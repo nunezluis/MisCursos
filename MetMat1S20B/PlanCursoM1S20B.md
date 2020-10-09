@@ -11,5 +11,6 @@ para avanzar en la confección de esos problemas de tarea.
 
 ## Evaluación 
 La evaluación de este curso estará organizada de la siguiente forma:
-+ **Cada tercera clase** se hará una evaluación sustentada de los ejercicios asignados como tarea. 
-Se tomarán en cuenta diez de estas evaluaciones y sumarán el 40\%
++ **Cada tercera clase** se hará una evaluación sustentada de los ejercicios asignados como tarea.  Se tomarán en cuenta diez de estas evaluaciones y sumarán el 40\%
+
++ *Y esta es una prueba* para ver si le leen los enlaces [enlaces pa ve] (https://github.com/nunezluis/LibroMetodosVol1/blob/main/Presentaciones/1_1Vectores.pdf)
