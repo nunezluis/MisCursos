@@ -11,5 +11,5 @@ para avanzar en la confección de esos problemas de tarea.
 
 ## Evaluación 
 La evaluación de este curso estará organizada de la siguiente forma:
-+ **Cada tercera clase* se hará una evaluación sustentada de los ejercicios asignados como tarea. 
++ **Cada tercera clase** se hará una evaluación sustentada de los ejercicios asignados como tarea. 
 Se tomarán en cuenta diez de estas evaluaciones y sumarán el 40\%
