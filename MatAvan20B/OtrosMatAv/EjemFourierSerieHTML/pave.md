@@ -1,1 +1,1 @@
-pa ver si funciona (./FourierSeries.html)
+pa ver si funciona (./http://FourierSeries.html)
