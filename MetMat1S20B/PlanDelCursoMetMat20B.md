@@ -62,6 +62,9 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
    1. Realice un código en MAXIMA para el cual, dado tres vectores que formen los lados de un triángulo calcule el centroide (Problema 3 Sección 1.1.8)
    2. Realice un código en MAXIMA que reproduzca el ejercicio 6 de la Sección 1.2.9 
 + **Asignación Clase N+5 (evaluación en la clase 6)** Desarrolle el problema 9 de la sección 1.3.5
++ **Materiales de apoyo**
+   1. Video y Presentación
+   2. Video y Presentación
 
 ### Clase 2. Análisis vectorial express  <a name="Clase2"></a>
 + **Actividad antes de clase** 
@@ -71,6 +74,9 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
    1. XXX
    2. YYY 
 + **Asignación Clase N+5 (evaluación en la clase 6)** ZZZ
++ **Materiales de apoyo**
+   1. Video y Presentación
+   2. Video y Presentación
 
 ### Clase 3. Análisis vectorial express  <a name="Clase3"></a>
 + **Actividad antes de clase** 
@@ -80,3 +86,6 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
    1. XXX
    2. YYY 
 + **Asignación Clase N+5 (evaluación en la clase 6)** ZZZ
++ **Materiales de apoyo**
+   1. Video y Presentación
+   2. Video y Presentación
