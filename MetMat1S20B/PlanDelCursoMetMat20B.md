@@ -58,15 +58,39 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
    3. Registrarse y configurar repositorio git
    4. Estudiar puntos 1.1, 1.2 y 1.3 del Vol 1 de las notas de clase
    5. Rehacer los ejercicios resueltos: 3 y 4 Sección 1.1.6; 3  Sección 1.2.7;  
-+ **Problema Clase N+2 (evaluación en la clase 3)**
++ **Taller de problemas 1 (evaluación en la clase 3)**
    1. Realice un código en MAXIMA para el cual, dado tres vectores que formen los lados de un triángulo calcule el centroide (Problema 3 Sección 1.1.8)
    2. Realice un código en MAXIMA que reproduzca el ejercicio 6 de la Sección 1.2.9 
-+ **Asignación Clase N+5 (evaluación en la clase 6)** Desarrolle el problema 9 de la sección 1.3.5
++ **Asignación 1 (evaluación en la clase n+5 = 6)** Desarrolle el problema 9 de la sección 1.3.5
 + **Materiales de apoyo**
    1. Video y Presentación
    2. Video y Presentación
 
 ### Clase 2. Análisis vectorial express  <a name="Clase2"></a>
++ **Actividad antes de clase** 
+   1. XXX
+   2. YYY 
++ **Taller de problema 1 (evaluación en la clase 3)**
+   1. XXX
+   2. YYY 
++ **Materiales de apoyo**
+   1. Video y Presentación
+   2. Video y Presentación
+
+### Clase 3. XXX  <a name="Clase3"></a>
++ **Actividad antes de clase** 
+   1. XXX
+   2. YYY 
++ **Evaluación taller de problemas 1**   
++ **Taller de problemas 2 (evaluación en la clase 5)**
+   1. XXX
+   2. YYY 
++ **Asignación Clase N+5 (evaluación en la clase 6)** ZZZ
++ **Materiales de apoyo**
+   1. Video y Presentación
+   2. Video y Presentación
+
+### Clase 4. XXX  <a name="Clase4"></a>
 + **Actividad antes de clase** 
    1. XXX
    2. YYY 
@@ -78,6 +102,17 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
    1. Video y Presentación
    2. Video y Presentación
 
+### Clase 3. Análisis vectorial express  <a name="Clase3"></a>
++ **Actividad antes de clase** 
+   1. XXX
+   2. YYY 
++ **Problema Clase N+2 (evaluación en la clase 3)**
+   1. XXX
+   2. YYY 
++ **Asignación Clase N+5 (evaluación en la clase 6)** ZZZ
++ **Materiales de apoyo**
+   1. Video y Presentación
+   2. Video y Presentación
 ### Clase 3. Análisis vectorial express  <a name="Clase3"></a>
 + **Actividad antes de clase** 
    1. XXX
