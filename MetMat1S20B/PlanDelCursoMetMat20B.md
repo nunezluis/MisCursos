@@ -2,10 +2,11 @@
 1. [La metodología](#metodologia)
    1. [Clases](#clases)
    2. [Colaboración y computación](#colaboracion)
-2. [La evaluación](#evaluacion) 
-3. [Plan detalledo del curso](#PlanDetallado)
+2. [La evaluación](#evaluacion)
+3. [Materiales del curso](#MaterialesCurso) 
+4. [Plan detallado del curso](#PlanDetallado)
    1. [Clase 1. Los vectores de siempre](#Clase1)
-4. Consideraciones finales
+5. Consideraciones finales
 
 ## La metodología 
 <a name="metodologia"></a>
@@ -37,6 +38,9 @@ La evaluación de este curso se realizará en base a tres tipos de actividades c
 + **Cada sexta clase** se sustentará una asignación especial. *Tendremos dos tipos de asignaciones cuyas evaluaciones sumarán el 40% del curso*. Algunas asignaciones de aplicación de los conceptos y otras de discusión de artículos relacionados con los tópicos que estemos desarrollando.  Las asignaciones de aplicación buscan reforzar los conceptos del curso en la solución de un problema particular. La discusión de artículos relacionan los conceptos del curso con su utilización específica reportada en la literarura.  Las asignaciones de aplicación serán reportadas de dos maneras: un reporte tipo artículo y una presentación (10m) de máximo 6 láminas presentadas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
 
 + En la **clase 14 o 15** y en **la 28 o 29** se realizará una evaluación oral de temas cubiertos hasta esas fechas. Esta *conversación evaluada* versará sobre un cuestionario que será enviado 24 horas antes de la actividad. Estas conversaciones evaluadas acopiarán el 20% restante.
+
+## Materiales del curso<a name="MaterialesCurso"></a> 
+Los materiales que utilizaremos en este curso 
 
 ## Plan detalledo del curso <a name="PlanDetallado"></a> 
 
