@@ -56,7 +56,7 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
    1. Instalar y configurar MAXIMA
    2. Registrarse en overleaf
    3. Registrarse y configurar repositorio git
-   4. Estudiar puntos 1.1, 1.2 y 1.3 del Vol 1 de las notas de clase
+   4. Estudiar puntos de las notas de clase 1.1, 1.2 y 1.3 del Vol 1
    5. Rehacer los ejercicios resueltos: 3 y 4 Sección 1.1.6; 3  Sección 1.2.7;  
 + **Taller de problemas 1 (evaluación en la clase 3)**
    1. Realice un código en MAXIMA para el cual, dado tres vectores que formen los lados de un triángulo calcule el centroide (Problema 3 Sección 1.1.8)
@@ -68,8 +68,8 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 
 ### Clase 2. Análisis vectorial express  <a name="Clase2"></a>
 + **Actividad antes de clase** 
-   1. XXX
-   2. YYY 
+   1. Estudiar puntos de las notas de clase
+   2. Rehacer los ejercicios resueltos: 
 + **Taller de problema 1 (evaluación en la clase 3)**
    1. XXX
    2. YYY 
@@ -79,48 +79,60 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 
 ### Clase 3. XXX  <a name="Clase3"></a>
 + **Actividad antes de clase** 
-   1. XXX
-   2. YYY 
+   1. Estudiar puntos de las notas de clase
+   2. Rehacer los ejercicios resueltos: 
 + **Evaluación taller de problemas 1**   
 + **Taller de problemas 2 (evaluación en la clase 5)**
    1. XXX
    2. YYY 
-+ **Asignación Clase N+5 (evaluación en la clase 6)** ZZZ
 + **Materiales de apoyo**
    1. Video y Presentación
    2. Video y Presentación
 
 ### Clase 4. XXX  <a name="Clase4"></a>
 + **Actividad antes de clase** 
+   1. Estudiar puntos de las notas de clase
+   2. Rehacer los ejercicios resueltos: 
++ **Taller de problemas 2 (evaluación en la clase 5)**
    1. XXX
    2. YYY 
-+ **Problema Clase N+2 (evaluación en la clase 3)**
-   1. XXX
-   2. YYY 
-+ **Asignación Clase N+5 (evaluación en la clase 6)** ZZZ
 + **Materiales de apoyo**
    1. Video y Presentación
    2. Video y Presentación
 
-### Clase 3. Análisis vectorial express  <a name="Clase3"></a>
+### Clase 5. XXX  <a name="Clase5"></a>
 + **Actividad antes de clase** 
+   1. Estudiar puntos de las notas de clase
+   2. Rehacer los ejercicios resueltos: 
++ **Evaluación taller de problemas 2**    
++ **Taller de problemas 3 (evaluación en la clase 8)**
    1. XXX
    2. YYY 
-+ **Problema Clase N+2 (evaluación en la clase 3)**
-   1. XXX
-   2. YYY 
-+ **Asignación Clase N+5 (evaluación en la clase 6)** ZZZ
 + **Materiales de apoyo**
    1. Video y Presentación
    2. Video y Presentación
-### Clase 3. Análisis vectorial express  <a name="Clase3"></a>
+   
+### Clase 6. XXX  <a name="Clase6"></a>
 + **Actividad antes de clase** 
+   1. Estudiar puntos de las notas de clase
+   2. Rehacer los ejercicios resueltos: 
++ **Evaluación Asignación 1**     
++ **Taller de problemas 3 (evaluación en la clase 8)**
    1. XXX
    2. YYY 
-+ **Problema Clase N+2 (evaluación en la clase 3)**
++ **Asignación 2 (evaluación en la clase 11)** ZZZ
++ **Materiales de apoyo**
+   1. Video y Presentación
+   2. Video y Presentación
+
+### Clase 7. XXX  <a name="Clase7"></a>
++ **Actividad antes de clase** 
+   1. Estudiar puntos de las notas de clase
+   2. Rehacer los ejercicios resueltos:     
++ **Taller de problemas 3 (evaluación en la clase 7)**
    1. XXX
    2. YYY 
-+ **Asignación Clase N+5 (evaluación en la clase 6)** ZZZ
++ **Asignación 2 (evaluación en la clase 11)** ZZZ
 + **Materiales de apoyo**
    1. Video y Presentación
    2. Video y Presentación
