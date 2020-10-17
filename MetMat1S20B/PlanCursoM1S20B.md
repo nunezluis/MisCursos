@@ -3,7 +3,7 @@
 ## Metodología
 **Antes de las clases** deberán revisar los materiales de apoyo (videos/textos) y recorrer los ejemplos resueltos de autoevaluación. Así podrán llevar dudas a la discusión que haremos en la clase. La clase quedará grabada y la discusión podrá revisarse también. La realización de esos ejemplos resueltos será tomada en cuenta durante el desarrollo de la clase.
 
-**En cada clase** tendremos dos partes: una de ~30m-40m para presentar los conceptos, seguida por otra de ~60m-90m para la discusión en los ejemplos resueltos. Los conceptos habrán sido previamente expuestos en videos e indicados en los materiales de estudio.
+**En cada clase** tendremos dos partes: una de ~30m-40m para presentar los conceptos, seguida por otra de ~60m-50m para la discusión en los ejemplos resueltos. Los conceptos habrán sido previamente expuestos en videos e indicados en los materiales de estudio.
 
 En cada clase se propondrán ejercicios y asignaciones que deben resolver, consignar y sustentar **cada tercera clase** y **cada sexta clase**, respectivamente.  Tendremos una hora de consulta para dilucidar las dudas que se les presenten tanto en la solución de los ejercicios y las asignaciones propuestos.
 
