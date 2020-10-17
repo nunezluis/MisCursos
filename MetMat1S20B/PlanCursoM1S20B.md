@@ -12,7 +12,7 @@ En cada clase se propondrán ejercicios y asignaciones que deben resolver, consi
 **Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  tres tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software))), otra de edición de documentos científicos de álta calidad ([overleaf](https://en.wikipedia.org/wiki/Overleaf)) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales.
 
 + MAXIMA lo pueden obtener e instalar localmente desde [aquí](http://maxima.sourceforge.net).
-+ Pueden registrarse en overleaf ([aquí](https://www.overleaf.com/))  
++ Pueden registrarse en overleaf [aquí](https://www.overleaf.com/).
 + Igualmente, pueden registrarse en github [aquí](https://github.com/)
 
 ## Evaluación 
