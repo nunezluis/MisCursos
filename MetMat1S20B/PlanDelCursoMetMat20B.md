@@ -40,14 +40,20 @@ La evaluación de este curso se realizará en base a tres tipos de actividades c
 + En la **clase 14 o 15** y en **la 28 o 29** se realizará una evaluación oral de temas cubiertos hasta esas fechas. Esta *conversación evaluada* versará sobre un cuestionario que será enviado 24 horas antes de la actividad. Estas conversaciones evaluadas acopiarán el 20% restante.
 
 ## Materiales del curso<a name="MaterialesCurso"></a> 
-Los materiales que utilizaremos en este curso 
+Los materiales que utilizaremos en este curso son
++ **Temas seleccionados** del libro [Matematicas Avanzadas Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
++ El **capítulo de Variable Compleja** del libro [Matematicas Avanzadas Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenDOS.pdf)
++ Presentaciones que resumen los temas de cada clase
++ Referencias bibliográficas de artículo y capítulos de otros libros
 
-## Plan detalledo del curso <a name="PlanDetallado"></a> 
+## Plan detallado del curso <a name="PlanDetallado"></a> 
 
 ### Clase 1. Los vectores de siempre  <a name="Clase1"></a>
 + **Actividad antes de clase** 
    1. Instalar y configurar MAXIMA
    2. Registrarse en overleaf
    3. Registrarse y configurar repositorio git
-   4. Estudiar puntos
-+ ** Ejercicios Clase N+2 (evaluación en la clase 3)** 
+   4. Estudiar puntos 1.1, 1.2 y 1.3 del Vol 1 de las notas de clase
+   5. Rehacer los ejercicios resueltos 
++ ** Ejercicios Clase N+2 (evaluación en la clase 3)**
++ ** Asignación Clase N+5 (evaluación en la clase 6)**
