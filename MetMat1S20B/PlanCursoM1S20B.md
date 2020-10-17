@@ -30,7 +30,7 @@ La evaluación de este curso estará organizada de la siguiente forma:
 
 + **Cada sexta clase** se sustentará una asignación especial. *Tendremos dos tipos de asignaciones cuyas evaluaciones sumarán el 40% del curso*. Algunas asignaciones de aplicación de los conceptos y otras de discusión de artículos relacionados con los tópicos que estemos desarrollando.  Las asignaciones de aplicación buscan reforzar los conceptos del curso en la solución de un problema particular. La discusión de artículos relacionan los conceptos del curso con su utilización específica reportada en la literarura.  Las asignaciones de aplicación serán reportadas de dos maneras: un reporte tipo artículo y una presentación (10m) de máximo 6 láminas presentadas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
 
-+ En la **clase 14 o 15** y en **la 28 o 29** se realizará una evaluación oral de temas cubiertos hasta esas fechas. Estas conversaciones evaluadas acopiarán el 20% restante.
++ En la **clase 14 o 15** y en **la 28 o 29** se realizará una evaluación oral de temas cubiertos hasta esas fechas. Esta *conversación evaluada* versará sobre un cuestionario que será enviado 24 horas antes de la actividad. Estas conversaciones evaluadas acopiarán el 20% restante.
 
 + **Los reportes y las sustentaciones se realizarán por equipos** de dos personas pero las evaluaciones orales serán individuales. Los reportes de las asignaciones deberán ser consignadas en el git antes de la actividad evaluada.
 
