@@ -4,6 +4,8 @@
    2. [Colaboración y computación](#colaboracion)
 2. [La evaluación](#evaluacion) 
 3. [Plan detalledo del curso](#PlanDetallado)
+   1. [Clase 1. Los vectores de siempre](#Clase1)
+4. Consideraciones finales
 
 ## La metodología 
 <a name="metodologia"></a>
@@ -37,3 +39,5 @@ La evaluación de este curso se realizará en base a tres tipos de actividades c
 + En la **clase 14 o 15** y en **la 28 o 29** se realizará una evaluación oral de temas cubiertos hasta esas fechas. Esta *conversación evaluada* versará sobre un cuestionario que será enviado 24 horas antes de la actividad. Estas conversaciones evaluadas acopiarán el 20% restante.
 
 ## Plan detalledo del curso <a name="PlanDetallado"></a> 
+
+### Clase 1. Los vectores de siempre  <a name="Clase1"></a>
