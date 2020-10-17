@@ -105,7 +105,7 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
    1. Estudiar puntos de las notas de clase
    2. Rehacer los ejercicios resueltos: 
 + **Evaluación taller de problemas 2**    
-+ **Taller de problemas 3 (evaluación en la clase 8)**
++ **Taller de problemas 3 (evaluación en la clase 7)**
    1. XXX
    2. YYY 
 + **Materiales de apoyo**
@@ -128,11 +128,22 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 ### Clase 7. XXX  <a name="Clase7"></a>
 + **Actividad antes de clase** 
    1. Estudiar puntos de las notas de clase
-   2. Rehacer los ejercicios resueltos:     
-+ **Taller de problemas 3 (evaluación en la clase 7)**
+   2. Rehacer los ejercicios resueltos:  
++ **Evaluación taller de problemas 3**    
++ **Taller de problemas 4 (evaluación en la clase 9)**
    1. XXX
    2. YYY 
-+ **Asignación 2 (evaluación en la clase 11)** ZZZ
++ **Materiales de apoyo**
+   1. Video y Presentación
+   2. Video y Presentación
+
+### Clase 8. XXX  <a name="Clase8"></a>
++ **Actividad antes de clase** 
+   1. Estudiar puntos de las notas de clase
+   2. Rehacer los ejercicios resueltos:    
++ **Taller de problemas 4 (evaluación en la clase 9)**
+   1. XXX
+   2. YYY 
 + **Materiales de apoyo**
    1. Video y Presentación
    2. Video y Presentación
