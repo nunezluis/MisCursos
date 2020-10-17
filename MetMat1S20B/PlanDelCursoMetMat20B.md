@@ -46,6 +46,8 @@ Los materiales que utilizaremos en este curso son
 + Presentaciones que resumen los temas de cada clase
 + Referencias bibliográficas de artículo y capítulos de otros libros
 
+Hay que enfatizar que ambos volúmenes son obras en evolución y siempre presentaremos la última versión que puede haber variado. Con eso estamos diciendo que **NO LOS IMPRIMAN**. Consulten la última versión en formato electrónico que les presentamos en los enlaces antes mencionados.
+
 ## Plan detallado del curso <a name="PlanDetallado"></a> 
 
 ### Clase 1. Los vectores de siempre  <a name="Clase1"></a>
@@ -55,5 +57,5 @@ Los materiales que utilizaremos en este curso son
    3. Registrarse y configurar repositorio git
    4. Estudiar puntos 1.1, 1.2 y 1.3 del Vol 1 de las notas de clase
    5. Rehacer los ejercicios resueltos 
-+ ** Ejercicios Clase N+2 (evaluación en la clase 3)**
-+ ** Asignación Clase N+5 (evaluación en la clase 6)**
++ **Ejercicios Clase N+2 (evaluación en la clase 3)**
++ **Asignación Clase N+5 (evaluación en la clase 6)**
