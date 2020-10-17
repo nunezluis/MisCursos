@@ -5,7 +5,11 @@
 
 **En cada clase** tendremos dos partes: una de ~30m-40m para presentar los conceptos, seguida por otra de ~60m-90m para la discusión en los ejemplos resueltos. Los conceptos habrán sido previamente expuestos en videos e indicados en los materiales de estudio.
 
-En cada clase se propondrán ejercicios que deben resolver, consignar y sustentar **cada tercera clase**.  Tendremos una hora de consulta durante la cual discutiremos las dudas que se les presenten para avanzar tanto en la solución de los ejercicios propuestos como en los problemas asignados.
+En cada clase se propondrán ejercicios que deben resolver, consignar y sustentar **cada tercera clase**.  Tendremos una hora de consulta para dilucidar las dudas que se les presenten tanto en la solución de los ejercicios propuestos como en los problemas asignados.
+
+**La colaboración** es fundamental en este curso, por lo tanto los reportes de las asignaciones especiales serán consignados en equipos de dos estudiantes. 
+
+**Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  tres tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([MAXIMA](http://maxima.sourceforge.net)), otra de edición de documentos científicos de álta calidad ([overleaf](https://www.overleaf.com/)) y otra ([Git](https://github.com/)) para la preservación de documentos, datos y códigos computacionales.
 
 ## Evaluación 
 La evaluación de este curso estará organizada de la siguiente forma:
