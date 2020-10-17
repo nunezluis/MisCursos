@@ -63,8 +63,8 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
    2. Realice un código en MAXIMA que reproduzca el ejercicio 6 de la Sección 1.2.9 
 + **Asignación 1 (evaluación en la clase n+5 = 6)** Desarrolle el problema 9 de la sección 1.3.5
 + **Materiales de apoyo**
-   1. Video y Presentación
-   2. Video y Presentación
+   1. Video y [Presentación](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_1Vectores.pdf)
+   2. Video y [Presentación](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_2BaseCompon.pdf)
 
 ### Clase 2. Análisis vectorial express  <a name="Clase2"></a>
 + **Actividad antes de clase** 
