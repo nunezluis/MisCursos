@@ -1,4 +1,4 @@
-# Plan del Curso
+# Plan del Curso de Métodos Matemáticos de la Física 1
 
 ## Metodología
 **Antes de las clases** deberán revisar los materiales de apoyo (videos/textos) y recorrer los ejemplos resueltos de autoevaluación. Así podrán llevar dudas a la discusión que haremos en la clase. La clase quedará grabada y la discusión podrá revisarse también. La realización de esos ejemplos resueltos será tomada en cuenta durante el desarrollo de la clase.
@@ -9,7 +9,7 @@ En cada clase se propondrán ejercicios y asignaciones que deben resolver, consi
 
 **La colaboración** es fundamental en este curso, por lo tanto los reportes de las asignaciones especiales serán consignados en equipos de dos estudiantes. 
 
-**Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  tres tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software))), otra de edición de documentos científicos de álta calidad ([overleaf](https://en.wikipedia.org/wiki/Overleaf)) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales.
+**Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  tres tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software))), otra de edición de documentos científicos de álta calidad ([overleaf](https://en.wikipedia.org/wiki/Overleaf)) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales. Adicionalmente, como homenaje al gran [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz) deberán documentar en el git la solución de los ejercicios y asignaciones utilizando [markdown](https://en.wikipedia.org/wiki/Markdown). 
 
 + MAXIMA lo pueden obtener e instalar localmente desde [aquí](http://maxima.sourceforge.net).
 + Pueden registrarse en overleaf [aquí](https://www.overleaf.com/).
@@ -24,4 +24,4 @@ La evaluación de este curso estará organizada de la siguiente forma:
 
 + **Los reportes y las sustentaciones se realizarán por equipos** de dos personas pero las evaluaciones serán individuales. Los reportes de las asignaciones evaluaciones deberán ser entregadas, por escrito, 24h antes de la sustentación.
 
-+ *Y esta es una prueba* para ver si le leen los enlaces [enlaces pa ve] (https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_1Vectores.pdf)
+
