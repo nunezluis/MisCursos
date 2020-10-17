@@ -1,7 +1,8 @@
 # Plan del Curso de Métodos Matemáticos de la Física 1
 1. [La metodología](#metodologia)
-  1. [Clases](#clases)
-  2. [Colaboración y computación](#colaboracion)
+   1. [Clases](#clases)
+   2. [Colaboración y computación](#colaboracion)
+2. [La evaluación](#evaluacion) 
 
 ## La metodología <a name="metodologia"></a>
 **Antes de las clases** deberán revisar los materiales de apoyo (videos/textos) y recorrer los ejemplos resueltos de autoevaluación. Así podrán llevar dudas a la discusión que haremos en la clase. La clase quedará grabada y la discusión podrá revisarse también. La realización de esos ejemplos resueltos será tomada en cuenta durante el desarrollo de la clase.
@@ -22,7 +23,7 @@ En cada clase se propondrán ejercicios y asignaciones que deben resolver, consi
 **La colaboración** es fundamental en este curso, por lo tanto los reportes de las asignaciones especiales serán consignados en equipos de dos estudiantes. Tanto overleaf como el git están diseñados para colaborar, para redactar, desarrollar códigos y proyectos de forma colaboraborativa.
 
 
-## La evaluación 
+## La evaluación <a name="evaluacion"></a> 
 La evaluación de este curso estará organizada de la siguiente forma:
 
 + **Cada tercera clase** se hará una evaluación sustentada de los *ejercicios asignados* como tarea.  Se tomarán en cuenta diez de estas evaluaciones y sumarán el 40\%. Las solución a los ejercicios 3C se copartirán desde el repositorio *git*
