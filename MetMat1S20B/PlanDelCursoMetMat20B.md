@@ -41,3 +41,9 @@ La evaluación de este curso se realizará en base a tres tipos de actividades c
 ## Plan detalledo del curso <a name="PlanDetallado"></a> 
 
 ### Clase 1. Los vectores de siempre  <a name="Clase1"></a>
++ **Actividad antes de clase** 
+   1. Instalar y configurar MAXIMA
+   2. Registrarse en overleaf
+   3. Registrarse y configurar repositorio git
+   4. Estudiar puntos
++ ** Ejercicios Clase N+2 (evaluación en la clase 3)** 
