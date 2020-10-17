@@ -147,3 +147,15 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 + **Materiales de apoyo**
    1. Video y Presentación
    2. Video y Presentación
+
+### Clase 9. XXX  <a name="Clase9"></a>
++ **Actividad antes de clase** 
+   1. Estudiar puntos de las notas de clase
+   2. Rehacer los ejercicios resueltos: 
++ **Evaluación taller de problemas 4**    
++ **Taller de problemas 5 (evaluación en la clase 12)**
+   1. XXX
+   2. YYY 
++ **Materiales de apoyo**
+   1. Video y Presentación
+   2. Video y Presentación
