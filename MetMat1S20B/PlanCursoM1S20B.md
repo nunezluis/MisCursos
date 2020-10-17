@@ -27,7 +27,7 @@ En cada clase se propondrán ejercicios y asignaciones que deben resolver, consi
 
 
 ## La evaluación <a name="evaluacion"></a> 
-La evaluación de este curso se realizará en base a tres tipos de evaluaciones con reportes y sustentaciones orales. **Los reportes y las sustentaciones se realizarán por equipos** de dos personas pero las **evaluaciones orales serán individuales**. Los reportes de las asignaciones deberán ser consignados en el git antes de la actividad evaluada. Los tres tipos de evaluación de este curso son:
+La evaluación de este curso se realizará en base a tres tipos de actividades con reportes y sustentaciones orales. **Los reportes y las sustentaciones se realizarán por equipos** de dos personas pero las **evaluaciones orales serán individuales**. Los reportes de las asignaciones deberán ser consignados en el git antes de la actividad evaluada. Los tres tipos de evaluación de este curso son:
 
 + **Cada tercera clase** se hará una evaluación sustentada de los *ejercicios asignados* como tarea.  Se tomarán en cuenta diez de estas evaluaciones y sumarán el 40\%. Las solución a los ejercicios 3C se copartirán desde el repositorio *git*
 
