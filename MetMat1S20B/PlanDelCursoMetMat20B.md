@@ -56,6 +56,8 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
    2. Registrarse en overleaf
    3. Registrarse y configurar repositorio git
    4. Estudiar puntos 1.1, 1.2 y 1.3 del Vol 1 de las notas de clase
-   5. Rehacer los ejercicios resueltos 
-+ **Ejercicios Clase N+2 (evaluación en la clase 3)**
+   5. Rehacer los ejercicios resueltos: 3 y 4 Sección 1.1.6; 3  Sección 1.2.7;  
++ **Problema Clase N+2 (evaluación en la clase 3)**
+   1. Realice un código en MAXIMA para el cual, dado tres vectores que formen los lados de un triángulo calcule el centroide (Problema 3 Sección 1.1.8)
+   2. Realice un código en MAXIMA que reproduzca el ejercicio 6 de la Sección 1.2.9 
 + **Asignación Clase N+5 (evaluación en la clase 6)**
