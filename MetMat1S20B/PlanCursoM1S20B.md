@@ -5,16 +5,20 @@
 
 **En cada clase** tendremos dos partes: una de ~30m-40m para presentar los conceptos, seguida por otra de ~60m-90m para la discusión en los ejemplos resueltos. Los conceptos habrán sido previamente expuestos en videos e indicados en los materiales de estudio.
 
-En cada clase se propondrán ejercicios que deben resolver, consignar y sustentar **cada tercera clase**.  Tendremos una hora de consulta para dilucidar las dudas que se les presenten tanto en la solución de los ejercicios propuestos como en los problemas asignados.
+En cada clase se propondrán ejercicios y asignaciones que deben resolver, consignar y sustentar **cada tercera clase** y **cada sexta clase**, respectivamente.  Tendremos una hora de consulta para dilucidar las dudas que se les presenten tanto en la solución de los ejercicios y las asignaciones propuestos.
 
 **La colaboración** es fundamental en este curso, por lo tanto los reportes de las asignaciones especiales serán consignados en equipos de dos estudiantes. 
 
-**Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  tres tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([MAXIMA](http://maxima.sourceforge.net)), otra de edición de documentos científicos de álta calidad ([overleaf](https://www.overleaf.com/)) y otra ([Git](https://github.com/)) para la preservación de documentos, datos y códigos computacionales.
+**Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  tres tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software))), otra de edición de documentos científicos de álta calidad ([overleaf](https://en.wikipedia.org/wiki/Overleaf)) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales.
+
++ MAXIMA lo pueden obtener e instalar localmente desde [aquí](http://maxima.sourceforge.net).
++ Pueden registrarse en overleaf ([aquí](https://www.overleaf.com/))  
++ Igualmente, pueden registrarse en github [aquí](https://github.com/)
 
 ## Evaluación 
 La evaluación de este curso estará organizada de la siguiente forma:
 
-+ **Cada tercera clase** se hará una evaluación sustentada de los *ejercicios asignados* como tarea.  Se tomarán en cuenta diez de estas evaluaciones y sumarán el 40\%
++ **Cada tercera clase** se hará una evaluación sustentada de los *ejercicios asignados* como tarea.  Se tomarán en cuenta diez de estas evaluaciones y sumarán el 40\%. Las solución a los ejercicios 3C se copartirán desde el repositorio *git*
 
 + **Cada sexta clase** se sustentará una asignación especial. *Tendremos dos tipos de asignaciones cuyas evaluaciones sumarán el 40% del curso*. Algunas asignaciones de aplicación de los conceptos y algunas discusiones de artículos relacionados con los tópicos que estemos desarrollando.  Las asignaciones de aplicación buscan reforzar los conceptos del curso en la solución de un problema particular. La discusión de artículos buscan relacionar los conceptos del curso con su utilización específica reportada en la literarura.  Las asignaciones de aplicación serán reportadas de dos maneras: un reporte tipo artículo y una presentación (10m) de máximo 6 láminas presentadas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones y está desarrollado en overleaf (un sistema permite redactar, en Latex, documentos científicos de alta calidad de forma colaborativa).
 
