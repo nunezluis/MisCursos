@@ -65,9 +65,9 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 + **Materiales de apoyo**
    1. Video y [presentación generalidades de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_1Vectores.pdf)
    2. Video y [presentación bases y componentes de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_2BaseCompon.pdf)
-   3. Video y [presentación de algebrá vectores, índices y notación de Einstein]
+   3. Video y [presentación de algebrá vectores, índices y notación de Einstein](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_3VectoresIndices.pdf)
 
-### Clase 2. Análisis vectorial express  <a name="Clase2"></a>
+### Clase 2. Análisis vectorial express y numeros complejos  <a name="Clase2"></a>
 + **Actividad antes de clase** 
    1. Estudiar puntos de las notas de clase
    2. Rehacer los ejercicios resueltos: 
