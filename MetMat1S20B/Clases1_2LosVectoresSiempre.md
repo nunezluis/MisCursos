@@ -1,8 +1,9 @@
 # Los vectores de siempre
 + [Clase 1. Los vectores de siempre](#Clase1)
-+ [Clase 2. Análisis vectorial express](#Clase2)
++ [Clase 2. Análisis vectorial express y numeros complejos ](#Clase2)
 
-## Clase 1. Los vectores de siempre  <a name="Clase1"></a>
+<a name="Clase1"></a>
+## Clase 1. Los vectores de siempre  
 + **Actividad antes de clase** 
    1. Instalar y configurar MAXIMA
    2. Registrarse en overleaf
@@ -18,7 +19,8 @@
    2. Video y [presentación bases y componentes de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_2BaseCompon.pdf)
    3. Video y [presentación de álgebra vectores, índices y notación de Einstein](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_3VectoresIndices.pdf)
 
-### Clase 2. Análisis vectorial express y numeros complejos  <a name="Clase2"></a>
+<a name="Clase2"></a>
+### Clase 2. Análisis vectorial express y numeros complejos  
 + **Actividad antes de clase** 
    1. Estudiar puntos de las notas de clase
    2. Rehacer los ejercicios resueltos: 
