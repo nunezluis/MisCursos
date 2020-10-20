@@ -51,8 +51,7 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 
 ## Plan detallado del curso <a name="PlanDetallado"></a> 
 
-### [Clase 1 y 2 Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases1_2LosVectoresSiempre.md) 
-<a name="#Clase1_2"></a>
+### [Clase 1 y 2 Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases1_2LosVectoresSiempre.md)<a name="#Clase1_2"></a>
 
 ### Clase 3. XXX  <a name="Clase3"></a>
 + **Actividad antes de clase** 
