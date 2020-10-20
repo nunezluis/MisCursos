@@ -5,8 +5,8 @@
 2. [La evaluación](#evaluacion)
 3. [Materiales del curso](#MaterialesCurso) 
 4. [Plan detallado del curso](#PlanDetallado)
-   1. [Clase 1. Los vectores de siempre](#Clase1)
-   2. [Clase 2. Análisis vectorial express](#Clase2)
+   1. [Clase 1 y 2 Los vectores de siempre](#Clase1_2)
+   2. 
 5. Consideraciones finales
 
 ## La metodología 
@@ -51,7 +51,7 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 
 ## Plan detallado del curso <a name="PlanDetallado"></a> 
 
-### Clase 1. Los vectores de siempre  <a name="Clase1"></a>
+### [Clase 1 y 2 Los vectores de siempre]() <a name="Clase1"></a>
 + **Actividad antes de clase** 
    1. Instalar y configurar MAXIMA
    2. Registrarse en overleaf
