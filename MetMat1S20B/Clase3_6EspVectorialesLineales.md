@@ -1,3 +1,51 @@
 # Espacios Vectoriales Lineales
 1. [Clase 3. Grupos y espacios lineales abstractos](#Clase3)
 2. [Clase 4. Espacios Métricos, Normados y Euclideanos](#Clase4)
+
+### Clase 3. XXX  <a name="Clase3"></a>
++ **Actividad antes de clase** 
+   1. Estudiar puntos de las notas de clase
+   2. Rehacer los ejercicios resueltos: 
++ **Evaluación taller de problemas 1**   
++ **Taller de problemas 2 (evaluación en la clase 5)**
+   1. XXX
+   2. YYY 
++ **Materiales de apoyo**
+   1. Video y Presentación
+   2. Video y Presentación
+
+### Clase 4. XXX  <a name="Clase4"></a>
++ **Actividad antes de clase** 
+   1. Estudiar puntos de las notas de clase
+   2. Rehacer los ejercicios resueltos: 
++ **Taller de problemas 2 (evaluación en la clase 5)**
+   1. XXX
+   2. YYY 
++ **Materiales de apoyo**
+   1. Video y Presentación
+   2. Video y Presentación
+
+### Clase 5. XXX  <a name="Clase5"></a>
++ **Actividad antes de clase** 
+   1. Estudiar puntos de las notas de clase
+   2. Rehacer los ejercicios resueltos: 
++ **Evaluación taller de problemas 2**    
++ **Taller de problemas 3 (evaluación en la clase 7)**
+   1. XXX
+   2. YYY 
++ **Materiales de apoyo**
+   1. Video y Presentación
+   2. Video y Presentación
+   
+### Clase 6. XXX  <a name="Clase6"></a>
++ **Actividad antes de clase** 
+   1. Estudiar puntos de las notas de clase
+   2. Rehacer los ejercicios resueltos: 
++ **Evaluación Asignación 1**     
++ **Taller de problemas 3 (evaluación en la clase 8)**
+   1. XXX
+   2. YYY 
++ **Asignación 2 (evaluación en la clase 11)** ZZZ
++ **Materiales de apoyo**
+   1. Video y Presentación
+   2. Video y Presentación
