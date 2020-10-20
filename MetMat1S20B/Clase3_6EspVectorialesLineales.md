@@ -11,8 +11,7 @@
    2. Rehacer los ejercicios resueltos: 2.1.6 ejemplos 1 y 2
 + **Evaluación taller de problemas 1**   
 + **Taller de problemas 2 (evaluación en la clase 5)**
-   1. XXX
-   2. YYY 
+   + Sección 2.1.8 ejercicios 3 y 10
 + **Materiales de apoyo**
    1. Video y Presentación
    2. Video y Presentación
