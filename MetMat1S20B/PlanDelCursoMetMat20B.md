@@ -55,55 +55,8 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 ### [Los vectores de siempre. Clases 1 y 2](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases1_2LosVectoresSiempre.md)
 
 <a name="Clase3_6"></a>
-### [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6]
+### [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clase3_6EspVectorialesLineales.md)
 
-### Clase 3. XXX  <a name="Clase3"></a>
-+ **Actividad antes de clase** 
-   1. Estudiar puntos de las notas de clase
-   2. Rehacer los ejercicios resueltos: 
-+ **Evaluación taller de problemas 1**   
-+ **Taller de problemas 2 (evaluación en la clase 5)**
-   1. XXX
-   2. YYY 
-+ **Materiales de apoyo**
-   1. Video y Presentación
-   2. Video y Presentación
-
-### Clase 4. XXX  <a name="Clase4"></a>
-+ **Actividad antes de clase** 
-   1. Estudiar puntos de las notas de clase
-   2. Rehacer los ejercicios resueltos: 
-+ **Taller de problemas 2 (evaluación en la clase 5)**
-   1. XXX
-   2. YYY 
-+ **Materiales de apoyo**
-   1. Video y Presentación
-   2. Video y Presentación
-
-### Clase 5. XXX  <a name="Clase5"></a>
-+ **Actividad antes de clase** 
-   1. Estudiar puntos de las notas de clase
-   2. Rehacer los ejercicios resueltos: 
-+ **Evaluación taller de problemas 2**    
-+ **Taller de problemas 3 (evaluación en la clase 7)**
-   1. XXX
-   2. YYY 
-+ **Materiales de apoyo**
-   1. Video y Presentación
-   2. Video y Presentación
-   
-### Clase 6. XXX  <a name="Clase6"></a>
-+ **Actividad antes de clase** 
-   1. Estudiar puntos de las notas de clase
-   2. Rehacer los ejercicios resueltos: 
-+ **Evaluación Asignación 1**     
-+ **Taller de problemas 3 (evaluación en la clase 8)**
-   1. XXX
-   2. YYY 
-+ **Asignación 2 (evaluación en la clase 11)** ZZZ
-+ **Materiales de apoyo**
-   1. Video y Presentación
-   2. Video y Presentación
 
 ### Clase 7. XXX  <a name="Clase7"></a>
 + **Actividad antes de clase** 
