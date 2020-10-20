@@ -1,8 +1,8 @@
 # Espacios Vectoriales Lineales
-1. [Clase 3. Grupos y espacios lineales abstractos](#Clase3)
-2. [Clase 4. Espacios Métricos, Normados y Euclideanos](#Clase4)
++ [Clase 3. Grupos y espacios lineales abstractos](#Clase3)
++ [Clase 4. Espacios Métricos, Normados y Euclideanos](#Clase4)
 
-### Clase 3. XXX  <a name="Clase3"></a>
+### Clase 3. Grupos y espacios lineales abstractos <a name="Clase3"></a>
 + **Actividad antes de clase** 
    1. Estudiar puntos de las notas de clase
    2. Rehacer los ejercicios resueltos: 
@@ -14,7 +14,7 @@
    1. Video y Presentación
    2. Video y Presentación
 
-### Clase 4. XXX  <a name="Clase4"></a>
+### Clase 4. Espacios Métricos, Normados y Euclideanos  <a name="Clase4"></a>
 + **Actividad antes de clase** 
    1. Estudiar puntos de las notas de clase
    2. Rehacer los ejercicios resueltos: 
