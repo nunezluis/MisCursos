@@ -1,6 +1,8 @@
 # Espacios Vectoriales Lineales
 + [Clase 3. Grupos y espacios lineales abstractos](#Clase3)
 + [Clase 4. Espacios Métricos, Normados y Euclideanos](#Clase4)
++ [Clase 5. Dependencia e independencia líneal y bases ortogonales](#Clase5)
++ [Clase 6. Aproximación de funciones y bases ortogonales](#Clase6)
 
 ### Clase 3. Grupos y espacios lineales abstractos <a name="Clase3"></a>
 + **Actividad antes de clase** 
@@ -25,7 +27,7 @@
    1. Video y Presentación
    2. Video y Presentación
 
-### Clase 5. XXX  <a name="Clase5"></a>
+### Clase 5. Dependencia e independencia líneal y bases ortogonales  <a name="Clase5"></a>
 + **Actividad antes de clase** 
    1. Estudiar puntos de las notas de clase
    2. Rehacer los ejercicios resueltos: 
@@ -37,7 +39,7 @@
    1. Video y Presentación
    2. Video y Presentación
    
-### Clase 6. XXX  <a name="Clase6"></a>
+### Clase 6. Aproximación de funciones y bases ortogonales  <a name="Clase6"></a>
 + **Actividad antes de clase** 
    1. Estudiar puntos de las notas de clase
    2. Rehacer los ejercicios resueltos: 
