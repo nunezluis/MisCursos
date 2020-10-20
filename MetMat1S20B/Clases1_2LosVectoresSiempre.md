@@ -1,6 +1,6 @@
 # Los vectores de siempre
-1. [Clase 1. Los vectores de siempre](#Clase1)
-2. [Clase 2. Análisis vectorial express](#Clase2)
++ [Clase 1. Los vectores de siempre](#Clase1)
++ [Clase 2. Análisis vectorial express](#Clase2)
 
 ## Clase 1. Los vectores de siempre  <a name="Clase1"></a>
 + **Actividad antes de clase** 
