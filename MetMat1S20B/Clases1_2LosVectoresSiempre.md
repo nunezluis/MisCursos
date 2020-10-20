@@ -26,5 +26,5 @@
    1. XXX
    2. YYY 
 + **Materiales de apoyo**
-   1. Video y Presentación
+   1. Video y [presentación derivación de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_8DeriVectores.pdf)
    2. Video y Presentación
