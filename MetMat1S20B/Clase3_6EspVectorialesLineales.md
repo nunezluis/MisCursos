@@ -6,8 +6,8 @@
 
 ### Clase 3. Grupos y espacios lineales abstractos <a name="Clase3"></a>
 + **Actividad antes de clase** 
-   1. Estudiar puntos de las notas de clase
-   2. Rehacer los ejercicios resueltos: 
+   1. Estudiar puntos de las notas de clase 2.1.1, 2.1.2, 2.1.3 y 2.1.4.
+   2. Rehacer los ejercicios resueltos: 2.1.6 ejemplos 1 y 2
 + **Evaluación taller de problemas 1**   
 + **Taller de problemas 2 (evaluación en la clase 5)**
    1. XXX
