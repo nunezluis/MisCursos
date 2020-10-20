@@ -5,8 +5,8 @@
 2. [La evaluación](#evaluacion)
 3. [Materiales del curso](#MaterialesCurso) 
 4. [Plan detallado del curso](#PlanDetallado)
-   1. [Clase 1 y 2 Los vectores de siempre](#Clase1_2)
-   2. 
+   1. [Los vectores de siempre. Clases 1 y 2](#Clase1_2)
+   2. [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6 ](#Clase3_6)
 5. Consideraciones finales
 
 ## La metodología 
@@ -52,8 +52,10 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 ## Plan detallado del curso <a name="PlanDetallado"></a> 
 
 <a name="Clase1_2"></a>
-### [Clase 1 y 2 Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases1_2LosVectoresSiempre.md)
+### [Los vectores de siempre. Clases 1 y 2](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases1_2LosVectoresSiempre.md)
 
+<a name="Clase3_6"></a>
+### [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6]
 
 ### Clase 3. XXX  <a name="Clase3"></a>
 + **Actividad antes de clase** 
