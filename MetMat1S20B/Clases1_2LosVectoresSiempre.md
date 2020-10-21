@@ -8,7 +8,7 @@
    1. Instalar y configurar MAXIMA
    2. Registrarse en overleaf
    3. Registrarse y configurar repositorio git
-   4. Estudiar puntos de las notas de clase 1.1, 1.2 y 1.3 del Vol 1
+   4. Estudiar puntos de las notas de clase 1.1, 1.2 y 1.3 del [Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
    5. Rehacer los ejercicios resueltos: 3 y 4 Sección 1.1.6; 3  Sección 1.2.7;  
 + **Taller de problemas 1 (evaluación en la clase 3)**
    1. Realice un código en MAXIMA para el cual, dado tres vectores que formen los lados de un triángulo calcule el centroide (Problema 3 Sección 1.1.8)
@@ -22,7 +22,7 @@
 <a name="Clase2"></a>
 ### Clase 2. Análisis vectorial express y numeros complejos  
 + **Actividad antes de clase** 
-   1. Estudiar puntos de las notas de clase
+   1. Estudiar puntos de las notas de clase 1.5.1, 1.5.2, 1.5.3, 1.5.4, 1.5.5 y 1.5.6 del [Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
    2. Rehacer los ejercicios resueltos: 
 + **Taller de problema 1 (evaluación en la clase 3)**
    1. XXX
