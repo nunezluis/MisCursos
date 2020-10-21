@@ -29,4 +29,4 @@
    2. Resuelva el problema 2, 5 y 6 de la sección 1.6.7 
 + **Materiales de apoyo**
    1. Video y [presentación derivación e integración de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_5DerIntVectores.pdf)
-   2. Video y presentación vectores y numeros complejos
+   2. Video y [presentación vectores y numeros complejos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_6VectoresComplejos.pdf)
