@@ -26,7 +26,7 @@
    2. Rehacer los ejercicios resueltos: 2 y 3 sección 1.5.7; y 2 y 4 de la sección 1.6.5
 + **Taller de problema 1 (evaluación en la clase 3)**
    1. Resuelva el problema 2a, 2d y 2f y con MAXIMA el problema 13 de la sección 1.5.9;
-   2. YYY 
+   2. Resuelva el problema 2, 5 y 6 de la sección 1.6.7 
 + **Materiales de apoyo**
    1. Video y [presentación derivación e integración de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_5DerIntVectores.pdf)
    2. Video y presentación vectores y numeros complejos
