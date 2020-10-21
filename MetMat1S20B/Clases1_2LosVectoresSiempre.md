@@ -28,5 +28,5 @@
    1. Resuelva el problema 2a, 2d y 2f y con MAXIMA el problema 13 de la sección 1.5.9;
    2. YYY 
 + **Materiales de apoyo**
-   1. Video y [presentación derivación e integración de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_8DerIntVectores.pdf)
+   1. Video y [presentación derivación e integración de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_5DerIntVectores.pdf)
    2. Video y presentación vectores y numeros complejos
