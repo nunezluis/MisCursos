@@ -23,7 +23,7 @@
 ## Clase 2. Análisis vectorial express y numeros complejos  
 + **Actividad antes de clase** 
    1. Estudiar puntos de las notas de clase 1.5.1, 1.5.2, 1.5.3, 1.5.4, 1.5.5 y 1.5.6 del [Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
-   2. Rehacer los ejercicios resueltos: 2 y 3 sección 1.5.7;     
+   2. Rehacer los ejercicios resueltos: 2 y 3 sección 1.5.7; y 2 y 4 de la sección $$\epsilon$$ 1.6.5
 + **Taller de problema 1 (evaluación en la clase 3)**
    1. Resuelva el problema 2a, 2d y 2f y con MAXIMA el problema 13 de la sección 1.5.9;
    2. YYY 
