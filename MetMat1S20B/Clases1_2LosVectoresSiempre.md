@@ -1,7 +1,7 @@
 # Los vectores de siempre
 + [Clase 1. Los vectores de siempre](#Clase1)
 + [Clase 2. Análisis vectorial express y numeros complejos ](#Clase2)
-
++ [Aquí podrán encontrar algunos ejemplos de MAXIMA](https://github.com/nunezluis/Programas-/tree/main/IntroduccionFisica) 
 <a name="Clase1"></a>
 ## Clase 1. Los vectores de siempre  
 + **Actividad antes de clase** 
