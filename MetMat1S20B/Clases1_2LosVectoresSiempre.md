@@ -9,7 +9,7 @@
    2. Registrarse en overleaf
    3. Registrarse y configurar repositorio git
    4. Estudiar puntos de las notas de clase 1.1, 1.2 y 1.3 del [Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
-   5. Rehacer los ejercicios resueltos: 3 y 4 Sección 1.1.6; 3  Sección 1.2.7;  
+   5. Rehacer los ejercicios resueltos: 3 y 4 de la Sección 1.1.6; 3 de la sección 1.2.7; 3, sección 1.4.5 
 + **Taller de problemas 1 (evaluación en la clase 3)**
    1. Realice un código en MAXIMA para el cual, dado tres vectores que formen los lados de un triángulo calcule el centroide (Problema 3 Sección 1.1.8)
    2. Realice un código en MAXIMA que reproduzca el ejercicio 6 de la Sección 1.2.9 
