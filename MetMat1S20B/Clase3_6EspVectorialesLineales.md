@@ -18,11 +18,10 @@
 <a name="Clase4"></a>
 ### Clase 4. Espacios Métricos, Normados y Euclideanos  
 + **Actividad antes de clase** 
-   1. Estudiar puntos de las notas de clase
-   2. Rehacer los ejercicios resueltos: 
+   1. Estudiar el punto 2.2 de las notas de clase
+   2. Rehacer con MAXIMA el ejercicio resuelto 2 sección 2.2.4. 
 + **Taller de problemas 2 (evaluación en la clase 5)**
-   1. XXX
-   2. YYY 
+   + Los cuaterniones, problema 5 sección 2.2.6
 + **Materiales de apoyo**
    1. Video y Presentación
    2. Video y Presentación
