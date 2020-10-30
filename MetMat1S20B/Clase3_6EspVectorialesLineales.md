@@ -13,8 +13,7 @@
 + **Taller de problemas 2 (evaluación en la clase 5)**
    + Sección 2.1.8 ejercicios 3 y 10
 + **Materiales de apoyo**
-   1. [Video](https://youtu.be/aiv3E_Nofko) y [presentación del concepto de espacio vectorial](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_1GruposEspaciosVectoriales.pdf) 
-   2. Video y Presentación
+   + [Video](https://youtu.be/aiv3E_Nofko) y [presentación del concepto de espacio vectorial](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_1GruposEspaciosVectoriales.pdf) 
 
 <a name="Clase4"></a>
 ### Clase 4. Espacios Métricos, Normados y Euclideanos  
