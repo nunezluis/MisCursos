@@ -24,7 +24,7 @@
    + Los cuaterniones, problema 5 sección 2.2.6
 + **Materiales de apoyo**
    1. [Video](https://youtu.be/la9Gnhc0uFg) y [presentación de espacios métricos y normados](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_2EspaciosMetricos.pdf)
-   2. [Video](https://youtu.be/rQ59n-wr9X8) y presentación de espacios euclideanos
+   2. [Video](https://youtu.be/rQ59n-wr9X8) y [presentación de espacios euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_23EspaciosEuclideanos.pdf)
 
 <a name="Clase5"></a>
 ### Clase 5. Dependencia e independencia líneal y bases ortogonales  
