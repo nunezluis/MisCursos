@@ -23,7 +23,7 @@
 + **Taller de problemas 2 (evaluación en la clase 5)**
    + Los cuaterniones, problema 5 sección 2.2.6
 + **Materiales de apoyo**
-   1. Video y Presentación
+   1. [Video](https://youtu.be/la9Gnhc0uFg) y [presentación de espacios métricos y normados](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_2EspaciosMetricos.pdf)
    2. Video y Presentación
 
 <a name="Clase5"></a>
