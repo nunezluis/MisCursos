@@ -1,0 +1,1391 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>EcDifOrdinariasIntro.html</title>
+<!-- Created by Maple 2018.0, Mac OS X -->
+</head>
+<a href="EcDifOrdinariasIntro.html#MapleAutoBookmark1">EcDifOrdinarias2.mw</a>
+<ul>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="center"><font color="#000000" size="5" face="Times New Roma"><strong>Ecuaciones diferenciales ordinarias</strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman">Luis A. Núñez</font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"></font><font color="#000000" size="3" face="Times New Roman"><em>Escuela de Física, Universidad Industrial de Santander</em></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><ul><li><font color="#000000" size="3" face="Times New Roma"><strong><em>Ecuaciones diferenciales ordinarias lineales y no lineales</em></strong></font></li></ul>&nbsp;</p>
+<p align="left"><ul><li><font color="#000000" size="3" face="Times New Roma"><strong><em>Dominio de la solución</em></strong></font></li></ul>&nbsp;</p>
+<p align="left"><ul><li><font color="#000000" size="3" face="Times New Roma"><strong><em>Soluciones generales y particulares</em></strong></font></li></ul>&nbsp;</p>
+<p align="left"><ul><li><font color="#000000" size="3" face="Times New Roma"><strong><em>Soluciones implícitas y explícitas</em></strong></font></li></ul>&nbsp;</p>
+<p align="left"><ul><li><font color="#000000" size="3" face="Times New Roma"><strong><em>Método de las isoclinas</em></strong></font></li></ul>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>restart; infolevel[dsolve]:=2;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_1.gif" width="129" height="23" alt="Typesetting:-mprintslash([infolevel[dsolve] := 2], [2])" align="center" border="0"></td>
+<td width='5%' align='center'>(1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roma"><strong><em>Ecuaciones diferenciales lineales</em></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Empecemos por un principio pediátrico, una ecuación diferencial &nbsp;ordinaria, lineal, de primer, orden inhomogénea</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>EcDifLineal := diff(y(x),x)= exp(x) -2*x*y(x);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_2.gif" width="269" height="39" alt="Typesetting:-mprintslash([EcDifLineal := diff(y(x), x) = `+`(exp(x), `-`(`*`(2, `*`(x, `*`(y(x))))))], [diff(y(x), x) = `+`(exp(x), `-`(`*`(2, `*`(x, `*`(y(x))))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">cuya solución es</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>SolEcDifLineal := dsolve(EcDifLineal,y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">Methods for first order ODEs:</td>
+</tr></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">--- Trying classification methods ---
+<br>trying a quadrature
+<br>trying 1st order linear
+<br>&lt;- 1st order linear successful</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_3.gif" width="452" height="69" alt="Typesetting:-mprintslash([SolEcDifLineal := y(x) = `*`(`+`(`-`(`*`(`+`(`*`(`/`(1, 2), `*`(I))), `*`(`^`(Pi, `/`(1, 2)), `*`(exp(-`/`(1, 4)), `*`(erf(`+`(`*`(I, `*`(x)), `*`(`/`(1, 2), `*`(I))))))))), ..." align="center" border="0"></td>
+<td width='5%' align='center'>(3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">nótese el efecto de la instrucción infolevel</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>?infolevel;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">cuando salen algunas funciones extrañas se puede invocar la ayuda para saber de qué se trata</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>?erf;
+<br>erf(-4.5);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_4.gif" width="117" height="14" alt="-.9999999998" align="center" border="0"></td>
+<td width='5%' align='center'>(4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roma"><strong><em>Ecuación diferencial ordinaria no lineal</em></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>EcDifNOLineal := diff(g(x),x) -(2*sqrt(g(x))-g(x))/x = 0; </td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_5.gif" width="358" height="44" alt="Typesetting:-mprintslash([EcDifNOLineal := `+`(diff(g(x), x), `-`(`/`(`*`(`+`(`*`(2, `*`(`^`(g(x), `/`(1, 2)))), `-`(g(x)))), `*`(x)))) = 0], [`+`(diff(g(x), x), `-`(`/`(`*`(`+`(`*`(2, `*`(`^`(g(x), `..." align="center" border="0"></td>
+<td width='5%' align='center'>(5)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">la función incógnita tiene un exponente distinto de uno. Esta ecuación se conoce como la ecuación de Bernoulli y puede ser integrada analíticamente</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>SolEcDifNOLineal := dsolve(EcDifNOLineal,g(x)); </td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">Methods for first order ODEs:</td>
+</tr></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">--- Trying classification methods ---
+<br>trying a quadrature
+<br>trying 1st order linear
+<br>trying Bernoulli
+<br>&lt;- Bernoulli successful</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_6.gif" width="309" height="44" alt="Typesetting:-mprintslash([SolEcDifNOLineal := `+`(`*`(`^`(g(x), `/`(1, 2))), `-`(2), `-`(`/`(`*`(_C1), `*`(`^`(x, `/`(1, 2)))))) = 0], [`+`(`*`(`^`(g(x), `/`(1, 2))), `-`(2), `-`(`/`(`*`(_C1), `*`(`^`..." align="center" border="0"></td>
+<td width='5%' align='center'>(6)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>SolEcDifNolineal:=solve(SolEcDifNOLineal,g(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_7.gif" width="263" height="48" alt="Typesetting:-mprintslash([SolEcDifNolineal := `/`(`*`(`^`(`+`(`*`(2, `*`(`^`(x, `/`(1, 2)))), _C1), 2)), `*`(x))], [`/`(`*`(`^`(`+`(`*`(2, `*`(`^`(x, `/`(1, 2)))), _C1), 2)), `*`(x))])" align="center" border="0"></td>
+<td width='5%' align='center'>(7)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roma"><strong><em>Dominio de la solución </em></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">A pesar de lo extraña de la expresión para la solución de la ecuación diferencial lineal </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>SolEcDifLineal;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_8.gif" width="332" height="69" alt="y(x) = `*`(`+`(`-`(`*`(`+`(`*`(`/`(1, 2), `*`(I))), `*`(`^`(Pi, `/`(1, 2)), `*`(exp(-`/`(1, 4)), `*`(erf(`+`(`*`(I, `*`(x)), `*`(`/`(1, 2), `*`(I))))))))), _C1), `*`(exp(`+`(`-`(`*`(`^`(x, 2)))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(8)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Todos los valores </font><font color="#000000" size="3" face="Times New Roman"><em>x</em></font><font color="#000000" size="3" face="Times New Roman"> son válidos. No así para la solución de la ecuación no lineal</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>g(x) = SolEcDifNolineal;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_9.gif" width="173" height="48" alt="g(x) = `/`(`*`(`^`(`+`(`*`(2, `*`(`^`(x, `/`(1, 2)))), _C1), 2)), `*`(x))" align="center" border="0"></td>
+<td width='5%' align='center'>(9)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">que solo es válida para </font><font color="#000000" size="3" face="Times New Roman"><em>x</em></font><font color="#000000" size="3" face="Times New Roman"> positivos</font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roma"><strong><em>Soluciones generales y particulares</em></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Volviendo a la familia soluciones &nbsp;</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>SolEcDifLineal;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_10.gif" width="332" height="69" alt="y(x) = `*`(`+`(`-`(`*`(`+`(`*`(`/`(1, 2), `*`(I))), `*`(`^`(Pi, `/`(1, 2)), `*`(exp(-`/`(1, 4)), `*`(erf(`+`(`*`(I, `*`(x)), `*`(`/`(1, 2), `*`(I))))))))), _C1), `*`(exp(`+`(`-`(`*`(`^`(x, 2)))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(10)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Nótese la presencia de una constante arbitraria _C1 que queda especificada si damos una condición inicial. Vale decir un punto por el cual pase la solución</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Si no se especifica la constante </font><font color="#000000" size="3" face="Times New Roman"><strong>tendremos una familia de soluciones o una la solución general.</strong></font><font color="#000000" size="3" face="Times New Roman"> Si se especifica la constante (a través de una condición inicial) </font><font color="#000000" size="3" face="Times New Roman"><strong>tendremos una solución particular</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>CondIni := y(0)=-3; SolEcDifLinealPart:=dsolve({EcDifLineal,CondIni},y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_11.gif" width="157" height="18" alt="Typesetting:-mprintslash([CondIni := y(0) = -3], [y(0) = -3])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">Methods for first order ODEs:
+<br>--- Trying classification methods ---
+<br>trying a quadrature
+<br>trying 1st order linear
+<br>&lt;- 1st order linear successful</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_12.gif" width="619" height="69" alt="Typesetting:-mprintslash([SolEcDifLinealPart := y(x) = `*`(`+`(`-`(`*`(`+`(`*`(`/`(1, 2), `*`(I))), `*`(`^`(Pi, `/`(1, 2)), `*`(exp(-`/`(1, 4)), `*`(erf(`+`(`*`(I, `*`(x)), `*`(`/`(1, 2), `*`(I)))))))..." align="center" border="0"></td>
+<td width='5%' align='center'>(11)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y si la graficamos</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot(rhs(SolEcDifLinealPart), x=-4..4, -4..4);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_13.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Obtenemos una única solución</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Igual para para la solución de la ecuacion diferencial no lineal</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>CondIni := g(1)=3; SolEcDifNOLinealPart:=dsolve({EcDifNOLineal,CondIni},g(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_14.gif" width="144" height="18" alt="Typesetting:-mprintslash([CondIni := g(1) = 3], [g(1) = 3])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New"> -&gt; Computing symmetries using: way = 3</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_15.gif" width="508" height="44" alt="Typesetting:-mprintslash([SolEcDifNOLinealPart := g(x) = `/`(`*`(`+`(`*`(`+`(`-`(`*`(4, `*`(`^`(3, `/`(1, 2))))), `-`(8)), `*`(`^`(x, `/`(1, 2)))), `*`(2, `*`(`^`(2, `/`(1, 2)), `*`(`^`(6, `/`(1, 2)))..." align="center" border="0"></td>
+<td width='5%' align='center'>(12)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y la graficamos</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot(rhs(SolEcDifNOLinealPart), x=0..4, 0..400);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_16.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Para cada valor de la constante </font><font color="#000000" size="3" face="Times New Roman"><strong>tendremos una solución particular</strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>ypartLinealvarias := rhs(SolEcDifLineal): GrafSolEcDifLinealpart := {seq(subs(_C1 = m, ypartLinealvarias), m=-4..4)}:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y graficamos</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot(GrafSolEcDifLinealpart, x=-4..4, -5..5);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_17.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">e igualmente para el caso de la solución de la ecuación no lineal</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>GrafSolEcDifNOLinealpart := {seq(subs(_C1 = m, SolEcDifNolineal), m=-4..4)}:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y graficamos</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot(GrafSolEcDifNOLinealpart, x=0..4, 0..50);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_18.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Para el caso de la familia de soluciones de la ecuación lineal </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>SolEcDifLineal;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_19.gif" width="332" height="69" alt="y(x) = `*`(`+`(`-`(`*`(`+`(`*`(`/`(1, 2), `*`(I))), `*`(`^`(Pi, `/`(1, 2)), `*`(exp(-`/`(1, 4)), `*`(erf(`+`(`*`(I, `*`(x)), `*`(`/`(1, 2), `*`(I))))))))), _C1), `*`(exp(`+`(`-`(`*`(`^`(x, 2)))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(13)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y no lineal</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>g(x) = SolEcDifNolineal;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_20.gif" width="173" height="48" alt="g(x) = `/`(`*`(`^`(`+`(`*`(2, `*`(`^`(x, `/`(1, 2)))), _C1), 2)), `*`(x))" align="center" border="0"></td>
+<td width='5%' align='center'>(14)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">vemos que hemos podido despejar el valor de la función solución. Tendremos una UNICA </font><font color="#000000" size="3" face="Times New Roman"><strong>solución explícita</strong></font><font color="#000000" size="3" face="Times New Roman">. Pero hay casos en los cuales eso no es posible.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>EcDifImplicita &nbsp;:= 3*x^2 +3*y(x)^2*diff(y(x),x) -3*y(x) -3*x*diff(y(x),x) =0;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_21.gif" width="507" height="39" alt="Typesetting:-mprintslash([EcDifImplicita := `+`(`*`(3, `*`(`^`(x, 2))), `*`(3, `*`(`^`(y(x), 2), `*`(diff(y(x), x)))), `-`(`*`(3, `*`(y(x)))), `-`(`*`(3, `*`(x, `*`(diff(y(x), x)))))) = 0], [`+`(`*`(3..." align="center" border="0"></td>
+<td width='5%' align='center'>(15)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font><font color="#000000" size="3" face="Times New Roman"><strong>La solución implícita </strong></font><font color="#000000" size="3" face="Times New Roman">para este caso será </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>x^3 + y^3 -3*y*x = 0;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_22.gif" width="127" height="22" alt="`+`(`*`(`^`(x, 3)), `*`(`^`(y, 3)), `-`(`*`(3, `*`(x, `*`(y))))) = 0" align="center" border="0"></td>
+<td width='5%' align='center'>(16)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y si uno le pide a la máquina que la solucione</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>SolEcDifImplicita:= dsolve(EcDifImplicita, y(x)):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">Methods for first order ODEs:</td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">--- Trying classification methods ---
+<br>trying a quadrature
+<br>trying 1st order linear
+<br>trying Bernoulli
+<br>trying separable
+<br>trying inverse linear
+<br>trying homogeneous types:
+<br>trying Chini
+<br>differential order: 1; looking for linear symmetries
+<br>trying exact
+<br>&lt;- exact successful</td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">porque existe tres posibles soluciones para esta ecuación diferencial</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>SolEcDifImplicita[1]; </td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_23.gif" width="768" height="61" alt="y(x) = `+`(`*`(`/`(1, 2), `*`(`^`(`+`(`-`(`*`(4, `*`(`^`(x, 3)))), `-`(`*`(4, `*`(_C1))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `*`(2, `*`(_C1, `*`(`^`(x, 3)))), `-`(`*`(4, `*`(`^`(x, 3)))), `*`(`^`(_C1,..." align="center" border="0"></td>
+<td width='5%' align='center'>(17)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>SolEcDifImplicita[2];</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_24.gif" width="768" height="50" alt="y(x) = `+`(`-`(`*`(`/`(1, 4), `*`(`^`(`+`(`-`(`*`(4, `*`(`^`(x, 3)))), `-`(`*`(4, `*`(_C1))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `*`(2, `*`(_C1, `*`(`^`(x, 3)))), `-`(`*`(4, `*`(`^`(x, 3)))), `*`(`^`(..." align="center" border="0"><br><img src="images/EcDifOrdinariasIntro_25.gif" width="768" height="66" alt="y(x) = `+`(`-`(`*`(`/`(1, 4), `*`(`^`(`+`(`-`(`*`(4, `*`(`^`(x, 3)))), `-`(`*`(4, `*`(_C1))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `*`(2, `*`(_C1, `*`(`^`(x, 3)))), `-`(`*`(4, `*`(`^`(x, 3)))), `*`(`^`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(18)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>SolEcDifImplicita[3];</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_26.gif" width="768" height="50" alt="y(x) = `+`(`-`(`*`(`/`(1, 4), `*`(`^`(`+`(`-`(`*`(4, `*`(`^`(x, 3)))), `-`(`*`(4, `*`(_C1))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `*`(2, `*`(_C1, `*`(`^`(x, 3)))), `-`(`*`(4, `*`(`^`(x, 3)))), `*`(`^`(..." align="center" border="0"><br><img src="images/EcDifOrdinariasIntro_27.gif" width="768" height="66" alt="y(x) = `+`(`-`(`*`(`/`(1, 4), `*`(`^`(`+`(`-`(`*`(4, `*`(`^`(x, 3)))), `-`(`*`(4, `*`(_C1))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `*`(2, `*`(_C1, `*`(`^`(x, 3)))), `-`(`*`(4, `*`(`^`(x, 3)))), `*`(`^`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(19)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">nótese que para la segunda y tercera solución tendemos valores imaginarios. Si buscamos la solución particular para </font><font color="#000000" size="3" face="Times New Roman"><em>_C1 = 0</em></font><font color="#000000" size="3" face="Times New Roman"> tendremos </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>SolImplicita1 := subs(_C1 = 0, SolEcDifImplicita[1]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_28.gif" width="563" height="65" alt="Typesetting:-mprintslash([SolImplicita1 := y(x) = `+`(`*`(`/`(1, 2), `*`(`^`(`+`(`-`(`*`(4, `*`(`^`(x, 3)))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `-`(`*`(4, `*`(`^`(x, 3))))), `/`(1, 2))))), `/`(1, 3))..." align="center" border="0"></td>
+<td width='5%' align='center'>(20)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>SolImplicita2 := subs(_C1 = 0, SolEcDifImplicita[2]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_29.gif" width="768" height="50" alt="Typesetting:-mprintslash([SolImplicita2 := y(x) = `+`(`-`(`*`(`/`(1, 4), `*`(`^`(`+`(`-`(`*`(4, `*`(`^`(x, 3)))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `-`(`*`(4, `*`(`^`(x, 3))))), `/`(1, 2))))), `/`(1,..." align="center" border="0"><br><img src="images/EcDifOrdinariasIntro_30.gif" width="768" height="66" alt="Typesetting:-mprintslash([SolImplicita2 := y(x) = `+`(`-`(`*`(`/`(1, 4), `*`(`^`(`+`(`-`(`*`(4, `*`(`^`(x, 3)))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `-`(`*`(4, `*`(`^`(x, 3))))), `/`(1, 2))))), `/`(1,..." align="center" border="0"></td>
+<td width='5%' align='center'>(21)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>SolImplicita3 := subs(_C1 = 0, SolEcDifImplicita[3]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_31.gif" width="768" height="50" alt="Typesetting:-mprintslash([SolImplicita3 := y(x) = `+`(`-`(`*`(`/`(1, 4), `*`(`^`(`+`(`-`(`*`(4, `*`(`^`(x, 3)))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `-`(`*`(4, `*`(`^`(x, 3))))), `/`(1, 2))))), `/`(1,..." align="center" border="0"><br><img src="images/EcDifOrdinariasIntro_32.gif" width="768" height="66" alt="Typesetting:-mprintslash([SolImplicita3 := y(x) = `+`(`-`(`*`(`/`(1, 4), `*`(`^`(`+`(`-`(`*`(4, `*`(`^`(x, 3)))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `-`(`*`(4, `*`(`^`(x, 3))))), `/`(1, 2))))), `/`(1,..." align="center" border="0"></td>
+<td width='5%' align='center'>(22)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Otra vez que para la segunda y tercera solución tenemos valores imaginarios</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Si graficamos las tres soluciones de forma conjunta tendremos</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot([rhs(SolImplicita1), rhs(SolImplicita2), rhs(SolImplicita3)], x=-2..2, color =[blue, red, green]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_33.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Cada color representa una de las soluciones para </font><font color="#000000" size="3" face="Times New Roman"><em>_C1 = 0</em></font><font color="#000000" size="3" face="Times New Roman"> para un rango de </font><font color="#000000" size="3" face="Times New Roman"><em>x</em></font><font color="#000000" size="3" face="Times New Roman"> que provee soluciones reales. </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Claramente hay una región 0 &lt; x &lt; ~1.6 en la cual se superponen las tres soluciones y hay que seleccionar cual de las soluciones es la viable. </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Esa indeterminación se elimina cuando uno escoge una solución particular, fuera de ese rango</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>CondIni := y(3)=4; SolEcDifImplicitaPart:= dsolve({EcDifImplicita, CondIni}, y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_34.gif" width="143" height="18" alt="Typesetting:-mprintslash([CondIni := y(3) = 4], [y(3) = 4])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New"> -&gt; Computing symmetries using: way = 3
+<br> -&gt; Computing symmetries using: way = 5
+<br>Methods for first order ODEs:
+<br>--- Trying classification methods ---
+<br>trying a quadrature
+<br>trying 1st order linear
+<br>trying Bernoulli
+<br>trying separable
+<br>trying inverse linear
+<br>trying homogeneous types:
+<br>trying Chini
+<br>differential order: 1; looking for linear symmetries
+<br>trying exact
+<br>&lt;- exact successful</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_35.gif" width="768" height="61" alt="Typesetting:-mprintslash([SolEcDifImplicitaPart := y(x) = `+`(`*`(`/`(1, 2), `*`(`^`(`+`(220, `-`(`*`(4, `*`(`^`(x, 3)))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `-`(`*`(114, `*`(`^`(x, 3)))), 3025), `/`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(23)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot(rhs(SolEcDifImplicitaPart), x=-10..10);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_36.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roma"><strong><em>Método de las Isoclinas</em></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">El método de las isoclinas se remonta a los orígenes de las ecuaciones diferenciales. Aparentemente es el mismo Johann Bernoulli fue quien explicó por primera vez la idea en su obra </font><font color="#000000" size="3" face="Times New Roman"><em>Modus generalis construendi omnes aequationes diferenciales primi gradus, Acta Eruditorum, noviembre de 1694</em></font><font color="#000000" size="3" face="Times New Roman"> (Citado en Tournès, D. (2016). Résolution graphique des équations différentielles pag. 8.)</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La idea es muy simple, en general, una ecuación diferencial de primer orden (explícita respecto a la derivada) se podrá representar como </font><font color="#000000" size="3" face="Times New Roman"><em>y' = f(y,x)</em></font><font color="#000000" size="3" face="Times New Roman"> . Ahora bien, el lado derecho de esa igualdad lo representa una función de dos variables, la cual tendrá un valor en cada punto $(x,y)$. Ese valor (por la igualdad que representa la ecuación diferencial) será el valor de la derivada en ese punto y el valor de la derivada en un punto, no es otra cosa que la pendiente de la recta tangente a una curva en ese punto. </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Entonces podemos construir el mapa de isoclinas para la ecuación diferencial lineal</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>EcDifLineal;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_37.gif" width="168" height="39" alt="Typesetting:-mprintslash([diff(y(x), x) = `+`(exp(x), `-`(`*`(2, `*`(x, `*`(y(x))))))], [diff(y(x), x) = `+`(exp(x), `-`(`*`(2, `*`(x, `*`(y(x))))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(24)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">de la forma</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>with(DEtools):DEplot(EcDifLineal,y(x),x=-4..4, y= -4..4);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_38.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y reconstruir algunas de las curvas integrales, vale decir aquellas curvas que tienen las lineas tangentes</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>DEplot(EcDifLineal,y(x),x=-4..4,[[0,-3],[0,-2], [0,3],[0,2]],y=-5..5);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric: entering dsolve/numeric</td>
+</tr></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_39.gif" width="131" height="27" alt="[YP[1] = `+`(exp(x), `-`(`*`(2, `*`(x, `*`(Y[1])))))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_40.gif" width="84" height="23" alt="[Y[1] = y(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_41.gif" width="131" height="27" alt="[YP[1] = `+`(exp(x), `-`(`*`(2, `*`(x, `*`(Y[1])))))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_42.gif" width="84" height="23" alt="[Y[1] = y(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_43.gif" width="131" height="27" alt="[YP[1] = `+`(exp(x), `-`(`*`(2, `*`(x, `*`(Y[1])))))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_44.gif" width="84" height="23" alt="[Y[1] = y(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_45.gif" width="131" height="27" alt="[YP[1] = `+`(exp(x), `-`(`*`(2, `*`(x, `*`(Y[1])))))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_46.gif" width="84" height="23" alt="[Y[1] = y(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_47.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Para la cuación de Bernoulli es un poco mas compleja</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>DEplot(EcDifNOLineal,g(x),x=-4..4, g= 0..10);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_48.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>DEplot(EcDifNOLineal,g(x),x=-4..4,[[1,1],[1,2],[1,3],[1,4],[1,5],[1,6], [1,7],[1,8]],g=0..10);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric: entering dsolve/numeric</td>
+</tr></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_49.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_50.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(0.25000241905466636)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(1.4498297453028626e-26)
+<br>dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(0.25000241905466636)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(1.4498297453028626e-26)
+<br>Warning, plot may be incomplete, the following errors(s) were issued:
+<br> &nbsp;&nbsp;cannot evaluate the solution further left of .25000242, probably a singularity
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_51.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_52.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(0.08578724055816335)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(2.462378437929581e-26)
+<br>dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(0.08578724055816335)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(2.462378437929581e-26)
+<br>Warning, plot may be incomplete, the following errors(s) were issued:
+<br> &nbsp;&nbsp;cannot evaluate the solution further left of .85787241e-1, probably a singularity
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_53.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_54.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(0.017949345328520508)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(4.241690816200589e-26)
+<br>dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(0.017949345328520508)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(4.241690816200589e-26)
+<br>Warning, plot may be incomplete, the following errors(s) were issued:
+<br> &nbsp;&nbsp;cannot evaluate the solution further left of .17949346e-1, probably a singularity
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_55.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_56.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_57.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_58.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(7.09568482721264e-100)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(7.853783337102679e97)
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_59.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_60.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(7.637143859880863e-100)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(2.6455015993581213e98)
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_61.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_62.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(6.873048850030775e-100)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(6.067095044385038e98)</td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_63.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_64.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(7.238188038056638e-100)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(9.481531494402608e98)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_65.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Podemos también hacer un zoom</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>DEplot(EcDifNOLineal,g(x),x=0..1.01,[[1,1],[1,2],[1,3],[1,4],[1,5],[1,6], [1,7],[1,8]],g=0..10);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric: entering dsolve/numeric</td>
+</tr></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_66.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_67.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(0.25000241905466636)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(1.4498297453028626e-26)
+<br>dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(0.25000241905466636)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(1.4498297453028626e-26)
+<br>Warning, plot may be incomplete, the following errors(s) were issued:
+<br> &nbsp;&nbsp;cannot evaluate the solution further left of .25000242, probably a singularity
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_68.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_69.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(0.08578724055816335)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(2.462378437929581e-26)
+<br>dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(0.08578724055816335)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(2.462378437929581e-26)
+<br>Warning, plot may be incomplete, the following errors(s) were issued:
+<br> &nbsp;&nbsp;cannot evaluate the solution further left of .85787241e-1, probably a singularity
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_70.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_71.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(0.017949345328520508)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(4.241690816200589e-26)
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_72.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_73.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_74.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_75.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(7.09568482721264e-100)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(7.853783337102679e97)
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_76.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_77.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(7.637143859880863e-100)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(2.6455015993581213e98)
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_78.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_79.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(6.873048850030775e-100)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(6.067095044385038e98)
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_80.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_81.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(7.238188038056638e-100)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(9.481531494402608e98)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_82.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Esta manera de explorar cualitativamente las soluciones de las ecuaciones diferenciales nos indica que hay otra soluciones para el dominio de las </font><font color="#000000" size="3" face="Times New Roman"><em>x</em></font><font color="#000000" size="3" face="Times New Roman"> negativas que no era evidente en la solución analítica </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>DEplot(EcDifNOLineal,g(x),x=-4..4,[[-1,1],[-1,2],[-1,3],[-1,4],[-1,5],[-1,6],[-1,7],[-1,8]],g=0..10);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_83.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_84.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(-0.25000241905466636)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(1.4498297453028626e-26)
+<br>dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(-0.25000241905466636)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(1.4498297453028626e-26)
+<br>Warning, plot may be incomplete, the following errors(s) were issued:
+<br> &nbsp;&nbsp;cannot evaluate the solution further right of -.25000242, probably a singularity
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_85.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_86.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(-0.08578724055816335)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(2.462378437929581e-26)
+<br>dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(-0.08578724055816335)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(2.462378437929581e-26)
+<br>Warning, plot may be incomplete, the following errors(s) were issued:
+<br> &nbsp;&nbsp;cannot evaluate the solution further right of -.85787241e-1, probably a singularity
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_87.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_88.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(-0.017949345328520508)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(4.241690816200589e-26)
+<br>dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(-0.017949345328520508)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(4.241690816200589e-26)
+<br>Warning, plot may be incomplete, the following errors(s) were issued:
+<br> &nbsp;&nbsp;cannot evaluate the solution further right of -.17949346e-1, probably a singularity
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_89.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_90.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_91.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_92.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(-7.09568482721264e-100)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(7.853783337102679e97)
+<br>dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(-7.09568482721264e-100)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(7.853783337102679e97)
+<br>Warning, plot may be incomplete, the following errors(s) were issued:
+<br> &nbsp;&nbsp;cannot evaluate the solution further right of -.70956849e-99, probably a singularity
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_93.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_94.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(-7.637143859880863e-100)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(2.6455015993581213e98)
+<br>dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(-7.637143859880863e-100)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(2.6455015993581213e98)
+<br>Warning, plot may be incomplete, the following errors(s) were issued:
+<br> &nbsp;&nbsp;cannot evaluate the solution further right of -.76371439e-99, probably a singularity
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_95.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_96.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(-6.873048850030775e-100)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(6.067095044385038e98)
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_97.gif" width="152" height="49" alt="[YP[1] = `/`(`*`(`+`(`*`(2, `*`(`^`(Y[1], `/`(1, 2)))), `-`(Y[1]))), `*`(x))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_98.gif" width="86" height="23" alt="[Y[1] = g(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(-7.238188038056638e-100)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(9.481531494402608e98)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_99.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Podemos hacer algo similar para la ecuación implícita</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>EcDifImplicita;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_100.gif" width="389" height="39" alt="Typesetting:-mprintslash([`+`(`*`(3, `*`(`^`(x, 2))), `*`(3, `*`(`^`(y(x), 2), `*`(diff(y(x), x)))), `-`(`*`(3, `*`(y(x)))), `-`(`*`(3, `*`(x, `*`(diff(y(x), x)))))) = 0], [`+`(`*`(3, `*`(`^`(x, 2))),..." align="center" border="0"></td>
+<td width='5%' align='center'>(25)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>DEplot(EcDifImplicita,y(x),x=-4..4, y= -4..4);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_101.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>DEplot(EcDifImplicita,y(x),x=-4..4,[[3,1],[3,2],[3,3],[3,4]],y=-4..4);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric: entering dsolve/numeric</td>
+</tr></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_102.gif" width="155" height="57" alt="[YP[1] = `/`(`*`(`+`(`-`(`*`(3, `*`(`^`(x, 2)))), `*`(3, `*`(Y[1])))), `*`(`+`(`*`(3, `*`(`^`(Y[1], 2))), `-`(`*`(3, `*`(x))))))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_103.gif" width="84" height="23" alt="[Y[1] = y(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(2.292967015061602)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(-1.5142535107436779)
+<br>dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(3.105307344496376)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(1.7621895123792362)
+<br>dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(3.105307344496376)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(1.7621895123792362)
+<br>dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(2.292967015061602)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(-1.5142535107436779)
+<br>Warning, plot may be incomplete, the following errors(s) were issued:
+<br> &nbsp;&nbsp;cannot evaluate the solution further right of 3.1053073, probably a singularity
+<br> &nbsp;&nbsp;cannot evaluate the solution further left of 2.2929671, probably a singularity
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_104.gif" width="155" height="57" alt="[YP[1] = `/`(`*`(`+`(`-`(`*`(3, `*`(`^`(x, 2)))), `*`(3, `*`(Y[1])))), `*`(`+`(`*`(3, `*`(`^`(Y[1], 2))), `-`(`*`(3, `*`(x))))))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_105.gif" width="84" height="23" alt="[Y[1] = y(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(3.0178667754507185)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(1.7372015499622966)
+<br>dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(3.0178667754507185)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(1.7372015499622966)
+<br>Warning, plot may be incomplete, the following errors(s) were issued:
+<br> &nbsp;&nbsp;cannot evaluate the solution further right of 3.0178667, probably a singularity
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_106.gif" width="155" height="57" alt="[YP[1] = `/`(`*`(`+`(`-`(`*`(3, `*`(`^`(x, 2)))), `*`(3, `*`(Y[1])))), `*`(`+`(`*`(3, `*`(`^`(Y[1], 2))), `-`(`*`(3, `*`(x))))))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_107.gif" width="84" height="23" alt="[Y[1] = y(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(3.408026258096188)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(1.8460849808988848)
+<br>dsolve/numeric/SC/IVPrun: error - integration terminated
+<br>dsolve/numeric/SC/IVPrun: t = &nbsp;HFloat(3.408026258096188)
+<br>dsolve/numeric/SC/IVPrun: y1 = &nbsp;HFloat(1.8460849808988848)
+<br>Warning, plot may be incomplete, the following errors(s) were issued:
+<br> &nbsp;&nbsp;cannot evaluate the solution further right of 3.4080262, probably a singularity
+<br>dsolve/numeric: entering dsolve/numeric
+<br>DEtools/convertsys: converted to first-order system Y'(x) = f(x,Y(x)) &nbsp;&nbsp;&nbsp;namely (with Y' represented by YP)</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_108.gif" width="155" height="57" alt="[YP[1] = `/`(`*`(`+`(`-`(`*`(3, `*`(`^`(x, 2)))), `*`(3, `*`(Y[1])))), `*`(`+`(`*`(3, `*`(`^`(Y[1], 2))), `-`(`*`(3, `*`(x))))))]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">DEtools/convertsys: correspondence between Y[i] names and original functions:</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_109.gif" width="84" height="23" alt="[Y[1] = y(x)]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_110.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">luego de explorarla cualitativamente con el método de las isoclinas uno puede resolverla analítica o numéricamente con mas conscienca de lo que está buscando</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>CondIni := y(3)=4; SolEcDifImplicitaPart34:= dsolve({EcDifImplicita, CondIni}, y(x)): </td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_111.gif" width="143" height="18" alt="Typesetting:-mprintslash([CondIni := y(3) = 4], [y(3) = 4])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New"> -&gt; Computing symmetries using: way = 3
+<br> -&gt; Computing symmetries using: way = 5
+<br>Methods for first order ODEs:
+<br>--- Trying classification methods ---
+<br>trying a quadrature
+<br>trying 1st order linear
+<br>trying Bernoulli
+<br>trying separable
+<br>trying inverse linear
+<br>trying homogeneous types:
+<br>trying Chini
+<br>differential order: 1; looking for linear symmetries
+<br>trying exact
+<br>&lt;- exact successful</td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>CondIni := y(3)=3: SolEcDifImplicitaPart33:= dsolve({EcDifImplicita, CondIni}, y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New"> -&gt; Computing symmetries using: way = 3
+<br> -&gt; Computing symmetries using: way = 5
+<br>Methods for first order ODEs:
+<br>--- Trying classification methods ---
+<br>trying a quadrature
+<br>trying 1st order linear
+<br>trying Bernoulli
+<br>trying separable
+<br>trying inverse linear
+<br>trying homogeneous types:
+<br>trying Chini
+<br>differential order: 1; looking for linear symmetries
+<br>trying exact
+<br>&lt;- exact successful</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_112.gif" width="768" height="62" alt="Typesetting:-mprintslash([SolEcDifImplicitaPart33 := y(x) = `+`(`*`(`/`(1, 2), `*`(`^`(`+`(108, `-`(`*`(4, `*`(`^`(x, 3)))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `-`(`*`(58, `*`(`^`(x, 3)))), 729), `/`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(26)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>CondIni := y(3)=2: SolEcDifImplicitaPart32:= dsolve({EcDifImplicita, CondIni}, y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New"> -&gt; Computing symmetries using: way = 3
+<br> -&gt; Computing symmetries using: way = 5
+<br>Methods for first order ODEs:
+<br>--- Trying classification methods ---
+<br>trying a quadrature
+<br>trying 1st order linear
+<br>trying Bernoulli
+<br>trying separable
+<br>trying inverse linear
+<br>trying homogeneous types:
+<br>trying Chini
+<br>differential order: 1; looking for linear symmetries
+<br>trying exact
+<br>&lt;- exact successful</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_113.gif" width="768" height="64" alt="Typesetting:-mprintslash([SolEcDifImplicitaPart32 := y(x) = `+`(`*`(`/`(1, 2), `*`(`^`(`+`(68, `-`(`*`(4, `*`(`^`(x, 3)))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `-`(`*`(38, `*`(`^`(x, 3)))), 289), `/`(1..." align="center" border="0"></td>
+<td width='5%' align='center'>(27)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>CondIni := y(3)=1: SolEcDifImplicitaPart31:= dsolve({EcDifImplicita, CondIni}, y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New"> -&gt; Computing symmetries using: way = 3
+<br> -&gt; Computing symmetries using: way = 5
+<br>Methods for first order ODEs:
+<br>--- Trying classification methods ---
+<br>trying a quadrature
+<br>trying 1st order linear
+<br>trying Bernoulli
+<br>trying separable
+<br>trying inverse linear
+<br>trying homogeneous types:
+<br>trying Chini
+<br>differential order: 1; looking for linear symmetries
+<br>trying exact
+<br>&lt;- exact successful</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_114.gif" width="768" height="50" alt="Typesetting:-mprintslash([SolEcDifImplicitaPart31 := y(x) = `+`(`-`(`*`(`/`(1, 4), `*`(`^`(`+`(76, `-`(`*`(4, `*`(`^`(x, 3)))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `-`(`*`(42, `*`(`^`(x, 3)))), 361), `..." align="center" border="0"><br><img src="images/EcDifOrdinariasIntro_115.gif" width="768" height="66" alt="Typesetting:-mprintslash([SolEcDifImplicitaPart31 := y(x) = `+`(`-`(`*`(`/`(1, 4), `*`(`^`(`+`(76, `-`(`*`(4, `*`(`^`(x, 3)))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `-`(`*`(42, `*`(`^`(x, 3)))), 361), `..." align="center" border="0"></td>
+<td width='5%' align='center'>(28)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>CondIni := y(3)=-2: SolEcDifImplicitaPart3_2:= dsolve({EcDifImplicita, CondIni}, y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New"> -&gt; Computing symmetries using: way = 3
+<br> -&gt; Computing symmetries using: way = 5
+<br>Methods for first order ODEs:
+<br>--- Trying classification methods ---
+<br>trying a quadrature
+<br>trying 1st order linear
+<br>trying Bernoulli
+<br>trying separable
+<br>trying inverse linear
+<br>trying homogeneous types:
+<br>trying Chini
+<br>differential order: 1; looking for linear symmetries
+<br>trying exact
+<br>&lt;- exact successful</td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_116.gif" width="768" height="50" alt="Typesetting:-mprintslash([SolEcDifImplicitaPart3_2 := y(x) = `+`(`-`(`*`(`/`(1, 4), `*`(`^`(`+`(148, `-`(`*`(4, `*`(`^`(x, 3)))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `-`(`*`(78, `*`(`^`(x, 3)))), 1369)..." align="center" border="0"><br><img src="images/EcDifOrdinariasIntro_117.gif" width="768" height="66" alt="Typesetting:-mprintslash([SolEcDifImplicitaPart3_2 := y(x) = `+`(`-`(`*`(`/`(1, 4), `*`(`^`(`+`(148, `-`(`*`(4, `*`(`^`(x, 3)))), `*`(4, `*`(`^`(`+`(`*`(`^`(x, 6)), `-`(`*`(78, `*`(`^`(x, 3)))), 1369)..." align="center" border="0"></td>
+<td width='5%' align='center'>(29)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>CondIni := y(1)=3: SolEcDifImplicitaPart13:= dsolve({EcDifImplicita, CondIni}, y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot([rhs(SolEcDifImplicitaPart14),rhs(SolEcDifImplicitaPart33),rhs(SolEcDifImplicitaPart32),rhs(SolEcDifImplicitaPart31),rhs(SolEcDifImplicitaPart3_2)], x=-5..5, color=[red, orange, green, blue, black]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EcDifOrdinariasIntro_118.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</body>
+</html>
