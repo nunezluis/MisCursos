@@ -6,10 +6,9 @@
 ## Clase 1. Los vectores de siempre 
 + **Objetivos de la clase**
 
-   Esta clase tiene varios objetivos. Primero incorporar tres herramientas profesionales, dos de ellas colaborativas. [LATEX](https://en.wikipedia.org/wiki/LaTeX), [MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software)) y los repositorios [git](http://github.com/). LATEX es un editor de textos científicos de calidad profesional que los Físicos utilizamos cotidianamente. En la actualidad existen plataformas como [overleaf](http://overleaf.com/) que permite realizar la edición, de textos en linea de forma colaborativa. MAXIMA es un manipulador simbólico del dominio público (con licencia GNU y [disponible para variados sistemas operativos](http://maxima.sourceforge.net)) que falicita complejas operaciones matemáticas (integración, derivación, algebra lineal, ecuaciones diferenciales, entre otras ) tanto analítica como numéricamente.
+   Esta clase tiene varios objetivos. Primero incorporar tres herramientas profesionales, dos de ellas colaborativas. [LATEX](https://en.wikipedia.org/wiki/LaTeX), [MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software)) y los repositorios [git](http://github.com/).
    
-   El segunto objetivo es utilizar la excusas de los vectores que uds han visto desde siempre e introduccir conceptos como las operaciones que definen un espacio vectorial, el concepto de independencia lineal y los productos (vectorial y escalar) que se definen entre vectores cartesianos.
-   + La primera excusa es la utilización de herram
+   El segunto objetivo es utilizar la excusa del conocimiento previo vectores cartesianos para introduccir conceptos fundamentales que utilizaremos a partir de la tercera clase de este curso. Entre estos conceptos fundamentales podemos mencionar: las operaciones que definen un espacio vectorial, el concepto de independencia lineal y los distintos productos (vectorial y escalar) que se definen entre vectores cartesianos.
 + **Actividad antes de clase** 
    1. Instalar y configurar MAXIMA
    2. Registrarse en overleaf
