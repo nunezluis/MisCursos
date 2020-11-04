@@ -29,25 +29,22 @@
 <a name="Clase5"></a>
 ### Clase 5. Dependencia e independencia líneal y bases ortogonales  
 + **Actividad antes de clase** 
-   1. Estudiar puntos de las notas de clase
-   2. Rehacer los ejercicios resueltos: 
+   1. Estudiar el punto 2.3 de las notas de clase
+   2. Rehacer el ejercicio resuelto: 2.3.6 
 + **Evaluación taller de problemas 2**    
 + **Taller de problemas 3 (evaluación en la clase 7)**
-   1. XXX
-   2. YYY 
+   1. Desarrollar los problemas 5 y 6 del punto 2.3.8
 + **Materiales de apoyo**
    + [Video](https://youtu.be/TVwa7wJ0N9I) y [presentación de variedades lineales](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_3IndependeLineal.pdf) 
  
-   
 <a name="Clase6"></a>   
 ### Clase 6. Aproximación de funciones y bases ortogonales  
 + **Actividad antes de clase** 
-   1. Estudiar puntos de las notas de clase
-   2. Rehacer los ejercicios resueltos: 
+   1. Estudiar el punto 2.4 de las notas de clase
+   2. Rehacer los ejercicios resueltos: Mínimos Cuadrados y Aproximación Polinomial 
 + **Evaluación Asignación 1**     
-+ **Taller de problemas 3 (evaluación en la clase 8)**
-   1. XXX
-   2. YYY 
++ **Taller de problemas 3 (evaluación en la clase 7)**
+   1. Desarrollar el problema 3 de la sección 2.4.7
 + **Asignación 2 (evaluación en la clase 11)** ZZZ
 + **Materiales de apoyo**
    + [Video](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_4AproximacionFunciones.pdf)
