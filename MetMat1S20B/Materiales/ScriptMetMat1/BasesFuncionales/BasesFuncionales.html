@@ -1,0 +1,1773 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>BasesFuncionales.html</title>
+<!-- Created by Maple 2018.0, Mac OS X -->
+</head>
+<a href="BasesFuncionales.html#MapleAutoBookmark1">BasesFuncionales.mw</a>
+<ul>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><font color="#000000" size="5" face="Times New Roma"><strong>Bases para un espacio de funciones</strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman">Luis A. Núñez</font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><em>Escuela de Física</em></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><em>Universidad Industrial de Santander</em></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"></font><font color="#000000" size="3" face="Times New Roman"><em>Bucaramanga Colombia</em></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"></font><font color="#000000" size="3" face="Times New Roman"><em>Actualizado Noviembre2020</em></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="4" face="Times New Roma"><strong>Expansión por series de Taylor. Una base de monomios en un espacio de polinomios</strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>restart: with(plots): </td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Consideremos una función sencilla</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>f := x -&gt; sqrt(1-x^2)*sin(3*x);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_1.gif" width="191" height="27" alt="Typesetting:-mprintslash([f := proc (x) options operator, arrow; `*`(sqrt(`+`(1, `-`(`*`(`^`(x, 2))))), `*`(sin(`+`(`*`(3, `*`(x)))))) end proc], [proc (x) options operator, arrow; `*`(sqrt(`+`(1, `-`..." align="center" border="0"></td>
+<td width='5%' align='center'>(1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot(f(x),x=-1..1, legend=["f"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/BasesFuncionales_2.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y recordemos la aproximación por serie de Taylor. Fijemos el mayor órden del monomio en la aproximación</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>n:=7;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_3.gif" width="55" height="18" alt="Typesetting:-mprintslash([n := 7], [7])" align="center" border="0"></td>
+<td width='5%' align='center'>(2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>Taylor[n]:= taylor(f(x),x=0,n);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_4.gif" width="268" height="39" alt="Typesetting:-mprintslash([Taylor[7] := series(`+`(`*`(3, `*`(x)), `-`(`*`(6, `*`(`^`(x, 3)))), `*`(`/`(39, 10), `*`(`^`(x, 5))))+O(`^`(x, 7)),x,7)], [series(`+`(`*`(3, `*`(x)), `-`(`*`(6, `*`(`^`(x, 3..." align="center" border="0"></td>
+<td width='5%' align='center'>(3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Nótese que fijamos el orden de la aproximación es </font><font color="#000000" size="3" face="Times New Roman"><em>n-1</em></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>fAproxTaylor[n]:=convert(Taylor[n],polynom):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La serie de Taylor no es más que una expansión en una base de monomios en la cual conocemos los coeficientes y sabemos como generarlos. Si graficamos la función y su aproximación vemos, que mejora cuando aumentamos el orden del polinomio</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot([f(x),fAproxTaylor[n]],x=-1..1, legend=["f","fAproxTaylor"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/BasesFuncionales_5.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>nn:=9;Taylor2[nn]:= taylor(f(x),x=0,nn);fAproxTaylor2[nn]:=convert(Taylor2[nn],polynom):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_6.gif" width="62" height="18" alt="Typesetting:-mprintslash([nn := 9], [9])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_7.gif" width="337" height="39" alt="Typesetting:-mprintslash([Taylor2[9] := series(`+`(`*`(3, `*`(x)), `-`(`*`(6, `*`(`^`(x, 3)))), `*`(`/`(39, 10), `*`(`^`(x, 5))), `-`(`*`(`/`(15, 14), `*`(`^`(x, 7)))))+O(`^`(x, 9)),x,9)], [series(`+`..." align="center" border="0"></td>
+<td width='5%' align='center'>(4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot([f(x),fAproxTaylor[n],fAproxTaylor2[nn]],x=-1..1, legend=["f","fAproxTaylor", "fAproxTaylor2"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/BasesFuncionales_8.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Como siempre el error de la aproximación será la norma de la resta de los dos vectores: &nbsp;la función original y la función aproximada por series de Taylor. Para el producto interno &lt; f | g &gt; = ∫</font><font color="#000000" size="3" face="Times New Roman"><sup>1</sup></font><font color="#000000" size="3" face="Times New Roman"><sub>-1</sub></font><font color="#000000" size="3" face="Times New Roman"> f(x) g(x) </font><font color="#000000" size="3" face="Times New Roman"><em>d</em></font><font color="#000000" size="3" face="Times New Roman">x el error será </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">&lt; f &nbsp;-fAprox| &nbsp;f -fAprox &gt; = ∫</font><font color="#000000" size="3" face="Times New Roman"><sup>1</sup></font><font color="#000000" size="3" face="Times New Roman"><sub>-1</sub></font><font color="#000000" size="3" face="Times New Roman"> &nbsp;(f -fAprox)^2 </font><font color="#000000" size="3" face="Times New Roman"><em>d</em></font><font color="#000000" size="3" face="Times New Roman">x  </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Esto es para el caso de n= </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>n;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_9.gif" width="21" height="18" alt="7" align="center" border="0"></td>
+<td width='5%' align='center'>(5)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>ErrorTaylor := sqrt(int((f(x)-fAproxTaylor[n])^2,x=-1..1)); evalf(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_10.gif" width="768" height="14" alt="Typesetting:-mprintslash([ErrorTaylor := `+`(`*`(`/`(1, 6930), `*`(`^`(`+`(`*`(8004150, `*`(`^`(Pi, `/`(1, 2)), `*`(`+`(`/`(`*`(4), `*`(`^`(Pi, `/`(1, 2)))), `/`(`*`(`/`(1, 3), `*`(cos(6))), `*`(`^`(P..." align="center" border="0"><br><img src="images/BasesFuncionales_11.gif" width="768" height="36" alt="Typesetting:-mprintslash([ErrorTaylor := `+`(`*`(`/`(1, 6930), `*`(`^`(`+`(`*`(8004150, `*`(`^`(Pi, `/`(1, 2)), `*`(`+`(`/`(`*`(4), `*`(`^`(Pi, `/`(1, 2)))), `/`(`*`(`/`(1, 3), `*`(cos(6))), `*`(`^`(P..." align="center" border="0"><br><img src="images/BasesFuncionales_12.gif" width="768" height="43" alt="Typesetting:-mprintslash([ErrorTaylor := `+`(`*`(`/`(1, 6930), `*`(`^`(`+`(`*`(8004150, `*`(`^`(Pi, `/`(1, 2)), `*`(`+`(`/`(`*`(4), `*`(`^`(Pi, `/`(1, 2)))), `/`(`*`(`/`(1, 3), `*`(cos(6))), `*`(`^`(P..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_13.gif" width="103" height="18" alt=".3330194739" align="center" border="0"></td>
+<td width='5%' align='center'>(6)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y para el caso de </font><font color="#000000" size="3" face="Times New Roman"><em>n</em></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>nn;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_14.gif" width="21" height="18" alt="9" align="center" border="0"></td>
+<td width='5%' align='center'>(7)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>ErrorTaylor2 := sqrt(int((f(x)-fAproxTaylor2[nn])^2,x=-1..1)); evalf(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_15.gif" width="768" height="14" alt="Typesetting:-mprintslash([ErrorTaylor2 := `+`(`*`(`/`(1, 20790), `*`(`^`(`+`(308314512, `*`(72037350, `*`(`^`(Pi, `/`(1, 2)), `*`(`+`(`/`(`*`(4), `*`(`^`(Pi, `/`(1, 2)))), `/`(`*`(`/`(1, 3), `*`(cos(6..." align="center" border="0"><br><img src="images/BasesFuncionales_16.gif" width="768" height="36" alt="Typesetting:-mprintslash([ErrorTaylor2 := `+`(`*`(`/`(1, 20790), `*`(`^`(`+`(308314512, `*`(72037350, `*`(`^`(Pi, `/`(1, 2)), `*`(`+`(`/`(`*`(4), `*`(`^`(Pi, `/`(1, 2)))), `/`(`*`(`/`(1, 3), `*`(cos(6..." align="center" border="0"><br><img src="images/BasesFuncionales_17.gif" width="768" height="30" alt="Typesetting:-mprintslash([ErrorTaylor2 := `+`(`*`(`/`(1, 20790), `*`(`^`(`+`(308314512, `*`(72037350, `*`(`^`(Pi, `/`(1, 2)), `*`(`+`(`/`(`*`(4), `*`(`^`(Pi, `/`(1, 2)))), `/`(`*`(`/`(1, 3), `*`(cos(6..." align="center" border="0"><br><img src="images/BasesFuncionales_18.gif" width="768" height="37" alt="Typesetting:-mprintslash([ErrorTaylor2 := `+`(`*`(`/`(1, 20790), `*`(`^`(`+`(308314512, `*`(72037350, `*`(`^`(Pi, `/`(1, 2)), `*`(`+`(`/`(`*`(4), `*`(`^`(Pi, `/`(1, 2)))), `/`(`*`(`/`(1, 3), `*`(cos(6..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_19.gif" width="110" height="18" alt="0.5870966633e-1" align="center" border="0"></td>
+<td width='5%' align='center'>(8)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Claramente, para este caso el error disminuye un órden de magnitud al aumetar un orden en la aproximación. En ambos casos las desviaciones ocurren en los extremos de la función</font>&nbsp;</p>
+<p align="center"><font color="#000000" size="4" face="Times New Roma"><strong>Taylor (la base de monomios) no es ortogonal</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Para el producto interno &lt; f | g &gt; = ∫</font><font color="#000000" size="3" face="Times New Roman"><sup>1</sup></font><font color="#000000" size="3" face="Times New Roman"><sub>-1</sub></font><font color="#000000" size="3" face="Times New Roman"> f(x) g(x) </font><font color="#000000" size="3" face="Times New Roman"><em>d</em></font><font color="#000000" size="3" face="Times New Roman">x &nbsp;esta base de monomios no es ortogonal &nbsp;&nbsp;</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>Int(x^l*x^m,x=-1..1)=int(x^l*x^m,x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_20.gif" width="199" height="46" alt="Typesetting:-mprintslash([Int(`*`(`^`(x, l), `*`(`^`(x, m))), x = -1 .. 1) = `/`(`*`(`+`(`^`(-1, `+`(l, m)), 1)), `*`(`+`(l, m, 1)))], [Int(`*`(`^`(x, l), `*`(`^`(x, m))), x = -1 .. 1) = `/`(`*`(`+`(`..." align="center" border="0"></td>
+<td width='5%' align='center'>(9)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Miren el caso particular para </font><font color="#000000" size="3" face="Times New Roman"><em>l = 14</em></font><font color="#000000" size="3" face="Times New Roman"> y </font><font color="#000000" size="3" face="Times New Roman"><em>m = 28</em></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>Int(x^l*x^m,x=-1..1)=int(x^l*x^m,x=-1..1);
+<br>Prodintern:=int(x^l*x^m,x=-1..1);subs({l=14,m=28},Prodintern);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_21.gif" width="199" height="46" alt="Typesetting:-mprintslash([Int(`*`(`^`(x, l), `*`(`^`(x, m))), x = -1 .. 1) = `/`(`*`(`+`(`^`(-1, `+`(l, m)), 1)), `*`(`+`(l, m, 1)))], [Int(`*`(`^`(x, l), `*`(`^`(x, m))), x = -1 .. 1) = `/`(`*`(`+`(`..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_22.gif" width="208" height="43" alt="Typesetting:-mprintslash([Prodintern := `/`(`*`(`+`(`^`(-1, `+`(l, m)), 1)), `*`(`+`(l, m, 1)))], [`/`(`*`(`+`(`^`(-1, `+`(l, m)), 1)), `*`(`+`(l, m, 1)))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_23.gif" width="36" height="39" alt="`/`(2, 43)" align="center" border="0"></td>
+<td width='5%' align='center'>(10)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="4" face="Times New Roman"><strong>Ortogonalización de la base de monomios</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Supongamos que ahora ortogonalizamos esa base de monomios <img src="images/BasesFuncionales_24.gif" width="164" height="22" alt="{1, x, `*`(`^`(x, 2)), `*`(`^`(x, 3)), `*`(`^`(x, 4)), `*`(`^`(x, 5)), `*`(`^`(x, 6)) .. ()}" align="center" border="0"> mediante del procedimiento de Gram Schmidt. Podemos construir los coeficientes a partir de la definición de producto interno &lt; f | g &gt; = ∫</font><font color="#000000" size="3" face="Times New Roman"><sup>1</sup></font><font color="#000000" size="3" face="Times New Roman"><sub>-1</sub></font><font color="#000000" size="3" face="Times New Roman"> f(x) g(x) </font><font color="#000000" size="3" face="Times New Roman"><em>d</em></font><font color="#000000" size="3" face="Times New Roman">x</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Para ello almacenamos en un arreglo la base de monomios que es, en general, la base "oblicua" &nbsp;</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>KK := n-2;
+<br>for k from 0 to KK do &nbsp;BaseOblic[k]:= x^k &nbsp;end do;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_25.gif" width="68" height="18" alt="Typesetting:-mprintslash([KK := 5], [5])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_26.gif" width="116" height="23" alt="Typesetting:-mprintslash([BaseOblic[0] := 1], [1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_27.gif" width="114" height="23" alt="Typesetting:-mprintslash([BaseOblic[1] := x], [x])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_28.gif" width="120" height="27" alt="Typesetting:-mprintslash([BaseOblic[2] := `*`(`^`(x, 2))], [`*`(`^`(x, 2))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_29.gif" width="120" height="27" alt="Typesetting:-mprintslash([BaseOblic[3] := `*`(`^`(x, 3))], [`*`(`^`(x, 3))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_30.gif" width="120" height="27" alt="Typesetting:-mprintslash([BaseOblic[4] := `*`(`^`(x, 4))], [`*`(`^`(x, 4))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_31.gif" width="120" height="27" alt="Typesetting:-mprintslash([BaseOblic[5] := `*`(`^`(x, 5))], [`*`(`^`(x, 5))])" align="center" border="0"></td>
+<td width='5%' align='center'>(11)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y luego ortogonalizamos mediante el procedimiento de &nbsp;Gram-Schmidt para obtener </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>BaseOrtog[0]:= BaseOblic[0];
+<br>BaseOrtog[1] := BaseOblic[1]-(simplify(int(BaseOrtog[0]*BaseOblic[1],x=-1..1)/int(BaseOrtog[0]^2,x=-1..1) ))*BaseOrtog[0];
+<br>BaseOrtog[2] := BaseOblic[2]-(simplify(int(BaseOrtog[1]*BaseOblic[2],x=-1..1)/int(BaseOrtog[1]^2,x=-1..1) ))*BaseOrtog[1] 
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-(simplify(int(BaseOrtog[0]*BaseOblic[2],x=-1..1)/int(BaseOrtog[0]^2,x=-1..1) ))*BaseOrtog[0];
+<br>BaseOrtog[3] := BaseOblic[3]-(simplify(int(BaseOrtog[2]*BaseOblic[3],x=-1..1)/int(BaseOrtog[2]^2,x=-1..1) ))*BaseOrtog[2]
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-(simplify(int(BaseOrtog[1]*BaseOblic[3],x=-1..1)/int(BaseOrtog[1]^2,x=-1..1) ))*BaseOrtog[1] 
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-(simplify(int(BaseOrtog[0]*BaseOblic[3],x=-1..1)/int(BaseOrtog[0]^2,x=-1..1) ))*BaseOrtog[0];</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_32.gif" width="118" height="23" alt="Typesetting:-mprintslash([BaseOrtog[0] := 1], [1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_33.gif" width="117" height="23" alt="Typesetting:-mprintslash([BaseOrtog[1] := x], [x])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_34.gif" width="160" height="39" alt="Typesetting:-mprintslash([BaseOrtog[2] := `+`(`*`(`^`(x, 2)), `-`(`/`(1, 3)))], [`+`(`*`(`^`(x, 2)), `-`(`/`(1, 3)))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_35.gif" width="170" height="39" alt="Typesetting:-mprintslash([BaseOrtog[3] := `+`(`*`(`^`(x, 3)), `-`(`*`(`/`(3, 5), `*`(x))))], [`+`(`*`(`^`(x, 3)), `-`(`*`(`/`(3, 5), `*`(x))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(12)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Pero la gracia del método de Gram-Schmidt es que es algorítmico y se puede programar. Por lo tanto es más inteligente hacer </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>BaseOrtog[0]:= BaseOblic[0];
+<br>for u from 1 to KK do &nbsp;
+<br> &nbsp;BaseOrtog[u] := BaseOblic[u] -add( (simplify(int(BaseOrtog[v-1]*BaseOblic[u],x=-1..1)/int(BaseOrtog[v-1]^2,x=-1..1) ))*BaseOrtog[v-1], v=1..u) 
+<br>end do;
+<br></td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_36.gif" width="118" height="23" alt="Typesetting:-mprintslash([BaseOrtog[0] := 1], [1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_37.gif" width="117" height="23" alt="Typesetting:-mprintslash([BaseOrtog[1] := x], [x])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_38.gif" width="160" height="39" alt="Typesetting:-mprintslash([BaseOrtog[2] := `+`(`*`(`^`(x, 2)), `-`(`/`(1, 3)))], [`+`(`*`(`^`(x, 2)), `-`(`/`(1, 3)))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_39.gif" width="170" height="39" alt="Typesetting:-mprintslash([BaseOrtog[3] := `+`(`*`(`^`(x, 3)), `-`(`*`(`/`(3, 5), `*`(x))))], [`+`(`*`(`^`(x, 3)), `-`(`*`(`/`(3, 5), `*`(x))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_40.gif" width="221" height="39" alt="Typesetting:-mprintslash([BaseOrtog[4] := `+`(`*`(`^`(x, 4)), `/`(3, 35), `-`(`*`(`/`(6, 7), `*`(`^`(x, 2)))))], [`+`(`*`(`^`(x, 4)), `/`(3, 35), `-`(`*`(`/`(6, 7), `*`(`^`(x, 2)))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_41.gif" width="239" height="39" alt="Typesetting:-mprintslash([BaseOrtog[5] := `+`(`*`(`^`(x, 5)), `*`(`/`(5, 21), `*`(x)), `-`(`*`(`/`(10, 9), `*`(`^`(x, 3)))))], [`+`(`*`(`^`(x, 5)), `*`(`/`(5, 21), `*`(x)), `-`(`*`(`/`(10, 9), `*`(`^`..." align="center" border="0"></td>
+<td width='5%' align='center'>(13)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Por construcción serán ortogonales. Miren</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>int(BaseOrtog[0]*BaseOrtog[1],x=-1..1);
+<br>int(BaseOrtog[1]*BaseOrtog[2],x=-1..1);
+<br>int(BaseOrtog[1]*BaseOrtog[3],x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_42.gif" width="21" height="18" alt="0" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_43.gif" width="21" height="18" alt="0" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_44.gif" width="21" height="18" alt="0" align="center" border="0"></td>
+<td width='5%' align='center'>(14)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Son verdaderamente ortogonales</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y podemos expresar la función f como combinación lineal de esta base ortogonal | f &gt; = <img src="images/BasesFuncionales_45.gif" width="417" height="23" alt="" align="center" border="0">Donde, gracias a los <img src="images/BasesFuncionales_46.gif" width="57" height="23" alt="" align="center" border="0">son ortogonales, los coeficientes se pueden calcular facilmente y uno por uno como &nbsp;<img src="images/BasesFuncionales_47.gif" width="153" height="49" alt="C__n = `/`(`*`(`<|>`(f, P__n)), `*`(`<|>`(P__n, P__n)))" align="center" border="0">Por lo tanto las proyecciones a lo largo de cada uno de los vectores base serán </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>BaseOrtog[0]; C[0]:=Int(f(x)*BaseOrtog[0],x=-1..1)/Int(BaseOrtog[0]^2,x=-1..1) = int(f(x)*BaseOrtog[0],x=-1..1)/int(BaseOrtog[0]^2,x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_48.gif" width="21" height="18" alt="1" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_49.gif" width="254" height="94" alt="Typesetting:-mprintslash([C[0] := `/`(`*`(Int(`*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(x)))))), x = -1 .. 1)), `*`(Int(1, x = -1 .. 1))) = 0], [`/`(`*`(Int(`*`(`^`(`+`(`..." align="center" border="0"></td>
+<td width='5%' align='center'>(15)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>BaseOrtog[1]; C[1]:=Int(f(x)*BaseOrtog[1],x=-1..1)/Int(BaseOrtog[1]^2,x=-1..1) =int(f(x)*BaseOrtog[1],x=-1..1)/int(BaseOrtog[1]^2,x=-1..1);evalf(rhs(%));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_50.gif" width="20" height="18" alt="x" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_51.gif" width="523" height="94" alt="Typesetting:-mprintslash([C[1] := `/`(`*`(Int(`*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(x)))), `*`(x))), x = -1 .. 1)), `*`(Int(`*`(`^`(x, 2)), x = -1 .. 1))) = `+`(`*`(`..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_52.gif" width="103" height="18" alt=".7635503665" align="center" border="0"></td>
+<td width='5%' align='center'>(16)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>BaseOrtog[2]; C[2]:=Int(f(x)*BaseOrtog[2],x=-1..1)/Int(BaseOrtog[2]^2,x=-1..1)=int(f(x)*BaseOrtog[2],x=-1..1)/int(BaseOrtog[2]^2,x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_53.gif" width="62" height="39" alt="`+`(`*`(`^`(x, 2)), `-`(`/`(1, 3)))" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_54.gif" width="328" height="113" alt="Typesetting:-mprintslash([C[2] := `/`(`*`(Int(`*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(x)))), `*`(`+`(`*`(`^`(x, 2)), `-`(`/`(1, 3)))))), x = -1 .. 1)), `*`(Int(`*`(`^`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(17)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Otra vez la hacemos de forma algorítmica y para ello almacenamos los coeficientes en un arreglo y los calculamos</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>for u from 0 to KK do
+<br>C[u] := evalf(simplify( int(f(x)*BaseOrtog[u],x=-1..1)/int(BaseOrtog[u]^2,x=-1..1) )) 
+<br>end do;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_55.gif" width="66" height="23" alt="Typesetting:-mprintslash([C[0] := 0.], [0.])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_56.gif" width="144" height="23" alt="Typesetting:-mprintslash([C[1] := .7635503670], [.7635503670])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_57.gif" width="66" height="23" alt="Typesetting:-mprintslash([C[2] := 0.], [0.])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_58.gif" width="151" height="23" alt="Typesetting:-mprintslash([C[3] := -2.625793952], [-2.625793952])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_59.gif" width="66" height="23" alt="Typesetting:-mprintslash([C[4] := 0.], [0.])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_60.gif" width="136" height="23" alt="Typesetting:-mprintslash([C[5] := 2.521874335], [2.521874335])" align="center" border="0"></td>
+<td width='5%' align='center'>(18)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y la combinación lineal será | f &gt; = <img src="images/BasesFuncionales_61.gif" width="417" height="23" alt="" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>fAproxOrto1 := add(evalf(C[u])*BaseOrtog[u], u=0..KK);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_62.gif" width="447" height="22" alt="Typesetting:-mprintslash([fAproxOrto1 := `+`(`*`(2.939473008, `*`(x)), `-`(`*`(5.427876546, `*`(`^`(x, 3)))), `*`(2.521874335, `*`(`^`(x, 5))))], [`+`(`*`(2.939473008, `*`(x)), `-`(`*`(5.427876546, `*..." align="center" border="0"></td>
+<td width='5%' align='center'>(19)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y graficamos esta aproximación con la función original</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot([f(x),fAproxTaylor[n],simplify(fAproxOrto1)],x=-1..1, legend=["f","fAproxTaylor","fAproxOrtog" ]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/BasesFuncionales_63.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y los errores serán</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">En Taylor</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>"n"=n;"error Taylor "=evalf(ErrorTaylor); </td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_64.gif" width="56" height="18" alt="n" = 7" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_65.gif" width="211" height="18" alt="error Taylor " = .3330194739" align="center" border="0"></td>
+<td width='5%' align='center'>(20)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>"n"=nn;"error Taylor "=evalf(ErrorTaylor2); </td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_66.gif" width="56" height="18" alt="n" = 9" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_67.gif" width="218" height="18" alt="error Taylor " = 0.5870966633e-1" align="center" border="0"></td>
+<td width='5%' align='center'>(21)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">En los polinomios de Legendre (polinomios ortogonalizados)</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>"n"=KK; ErrorOrto1 := evalf(sqrt(int((f(x)-simplify(fAproxOrto1))^2,x=-1..1)));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_68.gif" width="56" height="18" alt="n" = 5" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_69.gif" width="217" height="18" alt="Typesetting:-mprintslash([ErrorOrto1 := 0.9348849336e-2], [0.9348849336e-2])" align="center" border="0"></td>
+<td width='5%' align='center'>(22)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">la expansión en término de funciones ortogonales es mucho mas precisa. En particular 10 veces mas precisa.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="4" face="Times New Roman"></font><font color="#000000" size="4" face="Times New Roman"><strong>¿La expansión en Taylor es la única expansión en una base oblicua de monomios?</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Retomamos la base oblicua de monomio y hacemos la &nbsp;expansión de la función como combinación lineal en esa base. Es decir, no utilizamos la receta de Taylor sino que buscamos los coeficientes a partir de proyecciones y resolver un sistema de ecuaciones</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>fAproxObli := add(Cmono[u]*BaseOblic[u], u=0..KK);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_70.gif" width="577" height="27" alt="Typesetting:-mprintslash([fAproxObli := `+`(`*`(`^`(x, 5), `*`(Cmono[5])), `*`(`^`(x, 4), `*`(Cmono[4])), `*`(`^`(x, 3), `*`(Cmono[3])), `*`(`^`(x, 2), `*`(Cmono[2])), `*`(x, `*`(Cmono[1])), Cmono[0])..." align="center" border="0"></td>
+<td width='5%' align='center'>(23)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y proyectando con cada uno de los elementos de la base se obtiene el sistema de ecuaciones algebráicas, donde los coeficientes serán las incógnitas</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>for u from 0 to KK do
+<br>EcuacMono[u] := (int(f(x)*BaseOblic[u],x=-1..1,numeric)) = add(Cmono[v]*evalf(int(BaseOblic[v]*BaseOblic[u],x=-1..1,numeric)), v=0..KK);
+<br>end do;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_71.gif" width="536" height="23" alt="Typesetting:-mprintslash([EcuacMono[0] := 0. = `+`(`*`(2., `*`(Cmono[0])), `*`(.6666666667, `*`(Cmono[2])), `*`(.4000000000, `*`(Cmono[4])))], [0. = `+`(`*`(2., `*`(Cmono[0])), `*`(.6666666667, `*`(Cm..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_72.gif" width="692" height="23" alt="Typesetting:-mprintslash([EcuacMono[1] := .5090335777 = `+`(`*`(.6666666667, `*`(Cmono[1])), `*`(.4000000000, `*`(Cmono[3])), `*`(.2857142857, `*`(Cmono[5])))], [.5090335777 = `+`(`*`(.6666666667, `*`..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_73.gif" width="614" height="23" alt="Typesetting:-mprintslash([EcuacMono[2] := 0. = `+`(`*`(.6666666667, `*`(Cmono[0])), `*`(.4000000000, `*`(Cmono[2])), `*`(.2857142857, `*`(Cmono[4])))], [0. = `+`(`*`(.6666666667, `*`(Cmono[0])), `*`(...." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_74.gif" width="692" height="23" alt="Typesetting:-mprintslash([EcuacMono[3] := .1853838518 = `+`(`*`(.4000000000, `*`(Cmono[1])), `*`(.2857142857, `*`(Cmono[3])), `*`(.2222222222, `*`(Cmono[5])))], [.1853838518 = `+`(`*`(.4000000000, `*`..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_75.gif" width="614" height="23" alt="Typesetting:-mprintslash([EcuacMono[4] := 0. = `+`(`*`(.4000000000, `*`(Cmono[0])), `*`(.2857142857, `*`(Cmono[2])), `*`(.2222222222, `*`(Cmono[4])))], [0. = `+`(`*`(.4000000000, `*`(Cmono[0])), `*`(...." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_76.gif" width="699" height="23" alt="Typesetting:-mprintslash([EcuacMono[5] := 0.9217724939e-1 = `+`(`*`(.2857142857, `*`(Cmono[1])), `*`(.2222222222, `*`(Cmono[3])), `*`(.1818181818, `*`(Cmono[5])))], [0.9217724939e-1 = `+`(`*`(.2857142..." align="center" border="0"></td>
+<td width='5%' align='center'>(24)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Construimos una lista con las ecuaciones</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>ListEcuacMono := {seq(EcuacMono[w], w=0..KK )};</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_77.gif" width="768" height="18" alt="Typesetting:-mprintslash([ListEcuacMono := {0. = `+`(`*`(.4000000000, `*`(Cmono[0])), `*`(.2857142857, `*`(Cmono[2])), `*`(.2222222222, `*`(Cmono[4]))), 0. = `+`(`*`(.6666666667, `*`(Cmono[0])), `*`(...." align="center" border="0"><br><img src="images/BasesFuncionales_78.gif" width="768" height="18" alt="Typesetting:-mprintslash([ListEcuacMono := {0. = `+`(`*`(.4000000000, `*`(Cmono[0])), `*`(.2857142857, `*`(Cmono[2])), `*`(.2222222222, `*`(Cmono[4]))), 0. = `+`(`*`(.6666666667, `*`(Cmono[0])), `*`(...." align="center" border="0"><br><img src="images/BasesFuncionales_79.gif" width="768" height="18" alt="Typesetting:-mprintslash([ListEcuacMono := {0. = `+`(`*`(.4000000000, `*`(Cmono[0])), `*`(.2857142857, `*`(Cmono[2])), `*`(.2222222222, `*`(Cmono[4]))), 0. = `+`(`*`(.6666666667, `*`(Cmono[0])), `*`(...." align="center" border="0"><br><img src="images/BasesFuncionales_80.gif" width="768" height="18" alt="Typesetting:-mprintslash([ListEcuacMono := {0. = `+`(`*`(.4000000000, `*`(Cmono[0])), `*`(.2857142857, `*`(Cmono[2])), `*`(.2222222222, `*`(Cmono[4]))), 0. = `+`(`*`(.6666666667, `*`(Cmono[0])), `*`(...." align="center" border="0"></td>
+<td width='5%' align='center'>(25)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>ListIncogMono := {seq(Cmono[w], w=0..KK )};</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_81.gif" width="486" height="23" alt="Typesetting:-mprintslash([ListIncogMono := {Cmono[0], Cmono[1], Cmono[2], Cmono[3], Cmono[4], Cmono[5]}], [{Cmono[0], Cmono[1], Cmono[2], Cmono[3], Cmono[4], Cmono[5]}])" align="center" border="0"></td>
+<td width='5%' align='center'>(26)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Resolvemos el sistema ecuaciones </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>soluc:= fsolve(ListEcuacMono,ListIncogMono);assign(soluc);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_82.gif" width="768" height="21" alt="Typesetting:-mprintslash([soluc := {Cmono[0] = 0., Cmono[1] = 2.939473037, Cmono[2] = 0., Cmono[3] = -5.427876682, Cmono[4] = -0., Cmono[5] = 2.521874458}], [{Cmono[0] = 0., Cmono[1] = 2.939473037, Cm..." align="center" border="0"></td>
+<td width='5%' align='center'>(27)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y la función aproximada será</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>fAproxObli;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_83.gif" width="339" height="22" alt="`+`(`*`(2.521874458, `*`(`^`(x, 5))), `-`(`*`(5.427876682, `*`(`^`(x, 3)))), `*`(2.939473037, `*`(x)))" align="center" border="0"></td>
+<td width='5%' align='center'>(28)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y si la comparamos con la expansión en Taylor</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>fAproxTaylor[n];</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_84.gif" width="135" height="39" alt="`+`(`*`(3, `*`(x)), `-`(`*`(6, `*`(`^`(x, 3)))), `*`(`/`(39, 10), `*`(`^`(x, 5))))" align="center" border="0"></td>
+<td width='5%' align='center'>(29)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Nótese la diferencia entre la expansión por Taylor y la expansión por monomios todas truncadas en el mismo punto. 
+<br>
+<br>Por su parte la aproximación por funciones ortogonales (polinomios de Legendre)</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>fAproxOrto1;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_85.gif" width="339" height="22" alt="`+`(`*`(2.939473008, `*`(x)), `-`(`*`(5.427876546, `*`(`^`(x, 3)))), `*`(2.521874335, `*`(`^`(x, 5))))" align="center" border="0"></td>
+<td width='5%' align='center'>(30)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y la gráfica será</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot([f(x),fAproxTaylor[n],fAproxObli, fAproxOrto1],x=-1..1, legend=["f","fAproxTaylor","fAproxMono", "fAproxLegendre" ]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/BasesFuncionales_86.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Calculamos entonces los errores correspondientes</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Error de Taylor </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>evalf(ErrorTaylor) ;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_87.gif" width="103" height="18" alt=".3330194739" align="center" border="0"></td>
+<td width='5%' align='center'>(31)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Error de la aproximación de monomios</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>ErrorMono := evalf(sqrt(int((f(x)-fAproxObli)^2,x=-1..1)));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_88.gif" width="216" height="18" alt="Typesetting:-mprintslash([ErrorMono := 0.9348849453e-2], [0.9348849453e-2])" align="center" border="0"></td>
+<td width='5%' align='center'>(32)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Error de Legendre</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>ErrorOrto1;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_89.gif" width="118" height="18" alt="0.9348849336e-2" align="center" border="0"></td>
+<td width='5%' align='center'>(33)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Taylor resulta un fiasco y la proyección sobre los monomios casi es igual que la expansión por polinomios ortogononales. Como demostramos la aproximación en polinomios ortogonales es mejor, pero solo un poco</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="4" face="Times New Roman"></font><font color="#000000" size="4" face="Times New Roman"><strong>Base de funciones exponenciales</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Igual nos hubiera pasado con otro conjunto de funciones linealmente independiente</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>exp0 := 1;exp1 := exp(x);exp2 := exp(2*x);exp3 := exp(3*x); exp4 := exp(4*x);exp5 := exp(5*x);exp6 := exp(6*x);
+<br>exp7 := exp(7*x);exp8 := exp(8*x);exp9 := exp(9*x); </td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_90.gif" width="75" height="18" alt="Typesetting:-mprintslash([exp0 := 1], [1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_91.gif" width="78" height="22" alt="Typesetting:-mprintslash([exp1 := exp(x)], [exp(x)])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_92.gif" width="86" height="22" alt="Typesetting:-mprintslash([exp2 := exp(`+`(`*`(2, `*`(x))))], [exp(`+`(`*`(2, `*`(x))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_93.gif" width="86" height="22" alt="Typesetting:-mprintslash([exp3 := exp(`+`(`*`(3, `*`(x))))], [exp(`+`(`*`(3, `*`(x))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_94.gif" width="86" height="22" alt="Typesetting:-mprintslash([exp4 := exp(`+`(`*`(4, `*`(x))))], [exp(`+`(`*`(4, `*`(x))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_95.gif" width="86" height="22" alt="Typesetting:-mprintslash([exp5 := exp(`+`(`*`(5, `*`(x))))], [exp(`+`(`*`(5, `*`(x))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_96.gif" width="86" height="22" alt="Typesetting:-mprintslash([exp6 := exp(`+`(`*`(6, `*`(x))))], [exp(`+`(`*`(6, `*`(x))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_97.gif" width="86" height="22" alt="Typesetting:-mprintslash([exp7 := exp(`+`(`*`(7, `*`(x))))], [exp(`+`(`*`(7, `*`(x))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_98.gif" width="86" height="22" alt="Typesetting:-mprintslash([exp8 := exp(`+`(`*`(8, `*`(x))))], [exp(`+`(`*`(8, `*`(x))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_99.gif" width="86" height="22" alt="Typesetting:-mprintslash([exp9 := exp(`+`(`*`(9, `*`(x))))], [exp(`+`(`*`(9, `*`(x))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(34)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">las cuales claramente no son ortogonales</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>Int(exp0*exp1,x=-1..1)=int(exp0*exp1,x=-1..1);Int(exp0*exp2,x=-1..1)=int(exp0*exp1,x=-1..1);Int(exp0*exp3,x=-1..1)=int(exp0*exp1,x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_100.gif" width="138" height="46" alt="Typesetting:-mprintslash([Int(exp(x), x = -1 .. 1) = `+`(`-`(exp(-1)), exp(1))], [Int(exp(x), x = -1 .. 1) = `+`(`-`(exp(-1)), exp(1))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_101.gif" width="146" height="46" alt="Typesetting:-mprintslash([Int(exp(`+`(`*`(2, `*`(x)))), x = -1 .. 1) = `+`(`-`(exp(-1)), exp(1))], [Int(exp(`+`(`*`(2, `*`(x)))), x = -1 .. 1) = `+`(`-`(exp(-1)), exp(1))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_102.gif" width="146" height="46" alt="Typesetting:-mprintslash([Int(exp(`+`(`*`(3, `*`(x)))), x = -1 .. 1) = `+`(`-`(exp(-1)), exp(1))], [Int(exp(`+`(`*`(3, `*`(x)))), x = -1 .. 1) = `+`(`-`(exp(-1)), exp(1))])" align="center" border="0"></td>
+<td width='5%' align='center'>(35)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>Int(exp1*exp2,x=-1..1)=int(exp1*exp2,x=-1..1); Int(exp1*exp3,x=-1..1)=int(exp1*exp3,x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_103.gif" width="187" height="46" alt="Typesetting:-mprintslash([Int(`*`(exp(x), `*`(exp(`+`(`*`(2, `*`(x)))))), x = -1 .. 1) = `+`(`-`(`*`(`/`(1, 3), `*`(exp(-3)))), `*`(`/`(1, 3), `*`(exp(3))))], [Int(`*`(exp(x), `*`(exp(`+`(`*`(2, `*`(x..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_104.gif" width="187" height="46" alt="Typesetting:-mprintslash([Int(`*`(exp(x), `*`(exp(`+`(`*`(3, `*`(x)))))), x = -1 .. 1) = `+`(`-`(`*`(`/`(1, 4), `*`(exp(-4)))), `*`(`/`(1, 4), `*`(exp(4))))], [Int(`*`(exp(x), `*`(exp(`+`(`*`(3, `*`(x..." align="center" border="0"></td>
+<td width='5%' align='center'>(36)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="4" face="Times New Roman"></font><font color="#000000" size="4" face="Times New Roman"><strong>Angulos entre las funciones exponeciales</strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>cosangulo01 := int(exp0*exp1, x=-1..1)/(sqrt(int(exp0*exp0, x=-1..1))*sqrt(int(exp1*exp1, x=-1..1)));evalf(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_105.gif" width="234" height="53" alt="Typesetting:-mprintslash([cosangulo01 := `/`(`*`(`+`(`-`(exp(-1)), exp(1)), `*`(`^`(2, `/`(1, 2)))), `*`(`^`(`+`(`-`(`*`(2, `*`(exp(-2)))), `*`(2, `*`(exp(2)))), `/`(1, 2))))], [`/`(`*`(`+`(`-`(exp(-1..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_106.gif" width="103" height="18" alt=".8726936206" align="center" border="0"></td>
+<td width='5%' align='center'>(37)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">el ángulo entre exp0 y exp1</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>arccos(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_107.gif" width="103" height="18" alt=".5101042292" align="center" border="0"></td>
+<td width='5%' align='center'>(38)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>cosangulo02 := int(exp0*exp2, x=-1..1)/(sqrt(int(exp0*exp0, x=-1..1))*sqrt(int(exp2*exp2, x=-1..1)));evalf(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_108.gif" width="263" height="73" alt="Typesetting:-mprintslash([cosangulo02 := `/`(`*`(`+`(`-`(`*`(`/`(1, 2), `*`(exp(-2)))), `*`(`/`(1, 2), `*`(exp(2)))), `*`(`^`(2, `/`(1, 2)))), `*`(`^`(`+`(`-`(exp(-4)), exp(4)), `/`(1, 2))))], [`/`(`*..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_109.gif" width="103" height="18" alt=".6942721294" align="center" border="0"></td>
+<td width='5%' align='center'>(39)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">el ángulo entre exp0 y exp2</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>arccos(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_110.gif" width="103" height="18" alt=".8033882551" align="center" border="0"></td>
+<td width='5%' align='center'>(40)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>cosangulo03 := int(exp0*exp3, x=-1..1)/(sqrt(int(exp0*exp0, x=-1..1))*sqrt(int(exp3*exp3, x=-1..1)));evalf(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_111.gif" width="274" height="73" alt="Typesetting:-mprintslash([cosangulo03 := `+`(`/`(`*`(3, `*`(`+`(`-`(`*`(`/`(1, 3), `*`(exp(-3)))), `*`(`/`(1, 3), `*`(exp(3)))), `*`(`^`(2, `/`(1, 2))))), `*`(`^`(`+`(`-`(`*`(6, `*`(exp(-6)))), `*`(6,..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_112.gif" width="103" height="18" alt=".5759209299" align="center" border="0"></td>
+<td width='5%' align='center'>(41)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">el ángulo entre exp0 y exp3</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>arccos(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_113.gif" width="103" height="18" alt=".9570661128" align="center" border="0"></td>
+<td width='5%' align='center'>(42)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="4" face="Times New Roman"></font><font color="#000000" size="4" face="Times New Roman"><strong>Expansión en la base oblicua de funciones exponenciales </strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Como las funciones exponenciales son linealmente independientes podemos plantear nos una expansión del tipo | f &gt; = C0*1 + C1*exp(x) + C2*exp(2*x) + C3*exp(3*x) +....
+<br>Pero como la base {1, exp(x), exp(2*x), exp(3*x), ...} no es ortogonal la expansión de una función nos genera un sistema de ecuaciones para despejar los coeficientes C</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Construimos entonces la base oblicua de funciones exponenciales</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>for k from 0 to KK do &nbsp;BaseOblic3[k]:= exp(k*x); &nbsp;end do;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_114.gif" width="124" height="23" alt="Typesetting:-mprintslash([BaseOblic3[0] := 1], [1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_115.gif" width="126" height="27" alt="Typesetting:-mprintslash([BaseOblic3[1] := exp(x)], [exp(x)])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_116.gif" width="134" height="27" alt="Typesetting:-mprintslash([BaseOblic3[2] := exp(`+`(`*`(2, `*`(x))))], [exp(`+`(`*`(2, `*`(x))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_117.gif" width="134" height="27" alt="Typesetting:-mprintslash([BaseOblic3[3] := exp(`+`(`*`(3, `*`(x))))], [exp(`+`(`*`(3, `*`(x))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_118.gif" width="134" height="27" alt="Typesetting:-mprintslash([BaseOblic3[4] := exp(`+`(`*`(4, `*`(x))))], [exp(`+`(`*`(4, `*`(x))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_119.gif" width="134" height="27" alt="Typesetting:-mprintslash([BaseOblic3[5] := exp(`+`(`*`(5, `*`(x))))], [exp(`+`(`*`(5, `*`(x))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(43)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y la expansión en esta base de funciones oblicuas</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>fAproxObli3 := add(CexpOblic[u]*BaseOblic3[u], u=0..KK);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_120.gif" width="748" height="27" alt="Typesetting:-mprintslash([fAproxObli3 := `+`(CexpOblic[0], `*`(CexpOblic[1], `*`(exp(x))), `*`(CexpOblic[2], `*`(exp(`+`(`*`(2, `*`(x)))))), `*`(CexpOblic[3], `*`(exp(`+`(`*`(3, `*`(x)))))), `*`(CexpO..." align="center" border="0"></td>
+<td width='5%' align='center'>(44)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Al igual que hicimos arriba podemos expendir nuestra función en término de esa base oblicua</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>for u from 0 to KK do
+<br>EcuacExpOblic[u] := (int(f(x)*BaseOblic3[u],x=-1..1,numeric)) = add(CexpOblic[v]*evalf(int(BaseOblic3[v]*BaseOblic3[u],x=-1..1,numeric)), v=0..KK);
+<br>end do;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_121.gif" width="768" height="18" alt="Typesetting:-mprintslash([EcuacExpOblic[0] := 0. = `+`(`*`(2., `*`(CexpOblic[0])), `*`(2.350402387, `*`(CexpOblic[1])), `*`(3.626860408, `*`(CexpOblic[2])), `*`(6.678583285, `*`(CexpOblic[3])), `*`(13..." align="center" border="0"><br><img src="images/BasesFuncionales_122.gif" width="768" height="18" alt="Typesetting:-mprintslash([EcuacExpOblic[0] := 0. = `+`(`*`(2., `*`(CexpOblic[0])), `*`(2.350402387, `*`(CexpOblic[1])), `*`(3.626860408, `*`(CexpOblic[2])), `*`(6.678583285, `*`(CexpOblic[3])), `*`(13..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_123.gif" width="768" height="18" alt="Typesetting:-mprintslash([EcuacExpOblic[1] := .5407098789 = `+`(`*`(2.350402387, `*`(CexpOblic[0])), `*`(3.626860408, `*`(CexpOblic[1])), `*`(6.678583285, `*`(CexpOblic[2])), `*`(13.64495860, `*`(Cexp..." align="center" border="0"><br><img src="images/BasesFuncionales_124.gif" width="768" height="18" alt="Typesetting:-mprintslash([EcuacExpOblic[1] := .5407098789 = `+`(`*`(2.350402387, `*`(CexpOblic[0])), `*`(3.626860408, `*`(CexpOblic[1])), `*`(6.678583285, `*`(CexpOblic[2])), `*`(13.64495860, `*`(Cexp..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_125.gif" width="768" height="18" alt="Typesetting:-mprintslash([EcuacExpOblic[2] := 1.291253516 = `+`(`*`(3.626860408, `*`(CexpOblic[0])), `*`(6.678583285, `*`(CexpOblic[1])), `*`(13.64495860, `*`(CexpOblic[2])), `*`(29.68128423, `*`(Cexp..." align="center" border="0"><br><img src="images/BasesFuncionales_126.gif" width="768" height="18" alt="Typesetting:-mprintslash([EcuacExpOblic[2] := 1.291253516 = `+`(`*`(3.626860408, `*`(CexpOblic[0])), `*`(6.678583285, `*`(CexpOblic[1])), `*`(13.64495860, `*`(CexpOblic[2])), `*`(29.68128423, `*`(Cexp..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_127.gif" width="768" height="18" alt="Typesetting:-mprintslash([EcuacExpOblic[3] := 2.573532407 = `+`(`*`(6.678583285, `*`(CexpOblic[0])), `*`(13.64495860, `*`(CexpOblic[1])), `*`(29.68128423, `*`(CexpOblic[2])), `*`(67.23771912, `*`(Cexp..." align="center" border="0"><br><img src="images/BasesFuncionales_128.gif" width="768" height="18" alt="Typesetting:-mprintslash([EcuacExpOblic[3] := 2.573532407 = `+`(`*`(6.678583285, `*`(CexpOblic[0])), `*`(13.64495860, `*`(CexpOblic[1])), `*`(29.68128423, `*`(CexpOblic[2])), `*`(67.23771912, `*`(Cexp..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_129.gif" width="768" height="18" alt="Typesetting:-mprintslash([EcuacExpOblic[4] := 5.004651834 = `+`(`*`(13.64495860, `*`(CexpOblic[0])), `*`(29.68128423, `*`(CexpOblic[1])), `*`(67.23771912, `*`(CexpOblic[2])), `*`(156.6617495, `*`(Cexp..." align="center" border="0"><br><img src="images/BasesFuncionales_130.gif" width="768" height="18" alt="Typesetting:-mprintslash([EcuacExpOblic[4] := 5.004651834 = `+`(`*`(13.64495860, `*`(CexpOblic[0])), `*`(29.68128423, `*`(CexpOblic[1])), `*`(67.23771912, `*`(CexpOblic[2])), `*`(156.6617495, `*`(Cexp..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_131.gif" width="768" height="18" alt="Typesetting:-mprintslash([EcuacExpOblic[5] := 9.872377974 = `+`(`*`(29.68128423, `*`(CexpOblic[0])), `*`(67.23771912, `*`(CexpOblic[1])), `*`(156.6617495, `*`(CexpOblic[2])), `*`(372.6197064, `*`(Cexp..." align="center" border="0"><br><img src="images/BasesFuncionales_132.gif" width="768" height="18" alt="Typesetting:-mprintslash([EcuacExpOblic[5] := 9.872377974 = `+`(`*`(29.68128423, `*`(CexpOblic[0])), `*`(67.23771912, `*`(CexpOblic[1])), `*`(156.6617495, `*`(CexpOblic[2])), `*`(372.6197064, `*`(Cexp..." align="center" border="0"></td>
+<td width='5%' align='center'>(45)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Una vez mas, construimos una lista con las ecuaciones</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>ListEcuacExpOblic := {seq(EcuacExpOblic[w], w=0..KK )};</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_133.gif" width="768" height="18" alt="Typesetting:-mprintslash([ListEcuacExpOblic := {0. = `+`(`*`(2., `*`(CexpOblic[0])), `*`(2.350402387, `*`(CexpOblic[1])), `*`(3.626860408, `*`(CexpOblic[2])), `*`(6.678583285, `*`(CexpOblic[3])), `*`(..." align="center" border="0"><br><img src="images/BasesFuncionales_134.gif" width="768" height="18" alt="Typesetting:-mprintslash([ListEcuacExpOblic := {0. = `+`(`*`(2., `*`(CexpOblic[0])), `*`(2.350402387, `*`(CexpOblic[1])), `*`(3.626860408, `*`(CexpOblic[2])), `*`(6.678583285, `*`(CexpOblic[3])), `*`(..." align="center" border="0"><br><img src="images/BasesFuncionales_135.gif" width="768" height="18" alt="Typesetting:-mprintslash([ListEcuacExpOblic := {0. = `+`(`*`(2., `*`(CexpOblic[0])), `*`(2.350402387, `*`(CexpOblic[1])), `*`(3.626860408, `*`(CexpOblic[2])), `*`(6.678583285, `*`(CexpOblic[3])), `*`(..." align="center" border="0"><br><img src="images/BasesFuncionales_136.gif" width="768" height="18" alt="Typesetting:-mprintslash([ListEcuacExpOblic := {0. = `+`(`*`(2., `*`(CexpOblic[0])), `*`(2.350402387, `*`(CexpOblic[1])), `*`(3.626860408, `*`(CexpOblic[2])), `*`(6.678583285, `*`(CexpOblic[3])), `*`(..." align="center" border="0"><br><img src="images/BasesFuncionales_137.gif" width="768" height="18" alt="Typesetting:-mprintslash([ListEcuacExpOblic := {0. = `+`(`*`(2., `*`(CexpOblic[0])), `*`(2.350402387, `*`(CexpOblic[1])), `*`(3.626860408, `*`(CexpOblic[2])), `*`(6.678583285, `*`(CexpOblic[3])), `*`(..." align="center" border="0"><br><img src="images/BasesFuncionales_138.gif" width="768" height="18" alt="Typesetting:-mprintslash([ListEcuacExpOblic := {0. = `+`(`*`(2., `*`(CexpOblic[0])), `*`(2.350402387, `*`(CexpOblic[1])), `*`(3.626860408, `*`(CexpOblic[2])), `*`(6.678583285, `*`(CexpOblic[3])), `*`(..." align="center" border="0"><br><img src="images/BasesFuncionales_139.gif" width="768" height="18" alt="Typesetting:-mprintslash([ListEcuacExpOblic := {0. = `+`(`*`(2., `*`(CexpOblic[0])), `*`(2.350402387, `*`(CexpOblic[1])), `*`(3.626860408, `*`(CexpOblic[2])), `*`(6.678583285, `*`(CexpOblic[3])), `*`(..." align="center" border="0"><br><img src="images/BasesFuncionales_140.gif" width="768" height="18" alt="Typesetting:-mprintslash([ListEcuacExpOblic := {0. = `+`(`*`(2., `*`(CexpOblic[0])), `*`(2.350402387, `*`(CexpOblic[1])), `*`(3.626860408, `*`(CexpOblic[2])), `*`(6.678583285, `*`(CexpOblic[3])), `*`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(46)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>ListIncogExpOblic := {seq(CexpOblic[w], w=0..KK )};</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_141.gif" width="641" height="23" alt="Typesetting:-mprintslash([ListIncogExpOblic := {CexpOblic[0], CexpOblic[1], CexpOblic[2], CexpOblic[3], CexpOblic[4], CexpOblic[5]}], [{CexpOblic[0], CexpOblic[1], CexpOblic[2], CexpOblic[3], CexpObli..." align="center" border="0"></td>
+<td width='5%' align='center'>(47)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>solucExpOblic:= fsolve(ListEcuacExpOblic,ListIncogExpOblic);assign(solucExpOblic);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_142.gif" width="768" height="18" alt="Typesetting:-mprintslash([solucExpOblic := {CexpOblic[0] = 7.783863816, CexpOblic[1] = -37.29378628, CexpOblic[2] = 56.78012295, CexpOblic[3] = -37.13200709, CexpOblic[4] = 11.07660084, CexpOblic[5] =..." align="center" border="0"><br><img src="images/BasesFuncionales_143.gif" width="768" height="18" alt="Typesetting:-mprintslash([solucExpOblic := {CexpOblic[0] = 7.783863816, CexpOblic[1] = -37.29378628, CexpOblic[2] = 56.78012295, CexpOblic[3] = -37.13200709, CexpOblic[4] = 11.07660084, CexpOblic[5] =..." align="center" border="0"></td>
+<td width='5%' align='center'>(48)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">finalmente la expansión en la base oblicua de funciones exponenciales será</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>fAproxObli3;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_144.gif" width="705" height="22" alt="`+`(7.783863816, `-`(`*`(37.29378628, `*`(exp(x)))), `*`(56.78012295, `*`(exp(`+`(`*`(2, `*`(x)))))), `-`(`*`(37.13200709, `*`(exp(`+`(`*`(3, `*`(x))))))), `*`(11.07660084, `*`(exp(`+`(`*`(4, `*`(x)))..." align="center" border="0"></td>
+<td width='5%' align='center'>(49)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="4" face="Times New Roman"></font><font color="#000000" size="4" face="Times New Roman"><strong>Bases Exponenciales ortogonales</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Igual las podemos ortogonalizar, y para empezar almacenamos las funciones de la base oblicuas en un arreglo y ortogonalizamos con Gram-Schmidt</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>BaseOrtog3[0]:= BaseOblic3[0];
+<br>for u from 1 to KK do &nbsp;
+<br> &nbsp;BaseOrtog3[u] := (BaseOblic3[u] -add( (simplify(int(BaseOrtog3[v-1]*BaseOblic3[u],x=-1..1)/int(BaseOrtog3[v-1]^2,x=-1..1) ))*BaseOrtog3[v-1], v=1..u)) 
+<br>end do;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_145.gif" width="126" height="23" alt="Typesetting:-mprintslash([BaseOrtog3[0] := 1], [1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_146.gif" width="218" height="40" alt="Typesetting:-mprintslash([BaseOrtog3[1] := `+`(exp(x), `*`(`/`(1, 2), `*`(exp(-1))), `-`(`*`(`/`(1, 2), `*`(exp(1)))))], [`+`(exp(x), `*`(`/`(1, 2), `*`(exp(-1))), `-`(`*`(`/`(1, 2), `*`(exp(1)))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_147.gif" width="511" height="61" alt="Typesetting:-mprintslash([BaseOrtog3[2] := `+`(exp(`+`(`*`(2, `*`(x)))), `*`(`/`(1, 4), `*`(exp(-2))), `-`(`*`(`/`(1, 4), `*`(exp(2)))), `-`(`*`(`/`(1, 12), `*`(exp(-1), `*`(`+`(exp(4), `*`(4, `*`(exp..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_148.gif" width="768" height="47" alt="Typesetting:-mprintslash([BaseOrtog3[3] := `+`(exp(`+`(`*`(3, `*`(x)))), `*`(`/`(1, 6), `*`(exp(-3))), `-`(`*`(`/`(1, 6), `*`(exp(3)))), `-`(`*`(`/`(1, 12), `*`(exp(-2), `*`(`+`(exp(6), `*`(3, `*`(exp..." align="center" border="0"><br><img src="images/BasesFuncionales_149.gif" width="768" height="66" alt="Typesetting:-mprintslash([BaseOrtog3[3] := `+`(exp(`+`(`*`(3, `*`(x)))), `*`(`/`(1, 6), `*`(exp(-3))), `-`(`*`(`/`(1, 6), `*`(exp(3)))), `-`(`*`(`/`(1, 12), `*`(exp(-2), `*`(`+`(exp(6), `*`(3, `*`(exp..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_150.gif" width="768" height="47" alt="Typesetting:-mprintslash([BaseOrtog3[4] := `+`(exp(`+`(`*`(4, `*`(x)))), `*`(`/`(1, 8), `*`(exp(-4))), `-`(`*`(`/`(1, 8), `*`(exp(4)))), `-`(`*`(`/`(1, 40), `*`(exp(-3), `*`(`+`(`*`(3, `*`(exp(8))), `..." align="center" border="0"><br><img src="images/BasesFuncionales_151.gif" width="768" height="66" alt="Typesetting:-mprintslash([BaseOrtog3[4] := `+`(exp(`+`(`*`(4, `*`(x)))), `*`(`/`(1, 8), `*`(exp(-4))), `-`(`*`(`/`(1, 8), `*`(exp(4)))), `-`(`*`(`/`(1, 40), `*`(exp(-3), `*`(`+`(`*`(3, `*`(exp(8))), `..." align="center" border="0"><br><img src="images/BasesFuncionales_152.gif" width="768" height="66" alt="Typesetting:-mprintslash([BaseOrtog3[4] := `+`(exp(`+`(`*`(4, `*`(x)))), `*`(`/`(1, 8), `*`(exp(-4))), `-`(`*`(`/`(1, 8), `*`(exp(4)))), `-`(`*`(`/`(1, 40), `*`(exp(-3), `*`(`+`(`*`(3, `*`(exp(8))), `..." align="center" border="0"><br><img src="images/BasesFuncionales_153.gif" width="768" height="66" alt="Typesetting:-mprintslash([BaseOrtog3[4] := `+`(exp(`+`(`*`(4, `*`(x)))), `*`(`/`(1, 8), `*`(exp(-4))), `-`(`*`(`/`(1, 8), `*`(exp(4)))), `-`(`*`(`/`(1, 40), `*`(exp(-3), `*`(`+`(`*`(3, `*`(exp(8))), `..." align="center" border="0"><br><img src="images/BasesFuncionales_154.gif" width="768" height="66" alt="Typesetting:-mprintslash([BaseOrtog3[4] := `+`(exp(`+`(`*`(4, `*`(x)))), `*`(`/`(1, 8), `*`(exp(-4))), `-`(`*`(`/`(1, 8), `*`(exp(4)))), `-`(`*`(`/`(1, 40), `*`(exp(-3), `*`(`+`(`*`(3, `*`(exp(8))), `..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_155.gif" width="768" height="47" alt="Typesetting:-mprintslash([BaseOrtog3[5] := `+`(exp(`+`(`*`(5, `*`(x)))), `*`(`/`(1, 10), `*`(exp(-5))), `-`(`*`(`/`(1, 10), `*`(exp(5)))), `-`(`*`(`/`(1, 30), `*`(exp(-4), `*`(`+`(`*`(2, `*`(exp(10)))..." align="center" border="0"><br><img src="images/BasesFuncionales_156.gif" width="768" height="66" alt="Typesetting:-mprintslash([BaseOrtog3[5] := `+`(exp(`+`(`*`(5, `*`(x)))), `*`(`/`(1, 10), `*`(exp(-5))), `-`(`*`(`/`(1, 10), `*`(exp(5)))), `-`(`*`(`/`(1, 30), `*`(exp(-4), `*`(`+`(`*`(2, `*`(exp(10)))..." align="center" border="0"><br><img src="images/BasesFuncionales_157.gif" width="768" height="66" alt="Typesetting:-mprintslash([BaseOrtog3[5] := `+`(exp(`+`(`*`(5, `*`(x)))), `*`(`/`(1, 10), `*`(exp(-5))), `-`(`*`(`/`(1, 10), `*`(exp(5)))), `-`(`*`(`/`(1, 30), `*`(exp(-4), `*`(`+`(`*`(2, `*`(exp(10)))..." align="center" border="0"><br><img src="images/BasesFuncionales_158.gif" width="768" height="66" alt="Typesetting:-mprintslash([BaseOrtog3[5] := `+`(exp(`+`(`*`(5, `*`(x)))), `*`(`/`(1, 10), `*`(exp(-5))), `-`(`*`(`/`(1, 10), `*`(exp(5)))), `-`(`*`(`/`(1, 30), `*`(exp(-4), `*`(`+`(`*`(2, `*`(exp(10)))..." align="center" border="0"><br><img src="images/BasesFuncionales_159.gif" width="768" height="66" alt="Typesetting:-mprintslash([BaseOrtog3[5] := `+`(exp(`+`(`*`(5, `*`(x)))), `*`(`/`(1, 10), `*`(exp(-5))), `-`(`*`(`/`(1, 10), `*`(exp(5)))), `-`(`*`(`/`(1, 30), `*`(exp(-4), `*`(`+`(`*`(2, `*`(exp(10)))..." align="center" border="0"><br><img src="images/BasesFuncionales_160.gif" width="768" height="85" alt="Typesetting:-mprintslash([BaseOrtog3[5] := `+`(exp(`+`(`*`(5, `*`(x)))), `*`(`/`(1, 10), `*`(exp(-5))), `-`(`*`(`/`(1, 10), `*`(exp(5)))), `-`(`*`(`/`(1, 30), `*`(exp(-4), `*`(`+`(`*`(2, `*`(exp(10)))..." align="center" border="0"><br><img src="images/BasesFuncionales_161.gif" width="768" height="85" alt="Typesetting:-mprintslash([BaseOrtog3[5] := `+`(exp(`+`(`*`(5, `*`(x)))), `*`(`/`(1, 10), `*`(exp(-5))), `-`(`*`(`/`(1, 10), `*`(exp(5)))), `-`(`*`(`/`(1, 30), `*`(exp(-4), `*`(`+`(`*`(2, `*`(exp(10)))..." align="center" border="0"><br><img src="images/BasesFuncionales_162.gif" width="768" height="66" alt="Typesetting:-mprintslash([BaseOrtog3[5] := `+`(exp(`+`(`*`(5, `*`(x)))), `*`(`/`(1, 10), `*`(exp(-5))), `-`(`*`(`/`(1, 10), `*`(exp(5)))), `-`(`*`(`/`(1, 30), `*`(exp(-4), `*`(`+`(`*`(2, `*`(exp(10)))..." align="center" border="0"><br><img src="images/BasesFuncionales_163.gif" width="768" height="66" alt="Typesetting:-mprintslash([BaseOrtog3[5] := `+`(exp(`+`(`*`(5, `*`(x)))), `*`(`/`(1, 10), `*`(exp(-5))), `-`(`*`(`/`(1, 10), `*`(exp(5)))), `-`(`*`(`/`(1, 30), `*`(exp(-4), `*`(`+`(`*`(2, `*`(exp(10)))..." align="center" border="0"><br><img src="images/BasesFuncionales_164.gif" width="768" height="66" alt="Typesetting:-mprintslash([BaseOrtog3[5] := `+`(exp(`+`(`*`(5, `*`(x)))), `*`(`/`(1, 10), `*`(exp(-5))), `-`(`*`(`/`(1, 10), `*`(exp(5)))), `-`(`*`(`/`(1, 30), `*`(exp(-4), `*`(`+`(`*`(2, `*`(exp(10)))..." align="center" border="0"><br><img src="images/BasesFuncionales_165.gif" width="768" height="66" alt="Typesetting:-mprintslash([BaseOrtog3[5] := `+`(exp(`+`(`*`(5, `*`(x)))), `*`(`/`(1, 10), `*`(exp(-5))), `-`(`*`(`/`(1, 10), `*`(exp(5)))), `-`(`*`(`/`(1, 30), `*`(exp(-4), `*`(`+`(`*`(2, `*`(exp(10)))..." align="center" border="0"></td>
+<td width='5%' align='center'>(50)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>int(BaseOrtog3[2]*BaseOrtog3[3],x=-1..1);
+<br>int(BaseOrtog3[1]*BaseOrtog3[3],x=-1..1);
+<br>int(BaseOrtog3[4]*BaseOrtog3[3],x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_166.gif" width="21" height="18" alt="0" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_167.gif" width="21" height="18" alt="0" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_168.gif" width="21" height="18" alt="0" align="center" border="0"></td>
+<td width='5%' align='center'>(51)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y los nuevos coeficientes serán</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>for u from 0 to KK do
+<br>CexpOrt[u] := (simplify( int(f(x)*BaseOrtog3[u],x=-1..1,numeric)/int(BaseOrtog3[u]^2,x=-1..1,numeric) )) 
+<br>end do;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_169.gif" width="109" height="23" alt="Typesetting:-mprintslash([CexpOrt[0] := 0.], [0.])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_170.gif" width="187" height="23" alt="Typesetting:-mprintslash([CexpOrt[1] := .6253405145], [.6253405145])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_171.gif" width="202" height="23" alt="Typesetting:-mprintslash([CexpOrt[2] := -.6962843792], [-.6962843792])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_172.gif" width="202" height="23" alt="Typesetting:-mprintslash([CexpOrt[3] := -.8541834883], [-.8541834883])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_173.gif" width="179" height="23" alt="Typesetting:-mprintslash([CexpOrt[4] := 1.802274230], [1.802274230])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_174.gif" width="194" height="23" alt="Typesetting:-mprintslash([CexpOrt[5] := -1.248527815], [-1.248527815])" align="center" border="0"></td>
+<td width='5%' align='center'>(52)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y la combinación lineal</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>fAproxOrto3 := add(CexpOrt[u]*BaseOrtog3[u], u=0..KK);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_175.gif" width="768" height="17" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_176.gif" width="768" height="66" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_177.gif" width="768" height="31" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_178.gif" width="768" height="31" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_179.gif" width="768" height="66" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_180.gif" width="768" height="66" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_181.gif" width="768" height="66" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_182.gif" width="768" height="66" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_183.gif" width="768" height="66" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_184.gif" width="768" height="66" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_185.gif" width="768" height="66" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_186.gif" width="768" height="31" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_187.gif" width="768" height="66" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_188.gif" width="768" height="85" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_189.gif" width="768" height="85" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_190.gif" width="768" height="66" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_191.gif" width="768" height="66" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_192.gif" width="768" height="66" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"><br><img src="images/BasesFuncionales_193.gif" width="768" height="66" alt="Typesetting:-mprintslash([fAproxOrto3 := `+`(`*`(1.802274230, `*`(exp(`+`(`*`(4, `*`(x)))))), `-`(`*`(.6962843792, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(.3126702572, `*`(exp(1)))), `-`(`*`(.8541834..." align="center" border="0"></td>
+<td width='5%' align='center'>(53)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y la gráfica será</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot([f(x),fAproxTaylor[n],fAproxOrto1,fAproxObli3, fAproxOrto3],x=-1..1, legend=["f","fAproxTaylor","fAproxLegendre","fAproxExpObli","fAproxExpOrto" ]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/BasesFuncionales_194.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y los errores</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">El de Taylor</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>evalf(ErrorTaylor) ;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_195.gif" width="103" height="18" alt=".3330194739" align="center" border="0"></td>
+<td width='5%' align='center'>(54)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">El de Legendre</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>evalf(ErrorOrto1) ;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_196.gif" width="118" height="18" alt="0.9348849336e-2" align="center" border="0"></td>
+<td width='5%' align='center'>(55)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">El error de la base de funciones exponenciales oblicuas</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>ErrorOrto3 := (sqrt(int((f(x)-fAproxObli3)^2,x=-1..1,numeric)));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_197.gif" width="209" height="18" alt="Typesetting:-mprintslash([ErrorOrto3 := 0.3914518801e-1], [0.3914518801e-1])" align="center" border="0"></td>
+<td width='5%' align='center'>(56)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">El error de la base de funciones expoenenciales ortogonales </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>ErrorOrto3 := (sqrt(int((f(x)-fAproxOrto3)^2,x=-1..1,numeric)));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_198.gif" width="209" height="18" alt="Typesetting:-mprintslash([ErrorOrto3 := 0.3914443568e-1], [0.3914443568e-1])" align="center" border="0"></td>
+<td width='5%' align='center'>(57)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Es claro que la expansión en una base de funciones ortogonales, no necesariamente es más precisa. Cuando comparamos polimomios, claramente si lo es. </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="4" face="Times New Roman">Polinomios ortogonales predefinidos</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">
+<br>En MAPLE los polinomios ortogonales están predefinidos (en una biblioteca orthopoly) y se denotan como P(n,x) donde </font><font color="#000000" size="3" face="Times New Roman"><em>n</em></font><font color="#000000" size="3" face="Times New Roman"> es el orden del polinomo y </font><font color="#000000" size="3" face="Times New Roman"><em>x</em></font><font color="#000000" size="3" face="Times New Roman"> la variable. Para detalles pueden consultar la hoja de ayuda</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>with(orthopoly);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_199.gif" width="125" height="18" alt="[G, H, L, P, T, U]" align="center" border="0"></td>
+<td width='5%' align='center'>(58)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>?P</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>P(0,x);P(1,x);P(2,x);P(3,x);P(4,x);P(5,x);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_200.gif" width="21" height="18" alt="1" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_201.gif" width="20" height="18" alt="x" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_202.gif" width="95" height="43" alt="`+`(`-`(`/`(1, 2)), `*`(`/`(3, 2), `*`(`^`(x, 2))))" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_203.gif" width="95" height="39" alt="`+`(`*`(`/`(5, 2), `*`(`^`(x, 3))), `-`(`*`(`/`(3, 2), `*`(x))))" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_204.gif" width="153" height="39" alt="`+`(`/`(3, 8), `*`(`/`(35, 8), `*`(`^`(x, 4))), `-`(`*`(`/`(15, 4), `*`(`^`(x, 2)))))" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_205.gif" width="172" height="39" alt="`+`(`*`(`/`(63, 8), `*`(`^`(x, 5))), `-`(`*`(`/`(35, 4), `*`(`^`(x, 3)))), `*`(`/`(15, 8), `*`(x)))" align="center" border="0"></td>
+<td width='5%' align='center'>(59)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Los Polinomios de Legendre son ortogonales bajo un producto interno definido por &nbsp;&lt; P</font><font color="#000000" size="3" face="Times New Roman"><sub>n</sub></font><font color="#000000" size="3" face="Times New Roman"> | P</font><font color="#000000" size="3" face="Times New Roman"><sub>m</sub></font><font color="#000000" size="3" face="Times New Roman"> &gt; = ∫</font><font color="#000000" size="3" face="Times New Roman"><sup>1</sup></font><font color="#000000" size="3" face="Times New Roman"><sub>-1</sub></font><font color="#000000" size="3" face="Times New Roman"> P</font><font color="#000000" size="3" face="Times New Roman"><sub>n</sub></font><font color="#000000" size="3" face="Times New Roman"> P</font><font color="#000000" size="3" face="Times New Roman"><sub>m</sub></font><font color="#000000" size="3" face="Times New Roman"> </font><font color="#000000" size="3" face="Times New Roman"><em>d</em></font><font color="#000000" size="3" face="Times New Roman">x</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>int(P(z,x)*P(m,x),x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_206.gif" width="152" height="46" alt="Typesetting:-mprintslash([int(`*`(P(z, x), `*`(P(m, x))), x = -1 .. 1)], [int(`*`(P(z, x), `*`(P(m, x))), x = -1 .. 1)])" align="center" border="0"></td>
+<td width='5%' align='center'>(60)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>int(P(14,x)*P(28,x),x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_207.gif" width="21" height="18" alt="0" align="center" border="0"></td>
+<td width='5%' align='center'>(61)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>int(P(77,x)*P(77,x),x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_208.gif" width="44" height="39" alt="`/`(2, 155)" align="center" border="0"></td>
+<td width='5%' align='center'>(62)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Por lo tanto los coeficientes de la expansión serán &nbsp;&lt; f | P</font><font color="#000000" size="3" face="Times New Roman"><sub>m</sub></font><font color="#000000" size="3" face="Times New Roman"> &gt; = ∫</font><font color="#000000" size="3" face="Times New Roman"><sup>1</sup></font><font color="#000000" size="3" face="Times New Roman"><sub>-1</sub></font><font color="#000000" size="3" face="Times New Roman"> f(x) P</font><font color="#000000" size="3" face="Times New Roman"><sub>m</sub></font><font color="#000000" size="3" face="Times New Roman">(x) </font><font color="#000000" size="3" face="Times New Roman"><em>d</em></font><font color="#000000" size="3" face="Times New Roman">x</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">m=0</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>Int(f(x)*P(0,x),x=-1..1)/Int(P(0,x)*P(0,x),x=-1..1)=int(f(x)*P(0,x),x=-1..1)/int(P(0,x)*P(0,x),x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_209.gif" width="212" height="94" alt="Typesetting:-mprintslash([`/`(`*`(Int(`*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(x)))))), x = -1 .. 1)), `*`(Int(1, x = -1 .. 1))) = 0], [`/`(`*`(Int(`*`(`^`(`+`(`-`(`*`(`..." align="center" border="0"></td>
+<td width='5%' align='center'>(63)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">m=1</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>Int(f(x)*P(1,x),x=-1..1)/Int(P(1,x)*P(1,x),x=-1..1)=int(f(x)*P(1,x),x=-1..1)/int(P(1,x)*P(1,x),x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_210.gif" width="481" height="94" alt="Typesetting:-mprintslash([`/`(`*`(Int(`*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(x)))), `*`(x))), x = -1 .. 1)), `*`(Int(`*`(`^`(x, 2)), x = -1 .. 1))) = `+`(`*`(`/`(1, 2)..." align="center" border="0"></td>
+<td width='5%' align='center'>(64)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>evalf(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_211.gif" width="208" height="18" alt=".7635503665 = .7635503665" align="center" border="0"></td>
+<td width='5%' align='center'>(65)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">m=2</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>Int(f(x)*P(2,x),x=-1..1)/Int(P(2,x)*P(2,x),x=-1..1)=int(f(x)*P(2,x),x=-1..1)/int(P(2,x)*P(2,x),x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_212.gif" width="318" height="121" alt="Typesetting:-mprintslash([`/`(`*`(Int(`*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(x)))), `*`(`+`(`-`(`/`(1, 2)), `*`(`/`(3, 2), `*`(`^`(x, 2))))))), x = -1 .. 1)), `*`(Int(..." align="center" border="0"></td>
+<td width='5%' align='center'>(66)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">m=3</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>Int(f(x)*P(3,x),x=-1..1)/Int(P(3,x)*P(3,x),x=-1..1)=int(f(x)*P(3,x),x=-1..1)/int(P(3,x)*P(3,x),x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_213.gif" width="768" height="96" alt="Typesetting:-mprintslash([`/`(`*`(Int(`*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(x)))), `*`(`+`(`*`(`/`(5, 2), `*`(`^`(x, 3))), `-`(`*`(`/`(3, 2), `*`(x))))))), x = -1 .. ..." align="center" border="0"></td>
+<td width='5%' align='center'>(67)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>evalf(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_214.gif" width="221" height="18" alt="-1.050317580 = -1.050317580" align="center" border="0"></td>
+<td width='5%' align='center'>(68)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">m=4</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>Int(f(x)*P(4,x),x=-1..1)/Int(P(4,x)*P(4,x),x=-1..1)=int(f(x)*P(4,x),x=-1..1)/int(P(4,x)*P(4,x),x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_215.gif" width="377" height="113" alt="Typesetting:-mprintslash([`/`(`*`(Int(`*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(x)))), `*`(`+`(`/`(3, 8), `*`(`/`(35, 8), `*`(`^`(x, 4))), `-`(`*`(`/`(15, 4), `*`(`^`(x, ..." align="center" border="0"></td>
+<td width='5%' align='center'>(69)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">en general los coeficientes de la expansión se expresan</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>CoefLegendre[z]:= int(f(x)*P(z,x),x=-1..1)/int(P(z,x)*P(z,x),x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_216.gif" width="354" height="94" alt="Typesetting:-mprintslash([CoefLegendre[z] := `/`(`*`(int(`*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(x)))), `*`(P(z, x)))), x = -1 .. 1)), `*`(int(`*`(`^`(P(z, x), 2)), x =..." align="center" border="0"></td>
+<td width='5%' align='center'>(70)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y la aproximación de la función</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>f(x)=Sum(CoefLegendre[z]*P(z,x),z=0..nn);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_217.gif" width="467" height="94" alt="Typesetting:-mprintslash([`*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(x)))))) = Sum(`/`(`*`(int(`*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(x)))..." align="center" border="0"></td>
+<td width='5%' align='center'>(71)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>h:=5;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_218.gif" width="55" height="18" alt="Typesetting:-mprintslash([h := 5], [5])" align="center" border="0"></td>
+<td width='5%' align='center'>(72)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>f(x)=Sum(CoefLegendre[z]*P(z,x),z=0..h);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_219.gif" width="467" height="94" alt="Typesetting:-mprintslash([`*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(x)))))) = Sum(`/`(`*`(int(`*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(x)))..." align="center" border="0"></td>
+<td width='5%' align='center'>(73)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>AproxLegendre[h]:= sum(CoefLegendre[z]*P(z,x),z=0..h);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_220.gif" width="768" height="46" alt="Typesetting:-mprintslash([AproxLegendre[5] := `+`(`*`(`/`(1, 2), `*`(Pi, `*`(`+`(`-`(BesselJ(0, 3)), `*`(`/`(2, 3), `*`(BesselJ(1, 3)))), `*`(x)))), `*`(`/`(7, 2), `*`(`+`(`*`(`/`(10, 27), `*`(Pi, `*`..." align="center" border="0"><br><img src="images/BasesFuncionales_221.gif" width="768" height="62" alt="Typesetting:-mprintslash([AproxLegendre[5] := `+`(`*`(`/`(1, 2), `*`(Pi, `*`(`+`(`-`(BesselJ(0, 3)), `*`(`/`(2, 3), `*`(BesselJ(1, 3)))), `*`(x)))), `*`(`/`(7, 2), `*`(`+`(`*`(`/`(10, 27), `*`(Pi, `*`..." align="center" border="0"><br><img src="images/BasesFuncionales_222.gif" width="768" height="46" alt="Typesetting:-mprintslash([AproxLegendre[5] := `+`(`*`(`/`(1, 2), `*`(Pi, `*`(`+`(`-`(BesselJ(0, 3)), `*`(`/`(2, 3), `*`(BesselJ(1, 3)))), `*`(x)))), `*`(`/`(7, 2), `*`(`+`(`*`(`/`(10, 27), `*`(Pi, `*`..." align="center" border="0"><br><img src="images/BasesFuncionales_223.gif" width="768" height="46" alt="Typesetting:-mprintslash([AproxLegendre[5] := `+`(`*`(`/`(1, 2), `*`(Pi, `*`(`+`(`-`(BesselJ(0, 3)), `*`(`/`(2, 3), `*`(BesselJ(1, 3)))), `*`(x)))), `*`(`/`(7, 2), `*`(`+`(`*`(`/`(10, 27), `*`(Pi, `*`..." align="center" border="0"></td>
+<td width='5%' align='center'>(74)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>?BesselJ</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>simplify(AproxLegendre[h]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_224.gif" width="768" height="33" alt="`+`(`-`(`*`(`/`(7, 1152), `*`(Pi, `*`(x, `*`(`+`(`*`(32175, `*`(BesselJ(0, 3), `*`(`^`(x, 4)))), `*`(24288, `*`(BesselJ(1, 3), `*`(`^`(x, 4)))), `-`(`*`(36870, `*`(BesselJ(0, 3), `*`(`^`(x, 2))))), `-..." align="center" border="0"></td>
+<td width='5%' align='center'>(75)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot([f(x),AproxLegendre[h]],x=-1..1, legend=["f","AproxLegendre" ]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/BasesFuncionales_225.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Otra vez, el error de la aproximación será la norma de la distancia entre los dos vectores. Esto es</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>ErrorLegendre := sqrt(int((f(x)-AproxLegendre[h])^2,x=-1..1));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_226.gif" width="768" height="14" alt="Typesetting:-mprintslash([ErrorLegendre := `+`(`*`(`/`(1, 432), `*`(`^`(`+`(`-`(`*`(21339990, `*`(`^`(Pi, 2), `*`(`^`(BesselJ(0, 3), 2))))), `-`(`*`(31852800, `*`(`^`(Pi, 2), `*`(BesselJ(0, 3), `*`(Be..." align="center" border="0"><br><img src="images/BasesFuncionales_227.gif" width="768" height="39" alt="Typesetting:-mprintslash([ErrorLegendre := `+`(`*`(`/`(1, 432), `*`(`^`(`+`(`-`(`*`(21339990, `*`(`^`(Pi, 2), `*`(`^`(BesselJ(0, 3), 2))))), `-`(`*`(31852800, `*`(`^`(Pi, 2), `*`(BesselJ(0, 3), `*`(Be..." align="center" border="0"></td>
+<td width='5%' align='center'>(76)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">es decir</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>evalf(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_228.gif" width="118" height="18" alt="0.9347242258e-2" align="center" border="0"></td>
+<td width='5%' align='center'>(77)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Otro conjunto de polinomios ortogonales son los polinomios de Tchevichev</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>T(0,x);T(1,x);T(2,x);T(3,x);T(4,x);T(5,x);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_229.gif" width="21" height="18" alt="1" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_230.gif" width="20" height="18" alt="x" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_231.gif" width="64" height="22" alt="`+`(`*`(2, `*`(`^`(x, 2))), `-`(1))" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_232.gif" width="74" height="22" alt="`+`(`*`(4, `*`(`^`(x, 3))), `-`(`*`(3, `*`(x))))" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_233.gif" width="107" height="22" alt="`+`(`*`(8, `*`(`^`(x, 4))), `-`(`*`(8, `*`(`^`(x, 2)))), 1)" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_234.gif" width="133" height="22" alt="`+`(`*`(16, `*`(`^`(x, 5))), `-`(`*`(20, `*`(`^`(x, 3)))), `*`(5, `*`(x)))" align="center" border="0"></td>
+<td width='5%' align='center'>(78)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Que se parecen a los de Legendre, pero no son</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>P(0,x);P(1,x);P(2,x);P(3,x);P(4,x);P(5,x);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_235.gif" width="21" height="18" alt="1" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_236.gif" width="20" height="18" alt="x" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_237.gif" width="95" height="43" alt="`+`(`-`(`/`(1, 2)), `*`(`/`(3, 2), `*`(`^`(x, 2))))" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_238.gif" width="95" height="39" alt="`+`(`*`(`/`(5, 2), `*`(`^`(x, 3))), `-`(`*`(`/`(3, 2), `*`(x))))" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_239.gif" width="153" height="39" alt="`+`(`/`(3, 8), `*`(`/`(35, 8), `*`(`^`(x, 4))), `-`(`*`(`/`(15, 4), `*`(`^`(x, 2)))))" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_240.gif" width="172" height="39" alt="`+`(`*`(`/`(63, 8), `*`(`^`(x, 5))), `-`(`*`(`/`(35, 4), `*`(`^`(x, 3)))), `*`(`/`(15, 8), `*`(x)))" align="center" border="0"></td>
+<td width='5%' align='center'>(79)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Porque el producto interno con el cual ortogonalizamos la base de monomios <img src="images/BasesFuncionales_241.gif" width="164" height="22" alt="{1, x, `*`(`^`(x, 2)), `*`(`^`(x, 3)), `*`(`^`(x, 4)), `*`(`^`(x, 5)), `*`(`^`(x, 6)) .. ()}" align="center" border="0"> es distinto</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>pesoChevichev := 1/sqrt(1-x^2);
+<br>CoefChevi[m]:= int(f(x)*T(m,x)*pesoChevichev,x=-1..1)/int(T(m,x)*T(m,x)*pesoChevichev,x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_242.gif" width="211" height="48" alt="Typesetting:-mprintslash([pesoChevichev := `/`(1, `*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2))))], [`/`(1, `*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_243.gif" width="269" height="114" alt="Typesetting:-mprintslash([CoefChevi[m] := `/`(`*`(int(`*`(sin(`+`(`*`(3, `*`(x)))), `*`(T(m, x))), x = -1 .. 1)), `*`(int(`/`(`*`(`^`(T(m, x), 2)), `*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)))), x..." align="center" border="0"></td>
+<td width='5%' align='center'>(80)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>AproxChevi[h]:= sum(CoefChevi[m]*T(m,x),m=0..h);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_244.gif" width="768" height="48" alt="Typesetting:-mprintslash([AproxChevi[5] := `+`(`/`(`*`(2, `*`(`+`(`*`(`/`(2, 9), `*`(sin(3))), `-`(`*`(`/`(2, 3), `*`(cos(3))))), `*`(x))), `*`(Pi)), `/`(`*`(2, `*`(`+`(`*`(`/`(10, 9), `*`(cos(3))), `..." align="center" border="0"><br><img src="images/BasesFuncionales_245.gif" width="768" height="48" alt="Typesetting:-mprintslash([AproxChevi[5] := `+`(`/`(`*`(2, `*`(`+`(`*`(`/`(2, 9), `*`(sin(3))), `-`(`*`(`/`(2, 3), `*`(cos(3))))), `*`(x))), `*`(Pi)), `/`(`*`(2, `*`(`+`(`*`(`/`(10, 9), `*`(cos(3))), `..." align="center" border="0"></td>
+<td width='5%' align='center'>(81)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>Taylor[h+2]:= taylor(f(x),x=0,h+2); AproxTaylor[h+2]:=convert(Taylor[h+2],polynom);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_246.gif" width="268" height="39" alt="Typesetting:-mprintslash([Taylor[7] := series(`+`(`*`(3, `*`(x)), `-`(`*`(6, `*`(`^`(x, 3)))), `*`(`/`(39, 10), `*`(`^`(x, 5))))+O(`^`(x, 7)),x,7)], [series(`+`(`*`(3, `*`(x)), `-`(`*`(6, `*`(`^`(x, 3..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_247.gif" width="246" height="39" alt="Typesetting:-mprintslash([AproxTaylor[7] := `+`(`*`(3, `*`(x)), `-`(`*`(6, `*`(`^`(x, 3)))), `*`(`/`(39, 10), `*`(`^`(x, 5))))], [`+`(`*`(3, `*`(x)), `-`(`*`(6, `*`(`^`(x, 3)))), `*`(`/`(39, 10), `*`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(82)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot([f(x),AproxTaylor[h+2],AproxLegendre[h],AproxChevi[h]],x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/BasesFuncionales_248.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>ErrorChevi := sqrt(int((f(x)-AproxChevi[h])^2*pesoChevichev,x=-1..1));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_249.gif" width="768" height="14" alt="Typesetting:-mprintslash([ErrorChevi := `*`(`^`(int(`/`(`*`(`^`(`+`(`*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(x)))))), `-`(`/`(`*`(2, `*`(`+`(`*`(`/`(2, 9), `*`(sin(3))),..." align="center" border="0"><br><img src="images/BasesFuncionales_250.gif" width="768" height="63" alt="Typesetting:-mprintslash([ErrorChevi := `*`(`^`(int(`/`(`*`(`^`(`+`(`*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(x)))))), `-`(`/`(`*`(2, `*`(`+`(`*`(`/`(2, 9), `*`(sin(3))),..." align="center" border="0"><br><img src="images/BasesFuncionales_251.gif" width="768" height="88" alt="Typesetting:-mprintslash([ErrorChevi := `*`(`^`(int(`/`(`*`(`^`(`+`(`*`(`^`(`+`(`-`(`*`(`^`(x, 2))), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(x)))))), `-`(`/`(`*`(2, `*`(`+`(`*`(`/`(2, 9), `*`(sin(3))),..." align="center" border="0"></td>
+<td width='5%' align='center'>(83)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>evalf(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_252.gif" width="110" height="18" alt="0.1377034940e-1" align="center" border="0"></td>
+<td width='5%' align='center'>(84)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Si seleccionamos una función un poco mas compleja</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>restart: with(plots): with(orthopoly);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_253.gif" width="125" height="18" alt="[G, H, L, P, T, U]" align="center" border="0"></td>
+<td width='5%' align='center'>(85)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>f := x -&gt; sqrt(x^4+x^2+1)*sin(3*Pi*x);plot(f(x), x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_254.gif" width="237" height="27" alt="Typesetting:-mprintslash([f := proc (x) options operator, arrow; `*`(sqrt(`+`(`*`(`^`(x, 4)), `*`(`^`(x, 2)), 1)), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(x))))))) end proc], [proc (x) options operator, arrow;..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/BasesFuncionales_255.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Probamos con Taylor</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>n:=10;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_256.gif" width="62" height="18" alt="Typesetting:-mprintslash([n := 10], [10])" align="center" border="0"></td>
+<td width='5%' align='center'>(86)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>Taylor[n]:= taylor(f(x),x=0,n);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_257.gif" width="768" height="30" alt="Typesetting:-mprintslash([Taylor[10] := series(`+`(`*`(`*`(3, `*`(Pi)), `*`(x)), `*`(`+`(`-`(`*`(`/`(9, 2), `*`(`^`(Pi, 3)))), `*`(`/`(3, 2), `*`(Pi))), `*`(`^`(x, 3))), `*`(`+`(`*`(`/`(81, 40), `*`(`..." align="center" border="0"><br><img src="images/BasesFuncionales_258.gif" width="768" height="30" alt="Typesetting:-mprintslash([Taylor[10] := series(`+`(`*`(`*`(3, `*`(Pi)), `*`(x)), `*`(`+`(`-`(`*`(`/`(9, 2), `*`(`^`(Pi, 3)))), `*`(`/`(3, 2), `*`(Pi))), `*`(`^`(x, 3))), `*`(`+`(`*`(`/`(81, 40), `*`(`..." align="center" border="0"></td>
+<td width='5%' align='center'>(87)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>AproxTaylor[n]:=convert(Taylor[n],polynom);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_259.gif" width="768" height="30" alt="Typesetting:-mprintslash([AproxTaylor[10] := `+`(`*`(3, `*`(Pi, `*`(x))), `*`(`+`(`-`(`*`(`/`(9, 2), `*`(`^`(Pi, 3)))), `*`(`/`(3, 2), `*`(Pi))), `*`(`^`(x, 3))), `*`(`+`(`*`(`/`(81, 40), `*`(`^`(Pi, ..." align="center" border="0"><br><img src="images/BasesFuncionales_260.gif" width="768" height="30" alt="Typesetting:-mprintslash([AproxTaylor[10] := `+`(`*`(3, `*`(Pi, `*`(x))), `*`(`+`(`-`(`*`(`/`(9, 2), `*`(`^`(Pi, 3)))), `*`(`/`(3, 2), `*`(Pi))), `*`(`^`(x, 3))), `*`(`+`(`*`(`/`(81, 40), `*`(`^`(Pi, ..." align="center" border="0"></td>
+<td width='5%' align='center'>(88)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot([f(x),AproxTaylor[n]],x=-1..1,y=-2..2);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/BasesFuncionales_261.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y con Legendre</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>CoefLegendre[k]:= int(f(x)*P(k,x),x=-1..1)/int(P(k,x)*P(k,x),x=-1..1);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_262.gif" width="390" height="94" alt="Typesetting:-mprintslash([CoefLegendre[k] := `/`(`*`(int(`*`(`^`(`+`(`*`(`^`(x, 4)), `*`(`^`(x, 2)), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(x))))), `*`(P(k, x)))), x = -1 .. 1)), `*`(int(`*`(`..." align="center" border="0"></td>
+<td width='5%' align='center'>(89)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>AproxLegendre[n]:= sum(CoefLegendre[k]*P(k,x),k=0..n);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_263.gif" width="768" height="57" alt="Typesetting:-mprintslash([AproxLegendre[10] := `+`(`*`(`/`(3, 2), `*`(int(`*`(`^`(`+`(`*`(`^`(x, 4)), `*`(`^`(x, 2)), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(x))))), `*`(x))), x = -1 .. 1), `*`..." align="center" border="0"><br><img src="images/BasesFuncionales_264.gif" width="768" height="57" alt="Typesetting:-mprintslash([AproxLegendre[10] := `+`(`*`(`/`(3, 2), `*`(int(`*`(`^`(`+`(`*`(`^`(x, 4)), `*`(`^`(x, 2)), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(x))))), `*`(x))), x = -1 .. 1), `*`..." align="center" border="0"><br><img src="images/BasesFuncionales_265.gif" width="768" height="62" alt="Typesetting:-mprintslash([AproxLegendre[10] := `+`(`*`(`/`(3, 2), `*`(int(`*`(`^`(`+`(`*`(`^`(x, 4)), `*`(`^`(x, 2)), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(x))))), `*`(x))), x = -1 .. 1), `*`..." align="center" border="0"><br><img src="images/BasesFuncionales_266.gif" width="768" height="41" alt="Typesetting:-mprintslash([AproxLegendre[10] := `+`(`*`(`/`(3, 2), `*`(int(`*`(`^`(`+`(`*`(`^`(x, 4)), `*`(`^`(x, 2)), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(x))))), `*`(x))), x = -1 .. 1), `*`..." align="center" border="0"><br><img src="images/BasesFuncionales_267.gif" width="768" height="41" alt="Typesetting:-mprintslash([AproxLegendre[10] := `+`(`*`(`/`(3, 2), `*`(int(`*`(`^`(`+`(`*`(`^`(x, 4)), `*`(`^`(x, 2)), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(x))))), `*`(x))), x = -1 .. 1), `*`..." align="center" border="0"></td>
+<td width='5%' align='center'>(90)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>simplify(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_268.gif" width="768" height="35" alt="Typesetting:-mprintslash([`+`(`*`(`/`(1, 32768), `*`(x, `*`(`+`(`*`(230945, `*`(int(`*`(`+`(`*`(12155, `*`(`^`(x, 9))), `-`(`*`(25740, `*`(`^`(x, 7)))), `*`(18018, `*`(`^`(x, 5))), `-`(`*`(4620, `*`(`..." align="center" border="0"><br><img src="images/BasesFuncionales_269.gif" width="768" height="35" alt="Typesetting:-mprintslash([`+`(`*`(`/`(1, 32768), `*`(x, `*`(`+`(`*`(230945, `*`(int(`*`(`+`(`*`(12155, `*`(`^`(x, 9))), `-`(`*`(25740, `*`(`^`(x, 7)))), `*`(18018, `*`(`^`(x, 5))), `-`(`*`(4620, `*`(`..." align="center" border="0"><br><img src="images/BasesFuncionales_270.gif" width="768" height="35" alt="Typesetting:-mprintslash([`+`(`*`(`/`(1, 32768), `*`(x, `*`(`+`(`*`(230945, `*`(int(`*`(`+`(`*`(12155, `*`(`^`(x, 9))), `-`(`*`(25740, `*`(`^`(x, 7)))), `*`(18018, `*`(`^`(x, 5))), `-`(`*`(4620, `*`(`..." align="center" border="0"><br><img src="images/BasesFuncionales_271.gif" width="768" height="35" alt="Typesetting:-mprintslash([`+`(`*`(`/`(1, 32768), `*`(x, `*`(`+`(`*`(230945, `*`(int(`*`(`+`(`*`(12155, `*`(`^`(x, 9))), `-`(`*`(25740, `*`(`^`(x, 7)))), `*`(18018, `*`(`^`(x, 5))), `-`(`*`(4620, `*`(`..." align="center" border="0"><br><img src="images/BasesFuncionales_272.gif" width="768" height="35" alt="Typesetting:-mprintslash([`+`(`*`(`/`(1, 32768), `*`(x, `*`(`+`(`*`(230945, `*`(int(`*`(`+`(`*`(12155, `*`(`^`(x, 9))), `-`(`*`(25740, `*`(`^`(x, 7)))), `*`(18018, `*`(`^`(x, 5))), `-`(`*`(4620, `*`(`..." align="center" border="0"><br><img src="images/BasesFuncionales_273.gif" width="768" height="35" alt="Typesetting:-mprintslash([`+`(`*`(`/`(1, 32768), `*`(x, `*`(`+`(`*`(230945, `*`(int(`*`(`+`(`*`(12155, `*`(`^`(x, 9))), `-`(`*`(25740, `*`(`^`(x, 7)))), `*`(18018, `*`(`^`(x, 5))), `-`(`*`(4620, `*`(`..." align="center" border="0"><br><img src="images/BasesFuncionales_274.gif" width="768" height="35" alt="Typesetting:-mprintslash([`+`(`*`(`/`(1, 32768), `*`(x, `*`(`+`(`*`(230945, `*`(int(`*`(`+`(`*`(12155, `*`(`^`(x, 9))), `-`(`*`(25740, `*`(`^`(x, 7)))), `*`(18018, `*`(`^`(x, 5))), `-`(`*`(4620, `*`(`..." align="center" border="0"><br><img src="images/BasesFuncionales_275.gif" width="768" height="35" alt="Typesetting:-mprintslash([`+`(`*`(`/`(1, 32768), `*`(x, `*`(`+`(`*`(230945, `*`(int(`*`(`+`(`*`(12155, `*`(`^`(x, 9))), `-`(`*`(25740, `*`(`^`(x, 7)))), `*`(18018, `*`(`^`(x, 5))), `-`(`*`(4620, `*`(`..." align="center" border="0"><br><img src="images/BasesFuncionales_276.gif" width="768" height="35" alt="Typesetting:-mprintslash([`+`(`*`(`/`(1, 32768), `*`(x, `*`(`+`(`*`(230945, `*`(int(`*`(`+`(`*`(12155, `*`(`^`(x, 9))), `-`(`*`(25740, `*`(`^`(x, 7)))), `*`(18018, `*`(`^`(x, 5))), `-`(`*`(4620, `*`(`..." align="center" border="0"></td>
+<td width='5%' align='center'>(91)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>AproxLegendreDefitiva:=evalf(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_277.gif" width="768" height="17" alt="Typesetting:-mprintslash([AproxLegendreDefitiva := `+`(`*`(0.3051757812e-4, `*`(x, `*`(`+`(`*`(5049952.524, `*`(`^`(x, 8))), `-`(`*`(12832494.41, `*`(`^`(x, 6)))), `*`(10875743.58, `*`(`^`(x, 4))), `-..." align="center" border="0"></td>
+<td width='5%' align='center'>(92)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>plot([f(x),AproxTaylor[n],AproxLegendreDefitiva],x=-1..1,y=-2..2,legend=["func","AproxTaylor","AproxLegendre"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/BasesFuncionales_278.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Los errores</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>ErrorTaylor := sqrt(int((f(x)-AproxTaylor[n])^2,x=-1..1));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_279.gif" width="768" height="14" alt="Typesetting:-mprintslash([ErrorTaylor := `*`(`^`(int(`*`(`^`(`+`(`*`(`^`(`+`(`*`(`^`(x, 4)), `*`(`^`(x, 2)), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(x))))))), `-`(`*`(3, `*`(Pi, `*`(x)))), `-`(..." align="center" border="0"><br><img src="images/BasesFuncionales_280.gif" width="768" height="41" alt="Typesetting:-mprintslash([ErrorTaylor := `*`(`^`(int(`*`(`^`(`+`(`*`(`^`(`+`(`*`(`^`(x, 4)), `*`(`^`(x, 2)), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(x))))))), `-`(`*`(3, `*`(Pi, `*`(x)))), `-`(..." align="center" border="0"><br><img src="images/BasesFuncionales_281.gif" width="768" height="49" alt="Typesetting:-mprintslash([ErrorTaylor := `*`(`^`(int(`*`(`^`(`+`(`*`(`^`(`+`(`*`(`^`(x, 4)), `*`(`^`(x, 2)), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(x))))))), `-`(`*`(3, `*`(Pi, `*`(x)))), `-`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(93)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>evalf(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_282.gif" width="95" height="18" alt="182.0489197" align="center" border="0"></td>
+<td width='5%' align='center'>(94)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>ErrorLegendre := sqrt(int((f(x)-AproxLegendreDefitiva)^2,x=-1..1));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_283.gif" width="768" height="14" alt="Typesetting:-mprintslash([ErrorLegendre := `*`(`^`(int(`*`(`^`(`+`(`*`(`^`(`+`(`*`(`^`(x, 4)), `*`(`^`(x, 2)), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(x))))))), `-`(`*`(0.3051757812e-4, `*`(x, ..." align="center" border="0"><br><img src="images/BasesFuncionales_284.gif" width="768" height="35" alt="Typesetting:-mprintslash([ErrorLegendre := `*`(`^`(int(`*`(`^`(`+`(`*`(`^`(`+`(`*`(`^`(x, 4)), `*`(`^`(x, 2)), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(x))))))), `-`(`*`(0.3051757812e-4, `*`(x, ..." align="center" border="0"><br><img src="images/BasesFuncionales_285.gif" width="768" height="42" alt="Typesetting:-mprintslash([ErrorLegendre := `*`(`^`(int(`*`(`^`(`+`(`*`(`^`(`+`(`*`(`^`(x, 4)), `*`(`^`(x, 2)), 1), `/`(1, 2)), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(x))))))), `-`(`*`(0.3051757812e-4, `*`(x, ..." align="center" border="0"></td>
+<td width='5%' align='center'>(95)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="Courier New"><strong>evalf(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/BasesFuncionales_286.gif" width="103" height="18" alt=".1288678040" align="center" border="0"></td>
+<td width='5%' align='center'>(96)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</body>
+</html>
