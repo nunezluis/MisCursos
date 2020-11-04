@@ -5,7 +5,8 @@
 <a name="Clase1"></a>
 ## Clase 1. Los vectores de siempre 
 + **Objetivo de la clase**
-   Esta clase tiene varios objetivos. Primero incorporar tres herramientas profesionales. LATEX, MAXIMA y los repositorios git. El segunto objetivo es utilizar la excusas de los vectores que uds han visto desde siempre e introduccir conceptos como las operaciones que definen un espacio vectorial, el concepto de independencia lineal y los productos (vectorial y escalar) que se definen entre vectores cartesianos.
+   Esta clase tiene varios objetivos. Primero incorporar tres herramientas profesionales. [LATEX](https://en.wikipedia.org/wiki/LaTeX), [MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software)) y los repositorios [git](http://github.com/). LATEX es un editor de textos científicos de calidad profesional que los Físicos utilizamos cotidianamente. En la actualidad existen plataformas como [overleaf](http://overleaf.com/)
+   El segunto objetivo es utilizar la excusas de los vectores que uds han visto desde siempre e introduccir conceptos como las operaciones que definen un espacio vectorial, el concepto de independencia lineal y los productos (vectorial y escalar) que se definen entre vectores cartesianos.
    + La primera excusa es la utilización de herram
 + **Actividad antes de clase** 
    1. Instalar y configurar MAXIMA
