@@ -36,7 +36,7 @@
    1. Desarrollar los problemas 5 y 6 del punto 2.3.8
 + **Materiales de apoyo**
    + [Video](https://youtu.be/TVwa7wJ0N9I) y [presentación de variedades lineales](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_3IndependeLineal.pdf)
-   + [Ejemplos de ortogonalización de monomios y aproximación de fuciones](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/ScriptMetMat1/BasesFuncionales/BasesFuncionales.html)
+   + [Ejemplos de ortogonalización de monomios y aproximación de funciones](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/ScriptMetMat1/BasesFuncionales/BasesFuncionales.html)
  
 <a name="Clase6"></a>   
 ### Clase 6. Aproximación de funciones y bases ortogonales  
