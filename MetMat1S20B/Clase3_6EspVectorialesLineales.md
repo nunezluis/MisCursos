@@ -36,7 +36,7 @@
    1. XXX
    2. YYY 
 + **Materiales de apoyo**
-   1. Video y Presentación
+   1. Video y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_4AproximacionFunciones.pdf)
    2. Video y Presentación
    
 <a name="Clase6"></a>   
