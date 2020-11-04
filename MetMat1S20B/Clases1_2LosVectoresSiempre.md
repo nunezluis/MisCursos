@@ -3,7 +3,10 @@
 + [Clase 2. Análisis vectorial express y numeros complejos ](#Clase2)
 + [Aquí podrán encontrar algunos ejemplos de MAXIMA](https://github.com/nunezluis/Programas-/tree/main/IntroduccionFisica) 
 <a name="Clase1"></a>
-## Clase 1. Los vectores de siempre  
+## Clase 1. Los vectores de siempre 
++ **Objetivo de la clase**
+   Esta clase tiene varios objetivos. Primero incorporar tres herramientas profesionales. LATEX, MAXIMA y los repositorios git. El segunto objetivo es utilizar la excusas de los vectores que uds han visto desde siempre e introduccir conceptos como las operaciones que definen un espacio vectorial, el concepto de independencia lineal y los productos (vectorial y escalar) que se definen entre vectores cartesianos.
+   + La primera excusa es la utilización de herram
 + **Actividad antes de clase** 
    1. Instalar y configurar MAXIMA
    2. Registrarse en overleaf
@@ -18,6 +21,7 @@
    1. [Video](https://youtu.be/2LhoaImegV4) y [presentación generalidades de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_1Vectores.pdf)
    2. [Video](https://youtu.be/WNMyW9gKutU) y [presentación bases y componentes de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_2BaseCompon.pdf)
    3. Video y [presentación de álgebra vectores, índices y notación de Einstein](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_3VectoresIndices.pdf)
++ **Al terminar la clase** 
 
 <a name="Clase2"></a>
 ## Clase 2. Análisis vectorial express y numeros complejos  
