@@ -36,8 +36,8 @@
    1. XXX
    2. YYY 
 + **Materiales de apoyo**
-   1. [Video](https://youtu.be/TVwa7wJ0N9I) y [presentación de variedades lineales](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_3IndependeLineal.pdf) 
-   2. [Video](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_4AproximacionFunciones.pdf)
+   + [Video](https://youtu.be/TVwa7wJ0N9I) y [presentación de variedades lineales](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_3IndependeLineal.pdf) 
+ 
    
 <a name="Clase6"></a>   
 ### Clase 6. Aproximación de funciones y bases ortogonales  
@@ -50,5 +50,4 @@
    2. YYY 
 + **Asignación 2 (evaluación en la clase 11)** ZZZ
 + **Materiales de apoyo**
-   1. Video y Presentación
-   2. Video y Presentación
+    +[Video](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_4AproximacionFunciones.pdf)
