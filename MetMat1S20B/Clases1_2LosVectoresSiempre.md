@@ -8,7 +8,10 @@
 
    Esta clase tiene varios objetivos. Primero incorporar tres herramientas profesionales, dos de ellas colaborativas. [LATEX](https://en.wikipedia.org/wiki/LaTeX), [MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software)) y los repositorios [git](http://github.com/).
    
-   El segunto objetivo es utilizar la excusa del conocimiento previo vectores cartesianos para introduccir conceptos fundamentales que utilizaremos a partir de la tercera clase de este curso. Entre estos conceptos fundamentales podemos mencionar: las operaciones que definen un espacio vectorial, el concepto de independencia lineal y los distintos productos (vectorial y escalar) que se definen entre vectores cartesianos.
+   El segunto objetivo es utilizar la excusa del conocimiento previo vectores cartesianos para introduccir conceptos fundamentales que utilizaremos a partir de la tercera clase de este curso. Entre estos conceptos fundamentales podemos mencionar: las operaciones que definen un espacio vectorial, el concepto de independencia lineal y los distintos productos que se definen entre vectores cartesianos.
+   
+   El tercer objetivo es iniciar a los estudiantes en la utilización de la notación de Einstein para desarrollar algebra de vectores utilizando índices. 
+
 + **Actividad antes de clase** 
    1. Instalar y configurar MAXIMA
    2. Registrarse en overleaf
