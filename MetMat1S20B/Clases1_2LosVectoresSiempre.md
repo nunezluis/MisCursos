@@ -12,7 +12,7 @@
    
    El tercer objetivo es iniciar a los estudiantes en la utilización de la notación de Einstein para desarrollar algebra de vectores utilizando índices. 
 
-+ **Actividad antes de clase** 
++ **Actividad antes de iniciar la clase** 
    1. Instalar y configurar MAXIMA
    2. Registrarse en overleaf
    3. Registrarse y configurar repositorio git
@@ -26,7 +26,11 @@
    1. [Video](https://youtu.be/2LhoaImegV4) y [presentación generalidades de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_1Vectores.pdf)
    2. [Video](https://youtu.be/WNMyW9gKutU) y [presentación bases y componentes de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_2BaseCompon.pdf)
    3. Video y [presentación de álgebra vectores, índices y notación de Einstein](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_3VectoresIndices.pdf)
-+ **Al terminar la clase** 
++ **Al finalizar estos contenido** El estudiantes deberá
+   + Haber refrescado los conceptos de 
+      + vectores cartesianos, componentes,
+      + independencia lineal
+      + producto escalar y vectorial
 
 <a name="Clase2"></a>
 ## Clase 2. Análisis vectorial express y numeros complejos  
