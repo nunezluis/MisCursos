@@ -50,4 +50,4 @@
    2. YYY 
 + **Asignación 2 (evaluación en la clase 11)** ZZZ
 + **Materiales de apoyo**
-    +[Video](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_4AproximacionFunciones.pdf)
+   + [Video](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_4AproximacionFunciones.pdf)
