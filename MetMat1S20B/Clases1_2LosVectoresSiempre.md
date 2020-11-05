@@ -47,4 +47,7 @@
    1. Video y [presentación derivación e integración de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_5DerIntVectores.pdf)
    2. Video y [presentación vectores y numeros complejos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_6VectoresComplejos.pdf)
  + **Al finalizar estos contenidos** El estudiantes deberá
-   
+   1. Saber diferenciar vectores variables (componentes, vectores base o ambos) y poder plantear las operaciones de derivación.
+   2. Identificar campos vectoriales y las derivadas asociadas
+   3. Identificar el operador Nabla y asociarlos como un operador vectorial
+   4. Ser capaz de realizar integrales de campos vectoriales a lo largo de trayectorias
