@@ -49,7 +49,7 @@
 
 + **Asignación 2 (evaluación en la clase 11)** 
 
-    Est asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar cuál es el error de medición del sensor de bajo costo y, como calibrarlo para que podamos establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Asignaciones/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema planteado. 
+    Est asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar cuál es el error de medición del sensor de bajo costo y, como calibrarlo para que podamos establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Asignaciones/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema planteado. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MetMat1S20B/Asignaciones/Datos) podrán encontrar los datos para desarrollar los algoritmos planteados.
 
 + **Materiales de apoyo**
    + [Video](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_4AproximacionFunciones.pdf)
