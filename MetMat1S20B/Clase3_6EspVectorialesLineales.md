@@ -27,7 +27,10 @@
    2. [Video](https://youtu.be/rQ59n-wr9X8) y [presentación de espacios euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_23EspaciosEuclideanos.pdf)
 
 <a name="Clase5"></a>
-### Clase 5. Dependencia e independencia líneal y bases ortogonales  
+### Clase 5. Dependencia e independencia líneal y bases ortogonales
++ **Objetivos de la clase**
+
+   Esta clase tiene por objetivos, en primer lugar, introducir el concepto de independencia lineal y, a partir de éste, generar la idea de base de un espacio vectorial. Seguidamente, presentar la expansión de un vector como combinación lineal de la base y definir sus componentes en las distintas bases. Finalmente, si el espacio tiene definido un conjunto de   
 + **Actividad antes de clase** 
    1. Estudiar el punto 2.3 de las notas de clase
    2. Rehacer el ejercicio resuelto: 2.3.6 
