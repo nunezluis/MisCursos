@@ -51,3 +51,6 @@
    2. Identificar campos vectoriales y las derivadas asociadas
    3. Identificar el operador Nabla y asociarlos como un operador vectorial
    4. Ser capaz de realizar integrales de campos vectoriales a lo largo de trayectorias
+   5. Haber refrescado el álgebra elemental de números complejos
+   6. Asociar un número complejo con vectores en el plano complejo
+   7. Identificar y poder aplicar las fórmulas de Euler y Moivre
