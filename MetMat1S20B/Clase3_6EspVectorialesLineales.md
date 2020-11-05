@@ -47,7 +47,9 @@
 + **Taller de problemas 3 (evaluación en la clase 7)**
    1. Utilizando MAXIMA desarrollar el problema 3 de la sección 2.4.7
 + **Asignación 2 (evaluación en la clase 11)** 
+Este ejercicio busca mostrar que esa calibración está íntimamente ligada a la idea de métrica (pueden consultar \cite{Colombo2020}).
 
+El problema está en cuantificar cuál es el error de medición del sensor de bajo costo y, como calibrarlo para que podamos establecer nuevas lecturas que sean mas precisas.
 https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Asignaciones/TallerDistancias.pdf
 
 + **Materiales de apoyo**
