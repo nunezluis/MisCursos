@@ -46,6 +46,9 @@
 + **Evaluación Asignación 1**     
 + **Taller de problemas 3 (evaluación en la clase 7)**
    1. Utilizando MAXIMA desarrollar el problema 3 de la sección 2.4.7
-+ **Asignación 2 (evaluación en la clase 11)** ZZZ
++ **Asignación 2 (evaluación en la clase 11)** 
+
+https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Asignaciones/TallerDistancias.pdf
+
 + **Materiales de apoyo**
    + [Video](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_4AproximacionFunciones.pdf)
