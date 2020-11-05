@@ -32,7 +32,11 @@
    3. Utilizar la notación de Einstein para desarrollar cálculos vectoriales. Conocer las propiedades de la delta de Kronecker y el símbolo de Levi-Civita.
 
 <a name="Clase2"></a>
-## Clase 2. Análisis vectorial express y numeros complejos  
+## Clase 2. Análisis vectorial express y numeros complejos 
++ **Objetivos de la clase**
+
+   Esta clase tiene por objetivo realizar una aproximación intuitiva a los conceptos de análisis vectorial. En particular interpretar la derivadación e integración de un campo vectorial. Mas adelante, en el desarrollo del curso se formalizará este concepto. De igual forma se hará un repaso de los conceptos de números complejos y se asociará con la idea de un vector con una componente real y otra compleja.
+   
 + **Actividad antes de clase** 
    1. Estudiar puntos de las notas de clase 1.5.1, 1.5.2, 1.5.3, 1.5.4, 1.5.5 y 1.5.6 del [Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
    2. Rehacer los ejercicios resueltos: 2 y 3 sección 1.5.7; y 2 y 4 de la sección 1.6.5
