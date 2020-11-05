@@ -26,7 +26,7 @@
    1. [Video](https://youtu.be/2LhoaImegV4) y [presentación generalidades de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_1Vectores.pdf)
    2. [Video](https://youtu.be/WNMyW9gKutU) y [presentación bases y componentes de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_2BaseCompon.pdf)
    3. Video y [presentación de álgebra vectores, índices y notación de Einstein](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_3VectoresIndices.pdf)
-+ **Al finalizar estos contenido** El estudiantes deberá
++ **Al finalizar estos contenidos** El estudiantes deberá
    1. Haber instalado y tener operativas las plataformas computacionales que utilizará durante el curso
    2. Haber refrescado los conceptos de: vectores cartesianos, componentes, independencia lineal, bases del espacio vectorial, productos escalar y vectorial (tanto su representación geométrica como algebráica).
    3. Utilizar la notación de Einstein para desarrollar cálculos vectoriales. Conocer las propiedades de la delta de Kronecker y el símbolo de Levi-Civita.
@@ -46,3 +46,5 @@
 + **Materiales de apoyo**
    1. Video y [presentación derivación e integración de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_5DerIntVectores.pdf)
    2. Video y [presentación vectores y numeros complejos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_6VectoresComplejos.pdf)
+ + **Al finalizar estos contenidos** El estudiantes deberá
+   
