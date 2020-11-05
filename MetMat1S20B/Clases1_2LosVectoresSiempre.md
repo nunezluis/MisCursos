@@ -21,7 +21,8 @@
 + **Taller de problemas 1 (evaluación en la clase 3)**
    1. Realice un código en MAXIMA para el cual, dado tres vectores que formen los lados de un triángulo calcule el centroide (Problema 3 Sección 1.1.8)
    2. Realice un código en MAXIMA que reproduzca el ejercicio 6 de la Sección 1.2.9 
-+ **Asignación 1 (evaluación en la clase n+5 = 6)** Desarrolle el problema 9 de la sección 1.3.5
++ **Asignación 1 (evaluación en la clase n+5 = 6)** Desarrolle el problema 9 de la sección 1.3.5. 
+Las asignaciones serán presentadas de dos maneras: un reporte tipo artículo y una presentación (10m) de máximo 6 láminas presentadas. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
 + **Materiales de apoyo**
    1. [Video](https://youtu.be/2LhoaImegV4) y [presentación generalidades de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_1Vectores.pdf)
    2. [Video](https://youtu.be/WNMyW9gKutU) y [presentación bases y componentes de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_2BaseCompon.pdf)
