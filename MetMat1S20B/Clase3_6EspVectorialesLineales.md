@@ -40,6 +40,11 @@
 + **Materiales de apoyo**
    + [Video](https://youtu.be/TVwa7wJ0N9I) y [presentación de variedades lineales](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_3IndependeLineal.pdf)
    + [Ejemplos de ortogonalización de monomios y aproximación de funciones](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/ScriptMetMat1/BasesFuncionales/BasesFuncionales.html)
+   
++ **Al finalizar estos contenidos** El estudiantes deberá
+   1. Estar en capacidad construir una base para un espacio vectorial y identificar las componentes de un vector en esa base
+   2. Construir una base ortogonal a partir de la definición del producto interno y de una base oblicua previamente identificada. 
+   3. Comprender la diferencia de expresar un vector en 
  
 <a name="Clase6"></a>   
 ### Clase 6. Aproximación de funciones y bases ortogonales  
