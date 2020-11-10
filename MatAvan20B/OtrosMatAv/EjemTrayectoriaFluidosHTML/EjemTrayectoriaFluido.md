@@ -1,3 +1,3 @@
 # Ejemplo de Series de Fourier
-Aquí podrán encontrar un [ejemplos de aplicación de ecuaciones diferenciales ordinarias] 
-(https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MatAvan20B/OtrosMatAv/EjemFourierSerieHTML/FourierSeries.html)
+Aquí podrán encontrar un [ejemplo de aplicación de ecuaciones diferenciales ordinarias] 
+(https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MatAvan20B/OtrosMatAv/EjemTrayectoriaFluidosHTML/EjemTrayectoriasFluidos.html. Analizaremos el caso de el movimiento de una esfera (de corcho o de aire) en un fluido. En el caso de una burbuja de aire veremos como se relaciona su velocidad con la variación de presión desde el fondo del recipiente.
