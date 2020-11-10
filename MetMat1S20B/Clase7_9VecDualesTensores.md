@@ -1,8 +1,7 @@
 # Espacios vectoriales duales y tensoriales
 + [Clase 7. Funcionales Lineales y Espacios Vectoriales Duales](#Clase7)
 + [Clase 8. Tensores y espacios tensoriales](#Clase8)
-+ [Clase 5. Dependencia e independencia líneal y bases ortogonales](#Clase9)
-+ [Clase 6. Aproximación de funciones y bases ortogonales](#Clase6)
++ [Clase 9. Vectores, tensores y espacios pseudoeuclideanos](#Clase9)
 
 <a name="Clase7"></a>
 ### Clase 7. Funcionales Lineales y Espacios Vectoriales Duales 
