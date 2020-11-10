@@ -1,7 +1,8 @@
 # Espacios vectoriales duales y tensoriales
 + [Clase 7. Funcionales Lineales y Espacios Vectoriales Duales](#Clase7)
 + [Clase 8. Tensores y espacios tensoriales](#Clase8)
-+ [Clase 9. Vectores, tensores y espacios pseudoeuclideanos](#Clase9)
++ [Clase 9. Ejemplos de Tensores y espacios tensoriales](#Clase9)
++ [Clase 10. Vectores, tensores y espacios pseudoeuclideanos](#Clase10)
 
 <a name="Clase7"></a>
 ### Clase 7. Funcionales Lineales y Espacios Vectoriales Duales 
@@ -26,7 +27,18 @@
    2. [Video](https://youtu.be/rQ59n-wr9X8) y [presentación de espacios euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_23EspaciosEuclideanos.pdf)
 
 <a name="Clase9"></a>
-### Clase 9. Vectores, tensores y espacios pseudoeuclideanos  
+### Clase 9. Ejemplos de Tensores y espacios tensoriales  
++ **Actividad antes de clase** 
+   1. Estudiar el punto 2.2 de las notas de clase
+   2. Rehacer con MAXIMA el ejercicio resuelto 2 sección 2.2.4. 
++ **Taller de problemas 2 (evaluación en la clase 5)**
+   + Los cuaterniones, problema 5 sección 2.2.6
++ **Materiales de apoyo**
+   1. [Video](https://youtu.be/la9Gnhc0uFg) y [presentación de espacios métricos y normados](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_2EspaciosMetricos.pdf)
+   2. [Video](https://youtu.be/rQ59n-wr9X8) y [presentación de espacios euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_23EspaciosEuclideanos.pdf)
+   
+<a name="Clase10"></a>
+### Clase 10. Vectores, tensores y espacios pseudoeuclideanos  
 + **Actividad antes de clase** 
    1. Estudiar el punto 2.2 de las notas de clase
    2. Rehacer con MAXIMA el ejercicio resuelto 2 sección 2.2.4. 
