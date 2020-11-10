@@ -13,7 +13,7 @@
 + **Taller de problemas 4 (evaluación en la clase 9)**
    + Sección 3.1.6 ejercicios 6 y 7.
 + **Materiales de apoyo**
-   + [Video](https://youtu.be/aiv3E_Nofko) y [presentación del concepto de espacio vectorial](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_1GruposEspaciosVectoriales.pdf) 
+   + [Video]() y [presentación Funcionales Lineales y Espacios Vectoriales Duales]() 
 
 <a name="Clase8"></a>
 ### Clase 8. Tensores y espacios tensoriales 
