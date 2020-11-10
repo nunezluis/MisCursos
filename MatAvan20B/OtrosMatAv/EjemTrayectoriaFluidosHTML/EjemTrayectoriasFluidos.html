@@ -1,0 +1,1046 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>EjemTrayectoriasFluidos.html</title>
+<!-- Created by Maple 2018.0, Mac OS X -->
+</head>
+<a href="EjemTrayectoriasFluidos.html#MapleAutoBookmark1">TrayectoriasFluidos.maple</a>
+<ul>
+<li><a href="EjemTrayectoriasFluidos.html#MapleAutoBookmark2">Movimiento Vertical: Trayectorias de Gotas, Balas, Corchos y Burbujas en Fluidos</a>
+<li><a href="EjemTrayectoriasFluidos.html#MapleAutoBookmark3">Movimiento Parabólico: Trayectoria de Balas en Fluidos</a>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="center"><font color="#000000" size="5" face="Times New Roman"><strong>Trayectorias de Gotas, Balas, Corchos y Burbujas en Fluidos</strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"></font><font color="#000000" size="3" face="Times New Roman"><strong><em>Luis A. Núñez</em></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman">Escuela de Física, Universidad Industrial de Santander, Bucaramanga Colombia</font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark2" />
+<p align="left"><font color="#000000" size="5" face="Times New Roman"><strong>Movimiento Vertical: Trayectorias de Gotas, Balas, Corchos y Burbujas en Fluidos</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Esta hoja de trabajo muestra la evolución de un gota, una bala y una burbuja lanzadas (o dejadas caer) verticalmente en presencia del resitencia del aire</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">o un fluido cualquiera.. El movimiento se describe mediante la ecuación diferencial y se modela el efecto de la resitencia del aire. </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Para el modelaje tomamos: </font>&nbsp;</p>
+<p align="left"><ul><li><font color="#000000" size="3" face="Times New Roman"> <img src="images/EjemTrayectoriasFluidos_1.gif" width="21" height="21" alt="rho" align="center" border="0">0 la densidad del fluido y <img src="images/EjemTrayectoriasFluidos_2.gif" width="21" height="21" alt="rho" align="center" border="0">1 la densidad del cuerpo (gotas/balas/conchos/burbujas) en Kilogramos/<img src="images/EjemTrayectoriasFluidos_3.gif" width="29" height="22" alt="`*`(`^`(m, 3))" align="center" border="0"> &nbsp;</font></li></ul>&nbsp;</p>
+<p align="left"><ul><li><font color="#000000" size="3" face="Times New Roman">K es el coeficiente de fricción que depende de la forma de cuerpo. En el caso de una esfera en un fluido </font><font color="#000000" size="3" face="Times New Roman"><em>K</em></font><font color="#000000" size="3" face="Times New Roman">=6<img src="images/EjemTrayectoriasFluidos_4.gif" width="21" height="21" alt="Pi" align="center" border="0">R y </font></li></ul>&nbsp;</p>
+<p align="left"><ul><li><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_5.gif" width="22" height="21" alt="eta" align="center" border="0"> es el coeficiente de fricción que depende de la viscosidad del fluido. En el sistema MKS se expresa en N sg /<img src="images/EjemTrayectoriasFluidos_6.gif" width="29" height="22" alt="`*`(`^`(m, 2))" align="center" border="0"> y se mide en Poise que es igual a un décimo de la unidad en MKS.</font></li></ul>&nbsp;</p>
+<p align="left"><ul><li><font color="#000000" size="3" face="Times New Roman">g es la aceleración de gravedad, la cual consideramos constante igual a 9.8 metros por segundo cuadrado</font></li></ul>&nbsp;</p>
+<p align="left"><ul><li><font color="#000000" size="3" face="Times New Roman">y(t) es la altura del movil (gotas, balas, corchos o burbujas) en un tiempo t.
+<br></font></li></ul>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La evolución en el tiempo viene gobernada por una ecuación diferencial de segundo orden. </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>restart;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>m0:=(4*Pi/3)*rho0*R^3;
+<br>m:=(4*Pi/3)*rho1*R^3;
+<br>rho0:=xi*rho;
+<br>rho1:=phi*rho;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_7.gif" width="125" height="43" alt="Typesetting:-mprintslash([m0 := `+`(`*`(`/`(4, 3), `*`(Pi, `*`(rho0, `*`(`^`(R, 3))))))], [`+`(`*`(`/`(4, 3), `*`(Pi, `*`(rho0, `*`(`^`(R, 3))))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_8.gif" width="117" height="43" alt="Typesetting:-mprintslash([m := `+`(`*`(`/`(4, 3), `*`(Pi, `*`(rho1, `*`(`^`(R, 3))))))], [`+`(`*`(`/`(4, 3), `*`(Pi, `*`(rho1, `*`(`^`(R, 3))))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_9.gif" width="73" height="21" alt="Typesetting:-mprintslash([rho0 := `*`(xi, `*`(rho))], [`*`(xi, `*`(rho))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_10.gif" width="74" height="21" alt="Typesetting:-mprintslash([rho1 := `*`(phi, `*`(rho))], [`*`(phi, `*`(rho))])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Donde <img src="images/EjemTrayectoriasFluidos_11.gif" width="20" height="21" alt="xi" align="center" border="0"> y <img src="images/EjemTrayectoriasFluidos_12.gif" width="21" height="21" alt="phi" align="center" border="0"> &nbsp;representan las densidades relativas del fluido y del cuerpo respecto al agua (de densidad <img src="images/EjemTrayectoriasFluidos_13.gif" width="21" height="21" alt="rho" align="center" border="0"> ), respectivamente.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Para el caso de una gota de lluvia cayendo, una pelota lanzada hacia arriba o una burbuja (o un corcho) que se despega desde el fondo </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">de un vaso de refresco, la ecuación diferencial que describe el moviento puede ser escrita como</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>emov := m*diff(y(t),t$2) = m*g - K*eta*diff(y(t),t)-m0*g ;
+<br>K:=6*Pi*R;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_14.gif" width="547" height="68" alt="Typesetting:-mprintslash([emov := `+`(`*`(`/`(4, 3), `*`(Pi, `*`(phi, `*`(rho, `*`(`^`(R, 3), `*`(diff(y(t), `$`(t, 2))))))))) = `+`(`*`(`/`(4, 3), `*`(Pi, `*`(phi, `*`(rho, `*`(`^`(R, 3), `*`(g))))))..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_15.gif" width="82" height="21" alt="Typesetting:-mprintslash([K := `+`(`*`(6, `*`(Pi, `*`(R))))], [`+`(`*`(6, `*`(Pi, `*`(R))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Tenemos tres fuerzas presentes: el peso, la resistencia del aire y la fuerza de Arquímides (empuje o flotación). </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La solución general será:</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>soluciongeneral := dsolve( emov, y(t) );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_16.gif" width="530" height="66" alt="Typesetting:-mprintslash([soluciongeneral := y(t) = `+`(`-`(`/`(`*`(`/`(2, 9), `*`(phi, `*`(rho, `*`(`^`(R, 2), `*`(exp(`+`(`-`(`/`(`*`(`/`(9, 2), `*`(eta, `*`(t))), `*`(phi, `*`(rho, `*`(`^`(R, 2))))..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Donde _C1 y _C2 son constantes a ser determinadas por las condiciones iniciales. Es de hacer notar que, primeramente, una misma ecuación diferencial describe una variedad de fenómenos físicos. Igualmente, es importante señalar que la ecuación queda parametrizada <img src="images/EjemTrayectoriasFluidos_17.gif" width="36" height="21" alt="`*`(K, `*`(eta))" align="center" border="0"> ,<img src="images/EjemTrayectoriasFluidos_18.gif" width="20" height="21" alt="xi" align="center" border="0">,<img src="images/EjemTrayectoriasFluidos_19.gif" width="21" height="21" alt="rho" align="center" border="0"> y &nbsp;&nbsp;<img src="images/EjemTrayectoriasFluidos_20.gif" width="22" height="18" alt="R" align="center" border="0">. Estas cantidades nos permiten modelar el fenómeno.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Para el caso de la gota de agua supondremos que parte del reposo, por lo tanto la solución general será:</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>solucionparticular := dsolve( {emov,y(0)=0,D(y)(0)=v0}, y(t) );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_21.gif" width="728" height="54" alt="Typesetting:-mprintslash([solucionparticular := y(t) = `+`(`/`(`*`(`/`(2, 81), `*`(phi, `*`(rho, `*`(`^`(R, 2), `*`(exp(`+`(`-`(`/`(`*`(`/`(9, 2), `*`(eta, `*`(t))), `*`(phi, `*`(rho, `*`(`^`(R, 2))))..." align="center" border="0"><br><img src="images/EjemTrayectoriasFluidos_22.gif" width="728" height="38" alt="Typesetting:-mprintslash([solucionparticular := y(t) = `+`(`/`(`*`(`/`(2, 81), `*`(phi, `*`(rho, `*`(`^`(R, 2), `*`(exp(`+`(`-`(`/`(`*`(`/`(9, 2), `*`(eta, `*`(t))), `*`(phi, `*`(rho, `*`(`^`(R, 2))))..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La posición y la velocidad vendrán dadas por</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>posicion:=rhs(solucionparticular);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_23.gif" width="728" height="58" alt="Typesetting:-mprintslash([posicion := `+`(`/`(`*`(`/`(2, 81), `*`(phi, `*`(rho, `*`(`^`(R, 2), `*`(exp(`+`(`-`(`/`(`*`(`/`(9, 2), `*`(eta, `*`(t))), `*`(phi, `*`(rho, `*`(`^`(R, 2)))))))), `*`(`+`(`*`..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.5)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>velocidad:=diff(posicion,t);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_24.gif" width="529" height="66" alt="Typesetting:-mprintslash([velocidad := `+`(`-`(`/`(`*`(`/`(1, 9), `*`(exp(`+`(`-`(`/`(`*`(`/`(9, 2), `*`(eta, `*`(t))), `*`(phi, `*`(rho, `*`(`^`(R, 2)))))))), `*`(`+`(`*`(2, `*`(`^`(R, 2), `*`(g, `*`..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.6)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">El cambio de signo en las fuerzas indica que en algún momento la fuerza de fricción y el empuje anularán al peso. En ese caso estaremos</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">hablando una velocidad límite. Es decir de una velocidad a partir de la cual el movil cae sin aceleración.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ecuac1:=0=rhs(emov):
+<br>vellimite:= simplify((4/3*Pi*(rho1-rho0)*R^3*g)/(6*Pi*R*eta));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_25.gif" width="208" height="46" alt="Typesetting:-mprintslash([vellimite := `+`(`/`(`*`(`/`(2, 9), `*`(`^`(R, 2), `*`(g, `*`(rho, `*`(`+`(phi, `-`(xi))))))), `*`(eta)))], [`+`(`/`(`*`(`/`(2, 9), `*`(`^`(R, 2), `*`(g, `*`(rho, `*`(`+`(phi..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.7)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La velocidad límite será constante. En el caso de una gota de lluvia la densidad del aire respecto al agua es 1,30 10(-3), y consideremos el diámetro de la gota de agua 1mm= 10(-3)m.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>gota:= [g = 9.8, R=0.001,rho=10^3, xi=1.3*10^(-3), phi=1, v0=0,eta=0.01894*10^(-3)]: 
+<br>vellim:=subs(gota,vellimite);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_26.gif" width="159" height="18" alt="Typesetting:-mprintslash([vellim := 114.8335093], [114.8335093])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.8)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La gota tiene una velocidad límite de 120 mts/sg o</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>vellimiteKmh:=vellim*(0.001 / ( (1/60)*(1/60) ));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_27.gif" width="203" height="18" alt="Typesetting:-mprintslash([vellimiteKmh := 413.4006335], [413.4006335])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.9)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">° casi 500 Kmh !</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>vel1:=subs(gota,velocidad); 
+<br>plot(vel1,t=0..100,labels=[t,v]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_28.gif" width="350" height="22" alt="Typesetting:-mprintslash([vel1 := `+`(`-`(`*`(114.8335093, `*`(exp(`+`(`-`(`*`(0.8523000000e-1, `*`(t)))))))), 114.8335093)], [`+`(`-`(`*`(114.8335093, `*`(exp(`+`(`-`(`*`(0.8523000000e-1, `*`(t))))))..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_29.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>pos1:=subs(gota,posicion); 
+<br>plot(pos1,t=0..100,labels=[t,y]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_30.gif" width="458" height="22" alt="Typesetting:-mprintslash([pos1 := `+`(`*`(1347.336728, `*`(exp(`+`(`-`(`*`(0.8523000000e-1, `*`(t))))))), `*`(114.8335093, `*`(t)), `-`(1347.336728))], [`+`(`*`(1347.336728, `*`(exp(`+`(`-`(`*`(0.8523..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_31.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Si la gota crece a 0,2, 0,3, 0,4, 0,5 mm tendremos</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>gota2:= [g = 9.8, R=0.002,rho=10^3, xi=1.3*10^(-3), phi=1,v0=0,eta=1.81*10^(-5)]:
+<br>gota3:= [g = 9.8, R=0.003,rho=10^3, xi=1.3*10^(-3),phi=1, v0=0,eta=1.81*10^(-5)]:
+<br>gota4:= [g = 9.8, R=0.004,rho=10^3,phi=1, xi=1.3*10^(-3), v0=0,eta=1.81*10^(-5)]:
+<br>gota5:= [g = 9.8, R=0.005,rho=10^3, xi=1.3*10^(-3), phi=1,v0=0,eta=1.81*10^(-5)]:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>vel2:=subs(gota2,velocidad): 
+<br>vel3:=subs(gota3,velocidad): 
+<br>vel4:=subs(gota4,velocidad): 
+<br>vel5:=subs(gota5,velocidad):
+<br>plot([vel1,vel2,vel3,vel4,vel5],t=0..300,labels=[t,v],color=[red,green,blue,yellow,black]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_32.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>pos2:=subs(gota2,posicion):
+<br>pos3:=subs(gota3,posicion):
+<br>pos4:=subs(gota4,posicion):
+<br>pos5:=subs(gota5,posicion):
+<br>plot([pos1,pos2,pos3,pos4,pos5],t=0..300,labels=[t,y],color=[red,green,blue,yellow,black]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_33.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Consideremos el caso de una bala disparada verticalmente hacia arriba. Una bala la podemos aproximar por una esfera de 10 mm con 15 gr de masa y</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">se dispara con una velocidad de 600 m/sg. La densidad del hierro relativa al agua es 7,86</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>velocidadsr:=v0-g*t;
+<br>posicionsr:=v0*t-g*t^2/2;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_34.gif" width="166" height="18" alt="Typesetting:-mprintslash([velocidadsr := `+`(`-`(`*`(g, `*`(t))), v0)], [`+`(`-`(`*`(g, `*`(t))), v0)])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_35.gif" width="190" height="39" alt="Typesetting:-mprintslash([posicionsr := `+`(`*`(v0, `*`(t)), `-`(`*`(`/`(1, 2), `*`(g, `*`(`^`(t, 2))))))], [`+`(`*`(v0, `*`(t)), `-`(`*`(`/`(1, 2), `*`(g, `*`(`^`(t, 2))))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.10)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>balasr:=[g=9.8,v0=600]:
+<br>velsr:=subs(balasr,velocidadsr);
+<br>possr:=subs(balasr,posicionsr);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_36.gif" width="146" height="18" alt="Typesetting:-mprintslash([velsr := `+`(`-`(`*`(9.8, `*`(t))), 600)], [`+`(`-`(`*`(9.8, `*`(t))), 600)])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_37.gif" width="220" height="22" alt="Typesetting:-mprintslash([possr := `+`(`*`(600, `*`(t)), `-`(`*`(4.900000000, `*`(`^`(t, 2)))))], [`+`(`*`(600, `*`(t)), `-`(`*`(4.900000000, `*`(`^`(t, 2)))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.11)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>bala:= [g = -9.8, R=0.01,rho=10^3, xi=1.3*10^(-3), phi=7.86, v0=600,eta=1.81*10^(-5)]:
+<br>vel1:=subs(bala,velocidad); plot([vel1,velsr],t=0..125,labels=[t,v]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_38.gif" width="355" height="22" alt="Typesetting:-mprintslash([vel1 := `+`(`*`(95155.26089, `*`(exp(`+`(`-`(`*`(0.1036259542e-3, `*`(t))))))), `-`(94555.26089))], [`+`(`*`(95155.26089, `*`(exp(`+`(`-`(`*`(0.1036259542e-3, `*`(t))))))), `..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_39.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>pos1:=subs(bala,posicion); plot([pos1,possr],t=0..125,labels=[t,y]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_40.gif" width="525" height="22" alt="Typesetting:-mprintslash([pos1 := `+`(`-`(`*`(918257029.6, `*`(exp(`+`(`-`(`*`(0.1036259542e-3, `*`(t)))))))), `-`(`*`(94555.26089, `*`(t))), 918257029.4)], [`+`(`-`(`*`(918257029.6, `*`(exp(`+`(`-`(`..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_41.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Si aumentamos la viscosidad del liquido a agua, &nbsp;aceite y glicerina</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>bala2:= [g = -9.8, R=0.01,rho=10^3, xi=1.3*10^(-3), phi=7.86, v0=600,eta=1.002*10^(-3)]:
+<br>bala3:= [g = -9.8, R=0.01,rho=10^3, xi=1.3*10^(-3), phi=7.86, v0=600,eta=130*10^(-3)]:
+<br>bala4:= [g = -9.8, R=0.01,rho=10^3, xi=1.3*10^(-3), phi=7.86, v0=600,eta=629*10^(-3)]:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>vel2:=subs(bala2,velocidad): 
+<br>vel3:=subs(bala3,velocidad): 
+<br>vel4:=subs(bala4,velocidad): 
+<br>plot([vel1,vel2,vel3,vel4],t=0..60,labels=[t,v],color=[red,green,blue,yellow]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_42.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>pos2:=subs(bala2,posicion):
+<br>pos3:=subs(bala3,posicion):
+<br>pos4:=subs(bala4,posicion):
+<br>plot([pos1,pos2,pos3,pos4],t=0..60,labels=[t,y],color=[red,green,blue,yellow]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_43.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">recortanto la escala de tiempo a t= 6sg</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot([vel1,vel2,vel3,vel4],t=0..6,labels=[t,v],color=[red,green,blue,yellow]);
+<br></td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_44.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot([pos1,pos2,pos3,pos4],t=0..6,labels=[t,y],color=[red,green,blue,yellow]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_45.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y a t=0.6sg</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot([vel1,vel2,vel3,vel4],t=0..0.6,labels=[t,v],color=[red,green,blue,yellow]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_46.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot([pos1,pos2,pos3,pos4],t=0..0.6,labels=[t,y],color=[red,green,blue,yellow]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_47.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y a t=0.06sg</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot([vel1,vel2,vel3,vel4],t=0..0.06,labels=[t,v],color=[red,green,blue,yellow]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_48.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot([pos1,pos2,pos3,pos4],t=0..0.06,labels=[t,y],color=[red,green,blue,yellow]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_49.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Consideremos ahora un corcho esferico que parte del reposo en el fondo de recipiente con agua, también tendrá una velocidad</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">límite dada por</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>corcho:= [g = -9.8, R=0.02,rho=10^3, xi=1, phi=0.8, v0=0,eta=1.002*10^(-3)]: 
+<br>vellim:=subs(corcho,vellimite);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_50.gif" width="159" height="18" alt="Typesetting:-mprintslash([vellim := 173.8744733], [173.8744733])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.12)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y podremos graficar su velocidad y su aceleración</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>vel1:=subs(corcho,velocidad); 
+<br>plot(vel1,t=0..300,labels=[t,v]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_51.gif" width="350" height="22" alt="Typesetting:-mprintslash([vel1 := `+`(`-`(`*`(173.8744732, `*`(exp(`+`(`-`(`*`(0.1409062500e-1, `*`(t)))))))), 173.8744733)], [`+`(`-`(`*`(173.8744732, `*`(exp(`+`(`-`(`*`(0.1409062500e-1, `*`(t))))))..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_52.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>pos1:=subs(corcho,posicion); 
+<br>plot(pos1,t=0..300,labels=[t,y]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_53.gif" width="458" height="22" alt="Typesetting:-mprintslash([pos1 := `+`(`*`(12339.72753, `*`(exp(`+`(`-`(`*`(0.1409062500e-1, `*`(t))))))), `*`(173.8744733, `*`(t)), `-`(12339.72753))], [`+`(`*`(12339.72753, `*`(exp(`+`(`-`(`*`(0.1409..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_54.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Al cambiar la viscosidad a aceite y reducir el tiempo</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>corcho2:= [g = -9.8, R=0.02,rho=10^3, xi=1, phi=0.8, v0=0,eta=130*10^(-3)]:
+<br>corcho3:= [g = -9.8, R=0.02,rho=10^3, xi=1, phi=0.8, v0=0,eta=629*10^(-3)]:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>vel2:=subs(corcho2,velocidad): 
+<br>vel3:=subs(corcho3,velocidad): 
+<br>plot([vel1,vel2,vel3],t=0..20,labels=[t,v],color=[red,green,blue]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_55.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>pos2:=subs(corcho2,posicion):
+<br>pos3:=subs(corcho3,posicion):
+<br>plot([pos1,pos2,pos3],t=0..20,labels=[t,y],color=[red,green,blue]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_56.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>P*V = N*R*T;P[0]*V[0];P[0]; V[0]; P = rho*g*y(t);
+<br>rho*g*y(t)*(4/3)*Pi*R(t)^3 = rho * g * y(0) * (4/3) * Pi * R(0)^3;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_57.gif" width="87" height="18" alt="`*`(P, `*`(V)) = `*`(N, `*`(R, `*`(T)))" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_58.gif" width="46" height="23" alt="`*`(P[0], `*`(V[0]))" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_59.gif" width="27" height="23" alt="P[0]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_60.gif" width="27" height="23" alt="V[0]" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_61.gif" width="87" height="21" alt="P = `*`(rho, `*`(g, `*`(y(t))))" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_62.gif" width="278" height="43" alt="`+`(`*`(`/`(4, 3), `*`(rho, `*`(g, `*`(y(t), `*`(Pi, `*`(`^`(R(t), 3)))))))) = `+`(`*`(`/`(4, 3), `*`(rho, `*`(g, `*`(y(0), `*`(Pi, `*`(`^`(R(0), 3))))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(1.13)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Finalmente supongamos una burbuja. Por lo tanto, el radio de la burbuja varia con la presión. Si suponemos que la burbuja está compuesta por un gas ideal tendremos que <img src="images/EjemTrayectoriasFluidos_63.gif" width="87" height="18" alt="`*`(P, `*`(V)) = `*`(N, `*`(R, `*`(T)))" align="center" border="0"> = <img src="images/EjemTrayectoriasFluidos_64.gif" width="46" height="23" alt="`*`(P[0], `*`(V[0]))" align="center" border="0"> = constante, donde <img src="images/EjemTrayectoriasFluidos_65.gif" width="27" height="23" alt="P[0]" align="center" border="0"> y <img src="images/EjemTrayectoriasFluidos_66.gif" width="27" height="23" alt="V[0]" align="center" border="0"> son la presión y el volumen inicial respectivamente. </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Ahora bien, si la presión en un líquido viene dada por <img src="images/EjemTrayectoriasFluidos_67.gif" width="87" height="21" alt="P = `*`(rho, `*`(g, `*`(y(t))))" align="center" border="0">, con y(t) la profundidad, tendremos que</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"> <img src="images/EjemTrayectoriasFluidos_68.gif" width="278" height="43" alt="`+`(`*`(`/`(4, 3), `*`(rho, `*`(g, `*`(y(t), `*`(Pi, `*`(`^`(R(t), 3)))))))) = `+`(`*`(`/`(4, 3), `*`(rho, `*`(g, `*`(y(0), `*`(Pi, `*`(`^`(R(0), 3))))))))" align="center" border="0"> = <img src="images/EjemTrayectoriasFluidos_69.gif" width="46" height="23" alt="`*`(P[0], `*`(V[0]))" align="center" border="0"> = constante </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">con lo cual</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>restart:R:=gamma0*y(t)^(-1/3);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_70.gif" width="107" height="46" alt="Typesetting:-mprintslash([R := `/`(`*`(gamma0), `*`(`^`(y(t), `/`(1, 3))))], [`/`(`*`(gamma0), `*`(`^`(y(t), `/`(1, 3))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.14)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">donde gamma =R(0) * ( y(0))^(1/3)</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">nótese que la masa de la burbuja es constante, no así la masa desplazada por ella. Adicionalmente que hemos</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">cambiado el origen de coordenadas y ahora la posición inicial, y(0) = y0 es distinta de cero.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>gamma0 := R0*y0^(1/3);
+<br>m0:=(4*Pi/3)*rho0*R^3;
+<br>mB:=(4*Pi/3)*rho1*R0^3;
+<br>rho0:=xi*rho;
+<br>rho1:=phi*rho;
+<br>K:=6*Pi*R;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_71.gif" width="109" height="22" alt="Typesetting:-mprintslash([gamma0 := `*`(R0, `*`(`^`(y0, `/`(1, 3))))], [`*`(R0, `*`(`^`(y0, `/`(1, 3))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_72.gif" width="151" height="43" alt="Typesetting:-mprintslash([m0 := `+`(`/`(`*`(`/`(4, 3), `*`(Pi, `*`(rho0, `*`(`^`(R0, 3), `*`(y0))))), `*`(y(t))))], [`+`(`/`(`*`(`/`(4, 3), `*`(Pi, `*`(rho0, `*`(`^`(R0, 3), `*`(y0))))), `*`(y(t))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_73.gif" width="134" height="43" alt="Typesetting:-mprintslash([mB := `+`(`*`(`/`(4, 3), `*`(Pi, `*`(rho1, `*`(`^`(R0, 3))))))], [`+`(`*`(`/`(4, 3), `*`(Pi, `*`(rho1, `*`(`^`(R0, 3))))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_74.gif" width="73" height="21" alt="Typesetting:-mprintslash([rho0 := `*`(xi, `*`(rho))], [`*`(xi, `*`(rho))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_75.gif" width="74" height="21" alt="Typesetting:-mprintslash([rho1 := `*`(phi, `*`(rho))], [`*`(phi, `*`(rho))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_76.gif" width="140" height="47" alt="Typesetting:-mprintslash([K := `+`(`/`(`*`(6, `*`(Pi, `*`(R0, `*`(`^`(y0, `/`(1, 3)))))), `*`(`^`(y(t), `/`(1, 3)))))], [`+`(`/`(`*`(6, `*`(Pi, `*`(R0, `*`(`^`(y0, `/`(1, 3)))))), `*`(`^`(y(t), `/`(1,..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.15)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Donde <img src="images/EjemTrayectoriasFluidos_77.gif" width="20" height="21" alt="xi" align="center" border="0"> y <img src="images/EjemTrayectoriasFluidos_78.gif" width="21" height="21" alt="phi" align="center" border="0"> &nbsp;representan las densidad relativas del fluido y del cuerpo respecto al agua (de densidad <img src="images/EjemTrayectoriasFluidos_79.gif" width="21" height="21" alt="rho" align="center" border="0"> ), respectivamente. Por su parte</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">R0 representa el radio inicial de la burbuja.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Para el caso una burbuja que se despega desde el fondo de un vaso de refresco la ecuación diferencial que describe el moviento </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">puede ser escrita como</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>emov2 := mB*diff(y(t),t$2) = -mB*g - K*eta*diff(y(t),t)+m0*g ;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_80.gif" width="688" height="72" alt="Typesetting:-mprintslash([emov2 := `+`(`*`(`/`(4, 3), `*`(Pi, `*`(phi, `*`(rho, `*`(`^`(R0, 3), `*`(diff(y(t), `$`(t, 2))))))))) = `+`(`-`(`*`(`/`(4, 3), `*`(Pi, `*`(phi, `*`(rho, `*`(`^`(R0, 3), `*`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.16)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>dsolve({emov2,y(0)=-y0,D(y)(0)=0},y(t));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Por lo tanto debemos resolverla numéricamente. Para ello es imperioso adimensionalizarla. La integración numérica se hace </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">sobre números, por lo que las variables deben ser adimensionales. Para ello cambiamos la variable independiente (el tiempo, t)</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y la variable dependiente (la profundidad, y(t)) por </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">tt = t/tfinal &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yy(tt) = y(t)/y(0)</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>emov2AD := mB*diff(yy(tt),tt$2)(y0/(tfinal^2)) = -mB*g -6*Pi*R0/yy(tt)^(1/3)*eta*diff(yy(tt),tt)*(y0/tfinal)+4/3*Pi*xi*rho*R0^3/yy(tt)*g;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_81.gif" width="728" height="68" alt="Typesetting:-mprintslash([emov2AD := `+`(`*`(`/`(4, 3), `*`(Pi, `*`(phi, `*`(rho, `*`(`^`(R0, 3), `*`((diff(yy(tt), `$`(tt, 2)))(`/`(`*`(y0), `*`(`^`(tfinal, 2))))))))))) = `+`(`-`(`*`(`/`(4, 3), `*`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.17)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">acomodando un poco queda como</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>emov2AD1:=diff(yy(tt),tt$2)=-(g/(y0/tfinal^2))
+<br> -(6*Pi*R0/yy(tt)^(1/3)*eta*diff(yy(tt),tt)*y0/tfinal)/(4/3*Pi*phi*rho*R0^3*(y0/tfinal^2))
+<br>+(4/3*Pi*xi*rho*R0^3/yy(tt)*g)/(4/3*Pi*phi*rho*R0^3*(y0/tfinal^2));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_82.gif" width="542" height="64" alt="Typesetting:-mprintslash([emov2AD1 := diff(yy(tt), `$`(tt, 2)) = `+`(`-`(`/`(`*`(g, `*`(`^`(tfinal, 2))), `*`(y0))), `-`(`/`(`*`(`/`(9, 2), `*`(eta, `*`(diff(yy(tt), tt), `*`(tfinal)))), `*`(`^`(R0, 2..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.18)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y ahora convertimos esta ecuación de segundo orden en, dos ecuaciones de primer orden mediante un cambio de </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">variable</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"> <img src="images/EjemTrayectoriasFluidos_83.gif" width="79" height="39" alt="diff(yy(tt), tt)" align="center" border="0"> = pp(tt) &nbsp;con lo cual <img src="images/EjemTrayectoriasFluidos_84.gif" width="84" height="47" alt="diff(yy(tt), tt, tt)" align="center" border="0"> = <img src="images/EjemTrayectoriasFluidos_85.gif" width="82" height="39" alt="diff(pp(tt), tt)" align="center" border="0"> </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y entonces el sistema queda como</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ecuac1a:=diff(yy(tt),tt)=pp(tt);
+<br>ecuac1b:=diff(pp(tt),tt) = -g/y0*tfinal^2 -9/2*1/R0^2/yy(tt)^(1/3)*eta*pp(tt)*tfinal/phi/rho +xi/yy(tt)*g/phi/y0*tfinal^2;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_86.gif" width="212" height="39" alt="Typesetting:-mprintslash([ecuac1a := diff(yy(tt), tt) = pp(tt)], [diff(yy(tt), tt) = pp(tt)])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_87.gif" width="491" height="47" alt="Typesetting:-mprintslash([ecuac1b := diff(pp(tt), tt) = `+`(`-`(`/`(`*`(g, `*`(`^`(tfinal, 2))), `*`(y0))), `-`(`/`(`*`(`/`(9, 2), `*`(eta, `*`(pp(tt), `*`(tfinal)))), `*`(`^`(R0, 2), `*`(`^`(yy(tt), ..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.19)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">para una burbuja e agua esto es: <img src="images/EjemTrayectoriasFluidos_88.gif" width="143" height="21" alt="eta = 0.1002000000e-2" align="center" border="0"> </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>burbuja110:= [g = -9.8, R0=0.002,rho=10^3, xi=1, phi=0.08, eta=1.002*10^(-3),y0 =-10, tfinal=50]:
+<br>ecuac1a1:=subs(burbuja110,ecuac1a);
+<br>ecuac1b1:=subs(burbuja110,ecuac1b);
+<br>sist1:=ecuac1a1,ecuac1b1:
+<br></td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_89.gif" width="220" height="39" alt="Typesetting:-mprintslash([ecuac1a1 := diff(yy(tt), tt) = pp(tt)], [diff(yy(tt), tt) = pp(tt)])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_90.gif" width="542" height="43" alt="Typesetting:-mprintslash([ecuac1b1 := diff(pp(tt), tt) = `+`(`-`(2450.000000), `-`(`/`(`*`(704.5312500, `*`(pp(tt))), `*`(`^`(yy(tt), `/`(1, 3))))), `/`(`*`(30625.00000), `*`(yy(tt))))], [diff(pp(tt),..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.20)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>with(plots):Digits:=20:
+<br>sol:=dsolve({sist1,pp(0)=0,yy(0)=1},{pp(tt),yy(tt)},numeric,stiff=true,range=0..1);
+<br>odeplot(sol,[tt,yy(tt)],0..1,numpoints=500,title="posicion vs tiempo");</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_91.gif" width="270" height="18" alt="Typesetting:-mprintslash([sol := proc (x_rosenbrock) local _res, _dat, _vars, _solnproc, _xout, _ndsol, _pars, _n, _i; option `Copyright (c) 2000 by Waterloo Maple Inc. All rights reserved.`; if `<`(1..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_92.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y lha gráfica de la velocidad será</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>odeplot(sol,[tt,pp(tt)],0..1,numpoints=500,title="velocidad vs tiempo");</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_93.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Equivalentemente, MAPLE puede resolver la ecuación de segundo orden directamente.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>emov2AD10:= subs(burbuja110,emov2AD1);
+<br>sol2:=dsolve({emov2AD10,yy(0)=1,D(yy)(0)=0},numeric,stiff=true);
+<br>odeplot(sol2,[tt,yy(tt)],0..1,numpoints=50);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_94.gif" width="728" height="55" alt="Typesetting:-mprintslash([emov2AD10 := diff(yy(tt), `$`(tt, 2)) = `+`(`-`(2450.0000000000000000), `-`(`/`(`*`(704.53125000000000000, `*`(diff(yy(tt), tt))), `*`(`^`(yy(tt), `/`(1, 3))))), `/`(`*`(3062..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_95.gif" width="278" height="18" alt="Typesetting:-mprintslash([sol2 := proc (x_rosenbrock) local _res, _dat, _vars, _solnproc, _xout, _ndsol, _pars, _n, _i; option `Copyright (c) 2000 by Waterloo Maple Inc. All rights reserved.`; if `<`(..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_96.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark3" />
+<p align="left"><font color="#000000" size="5" face="Times New Roman"><strong>Movimiento Parabólico: Trayectoria de Balas en Fluidos</strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>restart;with(plots):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Toca ahora simular el lanzamiento de proyectiles en Fluidos. En física general, aún en secundaria, es proverbial resolver el movimiento en dos dimensiones (2D) con atracción gravitatoria. En esas tempranas épocas de nuestro conocimiento de física a este ``problema'' se le conoce con </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">el nombre de movimiento parabólico, por la trayectoria que describe el objeto. 
+<br>Si suponemos un cuerpo de masa constante, </font><font color="#000000" size="3" face="Times New Roman"><em>m</em></font><font color="#000000" size="3" face="Times New Roman">, que se mueve en un fluido con resitencia de despreciable las ecuaciones diferenciales que </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">describen el movimiento no pueden ser otras que aquellas que provengan de las ecuaciones de Newton y en este caso corresponden a </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_97.gif" width="166" height="52" alt="Sum(Fext, i = 1 .. n) = `*`(m, `*`(diff(r(t), t, t)))" align="center" border="0"> </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">donde r(t) es el radio vector posicion.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ecuac1xlib:=m*diff(xlib(t),t,t)=0;
+<br>ecuac1ylib:=m*diff(ylib(t),t,t)=-m*g;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_98.gif" width="238" height="47" alt="Typesetting:-mprintslash([ecuac1xlib := `*`(m, `*`(diff(xlib(t), `$`(t, 2)))) = 0], [`*`(m, `*`(diff(diff(xlib(t), t), t))) = 0])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_99.gif" width="263" height="47" alt="Typesetting:-mprintslash([ecuac1ylib := `*`(m, `*`(diff(ylib(t), `$`(t, 2)))) = `+`(`-`(`*`(m, `*`(g))))], [`*`(m, `*`(diff(diff(ylib(t), t), t))) = `+`(`-`(`*`(m, `*`(g))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(2.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">las cuales se resuelven de forma inmediata</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>solxlib:=dsolve({ecuac1xlib,xlib(0)=x0,D(xlib)(0)=V0x});
+<br>solylib:=dsolve({ecuac1ylib,ylib(0)=y0,D(ylib)(0)=V0y});
+<br>assign(solxlib):assign(solylib):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_100.gif" width="202" height="18" alt="Typesetting:-mprintslash([solxlib := xlib(t) = `+`(`*`(V0x, `*`(t)), x0)], [xlib(t) = `+`(`*`(V0x, `*`(t)), x0)])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_101.gif" width="274" height="39" alt="Typesetting:-mprintslash([solylib := ylib(t) = `+`(`-`(`*`(`/`(1, 2), `*`(g, `*`(`^`(t, 2))))), `*`(V0y, `*`(t)), y0)], [ylib(t) = `+`(`-`(`*`(`/`(1, 2), `*`(g, `*`(`^`(t, 2))))), `*`(V0y, `*`(t)), y0..." align="center" border="0"></td>
+<td width='5%' align='center'>(2.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">que no son otra cosa que las formulitas que siempre nos aprendimos</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>otrosparamlib:=[g=9.8]:
+<br>pos0:=[x0=0,y0=0]:
+<br>vel0pi12:=[V0x=600*evalf(cos(Pi/12)),V0y=600*evalf(sin(Pi/12))]:
+<br>vel0pi6:=[V0x=600*evalf(cos(Pi/6)),V0y=600*evalf(sin(Pi/6))]:
+<br>vel0pi4:=[V0x=600*evalf(cos(Pi/4)),V0y=600*evalf(sin(Pi/4))]:
+<br>vel0pi3:=[V0x=600*evalf(cos(Pi/3)),V0y=600*evalf(sin(Pi/3))]:
+<br>vel05pi12:=[V0x=600*evalf(cos(5*Pi/12)),V0y=600*evalf(sin(5*Pi/12))]:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>xpi12(t):=subs(pos0,vel0pi12,otrosparamlib,xlib(t)):
+<br>ypi12(t):=subs(pos0,vel0pi12,otrosparamlib,ylib(t)):
+<br>grafpi12:=plot([xpi12(t),ypi12(t),t=0..500],scaling=constrained):
+<br>xpi6(t):=subs(pos0,vel0pi6,otrosparamlib,xlib(t)):
+<br>ypi6(t):=subs(pos0,vel0pi6,otrosparamlib,ylib(t)):
+<br>grafpi6:=plot([xpi6(t),ypi6(t),t=0..500],scaling=constrained):
+<br>xpi4(t):=subs(pos0,vel0pi4,otrosparamlib,xlib(t)):
+<br>ypi4(t):=subs(pos0,vel0pi4,otrosparamlib,ylib(t)):
+<br>grafpi4:=plot([xpi4(t),ypi4(t),t=0..500],scaling=constrained):
+<br>xpi3(t):=subs(pos0,vel0pi3,otrosparamlib,xlib(t)):
+<br>ypi3(t):=subs(pos0,vel0pi3,otrosparamlib,ylib(t)):
+<br>grafpi3:=plot([xpi3(t),ypi3(t),t=0..500],scaling=constrained):
+<br>x5pi12(t):=subs(pos0,vel05pi12,otrosparamlib,xlib(t)):
+<br>y5pi12(t):=subs(pos0,vel05pi12,otrosparamlib,ylib(t)):
+<br>graf5pi12:=plot([x5pi12(t),y5pi12(t),t=0..500],scaling=constrained):
+<br>display({grafpi12,grafpi6,grafpi4,grafpi3,graf5pi12},view=[0..40000,0..20000],
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title="Movimiento Parabólico, sin roce",labels=["x(t)","y(t)"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_102.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">arriba se ilustra las trayectorias correspondientes a distintos movimientos parabólicos con una velocidad inicial <img src="images/EjemTrayectoriasFluidos_103.gif" width="58" height="23" alt="V[0] = 25" align="center" border="0"> y distintos águlos de</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">disparo <img src="images/EjemTrayectoriasFluidos_104.gif" width="144" height="42" alt="theta = `*`(`^`(Pi1, 3), `*`(Pi5, `*`(Pi, `*`(`/`(10368)))))" align="center" border="0"> &nbsp;</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Una cosa distinta se presenta para el movimiento en 2D con resistencia del aire. En este caso, como en todos los casos en los cuales una </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">fuerza de origen microscópico es descrita macroscópicamente, su representación matemática es fenomenológica. Vale decir, mediante una</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">fórmula matemática, utilizamos una descripción promedio de su efecto. En el caso de la fuerza de roce en fluidos se presentan dos casos:
+<br>uno en el cual la fuerza de resistencia con el aire es proporcional a la velocidad, <img src="images/EjemTrayectoriasFluidos_105.gif" width="181" height="32" alt="f[roce] = `+`(`-`(`*`(K, `*`(eta, `*`(sqrt(`+`(`*`(`^`(V[x], 2)), `*`(`^`(V[y], 2)))), `*`(U[v]))))))" align="center" border="0"> &nbsp;y otro en el cual supondremos la fuerza de roce proporcional al cuadrado de su velocidad, <img src="images/EjemTrayectoriasFluidos_106.gif" width="179" height="27" alt="f[roce] = `+`(`-`(`*`(K, `*`(eta, `*`(`+`(`*`(`^`(V[x], 2)), `*`(`^`(V[y], 2))), `*`(U[v]))))))" align="center" border="0"> &nbsp;En estos casos <img src="images/EjemTrayectoriasFluidos_107.gif" width="27" height="23" alt="U[v]" align="center" border="0"> es el vector unitario en la dirección </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">tangente <img src="images/EjemTrayectoriasFluidos_108.gif" width="247" height="73" alt="U[v] = `+`(`/`(`*`(V[x], `*`(i)), `*`(`^`(`+`(`*`(`^`(V[x], 2)), `*`(`^`(V[y], 2))), `/`(1, 2)))), `/`(`*`(V[y], `*`(j)), `*`(`^`(`+`(`*`(`^`(V[x], 2)), `*`(`^`(V[y], 2))), `/`(1, 2)))))" align="center" border="0"> &nbsp;y <img src="images/EjemTrayectoriasFluidos_109.gif" width="22" height="21" alt="eta" align="center" border="0"> es el coeficiente de fricción que depende de la viscosidad del fluido. En el sistema MKS se expresa en N sg /<img src="images/EjemTrayectoriasFluidos_110.gif" width="29" height="22" alt="`*`(`^`(m, 2))" align="center" border="0"> y se mide en Poise que es igual a un décimo de la unidad en MKS. &nbsp;Esto es 10P=1◊N sg/m2 &nbsp;En ambos casos K es el coeficiente de fricción que depende de la forma de cuerpo. Para una esfera de Radio, R, tendremos </font><font color="#000000" size="3" face="Times New Roman"><em>K</em></font><font color="#000000" size="3" face="Times New Roman">=6<img src="images/EjemTrayectoriasFluidos_111.gif" width="21" height="21" alt="Pi" align="center" border="0">R. La utilización de una u otra expresión para la fuerza de roce se basa en la magnitud de la velocidad del cuerpo respecto al fluido. Para los casos en los cuales la velocidad del cuerpo es mucho menor a la velocidad del sonido, la fuerza de roce será proporcional a la velocidad. En aquellos casos en los cuales el orden de magnitud del módulo de la velocidad del cuerpo sea el de la velocidad del sonido en ese medio, utilizaremos que la fuerza de roce será proporcional al cuadrado de la velocidad. </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Con lo cual para el caso de desplazamientos lentos a través de fluidos tendremos</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ecuacxrocelent:=m*diff(xrocelent(t),t,t)=
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-K*eta*sqrt(diff(xrocelent(t),t)^2 +diff(yrocelent(t),t)^2 )*(diff(xrocelent(t),t)/
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(sqrt(diff(xrocelent(t),t)^2 +diff(yrocelent(t),t)^2 )));
+<br>ecuacyrocelent:=m*diff(yrocelent(t),t,t)=-m*g
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-K*eta*sqrt(diff(xrocelent(t),t)^2 +diff(yrocelent(t),t)^2 )*(diff(yrocelent(t),t)/
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(sqrt(diff(xrocelent(t),t)^2 +diff(yrocelent(t),t)^2 )));
+<br></td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_112.gif" width="455" height="47" alt="Typesetting:-mprintslash([ecuacxrocelent := `*`(m, `*`(diff(xrocelent(t), `$`(t, 2)))) = `+`(`-`(`*`(K, `*`(eta, `*`(diff(xrocelent(t), t))))))], [`*`(m, `*`(diff(diff(xrocelent(t), t), t))) = `+`(`-`..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_113.gif" width="497" height="47" alt="Typesetting:-mprintslash([ecuacyrocelent := `*`(m, `*`(diff(yrocelent(t), `$`(t, 2)))) = `+`(`-`(`*`(m, `*`(g))), `-`(`*`(K, `*`(eta, `*`(diff(yrocelent(t), t))))))], [`*`(m, `*`(diff(diff(yrocelent(t..." align="center" border="0"></td>
+<td width='5%' align='center'>(2.3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Las cuales pueden ser integradas analíticamente como</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>K:=6*Pi*R;
+<br>solxrocelent:=dsolve({ecuacxrocelent,xrocelent(0)=x0,D(xrocelent)(0)=V0x});
+<br>solyrocelent:=dsolve({ecuacyrocelent,yrocelent(0)=y0,D(yrocelent)(0)=V0y});
+<br>assign(solxrocelent);
+<br>assign(solyrocelent);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_114.gif" width="82" height="21" alt="Typesetting:-mprintslash([K := `+`(`*`(6, `*`(Pi, `*`(R))))], [`+`(`*`(6, `*`(Pi, `*`(R))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_115.gif" width="468" height="62" alt="Typesetting:-mprintslash([solxrocelent := xrocelent(t) = `+`(`/`(`*`(`/`(1, 6), `*`(`+`(`*`(6, `*`(Pi, `*`(R, `*`(eta, `*`(x0))))), `*`(V0x, `*`(m))))), `*`(Pi, `*`(R, `*`(eta)))), `-`(`/`(`*`(`/`(1, ..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_116.gif" width="728" height="61" alt="Typesetting:-mprintslash([solyrocelent := yrocelent(t) = `+`(`-`(`/`(`*`(`/`(1, 36), `*`(m, `*`(exp(`+`(`-`(`/`(`*`(6, `*`(Pi, `*`(R, `*`(eta, `*`(t))))), `*`(m))))), `*`(`+`(`*`(6, `*`(Pi, `*`(R, `*`..." align="center" border="0"></td>
+<td width='5%' align='center'>(2.4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Ahora sustituimos los valores para distintas fuerzas de roce: aire, agua y aceite</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>otrosparamroceaire:=[g=9.8,m=0.015,eta=0.01894*10^(-3),R=0.015]:
+<br>xpi12lent(t):=subs(pos0,vel0pi12,otrosparamroceaire,xrocelent(t)):
+<br>ypi12lent(t):=subs(pos0,vel0pi12,otrosparamroceaire,yrocelent(t)):
+<br>grafpi12lentaire:=plot([xpi12lent(t),ypi12lent(t),t=0..500],scaling=constrained):
+<br>xpi6lent(t):=subs(pos0,vel0pi6,otrosparamroceaire,xrocelent(t)):
+<br>ypi6lent(t):=subs(pos0,vel0pi6,otrosparamroceaire,yrocelent(t)):
+<br>grafpi6lentaire:=plot([xpi6lent(t),ypi6lent(t),t=0..500],scaling=constrained):
+<br>xpi4lent(t):=subs(pos0,vel0pi4,otrosparamroceaire,xrocelent(t)):
+<br>ypi4lent(t):=subs(pos0,vel0pi4,otrosparamroceaire,yrocelent(t)):
+<br>grafpi4lentaire:=plot([xpi4lent(t),ypi4lent(t),t=0..500],scaling=constrained):
+<br>xpi3lent(t):=subs(pos0,vel0pi3,otrosparamroceaire,xrocelent(t)):
+<br>ypi3lent(t):=subs(pos0,vel0pi3,otrosparamroceaire,yrocelent(t)):
+<br>grafpi3lentaire:=plot([xpi3lent(t),ypi3lent(t),t=0..500],scaling=constrained):
+<br>x5pi12lent(t):=subs(pos0,vel05pi12,otrosparamroceaire,xrocelent(t)):
+<br>y5pi12lent(t):=subs(pos0,vel05pi12,otrosparamroceaire,yrocelent(t)):
+<br>graf5pi12lentaire:=plot([x5pi12lent(t),y5pi12lent(t),t=0..500],scaling=constrained):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>otrosparamroceagua:=[g=9.8,m=0.015,eta=1.002*10^(-3),R=0.015]:
+<br>xpi12lent(t):=subs(pos0,vel0pi12,otrosparamroceagua,xrocelent(t)):
+<br>ypi12lent(t):=subs(pos0,vel0pi12,otrosparamroceagua,yrocelent(t)):
+<br>grafpi12lentagua:=plot([xpi12lent(t),ypi12lent(t),t=0..500],scaling=constrained):
+<br>xpi6lent(t):=subs(pos0,vel0pi6,otrosparamroceagua,xrocelent(t)):
+<br>ypi6lent(t):=subs(pos0,vel0pi6,otrosparamroceagua,yrocelent(t)):
+<br>grafpi6lentagua:=plot([xpi6lent(t),ypi6lent(t),t=0..500],scaling=constrained):
+<br>xpi4lent(t):=subs(pos0,vel0pi4,otrosparamroceagua,xrocelent(t)):
+<br>ypi4lent(t):=subs(pos0,vel0pi4,otrosparamroceagua,yrocelent(t)):
+<br>grafpi4lentagua:=plot([xpi4lent(t),ypi4lent(t),t=0..500],scaling=constrained):
+<br>xpi3lent(t):=subs(pos0,vel0pi3,otrosparamroceagua,xrocelent(t)):
+<br>ypi3lent(t):=subs(pos0,vel0pi3,otrosparamroceagua,yrocelent(t)):
+<br>grafpi3lentagua:=plot([xpi3lent(t),ypi3lent(t),t=0..500],scaling=constrained):
+<br>x5pi12lent(t):=subs(pos0,vel05pi12,otrosparamroceagua,xrocelent(t)):
+<br>y5pi12lent(t):=subs(pos0,vel05pi12,otrosparamroceagua,yrocelent(t)):
+<br>graf5pi12lentagua:=plot([x5pi12lent(t),y5pi12lent(t),t=0..500],scaling=constrained):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>otrosparamroceaceite:=[g=9.8,m=0.015,eta=130*10^(-3),R=0.015]:
+<br>xpi12lent(t):=subs(pos0,vel0pi12,otrosparamroceaceite,xrocelent(t)):
+<br>ypi12lent(t):=subs(pos0,vel0pi12,otrosparamroceaceite,yrocelent(t)):
+<br>grafpi12lentaceite:=plot([xpi12lent(t),ypi12lent(t),t=0..500],scaling=constrained):
+<br>xpi6lent(t):=subs(pos0,vel0pi6,otrosparamroceaceite,xrocelent(t)):
+<br>ypi6lent(t):=subs(pos0,vel0pi6,otrosparamroceaceite,yrocelent(t)):
+<br>grafpi6lentaceite:=plot([xpi6lent(t),ypi6lent(t),t=0..500],scaling=constrained):
+<br>xpi4lent(t):=subs(pos0,vel0pi4,otrosparamroceaceite,xrocelent(t)):
+<br>ypi4lent(t):=subs(pos0,vel0pi4,otrosparamroceaceite,yrocelent(t)):
+<br>grafpi4lentaceite:=plot([xpi4lent(t),ypi4lent(t),t=0..500],scaling=constrained):
+<br>xpi3lent(t):=subs(pos0,vel0pi3,otrosparamroceaceite,xrocelent(t)):
+<br>ypi3lent(t):=subs(pos0,vel0pi3,otrosparamroceaceite,yrocelent(t)):
+<br>grafpi3lentaceite:=plot([xpi3lent(t),ypi3lent(t),t=0..500],scaling=constrained):
+<br>x5pi12lent(t):=subs(pos0,vel05pi12,otrosparamroceaceite,xrocelent(t)):
+<br>y5pi12lent(t):=subs(pos0,vel05pi12,otrosparamroceaceite,yrocelent(t)):
+<br>graf5pi12lentaceite:=plot([x5pi12lent(t),y5pi12lent(t),t=0..500],scaling=constrained):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>display({grafpi12,grafpi6,grafpi4,grafpi3,graf5pi12},view=[0..40000,0..20000],
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title="Movimiento Parabólico, sin roce",labels=["x(t)","y(t)"]);
+<br>display({grafpi12lentaire,grafpi6lentaire,grafpi4lentaire,grafpi3lentaire,graf5pi12lentaire },view=[0..40000,0..20000],
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title="Movimiento Parabólico lento, con roce en aire",labels=["x(t)","y(t)"]);
+<br>display({grafpi12lentagua,grafpi6lentagua,grafpi4lentagua,grafpi3lentagua,graf5pi12lentagua},view=[0..20000,0..12000],
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title="Movimiento Parabólico lento, con roce en agua",labels=["x(t)","y(t)"]);
+<br>display({grafpi12lentaceite,grafpi6lentaceite,grafpi4lentaceite,grafpi3lentaceite,graf5pi12lentaceite},view=[0..500,0..250],
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title="Movimiento Parabólico lento, con roce en aceite",labels=["x(t)","y(t)"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_117.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_118.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_119.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_120.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">También podemos graficar disparos con un mismo ángulo y distintos medios dispersivos</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>display({grafpi6,grafpi6lentaire,grafpi6lentagua,grafpi6lentaceite},view=[0..32000,0..5000],
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;title="Movimiento Parabólico, para un ángulo Pi/6",labels=["x(t)","y(t)"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_121.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Supongamos que ahora la fuerza de roce es proporcional al cuadrado de la velocidad. Esto implica que las ecuaciones quedan como</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ecuacxrocerap:=m*diff(xrocerap(t),t,t)=
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-K*eta*(diff(xrocerap(t),t)^2 +diff(yrocerap(t),t)^2 )*(diff(xrocerap(t),t)/
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(sqrt(diff(xrocerap(t),t)^2 +diff(yrocerap(t),t)^2 )));
+<br>ecuacyrocerap:=m*diff(yrocerap(t),t,t)=-m*g
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-K*eta*(diff(xrocerap(t),t)^2 +diff(yrocerap(t),t)^2 )*(diff(yrocerap(t),t)/
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(sqrt(diff(xrocerap(t),t)^2 +diff(yrocerap(t),t)^2 )));
+<br></td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_122.gif" width="728" height="49" alt="Typesetting:-mprintslash([ecuacxrocerap := `*`(m, `*`(diff(xrocerap(t), `$`(t, 2)))) = `+`(`-`(`*`(6, `*`(Pi, `*`(R, `*`(eta, `*`(`^`(`+`(`*`(`^`(diff(xrocerap(t), t), 2)), `*`(`^`(diff(yrocerap(t), t..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemTrayectoriasFluidos_123.gif" width="728" height="46" alt="Typesetting:-mprintslash([ecuacyrocerap := `*`(m, `*`(diff(yrocerap(t), `$`(t, 2)))) = `+`(`-`(`*`(m, `*`(g))), `-`(`*`(6, `*`(Pi, `*`(R, `*`(eta, `*`(`^`(`+`(`*`(`^`(diff(xrocerap(t), t), 2)), `*`(`^..." align="center" border="0"></td>
+<td width='5%' align='center'>(2.5)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">que ahora están mexcladas y el sistema de ecuaciones diferenciales NO se separa.</font>&nbsp;</p>
+</dl>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</body>
+</html>
