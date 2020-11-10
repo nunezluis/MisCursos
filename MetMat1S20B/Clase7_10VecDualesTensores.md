@@ -18,7 +18,7 @@
 <a name="Clase8"></a>
 ### Clase 8. Tensores y espacios tensoriales 
 + **Actividad antes de clase** 
-   1. Estudiar el punto 2.2 de las notas de clase
+   1. Estudiar los puntos 3.2.1, 3.2.2, 3.2.3, 3.2.4, 3.2.5, 3.2.6, 3.2.7 y 3.2.9 de las notas de clase
    2. Rehacer con MAXIMA el ejercicio resuelto 2 sección 2.2.4. 
 + **Taller de problemas 2 (evaluación en la clase 5)**
    + Los cuaterniones, problema 5 sección 2.2.6
