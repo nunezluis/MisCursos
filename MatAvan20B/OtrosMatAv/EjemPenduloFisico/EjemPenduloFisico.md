@@ -1,0 +1,2 @@
+# Ejemplo de Aplicación de ecuaciones diferenciales ordinarias
+Aquí podrán encontrar un [ejemplo de aplicación de ecuaciones diferenciales ordinarias](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MatAvan20B/OtrosMatAv/EjemPenduloFisico/EjemPenduloFisico.html). Analizaremos el caso de el movimiento del péndulo físico, un péndulo que puede oscilar con una amplitud arbitraria. Vale decir un sistema oscilatorio en su fase lineal y no lineal.
