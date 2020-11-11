@@ -1,5 +1,5 @@
 ## Evaluación
-| # | Equipo        | Taller 1 |
+| # | Equipo        | Taller 1 |Taller 2 |
 |:-:|:-----         |:-----:   |   
 | 1 |Camilo Sánchez,|          |
 |   |Johan Orozco   |          |         
