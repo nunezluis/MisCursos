@@ -10,26 +10,22 @@
    1. Estudiar puntos de las notas de clase 2.1.1, 2.1.2, 2.1.3 y 2.1.4.
    2. Rehacer los ejemplos resueltos: 2.1.6 ejemplos 1 y 2
 + **Evaluación taller de problemas 1**   
-+ **Taller de problemas 2 (evaluación en la clase 5)**
-   + Sección 2.1.8 ejercicios 3 y 10
-+ **Materiales de apoyo**
-   + [Video](https://youtu.be/aiv3E_Nofko) y [presentación del concepto de espacio vectorial](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_1GruposEspaciosVectoriales.pdf) 
++ **Taller de problemas 2 (evaluación en la clase 5):** Sección 2.1.8 ejercicios 3 y 10
++ **Materiales de apoyo:** [Video](https://youtu.be/aiv3E_Nofko) y [presentación del concepto de espacio vectorial](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_1GruposEspaciosVectoriales.pdf) 
 
 <a name="Clase4"></a>
 ### Clase 4. Espacios Métricos, Normados y Euclideanos  
 + **Actividad antes de clase** 
    1. Estudiar el punto 2.2 de las notas de clase
    2. Rehacer con MAXIMA el ejemplos resuelto 2 sección 2.2.4. 
-+ **Taller de problemas 2 (evaluación en la clase 5)**
-   + Los cuaterniones, problema 5 sección 2.2.6
++ **Taller de problemas 2 (evaluación en la clase 5)** Los cuaterniones, problema 5 sección 2.2.6
 + **Materiales de apoyo**
    1. [Video](https://youtu.be/la9Gnhc0uFg) y [presentación de espacios métricos y normados](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_2EspaciosMetricos.pdf)
    2. [Video](https://youtu.be/rQ59n-wr9X8) y [presentación de espacios euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_23EspaciosEuclideanos.pdf)
 
 <a name="Clase5"></a>
 ### Clase 5. Dependencia e independencia líneal y bases ortogonales
-+ **Objetivos de la clase**
- Esta clase tiene por objetivo, en primer lugar, introducir el concepto de independencia lineal y, a partir de éste, generar la idea de base para un espacio vectorial. Seguidamente, presentamos la expansión de los vectores de un espacio vectorial como combinación lineal de la base. Se enfatiza en asociar las componentes de los vectores con las distintas bases del espacio vectorial. Finalmente, si el espacio tiene definido un producto interno, se construye una base ortogonal a partir de las bases oblicuas que existan. 
++ **Objetivos de la clase.** Esta clase tiene por objetivo, en primer lugar, introducir el concepto de independencia lineal y, a partir de éste, generar la idea de base para un espacio vectorial. Seguidamente, presentamos la expansión de los vectores de un espacio vectorial como combinación lineal de la base. Se enfatiza en asociar las componentes de los vectores con las distintas bases del espacio vectorial. Finalmente, si el espacio tiene definido un producto interno, se construye una base ortogonal a partir de las bases oblicuas que existan. 
 + **Actividad antes de clase** 
    1. Estudiar el punto 2.3 de las notas de clase
    2. Rehacer el ejemplo resuelto: 2.3.6 
@@ -55,9 +51,6 @@
 + **Taller de problemas 3 (evaluación en la clase 7)**
    1. Utilizando MAXIMA desarrollar el problema 3 de la sección 2.4.7
 
-+ **Asignación 2 (evaluación en la clase 11)** 
++ **Asignación 2 (evaluación en la clase 11).** Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar cuál es el error de medición del sensor de bajo costo y, como calibrarlo para que podamos establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Asignaciones/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema planteado. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MetMat1S20B/Asignaciones/Datos) podrán encontrar los datos para desarrollar los algoritmos de calibración inteligente.
 
-    Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar cuál es el error de medición del sensor de bajo costo y, como calibrarlo para que podamos establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Asignaciones/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema planteado. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MetMat1S20B/Asignaciones/Datos) podrán encontrar los datos para desarrollar los algoritmos de calibración inteligente.
-
-+ **Materiales de apoyo**
-   + [Video](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_4AproximacionFunciones.pdf)
++ **Materiales de apoyo:** [Video](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_4AproximacionFunciones.pdf)
