@@ -43,14 +43,14 @@
  
 <a name="Clase6"></a>   
 ### Clase 6. Aproximación de funciones y bases ortogonales
-+ **Objetivos de la clase** Esta clase tiene por objetivos comprender la aplicación de los conceptos de base y expansión de vectores en término de una base para aproximar funciones. Al aplicar estos conceptos a un espacio vectorial de funciones hablamos de aproximación de una función en término de una base de vectores (ortogonales o no). También entender la aplicación del concepto de distancia --derivado de la definición de producto interno-- para estimar el error en la aproximación. 
++ **Objetivos de la clase.** Esta clase tiene por objetivos comprender la aplicación de los conceptos de base y expansión de vectores en término de una base para aproximar funciones. Al aplicar estos conceptos a un espacio vectorial de funciones hablamos de aproximación de una función en término de una base de vectores (ortogonales o no). También entender la aplicación del concepto de distancia --derivado de la definición de producto interno-- para estimar el error en la aproximación. 
 + **Actividad antes de clase** 
    1. Estudiar el punto 2.4 de las notas de clase
    2. Rehacer los ejemplos resueltos: Mínimos Cuadrados y Aproximación Polinomial 
 + **Evaluación Asignación 1**     
-+ **Taller de problemas 3 (evaluación en la clase 7)**
-   1. Utilizando MAXIMA desarrollar el problema 3 de la sección 2.4.7
++ **Taller de problemas 3 (evaluación en la clase 7).** Utilizando MAXIMA desarrollar el problema 3 de la sección 2.4.7
 
 + **Asignación 2 (evaluación en la clase 11).** Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar cuál es el error de medición del sensor de bajo costo y, como calibrarlo para que podamos establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Asignaciones/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema planteado. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MetMat1S20B/Asignaciones/Datos) podrán encontrar los datos para desarrollar los algoritmos de calibración inteligente.
 
 + **Materiales de apoyo:** [Video](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_4AproximacionFunciones.pdf)
++ **Al finalizar estos contenidos** El estudiantes deberá
