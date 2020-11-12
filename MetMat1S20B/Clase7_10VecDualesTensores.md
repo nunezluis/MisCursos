@@ -16,7 +16,10 @@
 + **Materiales de apoyo**
    + [Video]() y [presentación Funcionales Lineales y Espacios Vectoriales Duales]() 
 + **Al finalizar estos contenidos** El estudiantes deberá
-
+   1. Comprender el concepto de espacio vectorial dual
+   2. Construir la base dual a partir de la base de un espacio vectorial y la definición del producto interno
+   3. Expandir una 1-forma como combinación lineal de la base dual
+   
 <a name="Clase8"></a>
 ### Clase 8. Tensores y espacios tensoriales 
 + **Actividad antes de clase** 
