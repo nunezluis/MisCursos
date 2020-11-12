@@ -5,7 +5,8 @@
 + [Clase 10. Vectores, tensores y espacios pseudoeuclideanos](#Clase10)
 
 <a name="Clase7"></a>
-### Clase 7. Funcionales Lineales y Espacios Vectoriales Duales 
+### Clase 7. Funcionales Lineales y Espacios Vectoriales Duales (201117)
++ **Objetivos de la clase.** Esta clase tiene por objetivo,
 + **Actividad antes de clase** 
    1. Estudiar puntos de las notas de clase 3.1.1, 3.1.2 y 3.1.3
    2. Rehacer los ejemplos resueltos 3 y 4 de la sección 3.1.4 
@@ -14,6 +15,7 @@
    + Sección 3.1.6 ejercicios 6 y 7.
 + **Materiales de apoyo**
    + [Video]() y [presentación Funcionales Lineales y Espacios Vectoriales Duales]() 
++ **Al finalizar estos contenidos** El estudiantes deberá
 
 <a name="Clase8"></a>
 ### Clase 8. Tensores y espacios tensoriales 
