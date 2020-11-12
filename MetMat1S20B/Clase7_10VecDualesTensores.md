@@ -13,7 +13,7 @@
 + **Evaluación taller de problemas 3**   
 + **Taller de problemas 4 (evaluación en la clase 9)**
    + Sección 3.1.6 ejercicios 6 y 7.
-+ **Asignación 3 *fast track*. Lectura y síntesis de un artículo de Tensores (Evaluación clase 10).** Una de las actividades cotidiana del oficio de físico es la lectura de artículos y publicaciones. En este curso vamos a ayudar a irnos formando en esa dirección. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/JournalClub.pdf) podrán encontrar un bonito artículo que ilustra la estrategia para leer e informarse de otros artículos.   
++ **Asignación 3 *fast track*. Lectura y síntesis de un artículo de Tensores (Evaluación clase 10).** Una de las actividades cotidiana del oficio de físico es la lectura de artículos y publicaciones. En este curso vamos a ayudar a irnos formando en esa dirección. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/JournalClub.pdf) podrán encontrar un bonito artículo que ilustra la estrategia para leer e informarse cotidianamente. Muestra también como hacer *Journal Club* para discutir las referencias.    
 + **Materiales de apoyo**
    + [Video]() y [presentación Funcionales Lineales y Espacios Vectoriales Duales]() 
 + **Al finalizar estos contenidos** El estudiantes deberá
