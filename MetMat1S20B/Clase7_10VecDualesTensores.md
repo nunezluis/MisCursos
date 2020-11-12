@@ -17,7 +17,7 @@
 
 Entonces la asignación consiste en seleccionar **un artículo** de estos que les proponemos, hacer una síntesis y exponerlo en la Clase 9
    + [Artículo 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/Comon2014.pdf)
-   + Artículo 2
+   + [Artículo 2](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/BattagliaAmerican%20Journal%20of%20Physics2013.pdf)
    
 + **Materiales de apoyo**
    + [Video]() y [presentación Funcionales Lineales y Espacios Vectoriales Duales]() 
