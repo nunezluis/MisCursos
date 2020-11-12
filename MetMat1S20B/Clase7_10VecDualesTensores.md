@@ -6,7 +6,7 @@
 
 <a name="Clase7"></a>
 ### Clase 7. Funcionales Lineales y Espacios Vectoriales Duales (201117)
-+ **Objetivos de la clase.** Esta clase tiene por objetivo,
++ **Objetivos de la clase.** Esta clase tiene por objetivo, construir espacios vectoriales duales a partir de la definición del producto interno. Identificar las bases duales asociadas a las bases de los espacios vectoriales y los vectores duales (o 1-formas) asociados a los vectores. Mostrar como una un vector dual puede ser expresado como combinación lineal de la base dual. 
 + **Actividad antes de clase** 
    1. Estudiar puntos de las notas de clase 3.1.1, 3.1.2 y 3.1.3
    2. Rehacer los ejemplos resueltos 3 y 4 de la sección 3.1.4 
