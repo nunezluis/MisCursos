@@ -13,6 +13,7 @@
 + **Evaluación taller de problemas 3**   
 + **Taller de problemas 4 (evaluación en la clase 9)**
    + Sección 3.1.6 ejercicios 6 y 7.
++ **Lectura y síntesis de un artículo de Tensores**   
 + **Materiales de apoyo**
    + [Video]() y [presentación Funcionales Lineales y Espacios Vectoriales Duales]() 
 + **Al finalizar estos contenidos** El estudiantes deberá
@@ -25,8 +26,8 @@
 + **Actividad antes de clase** 
    1. Estudiar los puntos 3.2.1, 3.2.2, 3.2.3, 3.2.4, 3.2.5, 3.2.6, 3.2.7 y 3.2.9 de las notas de clase
    2. Rehacer el ejemplos resueltos 1 y 3 de la sección 3.2.10. 
-+ **Taller de problemas 2 (evaluación en la clase 5)**
-   + Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.12
++ **Taller de problemas 4 (evaluación en la clase 5)**
+   + Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.12   
 + **Materiales de apoyo**
    1. [Video]() y [presentación de tensores y espacios tensoriales]()
    2. [Video](https://youtu.be/rQ59n-wr9X8) y [presentación de tensores y espacios tensoriales]()
@@ -36,7 +37,7 @@
 + **Actividad antes de clase** 
    1. Estudiar el punto 2.2 de las notas de clase
    2. Rehacer con MAXIMA el ejercicio resuelto 2 sección 2.2.4.
-**Evaluación taller de problemas 4**   
++ **Evaluación taller de problemas 4**   
 + **Taller de problemas 2 (evaluación en la clase 5)**
    + Los cuaterniones, problema 5 sección 2.2.6
 + **Materiales de apoyo**
