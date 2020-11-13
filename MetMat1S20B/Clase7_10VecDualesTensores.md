@@ -20,7 +20,7 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
    + [Artículo 2](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/BattagliaAmerican%20Journal%20of%20Physics2013.pdf)
    
 + **Materiales de apoyo**
-   + [Video]() y [presentación Funcionales Lineales y Espacios Vectoriales Duales]() 
+   + [Video](https://youtu.be/9u5g5Y5bdJI) y [presentación Funcionales Lineales y Espacios Vectoriales Duales]() 
 + **Al finalizar estos contenidos** El estudiantes deberá
    1. Comprender el concepto de espacio vectorial dual
    2. Construir la base dual a partir de la base de un espacio vectorial y la definición del producto interno
