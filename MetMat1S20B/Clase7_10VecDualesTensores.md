@@ -34,28 +34,29 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 + **Taller de problemas 4 (evaluación en la clase 5)**
    + Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.12   
 + **Materiales de apoyo**
-   1. [Video]() y [presentación de tensores y espacios tensoriales]()
-   2. [Video](https://youtu.be/rQ59n-wr9X8) y [presentación de tensores y espacios tensoriales]()
+   1. Video y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_2Tensores1Abst.pdf)
+   2. Video y [presentación de tensores y coordenadas](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_3Tensores2Cord.pdf)
 
 <a name="Clase9"></a>
 ### Clase 9. Ejemplos de Tensores y espacios tensoriales  
 + **Actividad antes de clase** 
-   1. Estudiar el punto 2.2 de las notas de clase
-   2. Rehacer con MAXIMA el ejercicio resuelto 2 sección 2.2.4.
+   1. XXX
+   2. XXX
 + **Evaluación taller de problemas 4**   
-+ **Taller de problemas 2 (evaluación en la clase 5)**
-   + Los cuaterniones, problema 5 sección 2.2.6
++ **Taller de problemas XXX (evaluación en la clase XXX)**
+   + XXX
 + **Materiales de apoyo**
-   1. [Video](https://youtu.be/la9Gnhc0uFg) y [presentación de espacios métricos y normados](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_2EspaciosMetricos.pdf)
-   2. [Video](https://youtu.be/rQ59n-wr9X8) y [presentación de espacios euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_23EspaciosEuclideanos.pdf)
+   1. Video y presentación de espacios métricos y normados
+   2. Video y presentación XXX
    
 <a name="Clase10"></a>
 ### Clase 10. Vectores, tensores y espacios pseudoeuclideanos  
 + **Actividad antes de clase** 
-   1. Estudiar el punto 2.2 de las notas de clase
-   2. Rehacer con MAXIMA el ejercicio resuelto 2 sección 2.2.4. 
-+ **Taller de problemas 2 (evaluación en la clase 5)**
-   + Los cuaterniones, problema 5 sección 2.2.6
+   1. XXX
+   2. XXX
++ **Evaluación Asignación 3 *fast track*.**   
++ **Taller de problemas XXX (evaluación en la clase XXX)**
+   + XXX
 + **Materiales de apoyo**
-   1. [Video](https://youtu.be/la9Gnhc0uFg) y [presentación de espacios métricos y normados](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_2EspaciosMetricos.pdf)
-   2. [Video](https://youtu.be/rQ59n-wr9X8) y [presentación de espacios euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_23EspaciosEuclideanos.pdf)
+   1. Video y presentación de XXX
+  
