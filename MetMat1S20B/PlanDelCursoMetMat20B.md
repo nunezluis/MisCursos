@@ -7,6 +7,7 @@
 4. [Plan detallado del curso](#PlanDetallado)
    1. [Los vectores de siempre. Clases 1 y 2](#Clase1_2)
    2. [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6 ](#Clase3_6)
+   3. [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9 y 10](Clase7_10)
 5. Consideraciones finales
 
 ## La metodología 
@@ -58,31 +59,15 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 <a name="Clase3_6"></a>
 ### [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clase3_6EspVectorialesLineales.md)
 
+<a name="Clase7_10"></a>
+### [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9 y 10]
+(https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases7_10VecDualesTensores.md)
 
-### Clase 7. XXX  <a name="Clase7"></a>
-+ **Actividad antes de clase** 
-   1. Estudiar puntos de las notas de clase
-   2. Rehacer los ejercicios resueltos:  
-+ **Evaluación taller de problemas 3**    
-+ **Taller de problemas 4 (evaluación en la clase 9)**
-   1. XXX
-   2. YYY 
-+ **Materiales de apoyo**
-   1. Video y Presentación
-   2. Video y Presentación
 
-### Clase 8. XXX  <a name="Clase8"></a>
-+ **Actividad antes de clase** 
-   1. Estudiar puntos de las notas de clase
-   2. Rehacer los ejercicios resueltos:    
-+ **Taller de problemas 4 (evaluación en la clase 9)**
-   1. XXX
-   2. YYY 
-+ **Materiales de apoyo**
-   1. Video y Presentación
-   2. Video y Presentación
 
-### Clase 9. XXX  <a name="Clase9"></a>
+
+### Clase Modelito. XXX  <a name="Clase9"></a>
++ **Objetivos de la Clase** 
 + **Actividad antes de clase** 
    1. Estudiar puntos de las notas de clase
    2. Rehacer los ejercicios resueltos: 
@@ -93,3 +78,4 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 + **Materiales de apoyo**
    1. Video y Presentación
    2. Video y Presentación
++ **Al finalizar este contenido**
