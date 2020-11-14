@@ -7,7 +7,7 @@
 4. [Plan detallado del curso](#PlanDetallado)
    1. [Los vectores de siempre. Clases 1 y 2](#Clase1_2)
    2. [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6 ](#Clase3_6)
-   3. [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9 y 10](Clase7_10)
+   3. [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9 y 10](#Clase7_10)
 5. Consideraciones finales
 
 ## La metodología 
@@ -64,9 +64,9 @@ Los materiales que utilizaremos en este curso son
      2. [Ejemplos de ortogonalización de monomios y aproximación de funciones](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/ScriptMetMat1/BasesFuncionales/BasesFuncionales.html)
    + [**Clase 6. Aproximación de funciones y bases ortogonales**](#Clase3_6)
       + [Video](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_4AproximacionFunciones.pdf)
-   + [**Clase 7. Funcionales Lineales y Espacios Vectoriales Duales**]
+   + [**Clase 7. Funcionales Lineales y Espacios Vectoriales Duales**](#Clase7_10)
       + [Video](https://youtu.be/9u5g5Y5bdJI) y [presentación Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_1FuncionalesLineales.pdf)
-   +  [**Clase 8. Tensores y espacios tensoriales**](Clase7_10)
+   +  [**Clase 8. Tensores y espacios tensoriales**](#Clase7_10)
       1. Video y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_2Tensores1Abst.pdf)
       2. Video y [presentación de tensores y coordenadas](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_3Tensores2Cord.pdf)
 
