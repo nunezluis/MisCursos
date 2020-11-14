@@ -62,7 +62,7 @@ Los materiales que utilizaremos en este curso son
    + [*Clase 5. Dependencia e independencia líneal y bases ortogonales*](#Clase3_6)
      1. [Video](https://youtu.be/TVwa7wJ0N9I) y [presentación de variedades lineales](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_3IndependeLineal.pdf)
      2. [Ejemplos de ortogonalización de monomios y aproximación de funciones](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/ScriptMetMat1/BasesFuncionales/BasesFuncionales.html)
-   + *Clase 6. Aproximación de funciones y bases ortogonales*
+   + [*Clase 6. Aproximación de funciones y bases ortogonales*](#Clase3_6)
       + [Video](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_4AproximacionFunciones.pdf)
 + Referencias bibliográficas de artículo y capítulos de otros libros
    + [Artículo 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/Comon2014.pdf) Comon, P. (2014). Tensors: a brief introduction. IEEE Signal Processing Magazine, 31(3), 44-53.
