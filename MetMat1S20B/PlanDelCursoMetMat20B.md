@@ -46,6 +46,9 @@ La evaluación de este curso se realizará en base a tres tipos de actividades c
 Los materiales que utilizaremos en este curso son
 + **Temas seleccionados** del libro [Matematicas Avanzadas Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
 + El **capítulo de Variable Compleja** del libro [Matematicas Avanzadas Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenDOS.pdf)
+
+Hay que enfatizar que ambos volúmenes son obras en evolución y siempre presentaremos la última versión que puede haber variado. Con eso estamos diciendo que **NO LOS IMPRIMAN**. Consulten la última versión en formato electrónico que les presentamos en los enlaces antes mencionados.
+
 + Presentaciones que resumen los temas de cada clase
    + [**Clase 1. Los vectores de siempre**](#Clase1_2)
       1. [Video](https://youtu.be/2LhoaImegV4) y [presentación generalidades de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_1Vectores.pdf)
@@ -75,7 +78,7 @@ Los materiales que utilizaremos en este curso son
    + [Artículo 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/Comon2014.pdf) Comon, P. (2014). Tensors: a brief introduction. IEEE Signal Processing Magazine, 31(3), 44-53.
    + [Artículo 2](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/BattagliaAmerican%20Journal%20of%20Physics2013.pdf) Battaglia, F., & George, T. F. (2013). Tensors: A guide for undergraduate students. American Journal of Physics, 81(7), 498-511.
 
-Hay que enfatizar que ambos volúmenes son obras en evolución y siempre presentaremos la última versión que puede haber variado. Con eso estamos diciendo que **NO LOS IMPRIMAN**. Consulten la última versión en formato electrónico que les presentamos en los enlaces antes mencionados.
+
 
 ## Plan detallado del curso <a name="PlanDetallado"></a> 
 
