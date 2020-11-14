@@ -66,7 +66,7 @@ Los materiales que utilizaremos en este curso son
       + [Video](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_4AproximacionFunciones.pdf)
    + [**Clase 7. Funcionales Lineales y Espacios Vectoriales Duales**]
       + [Video](https://youtu.be/9u5g5Y5bdJI) y [presentación Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_1FuncionalesLineales.pdf)
-   +  [Clase 8. Tensores y espacios tensoriales](Clase7_10)
+   +  [**Clase 8. Tensores y espacios tensoriales**](Clase7_10)
       1. Video y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_2Tensores1Abst.pdf)
       2. Video y [presentación de tensores y coordenadas](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_3Tensores2Cord.pdf)
 
