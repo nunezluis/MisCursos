@@ -16,7 +16,7 @@
 + **Asignación 3 *fast track*. Lectura y síntesis de un artículo de Tensores (Evaluación clase 10).** Una de las actividades cotidiana del oficio de físico es la lectura de artículos y publicaciones. En este curso vamos a ayudar a irnos formando en esa dirección. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/JournalClub.pdf) podrán encontrar un bonito artículo que ilustra la estrategia para leer e informarse cotidianamente. Muestra también como hacer *Journal Club* para discutir las referencias. Hacer una revisión bibliográfica tiene su técnica y [aquí](https://www.kent.ac.uk/learning/resources/studyguides/literaturereviews.pdf) les recomiendo un que me pareció razonable.
 
 Entonces la asignación consiste en seleccionar **un artículo** de estos que les proponemos, hacer una síntesis y exponerlo en la Clase 9
-   + [Artículo 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/Comon2014.pdf)
+   + [Artículo 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/Comon2014.pdf) Comon, P. (2014). Tensors: a brief introduction. IEEE Signal Processing Magazine, 31(3), 44-53.
    + [Artículo 2](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/BattagliaAmerican%20Journal%20of%20Physics2013.pdf) Battaglia, F., & George, T. F. (2013). Tensors: A guide for undergraduate students. American Journal of Physics, 81(7), 498-511.
    
 + **Materiales de apoyo**
