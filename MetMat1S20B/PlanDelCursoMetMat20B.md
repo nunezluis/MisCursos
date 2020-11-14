@@ -54,6 +54,14 @@ Los materiales que utilizaremos en este curso son
    + [*Clase 2. Análisis vectorial express y numeros complejos*](#Clase1_2)
       1. Video y [presentación derivación e integración de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_5DerIntVectores.pdf)
       2. Video y [presentación vectores y numeros complejos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_6VectoresComplejos.pdf)
+   + [*Clase 3. Grupos y espacios lineales abstractos*](#Clase3_6)
+      + [Video](https://youtu.be/aiv3E_Nofko) y [presentación del concepto de espacio vectorial](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_1GruposEspaciosVectoriales.pdf)
+   + [*Clase 4. Espacios Métricos, Normados y Euclideanos*](#Clase3_6)
+      1. [Video](https://youtu.be/la9Gnhc0uFg) y [presentación de espacios métricos y normados](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_2EspaciosMetricos.pdf)
+      2. [Video](https://youtu.be/rQ59n-wr9X8) y [presentación de espacios euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_23EspaciosEuclideanos.pdf)
+   + *Clase XX*
+   
+   + *Clase XX*
 + Referencias bibliográficas de artículo y capítulos de otros libros
 
 Hay que enfatizar que ambos volúmenes son obras en evolución y siempre presentaremos la última versión que puede haber variado. Con eso estamos diciendo que **NO LOS IMPRIMAN**. Consulten la última versión en formato electrónico que les presentamos en los enlaces antes mencionados.
