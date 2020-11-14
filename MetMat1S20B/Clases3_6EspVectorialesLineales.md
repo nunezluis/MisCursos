@@ -33,8 +33,8 @@
 + **Taller de problemas 3 (evaluación en la clase 7)**
    1. Desarrollar los problemas 5 y 6 del punto 2.3.8
 + **Materiales de apoyo**
-   + [Video](https://youtu.be/TVwa7wJ0N9I) y [presentación de variedades lineales](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_3IndependeLineal.pdf)
-   + [Ejemplos de ortogonalización de monomios y aproximación de funciones](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/ScriptMetMat1/BasesFuncionales/BasesFuncionales.html)
+    1. [Video](https://youtu.be/TVwa7wJ0N9I) y [presentación de variedades lineales](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_3IndependeLineal.pdf)
+    2. [Ejemplos de ortogonalización de monomios y aproximación de funciones](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/ScriptMetMat1/BasesFuncionales/BasesFuncionales.html)
    
 + **Al finalizar estos contenidos** El estudiantes deberá
    1. Estar en capacidad construir una base para un espacio vectorial y identificar las componentes de un vector en esa base
