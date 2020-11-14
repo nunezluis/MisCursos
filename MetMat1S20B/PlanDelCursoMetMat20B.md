@@ -65,6 +65,8 @@ Los materiales que utilizaremos en este curso son
    + *Clase 6. Aproximación de funciones y bases ortogonales*
       + [Video](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_4AproximacionFunciones.pdf)
 + Referencias bibliográficas de artículo y capítulos de otros libros
+   + [Artículo 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/Comon2014.pdf) Comon, P. (2014). Tensors: a brief introduction. IEEE Signal Processing Magazine, 31(3), 44-53.
+   + [Artículo 2](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/BattagliaAmerican%20Journal%20of%20Physics2013.pdf) Battaglia, F., & George, T. F. (2013). Tensors: A guide for undergraduate students. American Journal of Physics, 81(7), 498-511.
 
 Hay que enfatizar que ambos volúmenes son obras en evolución y siempre presentaremos la última versión que puede haber variado. Con eso estamos diciendo que **NO LOS IMPRIMAN**. Consulten la última versión en formato electrónico que les presentamos en los enlaces antes mencionados.
 
