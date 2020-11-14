@@ -51,7 +51,7 @@ Los materiales que utilizaremos en este curso son unas notas de clase
 
 Hay que enfatizar que ambos volúmenes son obras en evolución y siempre presentaremos la última versión que puede haber variado. Con eso estamos diciendo que **NO LOS IMPRIMAN**. Consulten la última versión en formato electrónico que les presentamos en los enlaces antes mencionados.
 
-### Presentaciones
+### Presentaciones y videos
 + Presentaciones que resumen los temas de cada clase
    + [**Clase 1. Los vectores de siempre**](#Clase1_2)
       1. [Video](https://youtu.be/2LhoaImegV4) y [presentación generalidades de vectores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/1_1Vectores.pdf)
