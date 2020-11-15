@@ -95,8 +95,7 @@ Referencias bibliográficas de artículo y capítulos de otros libros
 <a name="Clase7_10"></a>
 ### [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9 y 10](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases7_10VecDualesTensores.md)
 
-## La evaluación
-<a name="Evaluacion"></a>
+## La evaluación<a name="Evaluacion"></a>
 [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Evaluacion.md) avanza la evaluación de este curso
 
 
