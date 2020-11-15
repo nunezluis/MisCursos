@@ -8,7 +8,7 @@
    1. [Los vectores de siempre. Clases 1 y 2](#Clase1_2)
    2. [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6 ](#Clase3_6)
    3. [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9 y 10](#Clase7_10)
-5. [La evaluación](#Evaluacion)
+5. [La evaluación](#evaluacion)
 
 
 ## La metodología 
@@ -95,12 +95,12 @@ Referencias bibliográficas de artículo y capítulos de otros libros
 <a name="Clase7_10"></a>
 ### [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9 y 10](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases7_10VecDualesTensores.md)
 
-## La evaluación<a name="Evaluacion"></a>
+## La evaluación <a name="evaluacion"></a>
 [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Evaluacion.md) avanza la evaluación de este curso
 
 
 
-### Clase Modelito. XXX  <a name="Clase9"></a>
+### Clase Modelito. XXX  <a name="ClaseXXX"></a>
 + **Objetivos de la Clase** 
 + **Actividad antes de clase** 
    1. Estudiar puntos de las notas de clase
