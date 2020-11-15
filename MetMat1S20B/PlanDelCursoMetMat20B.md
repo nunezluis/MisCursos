@@ -11,19 +11,18 @@
 5. [Evolución de la evaluación](#Avanzaevaluacion)
 
 
-## La metodología 
 <a name="metodologia"></a>
+## La metodología 
 **Antes de las clases** deberán revisar los materiales de apoyo (videos/textos) y recorrer los ejemplos resueltos de autoevaluación. Así podrán llevar dudas a la discusión que haremos en la clase. La clase quedará grabada y la discusión podrá revisarse también. La realización de esos ejemplos resueltos será tomada en cuenta durante el desarrollo de la clase.
 
-### Las clases 
 <a name="clases"></a>
+### Las clases 
 **En cada clase** tendremos dos partes: una de ~30m-40m para presentar los conceptos, seguida por otra de ~60m-50m para la discusión en los ejemplos resueltos. Los conceptos habrán sido previamente expuestos en videos e indicados en los materiales de estudio.
 
 En cada clase se propondrán ejercicios y asignaciones que deben resolver, consignar y sustentar **cada tercera clase** y **cada sexta clase**, respectivamente.  Tendremos una hora de consulta para dilucidar las dudas que se les presenten tanto en la solución de los ejercicios y las asignaciones propuestos.
 
-### La computación y la colaboración 
 <a name="colaboracion"></a>
-
+### La computación y la colaboración 
 **Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  tres tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software))), otra de edición de documentos científicos de álta calidad ([overleaf](https://en.wikipedia.org/wiki/Overleaf)) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales. Adicionalmente, como homenaje al gran [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz) deberán documentar en el git la solución de los ejercicios y asignaciones utilizando [markdown](https://en.wikipedia.org/wiki/Markdown). 
 
 + MAXIMA lo pueden obtener e instalar localmente desde [aquí](http://maxima.sourceforge.net).
@@ -33,7 +32,8 @@ En cada clase se propondrán ejercicios y asignaciones que deben resolver, consi
 **La colaboración** es fundamental en este curso, por lo tanto los reportes de las asignaciones especiales serán consignados en equipos de dos estudiantes. Tanto overleaf como el git están diseñados para colaborar, para redactar, desarrollar códigos y proyectos de forma colaboraborativa.
 
 
-## La evaluación <a name="evaluacion"></a> 
+<a name="evaluacion"></a> 
+## La evaluación 
 La evaluación de este curso se realizará en base a tres tipos de actividades con reportes y sustentaciones orales. **Los reportes y las sustentaciones se realizarán por equipos** de dos personas pero las **evaluaciones orales serán individuales**. Los reportes de las asignaciones deberán ser consignados en el git antes de la actividad evaluada. Los tres tipos de evaluación de este curso son:
 
 + **Cada tercera clase** se hará una evaluación sustentada de los *ejercicios asignados* como tarea.  Se tomarán en cuenta diez de estas evaluaciones y sumarán el 40\%. Las solución a los ejercicios 3C se copartirán desde el repositorio *git*
@@ -43,7 +43,8 @@ La evaluación de este curso se realizará en base a tres tipos de actividades c
 + En la **clase 14 o 15** y en **la 28 o 29** se realizará una evaluación oral de temas cubiertos hasta esas fechas. Esta *conversación evaluada* versará sobre un cuestionario que será enviado 24 horas antes de la actividad. Estas conversaciones evaluadas acopiarán el 20% restante.
 + **Para consignar las tareas y asignaciones** deberan "clonar" el [repositorio de tareas](https://github.com/nunezluis/TareasCursos20B) y depositar allí las tareas, asignaciones y proyectos que desarrollemos durante el curso.
 
-## Materiales del curso<a name="MaterialesCurso"></a>
+<a name="MaterialesCurso"></a>
+## Materiales del curso
 
 ### Libros textos
 Los materiales que utilizaremos en este curso son unas notas de clase
@@ -95,7 +96,8 @@ Referencias bibliográficas de artículo y capítulos de otros libros
 <a name="Clase7_10"></a>
 ### [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9 y 10](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases7_10VecDualesTensores.md)
 
-## La evaluación <a name="Avanzaevaluacion"></a>
+<a name="Avanzaevaluacion"></a>
+## La evaluación 
 [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Evaluacion.md) avanza la evaluación de este curso
 
 
