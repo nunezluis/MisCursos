@@ -34,7 +34,7 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 + **Taller de problemas 4 (evaluación en la clase 5)**
    + Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.12   
 + **Materiales de apoyo**
-   1. Video y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_2Tensores1Abst.pdf)
+   1. [Video](https://youtu.be/vYqYQvEwvlo) y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_2Tensores1Abst.pdf)
    2. Video y [presentación de tensores y coordenadas](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_3Tensores2Cord.pdf)
 
 <a name="Clase9"></a>
