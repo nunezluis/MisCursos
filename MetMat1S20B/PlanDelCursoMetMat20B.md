@@ -75,7 +75,7 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
    + [**Clase 7. Funcionales Lineales y Espacios Vectoriales Duales**](#Clase7_10)
       + [Video](https://youtu.be/9u5g5Y5bdJI) y [presentación Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_1FuncionalesLineales.pdf)
    +  [**Clase 8. Tensores y espacios tensoriales**](#Clase7_10)
-      1. Video y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_2Tensores1Abst.pdf)
+      1. [Video](https://youtu.be/vYqYQvEwvlo) y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_2Tensores1Abst.pdf)
       2. Video y [presentación de tensores y coordenadas](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_3Tensores2Cord.pdf)
 
 ### Artículos y capítulos de libros   
