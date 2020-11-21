@@ -1,8 +1,9 @@
 # Espacios vectoriales duales y tensoriales
 + [Clase 7. Funcionales Lineales y Espacios Vectoriales Duales](#Clase7)
 + [Clase 8. Tensores y espacios tensoriales](#Clase8)
-+ [Clase 9. Ejemplos de Tensores y espacios tensoriales](#Clase9)
-+ [Clase 10. Vectores, tensores y espacios pseudoeuclideanos](#Clase10)
++ [Clase 9. Tensores y tranformación de coordenas](#Clase9)
++ [Clase 10.Ejemplos de Tensores y espacios tensoriales](#Clase10)
++ [Clase 11. Vectores, tensores y espacios pseudoeuclideanos](#Clase11)
 
 <a name="Clase7"></a>
 ### Clase 7. Funcionales Lineales y Espacios Vectoriales Duales (201117)
@@ -38,7 +39,7 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
    2. Video y [presentación de tensores y coordenadas](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_3Tensores2Cord.pdf)
 
 <a name="Clase9"></a>
-### Clase 9. Ejemplos de Tensores y espacios tensoriales  
+### Clase 9. Tensores y tranformación de coordenas
 + **Actividad antes de clase** 
    1. XXX
    2. XXX
@@ -50,7 +51,7 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
    2. Video y presentación XXX
    
 <a name="Clase10"></a>
-### Clase 10. Vectores, tensores y espacios pseudoeuclideanos  
+### Clase 10.Ejemplos de Tensores y espacios tensoriales    
 + **Actividad antes de clase** 
    1. XXX
    2. XXX
@@ -60,3 +61,13 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 + **Materiales de apoyo**
    1. Video y presentación de XXX
   
+  <a name="Clase11"></a>
+### Clase 11. Vectores, tensores y espacios pseudoeuclideanos  
++ **Actividad antes de clase** 
+   1. XXX
+   2. XXX
++ **Evaluación Asignación 3 *fast track*.**   
++ **Taller de problemas XXX (evaluación en la clase XXX)**
+   + XXX
++ **Materiales de apoyo**
+   1. Video y presentación de XXX
