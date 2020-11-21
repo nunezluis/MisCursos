@@ -1,7 +1,7 @@
 # Espacios vectoriales duales y tensoriales
 + [Clase 7. Funcionales Lineales y Espacios Vectoriales Duales](#Clase7)
 + [Clase 8. Tensores y espacios tensoriales](#Clase8)
-+ [Clase 9. Tensores y tranformación de coordenas](#Clase9)
++ [Clase 9. Tensores y tranformaciones de coordenadas](#Clase9)
 + [Clase 10.Ejemplos de Tensores y espacios tensoriales](#Clase10)
 + [Clase 11. Vectores, tensores y espacios pseudoeuclideanos](#Clase11)
 
@@ -39,7 +39,7 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
    2. Video y [presentación de tensores y coordenadas](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_3Tensores2Cord.pdf)
 
 <a name="Clase9"></a>
-### Clase 9. Tensores y tranformación de coordenas
+### Clase 9. Tensores y tranformaciones de coordenadas
 + **Actividad antes de clase** 
    1. XXX
    2. XXX
