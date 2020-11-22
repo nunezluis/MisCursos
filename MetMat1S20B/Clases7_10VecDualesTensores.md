@@ -36,17 +36,17 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
    2. Rehacer los ejemplos resueltos 1 y 2 de la sección 3.2.9. 
 + **Taller de problemas 4 (evaluación en la clase 9)**
    + Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.11
-   + 
 + **Materiales de apoyo** [Video](https://youtu.be/vYqYQvEwvlo) y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_2Tensores1Abst.pdf)
 + **Al finalizar estos contenidos** El estudiantes deberá
-   1. Comprender el concepto de Tensor como un funcional multilineal
+   1. Comprender el concepto de tensor como un funcional multilineal
    2. Construir un espacio tensorial
    3. Realizar operaciones sencillas con componentes tensoriales: suma de tensores, contracción de índices, proyección de componetes de ecuaciones tensoriales.
    4. Construir partes simétricas y antisimétricas de componentes tensoriales
 
-
 <a name="Clase9"></a>
 ### Clase 9. Tensores y tranformaciones de coordenadas
++ **Objetivos de la clase.** Esta clase tiene por objetivo presentar las transformaciones de las componentes tensoriales bajo cambios de bases. Relacionar estar transformaciones de las componentes tensoriales con cambios de base de los espacios vectoriales y éstos con cambios de sistemas de coordenadas. Presentaremos el tensor métrico y lo relacionaremos con un tensor abstracto definido en un espacio vectorial y veremos sus distintas representaciones en varios sistemas de coordenadas, identificando los factores de escala correspondientes.  
+
 + **Actividad antes de clase** 
    1. Estudiar los puntos 3.2.5, 3.2.6, 3.2.7 y 3.2.9 de las notas de clase
    2. Rehacer con MAXIMA el ejemplo resuelto 3 de la sección 3.2.9.
@@ -62,7 +62,7 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
    2. XXX
 + **Evaluación Asignación 3 *fast track*. **   
 + **Taller de problemas 5 (evaluación en la clase 11)**
-   + Hacer el problema 5 de la sección 3.2.11.
+   + Hacer los problemas 5 y 8 de la sección 3.2.11.
 + **Materiales de apoyo**
    1. Video y presentación de XXX
   
