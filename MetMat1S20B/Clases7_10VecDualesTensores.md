@@ -33,23 +33,27 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 
 + **Actividad antes de clase** 
    1. Estudiar los puntos 3.2.1, 3.2.2, 3.2.3, 3.2.4 y 3.2.5 de las notas de clase
-   2. Rehacer los ejemplos resueltos 1 y 2 de la sección 3.2.10. 
+   2. Rehacer los ejemplos resueltos 1 y 2 de la sección 3.2.9. 
 + **Taller de problemas 4 (evaluación en la clase 9)**
-   + Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.12   
+   + Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.11
+   + 
 + **Materiales de apoyo** [Video](https://youtu.be/vYqYQvEwvlo) y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_2Tensores1Abst.pdf)
 + **Al finalizar estos contenidos** El estudiantes deberá
    1. Comprender el concepto de Tensor como un funcional multilineal
-   2. Construir un espacio tensor
+   2. Construir un espacio tensorial
+   3. Realizar operaciones sencillas con componentes tensoriales: suma de tensores, contracción de índices, proyección de componetes de ecuaciones tensoriales.
+   4. Construir partes simétricas y antisimétricas de componentes tensoriales
 
 
 <a name="Clase9"></a>
 ### Clase 9. Tensores y tranformaciones de coordenadas
 + **Actividad antes de clase** 
    1. Estudiar los puntos 3.2.5, 3.2.6, 3.2.7 y 3.2.9 de las notas de clase
-   2. Rehacer con MAXIMA el ejemplo resuelto 3 de la sección 3.2.10.
+   2. Rehacer con MAXIMA el ejemplo resuelto 3 de la sección 3.2.9.
 + **Evaluación taller de problemas 4**   
 + **Taller de problemas 5 (evaluación en la clase 11)**
-   + XXX
+   + 1. Hacer los problemas 3 y 4 de la sección 3.2.11.
+   + 2. Rehacer con MAXIMA el ejemplo resuelto 3 de la sección 3.2.10.
 + **Materiales de apoyo** Video y [presentación de tensores y coordenadas](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_3Tensores2Cord.pdf)  
 <a name="Clase10"></a>
 ### Clase 10.Ejemplos de Tensores y espacios tensoriales    
@@ -58,7 +62,7 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
    2. XXX
 + **Evaluación Asignación 3 *fast track*. **   
 + **Taller de problemas 5 (evaluación en la clase 11)**
-   + XXX
+   + Hacer el problema 5 de la sección 3.2.11.
 + **Materiales de apoyo**
    1. Video y presentación de XXX
   
