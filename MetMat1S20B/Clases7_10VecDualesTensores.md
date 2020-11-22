@@ -32,8 +32,8 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 + **Objetivos de la clase.** Esta clase tiene por objetivo construir la definición de un tensor a partir de la generalización de un funcional lineal. Mostrar que un tensor es una función multilineal con vectores y formas lineales como argumentos. Luego evidenciar que los tensores forman un espacio tensorial formado del producto tensorial de espacios vectoriales y/o duales. Luego construir bases para ese espacio a partir de las base de los espacios vectoriales (y/o duales) que lo generaron. Finalmente, expresamos un tensor genérico como una combinación lineal de esa base tensorial y analizaremos las propiedades de las bases. Discutiremos las contracción de índices tensoriales así como también su simetrización y antisimetrización.  
 
 + **Actividad antes de clase** 
-   1. Estudiar los puntos 3.2.1, 3.2.2, 3.2.3, 3.2.4, 3.2.5, 3.2.6, 3.2.7 y 3.2.9 de las notas de clase
-   2. Rehacer el ejemplos resueltos 1 y 3 de la sección 3.2.10. 
+   1. Estudiar los puntos 3.2.1, 3.2.2, 3.2.3, 3.2.4 y 3.2.5 de las notas de clase
+   2. Rehacer los ejemplos resueltos 1 y 2 de la sección 3.2.10. 
 + **Taller de problemas 4 (evaluación en la clase 9)**
    + Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.12   
 + **Materiales de apoyo** [Video](https://youtu.be/vYqYQvEwvlo) y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_2Tensores1Abst.pdf)
@@ -45,10 +45,10 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 <a name="Clase9"></a>
 ### Clase 9. Tensores y tranformaciones de coordenadas
 + **Actividad antes de clase** 
-   1. XXX
-   2. XXX
+   1. Estudiar los puntos 3.2.5, 3.2.6, 3.2.7 y 3.2.9 de las notas de clase
+   2. Rehacer con MAXIMA el ejemplo resuelto 3 de la sección 3.2.10.
 + **Evaluación taller de problemas 4**   
-+ **Taller de problemas XXX (evaluación en la clase XXX)**
++ **Taller de problemas 5 (evaluación en la clase 11)**
    + XXX
 + **Materiales de apoyo** Video y [presentación de tensores y coordenadas](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_3Tensores2Cord.pdf)  
 <a name="Clase10"></a>
@@ -56,8 +56,8 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 + **Actividad antes de clase** 
    1. XXX
    2. XXX
-+ **Evaluación Asignación 3 *fast track*.**   
-+ **Taller de problemas XXX (evaluación en la clase XXX)**
++ **Evaluación Asignación 3 *fast track*. **   
++ **Taller de problemas 5 (evaluación en la clase 11)**
    + XXX
 + **Materiales de apoyo**
    1. Video y presentación de XXX
@@ -67,7 +67,7 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 + **Actividad antes de clase** 
    1. XXX
    2. XXX
-+ **Evaluación Asignación 3 *fast track*.**   
++ **Evaluación taller de problemas 5 *fast track*.**   
 + **Taller de problemas XXX (evaluación en la clase XXX)**
    + XXX
 + **Materiales de apoyo**
