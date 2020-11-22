@@ -36,8 +36,8 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
    2. Rehacer los ejemplos resueltos 1 y 2 de la sección 3.2.9. 
 + **Taller de problemas 4 (evaluación en la clase 9)**
    + Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.11
-+ **Materiales de apoyo** [Video](https://youtu.be/vYqYQvEwvlo) y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_2Tensores1Abst.pdf)
-+ **Al finalizar estos contenidos** El estudiantes deberá
++ **Materiales de apoyo:** [Video](https://youtu.be/vYqYQvEwvlo) y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_2Tensores1Abst.pdf)
++ **Al finalizar estos contenidos** El estudiantes deberá:
    1. Comprender el concepto de tensor como un funcional multilineal
    2. Construir un espacio tensorial
    3. Realizar operaciones sencillas con componentes tensoriales: suma de tensores, contracción de índices, proyección de componetes de ecuaciones tensoriales.
@@ -52,9 +52,13 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
    2. Rehacer con MAXIMA el ejemplo resuelto 3 de la sección 3.2.9.
 + **Evaluación taller de problemas 4**   
 + **Taller de problemas 5 (evaluación en la clase 11)**
-   + 1. Hacer los problemas 3 y 4 de la sección 3.2.11.
-   + 2. Rehacer con MAXIMA el ejemplo resuelto 3 de la sección 3.2.10.
-+ **Materiales de apoyo** Video y [presentación de tensores y coordenadas](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_3Tensores2Cord.pdf)  
+   1. Hacer los problemas 3 y 4 de la sección 3.2.11.
+   2. Rehacer con MAXIMA el ejemplo resuelto 3 de la sección 3.2.10.
++ **Materiales de apoyo:** Video y [presentación de tensores y coordenadas](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_3Tensores2Cord.pdf)  
++ **Al finalizar estos contenidos** El estudiantes deberá ser capaz de:
+   + Expresar un tensor en distintas base, indentificando las leyes de transformación entre las distintas bases
+   + Construir le métrica para ese espacio vectorial dada una base
+
 <a name="Clase10"></a>
 ### Clase 10.Ejemplos de Tensores y espacios tensoriales    
 + **Actividad antes de clase** 
