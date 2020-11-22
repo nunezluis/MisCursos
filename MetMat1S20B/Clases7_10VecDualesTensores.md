@@ -28,16 +28,15 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
    3. Expandir una 1-forma como combinación lineal de la base dual
    
 <a name="Clase8"></a>
-### Clase 8. Tensores y espacios tensoriales
-+ **Objetivos de la clase.** Esta clase tiene por objetivo construir la definición de un tensor a partir de la generalización de un funcional lineal. Mostrar que un tensor es una función multilineal con vectores y formas lineales como argumentos. Luego evidenciar que los tensores forman un espacio tensorial formado del producto tensorial de espacios vectoriales y/o duales. Luego construir bases para ese espacio a partir de las base de los espacios vectoriales (y/o duales) que lo generaron. Finalmente, 
+### Clase 8. Tensores y espacios tensoriales (201120)
++ **Objetivos de la clase.** Esta clase tiene por objetivo construir la definición de un tensor a partir de la generalización de un funcional lineal. Mostrar que un tensor es una función multilineal con vectores y formas lineales como argumentos. Luego evidenciar que los tensores forman un espacio tensorial formado del producto tensorial de espacios vectoriales y/o duales. Luego construir bases para ese espacio a partir de las base de los espacios vectoriales (y/o duales) que lo generaron. Finalmente, expresamos un tensor genérico como una combinación lineal de esa base tensorial y analizaremos las propiedades de las bases. Discutiremos las contracción de índices tensoriales, simetrización y antisimetrización  
+
 + **Actividad antes de clase** 
    1. Estudiar los puntos 3.2.1, 3.2.2, 3.2.3, 3.2.4, 3.2.5, 3.2.6, 3.2.7 y 3.2.9 de las notas de clase
    2. Rehacer el ejemplos resueltos 1 y 3 de la sección 3.2.10. 
 + **Taller de problemas 4 (evaluación en la clase 5)**
    + Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.12   
-+ **Materiales de apoyo**
-   1. [Video](https://youtu.be/vYqYQvEwvlo) y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_2Tensores1Abst.pdf)
-   2. Video y [presentación de tensores y coordenadas](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_3Tensores2Cord.pdf)
++ **Materiales de apoyo** [Video](https://youtu.be/vYqYQvEwvlo) y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_2Tensores1Abst.pdf)
 
 <a name="Clase9"></a>
 ### Clase 9. Tensores y tranformaciones de coordenadas
@@ -47,10 +46,7 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 + **Evaluación taller de problemas 4**   
 + **Taller de problemas XXX (evaluación en la clase XXX)**
    + XXX
-+ **Materiales de apoyo**
-   1. Video y presentación de espacios métricos y normados
-   2. Video y presentación XXX
-   
++ **Materiales de apoyo** Video y [presentación de tensores y coordenadas](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_3Tensores2Cord.pdf)  
 <a name="Clase10"></a>
 ### Clase 10.Ejemplos de Tensores y espacios tensoriales    
 + **Actividad antes de clase** 
