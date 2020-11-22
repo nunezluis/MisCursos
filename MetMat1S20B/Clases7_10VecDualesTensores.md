@@ -57,19 +57,24 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 + **Materiales de apoyo:** Video y [presentación de tensores y coordenadas](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_3Tensores2Cord.pdf)  
 + **Al finalizar estos contenidos** El estudiantes deberá ser capaz de:
    + Expresar un tensor en distintas base, indentificando las leyes de transformación entre las distintas bases
-   + Construir le métrica para ese espacio vectorial dada una base
+   + Construir le métrica para ese espacio vectorial dada una base de vectores ortogonales u oblicuos.
 
 <a name="Clase10"></a>
-### Clase 10.Ejemplos de Tensores y espacios tensoriales    
+### Clase 10.Ejemplos de Tensores y espacios tensoriales  
++ **Objetivos de la clase.** Esta clase tiene por objetivo presentar ejemplos de tensores en Física, en particular el tensor de esfuerzos 2D y 3D, así como también el tensor de inercia. 
+
 + **Actividad antes de clase** 
-   1. XXX
-   2. XXX
-+ **Evaluación Asignación 3 *fast track*. **   
+   + Rehacer los ejemplos de tensores en física (ejemplo resuelto 8 sección 3.2.9). Tensor de esfuerzo y Tensor de Inercia
++ **Evaluación Asignación 3 *fast track*.**   
 + **Taller de problemas 5 (evaluación en la clase 11)**
    + Hacer los problemas 5 y 8 de la sección 3.2.11.
 + **Materiales de apoyo**
    1. Video y presentación de XXX
-  
++ **Al finalizar estos contenidos.** El estudiantes deberá:
+   + Comprender el significado físico del el tensor de esfuerzos
+   + Comprender el significado física del tensor de inercia, tanto para un sistema de partículas como para cuerpos contínuos
+   + Comprender las representaciones preferenciales de estos tensores en sistemas de coordenadas adaptados (ejes principales). 
+   
   <a name="Clase11"></a>
 ### Clase 11. Vectores, tensores y espacios pseudoeuclideanos  
 + **Actividad antes de clase** 
