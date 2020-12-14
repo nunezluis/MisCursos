@@ -76,7 +76,9 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
    + Comprender las representaciones preferenciales de estos tensores en sistemas de coordenadas adaptados (ejes principales).
 
   <a name="Clase11"></a>
-### Clase 11. Vectores, tensores y espacios pseudoeuclideanos  
+### Clase 11. Vectores, tensores y espacios pseudoeuclideanos
++ **Objetivos de la clase.** Esta clase tiene por objetivo presentar la aplicación de todos los conceptos desarrollados (Vectores, 1-Formas, espacios vectoriales, espacios duales, tensores, tensor métrico)
+### Clase 11. Vectores, tensores y espacios pseudoeuclideanos  n 
 + **Actividad antes de clase**
    1. XXX
    2. XXX
