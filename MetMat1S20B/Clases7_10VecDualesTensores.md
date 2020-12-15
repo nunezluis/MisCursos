@@ -82,9 +82,13 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 + **Actividad antes de clase**
    1. Estudiar los puntos 3.3.1 y 3.3.2 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
    2. Rehacer el ejemplo resuelto 1 de las sección 3.3.3 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
-   3. Rehacer la solución de MAXIMA 2 de la sección 3.3.4 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf) 
+   3. Rehacer la solución de MAXIMA 2 de la sección 3.3.4 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
 + **Evaluación taller de problemas 5**      
 + **Taller de problemas 6 (evaluación en la clase 12)**
-   + Resolver los ejercicios 5 y 6 de la sección 3.3.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
+  Resolver los ejercicios 5 y 6 de la sección 3.3.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
 + **Materiales de apoyo**
-   1. Video y [presentación de espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_4Pseudoeuclideanos.pdf)
+ Video y [presentación de espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_4Pseudoeuclideanos.pdf)
++ **Al finalizar estos contenidos** El estudiantes deberá ser capaz de:
+ + Comprender la relación entre componentes (contravariantes) de los vectores/tensores y las componentes (contravariantes) de las 1-formas/tensores con el tensor métrico.
+ + Comprender el significado físico de los vectores con norma positiva, negativa y nula
+ + Asociar las transformaciones de Lorentz con los observadores preferenciales para la relatividad especial    
