@@ -89,6 +89,6 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 + **Materiales de apoyo**
  Video y [presentación de espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_4Pseudoeuclideanos.pdf)
 + **Al finalizar estos contenidos** El estudiantes deberá ser capaz de:
- + Comprender la relación entre componentes (contravariantes) de los vectores/tensores y las componentes (contravariantes) de las 1-formas/tensores con el tensor métrico.
- + Comprender el significado físico de los vectores con norma positiva, negativa y nula
- + Asociar las transformaciones de Lorentz con los observadores preferenciales para la relatividad especial    
+   + Comprender la relación entre componentes (contravariantes) de los vectores/tensores y las componentes (contravariantes) de las 1-formas/tensores con el tensor métrico.
+   + Comprender el significado físico de los vectores con norma positiva, negativa y nula
+   + Asociar las transformaciones de Lorentz con los observadores preferenciales para la relatividad especial    
