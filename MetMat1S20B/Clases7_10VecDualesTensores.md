@@ -9,7 +9,7 @@
 ### Clase 7. Funcionales Lineales y Espacios Vectoriales Duales (201117)
 + **Objetivos de la clase.** Esta clase tiene por objetivo, construir espacios vectoriales duales a partir de la definición del producto interno. Identificar las bases duales asociadas a las bases de los espacios vectoriales y los vectores duales (o 1-formas) asociados a los vectores. Mostrar como una un vector dual puede ser expresado como combinación lineal de la base dual.
 + **Actividad antes de clase**
-   1. Estudiar puntos de las notas de clase 3.1.1, 3.1.2 y 3.1.3
+   1. Estudiar puntos de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf) 3.1.1, 3.1.2 y 3.1.3
    2. Rehacer los ejemplos resueltos 3 y 4 de la sección 3.1.4
 + **Evaluación taller de problemas 3**   
 + **Taller de problemas 4 (evaluación en la clase 9)**
@@ -32,7 +32,7 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 + **Objetivos de la clase.** Esta clase tiene por objetivo construir la definición de un tensor a partir de la generalización de un funcional lineal. Mostrar que un tensor es una función multilineal con vectores y formas lineales como argumentos. Luego evidenciar que los tensores forman un espacio tensorial formado del producto tensorial de espacios vectoriales y/o duales. Luego construir bases para ese espacio a partir de las base de los espacios vectoriales (y/o duales) que lo generaron. Finalmente, expresamos un tensor genérico como una combinación lineal de esa base tensorial y analizaremos las propiedades de las bases. Discutiremos las contracción de índices tensoriales así como también su simetrización y antisimetrización.  
 
 + **Actividad antes de clase**
-   1. Estudiar los puntos 3.2.1, 3.2.2, 3.2.3, 3.2.4 y 3.2.5 de las notas de clase
+   1. Estudiar los puntos 3.2.1, 3.2.2, 3.2.3, 3.2.4 y 3.2.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
    2. Rehacer los ejemplos resueltos 1 y 2 de la sección 3.2.9.
 + **Taller de problemas 4 (evaluación en la clase 9)**
    + Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.11
@@ -48,7 +48,7 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 + **Objetivos de la clase.** Esta clase tiene por objetivo presentar las transformaciones de las componentes tensoriales bajo cambios de bases. Relacionar estar transformaciones de las componentes tensoriales con cambios de base de los espacios vectoriales y éstos con cambios de sistemas de coordenadas. Presentaremos el tensor métrico y lo relacionaremos con un tensor abstracto definido en un espacio vectorial y veremos sus distintas representaciones en varios sistemas de coordenadas, identificando los factores de escala correspondientes.  
 
 + **Actividad antes de clase**
-   1. Estudiar los puntos 3.2.5, 3.2.6, 3.2.7 y 3.2.9 de las notas de clase
+   1. Estudiar los puntos 3.2.5, 3.2.6, 3.2.7 y 3.2.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
    2. Rehacer con MAXIMA el ejemplo resuelto 3 de la sección 3.2.9.
 + **Evaluación taller de problemas 4**   
 + **Taller de problemas 5 (evaluación en la clase 11)**
@@ -64,7 +64,7 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 + **Objetivos de la clase.** Esta clase tiene por objetivo presentar ejemplos de tensores en Física, en particular el tensor de esfuerzos 2D y 3D, así como también el tensor de inercia.
 
 + **Actividad antes de clase**
-   + Rehacer los ejemplos de tensores en física (ejemplo resuelto 8 sección 3.2.9). Tensor de esfuerzo y Tensor de Inercia
+   + Rehacer los ejemplos de tensores en física (ejemplo resuelto 8 sección 3.2.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)). Tensor de esfuerzo y Tensor de Inercia
 + **Evaluación Asignación 3 *fast track*.**   
 + **Taller de problemas 5 (evaluación en la clase 11)**
    + Hacer los problemas 5 y 8 de la sección 3.2.11.
@@ -77,13 +77,14 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 
   <a name="Clase11"></a>
 ### Clase 11. Vectores, tensores y espacios pseudoeuclideanos
-+ **Objetivos de la clase.** Esta clase tiene por objetivo presentar la aplicación de todos los conceptos desarrollados (Vectores, 1-Formas, espacios vectoriales, espacios duales, tensores, tensor métrico)
-### Clase 11. Vectores, tensores y espacios pseudoeuclideanos  n 
++ **Objetivos de la clase.** Esta clase tiene por objetivo presentar la aplicación de todos los conceptos desarrollados en este capítulo (Vectores, 1-Formas, espacios vectoriales, espacios duales, tensores y tensor métrico) para espacios vectoriales con norma positiva, negativa o nula.
+
 + **Actividad antes de clase**
-   1. XXX
-   2. XXX
-+ **Evaluación taller de problemas 5 *fast track*.**   
-+ **Taller de problemas XXX (evaluación en la clase XXX)**
-   + XXX
+   1. Estudiar los puntos 3.3.1 y 3.3.2 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
+   2. Rehacer el ejemplo resuelto 1 de las sección 3.3.3 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
+   3. Rehacer la solución de MAXIMA 2 de la sección 3.3.4 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf) 
++ **Evaluación taller de problemas 5**      
++ **Taller de problemas 6 (evaluación en la clase 12)**
+   + Resolver los ejercicios 5 y 6 de la sección 3.3.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
 + **Materiales de apoyo**
-   1. Video y presentación de XXX
+   1. Video y [presentación de espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_4Pseudoeuclideanos.pdf)
