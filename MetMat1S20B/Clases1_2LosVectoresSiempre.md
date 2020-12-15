@@ -16,7 +16,7 @@
    1. Instalar y configurar MAXIMA
    2. Registrarse en overleaf
    3. Registrarse y configurar repositorio git
-   4. Estudiar puntos de las notas de clase 1.1, 1.2 y 1.3 del [Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
+   4. Estudiar puntos de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf) 1.1, 1.2 y 1.3 del [Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
    5. Rehacer los ejercicios resueltos: 3 y 4 de la Sección 1.1.6; 3 de la sección 1.2.7; 3, sección 1.4.5
 + **Taller de problemas 1 (evaluación en la clase 3)**
    1. Realice un código en MAXIMA para el cual, dado tres vectores que formen los lados de un triángulo calcule el centroide (Problema 3 Sección 1.1.8)
@@ -39,7 +39,7 @@ Las asignaciones serán presentadas de dos maneras: un reporte tipo artículo y 
    Esta clase tiene por objetivo realizar una aproximación intuitiva a los conceptos de análisis vectorial. En particular interpretar la derivación e integración de un campo vectorial. Mas adelante, en el desarrollo del curso se formalizará este concepto. De igual forma se hará un repaso de los conceptos de números complejos y se asociará con la idea de un vector con una componente real y otra compleja.
 
 + **Actividad antes de clase**
-   1. Estudiar puntos de las notas de clase 1.5.1, 1.5.2, 1.5.3, 1.5.4, 1.5.5 y 1.5.6 del [Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
+   1. Estudiar puntos de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf) 1.5.1, 1.5.2, 1.5.3, 1.5.4, 1.5.5 y 1.5.6 del [Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
    2. Rehacer los ejercicios resueltos: 2 y 3 sección 1.5.7; y 2 y 4 de la sección 1.6.5
 + **Taller de problema 1 (evaluación en la clase 3)**
    1. Resuelva el problema 2a, 2d y 2f y con MAXIMA el problema 13 de la sección 1.5.9;
