@@ -52,24 +52,24 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
    2. Rehacer con MAXIMA el ejemplo resuelto 3 de la sección 3.2.9.
 + **Evaluación taller de problemas 4**   
 + **Taller de problemas 5 (evaluación en la clase 11)**
-   1. Hacer los problemas 3 y 4 de la sección 3.2.11.
-   2. Rehacer con MAXIMA el ejemplo resuelto 3 de la sección 3.2.10.
+   1. Hacer los problemas 3 y 4 de la sección 3.2.11 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf).
+   2. Rehacer con MAXIMA el ejemplo resuelto 3 de la sección 3.2.10 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf).
 + **Materiales de apoyo:** Video y [presentación de tensores y coordenadas](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_3Tensores2Cord.pdf)  
 + **Al finalizar estos contenidos** El estudiantes deberá ser capaz de:
    + Expresar un tensor en distintas base, identificando las leyes de transformación entre las distintas bases
    + Construir le métrica para ese espacio vectorial dada una base de vectores ortogonales u oblicuos.
 
 <a name="Clase10"></a>
-### Clase 10.Ejemplos de Tensores y espacios tensoriales  
+### Clase 10. Un par de ejemplos de tensores en Física  
 + **Objetivos de la clase.** Esta clase tiene por objetivo presentar ejemplos de tensores en Física, en particular el tensor de esfuerzos 2D y 3D, así como también el tensor de inercia.
 
 + **Actividad antes de clase**
-   + Rehacer los ejemplos de tensores en física (ejemplo resuelto 8 sección 3.2.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)). Tensor de esfuerzo y Tensor de Inercia
+    Rehacer los ejemplos de tensores en física (ejemplo resuelto 8 sección 3.2.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf) ). Tensor de esfuerzo y Tensor de Inercia
 + **Evaluación Asignación 3 *fast track*.**   
 + **Taller de problemas 5 (evaluación en la clase 11)**
-   + Hacer los problemas 5 y 8 de la sección 3.2.11.
+    Hacer los problemas 5 y 8 de la sección 3.2.11.
 + **Materiales de apoyo**
-   1. Video y presentación de XXX
+   Video y presentación de [ejemplos de tensores en Física](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_3EjemplTensor.pdf)
 + **Al finalizar estos contenidos.** El estudiantes deberá:
    + Comprender el significado físico del el tensor de esfuerzos
    + Comprender el significado física del tensor de inercia, tanto para un sistema de partículas como para cuerpos continuos
@@ -87,7 +87,7 @@ Entonces la asignación consiste en seleccionar **un artículo** de estos que le
 + **Taller de problemas 6 (evaluación en la clase 12)**
   Resolver los ejercicios 5 y 6 de la sección 3.3.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
 + **Materiales de apoyo**
- Video y [presentación de espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_4Pseudoeuclideanos.pdf)
+ Video y [presentación de espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_4Pseudoeuclidianos.pdf)
 + **Al finalizar estos contenidos** El estudiantes deberá ser capaz de:
    + Comprender la relación entre componentes (contravariantes) de los vectores/tensores y las componentes (contravariantes) de las 1-formas/tensores con el tensor métrico.
    + Comprender el significado físico de los vectores con norma positiva, negativa y nula
