@@ -24,16 +24,24 @@ Este curso está orientado a proveer de las herramientas y conceptos indispensab
 Los programas detallados y sus responsables los listamos a continuación:
 + [Ingeniería de software para la investigación](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/ResearchSoftwareEngineeringSyllabusNew.md) (2 ECTS). Responsables:
   + [Arturo Sánchez Pineda](https://laconga.redclara.net/arturo-sanchez-pineda/) International Centre for Theoretical Physics (ICTP) Italia y European Organization for Nuclear Research (CERN) Suiza.
-  + [Juan Carlos Bastos Pineda]() Universidad Industrial de Santander
+  + [Juan Carlos Bastos Pineda](https://github.com/juan-pineda/bio) Universidad Industrial de Santander
 + [Introducción a la estadística](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/StatisticsSyllabus.md) (5 ECTS). Responsables:
   + [José Ocariz](https://laconga.redclara.net/jose-ocariz/) Université de Paris, Francia.
   + [Camila Rangel](https://laconga.redclara.net/camila-rangel-smith/), Turing Institute, Reino Unido.  
-+ Proyectos *hands-on* de Ciencia de Datos (3 ECTS) en dos sabores, uno en Física de Altas Energías y otro en Sistemas Complejos:
-  + [Proyectos en Física de Altas Energías](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/HandsOnDataProjects.md). Responsables:
++ Proyectos *hands-on* de Ciencia de Datos en dos sabores, uno en Física de Altas Energías y otro en Sistemas Complejos:
+  + [Proyectos en Física de Altas Energías](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/HandsOnDataProjects.md) (3 ECTS). Responsables:
     + [Arturo Sánchez Pineda](https://laconga.redclara.net/arturo-sanchez-pineda/) International Centre for Theoretical Physics (ICTP) Italia y European Organization for Nuclear Research (CERN) Suiza.
-    + [Javier Solano](https://laconga.redclara.net/javier-solano/), Universidad Nacional de Ingeniería (Perú)
-  + [Proyecto de Sistemas Complejos en Dinámica Molecular](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/MonteCarloAndMolecularDynamics.md) Responsable: [Ernesto Medina](https://laconga.redclara.net/ernesto-medina/), Yachay Tech (Ecuador)   
+    + [Javier Solano](https://laconga.redclara.net/javier-solano/), Universidad Nacional de Ingeniería, Perú.
+  + [Proyectos de Sistemas Complejos en Dinámica Molecular](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/MonteCarloAndMolecularDynamics.md) (3 ECTS). Responsable: [Ernesto Medina](https://laconga.redclara.net/ernesto-medina/), Yachay Tech, Ecuador.   
 
 ### Instrumentación científica (10 ECTS)
 Este curso está orientado a proveer de las herramientas y conceptos indispensables implementar sistemas e interfaces en instrumentación científica. Está compuesto de tres módulos:
-+ Introducción a sistemas de medidas
++ [Introducción a sistemas de medidas](https://github.com/LA-CoNGA/WP1-Preparation/blob/instrumentation/syllabus/OurSyllabus/IntroductionToMeasurementSystemsSyllabus.md) (2 ECTS). Responsable: [Dennis Cazar](https://laconga.redclara.net/dennis-cazar/), Universidad San Francisco de Quito (Ecuador)
++ [Instrumentación Científica](https://github.com/LA-CoNGA/WP1-Preparation/blob/instrumentation/syllabus/OurSyllabus/InstrumentationSyllabus.md) (3 ECTS). Responsables:
+  + [Reina Camacho Toro](https://laconga.redclara.net/reina-camacho-toro/), Centre National de la Recherche Scientifique (CNRS), Francia.
+  + [Harold Yepes Ramírez](https://laconga.redclara.net/harold-yepes-ramirez/), Yachay Tech, Ecuador.
++ [Proyectos *hands-on* de Instrumentación Científica](https://github.com/LA-CoNGA/WP1-Preparation/blob/instrumentation/syllabus/OurSyllabus/InstrumentationResearchProjects.md) (5 ECTS) en dos sabores, uno en Física de Altas Energías y otro en Sistemas Complejos. Responsables:
+  + [Luis. A. Núñez](https://laconga.redclara.net/luis-a-nunez/), Universidad Industrial de Santander Colombia.
+  + [Mario Cosenza](https://scholar.google.com/citations?hl=en&user=wmSC_7EAAAAJ), Yachay Tech, Ecuador.
+
+  ### Instrumentación científica (10 ECTS)
