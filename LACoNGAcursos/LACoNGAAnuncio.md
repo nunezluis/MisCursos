@@ -19,12 +19,21 @@ En el siguiente semestre tendremos otra asignatura electiva y un conjunto de act
 ## ¿ Cuáles asignaturas comienzan en el primer semestre de enero 2021 ?
 Como lo detallamos arriba, entre los meses de enero y mayo desarrollaremos tres cursos, cada uno compuesto de varios módulos.
 
-### Ciencia de Datos (10 ECTS)
-Este curso está compuesto por tres módulos y sus responsables serán
-+ [Ingeniería de software para la investigación](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/ResearchSoftwareEngineeringSyllabusNew.md) (2 ECTS)
+### Ciencia de datos (10 ECTS)
+Este curso está orientado a proveer de las herramientas y conceptos indispensables para abordar el tratamiento de grandes volúmenes de datos. Está compuesto por tres módulos y cubren temas tanto de ingeniería de *software* aplicada a proyectos científicos como de estadística matemática. Se hace un especial énfasis en proyectos de aplicación de los conceptos, tanto en temas académicos como industriales.  
+Los programas detallados y sus responsables los listamos a continuación:
++ [Ingeniería de software para la investigación](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/ResearchSoftwareEngineeringSyllabusNew.md) (2 ECTS). Responsables:
   + [Arturo Sánchez Pineda](https://laconga.redclara.net/arturo-sanchez-pineda/) International Centre for Theoretical Physics (ICTP) Italia y European Organization for Nuclear Research (CERN) Suiza.
-  + [Juan Carlos Bastos Pineda]() Escuela de Física Universidad Industrial de Santander
-+ [Introducción a la estadística](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/StatisticsSyllabus.md) (5 ECTS)
-  + [José Ocariz](https://laconga.redclara.net/jose-ocariz/) Universidad de París, Francia.
-  + [Camila Rangel](https://laconga.redclara.net/camila-rangel-smith/) Instituto Turing, Reino Unido.  
-+ Proyectos de Ciencia de Datos (dos sabores, 3 ECTS)
+  + [Juan Carlos Bastos Pineda]() Universidad Industrial de Santander
++ [Introducción a la estadística](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/StatisticsSyllabus.md) (5 ECTS). Responsables:
+  + [José Ocariz](https://laconga.redclara.net/jose-ocariz/) Université de Paris, Francia.
+  + [Camila Rangel](https://laconga.redclara.net/camila-rangel-smith/), Turing Institute, Reino Unido.  
++ Proyectos *hands-on* de Ciencia de Datos (3 ECTS) en dos sabores, uno en Física de Altas Energías y otro en Sistemas Complejos:
+  + [Proyectos en Física de Altas Energías](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/HandsOnDataProjects.md). Responsables:
+    + [Arturo Sánchez Pineda](https://laconga.redclara.net/arturo-sanchez-pineda/) International Centre for Theoretical Physics (ICTP) Italia y European Organization for Nuclear Research (CERN) Suiza.
+    + [Javier Solano](https://laconga.redclara.net/javier-solano/), Universidad Nacional de Ingeniería (Perú)
+  + [Proyecto de Sistemas Complejos en Dinámica Molecular](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/MonteCarloAndMolecularDynamics.md) Responsable: [Ernesto Medina](https://laconga.redclara.net/ernesto-medina/), Yachay Tech (Ecuador)   
+
+### Instrumentación científica (10 ECTS)
+Este curso está orientado a proveer de las herramientas y conceptos indispensables implementar sistemas e interfaces en instrumentación científica. Está compuesto de tres módulos:
++ Introducción a sistemas de medidas
