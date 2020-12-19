@@ -29,7 +29,7 @@ Los programas detallados y sus responsables los listamos a continuación:
   + [Juan Carlos Basto Pineda](https://github.com/juan-pineda/bio) Universidad Industrial de Santander, Colombia.
 + [Introducción a la estadística](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/StatisticsSyllabus.md) (5 ECTS). Responsables:
   + [José Ocariz](https://laconga.redclara.net/jose-ocariz/) Université de Paris, Francia.
-  + [Camila Rangel](https://laconga.redclara.net/camila-rangel-smith/), Turing Institute, Reino Unido.  
+  + [Camila Rangel](https://laconga.redclara.net/camila-rangel-smith/), The Alan Turing Institute, Reino Unido.  
 + Proyectos *hands-on* de Ciencia de Datos en dos sabores, uno en Física de Altas Energías y otro en Sistemas Complejos:
   + [Proyectos en Física de Altas Energías](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/HandsOnDataProjects.md) Solo para la especialidad de Física de Altas Energías (3 ECTS). Responsables:
     + [Arturo Sánchez Pineda](https://laconga.redclara.net/arturo-sanchez-pineda/) International Centre for Theoretical Physics (ICTP) Italia y European Organization for Nuclear Research (CERN) Suiza.
