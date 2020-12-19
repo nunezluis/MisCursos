@@ -5,12 +5,12 @@ El proyecto ERASMUS+ [LA-CoNGA Physics](https://laconga.redclara.net) (por *Lati
 En [LA-CoNGA Physics](https://laconga.redclara.net) buscamos desarrollar cursos de posgrado en Física Avanzada, compatibles con el modelo de Boloña. Es un ambicioso proyecto que aglutina ocho universidades en América Latina y tres en Europa. Nuestros cursos serán, un modelo de colaboración científica distribuida, donde los estudiantes desarrollarán proyectos de forma cooperativa desde cuatro países.    
 
 ## ¿ Cómo es el programa académico de LA-CoNGA Physics ?
-Tal y como se puede apreciar en el calendario de nuestros cursos para el próximo año, nuestro programa presenta tres cursos complementarios:
+Tal y como se puede apreciar en el calendario de asignaturas para el próximo semestre, nuestro programa presenta tres ejes temáticos complementarios:
 + Física Avanzada
 + Instrumentación Científica
 + Ciencia de Datos
 
-Estos tres ejes temáticos corresponden a las tres asignaturas que inician el 18 enero.
+Estos tres ejes corresponden a las tres asignaturas que inician el 18 enero.
 
  ![programa detallado de LA-CoNGA](Figuras/CalendarioLACoNGA.png "Calendario detallado de actividades de LA-CoNGA")  
 
