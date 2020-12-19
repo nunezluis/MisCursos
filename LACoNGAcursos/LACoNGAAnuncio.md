@@ -22,17 +22,17 @@ En el siguiente semestre tendremos otra asignatura electiva y un conjunto de act
 Como lo detallamos arriba, entre los meses de enero y mayo desarrollaremos tres cursos, cada uno compuesto por varios módulos.
 
 ### Ciencia de datos (10 ECTS)
-Este curso está orientado a proveer de las herramientas y conceptos indispensables para abordar el tratamiento de grandes volúmenes de datos. Está compuesto por tres módulos y cubren temas tanto de ingeniería de *software* aplicada a proyectos científicos como de estadística matemática. Se hace un especial énfasis en proyectos de aplicación de los conceptos, tanto en temas académicos como industriales.  
+Este curso está orientado a proveer de las herramientas y conceptos indispensables para abordar el tratamiento y análisis de grandes volúmenes de datos. Está compuesto por tres módulos y cubren temas tanto de ingeniería de *software* aplicada a proyectos científicos como de estadística matemática. Se hace un especial énfasis en proyectos de aplicación de los conceptos, tanto en temas académicos como industriales.  
 Los programas detallados y sus responsables los listamos a continuación:
 + [Ingeniería de software para la investigación](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/ResearchSoftwareEngineeringSyllabusNew.md) (2 ECTS). Responsables:
-  + [Arturo Sánchez Pineda](https://laconga.redclara.net/arturo-sanchez-pineda/) International Centre for Theoretical Physics (ICTP) Italia y European Organization for Nuclear Research (CERN) Suiza.
-  + [Juan Carlos Basto Pineda](https://github.com/juan-pineda/bio) Universidad Industrial de Santander, Colombia.
+  + [Arturo Sánchez Pineda](https://laconga.redclara.net/arturo-sanchez-pineda/), International Centre for Theoretical Physics (ICTP) Italia y European Organization for Nuclear Research (CERN) Suiza.
+  + [Juan Carlos Basto Pineda](https://github.com/juan-pineda/bio), Universidad Industrial de Santander, Colombia.
 + [Introducción a la estadística](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/StatisticsSyllabus.md) (5 ECTS). Responsables:
-  + [José Ocariz](https://laconga.redclara.net/jose-ocariz/) Université de Paris, Francia.
+  + [José Ocariz](https://laconga.redclara.net/jose-ocariz/), Université de Paris, Francia.
   + [Camila Rangel](https://laconga.redclara.net/camila-rangel-smith/), The Alan Turing Institute, Reino Unido.  
 + Proyectos *hands-on* de Ciencia de Datos en dos sabores, uno en Física de Altas Energías y otro en Sistemas Complejos:
   + [Proyectos en Física de Altas Energías](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/HandsOnDataProjects.md) Solo para la especialidad de Física de Altas Energías (3 ECTS). Responsables:
-    + [Arturo Sánchez Pineda](https://laconga.redclara.net/arturo-sanchez-pineda/) International Centre for Theoretical Physics (ICTP) Italia y European Organization for Nuclear Research (CERN) Suiza.
+    + [Arturo Sánchez Pineda](https://laconga.redclara.net/arturo-sanchez-pineda/), International Centre for Theoretical Physics (ICTP) Italia y European Organization for Nuclear Research (CERN) Suiza.
     + [Javier Solano](https://laconga.redclara.net/javier-solano/), Universidad Nacional de Ingeniería, Perú.
   + [Proyectos de Sistemas Complejos en Dinámica Molecular](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/MonteCarloAndMolecularDynamics.md) Sólo para la especialidad de Sistemas Complejos (3 ECTS). Responsable: [Ernesto Medina](https://laconga.redclara.net/ernesto-medina/), Yachay Tech, Ecuador.   
 
@@ -49,10 +49,10 @@ Este curso está orientado a proveer de las herramientas y conceptos indispensab
 ### Física Avanzada (10 ECTS)
 El objetivo de este curso es comprender el formalismo básico de la Teoría  de Campos, así coo también sus aplicaciones en la Física de las Partículas y a la teoría de la Materia Condensada. El primer módulo de este curso es común a las dos especialidades: Sistemas Complejos y Física de Altas Energías. Luego se diversifica en dos módulos específicos para cada una de nuestras especialidades.
   + [Introducción a la Teoría de Campos](https://github.com/LA-CoNGA/WP1-Preparation/blob/theory/syllabus/OurSyllabus/IntroductionToQFT.md) (5 ECTS). Responsables:
-    + [José Ocariz](https://laconga.redclara.net/jose-ocariz/) Université de Paris, Francia.
-    + [Anamaría Font](https://inspirehep.net/authors/1009735) Universidad Central de Venezuela, Venezuela y Albert-Einstein-Institut, Max-Planck-Institut für Gravitationsphysik, Alemania.
+    + [José Ocariz](https://laconga.redclara.net/jose-ocariz/), Université de Paris, Francia.
+    + [Anamaría Font](https://inspirehep.net/authors/1009735), Universidad Central de Venezuela, Venezuela y Albert-Einstein-Institut, Max-Planck-Institut für Gravitationsphysik, Alemania.
     + [Jorge Stephany](https://laconga.redclara.net/jorge-stephany/), Universidad Simón Bolívar, Venezuela.
-  + [Teoría de Campos y Mecánica Estadística](https://github.com/LA-CoNGA/WP1-Preparation/blob/theory/syllabus/OurSyllabus/FieldTheoryForStatisticalMechanics.md) Sólo para la especialidad de Sistemas Complejos (5 ECTS). Responsable: [Pierre Pujol](https://laconga.redclara.net/pierre-pujol/), Université Paul Sabatier Toulouse, Francia.
+  + [Teoría de Campos y Mecánica Estadística](https://github.com/LA-CoNGA/WP1-Preparation/blob/theory/syllabus/OurSyllabus/FieldTheoryForStatisticalMechanics.md) Sólo para la especialidad de Sistemas Complejos (5 ECTS). Responsable: [Pierre Pujol](https://laconga.redclara.net/pierre-pujol/), Université Paul Sabatier, Francia.
   + [Introducción a la Física de Partículas](https://github.com/LA-CoNGA/WP1-Preparation/blob/theory/syllabus/OurSyllabus/ParticlePhysics.md) Solo para la especialidad de Física de Altas Energías (5 ECTS). Responsables:
      + [Carlos Sandoval](https://laconga.redclara.net/carlos-sandoval/), Universidad Nacional de Colombia y Universidad Antonio Nariño, Colombia.
      + [Gabriela Navarro](https://laconga.redclara.net/gabriela-navarro/), Universidad Antonio Nariño (Colombia)
