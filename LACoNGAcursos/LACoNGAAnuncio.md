@@ -10,11 +10,11 @@ Tal y como se puede apreciar en el calendario de asignaturas para el próximo se
 + Instrumentación Científica
 + Ciencia de Datos
 
-Estos tres ejes corresponden a las tres asignaturas que inician el 18 enero.
+Estos tres ejes corresponden a las asignaturas que inician el 18 enero.
 
  ![programa detallado de LA-CoNGA](Figuras/CalendarioLACoNGA.png "Calendario detallado de actividades de LA-CoNGA")  
 
-Como los cursos han sido confeccionados dentro del marco de la convención de Boloña, se basan en una dedicación horaria estándar para nuestros estudiantes: los [ECTS](https://www.study.eu/article/what-is-the-ects-european-credit-transfer-and-accumulation-system) (por *European Credit Transfer System*). De esta forma los cursos a desarrollar serán equivalentes a los de las maestrías europeas.
+Como los cursos han sido confeccionados dentro del marco de la convención de Boloña, se basan en una dedicación horaria estándar para nuestros estudiantes: los [ECTS](https://www.study.eu/article/what-is-the-ects-european-credit-transfer-and-accumulation-system) (por *European Credit Transfer System*). De esta forma los cursos que vamos a desarrollar serán equivalentes a los de las maestrías europeas.
 
 En el siguiente semestre, segundo 2021, completaremos con una asignatura electiva para cada eje temático y avanzaremos con un conjunto de actividades complementarias, entre las cuales destacan actividades de ciencia ciudadana y *Hackatones* entre nuestros estudiantes. Finalizaremos con una estancia de investigación en grupos/centros de investigación en América Latina y Europa. Estas pasantías también podrán desarrollarse en nuestros socios industriales.
 
@@ -57,5 +57,5 @@ El objetivo de este curso es comprender el formalismo básico de la Teoría  de 
   + [Teoría de Campos y Mecánica Estadística](https://github.com/LA-CoNGA/WP1-Preparation/blob/theory/syllabus/OurSyllabus/FieldTheoryForStatisticalMechanics.md) Sólo para la especialidad de Sistemas Complejos (5 ECTS). Responsable: [Pierre Pujol](https://laconga.redclara.net/pierre-pujol/), Université Paul Sabatier, Francia.
   + [Introducción a la Física de Partículas](https://github.com/LA-CoNGA/WP1-Preparation/blob/theory/syllabus/OurSyllabus/ParticlePhysics.md) Solo para la especialidad de Física de Altas Energías (5 ECTS). Responsables:
      + [Carlos Sandoval](https://laconga.redclara.net/carlos-sandoval/), Universidad Nacional de Colombia y Universidad Antonio Nariño, Colombia.
-     + [Gabriela Navarro](https://laconga.redclara.net/gabriela-navarro/), Universidad Antonio Nariño (Colombia)
-     + [José Antonio López](https://laconga.redclara.net/jose-antonio-lopez/), Universidad Central de Venezuela (Venezuela)
+     + [Gabriela Navarro](https://laconga.redclara.net/gabriela-navarro/), Universidad Antonio Nariño, Colombia.
+     + [José Antonio López](https://laconga.redclara.net/jose-antonio-lopez/), Universidad Central de Venezuela, Venezuela.
