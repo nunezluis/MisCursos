@@ -31,10 +31,10 @@ Los programas detallados y sus responsables los listamos a continuación:
   + [José Ocariz](https://laconga.redclara.net/jose-ocariz/) Université de Paris, Francia.
   + [Camila Rangel](https://laconga.redclara.net/camila-rangel-smith/), Turing Institute, Reino Unido.  
 + Proyectos *hands-on* de Ciencia de Datos en dos sabores, uno en Física de Altas Energías y otro en Sistemas Complejos:
-  + [Proyectos en Física de Altas Energías](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/HandsOnDataProjects.md) (3 ECTS). Responsables:
+  + [Proyectos en Física de Altas Energías](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/HandsOnDataProjects.md) Solo para la especialidad de Física de Altas Energías (3 ECTS). Responsables:
     + [Arturo Sánchez Pineda](https://laconga.redclara.net/arturo-sanchez-pineda/) International Centre for Theoretical Physics (ICTP) Italia y European Organization for Nuclear Research (CERN) Suiza.
     + [Javier Solano](https://laconga.redclara.net/javier-solano/), Universidad Nacional de Ingeniería, Perú.
-  + [Proyectos de Sistemas Complejos en Dinámica Molecular](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/MonteCarloAndMolecularDynamics.md) (3 ECTS). Responsable: [Ernesto Medina](https://laconga.redclara.net/ernesto-medina/), Yachay Tech, Ecuador.   
+  + [Proyectos de Sistemas Complejos en Dinámica Molecular](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/MonteCarloAndMolecularDynamics.md) Sólo para la especialidad de Sistemas Complejos (3 ECTS). Responsable: [Ernesto Medina](https://laconga.redclara.net/ernesto-medina/), Yachay Tech, Ecuador.   
 
 ### Instrumentación científica (10 ECTS)
 Este curso está orientado a proveer de las herramientas y conceptos indispensables para implementar sistemas e interfaces en instrumentación científica. Está compuesto de tres módulos:
@@ -52,8 +52,8 @@ El objetivo de este curso es comprender el formalismo básico de la Teoría  Cam
     + [José Ocariz](https://laconga.redclara.net/jose-ocariz/) Université de Paris, Francia.
     + [Anamaría Font](https://inspirehep.net/authors/1009735) Universidad Central de Venezuela, Venezuela y Albert-Einstein-Institut, Max-Planck-Institut für Gravitationsphysik, Alemania.
     + [Jorge Stephany](https://laconga.redclara.net/jorge-stephany/), Universidad Simón Bolívar, Venezuela.
-  + [Teoría de Campos y Mecánica Estadística](https://github.com/LA-CoNGA/WP1-Preparation/blob/theory/syllabus/OurSyllabus/FieldTheoryForStatisticalMechanics.md) (5 ECTS). Responsable: [Pierre Pujol](https://laconga.redclara.net/pierre-pujol/), Université Paul Sabatier Toulouse, Francia.
-  + [Introducción a la Física de Partículas](https://github.com/LA-CoNGA/WP1-Preparation/blob/theory/syllabus/OurSyllabus/ParticlePhysics.md) (5 ECTS)
+  + [Teoría de Campos y Mecánica Estadística](https://github.com/LA-CoNGA/WP1-Preparation/blob/theory/syllabus/OurSyllabus/FieldTheoryForStatisticalMechanics.md) Sólo para la especialidad de Sistemas Complejos (5 ECTS). Responsable: [Pierre Pujol](https://laconga.redclara.net/pierre-pujol/), Université Paul Sabatier Toulouse, Francia.
+  + [Introducción a la Física de Partículas](https://github.com/LA-CoNGA/WP1-Preparation/blob/theory/syllabus/OurSyllabus/ParticlePhysics.md) Solo para la especialidad de Física de Altas Energías (5 ECTS). Responsables:
      + [Carlos Sandoval](https://laconga.redclara.net/carlos-sandoval/), Universidad Nacional de Colombia y Universidad Antonio Nariño, Colombia.
      + [Gabriela Navarro](https://laconga.redclara.net/gabriela-navarro/), Universidad Antonio Nariño (Colombia)
      + [José Antonio López](https://laconga.redclara.net/jose-antonio-lopez/), Universidad Central de Venezuela (Venezuela)
