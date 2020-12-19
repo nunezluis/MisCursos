@@ -1,4 +1,4 @@
-# LACoNGA inicia sus cursos 18 enero 2021
+# LA-CoNGA inicia sus cursos 18 enero de 2021
 
 El proyecto ERASMUS+ [LA-CoNGA Physics](https://laconga.redclara.net) (por *Latin American Latin American Alliance for Capacity. buildiNG in Advanced Physics*) inicia operaciones el próximo 18 de enero, 2021. A partir de hoy y hasta el 15 enero, abrimos las inscripciones para los interesados en sumarse a este proyecto.
 
@@ -19,7 +19,7 @@ Como los cursos han sido confeccionados dentro del marco de la convención de Bo
 En el siguiente semestre tendremos otra asignatura electiva y un conjunto de actividades complementarias, entre las cuales destacan actividades de ciencia ciudadana y Hackatones entre nuestros estudiantes.
 
 ## ¿ Cuáles asignaturas comienzan en el primer semestre de enero 2021 ?
-Como lo detallamos arriba, entre los meses de enero y mayo desarrollaremos tres cursos, cada uno compuesto de varios módulos.
+Como lo detallamos arriba, entre los meses de enero y mayo desarrollaremos tres cursos, cada uno compuesto por varios módulos.
 
 ### Ciencia de datos (10 ECTS)
 Este curso está orientado a proveer de las herramientas y conceptos indispensables para abordar el tratamiento de grandes volúmenes de datos. Está compuesto por tres módulos y cubren temas tanto de ingeniería de *software* aplicada a proyectos científicos como de estadística matemática. Se hace un especial énfasis en proyectos de aplicación de los conceptos, tanto en temas académicos como industriales.  
