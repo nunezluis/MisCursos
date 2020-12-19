@@ -21,6 +21,8 @@ En el siguiente semestre, segundo 2021, completaremos con una asignatura electiv
 ## ¿ Cuáles asignaturas comienzan en el primer semestre de enero 2021 ?
 Como lo detallamos arriba, entre los meses de enero y mayo desarrollaremos tres cursos, cada uno compuesto por varios módulos.
 
+A continuación detallamos el programa de las asignaturas y sus  docentes responsables
+
 ### Ciencia de datos (10 ECTS)
 Este curso está orientado a proveer de las herramientas y conceptos indispensables para abordar el tratamiento y análisis de grandes volúmenes de datos. Está compuesto por tres módulos y cubren temas tanto de ingeniería de *software* aplicada a proyectos científicos como de estadística matemática. Se hace un especial énfasis en proyectos de aplicación de los conceptos, tanto en temas académicos como industriales.  
 Los programas detallados y sus responsables los listamos a continuación:
