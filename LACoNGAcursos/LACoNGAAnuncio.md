@@ -16,7 +16,7 @@ Estos tres ejes corresponden a las tres asignaturas que inician el 18 enero.
 
 Como los cursos han sido confeccionados dentro del marco de la convención de Boloña, se basan en una dedicación horaria estándar para nuestros estudiantes: los [ECTS](https://www.study.eu/article/what-is-the-ects-european-credit-transfer-and-accumulation-system) (por *European Credit Transfer System*). De esta forma los cursos a desarrollar serán equivalentes a los de las maestrías europeas.
 
-En el siguiente semestre, segundo 2021, completaremos con una asignatura electiva para cada uno de los ejes temáticos y avanzaremos con un conjunto de actividades complementarias, entre las cuales destacan actividades de ciencia ciudadana y *Hackatones* entre nuestros estudiantes. Finalizaremos con una estancia de investigación en grupos/centros de investigación en América Latina y Europa. Estas pasantías también podrán desarrollarse en nuestros socios industriales.
+En el siguiente semestre, segundo 2021, completaremos con una asignatura electiva para cada eje temático y avanzaremos con un conjunto de actividades complementarias, entre las cuales destacan actividades de ciencia ciudadana y *Hackatones* entre nuestros estudiantes. Finalizaremos con una estancia de investigación en grupos/centros de investigación en América Latina y Europa. Estas pasantías también podrán desarrollarse en nuestros socios industriales.
 
 ## ¿ Cuáles asignaturas comienzan en el primer semestre de enero 2021 ?
 Como lo detallamos arriba, entre los meses de enero y mayo desarrollaremos tres cursos, cada uno compuesto por varios módulos.
