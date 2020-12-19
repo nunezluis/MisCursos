@@ -2,7 +2,7 @@
 
 El proyecto ERASMUS+ [LA-CoNGA Physics](https://laconga.redclara.net) (por *Latin American Latin American Alliance for Capacity. buildiNG in Advanced Physics*) inicia operaciones el próximo 18 de enero, 2021. A partir de hoy y hasta el 15 enero, abrimos las inscripciones para los interesados en sumarse a este proyecto.
 
-Buscamos desarrollar cursos de posgrado en Física Avanzada, compatibles con el modelo de Boloña.   
+En [LA-CoNGA Physics](https://laconga.redclara.net) buscamos desarrollar cursos de posgrado en Física Avanzada, compatibles con el modelo de Boloña. Es un ambicioso proyecto que aglutina ocho universidades en América Latina y tres en Europa. Nuestros cursos serán, un modelo de colaboración científica distribuida, donde los estudiantes desarrollarán proyectos de forma cooperativa desde cuatro países.    
 
 ## ¿ Cómo es el programa académico de LA-CoNGA Physics ?
 Tal y como se puede apreciar en el calendario de nuestros cursos para el próximo año, nuestro programa presenta tres cursos complementarios:
@@ -14,9 +14,9 @@ Estos tres ejes temáticos corresponden a las tres asignaturas que inician el 18
 
  ![programa detallado de LA-CoNGA](Figuras/CalendarioLACoNGA.png "Calendario detallado de actividades de LA-CoNGA")  
 
-Como los cursos han sido confeccionados dentro del marco de la convención de Boloña, se basan en una dedicación horaria estándar para nuestros estudiantes: los [ECTS](https://www.study.eu/article/what-is-the-ects-european-credit-transfer-and-accumulation-system) (por *European Credit Transfer System*). De esta forma los cursos que ejecutaremos serán equivalentes a los de las maestrías europeas.
+Como los cursos han sido confeccionados dentro del marco de la convención de Boloña, se basan en una dedicación horaria estándar para nuestros estudiantes: los [ECTS](https://www.study.eu/article/what-is-the-ects-european-credit-transfer-and-accumulation-system) (por *European Credit Transfer System*). De esta forma los cursos a desarrollar serán equivalentes a los de las maestrías europeas.
 
-En el siguiente semestre tendremos otra asignatura electiva y un conjunto de actividades complementarias, entre las cuales destacan actividades de ciencia ciudadana y Hackatones entre nuestros estudiantes.
+En el siguiente semestre, segundo 2021, completaremos con una asignatura electiva para cada una de las líneas y avanzaremos con un conjunto de actividades complementarias, entre las cuales destacan actividades de ciencia ciudadana y *Hackatones* entre nuestros estudiantes. Finalizaremos con una estancia de investigación en grupos/centros de investigación en América Latina y Europa. Estas pasantías también podrán desarrollarse en nuestros socios industriales.
 
 ## ¿ Cuáles asignaturas comienzan en el primer semestre de enero 2021 ?
 Como lo detallamos arriba, entre los meses de enero y mayo desarrollaremos tres cursos, cada uno compuesto por varios módulos.
