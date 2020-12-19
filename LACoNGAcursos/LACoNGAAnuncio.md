@@ -37,8 +37,8 @@ Los programas detallados y sus responsables los listamos a continuación:
   + [Proyectos de Sistemas Complejos en Dinámica Molecular](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/MonteCarloAndMolecularDynamics.md) (3 ECTS). Responsable: [Ernesto Medina](https://laconga.redclara.net/ernesto-medina/), Yachay Tech, Ecuador.   
 
 ### Instrumentación científica (10 ECTS)
-Este curso está orientado a proveer de las herramientas y conceptos indispensables implementar sistemas e interfaces en instrumentación científica. Está compuesto de tres módulos:
-+ [Introducción a sistemas de medidas](https://github.com/LA-CoNGA/WP1-Preparation/blob/instrumentation/syllabus/OurSyllabus/IntroductionToMeasurementSystemsSyllabus.md) (2 ECTS). Responsable: [Dennis Cazar](https://laconga.redclara.net/dennis-cazar/), Universidad San Francisco de Quito (Ecuador)
+Este curso está orientado a proveer de las herramientas y conceptos indispensables para implementar sistemas e interfaces en instrumentación científica. Está compuesto de tres módulos:
++ [Introducción a sistemas de medidas](https://github.com/LA-CoNGA/WP1-Preparation/blob/instrumentation/syllabus/OurSyllabus/IntroductionToMeasurementSystemsSyllabus.md) (2 ECTS). Responsable: [Dennis Cazar](https://laconga.redclara.net/dennis-cazar/), Universidad San Francisco de Quito, Ecuador.
 + [Instrumentación Científica](https://github.com/LA-CoNGA/WP1-Preparation/blob/instrumentation/syllabus/OurSyllabus/InstrumentationSyllabus.md) (3 ECTS). Responsables:
   + [Reina Camacho Toro](https://laconga.redclara.net/reina-camacho-toro/), Centre National de la Recherche Scientifique (CNRS), Francia.
   + [Harold Yepes Ramírez](https://laconga.redclara.net/harold-yepes-ramirez/), Yachay Tech, Ecuador.
@@ -46,4 +46,5 @@ Este curso está orientado a proveer de las herramientas y conceptos indispensab
   + [Luis. A. Núñez](https://laconga.redclara.net/luis-a-nunez/), Universidad Industrial de Santander Colombia.
   + [Mario Cosenza](https://scholar.google.com/citations?hl=en&user=wmSC_7EAAAAJ), Yachay Tech, Ecuador.
 
-  ### Instrumentación científica (10 ECTS)
+  ### Física Avanzada (10 ECTS)
+El objetivo de este curso es aprender el formalismo básico de la Teoría  Campos, sus aplicaciones en la Física de las Partículas y la teoría de la Materia Condensada. Este curso es común a las dos especialidades: Sistemas complejos y Física de Altas Energías.
