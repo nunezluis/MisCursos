@@ -14,7 +14,7 @@ Estos tres ejes temáticos corresponden a las tres asignaturas que inician el 18
 
  ![programa detallado de LA-CoNGA](Figuras/CalendarioLACoNGA.png "Calendario detallado de actividades de LA-CoNGA")  
 
-Como los cursos han sido confeccionados dentro del marco de la convención de Boloña y se basan en una dedicación horaria estándar para nuestros estudiantes: los [ECTS](https://www.study.eu/article/what-is-the-ects-european-credit-transfer-and-accumulation-system) (por *European Credit Transfer System*). De esta forma los cursos que ejecutaremos serán equivalentes a los de las maestrías europeas.
+Como los cursos han sido confeccionados dentro del marco de la convención de Boloña, se basan en una dedicación horaria estándar para nuestros estudiantes: los [ECTS](https://www.study.eu/article/what-is-the-ects-european-credit-transfer-and-accumulation-system) (por *European Credit Transfer System*). De esta forma los cursos que ejecutaremos serán equivalentes a los de las maestrías europeas.
 
 En el siguiente semestre tendremos otra asignatura electiva y un conjunto de actividades complementarias, entre las cuales destacan actividades de ciencia ciudadana y Hackatones entre nuestros estudiantes.
 
@@ -26,7 +26,7 @@ Este curso está orientado a proveer de las herramientas y conceptos indispensab
 Los programas detallados y sus responsables los listamos a continuación:
 + [Ingeniería de software para la investigación](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/ResearchSoftwareEngineeringSyllabusNew.md) (2 ECTS). Responsables:
   + [Arturo Sánchez Pineda](https://laconga.redclara.net/arturo-sanchez-pineda/) International Centre for Theoretical Physics (ICTP) Italia y European Organization for Nuclear Research (CERN) Suiza.
-  + [Juan Carlos Basto Pineda](https://github.com/juan-pineda/bio) Universidad Industrial de Santander
+  + [Juan Carlos Basto Pineda](https://github.com/juan-pineda/bio) Universidad Industrial de Santander, Colombia.
 + [Introducción a la estadística](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/StatisticsSyllabus.md) (5 ECTS). Responsables:
   + [José Ocariz](https://laconga.redclara.net/jose-ocariz/) Université de Paris, Francia.
   + [Camila Rangel](https://laconga.redclara.net/camila-rangel-smith/), Turing Institute, Reino Unido.  
@@ -43,8 +43,13 @@ Este curso está orientado a proveer de las herramientas y conceptos indispensab
   + [Reina Camacho Toro](https://laconga.redclara.net/reina-camacho-toro/), Centre National de la Recherche Scientifique (CNRS), Francia.
   + [Harold Yepes Ramírez](https://laconga.redclara.net/harold-yepes-ramirez/), Yachay Tech, Ecuador.
 + [Proyectos *hands-on* de Instrumentación Científica](https://github.com/LA-CoNGA/WP1-Preparation/blob/instrumentation/syllabus/OurSyllabus/InstrumentationResearchProjects.md) (5 ECTS) en dos sabores, uno en Física de Altas Energías y otro en Sistemas Complejos. Responsables:
-  + [Luis. A. Núñez](https://laconga.redclara.net/luis-a-nunez/), Universidad Industrial de Santander Colombia.
+  + [Luis A. Núñez](https://laconga.redclara.net/luis-a-nunez/), Universidad Industrial de Santander Colombia.
   + [Mario Cosenza](https://scholar.google.com/citations?hl=en&user=wmSC_7EAAAAJ), Yachay Tech, Ecuador.
 
   ### Física Avanzada (10 ECTS)
-El objetivo de este curso es aprender el formalismo básico de la Teoría  Campos, sus aplicaciones en la Física de las Partículas y la teoría de la Materia Condensada. Este curso es común a las dos especialidades: Sistemas complejos y Física de Altas Energías.
+El objetivo de este curso es comprender el formalismo básico de la Teoría  Campos, sus aplicaciones en la Física de las Partículas y a la teoría de la Materia Condensada. El primer módulo de este curso es común a las dos especialidades: Sistemas Complejos y Física de Altas Energías. Luego se diversifica en dos módulos específicos para cada una de nuestras especialidade.
+  + [Introducción a la Teoría de Campos](https://github.com/LA-CoNGA/WP1-Preparation/blob/theory/syllabus/OurSyllabus/IntroductionToQFT.md) (5 ECTS). Responsables:
+    + [José Ocariz](https://laconga.redclara.net/jose-ocariz/) Université de Paris, Francia.
+    + [Anamaría Font](https://inspirehep.net/authors/1009735) Universidad Central de Venezuela, Venezuela y Albert-Einstein-Institut • Max-Planck-Institut für Gravitationsphysik, Alemania.
+    + [Jorge Stephany](https://laconga.redclara.net/jorge-stephany/), Universidad Simón Bolívar, Venezuela.
+  +    
