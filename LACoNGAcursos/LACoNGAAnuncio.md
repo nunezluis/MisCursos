@@ -1,6 +1,8 @@
 # LACoNGA inicia sus cursos 18 enero 2021
 
-El proyecto ERASMUS+ [LA-CoNGA Physics](https://laconga.redclara.net) (por *Latin American Latin American Alliance for Capacity. buildiNG in Advanced Physics*) inicia operaciones el próximo 18 de enero, 2021. A partir de hoy y hasta el 15ene abrimos las inscripciones para los interesados en sumarse a este proyecto. Buscamos desarrollar cursos de posgrado en Física Avanzada, compatibles con el modelo de Boloña.   
+El proyecto ERASMUS+ [LA-CoNGA Physics](https://laconga.redclara.net) (por *Latin American Latin American Alliance for Capacity. buildiNG in Advanced Physics*) inicia operaciones el próximo 18 de enero, 2021. A partir de hoy y hasta el 15 enero, abrimos las inscripciones para los interesados en sumarse a este proyecto.
+
+Buscamos desarrollar cursos de posgrado en Física Avanzada, compatibles con el modelo de Boloña.   
 
 ## ¿ Cómo es el programa académico de LA-CoNGA Physics ?
 Tal y como se puede apreciar en el calendario de nuestros cursos para el próximo año, nuestro programa presenta tres cursos complementarios:
@@ -24,7 +26,7 @@ Este curso está orientado a proveer de las herramientas y conceptos indispensab
 Los programas detallados y sus responsables los listamos a continuación:
 + [Ingeniería de software para la investigación](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/ResearchSoftwareEngineeringSyllabusNew.md) (2 ECTS). Responsables:
   + [Arturo Sánchez Pineda](https://laconga.redclara.net/arturo-sanchez-pineda/) International Centre for Theoretical Physics (ICTP) Italia y European Organization for Nuclear Research (CERN) Suiza.
-  + [Juan Carlos Bastos Pineda](https://github.com/juan-pineda/bio) Universidad Industrial de Santander
+  + [Juan Carlos Basto Pineda](https://github.com/juan-pineda/bio) Universidad Industrial de Santander
 + [Introducción a la estadística](https://github.com/LA-CoNGA/WP1-Preparation/blob/master/syllabus/OurSyllabus/data_programming/StatisticsSyllabus.md) (5 ECTS). Responsables:
   + [José Ocariz](https://laconga.redclara.net/jose-ocariz/) Université de Paris, Francia.
   + [Camila Rangel](https://laconga.redclara.net/camila-rangel-smith/), Turing Institute, Reino Unido.  
