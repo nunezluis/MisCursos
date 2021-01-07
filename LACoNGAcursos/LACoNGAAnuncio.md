@@ -49,9 +49,9 @@ Este curso está orientado a proveer de las herramientas y conceptos indispensab
   + [Mario Cosenza](https://scholar.google.com/citations?hl=en&user=wmSC_7EAAAAJ), Yachay Tech, Ecuador.
 
 ### Teoría (10 ECTS)
-El objetivo de este curso es comprender el formalismo básico de la Teoría  de Campos, así como también sus aplicaciones en la Física de las Partículas y la teoría de la Materia Condensada. El primer módulo de este curso es común a las dos especialidades: Sistemas Complejos y Física de Altas Energías. Luego se diversifica en dos módulos específicos para cada una de nuestras especialidades.
+El objetivo de este curso es comprender el formalismo básico de la Teoría  de Campos, así como también sus aplicaciones en la Física de las Partículas y la Teoría de la Materia Condensada. El primer módulo de este curso es común a las dos especialidades: Sistemas Complejos y Física de Altas Energías. Luego se diversifica en dos módulos específicos para cada una de nuestras especialidades.
   + [Introducción a la Teoría de Campos](https://github.com/LA-CoNGA/WP1-Preparation/blob/theory/syllabus/OurSyllabus/IntroductionToQFT.md) (5 ECTS). Responsables:
-    + [José Ocariz](https://laconga.redclara.net/jose-ocariz/), Université de Paris, Francia.
+    + [José Ocariz](https://laconga.redclara.net/jose-ocariz/), *Université de Paris*, Francia.
     + [Anamaría Font](https://inspirehep.net/authors/1009735), Universidad Central de Venezuela, Venezuela y *Albert-Einstein-Institut, Max-Planck-Institut für Gravitationsphysik*, Alemania.
     + [Jorge Stephany](https://laconga.redclara.net/jorge-stephany/), Universidad Simón Bolívar, Venezuela.
   + [Teoría de Campos y Mecánica Estadística](https://github.com/LA-CoNGA/WP1-Preparation/blob/theory/syllabus/OurSyllabus/FieldTheoryForStatisticalMechanics.md) Sólo para la especialidad de Sistemas Complejos (5 ECTS). Responsable: [Pierre Pujol](https://laconga.redclara.net/pierre-pujol/), *Université Paul Sabatier*, Francia.
