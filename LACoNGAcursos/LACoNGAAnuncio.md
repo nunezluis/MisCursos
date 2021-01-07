@@ -2,7 +2,7 @@
 
 El proyecto ERASMUS+ [LA-CoNGA Physics](https://laconga.redclara.net) (por *Latin American Latin American Alliance for Capacity. buildiNG in Advanced Physics*) inicia operaciones el próximo 18 de enero, 2021. A partir de hoy y hasta el 15 enero, abrimos las inscripciones para los interesados en sumarse a este proyecto.
 
-En [LA-CoNGA Physics](https://laconga.redclara.net) buscamos desarrollar cursos de posgrado en Física Avanzada, compatibles con el modelo de Boloña. Es un ambicioso proyecto que aglutina ocho universidades en América Latina y tres en Europa. Nuestros cursos serán, un modelo de colaboración científica distribuida, donde los estudiantes desarrollarán proyectos de forma cooperativa desde cuatro países.    
+En [LA-CoNGA Physics](https://laconga.redclara.net) buscamos desarrollar cursos de posgrado en Física Avanzada, compatibles con el modelo de Boloña. Es un ambicioso proyecto que aglutina ocho universidades en América Latina y tres en Europa. Nuestros cursos serán, un modelo de colaboración científica distribuida, donde los estudiantes desarrollarán proyectos de forma cooperativa desde cuatro países andinos.    
 
 ## ¿ Cómo es el programa académico de LA-CoNGA Physics ?
 Tal y como se puede apreciar en el calendario de asignaturas para el próximo semestre, nuestro programa presenta tres ejes temáticos complementarios:
@@ -56,6 +56,5 @@ El objetivo de este curso es comprender el formalismo básico de la Teoría  de 
     + [Jorge Stephany](https://laconga.redclara.net/jorge-stephany/), Universidad Simón Bolívar, Venezuela.
   + [Teoría de Campos y Mecánica Estadística](https://github.com/LA-CoNGA/WP1-Preparation/blob/theory/syllabus/OurSyllabus/FieldTheoryForStatisticalMechanics.md) Sólo para la especialidad de Sistemas Complejos (5 ECTS). Responsable: [Pierre Pujol](https://laconga.redclara.net/pierre-pujol/), Université Paul Sabatier, Francia.
   + [Introducción a la Física de Partículas](https://github.com/LA-CoNGA/WP1-Preparation/blob/theory/syllabus/OurSyllabus/ParticlePhysics.md) Solo para la especialidad de Física de Altas Energías (5 ECTS). Responsables:
-     + [Carlos Sandoval](https://laconga.redclara.net/carlos-sandoval/), Universidad Nacional de Colombia y Universidad Antonio Nariño, Colombia.
      + [Gabriela Navarro](https://laconga.redclara.net/gabriela-navarro/), Universidad Antonio Nariño, Colombia.
      + [José Antonio López](https://laconga.redclara.net/jose-antonio-lopez/), Universidad Central de Venezuela, Venezuela.
