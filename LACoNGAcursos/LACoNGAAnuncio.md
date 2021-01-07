@@ -49,7 +49,7 @@ Este curso está orientado a proveer de las herramientas y conceptos indispensab
   + [Mario Cosenza](https://scholar.google.com/citations?hl=en&user=wmSC_7EAAAAJ), Yachay Tech, Ecuador.
 
 ### Física Avanzada (10 ECTS)
-El objetivo de este curso es comprender el formalismo básico de la Teoría  de Campos, así coo también sus aplicaciones en la Física de las Partículas y a la teoría de la Materia Condensada. El primer módulo de este curso es común a las dos especialidades: Sistemas Complejos y Física de Altas Energías. Luego se diversifica en dos módulos específicos para cada una de nuestras especialidades.
+El objetivo de este curso es comprender el formalismo básico de la Teoría  de Campos, así como también sus aplicaciones en la Física de las Partículas y la teoría de la Materia Condensada. El primer módulo de este curso es común a las dos especialidades: Sistemas Complejos y Física de Altas Energías. Luego se diversifica en dos módulos específicos para cada una de nuestras especialidades.
   + [Introducción a la Teoría de Campos](https://github.com/LA-CoNGA/WP1-Preparation/blob/theory/syllabus/OurSyllabus/IntroductionToQFT.md) (5 ECTS). Responsables:
     + [José Ocariz](https://laconga.redclara.net/jose-ocariz/), Université de Paris, Francia.
     + [Anamaría Font](https://inspirehep.net/authors/1009735), Universidad Central de Venezuela, Venezuela y Albert-Einstein-Institut, Max-Planck-Institut für Gravitationsphysik, Alemania.
