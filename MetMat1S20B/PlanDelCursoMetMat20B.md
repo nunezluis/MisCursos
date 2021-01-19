@@ -3,7 +3,7 @@
    1. [Clases](#clases)
    2. [Colaboración y computación](#colaboracion)
 2. [La evaluación](#evaluacion)
-3. [Materiales del curso](#MaterialesCurso) 
+3. [Materiales del curso](#MaterialesCurso)
 4. [Plan detallado del curso](#PlanDetallado)
    1. [Los vectores de siempre. Clases 1 y 2](#Clase1_2)
    2. [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6 ](#Clase3_6)
@@ -12,18 +12,18 @@
 
 
 <a name="metodologia"></a>
-## La metodología 
+## La metodología
 **Antes de las clases** deberán revisar los materiales de apoyo (videos/textos) y recorrer los ejemplos resueltos de autoevaluación. Así podrán llevar dudas a la discusión que haremos en la clase. La clase quedará grabada y la discusión podrá revisarse también. La realización de esos ejemplos resueltos será tomada en cuenta durante el desarrollo de la clase.
 
 <a name="clases"></a>
-### Las clases 
+### Las clases
 **En cada clase** tendremos dos partes: una de ~30m-40m para presentar los conceptos, seguida por otra de ~60m-50m para la discusión en los ejemplos resueltos. Los conceptos habrán sido previamente expuestos en videos e indicados en los materiales de estudio.
 
 En cada clase se propondrán ejercicios y asignaciones que deben resolver, consignar y sustentar **cada tercera clase** y **cada sexta clase**, respectivamente.  Tendremos una hora de consulta para dilucidar las dudas que se les presenten tanto en la solución de los ejercicios y las asignaciones propuestos.
 
 <a name="colaboracion"></a>
-### La computación y la colaboración 
-**Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  tres tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software))), otra de edición de documentos científicos de álta calidad ([overleaf](https://en.wikipedia.org/wiki/Overleaf)) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales. Adicionalmente, como homenaje al gran [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz) deberán documentar en el git la solución de los ejercicios y asignaciones utilizando [markdown](https://en.wikipedia.org/wiki/Markdown). 
+### La computación y la colaboración
+**Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  tres tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software))), otra de edición de documentos científicos de álta calidad ([overleaf](https://en.wikipedia.org/wiki/Overleaf)) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales. Adicionalmente, como homenaje al gran [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz) deberán documentar en el git la solución de los ejercicios y asignaciones utilizando [markdown](https://en.wikipedia.org/wiki/Markdown).
 
 + MAXIMA lo pueden obtener e instalar localmente desde [aquí](http://maxima.sourceforge.net).
 + Pueden registrarse en overleaf [aquí](https://www.overleaf.com/).
@@ -32,8 +32,8 @@ En cada clase se propondrán ejercicios y asignaciones que deben resolver, consi
 **La colaboración** es fundamental en este curso, por lo tanto los reportes de las asignaciones especiales serán consignados en equipos de dos estudiantes. Tanto overleaf como el git están diseñados para colaborar, para redactar, desarrollar códigos y proyectos de forma colaboraborativa.
 
 
-<a name="evaluacion"></a> 
-## La evaluación 
+<a name="evaluacion"></a>
+## La evaluación
 La evaluación de este curso se realizará en base a tres tipos de actividades con reportes y sustentaciones orales. **Los reportes y las sustentaciones se realizarán por equipos** de dos personas pero las **evaluaciones orales serán individuales**. Los reportes de las asignaciones deberán ser consignados en el git antes de la actividad evaluada. Los tres tipos de evaluación de este curso son:
 
 + **Cada tercera clase** se hará una evaluación sustentada de los *ejercicios asignados* como tarea.  Se tomarán en cuenta diez de estas evaluaciones y sumarán el 40\%. Las solución a los ejercicios 3C se copartirán desde el repositorio *git*
@@ -85,7 +85,7 @@ Referencias bibliográficas de artículo y capítulos de otros libros
 
 
 
-## Plan detallado del curso <a name="PlanDetallado"></a> 
+## Plan detallado del curso <a name="PlanDetallado"></a>
 
 <a name="Clase1_2"></a>
 ### [Los vectores de siempre. Clases 1 y 2](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases1_2LosVectoresSiempre.md)
@@ -94,23 +94,23 @@ Referencias bibliográficas de artículo y capítulos de otros libros
 ### [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases3_6EspVectorialesLineales.md)
 
 <a name="Clase7_10"></a>
-### [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9 y 10](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases7_10VecDualesTensores.md)
+### [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9, 10 y 11](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases7_11VecDualesTensores.md)
 
 <a name="Avanzaevaluacion"></a>
-## La evaluación 
+## La evaluación
 [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Evaluacion.md) avanza la evaluación de este curso
 
 
 
 ### Clase Modelito. XXX  <a name="ClaseXXX"></a>
-+ **Objetivos de la Clase** 
-+ **Actividad antes de clase** 
++ **Objetivos de la Clase**
++ **Actividad antes de clase**
    1. Estudiar puntos de las notas de clase
-   2. Rehacer los ejercicios resueltos: 
+   2. Rehacer los ejercicios resueltos:
 + **Evaluación taller de problemas 4**    
 + **Taller de problemas 5 (evaluación en la clase 12)**
    1. XXX
-   2. YYY 
+   2. YYY
 + **Materiales de apoyo**
    1. Video y Presentación
    2. Video y Presentación
