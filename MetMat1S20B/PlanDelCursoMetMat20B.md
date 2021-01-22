@@ -98,7 +98,7 @@ Referencias bibliográficas de artículo y capítulos de otros libros
 ### [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9, 10 y 11](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases7_11VecDualesTensores.md)
 
 <a name="Clase12_15"></a>
-### [Operadores Lineales. Clases 12, 13, 14, y 15](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases7_11VecDualesTensores.md)
+### [Operadores Lineales. Clases 12, 13, 14, y 15](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases12_15OperadoresLineales.md)
 
 <a name="Avanzaevaluacion"></a>
 ## La evaluación
