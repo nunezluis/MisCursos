@@ -7,7 +7,8 @@
 4. [Plan detallado del curso](#PlanDetallado)
    1. [Los vectores de siempre. Clases 1 y 2](#Clase1_2)
    2. [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6 ](#Clase3_6)
-   3. [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9 y 10](#Clase7_10)
+   3. [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9, 10 y 11](#Clase7_10)
+   4. [Operadores Lineales. Clases 12, 13, 14, y 15](#Clase12_15)
 5. [Evolución de la evaluación](#Avanzaevaluacion)
 
 
@@ -93,8 +94,11 @@ Referencias bibliográficas de artículo y capítulos de otros libros
 <a name="Clase3_6"></a>
 ### [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases3_6EspVectorialesLineales.md)
 
-<a name="Clase7_10"></a>
+<a name="Clase7_11"></a>
 ### [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9, 10 y 11](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases7_11VecDualesTensores.md)
+
+<a name="Clase12_15"></a>
+### [Operadores Lineales. Clases 12, 13, 14, y 15](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases7_11VecDualesTensores.md)
 
 <a name="Avanzaevaluacion"></a>
 ## La evaluación
