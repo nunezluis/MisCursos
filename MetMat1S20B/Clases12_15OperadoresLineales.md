@@ -60,18 +60,19 @@ Esta clase tiene por objetivo desarrollar los conceptos:
 
 
 <a name="Clase14"></a>
-### Clase 14. XXX  
+### Clase 14. Matrices y Operadores Lineales  
+
 + **Objetivos de la Clase**
+Esta clase tiene por objetivo asociar una representación matricial a un operador y, a partir de esa definición, explorar sus consecuencias. Las matrices nos permiten calcular y en muchos casos hacerlo de forma algorítmica. En particular discutiremos las expresiones matriciales de los operadores considerados en la clase pasada.
+
 + **Actividad antes de clase**
-   1. Estudiar puntos de las notas de clase
-   2. Rehacer los ejercicios resueltos:
-+ **Evaluación taller de problemas 4**    
-+ **Taller de problemas 5 (evaluación en la clase 12)**
-   1. XXX
-   2. YYY
+   1. Estudiar puntos de 4.3, 4.3.1 al 4.3.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
+   2. Rehacer los ejemplos resueltos 2, 4 y 7 de la sección 4.2.8 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
+
++ **Taller de problemas 7 (evaluación en la clase 15)**
+    + Resolver ejercicio 2 de la sección 4.3.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
 + **Materiales de apoyo**
-   1. Video y Presentación
-   2. Video y Presentación
+    + Video y Presentación
 + **Al finalizar este contenido**
 
 
