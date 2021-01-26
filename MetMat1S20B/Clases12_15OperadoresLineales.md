@@ -73,6 +73,7 @@ Esta clase tiene por objetivo asociar una representación matricial a un operado
     + Resolver ejercicio 2 de la sección 4.3.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
 + **Materiales de apoyo**
     + Video y [Presentación Matrices y Operadores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/4_30MatricesOperadores.pdf)
+    + Video y [Presentación de un ejemplo de representación matricial de un operador]()
 + **Al finalizar este contenido** Al finalizar estos contenidos el estudiante debe ser capaz de
 
 1. Construir la representación matricial de cualquier operador en una base dada
@@ -80,7 +81,7 @@ Esta clase tiene por objetivo asociar una representación matricial a un operado
 3. Comprender que las representaciones matriciales de los operadores dependen de la base particular en la cual se expresen y que esas distintas representaciones pueden estar conectadas por las transformaciones de las bases.
 4. Calcular las traza de un operador y conocer sus propiedades
 5. Calcular el determinante de un operador y conocer sus propiedades
- 
+
 
 
 <a name="Clase15"></a>
