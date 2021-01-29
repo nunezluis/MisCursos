@@ -83,19 +83,18 @@ Esta clase tiene por objetivo asociar una representación matricial a un operado
 5. Calcular el determinante de un operador y conocer sus propiedades
 
 
-
 <a name="Clase15"></a>
 ### Clase 15. Autovalores y Autovectores  
 + **Objetivos de la Clase**
 + **Actividad antes de clase**
    1. Estudiar puntos de las notas de clase
    2. Rehacer los ejercicios resueltos:
-+ **Evaluación taller de problemas 4**    
++ **Evaluación taller de problemas 15**    
 + **Taller de problemas 5 (evaluación en la clase 12)**
    1. XXX
    2. YYY
 + **Materiales de apoyo**
-   1. Video y autovalores y autovectores
+   1. Video y [autovalores y autovectores](Materiales/Presentaciones/4_70AutoVectores.pdf)
    2. Video y Presentación
 + **Al finalizar este contenido**
 
