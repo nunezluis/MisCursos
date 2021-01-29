@@ -85,7 +85,7 @@ Esta clase tiene por objetivo asociar una representación matricial a un operado
 
 
 <a name="Clase15"></a>
-### Clase 15. XXX  
+### Clase 15. Autovalores y Autovectores  
 + **Objetivos de la Clase**
 + **Actividad antes de clase**
    1. Estudiar puntos de las notas de clase
@@ -95,7 +95,7 @@ Esta clase tiene por objetivo asociar una representación matricial a un operado
    1. XXX
    2. YYY
 + **Materiales de apoyo**
-   1. Video y Presentación
+   1. Video y autovalores y autovectores
    2. Video y Presentación
 + **Al finalizar este contenido**
 
