@@ -1,9 +1,9 @@
 # Operadores Lineales
 + [Clase 12. Operadores lineales y espacios vectoriales](#Clase12)
 + [Clase 13. Fauna de Operadores Lineales](#Clase13)
-+ [Clase 14. XXX ](#Clase14)
-+ [Clase 15. XXX ](#Clase15)
-+ [Clase 16. XXX ](#Clase16)
++ [Clase 14. Matrices y Operadores Lineales](#Clase14)
++ [Clase 15. Autovalores y Autovectores ](#Clase15)
++ [Clase 16. Conjunto Completo de Observables que conmutan ](#Clase16)
 
 <a name="Clase12"></a>
 ### Clase 12. Operadores lineales y espacios vectoriales  
@@ -99,7 +99,7 @@ Esta clase tiene por objetivo asociar una representación matricial a un operado
 + **Al finalizar este contenido**
 
 <a name="Clase16"></a>
-### Clase 16. XXX  
+### Clase 16. Conjunto Completo de Observables que conmutan  
 + **Objetivos de la Clase**
 + **Actividad antes de clase**
    1. Estudiar puntos de las notas de clase
