@@ -102,7 +102,7 @@ Referencias bibliográficas de artículo y capítulos de otros libros
 ### [Operadores Lineales. Clases 12, 13, 14, y 15](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases12_15OperadoresLineales.md)
 
 <a name="Clase17_20"></a>
-### [Análisis vectorial.  Clases 17, 18, 19, 20]()
+### [Análisis vectorial.  Clases 17, 18, 19, 20](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases17_20AnalisisVectorial.md)
 
 
 <a name="Avanzaevaluacion"></a>

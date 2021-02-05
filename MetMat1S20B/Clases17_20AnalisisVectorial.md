@@ -15,8 +15,8 @@
    1. XXX
    2. YYY
 + **Materiales de apoyo**
-   1. Video y Presentación coordenadas curvilíneas
-   2. Video y Presentación campos tensoriales
+   1. Video y [Presentación coordenadas curvilíneas](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/5_1CoordGeneralizadas.pdf)
+   2. Video y [Presentación campos tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/5_2CamposTensoriales.pdf)
 + **Al finalizar este contenido**
 
 <a name="Clase18"></a>
