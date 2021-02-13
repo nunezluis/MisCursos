@@ -66,15 +66,15 @@ Esta clase tiene por objetivo desarrollar los conceptos:
 Esta clase tiene por objetivo asociar una representación matricial a un operador y, a partir de esa definición, explorar sus consecuencias. Las matrices nos permiten calcular y en muchos casos hacerlo de forma algorítmica. En particular discutiremos las expresiones matriciales de los operadores considerados en la clase pasada.
 
 + **Actividad antes de clase**
-   1. Estudiar puntos de 4.3, 4.3.1 al 4.3.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
+   1. Estudiar los puntos de 4.3, 4.3.1 al 4.3.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
    2. Rehacer los ejemplos resueltos 2, 4 y 7 de la sección 4.2.8 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
 
 + **Taller de problemas 7 (evaluación en la clase 15)**
-    + Resolver ejercicio 2 de la sección 4.3.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
+    + Resolver el ejercicio 2 de la sección 4.3.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
 + **Materiales de apoyo**
     + Video y [Presentación Matrices y Operadores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/4_30MatricesOperadores.pdf)
     + Video y [Presentación de un ejemplo de representación matricial de un operador](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/4_30EjemploMatrizOperador.pdf)
-+ **Al finalizar este contenido** Al finalizar estos contenidos el estudiante debe ser capaz de
++ **Al finalizar este contenido** Al finalizar estos contenidos el estudiante debe ser capaz de:
 
 1. Construir la representación matricial de cualquier operador en una base dada
 2. Comprender como el álgebra (suma y multiplicación) de matrices emerge de forma natural a partir de las definiciones y propiedades de los operadores lineales
@@ -85,29 +85,34 @@ Esta clase tiene por objetivo asociar una representación matricial a un operado
 
 <a name="Clase15"></a>
 ### Clase 15. Autovalores y Autovectores  
-+ **Objetivos de la Clase**
++ **Objetivos de la Clase** Esta clase tiene por objetivo plantear, de manera general el problema de autovalores (y autovectores), explorar sus consecuencias en la construcción de bases de autovectores y representación matricial de operadores en esa base.
+
 + **Actividad antes de clase**
-   1. Estudiar puntos de las notas de clase
-   2. Rehacer los ejercicios resueltos:
-+ **Evaluación taller de problemas 15**    
-+ **Taller de problemas 5 (evaluación en la clase 12)**
-   1. XXX
-   2. YYY
+   1. Estudiar el capítulo 4.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf).
+   2. Rehacer y comprender los ejemplos expuestos en 4.6.4 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf).
+   3. Rehacer los códigos de MAXIMA en 4.6.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf).
++ **Evaluación taller de problemas 7**    
++ **Taller de problemas 8 (evaluación en la clase 17)**
+   1. Resolver los ejercicios 4, 5, y 12  de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
+   2. Hacer un par de códigos en MAXIMA para resolver los ejercicios 6 y 8 de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
 + **Materiales de apoyo**
-   1. Video y [autovalores y autovectores](Materiales/Presentaciones/4_70AutoVectores.pdf)
-   2. Video y Presentación
-+ **Al finalizar este contenido**
+   + Video y [autovalores y autovectores](Materiales/Presentaciones/4_70AutoVectores.pdf)
++ **Al finalizar estos contenidos** el estudiante debe ser capaz de
+
+  1. Identificar un problema de autovalores para operadores lineales abstractos y sus aplicaciones en distintos ámbitos.
+  2. Calcular los autovalores y autovectores de matrices. Construir la base de autovectores dependiendo del tipo de autovalor (simple o degenerado) al cual esté asociado el autovectores.
+  3. Representar los Operadores lineales en la base de autovectores y poder transformar las representaciones de los operadores de una base cualquier a la representación en la autobase.
 
 <a name="Clase16"></a>
 ### Clase 16. Conjunto Completo de Observables que conmutan  
-+ **Objetivos de la Clase**
++ **Objetivos de la Clase** Esta clase tiene un varios objetivos centrados, principalmente, en la representación matricial de operadores en una base de autovectores. Primeramente, explorar las particularidades de los autovalores y autovectores de matrices importantes: hermíticas, unitarias, ortogonales y similares. En segundo lugar busca discutir los conceptos de auto-espacio (subespacios vectoriales asociados a un autovalor degenerado). Finalmente, se discute el concepto del conjunto completo de observables que conmutan y la base común de autovectores que diagonalizan a un conjunto de operadores lineales.
+
 + **Actividad antes de clase**
-   1. Estudiar puntos de las notas de clase
-   2. Rehacer los ejercicios resueltos:
-+ **Evaluación taller de problemas 4**    
-+ **Taller de problemas 5 (evaluación en la clase 12)**
-   1. XXX
-   2. YYY
+   1. Estudiar el capítulo 4.7 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf).
+   2. Rehacer y comprender los ejemplos 2, 4, 6 y 7 expuestos en 4.7.4 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf).
++ **Taller de problemas 8 (evaluación en la clase 17)**
+   1. Realice un código en MAXIMA y desarrolle el ejercicio 2 de la sección 4.7.6 de de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf).
+   2. Desarrolle el ejercicio 6 de la sección 4.7.6 de de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf). 
 + **Materiales de apoyo**
    1. Video y Presentación
    2. Video y Presentación
