@@ -112,8 +112,10 @@ Esta clase tiene por objetivo asociar una representación matricial a un operado
    2. Rehacer y comprender los ejemplos 2, 4, 6 y 7 expuestos en 4.7.4 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf).
 + **Taller de problemas 8 (evaluación en la clase 17)**
    1. Realice un código en MAXIMA y desarrolle el ejercicio 2 de la sección 4.7.6 de de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf).
-   2. Desarrolle el ejercicio 6 de la sección 4.7.6 de de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf). 
+   2. Desarrolle el ejercicio 6 de la sección 4.7.6 de de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf).
 + **Materiales de apoyo**
    1. Video y Presentación
    2. Video y Presentación
-+ **Al finalizar este contenido**
++ **Al finalizar estos contenidos** el estudiante debe estar en capacidad de
+  + Identificar las particularidades de los autovalores y autovectores de matrices hermíticas, simétricas, unitarias.
+  + Construir una base común de autovectores a dos operadores que conmuntan
