@@ -31,7 +31,8 @@
    2. YYY
 + **Materiales de apoyo**
    1. Video y Presentación
-   2. Video y Presentación
+   2. Video y [Presentación de la Fauna de operadores diferenciales vectorial](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/5_3FaunaOperadoresVect.pdf).
+   
 + **Al finalizar este contenido**
 
 <a name="Clase19"></a>
