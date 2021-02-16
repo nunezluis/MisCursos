@@ -1,7 +1,7 @@
 # Análisis vectorial
 + [Clase 17. Coordenadas curvilíneas y campos tensoriales](#Clase17)
-+ [Clase 18. Derivadas de Campos](#Clase18)
-+ [Clase 19. XXX ](#Clase19)
++ [Clase 18. Derivadas de campos tensoriales](#Clase18)
++ [Clase 19. Integrales de campos tensoriales ](#Clase19)
 + [Clase 20. XXX ](#Clase20)
 
 <a name="Clase17"></a>
@@ -20,7 +20,7 @@
 + **Al finalizar este contenido**
 
 <a name="Clase18"></a>
-### Clase 18. Derivadas de Campos  
+### Clase 18. Derivadas de campos tensoriales  
 + **Objetivos de la Clase**
 + **Actividad antes de clase**
    1. Estudiar puntos de las notas de clase
@@ -30,13 +30,12 @@
    1. XXX
    2. YYY
 + **Materiales de apoyo**
-   1. Video y Presentación
-   2. Video y [Presentación de la Fauna de operadores diferenciales vectorial](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/5_3FaunaOperadoresVect.pdf).
-   
+   + Video y [Presentación de la Fauna de operadores diferenciales vectorial](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/5_3FaunaOperadoresVect.pdf).
+
 + **Al finalizar este contenido**
 
 <a name="Clase19"></a>
-### Clase 19. XXXX  
+### Clase 19. Integrales de campos tensoriales  
 + **Objetivos de la Clase**
 + **Actividad antes de clase**
    1. Estudiar puntos de las notas de clase
@@ -46,8 +45,7 @@
    1. XXX
    2. YYY
 + **Materiales de apoyo**
-   1. Video y Presentación
-   2. Video y Presentación
+   + Video y [Presentación de la Fauna de operadores diferenciales vectorial](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/5_4IntegralesCampos.pdf).
 + **Al finalizar este contenido**
 
 <a name="Clase20"></a>
