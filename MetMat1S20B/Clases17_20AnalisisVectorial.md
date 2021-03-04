@@ -8,8 +8,10 @@
 ### Clase 17. Coordenadas curvilíneas y campos tensoriales  
 + **Objetivos de la Clase**
 + **Actividad antes de clase**
-   1. Estudiar puntos de las notas de clase
+   1. Estudiar los puntos contenidos en la sección 5.1 (5.1.1 al 5.16) de las notas de clase de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
    2. Rehacer los ejercicios resueltos:
+   3. Estudiar los puntos contenidos en la sección 5.2 (5.1.1 al 5.16) de las notas de clase de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
+   4. Rehacer los ejercicios resueltos:
 + **Evaluación taller de problemas 4**    
 + **Taller de problemas 5 (evaluación en la clase 12)**
    1. XXX
