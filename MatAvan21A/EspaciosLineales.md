@@ -29,7 +29,7 @@
 + **Actividad antes de clase**
    1. Estudiar el punto 2.2 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
    2. Rehacer con MAXIMA el ejemplos resuelto 2 sección 2.2.4.
-+ **Taller de problemas 1 (evaluación en la clase 3)** Los cuaterniones, problema 5 sección 2.2.6
++ **Taller de problemas 1 (evaluación en la clase 3)** La utilización de vectores abstractos en computación gráfica: problema 7 sección 2.2.6
 + **Materiales de apoyo**
    1. [Video](https://youtu.be/la9Gnhc0uFg) y [presentación de espacios métricos y normados](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_2EspaciosMetricos.pdf)
    2. [Video](https://youtu.be/rQ59n-wr9X8) y [presentación de espacios euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_23EspaciosEuclideanos.pdf)
@@ -40,7 +40,7 @@
       3. Utilizar el concepto de norma generar la métrica. Comprender la asociación del concepto de norma con la idea de tamaño de un vector
       4. Comprender la definición de producto interno y su relación con el producto escalar en R^3
       5. A partir de la definición de producto interno deducir los conceptos de norma y métrica en un espacio vectorial
-      6. Comprender como se deduce la noción de ángulo a partir del producto interno. Comprender la deducción de las versiones del Teorema del Conseno y de Pitágoras a partir de la definición del producto interno.
+      6. Comprender cómo se deduce la noción de ángulo a partir del producto interno. Comprender la deducción de las versiones del Teorema del Coseno y de Pitágoras a partir de la definición del producto interno.
 
 
 

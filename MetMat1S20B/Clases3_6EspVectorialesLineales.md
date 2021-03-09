@@ -6,22 +6,43 @@
 
 <a name="Clase3"></a>
 ### Clase 3. Grupos y espacios lineales abstractos
++ **Objetivos de la clase.** Esta clase tiene por objetivo, en primer lugar, presentar los conceptos fundamentales de grupo, la construcción de la tabla de multiplicación  y la identificación de isomorfismos entre grupos. En segundo lugar se presenta el concepto de espacio vectorial abstracto y se ejemplifica con distintos casos: números, vectores n-dimensionales, polinomios, funciones, matrices, entre otros.
+
 + **Actividad antes de clase**
    1. Estudiar puntos de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf) 2.1.1, 2.1.2, 2.1.3 y 2.1.4.
    2. Rehacer los ejemplos resueltos: 2.1.6 ejemplos 1 y 2
-+ **Evaluación taller de problemas 1**   
-+ **Taller de problemas 2 (evaluación en la clase 5):** Sección 2.1.8 ejercicios 3 y 10
+
++ **Taller de problemas 1 (evaluación en la clase 3):** Sección 2.1.8 ejercicios 3 y 10
 + **Materiales de apoyo:** [Video](https://youtu.be/aiv3E_Nofko) y [presentación del concepto de espacio vectorial](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_1GruposEspaciosVectoriales.pdf)
+
++ **Al finalizar estos contenidos** El estudiantes deberá estar en capacidad de:
+   1. Indentificar (a partir de la tabla de multiplicación) si un conjunto de elementos con una operación definida constituye un grupo.
+   2. Identificar subgrupos dentro de los Grupos
+   3. Identificar isomorfismos entre Grupos
+   4. Identificar espacios vectoriales a partir de su definición
+   5. Identificar subespacios vectoriales
+
 
 <a name="Clase4"></a>
 ### Clase 4. Espacios Métricos, Normados y Euclideanos  
++ **Objetivos de la clase.** Esta clase tiene por objetivo explorar la estructura de los espacios vectoriales al equiparlos con la idea de distancia entres sus elementos (la función métrica); la idea de tamaño de sus elementos (Norma) y finalmente, como generar geometría en un espacio vectorial a partir de la definición de producto interno y con ello el ángulo entre los elementos del espacio.
+
 + **Actividad antes de clase**
    1. Estudiar el punto 2.2 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
    2. Rehacer con MAXIMA el ejemplos resuelto 2 sección 2.2.4.
-+ **Taller de problemas 2 (evaluación en la clase 5)** Los cuaterniones, problema 5 sección 2.2.6
++ **Taller de problemas 1 (evaluación en la clase 3)** Los cuaterniones, problema 5 sección 2.2.6
 + **Materiales de apoyo**
    1. [Video](https://youtu.be/la9Gnhc0uFg) y [presentación de espacios métricos y normados](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_2EspaciosMetricos.pdf)
    2. [Video](https://youtu.be/rQ59n-wr9X8) y [presentación de espacios euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_23EspaciosEuclideanos.pdf)
+
+   + **Al finalizar estos contenidos** El estudiantes deberá estar en capacidad de:
+      1. Utilizar el concepto de métrica para determinar la distancia entre elementos de un espacio vectoriales y aplicarlo a varios espacios vectoriales (números, n-uplas, funciones, matrices)
+      2. Comprender que un espacio vectorial puede tener varias definiciones de métricas y por lo tanto la idea de distancia es variable
+      3. Utilizar el concepto de norma generar la métrica. Comprender la asociación del concepto de norma con la idea de tamaño de un vector
+      4. Comprender la definición de producto interno y su relación con el producto escalar en R^3
+      5. A partir de la definición de producto interno deducir los conceptos de norma y métrica en un espacio vectorial
+      6. Comprender como se deduce la noción de ángulo a partir del producto interno. Comprender la deducción de las versiones del Teorema del Coseno y de Pitágoras a partir de la definición del producto interno.
+
 
 <a name="Clase5"></a>
 ### Clase 5. Dependencia e independencia líneal y bases ortogonales (201110)
