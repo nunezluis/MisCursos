@@ -29,7 +29,7 @@
 + **Actividad antes de clase**
    1. Estudiar el punto 2.2 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
    2. Rehacer con MAXIMA el ejemplos resuelto 2 sección 2.2.4.
-+ **Taller de problemas 1 (evaluación en la clase 3)** La utilización de vectores abstractos en computación gráfica: problema 7 sección 2.2.6
++ **Taller de problemas 1 (evaluación en la clase 3)** Los problemas 2 y 3 problema 7 sección 2.2.6
 + **Materiales de apoyo**
    1. [Video](https://youtu.be/la9Gnhc0uFg) y [presentación de espacios métricos y normados](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_2EspaciosMetricos.pdf)
    2. [Video](https://youtu.be/rQ59n-wr9X8) y [presentación de espacios euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_23EspaciosEuclideanos.pdf)
