@@ -44,7 +44,7 @@
 
 
 
-<a name="Clase3"></a>
+<a name="Clase3"></a> (210312)
 ### Clase 3. Dependencia e independencia líneal y bases ortogonales
 + **Objetivos de la clase.** Esta clase tiene por objetivo, en primer lugar, introducir el concepto de independencia lineal y, a partir de éste, generar la idea de base para un espacio vectorial. Seguidamente, presentamos la expansión de los vectores de un espacio vectorial como combinación lineal de la base. Se enfatiza en asociar las componentes de los vectores con las distintas bases del espacio vectorial. Finalmente, si el espacio tiene definido un producto interno, se construye una base ortogonal a partir de las bases oblicuas que existan.
 + **Actividad antes de clase**
@@ -57,21 +57,21 @@
     1. [Video](https://youtu.be/TVwa7wJ0N9I) y [presentación de variedades lineales](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_3IndependeLineal.pdf)
     2. [Ejemplos de ortogonalización de monomios y aproximación de funciones](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/ScriptMetMat1/BasesFuncionales/BasesFuncionales.html)
 
++ **Asignación 1 (evaluación en la clase 12).** Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar cuál es el error de medición del sensor de bajo costo y, como calibrarlo para que podamos establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Asignaciones/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema planteado. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MetMat1S20B/Asignaciones/Datos) podrán encontrar los datos para desarrollar los algoritmos de calibración inteligente.
+
 + **Al finalizar estos contenidos** El estudiantes deberá estar en capacidad de:
    1. Construir una base para un espacio vectorial y identificar las componentes de un vector en esa base
    2. Construir una base ortogonal a partir de la definición del producto interno y de una base oblicua previamente identificada.
    3. Comprender la diferencia de expresar un vector en
 
-<a name="Clase4"></a>
+<a name="Clase4"></a> (210316)
 ### Clase 4. Aproximación de funciones y bases ortogonales
 + **Objetivos de la clase.** Esta clase tiene por objetivos comprender la aplicación de los conceptos de base y expansión de vectores en término de una base para aproximar funciones. Al aplicar estos conceptos a un espacio vectorial de funciones hablamos de aproximación de una función en término de una base de vectores (ortogonales o no). También entender la aplicación del concepto de distancia --derivado de la definición de producto interno-- para estimar el error en la aproximación.
 + **Actividad antes de clase**
    1. Estudiar el punto 2.4 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
    2. Rehacer los ejemplos resueltos: Mínimos Cuadrados y Aproximación Polinomial
-+ **Evaluación Asignación 1**
-+ **Taller de problemas 2 (evaluación en la clase 6).** Utilizando MAXIMA desarrollar el problema 3 de la sección 2.4.7
 
-+ **Asignación 2 (evaluación en la clase 12).** Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar cuál es el error de medición del sensor de bajo costo y, como calibrarlo para que podamos establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Asignaciones/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema planteado. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MetMat1S20B/Asignaciones/Datos) podrán encontrar los datos para desarrollar los algoritmos de calibración inteligente.
++ **Taller de problemas 2 (evaluación en la clase 6).** Utilizando MAXIMA desarrollar el problema 3 de la sección 2.4.7
 
 + **Materiales de apoyo:** [Video](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/2_4AproximacionFunciones.pdf)
 + **Al finalizar estos contenidos** El estudiantes deberá
