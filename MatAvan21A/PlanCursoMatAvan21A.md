@@ -6,7 +6,7 @@
 3. [Materiales del curso](#MaterialesCurso)
 4. [Plan detallado del curso](#PlanDetallado)
    1. [Espacios Lineales](https://github.com/nunezluis/MisCursos/blob/main/MatAvan21A/EspaciosLineales.md)
-   2. [Espacios duales y Tensores](#YYY)
+   2. [Espacios duales y Tensores](https://github.com/nunezluis/MisCursos/blob/main/MatAvan21A/EspaciosDuales.md)
    3. [XXXX](#YYY)
    4. [XXXX](#YYY)
    5. [XXXX](#YYY)
