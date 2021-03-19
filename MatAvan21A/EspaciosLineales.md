@@ -5,8 +5,8 @@
 + [Clase 4. Aproximación de funciones y bases ortogonales](#Clase4)
 + [Clase 5. Taller de Funciones](#Clase5)
 
-<a name="Clase1"></a> (210305)
-### Clase 1. Grupos y espacios lineales abstractos
+<a name="Clase1"></a>
+### Clase 1. Grupos y espacios lineales abstractos (210305)
 + **Objetivos de la clase.** Esta clase tiene por objetivo, en primer lugar, presentar los conceptos fundamentales de grupo, la construcción de la tabla de multiplicación  y la identificación de isomorfismos entre grupos. En segundo lugar se presenta el concepto de espacio vectorial abstracto y se ejemplifica con distintos casos: números, vectores n-dimensionales, polinomios, funciones, matrices, entre otros.
 
 + **Actividad antes de clase**
@@ -23,8 +23,8 @@
    4. Identificar espacios vectoriales a partir de su definición
    5. Identificar subespacios vectoriales
 
-<a name="Clase2"></a> (210309)
-### Clase 2. Espacios Métricos, Normados y Euclideanos
+<a name="Clase2"></a>
+### Clase 2. Espacios Métricos, Normados y Euclideanos (210309)
 + **Objetivos de la clase.** Esta clase tiene por objetivo explorar la estructura de los espacios vectoriales al equiparlos con la idea de distancia entres sus elementos (la función métrica); la idea de tamaño de sus elementos (Norma) y finalmente, como generar geometría en un espacio vectorial a partir de la definición de producto interno y con ello el ángulo entre los elementos del espacio.
 
 + **Actividad antes de clase**
@@ -44,8 +44,8 @@
       6. Comprender cómo se deduce la noción de ángulo a partir del producto interno. Comprender la deducción de las versiones del Teorema del Coseno y de Pitágoras a partir de la definición del producto interno.
 
 
-<a name="Clase3"></a> (210312)
-### Clase 3. Dependencia e independencia líneal y bases ortogonales
+<a name="Clase3"></a>
+### Clase 3. Dependencia e independencia líneal y bases ortogonales (210312)
 + **Objetivos de la clase.** Esta clase tiene por objetivo, en primer lugar, introducir el concepto de independencia lineal y, a partir de éste, generar la idea de base para un espacio vectorial. Seguidamente, presentamos la expansión de los vectores de un espacio vectorial como combinación lineal de la base. Se enfatiza en asociar las componentes de los vectores con las distintas bases del espacio vectorial. Finalmente, si el espacio tiene definido un producto interno, se construye una base ortogonal a partir de las bases oblicuas que existan.
 + **Actividad antes de clase**
    1. Estudiar el punto 2.3 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
@@ -66,8 +66,8 @@ El problema deberá ser entregado por equipos en forma de artículo y podrían s
    2. Construir una base ortogonal a partir de la definición del producto interno y de una base oblicua previamente identificada.
    3. Comprender la diferencia de expresar un vector en
 
-<a name="Clase4"></a> (210316)
-### Clase 4. Aproximación de funciones y bases ortogonales
+<a name="Clase4"></a>
+### Clase 4. Aproximación de funciones y bases ortogonales (210316)
 + **Objetivos de la clase.** Esta clase tiene por objetivos comprender la aplicación de los conceptos de base y expansión de vectores en término de una base para aproximar funciones. Al aplicar estos conceptos a un espacio vectorial de funciones hablamos de aproximación de una función en término de una base de vectores (ortogonales o no). También entender la aplicación del concepto de distancia --derivado de la definición de producto interno-- para estimar el error en la aproximación.
 + **Actividad antes de clase**
    1. Estudiar el punto 2.4 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
@@ -81,6 +81,6 @@ El problema deberá ser entregado por equipos en forma de artículo y podrían s
    + Aplicación de los conceptos de espacios vectoriales abstractos a la aproximación de funciones en término de bases funcionales del espacio
    + Estimación del error al aproximar una función con bases ortogonales o no.
 
-<a name="Clase5"></a> (210319)
-### Clase 5. Taller
+<a name="Clase5"></a>
+### Clase 5. Taller (210319)
 En esta clase haremos una revisión de los ejercicios propuestos en las clases anteriores   
