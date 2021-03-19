@@ -3,7 +3,7 @@
 + [Clase 2. Espacios Métricos, Normados y Euclideanos](#Clase2)
 + [Clase 3. Dependencia e independencia líneal y bases ortogonales](#Clase3)
 + [Clase 4. Aproximación de funciones y bases ortogonales](#Clase4)
-+ [Clase 5. Taller de Funciones](#Clase5)
++ [Clase 5. Taller de bases funcionales y aproximación de funciones](#Clase5)
 
 <a name="Clase1"></a>
 ### Clase 1. Grupos y espacios lineales abstractos (210305)
