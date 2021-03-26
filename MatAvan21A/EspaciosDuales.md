@@ -2,7 +2,7 @@
 # Espacios vectoriales duales y tensoriales
 + [Clase 6. Funcionales Lineales y Espacios Vectoriales Duales](#Clase6)
 + [Clase 7. Tensores y espacios tensoriales](#Clase7)
-+ [Clase 8. Taller evaluado de Funcionales, Tensores y espacios tensoriales](#Clase7) 
++ [Clase 8. Taller evaluado de Funcionales, Tensores y espacios tensoriales](#Clase7)
 
 <a name="Clase6"></a>
 ### Clase 6. Funcionales Lineales y Espacios Vectoriales Duales (210323)
@@ -13,7 +13,7 @@
 + **Evaluación taller de problemas 3**
 + **Taller de problemas 4 (evaluación en la clase 9)**
    + Sección 3.1.6 ejercicios 6 y 7.
-+ **Asignación 2 (Fecha de entrega 210409).** Esta asignación tiene por objeto presentar tres artículos para discutir dos de ellos. Cada grupo seleccionará un artículo y hará una presentación de 20m en el cual resumirá los aspectos mas relevantes del artículo. Se reservarán 10m para la discusión de los conceptos fundamentales
++ **Asignación 2 (Fecha de entrega 210413).** Esta asignación tiene por objeto presentar tres artículos para discutir dos de ellos. Cada grupo seleccionará un artículo y hará una presentación de 20m en el cual resumirá los aspectos mas relevantes del artículo. Se reservarán 10m para la discusión de los conceptos fundamentales
   + Lu, H., Plataniotis, K. N. & Venetsanopoulos, A. N. **A survey of multilinear subspace learning for tensor data** *Pattern Recogn* **44**, 1540–1551 (2011).
   + Cichocki, A. **Era of Big Data Processing: A New Approach via Tensor Networks and Tensor Decompositions.** *Arxiv* (2014).
   + Rehman, M. H. ur et al. **Big Data Reduction Methods: A Survey.** *Data Sci Eng* **1**, 265–284 (2016).
