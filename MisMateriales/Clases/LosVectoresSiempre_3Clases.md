@@ -1,11 +1,16 @@
 # Los vectores de siempre
+
+Este capítulo busca repasar algunos conceptos que Uds han utilizado en sus cursos de álgebra básica y empezar a vincularlos con la forma como presentaremos los espacios vectoriales abstractos.
+
 + [Clase 1. Los vectores de siempre](#Clase1)
 + [Clase 2. Análisis vectorial express y números complejos ](#Clase2)
-+ [Aquí podrán encontrar algunos ejemplos de MAXIMA](https://github.com/nunezluis/Programas-/tree/main/IntroduccionFisica)
++ [Clase 3. Taller evaluado vectores](#Clase3)
+
 <a name="Clase1"></a>
 ## Clase 1. Los vectores de siempre
 + **Objetivos de la clase**
-   Esta clase tiene varios objetivos. Primero incorporar tres herramientas profesionales, dos de ellas colaborativas. [LATEX](https://en.wikipedia.org/wiki/LaTeX), [MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software)) y los repositorios [git](http://github.com/).
+
+   Esta clase tiene varios objetivos. Primero incorporar tres herramientas profesionales, dos de ellas colaborativas. [LATEX](https://en.wikipedia.org/wiki/LaTeX), [MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software)) y los repositorios [git](http://github.com/). [Aquí podrán encontrar algunos ejemplos de MAXIMA](https://github.com/nunezluis/Programas-/tree/main/IntroduccionFisica)
 
    El segundo objetivo es utilizar la excusa del conocimiento previo vectores cartesianos para introducir conceptos fundamentales que utilizaremos a partir de la tercera clase de este curso. Entre estos conceptos fundamentales podemos mencionar: las operaciones que definen un espacio vectorial, el concepto de independencia lineal y los distintos productos que se definen entre vectores cartesianos.
 
@@ -54,3 +59,7 @@ Las asignaciones serán presentadas de dos maneras: un reporte tipo artículo y 
    5. Haber refrescado el álgebra elemental de números complejos
    6. Asociar un número complejo con vectores en el plano complejo
    7. Identificar y poder aplicar las fórmulas de Euler y Moivre
+
+<a name="Clase5"></a>
+### Clase 3. Taller evaluado vectores
+En esta clase haremos una revisión de los ejercicios propuestos en las clases anteriores      
