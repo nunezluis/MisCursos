@@ -39,7 +39,6 @@ Las asignaciones serán presentadas de dos maneras: un reporte tipo artículo y 
 <a name="Clase2"></a>
 ## Clase 2. Análisis vectorial express y números complejos
 + **Objetivos de la clase**
-
    Esta clase tiene por objetivo realizar una aproximación intuitiva a los conceptos de análisis vectorial. En particular interpretar la derivación e integración de un campo vectorial. Mas adelante, en el desarrollo del curso se formalizará este concepto. De igual forma se hará un repaso de los conceptos de números complejos y se asociará con la idea de un vector con una componente real y otra compleja.
 
 + **Actividad antes de clase**

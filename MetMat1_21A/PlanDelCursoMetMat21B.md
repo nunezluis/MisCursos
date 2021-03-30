@@ -59,8 +59,9 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 ## Plan detallado del curso <a name="PlanDetallado"></a>
 
 <a name="Clase1_2"></a>
-### [Los vectores de siempre. Clases 1 y 2](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases1_2LosVectoresSiempre.md)
-
+### [Los vectores de siempre. Clases 1, 2 y 3](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases1_2LosVectoresSiempre.md)
++ **Asignación 1 (Asignada XXXX  fecha de entrega YYYY)** Desarrolle el problema 9 de la sección 1.3.5.
+Las asignaciones serán presentadas de dos maneras: un reporte tipo artículo y una presentación (10m) de máximo 6 láminas presentadas. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
 <a name="Clase3_6"></a>
 ### [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases3_6EspVectorialesLineales.md)
 
@@ -77,19 +78,3 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 <a name="Avanzaevaluacion"></a>
 ## La evaluación
 [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Evaluacion.md) avanza la evaluación de este curso
-
-
-
-### Clase Modelito. XXX  <a name="ClaseXXX"></a>
-+ **Objetivos de la Clase**
-+ **Actividad antes de clase**
-   1. Estudiar puntos de las notas de clase
-   2. Rehacer los ejercicios resueltos:
-+ **Evaluación taller de problemas 4**    
-+ **Taller de problemas 5 (evaluación en la clase 12)**
-   1. XXX
-   2. YYY
-+ **Materiales de apoyo**
-   1. Video y Presentación
-   2. Video y Presentación
-+ **Al finalizar este contenido**
