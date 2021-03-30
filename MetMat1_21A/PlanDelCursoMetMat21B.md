@@ -5,11 +5,6 @@
 2. [La evaluación](#evaluacion)
 3. [Materiales del curso](#MaterialesCurso)
 4. [Plan detallado del curso](#PlanDetallado)
-   1. [Los vectores de siempre. Clases 1 y 2](#Clase1_2)
-   2. [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6 ](#Clase3_6)
-   3. [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9, 10 y 11](#Clase7_10)
-   4. [Operadores Lineales. Clases 12, 13, 14, 15 y 16](#Clase12_15)
-   5. [Análisis vectorial.  Clases 17, 18, 19, 20](#Clase17_20)
 5. [Evolución de la evaluación](#Avanzaevaluacion)
 
 
@@ -56,13 +51,16 @@ Los materiales que utilizaremos en este curso son unas notas de clase
 Hay que enfatizar que ambos volúmenes son obras en evolución y siempre presentaremos la última versión que puede haber variado. Con eso estamos diciendo que **NO LOS IMPRIMAN**. Consulten la última versión en formato electrónico que les presentamos en los enlaces antes mencionados.
 
 
-## Plan detallado del curso <a name="PlanDetallado"></a>
+<a name="PlanDetallado"></a>
+## Plan detallado del curso
 
-<a name="Clase1_2"></a>
+1. [Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_1LosVectoresdeSiempre.md)
+2. [Análisis vectorial express]()
+
 ### [Los vectores de siempre. Clases 1, 2 y 3](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/LosVectoresSiempre_3Clases.md)
 + **Asignación 1 (Asignada clase 1 y sustentación clase 3)** Desarrolle el problema 9 de la sección 1.3.5.
 Esta asígnación será sustentada mediante una presentación (10m) de máximo 6 láminas presentadas.
-<a name="Clase3_6"></a>
+<a name="Clase4_8"></a>
 ### [Espacios Vectoriales lineales. Clases 4, 5, 6, 7 y 8](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EspVectorialesLineales_5Clases.md)
 
 <a name="Clase7_11"></a>

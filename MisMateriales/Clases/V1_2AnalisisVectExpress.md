@@ -1,6 +1,6 @@
-## Clase 2. Análisis vectorial express
+## Clase Análisis vectorial express
 + **Objetivos de la clase**
-   Esta clase tiene por objetivo realizar una aproximación intuitiva a los conceptos de análisis vectorial. En particular interpretar la derivación e integración de un campo vectorial. Mas adelante, en el desarrollo del curso se formalizará este concepto. 
+   Esta clase tiene por objetivo realizar una aproximación intuitiva a los conceptos de análisis vectorial. En particular interpretar la derivación e integración de un campo vectorial. Mas adelante, en el desarrollo del curso se formalizará este concepto.
 
 + **Actividad antes de clase**
    1. Estudiar puntos de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf) 1.5.1, 1.5.2, 1.5.3, 1.5.4, 1.5.5 y 1.5.6 del [Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
