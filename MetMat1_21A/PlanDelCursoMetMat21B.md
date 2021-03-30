@@ -59,11 +59,11 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 ## Plan detallado del curso <a name="PlanDetallado"></a>
 
 <a name="Clase1_2"></a>
-### [Los vectores de siempre. Clases 1, 2 y 3](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases1_2LosVectoresSiempre.md)
-+ **Asignación 1 (Asignada XXXX  fecha de entrega YYYY)** Desarrolle el problema 9 de la sección 1.3.5.
-Las asignaciones serán presentadas de dos maneras: un reporte tipo artículo y una presentación (10m) de máximo 6 láminas presentadas. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
+### [Los vectores de siempre. Clases 1, 2 y 3](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/LosVectoresSiempre_3Clases.md)
++ **Asignación 1 (Asignada clase 1 y sustentación clase 3)** Desarrolle el problema 9 de la sección 1.3.5.
+Esta asígnación será sustentada mediante una presentación (10m) de máximo 6 láminas presentadas.
 <a name="Clase3_6"></a>
-### [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases3_6EspVectorialesLineales.md)
+### [Espacios Vectoriales lineales. Clases 4, 5, 6, 7 y 8](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EspVectorialesLineales_5Clases.md)
 
 <a name="Clase7_11"></a>
 ### [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9, 10 y 11](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases7_11VecDualesTensores.md)
