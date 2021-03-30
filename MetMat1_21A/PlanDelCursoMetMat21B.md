@@ -53,24 +53,18 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 
 <a name="PlanDetallado"></a>
 ## Plan detallado del curso
+### Los vectores de siempre
+1. [Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md)
+2. [Análisis vectorial express](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_2AnalisisVectExpress.md)
+3. Taller evaluado de los vectores de siempre
 
-1. [Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_1LosVectoresdeSiempre.md)
-2. [Análisis vectorial express](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_2AnalisisVectExpress.md)
+### Espacios Vectoriales lineales.
 
-### [Los vectores de siempre. Clases 1, 2 y 3](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/LosVectoresSiempre_3Clases.md)
-+ **Asignación 1 (Asignada clase 1 y sustentación clase 3)** Desarrolle el problema 9 de la sección 1.3.5.
-Esta asígnación será sustentada mediante una presentación (10m) de máximo 6 láminas presentadas.
-<a name="Clase4_8"></a>
-### [Espacios Vectoriales lineales. Clases 4, 5, 6, 7 y 8](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EspVectorialesLineales_5Clases.md)
+### Espacios vectoriales duales y tensoriales.
 
-<a name="Clase7_11"></a>
-### [Espacios vectoriales duales y tensoriales. Clases 7, 8, 9, 10 y 11](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases7_11VecDualesTensores.md)
+### Operadores Lineales
 
-<a name="Clase12_15"></a>
-### [Operadores Lineales. Clases 12, 13, 14, y 15](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases12_15OperadoresLineales.md)
-
-<a name="Clase17_20"></a>
-### [Análisis vectorial.  Clases 17, 18, 19, 20](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases17_20AnalisisVectorial.md)
+### Análisis vectorial. 
 
 
 <a name="Avanzaevaluacion"></a>
