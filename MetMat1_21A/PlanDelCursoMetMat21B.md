@@ -59,9 +59,15 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 ## Plan detallado del curso <a name="PlanDetallado"></a>
 
 <a name="Clase1_2"></a>
+<<<<<<< HEAD
 ### [Los vectores de siempre. Clases 1, 2 y 3](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases1_2LosVectoresSiempre.md)
 + **Asignación 1 (Asignada XXXX  fecha de entrega YYYY)** Desarrolle el problema 9 de la sección 1.3.5.
 Las asignaciones serán presentadas de dos maneras: un reporte tipo artículo y una presentación (10m) de máximo 6 láminas presentadas. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
+=======
+### [Los vectores de siempre. Clases 1 y 2](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases1_2LosVectoresSiempre.md)
+[pa ver](./MisMateriales/Clases/LosVectoresSiempre_3Clases.md)
+
+>>>>>>> 2f0a661662d884363c1f00db070a1cc572505bf3
 <a name="Clase3_6"></a>
 ### [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases3_6EspVectorialesLineales.md)
 
