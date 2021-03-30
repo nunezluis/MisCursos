@@ -55,7 +55,7 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 ## Plan detallado del curso
 
 1. [Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_1LosVectoresdeSiempre.md)
-2. [Análisis vectorial express]()
+2. [Análisis vectorial express](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_2AnalisisVectExpress.md)
 
 ### [Los vectores de siempre. Clases 1, 2 y 3](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/LosVectoresSiempre_3Clases.md)
 + **Asignación 1 (Asignada clase 1 y sustentación clase 3)** Desarrolle el problema 9 de la sección 1.3.5.
