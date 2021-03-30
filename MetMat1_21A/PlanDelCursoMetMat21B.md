@@ -60,6 +60,7 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 
 <a name="Clase1_2"></a>
 ### [Los vectores de siempre. Clases 1 y 2](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases1_2LosVectoresSiempre.md)
+[pa ver](blob/main/MisMateriales/Clases/LosVectoresSiempre_3Clases.md)
 
 <a name="Clase3_6"></a>
 ### [Espacios Vectoriales lineales. Clases 3, 4, 5 y 6](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Clases3_6EspVectorialesLineales.md)
