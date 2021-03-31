@@ -1,4 +1,4 @@
-## Clase: Aproximación de funciones y bases ortogonales (210316)
+## Clase: Aproximación de funciones y bases ortogonales
 + **Objetivos de la clase.** Esta clase tiene por objetivos comprender la aplicación de los conceptos de base y expansión de vectores en término de una base para aproximar funciones. Al aplicar estos conceptos a un espacio vectorial de funciones hablamos de aproximación de una función en término de una base de vectores (ortogonales o no). También entender la aplicación del concepto de distancia --derivado de la definición de producto interno-- para estimar el error en la aproximación.
 + **Actividad antes de clase**
    1. Estudiar el punto 2.4 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
