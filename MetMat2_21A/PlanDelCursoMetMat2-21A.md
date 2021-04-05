@@ -3,7 +3,8 @@
 
 1. [La metodología](#metodologia)
    1. [Clases](#clases)
-   2. [Colaboración y computación](#colaboracion)
+   2. [El programa del curso](#programa)
+   3. [Colaboración y computación](#colaboracion)
 2. [La evaluación](#evaluacion)
 3. [Materiales del curso](#MaterialesCurso)
 4. [Plan detallado del curso](#PlanDetallado)
@@ -13,6 +14,10 @@
 <a name="metodologia"></a>
 ## La metodología
 **Antes de las clases** deberán revisar los materiales de apoyo (videos/textos) y recorrer los ejemplos resueltos de autoevaluación. Así podrán llevar dudas a la discusión que haremos en la clase. La clase quedará grabada y la discusión podrá revisarse también. La realización de esos ejemplos resueltos será tomada en cuenta durante el desarrollo de la clase.
+
+<a name="programa"></a>
+## El programa del curso de Métodos Matemáticos 2
+Este es programa del curso de [Métodos Matemáticos 2](https://github.com/nunezluis/MisCursos/blob/main/MetMat2_21A/MetMat2Programa.pdf)   
 
 <a name="clases"></a>
 ### Las clases
@@ -51,30 +56,62 @@ Los materiales que utilizaremos en este curso son unas notas de clase
 
 Hay que enfatizar que estas notas es una obra en evolución y siempre presentaremos la última versión que puede haber variado. Con eso estamos diciendo que **NO LOS IMPRIMAN**. Consulten la última versión en formato electrónico que les presentamos en los enlaces antes mencionados.
 
+También utilizaremos capítulos de esta bibliografía
++ Svozil, Karl.(2020) Mathematical methods of theoretical physics. World Scientific.
++ Boyce, W. E., DiPrima, R. C., & Meade, D. B. (2017). Elementary differential equations. John Wiley & Sons.
++ Arfken, G. B,  Weber H. J.; Harris, Frank E. (2012) Mathematical Methods for Physicists A Comprehensive Guide New York Academic Press.
++ Tang, K. T. (2007). Mathematical methods for engineers and scientists (Vols. 1, 2, y 3). New York: Springer.
++ Chow, T. L. (2001). Mathematical Methods for Physicists: A concise introduction. Cambridge, Cambridge Uniersity Press.
++ Riley, K. F., Hobson, M. P., & Bence, S. J. (1999). Mathematical methods for physics and engineering.
++ Landau, R. H., Páez, M. J., & Bordeianu, C. C. (2015). Computational physics: Problem solving with Python. John Wiley & Sons.
+
 
 <a name="PlanDetallado"></a>
 ## Plan detallado del curso
-### Los vectores de siempre (2 Semanas)
-1. [Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md)
-2. [Análisis vectorial express](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_2AnalisisVectExpress.md)
-3. Taller evaluado de los vectores de siempre
+### Variable Compeja (4 clases = 2 semanas)
+1. [Funciones y Números Complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_1VarCompleja.md)
+2. [Puntos y Líneas en al plano complejo](YY)
+3. [Integrales complejas](ZZ)
+4. Taller evaluado de Variable compleja
 
-### Espacios Vectoriales lineales. (3 Semanas)
-1. [Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md)
-2. [Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md)
-    + **Asignación 1 (Fecha de entrega XXXX).** Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar el error de medición del sensor de bajo costo y, como calibrarlo para establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Asignaciones/DatosDistancias) podrán encontrar los datos para desarrollar los algoritmos de calibración inteligente. El problema deberá ser entregado por equipos en forma de artículo y podrían seguir el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que presentamos en la descripción del curso.
-3. [Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md)
-4. [Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md)
-5. Taller Evaluado Espacios Lineales
+### Asignación
+Elegir y sustentar uno de los siguientes artículos
++ Dethe, T., Gill, H., Green, D., Greensweight, A., Gutierrez, L., He, M., ... & Yang, K. (2019). Causality and dispersion relations. American Journal of Physics, 87(4), 279-290.
++ Comella, M. J. (1989). Applications of the residue theorem to two‐dimensional electrostatic and magnetostatic situations. American Journal of Physics, 57(7), 603-607.
 
+### Series de funciones y Espacios de Hilbert. (6 clases = 3 Semanas)
+1. [Serie de Taylor, Laurent y Fourier](XXX)
+2. [Teorema del Residuo](XXX)
+3. [Polinomios ortogonales](XXX)
+4. [Planteamiento general Polinomios Ortogonales](XXX)
+5. Taller Evaluado Series de potencias
 
-### Espacios vectoriales duales y tensoriales. (3 Semanas)
+### Transformadas de Fourier. (2 Semanas)
+1. [Distribuciones y función delta de Dirac](XXX)
+2. [Bases discretas y contínuas para espacios de Hilbert](XXX)
+3. [Transformadas de Fourier y transformadas discretas de Fourier](XXX)
+4. Taller evaluado Transformada de Fourier
 
-### Operadores Lineales (2 Semanas)
+### Series y Ecuaciones Diferenciales Ordinarias (4 clases = 2 Semanas)
+1. [Soluciones numéricas al problema de valores iniciales en ecuaciones diferenciales ordinarias](XXX)
+2. [Soluciones por serie de ecuaciones diferenciales](XXX)
+3. [Funciones de Bessel](XXX)
+4. Taller evaluado ecuaciones diferenciales ordinarias
 
-### Análisis vectorial. (2 Semanas)
+### El problema de Sturm Liuoville y los valores de frontera (4 clases =2 Semanas)
+1. [Problema de Sturm Liuville y los valores de frontera](XXX)
+2. [Solución de Ecuaciones diferenciales ordinarias y valores de frontera](XXX)
+3. [Funciones de Green](XXX)
+4. Taller Evaluado de Valores de frontera
 
-### Variabel Compleja (2 Semanas)
+### Ecuaciones diferenciales en  (3 Semanas)
+1. [Ecuaciones Diferenciales en Derivadas parciales](XXX)
+2. [Ecuación de Onda](XXX)
+3. [Ecuación del Calor](XXX)
+4. [Ecuación de Laplace](XXX)
+5. [Solución Numérica de Ecuaciones diferenciales parciales]
+6. Taller evaluado de Ecuaciones diferenciales parciales
+
 
 <a name="Avanzaevaluacion"></a>
 ## La evaluación
