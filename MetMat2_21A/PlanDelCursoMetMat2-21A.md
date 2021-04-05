@@ -115,4 +115,4 @@ Elegir y sustentar uno de los siguientes artículos
 
 <a name="Avanzaevaluacion"></a>
 ## La evaluación
-[Aquí]() avanza la evaluación de este curso
+[Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat2_21A/EvaluaMetMat2_21A.md) avanza la evaluación de este curso
