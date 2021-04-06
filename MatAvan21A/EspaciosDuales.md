@@ -8,7 +8,7 @@
 ### Clase 6. Funcionales Lineales y Espacios Vectoriales Duales (210323)
 + **Objetivos de la clase.** Esta clase tiene por objetivo, construir espacios vectoriales duales a partir de la definición del producto interno. Identificar las bases duales asociadas a las bases de los espacios vectoriales y los vectores duales (o 1-formas) asociados a los vectores. Mostrar como una un vector dual puede ser expresado como combinación lineal de la base dual.
 + **Actividad antes de clase**
-   1. Estudiar puntos de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf) 3.1.1, 3.1.2 y 3.1.3
+   1. Estudiar puntos de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf) 3.1.1, 3.1.2 y 3.1.3
    2. Rehacer los ejemplos resueltos 3 y 4 de la sección 3.1.4
 + **Evaluación taller de problemas 3**
 + **Taller de problemas 4 (evaluación en la clase 9)**
@@ -30,7 +30,7 @@
 + **Objetivos de la clase.** Esta clase tiene por objetivo construir la definición de un tensor a partir de la generalización de un funcional lineal. Mostrar que un tensor es una función multilineal con vectores y formas lineales como argumentos. Luego evidenciar que los tensores forman un espacio tensorial a partir de un producto tensorial de espacios vectoriales y/o duales. Luego construir bases para ese espacio a partir de las base de los espacios vectoriales (y/o duales) que lo generaron. Finalmente, expresamos un tensor genérico como una combinación lineal de esa base tensorial y analizaremos las propiedades de las bases. Discutiremos las contracción de índices tensoriales así como también su simetrización y antisimetrización.
 
 + **Actividad antes de clase**
-   1. Estudiar los puntos 3.2.1, 3.2.2, 3.2.3, 3.2.4 y 3.2.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf)
+   1. Estudiar los puntos 3.2.1, 3.2.2, 3.2.3, 3.2.4 y 3.2.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
    2. Rehacer los ejemplos resueltos 1 y 2 de la sección 3.2.9.
 + **Taller de problemas 4 (evaluación en la clase 9)**
    + Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.11
