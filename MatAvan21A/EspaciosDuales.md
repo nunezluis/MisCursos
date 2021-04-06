@@ -32,7 +32,7 @@
 + **Actividad antes de clase**
    1. Estudiar los puntos 3.2.1, 3.2.2, 3.2.3, 3.2.4 y 3.2.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
    2. Rehacer los ejemplos resueltos 1 y 2 de la sección 3.2.9.
-+ **Taller de problemas 4 (evaluación en la clase 9)**
++ **Taller de problemas 4 (evaluación en la clase 8)**
    + Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.11
 + **Materiales de apoyo:** [Video](https://youtu.be/vYqYQvEwvlo) y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/3_2Tensores1Abst.pdf)
 + **Al finalizar estos contenidos** El estudiantes deberá:
