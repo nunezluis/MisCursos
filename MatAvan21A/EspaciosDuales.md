@@ -34,7 +34,7 @@
    2. Rehacer los ejemplos resueltos 1 y 2 de la sección 3.2.9.
 + **Taller de problemas 4 (evaluación en la clase 9)**
    + Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.11
-+ **Materiales de apoyo:** [Video](https://youtu.be/vYqYQvEwvlo) y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_2Tensores1Abst.pdf)
++ **Materiales de apoyo:** [Video](https://youtu.be/vYqYQvEwvlo) y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/3_2Tensores1Abst.pdf)
 + **Al finalizar estos contenidos** El estudiantes deberá:
    1. Comprender el concepto de tensor como un funcional multilineal
    2. Construir un espacio tensorial
