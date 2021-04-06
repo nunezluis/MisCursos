@@ -26,7 +26,7 @@
    3. Expandir una 1-forma como combinación lineal de la base dual
 
 <a name="Clase7"></a>
-### Clase 7. Tensores y espacios tensoriales (210326)
+### Clase 7. Tensores y espacios tensoriales (210406)
 + **Objetivos de la clase.** Esta clase tiene por objetivo construir la definición de un tensor a partir de la generalización de un funcional lineal. Mostrar que un tensor es una función multilineal con vectores y formas lineales como argumentos. Luego evidenciar que los tensores forman un espacio tensorial a partir de un producto tensorial de espacios vectoriales y/o duales. Luego construir bases para ese espacio a partir de las base de los espacios vectoriales (y/o duales) que lo generaron. Finalmente, expresamos un tensor genérico como una combinación lineal de esa base tensorial y analizaremos las propiedades de las bases. Discutiremos las contracción de índices tensoriales así como también su simetrización y antisimetrización.
 
 + **Actividad antes de clase**
@@ -41,6 +41,6 @@
    3. Realizar operaciones sencillas con componentes tensoriales: suma de tensores, contracción de índices, proyección de componetes de ecuaciones tensoriales.
    4. Construir partes simétricas y antisimétricas de componentes tensoriales
 
-   <a name="Clase8"></a>
+   <a name="Clase8"></a> (210409)
 ### Clase 8. Taller evaluado de Funcionales, Tensores y espacios tensoriales (210406)
 Se evaluarán los ejercicios propuestos    
