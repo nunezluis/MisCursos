@@ -10,8 +10,7 @@
 + **Actividad antes de clase**
    1. Estudiar puntos de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf) 3.1.1, 3.1.2 y 3.1.3
    2. Rehacer los ejemplos resueltos 3 y 4 de la sección 3.1.4
-+ **Evaluación taller de problemas 3**
-+ **Taller de problemas 4 (evaluación en la clase 9)**
++ **Taller de problemas 4 (evaluación en la clase 8)**
    + Sección 3.1.6 ejercicios 6 y 7.
 + **Asignación 2 (Fecha de entrega 210413).** Esta asignación tiene por objeto presentar tres artículos para discutir dos de ellos. Cada grupo seleccionará un artículo y hará una presentación de 20m en el cual resumirá los aspectos mas relevantes del artículo. Se reservarán 10m para la discusión de los conceptos fundamentales
   + Lu, H., Plataniotis, K. N. & Venetsanopoulos, A. N. **A survey of multilinear subspace learning for tensor data** *Pattern Recogn* **44**, 1540–1551 (2011).
