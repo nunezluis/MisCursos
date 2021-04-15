@@ -11,7 +11,7 @@ Esta clase tiempo por objetivos hacer un repaso de números complejos y discutir
    3. Estudiar los puntos 1.1.1, 1.1.2, 1.1.3, 1.1.4 y 1.1.5 de las [notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
    4. Rehacer los ejemplos resueltos 2 y 5 de la sección 1.1.6 de las [notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
 
-+ **Taller de problemas 1 (evaluación en la clase 3)**
++ **Taller de problemas 1 (evaluación en la clase 4)**
    + Desarrolle los ejercicios 6 y 10 de la sección 1.6.7 de las [notas de clase Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
    + Desarrolle los ejercicios 4 y 7 de la sección 1.1.8 de las [notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf).
 
@@ -26,4 +26,3 @@ Esta clase tiempo por objetivos hacer un repaso de números complejos y discutir
   + Comprender los conceptos de funciones de variable compleja y diferenciación de funciones de variable complejas
   + Conocer las condiciones de Cauchy Riemann y aplicarlas para demostrar la analiticidad de funciones
   + Comprender la importancia del concepto de funciones analíticas.
-  
