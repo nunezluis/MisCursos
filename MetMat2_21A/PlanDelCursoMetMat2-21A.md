@@ -70,8 +70,8 @@ También utilizaremos capítulos de esta bibliografía
 ## Plan detallado del curso
 ### Variable Compeja (4 clases = 2 semanas)
 1. [Funciones y Números Complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_1VarCompleja.md)
-2. [Puntos y Líneas en al plano complejo](YY)
-3. [Integrales complejas](ZZ)
+2. [Puntos, líneas y transformaciones en al plano complejo](YY)
+3. [Integrales complejas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_2TransfConformes.md))
 4. Taller evaluado de Variable compleja
 
 ### Asignación
