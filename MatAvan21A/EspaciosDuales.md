@@ -5,7 +5,7 @@
 + [Clase 8. Taller evaluado de Funcionales, Tensores y espacios tensoriales](#Clase7)
 
 <a name="Clase6"></a>
-### Clase 6. Funcionales Lineales y Espacios Vectoriales Duales (210323)
+### Clase 6. Funcionales Lineales y Espacios Vectoriales Duales (210409)
 + **Objetivos de la clase.** Esta clase tiene por objetivo, construir espacios vectoriales duales a partir de la definición del producto interno. Identificar las bases duales asociadas a las bases de los espacios vectoriales y los vectores duales (o 1-formas) asociados a los vectores. Mostrar como una un vector dual puede ser expresado como combinación lineal de la base dual.
 + **Actividad antes de clase**
    1. Estudiar puntos de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf) 3.1.1, 3.1.2 y 3.1.3
@@ -25,7 +25,7 @@
    3. Expandir una 1-forma como combinación lineal de la base dual
 
 <a name="Clase7"></a>
-### Clase 7. Tensores y espacios tensoriales (210406)
+### Clase 7. Tensores y espacios tensoriales (210413)
 + **Objetivos de la clase.** Esta clase tiene por objetivo construir la definición de un tensor a partir de la generalización de un funcional lineal. Mostrar que un tensor es una función multilineal con vectores y formas lineales como argumentos. Luego evidenciar que los tensores forman un espacio tensorial a partir de un producto tensorial de espacios vectoriales y/o duales. Luego construir bases para ese espacio a partir de las base de los espacios vectoriales (y/o duales) que lo generaron. Finalmente, expresamos un tensor genérico como una combinación lineal de esa base tensorial y analizaremos las propiedades de las bases. Discutiremos las contracción de índices tensoriales así como también su simetrización y antisimetrización.
 
 + **Actividad antes de clase**
@@ -40,6 +40,6 @@
    3. Realizar operaciones sencillas con componentes tensoriales: suma de tensores, contracción de índices, proyección de componetes de ecuaciones tensoriales.
    4. Construir partes simétricas y antisimétricas de componentes tensoriales
 
-   <a name="Clase8"></a> (210409)
-### Clase 8. Taller evaluado de Funcionales, Tensores y espacios tensoriales (210406)
+   <a name="Clase8"></a>
+### Clase 8. Taller evaluado de Funcionales, Tensores y espacios tensoriales (210416)
 Se evaluarán los ejercicios propuestos    
