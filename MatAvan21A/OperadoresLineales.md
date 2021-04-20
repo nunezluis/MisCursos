@@ -16,6 +16,12 @@ Esta clase tiene por objetivos:
 + **Actividad antes de clase**
    1. Estudiar puntos 4.1.1, 4.1.2, 4.1.3 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
    2. Rehacer los ejemplos resueltos 4.1.4: 1 y 2 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
+
++ **Asignación 3 (Fecha de entrega documento 210430 Sustentación 210504).** Esta asignación tiene por objeto mostrar una aplicación de espacios tensoriales en función de datos. Primero un sistema de masas donde se calcula el Tensor de Inercia y luego construir un espacio tensorial de productos internos bruto (PIB) y comparar los gastos militares del país en los últimos 15 años con los de educación, y los de ciencia y tecnología. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensoresAutovalores.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/DatosTensores/datosmasas.csv) podrán encontrar los datos.
+
+Al igual que la *Asignación 1* los resultados deberán ser entregados en forma de artículo siguiendo el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp).
+
+
 + **Taller de problemas 3 (evaluación en la clase 13)**
     + Resolver ejercicio 5 de la sección 4.1.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
 + **Materiales de apoyo**
@@ -62,7 +68,7 @@ Esta clase tiene por objetivo desarrollar los conceptos:
 
 
 <a name="Clase11"></a>
-### Clase 11. Matrices y Operadores Lineales  
+### Clase 11. Matrices y Operadores Lineales  (210427)
 
 + **Objetivos de la Clase**
 Esta clase tiene por objetivo asociar una representación matricial a un operador y, a partir de esa definición, explorar sus consecuencias. Las matrices nos permiten calcular y en muchos casos hacerlo de forma algorítmica. En particular discutiremos las expresiones matriciales de los operadores considerados en la clase pasada.
@@ -86,15 +92,16 @@ Esta clase tiene por objetivo asociar una representación matricial a un operado
 
 
 <a name="Clase12"></a>
-### Clase 12. Autovalores y Autovectores  
+### Clase 12. Autovalores y Autovectores  (210430)
 + **Objetivos de la Clase** Esta clase tiene por objetivo plantear, de manera general el problema de autovalores (y autovectores), explorar sus consecuencias en la construcción de bases de autovectores y representación matricial de operadores en esa base.
 
 + **Actividad antes de clase**
    1. Estudiar el capítulo 4.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf).
    2. Rehacer y comprender los ejemplos expuestos en 4.6.4 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf).
    3. Rehacer los códigos de MAXIMA en 4.6.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf).
-+ **Evaluación taller de problemas 3**    
-+ **Taller de problemas 4 (evaluación en la clase 18)**
++ **Entrega documento Asignación 2 Tensores y Autovalores**
+
++ **Taller de problemas 3 (evaluación en la clase 13)**
    1. Resolver los ejercicios 4, 5, y 12  de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
    2. Hacer un par de códigos en MAXIMA para resolver los ejercicios 6 y 8 de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
 + **Materiales de apoyo**
