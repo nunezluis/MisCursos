@@ -1,7 +1,7 @@
 # Métodos Matemáticos 2
 # Cortes, ceros y tranformaciones conformes
-+ **Objetivos de la semana**
-Esta clase tiempo por objetivos desarrollar los conceptos de
++ **Objetivos**
+Esta clase tiene por objetivos desarrollar los conceptos de:
     + puntos y lineas de corte para funciones de variable complejas.
     + Sigularidades, polos y cero de funciones de variable complejas
     + Transformaciones conformes y sus consecuencias
@@ -14,7 +14,7 @@ Esta clase tiempo por objetivos desarrollar los conceptos de
     + Desarrolle los ejercicios 2, 7 y 11 de la sección 1.1.8 de las [notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf).
 
 + **Materiales de apoyo**
-Para el desarrollo de
+Aquí encontrarán [la presentación de las clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_2_TransfConformes.pdf)
 
  + **Al finalizar estos contenidos** El estudiantes deberá
     + identificar los puntos y ramas de corte, comprendiendo su significado
