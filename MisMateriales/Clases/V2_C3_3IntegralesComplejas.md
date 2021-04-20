@@ -18,6 +18,6 @@ Esta clase tiempo por objetivos desarrollar los conceptos de:
     + Desarrolle los ejercicios 4, 11 y 12 de la sección 1.3.8 de las [notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf).
 
 + **Materiales de apoyo**
-    + Aquí encontrarán [la presentación de las clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_2_TransfConformes.pdf) 
+    + Aquí encontrarán [la presentación de las clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_3_Integrales.pdf) 
 
  + **Al finalizar estos contenidos** El estudiantes deberá
