@@ -80,16 +80,16 @@ Elegir y sustentar uno de los siguientes artículos
 + Comella, M. J. (1989). Applications of the residue theorem to two‐dimensional electrostatic and magnetostatic situations. American Journal of Physics, 57(7), 603-607.
 
 ### Series de funciones y Espacios de Hilbert. (6 clases = 3 Semanas)
-1. [Serie de Taylor, Laurent y Fourier](XXX)
-2. [Teorema del Residuo](XXX)
-3. [Polinomios ortogonales](XXX)
-4. [Planteamiento general Polinomios Ortogonales](XXX)
-5. Taller Evaluado Series de potencias
+1. [Serie de Taylor y Fourier](XXX)
+2. [Transformadas de Fourier y transformadas discretas de Fourier](XXX)
+3. [Series de Laurent y Teorema del Residuo](XXX)
+4. [Polinomios ortogonales](XXX)
+5. [Planteamiento general Polinomios Ortogonales](XXX)
+6. Taller Evaluado Series de potencias
 
 ### Transformadas de Fourier. (2 Semanas)
 1. [Distribuciones y función delta de Dirac](XXX)
-2. [Bases discretas y contínuas para espacios de Hilbert](XXX)
-3. [Transformadas de Fourier y transformadas discretas de Fourier](XXX)
+3. [Bases discretas y contínuas para espacios de Hilbert](XXX)
 4. Taller evaluado Transformada de Fourier
 
 ### Series y Ecuaciones Diferenciales Ordinarias (4 clases = 2 Semanas)

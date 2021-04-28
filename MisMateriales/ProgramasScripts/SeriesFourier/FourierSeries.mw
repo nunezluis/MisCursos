@@ -1,0 +1,1989 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Worksheet>
+<Version major="2018" minor="0"/>
+<Label-Scheme value="2" prefix=""/>
+<View-Properties presentation="false" autoexpanding_sections="true" UserProfileName="Maple Default Profile" NumericFormat-ApplyInteger="true" NumericFormat-ApplyRational="true" NumericFormat-ApplyExponent="false" editable="true">
+</View-Properties>
+<MapleNet-Properties prettyprint="3" warnlevel="3" preplot="" helpbrowser="standard" displayprecision="-1" echo="1" unitattributes="&quot;fontweight&quot; = &quot;bold&quot;" imaginaryunit="I" longdelim="true" elisiontermsthreshold="10000" elisiondigitsafter="100" elisiondigitsbefore="100" plotdevice="inline" errorbreak="1" plotoptions="" plotdriver="opengl" quiet="false" elisiontermsbefore="100" elisiontermsafter="100" screenwidth="79" indentamount="4" plotoutput="terminal" screenpixelheight="768" rtablesize="10" useclientjvm="true" labelwidth="20" postplot="" typesetting="extended" ansi="false" elisiondigitsthreshold="10000" showassumed="1" errorcursor="false" labelling="true" screenheight="25" prompt="&gt; " verboseproc="1" latexwidth="8.0" ShowLabels="true"/>
+<Styles>
+<Font name="Heading 1" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Warning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Line Printed Output" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 2" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="16" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Inert Output" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[144,144,144]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 3" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="14" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Diagnostic" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[40,120,40]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 1" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[120,0,14]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text Output" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 2" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 3" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 5" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Header and Footer" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkError" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Atomic Variable" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[175,0,175]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkWarning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Dictionary Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[147,0,15]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="2D Math" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Bullet Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Plot" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="List Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Dash Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Input" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Error" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Normal" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Caption Reference" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Code" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input Placeholder" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[200,0,200]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="true"/>
+<Font name="Equation Label" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Author" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,128,128]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Caption Text" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Layout name="Heading 1" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="4" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Warning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 4" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Line Printed Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 2" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="2" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Output" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.3" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 3" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Diagnostic" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Ordered List 1" alignment="left" bullet="numeric" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Text Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="newline" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Ordered List 2" alignment="left" bullet="alphabetic" firstindent="0" leftmargin="36" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Ordered List 3" alignment="left" bullet="roman" firstindent="0" leftmargin="72" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Ordered List 4" alignment="left" bullet="ALPHABETIC" firstindent="0" leftmargin="108" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Ordered List 5" alignment="left" bullet="ROMAN" firstindent="0" leftmargin="144" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix="."/>
+<Layout name="Annotation Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkError" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkWarning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Bullet Item" alignment="left" bullet="dot" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Plot" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="List Item" alignment="left" bullet="indent" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Dash Item" alignment="left" bullet="dash" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Error" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Normal" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Author" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="8" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Pencil-style name="Pencil 1" pen-color="[0,0,0]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 2" pen-color="[0,0,255]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 3" pen-color="[0,0,0]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 4" pen-color="[0,0,255]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 5" pen-color="[255,0,0]" pen-height="5.0" pen-width="5.0" pen-opacity="1.0"/>
+<Highlighter-style name="Highlighter 5" pen-color="[255,255,0]" pen-height="48.0" pen-width="48.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 3" pen-color="[51,255,0]" pen-height="24.0" pen-width="24.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 4" pen-color="[0,255,255]" pen-height="32.0" pen-width="32.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 1" pen-color="[255,153,255]" pen-height="12.0" pen-width="8.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 2" pen-color="[255,204,0]" pen-height="14.0" pen-width="14.0" pen-opacity="0.8"/>
+</Styles>
+<Startup-Code startupcode=""/>
+<Task-table>
+    <Task-category name="&lt;default&gt;"/>
+</Task-table>
+<Task/>
+<Group labelreference="L2" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal" alignment="centred"><Font size="20" bold="true">Series de Fourier</Font></Text-field><Text-field style="Text" layout="Normal" alignment="centred"><Font encoding="UTF-8">Luis A. N\303\272\303\261ez</Font></Text-field><Text-field style="Text" italic="true" layout="Normal" alignment="centred"><Font encoding="UTF-8" italic="true">Escuela de F\303\255sica</Font></Text-field><Text-field style="Text" italic="true" layout="Normal" alignment="centred"><Font italic="true">Universidad Industrial de Santander</Font></Text-field>
+</Input>
+</Group>
+<Group labelreference="L21">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">restart:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L22">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">with(plots): setoptions(thickness=1): </Text-field>
+</Input>
+</Group>
+<Group labelreference="L843" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Per\303\255odo</Font></Text-field>
+</Input>
+</Group>
+<Group labelreference="L23">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">T:=2: Digits:=20: </Text-field>
+</Input>
+</Group>
+<Group labelreference="L845" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">N\303\272mero de t\303\251rminos (coeficientes) en la serie de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L846" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">N:=15;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L24">
+<Input><Text-field style="Text" layout="Normal"><Font size="20" bold="true" encoding="UTF-8">Consideremos la siguiente funciones con per\303\255do T</Font> </Text-field>
+</Input>
+</Group><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L824" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Onda cuadrada en el intervalo [ -T/2, T/2]</Text-field></Title><Presentation-Block>
+<Group view="code" hide-input="false" labelreference="L826" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0:=-T/2: t1:=T/2: f:=piecewise((t0&lt;=t and t&lt;0,-1),(0&lt;=t and t&lt;=t1,1));</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L834" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">La graficamos</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L835" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot(f,t=t0-2..t1+2);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L1080" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Desarrollamos la funci\303\263n como una serie de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L1081" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourier := (m,t)-&gt;
+a[0]/2 + sum(a[k]*cos((2*k*Pi*t)/T),k=1..m) + sum(b[k]*sin((2*k*Pi*t)/T),k=1..m) ;</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L841" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Calculamos los coeficientes de Fourier </Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L842" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                     
+a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):                             	
+b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t=t0..t1):                             	
+A[n]:=sqrt(a[n]^2+b[n]^2): 
+phi[n]:= arctan(b[n]/(a[n]+1E-10)):                                      
+od: </Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L848" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Tres expansiones posibles ser\303\241n</Font></Text-field>
+</Input>
+</Group>
+<Group view="presentation" inline-output="false" labelreference="L850" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L851" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">N1:=floor(N/3); N2:=floor(N/2); N;</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L852" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SFourier1:=SerieFourier(N1,t);SFourier2:= SerieFourier(N2,t);SFourier3:= SerieFourier(N,t);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4818" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Como era de esperarse, tenemos una expansi\303\263n de una funci\303\263n impar en t\303\251rminos de una serie de funciones impares. Adem\303\241s note que los arm\303\263nicos tambi\303\251n son impares. </Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5398" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L870" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">La contribuci\303\263n del promedio de la funci\303\263n (independiente de los arm\303\263nicos) es </Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L873" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Promediofunc:=evalf(a[0]/2);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L874" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">El espectro de potencias se puede graficar como</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L875" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Amp_a0:=plot([[0,0],[0,Promediofunc]],thickness=9 ):          
+Amp_coef:=[seq(plot([[n,0],[n,A[n]]],thickness=9),n=1..N)]:
+<Font encoding="UTF-8">display(Amp_a0,Amp_coef,title=`Espectro de Potencia de la Se\303\261al`, labels=[&quot;n&quot;,&quot;A(n)&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L904" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">y el espectro de fases de la se\303\261al ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L905" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Phase_coef:=[seq(plot([[n,0],[n,phi[n]]],thickness=9),n=1..N)]:
+display(Phase_coef<Font encoding="UTF-8">,title=`Espectro de fases de la Se\303\261al`, labels=[&quot;n&quot;,&quot;Phi(n)&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5413" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4210" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Podemos tambi\303\251n expandir la funci\303\263n en t\303\251rmino de una serie compleja de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L4213" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourierExp:= (m,t)-&gt; sum(C[j]*exp(-I*(n*2*Pi/T)*t),j=1..m);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5417" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4229" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Calculamos los coeficientes</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L4231" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                    
+C[n]:=2/T*int(f*exp(-I*(n*2*Pi/T)*t),t=t0..t1):
+PowerC[n]:=abs(C[n]);  
+od:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5415" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4211" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Pero estos coeficientes pueden ser reales o complejos</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L4222" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CoefCn := {seq([n,C[n]], n=0..N)}; 
+PowerCoefCn := {seq([n,PowerC[n]], n=0..N)};</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5419" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">y como era de esperarse los coeficientes con imaginarios puros. Si la funci\303\263n es par, los coeficientes de la expansi\303\263n ser\303\241n reales y si la funci\303\263n es impar ser\303\241n imaginarios puros</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5420" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4227" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">por lo tanto, para graficarlos, calculamos su parte imaginaria y, adem\303\241s su espectro de potencias</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L4228" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ImCn := [seq(plot([[n,0],[n,Im(C[n])]],thickness=9),n=0..N)]: 
+PowerCn := [seq(plot([[n,0],[n,PowerC[n]]],thickness=9),n=0..N)]:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4234" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4230" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">La parte imaginaria</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L4235" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ImCn,title=`Espectro parte imaginaria de los coeficientes`, labels=[&quot;n&quot;,&quot;Im ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5428" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4212" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Espectro de los m\303\263dulos de los coeficientes</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L4223" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"><Font encoding="UTF-8">display(PowerCn,title=`Espectro de m\303\263dulos`, labels=[&quot;n&quot;,&quot;Mod ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4214" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Una vez mas, note que si <Font italic="true">f(t)</Font> es impar entonces los coeficientes son imaginarios y si <Font italic="true">f(x) </Font><Font encoding="UTF-8"> es par ser\303\241n reales</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4224" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4232" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8"> Al hacer el cambio de variable omega = 2*n*Pi/T podremos expandir la serie en funci\303\263n de las frecuencias</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L4236" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourierExpK := (m,t)-&gt; sum(CK[omega]*exp(-I*omega*t),omega=1..m);</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L4220" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">omegaMax := floor(2*N*Pi/T)</Text-field>
+</Input>
+</Group>
+<Group labelreference="L4218" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for omega from 0 to omegaMax do               	
+CK[omega]:=(2/Pi)*int(f*exp(-I*omega*t),t=t0..t1):
+PowerCK[omega] := evalf(abs(CK[omega])):	
+od:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4215" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">por lo tanto, para graficarlos, calculamos su parte real y parte compleja</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L4217" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ImCK  := [seq(plot( [[omega,0],[omega,Im(CK[omega])]],thickness=9),omega=0..omegaMax)]: 
+ReCK  := [seq(plot( [[omega,0],[omega,Re(CK[omega])]],thickness=9),omega=0..omegaMax)]: 
+PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..omegaMax)]:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4221" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4233" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">No tendremos coeficientes reales y su parte imaginaria se puede graficar</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L4237" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ImCK,title=`Espectro parte imaginaria de los coeficientes`, labels=[&quot;omega&quot;,&quot;Im ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4216" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">De igual manera graficamos el espectro de los m\303\263dulos de los coeficientes</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L4219" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(PowCK<Font encoding="UTF-8">,title=`Espectro m\303\263dulo de los coeficientes`, labels=[&quot;omega&quot;,&quot;Abs ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L4469" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">;</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L1078" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Onda cuadrada (desplazada) en el intervalo [0,T]</Text-field></Title><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L1291" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L1292" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0:=0: t1:=T: f:=piecewise((t0&lt;=t and t&lt;T/2,-1),(T/2&lt;=t and t&lt;=t1,1));</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L1324" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">La graficamos</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="code" labelreference="L4970" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot(f,t=t0-2..t1+2);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5501" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4961" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Desarrollamos la funci\303\263n como una serie de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L4959" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourier := (m,t)-&gt;
+a[0]/2 + sum(a[k]*cos((2*k*Pi*t)/T),k=1..m) + sum(b[k]*sin((2*k*Pi*t)/T),k=1..m) ;</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5503" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4948" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Calculamos los coeficientes de Fourier </Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L4945" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                     
+a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):                             	
+b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t=t0..t1):                             	
+A[n]:=sqrt(a[n]^2+b[n]^2): 
+phi[n]:= arctan(b[n]/(a[n]+1E-10)):                                      
+od: </Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5505" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4955" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Tres expansiones posibles ser\303\241n</Font></Text-field>
+</Input>
+</Group>
+<Group view="presentation" inline-output="false" labelreference="L4928" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L4933" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">N1:=floor(N/3); N2:=floor(N/2); N;</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L4931" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SFourier1:=SerieFourier(N1,t);SFourier2:= SerieFourier(N2,t);SFourier3:= SerieFourier(N,t);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4938" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Como era de esperarse, tenemos (como en el caso anterior) una expansi\303\263n de una funci\303\263n impar en t\303\251rminos de una serie de funciones impares, con contribuciones de arm\303\263nicos impares. </Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4946" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4939" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Graficamos las disntintas aproximaciones</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L4925" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot([f,SFourier1,SFourier2, SFourier3],t=t0..t1,title=&quot;Aproximaciones de Fourier: &quot;,color=[red,green,blue,black],numpoints=100,
+<Font encoding="UTF-8">legend=[&quot;funci\303\263n&quot;,&quot;Serie N1&quot;,</Font>&quot;Serie N2&quot;, &quot;Serie N&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5516" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4960" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">De los coeficientes diferenciamos las contribuciones del nivel base y de los distintos arm\303\263nicos.</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4962" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">La contribuci\303\263n del nivel base, o promedio de la funci\303\263n (independiente de los arm\303\263nicos) es </Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L4967" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Promediofunc:=evalf(a[0]/2);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5518" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Se anula porque la funci\303\263n es impar</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5519" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5521" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">El espectro de potencias se puedo graficar como</Text-field>
+</Input>
+</Group>
+<Group view="presentation" inline-output="false" labelreference="L4965" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L4963" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Amp_a0:=plot([[0,0],[0,Promediofunc]],thickness=9 ):          
+Amp_coef:=[seq(plot([[n,0],[n,A[n]]],thickness=9),n=1..N)]:
+<Font encoding="UTF-8">display(Amp_a0,Amp_coef,title=`Espectro de Potencia de la Se\303\261al`, labels=[&quot;n&quot;,&quot;A(n)&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5536" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Claramente es el mismo del caso anterior. Es la &quot;firma&quot; espectral de la onda cuadrada</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5537" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4927" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">El espectro de fases de la se\303\261al ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L4926" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Phase_coef:=[seq(plot([[n,0],[n,phi[n]]],thickness=9),n=1..N)]:
+display(Phase_coef<Font encoding="UTF-8">,title=`Espectro de fases de la Se\303\261al`, labels=[&quot;n&quot;,&quot;Phi(n)&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6049" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Note el cambio de signo con caso anterior, vale decir un desfase de Pi radianes entre ambos espectros de fase </Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6051" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4937" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Podemos tambi\303\251n expandir la funci\303\263n en t\303\251rmino de una serie compleja de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L4934" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourierExp := (m,t)-&gt; sum(C[j]*exp(-I*(n*2*Pi/T)*t),j=1..m);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4956" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Calculamos los coeficientes</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L4973" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                    
+C[n]:=2/T*int(f*exp(-I*(n*2*Pi/T)*t),t=t0..t1):
+PowerC[n]:=abs(C[n]);  
+od:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4936" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Pero estos coeficientes pueden ser reales o complejos</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L4952" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CoefCn := {seq([n,C[n]], n=0..N)}; 
+PowerCoefCn := {seq([n,PowerC[n]], n=0..N)};</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6053" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Una vez m\303\241s los coeficientes de expansi\303\263n de la funci\303\263n son imaginarios puros</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6054" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4943" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">por lo tanto, para graficarlos, calculamos su parte imaginaria</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L4957" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ImCn := [seq(plot([[n,0],[n,Im(C[n])]],thickness=9),n=0..N)]: 
+PowerCn := [seq(plot([[n,0],[n,PowerC[n]]],thickness=9),n=0..N)]:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6056" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4958" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">y la graficamos </Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L4968" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ImCn,title=`Espectro parte imaginaria de los coeficientes`, labels=[&quot;n&quot;,&quot;Im ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6058" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4935" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Espectro de los m\303\263dulos de los coeficientes</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L4951" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"><Font encoding="UTF-8">display(PowerCn,title=`Espectro de m\303\263dulos`, labels=[&quot;n&quot;,&quot;Mod ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4932" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Note que si <Font italic="true">f(t)</Font> es impar entonces los coeficientes son imaginarios y si <Font italic="true">f(x) </Font><Font encoding="UTF-8"> es par ser\303\241n reales</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4950" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4972" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8"> Al hacer el cambio de variable omega = 2*n*Pi/T podremos expandir la serie en funci\303\263n de las frecuencias</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L4966" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourierExpK := (m,t)-&gt; sum(CK[omega]*exp(-I*omega*t),omega=1..m);</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L4954" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">omegaMax := floor(2*N*Pi/T)</Text-field>
+</Input>
+</Group>
+<Group labelreference="L4941" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for omega from 0 to omegaMax do               	
+CK[omega]:=(2/Pi)*int(f*exp(-I*omega*t),t=t0..t1):
+PowerCK[omega] := evalf(abs(CK[omega])):	
+od:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6060" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4930" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">por lo tanto, para graficarlos, calculamos su parte real y parte compleja</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L4942" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ImCK  := [seq(plot( [[omega,0],[omega,Im(CK[omega])]],thickness=9),omega=0..omegaMax)]: 
+ReCK  := [seq(plot( [[omega,0],[omega,Re(CK[omega])]],thickness=9),omega=0..omegaMax)]: 
+PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..omegaMax)]:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6062" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4953" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">La parte real de los coeficientes ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L4947" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ReCK,title=`Espectro parte real de los coeficientes`, labels=[&quot;omega&quot;,&quot;Re ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4971" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">La parte imaginaria</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L4964" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ImCK,title=`Espectro parte imaginaria de los coeficientes`, labels=[&quot;omega&quot;,&quot;Im ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L4929" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Espectro de los m\303\263dulos de los coeficientes</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L4940" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(PowCK<Font encoding="UTF-8">,title=`Espectro m\303\263dulo de los coeficientes`, labels=[&quot;omega&quot;,&quot;Abs ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L4944" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">;</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L1736" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Onda cuadrada (par) en el intervalo [ -T/2, T/2]</Text-field></Title>
+<Group hide-input="false" labelreference="L1432" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0:=-T/2: t1:=T/2: f:=piecewise(((t&lt;t0 and t&gt;t1),0),(t&gt;=t0 and t&lt;=1,1));</Text-field>
+</Input>
+</Group><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L1464" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">La graficamos</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="code" labelreference="L5143" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot(f,t=t0-2..t1+2);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5134" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Desarrollamos la funci\303\263n como una serie de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5132" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourier := (m,t)-&gt;
+a[0]/2 + sum(a[k]*cos((2*k*Pi*t)/T),k=1..m) + sum(b[k]*sin((2*k*Pi*t)/T),k=1..m) ;</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5121" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Calculamos los coeficientes de Fourier </Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5118" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                     
+a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):                             	
+b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t=t0..t1):                             	
+A[n]:=sqrt(a[n]^2+b[n]^2): 
+phi[n]:= arctan(b[n]/(a[n]+1E-10)):                                      
+od: </Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5128" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Tres expansiones posibles ser\303\241n</Font></Text-field>
+</Input>
+</Group>
+<Group view="presentation" inline-output="false" labelreference="L5101" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5106" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">N1:=floor(N/3); N2:=floor(N/2); N;</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5104" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SFourier1:=SerieFourier(N1,t);SFourier2:= SerieFourier(N2,t);SFourier3:= SerieFourier(N,t);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5111" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Note que no hay componentes arm\303\263nicas y que la funci\303\263n se puede aproximar con el primer coeficiente a[0]</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5119" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group view="presentation" inline-output="false" labelreference="L5112" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5138" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">El espectro de potencias se puedo graficar como</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5136" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Amp_a0:=plot([[0,0],[0,Promediofunc]],thickness=9 ):          
+Amp_coef:=[seq(plot([[n,0],[n,A[n]]],thickness=9),n=0..N)]:
+<Font encoding="UTF-8">display(Amp_a0,Amp_coef,title=`Espectro de Potencia de la Se\303\261al`, labels=[&quot;n&quot;,&quot;A(n)&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5100" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5110" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Podemos tambi\303\251n haber expandido la funci\303\263n en t\303\251rmino de una serie compleja de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5107" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourierExp := (m,t)-&gt; sum(C[j]*exp(-I*(n*2*Pi/T)*t),j=1..m);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5129" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Calculamos los coeficientes</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5146" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                    
+C[n]:=2/T*int(f*exp(-I*(n*2*Pi/T)*t),t=t0..t1):
+PowerC[n]:=abs(C[n]);  
+od:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6551" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5109" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Otra vez, solo subsiste el primer coeficiente</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5125" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CoefCn := {seq([n,C[n]], n=0..N)}; 
+PowerCoefCn := {seq([n,PowerC[n]], n=0..N)};</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6553" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5116" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">por lo tanto, para graficarlos, calculamos su parte real y parte compleja</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5130" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ReCn:= [seq(plot([[n,0],[n,Re(C[n])]],thickness=9),n=0..N)]: 
+PowerCn := [seq(plot([[n,0],[n,PowerC[n]]],thickness=9),n=0..N)]:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5142" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">La parte real de los coeficientes ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5122" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ReCn,title=`Espectro parte real de los coeficientes`, labels=[&quot;n&quot;,&quot;Re ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6555" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5108" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Obviamente el espectro de los m\303\263dulos de los coeficientes ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5124" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"><Font encoding="UTF-8">display(PowerCn,title=`Espectro de m\303\263dulos`, labels=[&quot;n&quot;,&quot;Mod ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5123" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5145" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8"> Al hacer el cambio de variable omega = 2*n*Pi/T podremos expandir la serie en funci\303\263n de las frecuencias</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5139" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourierExpK := (m,t)-&gt; sum(CK[omega]*exp(-I*omega*t),omega=1..m);</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5127" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">omegaMax := floor(2*N*Pi/T)</Text-field>
+</Input>
+</Group>
+<Group labelreference="L5114" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for omega from 0 to omegaMax do               	
+CK[omega]:=(2/Pi)*int(f*exp(-I*omega*t),t=t0..t1):
+PowerCK[omega] := evalf(abs(CK[omega])):	
+od:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5103" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">por lo tanto, para graficarlos, calculamos su parte real y parte compleja</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5115" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ImCK  := [seq(plot( [[omega,0],[omega,Im(CK[omega])]],thickness=9),omega=0..omegaMax)]: 
+ReCK  := [seq(plot( [[omega,0],[omega,Re(CK[omega])]],thickness=9),omega=0..omegaMax)]: 
+PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..omegaMax)]:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5126" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Solo tendremos coeficientes reales </Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5120" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ReCK,title=`Espectro parte real de los coeficientes`, labels=[&quot;omega&quot;,&quot;Re ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5144" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5102" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Espectro de los m\303\263dulos de los coeficientes ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5113" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(PowCK<Font encoding="UTF-8">,title=`Espectro m\303\263dulo de los coeficientes`, labels=[&quot;omega&quot;,&quot;Abs ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5117" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">;</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="code" labelreference="L1450" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block>
+<Group labelreference="L1434" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Diente de sierra impar en el intervalo [ -T/2, T/2]</Text-field></Title>
+<Group hide-input="false" labelreference="L1470" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0:=-T/2: t1:=T/2: f:=piecewise((t0&lt;=t and t&lt;t1,3*t));</Text-field>
+</Input>
+</Group><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L1501" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">La graficamos</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="code" labelreference="L5192" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot(f,t=t0-2..t1+2);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5183" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Desarrollamos la funci\303\263n como una serie de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5181" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourier := (m,t)-&gt;
+a[0]/2 + sum(a[k]*cos((2*k*Pi*t)/T),k=1..m) + sum(b[k]*sin((2*k*Pi*t)/T),k=1..m) ;</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5170" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Calculamos los coeficientes de Fourier </Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5167" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                     
+a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):                             	
+b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t=t0..t1):                             	
+A[n]:=sqrt(a[n]^2+b[n]^2): 
+phi[n]:= arctan(b[n]/(a[n]+1E-10)):                                      
+od: </Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5177" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Tres expansiones posibles ser\303\241n</Font></Text-field>
+</Input>
+</Group>
+<Group view="presentation" inline-output="false" labelreference="L5150" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5155" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">N1:=floor(N/3); N2:=floor(N/2); N;</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5153" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SFourier1:=SerieFourier(N1,t);SFourier2:= SerieFourier(N2,t);SFourier3:= SerieFourier(N,t);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5160" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Como era de esperarse, tenemos una expansi\303\263n de una funci\303\263n impar en t\303\251rminos de una serie de funciones impares</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5168" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5161" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Graficamos las disntintas aproximaciones</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5147" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot([f,SFourier1,SFourier2, SFourier3],t=t0..t1,title=&quot;Aproximaciones de Fourier: &quot;,color=[red,green,blue,black],numpoints=100,
+<Font encoding="UTF-8">legend=[&quot;funci\303\263n&quot;,&quot;Serie N1&quot;,</Font>&quot;Serie N2&quot;, &quot;Serie N&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6557" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5182" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Por ser impar la funci\303\263n, la contribuci\303\263n del promedio de la funci\303\263n en el per\303\255odo se anula</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5189" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Promediofunc:=evalf(a[0]/2);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5187" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">El espectro de potencias se puede graficar como</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5185" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Amp_a0:=plot([[0,0],[0,Promediofunc]],thickness=9 ):          
+Amp_coef:=[seq(plot([[n,0],[n,A[n]]],thickness=9),n=1..N)]:
+<Font encoding="UTF-8">display(Amp_a0,Amp_coef,title=`Espectro de Potencia de la Se\303\261al`, labels=[&quot;n&quot;,&quot;A(n)&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5149" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">mientras que el espectro de fases de la se\303\261al ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5148" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Phase_coef:=[seq(plot([[n,0],[n,phi[n]]],thickness=9),n=1..N)]:
+display(Phase_coef<Font encoding="UTF-8">,title=`Espectro de fases de la Se\303\261al`, labels=[&quot;n&quot;,&quot;Phi(n)&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5159" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">
+<Font encoding="UTF-8">Podemos tambi\303\251n haber expandido la funci\303\263n en t\303\251rmino de una serie compleja de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5156" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourierExp := (m,t)-&gt; sum(C[j]*exp(-I*(n*2*Pi/T)*t),j=1..m);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5178" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Calculamos los coeficientes</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5195" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                    
+C[n]:=2/T*int(f*exp(-I*(n*2*Pi/T)*t),t=t0..t1):
+PowerC[n]:=abs(C[n]);  
+od:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5158" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Pero estos coeficientes pueden ser reales o complejos</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5174" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CoefCn := {seq([n,C[n]], n=0..N)}; 
+PowerCoefCn := {seq([n,PowerC[n]], n=0..N)};</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6559" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Una vez mas, como la funci\303\263n es impar, los coeficientes de la expansi\303\263n ser\303\241n imaginarios puros</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5165" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">
+por lo tanto, para graficarlos, calculamos su parte imaginaria</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5179" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ImCn := [seq(plot([[n,0],[n,Im(C[n])]],thickness=9),n=0..N)]: 
+PowerCn := [seq(plot([[n,0],[n,PowerC[n]]],thickness=9),n=0..N)]:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6561" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5180" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">y la graficamos</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5190" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ImCn,title=`Espectro parte imaginaria de los coeficientes`, labels=[&quot;n&quot;,&quot;Im ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5157" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Espectro de los m\303\263dulos de los coeficientes</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5173" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"><Font encoding="UTF-8">display(PowerCn,title=`Espectro de m\303\263dulos`, labels=[&quot;n&quot;,&quot;Mod ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5154" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">el espectro de frecuencia tendr\303\241 contribuci\303\263n de todos los arm\303\263nicos</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5172" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5194" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8"> Al hacer el cambio de variable omega = 2*n*Pi/T podremos expandir la serie en funci\303\263n de las frecuencias</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5188" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourierExpK := (m,t)-&gt; sum(CK[omega]*exp(-I*omega*t),omega=1..m);</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5176" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">omegaMax := floor(2*N*Pi/T)</Text-field>
+</Input>
+</Group>
+<Group labelreference="L5163" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for omega from 0 to omegaMax do               	
+CK[omega]:=(2/Pi)*int(f*exp(-I*omega*t),t=t0..t1):
+PowerCK[omega] := evalf(abs(CK[omega])):	
+od:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5152" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">y solo tendremos coeficientes imaginarios puros </Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5164" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ImCK  := [seq(plot( [[omega,0],[omega,Im(CK[omega])]],thickness=9),omega=0..omegaMax)]:  
+PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..omegaMax)]:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5175" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5193" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">y los graficamos</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5186" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ImCK,title=`Espectro parte imaginaria de los coeficientes`, labels=[&quot;omega&quot;,&quot;Im ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5151" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Espectro de los m\303\263dulos de los coeficientes</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5162" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(PowCK<Font encoding="UTF-8">,title=`Espectro m\303\263dulo de los coeficientes`, labels=[&quot;omega&quot;,&quot;Abs ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5166" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">;</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="code" labelreference="L1487" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Diente de sierra impar desplazada  en el intervalo [ 0, T]</Text-field></Title>
+<Group hide-input="false" labelreference="L1538" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0:=0: t1:=T: f:=piecewise((0 &lt;=t and t&lt;=T,3*t -3));</Text-field>
+</Input>
+</Group><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L1534" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">La graficamos</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="code" labelreference="L5241" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot(f,t=t0-2..t1+2);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5232" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Desarrollamos la funci\303\263n como una serie de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5230" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourier := (m,t)-&gt;
+a[0]/2 + sum(a[k]*cos((2*k*Pi*t)/T),k=1..m) + sum(b[k]*sin((2*k*Pi*t)/T),k=1..m) ;</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5219" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Calculamos los coeficientes de Fourier </Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5216" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                     
+a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):
+b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t=t0..t1):                             	
+A[n]:=sqrt(a[n]^2+b[n]^2): 
+phi[n]:= arctan(b[n]/(a[n]+1E-10)):                                      
+od: </Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5226" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Tres expansiones posibles ser\303\241n
+</Font></Text-field>
+</Input>
+</Group>
+<Group view="presentation" inline-output="false" labelreference="L5199" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5204" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">N1:=floor(N/3); N2:=floor(N/2); N;</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5202" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SFourier1:=SerieFourier(N1,t);SFourier2:= SerieFourier(N2,t);SFourier3:= SerieFourier(N,t);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5209" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Como era de esperarse, tenemos una expansi\303\263n de una funci\303\263n impar en t\303\251rminos de una serie de funciones impares, pero en este caso (como en el anterior) contribuyen los arm\303\263nicos impares</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5217" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5210" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Graficamos las disntintas aproximaciones</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5196" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot([f,SFourier1,SFourier2, SFourier3],t=t0..t1,title=&quot;Aproximaciones de Fourier: &quot;,color=[red,green,blue,black],numpoints=100,
+<Font encoding="UTF-8">legend=[&quot;funci\303\263n&quot;,&quot;Serie N1&quot;,</Font>&quot;Serie N2&quot;, &quot;Serie N&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6577" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5231" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Obviamente, el promedio vuelve a dar cero</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5238" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Promediofunc:=evalf(a[0]/2);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6579" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5236" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">El espectro de potencias se puedo graficar como</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5234" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Amp_a0:=plot([[0,0],[0,Promediofunc]],thickness=9 ):          
+Amp_coef:=[seq(plot([[n,0],[n,A[n]]],thickness=9),n=1..N)]:
+<Font encoding="UTF-8">display(Amp_a0,Amp_coef,title=`Espectro de Potencia de la Se\303\261al`, labels=[&quot;n&quot;,&quot;A(n)&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L6587" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5198" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">otra vez el espectro de fases de la se\303\261al diferir\303\241 en un signo con el caso anterior</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5197" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Phase_coef:=[seq(plot([[n,0],[n,phi[n]]],thickness=9),n=1..N)]:
+display(Phase_coef<Font encoding="UTF-8">,title=`Espectro de fases de la Se\303\261al`, labels=[&quot;n&quot;,&quot;Phi(n)&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5208" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">
+<Font encoding="UTF-8">Podemos tambi\303\251n haber expandido la funci\303\263n en t\303\251rmino de una serie compleja de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5205" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourierExp := (m,t)-&gt; sum(C[j]*exp(-I*(n*2*Pi/T)*t),j=1..m);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5227" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Calculamos los coeficientes</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5244" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                    
+C[n]:=2/T*int(f*exp(-I*(n*2*Pi/T)*t),t=t0..t1):
+PowerC[n]:=abs(C[n]);  
+od:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5207" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Pero estos coeficientes pueden ser reales o complejos</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5223" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CoefCn := {seq([n,C[n]], n=0..N)}; 
+PowerCoefCn := {seq([n,PowerC[n]], n=0..N)};</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5214" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">y por ser (otra vez) una funci\303\263n impar, solo tendremos coeficientes imaginarios puros </Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5228" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ImCn := [seq(plot([[n,0],[n,Im(C[n])]],thickness=9),n=0..N)]: 
+PowerCn := [seq(plot([[n,0],[n,PowerC[n]]],thickness=9),n=0..N)]:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5240" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5229" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">y los graficamos </Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5239" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ImCn,title=`Espectro parte imaginaria de los coeficientes`, labels=[&quot;n&quot;,&quot;Im ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5206" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Que coincide con el espectro de los m\303\263dulos de los coeficientes</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5222" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"><Font encoding="UTF-8">display(PowerCn,title=`Espectro de m\303\263dulos`, labels=[&quot;n&quot;,&quot;Mod ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5203" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5243" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8"> Al hacer el cambio de variable omega = 2*n*Pi/T podremos expandir la serie en funci\303\263n de las frecuencias</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5237" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourierExpK := (m,t)-&gt; sum(CK[omega]*exp(-I*omega*t),omega=1..m);</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5225" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">omegaMax := floor(2*N*Pi/T)</Text-field>
+</Input>
+</Group>
+<Group labelreference="L5212" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for omega from 0 to omegaMax do               	
+CK[omega]:=(2/Pi)*int(f*exp(-I*omega*t),t=t0..t1):
+PowerCK[omega] := evalf(abs(CK[omega])):	
+od:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5201" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">En este caso tendremos coeficientes reales y complejos por lo tanto, para graficarlos, calculamos su parte real y parte compleja</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5213" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ImCK  := [seq(plot( [[omega,0],[omega,Im(CK[omega])]],thickness=9),omega=0..omegaMax)]: 
+ReCK  := [seq(plot( [[omega,0],[omega,Re(CK[omega])]],thickness=9),omega=0..omegaMax)]: 
+PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..omegaMax)]:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5224" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">La parte real de los coeficientes ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5218" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ReCK,title=`Espectro parte real de los coeficientes`, labels=[&quot;omega&quot;,&quot;Re ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5242" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">La parte imaginaria</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5235" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ImCK,title=`Espectro parte imaginaria de los coeficientes`, labels=[&quot;omega&quot;,&quot;Im ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5200" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Espectro de los m\303\263dulos de los coeficientes</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5211" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(PowCK<Font encoding="UTF-8">,title=`Espectro m\303\263dulo de los coeficientes`, labels=[&quot;omega&quot;,&quot;Abs ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5215" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">;</Text-field>
+</Input>
+</Group></Presentation-Block><Text-field style="Text" layout="Normal"></Text-field>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Diente de sierra par en el intervalo [ -T/2, T/2]</Text-field></Title>
+<Group hide-input="false" labelreference="L1572" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0:=-T/2: t1:=T/2: f:=piecewise((t0&lt;=t and t&lt;=0,-3*t),(0&lt;t and t&lt;=t1,3*t));</Text-field>
+</Input>
+</Group><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L1554" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">La graficamos</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="code" labelreference="L5290" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot(f,t=t0-2..t1+2);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5281" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Desarrollamos la funci\303\263n como una serie de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5279" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourier := (m,t)-&gt;
+a[0]/2 + sum(a[k]*cos((2*k*Pi*t)/T),k=1..m) + sum(b[k]*sin((2*k*Pi*t)/T),k=1..m) ;</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5268" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Calculamos los coeficientes de Fourier </Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5265" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                     
+a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):                             	
+b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t=t0..t1):                             	
+A[n]:=sqrt(a[n]^2+b[n]^2): 
+phi[n]:= arctan(b[n]/(a[n]+1E-10)):                                      
+od: </Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5275" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Tres expansiones posibles ser\303\241n</Font></Text-field>
+</Input>
+</Group>
+<Group view="presentation" inline-output="false" labelreference="L5248" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5253" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">N1:=floor(N/3); N2:=floor(N/2); N;</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5251" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SFourier1:=SerieFourier(N1,t);SFourier2:= SerieFourier(N2,t);SFourier3:= SerieFourier(N,t);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L7021" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Como era de esperarse, tenemos una expansi\303\263n de una funci\303\263n par. Por lo tanto tendremos contribuci\303\263n del promedio de la funci\303\263n y la serie se desarrolla en t\303\251rmino de funciones pares. Las contribuciones de los arm\303\263nicos ser\303\241n de los impares </Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5258" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5259" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Graficamos las disntintas aproximaciones</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5245" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot([f,SFourier1,SFourier2, SFourier3],t=t0..t1,title=&quot;Aproximaciones de Fourier: &quot;,color=[red,green,blue,black],numpoints=100,
+<Font encoding="UTF-8">legend=[&quot;funci\303\263n&quot;,&quot;Serie N1&quot;,</Font>&quot;Serie N2&quot;, &quot;Serie N&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L7023" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5280" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">De los coeficientes diferenciamos las contribuciones del nivel base y de los distintos arm\303\263nicos.</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5282" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">La contribuci\303\263n del promedio de la funci\303\263n ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5287" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Promediofunc:=evalf(a[0]/2);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5285" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">El espectro de potencias se puedo graficar como</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5283" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Amp_a0:=plot([[0,0],[0,Promediofunc]],thickness=9 ):          
+Amp_coef:=[seq(plot([[n,0],[n,A[n]]],thickness=9),n=1..N)]:
+<Font encoding="UTF-8">display(Amp_a0,Amp_coef,title=`Espectro de Potencia de la Se\303\261al`, labels=[&quot;n&quot;,&quot;A(n)&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5247" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">y el espectro de fases de la se\303\261al se anula</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L7025" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5257" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Podemos tambi\303\251n haber expandido la funci\303\263n en t\303\251rmino de una serie compleja de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5254" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourierExp := (m,t)-&gt; sum(C[j]*exp(-I*(n*2*Pi/T)*t),j=1..m);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5276" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Calculamos los coeficientes</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5293" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                    
+C[n]:=2/T*int(f*exp(-I*(n*2*Pi/T)*t),t=t0..t1):
+PowerC[n]:=abs(C[n]);  
+od:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L7027" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">y en este caso por ser una funci\303\263n par los coeficientes de la expansi\303\263n ser\303\241n reales </Font></Text-field>
+</Input>
+</Group>
+<Group view="presentation" inline-output="false" labelreference="L5256" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5272" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CoefCn := {seq([n,C[n]], n=0..N)}; 
+PowerCoefCn := {seq([n,PowerC[n]], n=0..N)};</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5263" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">por lo tanto, para graficarlos, calculamos su parte real </Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5277" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ReCn:= [seq(plot([[n,0],[n,Re(C[n])]],thickness=9),n=0..N)]: 
+PowerCn := [seq(plot([[n,0],[n,PowerC[n]]],thickness=9),n=0..N)]:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5289" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">La parte real de los coeficientes ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5269" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ReCn,title=`Espectro parte real de los coeficientes`, labels=[&quot;n&quot;,&quot;Re ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5278" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5255" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Espectro de los m\303\263dulos de los coeficientes</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5271" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"><Font encoding="UTF-8">display(PowerCn,title=`Espectro de m\303\263dulos`, labels=[&quot;n&quot;,&quot;Mod ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5252" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Note que si <Font italic="true">f(t)</Font> es impar entonces los coeficientes son imaginarios y si <Font italic="true">f(x) </Font><Font encoding="UTF-8"> es par ser\303\241n reales</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5270" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5292" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8"> Al hacer el cambio de variable omega = 2*n*Pi/T podremos expandir la serie en funci\303\263n de las frecuencias</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5286" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourierExpK := (m,t)-&gt; sum(CK[omega]*exp(-I*omega*t),omega=1..m);</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5274" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">omegaMax := floor(2*N*Pi/T)</Text-field>
+</Input>
+</Group>
+<Group labelreference="L5261" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for omega from 0 to omegaMax do               	
+CK[omega]:=(2/Pi)*int(f*exp(-I*omega*t),t=t0..t1):
+PowerCK[omega] := evalf(abs(CK[omega])):	
+od:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5250" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">y lo mismo pasa con los coeficiente reales de esta expansi\303\263n </Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5262" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ReCK  := [seq(plot( [[omega,0],[omega,Re(CK[omega])]],thickness=9),omega=0..omegaMax)]: 
+PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..omegaMax)]:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5273" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">La parte real de los coeficientes ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5267" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ReCK,title=`Espectro parte real de los coeficientes`, labels=[&quot;omega&quot;,&quot;Re ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5291" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5249" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Espectro de los m\303\263dulos de los coeficientes</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5260" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(PowCK<Font encoding="UTF-8">,title=`Espectro m\303\263dulo de los coeficientes`, labels=[&quot;omega&quot;,&quot;Abs ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5264" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">;</Text-field>
+</Input>
+</Group></Presentation-Block><Text-field style="Text" layout="Normal"></Text-field>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1"><Font encoding="UTF-8">Par\303\241bola </Font>en el intervalo [ -T/2, T/2]</Text-field></Title>
+<Group hide-input="false" labelreference="L1574" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0:=-T/2: t1:=T/2: f:=piecewise((t0&lt;=t and t&lt;=t1,t^2));</Text-field>
+</Input>
+</Group><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L1604" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">La graficamos</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="code" labelreference="L5339" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot(f,t=t0-2..t1+2);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5330" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Desarrollamos la funci\303\263n como una serie de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5328" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourier := (m,t)-&gt;
+a[0]/2 + sum(a[k]*cos((2*k*Pi*t)/T),k=1..m) + sum(b[k]*sin((2*k*Pi*t)/T),k=1..m) ;</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5317" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Calculamos los coeficientes de Fourier </Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5314" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                     
+a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):                             	
+b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t=t0..t1):                             	
+A[n]:=sqrt(a[n]^2+b[n]^2): 
+phi[n]:= arctan(b[n]/(a[n]+1E-10)):                                      
+od: </Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5324" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Tres expansiones posibles ser\303\241n</Font></Text-field>
+</Input>
+</Group>
+<Group view="presentation" inline-output="false" labelreference="L5297" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5302" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">N1:=floor(N/3); N2:=floor(N/2); N;</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5300" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SFourier1:=SerieFourier(N1,t);SFourier2:= SerieFourier(N2,t);SFourier3:= SerieFourier(N,t);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5307" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Como era de esperarse, tenemos una expansi\303\263n de una funci\303\263n ipar y, como en el caso anterior, las contribuciones son los coeficientes de funciones pares y del coeficiente a[0]</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5315" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5308" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Graficamos las disntintas aproximaciones</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5294" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot([f,SFourier1,SFourier2, SFourier3],t=t0..t1,title=&quot;Aproximaciones de Fourier: &quot;,color=[red,green,blue,black],numpoints=100,
+<Font encoding="UTF-8">legend=[&quot;funci\303\263n&quot;,&quot;Serie N1&quot;,</Font>&quot;Serie N2&quot;, &quot;Serie N&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5329" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">La contribuci\303\263n del promedio de la funci\303\263n ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5336" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Promediofunc:=evalf(a[0]/2);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5334" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">El espectro de potencias se puedo graficar como</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5332" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Amp_a0:=plot([[0,0],[0,Promediofunc]],thickness=9 ):          
+Amp_coef:=[seq(plot([[n,0],[n,A[n]]],thickness=9),n=1..N)]:
+<Font encoding="UTF-8">display(Amp_a0,Amp_coef,title=`Espectro de Potencia de la Se\303\261al`, labels=[&quot;n&quot;,&quot;A(n)&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5296" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">y el espectro de fases de la se\303\261al se anula</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5295" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5306" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Podemos tambi\303\251n expandir la funci\303\263n en t\303\251rmino de una serie compleja de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5303" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourierExp := (m,t)-&gt; sum(C[j]*exp(-I*(n*2*Pi/T)*t),j=1..m);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5325" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Calculamos los coeficientes</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5342" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                    
+C[n]:=2/T*int(f*exp(-I*(n*2*Pi/T)*t),t=t0..t1):
+PowerC[n]:=abs(C[n]);  
+od:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5305" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">y como la funci\303\263n es par los coeficientes de la expansi\303\263n ser\303\241n reales</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5321" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CoefCn := {seq([n,C[n]], n=0..N)}; 
+PowerCoefCn := {seq([n,PowerC[n]], n=0..N)};</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5312" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">por lo tanto, los graficomos luego de calcularlos</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5326" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ReCn:= [seq(plot([[n,0],[n,Re(C[n])]],thickness=9),n=0..N)]: 
+PowerCn := [seq(plot([[n,0],[n,PowerC[n]]],thickness=9),n=0..N)]:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5338" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">La parte real de los coeficientes ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5318" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ReCn,title=`Espectro parte real de los coeficientes`, labels=[&quot;n&quot;,&quot;Re ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5327" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5304" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Espectro de los m\303\263dulos de los coeficientes</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5320" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"><Font encoding="UTF-8">display(PowerCn,title=`Espectro de m\303\263dulos`, labels=[&quot;n&quot;,&quot;Mod ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5301" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5341" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8"> Al hacer el cambio de variable omega = 2*n*Pi/T podremos expandir la serie en funci\303\263n de las frecuencias</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5335" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourierExpK := (m,t)-&gt; sum(CK[omega]*exp(-I*omega*t),omega=1..m);</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5323" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">omegaMax := floor(2*N*Pi/T)</Text-field>
+</Input>
+</Group>
+<Group labelreference="L5310" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for omega from 0 to omegaMax do               	
+CK[omega]:=(2/Pi)*int(f*exp(-I*omega*t),t=t0..t1):
+PowerCK[omega] := evalf(abs(CK[omega])):	
+od:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5299" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">En esta representaci\303\263n de la funci\303\263n tendremos coeficientes con parte real e imagianria ypor lo tanto, para graficarlos, calculamos su parte real y parte compleja</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5311" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ImCK  := [seq(plot( [[omega,0],[omega,Im(CK[omega])]],thickness=9),omega=0..omegaMax)]: 
+ReCK  := [seq(plot( [[omega,0],[omega,Re(CK[omega])]],thickness=9),omega=0..omegaMax)]: 
+PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..omegaMax)]:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5322" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">La parte real de los coeficientes ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5316" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ReCK,title=`Espectro parte real de los coeficientes`, labels=[&quot;omega&quot;,&quot;Re ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5340" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">La parte imaginaria</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5333" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ImCK,title=`Espectro parte imaginaria de los coeficientes`, labels=[&quot;omega&quot;,&quot;Im ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5298" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Espectro de los m\303\263dulos de los coeficientes</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5309" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(PowCK<Font encoding="UTF-8">,title=`Espectro m\303\263dulo de los coeficientes`, labels=[&quot;omega&quot;,&quot;Abs ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5313" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">;</Text-field>
+</Input>
+</Group></Presentation-Block><Text-field style="Text" layout="Normal"></Text-field>
+</Section>
+<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Ni par ni impar</Text-field></Title>
+<Group hide-input="false" labelreference="L1608" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0:=0: t1:=T: tp := T/4: y0:=T/10: f:=piecewise(( 0&lt;=t and t&lt;=tp,4*y0*t/T), (tp&lt;t and t&lt;=T,(4*y0/3)*(-t/T +1)) );</Text-field>
+</Input>
+</Group><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L1638" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">La graficamos</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="code" labelreference="L5388" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot(f,t=t0-2..t1+2);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5379" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Desarrollamos la funci\303\263n como una serie de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5377" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourier := (m,t)-&gt;
+a[0]/2 + sum(a[k]*cos((2*k*Pi*t)/T),k=1..m) + sum(b[k]*sin((2*k*Pi*t)/T),k=1..m) ;</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5366" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Calculamos los coeficientes de Fourier </Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5363" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                     a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):                             	b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t=t0..t1):                             	A[n]:=sqrt(a[n]^2+b[n]^2): 
+phi[n]:= arctan(b[n]/(a[n]+1E-10)):                                      od: </Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5373" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Tres expansiones posibles ser\303\241n</Font></Text-field>
+</Input>
+</Group>
+<Group view="presentation" inline-output="false" labelreference="L5346" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5351" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">N1:=floor(N/3); N2:=floor(N/2); N;</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5349" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SFourier1:=SerieFourier(N1,t);SFourier2:= SerieFourier(N2,t);SFourier3:= SerieFourier(N,t);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5356" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Como esta funci\303\263n no es ni impar, ni par, su expansi\303\263n ser\303\241 una combinaci\303\263n de funciones pares e impares.</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5364" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5357" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Graficamos las disntintas aproximaciones</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5343" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot([f,SFourier1,SFourier2, SFourier3],t=t0..t1,title=&quot;Aproximaciones de Fourier: &quot;,color=[red,green,blue,black],numpoints=100,
+<Font encoding="UTF-8">legend=[&quot;funci\303\263n&quot;,&quot;Serie N1&quot;,</Font>&quot;Serie N2&quot;, &quot;Serie N&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5378" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Adicionalmente, habr\303\241 contribuci\303\263n del promedio de la funci\303\263n</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5385" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Promediofunc:=evalf(a[0]/2);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5383" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">El espectro de potencias se puedo graficar como</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5381" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Amp_a0:=plot([[0,0],[0,Promediofunc]],thickness=9 ):          
+Amp_coef:=[seq(plot([[n,0],[n,A[n]]],thickness=9),n=1..N)]:
+<Font encoding="UTF-8">display(Amp_a0,Amp_coef,title=`Espectro de Potencia de la Se\303\261al`, labels=[&quot;n&quot;,&quot;A(n)&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5345" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">y el espectro de fases de la se\303\261al ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5344" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">Phase_coef:=[seq(plot([[n,0],[n,phi[n]]],thickness=9),n=1..N)]:
+display(Phase_coef<Font encoding="UTF-8">,title=`Espectro de fases de la Se\303\261al`, labels=[&quot;n&quot;,&quot;Phi(n)&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5355" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Podemos tambi\303\251n haber expandido la funci\303\263n en t\303\251rmino de una serie compleja de Fourier</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5352" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourierExp := (m,t)-&gt; sum(C[j]*exp(-I*(n*2*Pi/T)*t),j=1..m);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5374" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Calculamos los coeficientes</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5391" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                    
+C[n]:=2/T*int(f*exp(-I*(n*2*Pi/T)*t),t=t0..t1):
+PowerC[n]:=abs(C[n]);  
+od:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5354" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Pero estos coeficientes pueden ser reales o complejos</Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5370" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CoefCn := {seq([n,C[n]], n=0..N)}; 
+PowerCoefCn := {seq([n,PowerC[n]], n=0..N)};</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5361" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">por lo tanto, para graficarlos, calculamos su parte real y parte compleja</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5375" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ImCn := [seq(plot([[n,0],[n,Im(C[n])]],thickness=9),n=0..N)]: 
+ReCn:= [seq(plot([[n,0],[n,Re(C[n])]],thickness=9),n=0..N)]: 
+PowerCn := [seq(plot([[n,0],[n,PowerC[n]]],thickness=9),n=0..N)]:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5387" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">La parte real de los coeficientes ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5367" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ReCn,title=`Espectro parte real de los coeficientes`, labels=[&quot;n&quot;,&quot;Re ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L7464" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Note la importancia del promedio de la funci\303\263n </Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L7466" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5376" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">La parte imaginaria</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5386" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ImCn,title=`Espectro parte imaginaria de los coeficientes`, labels=[&quot;n&quot;,&quot;Im ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5353" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Espectro de los m\303\263dulos de los coeficientes</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5369" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"><Font encoding="UTF-8">display(PowerCn,title=`Espectro de m\303\263dulos`, labels=[&quot;n&quot;,&quot;Mod ( C(n) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5350" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Note la importancia del promedio de la funci\303\263n en el espectro de frecuencia.</Font></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5368" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5390" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8"> Al hacer el cambio de variable omega = 2*n*Pi/T podremos expandir la serie en funci\303\263n de las frecuencias</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" hide-input="false" labelreference="L5384" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SerieFourierExpK := (m,t)-&gt; sum(CK[omega]*exp(-I*omega*t),omega=1..m);</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5372" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">omegaMax := floor(2*N*Pi/T)</Text-field>
+</Input>
+</Group>
+<Group labelreference="L5359" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for omega from 0 to omegaMax do               	
+CK[omega]:=(2/Pi)*int(f*exp(-I*omega*t),t=t0..t1):
+PowerCK[omega] := evalf(abs(CK[omega])):	
+od:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5348" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">por lo tanto, para graficarlos, calculamos su parte real y parte compleja</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5360" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ImCK  := [seq(plot( [[omega,0],[omega,Im(CK[omega])]],thickness=9),omega=0..omegaMax)]: 
+ReCK  := [seq(plot( [[omega,0],[omega,Re(CK[omega])]],thickness=9),omega=0..omegaMax)]: 
+PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..omegaMax)]:</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5371" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">La parte real de los coeficientes ser\303\241</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5365" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ReCK,title=`Espectro parte real de los coeficientes`, labels=[&quot;omega&quot;,&quot;Re ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5389" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">La parte imaginaria</Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5382" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(ImCK,title=`Espectro parte imaginaria de los coeficientes`, labels=[&quot;omega&quot;,&quot;Im ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="presentation" inline-output="false" labelreference="L5347" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Espectro de los m\303\263dulos de los coeficientes</Font></Text-field>
+</Input>
+</Group>
+<Group view="code" labelreference="L5358" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">display(PowCK<Font encoding="UTF-8">,title=`Espectro m\303\263dulo de los coeficientes`, labels=[&quot;omega&quot;,&quot;Abs ( C(omega) )&quot;], labeldirections= [&quot;horizontal&quot;,&quot;vertical&quot;]);</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L5362" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">;</Text-field>
+</Input>
+</Group></Presentation-Block><Presentation-Block>
+<Group view="code" labelreference="L1624" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group></Presentation-Block><Text-field style="Text" layout="Normal"></Text-field>
+</Section>
+<Group hide-input="false" labelreference="L313" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+</Worksheet>
