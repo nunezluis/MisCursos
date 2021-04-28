@@ -1,0 +1,913 @@
+{VERSION 2018 0 "Mac OS X" "2018.0" }
+{USTYLETAB {PSTYLE "Heading 1" -1 3 1 {CSTYLE "" -1 -1 "Times" 1 18 0
+ 0 0 1 2 1 2 2 2 2 1 0 0 1 }1 1 0 0 8 4 2 0 2 0 2 2 -1 1 }{PSTYLE "War
+ning" -1 7 1 {CSTYLE "" -1 -1 "Courier New" 1 12 0 0 255 1 2 2 2 2 2 1
+ 1 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 4" -1 20 1 
+{CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 1 2 2 2 2 2 1 0 0 1 }1 1 0 0 0 0
+ 2 0 2 0 2 2 -1 1 }{PSTYLE "Line Printed Output" -1 6 1 {CSTYLE "" -1 
+-1 "Courier New" 1 12 0 0 255 1 2 2 2 2 2 1 2 0 0 1 }1 1 0 0 0 0 2 0 2
+ 0 2 2 -1 1 }{PSTYLE "Heading 2" -1 4 1 {CSTYLE "" -1 -1 "Times" 1 16 
+0 0 0 1 2 1 2 2 2 2 1 0 0 1 }1 1 0 0 8 2 2 0 2 0 2 2 -1 1 }{PSTYLE "Ma
+ple Output" -1 11 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 
+1 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Heading 3" -1 5 1 
+{CSTYLE "" -1 -1 "Times" 1 14 0 0 0 1 1 1 2 2 2 2 1 0 0 1 }1 1 0 0 0 0
+ 2 0 2 0 2 2 -1 1 }{PSTYLE "Diagnostic" -1 9 1 {CSTYLE "" -1 -1 "Couri
+er New" 1 12 40 120 40 1 2 2 2 2 2 1 2 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 
+-1 1 }{PSTYLE "Ordered List 1" -1 200 1 {CSTYLE "" -1 -1 "Times" 1 12 
+0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 1 0 0 3 3 2 0 2 0 2 2 -1 1 }{PSTYLE "Te
+xt Output" -1 2 1 {CSTYLE "" -1 -1 "Courier New" 1 12 0 0 255 1 2 2 2 
+2 2 1 3 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Ordered List 2" 
+-1 201 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 
+1 0 0 3 3 2 36 2 0 2 2 -1 1 }{PSTYLE "Ordered List 3" -1 202 1 {CSTYLE
+ "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 1 0 0 3 3 2 72 2
+ 0 2 2 -1 1 }{PSTYLE "Ordered List 4" -1 203 1 {CSTYLE "" -1 -1 "Times
+" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 1 0 0 3 3 2 108 2 0 2 2 -1 1 }
+{PSTYLE "Ordered List 5" -1 204 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 
+1 2 2 2 2 2 2 1 0 0 1 }1 1 0 0 3 3 2 144 2 0 2 2 -1 1 }{PSTYLE "Annota
+tion Title" -1 205 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2
+ 1 0 0 1 }3 1 0 0 12 12 2 0 2 0 2 2 -1 1 }{PSTYLE "HyperlinkError" -1 
+206 1 {CSTYLE "" -1 -1 "Courier New" 1 12 255 0 255 1 2 2 1 2 2 1 1 0 
+0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "HyperlinkWarning" -1 207 1
+ {CSTYLE "" -1 -1 "Courier New" 1 12 0 0 255 1 2 2 1 2 2 1 1 0 0 1 }1 
+1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "Bullet Item" -1 15 1 {CSTYLE "" 
+-1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 1 0 0 3 3 2 0 2 0 2 
+2 -1 1 }{PSTYLE "Maple Plot" -1 13 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0
+ 0 1 2 2 2 2 2 2 1 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "List \+
+Item" -1 14 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 
+1 }1 1 0 0 3 3 2 0 2 0 2 2 -1 1 }{PSTYLE "Dash Item" -1 16 1 {CSTYLE "
+" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 1 0 0 3 3 2 0 2 0 
+2 2 -1 1 }{PSTYLE "Error" -1 8 1 {CSTYLE "" -1 -1 "Courier New" 1 12 
+255 0 255 1 2 2 2 2 2 1 1 0 0 1 }1 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE
+ "Title" -1 18 1 {CSTYLE "" -1 -1 "Times" 1 18 0 0 0 1 2 1 2 2 2 2 1 0
+ 0 1 }3 1 0 0 12 12 2 0 2 0 2 2 -1 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE 
+"" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }1 1 0 0 0 0 2 0 2 0
+ 2 2 -1 1 }{PSTYLE "Author" -1 19 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 
+0 1 2 2 2 2 2 2 1 0 0 1 }3 1 0 0 8 8 2 0 2 0 2 2 -1 1 }{CSTYLE "2D Out
+put" -1 20 "Times" 1 12 0 0 255 1 2 2 2 2 2 1 0 0 0 1 }{CSTYLE "2D Ine
+rt Output" -1 200 "Times" 1 12 144 144 144 1 2 2 2 2 1 2 0 0 0 1 }
+{CSTYLE "Maple Input" -1 0 "Courier New" 1 12 120 0 14 1 2 1 2 2 1 2 0
+ 0 0 1 }{CSTYLE "Header and Footer" -1 201 "Times" 1 10 0 0 0 1 2 2 2 
+2 2 2 0 0 0 1 }{CSTYLE "Atomic Variable" -1 202 "Times" 1 12 175 0 175
+ 1 1 2 2 2 2 2 0 0 0 1 }{CSTYLE "Dictionary Hyperlink" -1 45 "Times" 1
+ 12 147 0 15 1 2 2 1 2 2 2 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 1 
+12 0 0 0 1 2 2 2 2 1 2 0 0 0 1 }{CSTYLE "Annotation Text" -1 203 "Time
+s" 1 12 0 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "2D Input" -1 19 "Times" 
+1 12 0 0 0 1 2 2 2 2 1 2 0 0 0 1 }{CSTYLE "Text" -1 204 "Times" 1 12 0
+ 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Caption Reference" -1 205 "Times"
+ 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }{CSTYLE "Code" -1 206 "Courier New"
+ 1 12 255 0 0 1 2 2 2 2 2 2 0 0 0 1 }{CSTYLE "Maple Input Placeholder"
+ -1 207 "Courier New" 1 12 200 0 200 1 2 1 2 2 1 2 0 0 0 1 }{CSTYLE "E
+quation Label" -1 208 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }
+{CSTYLE "Hyperlink" -1 17 "Times" 1 12 0 128 128 1 2 2 1 2 2 2 0 0 0 1
+ }{CSTYLE "Caption Text" -1 209 "Times" 1 12 0 0 0 1 2 1 2 2 2 2 0 0 0
+ 1 }{PSTYLE "" -1 208 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 2 2 2 2 
+2 2 1 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{CSTYLE "" -1 210 "Times" 1
+ 20 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }{PSTYLE "" -1 209 1 {CSTYLE "" -1 -1 
+"Times" 1 12 0 0 0 1 2 2 2 2 2 2 1 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1
+ }{PSTYLE "" -1 210 1 {CSTYLE "" -1 -1 "Times" 1 12 0 0 0 1 1 2 2 2 2 
+2 1 0 0 1 }3 1 0 0 0 0 2 0 2 0 2 2 -1 1 }{PSTYLE "" -1 211 1 {CSTYLE "
+" -1 -1 "Times" 1 12 0 0 0 1 1 2 2 2 2 2 1 0 0 1 }3 1 0 0 0 0 2 0 2 0 
+2 2 -1 1 }{CSTYLE "" -1 211 "Times" 1 20 0 0 0 1 2 1 2 2 2 2 0 0 0 1 }
+{CSTYLE "" -1 212 "Times" 1 12 0 0 0 1 1 2 2 2 2 2 0 0 0 1 }{CSTYLE ""
+ -1 213 "Times" 1 12 0 0 0 1 1 2 2 2 2 2 0 0 0 1 }{CSTYLE "" -1 214 "T
+imes" 1 12 0 0 0 1 1 2 2 2 2 2 0 0 0 1 }{CSTYLE "" -1 215 "Times" 1 12
+ 0 0 0 1 1 2 2 2 2 2 0 0 0 1 }{CSTYLE "" -1 216 "Times" 1 12 0 0 0 1 1
+ 2 2 2 2 2 0 0 0 1 }{CSTYLE "" -1 217 "Times" 1 12 0 0 0 1 1 2 2 2 2 2
+ 0 0 0 1 }}
+{SECT 0 {EXCHG {PARA 208 "" 0 "" {TEXT 210 17 "Series de Fourier" }}
+{PARA 209 "" 0 "" {TEXT 204 13 "Luis A. N\303\272\303\261ez" }}{PARA 
+210 "" 0 "" {TEXT 204 17 "Escuela de F\303\255sica" }}{PARA 211 "" 0 "
+" {TEXT 204 35 "Universidad Industrial de Santander" }}}{EXCHG {PARA 0
+ "> " 0 "" {MPLTEXT 1 0 8 "restart:" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 38 "with(plots): setoptions(thickness=1): " }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 7 "Per\303\255odo" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 18 "T:=2: Digits:=20: " }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 56 "N\303\272mero de t\303\251rminos (coeficientes) en la se
+rie de Fourier" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "N:=15;" }}
+}{EXCHG {PARA 0 "" 0 "" {TEXT 211 48 "Consideremos la siguiente funcio
+nes con per\303\255do T" }{TEXT 204 1 " " }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 0 "" }}}{SECT 0 {PARA 3 "" 0 "" {TEXT 218 42 "Onda cuadrada \+
+en el intervalo [ -T/2, T/2]" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+71 "t0:=-T/2: t1:=T/2: f:=piecewise((t0<=t and t<0,-1),(0<=t and t<=t1
+,1));" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 13 "La graficamos" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "plot(f,t=t0-2..t1+2);" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 50 "Desarrollamos la funci\303\263n c
+omo una serie de Fourier" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 
+"SerieFourier := (m,t)->\n" }{MPLTEXT 1 0 82 "a[0]/2 + sum(a[k]*cos((2
+*k*Pi*t)/T),k=1..m) + sum(b[k]*sin((2*k*Pi*t)/T),k=1..m) ;" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 39 "Calculamos los coeficientes de Fourier "
+ }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 74 "for n from 0 to N do    \+
+                                                 \n" }{MPLTEXT 1 0 73 
+"a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):                           \+
+          \n" }{MPLTEXT 1 0 73 "b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t=t0..
+t1):                                     \n" }{MPLTEXT 1 0 28 "A[n]:=s
+qrt(a[n]^2+b[n]^2): \n" }{MPLTEXT 1 0 74 "phi[n]:= arctan(b[n]/(a[n]+1
+E-10)):                                      \n" }{MPLTEXT 1 0 4 "od: 
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 31 "Tres expansiones posibles se
+r\303\241n" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0
+ "> " 0 "" {MPLTEXT 1 0 34 "N1:=floor(N/3); N2:=floor(N/2); N;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 91 "SFourier1:=SerieFourier(N1,t
+);SFourier2:= SerieFourier(N2,t);SFourier3:= SerieFourier(N,t);" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 164 "Como era de esperarse, tenemos u
+na expansi\303\263n de una funci\303\263n impar en t\303\251rminos de \+
+una serie de funciones impares. Adem\303\241s note que los arm\303\263
+nicos tambi\303\251n son impares. " }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 79 "La contribuci\303\263
+n del promedio de la funci\303\263n (independiente de los arm\303\263n
+icos) es " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "Promediofunc:=
+evalf(a[0]/2);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 47 "El espectro de
+ potencias se puede graficar como" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 63 "Amp_a0:=plot([[0,0],[0,Promediofunc]],thickness=9 ): \+
+         \n" }{MPLTEXT 1 0 60 "Amp_coef:=[seq(plot([[n,0],[n,A[n]]],th
+ickness=9),n=1..N)]:\n" }{MPLTEXT 1 0 131 "display(Amp_a0,Amp_coef,tit
+le=`Espectro de Potencia de la Se\303\261al`, labels=[\"n\",\"A(n)\"],
+ labeldirections= [\"horizontal\",\"vertical\"]);" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT 204 39 "y el espectro de fases de la se\303\261al ser\303
+\241" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "Phase_coef:=[seq(pl
+ot([[n,0],[n,phi[n]]],thickness=9),n=1..N)]:\n" }{MPLTEXT 1 0 18 "disp
+lay(Phase_coef" }{MPLTEXT 1 0 107 ",title=`Espectro de fases de la Se
+\303\261al`, labels=[\"n\",\"Phi(n)\"], labeldirections= [\"horizontal
+\",\"vertical\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 79 "Podemos tambi\303\251n expandir l
+a funci\303\263n en t\303\251rmino de una serie compleja de Fourier" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "SerieFourierExp:= (m,t)-> \+
+sum(C[j]*exp(-I*(n*2*Pi/T)*t),j=1..m);" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 27 "Calculamos los \+
+coeficientes" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 73 "for n from \+
+0 to N do                                                    \n" }
+{MPLTEXT 1 0 48 "C[n]:=2/T*int(f*exp(-I*(n*2*Pi/T)*t),t=t0..t1):\n" }
+{MPLTEXT 1 0 24 "PowerC[n]:=abs(C[n]);  \n" }{MPLTEXT 1 0 3 "od:" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+204 53 "Pero estos coeficientes pueden ser reales o complejos" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "CoefCn := \{seq([n,C[n]], n=
+0..N)\}; \n" }{MPLTEXT 1 0 44 "PowerCoefCn := \{seq([n,PowerC[n]], n=0
+..N)\};" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 180 "y como era de espera
+rse los coeficientes con imaginarios puros. Si la funci\303\263n es pa
+r, los coeficientes de la expansi\303\263n ser\303\241n reales y si la
+ funci\303\263n es impar ser\303\241n imaginarios puros" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 97 
+"por lo tanto, para graficarlos, calculamos su parte imaginaria y, ade
+m\303\241s su espectro de potencias" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 63 "ImCn := [seq(plot([[n,0],[n,Im(C[n])]],thickness=9),n
+=0..N)]: \n" }{MPLTEXT 1 0 65 "PowerCn := [seq(plot([[n,0],[n,PowerC[n
+]]],thickness=9),n=0..N)]:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }
+}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 19 "La parte imaginaria" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 140 "display(ImCn,title=`Espectro parte
+ imaginaria de los coeficientes`, labels=[\"n\",\"Im ( C(n) )\"], labe
+ldirections= [\"horizontal\",\"vertical\"]);" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 43 "Espectro de l
+os m\303\263dulos de los coeficientes" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 118 "display(PowerCn,title=`Espectro de m\303\263dulos`, \+
+labels=[\"n\",\"Mod ( C(n) )\"], labeldirections= [\"horizontal\",\"ve
+rtical\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 25 "Una vez mas, note
+ que si " }{TEXT 212 4 "f(t)" }{TEXT 204 57 " es impar entonces los co
+eficientes son imaginarios y si " }{TEXT 213 5 "f(x) " }{TEXT 204 20 "
+ es par ser\303\241n reales" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" 
+}}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 105 " Al hacer el cambio de variab
+le omega = 2*n*Pi/T podremos expandir la serie en funci\303\263n de la
+s frecuencias" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 70 "SerieFouri
+erExpK := (m,t)-> sum(CK[omega]*exp(-I*omega*t),omega=1..m);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "omegaMax := floor(2*N*Pi/T)"
+ }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "for omega from 0 to omeg
+aMax do                       \n" }{MPLTEXT 1 0 51 "CK[omega]:=(2/Pi)*
+int(f*exp(-I*omega*t),t=t0..t1):\n" }{MPLTEXT 1 0 42 "PowerCK[omega] :
+= evalf(abs(CK[omega])):        \n" }{MPLTEXT 1 0 3 "od:" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 73 "por lo tanto, para graficarlos, calculam
+os su parte real y parte compleja" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 89 "ImCK  := [seq(plot( [[omega,0],[omega,Im(CK[omega])]]
+,thickness=9),omega=0..omegaMax)]: \n" }{MPLTEXT 1 0 89 "ReCK  := [seq
+(plot( [[omega,0],[omega,Re(CK[omega])]],thickness=9),omega=0..omegaMa
+x)]: \n" }{MPLTEXT 1 0 89 "PowCK := [seq(plot( [[omega,0],[omega, Powe
+rCK[omega]]],thickness=9),omega=0..omegaMax)]:" }}}{EXCHG {PARA 0 "" 0
+ "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 72 "No tendremo
+s coeficientes reales y su parte imaginaria se puede graficar" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 148 "display(ImCK,title=`Espectr
+o parte imaginaria de los coeficientes`, labels=[\"omega\",\"Im ( C(om
+ega) )\"], labeldirections= [\"horizontal\",\"vertical\"]);" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 73 "De igual manera graficamos el esp
+ectro de los m\303\263dulos de los coeficientes" }}}{EXCHG {PARA 0 "> 
+" 0 "" {MPLTEXT 1 0 13 "display(PowCK" }{MPLTEXT 1 0 127 ",title=`Espe
+ctro m\303\263dulo de los coeficientes`, labels=[\"omega\",\"Abs ( C(o
+mega) )\"], labeldirections= [\"horizontal\",\"vertical\"]);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 1 ";" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 0 "" }}}}{SECT 0 {PARA 3 "" 0 "" {TEXT 218 48 "Onda cuadrada
+ (desplazada) en el intervalo [0,T]" }}{EXCHG {PARA 0 "" 0 "" {TEXT 
+204 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 70 "t0:=0: t1:=T: f:
+=piecewise((t0<=t and t<T/2,-1),(T/2<=t and t<=t1,1));" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 13 "La graficamos" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 21 "plot(f,t=t0-2..t1+2);" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 50 "Desarrollamos l
+a funci\303\263n como una serie de Fourier" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 24 "SerieFourier := (m,t)->\n" }{MPLTEXT 1 0 82 "a[0]/2
+ + sum(a[k]*cos((2*k*Pi*t)/T),k=1..m) + sum(b[k]*sin((2*k*Pi*t)/T),k=1
+..m) ;" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT 204 39 "Calculamos los coeficientes de Fourier " }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 74 "for n from 0 to N do               \+
+                                      \n" }{MPLTEXT 1 0 73 "a[n]:=2/T*
+int(f*cos(n*2*Pi/T*t),t=t0..t1):                                     \+
+\n" }{MPLTEXT 1 0 73 "b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t=t0..t1):      \+
+                               \n" }{MPLTEXT 1 0 28 "A[n]:=sqrt(a[n]^2
++b[n]^2): \n" }{MPLTEXT 1 0 74 "phi[n]:= arctan(b[n]/(a[n]+1E-10)):   \+
+                                   \n" }{MPLTEXT 1 0 4 "od: " }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+204 31 "Tres expansiones posibles ser\303\241n" }}}{EXCHG {PARA 0 "" 0
+ "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "N1:=fl
+oor(N/3); N2:=floor(N/2); N;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 91 "SFourier1:=SerieFourier(N1,t);SFourier2:= SerieFourier(N2,t);SFo
+urier3:= SerieFourier(N,t);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 181 "
+Como era de esperarse, tenemos (como en el caso anterior) una expansi
+\303\263n de una funci\303\263n impar en t\303\251rminos de una serie \+
+de funciones impares, con contribuciones de arm\303\263nicos impares. 
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 40 "Graficamos las disntintas aproximaciones" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 129 "plot([f,SFourier1,SFourier2, SFour
+ier3],t=t0..t1,title=\"Aproximaciones de Fourier: \",color=[red,green,
+blue,black],numpoints=100,\n" }{MPLTEXT 1 0 29 "legend=[\"funci\303\26
+3n\",\"Serie N1\"," }{MPLTEXT 1 0 24 "\"Serie N2\", \"Serie N\"]);" }}
+}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT
+ 204 97 "De los coeficientes diferenciamos las contribuciones del nive
+l base y de los distintos arm\303\263nicos." }}}{EXCHG {PARA 0 "" 0 ""
+ {TEXT 204 93 "La contribuci\303\263n del nivel base, o promedio de la
+ funci\303\263n (independiente de los arm\303\263nicos) es " }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "Promediofunc:=evalf(a[0]/2);
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 35 "Se anula porque la funci\303
+\263n es impar" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 47 "El espectro de potencias se puedo grafic
+ar como" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 63 "Amp_a0:=plot([[0,0],[0,Promediofunc]],thickne
+ss=9 ):          \n" }{MPLTEXT 1 0 60 "Amp_coef:=[seq(plot([[n,0],[n,A
+[n]]],thickness=9),n=1..N)]:\n" }{MPLTEXT 1 0 131 "display(Amp_a0,Amp_
+coef,title=`Espectro de Potencia de la Se\303\261al`, labels=[\"n\",\"
+A(n)\"], labeldirections= [\"horizontal\",\"vertical\"]);" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 85 "Claramente es el mismo del caso anterior
+. Es la \"firma\" espectral de la onda cuadrada" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 37 "El espectr
+o de fases de la se\303\261al ser\303\241" }}}{EXCHG {PARA 0 "> " 0 ""
+ {MPLTEXT 1 0 64 "Phase_coef:=[seq(plot([[n,0],[n,phi[n]]],thickness=9
+),n=1..N)]:\n" }{MPLTEXT 1 0 18 "display(Phase_coef" }{MPLTEXT 1 0 
+107 ",title=`Espectro de fases de la Se\303\261al`, labels=[\"n\",\"Ph
+i(n)\"], labeldirections= [\"horizontal\",\"vertical\"]);" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 110 "Note el cambio de signo con caso anteri
+or, vale decir un desfase de Pi radianes entre ambos espectros de fase
+ " }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 79 "Podemos tambi\303\251n expandir la funci\303\263n en t\3
+03\251rmino de una serie compleja de Fourier" }}}{EXCHG {PARA 0 "> " 0
+ "" {MPLTEXT 1 0 65 "SerieFourierExp := (m,t)-> sum(C[j]*exp(-I*(n*2*P
+i/T)*t),j=1..m);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 27 "Calculamos l
+os coeficientes" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 73 "for n fr
+om 0 to N do                                                    \n" }
+{MPLTEXT 1 0 48 "C[n]:=2/T*int(f*exp(-I*(n*2*Pi/T)*t),t=t0..t1):\n" }
+{MPLTEXT 1 0 24 "PowerC[n]:=abs(C[n]);  \n" }{MPLTEXT 1 0 3 "od:" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 53 "Pero estos coeficientes pueden se
+r reales o complejos" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "Coe
+fCn := \{seq([n,C[n]], n=0..N)\}; \n" }{MPLTEXT 1 0 44 "PowerCoefCn :=
+ \{seq([n,PowerC[n]], n=0..N)\};" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 
+77 "Una vez m\303\241s los coeficientes de expansi\303\263n de la func
+i\303\263n son imaginarios puros" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 
+0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 62 "por lo tanto, para grafic
+arlos, calculamos su parte imaginaria" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 63 "ImCn := [seq(plot([[n,0],[n,Im(C[n])]],thickness=9),n
+=0..N)]: \n" }{MPLTEXT 1 0 65 "PowerCn := [seq(plot([[n,0],[n,PowerC[n
+]]],thickness=9),n=0..N)]:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }
+}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 16 "y la graficamos " }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 140 "display(ImCn,title=`Espectro parte
+ imaginaria de los coeficientes`, labels=[\"n\",\"Im ( C(n) )\"], labe
+ldirections= [\"horizontal\",\"vertical\"]);" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 43 "Espectro de l
+os m\303\263dulos de los coeficientes" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 118 "display(PowerCn,title=`Espectro de m\303\263dulos`, \+
+labels=[\"n\",\"Mod ( C(n) )\"], labeldirections= [\"horizontal\",\"ve
+rtical\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 12 "Note que si " }
+{TEXT 214 4 "f(t)" }{TEXT 204 57 " es impar entonces los coeficientes \+
+son imaginarios y si " }{TEXT 215 5 "f(x) " }{TEXT 204 20 " es par ser
+\303\241n reales" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 105 " Al hacer el cambio de variable omega =
+ 2*n*Pi/T podremos expandir la serie en funci\303\263n de las frecuenc
+ias" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 70 "SerieFourierExpK := \+
+(m,t)-> sum(CK[omega]*exp(-I*omega*t),omega=1..m);" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 27 "omegaMax := floor(2*N*Pi/T)" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "for omega from 0 to omegaMax do    \+
+                   \n" }{MPLTEXT 1 0 51 "CK[omega]:=(2/Pi)*int(f*exp(-
+I*omega*t),t=t0..t1):\n" }{MPLTEXT 1 0 42 "PowerCK[omega] := evalf(abs
+(CK[omega])):        \n" }{MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "" 0 
+"" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 73 "por lo tanto
+, para graficarlos, calculamos su parte real y parte compleja" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "ImCK  := [seq(plot( [[omega,
+0],[omega,Im(CK[omega])]],thickness=9),omega=0..omegaMax)]: \n" }
+{MPLTEXT 1 0 89 "ReCK  := [seq(plot( [[omega,0],[omega,Re(CK[omega])]]
+,thickness=9),omega=0..omegaMax)]: \n" }{MPLTEXT 1 0 89 "PowCK := [seq
+(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..omega
+Max)]:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 
+0 "" {TEXT 204 38 "La parte real de los coeficientes ser\303\241" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 142 "display(ReCK,title=`Espectr
+o parte real de los coeficientes`, labels=[\"omega\",\"Re ( C(omega) )
+\"], labeldirections= [\"horizontal\",\"vertical\"]);" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 19 "La parte imaginaria" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 148 "display(ImCK,title=`Espectro parte imaginar
+ia de los coeficientes`, labels=[\"omega\",\"Im ( C(omega) )\"], label
+directions= [\"horizontal\",\"vertical\"]);" }}}{EXCHG {PARA 0 "" 0 ""
+ {TEXT 204 43 "Espectro de los m\303\263dulos de los coeficientes" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "display(PowCK" }{MPLTEXT 1 
+0 127 ",title=`Espectro m\303\263dulo de los coeficientes`, labels=[\"
+omega\",\"Abs ( C(omega) )\"], labeldirections= [\"horizontal\",\"vert
+ical\"]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 1 ";" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 0 "" }}}}{SECT 1 {PARA 3 "" 0 "" {TEXT 218 
+48 "Onda cuadrada (par) en el intervalo [ -T/2, T/2]" }}{EXCHG {PARA 0
+ "> " 0 "" {MPLTEXT 1 0 72 "t0:=-T/2: t1:=T/2: f:=piecewise(((t<t0 and
+ t>t1),0),(t>=t0 and t<=1,1));" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 
+13 "La graficamos" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "plot(f
+,t=t0-2..t1+2);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 50 "Desarrollamos
+ la funci\303\263n como una serie de Fourier" }}}{EXCHG {PARA 0 "> " 0
+ "" {MPLTEXT 1 0 24 "SerieFourier := (m,t)->\n" }{MPLTEXT 1 0 82 "a[0]
+/2 + sum(a[k]*cos((2*k*Pi*t)/T),k=1..m) + sum(b[k]*sin((2*k*Pi*t)/T),k
+=1..m) ;" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 39 "Calculamos los coefi
+cientes de Fourier " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 74 "for \+
+n from 0 to N do                                                     \+
+\n" }{MPLTEXT 1 0 73 "a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):      \+
+                               \n" }{MPLTEXT 1 0 73 "b[n]:=2/T*int(f*s
+in(n*2*Pi/T*t),t=t0..t1):                                     \n" }
+{MPLTEXT 1 0 28 "A[n]:=sqrt(a[n]^2+b[n]^2): \n" }{MPLTEXT 1 0 74 "phi[
+n]:= arctan(b[n]/(a[n]+1E-10)):                                      \+
+\n" }{MPLTEXT 1 0 4 "od: " }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 31 "Tre
+s expansiones posibles ser\303\241n" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+204 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "N1:=floor(N/3); \+
+N2:=floor(N/2); N;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 91 "SFour
+ier1:=SerieFourier(N1,t);SFourier2:= SerieFourier(N2,t);SFourier3:= Se
+rieFourier(N,t);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 104 "Note que no
+ hay componentes arm\303\263nicas y que la funci\303\263n se puede apr
+oximar con el primer coeficiente a[0]" }}}{EXCHG {PARA 0 "" 0 "" {TEXT
+ 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT 204 47 "El espectro de potencias se puedo graficar como" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "Amp_a0:=plot([[0,0],[0,Pr
+omediofunc]],thickness=9 ):          \n" }{MPLTEXT 1 0 60 "Amp_coef:=[
+seq(plot([[n,0],[n,A[n]]],thickness=9),n=0..N)]:\n" }{MPLTEXT 1 0 131 
+"display(Amp_a0,Amp_coef,title=`Espectro de Potencia de la Se\303\261a
+l`, labels=[\"n\",\"A(n)\"], labeldirections= [\"horizontal\",\"vertic
+al\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 ""
+ 0 "" {TEXT 204 86 "Podemos tambi\303\251n haber expandido la funci\30
+3\263n en t\303\251rmino de una serie compleja de Fourier" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "SerieFourierExp := (m,t)-> sum(C[j]
+*exp(-I*(n*2*Pi/T)*t),j=1..m);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 
+27 "Calculamos los coeficientes" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 73 "for n from 0 to N do                                          \+
+          \n" }{MPLTEXT 1 0 48 "C[n]:=2/T*int(f*exp(-I*(n*2*Pi/T)*t),t
+=t0..t1):\n" }{MPLTEXT 1 0 24 "PowerC[n]:=abs(C[n]);  \n" }{MPLTEXT 1 
+0 3 "od:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT 204 45 "Otra vez, solo subsiste el primer coeficiente" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "CoefCn := \{seq([n,C[n]], n
+=0..N)\}; \n" }{MPLTEXT 1 0 44 "PowerCoefCn := \{seq([n,PowerC[n]], n=
+0..N)\};" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT 204 73 "por lo tanto, para graficarlos, calculamos su par
+te real y parte compleja" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 62 
+"ReCn:= [seq(plot([[n,0],[n,Re(C[n])]],thickness=9),n=0..N)]: \n" }
+{MPLTEXT 1 0 65 "PowerCn := [seq(plot([[n,0],[n,PowerC[n]]],thickness=
+9),n=0..N)]:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 38 "La parte real de
+ los coeficientes ser\303\241" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 134 "display(ReCn,title=`Espectro parte real de los coeficientes`, l
+abels=[\"n\",\"Re ( C(n) )\"], labeldirections= [\"horizontal\",\"vert
+ical\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 
+"" 0 "" {TEXT 204 62 "Obviamente el espectro de los m\303\263dulos de \+
+los coeficientes ser\303\241" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 118 "display(PowerCn,title=`Espectro de m\303\263dulos`, labels=[\"n
+\",\"Mod ( C(n) )\"], labeldirections= [\"horizontal\",\"vertical\"]);
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 105 " Al hacer el cambio de variable omega = 2*n*Pi/T podrem
+os expandir la serie en funci\303\263n de las frecuencias" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 70 "SerieFourierExpK := (m,t)-> sum(CK[
+omega]*exp(-I*omega*t),omega=1..m);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 27 "omegaMax := floor(2*N*Pi/T)" }}}{EXCHG {PARA 0 "> " 0
+ "" {MPLTEXT 1 0 48 "for omega from 0 to omegaMax do                  \+
+     \n" }{MPLTEXT 1 0 51 "CK[omega]:=(2/Pi)*int(f*exp(-I*omega*t),t=t
+0..t1):\n" }{MPLTEXT 1 0 42 "PowerCK[omega] := evalf(abs(CK[omega])): \+
+       \n" }{MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 
+73 "por lo tanto, para graficarlos, calculamos su parte real y parte c
+ompleja" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "ImCK  := [seq(pl
+ot( [[omega,0],[omega,Im(CK[omega])]],thickness=9),omega=0..omegaMax)]
+: \n" }{MPLTEXT 1 0 89 "ReCK  := [seq(plot( [[omega,0],[omega,Re(CK[om
+ega])]],thickness=9),omega=0..omegaMax)]: \n" }{MPLTEXT 1 0 89 "PowCK \+
+:= [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0
+..omegaMax)]:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 35 "Solo tendremos \+
+coeficientes reales " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 142 "di
+splay(ReCK,title=`Espectro parte real de los coeficientes`, labels=[\"
+omega\",\"Re ( C(omega) )\"], labeldirections= [\"horizontal\",\"verti
+cal\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT 204 48 "Espectro de los m\303\263dulos de los coeficiente
+s ser\303\241" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "display(Po
+wCK" }{MPLTEXT 1 0 127 ",title=`Espectro m\303\263dulo de los coeficie
+ntes`, labels=[\"omega\",\"Abs ( C(omega) )\"], labeldirections= [\"ho
+rizontal\",\"vertical\"]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+1 ";" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 
+"" 0 "" {TEXT 204 0 "" }}}}{SECT 0 {PARA 3 "" 0 "" {TEXT 218 51 "Dient
+e de sierra impar en el intervalo [ -T/2, T/2]" }}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 54 "t0:=-T/2: t1:=T/2: f:=piecewise((t0<=t and t<t1,
+3*t));" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 13 "La graficamos" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "plot(f,t=t0-2..t1+2);" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 50 "Desarrollamos la funci\303\263n c
+omo una serie de Fourier" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 
+"SerieFourier := (m,t)->\n" }{MPLTEXT 1 0 82 "a[0]/2 + sum(a[k]*cos((2
+*k*Pi*t)/T),k=1..m) + sum(b[k]*sin((2*k*Pi*t)/T),k=1..m) ;" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 39 "Calculamos los coeficientes de Fourier "
+ }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 74 "for n from 0 to N do    \+
+                                                 \n" }{MPLTEXT 1 0 73 
+"a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):                           \+
+          \n" }{MPLTEXT 1 0 73 "b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t=t0..
+t1):                                     \n" }{MPLTEXT 1 0 28 "A[n]:=s
+qrt(a[n]^2+b[n]^2): \n" }{MPLTEXT 1 0 74 "phi[n]:= arctan(b[n]/(a[n]+1
+E-10)):                                      \n" }{MPLTEXT 1 0 4 "od: 
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 31 "Tres expansiones posibles se
+r\303\241n" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0
+ "> " 0 "" {MPLTEXT 1 0 34 "N1:=floor(N/3); N2:=floor(N/2); N;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 91 "SFourier1:=SerieFourier(N1,t
+);SFourier2:= SerieFourier(N2,t);SFourier3:= SerieFourier(N,t);" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 111 "Como era de esperarse, tenemos u
+na expansi\303\263n de una funci\303\263n impar en t\303\251rminos de \+
+una serie de funciones impares" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 
+"" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 40 "Graficamos las disntintas a
+proximaciones" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 129 "plot([f,S
+Fourier1,SFourier2, SFourier3],t=t0..t1,title=\"Aproximaciones de Four
+ier: \",color=[red,green,blue,black],numpoints=100,\n" }{MPLTEXT 1 0 
+29 "legend=[\"funci\303\263n\",\"Serie N1\"," }{MPLTEXT 1 0 24 "\"Seri
+e N2\", \"Serie N\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 91 "Por ser impar la funci\303\263n, \+
+la contribuci\303\263n del promedio de la funci\303\263n en el per\303
+\255odo se anula" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "Promedi
+ofunc:=evalf(a[0]/2);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 47 "El espe
+ctro de potencias se puede graficar como" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 63 "Amp_a0:=plot([[0,0],[0,Promediofunc]],thickness=9 ): \+
+         \n" }{MPLTEXT 1 0 60 "Amp_coef:=[seq(plot([[n,0],[n,A[n]]],th
+ickness=9),n=1..N)]:\n" }{MPLTEXT 1 0 131 "display(Amp_a0,Amp_coef,tit
+le=`Espectro de Potencia de la Se\303\261al`, labels=[\"n\",\"A(n)\"],
+ labeldirections= [\"horizontal\",\"vertical\"]);" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT 204 50 "mientras que el espectro de fases de la se\303\26
+1al ser\303\241" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "Phase_co
+ef:=[seq(plot([[n,0],[n,phi[n]]],thickness=9),n=1..N)]:\n" }{MPLTEXT 
+1 0 18 "display(Phase_coef" }{MPLTEXT 1 0 107 ",title=`Espectro de fas
+es de la Se\303\261al`, labels=[\"n\",\"Phi(n)\"], labeldirections= [
+\"horizontal\",\"vertical\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 1 
+"\n" }{TEXT 204 86 "Podemos tambi\303\251n haber expandido la funci\30
+3\263n en t\303\251rmino de una serie compleja de Fourier" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "SerieFourierExp := (m,t)-> sum(C[j]
+*exp(-I*(n*2*Pi/T)*t),j=1..m);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 
+27 "Calculamos los coeficientes" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 73 "for n from 0 to N do                                          \+
+          \n" }{MPLTEXT 1 0 48 "C[n]:=2/T*int(f*exp(-I*(n*2*Pi/T)*t),t
+=t0..t1):\n" }{MPLTEXT 1 0 24 "PowerC[n]:=abs(C[n]);  \n" }{MPLTEXT 1 
+0 3 "od:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 53 "Pero estos coeficien
+tes pueden ser reales o complejos" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 36 "CoefCn := \{seq([n,C[n]], n=0..N)\}; \n" }{MPLTEXT 1 
+0 44 "PowerCoefCn := \{seq([n,PowerC[n]], n=0..N)\};" }}}{EXCHG {PARA 
+0 "" 0 "" {TEXT 204 95 "Una vez mas, como la funci\303\263n es impar, \+
+los coeficientes de la expansi\303\263n ser\303\241n imaginarios puros
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 1 "\n" }{TEXT 204 62 "por lo tan
+to, para graficarlos, calculamos su parte imaginaria" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 63 "ImCn := [seq(plot([[n,0],[n,Im(C[n])]],th
+ickness=9),n=0..N)]: \n" }{MPLTEXT 1 0 65 "PowerCn := [seq(plot([[n,0]
+,[n,PowerC[n]]],thickness=9),n=0..N)]:" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 15 "y la graficamos
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 140 "display(ImCn,title=`Es
+pectro parte imaginaria de los coeficientes`, labels=[\"n\",\"Im ( C(n
+) )\"], labeldirections= [\"horizontal\",\"vertical\"]);" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 43 "Espectro de los m\303\263dulos de los co
+eficientes" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 118 "display(Powe
+rCn,title=`Espectro de m\303\263dulos`, labels=[\"n\",\"Mod ( C(n) )\"
+], labeldirections= [\"horizontal\",\"vertical\"]);" }}}{EXCHG {PARA 0
+ "" 0 "" {TEXT 204 68 "el espectro de frecuencia tendr\303\241 contrib
+uci\303\263n de todos los arm\303\263nicos" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 105 " Al hacer el c
+ambio de variable omega = 2*n*Pi/T podremos expandir la serie en funci
+\303\263n de las frecuencias" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 70 "SerieFourierExpK := (m,t)-> sum(CK[omega]*exp(-I*omega*t),omega=
+1..m);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "omegaMax := floor
+(2*N*Pi/T)" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "for omega fro
+m 0 to omegaMax do                       \n" }{MPLTEXT 1 0 51 "CK[omeg
+a]:=(2/Pi)*int(f*exp(-I*omega*t),t=t0..t1):\n" }{MPLTEXT 1 0 42 "Power
+CK[omega] := evalf(abs(CK[omega])):        \n" }{MPLTEXT 1 0 3 "od:" }
+}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 48 "y solo tendremos coeficientes i
+maginarios puros " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 90 "ImCK  \+
+:= [seq(plot( [[omega,0],[omega,Im(CK[omega])]],thickness=9),omega=0..
+omegaMax)]:  \n" }{MPLTEXT 1 0 89 "PowCK := [seq(plot( [[omega,0],[ome
+ga, PowerCK[omega]]],thickness=9),omega=0..omegaMax)]:" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 16 
+"y los graficamos" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 148 "displ
+ay(ImCK,title=`Espectro parte imaginaria de los coeficientes`, labels=
+[\"omega\",\"Im ( C(omega) )\"], labeldirections= [\"horizontal\",\"ve
+rtical\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 43 "Espectro de los m
+\303\263dulos de los coeficientes" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 13 "display(PowCK" }{MPLTEXT 1 0 127 ",title=`Espectro m
+\303\263dulo de los coeficientes`, labels=[\"omega\",\"Abs ( C(omega) \+
+)\"], labeldirections= [\"horizontal\",\"vertical\"]);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 ";" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}}{SECT 1 {PARA 3 "" 0 "" {TEXT 218 58 "Diente de \+
+sierra impar desplazada  en el intervalo [ 0, T]" }}{EXCHG {PARA 0 "> 
+" 0 "" {MPLTEXT 1 0 52 "t0:=0: t1:=T: f:=piecewise((0 <=t and t<=T,3*t
+ -3));" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 13 "La graficamos" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "plot(f,t=t0-2..t1+2);" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 50 "Desarrollamos la funci\303\263n c
+omo una serie de Fourier" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 
+"SerieFourier := (m,t)->\n" }{MPLTEXT 1 0 82 "a[0]/2 + sum(a[k]*cos((2
+*k*Pi*t)/T),k=1..m) + sum(b[k]*sin((2*k*Pi*t)/T),k=1..m) ;" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 39 "Calculamos los coeficientes de Fourier "
+ }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 74 "for n from 0 to N do    \+
+                                                 \n" }{MPLTEXT 1 0 43 
+"a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):\n" }{MPLTEXT 1 0 73 "b[n]:
+=2/T*int(f*sin(n*2*Pi/T*t),t=t0..t1):                                 \+
+    \n" }{MPLTEXT 1 0 28 "A[n]:=sqrt(a[n]^2+b[n]^2): \n" }{MPLTEXT 1 
+0 74 "phi[n]:= arctan(b[n]/(a[n]+1E-10)):                             \+
+         \n" }{MPLTEXT 1 0 4 "od: " }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+204 32 "Tres expansiones posibles ser\303\241n\n" }}}{EXCHG {PARA 0 ""
+ 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "N1:=
+floor(N/3); N2:=floor(N/2); N;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 91 "SFourier1:=SerieFourier(N1,t);SFourier2:= SerieFourier(N2,t);S
+Fourier3:= SerieFourier(N,t);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 
+186 "Como era de esperarse, tenemos una expansi\303\263n de una funci
+\303\263n impar en t\303\251rminos de una serie de funciones impares, \+
+pero en este caso (como en el anterior) contribuyen los arm\303\263nic
+os impares" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0
+ "" 0 "" {TEXT 204 40 "Graficamos las disntintas aproximaciones" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 129 "plot([f,SFourier1,SFourier2
+, SFourier3],t=t0..t1,title=\"Aproximaciones de Fourier: \",color=[red
+,green,blue,black],numpoints=100,\n" }{MPLTEXT 1 0 29 "legend=[\"funci
+\303\263n\",\"Serie N1\"," }{MPLTEXT 1 0 24 "\"Serie N2\", \"Serie N\"
+]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT 204 41 "Obviamente, el promedio vuelve a dar cero" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "Promediofunc:=evalf(a[0]/2);" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+204 47 "El espectro de potencias se puedo graficar como" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "Amp_a0:=plot([[0,0],[0,Promediofunc
+]],thickness=9 ):          \n" }{MPLTEXT 1 0 60 "Amp_coef:=[seq(plot([
+[n,0],[n,A[n]]],thickness=9),n=1..N)]:\n" }{MPLTEXT 1 0 131 "display(A
+mp_a0,Amp_coef,title=`Espectro de Potencia de la Se\303\261al`, labels
+=[\"n\",\"A(n)\"], labeldirections= [\"horizontal\",\"vertical\"]);" }
+}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 83 "otra vez el espectro de fases de la se\303\261al diferir
+\303\241 en un signo con el caso anterior" }}}{EXCHG {PARA 0 "> " 0 ""
+ {MPLTEXT 1 0 64 "Phase_coef:=[seq(plot([[n,0],[n,phi[n]]],thickness=9
+),n=1..N)]:\n" }{MPLTEXT 1 0 18 "display(Phase_coef" }{MPLTEXT 1 0 
+107 ",title=`Espectro de fases de la Se\303\261al`, labels=[\"n\",\"Ph
+i(n)\"], labeldirections= [\"horizontal\",\"vertical\"]);" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 1 "\n" }{TEXT 204 86 "Podemos tambi\303\251n
+ haber expandido la funci\303\263n en t\303\251rmino de una serie comp
+leja de Fourier" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "SerieFou
+rierExp := (m,t)-> sum(C[j]*exp(-I*(n*2*Pi/T)*t),j=1..m);" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 27 "Calculamos los coeficientes" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 73 "for n from 0 to N do               \+
+                                     \n" }{MPLTEXT 1 0 48 "C[n]:=2/T*i
+nt(f*exp(-I*(n*2*Pi/T)*t),t=t0..t1):\n" }{MPLTEXT 1 0 24 "PowerC[n]:=a
+bs(C[n]);  \n" }{MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+204 53 "Pero estos coeficientes pueden ser reales o complejos" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "CoefCn := \{seq([n,C[n]], n=
+0..N)\}; \n" }{MPLTEXT 1 0 44 "PowerCoefCn := \{seq([n,PowerC[n]], n=0
+..N)\};" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 86 "y por ser (otra vez) \+
+una funci\303\263n impar, solo tendremos coeficientes imaginarios puro
+s " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "ImCn := [seq(plot([[n
+,0],[n,Im(C[n])]],thickness=9),n=0..N)]: \n" }{MPLTEXT 1 0 65 "PowerCn
+ := [seq(plot([[n,0],[n,PowerC[n]]],thickness=9),n=0..N)]:" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 17 
+"y los graficamos " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 140 "disp
+lay(ImCn,title=`Espectro parte imaginaria de los coeficientes`, labels
+=[\"n\",\"Im ( C(n) )\"], labeldirections= [\"horizontal\",\"vertical
+\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 63 "Que coincide con el esp
+ectro de los m\303\263dulos de los coeficientes" }}}{EXCHG {PARA 0 "> 
+" 0 "" {MPLTEXT 1 0 118 "display(PowerCn,title=`Espectro de m\303\263d
+ulos`, labels=[\"n\",\"Mod ( C(n) )\"], labeldirections= [\"horizontal
+\",\"vertical\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 105 " Al hacer el cambio de variable \+
+omega = 2*n*Pi/T podremos expandir la serie en funci\303\263n de las f
+recuencias" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 70 "SerieFourierE
+xpK := (m,t)-> sum(CK[omega]*exp(-I*omega*t),omega=1..m);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "omegaMax := floor(2*N*Pi/T)" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "for omega from 0 to omegaMax
+ do                       \n" }{MPLTEXT 1 0 51 "CK[omega]:=(2/Pi)*int(
+f*exp(-I*omega*t),t=t0..t1):\n" }{MPLTEXT 1 0 42 "PowerCK[omega] := ev
+alf(abs(CK[omega])):        \n" }{MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 
+0 "" 0 "" {TEXT 204 128 "En este caso tendremos coeficientes reales y \+
+complejos por lo tanto, para graficarlos, calculamos su parte real y p
+arte compleja" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "ImCK  := [
+seq(plot( [[omega,0],[omega,Im(CK[omega])]],thickness=9),omega=0..omeg
+aMax)]: \n" }{MPLTEXT 1 0 89 "ReCK  := [seq(plot( [[omega,0],[omega,Re
+(CK[omega])]],thickness=9),omega=0..omegaMax)]: \n" }{MPLTEXT 1 0 89 "
+PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),o
+mega=0..omegaMax)]:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 38 "La parte \+
+real de los coeficientes ser\303\241" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 142 "display(ReCK,title=`Espectro parte real de los coefi
+cientes`, labels=[\"omega\",\"Re ( C(omega) )\"], labeldirections= [\"
+horizontal\",\"vertical\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 19 "
+La parte imaginaria" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 148 "dis
+play(ImCK,title=`Espectro parte imaginaria de los coeficientes`, label
+s=[\"omega\",\"Im ( C(omega) )\"], labeldirections= [\"horizontal\",\"
+vertical\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 43 "Espectro de los
+ m\303\263dulos de los coeficientes" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 13 "display(PowCK" }{MPLTEXT 1 0 127 ",title=`Espectro m
+\303\263dulo de los coeficientes`, labels=[\"omega\",\"Abs ( C(omega) \+
+)\"], labeldirections= [\"horizontal\",\"vertical\"]);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 ";" }}}{PARA 0 "" 0 "" {TEXT 204 0 ""
+ }}}{SECT 1 {PARA 3 "" 0 "" {TEXT 218 49 "Diente de sierra par en el i
+ntervalo [ -T/2, T/2]" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "t0:
+=-T/2: t1:=T/2: f:=piecewise((t0<=t and t<=0,-3*t),(0<t and t<=t1,3*t)
+);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 13 "La graficamos" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "plot(f,t=t0-2..t1+2);" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 50 "Desarrollamos la funci\303\263n como una
+ serie de Fourier" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "SerieF
+ourier := (m,t)->\n" }{MPLTEXT 1 0 82 "a[0]/2 + sum(a[k]*cos((2*k*Pi*t
+)/T),k=1..m) + sum(b[k]*sin((2*k*Pi*t)/T),k=1..m) ;" }}}{EXCHG {PARA 0
+ "" 0 "" {TEXT 204 39 "Calculamos los coeficientes de Fourier " }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 74 "for n from 0 to N do        \+
+                                             \n" }{MPLTEXT 1 0 73 "a[n
+]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):                               \+
+      \n" }{MPLTEXT 1 0 73 "b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t=t0..t1):
+                                     \n" }{MPLTEXT 1 0 28 "A[n]:=sqrt(
+a[n]^2+b[n]^2): \n" }{MPLTEXT 1 0 74 "phi[n]:= arctan(b[n]/(a[n]+1E-10
+)):                                      \n" }{MPLTEXT 1 0 4 "od: " }}
+}{EXCHG {PARA 0 "" 0 "" {TEXT 204 31 "Tres expansiones posibles ser\30
+3\241n" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "> 
+" 0 "" {MPLTEXT 1 0 34 "N1:=floor(N/3); N2:=floor(N/2); N;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 91 "SFourier1:=SerieFourier(N1,t);SFour
+ier2:= SerieFourier(N2,t);SFourier3:= SerieFourier(N,t);" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 241 "Como era de esperarse, tenemos una expa
+nsi\303\263n de una funci\303\263n par. Por lo tanto tendremos contrib
+uci\303\263n del promedio de la funci\303\263n y la serie se desarroll
+a en t\303\251rmino de funciones pares. Las contribuciones de los arm
+\303\263nicos ser\303\241n de los impares " }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 40 "Graficamos las \+
+disntintas aproximaciones" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+129 "plot([f,SFourier1,SFourier2, SFourier3],t=t0..t1,title=\"Aproxima
+ciones de Fourier: \",color=[red,green,blue,black],numpoints=100,\n" }
+{MPLTEXT 1 0 29 "legend=[\"funci\303\263n\",\"Serie N1\"," }{MPLTEXT 
+1 0 24 "\"Serie N2\", \"Serie N\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 97 "De los coeficientes d
+iferenciamos las contribuciones del nivel base y de los distintos arm
+\303\263nicos." }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 47 "La contribuci
+\303\263n del promedio de la funci\303\263n ser\303\241" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "Promediofunc:=evalf(a[0]/2);" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 47 "El espectro de potencias se puedo
+ graficar como" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "Amp_a0:=p
+lot([[0,0],[0,Promediofunc]],thickness=9 ):          \n" }{MPLTEXT 1 
+0 60 "Amp_coef:=[seq(plot([[n,0],[n,A[n]]],thickness=9),n=1..N)]:\n" }
+{MPLTEXT 1 0 131 "display(Amp_a0,Amp_coef,title=`Espectro de Potencia \+
+de la Se\303\261al`, labels=[\"n\",\"A(n)\"], labeldirections= [\"hori
+zontal\",\"vertical\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 43 "y el
+ espectro de fases de la se\303\261al se anula" }}}{EXCHG {PARA 0 "" 0
+ "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 86 "Podemos tam
+bi\303\251n haber expandido la funci\303\263n en t\303\251rmino de una
+ serie compleja de Fourier" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+65 "SerieFourierExp := (m,t)-> sum(C[j]*exp(-I*(n*2*Pi/T)*t),j=1..m);"
+ }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 27 "Calculamos los coeficientes" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 73 "for n from 0 to N do     \+
+                                               \n" }{MPLTEXT 1 0 48 "C
+[n]:=2/T*int(f*exp(-I*(n*2*Pi/T)*t),t=t0..t1):\n" }{MPLTEXT 1 0 24 "Po
+werC[n]:=abs(C[n]);  \n" }{MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "" 0 
+"" {TEXT 204 85 "y en este caso por ser una funci\303\263n par los coe
+ficientes de la expansi\303\263n ser\303\241n reales " }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 36 "CoefCn := \{seq([n,C[n]], n=0..N)\}; \n" }{MPLTEXT 1 0 44 "Power
+CoefCn := \{seq([n,PowerC[n]], n=0..N)\};" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 57 "por lo tanto, para graficarlos, calculamos su parte real
+ " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 62 "ReCn:= [seq(plot([[n,0
+],[n,Re(C[n])]],thickness=9),n=0..N)]: \n" }{MPLTEXT 1 0 65 "PowerCn :
+= [seq(plot([[n,0],[n,PowerC[n]]],thickness=9),n=0..N)]:" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 38 "La parte real de los coeficientes ser\30
+3\241" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 134 "display(ReCn,titl
+e=`Espectro parte real de los coeficientes`, labels=[\"n\",\"Re ( C(n)
+ )\"], labeldirections= [\"horizontal\",\"vertical\"]);" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 43 
+"Espectro de los m\303\263dulos de los coeficientes" }}}{EXCHG {PARA 0
+ "> " 0 "" {MPLTEXT 1 0 118 "display(PowerCn,title=`Espectro de m\303
+\263dulos`, labels=[\"n\",\"Mod ( C(n) )\"], labeldirections= [\"horiz
+ontal\",\"vertical\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 12 "Note \+
+que si " }{TEXT 216 4 "f(t)" }{TEXT 204 57 " es impar entonces los coe
+ficientes son imaginarios y si " }{TEXT 217 5 "f(x) " }{TEXT 204 20 " \+
+es par ser\303\241n reales" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }
+}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 105 " Al hacer el cambio de variabl
+e omega = 2*n*Pi/T podremos expandir la serie en funci\303\263n de las
+ frecuencias" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 70 "SerieFourie
+rExpK := (m,t)-> sum(CK[omega]*exp(-I*omega*t),omega=1..m);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "omegaMax := floor(2*N*Pi/T)"
+ }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "for omega from 0 to omeg
+aMax do                       \n" }{MPLTEXT 1 0 51 "CK[omega]:=(2/Pi)*
+int(f*exp(-I*omega*t),t=t0..t1):\n" }{MPLTEXT 1 0 42 "PowerCK[omega] :
+= evalf(abs(CK[omega])):        \n" }{MPLTEXT 1 0 3 "od:" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 61 "y lo mismo pasa con los coeficiente real
+es de esta expansi\303\263n " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 89 "ReCK  := [seq(plot( [[omega,0],[omega,Re(CK[omega])]],thickness=
+9),omega=0..omegaMax)]: \n" }{MPLTEXT 1 0 89 "PowCK := [seq(plot( [[om
+ega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..omegaMax)]:" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 38 "La parte real de los coeficientes
+ ser\303\241" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 142 "display(Re
+CK,title=`Espectro parte real de los coeficientes`, labels=[\"omega\",
+\"Re ( C(omega) )\"], labeldirections= [\"horizontal\",\"vertical\"]);
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 43 "Espectro de los m\303\263dulos de los coeficientes" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "display(PowCK" }{MPLTEXT 1 
+0 127 ",title=`Espectro m\303\263dulo de los coeficientes`, labels=[\"
+omega\",\"Abs ( C(omega) )\"], labeldirections= [\"horizontal\",\"vert
+ical\"]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 1 ";" }}}{PARA 0 "
+" 0 "" {TEXT 204 0 "" }}}{SECT 0 {PARA 3 "" 0 "" {TEXT 218 9 "Par\303
+\241bola " }{TEXT 218 28 "en el intervalo [ -T/2, T/2]" }}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "t0:=-T/2: t1:=T/2: f:=piecewise((t0
+<=t and t<=t1,t^2));" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 13 "La grafi
+camos" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "plot(f,t=t0-2..t1+
+2);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 50 "Desarrollamos la funci\30
+3\263n como una serie de Fourier" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT
+ 1 0 24 "SerieFourier := (m,t)->\n" }{MPLTEXT 1 0 82 "a[0]/2 + sum(a[k
+]*cos((2*k*Pi*t)/T),k=1..m) + sum(b[k]*sin((2*k*Pi*t)/T),k=1..m) ;" }}
+}{EXCHG {PARA 0 "" 0 "" {TEXT 204 39 "Calculamos los coeficientes de F
+ourier " }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 74 "for n from 0 to \+
+N do                                                     \n" }{MPLTEXT
+ 1 0 73 "a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):                   \+
+                  \n" }{MPLTEXT 1 0 73 "b[n]:=2/T*int(f*sin(n*2*Pi/T*t
+),t=t0..t1):                                     \n" }{MPLTEXT 1 0 28 
+"A[n]:=sqrt(a[n]^2+b[n]^2): \n" }{MPLTEXT 1 0 74 "phi[n]:= arctan(b[n]
+/(a[n]+1E-10)):                                      \n" }{MPLTEXT 1 
+0 4 "od: " }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 31 "Tres expansiones po
+sibles ser\303\241n" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "N1:=floor(N/3); N2:=floor(N/
+2); N;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 91 "SFourier1:=SerieF
+ourier(N1,t);SFourier2:= SerieFourier(N2,t);SFourier3:= SerieFourier(N
+,t);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 175 "Como era de esperarse, \+
+tenemos una expansi\303\263n de una funci\303\263n ipar y, como en el \+
+caso anterior, las contribuciones son los coeficientes de funciones pa
+res y del coeficiente a[0]" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }
+}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 40 "Graficamos las disntintas aprox
+imaciones" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 129 "plot([f,SFour
+ier1,SFourier2, SFourier3],t=t0..t1,title=\"Aproximaciones de Fourier:
+ \",color=[red,green,blue,black],numpoints=100,\n" }{MPLTEXT 1 0 29 "l
+egend=[\"funci\303\263n\",\"Serie N1\"," }{MPLTEXT 1 0 24 "\"Serie N2
+\", \"Serie N\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 47 "La contrib
+uci\303\263n del promedio de la funci\303\263n ser\303\241" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "Promediofunc:=evalf(a[0]/2);" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 47 "El espectro de potencias se puedo
+ graficar como" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "Amp_a0:=p
+lot([[0,0],[0,Promediofunc]],thickness=9 ):          \n" }{MPLTEXT 1 
+0 60 "Amp_coef:=[seq(plot([[n,0],[n,A[n]]],thickness=9),n=1..N)]:\n" }
+{MPLTEXT 1 0 131 "display(Amp_a0,Amp_coef,title=`Espectro de Potencia \+
+de la Se\303\261al`, labels=[\"n\",\"A(n)\"], labeldirections= [\"hori
+zontal\",\"vertical\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 43 "y el
+ espectro de fases de la se\303\261al se anula" }}}{EXCHG {PARA 0 "> "
+ 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 79 "Podemo
+s tambi\303\251n expandir la funci\303\263n en t\303\251rmino de una s
+erie compleja de Fourier" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 65 
+"SerieFourierExp := (m,t)-> sum(C[j]*exp(-I*(n*2*Pi/T)*t),j=1..m);" }}
+}{EXCHG {PARA 0 "" 0 "" {TEXT 204 27 "Calculamos los coeficientes" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 73 "for n from 0 to N do        \+
+                                            \n" }{MPLTEXT 1 0 48 "C[n]
+:=2/T*int(f*exp(-I*(n*2*Pi/T)*t),t=t0..t1):\n" }{MPLTEXT 1 0 24 "Power
+C[n]:=abs(C[n]);  \n" }{MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 70 "y como la funci\303\263n es par los coeficientes de la e
+xpansi\303\263n ser\303\241n reales" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 36 "CoefCn := \{seq([n,C[n]], n=0..N)\}; \n" }{MPLTEXT 1 
+0 44 "PowerCoefCn := \{seq([n,PowerC[n]], n=0..N)\};" }}}{EXCHG {PARA 
+0 "" 0 "" {TEXT 204 49 "por lo tanto, los graficomos luego de calcular
+los" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 62 "ReCn:= [seq(plot([[n
+,0],[n,Re(C[n])]],thickness=9),n=0..N)]: \n" }{MPLTEXT 1 0 65 "PowerCn
+ := [seq(plot([[n,0],[n,PowerC[n]]],thickness=9),n=0..N)]:" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 38 "La parte real de los coeficientes ser\30
+3\241" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 134 "display(ReCn,titl
+e=`Espectro parte real de los coeficientes`, labels=[\"n\",\"Re ( C(n)
+ )\"], labeldirections= [\"horizontal\",\"vertical\"]);" }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 43 
+"Espectro de los m\303\263dulos de los coeficientes" }}}{EXCHG {PARA 0
+ "> " 0 "" {MPLTEXT 1 0 118 "display(PowerCn,title=`Espectro de m\303
+\263dulos`, labels=[\"n\",\"Mod ( C(n) )\"], labeldirections= [\"horiz
+ontal\",\"vertical\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 0 "" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 105 " Al hacer el cambio de variable \+
+omega = 2*n*Pi/T podremos expandir la serie en funci\303\263n de las f
+recuencias" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 70 "SerieFourierE
+xpK := (m,t)-> sum(CK[omega]*exp(-I*omega*t),omega=1..m);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "omegaMax := floor(2*N*Pi/T)" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "for omega from 0 to omegaMax
+ do                       \n" }{MPLTEXT 1 0 51 "CK[omega]:=(2/Pi)*int(
+f*exp(-I*omega*t),t=t0..t1):\n" }{MPLTEXT 1 0 42 "PowerCK[omega] := ev
+alf(abs(CK[omega])):        \n" }{MPLTEXT 1 0 3 "od:" }}}{EXCHG {PARA 
+0 "" 0 "" {TEXT 204 162 "En esta representaci\303\263n de la funci\303
+\263n tendremos coeficientes con parte real e imagianria ypor lo tanto
+, para graficarlos, calculamos su parte real y parte compleja" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "ImCK  := [seq(plot( [[omega,
+0],[omega,Im(CK[omega])]],thickness=9),omega=0..omegaMax)]: \n" }
+{MPLTEXT 1 0 89 "ReCK  := [seq(plot( [[omega,0],[omega,Re(CK[omega])]]
+,thickness=9),omega=0..omegaMax)]: \n" }{MPLTEXT 1 0 89 "PowCK := [seq
+(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..omega
+Max)]:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 38 "La parte real de los c
+oeficientes ser\303\241" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 142 
+"display(ReCK,title=`Espectro parte real de los coeficientes`, labels=
+[\"omega\",\"Re ( C(omega) )\"], labeldirections= [\"horizontal\",\"ve
+rtical\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 19 "La parte imaginar
+ia" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 148 "display(ImCK,title=`
+Espectro parte imaginaria de los coeficientes`, labels=[\"omega\",\"Im
+ ( C(omega) )\"], labeldirections= [\"horizontal\",\"vertical\"]);" }}
+}{EXCHG {PARA 0 "" 0 "" {TEXT 204 43 "Espectro de los m\303\263dulos d
+e los coeficientes" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "displ
+ay(PowCK" }{MPLTEXT 1 0 127 ",title=`Espectro m\303\263dulo de los coe
+ficientes`, labels=[\"omega\",\"Abs ( C(omega) )\"], labeldirections= \+
+[\"horizontal\",\"vertical\"]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 1 ";" }}}{PARA 0 "" 0 "" {TEXT 204 0 "" }}}{SECT 0 {PARA 3 "" 0 ""
+ {TEXT 218 15 "Ni par ni impar" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 113 "t0:=0: t1:=T: tp := T/4: y0:=T/10: f:=piecewise(( 0<=t and t<=t
+p,4*y0*t/T), (tp<t and t<=T,(4*y0/3)*(-t/T +1)) );" }}}{EXCHG {PARA 0 
+"" 0 "" {TEXT 204 13 "La graficamos" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "plot(f,t=t0-2..t1+2);" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 50 "Desarrollamos la funci\303\263n como una serie de Fourie
+r" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "SerieFourier := (m,t)-
+>\n" }{MPLTEXT 1 0 82 "a[0]/2 + sum(a[k]*cos((2*k*Pi*t)/T),k=1..m) + s
+um(b[k]*sin((2*k*Pi*t)/T),k=1..m) ;" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 
+204 39 "Calculamos los coeficientes de Fourier " }}}{EXCHG {PARA 0 "> 
+" 0 "" {MPLTEXT 1 0 245 "for n from 0 to N do                         \+
+                            a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):
+                                     b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t
+=t0..t1):                                     A[n]:=sqrt(a[n]^2+b[n]^2
+): \n" }{MPLTEXT 1 0 77 "phi[n]:= arctan(b[n]/(a[n]+1E-10)):          \+
+                            od: " }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 
+31 "Tres expansiones posibles ser\303\241n" }}}{EXCHG {PARA 0 "" 0 "" 
+{TEXT 204 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "N1:=floor(
+N/3); N2:=floor(N/2); N;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 91 
+"SFourier1:=SerieFourier(N1,t);SFourier2:= SerieFourier(N2,t);SFourier
+3:= SerieFourier(N,t);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 105 "Como \+
+esta funci\303\263n no es ni impar, ni par, su expansi\303\263n ser\30
+3\241 una combinaci\303\263n de funciones pares e impares." }}}{EXCHG 
+{PARA 0 "" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 40 
+"Graficamos las disntintas aproximaciones" }}}{EXCHG {PARA 0 "> " 0 ""
+ {MPLTEXT 1 0 129 "plot([f,SFourier1,SFourier2, SFourier3],t=t0..t1,ti
+tle=\"Aproximaciones de Fourier: \",color=[red,green,blue,black],numpo
+ints=100,\n" }{MPLTEXT 1 0 29 "legend=[\"funci\303\263n\",\"Serie N1\"
+," }{MPLTEXT 1 0 24 "\"Serie N2\", \"Serie N\"]);" }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT 204 61 "Adicionalmente, habr\303\241 contribuci\303\263n \+
+del promedio de la funci\303\263n" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 28 "Promediofunc:=evalf(a[0]/2);" }}}{EXCHG {PARA 0 "" 0 
+"" {TEXT 204 47 "El espectro de potencias se puedo graficar como" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "Amp_a0:=plot([[0,0],[0,Prome
+diofunc]],thickness=9 ):          \n" }{MPLTEXT 1 0 60 "Amp_coef:=[seq
+(plot([[n,0],[n,A[n]]],thickness=9),n=1..N)]:\n" }{MPLTEXT 1 0 131 "di
+splay(Amp_a0,Amp_coef,title=`Espectro de Potencia de la Se\303\261al`,
+ labels=[\"n\",\"A(n)\"], labeldirections= [\"horizontal\",\"vertical
+\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 39 "y el espectro de fases \+
+de la se\303\261al ser\303\241" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 64 "Phase_coef:=[seq(plot([[n,0],[n,phi[n]]],thickness=9),n=1..N)]
+:\n" }{MPLTEXT 1 0 18 "display(Phase_coef" }{MPLTEXT 1 0 107 ",title=`
+Espectro de fases de la Se\303\261al`, labels=[\"n\",\"Phi(n)\"], labe
+ldirections= [\"horizontal\",\"vertical\"]);" }}}{EXCHG {PARA 0 "" 0 "
+" {TEXT 204 86 "Podemos tambi\303\251n haber expandido la funci\303\26
+3n en t\303\251rmino de una serie compleja de Fourier" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "SerieFourierExp := (m,t)-> sum(C[j]
+*exp(-I*(n*2*Pi/T)*t),j=1..m);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 
+27 "Calculamos los coeficientes" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 73 "for n from 0 to N do                                          \+
+          \n" }{MPLTEXT 1 0 48 "C[n]:=2/T*int(f*exp(-I*(n*2*Pi/T)*t),t
+=t0..t1):\n" }{MPLTEXT 1 0 24 "PowerC[n]:=abs(C[n]);  \n" }{MPLTEXT 1 
+0 3 "od:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 53 "Pero estos coeficien
+tes pueden ser reales o complejos" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 36 "CoefCn := \{seq([n,C[n]], n=0..N)\}; \n" }{MPLTEXT 1 
+0 44 "PowerCoefCn := \{seq([n,PowerC[n]], n=0..N)\};" }}}{EXCHG {PARA 
+0 "" 0 "" {TEXT 204 73 "por lo tanto, para graficarlos, calculamos su \+
+parte real y parte compleja" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+63 "ImCn := [seq(plot([[n,0],[n,Im(C[n])]],thickness=9),n=0..N)]: \n" 
+}{MPLTEXT 1 0 62 "ReCn:= [seq(plot([[n,0],[n,Re(C[n])]],thickness=9),n
+=0..N)]: \n" }{MPLTEXT 1 0 65 "PowerCn := [seq(plot([[n,0],[n,PowerC[n
+]]],thickness=9),n=0..N)]:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 38 "La
+ parte real de los coeficientes ser\303\241" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 134 "display(ReCn,title=`Espectro parte real de los co
+eficientes`, labels=[\"n\",\"Re ( C(n) )\"], labeldirections= [\"horiz
+ontal\",\"vertical\"]);" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 47 "Note \+
+la importancia del promedio de la funci\303\263n " }}}{EXCHG {PARA 0 "
+" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 19 "La parte
+ imaginaria" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 140 "display(ImC
+n,title=`Espectro parte imaginaria de los coeficientes`, labels=[\"n\"
+,\"Im ( C(n) )\"], labeldirections= [\"horizontal\",\"vertical\"]);" }
+}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 43 "Espectro de los m\303\263dulos \+
+de los coeficientes" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 118 "dis
+play(PowerCn,title=`Espectro de m\303\263dulos`, labels=[\"n\",\"Mod (
+ C(n) )\"], labeldirections= [\"horizontal\",\"vertical\"]);" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 76 "Note la importancia del promedio \+
+de la funci\303\263n en el espectro de frecuencia." }}}{EXCHG {PARA 0 
+"" 0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 105 " Al ha
+cer el cambio de variable omega = 2*n*Pi/T podremos expandir la serie \+
+en funci\303\263n de las frecuencias" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 70 "SerieFourierExpK := (m,t)-> sum(CK[omega]*exp(-I*omeg
+a*t),omega=1..m);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "omegaM
+ax := floor(2*N*Pi/T)" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "fo
+r omega from 0 to omegaMax do                       \n" }{MPLTEXT 1 0 
+51 "CK[omega]:=(2/Pi)*int(f*exp(-I*omega*t),t=t0..t1):\n" }{MPLTEXT 1 
+0 42 "PowerCK[omega] := evalf(abs(CK[omega])):        \n" }{MPLTEXT 1 
+0 3 "od:" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 73 "por lo tanto, para g
+raficarlos, calculamos su parte real y parte compleja" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "ImCK  := [seq(plot( [[omega,0],[ome
+ga,Im(CK[omega])]],thickness=9),omega=0..omegaMax)]: \n" }{MPLTEXT 1 
+0 89 "ReCK  := [seq(plot( [[omega,0],[omega,Re(CK[omega])]],thickness=
+9),omega=0..omegaMax)]: \n" }{MPLTEXT 1 0 89 "PowCK := [seq(plot( [[om
+ega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..omegaMax)]:" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 38 "La parte real de los coeficientes
+ ser\303\241" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 142 "display(Re
+CK,title=`Espectro parte real de los coeficientes`, labels=[\"omega\",
+\"Re ( C(omega) )\"], labeldirections= [\"horizontal\",\"vertical\"]);
+" }}}{EXCHG {PARA 0 "" 0 "" {TEXT 204 19 "La parte imaginaria" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 148 "display(ImCK,title=`Espectr
+o parte imaginaria de los coeficientes`, labels=[\"omega\",\"Im ( C(om
+ega) )\"], labeldirections= [\"horizontal\",\"vertical\"]);" }}}
+{EXCHG {PARA 0 "" 0 "" {TEXT 204 43 "Espectro de los m\303\263dulos de
+ los coeficientes" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "displa
+y(PowCK" }{MPLTEXT 1 0 127 ",title=`Espectro m\303\263dulo de los coef
+icientes`, labels=[\"omega\",\"Abs ( C(omega) )\"], labeldirections= [
+\"horizontal\",\"vertical\"]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 1 ";" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{PARA 0 "" 
+0 "" {TEXT 204 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}
+
+{MARK "0 0 0" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2
+ 33 1 1 }
