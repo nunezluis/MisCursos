@@ -89,6 +89,7 @@ Esta clase tiene por objetivo asociar una representación matricial a un operado
 
 + **Actividad antes de clase**
    1. Estudiar el capítulo 4.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf).
+   2. Estudiar el [video de Autovalores y Autovectores de 3Blue1Brown](https://www.youtube.com/watch?v=PFDu9oVAE-g) 
    2. Rehacer y comprender los ejemplos expuestos en 4.6.4 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf).
    3. Rehacer los códigos de MAXIMA en 4.6.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf).
 + **Evaluación taller de problemas 7**    

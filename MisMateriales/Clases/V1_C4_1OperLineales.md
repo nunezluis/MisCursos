@@ -7,6 +7,7 @@ Esta clase tiene por objetivos:
 
 + **Actividad antes de clase**
    1. Estudiar puntos 4.1.1, 4.1.2, 4.1.3 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
+   3. Seguir de espacios vectoriales abstractos el [video de 3blue-1brown](https://www.youtube.com/watch?v=TgKwz5Ikpc8)
    2. Rehacer los ejemplos resueltos 4.1.4: 1 y 2 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
 + **Taller de problemas 7 (evaluación en la clase 15)**
     + Resolver ejercicio 5 de la sección 4.1.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
