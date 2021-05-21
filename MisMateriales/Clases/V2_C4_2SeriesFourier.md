@@ -8,7 +8,7 @@ Presentamos el desarrollo de las series de Fourier con detalle, analizando las c
 
 1. La lectura de la sección 2.5 de [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf).  
 
-2. Se recomienda la lectura de la sección 12.2 del capítulo 12, Análisis de Fourier: señales y filtros de R. H. Landau, M. J. Páez C.C. Bordeianu, *Computational Physics: Problem solving with Python*   
+2. Se recomienda la lectura de la sección 12.2 del capítulo 12, Análisis de Fourier: señales y filtros de [R. H. Landau, M. J. Páez C.C. Bordeianu, *Computational Physics: Problem solving with Python*](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ReferenciaArticulos/LandauPaez.pdf)   
 
 3. Reproducir en MAXIMA alguno de los ejemplos de [cálculo de series de Fourier para variadas funciones](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/SeriesFourier/FourierSeries.html). Es importante comprobar el significado físico de las distintas componentes: componente independiete, componentes pares, impares, el espectro de frecuencias y fases.
 
