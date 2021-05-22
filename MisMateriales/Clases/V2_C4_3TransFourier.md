@@ -1,7 +1,7 @@
-# Series de funciones: Series de Fourier
+# Series de funciones: Transformadas de Fourier
 
 ## Objetivos de la clase
-Los objetivos de esta clase es presentar en detalle las series de Fourier, analizando las condiciones de Dirichlet y el Teorema de Fourier. Consideraremos algunos ejemplos de series de Fourier tanto reales como complejas y veremos la importancia del espectro de frecuencias y fases.
+Los objetivos de esta clase es presentar en detalle la transformada de Fourier en el marco de las transformadas integrales. Consideraremos el espectrograma.
 
 ## Actividad antes de iniciar la clase
 Presentamos el desarrollo de las series de Fourier con detalle, analizando las condiciones de Dirichlet y el Teorema de Fourier. Se recomiendan las siguientes actividades:
@@ -14,7 +14,7 @@ Presentamos el desarrollo de las series de Fourier con detalle, analizando las c
 
 
 ## Materiales de apoyo
-1. [Presentación Series de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_2_2FourierSeries.pdf)
+1. [Presentación Series de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_2_3FourierTransf.pdf)
 2. [Hoja MAPLE de series de Fourier](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/SeriesFourier/FourierSeries.html)
 
 

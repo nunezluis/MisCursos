@@ -113,7 +113,7 @@
 </Input>
 </Group>
 <Group hide-input="false" labelreference="L846" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
-<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">N:=15;</Text-field>
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">N:=10;</Text-field>
 </Input>
 </Group>
 <Group labelreference="L24">
@@ -124,7 +124,7 @@
 <Input><Text-field style="Text" layout="Normal"></Text-field>
 </Input>
 </Group></Presentation-Block>
-<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Onda cuadrada en el intervalo [ -T/2, T/2]</Text-field></Title><Presentation-Block>
+<Section collapsed="true" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Onda cuadrada en el intervalo [ -T/2, T/2]</Text-field></Title><Presentation-Block>
 <Group view="code" hide-input="false" labelreference="L826" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
 <Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0:=-T/2: t1:=T/2: f:=piecewise((t0&lt;=t and t&lt;0,-1),(0&lt;=t and t&lt;=t1,1));</Text-field>
 </Input>
@@ -151,12 +151,8 @@ a[0]/2 + sum(a[k]*cos((2*k*Pi*t)/T),k=1..m) + sum(b[k]*sin((2*k*Pi*t)/T),k=1..m)
 </Input>
 </Group>
 <Group view="code" labelreference="L842" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
-<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                     
-a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):                             	
-b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t=t0..t1):                             	
-A[n]:=sqrt(a[n]^2+b[n]^2): 
-phi[n]:= arctan(b[n]/(a[n]+1E-10)):                                      
-od: </Text-field>
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">for n from 0 to N do                                                     a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1):                             	b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t=t0..t1):                             	A[n]:=sqrt(a[n]^2+b[n]^2): 
+phi[n]:= arctan(b[n]/(a[n]+1E-10)):                                      od: </Text-field>
 </Input>
 </Group></Presentation-Block><Presentation-Block>
 <Group view="presentation" inline-output="false" labelreference="L848" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
@@ -357,7 +353,7 @@ PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..om
 </Input>
 </Group></Presentation-Block>
 </Section>
-<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Onda cuadrada (desplazada) en el intervalo [0,T]</Text-field></Title><Presentation-Block>
+<Section collapsed="true" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Onda cuadrada (desplazada) en el intervalo [0,T]</Text-field></Title><Presentation-Block>
 <Group view="presentation" inline-output="false" labelreference="L1291" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
 <Input><Text-field style="Text" layout="Normal"></Text-field>
 </Input>
@@ -651,7 +647,7 @@ PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..om
 </Input>
 </Group></Presentation-Block>
 </Section>
-<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Onda cuadrada (par) en el intervalo [ -T/2, T/2]</Text-field></Title>
+<Section collapsed="true" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Onda cuadrada (par) en el intervalo [ -T/2, T/2]</Text-field></Title>
 <Group hide-input="false" labelreference="L1432" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
 <Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0:=-T/2: t1:=T/2: f:=piecewise(((t&lt;t0 and t&gt;t1),0),(t&gt;=t0 and t&lt;=1,1));</Text-field>
 </Input>
@@ -859,7 +855,7 @@ PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..om
 </Input>
 </Group>
 </Section>
-<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Diente de sierra impar en el intervalo [ -T/2, T/2]</Text-field></Title>
+<Section collapsed="true" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Diente de sierra impar en el intervalo [ -T/2, T/2]</Text-field></Title>
 <Group hide-input="false" labelreference="L1470" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
 <Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0:=-T/2: t1:=T/2: f:=piecewise((t0&lt;=t and t&lt;t1,3*t));</Text-field>
 </Input>
@@ -1086,7 +1082,7 @@ PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..om
 </Input>
 </Group></Presentation-Block>
 </Section>
-<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Diente de sierra impar desplazada  en el intervalo [ 0, T]</Text-field></Title>
+<Section collapsed="true" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Diente de sierra impar desplazada  en el intervalo [ 0, T]</Text-field></Title>
 <Group hide-input="false" labelreference="L1538" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
 <Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0:=0: t1:=T: f:=piecewise((0 &lt;=t and t&lt;=T,3*t -3));</Text-field>
 </Input>
@@ -1314,7 +1310,7 @@ PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..om
 </Input>
 </Group></Presentation-Block><Text-field style="Text" layout="Normal"></Text-field>
 </Section>
-<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Diente de sierra par en el intervalo [ -T/2, T/2]</Text-field></Title>
+<Section collapsed="true" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Diente de sierra par en el intervalo [ -T/2, T/2]</Text-field></Title>
 <Group hide-input="false" labelreference="L1572" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
 <Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0:=-T/2: t1:=T/2: f:=piecewise((t0&lt;=t and t&lt;=0,-3*t),(0&lt;t and t&lt;=t1,3*t));</Text-field>
 </Input>
@@ -1538,7 +1534,7 @@ PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..om
 </Input>
 </Group></Presentation-Block><Text-field style="Text" layout="Normal"></Text-field>
 </Section>
-<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1"><Font encoding="UTF-8">Par\303\241bola </Font>en el intervalo [ -T/2, T/2]</Text-field></Title>
+<Section collapsed="true" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1"><Font encoding="UTF-8">Par\303\241bola </Font>en el intervalo [ -T/2, T/2]</Text-field></Title>
 <Group hide-input="false" labelreference="L1574" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
 <Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0:=-T/2: t1:=T/2: f:=piecewise((t0&lt;=t and t&lt;=t1,t^2));</Text-field>
 </Input>
@@ -1751,7 +1747,7 @@ PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..om
 </Input>
 </Group></Presentation-Block><Text-field style="Text" layout="Normal"></Text-field>
 </Section>
-<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Ni par ni impar</Text-field></Title>
+<Section collapsed="true" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Ni par ni impar</Text-field></Title>
 <Group hide-input="false" labelreference="L1608" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
 <Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">t0:=0: t1:=T: tp := T/4: y0:=T/10: f:=piecewise(( 0&lt;=t and t&lt;=tp,4*y0*t/T), (tp&lt;t and t&lt;=T,(4*y0/3)*(-t/T +1)) );</Text-field>
 </Input>
@@ -1982,8 +1978,4 @@ PowCK := [seq(plot( [[omega,0],[omega, PowerCK[omega]]],thickness=9),omega=0..om
 </Input>
 </Group></Presentation-Block><Text-field style="Text" layout="Normal"></Text-field>
 </Section>
-<Group hide-input="false" labelreference="L313" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
-<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
-</Input>
-</Group>
 </Worksheet>
