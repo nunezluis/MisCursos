@@ -1,0 +1,1044 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>FourierTransf.html</title>
+<!-- Created by Maple 2018.0, Mac OS X -->
+</head>
+<a href="FourierTransf.html#MapleAutoBookmark1">FourierTransf.mw</a>
+<ul>
+<li><a href="FourierTransf.html#MapleAutoBookmark2">Función escalón </a>
+<ul>
+<li><a href="FourierTransf.html#MapleAutoBookmark3">Expansión en series de Fourier complejas</a>
+</ul>
+<li><a href="FourierTransf.html#MapleAutoBookmark4">Función Onda cuadrada (centrada en 0 y desplazada)</a>
+<ul>
+<li><a href="FourierTransf.html#MapleAutoBookmark5">Expansión en series de Fourier complejas</a>
+</ul>
+<li><a href="FourierTransf.html#MapleAutoBookmark6">Función genérica en el intervalo [ -T, T]</a>
+<ul>
+<li><a href="FourierTransf.html#MapleAutoBookmark7">Expansión de series de Fourier complejas</a>
+</ul>
+<li><a href="FourierTransf.html#MapleAutoBookmark8">Función genérica Ni par ni impar</a>
+<ul>
+<li><a href="FourierTransf.html#MapleAutoBookmark9">Expansión en series de Fourier complejas</a>
+</ul>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="center"><font color="#000000" size="3" face="Times New Roman"></font><font color="#000000" size="4" face="Times New Roman">Transformaciones Fourier</font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"></font><font color="#000000" size="3" face="Times New Roman"><strong>Luis A. Núñez</strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><em>Escuela de Física, Universidad Industrial de Santander</em></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><em></em></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><em>Bucaramanga-Colombia</em></font>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark2" />
+<p align="left"><font color="#000000" size="5" face="Times New Roman"><strong>Función escalón </strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>restart: with(inttrans); with(plots):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_1.gif" width="728" height="16" alt="[addtable, fourier, fouriercos, fouriersin, hankel, hilbert, invfourier, invhilbert, invlaplace, invmellin, laplace, mellin, savetable]" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Fijo los parámetros </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>T := 2; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Período
+<br>medT:= T/2; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Medio período
+<br>Amp:=1; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Amplitud
+<br>Nterm:= 10; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Número de términos en la serie de fourier
+<br>kMax := floor(2*Nterm*Pi/T); # máxima frecuencia</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_2.gif" width="55" height="18" alt="Typesetting:-mprintslash([T := 2], [2])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_3.gif" width="81" height="18" alt="Typesetting:-mprintslash([medT := 1], [1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_4.gif" width="74" height="18" alt="Typesetting:-mprintslash([Amp := 1], [1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_5.gif" width="94" height="18" alt="Typesetting:-mprintslash([Nterm := 10], [10])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_6.gif" width="88" height="18" alt="Typesetting:-mprintslash([kMax := 31], [31])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Defino la función escalón</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>fEscalon:= Amp*(Heaviside(t +medT) -Heaviside(t -medT)); </td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_7.gif" width="330" height="18" alt="Typesetting:-mprintslash([fEscalon := `+`(Heaviside(`+`(t, 1)), `-`(Heaviside(`+`(t, `-`(1)))))], [`+`(Heaviside(`+`(t, 1)), `-`(Heaviside(`+`(t, `-`(1)))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot(fEscalon,t=-8..8,title="Señal")</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_8.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Calculo la transformada de Fourier</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>TFEscalon := fourier(fEscalon,t,k);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_9.gif" width="169" height="39" alt="Typesetting:-mprintslash([TFEscalon := `+`(`/`(`*`(2, `*`(sin(k))), `*`(k)))], [`+`(`/`(`*`(2, `*`(sin(k))), `*`(k)))])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Note que la transformada de Fourier es real, porque </font><font color="#000000" size="3" face="Times New Roman"><em>f(x)</em></font><font color="#000000" size="3" face="Times New Roman"> es par</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Grafico, la señal y su transformada</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot(fEscalon,t=-8..8,title="Señal");
+<br>plot([Re(TFEscalon),Im(TFEscalon)], k = -16..16,color=[red,blue], title ="F(k)= A(k) + iB(k)",legend=[`A(k)`,`B(k)`]);
+<br>plot(abs(TFEscalon),k=-16..16, title="Espectro de potencia F(k)");</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_10.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_11.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_12.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Note que, como sabíamos, &nbsp;si la función </font><font color="#000000" size="3" face="Times New Roman"><em>f(t) </em></font><font color="#000000" size="3" face="Times New Roman">es par solo tenemos coeficientes reales para </font><font color="#000000" size="3" face="Times New Roman"><em>F(k)</em></font>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark3" />
+<p align="left"><font color="#000000" size="4" face="Times New Roman"><strong>Expansión en series de Fourier complejas</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Que pasa si expandimos la función en término de una serie compleja de Fourier</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>SerieFourierExp := (m,t)-&gt; sum(C[j]*exp(-I*(n*2*Pi/T)*t),j=1..m);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_13.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Calculamos los coeficientes suponiendo que la función anterior es </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>t0 := -medT: t1:= medT: 
+<br>for n from 0 to Nterm do &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+<br> C[n]:=2/T*int(fEscalon*exp(-I*(n*2*Pi/T)*t),t=t0..t1):
+<br> PowerC[n]:=abs(C[n]); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+<br>od:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Pero estos coeficientes pueden ser reales o complejos. Pero en este caso particular de la función escalón, solo el coeficiente independiente contribuye</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>CoefExp := {seq([n,C[n]], n=0..Nterm)}; #los coeficientes
+<br>PowerCoefExp := {seq([n,PowerC[n]], n=0..Nterm)}; # el módulo de los coeficientes</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_14.gif" width="610" height="18" alt="Typesetting:-mprintslash([CoefExp := {[0, 2], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0], [10, 0]}], [{[0, 2], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_15.gif" width="650" height="18" alt="Typesetting:-mprintslash([PowerCoefExp := {[0, 2], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0], [10, 0]}], [{[0, 2], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], ..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La función escalón solo tiene un coeficiente el C[0], el resto de coeficientes serán nulos </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>PowerCn := [seq(plot([[n,0],[n,PowerC[n]]],thickness=9),n=0..Nterm)]:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Solo tendremos un elemento en el espectro de potencia se la señal (de los módulos de los coeficientes). No contribuyen ninguno de los armónicos sin sólo la componente del nivel base de la onda</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>display(PowerCn,title=`Espectro de módulos`, labels=["n","Mod ( C(n) )"], labeldirections= ["horizontal","vertical"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_16.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Al hacer el cambio de variable k = 2*n*Pi/T podremos expandir la serie en función de las frecuencias</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>SerieFourierExpK := (m,t)-&gt; sum(CK[k]*exp(-I*k*t),k=1..m);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_17.gif" width="298" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[k], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(k, `*`(t)))))))), k = 1 .. m) end proc], [proc (m, t) options operator..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>for k from 0 to kMax do &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br> CK[k]:=(2/Pi)*int(fEscalon*exp(-I*k*t),t=t0..t1):
+<br> PowerCK[k] := evalf(abs(CK[k])):	
+<br>od:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Tendremos también unicamente coeficientes reales en esta expansión Para graficarlos, calculamos su parte real</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ImCK &nbsp;:= [seq(plot( [[k,0],[k,Im(CK[k])]],thickness=9),k=0..kMax)]: 
+<br>ReCK &nbsp;:= [seq(plot( [[k,0],[k,Re(CK[k])]],thickness=9),k=0..kMax)]: 
+<br>PowCK := [seq(plot( [[k,0],[k, PowerCK[k]]],thickness=9),k=1..kMax)]:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La parte real de los coeficientes será</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>display(ReCK,title=`Espectro parte real de los coeficientes`, labels=["k","Re ( C(k) )"], labeldirections= ["horizontal","vertical"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_18.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Nóte la riqueza de esta expansión comparada con la expansión con la expansión con la etiqueta </font><font color="#000000" size="3" face="Times New Roman"><em>n</em></font><font color="#000000" size="3" face="Times New Roman"> De la misma manera observe que esta gráfica puede ser considerada la versión discreta de la gráfica de la transformada de Fourier que presentamos arriba</font><font color="#000000" size="3" face="Times New Roman"><em>
+<br></em></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Espectro de los módulos de los coeficientes</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>display(PowCK,title=`Espectro módulo de los coeficientes`, labels=["k","Abs ( C(k) )"], labeldirections= ["horizontal","vertical"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_19.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Nótese el parecido de este histograma con la curva del espectro de potencias de la transformada de Fourier. Por eso la serie compleja 2.1.3 puede ser contiene información similar a la integral &nbsp;</font>&nbsp;</p>
+</dl>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark4" />
+<p align="left"><font color="#000000" size="5" face="Times New Roman"><strong>Función Onda cuadrada (centrada en 0 y desplazada)</strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>restart: with(inttrans): with(plots):T := 2; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Período
+<br>medT:= T/2; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Medio período
+<br>Amp:=1; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Amplitud
+<br>Nterm:= 10; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Número de términos en la serie de fourier
+<br>kMax := floor(2*Nterm*Pi/T); # máxima frecuenciaDesplaza := 3; Amplitud := 1;
+<br>t0 := -T/2; t1 := T/2;
+<br>t0Desplaza := -T/2 + Desplaza; t1Desplaza := T/2 + Desplaza;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_20.gif" width="55" height="18" alt="Typesetting:-mprintslash([T := 2], [2])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_21.gif" width="81" height="18" alt="Typesetting:-mprintslash([medT := 1], [1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_22.gif" width="74" height="18" alt="Typesetting:-mprintslash([Amp := 1], [1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_23.gif" width="94" height="18" alt="Typesetting:-mprintslash([Nterm := 10], [10])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_24.gif" width="88" height="18" alt="Typesetting:-mprintslash([kMax := 31], [31])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_25.gif" width="104" height="18" alt="Typesetting:-mprintslash([Desplaza := 3], [3])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_26.gif" width="103" height="18" alt="Typesetting:-mprintslash([Amplitud := 1], [1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_27.gif" width="73" height="18" alt="Typesetting:-mprintslash([t0 := -1], [-1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_28.gif" width="58" height="18" alt="Typesetting:-mprintslash([t1 := 1], [1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_29.gif" width="117" height="18" alt="Typesetting:-mprintslash([t0Desplaza := 2], [2])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_30.gif" width="117" height="18" alt="Typesetting:-mprintslash([t1Desplaza := 4], [4])" align="center" border="0"></td>
+<td width='5%' align='center'>(2.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>fOndaCuadrada1 := piecewise((t0&lt;=t and t&lt;0,-Amplitud),(0&lt;=t and t&lt;= t1,Amplitud));
+<br>fOndaCuadrada2 := piecewise((t0Desplaza &lt;=t and t&lt;0 +Desplaza,-Amplitud),(0 +Desplaza&lt;=t and t&lt;=t1Desplaza,Amp));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_31.gif" width="302" height="52" alt="Typesetting:-mprintslash([fOndaCuadrada1 := PIECEWISE([-1, `and`(`<=`(-1, t), `<`(t, 0))], [1, `and`(`<=`(0, t), `<=`(t, 1))])], [piecewise(`and`(`<=`(-1, t), `<`(t, 0)), -1, `and`(`<=`(0, t), `<=`(t,..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_32.gif" width="287" height="52" alt="Typesetting:-mprintslash([fOndaCuadrada2 := PIECEWISE([-1, `and`(`<=`(2, t), `<`(t, 3))], [1, `and`(`<=`(3, t), `<=`(t, 4))])], [piecewise(`and`(`<=`(2, t), `<`(t, 3)), -1, `and`(`<=`(3, t), `<=`(t, 4..." align="center" border="0"></td>
+<td width='5%' align='center'>(2.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot([fOndaCuadrada1, fOndaCuadrada2],t=-4..8,title="Señal");</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_33.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">
+<br>Se calcula la transformada de Fourier</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>TFOndaCuadrada1 := fourier(fOndaCuadrada1,t,k);
+<br>TFOndaCuadrada2 := fourier(fOndaCuadrada2,t,k); &nbsp;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_34.gif" width="265" height="64" alt="Typesetting:-mprintslash([TFOndaCuadrada1 := `+`(`-`(`/`(`*`(`+`(`*`(4, `*`(I))), `*`(`^`(sin(`+`(`*`(`/`(1, 2), `*`(k)))), 2))), `*`(k))))], [`+`(`-`(`/`(`*`(`+`(`*`(4, `*`(I))), `*`(`^`(sin(`+`(`*`(..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_35.gif" width="300" height="64" alt="Typesetting:-mprintslash([TFOndaCuadrada2 := `+`(`-`(`/`(`*`(`+`(`*`(4, `*`(I))), `*`(`^`(sin(`+`(`*`(`/`(1, 2), `*`(k)))), 2), `*`(exp(`+`(`-`(`*`(`+`(`*`(3, `*`(I))), `*`(k)))))))), `*`(k))))], [`+`..." align="center" border="0"></td>
+<td width='5%' align='center'>(2.3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Nótese &nbsp;que el efecto del desplazamiento en la señal genera una modulación en la transformada de Fourier. En general se tiene</font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_36.gif" width="453" height="58" alt="Image" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">donde </font><font color="#000000" size="3" face="Times New Roman"><em>g(t)</em></font><font color="#000000" size="3" face="Times New Roman"> es la señal, </font><font color="#000000" size="3" face="Times New Roman"><em>f(t)</em></font><font color="#000000" size="3" face="Times New Roman"> la señal desplazada, </font><font color="#000000" size="3" face="Times New Roman"><em>G(k)</em></font><font color="#000000" size="3" face="Times New Roman"> la transformada de Fourier de la señal y </font><font color="#000000" size="3" face="Times New Roman"><em>F(k)</em></font><font color="#000000" size="3" face="Times New Roman"> la transformada de Fourier de la señal desplazada</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Igualmente observe que la transformada de Fourier es imaginaria pura. Si una función es impar, su transformada de Fourier será imaginaria pura. </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Ahora grafico, la señal y la parte imaginaria de su transformada </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot([fOndaCuadrada1, fOndaCuadrada2],t=-4..8,title="Señales");
+<br>plot([Re(TFOndaCuadrada1),Im(TFOndaCuadrada1)], k = -16..16,color=[red,blue], title ="F(k)= A(k) + iB(k)",legend=[`A(k)`,`B(k)`]);
+<br>plot([Re(TFOndaCuadrada2),Im(TFOndaCuadrada2)], k = -16..16,color=[red,blue], title ="Desplazada F(k)= A(k) + iB(k)",legend=[`A(k)`,`B(k)`]);
+<br>plot([abs(TFOndaCuadrada1),abs(TFOndaCuadrada2)],k=-16..16, title="Espectro de potencia F(k)");</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_37.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_38.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_39.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_40.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">De estas gráficas es claro</font>&nbsp;</p>
+<p align="left"><ul><li><font color="#000000" size="3" face="Times New Roman">Si la función es impar obtenemos una transformada de Fourier imaginaria pura, peor el desplazamiento genera componentes reales e imaginarias </font></li></ul>&nbsp;</p>
+<p align="left"><ul><li><font color="#000000" size="3" face="Times New Roman">El espectro de potencias no se ve afectado por el desplazamiento de la señal. En la gráfica la transformada de Fourier de la señal como de la función desplazada coinciden</font></li></ul>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark5" />
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><strong>Expansión en series de Fourier complejas</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Otra vez, que pasa si expandimos la función en término de una serie compleja de Fourier</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>SerieFourierExp := (m,t)-&gt; sum(C[j]*exp(-I*(n*2*Pi/T)*t),j=1..m);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_41.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
+<td width='5%' align='center'>(2.1.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Calculamos los coeficientes suponiendo tanto la señal como la señal desplazada &nbsp;</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>for n from 0 to Nterm do &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+<br> &nbsp;C1[n] &nbsp;&nbsp;&nbsp;&nbsp;:=2/T*int(fOndaCuadrada1*exp(-I*(n*2*Pi/T)*t),t=t0..t1):
+<br> &nbsp;PowerC1[n]:=abs(C1[n]); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+<br>od:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>for n from 0 to Nterm do &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+<br> &nbsp;C2[n] &nbsp;&nbsp;&nbsp;&nbsp;:=2/T*int(fOndaCuadrada2*exp(-I*(n*2*Pi/T)*t),t=t0Desplaza..t1Desplaza):
+<br> &nbsp;PowerC2[n]:=abs(C2[n]); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+<br>od:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">En principio estos coeficientes pueden ser reales o complejos</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>CoefExp1 := {seq([n,C1[n]], n=0..Nterm)}; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# coeficientes de la función señal
+<br>PowerCoefExp1 := {seq([n,PowerC1[n]], n=0..Nterm)}: # el módulo de los coeficientes de la señal
+<br>CoefExp2 := {seq([n,C2[n]], n=0..Nterm)}; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# los coeficientes señal desplazada
+<br>PowerCoefExp2 := {seq([n,PowerC2[n]], n=0..Nterm)}: # el módulo de los coeficientes señal desplazada</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_42.gif" width="688" height="53" alt="Typesetting:-mprintslash([CoefExp1 := {[0, 0], [1, `+`(`-`(`/`(`*`(`+`(`*`(4, `*`(I)))), `*`(Pi))))], [2, 0], [3, `+`(`-`(`/`(`*`(`+`(`*`(`/`(4, 3), `*`(I)))), `*`(Pi))))], [4, 0], [5, `+`(`-`(`/`(`*`..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_43.gif" width="688" height="49" alt="Typesetting:-mprintslash([CoefExp2 := {[0, 0], [1, `/`(`*`(`*`(4, `*`(I))), `*`(Pi))], [2, 0], [3, `/`(`*`(`*`(`/`(4, 3), `*`(I))), `*`(Pi))], [4, 0], [5, `/`(`*`(`*`(`/`(4, 5), `*`(I))), `*`(Pi))], [..." align="center" border="0"></td>
+<td width='5%' align='center'>(2.1.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Obviamente, para la señal (impar) y señal desplazada solo tenemos coeficientes C[n] imaginarios puros y creamos una lista con los coeficientes. </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ImCn1 &nbsp;&nbsp;&nbsp;:= [seq(plot([[n,0],[n,Im(C1[n])]], thickness=9),n=0..Nterm)]: 
+<br>PowerCn1 := [seq(plot([[n,0],[n,PowerC1[n]]],thickness=9),n=0..Nterm)]:
+<br>ReCn2 &nbsp;&nbsp;&nbsp;:= [seq(plot([[n,0],[n,Re(C2[n])]], thickness=9),n=0..Nterm)]: 
+<br>ImCn2 &nbsp;&nbsp;&nbsp;:= [seq(plot([[n,0],[n,Im(C2[n])]], thickness=9),n=0..Nterm)]: 
+<br>PowerCn2 := [seq(plot([[n,0],[n,PowerC2[n]]],thickness=9),n=0..Nterm)]:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La parte imaginaria de la señal será</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>display(ImCn1,title=`Espectro parte imaginaria de los coeficientes`, labels=["n","Im ( C(n) )"], labeldirections= ["horizontal","vertical"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_44.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Espectro de los módulos de los coeficientes, claramente coincide con (el módulo) de la parte imaginaria</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>display(PowerCn1,title=`Espectro de módulos`, labels=["n","Mod ( C(n) )"], labeldirections= ["horizontal","vertical"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_45.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Y serán los mismos que para la señal desplazada. </font>&nbsp;</p>
+</dl>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Al hacer el cambio de variable k = 2*n*Pi/T podremos expandir la serie en función de las frecuencias</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>SerieFourierExpK := (m,t)-&gt; sum(CK[k]*exp(-I*k*t),k=1..m);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_46.gif" width="298" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[k], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(k, `*`(t)))))))), k = 1 .. m) end proc], [proc (m, t) options operator..." align="center" border="0"></td>
+<td width='5%' align='center'>(2.4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>for k from 0 to kMax do &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br> &nbsp;CK1[k]:=(2/Pi)*int(fOndaCuadrada1*exp(-I*k*t),t=t0..t1):
+<br> &nbsp;PowerCK1[k] := evalf(abs(CK1[k])):	
+<br>od:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>for k from 0 to kMax do &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br> &nbsp;CK2[k]:=(2/Pi)*int(fOndaCuadrada2*exp(-I*k*t),t=t0Desplaza..t1Desplaza):
+<br> &nbsp;PowerCK2[k] := evalf(abs(CK2[k])):	
+<br>od:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Tenemos dos conjuntos de coeficientes tanto para la señal como para la señal desplazada </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>CoefCK1 := {seq([k,(CK1[k])], k=0..kMax)}: #los coeficientes
+<br>PowerCoefCK1 := {seq([k,PowerCK1[k]], k=0..kMax)}: # el módulo de los coeficientes
+<br>CoefCK2 := {seq([k,(CK2[k])], k=0..kMax)}: #los coeficientes
+<br>PowerCoefCK2 := {seq([k,PowerCK2[k]], k=0..kMax)}: # el módulo de los coeficientes</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Al igual que en el caso anterior, tendremos también unicamente coeficientes imaginarios puros en esta expansión. </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ImCK1 &nbsp;:= [seq(plot( [[k,0],[k,Im(CK1[k])]],thickness=9),k=0..kMax)]:
+<br>ReCK1 &nbsp;:= [seq(plot( [[k,0],[k,Re(CK1[k])]],thickness=9),k=0..kMax)]: &nbsp;
+<br>PowCK1 := [seq(plot( [[k,0],[k, PowerCK1[k]]],thickness=9),k=0..kMax)]:
+<br>ReCK2 &nbsp;:= [seq(plot( [[k,0],[k,Re(CK2[k])]],thickness=9),k=0..kMax)]:
+<br>ImCK2 &nbsp;:= [seq(plot( [[k,0],[k,Im(CK2[k])]],thickness=9),k=0..kMax)]: &nbsp;
+<br>PowCK2 := [seq(plot( [[k,0],[k, PowerCK2[k]]],thickness=9),k=0..kMax)]:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Nóte la riqueza de esta expansión comparada con la expansión con la expansión con la etiqueta </font><font color="#000000" size="3" face="Times New Roman"><em>n
+<br></em></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Solamente tendremos parte imaginaria de los coeficientes de la señal </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>display(ImCK1,title=`Espectro parte imaginaria de los coeficientes señal`, labels=["k","Im ( C(k) )"], labeldirections= ["horizontal","vertical"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_47.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>display(ReCK2,title=`Espectro parte real de los coeficientes señal desplazada`, labels=["k","Re ( C(k) )"], labeldirections= ["horizontal","vertical"]);
+<br>display(ImCK2,title=`Espectro parte imaginaria de los coeficientes señal desplazada`, labels=["k","Im ( C(k) )"], labeldirections= ["horizontal","vertical"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_48.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_49.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Nóte la riqueza de esta expansión comparada con la expansión con la expansión con la etiqueta </font><font color="#000000" size="3" face="Times New Roman"><em>n</em></font><font color="#000000" size="3" face="Times New Roman"> y </font><font color="#000000" size="3" face="Times New Roman"><em>
+<br></em></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Espectro de potencia de la señal y la señal desplazada coinciden. Es decir son caracterizan la señal</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>display(PowCK1,title=`Espectro módulo de los coeficientes señal `, labels=["k","Abs ( C(k) )"], labeldirections= ["horizontal","vertical"]);
+<br>display(PowCK2,title=`Espectro módulo de los coeficientes señal desplazada `, labels=["k","Abs ( C(k) )"], labeldirections= ["horizontal","vertical"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_50.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_51.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Otra vez compare este histograma con la gráfica que se presenta para la transformada de fourier continua</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark6" />
+<p align="left"><font color="#000000" size="5" face="Times New Roman"><strong>Función genérica en el intervalo [ -T, T]</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>restart: with(inttrans): with(plots):
+<br>T := 2; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Período
+<br>medT:= T/2; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Medio período
+<br>Amp:=1; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Amplitud
+<br>Nterm:= 10; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Número de términos en la serie de fourier
+<br>kMax := floor(2*Nterm*Pi/T); # máxima frecuencia</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_52.gif" width="55" height="18" alt="Typesetting:-mprintslash([T := 2], [2])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_53.gif" width="81" height="18" alt="Typesetting:-mprintslash([medT := 1], [1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_54.gif" width="74" height="18" alt="Typesetting:-mprintslash([Amp := 1], [1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_55.gif" width="94" height="18" alt="Typesetting:-mprintslash([Nterm := 10], [10])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_56.gif" width="88" height="18" alt="Typesetting:-mprintslash([kMax := 31], [31])" align="center" border="0"></td>
+<td width='5%' align='center'>(3.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>funcion := -(t^2 -medT)*t*(t +medT); plot(funcion,t=-T/2..T/2);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_57.gif" width="207" height="22" alt="Typesetting:-mprintslash([funcion := `+`(`-`(`*`(`+`(`*`(`^`(t, 2)), `-`(1)), `*`(t, `*`(`+`(t, 1))))))], [`+`(`-`(`*`(`+`(`*`(`^`(t, 2)), `-`(1)), `*`(t, `*`(`+`(t, 1))))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_58.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Calculo la transformada de Fourier</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>TFfuncion := fourier(funcion,t,k);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_59.gif" width="502" height="21" alt="Typesetting:-mprintslash([TFfuncion := `+`(`*`(2, `*`(Pi, `*`(`+`(`*`(I, `*`(Dirac(3, k))), `*`(I, `*`(Dirac(1, k))), `-`(Dirac(2, k)), `-`(Dirac(4, k)))))))], [`+`(`*`(2, `*`(Pi, `*`(`+`(`*`(I, `*`(D..." align="center" border="0"></td>
+<td width='5%' align='center'>(3.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">la transformada de Fourier tiene una parte real y una imaginaria y la función Dirac(1,k) representa al derivada de la distribución delta de Dirac</font>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark7" />
+<p align="left"><font color="#000000" size="4" face="Times New Roman"><strong>Expansión de series de Fourier complejas</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Si expandimos la función en término de una serie compleja de Fourier</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>SerieFourierExp := (m,t)-&gt; sum(C[j]*exp(-I*(n*2*Pi/T)*t),j=1..m);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_60.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
+<td width='5%' align='center'>(3.1.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>t0 := -1: t1:= 1: 
+<br>for n from 0 to Nterm do &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+<br> C[n]:=2/T*int(funcion*exp(-I*(n*2*Pi/T)*t),t=t0..t1):
+<br> PowerC[n]:=abs(C[n]); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+<br>od:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Pero estos coeficientes pueden ser reales o complejos. </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ReCn &nbsp;&nbsp;&nbsp;:= [seq(plot([[n,0],[n,Re(C[n])]], thickness=9),n=0..Nterm)]: 
+<br>ImCn &nbsp;&nbsp;&nbsp;:= [seq(plot([[n,0],[n,Im(C[n])]], thickness=9),n=0..Nterm)]: 
+<br>PowerCn := [seq(plot([[n,0],[n,PowerC[n]]],thickness=9),n=0..Nterm)]:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Los graficamos</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>display(ReCn,title=`Espectro parte real de los coeficientes`, labels=["n","Re ( C(n) )"], labeldirections= ["horizontal","vertical"]);
+<br>display(ImCn,title=`Espectro parte imaginaria de los coeficientes`, labels=["n","Im ( C(n) )"], labeldirections= ["horizontal","vertical"]);
+<br>display(PowerCn,title=`Espectro de potencia de los coeficientes`, labels=["n","Abs ( C(n) )"], labeldirections= ["horizontal","vertical"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_61.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_62.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_63.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Claramente el armónico fundamental y el promedio de la funcion lideran la identificación de está señal</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Al hacer el cambio de variable k = 2*n*Pi/T podremos expandir la serie en función de las frecuencias</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>SerieFourierExpK := (m,t)-&gt; sum(CK[k]*exp(-I*k*t),k=1..m);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_64.gif" width="298" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[k], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(k, `*`(t)))))))), k = 1 .. m) end proc], [proc (m, t) options operator..." align="center" border="0"></td>
+<td width='5%' align='center'>(3.1.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>for k from 0 to kMax do &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br> &nbsp;CK[k]:=(2/Pi)*int(funcion*exp(-I*k*t),t=t0..t1):
+<br> &nbsp;PowerCK[k] := evalf(abs(CK[k])):	
+<br>od:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>CoefCK := {seq([k,(CK[k])], k=0..kMax)}: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#los coeficientes
+<br>PowerCoefCK := {seq([k,PowerCK[k]], k=0..kMax)}: # el módulo de los coeficientes</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y graficamos las partes reales y complejas de los coeficientes y la serie de potencias</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ImCK &nbsp;:= [seq(plot( [[k,0],[k,Im(CK[k])]],thickness=9),k=0..kMax)]:
+<br>ReCK &nbsp;:= [seq(plot( [[k,0],[k,Re(CK[k])]],thickness=9),k=0..kMax)]: &nbsp;
+<br>PowCK := [seq(plot( [[k,0],[k, PowerCK[k]]],thickness=9),k=0..kMax)]:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>display(ReCK,title=`Espectro parte real de los coeficientes señal`, labels=["k","Re (C(k))"], labeldirections= ["horizontal","vertical"]);
+<br>display(ImCK,title=`Espectro parte imaginaria de los coeficientes señal`, labels=["k","Im (C(k))"], labeldirections= ["horizontal","vertical"]);
+<br>display(PowCK,title=`Espectro módulo de los coeficientes señal `,labels=["k","Abs ( C(k) )"], labeldirections= ["horizontal","vertical"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_65.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_66.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_67.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+</dl>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark8" />
+<p align="left"><font color="#000000" size="5" face="Times New Roman"><strong>Función genérica Ni par ni impar</strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>restart: with(inttrans): with(plots):
+<br>T := 2; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Período
+<br>medT:= T/2; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Medio período
+<br>Amp:=1; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Amplitud
+<br>Nterm:= 10; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Número de términos en la serie de fourier
+<br>kMax := floor(2*Nterm*Pi/T); # máxima frecuencia</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_68.gif" width="55" height="18" alt="Typesetting:-mprintslash([T := 2], [2])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_69.gif" width="81" height="18" alt="Typesetting:-mprintslash([medT := 1], [1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_70.gif" width="74" height="18" alt="Typesetting:-mprintslash([Amp := 1], [1])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_71.gif" width="94" height="18" alt="Typesetting:-mprintslash([Nterm := 10], [10])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_72.gif" width="88" height="18" alt="Typesetting:-mprintslash([kMax := 31], [31])" align="center" border="0"></td>
+<td width='5%' align='center'>(4.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>t0:=0: t1:=T: tp := T/4: y0:=T/10: NiParNiImpar:=piecewise(( 0&lt;=t and t&lt;=tp,4*y0*t/T), (tp&lt;t and t&lt;=T,(4*y0/3)*(-t/T +1)) );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_73.gif" width="337" height="94" alt="Typesetting:-mprintslash([NiParNiImpar := PIECEWISE([`+`(`*`(`/`(2, 5), `*`(t))), `and`(`<=`(0, t), `<=`(t, `/`(1, 2)))], [`+`(`-`(`*`(`/`(2, 15), `*`(t))), `/`(4, 15)), `and`(`<`(`/`(1, 2), t), `<=`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(4.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot(NiParNiImpar,t=t0-2..t1+2);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_74.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Calculo la transformada de Fourier</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>TFNiParNiImpar := fourier(NiParNiImpar,t,k);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_75.gif" width="448" height="77" alt="Typesetting:-mprintslash([TFNiParNiImpar := `+`(`/`(`*`(`/`(8, 15), `*`(`^`(sin(`+`(`*`(`/`(1, 4), `*`(k)))), 2), `*`(`+`(`*`(3, `*`(`^`(exp(`*`(`*`(`/`(1, 2), `*`(I)), `*`(k))), 2))), `*`(2, `*`(exp(..." align="center" border="0"></td>
+<td width='5%' align='center'>(4.3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Grafico, la señal y su transformada</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot(NiParNiImpar,t=-8..8,title="Señal");
+<br>plot([Re(TFNiParNiImpar),Im(TFNiParNiImpar)], k = -16..16,color=[red,blue], title ="F(k)= A(k) + iB(k)",legend=[`A(k)`,`B(k)`]);
+<br>plot(abs(TFNiParNiImpar),k=-16..16, title="Espectro de potencia F(k)");</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_76.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_77.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_78.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark9" />
+<p align="left"><font color="#000000" size="4" face="Times New Roman"><strong>Expansión en series de Fourier complejas</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Expandimos la función en término de una serie compleja de Fourier</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>SerieFourierExp := (m,t)-&gt; sum(C[j]*exp(-I*(n*2*Pi/T)*t),j=1..m);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_79.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
+<td width='5%' align='center'>(4.1.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Calculamos los coeficientes suponiendo que la función anterior es </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>for n from 0 to Nterm do &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+<br> C[n]:=2/T*int(NiParNiImpar*exp(-I*(n*2*Pi/T)*t),t=t0..t1):
+<br> PowerC[n]:=abs(C[n]): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+<br>od:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Pero estos coeficientes pueden ser reales o complejos. </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>CoefExp := {seq([n,C[n]], n=0..Nterm)}: #los coeficientes
+<br>PowerCoefExp := {seq([n,PowerC[n]], n=0..Nterm)}: # el módulo de los coeficientes</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Pero estos coeficientes pueden ser reales o complejos. </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ReCn &nbsp;&nbsp;&nbsp;:= [seq(plot([[n,0],[n,Re(C[n])]], thickness=9),n=0..Nterm)]: 
+<br>ImCn &nbsp;&nbsp;&nbsp;:= [seq(plot([[n,0],[n,Im(C[n])]], thickness=9),n=0..Nterm)]: 
+<br>PowerCn := [seq(plot([[n,0],[n,PowerC[n]]],thickness=9),n=0..Nterm)]:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Los graficamos</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>display(ReCn,title=`Espectro parte real de los coeficientes`, labels=["n","Re (C(n))"], labeldirections= ["horizontal","vertical"]);
+<br>display(ImCn,title=`Espectro parte imaginaria de los coeficientes`, labels=["n","Im (C(n))"], labeldirections= ["horizontal","vertical"]);
+<br>display(PowerCn,title=`Espectro de potencia de los coeficientes`, labels=["n"," |C(n)|"], labeldirections= ["horizontal","vertical"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_80.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_81.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_82.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Entre el nivel base y los tres primeros armónicos definen la señal</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Al hacer el cambio de variable k = 2*n*Pi/T podremos expandir la serie en función de las frecuencias</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>SerieFourierExpK := (m,t)-&gt; sum(CK[k]*exp(-I*k*t),k=1..m);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierTransf_83.gif" width="298" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[k], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(k, `*`(t)))))))), k = 1 .. m) end proc], [proc (m, t) options operator..." align="center" border="0"></td>
+<td width='5%' align='center'>(4.1.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>for k from 0 to kMax do &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<br> &nbsp;CK[k]:=(2/Pi)*int(NiParNiImpar*exp(-I*k*t),t=t0..t1):
+<br> &nbsp;PowerCK[k] := evalf(abs(CK[k])):	
+<br>od:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>CoefCK := {seq([k,(CK[k])], k=0..kMax)}: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#los coeficientes
+<br>PowerCoefCK := {seq([k,PowerCK[k]], k=0..kMax)}: # el módulo de los coeficientes</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y graficamos las partes reales y complejas de los coeficientes y la serie de potencias</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ImCK &nbsp;:= [seq(plot( [[k,0],[k,Im(CK[k])]],thickness=9),k=0..kMax)]:
+<br>ReCK &nbsp;:= [seq(plot( [[k,0],[k,Re(CK[k])]],thickness=9),k=0..kMax)]: &nbsp;
+<br>PowCK := [seq(plot( [[k,0],[k, PowerCK[k]]],thickness=9),k=0..kMax)]:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>display(ReCK,title=`Espectro parte real de los coeficientes señal`, labels=["k","Re (C(k))"], labeldirections= ["horizontal","vertical"]);
+<br>display(ImCK,title=`Espectro parte imaginaria de los coeficientes señal `, labels=["k","Im (C(k))"], labeldirections= ["horizontal","vertical"]);
+<br>display(PowCK,title=`Espectro módulo de los coeficientes señal `,labels=["k","Abs ( C(k) )"], labeldirections= ["horizontal","vertical"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_84.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_85.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierTransf_86.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</dl>
+</dl>
+</body>
+</html>
