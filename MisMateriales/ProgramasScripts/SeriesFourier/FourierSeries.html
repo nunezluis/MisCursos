@@ -4,7 +4,7 @@
 <title>FourierSeries.html</title>
 <!-- Created by Maple 2018.0, Mac OS X -->
 </head>
-<a href="FourierSeries.html#MapleAutoBookmark1">FourierSeries.mws</a>
+<a href="FourierSeries.html#MapleAutoBookmark1">FourierSeries.mw</a>
 <ul>
 <li><a href="FourierSeries.html#MapleAutoBookmark2">Onda cuadrada en el intervalo [ -T/2, T/2]</a>
 <li><a href="FourierSeries.html#MapleAutoBookmark3">Onda cuadrada (desplazada) en el intervalo [0,T]</a>
@@ -46,12 +46,12 @@
 <p align="left"><table>
 <tr>
 <td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
-<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>N:=15;</td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>N:=10;</td>
 </tr>
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_1.gif" width="65" height="18" alt="Typesetting:-mprintslash([N := 15], [15])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_1.gif" width="65" height="18" alt="Typesetting:-mprintslash([N := 10], [10])" align="center" border="0"></td>
 <td width='5%' align='center'>(1)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -102,12 +102,8 @@
 <p align="left"><table>
 <tr>
 <td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
-<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>for n from 0 to N do &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<br>a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
-<br>b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t=t0..t1): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
-<br>A[n]:=sqrt(a[n]^2+b[n]^2): 
-<br>phi[n]:= arctan(b[n]/(a[n]+1E-10)): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<br>od: </td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>for n from 0 to N do &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a[n]:=2/T*int(f*cos(n*2*Pi/T*t),t=t0..t1): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	b[n]:=2/T*int(f*sin(n*2*Pi/T*t),t=t0..t1): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	A[n]:=sqrt(a[n]^2+b[n]^2): 
+<br>phi[n]:= arctan(b[n]/(a[n]+1E-10)): &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;od: </td>
 </tr>
 </table></strong></font>&nbsp;</p>
 <p align="left"><font color="#000000" size="3" face="Times New Roman">Tres expansiones posibles serán</font>&nbsp;</p>
@@ -119,13 +115,13 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_5.gif" width="65" height="18" alt="Typesetting:-mprintslash([N1 := 5], [5])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_5.gif" width="65" height="18" alt="Typesetting:-mprintslash([N1 := 3], [3])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_6.gif" width="65" height="18" alt="Typesetting:-mprintslash([N2 := 7], [7])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_6.gif" width="65" height="18" alt="Typesetting:-mprintslash([N2 := 5], [5])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_7.gif" width="29" height="18" alt="15" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_7.gif" width="29" height="18" alt="10" align="center" border="0"></td>
 <td width='5%' align='center'>(1.3)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -137,13 +133,13 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_8.gif" width="387" height="44" alt="Typesetting:-mprintslash([SFourier1 := `+`(`/`(`*`(4, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi)), `/`(`*`(`/`(4, 3), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(Pi)), `/`(`*`(`/`(4, 5), `*`(sin(`+`(`*`(5, ..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_8.gif" width="282" height="44" alt="Typesetting:-mprintslash([SFourier1 := `+`(`/`(`*`(4, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi)), `/`(`*`(`/`(4, 3), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(Pi)))], [`+`(`/`(`*`(4, `*`(sin(`*`(Pi, `*`(..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_9.gif" width="493" height="44" alt="Typesetting:-mprintslash([SFourier2 := `+`(`/`(`*`(4, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi)), `/`(`*`(`/`(4, 3), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(Pi)), `/`(`*`(`/`(4, 5), `*`(sin(`+`(`*`(5, ..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_9.gif" width="387" height="44" alt="Typesetting:-mprintslash([SFourier2 := `+`(`/`(`*`(4, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi)), `/`(`*`(`/`(4, 3), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(Pi)), `/`(`*`(`/`(4, 5), `*`(sin(`+`(`*`(5, ..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_10.gif" width="728" height="34" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(`*`(4, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi)), `/`(`*`(`/`(4, 3), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(Pi)), `/`(`*`(`/`(4, 5), `*`(sin(`+`(`*`(5, ..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_10.gif" width="598" height="44" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(`*`(4, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi)), `/`(`*`(`/`(4, 3), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(Pi)), `/`(`*`(`/`(4, 5), `*`(sin(`+`(`*`(5, ..." align="center" border="0"></td>
 <td width='5%' align='center'>(1.4)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -227,10 +223,10 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_15.gif" width="728" height="48" alt="Typesetting:-mprintslash([CoefCn := {[0, 0], [1, `+`(`-`(`/`(`*`(`+`(`*`(4, `*`(I)))), `*`(Pi))))], [2, 0], [3, `+`(`-`(`/`(`*`(`+`(`*`(`/`(4, 3), `*`(I)))), `*`(Pi))))], [4, 0], [5, `+`(`-`(`/`(`*`(`..." align="center" border="0"><br><img src="images/FourierSeries_16.gif" width="728" height="48" alt="Typesetting:-mprintslash([CoefCn := {[0, 0], [1, `+`(`-`(`/`(`*`(`+`(`*`(4, `*`(I)))), `*`(Pi))))], [2, 0], [3, `+`(`-`(`/`(`*`(`+`(`*`(`/`(4, 3), `*`(I)))), `*`(Pi))))], [4, 0], [5, `+`(`-`(`/`(`*`(`..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_15.gif" width="728" height="57" alt="Typesetting:-mprintslash([CoefCn := {[0, 0], [1, `+`(`-`(`/`(`*`(`+`(`*`(4, `*`(I)))), `*`(Pi))))], [2, 0], [3, `+`(`-`(`/`(`*`(`+`(`*`(`/`(4, 3), `*`(I)))), `*`(Pi))))], [4, 0], [5, `+`(`-`(`/`(`*`(`..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_17.gif" width="728" height="32" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 0], [1, `+`(`/`(`*`(4), `*`(Pi)))], [2, 0], [3, `+`(`/`(`*`(`/`(4, 3)), `*`(Pi)))], [4, 0], [5, `+`(`/`(`*`(`/`(4, 5)), `*`(Pi)))], [6, 0], [7, `+`(`/`(`*..." align="center" border="0"><br><img src="images/FourierSeries_18.gif" width="728" height="32" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 0], [1, `+`(`/`(`*`(4), `*`(Pi)))], [2, 0], [3, `+`(`/`(`*`(`/`(4, 3)), `*`(Pi)))], [4, 0], [5, `+`(`/`(`*`(`/`(4, 5)), `*`(Pi)))], [6, 0], [7, `+`(`/`(`*..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_16.gif" width="728" height="41" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 0], [1, `+`(`/`(`*`(4), `*`(Pi)))], [2, 0], [3, `+`(`/`(`*`(`/`(4, 3)), `*`(Pi)))], [4, 0], [5, `+`(`/`(`*`(`/`(4, 5)), `*`(Pi)))], [6, 0], [7, `+`(`/`(`*..." align="center" border="0"></td>
 <td width='5%' align='center'>(1.7)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -254,7 +250,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_19.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_17.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -268,7 +264,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_20.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_18.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -283,7 +279,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_21.gif" width="309" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[omega], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(omega, `*`(t)))))))), omega = 1 .. m) end proc], [proc (m, t) opti..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_19.gif" width="309" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[omega], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(omega, `*`(t)))))))), omega = 1 .. m) end proc], [proc (m, t) opti..." align="center" border="0"></td>
 <td width='5%' align='center'>(1.8)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -295,7 +291,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_22.gif" width="124" height="18" alt="Typesetting:-mprintslash([omegaMax := 47], [47])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_20.gif" width="124" height="18" alt="Typesetting:-mprintslash([omegaMax := 31], [31])" align="center" border="0"></td>
 <td width='5%' align='center'>(1.9)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -327,7 +323,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_23.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_21.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -340,7 +336,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_24.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_22.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -363,7 +359,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_25.gif" width="182" height="52" alt="Typesetting:-mprintslash([f := PIECEWISE([-1, `and`(`<=`(0, t), `<`(t, 1))], [1, `and`(`<=`(1, t), `<=`(t, 2))])], [piecewise(`and`(`<=`(0, t), `<`(t, 1)), -1, `and`(`<=`(1, t), `<=`(t, 2)), 1)])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_23.gif" width="182" height="52" alt="Typesetting:-mprintslash([f := PIECEWISE([-1, `and`(`<=`(0, t), `<`(t, 1))], [1, `and`(`<=`(1, t), `<=`(t, 2))])], [piecewise(`and`(`<=`(0, t), `<`(t, 1)), -1, `and`(`<=`(1, t), `<=`(t, 2)), 1)])" align="center" border="0"></td>
 <td width='5%' align='center'>(2.1)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -376,7 +372,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_26.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_24.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -391,7 +387,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_27.gif" width="534" height="51" alt="Typesetting:-mprintslash([SerieFourier := proc (m, t) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(a[0])), sum(`*`(a[k], `*`(cos(`+`(`/`(`*`(2, `*`(k, `*`(Pi, `*`(t)))), `*`(T)))))), k = 1 .. m), s..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_25.gif" width="534" height="51" alt="Typesetting:-mprintslash([SerieFourier := proc (m, t) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(a[0])), sum(`*`(a[k], `*`(cos(`+`(`/`(`*`(2, `*`(k, `*`(Pi, `*`(t)))), `*`(T)))))), k = 1 .. m), s..." align="center" border="0"></td>
 <td width='5%' align='center'>(2.2)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -418,13 +414,13 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_28.gif" width="65" height="18" alt="Typesetting:-mprintslash([N1 := 5], [5])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_26.gif" width="65" height="18" alt="Typesetting:-mprintslash([N1 := 3], [3])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_29.gif" width="65" height="18" alt="Typesetting:-mprintslash([N2 := 7], [7])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_27.gif" width="65" height="18" alt="Typesetting:-mprintslash([N2 := 5], [5])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_30.gif" width="29" height="18" alt="15" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_28.gif" width="29" height="18" alt="10" align="center" border="0"></td>
 <td width='5%' align='center'>(2.3)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -436,13 +432,13 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_31.gif" width="394" height="44" alt="Typesetting:-mprintslash([SFourier1 := `+`(`-`(`/`(`*`(4, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi))), `-`(`/`(`*`(`/`(4, 3), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(Pi))), `-`(`/`(`*`(`/`(4, 5), `*`(s..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_29.gif" width="289" height="44" alt="Typesetting:-mprintslash([SFourier1 := `+`(`-`(`/`(`*`(4, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi))), `-`(`/`(`*`(`/`(4, 3), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(Pi))))], [`+`(`-`(`/`(`*`(4, `*`(si..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_32.gif" width="499" height="44" alt="Typesetting:-mprintslash([SFourier2 := `+`(`-`(`/`(`*`(4, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi))), `-`(`/`(`*`(`/`(4, 3), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(Pi))), `-`(`/`(`*`(`/`(4, 5), `*`(s..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_30.gif" width="394" height="44" alt="Typesetting:-mprintslash([SFourier2 := `+`(`-`(`/`(`*`(4, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi))), `-`(`/`(`*`(`/`(4, 3), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(Pi))), `-`(`/`(`*`(`/`(4, 5), `*`(s..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_33.gif" width="728" height="34" alt="Typesetting:-mprintslash([SFourier3 := `+`(`-`(`/`(`*`(4, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi))), `-`(`/`(`*`(`/`(4, 3), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(Pi))), `-`(`/`(`*`(`/`(4, 5), `*`(s..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_31.gif" width="604" height="44" alt="Typesetting:-mprintslash([SFourier3 := `+`(`-`(`/`(`*`(4, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi))), `-`(`/`(`*`(`/`(4, 3), `*`(sin(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(Pi))), `-`(`/`(`*`(`/`(4, 5), `*`(s..." align="center" border="0"></td>
 <td width='5%' align='center'>(2.4)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -458,7 +454,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_34.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_32.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -473,7 +469,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_35.gif" width="138" height="18" alt="Typesetting:-mprintslash([Promediofunc := 0.], [0.])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_33.gif" width="138" height="18" alt="Typesetting:-mprintslash([Promediofunc := 0.], [0.])" align="center" border="0"></td>
 <td width='5%' align='center'>(2.5)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -490,7 +486,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_36.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_34.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -506,7 +502,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_37.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_35.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -521,7 +517,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_38.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_36.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
 <td width='5%' align='center'>(2.6)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -545,10 +541,10 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_39.gif" width="728" height="48" alt="Typesetting:-mprintslash([CoefCn := {[0, 0], [1, `/`(`*`(`*`(4, `*`(I))), `*`(Pi))], [2, 0], [3, `/`(`*`(`*`(`/`(4, 3), `*`(I))), `*`(Pi))], [4, 0], [5, `/`(`*`(`*`(`/`(4, 5), `*`(I))), `*`(Pi))], [6,..." align="center" border="0"><br><img src="images/FourierSeries_40.gif" width="728" height="48" alt="Typesetting:-mprintslash([CoefCn := {[0, 0], [1, `/`(`*`(`*`(4, `*`(I))), `*`(Pi))], [2, 0], [3, `/`(`*`(`*`(`/`(4, 3), `*`(I))), `*`(Pi))], [4, 0], [5, `/`(`*`(`*`(`/`(4, 5), `*`(I))), `*`(Pi))], [6,..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_37.gif" width="728" height="52" alt="Typesetting:-mprintslash([CoefCn := {[0, 0], [1, `/`(`*`(`*`(4, `*`(I))), `*`(Pi))], [2, 0], [3, `/`(`*`(`*`(`/`(4, 3), `*`(I))), `*`(Pi))], [4, 0], [5, `/`(`*`(`*`(`/`(4, 5), `*`(I))), `*`(Pi))], [6,..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_41.gif" width="728" height="32" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 0], [1, `+`(`/`(`*`(4), `*`(Pi)))], [2, 0], [3, `+`(`/`(`*`(`/`(4, 3)), `*`(Pi)))], [4, 0], [5, `+`(`/`(`*`(`/`(4, 5)), `*`(Pi)))], [6, 0], [7, `+`(`/`(`*..." align="center" border="0"><br><img src="images/FourierSeries_42.gif" width="728" height="32" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 0], [1, `+`(`/`(`*`(4), `*`(Pi)))], [2, 0], [3, `+`(`/`(`*`(`/`(4, 3)), `*`(Pi)))], [4, 0], [5, `+`(`/`(`*`(`/`(4, 5)), `*`(Pi)))], [6, 0], [7, `+`(`/`(`*..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_38.gif" width="728" height="41" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 0], [1, `+`(`/`(`*`(4), `*`(Pi)))], [2, 0], [3, `+`(`/`(`*`(`/`(4, 3)), `*`(Pi)))], [4, 0], [5, `+`(`/`(`*`(`/`(4, 5)), `*`(Pi)))], [6, 0], [7, `+`(`/`(`*..." align="center" border="0"></td>
 <td width='5%' align='center'>(2.7)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -572,7 +568,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_43.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_39.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -586,7 +582,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_44.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_40.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -601,7 +597,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_45.gif" width="309" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[omega], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(omega, `*`(t)))))))), omega = 1 .. m) end proc], [proc (m, t) opti..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_41.gif" width="309" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[omega], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(omega, `*`(t)))))))), omega = 1 .. m) end proc], [proc (m, t) opti..." align="center" border="0"></td>
 <td width='5%' align='center'>(2.8)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -613,7 +609,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_46.gif" width="124" height="18" alt="Typesetting:-mprintslash([omegaMax := 47], [47])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_42.gif" width="124" height="18" alt="Typesetting:-mprintslash([omegaMax := 31], [31])" align="center" border="0"></td>
 <td width='5%' align='center'>(2.9)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -646,7 +642,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_47.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_43.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -659,7 +655,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_48.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_44.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -672,7 +668,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_49.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_45.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -694,7 +690,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_50.gif" width="182" height="52" alt="Typesetting:-mprintslash([f := PIECEWISE([0, `and`(`<`(t, -1), `<`(1, t))], [1, `and`(`<=`(-1, t), `<=`(t, 1))])], [piecewise(`and`(`<`(t, -1), `<`(1, t)), 0, `and`(`<=`(-1, t), `<=`(t, 1)), 1)])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_46.gif" width="182" height="52" alt="Typesetting:-mprintslash([f := PIECEWISE([0, `and`(`<`(t, -1), `<`(1, t))], [1, `and`(`<=`(-1, t), `<=`(t, 1))])], [piecewise(`and`(`<`(t, -1), `<`(1, t)), 0, `and`(`<=`(-1, t), `<=`(t, 1)), 1)])" align="center" border="0"></td>
 <td width='5%' align='center'>(3.1)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -707,7 +703,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_51.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_47.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -721,7 +717,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_52.gif" width="534" height="51" alt="Typesetting:-mprintslash([SerieFourier := proc (m, t) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(a[0])), sum(`*`(a[k], `*`(cos(`+`(`/`(`*`(2, `*`(k, `*`(Pi, `*`(t)))), `*`(T)))))), k = 1 .. m), s..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_48.gif" width="534" height="51" alt="Typesetting:-mprintslash([SerieFourier := proc (m, t) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(a[0])), sum(`*`(a[k], `*`(cos(`+`(`/`(`*`(2, `*`(k, `*`(Pi, `*`(t)))), `*`(T)))))), k = 1 .. m), s..." align="center" border="0"></td>
 <td width='5%' align='center'>(3.2)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -746,13 +742,13 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_53.gif" width="65" height="18" alt="Typesetting:-mprintslash([N1 := 5], [5])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_49.gif" width="65" height="18" alt="Typesetting:-mprintslash([N1 := 3], [3])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_54.gif" width="65" height="18" alt="Typesetting:-mprintslash([N2 := 7], [7])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_50.gif" width="65" height="18" alt="Typesetting:-mprintslash([N2 := 5], [5])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_55.gif" width="29" height="18" alt="15" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_51.gif" width="29" height="18" alt="10" align="center" border="0"></td>
 <td width='5%' align='center'>(3.3)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -764,13 +760,13 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_56.gif" width="110" height="18" alt="Typesetting:-mprintslash([SFourier1 := 1], [1])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_52.gif" width="110" height="18" alt="Typesetting:-mprintslash([SFourier1 := 1], [1])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_57.gif" width="110" height="18" alt="Typesetting:-mprintslash([SFourier2 := 1], [1])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_53.gif" width="110" height="18" alt="Typesetting:-mprintslash([SFourier2 := 1], [1])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_58.gif" width="110" height="18" alt="Typesetting:-mprintslash([SFourier3 := 1], [1])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_54.gif" width="110" height="18" alt="Typesetting:-mprintslash([SFourier3 := 1], [1])" align="center" border="0"></td>
 <td width='5%' align='center'>(3.4)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -787,7 +783,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_59.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_55.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -801,7 +797,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_60.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_56.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
 <td width='5%' align='center'>(3.5)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -826,10 +822,10 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_61.gif" width="728" height="15" alt="Typesetting:-mprintslash([CoefCn := {[0, 2], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0], [10, 0], [11, 0], [12, 0], [13, 0], [14, 0], [15, 0]}], [{[0, 2], [1, 0], [2, 0], [..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_57.gif" width="603" height="18" alt="Typesetting:-mprintslash([CoefCn := {[0, 2], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0], [10, 0]}], [{[0, 2], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0]..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_62.gif" width="728" height="14" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 2], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0], [10, 0], [11, 0], [12, 0], [13, 0], [14, 0], [15, 0]}], [{[0, 2], [1, 0], [2, ..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_58.gif" width="644" height="18" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 2], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [8, 0], [9, 0], [10, 0]}], [{[0, 2], [1, 0], [2, 0], [3, 0], [4, 0], [5, 0], [6, 0], [7, 0], [..." align="center" border="0"></td>
 <td width='5%' align='center'>(3.6)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -851,7 +847,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_63.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_59.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -865,7 +861,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_64.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_60.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -879,7 +875,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_65.gif" width="309" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[omega], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(omega, `*`(t)))))))), omega = 1 .. m) end proc], [proc (m, t) opti..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_61.gif" width="309" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[omega], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(omega, `*`(t)))))))), omega = 1 .. m) end proc], [proc (m, t) opti..." align="center" border="0"></td>
 <td width='5%' align='center'>(3.7)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -891,7 +887,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_66.gif" width="124" height="18" alt="Typesetting:-mprintslash([omegaMax := 47], [47])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_62.gif" width="124" height="18" alt="Typesetting:-mprintslash([omegaMax := 31], [31])" align="center" border="0"></td>
 <td width='5%' align='center'>(3.8)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -922,7 +918,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_67.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_63.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -936,7 +932,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_68.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_64.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -964,7 +960,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_69.gif" width="190" height="52" alt="Typesetting:-mprintslash([f := PIECEWISE([`+`(`*`(3, `*`(t))), `and`(`<=`(-1, t), `<`(t, 1))], [0, otherwise])], [piecewise(`and`(`<=`(-1, t), `<`(t, 1)), `+`(`*`(3, `*`(t))))])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_65.gif" width="190" height="52" alt="Typesetting:-mprintslash([f := PIECEWISE([`+`(`*`(3, `*`(t))), `and`(`<=`(-1, t), `<`(t, 1))], [0, otherwise])], [piecewise(`and`(`<=`(-1, t), `<`(t, 1)), `+`(`*`(3, `*`(t))))])" align="center" border="0"></td>
 <td width='5%' align='center'>(4.1)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -977,7 +973,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_70.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_66.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -991,7 +987,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_71.gif" width="534" height="51" alt="Typesetting:-mprintslash([SerieFourier := proc (m, t) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(a[0])), sum(`*`(a[k], `*`(cos(`+`(`/`(`*`(2, `*`(k, `*`(Pi, `*`(t)))), `*`(T)))))), k = 1 .. m), s..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_67.gif" width="534" height="51" alt="Typesetting:-mprintslash([SerieFourier := proc (m, t) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(a[0])), sum(`*`(a[k], `*`(cos(`+`(`/`(`*`(2, `*`(k, `*`(Pi, `*`(t)))), `*`(T)))))), k = 1 .. m), s..." align="center" border="0"></td>
 <td width='5%' align='center'>(4.2)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1016,13 +1012,13 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_72.gif" width="65" height="18" alt="Typesetting:-mprintslash([N1 := 5], [5])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_68.gif" width="65" height="18" alt="Typesetting:-mprintslash([N1 := 3], [3])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_73.gif" width="65" height="18" alt="Typesetting:-mprintslash([N2 := 7], [7])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_69.gif" width="65" height="18" alt="Typesetting:-mprintslash([N2 := 5], [5])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_74.gif" width="29" height="18" alt="15" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_70.gif" width="29" height="18" alt="10" align="center" border="0"></td>
 <td width='5%' align='center'>(4.3)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1034,13 +1030,13 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_75.gif" width="598" height="44" alt="Typesetting:-mprintslash([SFourier1 := `+`(`/`(`*`(6, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi)), `-`(`/`(`*`(3, `*`(sin(`+`(`*`(2, `*`(Pi, `*`(t))))))), `*`(Pi))), `/`(`*`(2, `*`(sin(`+`(`*`(3, `*`(Pi, `*`..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_71.gif" width="387" height="44" alt="Typesetting:-mprintslash([SFourier1 := `+`(`/`(`*`(6, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi)), `-`(`/`(`*`(3, `*`(sin(`+`(`*`(2, `*`(Pi, `*`(t))))))), `*`(Pi))), `/`(`*`(2, `*`(sin(`+`(`*`(3, `*`(Pi, `*`..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_76.gif" width="728" height="40" alt="Typesetting:-mprintslash([SFourier2 := `+`(`/`(`*`(6, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi)), `-`(`/`(`*`(3, `*`(sin(`+`(`*`(2, `*`(Pi, `*`(t))))))), `*`(Pi))), `/`(`*`(2, `*`(sin(`+`(`*`(3, `*`(Pi, `*`..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_72.gif" width="598" height="44" alt="Typesetting:-mprintslash([SFourier2 := `+`(`/`(`*`(6, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi)), `-`(`/`(`*`(3, `*`(sin(`+`(`*`(2, `*`(Pi, `*`(t))))))), `*`(Pi))), `/`(`*`(2, `*`(sin(`+`(`*`(3, `*`(Pi, `*`..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_77.gif" width="728" height="34" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(`*`(6, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi)), `-`(`/`(`*`(3, `*`(sin(`+`(`*`(2, `*`(Pi, `*`(t))))))), `*`(Pi))), `/`(`*`(2, `*`(sin(`+`(`*`(3, `*`(Pi, `*`..." align="center" border="0"><br><img src="images/FourierSeries_78.gif" width="728" height="34" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(`*`(6, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi)), `-`(`/`(`*`(3, `*`(sin(`+`(`*`(2, `*`(Pi, `*`(t))))))), `*`(Pi))), `/`(`*`(2, `*`(sin(`+`(`*`(3, `*`(Pi, `*`..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_73.gif" width="728" height="34" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(`*`(6, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi)), `-`(`/`(`*`(3, `*`(sin(`+`(`*`(2, `*`(Pi, `*`(t))))))), `*`(Pi))), `/`(`*`(2, `*`(sin(`+`(`*`(3, `*`(Pi, `*`..." align="center" border="0"><br><img src="images/FourierSeries_74.gif" width="728" height="34" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(`*`(6, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi)), `-`(`/`(`*`(3, `*`(sin(`+`(`*`(2, `*`(Pi, `*`(t))))))), `*`(Pi))), `/`(`*`(2, `*`(sin(`+`(`*`(3, `*`(Pi, `*`..." align="center" border="0"></td>
 <td width='5%' align='center'>(4.4)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1056,7 +1052,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_79.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_75.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1070,7 +1066,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_80.gif" width="138" height="18" alt="Typesetting:-mprintslash([Promediofunc := 0.], [0.])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_76.gif" width="138" height="18" alt="Typesetting:-mprintslash([Promediofunc := 0.], [0.])" align="center" border="0"></td>
 <td width='5%' align='center'>(4.5)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1085,7 +1081,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_81.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_77.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1099,7 +1095,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_82.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_78.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1113,7 +1109,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_83.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_79.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
 <td width='5%' align='center'>(4.6)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1137,10 +1133,10 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_84.gif" width="728" height="48" alt="Typesetting:-mprintslash([CoefCn := {[0, 0], [1, `+`(`-`(`/`(`*`(`+`(`*`(6, `*`(I)))), `*`(Pi))))], [2, `/`(`*`(`*`(3, `*`(I))), `*`(Pi))], [3, `+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I)))), `*`(Pi))))], [4, `..." align="center" border="0"><br><img src="images/FourierSeries_85.gif" width="728" height="48" alt="Typesetting:-mprintslash([CoefCn := {[0, 0], [1, `+`(`-`(`/`(`*`(`+`(`*`(6, `*`(I)))), `*`(Pi))))], [2, `/`(`*`(`*`(3, `*`(I))), `*`(Pi))], [3, `+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I)))), `*`(Pi))))], [4, `..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_80.gif" width="728" height="48" alt="Typesetting:-mprintslash([CoefCn := {[0, 0], [1, `+`(`-`(`/`(`*`(`+`(`*`(6, `*`(I)))), `*`(Pi))))], [2, `/`(`*`(`*`(3, `*`(I))), `*`(Pi))], [3, `+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I)))), `*`(Pi))))], [4, `..." align="center" border="0"><br><img src="images/FourierSeries_81.gif" width="728" height="48" alt="Typesetting:-mprintslash([CoefCn := {[0, 0], [1, `+`(`-`(`/`(`*`(`+`(`*`(6, `*`(I)))), `*`(Pi))))], [2, `/`(`*`(`*`(3, `*`(I))), `*`(Pi))], [3, `+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I)))), `*`(Pi))))], [4, `..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_86.gif" width="728" height="32" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 0], [1, `+`(`/`(`*`(6), `*`(Pi)))], [2, `+`(`/`(`*`(3), `*`(Pi)))], [3, `+`(`/`(`*`(2), `*`(Pi)))], [4, `+`(`/`(`*`(`/`(3, 2)), `*`(Pi)))], [5, `+`(`/`(`*..." align="center" border="0"><br><img src="images/FourierSeries_87.gif" width="728" height="32" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 0], [1, `+`(`/`(`*`(6), `*`(Pi)))], [2, `+`(`/`(`*`(3), `*`(Pi)))], [3, `+`(`/`(`*`(2), `*`(Pi)))], [4, `+`(`/`(`*`(`/`(3, 2)), `*`(Pi)))], [5, `+`(`/`(`*..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_82.gif" width="728" height="37" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 0], [1, `+`(`/`(`*`(6), `*`(Pi)))], [2, `+`(`/`(`*`(3), `*`(Pi)))], [3, `+`(`/`(`*`(2), `*`(Pi)))], [4, `+`(`/`(`*`(`/`(3, 2)), `*`(Pi)))], [5, `+`(`/`(`*..." align="center" border="0"></td>
 <td width='5%' align='center'>(4.7)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1164,7 +1160,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_88.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_83.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1177,7 +1173,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_89.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_84.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1192,7 +1188,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_90.gif" width="309" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[omega], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(omega, `*`(t)))))))), omega = 1 .. m) end proc], [proc (m, t) opti..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_85.gif" width="309" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[omega], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(omega, `*`(t)))))))), omega = 1 .. m) end proc], [proc (m, t) opti..." align="center" border="0"></td>
 <td width='5%' align='center'>(4.8)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1204,7 +1200,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_91.gif" width="124" height="18" alt="Typesetting:-mprintslash([omegaMax := 47], [47])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_86.gif" width="124" height="18" alt="Typesetting:-mprintslash([omegaMax := 31], [31])" align="center" border="0"></td>
 <td width='5%' align='center'>(4.9)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1235,7 +1231,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_92.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_87.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1248,7 +1244,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_93.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_88.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1275,7 +1271,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_94.gif" width="203" height="52" alt="Typesetting:-mprintslash([f := PIECEWISE([`+`(`*`(3, `*`(t)), `-`(3)), `and`(`<=`(0, t), `<=`(t, 2))], [0, otherwise])], [piecewise(`and`(`<=`(0, t), `<=`(t, 2)), `+`(`*`(3, `*`(t)), `-`(3)))])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_89.gif" width="203" height="52" alt="Typesetting:-mprintslash([f := PIECEWISE([`+`(`*`(3, `*`(t)), `-`(3)), `and`(`<=`(0, t), `<=`(t, 2))], [0, otherwise])], [piecewise(`and`(`<=`(0, t), `<=`(t, 2)), `+`(`*`(3, `*`(t)), `-`(3)))])" align="center" border="0"></td>
 <td width='5%' align='center'>(5.1)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1288,7 +1284,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_95.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_90.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1302,7 +1298,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_96.gif" width="534" height="51" alt="Typesetting:-mprintslash([SerieFourier := proc (m, t) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(a[0])), sum(`*`(a[k], `*`(cos(`+`(`/`(`*`(2, `*`(k, `*`(Pi, `*`(t)))), `*`(T)))))), k = 1 .. m), s..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_91.gif" width="534" height="51" alt="Typesetting:-mprintslash([SerieFourier := proc (m, t) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(a[0])), sum(`*`(a[k], `*`(cos(`+`(`/`(`*`(2, `*`(k, `*`(Pi, `*`(t)))), `*`(T)))))), k = 1 .. m), s..." align="center" border="0"></td>
 <td width='5%' align='center'>(5.2)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1328,13 +1324,13 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_97.gif" width="65" height="18" alt="Typesetting:-mprintslash([N1 := 5], [5])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_92.gif" width="65" height="18" alt="Typesetting:-mprintslash([N1 := 3], [3])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_98.gif" width="65" height="18" alt="Typesetting:-mprintslash([N2 := 7], [7])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_93.gif" width="65" height="18" alt="Typesetting:-mprintslash([N2 := 5], [5])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_99.gif" width="29" height="18" alt="15" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_94.gif" width="29" height="18" alt="10" align="center" border="0"></td>
 <td width='5%' align='center'>(5.3)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1346,13 +1342,13 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_100.gif" width="604" height="44" alt="Typesetting:-mprintslash([SFourier1 := `+`(`-`(`/`(`*`(6, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi))), `-`(`/`(`*`(3, `*`(sin(`+`(`*`(2, `*`(Pi, `*`(t))))))), `*`(Pi))), `-`(`/`(`*`(2, `*`(sin(`+`(`*`(3, `*..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_95.gif" width="394" height="44" alt="Typesetting:-mprintslash([SFourier1 := `+`(`-`(`/`(`*`(6, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi))), `-`(`/`(`*`(3, `*`(sin(`+`(`*`(2, `*`(Pi, `*`(t))))))), `*`(Pi))), `-`(`/`(`*`(2, `*`(sin(`+`(`*`(3, `*..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_101.gif" width="728" height="40" alt="Typesetting:-mprintslash([SFourier2 := `+`(`-`(`/`(`*`(6, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi))), `-`(`/`(`*`(3, `*`(sin(`+`(`*`(2, `*`(Pi, `*`(t))))))), `*`(Pi))), `-`(`/`(`*`(2, `*`(sin(`+`(`*`(3, `*..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_96.gif" width="604" height="44" alt="Typesetting:-mprintslash([SFourier2 := `+`(`-`(`/`(`*`(6, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi))), `-`(`/`(`*`(3, `*`(sin(`+`(`*`(2, `*`(Pi, `*`(t))))))), `*`(Pi))), `-`(`/`(`*`(2, `*`(sin(`+`(`*`(3, `*..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_102.gif" width="728" height="34" alt="Typesetting:-mprintslash([SFourier3 := `+`(`-`(`/`(`*`(6, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi))), `-`(`/`(`*`(3, `*`(sin(`+`(`*`(2, `*`(Pi, `*`(t))))))), `*`(Pi))), `-`(`/`(`*`(2, `*`(sin(`+`(`*`(3, `*..." align="center" border="0"><br><img src="images/FourierSeries_103.gif" width="728" height="34" alt="Typesetting:-mprintslash([SFourier3 := `+`(`-`(`/`(`*`(6, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi))), `-`(`/`(`*`(3, `*`(sin(`+`(`*`(2, `*`(Pi, `*`(t))))))), `*`(Pi))), `-`(`/`(`*`(2, `*`(sin(`+`(`*`(3, `*..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_97.gif" width="728" height="34" alt="Typesetting:-mprintslash([SFourier3 := `+`(`-`(`/`(`*`(6, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi))), `-`(`/`(`*`(3, `*`(sin(`+`(`*`(2, `*`(Pi, `*`(t))))))), `*`(Pi))), `-`(`/`(`*`(2, `*`(sin(`+`(`*`(3, `*..." align="center" border="0"><br><img src="images/FourierSeries_98.gif" width="728" height="34" alt="Typesetting:-mprintslash([SFourier3 := `+`(`-`(`/`(`*`(6, `*`(sin(`*`(Pi, `*`(t))))), `*`(Pi))), `-`(`/`(`*`(3, `*`(sin(`+`(`*`(2, `*`(Pi, `*`(t))))))), `*`(Pi))), `-`(`/`(`*`(2, `*`(sin(`+`(`*`(3, `*..." align="center" border="0"></td>
 <td width='5%' align='center'>(5.4)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1368,7 +1364,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_104.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_99.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1382,7 +1378,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_105.gif" width="138" height="18" alt="Typesetting:-mprintslash([Promediofunc := 0.], [0.])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_100.gif" width="138" height="18" alt="Typesetting:-mprintslash([Promediofunc := 0.], [0.])" align="center" border="0"></td>
 <td width='5%' align='center'>(5.5)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1398,7 +1394,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_106.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_101.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1413,7 +1409,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_107.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_102.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1427,7 +1423,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_108.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_103.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
 <td width='5%' align='center'>(5.6)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1451,10 +1447,10 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_109.gif" width="728" height="48" alt="Typesetting:-mprintslash([CoefCn := {[0, 0], [1, `/`(`*`(`*`(6, `*`(I))), `*`(Pi))], [2, `/`(`*`(`*`(3, `*`(I))), `*`(Pi))], [3, `/`(`*`(`*`(2, `*`(I))), `*`(Pi))], [4, `/`(`*`(`*`(`/`(3, 2), `*`(I)))..." align="center" border="0"><br><img src="images/FourierSeries_110.gif" width="728" height="48" alt="Typesetting:-mprintslash([CoefCn := {[0, 0], [1, `/`(`*`(`*`(6, `*`(I))), `*`(Pi))], [2, `/`(`*`(`*`(3, `*`(I))), `*`(Pi))], [3, `/`(`*`(`*`(2, `*`(I))), `*`(Pi))], [4, `/`(`*`(`*`(`/`(3, 2), `*`(I)))..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_104.gif" width="728" height="48" alt="Typesetting:-mprintslash([CoefCn := {[0, 0], [1, `/`(`*`(`*`(6, `*`(I))), `*`(Pi))], [2, `/`(`*`(`*`(3, `*`(I))), `*`(Pi))], [3, `/`(`*`(`*`(2, `*`(I))), `*`(Pi))], [4, `/`(`*`(`*`(`/`(3, 2), `*`(I)))..." align="center" border="0"><br><img src="images/FourierSeries_105.gif" width="728" height="48" alt="Typesetting:-mprintslash([CoefCn := {[0, 0], [1, `/`(`*`(`*`(6, `*`(I))), `*`(Pi))], [2, `/`(`*`(`*`(3, `*`(I))), `*`(Pi))], [3, `/`(`*`(`*`(2, `*`(I))), `*`(Pi))], [4, `/`(`*`(`*`(`/`(3, 2), `*`(I)))..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_111.gif" width="728" height="32" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 0], [1, `+`(`/`(`*`(6), `*`(Pi)))], [2, `+`(`/`(`*`(3), `*`(Pi)))], [3, `+`(`/`(`*`(2), `*`(Pi)))], [4, `+`(`/`(`*`(`/`(3, 2)), `*`(Pi)))], [5, `+`(`/`(`*..." align="center" border="0"><br><img src="images/FourierSeries_112.gif" width="728" height="32" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 0], [1, `+`(`/`(`*`(6), `*`(Pi)))], [2, `+`(`/`(`*`(3), `*`(Pi)))], [3, `+`(`/`(`*`(2), `*`(Pi)))], [4, `+`(`/`(`*`(`/`(3, 2)), `*`(Pi)))], [5, `+`(`/`(`*..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_106.gif" width="728" height="37" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 0], [1, `+`(`/`(`*`(6), `*`(Pi)))], [2, `+`(`/`(`*`(3), `*`(Pi)))], [3, `+`(`/`(`*`(2), `*`(Pi)))], [4, `+`(`/`(`*`(`/`(3, 2)), `*`(Pi)))], [5, `+`(`/`(`*..." align="center" border="0"></td>
 <td width='5%' align='center'>(5.7)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1476,7 +1472,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_113.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_107.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1489,7 +1485,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_114.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_108.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1503,7 +1499,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_115.gif" width="309" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[omega], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(omega, `*`(t)))))))), omega = 1 .. m) end proc], [proc (m, t) opti..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_109.gif" width="309" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[omega], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(omega, `*`(t)))))))), omega = 1 .. m) end proc], [proc (m, t) opti..." align="center" border="0"></td>
 <td width='5%' align='center'>(5.8)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1515,7 +1511,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_116.gif" width="124" height="18" alt="Typesetting:-mprintslash([omegaMax := 47], [47])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_110.gif" width="124" height="18" alt="Typesetting:-mprintslash([omegaMax := 31], [31])" align="center" border="0"></td>
 <td width='5%' align='center'>(5.9)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1546,7 +1542,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_117.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_111.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1559,7 +1555,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_118.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_112.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1572,7 +1568,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_119.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_113.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1594,7 +1590,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_120.gif" width="200" height="52" alt="Typesetting:-mprintslash([f := PIECEWISE([`+`(`-`(`*`(3, `*`(t)))), `and`(`<=`(-1, t), `<=`(t, 0))], [`+`(`*`(3, `*`(t))), `and`(`<`(0, t), `<=`(t, 1))])], [piecewise(`and`(`<=`(-1, t), `<=`(t, 0)), `..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_114.gif" width="200" height="52" alt="Typesetting:-mprintslash([f := PIECEWISE([`+`(`-`(`*`(3, `*`(t)))), `and`(`<=`(-1, t), `<=`(t, 0))], [`+`(`*`(3, `*`(t))), `and`(`<`(0, t), `<=`(t, 1))])], [piecewise(`and`(`<=`(-1, t), `<=`(t, 0)), `..." align="center" border="0"></td>
 <td width='5%' align='center'>(6.1)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1607,7 +1603,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_121.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_115.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1621,7 +1617,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_122.gif" width="534" height="51" alt="Typesetting:-mprintslash([SerieFourier := proc (m, t) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(a[0])), sum(`*`(a[k], `*`(cos(`+`(`/`(`*`(2, `*`(k, `*`(Pi, `*`(t)))), `*`(T)))))), k = 1 .. m), s..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_116.gif" width="534" height="51" alt="Typesetting:-mprintslash([SerieFourier := proc (m, t) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(a[0])), sum(`*`(a[k], `*`(cos(`+`(`/`(`*`(2, `*`(k, `*`(Pi, `*`(t)))), `*`(T)))))), k = 1 .. m), s..." align="center" border="0"></td>
 <td width='5%' align='center'>(6.2)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1646,13 +1642,13 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_123.gif" width="65" height="18" alt="Typesetting:-mprintslash([N1 := 5], [5])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_117.gif" width="65" height="18" alt="Typesetting:-mprintslash([N1 := 3], [3])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_124.gif" width="65" height="18" alt="Typesetting:-mprintslash([N2 := 7], [7])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_118.gif" width="65" height="18" alt="Typesetting:-mprintslash([N2 := 5], [5])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_125.gif" width="29" height="18" alt="15" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_119.gif" width="29" height="18" alt="10" align="center" border="0"></td>
 <td width='5%' align='center'>(6.3)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1664,13 +1660,13 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_126.gif" width="445" height="48" alt="Typesetting:-mprintslash([SFourier1 := `+`(`/`(3, 2), `-`(`/`(`*`(12, `*`(cos(`*`(Pi, `*`(t))))), `*`(`^`(Pi, 2)))), `-`(`/`(`*`(`/`(4, 3), `*`(cos(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(`^`(Pi, 2)))), ..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_120.gif" width="330" height="48" alt="Typesetting:-mprintslash([SFourier1 := `+`(`/`(3, 2), `-`(`/`(`*`(12, `*`(cos(`*`(Pi, `*`(t))))), `*`(`^`(Pi, 2)))), `-`(`/`(`*`(`/`(4, 3), `*`(cos(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(`^`(Pi, 2)))))]..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_127.gif" width="559" height="48" alt="Typesetting:-mprintslash([SFourier2 := `+`(`/`(3, 2), `-`(`/`(`*`(12, `*`(cos(`*`(Pi, `*`(t))))), `*`(`^`(Pi, 2)))), `-`(`/`(`*`(`/`(4, 3), `*`(cos(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(`^`(Pi, 2)))), ..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_121.gif" width="445" height="48" alt="Typesetting:-mprintslash([SFourier2 := `+`(`/`(3, 2), `-`(`/`(`*`(12, `*`(cos(`*`(Pi, `*`(t))))), `*`(`^`(Pi, 2)))), `-`(`/`(`*`(`/`(4, 3), `*`(cos(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(`^`(Pi, 2)))), ..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_128.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(3, 2), `-`(`/`(`*`(12, `*`(cos(`*`(Pi, `*`(t))))), `*`(`^`(Pi, 2)))), `-`(`/`(`*`(`/`(4, 3), `*`(cos(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(`^`(Pi, 2)))), ..." align="center" border="0"><br><img src="images/FourierSeries_129.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(3, 2), `-`(`/`(`*`(12, `*`(cos(`*`(Pi, `*`(t))))), `*`(`^`(Pi, 2)))), `-`(`/`(`*`(`/`(4, 3), `*`(cos(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(`^`(Pi, 2)))), ..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_122.gif" width="666" height="48" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(3, 2), `-`(`/`(`*`(12, `*`(cos(`*`(Pi, `*`(t))))), `*`(`^`(Pi, 2)))), `-`(`/`(`*`(`/`(4, 3), `*`(cos(`+`(`*`(3, `*`(Pi, `*`(t))))))), `*`(`^`(Pi, 2)))), ..." align="center" border="0"></td>
 <td width='5%' align='center'>(6.4)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1686,7 +1682,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_130.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_123.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1701,7 +1697,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_131.gif" width="286" height="18" alt="Typesetting:-mprintslash([Promediofunc := 1.5000000000000000000], [1.5000000000000000000])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_124.gif" width="286" height="18" alt="Typesetting:-mprintslash([Promediofunc := 1.5000000000000000000], [1.5000000000000000000])" align="center" border="0"></td>
 <td width='5%' align='center'>(6.5)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1716,7 +1712,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_132.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_125.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1731,7 +1727,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_133.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_126.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
 <td width='5%' align='center'>(6.6)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1755,10 +1751,10 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_134.gif" width="728" height="37" alt="Typesetting:-mprintslash([CoefCn := {[0, 3], [1, `+`(`/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), `-`(2)))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), 2))), `*`(`^`(Pi, 2)))))], [2, 0], [3, `+`..." align="center" border="0"><br><img src="images/FourierSeries_135.gif" width="728" height="37" alt="Typesetting:-mprintslash([CoefCn := {[0, 3], [1, `+`(`/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), `-`(2)))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), 2))), `*`(`^`(Pi, 2)))))], [2, 0], [3, `+`..." align="center" border="0"><br><img src="images/FourierSeries_136.gif" width="728" height="37" alt="Typesetting:-mprintslash([CoefCn := {[0, 3], [1, `+`(`/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), `-`(2)))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), 2))), `*`(`^`(Pi, 2)))))], [2, 0], [3, `+`..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_127.gif" width="728" height="37" alt="Typesetting:-mprintslash([CoefCn := {[0, 3], [1, `+`(`/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), `-`(2)))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), 2))), `*`(`^`(Pi, 2)))))], [2, 0], [3, `+`..." align="center" border="0"><br><img src="images/FourierSeries_128.gif" width="728" height="37" alt="Typesetting:-mprintslash([CoefCn := {[0, 3], [1, `+`(`/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), `-`(2)))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), 2))), `*`(`^`(Pi, 2)))))], [2, 0], [3, `+`..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_137.gif" width="728" height="37" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 3], [1, `+`(`-`(`/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), `-`(2)))), `*`(`^`(Pi, 2)))), `/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))], [2, 0], [3..." align="center" border="0"><br><img src="images/FourierSeries_138.gif" width="728" height="37" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 3], [1, `+`(`-`(`/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), `-`(2)))), `*`(`^`(Pi, 2)))), `/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))], [2, 0], [3..." align="center" border="0"><br><img src="images/FourierSeries_139.gif" width="728" height="37" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 3], [1, `+`(`-`(`/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), `-`(2)))), `*`(`^`(Pi, 2)))), `/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))], [2, 0], [3..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_129.gif" width="728" height="37" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 3], [1, `+`(`-`(`/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), `-`(2)))), `*`(`^`(Pi, 2)))), `/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))], [2, 0], [3..." align="center" border="0"><br><img src="images/FourierSeries_130.gif" width="728" height="37" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, 3], [1, `+`(`-`(`/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), `-`(2)))), `*`(`^`(Pi, 2)))), `/`(`*`(3, `*`(`+`(`*`(I, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))], [2, 0], [3..." align="center" border="0"></td>
 <td width='5%' align='center'>(6.7)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1779,7 +1775,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_140.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_131.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1793,7 +1789,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_141.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_132.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1808,7 +1804,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_142.gif" width="309" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[omega], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(omega, `*`(t)))))))), omega = 1 .. m) end proc], [proc (m, t) opti..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_133.gif" width="309" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[omega], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(omega, `*`(t)))))))), omega = 1 .. m) end proc], [proc (m, t) opti..." align="center" border="0"></td>
 <td width='5%' align='center'>(6.8)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1820,7 +1816,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_143.gif" width="124" height="18" alt="Typesetting:-mprintslash([omegaMax := 47], [47])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_134.gif" width="124" height="18" alt="Typesetting:-mprintslash([omegaMax := 31], [31])" align="center" border="0"></td>
 <td width='5%' align='center'>(6.9)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1850,7 +1846,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_144.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_135.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1864,7 +1860,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_145.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_136.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1886,7 +1882,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_146.gif" width="183" height="56" alt="Typesetting:-mprintslash([f := PIECEWISE([`*`(`^`(t, 2)), `and`(`<=`(-1, t), `<=`(t, 1))], [0, otherwise])], [piecewise(`and`(`<=`(-1, t), `<=`(t, 1)), `*`(`^`(t, 2)))])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_137.gif" width="183" height="56" alt="Typesetting:-mprintslash([f := PIECEWISE([`*`(`^`(t, 2)), `and`(`<=`(-1, t), `<=`(t, 1))], [0, otherwise])], [piecewise(`and`(`<=`(-1, t), `<=`(t, 1)), `*`(`^`(t, 2)))])" align="center" border="0"></td>
 <td width='5%' align='center'>(7.1)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1899,7 +1895,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_147.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_138.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1913,7 +1909,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_148.gif" width="534" height="51" alt="Typesetting:-mprintslash([SerieFourier := proc (m, t) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(a[0])), sum(`*`(a[k], `*`(cos(`+`(`/`(`*`(2, `*`(k, `*`(Pi, `*`(t)))), `*`(T)))))), k = 1 .. m), s..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_139.gif" width="534" height="51" alt="Typesetting:-mprintslash([SerieFourier := proc (m, t) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(a[0])), sum(`*`(a[k], `*`(cos(`+`(`/`(`*`(2, `*`(k, `*`(Pi, `*`(t)))), `*`(T)))))), k = 1 .. m), s..." align="center" border="0"></td>
 <td width='5%' align='center'>(7.2)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1938,13 +1934,13 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_149.gif" width="65" height="18" alt="Typesetting:-mprintslash([N1 := 5], [5])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_140.gif" width="65" height="18" alt="Typesetting:-mprintslash([N1 := 3], [3])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_150.gif" width="65" height="18" alt="Typesetting:-mprintslash([N2 := 7], [7])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_141.gif" width="65" height="18" alt="Typesetting:-mprintslash([N2 := 5], [5])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_151.gif" width="29" height="18" alt="15" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_142.gif" width="29" height="18" alt="10" align="center" border="0"></td>
 <td width='5%' align='center'>(7.3)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1956,13 +1952,13 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_152.gif" width="619" height="48" alt="Typesetting:-mprintslash([SFourier1 := `+`(`/`(1, 3), `-`(`/`(`*`(4, `*`(cos(`*`(Pi, `*`(t))))), `*`(`^`(Pi, 2)))), `/`(`*`(cos(`+`(`*`(2, `*`(Pi, `*`(t)))))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(4, 9),..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_143.gif" width="417" height="48" alt="Typesetting:-mprintslash([SFourier1 := `+`(`/`(1, 3), `-`(`/`(`*`(4, `*`(cos(`*`(Pi, `*`(t))))), `*`(`^`(Pi, 2)))), `/`(`*`(cos(`+`(`*`(2, `*`(Pi, `*`(t)))))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(4, 9),..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_153.gif" width="728" height="43" alt="Typesetting:-mprintslash([SFourier2 := `+`(`/`(1, 3), `-`(`/`(`*`(4, `*`(cos(`*`(Pi, `*`(t))))), `*`(`^`(Pi, 2)))), `/`(`*`(cos(`+`(`*`(2, `*`(Pi, `*`(t)))))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(4, 9),..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_144.gif" width="619" height="48" alt="Typesetting:-mprintslash([SFourier2 := `+`(`/`(1, 3), `-`(`/`(`*`(4, `*`(cos(`*`(Pi, `*`(t))))), `*`(`^`(Pi, 2)))), `/`(`*`(cos(`+`(`*`(2, `*`(Pi, `*`(t)))))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(4, 9),..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_154.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(1, 3), `-`(`/`(`*`(4, `*`(cos(`*`(Pi, `*`(t))))), `*`(`^`(Pi, 2)))), `/`(`*`(cos(`+`(`*`(2, `*`(Pi, `*`(t)))))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(4, 9),..." align="center" border="0"><br><img src="images/FourierSeries_155.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(1, 3), `-`(`/`(`*`(4, `*`(cos(`*`(Pi, `*`(t))))), `*`(`^`(Pi, 2)))), `/`(`*`(cos(`+`(`*`(2, `*`(Pi, `*`(t)))))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(4, 9),..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_145.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(1, 3), `-`(`/`(`*`(4, `*`(cos(`*`(Pi, `*`(t))))), `*`(`^`(Pi, 2)))), `/`(`*`(cos(`+`(`*`(2, `*`(Pi, `*`(t)))))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(4, 9),..." align="center" border="0"><br><img src="images/FourierSeries_146.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(1, 3), `-`(`/`(`*`(4, `*`(cos(`*`(Pi, `*`(t))))), `*`(`^`(Pi, 2)))), `/`(`*`(cos(`+`(`*`(2, `*`(Pi, `*`(t)))))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(4, 9),..." align="center" border="0"></td>
 <td width='5%' align='center'>(7.4)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1978,7 +1974,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_156.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_147.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -1991,7 +1987,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_157.gif" width="294" height="18" alt="Typesetting:-mprintslash([Promediofunc := .33333333333333333333], [.33333333333333333333])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_148.gif" width="294" height="18" alt="Typesetting:-mprintslash([Promediofunc := .33333333333333333333], [.33333333333333333333])" align="center" border="0"></td>
 <td width='5%' align='center'>(7.5)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2006,7 +2002,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_158.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_149.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2026,7 +2022,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_159.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_150.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
 <td width='5%' align='center'>(7.6)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2050,10 +2046,10 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_160.gif" width="728" height="35" alt="Typesetting:-mprintslash([CoefCn := {[0, `/`(2, 3)], [1, `+`(`-`(`/`(`*`(4), `*`(`^`(Pi, 2)))))], [2, `/`(1, `*`(`^`(Pi, 2)))], [3, `+`(`-`(`/`(`*`(`/`(4, 9)), `*`(`^`(Pi, 2)))))], [4, `+`(`/`(`*`(`/`..." align="center" border="0"><br><img src="images/FourierSeries_161.gif" width="728" height="35" alt="Typesetting:-mprintslash([CoefCn := {[0, `/`(2, 3)], [1, `+`(`-`(`/`(`*`(4), `*`(`^`(Pi, 2)))))], [2, `/`(1, `*`(`^`(Pi, 2)))], [3, `+`(`-`(`/`(`*`(`/`(4, 9)), `*`(`^`(Pi, 2)))))], [4, `+`(`/`(`*`(`/`..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_151.gif" width="728" height="35" alt="Typesetting:-mprintslash([CoefCn := {[0, `/`(2, 3)], [1, `+`(`-`(`/`(`*`(4), `*`(`^`(Pi, 2)))))], [2, `/`(1, `*`(`^`(Pi, 2)))], [3, `+`(`-`(`/`(`*`(`/`(4, 9)), `*`(`^`(Pi, 2)))))], [4, `+`(`/`(`*`(`/`..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_162.gif" width="728" height="35" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, `/`(2, 3)], [1, `+`(`/`(`*`(4), `*`(`^`(Pi, 2))))], [2, `/`(1, `*`(`^`(Pi, 2)))], [3, `+`(`/`(`*`(`/`(4, 9)), `*`(`^`(Pi, 2))))], [4, `+`(`/`(`*`(`/`(1, 4..." align="center" border="0"><br><img src="images/FourierSeries_163.gif" width="728" height="35" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, `/`(2, 3)], [1, `+`(`/`(`*`(4), `*`(`^`(Pi, 2))))], [2, `/`(1, `*`(`^`(Pi, 2)))], [3, `+`(`/`(`*`(`/`(4, 9)), `*`(`^`(Pi, 2))))], [4, `+`(`/`(`*`(`/`(1, 4..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_152.gif" width="728" height="36" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, `/`(2, 3)], [1, `+`(`/`(`*`(4), `*`(`^`(Pi, 2))))], [2, `/`(1, `*`(`^`(Pi, 2)))], [3, `+`(`/`(`*`(`/`(4, 9)), `*`(`^`(Pi, 2))))], [4, `+`(`/`(`*`(`/`(1, 4..." align="center" border="0"></td>
 <td width='5%' align='center'>(7.7)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2074,7 +2070,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_164.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_153.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2088,7 +2084,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_165.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_154.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2102,7 +2098,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_166.gif" width="309" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[omega], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(omega, `*`(t)))))))), omega = 1 .. m) end proc], [proc (m, t) opti..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_155.gif" width="309" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[omega], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(omega, `*`(t)))))))), omega = 1 .. m) end proc], [proc (m, t) opti..." align="center" border="0"></td>
 <td width='5%' align='center'>(7.8)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2114,7 +2110,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_167.gif" width="124" height="18" alt="Typesetting:-mprintslash([omegaMax := 47], [47])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_156.gif" width="124" height="18" alt="Typesetting:-mprintslash([omegaMax := 31], [31])" align="center" border="0"></td>
 <td width='5%' align='center'>(7.9)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2145,7 +2141,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_168.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_157.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2158,7 +2154,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_169.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_158.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2171,7 +2167,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_170.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_159.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2193,7 +2189,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_171.gif" width="252" height="94" alt="Typesetting:-mprintslash([f := PIECEWISE([`+`(`*`(`/`(2, 5), `*`(t))), `and`(`<=`(0, t), `<=`(t, `/`(1, 2)))], [`+`(`-`(`*`(`/`(2, 15), `*`(t))), `/`(4, 15)), `and`(`<`(`/`(1, 2), t), `<=`(t, 2))])], ..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_160.gif" width="252" height="94" alt="Typesetting:-mprintslash([f := PIECEWISE([`+`(`*`(`/`(2, 5), `*`(t))), `and`(`<=`(0, t), `<=`(t, `/`(1, 2)))], [`+`(`-`(`*`(`/`(2, 15), `*`(t))), `/`(4, 15)), `and`(`<`(`/`(1, 2), t), `<=`(t, 2))])], ..." align="center" border="0"></td>
 <td width='5%' align='center'>(8.1)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2206,7 +2202,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_172.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_161.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2220,7 +2216,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_173.gif" width="534" height="51" alt="Typesetting:-mprintslash([SerieFourier := proc (m, t) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(a[0])), sum(`*`(a[k], `*`(cos(`+`(`/`(`*`(2, `*`(k, `*`(Pi, `*`(t)))), `*`(T)))))), k = 1 .. m), s..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_162.gif" width="534" height="51" alt="Typesetting:-mprintslash([SerieFourier := proc (m, t) options operator, arrow; `+`(`*`(`/`(1, 2), `*`(a[0])), sum(`*`(a[k], `*`(cos(`+`(`/`(`*`(2, `*`(k, `*`(Pi, `*`(t)))), `*`(T)))))), k = 1 .. m), s..." align="center" border="0"></td>
 <td width='5%' align='center'>(8.2)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2241,13 +2237,13 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_174.gif" width="65" height="18" alt="Typesetting:-mprintslash([N1 := 5], [5])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_163.gif" width="65" height="18" alt="Typesetting:-mprintslash([N1 := 3], [3])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_175.gif" width="65" height="18" alt="Typesetting:-mprintslash([N2 := 7], [7])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_164.gif" width="65" height="18" alt="Typesetting:-mprintslash([N2 := 5], [5])" align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_176.gif" width="29" height="18" alt="15" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_165.gif" width="29" height="18" alt="10" align="center" border="0"></td>
 <td width='5%' align='center'>(8.3)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2259,13 +2255,13 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_177.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier1 := `+`(`/`(1, 10), `*`(`+`(`/`(`*`(`/`(1, 5), `*`(`+`(`-`(2), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))), `*..." align="center" border="0"><br><img src="images/FourierSeries_178.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier1 := `+`(`/`(1, 10), `*`(`+`(`/`(`*`(`/`(1, 5), `*`(`+`(`-`(2), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))), `*..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_166.gif" width="728" height="38" alt="Typesetting:-mprintslash([SFourier1 := `+`(`/`(1, 10), `*`(`+`(`/`(`*`(`/`(1, 5), `*`(`+`(`-`(2), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))), `*..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_179.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier2 := `+`(`/`(1, 10), `*`(`+`(`/`(`*`(`/`(1, 5), `*`(`+`(`-`(2), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))), `*..." align="center" border="0"><br><img src="images/FourierSeries_180.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier2 := `+`(`/`(1, 10), `*`(`+`(`/`(`*`(`/`(1, 5), `*`(`+`(`-`(2), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))), `*..." align="center" border="0"><br><img src="images/FourierSeries_181.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier2 := `+`(`/`(1, 10), `*`(`+`(`/`(`*`(`/`(1, 5), `*`(`+`(`-`(2), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))), `*..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_167.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier2 := `+`(`/`(1, 10), `*`(`+`(`/`(`*`(`/`(1, 5), `*`(`+`(`-`(2), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))), `*..." align="center" border="0"><br><img src="images/FourierSeries_168.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier2 := `+`(`/`(1, 10), `*`(`+`(`/`(`*`(`/`(1, 5), `*`(`+`(`-`(2), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))), `*..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_182.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(1, 10), `*`(`+`(`/`(`*`(`/`(1, 5), `*`(`+`(`-`(2), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))), `*..." align="center" border="0"><br><img src="images/FourierSeries_183.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(1, 10), `*`(`+`(`/`(`*`(`/`(1, 5), `*`(`+`(`-`(2), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))), `*..." align="center" border="0"><br><img src="images/FourierSeries_184.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(1, 10), `*`(`+`(`/`(`*`(`/`(1, 5), `*`(`+`(`-`(2), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))), `*..." align="center" border="0"><br><img src="images/FourierSeries_185.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(1, 10), `*`(`+`(`/`(`*`(`/`(1, 5), `*`(`+`(`-`(2), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))), `*..." align="center" border="0"><br><img src="images/FourierSeries_186.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(1, 10), `*`(`+`(`/`(`*`(`/`(1, 5), `*`(`+`(`-`(2), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))), `*..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_169.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(1, 10), `*`(`+`(`/`(`*`(`/`(1, 5), `*`(`+`(`-`(2), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))), `*..." align="center" border="0"><br><img src="images/FourierSeries_170.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(1, 10), `*`(`+`(`/`(`*`(`/`(1, 5), `*`(`+`(`-`(2), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))), `*..." align="center" border="0"><br><img src="images/FourierSeries_171.gif" width="728" height="37" alt="Typesetting:-mprintslash([SFourier3 := `+`(`/`(1, 10), `*`(`+`(`/`(`*`(`/`(1, 5), `*`(`+`(`-`(2), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), 2))), `*`(`^`(Pi, 2))))), `*..." align="center" border="0"></td>
 <td width='5%' align='center'>(8.4)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2281,7 +2277,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_187.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_172.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2294,7 +2290,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_188.gif" width="294" height="18" alt="Typesetting:-mprintslash([Promediofunc := .10000000000000000000], [.10000000000000000000])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_173.gif" width="294" height="18" alt="Typesetting:-mprintslash([Promediofunc := .10000000000000000000], [.10000000000000000000])" align="center" border="0"></td>
 <td width='5%' align='center'>(8.5)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2309,7 +2305,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_189.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_174.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2323,7 +2319,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_190.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_175.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2336,7 +2332,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_191.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_176.gif" width="296" height="52" alt="Typesetting:-mprintslash([SerieFourierExp := proc (m, t) options operator, arrow; sum(`*`(C[j], `*`(exp(`+`(`-`(`/`(`*`(`+`(`*`(2, `*`(I))), `*`(n, `*`(Pi, `*`(t)))), `*`(T))))))), j = 1 .. m) end pro..." align="center" border="0"></td>
 <td width='5%' align='center'>(8.6)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2360,10 +2356,10 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_192.gif" width="728" height="37" alt="Typesetting:-mprintslash([CoefCn := {[0, `/`(1, 5)], [1, `+`(`/`(`*`(`/`(1, 5), `*`(`+`(`+`(`-`(2), `-`(`*`(2, `*`(I)))), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), `+`(..." align="center" border="0"><br><img src="images/FourierSeries_193.gif" width="728" height="37" alt="Typesetting:-mprintslash([CoefCn := {[0, `/`(1, 5)], [1, `+`(`/`(`*`(`/`(1, 5), `*`(`+`(`+`(`-`(2), `-`(`*`(2, `*`(I)))), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), `+`(..." align="center" border="0"><br><img src="images/FourierSeries_194.gif" width="728" height="37" alt="Typesetting:-mprintslash([CoefCn := {[0, `/`(1, 5)], [1, `+`(`/`(`*`(`/`(1, 5), `*`(`+`(`+`(`-`(2), `-`(`*`(2, `*`(I)))), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), `+`(..." align="center" border="0"><br><img src="images/FourierSeries_195.gif" width="728" height="37" alt="Typesetting:-mprintslash([CoefCn := {[0, `/`(1, 5)], [1, `+`(`/`(`*`(`/`(1, 5), `*`(`+`(`+`(`-`(2), `-`(`*`(2, `*`(I)))), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), `+`(..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_177.gif" width="728" height="37" alt="Typesetting:-mprintslash([CoefCn := {[0, `/`(1, 5)], [1, `+`(`/`(`*`(`/`(1, 5), `*`(`+`(`+`(`-`(2), `-`(`*`(2, `*`(I)))), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), `+`(..." align="center" border="0"><br><img src="images/FourierSeries_178.gif" width="728" height="37" alt="Typesetting:-mprintslash([CoefCn := {[0, `/`(1, 5)], [1, `+`(`/`(`*`(`/`(1, 5), `*`(`+`(`+`(`-`(2), `-`(`*`(2, `*`(I)))), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), `+`(..." align="center" border="0"><br><img src="images/FourierSeries_179.gif" width="728" height="37" alt="Typesetting:-mprintslash([CoefCn := {[0, `/`(1, 5)], [1, `+`(`/`(`*`(`/`(1, 5), `*`(`+`(`+`(`-`(2), `-`(`*`(2, `*`(I)))), Pi))), `*`(`^`(Pi, 2))), `-`(`/`(`*`(`/`(1, 15), `*`(`+`(`*`(3, `*`(Pi)), `+`(..." align="center" border="0"></td>
 </tr></font>&nbsp;</p>
 <p align="center"><tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_196.gif" width="728" height="39" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, `/`(1, 5)], [1, `+`(`/`(`*`(`/`(8, 15), `*`(`^`(2, `/`(1, 2)))), `*`(`^`(Pi, 2))))], [2, `+`(`/`(`*`(`/`(1, 10), `*`(`+`(`*`(I, `*`(Pi)), 2))), `*`(`^`(Pi..." align="center" border="0"><br><img src="images/FourierSeries_197.gif" width="728" height="39" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, `/`(1, 5)], [1, `+`(`/`(`*`(`/`(8, 15), `*`(`^`(2, `/`(1, 2)))), `*`(`^`(Pi, 2))))], [2, `+`(`/`(`*`(`/`(1, 10), `*`(`+`(`*`(I, `*`(Pi)), 2))), `*`(`^`(Pi..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_180.gif" width="728" height="39" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, `/`(1, 5)], [1, `+`(`/`(`*`(`/`(8, 15), `*`(`^`(2, `/`(1, 2)))), `*`(`^`(Pi, 2))))], [2, `+`(`/`(`*`(`/`(1, 10), `*`(`+`(`*`(I, `*`(Pi)), 2))), `*`(`^`(Pi..." align="center" border="0"><br><img src="images/FourierSeries_181.gif" width="728" height="39" alt="Typesetting:-mprintslash([PowerCoefCn := {[0, `/`(1, 5)], [1, `+`(`/`(`*`(`/`(8, 15), `*`(`^`(2, `/`(1, 2)))), `*`(`^`(Pi, 2))))], [2, `+`(`/`(`*`(`/`(1, 10), `*`(`+`(`*`(I, `*`(Pi)), 2))), `*`(`^`(Pi..." align="center" border="0"></td>
 <td width='5%' align='center'>(8.7)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2385,7 +2381,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_198.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_182.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2400,7 +2396,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_199.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_183.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2413,7 +2409,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_200.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_184.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2428,7 +2424,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_201.gif" width="309" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[omega], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(omega, `*`(t)))))))), omega = 1 .. m) end proc], [proc (m, t) opti..." align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_185.gif" width="309" height="51" alt="Typesetting:-mprintslash([SerieFourierExpK := proc (m, t) options operator, arrow; sum(`*`(CK[omega], `*`(exp(`+`(`-`(`*`(`+`(I), `*`(omega, `*`(t)))))))), omega = 1 .. m) end proc], [proc (m, t) opti..." align="center" border="0"></td>
 <td width='5%' align='center'>(8.8)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2440,7 +2436,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_202.gif" width="124" height="18" alt="Typesetting:-mprintslash([omegaMax := 47], [47])" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/FourierSeries_186.gif" width="124" height="18" alt="Typesetting:-mprintslash([omegaMax := 31], [31])" align="center" border="0"></td>
 <td width='5%' align='center'>(8.9)</td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2471,7 +2467,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_203.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_187.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2484,7 +2480,7 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_204.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_188.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
@@ -2497,29 +2493,10 @@
 </table></strong></font>&nbsp;</p>
 <p align="center"><table width='100%'>
 <tr>
-<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_205.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/FourierSeries_189.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
 <td width='5%' align='center'></td>
 </tr>
 </table></font>&nbsp;</p>
-<p align="left"><table>
-<tr>
-<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
-<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>;</td>
-</tr>
-</table></strong></font>&nbsp;</p>
-<p align="left"><table>
-<tr>
-<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
-<td valign="top"></td>
-</tr>
-</table>&nbsp;</p>
-<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
 </dl>
-<p align="left"><table>
-<tr>
-<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
-<td valign="top"></td>
-</tr>
-</table>&nbsp;</p>
 </body>
 </html>
