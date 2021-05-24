@@ -1,0 +1,293 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>FourierSenales.html</title>
+<!-- Created by Maple 2018.0, Mac OS X -->
+</head>
+<a href="FourierSenales.html#MapleAutoBookmark1">FourierSenales.mw</a>
+<ul>
+<li><a href="FourierSenales.html#MapleAutoBookmark2">Un clavecín</a>
+<li><a href="FourierSenales.html#MapleAutoBookmark3">Un piano</a>
+<li><a href="FourierSenales.html#MapleAutoBookmark4">Un Bajo</a>
+<li><a href="FourierSenales.html#MapleAutoBookmark5">Una Trompeta</a>
+<li><a href="FourierSenales.html#MapleAutoBookmark6">Un LA de una guitarra</a>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>restart; with(SignalProcessing): with(AudioTools): with(DocumentTools):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"></font><font color="#000000" size="5" face="Times New Roman"><strong>Espectrogramas de algunas Señales</strong></font>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark2" />
+<p align="left"><font color="#000000" size="5" face="Times New Roman"><strong>Un clavecín</strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Audiofile := "/Users/luisnunez/Documents/GitHub/Cursos/MisMateriales/ProgramasScripts/Espectrogramas/WAVFiles/Clavecin.wav":</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Clavecin := Read(Audiofile):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Play(Clavecin, "Speaker0");
+<br>
+<br><img src="images/FourierSenales_1.gif" width="38" height="38" alt="Embedded component" align="center" border="0"></td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New">&gt; </font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New">Spectrogram(</font><font color="#78000e" size="3" face="Courier New"><strong>Clavecin</strong></font><font color="#78000e" size="3" face="Courier New">, colorscheme = ["zgradient", [white, LightBlue, blue, red, black], markers = [0, .25, .5, .75, 1]], fftsize = 2^10, channel = 1, size = [800, 400], </font><font color="#78000e" size="3" face="Courier New"><strong>includesignal, includepowerspectrum</strong></font><font color="#78000e" size="3" face="Courier New">);</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman">
+<p><table style="empty-cells:show;border-collapse:collapse;border:none;border-color:black;border-width:1;" width=728>
+	<colgroup span="1" width="727" >
+	<tr>
+		<td style="border-right:solid;border-left:solid;border-top:solid;border-bottom:none;border-color:black;border-width:1;" valign=top colspan=1 rowspan=1><img src="images/FourierSenales_2.gif" width="726" height="363" alt="Plot_2d" align="center" border="0">
+		</td>
+	</tr>
+	<tr>
+		<td style="border-right:solid;border-left:solid;border-top:solid;border-bottom:none;border-color:black;border-width:1;" valign=top colspan=1 rowspan=1><img src="images/FourierSenales_3.gif" width="726" height="363" alt="Plot_2d" align="center" border="0">
+		</td>
+	</tr>
+	<tr>
+		<td style="border-right:solid;border-left:solid;border-top:solid;border-bottom:solid;border-color:black;border-width:1;" valign=top colspan=1 rowspan=1><img src="images/FourierSenales_4.gif" width="726" height="363" alt="Plot_2d" align="center" border="0">
+		</td>
+	</tr>
+</table></p>
+</td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark3" />
+<p align="left"><font color="#000000" size="5" face="Times New Roman"><strong>Un piano</strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Audiofile := "/Users/luisnunez/Documents/GitHub/Cursos/MisMateriales/ProgramasScripts/Espectrogramas/WAVFiles/Piano.wav":</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Piano := Read(Audiofile):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Play(Piano);
+<br><img src="images/FourierSenales_5.gif" width="38" height="38" alt="Embedded component" align="center" border="0"></td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Spectrogram(Piano, colorscheme = ["zgradient", [white, LightBlue, blue, red, black], markers = [0, 0.25, .5, .75, 1]], fftsize = 2^10, channel = 1, size = [800, 400], includesignal, includepowerspectrum);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman">
+<p><table style="empty-cells:show;border-collapse:collapse;border:none;border-color:black;border-width:1;" width=728>
+	<colgroup span="1" width="727" >
+	<tr>
+		<td style="border-right:solid;border-left:solid;border-top:solid;border-bottom:none;border-color:black;border-width:1;" valign=top colspan=1 rowspan=1><img src="images/FourierSenales_6.gif" width="726" height="363" alt="Plot_2d" align="center" border="0">
+		</td>
+	</tr>
+	<tr>
+		<td style="border-right:solid;border-left:solid;border-top:solid;border-bottom:none;border-color:black;border-width:1;" valign=top colspan=1 rowspan=1><img src="images/FourierSenales_7.gif" width="726" height="363" alt="Plot_2d" align="center" border="0">
+		</td>
+	</tr>
+	<tr>
+		<td style="border-right:solid;border-left:solid;border-top:solid;border-bottom:solid;border-color:black;border-width:1;" valign=top colspan=1 rowspan=1><img src="images/FourierSenales_8.gif" width="726" height="363" alt="Plot_2d" align="center" border="0">
+		</td>
+	</tr>
+</table></p>
+</td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark4" />
+<p align="left"><font color="#000000" size="5" face="Times New Roman"><strong>Un Bajo</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Audiofile := "/Users/luisnunez/Documents/GitHub/Cursos/MisMateriales/ProgramasScripts/Espectrogramas/WAVFiles/FingerBass.wav":</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>FingerBass := Read(Audiofile):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New"><u><a href="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20ignoring%20WAVE%20file%20%60LIST%60%20chunk"></u></font><font color="#0000ff" size="3" face="Courier New"><u>Warning, ignoring WAVE file `LIST` chunk</u></font></a></td>
+<td width='5%' align='center'></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Play(FingerBass); <img src="images/FourierSenales_9.gif" width="38" height="38" alt="Embedded component" align="center" border="0"></td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Spectrogram(FingerBass, colorscheme = ["zgradient", [white, LightBlue, blue, red, black], markers = [0, 0.25, .5, .75, 1]], fftsize = 2^10, channel = 1, size = [800, 400], includesignal, includepowerspectrum);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman">
+<p><table style="empty-cells:show;border-collapse:collapse;border:none;border-color:black;border-width:1;" width=728>
+	<colgroup span="1" width="727" >
+	<tr>
+		<td style="border-right:solid;border-left:solid;border-top:solid;border-bottom:none;border-color:black;border-width:1;" valign=top colspan=1 rowspan=1><img src="images/FourierSenales_10.gif" width="726" height="363" alt="Plot_2d" align="center" border="0">
+		</td>
+	</tr>
+	<tr>
+		<td style="border-right:solid;border-left:solid;border-top:solid;border-bottom:none;border-color:black;border-width:1;" valign=top colspan=1 rowspan=1><img src="images/FourierSenales_11.gif" width="726" height="363" alt="Plot_2d" align="center" border="0">
+		</td>
+	</tr>
+	<tr>
+		<td style="border-right:solid;border-left:solid;border-top:solid;border-bottom:solid;border-color:black;border-width:1;" valign=top colspan=1 rowspan=1><img src="images/FourierSenales_12.gif" width="726" height="363" alt="Plot_2d" align="center" border="0">
+		</td>
+	</tr>
+</table></p>
+</td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark5" />
+<p align="left"><font color="#000000" size="5" face="Times New Roman"><strong>Una Trompeta</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Audiofile := "/Users/luisnunez/Documents/GitHub/Cursos/MisMateriales/ProgramasScripts/Espectrogramas/WAVFiles/Trompeta.wav":</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Trompeta := Read(Audiofile): Play(Trompeta);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Spectrogram(Trompeta, colorscheme = ["zgradient", [white, LightBlue, blue, red, black], markers = [0, 0.25 ,.5, .75, 1]], fftsize = 2^10, channel = 1, size = [800, 400], includesignal, includepowerspectrum);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman">
+<p><table style="empty-cells:show;border-collapse:collapse;border:none;border-color:black;border-width:1;" width=728>
+	<colgroup span="1" width="727" >
+	<tr>
+		<td style="border-right:solid;border-left:solid;border-top:solid;border-bottom:none;border-color:black;border-width:1;" valign=top colspan=1 rowspan=1><img src="images/FourierSenales_13.gif" width="726" height="363" alt="Plot_2d" align="center" border="0">
+		</td>
+	</tr>
+	<tr>
+		<td style="border-right:solid;border-left:solid;border-top:solid;border-bottom:none;border-color:black;border-width:1;" valign=top colspan=1 rowspan=1><img src="images/FourierSenales_14.gif" width="726" height="363" alt="Plot_2d" align="center" border="0">
+		</td>
+	</tr>
+	<tr>
+		<td style="border-right:solid;border-left:solid;border-top:solid;border-bottom:solid;border-color:black;border-width:1;" valign=top colspan=1 rowspan=1><img src="images/FourierSenales_15.gif" width="726" height="363" alt="Plot_2d" align="center" border="0">
+		</td>
+	</tr>
+</table></p>
+</td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark6" />
+<p align="left"><font color="#000000" size="5" face="Times New Roman"><strong>Un LA de una guitarra</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Audiofile := "/Users/luisnunez/Documents/GitHub/Cursos/MisMateriales/ProgramasScripts/Espectrogramas/WAVFiles/RagoLA.wav":</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>RagoLA := Read(Audiofile):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Spectrogram(RagoLA, colorscheme = ["zgradient", [white, LightBlue, blue, red, black], markers = [0, 0.25 ,.5, .75, 1]], fftsize = 2^10, channel = 1, size = [800, 400], includesignal, includepowerspectrum);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman">
+<p><table style="empty-cells:show;border-collapse:collapse;border:none;border-color:black;border-width:1;" width=728>
+	<colgroup span="1" width="727" >
+	<tr>
+		<td style="border-right:solid;border-left:solid;border-top:solid;border-bottom:none;border-color:black;border-width:1;" valign=top colspan=1 rowspan=1><img src="images/FourierSenales_16.gif" width="726" height="363" alt="Plot_2d" align="center" border="0">
+		</td>
+	</tr>
+	<tr>
+		<td style="border-right:solid;border-left:solid;border-top:solid;border-bottom:none;border-color:black;border-width:1;" valign=top colspan=1 rowspan=1><img src="images/FourierSenales_17.gif" width="726" height="363" alt="Plot_2d" align="center" border="0">
+		</td>
+	</tr>
+	<tr>
+		<td style="border-right:solid;border-left:solid;border-top:solid;border-bottom:solid;border-color:black;border-width:1;" valign=top colspan=1 rowspan=1><img src="images/FourierSenales_18.gif" width="726" height="363" alt="Plot_2d" align="center" border="0">
+		</td>
+	</tr>
+</table></p>
+</td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</dl>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+</body>
+</html>
