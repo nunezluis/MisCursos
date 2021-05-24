@@ -14,8 +14,8 @@ Presentamos el desarrollo de las series de Fourier con detalle, analizando las c
 
 
 ## Materiales de apoyo
-1. [Presentación Series de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_2_3FourierTransf.pdf)
-2. [Hoja MAPLE de series de Fourier](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/SeriesFourier/FourierSeries.html)
+1. [Presentación Transformadas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_2_3FourierTransf.pdf)
+2. [Hoja MAPLE de transformadas de Fourier](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/TransFourier/FourierTransf.html)
 
 
  ## Al finalizar estos contenidos

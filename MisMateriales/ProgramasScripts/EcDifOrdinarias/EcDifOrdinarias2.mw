@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Worksheet>
+<Version major="2018" minor="0"/>
+<Label-Scheme value="2" prefix=""/>
+<View-Properties presentation="false" autoexpanding_sections="true" UserProfileName="Maple Default Profile" NumericFormat-ApplyInteger="true" NumericFormat-ApplyRational="true" NumericFormat-ApplyExponent="false" editable="true">
+</View-Properties>
+<MapleNet-Properties prettyprint="3" warnlevel="3" preplot="" helpbrowser="standard" displayprecision="-1" echo="1" unitattributes="&quot;fontweight&quot; = &quot;bold&quot;" imaginaryunit="I" longdelim="true" elisiontermsthreshold="10000" elisiondigitsafter="100" elisiondigitsbefore="100" plotdevice="inline" errorbreak="1" plotoptions="" plotdriver="opengl" quiet="false" elisiontermsbefore="100" elisiontermsafter="100" screenwidth="79" indentamount="4" plotoutput="terminal" screenpixelheight="768" rtablesize="10" useclientjvm="true" labelwidth="20" postplot="" typesetting="extended" ansi="false" elisiondigitsthreshold="10000" showassumed="1" errorcursor="false" labelling="true" screenheight="25" prompt="&gt; " verboseproc="1" latexwidth="8.0" ShowLabels="true"/>
+<Styles>
+<Font name="Heading 1" background="[255,255,255]" bold="true" executable="false" family="Times New Roma" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Warning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roma" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Line Printed Output" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 2" background="[255,255,255]" bold="true" executable="false" family="Times New Roma" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="16" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Output" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Inert Output" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[144,144,144]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Heading 3" background="[255,255,255]" bold="true" executable="false" family="Times New Roma" foreground="[0,0,0]" italic="true" opaque="false" readonly="false" size="14" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Diagnostic" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[40,120,40]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 1" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[255,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text Output" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 2" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 3" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 4" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Ordered List 5" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Header and Footer" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="10" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkError" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Atomic Variable" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[175,0,175]" italic="true" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="HyperlinkWarning" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[0,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Dictionary Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roma" foreground="[147,0,15]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="2D Math" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Bullet Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Plot" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Annotation Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="List Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Dash Item" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="2D Input" background="[255,255,255]" bold="false" executable="true" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Error" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,255]" italic="false" opaque="false" readonly="true" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Title" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="18" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Text" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Normal" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Caption Reference" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Code" background="[255,255,255]" bold="false" executable="false" family="Courier New" foreground="[255,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Maple Input Placeholder" background="[255,255,255]" bold="true" executable="true" family="Courier New" foreground="[200,0,200]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="true"/>
+<Font name="Equation Label" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Author" background="[255,255,255]" bold="false" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Font name="Hyperlink" background="[255,255,255]" bold="false" executable="false" family="Times New Roma" foreground="[0,128,128]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="true" placeholder="false"/>
+<Font name="Caption Text" background="[255,255,255]" bold="true" executable="false" family="Times New Roman" foreground="[0,0,0]" italic="false" opaque="false" readonly="false" size="12" subscript="false" superscript="false" underline="false" placeholder="false"/>
+<Layout name="Heading 1" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="4" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Warning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 4" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Line Printed Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 2" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="2" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Output" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.3" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Heading 3" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Diagnostic" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="any" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Ordered List 1" alignment="left" bullet="numeric" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Text Output" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="newline" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Ordered List 2" alignment="left" bullet="alphabetic" firstindent="0" leftmargin="36" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Ordered List 3" alignment="left" bullet="roman" firstindent="0" leftmargin="72" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Ordered List 4" alignment="left" bullet="ALPHABETIC" firstindent="0" leftmargin="108" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Ordered List 5" alignment="left" bullet="ROMAN" firstindent="0" leftmargin="144" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="-1" bulletsuffix=""/>
+<Layout name="Annotation Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkError" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="HyperlinkWarning" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Bullet Item" alignment="left" bullet="dot" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Maple Plot" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="List Item" alignment="left" bullet="indent" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Dash Item" alignment="left" bullet="dash" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="3" spacebelow="3" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Error" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Title" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="12" spacebelow="12" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Normal" alignment="left" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="0" spacebelow="0" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Layout name="Author" alignment="centred" bullet="none" firstindent="0" leftmargin="0" rightmargin="0" linespacing="0.0" spaceabove="8" spacebelow="8" linebreak="space" pagebreak-before="false" initial="0" bulletsuffix=""/>
+<Pencil-style name="Pencil 1" pen-color="[0,0,0]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 2" pen-color="[0,0,255]" pen-height="1.0" pen-width="1.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 3" pen-color="[0,0,0]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 4" pen-color="[0,0,255]" pen-height="3.0" pen-width="3.0" pen-opacity="1.0"/>
+<Pencil-style name="Pencil 5" pen-color="[255,0,0]" pen-height="5.0" pen-width="5.0" pen-opacity="1.0"/>
+<Highlighter-style name="Highlighter 5" pen-color="[255,255,0]" pen-height="48.0" pen-width="48.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 3" pen-color="[51,255,0]" pen-height="24.0" pen-width="24.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 4" pen-color="[0,255,255]" pen-height="32.0" pen-width="32.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 1" pen-color="[255,153,255]" pen-height="12.0" pen-width="8.0" pen-opacity="0.8"/>
+<Highlighter-style name="Highlighter 2" pen-color="[255,204,0]" pen-height="14.0" pen-width="14.0" pen-opacity="0.8"/>
+</Styles>
+<Startup-Code startupcode=""/>
+<Metadata-table>
+    <Metadata-category name="&lt;default&gt;"/>
+    <Metadata-tag id="0" category="&lt;default&gt;" name="Document Properties">
+        <Metadata-attribute name="Keywords" value="&lt;default&gt;"/>
+        <Metadata-attribute name="Item List" value="true"/>
+        <Metadata-attribute name="Title" value="&lt;default&gt;"/>
+        <Metadata-attribute name="Author" value="&lt;default&gt;"/>
+        <Metadata-attribute name="Subject" value="&lt;default&gt;"/>
+    </Metadata-tag>
+</Metadata-table>
+<Task-table>
+    <Task-category name="&lt;default&gt;"/>
+</Task-table>
+<Task/>
+<Group labelreference="L1882" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Heading 1" layout="Heading 1" alignment="centred">Ecuaciones diferenciales ordinarias</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1885" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Author" layout="Author"><Font encoding="UTF-8">Luis A. N\303\272\303\261ez</Font></Text-field><Text-field style="Author" layout="Author"><Font encoding="UTF-8" italic="true">Escuela de F\303\255sica, Universidad Industrial de Santander</Font></Text-field><Text-field style="Author" layout="Author"></Text-field><Text-field style="Author" layout="Author"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L1883" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Heading 3" layout="Heading 3" initial="-1" bulletsuffix="." bullet="numeric">Ecuaciones diferenciales ordinarias lineales y no lineales</Text-field><Text-field style="Heading 3" layout="Heading 3" initial="-1" bulletsuffix="." bullet="numeric"><Font encoding="UTF-8">Dominio de la soluci\303\263n</Font></Text-field><Text-field style="Heading 3" layout="Heading 3" initial="-1" bulletsuffix="." bullet="numeric">Soluciones generales y particulares</Text-field><Text-field style="Heading 3" layout="Heading 3" initial="-1" bulletsuffix="." bullet="numeric"><Font encoding="UTF-8">Soluciones impl\303\255citas y expl\303\255citas</Font></Text-field><Text-field style="Heading 3" layout="Heading 3" initial="-1" bulletsuffix="." bullet="numeric"><Font encoding="UTF-8">M\303\251todo de las isoclinas</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1881" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">restart; infolevel[dsolve]:=2;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1884" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Heading 3" layout="Heading 3" alignment="centred">Ecuaciones diferenciales lineales</Text-field>
+</Input>
+</Group>
+<Group labelreference="L273" drawlabel="true">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Empecemos por un principio pedi\303\241trico, una ecuaci\303\263n diferencial  ordinaria, lineal, de primer, orden inhomog\303\251nea</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L274" drawlabel="true">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">EcDifLineal := diff(y(x),x)= exp(x) -2*x*y(x);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L275" drawlabel="true">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">cuya soluci\303\263n es</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L276" drawlabel="true">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SolEcDifLineal := dsolve(EcDifLineal,y(x));</Text-field>
+</Input>
+</Group>
+<Group labelreference="L277" drawlabel="true">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">n\303\263tese el efecto de la instrucci\303\263n infolevel</Font></Text-field>
+</Input>
+</Group>
+<Group labelreference="L278" drawlabel="true">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">?infolevel;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1715" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">cuando salen algunas funciones extra\303\261as se puede invocar la ayuda para saber de qu\303\251 se trata</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1377" drawlabel="true">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">?erf;
+erf(-4.5);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1957" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Heading 3" layout="Heading 3" alignment="centred"><Font encoding="UTF-8">Ecuaci\303\263n diferencial ordinaria no lineal</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1958" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">EcDifNOLineal := diff(g(x),x) -(2*sqrt(g(x))-g(x))/x = 0; </Text-field>
+</Input>
+</Group>
+<Group labelreference="L1959" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">la funci\303\263n inc\303\263gnita tiene un exponente distinto de uno. Esta ecuaci\303\263n se conoce como la ecuaci\303\263n de Bernoulli y puede ser integrada anal\303\255ticamente</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1960" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SolEcDifNOLineal := dsolve(EcDifNOLineal,g(x)); </Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1963" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SolEcDifNolineal:=solve(SolEcDifNOLineal,g(x));</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1964" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Heading 3" layout="Heading 3" alignment="centred"><Font encoding="UTF-8">Dominio de la soluci\303\263n </Font></Text-field>
+</Input>
+</Group>
+<Group labelreference="L1965" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">A pesar de lo extra\303\261a de la expresi\303\263n para la soluci\303\263n de la ecuaci\303\263n diferencial lineal </Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1966" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SolEcDifLineal;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1967" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Todos los valores <Font italic="true">x</Font><Font encoding="UTF-8"> son v\303\241lidos. No as\303\255 para la soluci\303\263n de la ecuaci\303\263n no lineal</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1968" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">g(x) = SolEcDifNolineal;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1969" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">que solo es v\303\241lida para </Font><Font italic="true">x</Font> positivos distintos de cero</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1970" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Heading 3" layout="Heading 3" alignment="centred">Soluciones generales y particulares</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1716" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Volviendo a la familia soluciones  </Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1718" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SolEcDifLineal;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1717" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">N\303\263tese la presencia de una constante arbitraria _C1 que queda especificada si damos una condici\303\263n inicial. Vale decir un punto por el cual pase la soluci\303\263n</Font></Text-field><Text-field style="Text" layout="Normal"></Text-field><Text-field style="Text" layout="Normal">Si no se especifica la constante <Font bold="true" encoding="UTF-8">tendremos una familia de soluciones o una la soluci\303\263n general.</Font><Font encoding="UTF-8"> Si se especifica la constante (a trav\303\251s de una condici\303\263n inicial) <Font bold="true">tendremos una soluci\303\263n particular</Font></Font></Text-field><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1719" drawlabel="true">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CondIni := y(0)=-3; SolEcDifLinealPart:=dsolve({EcDifLineal,CondIni},y(x));</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1971" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">y si la graficamos</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L279" drawlabel="true">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot(rhs(SolEcDifLinealPart), x=-4..4, -4..4);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1977" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Obtenemos una \303\272nica soluci\303\263n</Font></Text-field><Text-field style="Text" layout="Normal"></Text-field><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Igual para para la soluci\303\263n de la ecuacion diferencial no lineal</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1978" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CondIni := g(1)=3; SolEcDifNOLinealPart:=dsolve({EcDifNOLineal,CondIni},g(x));</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1979" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">y la graficamos</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1980" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot(rhs(SolEcDifNOLinealPart), x=0..4, 0..400);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L281" drawlabel="true">
+<Input><Text-field style="Text" layout="Normal">Para cada valor de la constante <Font bold="true" encoding="UTF-8">tendremos una soluci\303\263n particular</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L280" drawlabel="true">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">ypartLinealvarias := rhs(SolEcDifLineal): 
+GrafSolEcDifLinealpart := {seq(subs(_C1 = m, ypartLinealvarias), m=-4..4)}:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L282" drawlabel="true">
+<Input><Text-field style="Text" layout="Normal">y graficamos</Text-field>
+</Input>
+</Group>
+<Group labelreference="L284" drawlabel="true">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot(GrafSolEcDifLinealpart, x=-4..4, -5..5);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2019" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">e igualmente para el caso de la soluci\303\263n de la ecuaci\303\263n no lineal</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2020" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">GrafSolEcDifNOLinealpart := {seq(subs(_C1 = m, SolEcDifNolineal), m=-4..4)}:</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2023" drawlabel="true">
+<Input><Text-field style="Text" layout="Normal">y graficamos</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2022" drawlabel="true">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot(GrafSolEcDifNOLinealpart, x=0..1, 0..50);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2021" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field>
+</Input>
+</Group>
+<Group labelreference="L1754" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Para el caso de la familia de soluciones de la ecuaci\303\263n lineal </Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1756" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SolEcDifLineal;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2135" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">y no lineal</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2136" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">g(x) = SolEcDifNolineal;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1755" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">vemos que hemos podido despejar el valor de la funci\303\263n soluci\303\263n. Tendremos una UNICA <Font bold="true">soluci\303\263n expl\303\255cita</Font></Font>. Pero hay casos en los cuales eso no es posible.</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1775" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">EcDifImplicita  := 3*x^2 +3*y(x)^2*diff(y(x),x) -3*y(x) -3*x*diff(y(x),x) =0;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2191" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font bold="true" encoding="UTF-8">La soluci\303\263n impl\303\255cita </Font><Font encoding="UTF-8">para este caso ser\303\241 </Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2190" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">x^3 + y^3 -3*y*x = 0;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2189" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">y si uno le pide a la m\303\241quina que la solucione</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1776" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SolEcDifImplicita:= dsolve(EcDifImplicita, y(x)):</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1778" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">porque existe tres posibles soluciones para esta ecuaci\303\263n diferencial</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1777" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SolEcDifImplicita[1]; </Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1779" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SolEcDifImplicita[2];</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L1780" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SolEcDifImplicita[3];</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2187" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">n\303\263tese que para la segunda y tercera soluci\303\263n tendemos valores imaginarios. Si buscamos la soluci\303\263n particular para </Font><Font italic="true">_C1 = 0</Font> tendremos </Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2182" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SolImplicita1 := subs(_C1 = 0, SolEcDifImplicita[1]);</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2183" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SolImplicita2 := subs(_C1 = 0, SolEcDifImplicita[2]);</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2184" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SolImplicita3 := subs(_C1 = 0, SolEcDifImplicita[3]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2185" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Otra vez que para la segunda y tercera soluci\303\263n tenemos valores imaginarios</Font></Text-field>
+</Input>
+</Group>
+<Group labelreference="L1879" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Si graficamos las tres soluciones de forma conjunta tendremos</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1818" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot([rhs(SolImplicita1), rhs(SolImplicita2), rhs(SolImplicita3)], x=-2..2, color =[blue, red, green]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L1880" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Cada color representa una de las soluciones para <Font italic="true">_C1 = 0</Font> para un rango de <Font italic="true">x</Font> que provee soluciones reales. </Text-field><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Claramente hay una regi\303\263n 0 &lt; x &lt; ~1.6 en la cual se superponen las tres soluciones y hay que seleccionar cual de las soluciones es la viable. </Font></Text-field>
+</Input>
+</Group>
+<Group labelreference="L2484" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Esa indeterminaci\303\263n se elimina cuando uno escoge una soluci\303\263n particular, fuera de ese rango</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2485" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CondIni := y(3)=4; SolEcDifImplicitaPart:= dsolve({EcDifImplicita, CondIni}, y(x));</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2486" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot(rhs(SolEcDifImplicitaPart), x=-10..10);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2271" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Heading 3" layout="Heading 3" alignment="centred"><Font encoding="UTF-8">M\303\251todo de las Isoclinas</Font></Text-field>
+</Input>
+</Group>
+<Group labelreference="L2272" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">El m\303\251todo de las isoclinas se remonta a los or\303\255genes de las ecuaciones diferenciales. Aparentemente es el mismo Johann Bernoulli fue quien explic\303\263 por primera vez la idea en su obra </Font><Font italic="true">Modus generalis construendi omnes aequationes diferenciales primi gradus, Acta Eruditorum, noviembre de 1694</Font><Font encoding="UTF-8"> (Citado en Tourn\303\250s, D. (2016). R\303\251solution graphique des \303\251quations diff\303\251rentielles pag. 8.)</Font></Text-field>
+</Input>
+</Group>
+<Group labelreference="L2273" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">La idea es muy simple, en general, una ecuaci\303\263n diferencial de primer orden (expl\303\255cita respecto a la derivada) se podr\303\241 representar como </Font><Font italic="true">y' = f(y,x)</Font><Font encoding="UTF-8"> . Ahora bien, el lado derecho de esa igualdad lo representa una funci\303\263n de dos variables, la cual tendr\303\241 un valor en cada punto (x, y). Ese valor (por la igualdad que representa la ecuaci\303\263n diferencial) ser\303\241 el valor de la derivada en ese punto y el valor de la derivada en un punto, no es otra cosa que la pendiente de la recta tangente a una curva en ese punto. </Font></Text-field>
+</Input>
+</Group>
+<Group labelreference="L2294" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"></Text-field><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Entonces podemos construir el mapa de isoclinas para la ecuaci\303\263n diferencial lineal</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2295" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">EcDifLineal;</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2809" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">evalf(subs([x=3,yy=2],exp(x)-2*x*yy));</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2810" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">arctan(%);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2297" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">de la forma</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2275" drawlabel="true">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">with(DEtools):
+DEplot(EcDifLineal,y(x),x=-4..4, y= -4..4);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2307" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">y reconstruir algunas de las curvas integrales, vale decir aquellas curvas que tienen las lineas tangentes</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2276" drawlabel="true">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">DEplot(EcDifLineal,y(x),x=-4..4,[[0,-3],[0,-2], [0,3],[0,2]],y=-5..5);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2314" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Para la cuaci\303\263n de Bernoulli es un poco mas compleja</Font></Text-field>
+</Input>
+</Group>
+<Group labelreference="L2315" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">DEplot(EcDifNOLineal,g(x),x=-4..4, g= 0..10);</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2321" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">DEplot(EcDifNOLineal,g(x),x=-4..4,[[1,1],[1,2],[1,3],[1,4],[1,5],[1,6], [1,7],[1,8]],g=0..10);</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2836" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">EcDifNOLineal;</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2838" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">dsolve(EcDifNOLineal);</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2837" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">SolEcDifNolineal;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2424" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Podemos tambi\303\251n hacer un zoom</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2425" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">DEplot(EcDifNOLineal,g(x),x=0..1.01,[[1,1],[1,2],[1,3],[1,4],[1,5],[1,6], [1,7],[1,8]],g=0..10);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2274" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal">Esta manera de explorar cualitativamente las soluciones de las ecuaciones diferenciales nos indica que hay otra soluciones para el dominio de las <Font italic="true">x</Font><Font encoding="UTF-8"> negativas que no era evidente en la soluci\303\263n anal\303\255tica</Font> </Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2351" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">DEplot(EcDifNOLineal,g(x),x=-4..4,[[-1,1],[-1,2],[-1,3],[-1,4],[-1,5],[-1,6],[-1,7],[-1,8]],g=0..10);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2444" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">Podemos hacer algo similar para la ecuaci\303\263n impl\303\255cita</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L340" drawlabel="true">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">EcDifImplicita;</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2446" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">DEplot(EcDifImplicita,y(x),x=-4..4, y= -4..4);</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2452" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">DEplot(EcDifImplicita,y(x),x=-4..4,[[3,1],[3,2],[3,3],[3,4]],y=-4..4);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2580" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field style="Text" layout="Normal"><Font encoding="UTF-8">luego de explorarla cualitativamente con el m\303\251todo de las isoclinas uno puede resolverla anal\303\255tica o num\303\251ricamente con mas conscienca de lo que est\303\241 buscando</Font></Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2483" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CondIni := y(3)=4; SolEcDifImplicitaPart34:= dsolve({EcDifImplicita, CondIni}, y(x)): </Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2502" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CondIni := y(3)=3: SolEcDifImplicitaPart33:= dsolve({EcDifImplicita, CondIni}, y(x));</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2503" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CondIni := y(3)=2: SolEcDifImplicitaPart32:= dsolve({EcDifImplicita, CondIni}, y(x));</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2504" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CondIni := y(3)=1: SolEcDifImplicitaPart31:= dsolve({EcDifImplicita, CondIni}, y(x));</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2553" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CondIni := y(3)=-2: SolEcDifImplicitaPart3_2:= dsolve({EcDifImplicita, CondIni}, y(x));</Text-field>
+</Input>
+</Group>
+<Group hide-input="false" labelreference="L2691" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">CondIni := y(1)=3: SolEcDifImplicitaPart13:= dsolve({EcDifImplicita, CondIni}, y(x));</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2539" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">plot([rhs(SolEcDifImplicitaPart14),rhs(SolEcDifImplicitaPart33),rhs(SolEcDifImplicitaPart32),rhs(SolEcDifImplicitaPart31),rhs(SolEcDifImplicitaPart3_2)], x=-5..5, color=[red, orange, green, blue, black]);</Text-field>
+</Input>
+</Group>
+<Group labelreference="L2682" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal"></Text-field>
+</Input>
+</Group>
+</Worksheet>
