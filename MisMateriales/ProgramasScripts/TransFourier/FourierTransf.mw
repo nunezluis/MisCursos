@@ -92,7 +92,7 @@
 <Input><Text-field style="Text" layout="Normal" alignment="centred"><Font size="16">Transformaciones Fourier</Font></Text-field><Text-field style="Text" layout="Normal" alignment="centred"><Font bold="true" encoding="UTF-8">Luis A. N\303\272\303\261ez</Font></Text-field><Text-field style="Text" italic="true" layout="Normal" alignment="centred"><Font encoding="UTF-8" italic="true">Escuela de F\303\255sica, Universidad Industrial de Santander</Font></Text-field><Text-field style="Text" italic="true" layout="Normal" alignment="centred"></Text-field><Text-field style="Text" italic="true" layout="Normal" alignment="centred"><Font italic="true">Bucaramanga-Colombia</Font></Text-field>
 </Input>
 </Group>
-<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1"><Font encoding="UTF-8">Funci\303\263n escal\303\263n </Font></Text-field></Title><Text-field style="Text" layout="Normal"></Text-field>
+<Section collapsed="true" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1"><Font encoding="UTF-8">Funci\303\263n escal\303\263n </Font></Text-field></Title><Text-field style="Text" layout="Normal"></Text-field>
 <Group hide-input="false" labelreference="L11016" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
 <Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">restart: with(inttrans); with(plots):</Text-field>
 </Input>
@@ -329,7 +329,7 @@ PowCK := [seq(plot( [[k,0],[k, PowerCK[k]]],thickness=9),k=1..kMax)]:</Text-fiel
 </Input>
 </Group></Presentation-Block>
 </Section>
-<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1"><Font encoding="UTF-8">Funci\303\263n </Font>Onda cuadrada (centrada en 0 y desplazada)</Text-field></Title>
+<Section collapsed="true" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1"><Font encoding="UTF-8">Funci\303\263n </Font>Onda cuadrada (centrada en 0 y desplazada)</Text-field></Title>
 <Group hide-input="false" labelreference="L10799" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
 <Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">restart: with(inttrans): with(plots):<Font encoding="UTF-8">T := 2;             # Per\303\255odo
 medT:= T/2;         # Medio per\303\255odo
@@ -664,7 +664,7 @@ display(ImCK2,title=`Espectro parte imaginaria de los coeficientes se\303\261al 
 </Input>
 </Group></Presentation-Block>
 </Section>
-<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1"><Font encoding="UTF-8">Funci\303\263n gen\303\251rica en el intervalo </Font>[ -T, T]</Text-field></Title><Text-field style="Text" layout="Normal"></Text-field>
+<Section collapsed="true" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1"><Font encoding="UTF-8">Funci\303\263n gen\303\251rica en el intervalo </Font>[ -T, T]</Text-field></Title><Text-field style="Text" layout="Normal"></Text-field>
 <Group hide-input="false" labelreference="L10912" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
 <Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">restart: with(inttrans): with(plots):
 <Font encoding="UTF-8">T := 2;             # Per\303\255odo
@@ -813,7 +813,7 @@ display(PowCK<Font encoding="UTF-8">,title=`Espectro m\303\263dulo de los coefic
 </Group>
 </Section>
 </Section>
-<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1"><Font encoding="UTF-8">Funci\303\263n gen\303\251rica Ni par ni impar</Font></Text-field></Title>
+<Section collapsed="true" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1"><Font encoding="UTF-8">Funci\303\263n gen\303\251rica Ni par ni impar</Font></Text-field></Title>
 <Group hide-input="false" labelreference="L10954" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
 <Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">restart: with(inttrans): with(plots):
 <Font encoding="UTF-8">T := 2;             # Per\303\255odo
@@ -1006,7 +1006,7 @@ display(PowCK<Font encoding="UTF-8">,title=`Espectro m\303\263dulo de los coefic
 </Group>
 </Section>
 </Section>
-<Section collapsed="false" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Varias funciones del Libro de Landau &amp; Paez</Text-field></Title>
+<Section collapsed="true" isCollapsible="true" drawButton="true" MultipleChoiceAnswerIndex="-1" MultipleChoiceRandomizeChoices="false" TrueFalseAnswerIndex="-1" EssayAnswerRows="5" EssayAnswerColumns="60"><Title><Text-field style="Heading 1" layout="Heading 1">Varias funciones del Libro de Landau &amp; Paez</Text-field></Title>
 <Group labelreference="L11240" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
 <Input><Text-field style="Text" layout="Normal"></Text-field>
 </Input>
