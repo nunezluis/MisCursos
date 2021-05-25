@@ -8,7 +8,7 @@
    1. [Espacios Lineales](https://github.com/nunezluis/MisCursos/blob/main/MatAvan21A/EspaciosLineales.md)
    2. [Espacios duales y Tensores](https://github.com/nunezluis/MisCursos/blob/main/MatAvan21A/EspaciosDuales.md)
    3. [Operadores Lineales](https://github.com/nunezluis/MisCursos/blob/main/MatAvan21A/OperadoresLineales.md)
-   4. [XXXX](#YYY)
+   4. [Series y Transformadas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MatAvan21A/SerieTransFourier.md)
    5. [XXXX](#YYY)
 5. [Evolución de la evaluación](#Avanzaevaluacion)
 
