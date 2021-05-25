@@ -1,0 +1,68 @@
+\documentclass[spanish,notitlepage,letterpaper,11pt]{article} % para artÌculo en castellano
+\usepackage[utf8]{inputenc} % Acepta caracteres en castellano
+\usepackage[T1]{fontenc} % font encoding
+\usepackage[spanish]{babel} % silabea palabras castellanas
+\usepackage[none]{hyphenat} 
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref} % navega por el doc
+\usepackage{graphicx}
+\usepackage{geometry} % See geometry.pdf to learn the layout options.
+\geometry{letterpaper}  % ... or a4paper or a5paper or ... 
+%\geometry{landscape}  % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{epstopdf}
+\usepackage{fancyhdr} % encabezados y pies de pg
+\usepackage{lineno}
+%\linenumbers
+
+\pagestyle{fancy} 
+\chead{\bfseries Series y Transformadas de Fourier} 
+\lhead{} % si se omite coloca el nombre de la seccion
+\rhead{Julio 2020} 
+\lfoot{\it L.A. Núñez  } 
+\cfoot{Universidad Industrial de Santander} 
+\rfoot{\thepage} 
+
+\voffset = -0.25in 
+\textheight = 8.0in 
+\textwidth = 6.5in
+\oddsidemargin = 0.in
+\headheight = 20pt 
+\headwidth = 6.5in
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0,5pt}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+
+\begin{document}
+\begin{center}
+{\LARGE Series y transformadas de fourier}    
+\end{center}
+\section{El trimbre y las series de fourier}
+En música, el timbre o color del tono o calidad del tono es la calidad sonora de una nota musical. El timbre distingue diferentes tipos de producción de sonido, como las voces de un coro los instrumentos de cuerda, los instrumentos de viento y los instrumentos de percusión. También permite a los oyentes distinguir diferentes instrumentos de la misma categoría (por ejemplo, un oboe y un clarinete, ambos instrumentos de viento-madera).
+
+\begin{enumerate}
+  \item ¿cómo puede Ud caracterizar el timbre de un instrumento? Esto es: ¿cómo diferencias un ``la natural'' (440 HZ) emitido por un piano, por una guitarra, por una voz?
+  \item ¿pueden utilizar este esquema para identificar dos voces de dos personas distintas.
+\end{enumerate}
+
+En ambos casos tienen que mostrar los resultados ejecutando un código en Python que pueda leer un archivo de sonido y prosesarlo mediante un análisis de serie de Fourier
+
+\section{Espectrogramas de los sonidos}
+Un espectrograma es una representación visual del espectro de frecuencias para una señal que varía con el tiempo. Los espectrogramas a veces se llaman sonografías cuando se aplican a una señal de audio. 
+
+Los espectrogramas se utilizan ampliamente en los campos de la música, la lingüística, para el procesamiento del habla. Los espectrogramas de audio pueden ser usados para identificar fonéticamente las palabras habladas, y para analizar las diversas llamadas de los animales.
+
+\begin{enumerate}
+  \item ¿cómo puede Ud caracterizar una serie de palabras (o cantos de aves, o ladridos de perros) a partir de su espectrograma?  
+  \item ¿pueden utilizar este esquema para identificar dos voces de dos personas distintas.
+  \item ¿los algoritmos de reconocimiento de voz de los celulares se basan en el análisis del espectro de potencias de Fourier?
+\end{enumerate}
+
+%\bibliographystyle{unsrt}
+%\bibliography{BibTex/BiblioLN151010}
+
+\end{document}  
+

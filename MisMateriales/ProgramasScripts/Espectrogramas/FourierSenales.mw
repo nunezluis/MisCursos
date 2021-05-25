@@ -181,7 +181,7 @@
 </Input>
 </Group>
 <Group hide-input="false" labelreference="L832" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
-<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">RagoLA := Read(Audiofile):</Text-field>
+<Input><Text-field prompt="&gt; " style="Maple Input" layout="Normal">RagoLA := Read(Audiofile):Play(RagoLA);</Text-field>
 </Input>
 </Group>
 <Group labelreference="L831" drawlabel="true" applyint="true" applyrational="true" applyexponent="false">
