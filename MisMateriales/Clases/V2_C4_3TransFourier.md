@@ -28,10 +28,10 @@ Presentamos el desarrollo de las transformadas de Fourier con detalle. Se recomi
 Desarrollar los ejercicios 3, 4 y 5 de la sección 12.5.3 de [R. H. Landau, M. J. Páez C.C. Bordeianu, *Computational Physics: Problem solving with Python*](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ReferenciaArticulos/LandauPaez.pdf)
 
 
- ## Al finalizar estos contenidos
+## Al finalizar estos contenidos
  Al finalizar estos contenidos el estudiantes deberá
- 1. Entender los requerimientos del Teorema de Fourier y las restricciones de las condiciones de Dirichlet
- 2. Poder expandir funciones elementales en series de fourier (reales y complejas) y entender los significados de cada uno de los coeficientes de Fourier.
- 3. Ser capaz de calular el espectro de potencias y fases para una serie de Fourier
- 4. Comprender el significado físico de cada uno de los coficientes de Fourier
- 5. Comprender el significad del espectro de frecuencias y fases para una serie de Fourier
+ 1. Ser capaz de calcular la transformada de Fourier para funciones elementales y comprender su significado aislando las frecuencias. Cuando una transformada es real o compleja.
+ 2. Comprender la interrelación entre la transformda de Fourier y las series de Fourier
+ 3. Ser capaz de calcular el espectrograma de señales complejas
+ 4. Comprender la diferencias y semejanzas de la transformada de Fourier contínua y discreta
+ 5. Ser capaz de calcular la transformada de Fourier de una señal.
