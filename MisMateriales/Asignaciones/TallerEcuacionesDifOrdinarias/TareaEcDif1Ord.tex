@@ -1,0 +1,103 @@
+\documentclass[spanish,notitlepage,letterpaper]{article} % para articulo en castellano
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue, citecolor=blue]{hyperref} % navega por el doc
+\usepackage{graphicx}
+\usepackage{geometry}           % See geometry.pdf to learn the layout options.
+\geometry{letterpaper}          % ... or a4paper or a5paper or ... 
+%\geometry{landscape}           % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}  % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{epstopdf}
+\usepackage{fancyhdr} % encabezados y pies de pg
+
+\pagestyle{fancy} 
+\chead{} 
+\lhead{\textit{ Tarea Matemáticas Avanzadas}} % si se omite coloca el nombre de la seccion
+\rhead{\textbf{EcDiferenciales Ordinarias 1erOrden}} 
+\lfoot{Luis A. N\'u\~nez} 
+\rfoot{Universidad Industrial de Santander} 
+%\rfoot{\thepage} 
+
+\voffset = -0.25in 
+\textheight = 8.0in 
+\textwidth = 6.5in
+\oddsidemargin = 0.in
+\headheight = 20pt 
+\headwidth = 6.5in
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0,5pt}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+
+
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+%\title{Ecuaciones Diferenciales Ordinarias de Primer Orden: \\
+%\textbf{Fecha de Entrega: 1 Febrero}}
+%\author{
+%\textbf{L. A. Núñez} \\ 
+%\textit{Escuela de Física, Facultad de Ciencias, }\\
+%\textit{Universidad Industrial de Santander, Santander, Colombia} 
+%}
+%\maketitle
+\section{Ecuación de Bernoulli}
+Uno puede reducir un tipo de ecuación diferencial no lineal a una ecuación diferencial lineal y proceder como hemos resuelto los sistemas anteriores. Considere la ecuación diferencial
+\[
+y^{\prime} +p(x)y = q(x)y^{n}
+\] 
+\begin{enumerate}
+  \item Muestre que el siguiente cambio de variable $v = y^{1-n}$, la convierte en en una ecuación lineal.
+  \item Considere el caso particular de la ecuación de Verhulst o también conocida como ecuación logística (el  caso $n=2$ con $p(x) = \alpha = const$) con la condición inicial $y(0) = y_{0} > 0$. 
+  \begin{enumerate}  
+  \item Suponga que $\lim_{x \rightarrow \infty} \exp(\alpha x) \int_{0}^{x}  \mathrm{d}x \, q(x) \exp(-\alpha x) = L$ existe y encuentre la solución $\lim_{x \rightarrow \infty} y(x)$
+  \item Suponga ahora, que $q(x)$ es una función discontínua, vale decir
+  \[
+ q(x) = 
+ \left\{\begin{array}{ll}
+  x    &  0 \leq x \leq 1  \\
+     &   \\
+  x^{2}  & x > 1     
+\end{array}
+ \right. 
+  \] y considere otra vez la condición inicial $y(0) = y_{0} > 0$ y encuentre la solución para $0 \leq x \leq 2 $
+  \item Considere la evolución demográfica de Colombia\footnote{Puede consultar \url{http://www.populstat.info/Americas/colombic.htm} o cualquier otra fuente confiable que puede citar}, ajuste los parámetros para las descripciones maltusiana o verhulstiana y recuerde la historia para ver como puede justificar el ajuste.  
+  \item Suponga ahora, que $q(x) = \epsilon << 1$, y considere que la ecuación la ecuación de Verhulst se puede expresar como $y^{\prime} = \tilde{p}(x) y + \epsilon y^{2}$ con lo cual el término cuadrático puede representar una perturbación a la solución de la ecuación lineal. Haga un mapa de la solución gráfica de la ecuación y muestre en el rango $0 \leq x \leq 2 $ el comportamiento de la solución para $\epsilon = 0.1 \, \epsilon = 0.01 \, \epsilon = 0.001 \,$
+\end{enumerate}
+\end{enumerate}
+\section{Sistemas autónomos}
+Una de las clases de ecuaciones diferenciales más comunes o utilizadas la constituyen los sistemas autónomos del tipo $y^{\prime} = f(y)$. Claramente las ecuaciones de Malthus y Verhulst (o logística) constituyen casos particulares de este tipo de sistemas para $f_{M}(y)=ky$ y $f_{V}(y)=ky(1 -\frac{y}{K})$, respectivamente (con $k$ la constante malthusiana de crecimiento intrínseco) que son fundamentales en dinámica de poblaciones\footnote{\url{https://en.wikipedia.org/wiki/Population_ecology}}. 
+\begin{enumerate}
+  \item Considere la ecuación logística $y^{\prime} = ky(1 -\frac{y}{K})$  
+  \begin{enumerate}
+  \item Encuentre la solución gráfica para la familia de soluciones de la ecuación  con $k= 1/3$ y $K= 6$.
+  \item Suponga una solución particular para la ecuación con $y(0) = 2$ y encuentre el valor de $x$ para el cual la población inicial se duplicó
+  \item Suponga que $y(0)/K = \alpha$ y encuentre el valor de $X$, tal que $y(X)/K = \beta$, para $\alpha > 0$ y $\beta < 1$. Note que $X \rightarrow \infty$ cuando $\alpha \rightarrow 0$ o $\beta \rightarrow 1$ Encuentre el valor de $X$ para $k = 0.025$, $\alpha =0.1$ y $\beta = 0.9$
+\end{enumerate}
+  \item Los sistemas autónomos $y^{\prime} = f(y)$ admiten un estudio cualitativo interesante a partir del comportamiento de la función $f(y)$. Los ceros de $f(y) =0$  representan soluciones de equilibrio y de sus máximos y mínimos también podemos extraer información sin resolver la ecuación.
+  \begin{enumerate}
+  \item Considere otra vez la ecuación logística $y^{\prime} = ky(1 -\frac{y}{K})$, encuentre las dos soluciones de equilibrio y discuta por qué una de ellas se considera como de equilibrio inestable y otra de equilibrio asintótico. Ilustre esas afirmaciones para el caso $k= 1/3$ y $K= 6$,
+  \item Considere ahora una variante de la ecuación logística $y^{\prime} = -ky(1 -\frac{y}{T})(1 -\frac{y}{K})$, con $0 < T < K$ y $k >0$. Esta ecuación se utilizó para describir el crecimiento y extinción en norteamérica de la Paloma Migratoria o Paloma de la Carolina\footnote{\url{https://en.wikipedia.org/wiki/Passenger_pigeon}}. 
+  \begin{enumerate}
+  \item a partir del análisis de las soluciones críticas discuta el significado de las constantes $T$ y $K$ y de las soluciones en las regiones $0< y < T$, $T< y < K$ y $y > K$.
+  \item discuta el significado de los máximos y los mínimos de $f(y) = -ky(1 -\frac{y}{T})(1 -\frac{y}{K})$ y muestre cómo están relacionados con el comportamiento de las soluciones y(x)
+  \item Encuentre las solución gráfica para el caso $k= 1/3$, $T= 2$ y $K= 6$ e ilustre sus afirmaciones. En particular asocie el comportamiento de la función $f(y)$ con la familia de soluciones para este caso.
+\end{enumerate} 
+  \item Finalmente considere la ecuación de Gompertz\footnote{\url{https://en.wikipedia.org/wiki/Gompertz_function}} $y^{\prime} = -ky \ln(\frac{K}{y})$ con $K$ y $k$ constantes positivas 
+  \begin{enumerate}
+  \item Encuentre las soluciones críticas y discuta cuáles corresponden a soluciones estables o inestables 
+  \item Resuelva la ecuación de Gompertz para $k= 1/3$ y $K= 6$ y compárela con la ecuación de Verhulst. ?`Cómo se compara el crecimiento de poblaciones descrito por cada una de estas ecuaciones?  
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+
+%\bibliographystyle{unsrt}
+%\bibliography{BibTex/BiblioLN151010}
+
+\end{document}  
+
+Las soluciones más simples de este tipo de ecuaciones son las llamadas de equilibrio: $f_{V}(y)=k(1 -\frac{y}{K}) =0$, en las cuales se obliga a que se compensen los cambios con las contribuciones de los dos términos del lado derecho y, consiguientemente la función $y(x)$, permanece constante. 
