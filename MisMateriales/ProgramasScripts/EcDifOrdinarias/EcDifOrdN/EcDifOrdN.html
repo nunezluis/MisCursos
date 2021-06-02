@@ -1,0 +1,469 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>EcDifOrdN.html</title>
+<!-- Created by Maple 2018.0, Mac OS X -->
+</head>
+<a href="EcDifOrdN.html#MapleAutoBookmark1">EcDifOrdN.mw</a>
+<ul>
+</ul>
+<hr>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>restart;#infolevel[dsolve]:=2;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="4" face="Times New Roman"><strong></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="4" face="Times New Roman"><strong>Ecuaciones diferenciales ordinarias homogéneas</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><strong>Ecuación característica con todas las raíces reales distintas</strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuaDif1 := diff(y(x),x,x,x) + 2*diff(y(x),x,x) -diff(y(x),x) -2*y(x)=0;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_1.gif" width="417" height="47" alt="Typesetting:-mprintslash([EcuaDif1 := `+`(diff(y(x), `$`(x, 3)), `*`(2, `*`(diff(y(x), `$`(x, 2)))), `-`(diff(y(x), x)), `-`(`*`(2, `*`(y(x))))) = 0], [`+`(diff(diff(diff(y(x), x), x), x), `*`(2, `*`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>dsolve(EcuaDif1,y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_2.gif" width="240" height="22" alt="y(x) = `+`(`*`(_C1, `*`(exp(`+`(`-`(`*`(2, `*`(x))))))), `*`(_C2, `*`(exp(x))), `*`(_C3, `*`(exp(`+`(`-`(x))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">El polinomio característico será</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuaCar1 := m^3 +2*m^2 -m -2 =0;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_3.gif" width="246" height="22" alt="Typesetting:-mprintslash([EcuaCar1 := `+`(`*`(`^`(m, 3)), `*`(2, `*`(`^`(m, 2))), `-`(m), `-`(2)) = 0], [`+`(`*`(`^`(m, 3)), `*`(2, `*`(`^`(m, 2))), `-`(m), `-`(2)) = 0])" align="center" border="0"></td>
+<td width='5%' align='center'>(3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>solve(EcuaCar1,m);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_4.gif" width="81" height="18" alt="1, -2, -1" align="center" border="0"></td>
+<td width='5%' align='center'>(4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Ahora a partir de un polinomio característico, con raíces conocidas construimos su ecuación diferencial homogénea asociada y veremos como </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">las soluciones se relacionan con las raíces del polinomio característico.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Para el caso de tres raíces reales distintas</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>expand((m -1)*(m -2)*(m -3));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_5.gif" width="152" height="22" alt="`+`(`*`(`^`(m, 3)), `-`(`*`(6, `*`(`^`(m, 2)))), `*`(11, `*`(m)), `-`(6))" align="center" border="0"></td>
+<td width='5%' align='center'>(5)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Ecdif20 := diff(y(x),x,x,x) - 6*diff(y(x),x,x) +11*diff(y(x),x) -6*y(x)=0;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_6.gif" width="426" height="47" alt="Typesetting:-mprintslash([Ecdif20 := `+`(diff(y(x), `$`(x, 3)), `-`(`*`(6, `*`(diff(y(x), `$`(x, 2))))), `*`(11, `*`(diff(y(x), x))), `-`(`*`(6, `*`(y(x))))) = 0], [`+`(diff(diff(diff(y(x), x), x), x)..." align="center" border="0"></td>
+<td width='5%' align='center'>(6)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">la solución se presenta como una combinación lineal de exponenciales con esas raíces</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>dsolve(Ecdif20,y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_7.gif" width="233" height="22" alt="y(x) = `+`(`*`(_C1, `*`(exp(`+`(`*`(3, `*`(x)))))), `*`(_C2, `*`(exp(x))), `*`(_C3, `*`(exp(`+`(`*`(2, `*`(x)))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(7)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Para el caso de un polinomo característico con una raíz repetida tres veces tendremos</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>expand((m -1)*(m -2)^3);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_8.gif" width="207" height="22" alt="`+`(`*`(`^`(m, 4)), `-`(`*`(7, `*`(`^`(m, 3)))), `*`(18, `*`(`^`(m, 2))), `-`(`*`(20, `*`(m))), 8)" align="center" border="0"></td>
+<td width='5%' align='center'>(8)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Ecdif31 := diff(y(x),x,x,x,x) - 7*diff(y(x),x,x,x) +18*diff(y(x),x,x) -20*diff(y(x),x) +8*y(x)=0;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_9.gif" width="529" height="47" alt="Typesetting:-mprintslash([Ecdif31 := `+`(diff(y(x), `$`(x, 4)), `-`(`*`(7, `*`(diff(y(x), `$`(x, 3))))), `*`(18, `*`(diff(y(x), `$`(x, 2)))), `-`(`*`(20, `*`(diff(y(x), x)))), `*`(8, `*`(y(x)))) = 0],..." align="center" border="0"></td>
+<td width='5%' align='center'>(9)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La solución de la homogénea para la raíz repetida será una exponencial multiplicada por un polinomio de grado </font><font color="#000000" size="3" face="Times New Roman"><em>n-1 </em></font><font color="#000000" size="3" face="Times New Roman"> de grado de repetición de la raíz</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>dsolve(Ecdif31,y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_10.gif" width="326" height="22" alt="y(x) = `+`(`*`(_C1, `*`(exp(x))), `*`(_C2, `*`(exp(`+`(`*`(2, `*`(x)))))), `*`(_C3, `*`(exp(`+`(`*`(2, `*`(x)))), `*`(x))), `*`(_C4, `*`(exp(`+`(`*`(2, `*`(x)))), `*`(`^`(x, 2)))))" align="center" border="0"></td>
+<td width='5%' align='center'>(10)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Para el caso de un polinomio característico con raíces imaginarias puras </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>expand((m -1)*(m^2 +4));solve(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_11.gif" width="133" height="22" alt="`+`(`*`(`^`(m, 3)), `-`(`*`(`^`(m, 2))), `*`(4, `*`(m)), `-`(4))" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_12.gif" width="78" height="18" alt="1, `*`(2, `*`(I)), `+`(`-`(`*`(2, `*`(I))))" align="center" border="0"></td>
+<td width='5%' align='center'>(11)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Ecdif50 := diff(y(x),x,x,x) - diff(y(x),x,x) +4*diff(y(x),x) -4*y(x)=0;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_13.gif" width="407" height="47" alt="Typesetting:-mprintslash([Ecdif50 := `+`(diff(y(x), `$`(x, 3)), `-`(diff(y(x), `$`(x, 2))), `*`(4, `*`(diff(y(x), x))), `-`(`*`(4, `*`(y(x))))) = 0], [`+`(diff(diff(diff(y(x), x), x), x), `-`(diff(dif..." align="center" border="0"></td>
+<td width='5%' align='center'>(12)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La solución para esa raíz viene expresada como combinación de senos y cosenos</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>dsolve(Ecdif50,y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_14.gif" width="302" height="22" alt="y(x) = `+`(`*`(_C1, `*`(exp(x))), `*`(_C2, `*`(sin(`+`(`*`(2, `*`(x)))))), `*`(_C3, `*`(cos(`+`(`*`(2, `*`(x)))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(13)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>expand((m -1)*(m - 3 +2*I)*(m - 3 -2*I)); solve(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_15.gif" width="160" height="22" alt="`+`(`*`(`^`(m, 3)), `-`(`*`(7, `*`(`^`(m, 2)))), `*`(19, `*`(m)), `-`(13))" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_16.gif" width="122" height="18" alt="1, `+`(3, `-`(`*`(2, `*`(I)))), `+`(3, `*`(2, `*`(I)))" align="center" border="0"></td>
+<td width='5%' align='center'>(14)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Ecdif60 := diff(y(x),x,x,x) - 7*diff(y(x),x,x) +19*diff(y(x),x) -13*y(x)=0;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_17.gif" width="434" height="47" alt="Typesetting:-mprintslash([Ecdif60 := `+`(diff(y(x), `$`(x, 3)), `-`(`*`(7, `*`(diff(y(x), `$`(x, 2))))), `*`(19, `*`(diff(y(x), x))), `-`(`*`(13, `*`(y(x))))) = 0], [`+`(diff(diff(diff(y(x), x), x), x..." align="center" border="0"></td>
+<td width='5%' align='center'>(15)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>dsolve(Ecdif60,y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_18.gif" width="346" height="22" alt="y(x) = `+`(`*`(_C1, `*`(exp(x))), `*`(_C2, `*`(exp(`+`(`*`(3, `*`(x)))), `*`(sin(`+`(`*`(2, `*`(x))))))), `*`(_C3, `*`(exp(`+`(`*`(3, `*`(x)))), `*`(cos(`+`(`*`(2, `*`(x))))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(16)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><strong>Ecuación característica con dos raíces reales repetidas</strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuaDif2 := diff(y(x),x,x,x,x) - 3*diff(y(x),x,x) +2*diff(y(x),x) = 0;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_19.gif" width="369" height="47" alt="Typesetting:-mprintslash([EcuaDif2 := `+`(diff(y(x), `$`(x, 4)), `-`(`*`(3, `*`(diff(y(x), `$`(x, 2))))), `*`(2, `*`(diff(y(x), x)))) = 0], [`+`(diff(diff(diff(diff(y(x), x), x), x), x), `-`(`*`(3, `*..." align="center" border="0"></td>
+<td width='5%' align='center'>(17)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>dsolve(EcuaDif2,y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_20.gif" width="289" height="22" alt="y(x) = `+`(_C1, `*`(_C2, `*`(exp(`+`(`-`(`*`(2, `*`(x))))))), `*`(_C3, `*`(exp(x))), `*`(_C4, `*`(exp(x), `*`(x))))" align="center" border="0"></td>
+<td width='5%' align='center'>(18)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuaCar2 := m^4 -3*m^2 +2*m =0;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_21.gif" width="230" height="22" alt="Typesetting:-mprintslash([EcuaCar2 := `+`(`*`(`^`(m, 4)), `-`(`*`(3, `*`(`^`(m, 2)))), `*`(2, `*`(m))) = 0], [`+`(`*`(`^`(m, 4)), `-`(`*`(3, `*`(`^`(m, 2)))), `*`(2, `*`(m))) = 0])" align="center" border="0"></td>
+<td width='5%' align='center'>(19)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>solve(EcuaCar2,m);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_22.gif" width="82" height="18" alt="0, -2, 1, 1" align="center" border="0"></td>
+<td width='5%' align='center'>(20)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><strong>Ecuación característica con una raíz compleja y su conjugada</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><strong></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><strong></strong></font><font color="#000000" size="3" face="Times New Roman">Para el caso de un polinomio característico con raíces complejas genéricas, vale decir con parte real y parte imagiria</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuaCar3 := m^3 -8*m^2 +22*m -20 =0; solve(EcuaCar3,m);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_23.gif" width="273" height="22" alt="Typesetting:-mprintslash([EcuaCar3 := `+`(`*`(`^`(m, 3)), `-`(`*`(8, `*`(`^`(m, 2)))), `*`(22, `*`(m)), `-`(20)) = 0], [`+`(`*`(`^`(m, 3)), `-`(`*`(8, `*`(`^`(m, 2)))), `*`(22, `*`(m)), `-`(20)) = 0])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_24.gif" width="99" height="18" alt="2, `+`(3, `-`(I)), `+`(3, I)" align="center" border="0"></td>
+<td width='5%' align='center'>(21)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuaDif3 := diff(y(x),x,x,x) - 8*diff(y(x),x,x) +22*diff(y(x),x) -20*y(x)= 0;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_25.gif" width="445" height="47" alt="Typesetting:-mprintslash([EcuaDif3 := `+`(diff(y(x), `$`(x, 3)), `-`(`*`(8, `*`(diff(y(x), `$`(x, 2))))), `*`(22, `*`(diff(y(x), x))), `-`(`*`(20, `*`(y(x))))) = 0], [`+`(diff(diff(diff(y(x), x), x), ..." align="center" border="0"></td>
+<td width='5%' align='center'>(22)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La solución correpondiente a la raíz compleja genérica del polinomio característico la parte real contruye la exponencial mientras que la parte imaginaria pura genera la combinación lineal se senos y cosenos</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>dsolve(EcuaDif3,y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_26.gif" width="330" height="22" alt="y(x) = `+`(`*`(_C1, `*`(exp(`+`(`*`(2, `*`(x)))))), `*`(_C2, `*`(exp(`+`(`*`(3, `*`(x)))), `*`(sin(x)))), `*`(_C3, `*`(exp(`+`(`*`(3, `*`(x)))), `*`(cos(x)))))" align="center" border="0"></td>
+<td width='5%' align='center'>(23)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="4" face="Times New Roman"><strong></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="4" face="Times New Roman"><strong>Ecuaciones diferenciales ordinarias inhomogénea</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Para el caso de las ecuaciones inhomogéneas es indispensable construir la solución de la homogenea y &nbsp;definir la solución particular de la inhomogénea</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuaDifNH1 := diff(y(x),x,x,x) + 2*diff(y(x),x,x) -diff(y(x),x) -2*y(x)= 4*x^2 + 6*x^2*exp(-2*x);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_27.gif" width="528" height="47" alt="Typesetting:-mprintslash([EcuaDifNH1 := `+`(diff(y(x), `$`(x, 3)), `*`(2, `*`(diff(y(x), `$`(x, 2)))), `-`(diff(y(x), x)), `-`(`*`(2, `*`(y(x))))) = `+`(`*`(4, `*`(`^`(x, 2))), `*`(6, `*`(`^`(x, 2), `..." align="center" border="0"></td>
+<td width='5%' align='center'>(24)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuaDifH1 := diff(y(x),x,x,x) + 2*diff(y(x),x,x) -diff(y(x),x) -2*y(x)= 0;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_28.gif" width="429" height="47" alt="Typesetting:-mprintslash([EcuaDifH1 := `+`(diff(y(x), `$`(x, 3)), `*`(2, `*`(diff(y(x), `$`(x, 2)))), `-`(diff(y(x), x)), `-`(`*`(2, `*`(y(x))))) = 0], [`+`(diff(diff(diff(y(x), x), x), x), `*`(2, `*`..." align="center" border="0"></td>
+<td width='5%' align='center'>(25)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>dsolve(EcuaDifNH1,y(x)); dsolve(EcuaDifH1,y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_29.gif" width="692" height="43" alt="y(x) = `+`(`*`(`+`(`-`(`*`(2, `*`(`^`(x, 2), `*`(exp(`+`(`*`(2, `*`(x)))))))), `*`(`/`(2, 3), `*`(`^`(x, 3))), `*`(2, `*`(x, `*`(exp(`+`(`*`(2, `*`(x))))))), `-`(`*`(5, `*`(exp(`+`(`*`(2, `*`(x)))))))..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_30.gif" width="240" height="22" alt="y(x) = `+`(`*`(_C1, `*`(exp(`+`(`-`(`*`(2, `*`(x))))))), `*`(_C2, `*`(exp(x))), `*`(_C3, `*`(exp(`+`(`-`(x))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(26)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Se cumple el principio de superposición para la solución parcial de la inhomogénea</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuaDifNH11 := diff(y(x),x,x,x) + 2*diff(y(x),x,x) -diff(y(x),x) -2*y(x)= 4*x^2;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_31.gif" width="463" height="47" alt="Typesetting:-mprintslash([EcuaDifNH11 := `+`(diff(y(x), `$`(x, 3)), `*`(2, `*`(diff(y(x), `$`(x, 2)))), `-`(diff(y(x), x)), `-`(`*`(2, `*`(y(x))))) = `+`(`*`(4, `*`(`^`(x, 2))))], [`+`(diff(diff(diff(..." align="center" border="0"></td>
+<td width='5%' align='center'>(27)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>dsolve(EcuaDifNH11,y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_32.gif" width="359" height="22" alt="y(x) = `+`(`-`(`*`(2, `*`(`^`(x, 2)))), `*`(2, `*`(x)), `-`(5), `*`(_C1, `*`(exp(x))), `*`(_C2, `*`(exp(`+`(`-`(`*`(2, `*`(x))))))), `*`(_C3, `*`(exp(`+`(`-`(x))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(28)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuaDifNH12 := diff(y(x),x,x,x) + 2*diff(y(x),x,x) -diff(y(x),x) -2*y(x)= 6*exp(x);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_33.gif" width="462" height="47" alt="Typesetting:-mprintslash([EcuaDifNH12 := `+`(diff(y(x), `$`(x, 3)), `*`(2, `*`(diff(y(x), `$`(x, 2)))), `-`(diff(y(x), x)), `-`(`*`(2, `*`(y(x))))) = `+`(`*`(6, `*`(exp(x))))], [`+`(diff(diff(diff(y(x..." align="center" border="0"></td>
+<td width='5%' align='center'>(29)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>dsolve(EcuaDifNH12,y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_34.gif" width="281" height="22" alt="y(x) = `+`(`*`(x, `*`(exp(x))), `*`(_C1, `*`(exp(x))), `*`(_C2, `*`(exp(`+`(`-`(`*`(2, `*`(x))))))), `*`(_C3, `*`(exp(`+`(`-`(x))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(30)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuaDif4 := diff(y(x),x,x) - 3*diff(y(x),x) +2*y(x)= sin(exp(-x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_35.gif" width="381" height="47" alt="Typesetting:-mprintslash([EcuaDif4 := `+`(diff(y(x), `$`(x, 2)), `-`(`*`(3, `*`(diff(y(x), x)))), `*`(2, `*`(y(x)))) = sin(exp(`+`(`-`(x))))], [`+`(diff(diff(y(x), x), x), `-`(`*`(3, `*`(diff(y(x), x)..." align="center" border="0"></td>
+<td width='5%' align='center'>(31)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>dsolve(EcuaDif4,y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_36.gif" width="272" height="43" alt="y(x) = `*`(`+`(`*`(_C1, `*`(exp(x))), `-`(`*`(sin(`/`(1, `*`(exp(x)))), `*`(exp(x)))), _C2), `*`(exp(x)))" align="center" border="0"></td>
+<td width='5%' align='center'>(32)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuaDif41 := diff(y(x),x,x) - 3*diff(y(x),x) +2*y(x)= sin(x);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_37.gif" width="374" height="47" alt="Typesetting:-mprintslash([EcuaDif41 := `+`(diff(y(x), `$`(x, 2)), `-`(`*`(3, `*`(diff(y(x), x)))), `*`(2, `*`(y(x)))) = sin(x)], [`+`(diff(diff(y(x), x), x), `-`(`*`(3, `*`(diff(y(x), x)))), `*`(2, `*..." align="center" border="0"></td>
+<td width='5%' align='center'>(33)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>dsolve(EcuaDif41,y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifOrdN_38.gif" width="318" height="39" alt="y(x) = `+`(`*`(_C1, `*`(exp(`+`(`*`(2, `*`(x)))))), `*`(`/`(3, 10), `*`(cos(x))), `*`(`/`(1, 10), `*`(sin(x))), `*`(_C2, `*`(exp(x))))" align="center" border="0"></td>
+<td width='5%' align='center'>(34)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</body>
+</html>
