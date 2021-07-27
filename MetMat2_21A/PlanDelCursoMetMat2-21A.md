@@ -79,16 +79,16 @@ Elegir y sustentar uno de los siguientes artículos
 + Dethe, T., Gill, H., Green, D., Greensweight, A., Gutierrez, L., He, M., ... & Yang, K. (2019). Causality and dispersion relations. American Journal of Physics, 87(4), 279-290.
 + Comella, M. J. (1989). Applications of the residue theorem to two‐dimensional electrostatic and magnetostatic situations. American Journal of Physics, 57(7), 603-607.
 
-### Series de funciones y Espacios de Hilbert. (7 clases = 3.5 Semanas)
+### Series de funciones y Espacios de Hilbert. (6 clases = 3 Semanas)
 1. [Series de Taylor](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_1SeriesTaylor.md)
 2. [Series de Laurent y Teorema del Residuo](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 3. [Polinomios ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
-4. [Planteamiento general Polinomios Ortogonales](Xhttps://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
+4. [Planteamiento general Polinomios Ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 5. Taller Evaluado Series de potencias
 
-### Transformadas de Fourier. (2 Semanas)
+### Transformadas de Fourier. (6 clases = 3 Semanas)
 1. [Series de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_2SeriesFourier.md)
-2. [Transformadas de Fourier y transformadas discretas de Fourier](XXX)
+2. [Transformadas de Fourier y transformadas discretas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 3. [Distribuciones y función delta de Dirac](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 4. [Bases discretas y continuas para espacios de Hilbert](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 5. Taller evaluado Transformada de Fourier
@@ -99,18 +99,18 @@ Elegir y sustentar uno de los siguientes artículos
 3. [Funciones de Bessel](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 4. Taller evaluado ecuaciones diferenciales ordinarias
 
-### El problema de Sturm Liuoville y los valores de frontera (4 clases =2 Semanas)
+### El problema de Sturm Liuoville y los valores de frontera (4 clases = 2 Semanas)
 1. [Problema de Sturm Liuville y los valores de frontera](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 2. [Solución de Ecuaciones diferenciales ordinarias y valores de frontera](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 3. [Funciones de Green](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 4. Taller Evaluado de Valores de frontera
 
-### Ecuaciones diferenciales en  (3 Semanas)
+### Ecuaciones diferenciales en  (6 clases = 3 Semanas)
 1. [Ecuaciones Diferenciales en Derivadas parciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 2. [Ecuación de Onda](Xhttps://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 3. [Ecuación del Calor](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 4. [Ecuación de Laplace](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
-5. [Solución Numérica de Ecuaciones diferenciales parciales]
+5. [Solución Numérica de Ecuaciones diferenciales parciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 6. Taller evaluado de Ecuaciones diferenciales parciales
 
 
