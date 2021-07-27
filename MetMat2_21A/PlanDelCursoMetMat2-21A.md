@@ -79,13 +79,14 @@ Elegir y sustentar uno de los siguientes artículos
 + Dethe, T., Gill, H., Green, D., Greensweight, A., Gutierrez, L., He, M., ... & Yang, K. (2019). Causality and dispersion relations. American Journal of Physics, 87(4), 279-290.
 + Comella, M. J. (1989). Applications of the residue theorem to two‐dimensional electrostatic and magnetostatic situations. American Journal of Physics, 57(7), 603-607.
 
-### Series de funciones y Espacios de Hilbert. (6 clases = 3 Semanas)
-1. [Serie de Taylor y Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_1SeriesTaylorFourier.md)
-2. [Transformadas de Fourier y transformadas discretas de Fourier](XXX)
+### Series de funciones y Espacios de Hilbert. (7 clases = 3.5 Semanas)
+1. [Series de Taylor](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_1SeriesTaylor.md)
+2. [Series de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_2SeriesFourier.md)
 3. [Series de Laurent y Teorema del Residuo](XXX)
-4. [Polinomios ortogonales](XXX)
-5. [Planteamiento general Polinomios Ortogonales](XXX)
-6. Taller Evaluado Series de potencias
+4. [Transformadas de Fourier y transformadas discretas de Fourier](XXX)
+5. [Polinomios ortogonales](XXX)
+6. [Planteamiento general Polinomios Ortogonales](XXX)
+7. Taller Evaluado Series de potencias
 
 ### Transformadas de Fourier. (2 Semanas)
 1. [Distribuciones y función delta de Dirac](XXX)
