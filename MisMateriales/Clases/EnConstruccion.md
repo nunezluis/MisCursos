@@ -1,2 +1,3 @@
-En construcción
+En construcción...
+
 ![Test Image 4](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/Figuras/ComingSoon.png)
