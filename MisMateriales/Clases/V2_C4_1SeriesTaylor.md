@@ -22,7 +22,8 @@ Desarrollar los ejercicios 4 y 6 de la sección 2.4.7 de [las notas de clase Vol
   4. [Hoja MAPLE con propiedades de la función Gamma](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/FuncionGamma/funcionGamma.html)
 
 ## Al finalizar estos contenidos
-Al finalizar estos contenidos el estudiantes deberá
+Al finalizar estos contenidos el estudiantes deberá:
+
     1. Conocer los criterios de convergencia para las series de funciones
     2. Ser capaz de realizar algebra elemental de series de potencias: suma y multiplicación.
     3. Poder desarrollar una función en serie de Taylor y entender el alcance de esta aproximación
