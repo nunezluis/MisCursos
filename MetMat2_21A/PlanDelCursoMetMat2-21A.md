@@ -81,17 +81,17 @@ Elegir y sustentar uno de los siguientes artículos
 
 ### Series de funciones y Espacios de Hilbert. (7 clases = 3.5 Semanas)
 1. [Series de Taylor](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_1SeriesTaylor.md)
-2. [Series de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_2SeriesFourier.md)
-3. [Series de Laurent y Teorema del Residuo](XXX)
-4. [Transformadas de Fourier y transformadas discretas de Fourier](XXX)
-5. [Polinomios ortogonales](XXX)
-6. [Planteamiento general Polinomios Ortogonales](XXX)
-7. Taller Evaluado Series de potencias
+2. [Series de Laurent y Teorema del Residuo](XXX)
+3. [Polinomios ortogonales](XXX)
+4. [Planteamiento general Polinomios Ortogonales](XXX)
+5. Taller Evaluado Series de potencias
 
 ### Transformadas de Fourier. (2 Semanas)
-1. [Distribuciones y función delta de Dirac](XXX)
-3. [Bases discretas y contínuas para espacios de Hilbert](XXX)
-4. Taller evaluado Transformada de Fourier
+1. [Series de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_2SeriesFourier.md)
+2. [Transformadas de Fourier y transformadas discretas de Fourier](XXX)
+3. [Distribuciones y función delta de Dirac](XXX)
+4. [Bases discretas y contínuas para espacios de Hilbert](XXX)
+5. Taller evaluado Transformada de Fourier
 
 ### Series y Ecuaciones Diferenciales Ordinarias (4 clases = 2 Semanas)
 1. [Soluciones numéricas al problema de valores iniciales en ecuaciones diferenciales ordinarias](XXX)
