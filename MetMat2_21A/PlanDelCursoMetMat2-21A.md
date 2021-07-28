@@ -107,7 +107,7 @@ Elegir y sustentar uno de los siguientes artículos
 
 ### Ecuaciones diferenciales en  (6 clases = 3 Semanas)
 1. [Ecuaciones Diferenciales en Derivadas parciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
-2. [Ecuación de Onda](Xhttps://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
+2. [Ecuación de Onda](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 3. [Ecuación del Calor](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 4. [Ecuación de Laplace](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 5. [Solución Numérica de Ecuaciones diferenciales parciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
