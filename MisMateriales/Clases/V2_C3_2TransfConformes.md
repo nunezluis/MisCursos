@@ -14,7 +14,7 @@ Esta clase tiene por objetivos desarrollar los conceptos de:
     + Desarrolle los ejercicios 2, 7 y 11 de la sección 1.2.7 de las [notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf).
 
 + **Materiales de apoyo**
-Aquí encontrarán [la presentación de las clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_2_TransfConformes.pdf)
+Aquí encontrarán [la presentación de transformaciones conformes](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_1_2TransfConformes.pdf)
 
  + **Al finalizar estos contenidos** El estudiantes deberá
     + identificar los puntos y ramas de corte, comprendiendo su significado
