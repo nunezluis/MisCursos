@@ -17,6 +17,9 @@ Esta clase tiempo por objetivos hacer un repaso de números complejos y discutir
 
 + **Materiales de apoyo**
 
+[Presentación números y funciones de variable compleja](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_1_1IntroVariabCompleja.pdf)
+
+
 + **Al finalizar estos contenidos** El estudiantes deberá
   + Comprender las representaciones polares y cartesianas de los números complejos.
   + Poder traducir un número complejo a algunas de sus representaciones mediante al fórmulas de Euler y Moire
