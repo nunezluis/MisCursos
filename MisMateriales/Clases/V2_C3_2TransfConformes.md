@@ -7,7 +7,8 @@ Esta clase tiene por objetivos desarrollar los conceptos de:
     + Transformaciones conformes y sus consecuencias
 + **Actividad antes de iniciar la clase**
    1. Estudiar los puntos 1.2.1 al 1.2.4 de las [notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
-   2. Como material adicional vamos a recorrer el capítulo 20 (secciones 20.5. 20.6 y 20.8) del libro Riley, K. F., Hobson, M. P., Bence, S. J., & Hobson, M. (2002). **Mathematical methods for physics and engineering: a comprehensive guide**. Cambridge university press.
+   2. Como material adicional vamos a recorrer
+        + El capítulo 20 (secciones 20.5. 20.6 y 20.8) del libro Riley, K. F., Hobson, M. P., Bence, S. J., & Hobson, M. (2002). **Mathematical methods for physics and engineering: a comprehensive guide**. Cambridge university press. Disponible en la [Biblioteca de la UIS](http://tangara.uis.edu.co)
    3. Rehacer los ejemplos resueltos 2 y 3 del punto 1.2.5 de las [notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
 
 + **Taller de problemas 1 (evaluación en la clase 4)**
