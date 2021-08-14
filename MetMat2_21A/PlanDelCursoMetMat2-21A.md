@@ -74,10 +74,6 @@ También utilizaremos capítulos de esta bibliografía
 3. [Integrales complejas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_3IntegralesComplejas.md)
 4. Taller evaluado de Variable compleja
 
-### Asignación
-Resumir y sustentar el siguientes artículo
-+ Dethe, T., Gill, H., Green, D., Greensweight, A., Gutierrez, L., He, M., ... & Yang, K. (2019). Causality and dispersion relations. American Journal of Physics, 87(4), 279-290.
-
 
 ### Series de funciones y Espacios de Hilbert. (6 clases = 3 Semanas. 10ago-27ago)
 1. [Series de Taylor](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_1SeriesTaylor.md)
@@ -88,8 +84,9 @@ Resumir y sustentar el siguientes artículo
 6. Taller Evaluado Series de potencias
 
 ### Asignación
-Resumir y sustentar el siguientes artículo
+Resumir y sustentar el uno de los siguientes artículos
 + Comella, M. J. (1989). Applications of the residue theorem to two‐dimensional electrostatic and magnetostatic situations. American Journal of Physics, 57(7), 603-607.
++ Dethe, T., Gill, H., Green, D., Greensweight, A., Gutierrez, L., He, M., ... & Yang, K. (2019). Causality and dispersion relations. American Journal of Physics, 87(4), 279-290.
 
 Esto es:
   + Realizar un reporte (máximo 2500 palabras) sin bibliografía
