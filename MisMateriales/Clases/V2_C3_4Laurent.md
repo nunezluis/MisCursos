@@ -22,4 +22,8 @@ Los objetivos de esta clase son
 ## Materiales de apoyo
   + Aquí encontrarán [la presentación de la clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_1_4SeriesLaurent.pdf)
 
- + **Al finalizar estos contenidos** El estudiantes deberá
+## Al finalizar estos contenidos
+  El estudiantes deberá estar en capacidad de
+
+      + Expresar una función de variable compleja mediante una serie de Laurent, identificar sus polos, sus cero y establecer su entorno de covergencia
+      + Identificar los residuos en la expansión de una función de variable compleja 
