@@ -81,10 +81,11 @@ Elegir y sustentar uno de los siguientes artículos
 
 ### Series de funciones y Espacios de Hilbert. (6 clases = 3 Semanas. 10ago-27ago)
 1. [Series de Taylor](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_1SeriesTaylor.md)
-2. [Series de Laurent y Teorema del Residuo](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
-3. [Polinomios ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
-4. [Planteamiento general Polinomios Ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
-5. Taller Evaluado Series de potencias
+2. [Series de Laurent y Residuos de una función compleja](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
+3. [Teorema del Residuo y sus Aplicaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
+4. [Polinomios ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
+5. [Planteamiento general Polinomios Ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
+6. Taller Evaluado Series de potencias
 
 ### Transformadas de Fourier. (6 clases = 3 Semanas. 31ago-17sep)
 1. [Series de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_2SeriesFourier.md)
