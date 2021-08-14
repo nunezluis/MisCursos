@@ -75,9 +75,9 @@ También utilizaremos capítulos de esta bibliografía
 4. Taller evaluado de Variable compleja
 
 ### Asignación
-Elegir y sustentar uno de los siguientes artículos
+Resumir y sustentar el siguientes artículo
 + Dethe, T., Gill, H., Green, D., Greensweight, A., Gutierrez, L., He, M., ... & Yang, K. (2019). Causality and dispersion relations. American Journal of Physics, 87(4), 279-290.
-+ Comella, M. J. (1989). Applications of the residue theorem to two‐dimensional electrostatic and magnetostatic situations. American Journal of Physics, 57(7), 603-607.
+
 
 ### Series de funciones y Espacios de Hilbert. (6 clases = 3 Semanas. 10ago-27ago)
 1. [Series de Taylor](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_1SeriesTaylor.md)
@@ -86,6 +86,17 @@ Elegir y sustentar uno de los siguientes artículos
 4. [Polinomios ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 5. [Planteamiento general Polinomios Ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 6. Taller Evaluado Series de potencias
+
+### Asignación
+Resumir y sustentar el siguientes artículo
++ Comella, M. J. (1989). Applications of the residue theorem to two‐dimensional electrostatic and magnetostatic situations. American Journal of Physics, 57(7), 603-607.
+
+Esto es:
+  + Realizar un reporte (máximo 2500 palabras) sin bibliografía
+  + Realizar una presentación en máximo de 8 láminas
+  + Sustentarla el 7 minutos el día 20ago
+
+En esas distintas formas de narración
 
 ### Transformadas de Fourier. (6 clases = 3 Semanas. 31ago-17sep)
 1. [Series de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_2SeriesFourier.md)
