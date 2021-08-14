@@ -1,4 +1,5 @@
 # Métodos Matemáticos 2
+# Escuela de Física, Universidad Industrial de Santander
 # Series de Laurent y Residuos
 
 ## Objetivos
@@ -26,4 +27,4 @@ Los objetivos de esta clase son
   El estudiantes deberá estar en capacidad de
 
       + Expresar una función de variable compleja mediante una serie de Laurent, identificar sus polos, sus cero y establecer su entorno de covergencia
-      + Identificar los residuos en la expansión de una función de variable compleja 
+      + Identificar los residuos en la expansión de una función de variable compleja
