@@ -81,7 +81,7 @@ Elegir y sustentar uno de los siguientes artículos
 
 ### Series de funciones y Espacios de Hilbert. (6 clases = 3 Semanas. 10ago-27ago)
 1. [Series de Taylor](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_1SeriesTaylor.md)
-2. [Series de Laurent y Residuos de una función compleja](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
+2. [Series de Laurent y Residuos de una función compleja](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_4Laurent.md)
 3. [Teorema del Residuo y sus Aplicaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 4. [Polinomios ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 5. [Planteamiento general Polinomios Ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
