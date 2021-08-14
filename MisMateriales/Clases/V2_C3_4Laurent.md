@@ -1,6 +1,9 @@
-# Introducción a la Física UIS Semestre 21A
-# Semana XX
-+ **Objetivos de la semana**
+# Métodos Matemáticos 2
+# Series de Laurent y Residuos
+
+## Objetivos
+Los objetivos de esta clase son
+  +
 
 + **Actividad antes de iniciar la clase**
 
