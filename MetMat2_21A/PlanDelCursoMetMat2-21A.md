@@ -84,7 +84,7 @@ También utilizaremos capítulos de esta bibliografía
 6. Taller Evaluado Series de potencias
 
 ### Asignación
-Resumir y sustentar el uno de los siguientes artículos
+Resumir y sustentar uno de los siguientes artículos relacionados con el tema del análisis complejo aplicado en Física
 + Comella, M. J. (1989). Applications of the residue theorem to two‐dimensional electrostatic and magnetostatic situations. American Journal of Physics, 57(7), 603-607.
 + Dethe, T., Gill, H., Green, D., Greensweight, A., Gutierrez, L., He, M., ... & Yang, K. (2019). Causality and dispersion relations. American Journal of Physics, 87(4), 279-290.
 
