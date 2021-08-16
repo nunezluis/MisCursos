@@ -11,21 +11,6 @@
 5. [Evolución de la evaluación](#Avanzaevaluacion)
 
 
-1. [La metodología](#metodologia)
-   1. [Clases](#clases)
-   2. [Colaboración y computación](#colaboracion)
-2. [La evaluación](#evaluacion)
-3. [Materiales del curso](#MaterialesCurso)
-4. [Plan detallado del curso](#PlanDetallado)
-   1. [Espacios Lineales](https://github.com/nunezluis/MisCursos/blob/main/MatAvan21A/EspaciosLineales.md)
-   2. [Espacios duales y Tensores](https://github.com/nunezluis/MisCursos/blob/main/MatAvan21A/EspaciosDuales.md)
-   3. [Operadores Lineales](https://github.com/nunezluis/MisCursos/blob/main/MatAvan21A/OperadoresLineales.md)
-   4. [Series y Transformadas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MatAvan21A/SerieTransFourier.md)
-   5. [Ecuaciones diferenciales ordinarias](#YYY)
-   6. [Ecuaciones diferenciales en derivadas parciales](#YYY)
-5. [Evolución de la evaluación](#Avanzaevaluacion)
-
-
 <a name="metodologia"></a>
 ## La metodología
 **Antes de las clases** deberán revisar los materiales de apoyo (videos/textos) y recorrer los ejemplos resueltos de autoevaluación. Así podrán llevar dudas a la discusión que haremos en la clase. La clase quedará grabada y la discusión podrá revisarse también. La realización de esos ejemplos resueltos será tomada en cuenta durante el desarrollo de la clase.
@@ -86,7 +71,6 @@ También utilizaremos capítulos de esta bibliografía
 <a name="PlanDetallado"></a>
 ## Plan detallado del curso
 1. [Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md)
-+ [Clase 1. ](#Clase1)
 + [Clase 2. Espacios Métricos, Normados y Euclideanos](#Clase2)
 + [Clase 3. Dependencia e independencia líneal y bases ortogonales](#Clase3)
 + [Clase 4. Aproximación de funciones y bases ortogonales](#Clase4)
@@ -102,7 +86,3 @@ También utilizaremos capítulos de esta bibliografía
 ### Ecuaciones diferenciales ordinarias
 
 ### Ecuaciones en derivadas parciales
-
-
-### La evolución de la evaluación
-[Aquí](https://github.com/nunezluis/MisCursos/blob/main/MatAvan21A/EvaluaMatAva21A.md) pueden encontrar la evolución de la evaluación del curso
