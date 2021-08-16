@@ -47,6 +47,10 @@ La evaluación de este curso se realizará en base a tres tipos de actividades c
 + En la **clase 14 o 15** y en **la 28 o 29** se realizará una evaluación oral de temas cubiertos hasta esas fechas. Esta *conversación evaluada* versará sobre un cuestionario que será enviado 24 horas antes de la actividad. Estas conversaciones evaluadas acopiarán el 20% restante.
 + **Para consignar las tareas y asignaciones** deberan "clonar" el [repositorio de tareas](https://github.com/nunezluis/TareasCursos20B) y depositar allí las tareas, asignaciones y proyectos que desarrollemos durante el curso.
 
+<a name="Avanzaevaluacion"></a>
+## La evaluación
+[Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat2_21A/EvaluaMetMat2_21A.md) avanza la evaluación de este curso
+
 <a name="MaterialesCurso"></a>
 ## Materiales del curso
 
@@ -121,8 +125,3 @@ En esas distintas formas de narración
 4. [Ecuación de Laplace](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 5. [Solución Numérica de Ecuaciones diferenciales parciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 6. Taller evaluado de Ecuaciones diferenciales parciales
-
-
-<a name="Avanzaevaluacion"></a>
-## La evaluación
-[Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat2_21A/EvaluaMetMat2_21A.md) avanza la evaluación de este curso
