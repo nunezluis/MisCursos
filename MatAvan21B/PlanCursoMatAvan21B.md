@@ -15,10 +15,6 @@
 ## La metodología
 **Antes de las clases** deberán revisar los materiales de apoyo (videos/textos) y recorrer los ejemplos resueltos de autoevaluación. Así podrán llevar dudas a la discusión que haremos en la clase. La clase quedará grabada y la discusión podrá revisarse también. La realización de esos ejemplos resueltos será tomada en cuenta durante el desarrollo de la clase.
 
-<a name="programa"></a>
-## El programa del curso de Métodos Matemáticos 2
-Este es programa del curso de [Métodos Matemáticos 2](https://github.com/nunezluis/MisCursos/blob/main/MetMat2_21A/MetMat2Programa.pdf)   
-
 <a name="clases"></a>
 ### Las clases
 **En cada clase** tendremos dos partes: una de ~30m-40m para presentar los conceptos, seguida por otra de ~60m-50m para la discusión en los ejemplos resueltos. Los conceptos habrán sido previamente indicados en los materiales de estudio.
@@ -70,12 +66,15 @@ También utilizaremos capítulos de esta bibliografía
 
 <a name="PlanDetallado"></a>
 ## Plan detallado del curso
-1. [Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md)
-+ [Clase 2. Espacios Métricos, Normados y Euclideanos](#Clase2)
-+ [Clase 3. Dependencia e independencia líneal y bases ortogonales](#Clase3)
-+ [Clase 4. Aproximación de funciones y bases ortogonales](#Clase4)
-+ [Clase 5. Taller de bases funcionales y aproximación de funciones](#Clase5)
 ### Espacios lineales
+#### Temas
+1. [Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md)
+2. [Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md)
+3. [Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md)
+4. [Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md)
+
+#### Asignaciones
+
 
 ### Espacios duales y Tensores
 
