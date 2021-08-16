@@ -6,6 +6,7 @@
    2. Rehacer los ejemplos resueltos: 2.1.6 ejemplos 1 y 2
 
 + **Taller de problemas 1 (evaluación en la clase 5):** Sección 2.1.8 ejercicios 3 y 10
+
 + **Materiales de apoyo:** [Video](https://youtu.be/aiv3E_Nofko) y [presentación del concepto de espacio vectorial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/2_1GruposEspaciosVectoriales.pdf)
 
 + **Al finalizar estos contenidos** El estudiantes deberá estar en capacidad de:
