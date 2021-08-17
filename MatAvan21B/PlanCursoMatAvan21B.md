@@ -6,9 +6,10 @@
    2. [El programa del curso](#programa)
    3. [Colaboración y computación](#colaboracion)
 2. [La evaluación](#evaluacion)
-3. [Materiales del curso](#MaterialesCurso)
-4. [Plan detallado del curso](#PlanDetallado)
-5. [Evolución de la evaluación](#Avanzaevaluacion)
+3. [Fechas importantes](#fechas)
+4. [Materiales del curso](#MaterialesCurso)
+5. [Plan detallado del curso](#PlanDetallado)
+6. [Evolución de la evaluación](#Avanzaevaluacion)
 
 
 <a name="metodologia"></a>
@@ -43,6 +44,12 @@ La evaluación de este curso se realizará en base a tres tipos de actividades c
 
 + En la **clase 14 o 15** y en **la 28 o 29** se realizará una evaluación oral de temas cubiertos hasta esas fechas. Esta *conversación evaluada* versará sobre un cuestionario que será enviado 24 horas antes de la actividad. Estas conversaciones evaluadas acopiarán el 20% restante.
 + **Para consignar las tareas y asignaciones** deberan "clonar" el [repositorio de tareas](https://github.com/nunezluis/TareasCursos20B) y depositar allí las tareas, asignaciones y proyectos que desarrollemos durante el curso.
+
+<a name="fechas"></a>
+## Fechas de interés
++ **Inicio de clases:** miercoles 11 de agosto de 2021
++ **Fin de clases:** martes 30 de noviembre de 2021.
++ **Último día para registro de notas:** martes 7 diciembre 2021
 
 <a name="MaterialesCurso"></a>
 ## Materiales del curso
