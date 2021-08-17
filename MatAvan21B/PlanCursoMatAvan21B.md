@@ -55,11 +55,10 @@ Hay que enfatizar que estas notas es una obra en evolución y siempre presentare
 
 También utilizaremos capítulos de esta bibliografía
 + Svozil, Karl.(2020) Mathematical methods of theoretical physics. World Scientific.
-+ Boyce, W. E., DiPrima, R. C., & Meade, D. B. (2017). Elementary differential equations. John Wiley & Sons.
-+ Arfken, G. B,  Weber H. J.; Harris, Frank E. (2012) Mathematical Methods for Physicists A Comprehensive Guide New York Academic Press.
-+ Tang, K. T. (2007). Mathematical methods for engineers and scientists (Vols. 1, 2, y 3). New York: Springer.
-+ Chow, T. L. (2001). Mathematical Methods for Physicists: A concise introduction. Cambridge, Cambridge Uniersity Press.
-+ Riley, K. F., Hobson, M. P., & Bence, S. J. (1999). Mathematical methods for physics and engineering.
++ Boyce, W. E., DiPrima, R. C., & Meade, D. B. (2017). Elementary differential equations. John Wiley & Sons. [Disponible en la Biblioteca UIS](http://tangara.uis.edu.co)
++ Tang, K. T. (2007). Mathematical methods for engineers and scientists (Vols. 1, 2, y 3). New York: Springer. [Disponible en la Biblioteca UIS](http://tangara.uis.edu.co)
++ Chow, T. L. (2001). Mathematical Methods for Physicists: A concise introduction. Cambridge, Cambridge Uniersity Press. [Disponible en la Biblioteca UIS](http://tangara.uis.edu.co)
++ Riley, K. F., Hobson, M. P., & Bence, S. J. (1999). Mathematical methods for physics and engineering.[Disponible en la Biblioteca UIS](http://tangara.uis.edu.co)
 + Landau, R. H., Páez, M. J., & Bordeianu, C. C. (2015). Computational physics: Problem solving with Python. John Wiley & Sons.
 
 
