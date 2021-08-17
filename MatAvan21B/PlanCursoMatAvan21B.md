@@ -94,3 +94,7 @@ También utilizaremos capítulos de esta bibliografía
 ### Ecuaciones diferenciales ordinarias
 
 ### Ecuaciones en derivadas parciales
+
+<a name="Avanzaevaluacion"></a>
+## La evaluación
+[Aquí](https://github.com/nunezluis/MisCursos/blob/main/MatAvan21B/EvaluaMatAva21B.md) avanza la evaluación de este curso
