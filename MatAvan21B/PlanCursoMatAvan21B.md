@@ -87,7 +87,9 @@ También utilizaremos capítulos de esta bibliografía
 
 ### Espacios duales y Tensores
 #### Clases
-+ [Clase 5. Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md)
++ [Clase 5. Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md)
+
++ [Clase 6 Evaluación Asignación 1 ]
 
 
 ### Operadores Lineales
