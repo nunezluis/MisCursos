@@ -1,4 +1,4 @@
-## Clase: Dependencia e independencia líneal y bases ortogonales
+## Dependencia e independencia lineal y bases ortogonales
 
 ### Objetivos de la clase.
 Esta clase tiene por objetivo, en primer lugar, introducir el concepto de independencia lineal y, a partir de éste, generar la idea de base para un espacio vectorial. Seguidamente, presentamos la expansión de los vectores de un espacio vectorial como combinación lineal de la base. Se enfatiza en asociar las componentes de los vectores con las distintas bases del espacio vectorial. Finalmente, si el espacio tiene definido un producto interno, se construye una base ortogonal a partir de las bases oblicuas que existan.
