@@ -12,7 +12,7 @@ Esta clase tiene por objetivos:
 + **Taller de problemas 3 (evaluación en la clase 13)**
     + Resolver ejercicio 5 de la sección 4.1.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
 + **Materiales de apoyo**
-    + [Video](https://youtu.be/JGcYt7Nh-kE) y [Presentación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/4_1OperadLineales.pdf)
+    + [Video operadores lineales](https://youtu.be/JGcYt7Nh-kE) y [Presentación operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/4_1OperadLineales.pdf)
 
 + **Al finalizar este contenido** Al finalizar estos contenidos el estudiante debe ser capaz de
 
