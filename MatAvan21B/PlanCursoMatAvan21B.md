@@ -95,7 +95,7 @@ También utilizaremos capítulos de esta bibliografía
 
 ### Operadores Lineales
 #### Clases
-+ [Clase 8. Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperadLineales.md)
++ [Clase 8. Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md)
 
 + [Clase 9. Evaluación Ejercicios y Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md)
 ### Series y Transformadas de Fourier
