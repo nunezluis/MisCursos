@@ -1,4 +1,4 @@
-## Clase 12. Operadores lineales y espacios vectoriales  
+## Operadores lineales y espacios vectoriales  
 + **Objetivos de la Clase**
 Esta clase tiene por objetivos:
 
