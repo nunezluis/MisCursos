@@ -1,5 +1,5 @@
 
-### Clase 7. Tensores y espacios tensoriales
+### Tensores y espacios tensoriales
 + **Objetivos de la clase.** Esta clase tiene por objetivo construir la definición de un tensor a partir de la generalización de un funcional lineal. Mostrar que un tensor es una función multilineal con vectores y formas lineales como argumentos. Luego evidenciar que los tensores forman un espacio tensorial a partir de un producto tensorial de espacios vectoriales y/o duales. Luego construir bases para ese espacio a partir de las base de los espacios vectoriales (y/o duales) que lo generaron. Finalmente, expresamos un tensor genérico como una combinación lineal de esa base tensorial y analizaremos las propiedades de las bases. Discutiremos las contracción de índices tensoriales así como también su simetrización y antisimetrización.
 
 + **Actividad antes de clase**
