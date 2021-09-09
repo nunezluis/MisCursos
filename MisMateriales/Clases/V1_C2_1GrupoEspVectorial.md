@@ -1,4 +1,4 @@
-## Clase: Grupos y espacios lineales abstractos
+## Grupos y espacios lineales abstractos
 
 ### Objetivos de la clase.
 Esta clase tiene por objetivo, en primer lugar, presentar los conceptos fundamentales de grupo, la construcción de la tabla de multiplicación  y la identificación de isomorfismos entre grupos. En segundo lugar se presenta el concepto de espacio vectorial abstracto y se ejemplifica con distintos casos: números, vectores n-dimensionales, polinomios, funciones, matrices, entre otros.
