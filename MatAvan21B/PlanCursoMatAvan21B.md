@@ -102,7 +102,13 @@ Al igual que la *Asignación 1* los resultados deberán ser entregados en forma 
 #### Clases
 + [Clase 8. Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md)
 
-+ [Clase 9. Evaluación Ejercicios y Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md)
++ [Clase 9. Evaluación Ejercicios y Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md)
+
++ [Clase 10. Matrices y Operadores Lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **Entrega Asignación 2**
+
++ [Clase 11. Autovalores y Autovectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md)
+
++ Clase 12 Evaluación Asignación 2 y ejercicios
 
 ### Series y Transformadas de Fourier
 
