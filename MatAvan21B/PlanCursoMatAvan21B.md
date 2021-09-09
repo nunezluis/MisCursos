@@ -89,9 +89,11 @@ También utilizaremos capítulos de esta bibliografía
 #### Clases
 + [Clase 5. Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md)
 
-+ [Clase 6 Evaluación Asignación 1 Tensores y espacios tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md)
++ Clase 6 Evaluación Asignación 1 y ejercicios
 
++ [Clase 7. Tensores y espacios tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md)
 
++ [Clase 8. Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md)
 ### Operadores Lineales
 
 ### Series y Transformadas de Fourier
