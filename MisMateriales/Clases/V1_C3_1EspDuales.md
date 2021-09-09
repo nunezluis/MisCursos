@@ -8,7 +8,7 @@ Esta busca construir espacios vectoriales duales a partir de la definición del 
    2. Rehacer los ejemplos resueltos 3 y 4 de la sección 3.1.4
 
 ### Taller de problemas
-   + Desarrollar ejercicios 6 y 7 de la Sección 3.1.6 .
+Desarrollar ejercicios 6 y 7 de la Sección 3.1.6 .
 
 ### Materiales de apoyo
    + [Video](https://youtu.be/9u5g5Y5bdJI) y [presentación Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_1FuncionalesLineales.pdf)
