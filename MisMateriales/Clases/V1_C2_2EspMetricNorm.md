@@ -9,7 +9,8 @@ Esta clase tiene por objetivo explorar la estructura de los espacios vectoriales
 
 ### Taller de problemas
 Los problemas 2 y 3 problema 7 sección 2.2.6
-+ **Materiales de apoyo**
+
+### Materiales de apoyo
    1. [Video](https://youtu.be/la9Gnhc0uFg) y [presentación de espacios métricos y normados](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/2_2EspaciosMetricos.pdf)
    2. [Video](https://youtu.be/rQ59n-wr9X8) y [presentación de espacios euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/2_23EspaciosEuclideanos.pdf)
 
