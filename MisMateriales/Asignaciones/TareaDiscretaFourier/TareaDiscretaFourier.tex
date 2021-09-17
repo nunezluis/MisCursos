@@ -1,0 +1,46 @@
+
+
+
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+
+\title{Taller Transformadas Discretas de Fourier}
+\author{{\bf Luis Núñez} \\ Métodos Matemáticos 2 \\ 
+Escuela de Física Universidad Industrial de Santander
+}
+\date{Fecha de entrega: 24 Septiebre 2021}
+
+\begin{document}
+\maketitle
+
+\begin{enumerate}
+    \item Considere las siguientes señales
+    \[y(t)=3 \cos (\omega t) + 5 \cos (3 \omega t) +8\cos (7 \omega t) 
+    \quad {\rm y } \quad y(t)= 3\,{\rm sen}\,(\omega t) +2\,{\rm sen}\,(3 \omega t) +3\,{\rm sen}\, (8 \omega t)
+    \] 
+    \begin{enumerate}
+        \item Implemente en cada caso la transformada analítica y discreta de Fourier. Compárelas.
+        \item Muestre para cuáles casos recupera una transformada real o imaginiaria.
+        \item Encuentre las distintas componentes para el espectro de potencias y muestre que las frecuencias tienen los valores esperados (no sólo las proporciones)
+        \item Experimentar los efectos de elegir diferentes valores del tamaño de paso $h$ y de ampliar el período de medición $T=N h$.
+    \end{enumerate}
+    %
+    \item Considere ahora la siguiente señal
+    \[ y(t_i) = \frac{10}{10 - 9\,{\rm sen}\,(t_i)} 
+    + \alpha(3 \mathcal{R}_i -1) \quad {\rm con} \quad 0 \leq \mathcal{R}_i \leq -1\]
+    donde $\mathcal{R}_i$ es un número aleatorio y $\alpha$ un parámetro de control. Use este parámetro $\alpha$ para simular tres tiepos de ruido: alto, medio y bajo. En el caso del ruido alto, la señal se pierde. En los otros dos casos puede ser identificada
+    \begin{enumerate}
+        \item Grafique su señal ruidosa, su transformada de Fourier (analítica) y su espectro de potencia
+        \item Calcule la función de autocorrelación $A(\tau)$ y su transformada de Fourier $A(\omega)$.
+        \item Compare la transformada discreta de fourier de $A(\tau)$ con el verdadero espectro de potencia y discuta la eficacia de la reducción del ruido mediante el uso de la función de autocorrelación.
+        \item ¿Para cuales valores de $\alpha$ se pierde toda la información en la entrada?
+    \end{enumerate}
+    
+    
+\end{enumerate}
+
+
+\end{document}
+
+
+
