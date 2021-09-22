@@ -4,8 +4,9 @@
 Esta clase tiene por objetivo, en primer lugar, presentar los conceptos fundamentales de grupo, la construcción de la tabla de multiplicación  y la identificación de isomorfismos entre grupos. En segundo lugar se presenta el concepto de espacio vectorial abstracto y se ejemplifica con distintos casos: números, vectores n-dimensionales, polinomios, funciones, matrices, entre otros.
 
 ### Actividad antes de clase
-   1. Estudiar puntos de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf) 2.1.1, 2.1.2, 2.1.3 y 2.1.4.
-   2. Rehacer los ejemplos resueltos: 2.1.6 ejemplos 1 y 2
+1. Estudiar puntos de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf) 2.1.1, 2.1.2, 2.1.3 y 2.1.4.
+2. Seguir el video de espacios vectoriales abstractos el [video de 3blue-1brown](https://www.youtube.com/watch?v=TgKwz5Ikpc8)   
+3. Rehacer los ejemplos resueltos: 2.1.6 ejemplos 1 y 2
 
 ### Taller de problemas
 De la Sección 2.1.8 desarrollar los ejercicios 3 y 10
