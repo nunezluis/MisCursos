@@ -109,13 +109,15 @@ Al igual que la *Asignación 1* los resultados deberán ser entregados en forma 
 
 + [Clase 9. Evaluación Ejercicios y Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md)
     1. Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.11
-    2. Resolver ejercicio 5 de la sección 4.1.6 
+    2. Resolver ejercicio 5 de la sección 4.1.6
 
-+ [Clase 10. Matrices y Operadores Lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **Entrega Asignación 2**
++ [Clase 10. Matrices y Operadores Lineales, parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **Entrega Asignación 2**
 
-+ [Clase 11. Autovalores y Autovectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md)
++ [Clase 11. Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md)
 
-+ Clase 12 Evaluación Asignación 2 y ejercicios
++ [Clase 12. Autovalores y Autovectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md)
+
++ Clase 13 Evaluación Asignación 2 y ejercicios
 
 ### Series y Transformadas de Fourier
 
