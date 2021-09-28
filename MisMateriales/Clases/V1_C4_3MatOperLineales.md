@@ -11,8 +11,8 @@ Esta clase tiene por objetivo asociar una representación matricial a un operado
 Resolver el ejercicio 2 de la sección 4.3.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
 
 ### Materiales de apoyo
-+ Video y [Presentación Matrices y Operadores](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/4_30MatricesOperadores.pdf)
-+ Video y [Presentación de un ejemplo de representación matricial de un operador](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/4_30EjemploMatrizOperador.pdf)
++ Video y [Presentación Matrices y Operadores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/4_30MatricesOperadores.pdf)
++ Video y [Presentación de un ejemplo de representación matricial de un operador](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/4_30EjemploMatrizOperador.pdf)
 
 ### Al finalizar este contenido
 Al finalizar estos contenidos el estudiante debe ser capaz de:
