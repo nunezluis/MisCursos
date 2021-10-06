@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  1 JUN 2021 21:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  5 OCT 2021 12:00
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -557,8 +557,10 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframesep=\dimen131
 \bframebox=\box28
 LaTeX Info: Redefining \\ on input line 3056.
+) (./latigo.aux
+LaTeX Info: Redefining \. on input line 27.
+LaTeX Info: Redefining \% on input line 27.
 )
-No file latigo.aux.
 \openout1 = `latigo.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
@@ -604,6 +606,8 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 41.
 LaTeX Info: Redefining \pageref on input line 41.
 LaTeX Info: Redefining \nameref on input line 41.
+
+(./latigo.out) (./latigo.out)
 \@outlinefile=\write3
 \openout3 = `latigo.out'.
 
@@ -668,20 +672,6 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 54.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-
-LaTeX Warning: Citation `BernsteinHallTrent1958' on page 1 undefined on input l
-ine 56.
-
-
-LaTeX Warning: Citation `GorielyMcMillen2002' on page 1 undefined on input line
- 56.
-
-
-LaTeX Warning: Citation `Preston2011' on page 1 undefined on input line 56.
-
-
-LaTeX Warning: Citation `Telciyan2018' on page 1 undefined on input line 56.
-
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 64.
 Package babel Info: Redefining spanish shorthand >>
@@ -730,14 +720,16 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 71.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 71.
-[1
+ [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./lati
+go.bbl
+Underfull \hbox (badness 1231) in paragraph at lines 27--31
+\T1/cmr/m/n/10.95 Mo-dos de os-ci-la-ción en cuer-das ho-mo-gé-neas por ter-cio
+s.  \T1/cmr/m/it/10.95 Re-vis-ta me-xi-ca-na de fí-si-ca\T1/cmr/m/n/10.95 ,
+ []
 
-LaTeX Warning: Citation `RodriguezzuritaEtal2002modos' on page 2 undefined on i
-nput line 71.
-
-No file latigo.bbl.
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 79.
@@ -763,7 +755,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 79.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 79.
-[2]
+ [2]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
  (./latigo.aux
 LaTeX Info: Redefining \. on input line 27.
@@ -771,25 +763,15 @@ LaTeX Info: Redefining \% on input line 27.
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 79.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 79.
-
-
-Package rerunfilecheck Warning: File `latigo.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `latigo.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  E51AADD43135B59216394DDF938C63CA;157.
-
-LaTeX Warning: There were undefined references.
-
+Package rerunfilecheck Info: File `latigo.out' has not changed.
+(rerunfilecheck)             Checksum: E51AADD43135B59216394DDF938C63CA;157.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
  ) 
 Here is how much of TeX's memory you used:
- 7996 strings out of 493089
- 112015 string characters out of 6134842
- 210643 words of memory out of 5000000
- 11355 multiletter control sequences out of 15000+600000
+ 8020 strings out of 493089
+ 112355 string characters out of 6134842
+ 211923 words of memory out of 5000000
+ 11365 multiletter control sequences out of 15000+600000
  21721 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  30i,11n,43p,621b,427s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -810,10 +792,10 @@ e/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/
 exmf-dist/fonts/type1/public/cm-super/sfti1200.pfb></usr/local/texlive/2015/tex
 mf-dist/fonts/type1/public/cm-super/sftt0900.pfb></usr/local/texlive/2015/texmf
 -dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on latigo.pdf (2 pages, 254797 bytes).
+Output written on latigo.pdf (2 pages, 265084 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
- 7 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 114 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
+ 25 words of extra memory for PDF output out of 10000 (max. 10000000)
 
