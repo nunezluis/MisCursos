@@ -118,6 +118,8 @@ Al igual que la *Asignación 1* los resultados deberán ser entregados en forma 
 + [Clase 12. Autovalores y Autovectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md)
 
 + Clase 13 Evaluación Asignación 2 y ejercicios
+   1. Resolver los ejercicios 4, 5, y 12  de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
+   2. Hacer un par de códigos en MAXIMA para resolver los ejercicios 6 y 8 de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf) 
 
 ### Series y Transformadas de Fourier
 
