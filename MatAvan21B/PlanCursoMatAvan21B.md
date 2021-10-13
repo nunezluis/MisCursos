@@ -131,6 +131,8 @@ En [esta carpeta](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales
 
 Su misión y decidieron [aceptarla](https://www.youtube.com/watch?v=XAYhNHhxN0A) es investigar si un evento, visto desde varias antenas, conserva su identidad espectral. Vale decir, algunas características del espectro de potencia de Fourier puede ser identificado desde distintas antenas. Para ello utilicen las columna 2 y 3( x=tiempo_corregido y y= señal, respectivamente)  
 
+Explore y hacer un espectrograma con estas señales puede ayudar
+
 #### Clases
 
 + [Clase 14. Series de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_2SeriesFourier.md)
@@ -139,7 +141,7 @@ Su misión y decidieron [aceptarla](https://www.youtube.com/watch?v=XAYhNHhxN0A)
 
 + [Clase 16. Transformadas de Fourier Discreta](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_4TransDiscFourier.md)
 
-+ Clase 17 Evaluación Asignación 3 
++ Clase 17 Evaluación Asignación 3
 
 ### Ecuaciones diferenciales ordinarias
 
