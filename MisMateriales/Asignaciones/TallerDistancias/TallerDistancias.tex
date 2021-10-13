@@ -1,0 +1,90 @@
+\documentclass[spanish,notitlepage,letterpaper,12pt]{article} % para articulo en castellano
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+%
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref} % navega por el doc
+\usepackage{graphicx}
+\usepackage{geometry}           % See geometry.pdf to learn the layout options.
+\geometry{letterpaper}          % ... or a4paper or a5paper or ... 
+%\geometry{landscape}           % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}  % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{epstopdf}
+\usepackage{fancyhdr} % encabezados y pies de pg
+\usepackage{lineno}
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers.
+%
+
+
+\pagestyle{fancy} 
+\chead{} 
+\lhead{\textit{ Métricas, datos y calibración }} % si se omite coloca el nombre de la seccion
+\rhead{\textbf{Métodos Matematicos}} 
+\lfoot{Luis A. N\'u\~nez} 
+\rfoot{Escuela de Física} 
+%\rfoot{\thepage} 
+
+\voffset = -0.25in 
+\textheight = 8.0in 
+\textwidth = 6.5in
+\oddsidemargin = 0.in
+\headheight = 20pt 
+\headwidth = 6.5in
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0,5pt}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+
+\title{Métricas, datos y calibración inteligente}
+\author{
+\textbf{L. A. Núñez} \\ 
+\textit{Escuela de Física, Facultad de Ciencias, } 
+}
+
+\begin{document}
+\maketitle
+%\begin{abstract}
+%Presentamos
+%\end{abstract}
+%\newpage
+%\tableofcontents
+
+\section{El problema}
+Estamos viviendo una época de desarrollo explosivo de sensores que pueblan y generan datos en todas las facetas de nuestra cotidianidad. Estos sensores de bajo costo forman parte de dispositivos de la llamada revolución de la \textit{Internet de las cosas, IoT}. Muchas veces estos sensores no son lo suficientemente precisos y deben ser calibrados con un patron de referencia (Para un ejemplo de este tipo de calibraciones inteligente pueden consultar \cite{ZimmermanEtal2018}). 
+Este ejercicio busca mostrar que esa calibración está íntimamente ligada a la idea de métrica (pueden consultar \cite{Colombo2020}).
+
+El problema está en cuantificar cuál es el error de medición del sensor de bajo costo y, como calibrarlo para que podamos establecer nuevas lecturas que sean mas precisas.
+
+En el directorio del pie de página\footnote{\url{https://github.com/nunezluis/MisCursos/tree/main/MetMat1S20B/Asignaciones/Datos/}} podrán encontrar los datos de referencia y los de las estaciones \textit{IoT}. El archivo \textit{Datos Estaciones AMB} contiene las medidas de referencia de concentración de material particulado PM$_{2.5}$\footnote{\url{https://blissair.com/what-is-pm-2-5.htm}}, vale decir: concentración de partículas en suspensión de dimensiones $\leq 2.5 \mu$m. Los archivos etiquetados por \textit{mediciones..} contiene los registro de las estaciones de bajo costo.
+
+\section{Una posible estrategia para calcular la distancia}
+Para comenzar es importante estimar la distancia entre las medidas de las estaciones de referencia y de las de bajo costo. Para ellos utilizamos la distancia euclidea entre las dos mediciones. 
+\begin{equation}
+\mathcal{D}(\mathbb{D}_{i}, \hat{\mathbb{D}}_{\hat{i}} ) = \sqrt{ \sum_{i,\hat{i}} \left( \mathbb{D}_{i} - \hat{\mathbb{D}}_{\hat{i}} \right)^{2} }
+\label{Distancia}
+\end{equation}
+Donde hemos definido como $\mathbb{D}_{i} = \left\{ (x_{1}, y_{1}), (x_{2}, y_{2}) \cdots (x_{n}, y_{n}) \right\}$ al conjunto de datos de referencia y como $\hat{\mathbb{D}}_{\hat{i}} = \left\{ (\hat{x}_{1}, \hat{y}_{1}), (\hat{x}_{2}, \hat{y}_{2}) \cdots (\hat{x}_{m}, \hat{y}_{m}) \right\} $ al conjunto de datos a calibrar. 
+
+Claramente, estamos identificando por $f(x_{i}) = y_{i}$ como el valor de la variable dependiente (en este caso la concentración de material particulado) medido por la estación patrón  y las mediciones de la estación a calibrar por $\hat{f}(\hat{x}_{i}) = \hat{y}_{i}$. Adicionalmente, note que las dimensiones de los dos conjuntos de datos ($i = 1, 2, \cdots n$ e $\hat{i} = 1, 2, \cdots m$) son distintas y, que hemos denotamos por $x_{i} , \hat{x}_{i}$ las variables independientes (en este caso el tiempo) ``mas cercanas'' que intervienen en el cálculo de la distancia (\ref{Distancia}).
+
+Una posible estrategia para identificar los datos ``mas cercanos'' es utilizar el criterio de el promedio móvil\footnote{\url{https://en.wikipedia.org/wiki/Moving_average}} y comparar los promedios locales de ambos conjuntos $f(\xi_{j})$ y $\hat{f}(\xi_{j})$, calculados para una ventana común $a_{j} \leq x_{i} , \hat{x}_{i} \leq b_{j}$. Donde una posible elección de $\xi_{j}$ puede ser $\xi_{j} = a_{j} + (b_{j} - a_{j})/2$, con $j$ indica el número de ventanas a definir en el rango de variación de los datos. 
+
+Definir el ancho de la ventana para calcular los promedios locales es un arte y requiere de experimentación para balancear el tiempo de cálculo con la precisión lograda.  Entonces, \textbf{calcule la distancia euclidea $\mathcal{D}(\mathbb{D}_{i}, \hat{\mathbb{D}}_{\hat{i}} )$ para varios valores de la ventana móvil} y determine el mejor de los valores para la ventana.  
+ 
+\section{Una posible estrategia para calibrar las mediciones}
+Si graficamos los puntos  $\left( \hat{f}(\xi_{j}), f(\xi_{j}) \right)$, y hacemos un ajuste de mínimos cuadrados podremos determinar un modelo de ajuste lineal, $f(\xi_{j}) = \alpha \hat{f}(\xi_{j})$. Claramente si ambas estaciones midieran lo mismo, tendríamos $\alpha = 1$. \\ \textbf{Determine el alcance de validez del modelo lineal}. Esto es, defina una tolerancia\footnote{Error que está dispuesto a aceptar} y encuentre el alcance en $\hat{x}_{i}$ para la validez su modelo lineal.
+
+Otra estrategia posible es dividir los conjuntos de datos por la mitad, \\ $\mathbb{D}_{i} = \left\{ (x_{1}, y_{1}), (x_{2}, y_{2}) \cdots (x_{\approx n/2}, y_{\approx n/2}) \right\}$ y $\hat{\mathbb{D}}_{\hat{i}} = \left\{ (\hat{x}_{1}, \hat{y}_{1}), (\hat{x}_{2}, \hat{y}_{2}) \cdots (\hat{x}_{\approx n/2}, \hat{y}_{\approx n/2}) \right\}$, implementar el modelo lineal y comparar la predicción del modelo con las próximas mediciones de referencia $\mathbb{D}_{\approx n/2 \rightarrow n} = \left\{ (x_{\approx n/2 +1}, y_{\approx n/2 +1}), (x_{\approx n/2 +2}, y_{\approx n/2 +2}) \cdots (x_{n}, y_{n}) \right\}$. \\ \textbf{Determine cual el alcance para realizar predicciones dentro de la tolerancia}.
+
+El rango de los valores para generar el modelo (en este caso lineal) y el alcance de su predicción es un arte que debe definirse para cada conjunto de datos. Arriba se propuso utilizar la mitad del conjunto de datos para modelar, pero eso en general no es necesario. \textbf{Determine entonces, el mínimo conjunto de datos para generar el modelo y cuál será su máximo alcance para una tolerancia dada.} 
+%\subsection{}
+
+
+\bibliographystyle{alpha}
+\bibliography{Taller1}
+
+\end{document}  
