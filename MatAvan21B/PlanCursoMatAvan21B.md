@@ -139,6 +139,7 @@ Su misión y decidieron [aceptarla](https://www.youtube.com/watch?v=XAYhNHhxN0A)
 
 + [Clase 16. Transformadas de Fourier Discreta](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_4TransDiscFourier.md)
 
++ Clase 17 Evaluación Asignación 3 
 
 ### Ecuaciones diferenciales ordinarias
 
