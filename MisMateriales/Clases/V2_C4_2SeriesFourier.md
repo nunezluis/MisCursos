@@ -18,10 +18,10 @@ Presentamos el desarrollo de las series de Fourier con detalle, analizando las c
 2. [Hoja MAPLE de series de Fourier](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/SeriesFourier/FourierSeries.html)
 
 
- ## Al finalizar estos contenidos
+## Al finalizar estos contenidos
  Al finalizar estos contenidos el estudiantes deberá
  1. Entender los requerimientos del Teorema de Fourier y las restricciones de las condiciones de Dirichlet
- 2. Poder expandir funciones elementales en series de fourier (reales y complejas) y entender los significados de cada uno de los coeficientes de Fourier.
- 3. Ser capaz de calular el espectro de potencias y fases para una serie de Fourier
+ 2. Poder expandir funciones elementales en series de Fourier (reales y complejas) y entender los significados de cada uno de los coeficientes de Fourier.
+ 3. Ser capaz de calcular el espectro de potencias y fases para una serie de Fourier
  4. Comprender el significado físico de cada uno de los coficientes de Fourier
  5. Comprender el significad del espectro de frecuencias y fases para una serie de Fourier

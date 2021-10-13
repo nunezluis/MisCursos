@@ -17,9 +17,6 @@ Presentamos el desarrollo de las transformadas de Fourier con detalle. Se recomi
 1. [Presentación Transformadas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_2_3FourierTransf.pdf)
 2. [Hoja MAPLE de transformadas de Fourier](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/TransFourier/FourierTransf.html)
 
-## Taller de problemas 3
-Desarrollar los ejercicios 1, 2 y 3 de la sección 12.5.3 de [R. H. Landau, M. J. Páez C.C. Bordeianu, *Computational Physics: Problem solving with Python*](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ReferenciaArticulos/LandauPaez.pdf)
-
 
 ## Al finalizar estos contenidos
  Al finalizar estos contenidos el estudiantes deberá
