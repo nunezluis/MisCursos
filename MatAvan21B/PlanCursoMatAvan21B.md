@@ -123,6 +123,12 @@ Al igual que la *Asignación 1* los resultados deberán ser entregados en forma 
    3. Hacer un par de códigos en MAXIMA para resolver los ejercicios 6 y 8 de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
 
 ### Series y Transformadas de Fourier
+
+#### Asignación 3
+Esta asignación tiene por objeto mostrar algunas aplicaciones de las series y transformadas de Fourier. Esta asignación tiene dos etapas. [La primera constituye](XXXX) un calentamiento para comprobar algunos de los conceptos que discutimos en clase. La segunda fase es "un trabajo de campo" la aplicación de esos conceptos a señales reales. 
+
+
+
 + [Clase 14. Series de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_2SeriesFourier.md)
 
 + [Clase 15. Transformadas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_3TransFourier.md)
