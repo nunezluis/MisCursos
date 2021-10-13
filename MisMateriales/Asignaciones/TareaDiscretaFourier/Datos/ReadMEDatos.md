@@ -7,3 +7,16 @@
 + Las dos últimas columnas corresponden
     + señal2 = señal/amplitudeNormalization + azimuth
     + señal3 = señal/amplitudeNormalization + distance/1000 (distancia en km del rayo a la antena)
+
+En esta carpeta encontrarán los siguientes archivos de datos
++ Trace_EVT1272065836.908173614_908.2.txt
++ Trace_EVT1272070257.318228291_318.2.txt
++ Trace_EVT1272070496.820081490_820.1.txt
++ Trace_EVT1272070710.480088004_480.1.txt
++ Trace_EVT1272071343.694072075_694.1.txt
+
+y dos de demos
++ DemoTrace_EVT1272065836.908173614_azi.pdf
++ DemoTrace_EVT1272065836.908173614.txt
+
+Si grafican los datos del archivo DemoTrace_EVT1272065836.908173614.txt x=columna_2=tiempo_corregido, y=columna_4=señal2, debería salir un gráfico idéntico al pdf
