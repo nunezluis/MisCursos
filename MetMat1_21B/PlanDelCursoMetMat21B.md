@@ -53,7 +53,7 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 
 <a name="PlanDetallado"></a>
 ## Plan detallado del curso
-### Los vectores de siempre (2 Semanas)
+### Los vectores de siempre (1.5 Semanas)
 1. [Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md)
 2. [Análisis vectorial express](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_2AnalisisVectExpress.md)
 3. Taller evaluado de los vectores de siempre
@@ -61,7 +61,7 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 ### Espacios Vectoriales lineales. (3 Semanas)
 1. [Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md)
 2. [Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md)
-    + **Asignación 1 (Fecha de entrega XXXX).** Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar el error de medición del sensor de bajo costo y, como calibrarlo para establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Asignaciones/DatosDistancias) podrán encontrar los datos para desarrollar los algoritmos de calibración inteligente. El problema deberá ser entregado por equipos en forma de artículo y podrían seguir el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que presentamos en la descripción del curso.
+**Asignación 1 (Fecha de entrega XXXX).** Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar el error de medición del sensor de bajo costo y, como calibrarlo para establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Asignaciones/DatosDistancias) podrán encontrar los datos para desarrollar los algoritmos de calibración inteligente. El problema deberá ser entregado por equipos en forma de artículo y podrían seguir el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que presentamos en la descripción del curso.
 3. [Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md)
 4. [Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md)
 5. Taller Evaluado Espacios Lineales
