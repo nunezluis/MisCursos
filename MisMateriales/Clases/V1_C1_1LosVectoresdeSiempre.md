@@ -18,7 +18,7 @@ El tercer objetivo es iniciar a los estudiantes en la utilización de la notaci�
 1. Realice un código en MAXIMA para el cual, dado tres vectores que formen los lados de un triángulo calcule el centroide (Problema 3 Sección 1.1.8)
 2. Realice un código en MAXIMA que reproduzca el ejercicio 6 de la Sección 1.2.9
 
-### Materiales de apoyo**
+### Materiales de apoyo
 1. [Video](https://youtu.be/2LhoaImegV4) y [presentación generalidades de vectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/1_1Vectores.pdf)
 2. [Video](https://youtu.be/WNMyW9gKutU) y [presentación bases y componentes de vectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/1_2BaseCompon.pdf)
 3. Video y [presentación de álgebra vectores, índices y notación de Einstein](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/1_3VectoresIndices.pdf)
