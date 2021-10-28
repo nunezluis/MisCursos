@@ -23,7 +23,8 @@ El tercer objetivo es iniciar a los estudiantes en la utilización de la notaci�
 2. [Video](https://youtu.be/WNMyW9gKutU) y [presentación bases y componentes de vectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/1_2BaseCompon.pdf)
 3. Video y [presentación de álgebra vectores, índices y notación de Einstein](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/1_3VectoresIndices.pdf)
 
-### Al finalizar estos contenidos** El estudiantes deberá
+### Al finalizar estos contenidos 
+El estudiantes deberá:
 1. Haber instalado y tener operativas las plataformas computacionales que utilizará durante el curso
 2. Haber refrescado los conceptos de: vectores cartesianos, componentes, independencia lineal, bases del espacio vectorial, productos escalar y vectorial (tanto su representación geométrica como algebraica).
 3. Utilizar la notación de Einstein para desarrollar cálculos vectoriales. Conocer las propiedades de la delta de Kronecker y el símbolo de Levi-Civita.
