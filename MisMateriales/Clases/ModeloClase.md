@@ -1,11 +1,18 @@
-# Introducción a la Física UIS Semestre 21A
-# Semana XX
-+ **Objetivos de la semana**
+## Título de la clase
 
-+ **Actividad antes de iniciar la clase**
+### Objetivos de la clase
+Esta clase tiene varios objetivos.
 
-+ **Taller de problemas 1 (evaluación en la clase XXX)**
+### Actividades **antes** de clase**
+   1. Estudiar los puntos XXXX  
+   2. Rehacer los ejercicios resueltos YYYY
 
-+ **Materiales de apoyo**
+### Actividad **después** de clase
 
- + **Al finalizar estos contenidos** El estudiantes deberá
+
+### Materiales de apoyo
+   1. [Video](XXX) y [presentación](YYY)
+
+### Al finalizar estos contenidos
+   El estudiantes deberá:
+   1. Haber
