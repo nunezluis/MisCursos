@@ -1,4 +1,4 @@
-## Clase Análisis vectorial express
+## Análisis vectorial express
 ### Objetivos de la clase
    Esta clase tiene por objetivo realizar una aproximación intuitiva a los conceptos de análisis vectorial. En particular interpretar la derivación e integración de un campo vectorial. Mas adelante, en el desarrollo del curso se formalizará este concepto.
 
