@@ -108,17 +108,24 @@ Al igual que la *Asignación 1 y 2* los resultados deberán ser entregados en fo
 + Ajuste y sustentación asignación 3
 
 ### Análisis vectorial. (2 Semanas)
++ [Clase 16: Coordenadas curvilíneas generalizadas y campos tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
+
++ [Clase 17: La fauna de los operadores vectoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
+
++ [Clase 18: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
+
++ [Clase 19: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
 ### Variable Compleja (3 Semanas)
-+ [Clase XX. Variable Compleja](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_1VarCompleja.md).
++ [Clase 20. Variable Compleja](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_1VarCompleja.md).
 
-+ [Clase XX. Transformaciones Conformes](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_2TransfConformes.md).
++ [Clase 21. Transformaciones Conformes](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_2TransfConformes.md).
 
-+ [Clase XX. Integrales Complejas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_3IntegralesComplejas.md).
++ [Clase 22. Integrales Complejas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_3IntegralesComplejas.md).
 
-+ [Clase XX. Series de Taylor y Laurent](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_4Laurent.md).
++ [Clase 23. Series de Taylor y Laurent](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_4Laurent.md).
 
-+ [Clase XX. Residuos e Integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_5ResiduosIntegrales.md).
++ [Clase 24. Residuos e Integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_5ResiduosIntegrales.md).
 <a name="Avanzaevaluacion"></a>
 ## La evaluación
 [Aquí]() avanza la evaluación de este curso
