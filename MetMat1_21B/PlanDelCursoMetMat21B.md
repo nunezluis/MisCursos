@@ -54,35 +54,45 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 <a name="PlanDetallado"></a>
 ## Plan detallado del curso
 ### Asignación 1 (Entrega hasta clase 4 y discusión clase 5)
-La primera asignación tiene que ver con la utilización de los vectores en cristalografía. La intención es que desarrollen y entreguen el ejercicio 9 del punto 1.3.3 de las notas de [Matematicas Avanzadas Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
+La primera asignación tiene que ver con la utilización de los vectores en cristalografía. La intención es que desarrollen y entreguen el ejercicio 9 del punto 1.3.3 de las notas de [Matematicas Avanzadas Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf). El problema deberá ser entregado por equipos de dos personas.
 
 ### Clases y Talleres  
-#### Los vectores de siempre (1.5 Semanas)
+#### Los vectores de siempre (1 Semanas)
 + [Clase 1: Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md)
 + [Clase 2: Análisis vectorial express](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_2AnalisisVectExpress.md)
 
-### Espacios Vectoriales lineales. (3 Semanas)
-#### Asignación 2 (Entrega hasta clase 9 y discusión clase 10).
-Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar el error de medición del sensor de bajo costo y, como calibrarlo para establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Asignaciones/DatosDistancias) podrán encontrar los datos para desarrollar los algoritmos de calibración inteligente. El problema deberá ser entregado por equipos en forma de artículo y podrían seguir el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que presentamos en la descripción del curso.
+### Espacios Vectoriales lineales. (2.5 Semanas)
 
 #### Clases y Talleres
-+ [Clase 3: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md) Taller evaluado de los vectores de siempre.
++ [Clase 3: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md) Además tendremos un taller evaluado de los vectores de siempre (clases 1 y 2).
 
 + [Clase 4: Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md)
 
 + [Clase 5: Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md)
-Sustentación de Asignación 1
+También tendremos la sustentación de Asignación 1.
 
-+ [Clase 6: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) Taller Evaluado Espacios Lineales
++ [Clase 6: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) Taller Evaluado Espacios Lineales (clases 3, 4, 5)
 
++ Ajuste
 
-### Espacios vectoriales duales y tensoriales. (3 Semanas)
+#### Asignación 2 (Entrega hasta clase 9 y discusión clase 10).
+Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar el error de medición del sensor de bajo costo y, como calibrarlo para establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerDistancias/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Asignaciones/TallerDistancias/DatosDistancias) podrán encontrar los datos para desarrollar los algoritmos de calibración inteligente. Los datos patrones están contenidos en la hoja excel en la pestaña *Normal*. Los datos de las estaciones a calibrar los encontrarán en los demás archivos.   El problema deberá ser entregado por equipos de dos personas en forma de artículo y podrían seguir el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que presentamos en la descripción del curso.
+
+### Espacios vectoriales duales y tensoriales. (2 Semanas)
++ [Clase 7: Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md)
+
++ [Clase 8: Tensores y espacios tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md)
+
++ [Clase 9: Tensores y espacios tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md) También tendremos evaluación de los ejercicios asignados clases 6, 7 y 8.
+
++ Ajuste y sustentación asignación 2
 
 ### Operadores Lineales (2 Semanas)
++ [Clase 10: Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md)
 
 ### Análisis vectorial. (2 Semanas)
 
-### Variabel Compleja (2 Semanas)
+### Variable Compleja (2 Semanas)
 
 <a name="Avanzaevaluacion"></a>
 ## La evaluación
