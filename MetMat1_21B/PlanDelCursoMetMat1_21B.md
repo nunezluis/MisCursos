@@ -107,7 +107,7 @@ Al igual que la *Asignación 1 y 2* los resultados deberán ser entregados en fo
 
 + Ajuste y sustentación asignación 3
 
-### Análisis vectorial. (2 Semanas)
+### Análisis vectorial. (2.5 Semanas)
 + [Clase 16: Coordenadas curvilíneas generalizadas y campos tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
 + [Clase 17: La fauna de los operadores vectoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
@@ -115,6 +115,8 @@ Al igual que la *Asignación 1 y 2* los resultados deberán ser entregados en fo
 + [Clase 18: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
 + [Clase 19: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
+
++ Ajuste
 
 ### Variable Compleja (3 Semanas)
 + [Clase 20. Variable Compleja](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_1VarCompleja.md).
@@ -126,6 +128,8 @@ Al igual que la *Asignación 1 y 2* los resultados deberán ser entregados en fo
 + [Clase 23. Series de Taylor y Laurent](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_4Laurent.md).
 
 + [Clase 24. Residuos e Integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_5ResiduosIntegrales.md).
+
++ Ajuste 
 <a name="Avanzaevaluacion"></a>
 ## La evaluación
 [Aquí]() avanza la evaluación de este curso
