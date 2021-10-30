@@ -87,6 +87,11 @@ Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor e
 
 + Ajuste y sustentación asignación 2
 
+### Asignación 3
+Esta asignación tiene por objeto mostrar una aplicación de espacios tensoriales en función de datos. Primero un sistema de masas donde se calcula el Tensor de Inercia y luego construir un espacio tensorial de productos internos bruto (PIB) y comparar los gastos militares del país en los últimos 15 años con los de educación, y los de ciencia y tecnología. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensores/TallerTensoresAutovalores.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensores/DatosTensores/datosmasas.csv) podrán encontrar los datos.
+
+Al igual que la *Asignación 1 y 2* los resultados deberán ser entregados en forma de artículo siguiendo el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp).
+
 ### Operadores Lineales (3 Semanas)
 + [Clase 10: Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md)
 
@@ -96,9 +101,9 @@ Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor e
 
 + [Clase 13. Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md). Evaluación de los ejercicios asignados clases 10, 11 y 12.
 
-+ [Clase 14. Autovalores y Autovectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md)
++ [Clase 14. Autovalores y Autovectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md). Entrega asignación 3.
 
-+ Ajuste
++ Ajuste y sustentación asignación 3
 
 ### Análisis vectorial. (2 Semanas)
 
