@@ -109,7 +109,7 @@ Al igual que la *Asignación 1 y 2* los resultados deberán ser entregados en fo
 
 ### Análisis vectorial. (2 Semanas)
 
-### Variable Compleja (2 Semanas)
+### Variable Compleja (3 Semanas)
 + [Clase XX. Variable Compleja](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_1VarCompleja.md).
 
 + [Clase XX. Transformaciones Conformes](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_2TransfConformes.md).
