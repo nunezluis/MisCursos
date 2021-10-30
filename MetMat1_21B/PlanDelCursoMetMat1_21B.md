@@ -56,8 +56,8 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 ### Asignación 1 (Entrega hasta clase 4 y discusión clase 5)
 La primera asignación tiene que ver con la utilización de los vectores en cristalografía. La intención es que desarrollen y entreguen el ejercicio 9 del punto 1.3.3 de las notas de [Matematicas Avanzadas Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf). El problema deberá ser entregado por equipos de dos personas.
 
-### Clases y Talleres  
-#### Los vectores de siempre (1 Semanas)
+## Clases y Talleres  
+### Los vectores de siempre (1 Semanas)
 + [Clase 1: Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md)
 + [Clase 2: Análisis vectorial express](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_2AnalisisVectExpress.md)
 
@@ -81,14 +81,24 @@ Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor e
 ### Espacios vectoriales duales y tensoriales. (2 Semanas)
 + [Clase 7: Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md)
 
-+ [Clase 8: Tensores y espacios tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md)
++ [Clase 8: Tensores y espacios tensoriales parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md)
 
-+ [Clase 9: Tensores y espacios tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md) También tendremos evaluación de los ejercicios asignados clases 6, 7 y 8.
++ [Clase 9: Tensores y espacios tensoriales parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md) También tendremos evaluación de los ejercicios asignados clases 6, 7 y 8.
 
 + Ajuste y sustentación asignación 2
 
-### Operadores Lineales (2 Semanas)
+### Operadores Lineales (3 Semanas)
 + [Clase 10: Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md)
+
++ [Clase 11: Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md)
+
++ [Clase 12: Matrices y Operadores Lineales, parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md)
+
++ [Clase 13. Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md). Evaluación de los ejercicios asignados clases 10, 11 y 12.
+
++ [Clase 14. Autovalores y Autovectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md)
+
++ Ajuste
 
 ### Análisis vectorial. (2 Semanas)
 
