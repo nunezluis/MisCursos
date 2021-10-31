@@ -130,6 +130,7 @@ TBD
 + Ajuste y sustentación asignación 4
 
 ### Asignación 5 (Entrega hasta clase 24 y discusión clase 25)
+TBD
 
 ### Variable Compleja (3 Semanas)
 + [Clase 20: Variable Compleja](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_1VarCompleja.md).
