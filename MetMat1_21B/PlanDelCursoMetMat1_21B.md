@@ -41,7 +41,7 @@ La evaluación de este curso se realizará en base a tres tipos de actividades c
 
 + **Cada quinta clase (C5C)** se sustentará una asignación especial. *Tendremos dos tipos de asignaciones cuyas evaluaciones sumarán el 40% del curso*. Los reportes y las presentaciones de las asignaciones se conpartirán desde el repositorio *git*
 
-+ En la **clase 14 o 15** y en **la 28 o 29** se realizará una evaluación oral (o escrita según el caso) de temas cubiertos hasta esas fechas. Esta *conversación evaluada* versará sobre un cuestionario que será enviado 24 horas antes de la actividad. Estas conversaciones evaluadas acopiarán el 20% restante.
++ En la **clase 14 o 15** y en **la 26 o 27** se realizará una evaluación oral (o escrita según el caso) de temas cubiertos hasta esas fechas. Esta *conversación evaluada* versará sobre un cuestionario que será enviado 24 horas antes de la actividad. Estas conversaciones evaluadas acopiarán el 20% restante.
 + **Para consignar las tareas y asignaciones** deberan "clonar" el [repositorio de tareas](https://github.com/nunezluis/TareasCursos20B) y depositar allí las tareas, asignaciones y proyectos que desarrollemos durante el curso.
 
 <a name="MaterialesCurso"></a>
@@ -160,7 +160,7 @@ Resumir y sustentar **uno** de los siguientes artículos relacionados con el tem
 Esto es:
   + Realizar un reporte (máximo 2500 palabras) sin bibliografía
   + Realizar una presentación en máximo de 8 láminas
-  + Sustentarla el 7 minutos el día 20ago
+  + Sustentarla el 7 minutos
 
 ### Variable Compleja (3 Semanas)
 <a name="VariableCompleja"></a>
