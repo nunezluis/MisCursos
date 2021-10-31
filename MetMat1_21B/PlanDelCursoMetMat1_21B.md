@@ -33,9 +33,9 @@ En cada clase se propondrán ejercicios y asignaciones que deben resolver, consi
 ## La evaluación
 La evaluación de este curso se realizará en base a tres tipos de actividades con reportes y sustentaciones orales. **Los reportes y las sustentaciones se realizarán por equipos** de dos personas pero las **evaluaciones orales serán individuales**. Los reportes de las asignaciones deberán ser consignados en el git antes de la actividad evaluada. Los tres tipos de evaluación de este curso son:
 
-+ **Cada tercera clase** se hará una evaluación sustentada de los *ejercicios asignados* como tarea.  Se tomarán en cuenta diez de estas evaluaciones y sumarán el 40\%. Las solución a los ejercicios 3C se conpartirán desde el repositorio *git*
++ **Cada tercera clase (C3C)** se hará una evaluación sustentada de los *ejercicios asignados* como tarea.  Se tomarán en cuenta diez de estas evaluaciones y sumarán el 40\%. Las solución a los ejercicios C3C se conpartirán desde el repositorio *git*
 
-+ **Cada quinta clase** se sustentará una asignación especial. *Tendremos dos tipos de asignaciones cuyas evaluaciones sumarán el 40% del curso*. Algunas asignaciones de aplicación de los conceptos y otras de discusión de artículos relacionados con los tópicos que estemos desarrollando.  Las asignaciones de aplicación buscan reforzar los conceptos del curso en la solución de un problema particular. La discusión de artículos relacionan los conceptos del curso con su utilización específica reportada en la literatura.  Las asignaciones de aplicación serán presentadas de dos maneras: un reporte tipo artículo y una presentación de máximo 6 láminas expuestas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
++ **Cada quinta clase (C5C)** se sustentará una asignación especial. *Tendremos dos tipos de asignaciones cuyas evaluaciones sumarán el 40% del curso*. Algunas asignaciones de aplicación de los conceptos y otras de discusión de artículos relacionados con los tópicos que estemos desarrollando.  Las asignaciones de aplicación buscan reforzar los conceptos del curso en la solución de un problema particular. La discusión de artículos relacionan los conceptos del curso con su utilización específica reportada en la literatura.  Las asignaciones de aplicación serán presentadas de dos maneras: un reporte tipo artículo y una presentación de máximo 6 láminas expuestas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
 
 + En la **clase 14 o 15** y en **la 28 o 29** se realizará una evaluación oral de temas cubiertos hasta esas fechas. Esta *conversación evaluada* versará sobre un cuestionario que será enviado 24 horas antes de la actividad. Estas conversaciones evaluadas acopiarán el 20% restante.
 + **Para consignar las tareas y asignaciones** deberan "clonar" el [repositorio de tareas](https://github.com/nunezluis/TareasCursos20B) y depositar allí las tareas, asignaciones y proyectos que desarrollemos durante el curso.
@@ -50,13 +50,21 @@ Los materiales que utilizaremos en este curso son unas notas de clase
 
 Hay que enfatizar que ambos volúmenes son obras en evolución y siempre presentaremos la última versión que puede haber variado. Con eso estamos diciendo que **NO LOS IMPRIMAN**. Consulten la última versión en formato electrónico que les presentamos en los enlaces antes mencionados.
 
+También utilizaremos capítulos de la siguiente  bibliografía de textos clásicos en el tema  
++ Svozil, Karl.(2020) Mathematical methods of theoretical physics. World Scientific.
++ Arfken, G. B,  Weber H. J.; Harris, Frank E. (2012) Mathematical Methods for Physicists A Comprehensive Guide New York Academic Press.
++ Tang, K. T. (2007). Mathematical methods for engineers and scientists (Vols. 1, 2, y 3). New York: Springer.
++ Chow, T. L. (2001). Mathematical Methods for Physicists: A concise introduction. Cambridge, Cambridge Uniersity Press.
++ Riley, K. F., Hobson, M. P., & Bence, S. J. (1999). Mathematical methods for physics and engineering.
++ Landau, R. H., Páez, M. J., & Bordeianu, C. C. (2015). Computational physics: Problem solving with Python. John Wiley & Sons.
+
+
 
 <a name="PlanDetallado"></a>
-## Plan detallado del curso
+## Plan detallado del curso: Clases, talleres y asignaciones
 ### Asignación 1 (Entrega hasta clase 4 y discusión clase 5)
 La primera asignación tiene que ver con la utilización de los vectores en cristalografía. La intención es que desarrollen y entreguen el ejercicio 9 del punto 1.3.3 de las notas de [Matematicas Avanzadas Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf). El problema deberá ser entregado por equipos de dos personas.
 
-## Clases y Talleres  
 ### Los vectores de siempre (1.5 Semanas)
 + [Clase 1: Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md)
 
@@ -77,7 +85,7 @@ También tendremos la sustentación de Asignación 1.
 
 + Ajuste
 
-#### Asignación 2 (Entrega hasta clase 9 y discusión clase 10).
+### Asignación 2 (Entrega hasta clase 9 y discusión clase 10).
 Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar el error de medición del sensor de bajo costo y, como calibrarlo para establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerDistancias/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Asignaciones/TallerDistancias/DatosDistancias) podrán encontrar los datos para desarrollar los algoritmos de calibración inteligente. Los datos patrones están contenidos en la hoja excel en la pestaña *Normal*. Los datos de las estaciones a calibrar los encontrarán en los demás archivos.   El problema deberá ser entregado por equipos de dos personas en forma de artículo y podrían seguir el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que presentamos en la descripción del curso.
 
 ### Espacios vectoriales duales y tensoriales. (2 Semanas)
@@ -107,6 +115,9 @@ Al igual que la *Asignación 1 y 2* los resultados deberán ser entregados en fo
 
 + Ajuste y sustentación asignación 3
 
+### Asignación 4 (Entrega hasta clase 19 y discusión clase 20)
+TBD
+
 ### Análisis vectorial. (2.5 Semanas)
 + [Clase 16: Coordenadas curvilíneas generalizadas y campos tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
@@ -114,9 +125,11 @@ Al igual que la *Asignación 1 y 2* los resultados deberán ser entregados en fo
 
 + [Clase 18: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
-+ [Clase 19: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
++ [Clase 19: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md). Entrega asignación 4
 
-+ Ajuste
++ Ajuste y sustentación asignación 4
+
+### Asignación 5 (Entrega hasta clase 24 y discusión clase 25)
 
 ### Variable Compleja (3 Semanas)
 + [Clase 20: Variable Compleja](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_1VarCompleja.md).
@@ -127,9 +140,10 @@ Al igual que la *Asignación 1 y 2* los resultados deberán ser entregados en fo
 
 + [Clase 23: Series de Taylor y Laurent](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_4Laurent.md).
 
-+ [Clase 24: Residuos e Integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_5ResiduosIntegrales.md).
++ [Clase 24: Residuos e Integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_5ResiduosIntegrales.md). Entrega asignación 5
 
-+ Ajuste
++ Ajuste y evaluación asignación 5
+
 <a name="Avanzaevaluacion"></a>
 ## La evaluación
 [Aquí]() avanza la evaluación de este curso
