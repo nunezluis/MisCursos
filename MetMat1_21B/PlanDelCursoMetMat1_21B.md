@@ -109,7 +109,7 @@ Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor e
 <a name="EspaciosDuales"></a>
 + [Clase 8: Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md)
 
-+ [Clase 9: Tensores y espacios tensoriales parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md).
++ [Clase 9: Tensores y espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md).
 
 + [Clase 10: Tensores y sus aplicaciones en Física](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md). Evaluación de los ejercicios asignados clases 6, 7, 8 y 9.
 
@@ -133,7 +133,7 @@ Al igual que la *Asignación 1 y 2* los resultados deberán ser entregados en fo
 
 + [Clase 15: Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md). Evaluación de los ejercicios asignados clases 11, 12 y 13.
 
-+ [Clase 16: Autovalores y Autovectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md). Entrega asignación 3.
++ [Clase 16: Autovalores, autovectores y conjunto completo de observables que conmutan](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md). Entrega asignación 3.
 
 + Ajuste y sustentación asignación 3
 
@@ -148,14 +148,14 @@ TBD
 
 + [Clase 19: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
-+ [Clase 20: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md). Entrega asignación 4
++ [Clase 20: Teoría de Potencial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md). Entrega asignación 4
 
 + Ajuste y sustentación asignación 4
 
 ### Asignación 5 (Entrega hasta clase 25 y discusión clase 26)
 Resumir y sustentar **uno** de los siguientes artículos relacionados con el tema del análisis complejo aplicado en Física
-+ Comella, M. J. (1989). Applications of the residue theorem to two‐dimensional electrostatic and magnetostatic situations. American Journal of Physics, 57(7), 603-607.
-+ Dethe, T., Gill, H., Green, D., Greensweight, A., Gutierrez, L., He, M., ... & Yang, K. (2019). Causality and dispersion relations. American Journal of Physics, 87(4), 279-290.
++ Comella, M. J. (1989). Applications of the residue theorem to two‐dimensional electrostatic and magnetostatic situations. *American Journal of Physics*, 57(7), 603-607.
++ Dethe, T., Gill, H., Green, D., Greensweight, A., Gutierrez, L., He, M., ... & Yang, K. (2019). Causality and dispersion relations. *American Journal of Physics*, 87(4), 279-290.
 
 Esto es:
   + Realizar un reporte (máximo 2500 palabras) sin bibliografía
