@@ -6,7 +6,7 @@ Esta clase tiene por objetivo, en primer lugar, presentar los conceptos fundamen
 ### Actividad antes de clase
 1. Estudiar el punto 2.1 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf).
 2. Seguir el video de espacios vectoriales abstractos el [video de 3blue-1brown](https://www.youtube.com/watch?v=TgKwz5Ikpc8)   
-3. Rehacer los ejemplos resueltos 2.1 y 2.3.
+3. Rehacer los ejemplos 2.1 y 2.3.
 
 ### Taller de problemas
 De la Sección 2.1.6 desarrollar los ejercicios 3 y 10
