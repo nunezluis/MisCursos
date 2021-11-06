@@ -11,12 +11,12 @@ El tercer objetivo es iniciar a los estudiantes en la utilización de la notaci�
 1. Instalar y configurar MAXIMA
 2. Registrarse en overleaf
 3. Registrarse y configurar repositorio git
-4. Estudiar puntos 1.1, 1.2 y 1.3 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
-5. Rehacer los ejercicios resueltos: 3 y 4 de la Sección 1.1.6; 3 de la sección 1.2.7; 3, sección 1.4.5
+4. Estudiar puntos 1.1.1, 1.1.2 y 1.1.3 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
+5. Rehacer los ejemplos 1.3, 1.4, 1.10 y 1.15.
 
 ### Taller de problemas 1 (evaluación en la clase 3)
-1. Realice un código en MAXIMA para el cual, dado tres vectores que formen los lados de un triángulo calcule el centroide (Problema 3 Sección 1.1.8)
-2. Realice un código en MAXIMA que reproduzca el ejercicio 6 de la Sección 1.2.9
+1. Realice un código en MAXIMA para el cual, dado tres vectores que formen los lados de un triángulo calcule el centroide (Problema 3 Sección 1.1.6). Trate de hacer este problema de forma que pueda reutilizar su código para tres vectores cualesquiera.
+2. Realice un código en MAXIMA que reproduzca el ejercicio 6 de la Sección 1.2.7
 
 ### Materiales de apoyo
 1. [Video](https://youtu.be/2LhoaImegV4) y [presentación generalidades de vectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/1_1Vectores.pdf)
