@@ -1,0 +1,1987 @@
+/* quad1d.mac
+   Oct. 31, 2012
+   Maxima by Example, Ch.8, Numerical Integration
+   
+    quad1d.mac is a package of Maxima functions which 
+    contains code for working with the quadpack functions of
+    Maxima.  This code should work with Maxima ver. 5.28.0.
+    
+    Copyright (C) 2012,  Edwin L. Woollett  <woollett@charter.net>       
+    http://www.csulb.edu/~woollett
+    
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU GENERAL PUBLIC LICENSE, Version 2, June 1991,
+    as published by the Free Software Foundation.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details. You should have received a
+    copy of the GNU General Public License along with this program.
+    If not, see http://www.fsf.org/licensing/.
+   
+   defines following functions:
+   
+   quad1d
+   quadpack1
+   quadpack11
+   
+   func_aver(f(x),x,x0)
+   func_ratio_complex
+   func_ratio
+   func_slope
+   
+   underflow2(f(x),x,x1,x2)
+   overflow2(f(x),x,x1,x2)
+   overflowb
+   
+   underflow1(f(x),x,x1,x2)
+   overflow1(f(x),x,x1,x2)   
+   overflowa
+   
+   qags1
+   qags
+   
+   qag1
+   qag
+   
+   qagi1
+   qagi
+   
+   qawc1
+   qawc
+   
+   qagp1
+   qagp   
+   
+*/
+   
+/*********** quad1d april 28, 2012 ***************/   
+/* mar 31: calls new quadpack1, which only calls quadpack11.
+      and calls qag, qags, qagi, etc, which are responsible for
+      constructing nargL and noutL.
+      
+       make assume_real, assume_imag, assume_complex
+      global variables 
+       returns false or numerical answer.
+      quad1d only called by quad
+      
+*/
+      
+   
+/*
+       The code sets xopt:1 for competition between
+         qag and qags, (the default if method option
+         is not included and if the limits are finite).
+         
+        sets xopt:2 for qag (strong_osc),
+        sets xopt:3 for qawc (principal_val),
+        sets xopt:4 for qagp (points)
+        sets xopt:5 for qagi (range involves inf and/or minf)
+        sets xopt:6 for qags (singular)
+        
+      
+        called by quad in quad.mac
+*/
+   
+/*  quad1d expects one expression,possibly complex.
+
+     possible syntax forms are: (can replace
+      quad1d with quad,which calls quad1d if the
+      second arg is not a list)
+      
+       the default methods are used for:
+          
+        quad1d (expr,var,a,b)
+        quad1d (expr,var,a,b,real)
+        quad1d (expr,var,a,b,imaginary)
+        quad1d (expr,var,a,b,complex)
+        
+        quad_qag is used for:
+        
+        quad1d (expr,var,a,b,strong_osc)
+        quad1d (expr,var,a,b,strong_osc,real)
+        quad1d (expr,var,a,b,strong_osc,imaginary)
+        quad1d (expr,var,a,b,strong_osc,complex)
+        
+        quad_qags is used for:
+        
+        quad1d (expr,var,a,b,singular)
+        quad1d (expr,var,a,b,singular,real)
+        quad1d (expr,var,a,b,singular,imaginary)
+        quad1d (expr,var,a,b,singular,complex)
+        
+        quad_qawc is used for:
+        
+        quad1d (expr,var,a,b,principal_val(v0))
+        quad1d (expr,var,a,b,principal_val(v0),real)
+        quad1d (expr,var,a,b,principal_val(v0),imaginary)
+        quad1d (expr,var,a,b,principal_val(v0),complex)
+        
+        quad_qagp is used for:
+        
+        quad1d (expr,var,a,b, points(x1,x2,...))
+        quad1d (expr,var,a,b, points(x1,x2,...),real)
+        quad1d (expr,var,a,b, points(x1,x2,...),imaginary)
+        quad1d (expr,var,a,b,points(x1,x2,...),complex)  
+        
+        the keyword strong_osc forces use of quad_qag
+        
+        The keyword singular forces use of quad_qags.
+        
+        The keywork principal_val(v0) forces use of
+           quad_qawc.
+           
+        The option points(x1,..) forces use of
+          quad_qagp.        
+                
+        The method options and the type options
+        can be entered in any order.
+        
+        The finite range quadpack functions allow
+        the range parameters to correspond to
+        integration in the positive direction or
+        negative direction.
+          (%i16) quad_qags(x,x,1,2);
+          (%o16) [1.5,1.66533454E-14,21,0]
+          (%i17) quad_qags(x,x,2,1);
+          (%o17) [-1.5,1.66533454E-14,21,0]
+        --------------------------------------------  
+         quad1d returns false or a numerical answer
+
+*/
+/*  april 28: convert to macro with simp:false, and
+     replace integration variable by gg:gensym("x")
+     then set simp:true and continue as usual.  */
+     
+
+quad1d([xpL]) ::=
+block ([simp:false,listconstvars:false,frc,frcval,cex24,xrest2,
+         xexpr,xL,xx,gg:gensym("x"),xxpL,xopt:1,xval:0,xptsL : [],
+         xoptL:[],anopt,anopt_args,xxmin,xxmax,q1dans,
+         z24,s24,temp ],
+    
+    if debug then print ("  quad1d may 3 "),     
+    if debug then display(xpL,gg),
+     
+    xexpr :  ev(first(xpL)),    
+    xx : ev(second(xpL)),    
+    if debug then display (xexpr,xx),
+    xexpr : subst(xx=gg, xexpr),
+    if debug then display(xexpr),
+    block([simp:true],
+      set_assumes_false(),
+      if debug then disp_assumes(),
+      xexpr : ev(xexpr),
+      xrest2 : rest(xpL,2),
+      xrest2 : ev(xrest2),
+      xxpL : cons(xexpr,cons(gg,xrest2)),
+      if debug then display(xxpL),
+        
+    /* we want xL to be [gg,x1,x2]  */
+    
+      if length(xxpL) = 4 then
+         xL : rest (xxpL)          
+       else
+          (xL : rest ( rest (xxpL,-(length(xxpL) - 4))),
+           xoptL : rest (xxpL,4)),
+    
+      if debug then display (xL,xoptL),
+    
+/* check args */
+    
+      if not good_var (xx) then
+         (print("  ",xx,"  is an invalid variable of integration "),
+          return (false)),    
+     
+      if not good_lvar (xL[2]) then
+         (print("  ",xL[2],"  is an invalid range parameter "),
+          return (false)),        
+        
+      if not good_lvar (xL[3]) then
+         (print("  ",xL[3],"  is an invalid range parameter "),
+          return (false)),   
+/*         
+      if not apply('good_expr,flatten ([xexpr,xL])) then
+            (print(" the integrand does not evaluate to a number "),
+             return (false)),
+ */           
+
+    
+    /* search for allowed options  */
+    
+    /* first set global flags for this expression  */
+    
+/*  
+      this is done using set_assumes_false above.
+      assume_real:false,
+      assume_imag:false,
+      assume_complex:false,
+ */
+    
+    /* ignore for now a user including more than one of the
+       options real,imaginary, complex */
+       
+    /* if xoptL = [], nothing is done here */
+    
+      for anopt in xoptL do             
+           if (atom(anopt) and anopt = strong_osc) then xopt : 2
+         
+           else if atom(anopt) and anopt = real then
+                assume_real:true
+                
+           else if atom(anopt) and anopt = imaginary then
+                  assume_imag : true
+                
+           else if atom(anopt) and anopt = singular then
+                xopt:6
+                
+           else if atom(anopt) and anopt = complex then
+                assume_complex : true
+         
+           else if  (not atom (anopt) and op(anopt) = principal_val) then
+              (anopt_args: args(anopt),                  
+               if debug then display (anopt_args),                  
+               
+               if length (anopt_args) > 1 then (
+                     print("quad1d: principal value option has form principal_val(v0)"),
+                     print(" where v0 is a number"),
+                     set_assumes_false(),
+                     return (false) ),
+                  
+               xval : float(first(anopt_args)),                     
+               xopt : 3)         
+
+         
+           else if  (not atom (anopt) and op(anopt) = points) then
+              ( xptsL: args(anopt),                  
+                if debug then display (xptsL),                  
+                xopt : 4)
+
+           else (
+                print("quad1d: ",anopt,"  option not recognised "),
+                set_assumes_false(),
+                return (false)),
+                
+                
+     /* following overrules above xopt values  */           
+                
+      if member(inf,rest(xL)) or member(minf,rest(xL)) then xopt : 5,
+            
+      if debug then
+            display(xopt,xval,xptsL,assume_real,assume_imag,
+                       assume_complex),
+     
+      xL : float(xL),          
+      
+      /* global lists */
+      nargL : [],
+      noutL : [],
+    
+   /* check whether a point near the upper limit value
+          of integrand has float value 0.0 which may
+          indicate overflow (if the slopes are
+          positive and integrand is a bessel function) 
+           or returns 1..#INF... as first
+          part of answer, which rep. gcl overflow
+          of ordinary functions like exp(x).  */
+/*
+(%i38) cfloat(bessel_j(1.0,%i*800));
+zbesj ierr = 2
+(%o38) 0.0
+(%i39) cfloat(bessel_j(1.0,%i*2));
+(%o39) 1.590636854637329*%i
+
+*/
+
+/* 
+    we ignore integrand underflow for now.
+    in gcl:
+     (%i12) cfloat(exp(-10^4));
+     (%o12) 0.0
+*/
+
+      
+     xxmin : apply ('min,rest(xL)),
+     xxmax : apply ('max,rest(xL)),
+     if debug then display(xxmin,xxmax),
+   
+      
+     if overflowb(xexpr,xL[1],xxmin,xxmax) then
+         (print(" overflow error return from xmax "),
+          set_assumes_false(),
+          return(false)),  
+   
+     if overflowa(xexpr,xL[1],xxmin,xxmax) then
+          (print(" overflow error return from xmin  "),
+          set_assumes_false(),
+          return(false)),  
+
+                 
+      if xopt = 1 
+          then (q1dans : fchop(apply('quadpack1,flatten([xexpr,xL]))),
+                set_assumes_false(),
+                return(q1dans)),
+      if xopt = 2 
+         then (if method then print (" quad_qag"),
+               q1dans : fchop(apply('qag,flatten([xexpr,xL]))),
+               set_assumes_false(),
+               return(q1dans)),
+      if xopt = 3 
+          then( if method then print (" quad_qawc"),                   
+                q1dans : fchop(apply('qawc,flatten([xexpr,xL,xval]))),
+                set_assumes_false(),
+                return(q1dans)),
+                
+    
+      if xopt = 6 
+          then (if method then print (" quad_qags"),
+                q1dans : fchop(apply('qags,flatten([xexpr,xL]))),
+                set_assumes_false(),
+                return(q1dans)),
+    
+      if xopt = 4 
+          then (temp : append(flatten([xexpr,xL]),[xptsL]),
+                if debug then display (temp),
+                if method then print (" quad_qagp"),
+                q1dans : fchop(apply('qagp,temp)),
+                set_assumes_false(),
+                return(q1dans)),
+        
+/*
+         experimental test for qagi convergence abilities
+         filter out cases which probably will not converge
+         whether or not contains bessel functions.
+*/
+         
+/*    if (xopt=5 and max(xL[2],xL[3]) = inf) then
+         (frc : func_ratio_complex(xexpr,xL[1],10,10^4),
+          if debug then display(frc),
+          if (frc = false or frc > 1.0E-11) then
+             (print(" slow convergence return "),
+              set_assumes_false(),
+                return(false))),
+         
+    if (xopt=5 and min(xL[2],xL[3]) = minf) then
+         (frc : func_ratio_complex(xexpr,xL[1],-10,-10^4),
+          if debug then display(frc),
+          if (frc = false or frc > 1.0E-11) then
+             (print(" slow convergence return "),
+              set_assumes_false(),
+                return(false))),
+ */
+        
+           
+      if xopt = 5 then
+          ( if method then print(" quad_qagi "),
+          
+            if has_bessel(xexpr) and not finite(xL[2],xL[3])
+               then ( print(" bessel with large arg problems"),
+                      set_assumes_false(),
+                      return(false)),
+          
+            if xL[3] >= xL[2] 
+               then q1dans : fchop(apply('qagi,flatten([xexpr,xL])))
+               else q1dans : -fchop(qagi(xexpr,xL[1],xL[3],xL[2])),
+            set_assumes_false(),
+            return(q1dans)),
+    
+      print("quad1d: option 1 - 6 not found "),
+      set_assumes_false(),
+      false))$
+
+    
+/*** end may 8 quad1d  ***********/
+
+
+                 
+  /********** mar 31 quadpack1
+         competition between qag and qags.
+           expr in general can be complex,
+           returns numerical ans or false.
+           only calls quadpack11  *****************/       
+
+quadpack1 (bex,bvv,bv1, bv2) := 
+block([cex,cans:0.0,dans,bargL,boutL],
+    if debug then print ("  quadpack1  mar 31 "),
+    
+    /* global lists */
+    noutL : [],
+    nargL : [],
+    if float(bex) = 0.0 then return (0.0),    
+        
+    if assume_complex  then
+      (if debug then print(" go to complex section "),
+       go (docomplexcase)),
+    
+    /* case real expression
+        assume_real is global flag  */
+    
+     if (assume_real or isequal(bex,realpart(bex)) or
+                   imagpart(bex) = 0 or
+                   isreal(bex,bvv,bv1,bv2,500)) then 
+                   
+            ( if debug then print("assume real section calls quadpack11"),
+              [dans,bargL,boutL] : quadpack11(bex,[bvv,bv1,bv2]),
+              if debug then mprint(dans,bargL,boutL),
+              nargL : bargL,
+              
+              if dans = false then
+                   ( /*print(" real part: no success"), */                     
+                      return(false))
+               else 
+                    (noutL : boutL,
+                     return(dans))),
+                        
+    /* case pure imaginary expression
+         assume_imag is a global flag */         
+
+    if (assume_imag or isequal(expand(bex/%i), imagpart(bex)) or 
+             realpart(bex) = 0  or
+             isreal(bex/%i,bvv,bv1,bv2,500)) then
+             
+          (if debug then print (" assume imaginary section calls quadpack11 "),
+          
+           [dans,bargL,boutL] : quadpack11(imagpart(bex),[bvv,bv1,bv2]),
+           if debug then mprint(dans,bargL,boutL),
+           nargL : bargL,
+           if dans = false then
+                   ( /* print(" imag part returns noun form"), */                    
+                    return(false))
+           else
+                (noutL : boutL,
+                 return(%i*dans))),
+                 
+                      
+     /*  case neither real nor pure imaginary */
+           
+    docomplexcase,
+    
+    if debug then print(" start complex case section"),
+    cex : realpart(bex),
+    if debug then print(" real part"),
+    if debug then display(cex),
+    if float(cex) = 0.0 then go(doimagpart), 
+    
+    /* real part calculation */
+    
+    if debug then print(" real part call of quadpack11"),
+    
+    [dans,bargL,boutL] : quadpack11(cex,[bvv,bv1,bv2]),
+    if debug then mprint(dans,bargL,boutL),
+    nargL : bargL,
+    
+    if dans = false then
+       ( /* print(" real part returns noun form"), */       
+        return(false))
+    else
+         (noutL : boutL,
+          cans : dans),
+          
+    if debug then display(cans,noutL),
+                       
+    doimagpart,
+    
+    /* imag part calculation */
+                       
+    cex : imagpart(bex),
+    if debug then print(" imaginary part"),
+    if debug then display(cex),
+    if float(cex) = 0.0 then return(cans),
+    
+    if debug then print(" imag part call quadpack11"),
+    
+    [dans,bargL,boutL] : quadpack11(cex,[bvv,bv1,bv2]),
+    if debug then mprint(dans,bargL,boutL),
+    if nargL = [] then nargL : bargL
+     else  nargL : reverse(cons(bargL,[nargL])),
+    
+    if dans = false then
+       ( /* print(" imaginary part returns noun form"), */        
+        return(false))
+    else
+         ( if noutL = [] then noutL : boutL
+            else noutL : reverse(cons(boutL,[noutL])),
+            cans + %i*dans))$
+    
+          
+   /******* end mar 31 quadpack1  ************************/
+
+
+    
+ /*******  mar 31 quadpack11 *********************************/
+    /** quadpack11 assumes ve is real, and tries both
+        qags and qag via
+        calling qags1 and qag1
+        returns list[ans,argL,outL]
+        mar 31 
+        
+         **/
+        
+        
+    
+quadpack11(ve,vL) :=
+block ([qgargL,gans,gcode,gargL,goutL,
+              gsans,gscode,gsargL,gsoutL],
+
+   if debug then print("  quadpack11  mar 31"),
+   if debug then mprint(ve,vL),
+   
+   qgargL : flatten([ve,vL]),   
+   
+   if debug then mprint(qgargL),
+
+   [gans,gcode,gargL,goutL] : apply ('qag1, qgargL),
+   
+   if debug then display(gans,gcode,gargL,goutL),
+          
+     /* if quad_qag returns a noun form, then try
+              quad_qags  */
+           
+   if gans = false then (
+          
+        if debug then print("qag1 returned a noun form - try qags1"),              
+        
+        [gsans,gscode,gsargL,gsoutL] : apply ('qags1, qgargL),      
+        if debug then display(gsans,gscode,gsargL,gsoutL),                
+        
+        if gsans = false then (              
+              print ("both quad_qag and quad_qags return a noun form"), 
+              return ([false,gsargL,[qags]])),
+               
+        if method then print ("   quad_qags"),                
+                 
+        if gscode = 0 then return([gsans,gsargL,gsoutL])         
+         else
+             ( print (" quad_qags error code = ", part (codelist,gscode,2))), 
+                                
+         return([false,gsargL,gsoutL])),
+  
+              
+    /* we arrive here if quad_qag returned a list. now try
+            quad_qags to compare results  */              
+                 
+   [gsans,gscode,gsargL,gsoutL] : apply ('qags1, qgargL),      
+   if debug then display(gsans,gscode,gsargL,gsoutL),
+            
+    /* if qags returns a noun form, then we
+              return quad_qag result here */
+            
+   if gsans = false then (        
+        if gcode = 0 then return([gans,gargL,goutL])         
+         else
+            (  print (" quad_qag error code = ", part (codelist,gcode,2))), 
+         return([false,gargL,qoutL])),
+              
+
+                                   
+   /* we arrive here if both qag and qags return a list:  select the winner */
+            
+    if (gcode = 0 and gscode = 0) then   /* no errors case */                  
+         
+         (  if debug then print (" gcode=0 and gscode=0 section"),
+         
+           if goutL[3] <= gsoutL[3] then (
+           
+             if method then print ("   quad_qag"),
+             if debug then mprint(gans,gargL,goutL),
+             return([gans,gargL,goutL]))
+                
+          else ( if method then print ("   quad_qags"),
+                  return([gsans,gsargL,gsoutL])))
+   
+    else if gcode = 0 then 
+            ( if method then print ("  quad_qag"),
+               return([gans,gargL,goutL]))
+            
+    else if gscode = 0 then         
+            (if method then print ("   quad_qags"),
+              return([gsans,gsargL,gsoutL]))
+             
+    else (  print (" quad_qag error code = ", part (codelist,gcode,2)),
+              print (" quad_qags error code = ", part (codelist,gscode,2))), 
+              
+            [false,cons(gargL,[gsargL]),cons(goutL,[gsoutL])])$         
+ 
+   /******* end mar 31 quadpack11  ***********************/
+   
+   
+   
+   
+/*** func_aver returns a real number (or false)
+      which is the rough average value of the real expression
+      over a real interval centered on xu0 = real number.
+      Expects xuexpr to be a real expression.
+       qags1
+       old version integrated from -1 to +1 for case u0 = 0.0
+       and integrated from u0 - u0/10 to u0 + u0/10, and
+       took a long time for u0 = 10^4.
+       new version: april 3 is speeded up version:
+  ***/   
+   
+func_aver(xuexpr,xu,xu0) :=
+block([fans,fcode,dx,f1L,f2L],
+    if float(xu0) = 0.0 then
+        ([fans,fcode,f1L,f2L] : qags1(xuexpr,xu,-1,1),         
+         if (fans = false or fcode # 0) then return(false),
+         dx : 2)
+    else
+        ([fans,fcode,f1L,f2L] : qags1(xuexpr,xu,xu0-xu0/1000,xu0+xu0/1000),
+         if (fans = false or fcode # 0) then return(false),
+         dx : xu0/500),
+    fans/dx)$
+
+
+    
+ /* func_ratio(f(x),x,x1,x2) returns false
+     or abs(fav(x2)/fav(x1));
+     expects f(x) to be real
+  */   
+    
+   
+func_ratio(zexpr,zz,zz1,zz2) :=
+block([fzz1,fzz2],
+     if debug then print(" func_ratio"),
+     fzz1 : func_aver (zexpr,zz,zz1),
+     if debug then display(fzz1),
+     if (fzz1 = false) then return(false),
+     if float(fzz1) = 0.0 then return(false),
+     fzz2 : func_aver (zexpr,zz,zz2),
+     if debug then display(fzz2),
+     if (fzz2 = false) then return(false),
+     abs(fzz2/fzz1))$
+     
+ /*** func_ratio_complex
+      accepts a possibly complex expression
+      and in general submits separately both the real and
+      imaginary parts to func_ratio, and
+      returns either false or the maximum
+      numerical absolute value found
+  ****/
+
+
+func_ratio_complex(ze39,z39,z139,z239) :=
+block([frc1,frc2,ze39v],
+    if debug then print ("  func_ratio_complex "),
+     
+
+     ze39v : realpart(ze39),
+     if debug then print(" realpart ze39v = ",ze39v),
+    if float(ze39v) = 0.0 then frc1 : false
+    else frc1 : func_ratio(ze39v,z39,z139,z239),
+    if debug then display(frc1),    
+    
+    ze39v : imagpart(ze39),
+    if debug then print(" imagpart ze39v = ",ze39v),
+    if float(ze39v) = 0.0 then frc2 : false
+    else frc2 : func_ratio(ze39v,z39,z139,z239),
+    if debug then display(frc2),
+    
+    if frc1=false and frc2=false then false
+    else if frc1=false then frc2
+    else if frc2=false then frc1
+    else max(frc1,frc2))$
+   
+     
+  /* func_slope computes a rough slope based
+      on average values of the function at the
+      limits, returns a numerical slope or false.
+      expects yexpr to be a real function of
+      real variable yy.
+      assumes yy2 # yy1  */   
+     
+     
+func_slope(yexpr,yy,yy1,yy2) :=
+block([fyy1,fyy2],     
+     if debug then print("func_slope"),
+     fyy1 : func_aver (yexpr,yy,yy1),
+     if debug then print ("in func_slope, fyy1 = ",fyy1),
+     if (fyy1 = false) then return(false),
+     fyy2 : func_aver (yexpr,yy,yy2),
+     if debug then print ("in func_slope, fyy2 = ",fyy2),
+     if (fyy2 = false) then return(false),
+     (fyy2 - fyy1)/(yy2 - yy1))$
+     
+     
+ /* underflow1(wwex,ww,ww1,ww2) returns true if
+    point ww1 could match an underflow scenario,
+    else returns false.
+    wwex = real expression.
+    assumes ww1 < ww2.
+ */  
+   
+ underflow1(wwex,ww,ww1,ww2) :=
+ block([wwm ],
+     if ww1 = minf then wwm : ww2 - 100
+      else wwm : ww2 - (ww2 - ww1)/3,
+      
+     if (func_aver(wwex,ww,wwm) > 0  and
+          func_slope(wwex,ww,wwm,ww2) > 0) then true
+          
+     else if (func_aver(wwex,ww,wwm) < 0  and
+          func_slope(wwex,ww,wwm,ww2) < 0) then true
+          
+     else false)$
+     
+ /* overflow1(uuex,uu,uu1,uu2) returns true if
+      overflow is detected near lower limit uu1,
+      else returns false.
+      assumes uu2 > uu1 and uuex is real expression.
+ */  
+     
+     
+ overflow1(uuex,uu,uu1,uu2) :=
+ block([temp41,z41,s41,uval1],
+     if debug then print ("overflow1 "),
+     if debug then display (uuex,uu,uu1,uu2),
+     if float(uuex) = 0.0 then return(false),
+     
+     if uu1 = minf then 
+         (if debug then print(" case uu1 = minf"),          
+           uval1 : -10^4)
+          
+     else if uu2 = inf then
+         (if debug then print (" case uu2 = inf"),
+           if float(uu1) = 0.0 then uval1 : 0.001
+            else uval1 : uu1 + 0.001*abs(uu1))
+           
+     else
+         (if debug then print( " case else "),
+          if float(uu1) = 0.0 then uval1 : 0.001
+           else uval1 : uu1 + 0.001*(uu2 - uu1)),
+          
+     temp41 : errcatch(cfloat(subst(uu = uval1,uuex))),
+     if debug then display(uval1,temp41),
+     
+     if temp41 = [] then return(false),
+     z41 : first(temp41),     
+     s41 : string(z41),
+     if debug then mprint(z41,s41),
+     if (z41 = 0.0) and has_bessel(uuex) and 
+            (underflow1(uuex,uu,uu1,uu2) = false) then true                
+    /* else if (slength(s41) > 6 and substring(s41,1,8) = "1..#INF") then true */
+       else if numberp(sposition("#",s41)) then true
+     else false)$    
+     
+      
+   
+ /* underflow2(wwex,ww,ww1,ww2) returns true if
+    point ww2 could match an underflow scenario,
+    else returns false.
+    wwex = real expression.
+    assumes ww1 < ww2.
+ */  
+   
+ underflow2(wwex,ww,ww1,ww2) :=
+ block([wwm ],
+     if ww2 = inf then wwm : ww1 + 100
+      else wwm : ww1 + (ww2 - ww1)/3,
+      
+     if (func_aver(wwex,ww,wwm) > 0  and
+          func_slope(wwex,ww,ww1,wwm) < 0) then true
+          
+     else if (func_aver(wwex,ww,wwm) < 0  and
+          func_slope(wwex,ww,ww1,wwm) > 0) then true
+          
+     else false)$
+     
+ /* overflow2(uuex,uu,uu1,uu2) returns true if
+      overflow is detected near upper limit uu2,
+      else returns false.
+      assumes uu2 > uu1 and uuex is real expression.
+ */  
+     
+     
+ overflow2(uuex,uu,uu1,uu2) :=
+ block([temp42,z42,s42,uval2 ],
+     if debug then print(" overflow2 "),     
+     if debug then display (uuex,uu,uu1,uu2),
+     if float(uuex) = 0.0 then return(false),
+     
+     if uu2 = inf then    
+         (if debug then print(" case uu2 = inf"),
+           uval2 : 10^4)
+         
+     else if uu1 = minf then
+          ( if debug then print(" case uu1 = minf"),
+            if float(uu2) = 0.0 then uval2 : -0.001
+            else uval2 : uu2 - 0.001*abs(uu2))
+                      
+     else 
+          ( if debug then print(" case else "),
+             if float(uu2) = 0.0 then uval2 : -0.001
+              else uval2 : uu1 + 0.999*(uu2 - uu1)),
+     
+     temp42 : errcatch(cfloat(subst(uu = uval2,uuex))),     
+     
+     if debug then display(uval2,temp42),
+     if temp42 = [] then return(false),
+     z42 : first(temp42),     
+     s42 : string(z42),
+     if debug then mprint(z42,s42),
+     if (z42 = 0.0) and has_bessel(uuex) and
+            (underflow2(uuex,uu,uu1,uu2) = false) then true                
+    /* else if (slength(s42) > 6 and substring(s42,1,8) = "1..#INF") then true */
+      else if numberp(sposition("#",s42)) then true
+     else false)$
+
+ /** end overflow2  ***/                 
+    
+/* test mar 27
+(%i2) overflow2(exp(x),x,1,inf);
+(%o2) true
+(%i3) overflow2(exp(x),x,1,800);
+(%o3) true
+(%i4) overflow2(exp(-x),x,1,inf);
+(%o4) false
+(%i5) overflow2(exp(-x),x,1,800);
+(%o5) false
+(%i18) overflow2(realpart(bessel_j(1,%i*x)),x,1,100);
+(%o18) false
+(%i19) overflow2(realpart(bessel_j(1,%i*x)),x,1,800);
+(%o19) false
+(%i20) overflow2(realpart(bessel_j(1,%i*x)),x,1,inf);
+(%o20) false
+(%i9) overflow2(imagpart(bessel_j(1,%i*x)),x,1,100);
+(%o9) false
+(%i10) overflow2(imagpart(bessel_j(1,%i*x)),x,1,700);
+(%o10) false
+(%i11) overflow2(imagpart(bessel_j(1,%i*x)),x,1,800);
+zbesj ierr = 2
+(%o11) true
+
+(%i21) realpart(bessel_j(1,%i*x));
+(%o21) 0
+
+*/
+
+/***  overflowb mar 31 ************/
+/* expr ge can be complex */
+
+overflowb(ge,gx,g1,g2) :=
+block([cge],
+
+    if assume_complex then
+         (if debug then print(" go to complex section "),
+          go (docomplexcase)),
+          
+    /* case ge is real */
+    if (assume_real or isequal(ge,realpart(ge)) or
+               imagpart(ge) = 0 /* or isreal(ge,gx,g1,g2,500) */ ) then 
+         return(overflow2(ge,gx,g1,g2)),
+         
+    /* case ge is pure imaginary */
+    
+    if (assume_imag or isequal(expand(ge/%i), imagpart(ge)) or 
+             realpart(ge) = 0  /* or isreal(ge/%i,gx,g1,g2,500) */ ) then    
+             return(overflow2(ge/%i,gx,g1,g2)),
+             
+     /* case ge is complex */
+     
+     docomplexcase,
+     
+    cge : realpart(ge),
+    
+    if float(cge) = 0.0 then go(doimagpart), 
+    
+    /* real part calculation */      
+    
+    if overflow2(cge,gx,g1,g2) then return(true),    
+    
+    doimagpart,
+    
+    cge : imagpart(ge),
+    
+    if float(cge) = 0.0 then false
+    else if overflow2(cge,gx,g1,g2) then true
+    else false )$
+    
+/*
+(%i106) overflowb(exp(-x),x,10,100);
+(%o106) false
+(%i107) overflowb(exp(x),x,10,100);
+(%o107) false
+(%i108) overflowb(exp(x),x,10,800);
+(%o108) true
+
+(%i12) overflowb(bessel_j(1,%i*x),x,1,800);
+zbesj ierr = 2
+(%o12) true
+
+*/
+
+/***  overflowa mar 31 ************/
+/* expr ge can be complex
+   assumes g2 > g1
+ */
+
+overflowa(ge,gx,g1,g2) :=
+block([cge],
+     if debug then print("  overflowa"),
+     
+    if assume_complex then
+         (if debug then print(" go to complex section "),
+          go (docomplexcase)),
+          
+    /* case ge is real */
+    if (assume_real or isequal(ge,realpart(ge)) or
+               imagpart(ge) = 0 /* or isreal(ge,gx,g1,g2,500) */ ) then 
+           (if debug then print(" case assume real "),
+         return(overflow1(ge,gx,g1,g2))),
+         
+    /* case ge is pure imaginary */
+    
+    if (assume_imag or isequal(expand(ge/%i), imagpart(ge)) or 
+             realpart(ge) = 0  /* or isreal(ge/%i,gx,g1,g2,500) */ ) then    
+             (if debug then print (" case assume imaginary"),
+             return(overflow1(ge/%i,gx,g1,g2))),
+             
+     /* case ge is complex */
+     
+     docomplexcase,
+     if debug then print (" case docomplexcase "),
+     
+    cge : realpart(ge),
+    
+    if float(cge) = 0.0 then go(doimagpart), 
+    
+    /* real part calculation */ 
+    if debug then print (" real part to overflow1"),
+    
+    if overflow1(cge,gx,g1,g2) then return(true),    
+    
+    doimagpart,
+    if debug then print (" imag part to overflow1"),
+    cge : imagpart(ge),
+    
+    if float(cge) = 0.0 then false
+    else if overflow1(cge,gx,g1,g2) then true
+    else false )$
+
+/*
+(%i4) overflowa(exp(-x),x,-800,-10);
+(%o4) true
+(%i5) overflowa(exp(x),x,-800,-10);
+(%o5) false
+
+(%i11) overflowa(bessel_j(1,%i*x),x,-800,-1);
+zbesj ierr = 2
+(%o11) true
+
+*/
+
+/******  qawc1 assumes expr is real *************/
+/* returns [ans,code,arglist,outlist] or [false,false,arglist,[]] 
+   calls quad_qawc, called by qawc 
+   */
+   
+
+qawc1(aex,avv,av1,av2,aval) :=
+block([fgwc,tmp,argL,outL],
+    if debug then print(" qawc1 "),
+    if float(aex) = 0.0 then return([0.0,0,[],[]]),
+    fgwc : ratsimp(expand((avv-aval)*factor(aex))),    
+   
+   /* default case: try epsrel criterion */
+    argL : [qawc,fgwc,avv,aval,av1, av2,'limit = 800],
+    
+    tmp: quad_qawc(fgwc,avv,aval,av1, av2,'limit = 800),
+    if not listp (tmp) then return([false,false,argL,[]]),
+    if tmp[4] = 0 then
+        ( if debug then print(" epsrel criterion"),
+         outL : cons(qawc,tmp),
+         return([tmp[1],tmp[4],argL,outL])),
+             
+    /* case tmp[4] # 0:  try epsabs criterion */
+    
+    if debug then print("re-eval with epsabs "),
+    argL : [qawc,fgwc,avv,aval,av1, av2,'epsabs = 1d-8,'limit = 800],
+    
+    tmp: quad_qawc(fgwc,avv,aval,av1, av2,'epsabs = 1d-8,'limit = 800),
+    
+    if not listp(tmp) then [false,false,argL,[]]
+     else 
+         (if debug then print (" epsabs criterion "),          
+          outL : cons (qawc,tmp),
+         [tmp[1],tmp[4],argL,outL]))$
+         
+
+/*******  qawc  default access to quad_qawc
+          qawc(e,x,x1,x2,xval) submits expression
+          e depending on x, for principal value
+          integration of f(x)/(x - xval), where
+          f(x) = e*( x - xval).
+          
+         qawc accepts complex expression e. 
+         
+         calls qawc1 for real and imag parts
+         creates global nargL, noutL
+         april 6, 2012
+        ****************/
+        
+qawc (bex,bvv,bv1, bv2,bval) := 
+block([cex,cans:0.0,dans,dcode,bargL,boutL],
+    if debug then print ("  qawc "),
+    
+    
+    /* global lists */
+    noutL : [],
+    nargL : [],
+    if float(bex) = 0.0 then return (0.0),
+    
+    if assume_complex  then
+      (if debug then print(" go to complex section "),
+       go (docomplexcase)),
+    
+    /* case real expression
+        assume_real is global flag  */
+    
+     if (assume_real or isequal(bex,realpart(bex)) or
+                   imagpart(bex) = 0 ) then 
+                   
+            ( if debug then print("assume real section calls qawc1"),
+              if method then print (" quad_qawc "),
+              [dans,dcode,bargL,boutL] : qawc1(bex,bvv,bv1,bv2,bval),
+              if debug then mprint(dans,dcode,bargL,boutL),
+              nargL : bargL,
+              if dans = false then
+                   (print(" real part returns noun form"),                     
+                      return(false)),              
+              noutL : boutL,
+              if debug then mprint(nargL,bargL),
+        
+              if dcode = 0 then return(dans)
+               else
+                 (print(" realpart quad_qawc error = ", part(codelist,dcode,2)),
+                  return(false))),
+          
+    /* case pure imaginary expression
+         assume_imag is a global flag */         
+
+    if (assume_imag or isequal(expand(bex/%i), imagpart(bex)) or 
+             realpart(bex) = 0  ) then
+             
+          (if debug then print (" assume imaginary section calls qawc1 "),
+            if method then print (" quad_qawc "),
+           [dans,dcode,bargL,boutL] : qags1(imagpart(bex),bvv,bv1,bv2,bval),
+           if debug then mprint(dans,dcode,bargL,boutL),
+           nargL : bargL,
+           if dans = false then
+                   (print(" imag part returns noun form"),                    
+                    return(false)),           
+           noutL : boutL,
+           if debug then mprint(nargL,bargL),
+           if dcode = 0 then return(%i*dans)
+            else
+                 (print(" imagpart quad_qawc error = ", part(codelist,dcode,2)),
+                  return(false))),
+           
+     /*  case neither real nor pure imaginary */
+           
+    docomplexcase,
+    
+    if debug then print(" start complex case section"),
+    cex : realpart(bex),
+    if debug then print(" real part"),
+    if debug then display(cex),
+    if float(cex) = 0.0 then go(doimagpart), 
+    
+    /* real part calculation */
+    
+    if debug then print(" real part call of qawc1"),
+    if method then print (" quad_qawc "),
+    [dans,dcode,bargL,boutL] : qags1(cex,bvv,bv1,bv2,bval),
+    if debug then mprint(dans,dcode,bargL,boutL),
+    nargL : bargL,
+    if dans = false then
+       (print(" real part returns noun form"),       
+        return(false)),    
+    noutL : boutL,
+    if debug then mprint(nargL,bargL),
+        
+    if dcode = 0 then cans : dans else
+       (print(" realpart quad_qawc error = ", part(codelist,dcode,2)),
+          return(false)),
+          
+    if debug then display(cans),
+                       
+    doimagpart,
+    
+    /* imag part calculation */
+                       
+    cex : imagpart(bex),
+    if debug then print(" imaginary part"),
+    if debug then display(cex),
+    if float(cex) = 0.0 then return(cans),
+    
+    if debug then print(" imag part call qawc1"),
+    if method then print (" quad_qawc "),
+    [dans,dcode,bargL,boutL] : qags1(cex,bvv,bv1,bv2,bval),
+    if debug then mprint(dans,dcode,bargL,boutL),
+    
+    if nargL = [] then nargL : bargL
+    else  nargL : reverse(cons(bargL,[nargL])),
+    
+    if dans = false then
+       (print(" imaginary part returns noun form"),       
+        return(false)),     
+    
+    if noutL = [] then noutL : boutL
+    else noutL : reverse(cons(boutL,[noutL])),
+    
+        
+    if dcode = 0 then  cans + %i*dans 
+     else
+       (print(" imagpart quad_qawc error = ", part(codelist,dcode,2)),
+          false))$        
+                
+   /*****  end april 6 qawc  ***************/
+   
+/******  qagp1 assumes expr is real *************/
+/* returns [ans,code,arglist,outlist] or [false,false,arglist,[]] 
+   calls quad_qagp, called by qagp 
+   */
+   
+
+qagp1(aex,avv,av1,av2,aptsL) :=
+block([tmp,argL,outL],
+    if debug then print(" qagp1 "),
+    if debug then display(aex,avv,av1,av2,aptsL),
+   if float(aex) = 0.0 then return([0.0,0,[],[]]),
+   
+   /* default case: try epsrel criterion */
+    argL : [qagp,aex,avv,av1, av2,aptsL,'limit = 800],
+    
+    tmp: quad_qagp(aex,avv,av1, av2,aptsL,'limit = 800),
+    if not listp (tmp) then return([false,false,argL,[]]),
+    if tmp[4] = 0 then
+        ( if debug then print(" epsrel criterion"),
+         outL : cons(qagp,tmp),
+         return([tmp[1],tmp[4],argL,outL])),
+             
+    /* case tmp[4] # 0:  try epsabs criterion */
+    
+    if debug then print("re-eval with epsabs "),
+    argL : [qagp,aex,avv,av1, av2,aptsL,'epsabs = 1d-8,'limit = 800],
+    
+    tmp: quad_qagp(aex,avv,av1, av2,aptsL,'epsabs = 1d-8,'limit = 800),
+    
+    if not listp(tmp) then [false,false,argL,[]]
+     else 
+         (if debug then print (" epsabs criterion "),          
+          outL : cons (qagp,tmp),
+         [tmp[1],tmp[4],argL,outL]))$   
+   
+   /**** end april 6 qagp1 ***************/
+   
+        
+
+/*******  qagp  default access to quad_qagp
+        accepts complex expression 
+         calls qagp1 for real and imag parts
+         creates global nargL, noutL
+         april 6, 2012
+        ****************/
+        
+qagp (bex,bvv,bv1, bv2,bptsL) := 
+block([cex65,cans:0.0,dans,dcode,bargL,boutL,cexrr],
+    if debug then print ("  qagp "),
+    if debug then mprint(bex,bvv,bv1,bv2,bptsL),
+    
+    /* global lists */
+    noutL : [],
+    nargL : [],
+    if float(bex) = 0.0 then return (0.0),
+    
+    if debug then 
+         (cexrr : realpart(bex),
+          display(cexrr)),        
+    
+    if assume_complex  then
+      (if debug then print(" go to complex section "),
+       go (docomplexcase)),
+    
+    /* case real expression
+        assume_real is global flag  */
+    
+     if (assume_real or isequal(bex,realpart(bex)) or
+                   imagpart(bex) = 0 ) then 
+                   
+            ( if debug then print("assume real section calls qagp1"),
+            if debug then display(assume_real),
+              if method then print ("  quad_qagp "),
+              [dans,dcode,bargL,boutL] : qagp1(bex,bvv,bv1,bv2,bptsL),
+              if debug then mprint(dans,dcode,bargL,boutL),
+              nargL : bargL,
+              if dans = false then
+                   (print(" real part returns noun form"),                     
+                      return(false)),              
+              noutL : boutL,
+              if debug then mprint(nargL,bargL),
+        
+              if dcode = 0 then return(dans)
+               else
+                 (print(" realpart quad_qagp error = ", part(codelist,dcode,2)),
+                  return(false))),
+          
+    /* case pure imaginary expression
+         assume_imag is a global flag */         
+
+    if (assume_imag or isequal(expand(bex/%i), imagpart(bex)) or 
+             realpart(bex) = 0  ) then
+             
+          (if debug then print (" assume imaginary section calls qagp1 "),
+            if method then print ("  quad_qagp "),
+           [dans,dcode,bargL,boutL] : qagp1(imagpart(bex),bvv,bv1,bv2,bptsL),
+           if debug then mprint(dans,dcode,bargL,boutL),
+           nargL : bargL,
+           if dans = false then
+                   (print(" imag part returns noun form"),                    
+                    return(false)),           
+           noutL : boutL,
+           if debug then mprint(nargL,bargL),
+           if dcode = 0 then return(%i*dans)
+            else
+                 (print(" imagpart quad_qagp error = ", part(codelist,dcode,2)),
+                  return(false))),
+           
+     /*  case neither real nor pure imaginary */
+           
+    docomplexcase,
+    
+    if debug then print(" start complex case section"),        
+    cex65 : realpart(bex),    
+    if debug then print(" real part"),
+    if debug then display(cex65),
+    if float(cex65) = 0.0 then go(doimagpart), 
+    
+    /* real part calculation */    
+    
+    if method then print ("  quad_qagp "),
+    [dans,dcode,bargL,boutL] : qagp1(cex65,bvv,bv1,bv2,bptsL),
+    if debug then mprint(dans,dcode,bargL,boutL),
+    nargL : bargL,
+    if dans = false then
+       (print(" real part returns noun form"),       
+        return(false)),    
+    noutL : boutL,
+    if debug then mprint(nargL,bargL),
+        
+    if dcode = 0 then cans : dans else
+       (print(" realpart quad_qagp error = ", part(codelist,dcode,2)),
+          return(false)),
+          
+    if debug then display(cans),
+                       
+    doimagpart,
+    
+    /* imag part calculation */
+                       
+    cex65 : imagpart(bex),
+    if debug then print(" imaginary part"),
+    if debug then display(cex65),
+    if float(cex65) = 0.0 then return(cans),        
+    if method then print ("  quad_qagp "),
+    [dans,dcode,bargL,boutL] : qagp1(cex65,bvv,bv1,bv2,bptsL),
+    if debug then mprint(dans,dcode,bargL,boutL),
+    
+    if nargL = [] then nargL : bargL
+    else  nargL : reverse(cons(bargL,[nargL])),
+    
+    if dans = false then
+       (print(" imaginary part returns noun form"),       
+        return(false)),     
+    
+    if noutL = [] then noutL : boutL
+    else noutL : reverse(cons(boutL,[noutL])),
+    
+        
+    if dcode = 0 then  cans + %i*dans 
+     else
+       (print(" imagpart quad_qagp error = ", part(codelist,dcode,2)),
+          false))$
+                
+   /*****  end april 6 qagp  ***************/
+        
+     
+
+/******  qags1 assumes expr is real *************/
+/* returns [ans,code,arglist,outlist] or [false,false,arglist,[]] 
+   calls quad_qags, called by qags and func_aver.
+   */
+   
+
+qags1(aex,avv,av1,av2) :=
+block([tmp,argL,outL],
+    if debug then print(" qags1 "),
+   if float(aex) = 0.0 then return([0.0,0,[],[]]),
+   /* default case: try epsrel criterion */
+    argL : [qags,aex,avv,av1, av2,'limit = 800],
+    
+    tmp: quad_qags(aex,avv,av1, av2,'limit = 800),
+    if not listp (tmp) then return([false,false,argL,[]]),
+    if tmp[4] = 0 then
+        ( if debug then print(" epsrel criterion"),
+         outL : cons(qags,tmp),
+         return([tmp[1],tmp[4],argL,outL])),
+             
+    /* case tmp[4] # 0:  try epsabs criterion */
+    
+    if debug then print("re-eval with epsabs "),
+    argL : [qags,aex,avv,av1, av2,'epsabs = 1d-8,'limit = 800],
+    
+    tmp: quad_qags(aex,avv,av1, av2,'epsabs = 1d-8,'limit = 800),
+    
+    if not listp(tmp) then [false,false,argL,[]]
+     else 
+         (if debug then print (" epsabs criterion "),          
+          outL : cons (qags,tmp),
+         [tmp[1],tmp[4],argL,outL]))$
+         
+/*
+(%i35) qags1(bessel_j(1,x),x,9,11);
+(%o35) [0.0808567,0,[qags,bessel_j(1,x),x,9,11,limit = 800],
+        [qags,0.0808567,2.63930659E-15,21,0]]
+(%i36) time(%);
+(%o36) [0.0]
+
+(%i38) qags1(bessel_j(1,x),x,9990,10010);
+(%o38) [-0.00396301,0,[qags,bessel_j(1,x),x,9990,10010,limit = 800],
+        [qags,-0.00396301,1.30965388E-13,63,0]]
+(%i39) time(%);
+(%o39) [0.03]
+*/
+
+
+
+
+
+/*******  qags  default access to quad_qags
+        accepts complex expression 
+         calls qags1 for real and imag parts
+         creates global nargL, noutL
+         april 6, 2012
+        ****************/
+        
+qags (bex,bvv,bv1, bv2) := 
+block([cex,cans:0.0,dans,dcode,bargL,boutL],
+    if debug then print ("  qags "),
+    
+    /* global lists */
+    noutL : [],
+    nargL : [],
+    if float(bex) = 0.0 then return (0.0),
+    
+    if assume_complex then
+      (if debug then print(" go to complex section "),
+       go (docomplexcase)),
+    
+    /* case real expression
+        assume_real is global flag  */
+    
+     if (assume_real or isequal(bex,realpart(bex)) or
+                   imagpart(bex) = 0 or
+                   isreal(bex,bvv,bv1,bv2,500)) then 
+                   
+            ( if debug then print("assume real section calls qags1"),
+              [dans,dcode,bargL,boutL] : qags1(bex,bvv,bv1,bv2),
+              if debug then mprint(dans,dcode,bargL,boutL),
+              nargL : bargL,
+              if dans = false then
+                   (print(" real part returns noun form"),                     
+                      return(false)),              
+              noutL : boutL,
+              if debug then mprint(nargL,bargL),
+        
+              if dcode = 0 then return(dans)
+               else
+                 (print(" realpart quad_qags error = ", part(codelist,dcode,2)),
+                  return(false))),
+          
+    /* case pure imaginary expression
+         assume_imag is a global flag */         
+
+    if (assume_imag or isequal(expand(bex/%i), imagpart(bex)) or 
+             realpart(bex) = 0  or
+             isreal(bex/%i,bvv,bv1,bv2,500)) then
+             
+          (if debug then print (" assume imaginary section calls qags1 "),
+          
+           [dans,dcode,bargL,boutL] : qags1(imagpart(bex),bvv,bv1,bv2),
+           if debug then mprint(dans,dcode,bargL,boutL),
+           nargL : bargL,
+           if dans = false then
+                   (print(" imag part returns noun form"),                    
+                    return(false)),           
+           noutL : boutL,
+           if debug then mprint(nargL,bargL),
+           if dcode = 0 then return(%i*dans)
+            else
+                 (print(" imagpart quad_qags error = ", part(codelist,dcode,2)),
+                  return(false))),
+           
+     /*  case neither real nor pure imaginary */
+           
+    docomplexcase,
+    
+    if debug then print(" start complex case section"),
+    cex : realpart(bex),
+    if debug then print(" real part"),
+    if debug then display(cex),
+    if float(cex) = 0.0 then go(doimagpart), 
+    
+    /* real part calculation */
+    
+    if debug then print(" real part call of qags1"),
+    
+    [dans,dcode,bargL,boutL] : qags1(cex,bvv,bv1,bv2),
+    if debug then mprint(dans,dcode,bargL,boutL),
+    nargL : bargL,
+    if dans = false then
+       (print(" real part returns noun form"),       
+        return(false)),    
+    noutL : boutL,
+    if debug then mprint(nargL,bargL),
+        
+    if dcode = 0 then cans : dans else
+       (print(" realpart quad_qags error = ", part(codelist,dcode,2)),
+          return(false)),
+          
+    if debug then display(cans),
+                       
+    doimagpart,
+    
+    /* imag part calculation */
+                       
+    cex : imagpart(bex),
+    if debug then print(" imaginary part"),
+    if debug then display(cex),
+    if float(cex) = 0.0 then return(cans),
+    
+    if debug then print(" imag part call qags1"),
+    
+    [dans,dcode,bargL,boutL] : qags1(cex,bvv,bv1,bv2),
+    if debug then mprint(dans,dcode,bargL,boutL),
+    
+    if nargL = [] then nargL : bargL
+    else  nargL : reverse(cons(bargL,[nargL])),
+    
+    if dans = false then
+       (print(" imaginary part returns noun form"),       
+        return(false)),     
+    
+    if noutL = [] then noutL : boutL
+    else noutL : reverse(cons(boutL,[noutL])),
+    
+        
+    if dcode = 0 then  cans + %i*dans 
+     else
+       (print(" imagpart quad_qags error = ", part(codelist,dcode,2)),
+          false))$        
+                
+   /*****  end april 6 qags  ***************/
+        
+
+    
+/*
+(%i83) qags(sin(x),x,-1,1);
+ epsabs criterion  
+(%o83) 0.0
+(%i84) noutL;
+(%o84) [qags,0.0,1.01659335E-14,21,0]
+(%i85) nargL;
+(%o85) [qags,sin(x),x,-1,1,epsabs = 1.0E-8,limit = 800]
+
+
+(%i86) qags(sin(1/x),x,-1,1);
+ real part returns noun form 
+(%o86) false
+(%i87) nargL;
+(%o87) [qags,sin(1/x),x,-1,1,limit = 800]
+(%i88) noutL;
+(%o88) []
+
+
+
+(%i89) qags(%i*sin(x),x,-1,1);
+ epsabs criterion  
+(%o89) 0.0
+(%i90) noutL;
+(%o90) [qags,0.0,1.01659335E-14,21,0]
+(%i91) nargL;
+(%o91) [qags,sin(x),x,-1,1,epsabs = 1.0E-8,limit = 800]
+
+
+(%i92) qags(sin(x+1),x,-3,1);
+ epsabs criterion  
+(%o92) 1.51674678E-17
+(%i93) fchop(%);
+(%o93) 0.0
+(%i94) noutL;
+(%o94) [qags,1.51674678E-17,3.12789662E-14,21,0]
+(%i95) nargL;
+(%o95) [qags,sin(x+1),x,-3,1,epsabs = 1.0E-8,limit = 800]
+
+
+(%i96) qags(cos(x),x,-1,1);
+ epsrel criterion 
+(%o96) 1.682942
+(%i97) noutL;
+(%o97) [qags,1.682942,1.86844092E-14,21,0]
+(%i98) nargL;
+(%o98) [qags,cos(x),x,-1,1,limit = 800]
+
+
+
+(%i103) qags(cos(x)+%i*sin(x),x,-1,1);
+ epsrel criterion 
+ epsabs criterion  
+(%o103) 1.682942
+(%i104) noutL;
+(%o104) [[qags,1.682942,1.86844092E-14,21,0],[qags,0.0,1.01659335E-14,21,0]]
+(%i105) nargL;
+(%o105) [[qags,cos(x),x,-1,1,limit = 800],
+         [qags,sin(x),x,-1,1,epsabs = 1.0E-8,limit = 800]]
+         
+        
+(%i106) qags(exp(%i*x),x,-1,1);
+ epsrel criterion 
+ epsabs criterion  
+(%o106) 1.682942
+(%i107) noutL;
+(%o107) [[qags,1.682942,1.86844092E-14,21,0],[qags,0.0,1.01659335E-14,21,0]]
+(%i108) nargL;
+(%o108) [[qags,cos(x),x,-1,1,limit = 800],
+         [qags,sin(x),x,-1,1,epsabs = 1.0E-8,limit = 800]]
+
+(%i22) qags(x,x,1,2);
+ epsrel criterion 
+(%o22) 1.5
+(%i23) qags(x,x,2,1);
+ epsrel criterion 
+(%o23) -1.5
+
+
+*/
+
+
+/******  qag1 assumes expr is real *************/
+/* returns [ans,code,argL,outL] or [false,false,argL,[]] 
+  called by qag, calls quad_qag
+ */
+   
+
+qag1(aex,avv,av1,av2) :=
+block([tmp,argL,outL],
+    if debug then print(" qag1"),
+   if float(aex) = 0.0 then return([0.0,0,[],[]]),
+   /* default case: try epsrel criterion */
+   
+    argL : [qag,aex,avv,av1, av2,3,'limit = 800],
+    
+    tmp: quad_qag(aex,avv,av1, av2,3,'limit = 800),
+    if not listp (tmp) then return([false,false,argL,[]]),
+    if tmp[4] = 0 then 
+         (if debug then print(" epsrel criterion "),          
+          outL : cons (qag,tmp),
+          return([tmp[1],tmp[4],argL,outL])),
+             
+    /* case tmp[4] # 0:  try epsabs criterion */
+    
+    if debug then print("re-eval with epsabs "),
+    argL : [qag,aex,avv,av1, av2,3,'epsabs = 1d-8,'limit = 800],
+    
+    tmp: quad_qag(aex,avv,av1, av2,3,'epsabs = 1d-8,'limit = 800),
+    
+    if not listp(tmp) then [false,false,argL,[]]
+     else 
+         (if debug then print("  epsabs criterion"),           
+           outL : cons(qag,tmp),
+           [tmp[1],tmp[4],argL,outL]))$
+         
+/*
+(%i15) qag1(sin(x),x,-1,1);
+(%o15) [0.0,0]
+*/
+
+
+/*******  qag  access to quad_qag
+        accepts complex expression 
+         mar. 30, 2012: to do: use same real, imag, complex 
+            structure in quadpack1 (which only calls quadpack11)
+             and qags
+            
+            
+         calls qag1 with a real expression
+        ****************/
+        
+qag (bex,bvv,bv1, bv2) := 
+block([cex,cans:0.0,dans,dcode,bargL,boutL],
+    if debug then print ("  qag "),
+    
+    /* global lists */
+    noutL : [],
+    nargL : [],
+    if float(bex) = 0.0 then return (0.0),
+    
+    if assume_complex then
+      (if debug then print(" go to complex section "),
+       go (docomplexcase)),
+    
+    /* case real expression
+        assume_real is global flag  */
+    
+     if (assume_real or isequal(bex,realpart(bex)) or
+                   imagpart(bex) = 0 or
+                   isreal(bex,bvv,bv1,bv2,500)) then 
+                   
+            ( if debug then print("assume real section calls qag1"),
+              [dans,dcode,bargL,boutL] : qag1(bex,bvv,bv1,bv2),
+              if debug then mprint(dans,dcode,bargL,boutL),
+              if dans = false then
+                   (print(" real part returns noun form"),
+                     nargL : bargL,
+                      return(false)),
+              nargL : bargL,
+              noutL : boutL,
+              if debug then mprint(nargL,bargL),
+        
+              if dcode = 0 then return(dans)
+               else
+                 (print(" realpart quad_qag error = ", part(codelist,dcode,2)),
+                  return(false))),
+          
+    /* case pure imaginary expression
+         assume_imag is a global flag */         
+
+    if (assume_imag or isequal(expand(bex/%i), imagpart(bex)) or 
+             realpart(bex) = 0  or
+             isreal(bex/%i,bvv,bv1,bv2,500)) then
+             
+          (if debug then print (" assume imaginary section calls qag1 "),
+          
+           [dans,dcode,bargL,boutL] : qag1(imagpart(bex),bvv,bv1,bv2),
+           if debug then mprint(dans,dcode,bargL,boutL),
+           if dans = false then
+                   (print(" imag part returns noun form"),
+                    nargL : bargL,
+                    return(false)),
+           nargL : bargL,
+           noutL : boutL,
+           if debug then mprint(nargL,bargL),
+           if dcode = 0 then return(%i*dans)
+            else
+                 (print(" imagpart quad_qag error = ", part(codelist,dcode,2)),
+                  return(false))),
+           
+     /*  case neither real nor pure imaginary */
+           
+    docomplexcase,
+    
+    if debug then print(" start complex case section"),
+    cex : realpart(bex),
+    if debug then print(" real part"),
+    if debug then display(cex),
+    if float(cex) = 0.0 then go(doimagpart), 
+    
+    /* real part calculation */
+    
+    if debug then print(" real part call of qag1"),
+    
+    [dans,dcode,bargL,boutL] : qag1(cex,bvv,bv1,bv2),
+    if debug then mprint(dans,dcode,bargL,boutL),
+    
+    if dans = false then
+       (print(" real part returns noun form"),
+       nargL : bargL,
+        return(false)),
+        
+    nargL : bargL,
+    noutL : boutL,
+    if debug then mprint(nargL,bargL),
+        
+    if dcode = 0 then cans : dans else
+       (print(" realpart quad_qag error = ", part(codelist,dcode,2)),
+          return(false)),
+          
+    if debug then display(cans),
+                       
+    doimagpart,
+    
+    /* imag part calculation */
+                       
+    cex : imagpart(bex),
+    if debug then print(" imaginary part"),
+    if debug then display(cex),
+    if float(cex) = 0.0 then return(cans),
+    
+    if debug then print(" imag part call qag1"),
+    
+    [dans,dcode,bargL,boutL] : qag1(cex,bvv,bv1,bv2),
+    if debug then mprint(dans,dcode,bargL,boutL),
+    
+    if dans = false then
+       (print(" imaginary part returns noun form"),
+        nargL : cons(bargL,[nargL]),
+        return(false)),
+        
+    if nargL = [] then nargL : bargL
+    else  nargL : reverse(cons(bargL,[nargL])),
+    
+    if noutL = [] then noutL : boutL
+    else noutL : reverse(cons(boutL,[noutL])),
+    
+        
+    if dcode = 0 then  cans + %i*dans 
+     else
+       (print(" imagpart quad_qag error = ", part(codelist,dcode,2)),
+          false))$        
+        
+        
+  /***********  end mar 30 qag  *********************/        
+        
+    
+/*
+(%i80) qag(x,x,1,2);
+ epsrel criterion  
+(%o80) 1.5
+(%i81) noutL;
+(%o81) [qag,1.5,1.66533454E-14,31,0]
+(%i82) nargL;
+(%o82) [qag,x,x,1,2,3,limit = 800]
+
+(%i33) qag(x,x,2,1);
+ epsrel criterion  
+(%o33) -1.5
+
+(%i44) qag(sin(x),x,-1,1);
+  epsabs criterion 
+(%o44) 0.0
+(%i45) noutL;
+(%o45) [qag,0.0,1.01883225E-14,31,0]
+(%i46) nargL;
+(%o46) [qag,sin(x),x,-1,1,3,epsabs = 1.0E-8,limit = 800]
+
+
+(%i57) qag(sin(1/x),x,-1,1);
+ real part returns noun form 
+(%o57) false
+(%i58) noutL;
+(%o58) []
+(%i59) nargL;
+(%o59) [qag,sin(1/x),x,-1,1,3,limit = 800]
+
+(%i54) qag(%i*sin(x),x,-1,1);
+  epsabs criterion 
+(%o54) 0.0
+(%i55) noutL;
+(%o55) [qag,0.0,1.01883225E-14,31,0]
+(%i56) nargL;
+(%o56) [qag,sin(x),x,-1,1,3,epsabs = 1.0E-8,limit = 800]
+
+(%i67) qag(sin(x+1),x,-3,1);
+  epsabs criterion 
+(%o67) 1.19404039E-18
+(%i68) fchop(%);
+(%o68) 0.0
+(%i69) noutL;
+(%o69) [qag,1.19404039E-18,3.13686699E-14,31,0]
+(%i70) nargL;
+(%o70) [qag,sin(x+1),x,-3,1,3,epsabs = 1.0E-8,limit = 800]
+
+(%i71) qag(cos(x),x,-1,1);
+ epsrel criterion  
+(%o71) 1.682942
+(%i72) noutL;
+(%o72) [qag,1.682942,1.86844092E-14,31,0]
+(%i73) nargL;
+(%o73) [qag,cos(x),x,-1,1,3,limit = 800]
+
+(%i109) qag(cos(x)+%i*sin(x),x,-1,1);
+ epsrel criterion  
+  epsabs criterion 
+(%o109) 1.682942
+(%i110) noutL;
+(%o110) [[qag,1.682942,1.86844092E-14,31,0],[qag,0.0,1.01883225E-14,31,0]]
+(%i111) nargL;
+(%o111) [[qag,cos(x),x,-1,1,3,limit = 800],
+         [qag,sin(x),x,-1,1,3,epsabs = 1.0E-8,limit = 800]]
+         
+(%i112) qag(exp(%i*x),x,-1,1);
+ epsrel criterion  
+  epsabs criterion 
+(%o112) 1.682942
+(%i113) noutL;
+(%o113) [[qag,1.682942,1.86844092E-14,31,0],[qag,0.0,1.01883225E-14,31,0]]
+(%i114) nargL;
+(%o114) [[qag,cos(x),x,-1,1,3,limit = 800],
+         [qag,sin(x),x,-1,1,3,epsabs = 1.0E-8,limit = 800]]
+         
+*/
+
+/********  qagi1  mar 31 
+          assumes aex is real
+          called by qagi
+             **********************/
+
+qagi1(aex,avv,av1,av2) :=
+block([tmp,argL,outL],
+    if debug then print(" qagi1"),
+   if float(aex) = 0.0 then return([0.0,0,[],[]]),
+   /* default case: try epsrel criterion */
+   
+    argL : [qagi,aex,avv,av1, av2,'limit = 800],
+    
+    tmp: quad_qagi(aex,avv,av1, av2,'limit = 800),
+    if not listp (tmp) then return([false,false,argL,[]]),
+    if tmp[4] = 0 then 
+         (if debug then print(" epsrel criterion "),          
+          outL : cons (qagi,tmp),
+          return([tmp[1],tmp[4],argL,outL])),
+             
+    /* case tmp[4] # 0:  try epsabs criterion */
+    
+    if debug then print("re-eval with epsabs "),
+    argL : [qagi,aex,avv,av1, av2,3,'epsabs = 1d-8,'limit = 800],
+    
+    tmp: quad_qagi(aex,avv,av1, av2,'epsabs = 1d-8,'limit = 800),
+    
+    if not listp(tmp) then [false,false,argL,[]]
+     else 
+         (if debug then print("  epsabs criterion"),           
+           outL : cons(qagi,tmp),
+           [tmp[1],tmp[4],argL,outL]))$
+           
+/* mar 31 
+(%i77) qagi1(exp(-x),x,0,inf);
+ epsrel criterion  
+(%o77) [1.0,0,[qagi,%e^-x,x,0,inf,limit = 800],[qagi,1.0,5.84260704E-11,135,0]]
+                                                
+*/
+
+
+
+/*******  qagi  access to quad_qagi
+        accepts complex expression 
+         calls qagi1 for real and imag parts
+         creates global nargL, noutL
+         april 2, 2012
+        ****************/
+        
+qagi (bex,bvv,bv1, bv2) := 
+block([cex,cans:0.0,dans,dcode,bargL,boutL],
+    if debug then print ("  qagi "),
+    
+    /* global lists */
+    noutL : [],
+    nargL : [],
+    if float(bex) = 0.0 then return (0.0),
+    if debug then display(assume_real,assume_imag, assume_complex),
+    
+    if assume_complex then
+      (if debug then print(" go to complex section "),
+       go (docomplexcase)),
+    
+    /* case real expression
+        assume_real is global flag  */
+    
+     if (assume_real or isequal(bex,realpart(bex)) or
+                   isequal(imagpart(bex),0) ) then 
+                   
+            ( if debug then print("assume real section calls qagi1"),
+              [dans,dcode,bargL,boutL] : qagi1(bex,bvv,bv1,bv2),
+              if debug then mprint(dans,dcode,bargL,boutL),
+              nargL : bargL,
+              if dans = false then
+                   (print(" real part returns noun form"),                     
+                      return(false)),              
+              noutL : boutL,
+              if debug then mprint(nargL,bargL),
+        
+              if dcode = 0 then return(dans)
+               else
+                 (print(" realpart quad_qagi error = ", part(codelist,dcode,2)),
+                  return(false))),
+          
+    /* case pure imaginary expression
+         assume_imag is a global flag */         
+
+    if (assume_imag or isequal(expand(bex/%i), imagpart(bex)) or 
+             isequal(realpart(bex),0) ) then
+             
+          (if debug then print (" assume imaginary section calls qagi1 "),
+          
+           [dans,dcode,bargL,boutL] : qagi1(imagpart(bex),bvv,bv1,bv2),
+           if debug then mprint(dans,dcode,bargL,boutL),
+           nargL : bargL,
+           if dans = false then
+                   (print(" imag part returns noun form"),                    
+                    return(false)),
+           
+           noutL : boutL,
+           if debug then mprint(nargL,bargL),
+           if dcode = 0 then return(%i*dans)
+            else
+                 (print(" imagpart quad_qagi error = ", part(codelist,dcode,2)),
+                  return(false))),
+           
+     /*  case neither real nor pure imaginary */
+           
+    docomplexcase,
+    
+    if debug then print(" start complex case section"),
+    cex : realpart(bex),
+    if debug then print(" real part"),
+    if debug then display(cex),
+    if float(cex) = 0.0 then go(doimagpart), 
+    
+    /* real part calculation */
+    
+    if debug then print(" real part call of qagi1"),
+    
+    [dans,dcode,bargL,boutL] : qagi1(cex,bvv,bv1,bv2),
+    if debug then mprint(dans,dcode,bargL,boutL),
+    nargL : bargL,
+    if dans = false then
+       (print(" real part returns noun form"),       
+        return(false)),    
+    noutL : boutL,
+    if debug then mprint(nargL,bargL),
+        
+    if dcode = 0 then cans : dans else
+       (print(" realpart quad_qagi error = ", part(codelist,dcode,2)),
+          return(false)),
+          
+    if debug then display(cans),
+                       
+    doimagpart,
+    
+    /* imag part calculation */
+                       
+    cex : imagpart(bex),
+    if debug then print(" imaginary part"),
+    if debug then display(cex),
+    if float(cex) = 0.0 then return(cans),
+    
+    if debug then print(" imag part call qagi1"),
+    
+    [dans,dcode,bargL,boutL] : qagi1(cex,bvv,bv1,bv2),
+    if debug then mprint(dans,dcode,bargL,boutL),
+    
+    if nargL = [] then nargL : bargL
+    else  nargL : reverse(cons(bargL,[nargL])),
+    
+    if dans = false then
+       (print(" imaginary part returns noun form"),        
+        return(false)),    
+    
+    if noutL = [] then noutL : boutL
+    else noutL : reverse(cons(boutL,[noutL])),    
+        
+    if dcode = 0 then  cans + %i*dans 
+     else
+       (print(" imagpart quad_qagi error = ", part(codelist,dcode,2)),
+          false))$        
+                
+   /*****  end april 2 qagi  ***************/
+        

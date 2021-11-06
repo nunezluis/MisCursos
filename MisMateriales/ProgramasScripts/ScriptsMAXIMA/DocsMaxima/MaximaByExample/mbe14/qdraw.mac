@@ -1,0 +1,2572 @@
+/************************************************************************
+    qdraw.mac is an interface to Maxima's draw2d function which provides
+    quicker access to some features of draw2d, with defaults of interest 
+    to users from the physical sciences and engineering. Use of this
+	software is demonstrated in Maxima by Example, Ch. 13:  2d
+	Plots and Graphics using qdraw, available on the author's web
+	page:  http://www.csulb.edu/~woollett
+    
+    Copyright (C) 2016, 2008  Edwin L. Woollett  <woollett@charter.net>       
+    
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU GENERAL PUBLIC LICENSE, Version 2, June 1991,
+    as published by the Free Software Foundation.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details. You should have received a
+    copy of the GNU General Public License along with this program.
+    If not, see http://www.fsf.org/licensing/.
+************************************************************************/   
+
+/* global functions defined:
+
+qdraw, qdraw1, qdensity, qdensity1, doplot1, doplot2 
+point_types(), fll, head, tail
+*/
+
+
+ 
+    
+
+/* file qdraw.mac 
+   Edwin L. (Ted)  Woollett
+    april, may,june 2008, march 2016
+    qdraw1 does all the work for qdraw and produces drlist.
+    qdraw calls qdraw1 then passes drlist on to draw2d.
+    qdensity only does density plots and is independent of qdraw.
+        qdensity (expr, [x,x1,x2,dx],...) calls qdensity1
+	qdensity1 (Amatrix, [x1,x2],...)	
+    send comments and suggestions for improvement to:
+    woollett@charter.net
+    
+    See tutorial notes: mbe13qdraw.pdf
+       Maxima by Example, Ch. 13 for
+       a discussion of qdraw() with many examples.
+	   
+    http://www.csulb.edu/~woollett          
+    
+ */
+ 
+ qdraw_usage() := 
+print("
+
+
+ -------------QDRAW SYNTAX------------------------------
+
+ All arguments to qdraw are optional and can be entered in any order.
+ 
+ You can have no more than one xr(..) argument.  Likewise,
+  no more than one yr(..), one cut(..), one lw(n) (as an arg of
+   qdraw), one nticks(n) and one ipgrid(n).
+ 
+ You can have an arbitrary number of the other args in any order.
+ 
+ The complete set of possible arguments (in alphabetic order) with the
+    maximum number and type of arguments follow. In general, arguments
+    with names lc,lw,lk,fill,pc,ps,pt,pk,pj,ha,hb,hl,and ht are optional.
+
+    qdraw( arrowhead(x,y,theta-degrees,s,lc(c),lw(n) ),
+           circle(x,y,radius,lc(c),lw(n),fill(cc) ),
+           contour(expr,x,x1,x2,y,y1,y2,crange(n,min,max),options )
+              or contour(expr,x,x1,x2,y,y1,y2, cvals(v1,v2,...), options ),
+              contour options are lc(c),lw(n), add( add-options );
+                 add-options are grid,xaxis,yaxis,and xyaxes,
+           cut(cut-options);
+              cut-options are key,grid,xaxis,yaxis,xyaxes,edge,all,
+           ellipse(xc,yc,xsma,ysma,th0-deg,dth-deg,lw(n),lc(c),fill(cc) ),
+           errorbars(ptlist,dylist,lc(c),lw(n) ),
+           ex(exprlist,x,x1,x2),
+           ex1(expr,x,x1,x2,lc(c),lw(n),lk(string) ),
+           imp(eqnlist,x,xx1,xx2,y,yy1,yy2),
+           imp1(eqn,x,x1,x2,y,y1,y2,lc(c),lw(n),lk(string) ),
+           ipgrid(n),
+           key(bottom) or key(top),
+           label( [string1,x1,y1],[string2,x2,y2],...),
+           label_align(p-options); p-options are l, r, or c,
+           line(x1,y1,x2,y2,lc(c),lw(n),lk(string) ),
+           log(log-options); log-options are x, y, or xy,
+           lw(n),
+           more( any legal draw2d arguments),
+           nticks(n),
+           para( xofu,yofu,u,u1,u2,lc(c),lw(n),lk(string) ),
+           polar( roftheta,theta,th1,th2,lc(c),lw(n),lk(string) );
+                       theta, th1, and th2 must be in radians,
+           poly([ [x1,y1],[x2,y2],.,[xN,yN] ], lc(c),lw(n),fill(cc) ),
+           pts( [ [x1,y1],[x2,y2],.,[xN,yN] ],pc(c),ps(s),pt(t),pk(string) ),
+           pic( type(t), fname(string), font(string,size)  );
+                      font(..) is optional,
+           rect( x1,y1,x2,y2, lc(c),lw(n),fill(cc) ),
+           vector( [x,y],[dx,dy],lw(n),lc(c),lk(string),
+                                   ha(deg),hb(v),hl(v),ht(t) ),
+                type vector_use(); to see vector option details,
+           xr(xa,xb), 
+           yr(ya,yb),            
+           );
+           
+  ...................................................
+  QUICK PLOT FEATURES:
+               
+  For quick plots, use ex(...) and imp(...). These
+  two functions ex(...) and imp(...) use default colors, line widths,
+  and simple legend key numbers. The function ex(...) can be used either
+  with a single expression, as in ex( u^3,u,-2,2), or with a list
+  of expressions as in ex([u,u^2,u^3],u,-2,2).
+  
+  You can use any other letter instead of 'u', such as 'x', etc.
+  
+  Like wise the function imp(...), used for the implicit plots of equations,
+  can be used for one equation, as in imp(v^3=u^2,u,-2,2,v,-2,2) or for a 
+  list of equations as in imp([v=u,v^2=u,v^3=u],u,-2,2,v,-2,2).
+  
+  You can use any other letters instead of 'u' and 'v', such as 'x' and 'y'.
+   
+  The top level qdraw argument lw(n) overrides the default line_width
+   setting used for ex(...) and imp(...).
+  
+  You can have multiple ex and imp arguments.
+  ....................................................
+  
+  You recover more control, although limited to either one expression
+  or one equation, if you use ex1(...), or imp1(...), using the options
+  indicated.
+ 
+===========================================================
+the function qdensity(expr,[x,x1,x2,dx],[y,y1,y2,dy], palette(p-options),
+                         pic(..) );
+       palette(p) and pic(type,filename) are optional;
+       palette(blue), palette(gray), palette(color), or palette(n1,n2,n3), 
+   can be used to produce a density plot. qdensity is called by itself and
+   is not 'wrapped' by qdraw. 
+================================================================
+
+   To see the above again, type qdraw();
+     
+  ")$
+  
+vector_use() :=  
+disp(
+"vector([x,y],[dx,dy],ha(thdeg),hb(v),hl(v),ht(t),lw(n),lc(c),lk(string) )
+ draws a vector with components [dx,dy] starting at [x,y]. The first two
+ list arguments are required, all others are optional and can be entered in
+ any order after the first two required arguments.
+ The default head angle is 30 deg, change to 45 deg using 
+               ha(45) for example.
+ The default 'head both' value is f for false, use hb(t) to set
+      it to true,and hb(f) to return to false.
+ The default 'head length' is 0.5, use hl(0.7) to change to 0.7.
+ The default 'head type' is 'nofilled'; use ht(e) for 'empty',
+       ht(f) for 'filled',and ht(n) to change back to 'nofilled'.           
+ The default line width is 3, use lw(5) to change to 5.
+ The default line color is black, use lc(brown) to change to brown.
+ The default is no key string. use lk(string) for example to create
+     a text string for the key.")$
+
+
+disp(" qdraw(...), qdensity(...), qdensity1(...), syntax: type qdraw(); ")$
+
+
+
+/*********************************** working version qdraw1  */
+
+qdraw1([qda]) :=
+   block([ acolor, anerr,arg,ax,ay,bx,by,cc,cdv,clist,cnum,coldef,ct,ctop,ctargs,cval, drlist,dy,dyl,
+     eex,elist,eqe,errblw,fnamelst,fnamestr,fntsize,fntstr, hlim,hvlim,
+     ipgriddef,iq,jq,kk,klist,labadef,lab_args,le,lendr,ll,lp,lqda,lwa,lwdef,lwval,mkedge,mkgrid,
+     labellist,mkkey,mkxaxis,mkxyaxis,mkyaxis,morelist,msg,nn,nargs,ndef,nlabel,nlw,npic,
+     nps,nticksdef,nxr,nyr,phi,piclist,pictype,pl,pl1,pr,prlist,pstr,ptl, ptsdef,pttdef,ptsl,ptslist,
+     qt,rl,rnglist,sa,targs,th, tlist,qtop,tp,tt,ttargs,ttop,tval,ulim,xx, x1rr,x2rr,yy, y1rr,y2rr ],
+	 
+     local (goodargs, eqncheck, doerr,qval,setnfill,setnlk, setnlw,setnpc,setoptions,inlistp),
+
+       stringdisp:true, 
+       ratprint:false,
+/*       display2d:false, */
+
+       /* default value of curve linewidth and color */   
+       
+       lwdef : 3,       
+       lwval: lwdef,
+       coldef : blue,
+       
+       /* default point size and type */
+       ptsdef : 3,
+       pttdef : 7,
+       
+       /* default label alignment */
+       labadef : left,
+
+       
+       /* default value of nticks for qdraw
+          can be changed to 200 for all inputs by including
+          qdraw( ..., nticks(200), ...) for example   */
+       nticksdef : 100,
+       ipgriddef : 10,
+          
+     /* ndef set to true each time a separate ex or imp arg found
+        */
+        ndef : false,
+        
+        /* npic set to true each time pic(...) is found  */
+        npic : false,
+        
+        /* nlabel set to true each time label(...) is found */
+        nlabel : false,
+                                  
+       morelist : [],
+       piclist : [],
+       ptslist : [],
+       labellist : [],
+       
+  /* drlist will be the ultimate list of arguments sent to draw2d */
+     
+     drlist : [], 
+     
+     /* rnglist is a temporary parking lot for x and y range items */
+     rnglist : [],
+     /* nxr = number of xr() arguments found */
+     nxr : 0,
+     /* nyr = number of yr() arguments found  */
+     nyr : 0, 
+       
+       
+       /* by default, include key, grid, all axes */
+       mkkey : true,
+       mkgrid : true,
+       mkxyaxes : true,
+       mkedge : true,
+       mkxaxis : true,
+       mkyaxis : true,
+/*
+qdraw( arrowhead(..), circle(..),contour(), cut(..),ellipse(..), errorbars(...),
+     ex(..), ex1(..), imp(..),imp1(..),ipgrid(), key(..),label(...),label_align(..),
+      line(..), lw(n), more(..),nticks(..), pic(..), para(...),
+     polar(..), poly(..), pts(..), rect(..),vector(..), xr(..), yr(..) )
+	
+*/
+
+/* function goodargs(arglist, msg, goodarglist) returns true
+		   if all args in arglist are not atoms and if op(item)  matches an
+		    arg in goodarglist, otherwise issues a return with the error
+		     message msg and returns false */
+		     
+goodargs(arglist,msg,goodarglist) :=
+block( [aa,ii,jj ,nchk], 		     		     
+	for ii thru length(arglist) do ( 
+	    aa : arglist[ii],  
+		       
+	    if atom(aa) then (  
+	        nchk : false,
+	        print(" arg ",aa," must itself have args "), 
+	        return( doerr(msg) )),
+
+	    nchk : false,		        
+		        
+		for jj thru length(goodarglist) do (  
+		    if op(aa) = goodarglist[jj] then (
+		        nchk : true,
+		        return())), 
+		          
+		 /* if aa not found in goodarglist, we are
+		            left with nchk equal to false */  
+		if not nchk then (  
+		    print(" arg ",aa," problem"),
+		    return(doerr(msg)) )),
+		      
+	return(nchk)),		   
+
+       
+       /* syntax errors change anerr to true */
+       
+    anerr : false, 
+       
+       /* default color selection list for ex(..) and imp(...)  */
+       
+    cc: [blue,red,turquoise,brown,magenta,green,black],
+            
+      /* eqncheck returns true if item head is "=", else returns false */    
+      
+    eqncheck(eqe) := (
+         if atom(eqe) then false
+           else if op(eqe) = "=" then true else false ),
+          
+       /*  write standard form error message  */   
+          
+    doerr(msg) := (anerr:true,print("...syntax error"),print(msg),false),
+                    
+                               
+      /* gets elements 1 thru 7 of color list for arbitrary n  */                 
+          
+    qval(nn) := (if mod(nn,7)=0 then 7 else mod(nn,7) ),
+              
+    setnpc(ll) := ( 
+        if length(ll)=1 then (
+                 ptsl :  cons(color=ll[1], ptsl ),
+                 ptsl : append( ptsl, [color = coldef] ) )                        
+                  else return( doerr("use lc(red) for example " ))), 
+
+     setnlw(ll) := ( 
+        if length(ll)=1 then (
+                 ptsl :  cons(line_width= ll[1], ptsl ),
+                 ptsl : append( ptsl, [line_width = lwdef] ))                       
+                  else return( doerr("use lw(5) for example " ) )),
+               
+       setnlk(ll) := ( 
+        if length(ll)=1 then (
+                 ptsl : cons(key = ll[1], ptsl),
+                 ptsl : append(ptsl, [ key = "" ] ))                       
+                  else return( doerr(" use lk(\"case 1\") for example " ))),             
+               
+     
+     setnfill(ll) := ( 
+                     if length(ll)=1 then (
+                        ptsl :  cons(fill_color = ll[1], ptsl),
+                        ptsl :  cons(transparent = false, ptsl),
+                        ptsl : append(ptsl, [ transparent = true]))     
+                      else return( doerr("use fill(blue) for example" ))),      
+
+     /* setoptions(list) is called by line, ex1,imp1, pts,circle,ellipse,poly,rect     */
+     
+    setoptions(prlist) := 
+	block( [jj,tt,ttop,ttargs ],                                                     
+        for jj thru length(prlist) do (
+            tt : prlist[jj],     
+            ttop : op(tt),
+            ttargs : args(tt),
+            if ttop = lc then setnpc(ttargs),
+            if ttop = lw then setnlw(ttargs),
+            if ttop = lk then setnlk(ttargs),
+            if ttop = fill then setnfill(ttargs))),         
+      
+      /* inlistp(a,ll) returns true if a is found in list ll
+         otherwise returns false 
+         */
+         
+    inlistp(aaa,lll) := block([fff,xxx], 
+        fff : false,
+        for xxx in lll do if xxx = aaa then fff:true,            
+        fff ),
+     
+/********  start of main program  ****************/     
+      
+    /*  qda is the list of arguments given to qdraw */   
+ 
+     /* lqda is the number of arguments to qdraw */
+     
+     lqda : length(qda), 
+     
+     /* refer to syntax usage function  if no arguments */
+     
+     if lqda = 0 then ( qdraw_usage(),return(false) ),
+
+/* debug 
+     display(qda),
+*/     
+     /* check for all valid args to qdraw */
+     
+     if not goodargs(qda,"qdraw args:arrowhead(), circle(), contour(), cut(), ellipse(), errorbars(), ex(), ex1(), imp(), imp1(),ipgrid(),key(),label(),label_align(), line(), log(), lw(n), more(),nticks(),para(),pic(),polar(), poly(), pts(), rect(),vector(), xr(), yr() ",
+	      [arrowhead,circle,contour,cut,ellipse,errorbars,pic,ex,ex1,imp,imp1,ipgrid,key,label,
+	          label_align,line,log,lw,more,nticks,para,pic,polar,poly,pts,rect,vector,xr,yr]  ) 
+	      then return(false),
+	      
+
+     /************************* scan 1: set defaults with lw(n),nticks(n),
+                                        log(a),   cut(...), xrange, yrange options  */
+          
+     for iq thru lqda do (
+     
+     if anerr  then return( ),
+   
+     /* qt is one argument to qdraw : we have already checked that the args to
+         qdraw are not atoms and op(arg) matches an allowed arg  */
+     
+        qt : qda[iq],
+                      
+                                                         
+        /* qtop is head of qt */
+        /* targs is list of args of qt */
+        
+        qtop : op(qt),
+                           
+        targs : args(qt),
+        
+         /****************************  case  lw   ****************/
+         /* lw(n) arg to qdraw only affects the drawing of the 
+             arguments of ex(...) and imp(...) which use lwval  */
+         
+          if qtop = lw then ( 
+          
+             /* check that lw has only one argument */
+             if length( targs ) # 1 then 
+               return( doerr("lw  must have one and only one argument" )),
+               
+              lwa : targs[1], 
+              
+              if integerp(lwa) then lwval : lwa
+                else  return( doerr("lw arg must be a literal integer like 2" ) )),
+           
+           /********* case log *********************************/
+           
+           if qtop = log then (  
+              /* check that log has only one argument */
+             if length( targs ) # 1 then 
+               return( doerr(" use log(a) where a is x, y, or xy " ) ),
+               
+             pl : targs[1],
+             
+             if not inlistp(pl, [x,y,xy] ) then
+                return(doerr(" use log(a) where a is x, y, or xy ")),               
+                
+             if pl = x then loglist : [logx = true]
+               else if pl = y then loglist : [logy = true]
+               else if pl = xy then loglist : [logx = true, logy = true]
+               else
+                 return( doerr(" use log(a) where a is x, y, or xy" ) ),
+                 
+              drlist : append(drlist, loglist)),
+           
+           
+           /*********  case nticks  **********************************/
+           /*  current default is 100  */
+           
+           if qtop = nticks then ( 
+          
+             /* check that nticks has only one argument */
+             if length( targs ) # 1 then 
+               return( doerr("nticks ex: nticks(200) " ) ),
+               
+              nticksdef : targs[1] ),
+           
+         /*********  case ipgrid  **********************************/
+         
+         /* this over-rides the default parameter used for the
+            draw2d arg:  in_grid_in = [n,n]   
+            draw2d's default value for n is 5 with some jaggies
+            as a result. this program uses the default value of
+            10, which reduces jaggies but requires more time for
+            the plot to be created. Especially for the
+            contour function, you may need to increase this
+            parameter to 15 or 20 to get smooth curves 
+            */
+           
+            if qtop = ipgrid then ( 
+          
+                 /* check that ipgrid has only one argument */
+                if length( targs ) # 1 then 
+                    return( doerr("ipgrid ex: ipgrid(15) " ) ),
+               
+                ipgriddef : targs[1] ),
+           
+           
+           /****************************  case cut   ****************/
+           
+           /*  cut(edge) removes the grid as well as the border
+                axes and tick marks  
+              cut(all) removes key, grid, xyaxes, boder axes, tick marks 
+              cut(grid) only removes grid, 
+              cut(key) removes key
+              cut(xyaxes) removes both x and y axes
+              cut(yaxis) removes only y axis
+              cut(xaxis) removes only x axis
+              cut(edge) removes grid, border axes and tics
+              example: cut(key,grid,yaxis)
+              */
+         
+         if qtop = cut then (
+           /* since all valid args to cut are atoms, check syntax here  */
+         
+            eex : targs,
+            le : length(eex),
+            for jq  thru le do (
+           
+                pl : eex[jq],
+             
+                if not inlistp(pl,[all,edge,grid,key,xaxis,xyaxes,yaxis]  ) then
+                         return( doerr( "cut: valid args: all,key,grid,xyaxes,xaxis,yaxis,edge ")),
+                
+                if pl = all then (
+                   mkkey : false,
+                   mkgrid : false,
+                   mkxyaxes : false,
+                   mkedge : false ),
+                if pl = key then mkkey : false,
+                if pl = grid then mkgrid : false ,
+                if pl = xyaxes then mkxyaxes : false,
+                if pl = xaxis then mkxaxis : false,
+                if pl = yaxis then mkyaxis : false,
+                if pl = edge then mkedge : false )),
+           
+            
+         /********************** case xr  ************************/ 
+               
+         if qtop = xr  then ( 
+         
+           /* check that only one xr item is provided to qdraw */
+           
+           nxr : nxr + 1, 
+           
+           if nxr = 2 then
+                  return( doerr("only one xr(xa,xb) item allowed in qdraw" ) ),
+                                      
+           if length( targs ) # 2 then 
+               return( doerr("xr must be of form xr(xa, xb)" ) ),
+                                                                                                         
+           x1rr : float( targs[1] ),
+           
+            if not numberp(x1rr) then
+            return( doerr("xr(x1,x2): x1 is not a number" ) ),   
+            
+           x2rr : float( targs[2] ), 
+           
+            if not numberp(x2rr) then
+            return( doerr("xr(x1,x2): x2 is not a number" ) ),   
+            
+           tval : xrange =  [x1rr,x2rr] ,
+           
+           
+           /* this puts xrange item first in case list
+               already contains yrange item  */
+           
+           rnglist : cons(tval, rnglist)), 
+               
+         /************************  case yr  **************/              
+               
+         if qtop = yr then ( 
+             
+             /* check that only one yr item is provided */
+           nyr : nyr + 1, 
+           
+           if nyr = 2 then 
+               return( doerr("only one yr(ya,yb) item allowed in qdraw" ) ),
+                                      
+           if length( targs ) # 2 then 
+               return( doerr("yr must be of form yr(ya, yb)" ) ),
+                                      
+           y1rr : float( targs[1] ), 
+           
+           if not numberp(y1rr) then
+            return( doerr("yr(y1,y2): y1 is not a number" ) ),
+           
+           y2rr : float( targs[2] ), 
+           
+           if not numberp(y2rr) then
+            return( doerr("yr(y1,y2): y2 is not a number" ) ),
+            
+           tval : yrange =  [y1rr, y2rr] ,            
+                     
+           /* this puts yrange item last in case list
+                already contains xrange item  */
+                
+           rnglist : append(rnglist,[tval] ))),
+       if anerr then return(),
+       
+           /* put range into drlist as first contents if xr and or yr found at end  */               
+       
+       /************** scan 2: look for ex and imp options 
+                we have already looked at all qdraw args and checked that
+                none are atoms   */
+
+       for iq thru lqda do (    
+       
+       if anerr  then return( ),
+        
+     /* qt is one argument to qdraw */
+     
+        qt : qda[iq],
+                                          
+        /* qtop is head of qt */
+        /* targs is list of args of qt */
+        
+        qtop : op(qt),
+        targs : args(qt),
+                               
+        /*******************  case ex  *****************/
+        
+        if qtop = ex  then (
+        
+            ndef : true,
+                          
+           if length(targs) # 4 then             
+                return( doerr("ex() should have exactly four arguments" ) ),                
+                                        
+        /*  targs[1] is either an expression list or single expression */
+          eex : targs[1],
+          
+          /* if not a list, make it a list */
+          if not listp(eex) then eex : [eex], 
+          
+          /*  the rest of targs should be [x,x1,x2 ] */
+          
+            /* first make sure numerical arguments of hlim
+               are converted to floating point numbers, especially
+               things like [x,-%pi/2,%pi/2]    */
+               
+          hlim : float( rest(targs,1) ), 
+
+           /* check first element of hlim is not a number */
+           
+           if numberp(hlim[1]) then
+                return( doerr("ex: hlim=[x,x1,x2]: x is a number" ) ), 
+          
+                          
+           /* check last two elements of hlim are numbers */
+
+          if not numberp(hlim[2]) then
+               return( doerr("ex: hlim=[x,x1,x2]: x1 is not a number" ) ),
+           
+          if not numberp(hlim[3]) then
+               return( doerr("ex: hlim=[x,x1,x2]: x2 is not a number" ) ),
+             
+                                
+            /* how many expressions in list of expressions passed to ex() ? */      
+          le : length(eex), 
+            
+            /* look at each expression separately */
+            
+                                                                     
+          for jq thru le do (
+               
+               /* if "expression" is equation , an error */
+               if eqncheck(eex[jq]) then
+                     return( doerr("you have an equation in ex() " ) ),
+                                                                       
+             /* make a list out of expression and hlim  */        
+               tlist : cons(eex[jq],hlim),
+               
+               /* wrap "explicit" around list items */
+               tval : apply( 'explicit, tlist ), 
+               
+               /* add this explicit(...) item to draw2d list */
+               drlist : append(drlist, [tval] ))),
+           
+                     
+        /*******  case  imp **********     similar in structure to ex */      
+        
+        if qtop = imp  then ( 
+        
+               ndef : true,
+               
+             /* imp must have exactly seven arguments */
+                        
+             if length(targs) # 7 then
+                   return( doerr("imp() should have exactly seven arguments" ) ),
+                             
+            eex : targs[1],
+            
+            if not listp(eex) then eex : [eex], 
+            
+            /* but first make sure limits like %pi/2 get
+                converted to floats  */
+            
+            hvlim : float( rest(targs,1) ), 
+            
+            
+            /* check elements of hvlim  */
+           
+           if numberp(hvlim[1]) then
+               return( doerr("imp: hvlim=[x,x1,x2,y,y1,y2]: x is a number" ) ), 
+                                                  
+           if not numberp(hvlim[2]) then
+                return( doerr("imp: hvlim=[x,x1,x2,y,y1,y2]: x1 is not a number" ) ),   
+            
+           if not numberp(hvlim[3]) then
+                return( doerr("imp: hvlim=[x,x1,x2,y,y1,y2]: x2 is not a number" ) ),   
+            
+           if numberp(hvlim[4]) then
+                return( doerr("imp: hvlim=[x,x1,x2,y,y1,y2]: y is a number" ) ), 
+            
+           if not numberp(hvlim[5]) then
+                return( doerr("imp: hvlim=[x,x1,x2,y,y1,y2]: y1 is not a number" ) ),   
+            
+           if not numberp(hvlim[6]) then
+                return( doerr("imp: hvlim=[x,x1,x2,y,y1,y2]: y2 is not a number" ) ),   
+                                              
+            le : length(eex), 
+            
+            /* look at each equation  */
+                        
+            for jq thru le do ( 
+            
+               if not eqncheck(eex[jq]) then 
+                   return( doerr("one imp() arg is not an equation " ) ), 
+                                           
+               tlist : cons(eex[jq], hvlim ), 
+               tval : apply( 'implicit, tlist ), 
+               drlist : append(drlist, [tval] )))),   /* end do loop scan 2  */
+        
+        if anerr then return(),
+        
+                  
+          /* construct drlist with default colors for ex and
+                        imp items if we have any */
+                        
+         if ndef then (                        
+          
+             /* add default colors and simple numbers for key to plot items  */
+             /* key defaults to empty string for explicit and implicit */
+           
+                         
+            lendr : length(drlist),
+       
+            clist : makelist(color=cc[ qval(kk) ],kk,1,lendr ), 
+       
+            if mkkey then (
+                 klist : makelist( key = string(kk), kk, 1, lendr),
+                 drlist : flatten(makelist([clist[kk],klist[kk],drlist[kk] ],kk,1,lendr ) ))               
+                  else drlist: join( clist, drlist ),
+           
+                /*  use my default lwval = lwdef unless overridden 
+                        with top level lw(n) arg   */
+       
+            drlist : cons( line_width=lwval, drlist ), 
+           
+                /* return to defaults after plotting ex and imp stuff */
+           
+              /* drlist : append(drlist, [color = coldef, line_width = lwdef, transparent = true,
+                                          point_size = ptsdef,point_type = pttdef,
+                                          label_alignment=labadef ] ),  */
+                                          
+            drlist : append(drlist,[ color = coldef ] )),
+            
+            if mkkey then drlist : append(drlist,[key = ""]),
+           
+            drlist : append(drlist, [ line_width = lwdef, transparent = true,
+                          point_size = ptsdef,point_type = pttdef,label_alignment=labadef,
+                          head_type=nofilled, head_angle=30,head_length= 0.5 ] ),
+           
+
+        /******************************************/
+        /*** scan 3  look for remaining allowed args to qdraw */
+    /*   print (" scan3 line 738"),  */
+       for iq thru lqda do (
+      /*   print (" iq = ",iq," line 740 "),  */
+        if anerr  then return( ),
+        
+     /* qt is one argument to qdraw */
+     
+        qt : qda[iq],
+       /*   print (" qt = ",qt," line 746 "),   */
+        /* qtop is head of qt */
+        /* targs is list of args of qt */
+        
+        qtop : op(qt),
+        targs : args(qt),  
+	/*	print ("qtop = ",qtop,"  targs = ",targs,"  line 752"), */
+        
+        /**************   case key    ***********************/
+        
+        if qtop = key then (                       
+
+           if length(targs) > 1 then 
+                  return( doerr("use key(bottom) or key(top) ")),
+            
+            tt : targs[1],
+            
+            if tt = bottom then
+              ptslist : append( ptslist, [ user_preamble="set key bottom" ] )
+              
+            else if tt = top then 
+              ptslist : append( ptslist, [ user_preamble="set key top" ] )
+              
+            else   
+                 return( doerr("use key(bottom) or key(top) "))),
+        
+        /************* case label **********************/
+        /* 
+		    The default color of label is black, which can be over-ridden by
+              adding a fourth argument of the form  lc(red), or lc(blue) etc.
+			  
+		   syntax: label ( [s, x, y] )  or label ( [s, x, y, lc (green)]) where s = string, x and y are label location
+		      of left end of label.  Multiple labels : either use separate label(..) entry for each or use
+           label( [s1,x1,y1], [s2,x2,y2],... )  or  label( [s1,x1,y1],[s2,x2,y2,lc(blue)],... )  etc
+                      
+           you can use label_align(p) to override the default left setting (see next case).
+        */
+		   
+		if qtop = label then (        
+             nlabel : true,			
+		/*	 print(" qtop = label, labellist = ",labellist, "  line 786 "),  */
+			 for kl thru length(targs) do (			       
+			      lab_args : targs[kl],
+     /*			  print (" kl = ",kl,"  lab_args = ", lab_args),  */
+				  if length (lab_args) = 3 then 
+			            labellist : append(labellist, [ apply( 'label, [lab_args] ) ] )
+				  else (
+				        acolor : args ( lab_args[4] ) [1],
+						labellist : append(labellist, [ color = acolor ]),
+						labellist : append (labellist, [ apply ('label, [ rest (lab_args,-1)])]),
+						labellist : append(labellist, [ color = black ])) /*  , print (" labellist = ",labellist, "  line 796") */  )),
+						
+						
+         
+         /************ case label_align  ***************/
+         
+         /* syntax:
+            label_align(p) where p is l,r,c
+            left is the default until this is called, henceforth,
+            whatever value of p is used remains the default until
+            this is called again. the new setting is placed in the left
+            end of the labellist at the time label_align is called
+            */
+            
+         if qtop = label_align then (  
+             
+            if length(targs) > 1 then
+               return(doerr(" use label_align(p) where p is l, r, or c ") ),
+               
+             pl : targs[1],
+             
+             if not inlistp(pl, [l,r,c] ) then
+                return(doerr(" use label_align(p) where p is l, r, or c ")),
+                
+             if pl = l then labadef : left,
+             if pl = r then  labadef : right,
+             if pl = c then labadef : center,
+             
+             labellist : append(labellist,[ label_alignment = labadef ] )),   
+        
+        /************** case ex1   ***********************/
+        
+        /* syntax:
+             ex1( expr, x, x1, x2, lc(c), lw(n) ,lk(string)  )
+            example:
+            ex1( u^3,u,-2,2,lc(blue), lw(5),lk("case 1") ) 
+             */
+             
+        if qtop = ex1 then ( 
+                  
+         /* the first four args are required for passing
+             to draw2d's explicit(..)
+              */
+           
+          nargs : length(targs), 
+          
+          if nargs < 4 then (
+		          print("ex1 syntax: ex1(expr,x,x1,x2,lc(c),lw(n),lk(string) ) "),
+                  print("first four args required"),
+                 return( doerr("only lc(c), lw(n), and lk(string) options can be included"))),
+				 
+          if nargs > 7 then return( doerr("ex1: only lc(c), lw(n), and lk(string) options allowed ")),
+		  
+          /* elist hold four args for explicit */
+          
+          elist : rest(targs,-(nargs-4) ),
+          
+          /* the first arg of elist should not be a list  */
+          
+          if listp(elist[1]) then
+               return( doerr("ex1: first arg should not be a list")),
+          
+          /*  the last three args of elist should be [var,var1,var2 ] */
+          
+            /* first make sure numerical arguments of hlim
+               are converted to floating point numbers, especially
+               things like [x,-%pi/2,%pi/2]    */
+               
+          hlim : float( rest(elist,1) ), 
+          
+           /* check first element of hlim is not a number */
+           
+           if numberp(hlim[1]) then
+                return( doerr("ex1: hlim=[x,x1,x2]: x is a number" ) ),           
+                          
+           /* check last two elements of hlim are numbers */
+
+          if not numberp(hlim[2]) then
+              return( doerr("ex1: hlim=[x,x1,x2]: x1 is not a number" ) ),
+           
+          if not numberp(hlim[3]) then
+              return( doerr("ex1: hlim=[x,x1,x2]: x2 is not a number" ) ),                       
+         
+          /* the first four arguments pass to draw2d's explicit function
+              as explicit(expr, x, x1, x2)  */
+          
+          ptsl : [apply( 'explicit, elist ) ],           
+         
+          /* pr is a list of zero, one, two, or three options  */          
+          pr : rest(targs,4),
+          lp : length(pr), 
+
+          if lp > 0 then (                                           
+               if not goodargs(pr,"ex1 options: lc(color), lw(n), lk(string) ",[lc,lw,lk] )
+                    then  return() ,
+             /* we know args are not atoms and are legal */                  
+                   setoptions(pr)),
+             /* merge ptsl with ptslist  */                
+          ptslist : append( ptslist, ptsl )),  /* end case ex1 */
+        
+        /************* case imp1 ****************************/
+        
+   /* syntax:
+             imp1( equation, x, x1, x2,y,y1,y2, lc(c), lw(n) ,lk(string)  )
+            example:
+            imp1(v^2= u^3,u,-2,2,v,-3,3, lc(blue), lw(5),lk("case 1") ) 
+             */
+             
+        if qtop = imp1 then ( 
+                  
+         /* the first seven args are required for passing
+             to draw2d's implicit(..)
+              */
+
+         nargs : length(targs), 
+         
+         if nargs < 7 then
+                   return( doerr("imp1 syntax: imp1(eqn,x,x1,x2,y,y1,y2,options)" ) ),
+
+          if nargs > 10 then return( doerr("imp1: only lc(c), lw(n), and lk(string) options allowed ")),
+          
+          /* elist hold seven args for implicit */
+          
+          elist : rest(targs,-(nargs-7) ), 
+          
+          /* the first arg of elist should not be a list  */
+          
+          if listp(elist[1]) then
+               return( doerr("imp1: first arg should not be a list")),
+               
+          /* the first arg of elist should be an equation */          
+          
+          if not eqncheck(elist[1]) then 
+                   return( doerr("imp1: first arg should be an equation " ) ),           
+          
+          /*  the last six args of elist should be [x,x1,x2,y,y1,y2 ] */
+          
+            /* first make sure numerical arguments of hlim
+               are converted to floating point numbers, especially
+               things like [x,-%pi/2,%pi/2]    */
+               
+          hlim : float( rest(elist,1) ), 
+                      
+          if numberp(hlim[1]) then
+                return( doerr("imp1(eqn,x,x1,x2,y,y1,y2,options): x must be a symbol" ) ), 
+
+          if not numberp(hlim[2]) then
+                 return( doerr("imp1(eqn,x,x1,x2,y,y1,y2,options): x1 must be a number" ) ),
+           
+          if not numberp(hlim[3]) then
+                 return( doerr("imp1(eqn,x,x1,x2,y,y1,y2,options): x2 must be a number" ) ),
+             
+          if numberp(hlim[4]) then
+                return( doerr("imp1(eqn,x,x1,x2,y,y1,y2,options): y must be a symbol" ) ), 
+            
+          if not numberp(hlim[5]) then
+                return( doerr("imp1(eqn,x,x1,x2,y,y1,y2,options): y1 must be a number" ) ),
+           
+          if not numberp(hlim[6]) then
+                return( doerr("imp1(eqn,x,x1,x2,y,y1,y2,options): y2 must be a number" ) ),
+         
+          /* the first seven arguments pass to draw2d's implicit function
+              */
+          
+          ptsl : [ apply('implicit, elist) ], 
+         
+         
+          /* pr is a list of zero, one, two, or three options  */
+          
+          pr : rest(targs,7),
+          lp : length(pr), 
+
+          if lp > 0 then (                                                        
+             if not goodargs(pr,"imp1 options: lc(color), lw(n), lk(string) ",[lc,lw,lk] )
+                    then  return() ,
+             /* we know args are not atoms and are legal */     
+             
+             setoptions(pr)),
+			 
+   /* merge ptsl with ptslist  */
+                
+          ptslist : append( ptslist, ptsl )),        /* end case imp1  */
+        
+        /*************** case contour ********************/
+        
+        /* syntax
+         contour(expr,x,x1,x2,y,y1,y2,crange(n,min,max),options )
+            or contour(expr,x,x1,x2,y,y1,y2, cvals(v1,v2,...), options  )
+          where options are lc(color), lw(n), and add(options = elements from 
+            the set [grid,xaxis,yaxis,xyaxes] )  
+        */
+            
+     if qtop = contour then ( 
+          
+          print("   contour working... "),
+                  
+         /* the first seven args will be used with a cval implied by the
+            last argument to provide args to draw2d's implicit(..)
+              */
+
+         nargs : length(targs), 
+         
+         if nargs < 8 then
+                   return( doerr("contour syntax: contour(expr,x,x1,x2,y,y1,y2,cvals(v1,v2,...),options )
+                            or contour(expr,x,x1,x2,y,y1,y2, crange(n,min,max),options )" ) ),
+
+          
+          /* elist is a list of the first seven args  */
+          elist : makelist( targs[jj],jj,1,7 ), 
+          
+          /* the first arg of elist should not be a list  */
+          
+          if listp(elist[1]) then
+               return( doerr("contour: first arg should be an expression depending on
+                            two variables ")),
+               
+          /* the first arg of elist should not be an equation */          
+          
+          if eqncheck(elist[1]) then 
+                   return( doerr("contour: first arg should be an expression " ) ),           
+          
+          /*  the last six args of elist should be hlim =  [x,x1,x2,y,y1,y2 ] */
+          
+            /* first make sure numerical arguments of hlim
+               are converted to floating point numbers, especially
+               things like [x,-%pi/2,%pi/2]    */
+               
+          hlim : float( rest(elist,1) ), 
+                      
+           if numberp(hlim[1]) then
+                      return( doerr("contour(expr,x,x1,x2,y,y1,y2,options): x must be a symbol" ) ), 
+
+          if not numberp(hlim[2]) then
+                      return( doerr("contour(expr,x,x1,x2,y,y1,y2,options): x1 must be a number" ) ),
+           
+          if not numberp(hlim[3]) then
+                     return( doerr("contour(expr,x,x1,x2,y,y1,y2,options): x2 must be a number" ) ),
+             
+          if numberp(hlim[4]) then
+                     return( doerr("contour(expr,x,x1,x2,y,y1,y2,options): y must be a symbol" ) ), 
+            
+          if not numberp(hlim[5]) then
+                     return( doerr("contour(expr,x,x1,x2,y,y1,y2,options): y1 must be a number" ) ),
+           
+          if not numberp(hlim[6]) then
+                     return( doerr("contour(expr,x,x1,x2,y,y1,y2,options): y2 must be a number" ) ),
+         
+          /* the first seven arguments pass to draw2d's implicit function
+              */
+          
+          /* pl is eighth arg and is either cvals(v1,v2,...) or crange(n,min,max)  */
+          
+          pl : targs[8], 
+          
+          if atom(pl) then
+                    return( doerr("contour eighth arg: cvals(v1,v2,...) or crange(n,min,max)" ) ),  
+          
+         /* construct ptsl list for the two cases possible  with the eighth arg */
+         
+         ptsl : [],
+         
+         if op(pl) = cvals then (  
+             tt : args(pl), 
+             for cval in tt do (
+                 ptl : hlim,
+                 ptl : cons( first(elist)=cval, ptl),
+                 ptsl : append(ptsl,[apply('implicit,ptl) ] )))
+         
+         else if op(pl) = crange then (  
+              tt : args(pl),
+              if length(tt) # 3 then
+                    return( doerr("contour last arg: cvals(v1,...) or crange(n,min,max)" ) ),  
+              cnum : first(tt),
+           
+              if not integerp(cnum) then
+                        return( doerr("crange(n,min,max): n must be literal integer, like 10" ) ),  
+              if cnum = 0 then
+                      return( doerr("crange(n,min,max): n cannot be zero " ) ), 
+              if not numberp(tt[2]) then
+                     return( doerr("crange(n,min,max): min must be a number" ) ), 
+              if not numberp(tt[3]) then
+                     return( doerr("crange(n,min,max): max must be a number" ) ), 
+              if tt[3] < tt[2] then
+                    return( doerr("crange(n,min,max): max must be greater than min " ) ), 
+              cdv : float( abs((tt[3] - tt[2])/cnum) ) , 
+              for kk thru cnum do (
+                 ptl: hlim,
+                 cval : tt[2] + (kk - 1)*cdv,
+                 ptl : cons( first(elist)=cval, ptl),
+                 ptsl : append(ptsl,[apply('implicit,ptl) ] )))
+         
+         else return( doerr("contour last arg: cvals(v1,...) or crange(n,min,max)" ) ),  
+         
+         
+         /* contour default: no grid and no xyaxes can be overridden
+            by add(grid, xyaxes) for example */
+            
+         mkgrid : false,   
+         mkxaxis : false,   
+         mkyaxis : false,
+         
+         
+         /* pr is a list of zero, one, two, or three options  */
+          
+          pr : rest(targs,8),
+          lp : length(pr), 
+          nlw : false,
+
+          if lp > 0 then ( 
+                                           
+             if not goodargs(pr,"contour options: lc(color), lw(n), add(options) ",[lc,lw,add] )
+                  then  return() ,
+                  
+             /* we know args are not atoms and are legal
+                 because we are using def line width = 1 for contour, we need
+                 to call setnlw and setnpc here */     
+
+             for kk thru lp do ( 
+               ct : pr[kk], 
+               ctop : op(ct),
+               ctargs : args(ct),
+               if ctop = lc then setnpc(ctargs),
+               if ctop = lw then 
+                   if length(ctargs)=1 then ( 
+                     nlw : true,
+                     ptsl :  cons(line_width= ctargs[1], ptsl ),
+                     ptsl : append( ptsl, [line_width = lwdef] ))                    
+                  else return( doerr("use lw(5) for example " )),
+               if ctop = add then 
+                 for ll thru length(ctargs) do (
+                   if ctargs[ll] = grid then mkgrid : true
+                   else if ctargs[ll] = xaxis then mkxaxis : true  
+                    else if ctargs[ll] = yaxis then mkyaxis : true
+                    else if ctargs[ll] = xyaxes then (
+                        mkxaxis: true,mkyaxis:true )
+                    else return( doerr("contour: add(grid,xaxis,yaxis,xyaxes) " ) )))),
+         
+         /* use default line width = 1 unless over-ridden by local lw(n) arg*/
+         
+         if not nlw then (
+             ptsl : cons(line_width = 1,ptsl ),
+             ptsl : append(ptsl, [line_width = lwdef] )), 
+			 
+   /* merge ptsl with ptslist  */            
+                
+          ptslist : append( ptslist, ptsl )),   /* end case contour  */                    
+        
+        
+        
+
+        
+        /************ case para **************************/
+        
+        /* interface to parametric 
+           syntax: para( xofu,yofu,u,umin,umax,lw(n),lc(c),lk(string) )
+           example:
+              para( 2*cos(u),u^2,u,0,2*%pi , lc(blue), lk("case 1") )
+              
+           to see this whole curve, need to add xr(-3,3), yr(0,40) to qdraw args
+           Naturally, you can use any symbol as the parameter.
+        */   
+        
+        if qtop = para then ( 
+           
+         /* the first five args are required for passing
+             to draw2d's parametric(..)
+              */
+           
+          nargs : length(targs), 
+          
+          if nargs < 5 then (
+		          print("para syntax: para(xofu,yofu,u,u1,u2,lc(c),lw(n),lk(string) ) "),
+                  print("first five args are required"),
+                  return( doerr("only lc(c), lw(n), and lk(string) options can be included"))),
+				  
+          if nargs > 8 then return( doerr("para: only lc(c), lw(n), and lk(string) options allowed ")),
+          /* elist holds five args for parametric */
+          
+          elist : rest(targs,-(nargs-5) ), 
+          
+          /* the first arg of elist should not be a list  */
+          
+          if listp(elist[1]) then
+               return( doerr("para: first arg should not be a list")),
+          
+          /*  the last three args of elist should be [var,var1,var2 ] */
+          
+            /* first make sure numerical arguments of hlim
+               are converted to floating point numbers, especially
+               things like [x,-%pi/2,%pi/2]    */
+               
+          ulim : float( rest(elist,2) ), 
+          
+           /* check first element of ulim is not a number */
+           
+           if numberp(ulim[1]) then
+                return( doerr("para: ulim=[var,var1,var2]: var is a number" ) ), 
+          
+                          
+           /* check last two elements of ulim are numbers */
+
+          if not numberp(ulim[2]) then
+               return( doerr("para: ulim=[var,var1,var2]: var1 is not a number" ) ),
+           
+          if not numberp(ulim[3]) then
+               return( doerr("para: ulim=[var,var1,var2]: var2 is not a number" ) ),
+             
+          
+         
+          /* the first five arguments pass to draw2d's parametric function
+                */
+          
+          ptsl : [apply( 'parametric, elist ) ],  
+         
+          
+          
+        /* pr is a list of zero, one, two, or three options  */
+          
+          pr : rest(targs,5),
+          lp : length(pr), 
+
+          if lp > 0 then (             
+                                           
+             if not goodargs(pr,"para options: lc(color), lw(n), lk(string) ",[lc,lw,lk] )
+                  then  return() ,
+                  
+             /* we know args are not atoms and are legal */     
+             
+             setoptions(pr) ),
+            
+          
+  /* merge ptsl with ptslist  */
+                
+          ptslist : append( ptslist, ptsl )),
+        
+/***************  case polar  *****************/
+
+/* interface to draw2d's polar(...)
+
+    syntax: polar(roftheta,theta,thetamin,thetamax,lc(c),lw(w),lk(string) ) 
+        with th, th1, th2 in radians
+    
+     the 2d plot has x = r(th)*cos(th),  y = r(th)*sin(th)
+     
+     example:
+       polar( 10/theta,theta,1, 2*%pi,lc(blue), lw(5),lk("hyperbolic spiral") )
+       
+       */
+       
+        if qtop = polar then ( 
+           
+         /* the first four args are required for passing
+             to draw2d's polar(..)
+              */
+           
+          nargs : length(targs), 
+          
+          if nargs < 4 then (
+		          print("polar syntax: polar(roftheta,theta,thetamin,thetamax,lc(c),lw(w),lk(string) ) "),
+                  print("first four args are required"),
+                  return( doerr("only lc(c), lw(n), and lk(string) options can be included"))),
+          if nargs > 7 then return( doerr("polar: only lc(c), lw(n), and lk(string) options allowed ")),
+          /* elist holds four args for polar */
+          
+          elist : rest(targs,-(nargs-4) ), 
+          
+          /* the first arg of elist should not be a list  */
+          
+          if listp(elist[1]) then
+               return( doerr("polar: first arg should not be a list")),
+          
+          /*  the last three args of elist should be [var,var1,var2 ] */
+          
+            /* first make sure numerical arguments of hlim
+               are converted to floating point numbers, especially
+               things like [x,-%pi/2,%pi/2]    */
+               
+          ulim : float( rest(elist,1) ), 
+          
+           /* check first element of ulim is not a number */
+           
+           if numberp(ulim[1]) then
+                return( doerr("polar: ulim=[var,var1,var2]: var is a number" ) ), 
+          
+                          
+           /* check last two elements of ulim are numbers */
+
+          if not numberp(ulim[2]) then
+               return( doerr("polar: ulim=[var,var1,var2]: var1 is not a number" ) ),
+           
+          if not numberp(ulim[3]) then
+               return( doerr("polar: ulim=[var,var1,var2]: var2 is not a number" ) ),
+             
+          
+         
+          /* the first four arguments pass to draw2d's polar function
+                */
+          
+          ptsl : [apply( 'polar, elist ) ], 
+          
+        /* pr is a list of zero, one, two, or three options  */
+          
+          pr : rest(targs,4), 
+          lp : length(pr), 
+
+          if lp > 0 then (             
+                                           
+             if not goodargs(pr,"polar options: lc(color), lw(n), lk(string) ",[lc,lw,lk] )
+                  then  return() ,
+                  
+             /* we know args are not atoms and are legal */     
+             
+             setoptions(pr)),
+            
+          
+  /* merge ptsl with ptslist  */
+                
+          ptslist : append( ptslist, ptsl )),   /* end case polar  */        
+
+               
+
+           
+         /***************** case circle *********************/
+         
+         /* syntax:
+              circle( x0,y0,radius, lc(c), lw(n), fill(cc) ),
+              args lc, lw, and fill are optional and can be in any order
+              */
+              
+         if qtop = circle then (
+        
+         /* the first three args must be numbers
+           which will be passed to draw2d's ellipse function
+           in the order (x0,y0,radius,radius,0, 360)   */
+           
+          nargs : length(targs), 
+          
+          if nargs < 3 then return( doerr("circle: at least three args needed")),
+          elist : rest(targs,-(nargs-3) ),
+          
+          pr : rest(targs,3),
+          lp : length(pr), 
+          
+          ptsl : [ ellipse(elist[1],elist[2],elist[3],elist[3],0,360) ], 
+          
+                             
+          /* if any options,include them in ptsl list  */
+           /* work through valid text args;
+                 if lp = 0 nothing is done here 
+                 only draws solid lines;
+                 legal options are lc, lw, and fill  */
+                 
+          if lp > 0 then (    
+                                           
+             if not goodargs(pr,"circle options: lc(color), lw(n), fill(color) ",[lc,lw,fill] )
+                  then  return() ,
+             /* we know args are not atoms and are legal */     
+             
+             setoptions(pr)),
+                           
+          if anerr then return(),              
+                                                  
+            /* merge ptsl with ptslist  */
+                
+          ptslist : append( ptslist, ptsl )),
+
+        /*******************  case ellipse  *****************/
+        
+        
+        /* syntax:
+                 ellipse(xc,yc,xsma,ysma,th0,dth, lc(c),lw(n),fill(cc)  ),
+               args lc, lw, fill are optional and can be in
+               any order   */
+        
+        if qtop = ellipse then (
+        
+         /* the first six args must be numbers
+           corresponding to 
+           (xc,yc,xsa,ysa,th0, dth)   */
+           
+          nargs : length(targs), 
+          
+          if nargs < 6 then return( doerr("ellipse: at least six args needed")),
+          elist : rest(targs,-(nargs-6) ),
+          
+          pr : rest(targs,6), 
+          lp : length(pr), 
+          
+          /* the first six arguments pass to draw2d's ellipse function  */
+          
+          ptsl : [ apply('ellipse,elist) ], 
+          
+                              
+          /* if any options,include them in ptsl list  */
+           /* work through valid text args;
+                 if lp = 0 nothing is done here 
+                 only draws solid lines;
+                 legal options are lc, lw, and fill  */
+                 
+          if lp > 0 then (
+                  if not goodargs(pr,"ellipse options: lc(color), lw(n), fill(color) ",[lc,lw,fill] )
+                       then  return() ,
+                 /* we know args are not atoms and are legal */     
+             
+                  setoptions(pr)),
+               
+          if anerr then return(),
+
+            /* merge ptsl with ptslist  */
+                
+          ptslist : append( ptslist, ptsl )),           /*  end case ellipse */ 
+               
+               
+            
+           /************ case line  **************/
+           /* line calls draw2d's points  */
+           /* line syntax:
+              line( x1,y1,x2,y2, lc(c), lw(n),lk(string) ),
+                args lc, lw, and lk are optional
+                and can be in any order after the first
+                four numbers */
+           
+           if qtop = line then (
+           
+              
+              nargs : length(targs), 
+          
+              if nargs < 4 then return( doerr("line: at least four args needed")),
+              elist : rest(targs,-(nargs-4) ),
+              if length(elist) # 4 then return( doerr("line: at least four args needed")),
+          
+          
+          /* the first four arguments pass to draw2d's points function 
+            as points( [ [x0,y0],[x1,y1] ] ) */
+                               
+              ptsl :  [ points([ rest(elist,-2),rest(elist,2)])  ], 
+             
+              pr : rest(targs,4), 
+              lp : length(pr),
+              
+              
+              if lp > 0 then (  
+            
+               if not goodargs(pr,"line options: lc(color), lw(n), lk(string) ",[lc,lw,lk] )
+                  then  return() ,
+             /* we know args are not atoms and are legal */     
+             
+             setoptions(pr)),                 
+              
+
+            /* complete case line: 
+                we need to turn off points_joined and point_type to their 
+                 default values so a later call to pts(..)
+                 defaults to unconnected points of type pttdef  */
+            
+              ptsl :  cons(points_joined=true, ptsl ),
+              ptsl :  cons(point_type = -1, ptsl ),
+              ptsl : append(ptsl,[points_joined = false,point_type=pttdef] ),
+               
+                            
+            /* merge ptsl with ptslist  */
+                
+              ptslist : append( ptslist, ptsl )), 
+           
+           
+/*********** case vector *************************************/
+
+/*  syntax: vector([x,y],[dx,dy], ha(thdeg), hb(v), hl(v),ht(t), lw(n), lc(c), lk(string) )
+         draws a vector with components [dx,dy] starting at [x,y]. The first two
+         list arguments are required, all others are optional and can be entered in
+         any order after the first two required arguments.
+         The default head angle is 30 deg, change to 45 deg using ha(45) for example.
+         The default "head both" value is f for false, use hb(t) to set it to true,
+                   and hb(f) to return to false.
+         The default "head length" is 0.5, use hl(0.7) to change to 0.7.
+         The default "head type" is "nofilled"; use ht(e) for "empty", ht(f) for "filled",
+                 and ht(n) to change back to "nofilled".           
+         The default line width is 3, use lw(5) to change to 5.
+         The default line color is black, use lc(brown) to change to brown.
+         The default is no key string. use lk("A1") for example to create a text string for key.
+         */
+         
+      if qtop = vector then (
+              
+              nargs : length(targs), 
+          
+              if nargs < 2 then return( doerr("vector: at least two args needed")),
+         /* elist is a list containing the first two arguments */
+              elist : rest(targs,-(nargs-2) ),
+         
+         /* check first two args to vector are lists */
+         
+              for jq thru 2 do 
+                   if not listp(elist[jq]) then
+                   return(doerr("vector([x,y],[dx,dy],options )") ),
+               
+         
+              ptsl : [ apply( 'vector, elist ) ], 
+             
+              pr : rest(targs,2), 
+              lp : length(pr),
+              
+              if lp > 0 then (  
+            
+                   if not goodargs(pr,"vector options: lc(color), lw(n), lk(string), 
+                            ha(thdeg), hb(v), hl(v), ht(v) ",[lc,lw,lk,ha,hb,hl,ht] )
+                           then  return(),
+           /* we know args are not atoms and are legal */  
+           /*  modify ptsl if any lw,lc,or lk args */   
+             
+              setoptions(pr),
+           
+           /* look for args ha,hb,hl, and ht here*/
+           
+              for jq thru lp do (
+                   if anerr then return(), 
+
+                   tt : pr[jq], 
+                   ttop : op(tt),
+                   ttargs : args(tt),
+               
+                   if ttop = ha then (
+               
+                       if length(ttargs) #1 then
+                             return( doerr("vector: use ha(45) for example " ) ),
+                     
+                       pl : float( ttargs[1] ),   
+                  
+                       if not numberp(pl) then
+                             return( doerr("vector: use ha(45) for example " ) ),
+                                   
+                      ptsl :  cons(head_angle = pl, ptsl)),
+               
+                              
+                   if ttop = hb then (
+               
+                       if length(ttargs) #1 then
+                                    return( doerr("vector: use hb(t) or hb(f) " ) ),
+                     
+                       pl : ttargs[1],
+                     
+                       if not inlistp( pl, [t,f] ) then
+                                 return( doerr("vector: use hb(t) or hb(f) " ) ),
+                       
+                       if pl = t then ptsl :  cons(head_both = true, ptsl) , 
+                   
+                       if pl = f then ptsl :  cons(head_both = false, ptsl)),
+                   
+                   if ttop = hl then (
+               
+                       if length(ttargs) #1 then
+                                  return( doerr("vector: use hl(0.7) for example " ) ),
+                     
+                       pl : float( ttargs[1] ),  
+                  
+                       if not numberp(pl) then 
+                                     return( doerr("vector: use hl(0.7) for example " ) ),                
+                                   
+                       ptsl :  cons(head_length = pl, ptsl)),   
+                  
+                   if ttop = ht then (
+               
+                       if length(ttargs) #1 then
+                                      return( doerr("vector: use ht(e), ht(f), or ht(n) " ) ),
+                     
+                       pl : ttargs[1],
+                     
+                       if not inlistp( pl, [e,f,n] ) then
+                                     return( doerr("vector: use ht(e), ht(f), or ht(n) " ) ),
+                       
+                       if pl = e then ptsl :  cons(head_type = empty, ptsl) , 
+                   
+                       if pl = f then ptsl :  cons(head_type = filled, ptsl),
+                   
+                       if pl = n then ptsl :  cons(head_type = nofilled, ptsl)))),
+         
+         /* merge ptsl with ptslist  */
+                
+                ptslist : append( ptslist, ptsl )),  /*  end case  vector  */
+         
+         
+         
+           
+/*********** case arrowhead  ********************************/
+
+/*  syntax  arrowhead( x, y, theta-deg, s, lc(c), lw(n) )
+              first four args required and must be numbers.
+              theta is angle in degrees and the direction
+                 the arrowhead is to point relative to the
+                 positive x axis, ccw from x axis taken as
+                 a positive angle.
+              s is the length of the sides of the arrowhead.
+              args lc and lw are optional, default will
+              be defcolor and lwdef
+              The opening half angle is hardwired to be
+              phi = 25 deg = 0.44 radians              
+            example:
+              arrowhead(1,1,45,0.3,lc(red) )
+              
+              The geometry will look better if the xrange
+              is about 1.4 times the yrange.
+              
+      */
+      
+         if qtop = arrowhead then (
+           
+              
+             nargs : length(targs), 
+          
+             if nargs < 4 then return( doerr("try arrowhead(0,0,45,0.3) for example ")),
+             elist : float( rest(targs,-(nargs-4) ) ),
+             
+             /* all four args must be numbers */
+             for jq thru 4 do
+                if not numberp(elist[jq]) then
+                         return( doerr("arrowhead: first 4 args must be numbers" ) ),                  
+             if anerr then return(),
+                                       
+             phi : 0.44,
+             xx : elist[1],
+             yy : elist[2],
+             /* convert angle to radians here */
+             th : float(%pi*elist[3]/180),
+             sa : elist[4],
+             ax : sa*cos(th - phi),
+             ay : sa*sin(th - phi),
+     
+             bx : sa*cos(th + phi),
+             by : sa*sin(th + phi),
+             
+                               
+                               
+             ptsl :  [ points([ [ xx - ax, yy - ay ],[ xx, yy ] ] ),
+                         points( [ [xx - bx, yy - by ], [xx, yy ] ] )  ], 
+             
+              pr : rest(targs,4), 
+              lp : length(pr),
+              
+              
+            if lp > 0 then (  
+            
+               if not goodargs(pr,"arrowhead options: lc(color), lw(n)  ",[lc,lw ] )
+                  then  return() ,
+             /* we know args are not atoms and are legal */     
+             
+             setoptions(pr)),
+              
+
+            /* complete case arrowhead: 
+                we need to turn off points_joined and point_type to their 
+                 default values so a later call to pts(..)
+                 defaults to unconnected points of type pttdef  */
+            
+            ptsl :  cons(points_joined=true, ptsl ),
+            ptsl :  cons(point_type = -1, ptsl ),
+            ptsl : append(ptsl,[points_joined = false,point_type=pttdef] ),
+               
+                            
+            /* merge ptsl with ptslist  */
+                
+            ptslist : append( ptslist, ptsl )),         /*  end case arrowhead  */
+              
+              
+              
+              
+              
+           /************ case rect **************/
+           /* rect syntax:
+              rect( x0,y0,x1,y1, lc(c), lw(n), fill(cc)  )  */
+           
+           if qtop = rect then (   
+
+              /*  use draw2d's rectangle  function  */
+              /* qdraw args: can have more than one rect()  */
+              
+              /* first four args of rect = (x0,y0,x1,y1)  */
+              /* optional args: lc(color), lw(n), fill(color)  */
+              /* overrides default color = black
+                 and default linewidth lwval 
+                 and default no fill with interior color  */
+              /* ptsl = temp list for one call to rect  */
+           
+                           
+                       
+            /* the first four args must be numbers
+                    corresponding to 
+                              (x0,y0,x1,y1)   */
+           
+               nargs : length(targs), 
+          
+               if nargs < 4 then return( doerr("rect: at least four args needed")),
+             
+               elist : rest(targs,-(nargs-4) ),
+             
+               if length(elist) # 4 then return( doerr("rect: at least four args needed")),
+          
+               pr : rest(targs,4), 
+               lp : length(pr), 
+          
+          /* the first four arguments pass to draw2d's rectangle function 
+            as rectangle( [x0,y0],[x1,y1] ) */
+                               
+               ptsl :  [ rectangle( rest(elist,-2),rest(elist,2) )  ], 
+
+              
+              /* work through valid text args;
+                 if lp = 0 nothing is done here 
+                 only draw solid lines;
+                 legal options are lc, lw, and fill  */
+                 
+               if lp > 0 then (
+           
+               /* check for valid args  */
+           
+                   if not goodargs(pr,"rect options: lc(color), lw(n), fill(color) ",[lc,lw,fill] )
+                                  then  return() ,
+             /* we know args are not atoms and are legal */     
+             
+                   setoptions(pr)),  
+                                 
+               if anerr then return(),                          
+         
+            /* merge ptsl with ptslist  */
+                
+               ptslist : append( ptslist, ptsl )),      /*  end case rect */ 
+           
+           
+           
+           /************ case poly **************/
+           
+           if qtop = poly then (
+              /*  use draw2d's polygon  function  */
+              /* qdraw args: can have more than one poly()  */
+              
+              /* first arg of poly = [ [x0,y0], [x1,y1],... ] 
+                 are vertices of the polygon  */
+                 
+              /* optional args: lc(color), lw(n), fill(color)  */
+              /* overrides default color = black
+                 and default linewidth lwval 
+                 and no fill with interior color  */
+              /* ptsl = temp list for one call to poly  */
+           
+              /* ptsl : [], */
+              
+                            
+              /* first arg must be list of two element lists  */
+               pl : first(targs), 
+              
+               if not listp(pl) then
+                        return( doerr("first arg of poly:[ [x0,y0],[x1,y1],...]" ) ),
+                
+               pl1 : first(pl),
+              
+               if not listp(pl1) then
+                       return( doerr("first arg of poly:[ [x0,y0],[x1,y1],...]" ) ),
+              
+               if length(pl1) # 2 then
+                     return( doerr("first arg of poly:[ [x0,y0],[x1,y1],...]" ) ),
+                
+              /* ptsl : append( ptsl, [ polygon(pl) ] ),   */
+               ptsl : [ polygon(pl) ],
+           
+               pr : rest(targs), 
+             
+               lp : length(pr),
+              
+              /* work through valid text args;
+                 if lp = 0 nothing is done here 
+                 only draw solid lines;
+                 legal options are lc, lw, and fill  */
+
+           if lp > 0 then (
+           
+               /* check for valid args  */
+           
+               if not goodargs(pr,"poly options: lc(color), lw(n), fill(color) ",[lc,lw,fill] )
+                  then  return() ,
+             /* we know args are not atoms and are legal */     
+             
+               setoptions(pr)), 
+           
+           if anerr then return(),
+
+            /* merge ptsl with ptslist  */
+                
+           ptslist : append( ptslist, ptsl )),    
+           
+           
+                                                      
+           /********** case pts *******************/
+           
+           
+           if qtop = pts then (
+
+           
+         /* ptsl = temp list for one call to pts  */
+           
+         /* first arg must be list of points  */
+               pl : first(targs),               
+                           
+               if not listp(pl) then
+                    return( doerr("first arg of pts must be a list" ) ),
+                  
+               if length(pl) = 2 then   /* this is true for both of the illust. cases */
+                                if not listp( pl[1] ) then pl : [pl],
+                       
+               ptsl : [ points(pl) ], 
+               
+               /* now deal with possible optional args to pts(...)  */
+               
+               pr : rest(targs),
+             
+               lp : length(pr),
+              
+               if lp > 0 then (
+              
+              /* check for valid args  */
+              
+                   if not goodargs(pr, "pts options: pc(color), ps(size), pk(string), pt(type), pj(lw) ",
+                                     [pc,ps,pt,pj,pk] )  then  return() ,
+                  
+             /* we now know all args are not atoms and are legal */                   
+              
+                   for jq thru lp do (
+                       if anerr then return(), 
+
+                       tt : pr[jq], 
+                       ttop : op(tt),
+                       ttargs : args(tt),
+               
+                              
+                       if ttop = pc then 
+                           if length(ttargs)=1 then (
+                                   ptsl :  cons(color=ttargs[1], ptsl) ,
+                                  ptsl : append( ptsl, [color = coldef] ))
+                           else return( doerr("pts: use pc(blue) for example" ) ),
+                  
+                  
+                       if ttop = ps then  
+                           if length(ttargs)=1 then ( 
+                                ptsl : cons(point_size=ttargs[1], ptsl),
+                                ptsl : append( ptsl, [point_size = ptsdef] ))                        
+                           else return( doerr("pts: use ps(2) for example " ) ),
+                                  
+                       if ttop = pt then  
+                           if length(ttargs)=1 then ( 
+                                  ptsl : cons(point_type=ttargs[1], ptsl),
+                                  ptsl : append( ptsl, [point_type = pttdef] ))                       
+                          else return( doerr("pts: use pt(3) for example " ) ),
+                                
+                       if ttop = pj then 
+                           if length(ttargs)=1 then (
+                                  if ttargs[1] # lwdef then
+                                        ptsl :  cons(line_width=ttargs[1], ptsl),
+                                  ptsl :  cons(points_joined=true, ptsl),
+                                  ptsl : append( ptsl,[ points_joined = false ] ),
+                                  if ttargs[1] # lwdef then
+                                               ptsl : append( ptsl,[line_width = lwdef] ))
+                           else return( doerr("pts: use pj(2) for example " ) ),
+
+                       if ttop = pk then 
+                           if length(ttargs)=1 then (
+                                 ptsl : cons(key = ttargs[1], ptsl),
+                                 ptsl : append(ptsl, [ key = "" ] ))                        
+                          else return( doerr("pts: use pk(\"case 1\") for example " )))),   
+              
+               if anerr then return(),     
+
+                /* merge ptsl with ptslist  */
+                
+               ptslist : append( ptslist, ptsl )),  /* end case pts  */ 
+           
+           /*********** case errorbars  *******************/
+           
+           /**  this is meant to be used together with pts(...), as in
+              qdraw( pts( ptl, options), errorbars( ptl, dyl, options ),...),
+              where we pass the same list of points (ptl) to both pts and errorbars.
+              The list dyl can be a single number (as a list or not a list) in which case
+              it represents the same +/- dy value of error bar for all the
+              points in ptl. Otherwise, one should have a list of separate
+              error estimates ( +/- dy) for each of the supplied list of points
+              in the form dyl = [dy1, dy2, ... , dyN], which would supply error bars
+              for the ptl = [ [x1,y1],[x2,y2],...,[xN,yN] ] .
+              default line width is 1 for the error bars, and
+              we suggest use of ps(1) with pts(...) .
+              options for errorbars are lw(n) and lc(color)  
+              */
+              
+
+              
+           if qtop = errorbars then (
+             
+               if length(targs) = 1 then
+                      return( doerr("errorbars(ptl,dyl,options" ) ),
+             
+             /* first arg must be list of points  */
+               ptl : first(targs), 
+              
+                           
+               if not listp(ptl) then
+                        return( doerr("first arg of errorbars must be a list of points" ) ),
+               le : length(ptl), 
+                  
+               if le = 2 then   /* this is true for both of the illust. cases */
+                   if not listp( ptl[1] ) then ptl : [ptl],
+                  
+               /* redefine le now that we have a list of lists in all cases */
+               le : length(ptl), 
+                                    
+               dyl : second(targs), 
+             
+               if not listp(dyl) then dyl : [dyl],                   
+                  
+               ptsl:[points_joined=true,point_type=-1 ],
+
+               if length(dyl) = 1 then (
+                /* construct case pts all have same error bars */ 
+                   dy : dyl[1], 
+                   for jq thru length(ptl) do  
+                       ptsl : append(ptsl, [points( [ [ptl[jq][1],ptl[jq][2]-dy],[ptl[jq][1],ptl[jq][2]+dy]])]))
+                
+               else  (
+                 /* construct case separate error bars for each point  */ 
+                  
+                   if length(dyl) # le then
+                        return( doerr("number of errorbars must equal number of points" ) ),
+                   for jq thru length(ptl) do 
+                       ptsl : append(ptsl,[points( [ [ptl[jq][1],ptl[jq][2]-dyl[jq]],[ptl[jq][1],ptl[jq][2]+dyl[jq] ] ])])),
+                 
+
+              /* look for possible options */
+              
+              /* default errorbars line width  */
+              
+               errblw : 1,
+              
+               if length(targs) > 2 then (
+                   pr : rest(targs,2), 
+                
+                   if not goodargs(pr, "errorbars options: lc(c), lw(n) ", [lc,lw] )  then  return() ,
+                
+                /* we now know options are non-atomic and valid */
+                                
+                   lp : length(pr), 
+                
+                   for kk thru lp do (
+                  
+                       tt : pr[kk],
+                       ttop : op(tt),
+                       ttargs : args(tt),                 
+                       if ttop = lc then (
+                           if length(ttargs) # 1 then
+                                  return( doerr("errorbars: use lc(red) for example" ) ),
+                           ptsl : cons( color = ttargs[1], ptsl ),
+                           ptsl : append(ptsl, [color = coldef ] )),
+                       if ttop = lw then (
+                           if length(ttargs) # 1 then
+                                   return( doerr("errorbars: use lw(2) for example" ) ),
+                           errblw : ttargs[1]))),
+              
+               ptsl : cons( line_width = errblw, ptsl),
+
+                 /* we have now constructed the error bar list ptsl                  
+                  end list by returning to pts defaults
+                   */
+                  
+               ptsl : append(ptsl,[points_joined=false,point_type=pttdef,line_width = lwdef] ),
+                 
+               if anerr then return(),     
+
+                /* merge ptsl with ptslist  */
+                
+               ptslist : append( ptslist, ptsl )),  /* end case errorbars  */
+           
+           
+                                
+             /************  case pic  *****************/
+             /* type  can be eps, jpg, or png  */
+             /*  syntax:  pic( type , fname , font(string, size) ) 
+                 first two args required, font(..) arg optional 
+               example: pic( eps, "case1" ) 
+               will generate file case1.eps in folder where
+               xmaxima was started up, with default font and fontsize which
+               can't be changed unless a ps font has been specified.
+               pic( eps, "case1", font("Times-Roman",20) ) will generate 
+               case1.eps with ps true type font Times-Roman
+               with font size 20.
+               */
+               
+             
+           if qtop = pic then ( 
+          
+             
+               if npic then
+                     return( doerr("can only be one pic(...) arg to qdraw" ) ),
+                     
+               npic : true,       
+               nargs : length(targs),
+             
+               if (nargs < 2) or (nargs > 3) then
+                        return( doerr("pic args: type ,fname , font(string,size);
+                                    type and fname required, font() optional " ) ),
+                        
+               pictype : targs[1], 
+             
+               if not inlistp(pictype,[eps,eps_color,jpg,png]) then
+                     return( doerr("pic types are eps, eps_color, jpg, and png " ) ),       
+                
+               if pictype = eps then pictype : eps_color,   
+                
+               fnamestr : targs[2],
+             /* check filename string  */
+               
+               if not stringp(fnamestr) then
+                     return( doerr("pic file name must be in double quotes " ) ),
+                 
+             /* check for period in string  */ 
+              
+               fnamelst : charlist(fnamestr),
+                 
+               for kk thru length(fnamelst) do (
+                   if fnamelst[kk] = "." then
+                       return( doerr("pic file name string cannot contain a period" ) )),
+               
+               if anerr then return(),
+                   
+             /* filename tests passed, supplement piclist  */
+               piclist : append(piclist, [terminal = pictype, file_name = fnamestr] ),
+              
+               if nargs = 3 then (
+                   tt : targs[3],
+                   ttop : op(tt),
+                   if ttop # font then
+                             return( doerr("pic 3rd arg: font(string,size) " ) ),
+                   ttargs : args(tt),
+                   if length(ttargs) # 2 then
+                              return( doerr("pic 3rd arg: font(string,size)" ) ),
+                      
+                   fntstr : ttargs[1], 
+                    
+                /* check filename string  */
+               
+                   if not stringp(fntstr) then
+                             return( doerr("font string must be in double quotes " ) ),
+              
+                   fntsize : ttargs[2], 
+                   if not integerp(fntsize) then
+                            return( doerr("pic: font syntax: size must be a positive integer " ) ), 
+                      
+                /* complete case font */
+                   piclist : append(piclist,[font = fntstr, font_size = fntsize] ))),  /* end case pic */
+           
+           /***************** case more  ****************/
+           
+           if qtop = more then morelist : append(morelist, targs)),   /* end scan 3 do loop  */       
+       
+       if anerr then return(),
+
+        /* if no syntax error, complete drlist */
+         
+           /* default value nticks=5 will result in jaggies for
+                explicit functions which are changing rapidly,
+                  increase to nticksdef here  */
+          
+       drlist : cons( nticks = nticksdef, drlist),        
+           
+       if mkgrid then drlist : cons( grid = true, drlist ),       
+       
+           /* draw2d's default value of ip_grid_in is [5,5] with
+                some jaggies as a result for implicit plots;
+                the larger you make these, the longer it takes
+                     for the plot  */
+          
+       drlist : cons(ip_grid_in = [ipgriddef,ipgriddef], drlist),
+           
+                  
+            /* append more(...) args without review */
+       if length(morelist) > 0 then drlist : append(drlist, morelist), 
+           
+              /*    include ptslist after morelist    */
+           
+       drlist : append(drlist, ptslist),           
+       
+           /* for no axes, use cut(all) or cut(xyaxes) or cut(yaxis) or cut(xaxis)  */
+           
+       if mkxyaxes and mkxaxis then drlist : append(drlist,[xaxis=true,xaxis_width=2] ),
+       if mkxyaxes and mkyaxis then drlist : append(drlist,[yaxis=true,yaxis_width=2] ),
+           
+           /* to remove edge axes use cut(all) or cut(edge) 
+              since this removes tick marks, it will also remove
+               the grid   */
+       if not mkedge then  
+              drlist : append(drlist,
+                  [xtics = 'none, ytics = 'none,
+                  axis_bottom=false,axis_top=false, axis_left=false,
+                                          axis_right=false] ),
+
+           
+           /* append piclist in case not empty  */
+       if length(piclist) > 0 then drlist : append(drlist, piclist ),
+           
+/* if there are label ( [s,x,y],...) entries, append them to drlist
+   and make the default color black.
+ */
+
+       if nlabel then (
+	         drlist : append(drlist,[color = black]),
+	         drlist : append(drlist,labellist)),
+       
+           /* add range list to beginning of drlist */
+           
+       drlist : append(rnglist,drlist ) ,
+           
+           /* note: could have used drlist:append(drlist,rnglist) to
+               get range info at end of list instead */  
+               
+ /* debug: 
+            print(" end value drlist = ",drlist ),     
+ */           
+
+            /* qdraw1 returns the list drlist */
+       drlist)$   /*  end qdraw1  */
+      
+qdraw([qargs]) := ( apply('qdraw1,qargs),
+                      if listp(%%) then apply('draw2d,%%) ) $
+      
+            
+     
+/**************** qdensity *************************/
+
+/*  qdensity (expr, [x,x1,x2,dx], [y,y1,y2,dy], [ palette(p), pic (type, filename)] ),
+     if expr depends on the symbols x and y, produces a density plot in the
+	 default "shades of blue" color scheme palette (1,3,8) if only the first
+	 three args are present. Otherwise you can use palette(gray), palette(color),
+	 palette(8,3,1), with the latter choice producing "shades of red", or any other
+	 set palette (n1,n2,n3) containing positive integers.
+	
+	If you already have a matrix of x-y values and want a density plot,
+	use qdensity1  (see below).
+*/	
+
+/*  new def of qdensity calls qdensity1  */
+
+qdensity([qda]) :=
+block( [ ddrlist,dxx,dyy, imatrix,ii,jj, lqda,nxx,nyy,
+                  qexpr,xrdx,xx,xx1,xx2, xxlist,xyvals,yy, yy1, yy2, yrdy,yylist ],                      
+       
+    /*  qda is the list of arguments given to qdensity */    
+     /* lqda is the number of list elements in qda  */          
+       lqda : length(qda), 
+     
+       if lqda > 5 then 
+              return( "qdensity(f(x,y),[x,x1,x2,dx],[y,y1,y2,dy],palette(p),pic(..)),
+                             palette and pic are optional" ),
+     
+     /* first three args are used for args to draw2d's image(..) */
+     
+       if lqda < 3 then
+            return( "qdensity(f(x,y),[x,x1,x2,dx],[y,y1,y2,dy],palette(p),pic(..)),
+                             palette and pic are optional" ),
+     
+       qexpr : qda[1], 
+       xrdx : qda[2],  
+       xx : xrdx[1],
+       xx1 :  xrdx[2],
+       xx2 : xrdx[3],
+       dxx : xrdx[4], 
+     
+       yrdy : qda[3], 
+       yy : yrdy[1],
+       yy1 : yrdy[2],
+       yy2 : yrdy[3],
+       dyy : yrdy[4], 
+      
+       nxx : floor( (xx2 - xx1)/dxx ),  
+       nyy : floor( (yy2 - yy1)/dyy ), 
+     
+       xxlist : float( makelist( xx1 + dxx*ii,ii,1,nxx ) ), 
+     
+       yylist : reverse( float( makelist(yy1 + dyy*ii,ii,1,nyy ) ) ) , 
+     
+       xyvals : float( makelist( subst( yy=yylist[jj],
+                makelist( subst( xx = xxlist[ii],qexpr),ii,1,length(xxlist)) ),jj,1,length(yylist) ) ),         
+     
+       imatrix : apply( 'matrix, xyvals ),     
+	   ddrlist : [ imatrix, [xx1,xx2], [yy1,yy2] ],
+	   if lqda > 3 then ddrlist : append (ddrlist, rest (qda,3)),
+	   apply ('qdensity1, ddrlist))$
+	   
+
+
+
+
+
+/* old definition of qdensity  
+
+qdensity([qda]) :=
+block( [anerr, doerr, drlist,dxx,dyy,fnamelst,fnamestr,
+             ii,imatrix,jj,kk, lqda,nxx,nyy,paldef,pra ,prb,pictype,
+                  qexpr,tt,ttop,ttargs,xrdx,xx,xx1,xx2,
+                  xxlist,xyvals,yy, yy1, yy2, yrdy,yylist ],
+   
+          /*  write standard form error message  */   
+       local (doerr),
+       doerr(msg) := (anerr:true,print("...syntax error"),print(msg),false),
+     
+     /* first go, don't check args */
+     
+     /* palette default value is sort of blue */
+     
+       paldef : [1,3,8], 
+     
+       anerr : false,
+     
+              
+    /*  qda is the list of arguments given to qdensity */   
+ 
+     /* lqda is the number of arguments to qdensity */      
+     
+       lqda : length(qda), 
+     
+       if lqda > 5 then 
+              return( doerr("qdensity(f(x,y),[x,x1,x2,dx],[y,y1,y2,dy],palette(p),pic(..)),
+                             palette and pic are optional" ) ),
+     
+     /* first three args used for args to draw2d's image(..) */
+     
+       if lqda < 3 then
+            return( doerr("qdensity(f(x,y),[x,x1,x2,dx],[y,y1,y2,dy],palette(p),pic(..)),
+                               palette and pic are optional " ) ),
+      
+       pra : float( rest(qda,-(lqda-3) ) ) , 
+     
+       qexpr : pra[1], 
+       xrdx : pra[2],  
+       xx : xrdx[1],
+       xx1 :  xrdx[2],
+       xx2 : xrdx[3],
+       dxx : xrdx[4], 
+     
+       yrdy : pra[3], 
+       yy : yrdy[1],
+       yy1 : yrdy[2],
+       yy2 : yrdy[3],
+       dyy : yrdy[4], 
+      
+       nxx : floor( (xx2 - xx1)/dxx ),  
+       nyy : floor( (yy2 - yy1)/dyy ), 
+     
+       xxlist : float( makelist( xx1 + dxx*ii,ii,1,nxx ) ), 
+     
+       yylist : reverse( float( makelist(yy1 + dyy*ii,ii,1,nyy ) ) ) , 
+     
+       xyvals : float( makelist( subst( yy=yylist[jj],
+                makelist( subst( xx = xxlist[ii],qexpr),ii,1,length(xxlist)) ),jj,1,length(yylist) ) ),         
+     
+       imatrix : apply( 'matrix, xyvals ),     
+       drlist : [  image( imatrix, xx1,yy1,xx2 - xx1,yy2 - yy1 ) ],
+     
+     /* look for options  */
+     
+       if lqda > 3 then (
+           prb : rest(qda,3), 
+         
+           for ii thru length(prb) do (
+               tt : prb[ii],
+               if atom(tt) then
+                    return( doerr("qdensity options: palette(args), pic(args) " ) ),
+               if anerr then return(),
+               ttop : op(tt),
+               ttargs : args(tt),
+               if ttop = palette then (
+                   if length(ttargs) = 1 then (
+                       if ttargs[1] = gray then paldef : [3,3,3]
+                       else if ttargs[1] = color then paldef : [7,5,15]
+                       else if ttargs[1] = blue then paldef : [1,3,8]
+                       else return( doerr("palette(gray,color,blue,or n1,n2,n3 ) " ) ))
+                   else if length(ttargs) = 3 then paldef : [ttargs[1],ttargs[2],ttargs[3] ]
+                   else return( doerr("palette(gray,color,blue,or n1,n2,n3 ) " ) ))
+                
+               else if ttop = pic then (
+            
+                   if length( ttargs ) # 2 then              
+                             return( doerr("pic(type,flname) requires two args" ) ),
+                   
+                   pictype : ttargs[1], 
+           
+                   if pictype = eps then pictype : eps_color,
+                   
+                   fnamestr : ttargs[2],
+             
+               /* check filename string  */
+               
+                   if not stringp(fnamestr) then
+                           return( doerr("pic file name must be in double quotes " ) ),
+                 
+              /* check for period in string  */ 
+              
+                   fnamelst : charlist(fnamestr),
+                 
+                   for kk thru length(fnamelst) do (
+                       if fnamelst[kk] = "." then
+                                  return( doerr("pic file name string cannot contain a period" ) )),
+               
+                   if anerr then return(),
+                   
+             /* filename tests passed, create piclist  */
+             
+                   drlist : append(drlist, [terminal = pictype, file_name = fnamestr] ))
+                       
+               else return( doerr("qdensity options: palette(args), pic(args) " )))),  /*  end if lqda > 3 case */
+     
+       drlist : cons( palette = paldef, drlist ),          
+       apply( 'draw2d, drlist ))$  
+	   
+ end old def  
+*/
+
+ 
+/************************ qdensity1 ***********************************/	   
+	   
+/*    qdensity1(Amatrix, [x1,x2], [y1,y2], [palette, pic] )
+         takes as input a matrix of x-y values, and the two
+        range lists to produce a density plot in a default color
+        scheme. palette(p) and pic(type,filename) are both
+        optional and must follow the first three args, but
+        otherwise can be in any order.
+*/		
+	   
+qdensity1([qda]) :=
+block( [anerr, xlim,ylim, xx1,xx2,yy1,yy2, drlist,fnamelst,fnamestr,
+              lqda,paldef,Mxy ,prb,pictype, tt,ttop,ttargs, fnamestr, fnamelst ],
+       local (doerr),
+          /*  write standard form error message  */             
+       doerr(msg) := (anerr:true,print("...syntax error"),print(msg),false),               
+     /* palette default value is shades of blue */     
+       paldef : [1,3,8],      
+       anerr : false,                   
+    /*  qda is the list of arguments given to qdensity */    
+     /* lqda is the number of arguments to qdensity */          
+       lqda : length(qda),      
+       if lqda > 5 then 
+              return( doerr("qdensity(Amatrix, [x1,x2], [y1,y2], palette(p),pic(..)), palette and pic are optional" ) ),
+			  
+	   if lqda < 3 then 
+              return( doerr("qdensity(Amatrix, [x1,x2], [y1,y2], palette(p),pic(..)), palette and pic are optional" ) ),
+     
+       Mxy : qda[1],
+     
+       if not matrixp (Mxy) then
+            return( doerr("qdensity(Amatrix, [x1,x2], [y1,y2], palette(p),pic(..)),palette and pic are optional " ) ),             
+       xlim : float (qda[2]),
+	   if not listp (xlim) then 
+             return( doerr("qdensity(Amatrix, [x1,x2], [y1,y2], palette(p),pic(..)),palette and pic are optional " ) ), 
+       xx1 : xlim[1],
+       xx2 : xlim[2],	   
+	   ylim : float (qda[3]),	
+       if not listp (ylim) then 
+             return( doerr("qdensity(Amatrix, [x1,x2], [y1,y2], palette(p),pic(..)),palette and pic are optional " ) ), 
+	   yy1 : ylim[1],
+       yy2 : ylim[2],	   
+       
+       drlist : [  image( Mxy, xx1,yy1,xx2 - xx1,yy2 - yy1 ) ],
+     
+     /* look for options  */
+     
+       if lqda > 3 then (
+           prb : rest(qda,3), 
+         
+           for ii thru length(prb) do (
+               tt : prb[ii],
+               if atom(tt) then
+                    return( doerr("qdensity options: palette(args), pic(args) " ) ),
+               if anerr then return(),
+               ttop : op(tt),
+               ttargs : args(tt),
+               if ttop = palette then (
+                   if length(ttargs) = 1 then (
+                       if ttargs[1] = gray then paldef : [3,3,3]
+                       else if ttargs[1] = color then paldef : [7,5,15]
+                       else if ttargs[1] = blue then paldef : [1,3,8]
+                       else return( doerr("palette(gray,color,blue,or n1,n2,n3 ) " ) ))
+                   else if length(ttargs) = 3 then paldef : [ttargs[1],ttargs[2],ttargs[3] ]
+                   else return( doerr("palette(gray,color,blue,or n1,n2,n3 ) " ) ))
+                
+               else if ttop = pic then (
+            
+                   if length( ttargs ) # 2 then              
+                             return( doerr("pic(type,flname) requires two args" ) ),
+                   
+                   pictype : ttargs[1], 
+           
+                   if pictype = eps then pictype : eps_color,
+                   
+                   fnamestr : ttargs[2],
+             
+               /* check filename string  */
+               
+                   if not stringp(fnamestr) then
+                           return( doerr("pic file name must be in double quotes " ) ),
+                 
+              /* check for period in string  */ 
+              
+                   fnamelst : charlist(fnamestr),
+                 
+                   for kk thru length(fnamelst) do (
+                       if fnamelst[kk] = "." then
+                                  return( doerr("pic file name string cannot contain a period" ) )),
+               
+                   if anerr then return(),
+                   
+             /* filename tests passed, create piclist  */
+             
+                   drlist : append(drlist, [terminal = pictype, file_name = fnamestr] ))
+                       
+               else return( doerr("qdensity options: palette(args), pic(args) " )))),  /*  end if lqda > 3 case */
+     
+       drlist : cons( palette = paldef, drlist ),          
+       apply( 'draw2d, drlist ))$	   
+	   
+/*
+
+(%i5) (x1:0,x2:1,dx:0.2,y1:0,y2:1,dy:0.2,expr : x*y)$
+(%i6) nx : floor( (x2-x1)/dx );
+(%o6) 5
+(%i7) ny : floor( (y2-y1)/dy );
+(%o7) 5
+(%i8) xlist : float( makelist( x1 + dx*ii,ii,1,nx ) );
+(%o8) [0.2,0.4,0.6000000000000001,0.8,1.0]
+(%i9) fpprintprec:8$
+(%i10) xlist;
+(%o10) [0.2,0.4,0.6,0.8,1.0]
+(%i11) ylist : reverse( float( makelist(y1 + dy*ii,ii,1,ny ) ) );
+(%o11) [1.0,0.8,0.6,0.4,0.2]
+(%i12) xyvals : makelist( subst( y=ylist[jj],
+                makelist( subst( x = xlist[ii],expr),ii,1,5)),jj,1,5);
+(%o12) [[0.2,0.4,0.6,0.8,1.0],[0.16,0.32,0.48,0.64,0.8],
+        [0.12,0.24,0.36,0.48,0.6],[0.08,0.16,0.24,0.32,0.4],
+        [0.04,0.08,0.12,0.16,0.2]]
+(%i13) imatrix : apply ('matrix, xyvals);
+(%o13) matrix([0.2,0.4,0.6,0.8,1.0],[0.16,0.32,0.48,0.64,0.8],
+              [0.12,0.24,0.36,0.48,0.6],[0.08,0.16,0.24,0.32,0.4],
+              [0.04,0.08,0.12,0.16,0.2])
+(%i14) draw2d( palette = [1,3,8],image (imatrix,x1,y1,x2-x1,y2-y1))$
+(%i16) qdensity1(imatrix, [x1,x2], [y1,y2] )$
+  both produce the same density plot in the default "shades of blue"
+  palette
+  
+(%i17) qdensity1(imatrix, [x1,x2], [y1,y2],palette (color))$
+  produces a density plot with a series of colors.
+
+(%i19) qdensity1(imatrix, [x1,x2], [y1,y2],palette (8,3,1))$  
+   produces a density plot in "shades of red."
+  
+*/
+
+/* doplot1(n_line_width) shows some of the colors available  */
+
+doplot1(nlw) := block([cc,qlist,x,val ],
+     /* list of 20 single name colors  */
+     cc : [aquamarine,beige,blue,brown,cyan,gold,goldenrod,green,khaki,
+            magenta,orange,pink,plum,purple,red,salmon,skyblue,turquoise,
+            violet,yellow ],
+     qlist : [ xr(-3.3,3) ],     
+     for i thru length(cc) do (
+        x : -3.3 + 0.3*i,
+        val : line( x,-1,x,1, lc( cc[i] ),lw(nlw) ),
+        qlist : append(qlist, [val] )),
+     qlist : append( qlist,[ cut(all) ] ),
+     apply('qdraw, qlist))$
+    
+/* create an eps graphics file via Maxima for the sample colors */
+	
+doplot1_eps(nlw, fname) := block([cc,qlist,x,val ],
+     /* list of 20 single name colors  */
+     cc : [aquamarine,beige,blue,brown,cyan,gold,goldenrod,green,khaki,
+            magenta,orange,pink,plum,purple,red,salmon,skyblue,turquoise,
+            violet,yellow ],
+     qlist : [ xr(-3.3,3) ],     
+     for i thru length(cc) do (
+        x : -3.3 + 0.3*i,
+        val : line( x,-1,x,1, lc( cc[i] ),lw(nlw) ),
+        qlist : append(qlist, [val] )),
+     qlist : append( qlist,[ cut(all) ] ),
+	 qlist : append (qlist, [pic (eps, fname)]),
+     apply('qdraw, qlist))$
+	   
+/* draw a stacked pattern of eighteen color filled triangles using qdraw  */	   
+
+doplot2() := block([cc, qlist,x1,x2,y1,y2,i,val ],
+
+     cc : [aquamarine,beige,blue,brown,cyan,gold,goldenrod,green,khaki,
+            magenta,orange,pink,plum,purple,red,salmon,skyblue,turquoise,
+            violet,yellow ],
+			
+      print("this is doplot2 "),
+            
+     qlist : [ xr(-3.3,3.3), yr(-3.3,3.3) ],
+     
+     /* top row of triangles  */
+     y1  : 1,
+     y2 : 3,
+     for i:0 thru 5 do ( 
+       x1 : -3 + i,
+       x2 : x1 + 1,
+       val : poly( [ [x1,y1],[x2,y1],[x1,y2]], fill( cc[i+1] ) ),
+       qlist : append(qlist, [val ])),
+       /* middle row of triangles  */
+       y1 : -1,
+       y2 : 1,
+       for i:0 thru 5 do (
+         x1 : -3 + i,
+         x2 : x1 + 1,
+         val : poly( [ [x1,y1],[x1,y2],[x2,y2]], fill( cc[i+7] ) ),
+       qlist : append(qlist, [val ])),  
+              
+       /* bottom row of triangles  */
+       y1 : -3,
+       y2 : -1,
+       for i:0 thru 5 do (
+         x1 : -3 + i,
+         x2 : x1 + 1,
+         val : poly( [ [x1,y1],[x2,y1],[x1,y2]], fill( cc[i+13] ) ),
+       qlist : append(qlist, [val ])),   
+       
+       qlist : append(qlist,[cut(all) ] ),      
+              
+     apply( 'qdraw, qlist ))$
+	 
+/* point_types() produces a 2d graphic table showing the relation
+   between the numbers 'n' used in the option pt(n) to pts(...) and
+   the resulting point type produced. Use of numbers is required
+   (rather than text descriptions such as 'circle') when using the
+   pts(...) function inside qdraw
+*/   
+	 
+point_types() := qdraw (xr(-2,2),yr(-4,4),label_align(c),
+            label(["1",-1.5,3.5],["2",-.5,3.5],["3",.5,3.5],["4",1.5,3.5]),
+            pts([[-1.5,2.5]],pt(1)),pts([[-0.5,2.5]],pt(2)),pts([[0.5,2.5]],pt(3)),
+            pts([[1.5,2.5]],pt(4)),
+            label(["5",-1.5,1.5],["6",-.5,1.5],["7",.5,1.5],["8",1.5,1.5]),
+            pts([[-1.5,0.5]],pt(5)),pts([[-0.5,0.5]],pt(6)),pts([[0.5,0.5]],pt(7)),
+            pts([[1.5,0.5]],pt(8)),
+            label(["9",-1.5,-0.5],["10",-.5,-0.5],["11",.5,-0.5],["12",1.5,-0.5]),
+            pts([[-1.5,-1.5]],pt(9)),pts([[-0.5,-1.5]],pt(10)),pts([[0.5,-1.5]],pt(11)),
+            pts([[1.5,-1.5]],pt(12)),
+            label(["13",-1.5,-2.5],["14",-.5,-2.5],["15",.5,-2.5],["16",1.5,-2.5]), 
+            pts([[-1.5,-3.5]],pt(13)),pts([[-0.5,-3.5]],pt(14)),pts([[0.5,-3.5]],pt(15)),
+            pts([[1.5,-3.5]],pt(16)), cut (all) )$
+
+			
+
+/*  list utilities  */	   
+	   
+fll(x) := [first(x),last(x),length(x)]$
+
+head(mylist) :=
+block([numL,nleft:6],
+    numL : length(mylist),
+	if nleft >= numL then mylist
+    else rest (mylist, -(numL - nleft)))$
+    
+tail(mylist) :=
+block([numL,nleft:6],
+    numL : length(mylist),
+	if nleft >= numL then mylist
+    else rest (mylist, numL - nleft))$		
+	
+
+declare(fll,evfun)$
+
+	   
+   ratsimp:false$

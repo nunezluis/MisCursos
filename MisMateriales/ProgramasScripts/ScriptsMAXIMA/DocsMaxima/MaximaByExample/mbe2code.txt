@@ -1,0 +1,709 @@
+  file mbe2code.txt  has Maxima code
+   for Maxima by Example, Chapter 2,
+   "Plots, Files, Read, Write, and Fit",
+
+    Edwin L Woollett, Jan. 18, 2012 update
+    ver. 5.26.0
+    woollett@charter.net
+    http://www.csulb.edu/~woollett
+    
+  the jan. 18, 2012 revision of mfiles.mac and Ch. 2, Maxima by Example
+   conforms to Maxima v. 5.26.0, and the examples have been carried
+   out using the XMaxima interface. All functions which require file
+   names (except file_search) must have the full path:
+   ie:  "c:/work2/text1.txt"  (not "text1.txt")
+   
+   To simplify the typing, the revised Ch. 2 recommends placing the
+   lines (but replacing c:/work2 with your own work folder path):
+   
+   maxima_userdir: "c:/work2" $  
+   
+    maxima_tempdir : "c:/work2"$
+
+    file_search_maxima : append(["c:/work2/###.{mac,mc}"],file_search_maxima )$
+
+     file_search_lisp : append(["c:/work2/###.lisp"],file_search_lisp )$
+
+     bpath : "c:/work2/"$
+
+     mkp (_fname) := sconcat (bpath,_fname)$
+     
+    in your maxima-init.mac file, so these settings and definitions
+    are available at startup of Maxima.
+    
+    you can then use read_text(mkp("text1.txt"))
+    
+    instead of read_text ("c:/work2/text1.txt")
+    
+    although both versions work.
+    
+    You can then change the base (beginning) of the path (bpath)
+    on the fly :
+    bpath : "c:/work3/temp1";
+    for example, and the next use of mkp will reflect that choice.
+    
+                  
+=============================================================
+                    
+    
+2.1 Introduction to plot2d
+
+2.1.1 First Steps with plot2d
+
+(%i1) plot2d ( sin(u), ['u, 0, %pi/2] )$
+
+(%i2) plot2d ( sin(u),['u,0,%pi/2],['x, -0.2, 1.8] )$
+
+(%i3) plot2d(sin(u),['x,-0.2,1.8], ['u,0,%pi/2] )$
+
+(%i4) plot2d ( sin(x), ['x,0,%pi/2], ['x,-0.2,1.8] )$
+
+(%i5) plot2d ( sin(y), ['y,0,%pi/2], ['x,-0.2,1.8] )$
+
+(%i6) plot2d ( sin(u), ['u,0,%pi/2], ['x,-0.2,1.8], ['y,-0.2, 1.2] )$
+
+(%i7) plot2d ( sin(u), ['u,0,%pi/2], ['y,-0.2, 1.2], ['x,-0.2,1.8] )$
+
+(%i8) plot2d ( sin(x), ['x,0,%pi/2], ['x,-0.2,1.8], ['y,-0.2, 1.2] )$
+
+(%i9) plot2d ( sin(y), ['y,0,%pi/2], ['x,-0.2,1.8], ['y,-0.2, 1.2] )$
+
+---------------------------------------
+2.1.2 Parametric Plots
+
+(%i1) plot2d ( [parametric, t, sin(t), ['t, 0, %pi] ] )$
+--------------------------------------               
+2.1.3  Can We Draw a Circle?
+
+(%i2) plot2d ([parametric, cos(t), sin(t), ['t,-%pi,%pi]])$
+
+(%i3) plot2d ([parametric, cos(t), sin(t), ['t,-%pi,%pi]],
+          [gnuplot_preamble,"set size ratio 1;"])$
+          
+(%i4) plot2d ([parametric, cos(t), sin(t), ['t, -%pi, %pi] ], ['x,-1.6,1.6])$
+
+(%i5) plot2d ([u^3,[parametric, cos(t), sin(t), ['t,-%pi,%pi]]],
+                ['u,-1.1,1.1],['x,-1.5,1.5],['y,-1.5,1.5],
+                 [gnuplot_preamble,"set size ratio 1;"])$
+                 
+(%i6) plot2d (
+              [ [parametric, cos(t), sin(t), ['t,-%pi,%pi],[nticks,200]],u^3],
+                ['u,-1,1], ['x,-1.2,1.2] , ['y,-1.2,1.2], 
+                [style, [lines,8]],  [xlabel," "], [ylabel," "],
+                [box,false], [axes, false],              
+                [legend,false],[gnuplot_preamble,"set size ratio 1;"])$
+                
+---------------------------------------                
+2.1.4 Line Width and Color Controls
+
+(%i1) plot2d(
+         [ [discrete,[[0,0],[0,5]]], [discrete,[[2,0],[2,5]]],
+           [discrete,[[4,0],[4,5]]],[discrete,[[6,0],[6,5]]],
+           [discrete,[[8,0],[8,5]]],[discrete,[[10,0],[10,5]]],
+           [discrete,[[12,0],[12,5]]],[discrete,[[14,0],[14,5]]] ],
+		   
+           [style,  [lines,30,0],[lines,30,1],[lines,30,2],
+           [lines,30,3],[lines,30,4],[lines,30,5],[lines,30,6],
+           [lines,30,7]],
+		   
+           ['x,-2,20],   ['y,-2,8],
+           [legend,"0","1","2","3","4","5","6","7"],
+           [xlabel," "],   [ylabel," "],
+           [box,false],[axes,false])$
+           
+(%i2) load(draw);
+
+(%i3) draw2d(
+      xrange = [-2,20],
+      yrange = [-3,8],
+      axis_left = false,
+      axis_bottom = false,
+      axis_top = false,
+      axis_right = false,
+      xtics = 'none,
+      ytics = 'none,
+      fill_density = 1,
+      key = "0",      fill_color = black,
+      bars([0,5,1]),
+      key = "1",      fill_color = blue,
+      bars([2,5,1]),
+      key = "2",      fill_color = red,
+      bars([4,5,1]),
+      key = "3",      fill_color = light-green,
+      bars([6,5,1]),
+      key = "4",      fill_color = violet,
+      bars([8,5,1]),
+      key = "5",      fill_color = "#803300",
+      bars([10,5,1]),
+      key = "6",      fill_color = black,
+      bars([12,5,1]),
+      key = "7",      fill_color = blue,
+      bars([14,5,1]))$
+      
+(%i4) plot2d( [u^2,u^3],['u,0,2], ['x, -.2, 2.5],
+          [style, [lines,5,6],[lines,5,2]],
+           ['y,-1,4] )$
+---------------------------------------
+
+2.1.5 Discrete Data Plots: Point Size, Color, and Type Control
+
+(%i1) obj_list : [ [parametric, 2*cos(t),t^2,['t,0,2*%pi]],
+                     [discrete,[[2,0]]],[discrete,[[0,(%pi/2)^2]]],
+              [discrete,[[-2,%pi^2]]],[discrete,[[0,(3*%pi/2)^2]]] ]$
+              
+(%i2) style_list : [style, [lines,4,6],[points,5,1,1],[points,5,2,1],
+                 [points,5,3,1],[points,5,4,1]]$
+                 
+(%i3) legend_list : [legend, " ","t = 0","t = pi/2","t = pi",
+                " t = 3*pi/2"]$
+                
+(%i4) plot2d( obj_list, ['x,-3,4], ['y,-1,40],style_list,
+                  [xlabel,"X = 2 cos( t ), Y = t ^2 "],
+                   [ylabel, " "] ,legend_list )$
+                   
+(%i5) data_list : [discrete,
+         [ [1.1,-0.9],[1.45,-1],[1.56,0.3],[1.88,2],
+              [1.98,3.67],[2.32,2.6],[2.58,1.14],
+           [2.74,-1.5],[3,-0.8],[3.3,1.1],
+           [3.65,0.8],[3.72,-2.9] ] ]$
+           
+(%i6) plot2d( data_list, [style,[points]])$
+
+(%i7) plot2d( [sin(u)*cos(3*u)*u^2, data_list],
+               ['u,1,4], ['x,0,5],['y,-10,8],
+          [style,[lines,4,1],[points,4,2,1]])$
+          
+---------------------------------------          
+2.1.6 More gnuplot_preamble Options
+
+(%i1) plot2d([ u*sin(u),cos(u)],['u,-4,4] ,['x,-8,8],
+             [style,[lines,5]],
+         [gnuplot_preamble,"set grid; set key bottom center;
+              set title 'Two Functions';"])$
+---------------------------------------             
+2.1.7 Creating Various Kinds of Graphics Files using plot2d
+
+(%i1) plot2d (sin(u),['u,0,%pi], [gnuplot_term,'jpeg])$
+       
+(%i2) plot2d (cos(u),['u,0,%pi], [gnuplot_term,'jpeg])$
+
+(%i3) plot2d (cos(u),['u,0,%pi],
+        [gnuplot_out_file,"mycos1.jpeg"],
+       [gnuplot_term,'jpeg])$
+       
+(%i4) plot2d (cos(u),['u,0,%pi],
+        [gnuplot_out_file,"c:/work2/mycos2.jpg"],
+       [gnuplot_term,'jpeg])$
+       
+(%i5) plot2d (sin(u),['u,0,%pi],
+       [gnuplot_term,'png])$
+       
+(%i6) plot2d (sin(u),['u,0,%pi],
+       [gnuplot_term,'eps])$
+       
+(%i7) plot2d (sin(u),['u,0,%pi],
+       [gnuplot_term,'svg])$
+       
+(%i8) plot2d (sin(u),['u,0,%pi],
+       [gnuplot_term,'pdf])$
+       
+---------------------------------------
+
+
+2.1.8 Using qplot for Quick Plots of One or More Functions
+
+(%i1) load(qplot);
+
+(%i2) qplot(sin(u),['u,-%pi,%pi])$
+
+(%i3) qplot(sin(u),['u,-%pi,%pi],['x,-4,4])$
+
+(%i4) qplot(sin(u),['u,-%pi,%pi],['x,-4,4],['y,-1.2,1.2])$
+
+(%i5) qplot([sin(u),cos(u)],['u,-%pi,%pi])$
+
+(%i6) qplot([sin(u),cos(u)],['u,-%pi,%pi],['x,-4,4])$
+
+(%i7) qplot([sin(u),cos(u)],['u,-%pi,%pi],['x,-4,4],['y,-1.2,1.2])$
+
+(%i8) qplot ([parametric, cos(t), sin(t), ['t,-%pi,%pi]],
+              ['x,-2.1,2.1],['y,-1.5,1.5])$
+
+(%i9) qplot ([ u^3,
+               [parametric, cos(t), sin(t), ['t,-%pi,%pi]]],
+               ['u,-1,1],['x,-2.25,2.25],['y,-1.5,1.5])$
+               
+(%i10) qplot([discrete,[[0,-2],[0,2]]],['x,-2,2],['y,-4,4])$
+
+(%i11) qplot( [ [discrete,[[-1,-2],[-1,2]]],
+                  [discrete,[[1,-2],[1,2]]]],['x,-2,2],['y,-4,4])$
+---------------------------------------                  
+                  
+2.1.9 Plot of a Discontinuous Function
+
+(%i12) fs(x) := if x >= -1 and x <= 1 then 3/2 else 0$
+
+(%i13) plot2d (fs(u),['u,-2,2],['x,-3,3],['y,-.5,2],
+        [style, [lines,5]],[ylabel,""],
+         [xlabel,""])$
+         
+(%i14) load(qplot);
+
+(%i15) qplot (fs(u),['u,-2,2],['x,-3,3],['y,-.5,2],[xlabel,""])$
+
+---------------------------------------
+2.1.10 Multiple Plots Using the Embedded Option
+=========================================================
+=========================================================
+
+2.2 Working with Files Using the Package mfiles.mac
+
+---------------------------------------
+
+2.2.1  Check File Existence with file_search or probe_file
+
+(%i1) file_search ("ztemp.txt");
+
+(%i2) probe_file ("ztemp.txt");
+
+(%i3) load(mfiles);
+
+(%i4) probe_file ("ztemp.txt");
+
+(%i5) probe_file ("c:/work2/ztemp.txt");
+
+(%i6) myf : mkp("ztemp.txt");
+
+(%i7) probe_file (myf);
+
+(%i8) file_search ("ztemp");
+
+(%i9) file_search ("ytemp.txt");
+
+---------------------------------------
+2.2.2  Check for File Existence using ls or dir
+
+(%i10) display2d:false$
+
+(%i11) sconcat("a bc","xy z");
+
+(%i12) ls(mkp("*temp.txt"));
+
+(%i13) ls("c:/work2/*temp.txt");
+
+(%i14) dir(mkp("*temp.txt"));
+
+(%i15) dir("c:/work2/*temp.txt");
+
+(%i16) ls ("c:/work3/dirac.*");
+
+(%i17) dir ("c:/work3/dirac.*");
+
+---------------------------------------
+2.2.3  Type of File, Number of Lines, Number of Characters
+
+(%i18) file_search("lisp1w.txt");
+
+(%i19) file_lines("lisp1w.txt");
+
+(%i20) file_lines(mkp("lisp1w.txt"));
+
+(%i21) file_lines("c:/work2/lisp1w.txt");
+
+(%i22) myf:mkp("lisp1w.txt");
+
+(%i23) ftype(myf);
+
+(%i24) file_length(myf);
+
+(%i25) file_info(myf);
+
+---------------------------------------
+2.2.4  Print All or Some Lines of a File to the Console
+
+(%i26) print_file (myf)$
+
+(%i27) myf : mkp("lisp2.txt");
+
+(%i28) file_info(myf);
+
+(%i29) print_lines(myf,3,5)$
+
+---------------------------------------
+2.2.5  Rename a File using rename_file
+
+(%i30) file_search("foo1.txt");
+
+(%i31) file_search("bar1.txt");
+
+(%i32) rename_file(mkp("bar1.txt"),mkp("foo1.txt"));
+
+(%i33) file_search("foo1.txt");
+
+(%i34) file_search("bar1.txt");
+
+---------------------------------------
+2.2.6  Delete a File with delete_file
+
+(%i35) file_search("bar2.txt");
+
+(%i36) delete_file(mkp("bar2.txt"));
+
+(%i37) file_search("bar2.txt");
+
+---------------------------------------
+2.2.7  Copy a File using copy_file
+
+(%i38) file_search("foo2.txt");
+
+(%i39) file_info(mkp("foo1.txt"));
+
+(%i40) copy_file(mkp("foo1.txt"),mkp("foo2.txt"));
+
+(%i41) file_info(mkp("foo2.txt"));
+
+---------------------------------------
+2.2.8  Change the File Type using file_convert
+
+(%i42) file_search("bar1.txt");
+
+(%i43) file_search("bar2.txt");
+
+(%i44) print_file(mkp("bar1.txt"))$
+
+(%i45) file_info(mkp("bar1.txt"));
+
+(%i46) file_convert(mkp("bar1.txt"),mkp("bar11u.txt"),unix);
+
+(%i47) file_info(mkp("bar11u.txt"));
+
+(%i48) print_file(mkp("bar2.txt"));
+
+(%i49) file_info(mkp("bar2.txt"));
+
+(%i50) file_convert(mkp("bar2.txt"),mac);
+
+(%i51) file_info(mkp("bar2.txt"));
+
+(%i52) print_file(mkp("bar2.txt"));
+
+---------------------------------------
+2.2.9  Breaking File Lines with pbreak_lines or pbreak()
+
+(%i53) file_info(mkp("ztemp.txt"));
+
+(%i54) print_lines(mkp("ztemp.txt"),1,1);
+
+(%i55) pbreak_lines(mkp("ztemp.txt"),60)$
+
+(%i56) pbreak();
+
+(%i57) break_file_lines (mkp("ztemp.txt"),mkp("ztemp1.txt"),72);
+
+(%i58) print_lines(mkp("ztemp1.txt"),1,2);
+
+(%i59) file_info(mkp("ztemp.txt"));
+
+(%i60) file_info(mkp("ztemp1.txt"));
+
+---------------------------------------
+2.2.10 Search Text Lines for Strings with search_file
+
+(%i61) file_info (mkp("ndata1.dat"));
+
+(%i62) print_file (mkp("ndata1.dat"))$
+
+(%i63) search_file (mkp("ndata1.dat"),"is")$
+
+(%i64) search_file (mkp("ndata1.dat"),"is much")$
+
+(%i65) file_info (mkp("text1.txt"));
+
+(%i66) print_file (mkp("text1.txt"))$
+
+(%i67) search_file (mkp("text1.txt"),"is")$
+
+(%i68) search_file (mkp("text1.txt"),"is",word)$
+
+(%i69) search_file (mkp("text1.txt"),"is",all)$
+
+---------------------------------------
+2.2.11 Search for a Text String in Multiple Files with search_mfiles
+
+(%i1) load(mfiles);
+
+(%i2) print_file(mkp("text1.txt"))$
+
+(%i3) search_mfiles(mkp("text1.txt"),"is")$
+
+(%i4) search_mfiles(mkp("text1.txt"),"Is")$
+
+(%i5) search_mfiles(mkp("ndata*.dat"),"is")$
+
+(%i6) search_mfiles(mkp("text1.txt"),"is",all)$
+----------------
+(restart)
+
+(%i1) load(mfiles);
+
+(%i2) search_mfiles ("c:/work2/temp1/atext1.txt","is");
+
+(%i3) search_mfiles ("c:/work2/temp1/","is")$
+
+---------------------------------------
+2.2.12 Replace Text in File with ftext_replace
+
+(%i4) file_info(mkp("text1w.txt"));
+
+(%i5) print_file(mkp("text1w.txt"));
+
+(%i6) ftext_replace(mkp("text1w.txt"),"is","was");
+
+(%i7) print_file(mkp("text1w.txt"));
+
+(%i8) file_info(mkp("text1w.txt"));
+
+(%i9) ftext_replace(mkp("text1w.txt"),"was","is");
+
+(%i10) print_file(mkp("text1w.txt"));
+
+---------------------------------------
+2.2.13 Email Reply Format using reply_to
+
+(%i11) reply_to("");
+
+(%i12) reply_to(" ray")$
+
+---------------------------------------
+2.2.14 Reading a Data File with read_data
+
+(%i13) print_file(mkp("ndata2w.dat"))$
+
+(%i14) read_data(mkp("ndata2w.dat"));
+
+(%i15) display2d:false$
+
+(%i16) read_data(mkp("ndata2w.dat"));
+
+(%i17) fpprintprec:8$
+
+(%i18) read_data(mkp("ndata2w.dat"));
+
+(%i19) print_file(mkp("ndata2wa.dat"))$
+
+(%i20) read_data(mkp("ndata2wa.dat"));
+
+(%i21) print_file(mkp("ndata3w.dat"))$
+
+(%i22) read_data(mkp("ndata3w.dat"),";");
+
+(%i23) print_file(mkp("ndata6.dat"));
+
+(%i24) read_data(mkp("ndata6.dat"),",");
+
+(%i25) print_file(mkp("ndata10w.dat"))$
+ 
+(%i26) read_data(mkp("ndata10w.dat"));
+
+(%i27) file_info (mkp("ndata10w.dat"));
+
+---------------------------------------
+2.2.15 File Lines to List of Strings using read_text
+
+(%i28) print_file(mkp("ndata1.dat"))$
+
+(%i29) read_text(mkp("ndata1.dat"));
+
+---------------------------------------
+2.2.16 Writing Data to a Data File One Line at a Time using with_stdout
+
+(%i30) with_stdout (mkp("tmp.out"),
+           for i thru 10 do
+             print (i,",",i^2,",",i^3))$
+             
+(%i31) print_file (mkp("tmp.out"))$
+
+(%i32) read_data (mkp("tmp.out"));
+
+(%i33) file_info (mkp("tmp.out"));
+
+
+
+---------------------------------------
+2.2.17 Creating a Data File from a Nested List using write_data
+
+(%i34) dataL : [[0,2],[1,3],[2,4]]$
+
+(%i35) write_data(dataL,mkp("tmp.out"))$
+
+(%i36) file_search("tmp.out");
+
+(%i37) print_file(mkp("tmp.out"))$
+
+(%i38) file_info(mkp("tmp.out"));
+
+(%i39) write_data(dataL,mkp("tmp.out"),comma)$
+
+(%i40) print_file(mkp("tmp.out"))$
+
+(%i41) file_info(mkp("tmp.out"));
+
+(%i42) write_data(dataL,mkp("tmp.out"),semicolon)$
+
+(%i43) print_file(mkp("tmp.out"))$
+
+(%i44) dataL : []$
+
+(%i45) for x thru 5 do (
+          px : subst (x,z, (1-z)/(1+z)),
+          dataL : cons ( [x, px], dataL ))$
+          
+(%i46) dataL;
+
+(%i47) dataL : reverse (dataL);
+
+(%i48) write_data (dataL, mkp("mydata1.dat"))$
+
+(%i49) print_file (mkp("mydata1.dat"))$
+
+(%i50) read_data (mkp("mydata1.dat"));
+
+(%i51) file_info (mkp("mydata1.dat"));
+
+(%i52) read_nested_list (mkp("mydata1.dat"));
+
+(%i53) display2d:true$
+
+(%i54) read_nested_list (mkp("mydata1.dat"));
+
+
+=========================================================
+
+2.3 Least Squares Fit to Experimental Data
+---------------------------------------
+2.3.1 Maxima and Least Squares Fits: lsquares_estimates
+
+(%i1) dataL : [[1, 1], [2, 7/4], [3, 11/4], [4, 13/4]]$
+
+(%i2) display2d:false$
+
+(%i3) dataM : apply ('matrix, dataL);
+
+(%i4) load (lsquares);
+
+(%i5) fpprintprec:6$
+
+(%i6) lsquares_estimates (dataM, [x,y], y=a*x^b+c,
+               [a,b,c], initial=[3,3,3], iprint=[-1,0] );
+
+(%i7) myfit : a*x^b + c , % ;
+
+(%i8) plot2d ([myfit,[discrete,dataL]],[x,0,5],
+        [style,[lines,5],[points,4,2,1]],
+         [legend,"myfit", "data"],
+         [gnuplot_preamble,"set key bottom;"])$
+
+---------------------------------------
+2.3.2 Syntax of lsquares_estimates
+
+(%i1) expr : 2*%pi + 3*exp(-4);
+
+(%i2) listconstvars:true$
+
+(%i3) listofvars(expr);
+
+(%i4) map('numberp,%);
+
+(%i5) fullmap('numberp,expr);
+
+(%i6) float(expr);
+
+(%i7) numberp(%);
+
+---------------------------------------
+2.3.3 Coffee Cooling Model
+
+(%i1) de : 'diff(T,t) + r*(T - Ts);
+
+(%i2) gsoln : ode2(de,T,t);
+
+(%i3) de, gsoln, diff, ratsimp;
+
+(%i4) ic1 (gsoln, t = 0, T = T0);
+
+(%i5) expand (%);
+
+(%i6) Tcup : collectterms ( rhs(%), exp(-r*t) );
+
+(%i7) Tcup, t = 0;
+
+---------------------------------------
+
+2.3.4 Experiment Data for Coffee Cooling
+
+(%i8) display2d:false$
+
+(%i9) sconcat("a bc","xy z");
+
+(%i10) file_search("coffee.dat");
+
+(%i11) (display2d:false,load(mfiles));
+
+(%i12) print_file(mkp("coffee.dat"))$
+
+(%i13) fpprintprec:6$
+
+(%i14) cdata : read_data(mkp("coffee.dat"));
+
+(%i15) black_data : makelist( [first(cdata[i]),second(cdata[i])],
+                       i,1,length(cdata));
+                       
+(%i16) white_data : makelist( [first(cdata[i]),third(cdata[i])],
+                       i,1,length(cdata));
+                       
+
+---------------------------------------
+2.3.5 Least Squares Fit of Coffee Cooling Data
+
+(%i17) black_matrix : apply ( 'matrix, black_data);
+
+(%i18) white_matrix : apply ( 'matrix, white_data);
+
+(%i19) load(lsquares);
+
+(%i20) black_eqn : T = 17 + 65.3*exp(-r*t);
+
+(%i21) lsquares_estimates ( black_matrix, [t,T], black_eqn, [r],
+                               iprint = [-1,0] );
+
+(%i22) black_fit : rhs ( black_eqn ), %;
+
+(%i23) white_eqn : T = 17 + 51.8*exp(-r*t);
+
+(%i24) lsquares_estimates ( white_matrix, [t,T], white_eqn, [r],
+                              iprint = [-1,0] );
+
+(%i25) white_fit : rhs ( white_eqn ), %;
+
+(%i26) plot2d( [ black_fit ,[discrete,black_data] ],
+           [t,0,50], [style, [lines,5], [points,2,2,6]],
+           [ylabel," "] ,
+           [xlabel," Black Coffee T(deg C) vs. t(min) with r = 0.026/min"],
+           [legend,"black fit","black data"] )$
+           
+(%i27) plot2d( [ white_fit ,[discrete, white_data] ],
+           [t,0,50], [style, [lines,5], [points,2,2,6]],
+           [ylabel," "] ,
+           [xlabel," White Coffee T(deg C) vs. t(min) with r = 0.024/min"],
+           [legend,"white fit","white data"] )$
+           
+(%i28) T : 17 + (T0 -17)*exp(-r*t);
+
+(%i29) T1 : T, [T0 = 85, r = 0.0237];
+
+(%i30) t1 : find_root(T1 - 75,t,2,10);
+
+(%i31) T2 : T, [T0 = 90, r = 0.02592];
+
+(%i32) t2 : find_root(T2 - 80,t,2,10);
+                       

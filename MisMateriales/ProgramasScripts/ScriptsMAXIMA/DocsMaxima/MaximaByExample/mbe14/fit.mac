@@ -1,0 +1,1393 @@
+
+/************************************************************************
+    fit.mac is a software file which accompanies Chapter 14 of
+    Maxima by Example, Fitting a Model Function to Data
+    
+    Copyright (C) 2017
+    Edwin L Woollett,  woollett@charter.net
+    http://www.csulb.edu/~woollett
+    
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU GENERAL PUBLIC LICENSE, Version 2, June 1991,
+    as published by the Free Software Foundation.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details. You should have received a
+    copy of the GNU General Public License along with this program.
+    If not, see http://www.fsf.org/licensing/.
+************************************************************************/
+
+
+/*   fit.mac provides least squares fitting functions
+     which return both the best fit values of the model 
+     parameters, and the estimated uncertainty of those
+     parameters.	 
+	 See Maxima by Example, Ch. 14: Fitting a Model Function to Data,
+	   for examples of use.
+	 
+Maxima functions defined in this file:
+
+Vsearch(data_M, sigma_list,  ymodel_expr, paramL, param_guessL)
+moment(dataL)
+p(chi2,nu) 
+chi2_moment (m,nu) 
+chi2_norm(nu) 
+chi2_mean (nu)
+chi2_variance (nu)
+Q(a,x)
+y_gaussian_PE (%dataM,%dof,%yfit_expr)
+chi2_prob(cchi2,%ddof)
+get_chi2 (data_matrix1,sigma,  y_fit)
+print1 (asymb, avalue)
+print2_pm (asymb,avalue,davalue)
+get_basis (param_list,model_expr)
+get_ivar (an_expr, basisL)
+lfit_basis1 (ddataM,ssL, extra_expr,basis_exprL , paramL)
+lfit_basis (ddataM,ssL, extra_expr,basis_exprL, paramL)
+lfit (data, sigma, ymodel ,parameters)
+fit_line (%dataM,%sigL)
+fit_slope (%dataM,%sigL,%yintercept)
+fit_y_intercept (%dataM,%sigL,%slope)
+nlfit1(data_matrix, sL, ymod_expr, pp, ppg)
+get_symbolic (xxL,yyL,ssL,ymod,ppL)
+get_daL (arL,lparam, bMs,AMs)
+get_errorL (arL,AMs)
+nlfit(data_M, ssigL, ymodel_expr, paramL, param_guessL)
+mydblint(f,r,s,a,b,releps)
+mytest(n)
+grid_search(data_matrix, sigma_list,ymodel_expr,paramL,param_startL,stepFactor)
+xyList(aL,bL)
+getL(HA,ii,Nc)
+col_vec(zzL)
+fll(x)
+head(mylist)
+tail(mylist)
+get_vec(%aL,%nn)
+range(aaL)
+pos_GT (xxL,xxv)
+positions_LE (xxL,xxv)
+Remove1(yyL, nval)
+Remove (xxL,posL)
+integer_frequency (xL,nv)
+	 
+*/
+
+/* Vsearch allows for a visual search for parameter values that
+      allow a given expression to approximately fit a set of data.
+   You must use load(draw) and load(qdraw) prior to use.
+*/  
+
+Vsearch(data_M, sigma_list,  ymodel_expr, paramL, param_guessL) :=
+block ([xdataL, ydataL,Ndata,Nparam,xmin,xmax,
+           plist,ivar : %%x,yfit_expr,chiSq, param_list, numer],numer:true,
+     if not listp (paramL) then
+    ( print (" Vsearch:  paramL must be a list "),
+       return (done)),
+
+	   if not listp (param_guessL) then
+    ( print (" Vsearch: param_guessL must be a list "),
+       return (done)),
+	   
+	xdataL : list_matrix_entries (col (data_M,1)),
+	ydataL : list_matrix_entries (col (data_M,2)),
+	Ndata : length (xdataL),
+	Nparam : length (paramL),  
+	xmin : first(xdataL),
+	xmax : last(xdataL),	
+	plist : xyList (xdataL, ydataL),
+	for p in listofvars (ymodel_expr) do 
+	       if lfreeof (paramL,p) then ivar : p,	
+	param_list : map ("=", paramL, param_guessL),	   
+	print ("  param_list = ", param_list),
+	yfit_expr : sublis (param_list, ymodel_expr),
+    print ("  yfit_expr = ",yfit_expr),	
+	chiSq : get_chi2 (data_M,sigma_list, yfit_expr),
+	print ("  chiSq = ", chiSq),
+	qdraw (  ex1 (yfit_expr, ivar, xmin,xmax),
+	             pts (plist,pc(black),ps(1)),xr(xmin,xmax), 
+				 errorbars (plist, sigma_list,lw(3),lc(red)),
+				 more (xlabel = string(ivar),title = string(param_list))))$
+				 
+				 
+
+moment(dataL) :=
+block ([n,ave,variance,sigma,  numer],numer:true,
+    n : length(dataL),
+    print (" ndata = ",n),    
+    ave : apply ("+", dataL)/n,
+    print (" mean = ",ave),
+    variance : (apply ("+", (dataL-ave)^2) - apply ("+", dataL-ave)^2 / n )/(n-1),
+	print (" variance = ",variance),
+	sigma : sqrt (variance),
+	print (" sigma = ",sigma),
+	[ave, variance, sigma])$
+	
+	
+
+
+/*  chi-square probability distribution function p (chi2,nu) used to
+   define norm, mean, variance of chi-square with nu = positive integer
+     = dof.   mean (chi2) = nu,  variance (chi2) = 2*nu
+*/
+
+p(chi2,nu) := chi2^(nu/2 -1)*exp(-chi2/2)/2^(nu/2) / gamma(nu/2)$
+
+chi2_moment (m,nu) := integrate(z^m*p(z,nu),z,0,inf)$
+
+chi2_norm(nu) := chi2_moment (0,nu)$
+
+chi2_mean (nu) := chi2_moment (1,nu)$
+
+chi2_variance (nu) := (chi2_moment (2,nu) - chi2_mean (nu)^2)$   
+
+/*
+(%i6) chi2_norm(8);
+(%o6) 1
+(%i7) map ('chi2_norm,[8,9]);
+(%o7) [1,1]
+(%i8) map ('chi2_mean,[8,9]);
+(%o8) [8,9]
+(%i9) map ('chi2_variance,[8,9]);
+(%o9) [16,18]
+(%i12) plot2d([p(z,6),p(z,10)],[z,0.2,20],[legend,"6","10"],[xlabel,"chi2"])$
+*/
+
+
+
+Q(a,x) := float(gamma_incomplete(a,x)/gamma(a))$
+
+/* if successive experimental data y_i (for fixed x_i) are drawn from a Gaussian distribution,
+   there is roughly a 50% chance each y_i will lie in the interval
+   [yfit(x_i) - PE , yfit(x_i) + PE], in which PE = 2*sig_PE/3 = "probable
+   error"  and sig_PE  is the square root of the
+   ''variance''.  This PE (prob. error)  value is given by y_gaussian_PE:
+*/
+   
+
+y_gaussian_PE (%dataM,%dof,%yfit_expr) := 
+block ([%xL,%yL,%ivar,%yfitL,y_variance, numer],numer:true,
+    local (yfit_func),
+    %xL : list_matrix_entries (col (%dataM,1)),
+	%yL : list_matrix_entries (col (%dataM,2)),
+	%ivar : listofvars(%yfit_expr)[1],
+	/* print (" %ivar = ",%ivar), */
+	define (yfit_func(%ivar), %yfit_expr),
+	%yfitL : map ('yfit_func, %xL),
+	/* print (" %yfitL = ", %yfitL), */
+    y_variance : apply ("+", (%yL - %yfitL)^2)/%dof,
+	/* print (" y_variance = ", y_variance), */
+	2*sqrt(y_variance)/3)$
+	
+/*
+(%i28) Mdata;
+(%o28) matrix([1.0,15.6],[2.0,17.5],[3.0,36.6],[4.0,43.8],[5.0,58.2],
+              [6.0,61.6],[7.0,64.2],[8.0,70.4],[9.0,98.8])
+(%i39) y_gaussian_PE (Mdata,7,4.81 + 9.4*x);
+(%o39) 4.48405
+*/
+
+chi2_prob(cchi2,%ddof) := 
+block( [qqval : Q(%ddof/2, cchi2/2)],
+        print(" chi2/dof = ",float (cchi2/%ddof)), 
+		print (" chi2_prob = ", 100*qqval,"%"),		
+		done)$
+		
+/*   get_chi2 (data_matrix1, sigma, y_fit) 
+         uses y_expr_numer which depends on one independent
+		 variable.      
+ */
+
+get_chi2 (data_matrix1,sigma,  y_fit) :=
+block ([xdataL,ydataL,ivar,yfitL,numer],numer:true,
+    local (y_func),
+    xdataL : list_matrix_entries (col (data_matrix1,1)),
+	/* print (" xdataL = ",xdataL), */
+    ydataL : list_matrix_entries (col (data_matrix1,2)),
+	/* print (" ydataL = ",ydataL), */
+	ivar : listofvars(y_fit)[1],
+	/* print (" ivar = ",ivar), */
+	define (y_func(ivar), y_fit),
+	yfitL : map ('y_func, xdataL),
+	/* print (" yfitL = ",yfitL), */
+	apply ("+", ( (ydataL - yfitL)/sigma)^2))$
+	
+	
+alias(lme, list_matrix_entries)$
+	   
+
+
+	
+/* print utilities */
+
+print1 (asymb, avalue) := 
+    print (sconcat (string (asymb)," = "),avalue)$
+
+print2_pm (asymb,avalue,davalue) :=
+    print (sconcat (string (asymb)," = "),avalue," +/- ", davalue)$
+
+/*
+
+(%i21) a : 1;
+(%o21) 1
+(%i22) print1 (a,3.2)$
+1 =  3.2 
+(%i23) print2_pm (a, 3.2, 0.1)$
+1 =  3.2  +/-  0.1 
+(%i24) kill(a);
+(%o24) done
+(%i25) print1 (a,3.2)$
+a =  3.2 
+(%i26) print2_pm (a, 3.2, 0.1)$
+a =  3.2  +/-  0.1 
+*/
+
+/* get_basis is called by lfit */
+
+get_basis (param_list,model_expr) := 
+block ([basis_list:[], freeof_params: 0, aterm, numer],numer:true,
+    if atom (model_expr) then [0,[1]]
+	else if op (model_expr) # "+" then [0,[coeff(model_expr,param_list[1])]]
+	else (
+    for k thru length (model_expr) do 
+	    ( aterm : part (model_expr,k),
+		  if lfreeof (param_list, aterm) then freeof_params : freeof_params + aterm),
+	for k thru length (param_list) do 
+	    basis_list : cons (coeff (model_expr, param_list[k]), basis_list),
+	[freeof_params, reverse (basis_list)]))$
+	
+/*
+(%i43) get_basis ([a],a - 0.59*t);
+(%o43) [-0.59*t,[1]]
+(%i36) myparamL : [a1,a2,a3];
+(%o36) [a1,a2,a3]
+(%i37) myexpr : 1 + a1*x + a2*x^2 + cos(x);
+(%o37) cos(x)+a2*x^2+a1*x+1
+(%i38) get_basis (myparamL, myexpr);
+(%o38) [cos(x)+1,[x,x^2,0]]
+(%i39) myexpr : 1 + a1*x + a2*x^2 + a3*sin(x) + cos(x);
+(%o39) a3*sin(x)+cos(x)+a2*x^2+a1*x+1
+(%i40) get_basis (myparamL, myexpr);
+(%o40) [cos(x)+1,[x,x^2,sin(x)]]
+*/	
+	
+	
+/*  get_ivar  called by lfit_basis1 and by lfit_basis  */
+
+get_ivar (an_expr, basisL) := 
+block ([vvL,%x : 0, found_it:false],
+   vvL : listofvars (an_expr),
+   if length (vvL) > 0 then return (vvL[1]),
+       
+   if not listp (basisL) then
+      (print (" basisL is not a list"),
+	  return (false)),
+	  
+   for k thru length (basisL) do
+        (  vvL : listofvars (basisL[k]),
+         /*  print (" k = ",k, " vvL = ",vvL),		 */
+           if length (vvL) > 0 then
+                (  %x : vvL[1],
+				     found_it : true,
+				    return () )),
+	if found_it then %x 
+	  else  false)$
+				 
+/*
+(%i47) get_ivar(-0.59*t,[1]);
+(%o47) t
+(%i28) get_ivar (x^2,1);
+(%o28) x
+(%i29) get_ivar (x^2,[1]);
+(%o29) x
+(%i30) get_ivar (1,1);
+ basisL is not a list 
+(%o30) false
+(%i31) get_ivar (1,[y]);
+(%o31) y
+(%i32) get_ivar (1,[cos(x)]);
+(%o32) x
+(%i33) get_ivar (1,[2]);
+ ivar not found  
+(%o33) false
+*/	
+	
+	
+/*  lfit_basis1   */
+
+lfit_basis1 (ddataM,ssL, extra_expr,basis_exprL , paramL) :=
+block ([xxL,yyL,ivar, b_expr, extraL,eL,num_data,AL,delta,alpha,aa1,siga,
+        num_param, dof, yy_expr,ymL,chi2,qval, numer], numer:true,
+	local ( extra_func, yy_func),
+    /* print (" in lfit_basis1"), */
+	
+	if not listp (basis_exprL) then
+        (print (" basis_exprL arg is not a list"),
+		return()),
+	if length(basis_exprL) > 1 then return(),
+	ivar : get_ivar(extra_expr,basis_exprL),
+	
+	/* print (" ivar = ",ivar), */
+	
+	if ivar = false then print (" no ivar present")
+	 else print (" ivar = ",ivar),		
+	 
+	extra_expr : float (extra_expr),
+	/* print (" extra_expr = ",extra_expr), */
+	num_param : 1,
+	print (" num_param = ",num_param),
+	b_expr : basis_exprL[1],
+	/* print (" b_expr = ",b_expr),		 */
+    xxL : float( list_matrix_entries (col (ddataM,1))),
+	yyL : list_matrix_entries (col (ddataM,2)),
+	num_data : length(xxL),
+	print (" num_data = ",num_data),		
+	dof : num_data - 1,
+	print (" dof = ", dof),
+	
+	if extra_expr = 0 then eL : yyL/ssL
+	 else if numberp(extra_expr) then 
+	        eL : (yyL - extra_expr)/ssL
+	 else (   define (extra_func(ivar), extra_expr),
+	             extraL : map (extra_func, xxL),
+	             eL : (yyL - extraL)/ssL),
+	/* print (" eL = ",eL), */
+		
+	if numberp (b_expr) then
+	        AL : b_expr/ssL
+	  else  AL : makelist ( subst (ivar = xxL[i],b_expr)/ssL[i],i,1,num_data),
+	/* print (" AL = ", AL), */
+	delta : AL . eL,
+	/* print (" delta = ",delta), */
+	alpha : AL . AL,
+	/* print (" alpha = ",alpha), */
+	aa1 : delta / alpha,
+	/* print (" aa1 = ",aa1), */
+	siga : 1/sqrt (alpha),
+	/* print (" siga = ", siga), */
+	yy_expr : extra_expr + aa1*b_expr,
+	/* print (" yy_expr = ", yy_expr),  */
+	if numberp (yy_expr) then 
+	      ymL : makelist (yy_expr,i,1,num_data)
+	 else 
+	      (define (yy_func(ivar), yy_expr),
+	       ymL : map (yy_func, xxL)),	
+	/* print (" ymL = ",ymL), */
+	chi2 :  apply ("+", ( (yyL - ymL)/ssL)^2 ),
+	/* print (" chi2 = ",chi2), */
+	qval : Q (dof/2,chi2/2),
+	/* print (" qval = ", qval), */
+	chi2_prob (chi2, dof),
+	/* print (" aa1 = ",aa1," +/- ",siga), */
+	print2_pm (paramL[1], aa1, siga),
+	[ map ("=", paramL, [aa1]), [siga], chi2, qval])$
+	
+/*
+Ex. 2 data case
+(%i51) lfit_basis1 (Mdata,sigL,-0.59*t,[1]);
+ ivar =  t 
+ num_param =  1 
+ num_data =  10 
+ dof =  9 
+ chi2/dof =  0.925213 
+ chi2_prob =  50.1566 % 
+(%o51) [104.111,2.28284,8.32692,0.501566]
+*/	
+	
+	
+	
+	
+
+/* lfit_basis    */
+
+lfit_basis (ddataM,ssL, extra_expr,basis_exprL, paramL) :=
+block ([xxL,yyL,ivar,extraL,eL,e_col, delta_col,designM,alphaM,num_data,
+        num_param, dof, CM,ppL,errL,yy_expr,ymL,chi2,qval, numer], numer:true,
+	local (Aha, extra_func, yy_func),
+	
+	num_param : length(paramL),
+	if num_param = 1 then lfit_basis1 (ddataM,ssL, extra_expr,basis_exprL) 
+	
+	else 
+	
+     ( ivar : get_ivar (extra_expr, basis_exprL),
+	   if not ivar then 
+	        ( print ("  ivar not found "),
+			   return(false)),
+	   print (" ivar = ",ivar),
+	 xxL : float( list_matrix_entries (col (ddataM,1))),
+	yyL : list_matrix_entries (col (ddataM,2)),
+	num_data : length(xxL),
+	print (" num_data = ",num_data),
+	num_param : length(basis_exprL),
+	print (" num_param = ",num_param),
+	dof : num_data - num_param,
+	print (" dof = ", dof),
+	
+	if extra_expr = 0 then eL : yyL/ssL
+	else if numberp(extra_expr) then 
+	        eL : (yyL - extra_expr)/ssL
+	 else (   define (extra_func(ivar), extra_expr),
+	             extraL : map (extra_func, xxL),
+	             eL : (yyL - extraL)/ssL),
+	/* print (" eL = ",eL), */
+	e_col : apply ('matrix, makelist([eL[i]],i,1,num_data)),
+	/* print (" e_col = ", e_col), */
+	Aha[i,k] := subst( ivar = xxL[i], basis_exprL[k]) / ssL[i],
+	designM : genmatrix (Aha, num_data, num_param),
+	/* print (" designM = ", designM), */
+	delta_col : transpose(designM) . e_col,
+	/* print (" delta_col = ",delta_col), */
+	alphaM : transpose(designM) . designM,
+	/* print (" alphaM = ", alphaM), */
+	CM : invert (alphaM),
+	ppL : list_matrix_entries (CM . delta_col),	
+	/* print (" ppL = ", ppL)	, */
+	errL : makelist ( sqrt (CM[k,k]),k,1,num_param),
+	/* print (" errL = ",errL), */
+	yy_expr : extra_expr + sum (ppL[k]*basis_exprL[k],k,1,num_param),
+	/* print (" yy_expr = ", yy_expr), */
+	define (yy_func(ivar), yy_expr),
+	ymL : map (yy_func, xxL),	
+	/* print (" ymL = ",ymL), */
+	chi2 :  apply ("+", ( (yyL - ymL)/ssL)^2 ),
+	qval : Q (dof/2,chi2/2),
+	/* print (" qval = ", qval), */
+	chi2_prob (chi2, dof),	
+	for k thru num_param do 
+              print2_pm (paramL[k],ppL[k],errL[k]),
+	cons (errL,[chi2,qval]),
+	cons ( map ("=", paramL, ppL), %%)))$
+	
+
+/* lfit for general linear model (the model is linear in the parameters
+	      a1, a2, ... to be found) using least squares methods.
+		  
+	     y(x) = f(x) + a1*X1(x) + a2*X2(x) + ...
+		 
+    	lfit (dataM,sigL,ymodel_expr ,paramL) 
+		calls get_basis (paramL, ymodel_expr). The latter function
+		returns rL = [ extra_expr, basisL].        
+	 
+  	The order of expressions in basisL list should correspond
+	to the order of the parameter symbols in paramL.
+	    
+    lfit then calls either lfit_basis1 or lfit_basis.
+	
+	lfit returns a list of the best fit parameter values, the
+	  corresponding uncertainties in those best fit values,
+	  the value of chi2 based on those best fit values,
+	  and finally the value of Q.
+	  [a1,a2,..., da1,da2,...,chi2,Q]
+	  
+	  lfit is called by fit_line, fit_slope, fit_y_intercept  
+	
+*/
+
+/* lfit  */
+
+lfit (data, sigma, ymodel ,parameters) := 
+block ([Nparam, rL,rbL, numer],numer : true,
+     if not listp (parameters) then parameters : [parameters],
+	 Nparam : length (parameters),
+	/* print (" Nparam = ", Nparam), */
+	 rL : get_basis (parameters, ymodel),
+	 /* print (" rL = ",rL), */
+	 if Nparam = 1 then rbL : lfit_basis1(data,sigma,rL[1], rL[2], parameters)
+	  else rbL : lfit_basis (data,sigma,rL[1], rL[2],parameters),
+     rbL)$
+
+/* fit_line */
+
+fit_line (%dataM,%sigL) :=
+block ([   numer],numer:true,
+    print(" fit model y(x) = a + b*x to given data"),
+	print (" a = y-intercept,  b = slope "),
+	lfit (%dataM,%sigL, a + b*x, [a,b]))$
+
+	/* fit_slope */
+	
+fit_slope (%dataM,%sigL,%yintercept) :=
+block ([   numer],numer:true,
+    if  not numberp (%yintercept) then
+	    (print (" %yintercept must be a number"),
+		 return (done)),
+    print(" fit model y(x) = ",%yintercept, " + b*x to given data"),
+	lfit (%dataM,%sigL, %yintercept + b*x, [b]))$
+
+	/* fit_y_intercept */
+	
+fit_y_intercept (%dataM,%sigL,%slope) :=
+block ([   numer],numer:true,
+    if  not numberp (%slope) then
+	    (print (" %slope must be a number"),
+		 return (done)),
+    print(" fit model y(x) = a + (",%slope,")*x to given data"),
+	lfit (%dataM,%sigL, a + %slope*x, [a]))$
+	
+	
+
+	
+	
+/*   nlfit1:
+   general nonlinear fit for one parameter only   
+  */
+
+nlfit1(data_matrix, sL, ymod_expr, pp, ppg) :=
+block ([xxL, yyL,miter : 0, miter_max : 5, p_old ,ivar : %%x,lparam,Rsymb,
+              chi2_symb, beta_symb,zL, A_symb,  chi2_old,  lam : 0.001, 
+			  p_new,  chi2_new, Error_val, qval, dof, ndata,  numer],numer : true,
+     
+    local(ymodel_func),		
+	
+	if listp (pp) then  pp : pp[1],		
+    if listp (ppg) then  ppg : ppg[1],	
+	p_old : float (ppg),	
+	for pv in listofvars (ymod_expr) do 
+	       if freeof (pv,pp) then ivar : pv,
+	print (" ivar = ",ivar), 
+	xxL : list_matrix_entries (col (data_matrix,1)),
+	yyL : list_matrix_entries (col (data_matrix,2)),
+	ndata : length (xxL),
+	print (" num_data = ", ndata),
+	dof : ndata - 1,
+	print (" num_parameters = ",1),
+	print ("  dof = ",dof),
+	
+    define (ymodel_func(ivar), ymod_expr),	
+	ysymbL : map (ymodel_func, xxL),
+    /* print (" ysymbL = ", ysymbL), */
+	chi2_symb : apply ("+", ((yyL - ysymbL)/sL)^2 ),
+	/* print (" chi2_symb = ", chi2_symb),  */
+    beta_symb : -diff (chi2_symb, pp)/2,
+	/* print (" beta_symb = ",beta_symb), */
+	/* A_symb : diff (chi2_symb, pp, 2) / 2, */
+	zL : diff (ysymbL,pp) / sL,
+	A_symb : zL . zL,
+	/* print (" A_symb = ", A_symb), */
+	Rsymb : beta_symb/( (1 + lparam)*A_symb),
+	/* print (" Rsymb = ", Rsymb),  */
+	chi2_old : subst (pp = p_old, chi2_symb),
+	
+	print (" lam = ",lam," p_old = ",p_old," chi2_old = ", chi2_old ),
+	print (" --------------------------------------------------"),
+/*	print ("  n      lam       p_old      p_new       chi2_new "), */
+	printf(true, "~2t ~a ~10t ~a ~23t ~a ~38t ~a ~50t ~a ~%","n", "lam","p_old", "p_new","chi2_new"),
+	
+	do ( miter : miter + 1,	       
+	      if miter = miter_max then return(),	
+	      p_new : p_old + subst ([lparam = lam, pp = p_old], Rsymb),	      
+		  /* print (" p_new = ",p_new), */
+	      chi2_new : subst (pp = p_new, chi2_symb),	      
+		  /* print (" ",miter,"  ",lam," ",p_old,"  ",p_new,"  ", chi2_new), */
+		  printf(true, "~t ~2d ~3t ~8e ~18t ~12e ~29t ~12e ~41t ~12e ~%",miter, lam,p_old, p_new,chi2_new),
+		  
+		      /* case chi2 increased or stayed the same, leave
+                chi2_old and p_old the same but increase lam	 
+				*/
+				
+	      if chi2_new >= chi2_old then 
+           		 (print (" increase "),
+          		  lam : 10*lam)
+	          
+	     else  /* case chi2 decreased */
+	           ( if abs (chi2_new - chi2_old) < 0.01 then return(),			   
+		         lam : lam/10,
+				 chi2_old : chi2_new,
+		         p_old : p_new)),
+				 
+	Error_val : subst ( pp = p_new, 1/A_symb),
+	/* print (" Error_val = ",Error_val),	 */
+	print (" --------------------------------------------------"),
+	chi2_prob (chi2_new,dof),
+	qval : Q (dof/2, chi2_new/2),
+	print2_pm (pp, p_new,  Error_val ),
+	print (" --------------------------------------------------"),
+	[map ("=",[pp],[p_new]), [Error_val],chi2_new,qval])$
+	
+/*
+one parameter non-linear fit example, using
+  nlfit1
+  
+(%i2) xL : [1,2,3];
+(%o2) [1,2,3]
+(%i3) yL : [0.5,0.4,0.2];
+(%o3) [0.5,0.4,0.2]
+
+(%i73) Mdata : apply('matrix, xyList(xL,yL));
+(%o73) matrix([1,0.5],[2,0.4],[3,0.2])
+(%i4) sigL : [0.1,0.1,0.1];
+(%o4) [0.1,0.1,0.1]
+
+(%i36) nlfit (Mdata,sigL,exp (-a*x),[a],[0.6]);
+ ivar =  x 
+ num_data =  3 
+ num_parameters =  1 
+  dof =  2 
+ lam =  0.001  a_old =  0.6  chi2_old =  1.33493 
+ -------------------------------------------------- 
+   n       lam          a_old          a_new       chi2_new 
+   1      1.e-3           6.e-1   5.4517531e-1   1.0468399e+0 
+   2      1.e-4    5.4517531e-1   5.4540875e-1   1.0468335e+0 
+ -------------------------------------------------- 
+ chi2/dof =  0.523417 
+ chi2_prob =  59.2493 % 
+a =  0.545409  +/-  0.00886062 
+ -------------------------------------------------- 
+(%o36) [0.545409,0.00886062,1.04683,0.592493]
+------------------------------------------
+or use nlfit1:
+
+(%i5) myx : exp (-a*x);
+(%o5) %e^-(a*x)
+
+(%i77) nlfit1 (Mdata,sigL,myx,a,0.6);
+ ivar =  x 
+ num_data =  3 
+ num_parameters =  1 
+  dof =  2 
+ lam =  0.001  a_old =  0.6  chi2_old =  1.33493 
+ -------------------------------------------------- 
+   n       lam          a_old          a_new       chi2_new 
+   1      1.e-3           6.e-1   5.4517531e-1   1.0468399e+0 
+   2      1.e-4    5.4517531e-1   5.4540875e-1   1.0468335e+0 
+ -------------------------------------------------- 
+ chi2/dof =  0.523417 
+ chi2_prob =  59.2493 % 
+   a =  0.545409  +/-  0.00886062 
+ -------------------------------------------------- 
+(%o77) [0.545409,0.00886062,1.04683,0.592493]
+-----------------------------------------------------------
+or can enclose last two args in brackets:
+
+(%i78) nlfit1 (Mdata,sigL,myx,[a],[0.6]);
+ ivar =  x 
+ num_data =  3 
+ num_parameters =  1 
+  dof =  2 
+ lam =  0.001  a_old =  0.6  chi2_old =  1.33493 
+ -------------------------------------------------- 
+   n       lam          a_old          a_new       chi2_new 
+   1      1.e-3           6.e-1   5.4517531e-1   1.0468399e+0 
+   2      1.e-4    5.4517531e-1   5.4540875e-1   1.0468335e+0 
+ -------------------------------------------------- 
+ chi2/dof =  0.523417 
+ chi2_prob =  59.2493 % 
+   a =  0.545409  +/-  0.00886062 
+ -------------------------------------------------- 
+(%o78) [0.545409,0.00886062,1.04683,0.592493]
+
+*/	
+
+
+get_symbolic (xxL,yyL,ssL,ymod,ppL) :=
+block ([Ndata : length(xxL),np : length(ppL),ysymbL,chi2,bM,ZM,Asymb,
+               ivar : %%x, numer],numer:true,
+    local(ymodel_func, Zha),
+	for p in listofvars (ymod) do 
+	       if lfreeof (ppL,p) then ivar : p,
+	print (" ivar = ", ivar),
+    define (ymodel_func(ivar), ymod),	
+	ysymbL : map (ymodel_func, xxL),
+	 /* print (" ysymbL = ", ysymbL),  */
+	chi2 : apply ("+", ((yyL - ysymbL)/ssL)^2 ),
+	/* print (" chi2_symb = ", chi2),  */
+	bM : apply ('matrix, makelist ( [-diff (chi2, ppL[k]) / 2], k,1,np)),			
+	/* print (" bM = ",bM), */
+	for i thru Ndata do
+	     for k thru np do
+		      Zha[i,k] : diff (ysymbL[i],ppL[k]) / ssL[i],			   
+	ZM : genmatrix (Zha, Ndata, np),	
+	Asymb : transpose (ZM) . ZM,
+	[chi2, bM, Asymb])$
+	
+get_daL (arL,lparam, bMs,AMs) :=
+block ([lp:length(arL), AM_curr, beta_col,numer],numer:true,    	
+	beta_col : sublis (arL, bMs),
+	/* print (" in get_daL "), */
+   /* print (" beta_col = ", beta_col),  */
+    AM_curr : sublis(arL, AMs),		
+	for k thru lp do
+	    AM_curr[k,k] : (1+lparam)*AM_curr[k,k],	
+	list_matrix_entries ( invert (AM_curr) . beta_col))$
+	
+	
+get_errorL (arL,AMs) :=
+block ([CovM,EL:[],numer],numer:true,
+    CovM : invert (sublis (arL, AMs)),
+	/* print (" CovM = ",CovM), */
+	for p thru length (CovM) do
+	     EL : cons (CovM[p,p], EL),
+	sqrt ( reverse (EL)))$
+
+	
+/* nlfit calls nlfit1 if one parameter only, otherwise 
+    calls get_symbolic, get_daL, and get_errorL.
+	*/
+	
+nlfit(data_M, ssigL, ymodel_expr, paramL, param_guessL) :=
+block ([xdataL, ydataL,niter : 0, niter_max : 10, p_oldL,Ndata,Nparam,dof,
+              chi2_symb, betaMs, As, atL_old, chi2_old,  lam : 0.001, qval,
+			  p_newL, atL_new, chi2_new, ErrorL, numer],numer:true,	
+
+if not listp (paramL) then
+    ( print (" nlfit:  paramL must be a list "),
+       return (done)),
+
+	   if not listp (param_guessL) then
+    ( print (" nlfit: param_guessL must be a list "),
+       return (done)),
+	   
+if length(paramL) = 1 then 
+       nlfit1(data_M, ssigL, ymodel_expr, paramL[1], param_guessL[1])
+else (			  
+    xdataL : list_matrix_entries (col (data_M,1)),
+	ydataL : list_matrix_entries (col (data_M,2)),
+	Ndata : length (xdataL),
+	Nparam : length (paramL),
+	dof : Ndata - Nparam,
+	print (" Ndata = ",Ndata),
+	print (" Nparam = ",Nparam),
+	print (" dof = ",dof),
+	
+	[chi2_symb,betaMs,As] : get_symbolic (xdataL,ydataL,ssigL, ymodel_expr,paramL),				
+	
+	p_oldL : float (param_guessL),
+	atL_old : map ("=", paramL, p_oldL),	
+	chi2_old : sublis (atL_old, chi2_symb),	 	 
+	print ("start:   params:   ",atL_old,"       chi2 = ", chi2_old),	
+	
+	print ("---------------------------------------------------------------"),
+	print ("  n     lam"),
+	
+	do ( niter : niter + 1,	       
+	      if niter = niter_max then return(),	
+	      p_newL : p_oldL + get_daL (atL_old, lam, betaMs, As),	      
+	      atL_new : map ("=", paramL, p_newL),	      
+	      chi2_new : sublis (atL_new, chi2_symb),	      
+		 /* print (" ",n,"  ",lam," ",p_oldL,"  ",p_newL,"  ", chi2_new), */
+		  print (" ",niter,"  ",lam),
+		  print ("              p_oldL = ",p_oldL),
+		  
+		  print ("              p_newL = ",p_newL,"   chi2_new = ",chi2_new),
+		  /* print ("                       chi2_new = ",chi2_new), */
+
+		      /* case chi2 increased or stayed the same, leave
+                chi2_old, p_oldL, and atL_old the same,
+                 but increase lam				*/
+				
+	      if chi2_new >= chi2_old then 
+           		 (print (" increase "),
+          		  lam : 10*lam)
+	          
+	     else  /* case chi2 decreased */
+	           ( if abs (chi2_new - chi2_old) < 0.01 then return(),			   
+		         lam : lam/10,
+				 chi2_old : chi2_new,
+		         p_oldL : p_newL,
+		         atL_old : map ("=", paramL, p_oldL))),
+	print ("---------------------------------------------------------------"),
+	ErrorL : get_errorL (atL_new, As),
+	/* print(" ErrorL = ",ErrorL), */
+	qval : Q (dof/2, chi2_new/2),
+	chi2_prob (chi2_new, dof),
+	print ("---------------------------------------------------------------"),
+	for k thru Nparam do
+	     print2_pm (paramL[k], p_newL[k],ErrorL[k]),
+	cons (ErrorL, [chi2_new,qval]),
+	cons ( map ("=" , paramL, p_newL),%%)))$
+	
+	
+	
+
+	
+/*
+toy problem with three data points
+two parameter fit with nlfit
+
+(%i1) load(fit);
+(%o1) "c:/work9/fit.mac"
+(%i2) xL : [1,2,3];
+(%o2) [1,2,3]
+(%i3) yL : [0.5,0.4,0.2];
+(%o3) [0.5,0.4,0.2]
+(%i73) Mdata : apply('matrix, xyList(xL,yL));
+(%o73) matrix([1,0.5],[2,0.4],[3,0.2])
+(%i4) sigL : [0.1,0.1,0.1];
+(%o4) [0.1,0.1,0.1]
+
+nov 10
+
+(%i25) nlfit(Mdata,sigL,a1*exp(-a2*x),[a1,a2],[1,1/2]);
+ Ndata =  3 
+ Nparam =  2 
+ dof =  1 
+ ivar =  x 
+start:   params:    [a1 = 1.0,a2 = 0.5]        chi2 =  1.29155 
+--------------------------------------------------------------- 
+  n     lam 
+  1    0.001 
+              a_oldL =  [1.0,0.5] 
+              a_newL =  [0.73907,0.390241]    chi2_new =  0.461988 
+  2    1.0e-4 
+              a_oldL =  [0.73907,0.390241] 
+              a_newL =  [0.763505,0.390015]    chi2_new =  0.415385 
+  3    1.0e-5 
+              a_oldL =  [0.763505,0.390015] 
+              a_newL =  [0.763539,0.390049]    chi2_new =  0.415385 
+--------------------------------------------------------------- 
+ chi2/dof =  0.415385 
+ chi2_prob =  51.9249 % 
+--------------------------------------------------------------- 
+a1 =  0.763539  +/-  0.271814 
+a2 =  0.390049  +/-  0.211558 
+(%o25) [0.763539,0.390049,0.271814,0.211558,0.415385,0.519249]
+
+(%i33) get_chi2(Mdata,sigL,0.763539*exp(-0.390049*x));
+(%o33) 0.415385
+
+Compare with lsquares algorithm:
+
+(%i26) load(lsquares);
+(%o26) "C:/Program Files/Maxima-sbcl-5.36.1/share/maxima/5.36.1/share/lsquares/lsquares.mac"
+(%i27) lsquares_estimates (Mdata,[x,y],y = a1*exp(-a2*x),[a1,a2],init = [1,0.5]); 
+*************************************************
+  N=    2   NUMBER OF CORRECTIONS=25
+       INITIAL VALUES
+ F=  3.668905973137840D-02   GNORM=  1.131424495683743D-01
+*************************************************
+
+   I  NFN     FUNC                    GNORM                   STEPLENGTH
+
+   1    3     9.772859700300742D-03   5.448876601206837D-02   2.564310576072946D+00  
+   2    5     6.701495395730015D-03   1.796848487510911D-02   2.897145536629124D-01  
+   3    6     5.923471234028936D-03   2.169703774739059D-02   1.000000000000000D+00  
+   4    7     3.049654704332661D-03   4.447809954902111D-02   1.000000000000000D+00  
+   5    8     1.866054561813460D-03   8.492413072066354D-03   1.000000000000000D+00  
+   6    9     1.444568853841703D-03   8.851766743674662D-03   1.000000000000000D+00  
+   7   10     1.386774799776487D-03   1.862827771232478D-03   1.000000000000000D+00  
+   8   11     1.384626562653108D-03   4.988315017517789D-05   1.000000000000000D+00  
+
+ THE MINIMIZATION TERMINATED WITHOUT DETECTING ERRORS.
+ IFLAG = 0
+(%o27) [[a1 = 0.763062,a2 = 0.389723]]
+
+(%i28) lsquares_estimates (Mdata,[x,y],y = a1*exp(-a2*x),[a1,a2],init = [1,0.5],
+              iprint = [-1,0]);
+(%o28) [[a1 = 0.763062,a2 = 0.389723]]
+
+(%i34) get_chi2(Mdata,sigL,0.763062*exp(-0.389723*x));
+(%o34) 0.415388
+ 
+*/		
+
+
+/* wrapper for dblint  */
+
+mydblint(f,r,s,a,b,releps) :=
+block ([ival1, ival2, reldiff,niter:0,nmax:10,numer],numer:true,
+     dblint_x : 10,
+	 dblint_y : 10,
+	 a : float(a),
+	 b : float(b),
+     ival1 : dblint(f,r,s,a,b),
+	 print (" start ival = ",ival1),
+     do (
+	      niter : niter + 1,
+		  if niter = nmax then return(),
+		  dblint_x : 2*dblint_x,
+		  dblint_y : 2*dblint_y,
+		  ival2 : dblint(f,r,s,a,b),		  
+		  reldiff : abs ( (ival2 - ival1)/ival1),
+		  print (niter, dblint_x, ival2, reldiff),
+		  if reldiff <= releps then return(),
+		  ival1 : ival2),		  
+	 dblint_x : 10,
+	 dblint_y : 10,
+	 ival2)$
+	 
+/*
+
+(%i1) load(dblint);
+(%o1) "C:/Program Files/Maxima-sbcl-5.36.1/share/maxima/5.36.1/share/numeric/dblint.mac"
+
+(%i2) translate(dblint);
+warning: encountered undefined variable dblint_x in translation.
+warning: encountered undefined variable dblint_y in translation.
+(%o2) [dblint]
+(%i3) compile(dblint);
+warning: encountered undefined variable dblint_x in translation.
+warning: encountered undefined variable dblint_y in translation.
+STYLE-WARNING: redefining MAXIMA::$DBLINT in DEFUN
+(%o3) [dblint]
+
+(%i4) [dblint_x,dblint_y];
+(%o4) [10,10]
+
+(%i5) integrate (integrate (x^2*y^2,y,-sqrt(1-x^2),sqrt(1-x^2)),x,-1,1);
+(%o5) %pi/24
+(%i6) itrue : %,numer;
+(%o6) 0.1308996938995747
+
+(%i7) f(x,y) := (mode_declare([x,y],float),  x^2*y^2)$
+(%i8) r(x) := (mode_declare(x,float), -sqrt(1-x^2))$
+(%i9) s(x) :=  (mode_declare(x,float),sqrt(1-x^2))$
+(%i10) translate(f,r,s);
+(%o10) [f,r,s]
+/* part A: use mydblint  */	 
+	 
+(%i13) ival : mydblint('f,'r,'s,-1,1,1e-6);
+ start ival =  0.1311266505187811 
+1 20 0.1309349983128048 0.00146158088548835 
+2 40 0.1309054544797164 2.256374038191729e-4 
+3 80 0.1309006674580971 3.65685420694962e-5 
+4 160 0.130899861944236 6.153626843581935e-6 
+5 320 0.1308997232429267 1.059598591371263e-6 
+6 640 0.1308996990545163 1.847858025538194e-7 
+(%o13) 0.1308996990545163
+(%i14) time(%);
+(%o14) [3.843]
+(%i15) abs ( (ival - itrue)/itrue);
+(%o15) 3.938085264664993e-8
+(%i16) [dblint_x,dblint_y];
+(%o16) [10,10]
+
+/* part B: call dblint directly */
+
+(%i17) i10 : dblint('f,'r,'s,-1.0,1.0);
+(%o17) 0.1311266505187811
+(%i18) abs ( (i10 - itrue)/itrue);
+(%o18) 0.001733820855077998
+
+(%i19) [dblint_x,dblint_y] : [100,100];
+(%o19) [100,100]
+(%i20) [dblint_x,dblint_y];
+(%o20) [100,100]
+(%i21) i100 : dblint('f,'r,'s,-1.0,1.0);
+(%o21) 0.1309002459667411
+(%i22) abs ( (i100 - itrue)/itrue);
+(%o22) 4.217482485861476e-6
+
+*/	
+
+/* application of readonly  */
+
+mytest(n) :=
+block ([nv,ans],
+     nv : n,
+     do
+          ((nv : nv + 1),
+           print (" nv = ",nv),
+           ans : readonly ("Enter s to stop, c to continue "),
+           if ans = s then return()))$
+		   
+/*
+(%i2) mytest(0);
+ nv =  1 
+Enter s to stop, c to continue  
+s;
+(%o2) false
+(%i3) mytest(0);
+ nv =  1 
+Enter s to stop, c to continue  
+c;
+ nv =  2 
+Enter s to stop, c to continue  
+c;
+ nv =  3 
+Enter s to stop, c to continue  
+s;
+(%o3) false
+*/		   
+
+/*  grid_search  */
+
+grid_search(data_matrix, sigma_list,ymodel_expr,paramL,param_startL,stepFactor) :=
+block ([ Nparam,asubL,yfit,chiCut : 0.01,chiSqr,chiOld, chiSq1,chiSq2,chiSq3,rlist,
+               Save,Delta, ac3,amin,eq1,eq2,eq3,aa,bb,cc,soln, stop_program : false,
+			    Alpha,Beta,Gamma, anerror : false,trial : 0,ans,maxtrial:10, drlist,
+            	numer],numer:true,			 
+      local (ac,deltaA,dac),
+	  
+     Nparam : length (paramL),
+	/*  print (" Nparam = ",Nparam), */
+	 print (" ymodel = ", ymodel_expr),
+	 
+	 for i thru Nparam do
+	     (ac[i] : param_startL[i],
+		  if abs(ac[i]) < 1e-20 then 
+		      ( print(" starting value for parameter ",i," is too small"),
+			    anerror : true,
+				return())),
+     if anerror then return (done),	 
+	 
+	 /* initial step size for each parameter */
+	 for i thru Nparam do  deltaA[i] : stepFactor*abs (ac[i]),		  		  
+		  
+	 /* starting value of chiSqr  */
+     asubL : map ("=",paramL,param_startL),	 
+	/* print (" asubL = ", asubL),	  */
+	 yfit : sublis (asubL, ymodel_expr),
+	/* print (" yfit = ", yfit), */
+	 chiSqr : get_chi2 (data_matrix,sigL,yfit),	  /* starting value of chiSqr  */
+	 if chiSqr < 0 then
+	     (print (" starting chiSqr = ",chiSqr," is less than zero"),
+		  return(done)),
+	 chiOld : chiSqr + chiCut + 1,	 
+	   /*  start next trial minimization of chiSqr  */
+	 do (
+	    print("============================="),
+		/* print (" at top of trial do loop "), */
+		if abs(chiOld - chiSqr) < chiCut then return(),	 
+	    chiOld : chiSqr,
+		trial : trial + 1,
+		if trial > maxtrial then return(),
+	    print (" trial =  ",trial," starting chiSqr =  ",chiSqr),		
+		print (" starting parameter values and step sizes for this trial "),	 
+	    for j thru Nparam do print (" ",j," ",ac[j]," ",deltaA[j]),			
+		
+	 /*	-find local minimum for each parameter-  */
+		/* chiSq2 : chiSqr,    	 */
+	    for j thru Nparam do 
+		       /* choose a Delta with a sign that causes chiSqr to decrease */
+	         ( print ("----------------------------------------------------"),
+			   print ("  parameter ",j),
+			 chiSq2 : chiSqr, 
+			 /* print (" start parameter j =  ",j, "  chiSqr = ",chiSqr), */
+			 Delta : deltaA[j],
+			 /* print (" Delta = ", Delta), */
+             ac[j]  : ac[j] + Delta,
+			 /* print (" new ac[j] = ", ac[j]), */
+	         asubL : map ("=",paramL,makelist (ac[i],i,1,Nparam)), 
+			 /* print (" asubL = ",asubL), */
+		     yfit : sublis (asubL, ymodel_expr),
+	         chiSq3 : get_chi2 (data_matrix,sigL,yfit),
+			 if chiSq3 <  0 then
+	              (print (" chiSq3 = ",chiSq3," is less than zero"),
+				   print (" abort program "),
+				   stop_program : true,
+		           return()),
+             if chiSq3 > chiSq2  then  /* started in wrong direction */
+		          (Delta  : -Delta,               
+		           ac[j] : ac[j] + Delta,
+		           Save : chiSq2,             /* interchange 2 and 3 so 3 is lower */
+		           chiSq2 : chiSq3,
+                   chiSq3 : Save),
+		   /*  Now Increment or decrement ac[j] until chi squared increases-  */
+             do
+		         (chiSq1 : chiSq2,          /* move back to prepare for quadratic eqn. fit  */
+                  chiSq2 : chiSq3,
+		          ac[j] : ac[j] + Delta,
+			      asubL : map ("=",paramL,makelist (ac[i],i,1,Nparam)), 
+		          yfit : sublis (asubL, ymodel_expr),
+		          chiSq3 : get_chi2 (data_matrix,sigL,yfit),
+				  if chiSq3 <  0 then
+	                   (print (" chiSq3 = ",chiSq3," is less than zero"),
+				        print (" abort program "),
+				        stop_program : true,
+		                return()),				   
+                  if chiSq3 >  chiSq2 then return()),
+				  
+			 if stop_program then return(),
+			 print (" chiSq1 = ",chiSq1," chiSq2 = ",chiSq2," chiSq3 = ",chiSq3),
+			 
+		 /*  -Find minimum of parabola defined by last three points-  */
+		     ac3 : ac[j],          /* chiSqr = aa*a[j]**2 + bb*a[j] + cc   */
+			 eq1 : chiSq1 = aa*(ac3 - 2*Delta)^2 + bb*(ac3 - 2*Delta) + cc,
+			 eq2 : chiSq2 = aa*(ac3 - Delta)^2 + bb*(ac3 - Delta) + cc,
+		     eq3 : chiSq3 = aa*ac3^2 + bb*ac3 + cc,
+		     soln : solve ([eq1,eq2,eq3],[aa,bb,cc]),
+			 /* print (" soln = ",soln), */
+		     [Alpha,Beta,Gamma] : map ('rhs, soln[1]),
+			 /* print (" Alpha = ",Alpha," Beta = ",Beta," Gamma = ",Gamma), */
+			 ac[j] : -Beta/Alpha/2,   /* location of local minimum, based on parabola fit */
+
+			 chiSqr : Gamma - Beta^2 /(4*Alpha),  /* min. value based on a parabola fit */
+			 if chiSqr < 0 then
+			     (print ("  chiSqr-minimum is less than zero  using parabola fit "),
+				  print (" compute using corresponding parameter value"),
+				  asubL : map ("=",paramL,makelist (ac[i],i,1,Nparam)), 
+			     /* print (" asubL = ", asubL),  */
+		          yfit : sublis (asubL, ymodel_expr),
+			     /*  print (" yfit = ", yfit), */
+		          chiSqr : get_chi2 (data_matrix,sigL,yfit)),			 
+			 if chiSqr <  0 then
+	                   (print (" chiSqr local minimum = ",chiSqr," is less than zero"),					    
+				        print (" abort program "),
+				        stop_program : true,
+		                return()),			
+			 /* adjust step size to be the change in a[j] (from min. location)
+			     needed to produce chiSqr = chiSqr_min + 2, based on a
+				  parabola fit, if possible, otherwise divide by 2.
+			 */
+			 if Alpha < 0 then 
+			     (print (" Alpha = ",Alpha," is negative for j = ",j),
+				  print (" Cannot compute new deltaA[j] with parabola fit"),
+				  deltaA[j] : deltaA[j]/2,
+				  dac[j] : non_physical)
+			 else 
+                 (deltaA[j] : sqrt (2/Alpha),	             
+				  dac[j] : 1/sqrt(Alpha)),
+			 print (" ac[j] =  ",ac[j]," dac[j] = ",dac[j], " deltaA[j] =   ",deltaA[j]),
+			 print (" chiSqr =   ",chiSqr )),     /* end of parameter j calc do loop  */
+			 
+		if stop_program then return(),
+		if chiSqr > chiOld then
+		    print (" chiSqr increased:   chiOld = ",chiOld," new chiSqr = ",chiSqr),
+		ans : readonly ("Enter s; to stop trials, c; to continue "),
+        if ans = s then return()),  /* end next trial do loop */
+	 /* print (" out of trial do loop "),  */
+	 print ("====================================="),
+	 rlist : [],
+	 drlist : [],
+	 for j thru Nparam do
+          (rlist : cons (ac[j], rlist),
+		   drlist : cons (dac[j], drlist)),
+	 [reverse (rlist), reverse (drlist)]  )$
+
+/* sample run with coffee.dat three parameter fit search
+
+(%i1) load(fit);
+(%o1) "c:/work9/fit.mac"
+(%i2)  Mdata : matrix([0,82.3],[2,78.5],[4,74.3],[6,70.7],[8,67.6],[10,65.0],[12,62.5],
+             [14,60.1],[16,58.1],[18,56.1],[20,54.3],[22,52.8],[24,51.2],
+             [26,49.9],[28,48.6],[30,47.2],[32,46.1],[34,45.0],[36,43.9],
+             [38,43.0],[40,41.9],[42,41.0],[44,40.1],[46,39.5])$
+(%i3)  sigL : makelist (1.14,j,1,24)$
+(%i4)  myexpr : a1 + a2*exp (-x/a3)$
+			 
+(%i11) grid_search(Mdata,sigL,myexpr,[a1,a2,a3],[17,65.3,38.5],0.5);
+ ymodel =  a2*%e^-(x/a3)+a1 
+============================= 
+ trial =   1  starting chiSqr =   51.6635 
+ starting parameter values and step sizes for this trial  
+  1   17   8.5 
+  2   65.3   32.65 
+  3   38.5   19.25 
+---------------------------------------------------- 
+  parameter  1 
+ chiSq1 =  1483.72  chiSq2 =  51.6635  chiSq3 =  1288.12 
+ ac[j] =   16.6885  dac[j] =  0.232702  deltaA[j] =    0.32909 
+ chiSqr =    49.8713 
+---------------------------------------------------- 
+  parameter  2 
+ chiSq1 =  7986.98  chiSq2 =  49.8713  chiSq3 =  7363.9 
+ ac[j] =   64.633  dac[j] =  0.373893  deltaA[j] =    0.528764 
+ chiSqr =    46.6892 
+---------------------------------------------------- 
+  parameter  3 
+ chiSq1 =  849.349  chiSq2 =  46.6892  chiSq3 =  3684.78 
+  chiSqr-minimum is less than zero  using parabola fit  
+ compute using corresponding parameter value 
+ ac[j] =   44.6456  dac[j] =  0.408524  deltaA[j] =    0.57774 
+ chiSqr =    121.832 
+ chiSqr increased:   chiOld =  51.6635  new chiSqr =  121.832 
+Enter s; to stop trials, c; to continue  
+c;
+============================= 
+ trial =   2  starting chiSqr =   121.832 
+ starting parameter values and step sizes for this trial  
+  1   16.6885   0.32909 
+  2   64.633   0.528764 
+  3   44.6456   0.57774 
+---------------------------------------------------- 
+  parameter  1 
+ chiSq1 =  33.6759  chiSq2 =  32.9831  chiSq3 =  36.2904 
+ ac[j] =   14.4924  dac[j] =  0.232702  deltaA[j] =    0.32909 
+ chiSqr =    32.7695 
+---------------------------------------------------- 
+  parameter  2 
+ chiSq1 =  35.385  chiSq2 =  32.7695  chiSq3 =  34.5901 
+ ac[j] =   64.5857  dac[j] =  0.355039  deltaA[j] =    0.502101 
+ chiSqr =    32.7517 
+---------------------------------------------------- 
+  parameter  3 
+ chiSq1 =  34.223  chiSq2 =  32.7517  chiSq3 =  33.3586 
+ ac[j] =   44.5254  dac[j] =  0.566763  deltaA[j] =    0.801524 
+ chiSqr =    32.7068 
+Enter s; to stop trials, c; to continue  
+c;
+============================= 
+ trial =   3  starting chiSqr =   32.7068 
+ starting parameter values and step sizes for this trial  
+  1   14.4924   0.32909 
+  2   64.5857   0.502101 
+  3   44.5254   0.801524 
+---------------------------------------------------- 
+  parameter  1 
+ chiSq1 =  33.7845  chiSq2 =  32.7068  chiSq3 =  35.6221 
+ ac[j] =   14.5681  dac[j] =  0.232906  deltaA[j] =    0.329379 
+ chiSqr =    32.6011 
+---------------------------------------------------- 
+  parameter  2 
+ chiSq1 =  35.0065  chiSq2 =  32.6011  chiSq3 =  34.1818 
+ ac[j] =   64.5337  dac[j] =  0.355657  deltaA[j] =    0.502975 
+ chiSqr =    32.5798 
+---------------------------------------------------- 
+  parameter  3 
+ chiSq1 =  35.0982  chiSq2 =  32.5798  chiSq3 =  34.0787 
+ ac[j] =   44.4237  dac[j] =  0.565537  deltaA[j] =    0.79979 
+ chiSqr =    32.5474 
+Enter s; to stop trials, c; to continue  
+s;
+===================================== 
+(%o11) [[14.5681,64.5337,44.4237],[0.232906,0.355657,0.565537]]
+
+
+*/	 
+	 
+	
+	
+/* reminder: (i,j) element of Amatrix is retreived by:  Amatrix[i,j]  */	
+	
+/*  list utilities  */	   
+
+
+xyList(aL,bL) := makelist ([aL[i],bL[i]],i,1,length (aL))$
+
+/*  join versus merge lists :
+
+(%i30) xL : [1,2,3];
+(%o30) [1,2,3]
+(%i31) yL : [a,b,c];
+(%o31) [a,b,c]
+(%i32) join(xL,yL);
+(%o32) [1,a,2,b,3,c]
+(%i33) flatten (cons (xL,yL));
+(%o33) [1,2,3,a,b,c]
+*/
+
+/*  getL(HA,ii,Nc)
+        create list of two index hashed array HA values for given value of first index .
+		
+		examples:
+(%i18) getL(ha,1,3);
+(%o18) [ha[1,1],ha[1,2],ha[1,3]]
+(%i19) getL(ha,2,3);
+(%o19) [ha[2,1],ha[2,2],ha[2,3]]
+         Can also make some previous assignment, such as HA[1,1]:3, or
+             HA[i,j] := i*sin(j*%pi)$ for example.
+*/   
+
+getL(HA,ii,Nc) :=
+ block([zzL:[]],
+     for jj thru Nc do zzL:cons(HA[ii,jj],zzL),
+	 reverse (zzL))$
+
+/* convert list into a column matrix */
+
+col_vec(zzL) := apply ('matrix,makelist ([zzL[i]],i,1,length(zzL)))$
+
+/* first element, last element, and length of a given list */
+	   
+fll(x) := [first(x),last(x),length(x)]$
+
+declare(fll,evfun)$
+
+head(mylist) :=
+block([numL,nleft:6],
+    numL : length(mylist),
+	if nleft >= numL then mylist
+    else rest (mylist, -(numL - nleft)))$
+    
+tail(mylist) :=
+block([numL,nleft:6],
+    numL : length(mylist),
+	if nleft >= numL then mylist
+    else rest (mylist, numL - nleft))$		
+
+get_vec(%aL,%nn) := (map(lambda([x],part(x,%nn)), %aL))$
+
+range(aaL) := print(" min = ",lmin(aaL),"  max = ", lmax(aaL))$	
+
+/*  return the first list position i such that  xxL[i] >  xxv
+*/	
+
+pos_GT (xxL,xxv) :=
+block ([nxv:0],
+   for i thru length (xxL) do
+        if xxL[i] > xxv then 
+		    ( nxv : i,
+			  return ()),	
+    nxv)$
+   
+/*
+(%i27) pos_GT (tL,200);
+(%o27) 14
+*/   
+
+/*
+ return a list of the positions of elements of xxL which are less than or equal to xxv
+*/
+
+positions_LE (xxL,xxv) := 
+block ([plist:[]],
+    for i thru length (xxL) do
+	    if xxL[i] <= xxv then plist : cons (i, plist),
+	reverse (plist))$
+	
+/*
+(%i32) pL : positions_LE (CLp2,0);
+(%o32) [35,38,39,46]
+
+*/
+
+/*  Remove element yyL[nval] from given list yyL  */
+
+Remove1(yyL, nval) := 
+block ([yyL_new : []],
+     for i thru length (yyL) do
+	      if i # nval then yyL_new : cons (yyL[i],yyL_new),
+	 reverse (yyL_new))$
+	 
+	 
+	 
+/*
+(%i36) CLp2;
+(%o36) [58,38,44,41,36,45,19,18,27,39,16,25,19,21,14,15,25,14,20,16,18,11,8,
+        10,17,7,7,4,7,14,1,12,7,2,0,3,6,-1,-1,4,11,7,3,2,8,0]
+(%i37) Remove1 (CLp2,1);
+(%o37) [38,44,41,36,45,19,18,27,39,16,25,19,21,14,15,25,14,20,16,18,11,8,10,
+        17,7,7,4,7,14,1,12,7,2,0,3,6,-1,-1,4,11,7,3,2,8,0]
+(%i38) length(%);
+(%o38) 45
+(%i39) Remove1 (CLp2,2);
+(%o39) [58,44,41,36,45,19,18,27,39,16,25,19,21,14,15,25,14,20,16,18,11,8,10,
+        17,7,7,4,7,14,1,12,7,2,0,3,6,-1,-1,4,11,7,3,2,8,0]
+*/
+
+/* Remove all elements xxL[j] whose positions j are in given list posL */
+
+Remove (xxL,posL) := 
+block ([xxL_new : xxL],
+      posL : sort (posL, 'orderlessp),
+      for j thru length (posL) do 
+	        xxL_new : Remove1 (xxL_new, posL[j] + 1 -j),
+	  xxL_new)$
+	  
+/*
+(%i47) CLp2;
+(%o47) [58,38,44,41,36,45,19,18,27,39,16,25,19,21,14,15,25,14,20,16,18,11,8,
+        10,17,7,7,4,7,14,1,12,7,2,0,3,6,-1,-1,4,11,7,3,2,8,0]
+(%i48) pL;
+(%o48) [35,38,39,46]
+(%i49) Remove (CLp2,pL);
+(%o49) [58,38,44,41,36,45,19,18,27,39,16,25,19,21,14,15,25,14,20,16,18,11,8,
+        10,17,7,7,4,7,14,1,12,7,2,3,6,4,11,7,3,2,8]
+*/
+
+integer_frequency (xL,nv) :=
+block ([val : 0],
+    for j thru length (xL) do
+	    if xL[j] = nv then val : val + 1,
+	val)$
+		
+	
+   
+ratprint : false$	
+orthopoly_returns_intervals : false$
+display2d : false$
+fpprintprec : 6$
+
+

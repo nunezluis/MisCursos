@@ -1,0 +1,564 @@
+  file mbe1code.txt  has Maxima code
+   for Maxima by Example, Chapter 1,
+   Introduction to Maxima.
+
+    Edwin L Woollett, Aug. 11, 2009
+    woollett@charter.net
+    http://www.csulb.edu/~woollett
+
+
+
+1.1 What is Maxima?
+
+1.2 Which Maxima Interface Should You Use?
+
+1.3 Using the wxMaxima Interface
+
+1.3.1  Rational Simplification with ratsimp and fullratsimp
+
+(%i1) expr: (x^(a/2) + 1)^2*(x^(a/2) - 1)^2/(x^a - 1);
+(%i2) expr, ratsimp;
+(%i3) expr, fullratsimp;
+(%i4) rat (expr);
+
+1.4 Using the Xmaxima Interface
+
+(%i1) a:45;
+(%i2) b:30;
+(%i3) a:48;
+
+1.5 Creating and Using a Startup File: maxima-init.mac
+
+(%i1) maxima_userdir;
+(%i2) load(qfft);
+(%i3) load("qfft.mac");
+(%i4) load("c:/work2/qfft.mac");
+--------------------
+(%i1) maxima_userdir;
+(%i2) load(qfft)$
+(%i3) functions;
+(%i4) mclean();
+(%i1) functions;
+(%i2) kill(all);
+(%i1) functions;	
+
+1.6 Maxima Expressions, Numbers, Operators, Constants, and Reserved Words
+
+(%i1) x^2+3;
+(%i2) 2^3^4;
+(%i3) 2^(3^4);
+(%i4) (2^3)^4;
+(%i5) float( [%e,%pi,%phi,%gamma] );
+(%i6) Solve(x):= x^2;
+(%i7) Solve(3);
+
+
+1.7 Input and Output Examples
+
+(%i1) x/(x^3+1);
+(%i2) display2d:false$
+(%i3) %o1;
+(%i4) display2d:true$
+(%i5) %o1;
+(%i6) % + %;
+(%i7) sin(x - %pi/2);
+
+
+1.8 Maxima Power Tools at Work
+
+1.8.1 The Functions apropos and describe
+
+(%i1) apropos(exp);
+(%i2) ? exp
+
+1.8.2 The Function ev and the Properties evflag and evfun
+
+(%i1) x+y, x  =  a+y;
+(%i2) %, y = 2;
+(%i3) x+y, x = a+y, y = 2;
+(%i4) x+y, [x = a+y, y = 2];
+----------
+(%i1) eqns : [-2*x -3*y = 3, -3*x +2*y = -4]$
+(%i2) solns : solve (eqns);
+(%i3) eqns, solns;
+----------
+(%i1) solve ( a^4 + 1 );
+(%i2) % , rectform, ratsimp;
+(%i3) %^4, ratsimp;
+(%i4) [exponentialize,float,numer,simp];
+(%i5) properties(exponentialize);
+(%i6) properties(numer);
+(%i7) properties(float);
+(%i8) properties(simp);
+(%i9) [ ev (exp(3/29), numer ), ev (exp(3/29), float) ];
+(%i10) [ ev (exp (%pi*3/29), numer), ev (exp (%pi*3/29), float) ];
+(%i11) 2*cos(w*t) + 3*sin(w*t), exponentialize, expand;
+(%i12) [diff,expand,integrate,nouns];
+(%i13) properties(expand);
+(%i14) (a+b)*(c+d);
+(%i15) (a+b)*(c+d),expand;
+(%i16) ev((a+b)*(c+d),expand);
+
+
+1.8.3 The List functions and the Function fundef
+
+(%i1) functions;
+(%i2) fundef(rtt);
+(%i3) fundef(cos);
+
+
+1.8.4 The Function kill and the List values
+
+(%i1) kill(rtt);
+(%i2) functions;
+(%i3) [ a:2, b:5, e: x^2/3 ];
+(%i4) values;
+
+
+1.8.5 Examples of map, fullmap, apply, grind, and args
+
+(%i1) map('f, [x, y, z] );
+(%i2) map('f, x + y + z);
+(%i3) map('f, [a*x,b*exp(y),c*log(z)]);
+(%i4) map('f, a*x + b*exp(y) + c*log(z) );
+(%i5) e : x/(x^2+x)+(y^2+y)/y ;
+(%i6) e, ratsimp;
+(%i7) map('ratsimp,e);
+(%i8) map( "=", [x,y,z],[a,b,c] );
+(%i9) expr : 2*%pi + 3*exp(-4);
+(%i10) map('f, expr);
+(%i11) fullmap('f, expr);
+(%i12) apply('f, [x,y,z]);
+(%i13) apply("+",[x,y,z]);
+(%i14) dataL : [ [1,2], [2,4] ]$
+(%i15) dataM : apply('matrix, dataL );
+(%i16) grind(%)$
+(%i17) args(dataM);
+
+1.8.6 Examples of subst, ratsubst, part, and substpart
+
+(%i1) e : f*x^3 + g*cos(x);
+(%i2) subst ( x = a, e );
+(%i3) e1 : subst ( x = a + b, e );
+(%i4) e2 : subst ( a + b = y, e1 );
+(%i5) e3 : f*x^3 + g*cos(y);
+(%i6) e4 : subst ( [x = a+b, y = c+d],e3 );
+(%i7) subst ([a+b = r, c+d = p],e4 );
+(%i8) e : a*f(y) + b*g(x);
+(%i9) e1 : ratsubst( cos(y),f(y),e );
+(%i10) e2 : ratsubst( x^3*sin(x),g(x),e1 );
+(%i11) e : a*log(f(y))/(b*exp(f(y)));
+(%i12) length(e);
+(%i13) [part(e,0),part(e,1),part(e,2)];
+(%i14) substpart("+",e,0);
+(%i15) length(part(e,1));
+(%i16) [part(e,1,0),part(e,1,1),part(e,1,2),part(e,1,3)];
+(%i17) length(part(e,1,3));
+(%i18) [part(e,1,3,0),part(e,1,3,1)];
+(%i19) substpart(sin,e,1,3,0);
+(%i20) length( part(e,1,3,1) );
+(%i21) [part(e,1,3,1,0), part(e,1,3,1,1)];
+(%i22) substpart(x,e,1,3,1,1);
+
+
+1.8.7 Examples of coeff, ratcoef, and collectterms
+
+(%i1) ex1 :  a1*(b + c/2)^2 + a2*(d + e/3)^3 , expand;
+(%i2) collectterms(ex1,a1,a2);
+(%i3) map('factor, %);
+(%i4) coeff(%, a2);
+(%i5) coeff(%, e + 3*d, 3);
+(%i6) ex2 : (a*x + b)^2;
+(%i7) coeff(ex2,x);
+(%i8) ratcoeff(ex2,x);
+(%i9) ratcoef(ex2,x);
+(%i10) ratcoeff(ex2, x, 0);
+(%i11) ratcoef(ex2, x, 0);
+(%i12) eqn : (a*sin(x) + b*cos(x))^3 = c*sin(x)*cos(x);
+(%i13) ratcoef(eqn,sin(x),0);
+(%i14) ratcoef(eqn,sin(x));
+
+
+1.8.8 Examples of rat, diff, ratdiff, ratexpand, expand, factor, gfactor, and partfrac
+
+(%i1) e:(x + 3)^10;
+(%i2) de1 : diff ( e, x );
+(%i3) de1r : ratdiff ( e, x );
+(%i4) factor ( de1r );
+(%i5) rat(e);
+(%i6) ratexpand (e);
+(%i7) expand (e);
+(%i8) factor (%);
+(%i9) powerdisp;
+(%i10) powerdisp : true$
+(%i11) %o7;
+(%i12) powerdisp : false$
+(%i13) expr: (x - 1)/(x + 1)^2 + 1/(x - 1);
+(%i14) expand ( expr );
+(%i15) ratexpand ( expr );
+(%i16) e :
+   ((2/%pi-1)*(((%pi/2-1)/(%pi-1)-1)*((6*(2/%pi-2*(4-%pi)/%pi)/%pi-(6*(2*(4-%pi)
+     /%pi-(%pi-2)/(%pi/2-1))/(%pi-1)-6*((%pi-2)/(%pi/2-1)-2)*(%pi/2-1)
+     /(%pi*(%pi-1)))/(2*((2/%pi-1)*(%pi/2-1)/(2*(%pi-1)) +2)))     
+      /(((%pi/2-1)/(%pi-1)-1)/(2*((2/%pi-1)*(%pi/2-1)/(2*(%pi-1))+2))+2)
+     -(6*(2*(2*%pi-5)/%pi-2/%pi)/%pi-(6*(2/%pi-2*(4-%pi)/%pi)/%pi
+     -(6*(2*(4-%pi)/%pi-(%pi-2)/(%pi/2-1))/(%pi-1)-6*((%pi-2)/(%pi/2-1)-2)
+     *(%pi/2-1)/(%pi*(%pi-1)))/(2*((2/%pi-1)*(%pi/2-1)/(2*(%pi-1))+2)))
+     /(2*(((%pi/2-1)/(%pi-1)-1)/(2*((2/%pi-1)*(%pi/2-1)/(2*(%pi-1))+2))+2)))
+     /(2*(2-1/(4*(((%pi/2-1)/(%pi-1)-1)/(2*((2/%pi-1)*(%pi/2-1)/(2*(%pi-1))+2))
+     +2)))*(((%pi/2-1)/(%pi-1)-1)/(2*((2/%pi-1)*(%pi/2-1)/(2*(%pi-1))
+     +2))+2)))/((2/%pi-1)*(%pi/2-1)/(2*(%pi-1))+2)+(6*(2*(4-%pi)/%pi-(%pi-2)
+     /(%pi/2-1))/(%pi-1)-6*((%pi-2)/(%pi/2-1)-2)*(%pi/2-1)/(%pi*(%pi-1)))
+     /((2/%pi-1)*(%pi/2-1)/(2*(%pi-1))+2))/2+6*((%pi-2)/(%pi/2-1)-2)/%pi)
+     *(x^3-x)/6  + 2*x$
+(%i17) ratsimp (e);
+(%i18) rat (e);
+(%i19) ratexpand (e);
+(%i20) gfactor ( x^2 + 1 );
+(%i21) e : 1/(1+x)^2 - 2/(1+x) + 2/(2+x);
+(%i22) e, ratsimp;
+(%i23) partfrac (%, x);
+
+
+1.8.9 Examples of integrate, assume, facts and forget
+
+(%i1) e : x/(x^3 + 1);
+(%i2) ie : integrate (e, x);
+(%i3) diff (ie, x);
+(%i4) %, ratsimp;
+(%i5) ratdiff (ie, x);
+-------------
+(%i1) facts();
+(%i2) integrate(x*exp(-a*x)*cos(w*x),x,0,inf);
+(%i3) ( assume(a > 0), facts() );
+(%i4) integrate(x*exp(-a*x)*cos(w*x),x,0,inf);
+(%i5) (forget(a > 0), facts() );
+
+
+1.8.10 Numerical Integration and Evaluation: float, bfloat, and quad_qags
+
+(%i1) is : integrate( exp(x^3),x,1,2 ) ;
+(%i2) float(is) ;
+(%i3) expand(%) ;
+(%i4) ival : % ;
+(%i5) bfloat(is), fpprec:20;
+(%i6) expand(%), fpprec:20;
+(%i7) tval20: realpart(%);
+(%i8) abs(ival - tval20);
+(%i9) float(gamma_incomplete(1/3,-8));
+(%i10) float(gamma_incomplete(1/3,-1));
+(%i11) quad_qags(exp(x^3),x,1,2);
+(%i12) abs(first(%) - tval20);
+
+
+1.8.11 Taylor and Laurent Series Expansion with taylor
+
+(%i1) taylor( sin(x),x,0,5 );
+(%i2) taylor( cos(x),x,0,5);
+(%i3) % * %th(2);
+(%i4) taylor( 1/ (cos(x) - sec(x))^3, x,0,5 );
+
+
+1.8.12 Solving Equations: solve, allroots, realroots, and find_root
+
+  Example 1
+(%i1) eqn : x^6 - 1 = 0$
+(%i2) solns : solve(eqn);
+(%i3) for i thru length(solns) do
+        disp ( ev( eqn, solns[i], ratsimp ) )$
+(%i4) fpprintprec:8$
+(%i5) nsolns : allroots(x^6 - 1);
+(%i6) for i thru length(nsolns) do
+        disp ( ev( x^6 - 1, nsolns[i],expand ))$
+-----------------
+  Example 2
+(%i1) fpprintprec:8$
+(%i2) eqns : [4*x^2 - y^2 - 12 = 0, x*y - x - 2 = 0]$
+(%i3) solns : solve(eqns,[x,y]);
+(%i4) eqns,solns[1],ratsimp;
+(%i5) for i:2 thru 4 do
+        disp ( ev (eqns, solns[i],expand) )$
+(%i6) solns[4];
+----------------
+  Example 3
+(%i1) fpprintprec:8$
+(%i2) eqn : 275.0 * exp(-r) + 275.0 * exp(-2*r) + 275.0 * exp(-3*r) 
+    + 275.0 * exp(-4*r) + 5275.0 * exp(-5*r) - 4750.0 = 0$
+(%i3) rat(eqn),ratprint:false;
+(%i4) zeqn : ratsubst(z,exp(r),%);
+(%i5) soln : solve(zeqn);
+(%i6) rr : realroots(soln[1]);
+(%i7) zeqn, rr, ratsimp;
+(%i8) %, numer;
+(%i9) rr : realroots( soln[1],1.0e-16);
+(%i10) zeqn, rr, numer;
+(%i11) rval : log(rhs(rr[1])),numer;
+(%i12) eqn, r = rval;
+------------------
+  Example 4
+(%i1) e : sin(x) - x/2;
+(%i2) solve(e);
+(%i3) plot2d(e,[x,0,2*%pi],
+          [style,[lines,5]],[ylabel," "],
+           [xlabel," sin(x) - x/2 " ],
+           [gnuplot_preamble,"set zeroaxis lw 2"])$
+(%i4) xr : find_root(e,x,0.1,%pi);
+(%i5) e, x = xr;
+--------------------
+  Example 5, method 1
+(%i1) eqn : a*(1-sin(x)) - 2*b*cos(x) = 0$
+(%i2) solve ( eqn, x );
+(%i3) eqn, exponentialize;
+(%i4) solns : solve ( %, x );
+(%i5) solns : solns, rectform, ratsimp;
+(%i6) eqn, solns[1], ratsimp;
+(%i7) eqn, solns[2], ratsimp;
+(%i8) x2 : atan2(a^2 - 4*b^2, 4*a*b)$
+(%i9) eqn, x = x2, ratsimp;
+(%i10) scanmap( 'factor, % );
+----------------------
+  Example 5, method 2
+(%i1) eqns : [a*(1-s) - 2*b*c = 0, c^2 + s^2 - 1 = 0]$
+(%i2) solns : solve ( eqns, [s,c] );
+(%i3) eqns, solns[1], ratsimp;
+(%i4) x1soln : solve ( sin(x) = 1, x );
+(%i5) eqn, x1soln, ratsimp;
+(%i6) eqns, solns[2], ratsimp;
+(%i7) tan(x) = s/c, solns[2], ratsimp;
+(%i8) x2soln : solve (%, x), ratsimp;
+
+1.8.13 Non-Rational Simplification: radcan, logcontract, rootscontract, and radexpand 
+
+(%i1) expr : (exp(x)-1)/(exp(x/2)+1);
+(%i2) expr, ratsimp;
+(%i3) expr, radcan;
+(%i4) logexpr : log ( (x+2)*(x-2) ) + log (x);
+(%i5) logexpr, ratsimp;
+(%i6) logexpr, fullratsimp;
+(%i7) logexpr, radcan;
+(%i8) %, logcontract;
+(%i9) logexpr, logcontract;
+(%i10) sqrt(2)*sqrt(3), radcan;
+(%i11) sqrt(2)*sqrt(3), rootscontract;
+(%i12) sqrt(6)*sqrt(3), radcan;
+(%i13) sqrt(6)*sqrt(3), rootscontract;
+(%i14) sqrt(6)/sqrt(3), radcan;
+(%i15) sqrt(6)/sqrt(3), rootscontract;
+(%i16) sqrt(x^2);
+(%i17) domain:complex$
+(%i18) sqrt(x^2);
+(%i19) domain:real$
+(%i20) sqrt(x^2);
+(%i21) radexpand;
+(%i22) sqrt(16*x^2);
+(%i23) radexpand:all$
+(%i24) sqrt(16*x^2);
+(%i25) radexpand:false$
+(%i26) sqrt(16*x^2);
+
+1.8.14 Trigonometric Simplification: trigsimp, trigexpand, trigreduce, and trigrat
+
+(%i1) trigsimp(tan(x));
+(%i2) sin(x+y), trigexpand;
+(%i3) x+3*cos(x)^2 - sin(x)^2, trigreduce;
+(%i4) trigrat ( sin(3*a)/sin(a+%pi/3) );
+(%i5) e: sin(x+y), trigexpand;
+(%i6) e, trigreduce;
+(%i7) rtt (e);
+(%i8) e :  tan(x+y), trigexpand;
+(%i9) e, trigreduce;
+(%i10) %, ratsimp;
+(%i11) rtt (e);
+(%i12) trigsimp( tan(x+y) );
+(%i13) e :  cosh(x + y), trigexpand;
+(%i14) e, trigreduce;
+(%i15) rtt (e);
+(%i16) expand(%);
+-----------------------
+(%i1) e1 : trigexpand( tan(2*x + y) );
+(%i2) e2 : tan (2*x + y), trigexpand;
+(%i3) rtt (e1);
+(%i4) rtt (e2);
+(%i5) trigsimp (e1);
+(%i6) trigsimp (e2);
+
+1.8.15 Complex Expressions: rectform, demoivre, realpart, imagpart, and exponentialize
+
+(%i1) cform : [cos(x),sin(x),cosh(x)], exponentialize;
+(%i2) cform, demoivre;
+(%i3) cform, rectform;
+(%i4) realpart ( cform );
+(%i5) imagpart ( cform );
+
+1.8.16 Are Two Expressions Numerically Equivalent? zeroequiv
+
+(%i1) e1:cos(x-1)^2;
+(%i2) e2 : (sin(2)*sin(2*x)+cos(2)*cos(2*x)+1)/2;
+(%i3) zeroequiv ( e1-e2, x );
+
+1.9 User Defined Maxima Functions: define, fundef, block, and local
+
+1.9.1 A Function Which Takes a Derivative
+
+(%i1) f(y) := y^3;
+(%i2) f(z);
+(%i3) f1(x) := diff ( f(x), x);
+(%i4) f2(x) := ''(diff ( f(x), x));
+(%i5) define ( f3(x), diff ( f(x), x) );
+(%i6) [f1(z), f2(z), f3(z) ];
+(%i7) [f1(1), f2(1), f3(1) ];
+(%i8) [f2(1), f3(1)];
+(%i9) dplay(g,a,b) := block ( [val1,val2 ],
+        local (dg),
+          define ( dg(y), diff (g(y), y)),
+          val1 : g(a) + dg(a),
+          val2 : g(b) + dg(b),
+          display (val1,val2),
+          val1 + val2)$
+(%i10) g(x) := x;
+(%i11) dplay(g,1,1);
+(%i12) g(x) := x^2;
+(%i13) dplay(g,1,2);
+(%i14) dg(3);
+----------------------
+(%i1) f1(x):=print (x)$
+(%i2) define ( f2(x), print (x) )$
+(%i3) fundef (f1);
+(%i4) fundef (f2);
+(%i5) f1(5);
+(%i6) f2(5);
+(%i7) define (f(x), optimize (horner (taylor (tanh(x),x,0,8),x)));
+(%i8) f(0.1);
+(%i9) g(x) := optimize (horner (taylor (tanh(x),x,0,8),x));
+(%i10) g(0.1);
+
+1.9.2 Lambda Expressions
+
+(%i1) functions;
+(%i2) f : lambda([x,y],x^2 + y^3);
+(%i3) f (1,1);
+(%i4) f(2,a);
+(%i5) apply ( f, [1,2] );
+(%i6) functions;
+(%i7) map ( 'sin, [1,2,3] );
+(%i8) map ( lambda([x],x^2 + sin(x) ),[1,2,3] );
+(%i9) lambda ([x],x+1 )(3);
+  
+1.9.3 Recursive Functions; factorial and trace
+
+(%i1) myfac(n) := if n = 0 then 1 else n*myfac(n-1)$
+(%i2) map ('myfac, [0,1,2,3,4] );
+(%i3) [0!,1!,2!,3!,4!];
+(%i4) map ('factorial, [0,1,2,3,4] );
+(%i5) trace (myfac);
+(%i6) myfac(4);
+(%i7) untrace(myfac);
+(%i8) [myfac(4),factorial(4),4!];
+-------------------------
+(%i1) p(n,x) := if n=0 then 1 elseif n=1 then x else
+             expand( ( (2*n-1)/n )*x*p(n-1,x) - ((n-1)/n)*p(n-2,x) )$
+(%i2) [p(0,x),p(1,x),p(2,x),p(3,x)];
+(%i3) map ( lambda([nn], p (nn,x) ),[0,1,2] );
+(%i4) map ( lambda([nn], expand (legendre_p (nn,x))),[0,1,2] );
+
+  
+1.9.4 Non-Recursive Subscripted Functions (Hashed Arrays)
+
+(%i1) f[k](x) := x^k + 1;
+(%i2) arrays;
+(%i3) makelist ( f[nn](y),nn,0,3 );
+(%i4) arrayinfo(f);
+(%i5) map ( lambda ( [m], f[m](y) ), [0,1,2,3] );
+---------------------------
+(%i1) h[nn] := lambda ([xx], xx^nn + 1);
+(%i2) arrays;
+(%i3) arrayinfo(h);
+(%i4) h[2];
+(%i5) arrayinfo(h);
+(%i6) h[2](y);
+(%i7) map ( lambda ( [mm], h[mm](x) ),[0,1,2,3] );
+(%i8) arrayinfo(h);
+
+  
+1.9.5 Recursive Hashed Arrays and Memoizing
+
+(%i1) arrays;
+(%i2) a[n] := n*a[n-1]$
+(%i3) a[0] : 1$
+(%i4) arrays;
+(%i5) arrayinfo(a);
+(%i6) a[4];
+(%i7) arrayinfo(a);
+(%i8) a[n] := n/2$
+(%i9) a[4];
+(%i10) a[7];
+(%i11) arrayinfo(a);
+
+  
+1.9.6 Recursive Subscripted Maxima Functions
+
+(%i1) ( p[n](x) := expand(((2*n-1)/n)*x*p [n-1](x) - ((n-1)/n)*p [n-2](x) ),
+           p [0](x) := 1, p [1](x) := x ) $
+(%i2) makelist( p[m](x),m,0,4 );
+(%i3) arrays;
+(%i4) arrayinfo(p);
+(%i5) [p[3](x),p[3](y)];
+(%i6) map ( lambda([nn], p[nn](x)),[0,1,2,3] );
+(%i7) ( a:1, b:2/3, c : cos(4/3) )$
+(%i8) [ a:1, b:2/3, c : cos(4/3) ];
+
+  
+1.9.7 Floating Point Numbers from a Maxima Function
+
+(%i1) ( p[n](x) := expand(((2*n-1)/n)*x*p [n-1](x) - ((n-1)/n)*p [n-2](x) ),
+           p [0](x) := 1, p [1](x) := x ) $
+(%i2) p3 : p[3](x);
+(%i3) p3t : p3, x = 8/10;
+(%i4) float(p3t);
+(%i5) ?print(%);
+(%i6) p3f : p3, x = 0.8;
+(%i7) ?print(%);
+(%i8) abs (p3f - p3t);
+(%i9) abs (%o4 - p3t);
+(%i10) ?print(%);
+(%i11) define (P3(y), p[3](y))$
+(%i12) P3(x);
+(%i13) P3f1 : float (P3(8/10));
+(%i14) ?print(%);
+(%i15) P3f2 : P3(0.8);
+(%i16) ?print(%);
+(%i17) abs (P3f2 - P3f1);
+(%i18) ?print(a + b)$
+(%i19) :lisp $_
+(%i19) :lisp #$a+b$
+(%i19) ?print( a/b )$
+(%i20) :lisp $_
+(%i20) :lisp #$a / b$
+(%i21) bfloat(2/25),fpprec:30;
+(%i22) ?print(%);
+(%i23) p3, x = 8/10;
+(%i24) :lisp $_
+(%i24) :lisp #$ p3, x=8/10 $
+
+  
+1.10  Pulling Out Overall Factors from an Expression
+
+(%i1) e1 : x*(A*cos(d1)^3 - A*cos(d2)^3);
+(%i2) A * ratsimp (e1/A);
+(%i3) rat (e1);
+(%i4) e2 : x*(A*a*b1 - A*a*b2);
+(%i5) A*a*ratsimp ( e2/( A*a));
+(%i6) factor(e2);
+(%i7) rat(e2);
+(%i8) factor (e1);
+
+1.11  Construction and Use of a Test Suite File  
+
+(%i1) display2d:false$
+(%i2) 2.0/3;
+(%i3) ?print(%);
+(%i4) batch ("mytest.mac",test )$
+
+
+
+1.12  History of Maxima's Development

@@ -1,0 +1,675 @@
+/************************************************************************
+    taquad.mac is a software file which accompanies Chapter 8 of
+    Maxima by Example, Numerical Integration.
+    
+    Copyright (C) 2009, 2012
+    Edwin L Woollett,  woollett@charter.net
+    http://www.csulb.edu/~woollett
+    
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU GENERAL PUBLIC LICENSE, Version 2, June 1991,
+    as published by the Free Software Foundation.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details. You should have received a
+    copy of the GNU General Public License along with this program.
+    If not, see http://www.fsf.org/licensing/.
+************************************************************************/
+
+
+
+/* tsquad.mac          
+    contains the functions:
+    
+    _ywt%(u),
+    _ywl%(k),
+    _mkyw%(kk),
+    _inlistp%(aaa,lll),
+    _powten%(x)
+    fpxy(fp)
+    ts11s(ff,kk),
+    qts1k(%%g,kk,fp)
+    qtsk(%f,%a,%b,%k,%fp)
+    fdf (%ff, %xx, %dfp)
+    qtsk_e(%f,%a,%b,%k,%fp)    
+    qts(%fg,a,b,rprec,fp)
+    quad_ts(%%fg,a,b,rprec,fp)    
+    tsquad(e,x,x1,x2,rp,wp)
+    qts_test(%fg,a,b,rprec,fp)
+    bfprint(bf,fpp)
+    
+    and the global parameters
+      _kmax%, and _epsfac%
+      
+     and global hashed arrays
+      _yw%[_kmax%, fp] for values of fp used 
+      in calculation
+ */
+
+
+_kmax% : 8$
+_epsfac% : 2$
+
+print("   _kmax% = ",_kmax%, "  _epsfac% = ",_epsfac% )$
+
+/* _ywt%(u) calculates [y,weight] at the current precision for the
+   [-1,1] tanh-sinh integration scheme  */
+   
+   
+ /*
+disp("_ywt%(u) returns [y,weight] at the current 
+         floating point precision ")$
+ */        
+
+_ywt%(u) := 
+ block([piby2,t2,v1,v2,t3,t4 ],   
+   
+   piby2:bfloat(%pi/2),
+   t2:exp(bfloat(u)),
+   v1:piby2*(t2+1/t2)/2, /* (pi/2)*cosh(u) */
+   v2:piby2*(t2-1/t2)/2, /* (pi/2)*sinh(u) */
+   t3:exp(v2),
+   t4:(t3+1/t3)/2, /* cosh(v2) */
+   /* return [y, weight]  */
+   
+   [2/(1 + t3*t3), v1/(t4*t4) ] )$   
+   
+
+/* _ywl%(k) uses the current value of p=fpprec and
+   returns a list
+  [rlist, anerr], where rlist = 
+  [ [y1,w1], [y2,w2],... ]  for [-1,1] quadrature
+   and   calls _ywt%(u). Additional (y,w) pairs
+   are calculated until w(j) < 10^(-n*p)
+   where n = _epsfac% = 2 and p = fpprec */
+  
+ /*  
+disp(" _ywl%(k) " )$
+ */
+
+_ywl%(kk) :=
+  block( [j,hh,eps1,rlist,jmax:5000 ,u,ywpair ,fpeps ],  
+   fpeps : round(_epsfac%*fpprec),
+   hh : 1/2^kk,
+   eps1: bfloat(10^(-fpeps)),     
+   rlist:[ ],
+   for j:1 thru (jmax+4) do 
+      ( if j > jmax then   /* stop list construction, print warning */
+       ( print(" in _ywl%(kk), j  = ",j," > jmax "), return(done) ),
+     u:bfloat(hh*j),
+     ywpair: _ywt%(u),  /* ywpair = [y,weight]  */
+     rlist : cons(ywpair, rlist),
+     if abs(second(ywpair)) < eps1 then return(done)),
+   reverse(rlist)  )$
+   
+   
+
+
+
+
+/*  _mkyw%(k)  constructs array _yw%[k,fpprec]   */
+ 
+
+ 
+_mkyw%(kk) := block( 
+  print(" construct _yw%[kk,fpprec] array for kk = ",kk,
+          " and fpprec = ",fpprec,"  ...working..."),
+
+           /*  print(" in _mkyw%(kk), kk = ",kk," and fpprec = ",fpprec ), */
+           
+             _yw%[kk,fpprec] : _ywl%(kk)  )$  
+             
+             
+_inlistp%(aaa,lll) := block([fff,xxx],
+         fff : false,
+         for xxx in lll do if xxx = aaa then fff:true,
+            fff )$
+            
+/********************************************/
+
+_powten%(x):= floor(1 - log(x)/log(10))$   
+
+/**************************************/
+
+fpxy(fp) :=
+  block([lasty, fpxyval],
+  
+    if not _inlistp%(_yw%,arrays) then 
+      (print(" no _yw% arrays are defined yet."),return(done)),
+    if not _inlistp%([_kmax%,fp],arrayinfo(_yw%)) then   
+      ( print(" _yw%[_kmax%,fp] array has not yet been defined."),
+         return(done) ),
+         
+    lasty :  first ( last ( _yw%[_kmax%,fp] ) ),
+    fpxyval: _powten%( lasty ) + 10,
+    
+    print(" the last y value = ",lasty),
+    print(" the fpprec being used for x and f(x) is ",fpxyval) )$
+    
+    
+/***************************************************************/
+
+            
+/*  ts11s(ff,kk) does tanh-sinh method sum for
+         integration over [-1,1] and calls _inlistp% and _mkyw%
+         and _powten%,   gets y(u) and weight(u) from
+         _yw%[_kmax%,fpprec], where  kk <= _kmax% . 
+         the value of fpprec used for the
+         arithmetic is controlled by the
+         calling function.
+         x is computed from the array y value using
+           high precision fpprec:fpxy based on the size
+           of the smallest (the last) y value in _yw%[8,fp].
+         
+ */
+         
+/*
+disp("  ts11s(ff,kk) uses _yw%[_kmax%,fpprec] ")$
+*/
+
+
+
+    
+ts11s(ff,kk) :=
+ block([jstep,jmax,nhi,stride,fpxy,bfx,ywpair,ssum, anerr ], 
+   if kk > _kmax% then (anerr:true,print(" kk >> _kmax% "),return([0.0b0,anerr])),
+   anerr : false,   
+   
+   /* if _yw% is not known to be an array yet, then
+        we proceed to create _yw%[_kmax%,fpprec] */
+        
+    if not _inlistp%(_yw%,arrays) then _mkyw%(_kmax%)
+     else
+     
+   /* if requested _yw%[_kmax%,fpprec] does not exist then create it */
+   
+     if not _inlistp%([_kmax%,fpprec],arrayinfo(_yw%)) then _mkyw%(_kmax%),        
+     
+   /* otherwise we assume _yw%[_kmax%,fpprec] already exists */
+     
+   nhi : length(_yw%[_kmax%,fpprec]),
+   stride : 2^(_kmax% - kk), 
+   jmax : floor(nhi/stride),
+   ssum : 0.0b0,
+   
+   /* to get x from y use high enough precision */
+   
+   fpxy : _powten%( first ( last ( _yw%[_kmax%,fpprec] ) ) ) + 10,
+   
+   /* print(" in ts11s, fpxy = ",fpxy ), */
+   
+   
+   if kk = 1 then jstep:1 else jstep:2,
+   
+
+    for j:1 step jstep thru jmax do
+      (  ywpair : _yw%[_kmax%,fpprec][stride*j],
+        
+        /* abscissa x = tanh(v2)=sinh(v2)/cosh(v2)  */   
+        /* for safety, use high precision for
+           x, -x and function evaluation here */
+           
+        block([fpprec : fpxy,x ],        
+          x : bfloat(1 - first( ywpair )),         
+          bfx: bfloat(ff(x)) + bfloat(ff(-x)) ),          
+        
+          ssum : ssum + bfx*second ( ywpair ) ),
+        
+       [ssum, anerr]              
+   
+   )$ 
+
+   
+/*******************************************/
+
+/* qts1k(f,kk,fp) computes the kk approximation to the
+  integral of f over [-1,1] after setting fpprec = fp.
+  For k:1 thru kk calls ts11s(f,k) which calculates the sums.
+  returns approx value of integral. qts1k(..) is called
+  by qtsk(..), qts1k_e(..), and qtsk_e(..)  
+ */
+
+ /* 
+disp("qts1k(f,k,fp)")$
+
+ */
+ /* working version qts1k  */
+ 
+ qts1k(%%g,kk,fp) :=
+  block([fpprec:fp,h,isumlist,isum,val,nerr,k ],
+     if kk > _kmax% then
+           ( print(" kk = ",kk," > _kmax% "), return(done ) ),   
+    
+   /* isum contribution from u = 0 => x = 0 */    
+
+    isum : bfloat(%pi*%%g(0)/2),
+     
+    for k:1 thru kk do
+    
+     ( isumlist : ts11s(%%g,k),       
+      nerr : second(isumlist), 
+      if nerr then return(done),
+      isum : isum + first(isumlist) ) ,       
+    
+    if nerr then return(done),
+    expand(bfloat(isum/2^kk)) )$
+    
+ 
+
+
+
+/* debug version qts1k
+
+qts1k(%%g,kk,fp) :=
+  block([fpprec:fp,h,isumlist,isum,val,nerr,k ],
+     if kk > _kmax% then
+           ( print(" kk = ",kk," > _kmax% "), return(done ) ),  
+ disp("in qts1k(%%g,kk,fp) "),
+display(%%g(x),kk,fp),
+
+    
+   /* isum contribution from u = 0 => x = 0 */
+   
+     disp(" get isum for x = 0 "), 
+
+    isum : bfloat(%pi*%%g(0)/2),
+    
+     print(" x = 0 isum = ",isum), 
+     
+    for k:1 thru kk do
+    
+     (  display(k), 
+     
+       isumlist : ts11s(%%g,k),
+       
+       display(isumlist), 
+      
+      nerr : second(isumlist), 
+      if nerr then return(done),
+      isum : isum + first(isumlist) ,
+         display(isum) ),                
+    
+    if nerr then return(done),
+    expand(bfloat(isum/2^kk)) )$
+    
+ end debug version
+ */   
+    
+/***************************************/
+
+/* qtsk(f,a,b,k,fp) calculates the k approximation
+   to the integral of f over [a,b] via a change
+   of variables from [a,b] to [-1,1], f -> ft,
+   which is done with n*p digit precision, 
+   where n = _epsfac% and p =  fpprec = %fp here,
+   and calls qts1k(ft,k) 
+   */
+   
+
+ 
+ 
+qtsk(%f,%a,%b,%k,%fp) :=
+   block([fpprec,alpha, beta], local(%ft),
+     fpprec : round( _epsfac% * %fp ),
+     alpha : bfloat((%b-%a)/2),
+     beta : bfloat((%a+%b)/2),
+     
+    /*  disp("in qtsk "),
+       display( %f(xx) ),
+       display(alpha,beta,fpprec),
+     */  
+     
+     define ( %ft(yy), alpha* %f ( alpha*yy + beta) ),     
+     
+     qts1k(%ft,%k,%fp))$
+ 
+     
+     
+
+
+/*************************************/
+
+
+/*
+disp(" fdf(f,x,dfp) finds the absolute value
+       of the difference of f(x) at the current
+     value of fpprec and at the value (fpprec+dfp),
+     and returns [f(x), df(x)] ")$
+ */
+ 
+     
+fdf (%ff, %xx, %dfp) :=
+   block([fv1,fv2,df],
+    fv1:bfloat(%ff(bfloat(%xx))),
+    block([fpprec:fpprec + %dfp ],
+     fv2:  bfloat(%ff(bfloat(%xx))),
+     df: abs(fv2 - fv1) ),
+   [bfloat(fv2),bfloat(df)] )$     
+   
+/***************************************/
+
+/* this works for [-1,1]: */
+
+qts1k_e(%fg,k,fp) :=
+      qts1k( lambda([%z],fdf(%fg,%z,10)),k,fp)$
+       
+/*****************************************/
+
+
+/* this works for [a,b] .
+     The scaling from (a,b) to
+    (-1,1) is done with n*p digit precision
+    where n = _epsfac% and p = fpprec = %fp 
+    here.
+     */
+
+qtsk_e(%f,%a,%b,%k,%fp) :=
+
+ block([fpprec,alpha, beta], local(%ft),
+     fpprec : round( _epsfac% * %fp ),
+     alpha : bfloat((%b-%a)/2),
+     beta : bfloat((%a+%b)/2),
+     
+    /*  disp("in qtsk "),
+       display( %f(xx) ),
+       display(alpha,beta,fpprec),
+     */  
+     
+     define ( %ft(yy), alpha* %f ( alpha*yy + beta) ),     
+     
+     
+     
+     fpprec:%fp,
+     
+     qts1k(lambda([%z],fdf(%ft,%z,10)),%k,%fp))$           
+     
+
+
+
+    
+/*********************************************/
+
+ /* 
+
+disp("qts(f,a,b,rprec,fp)  f -> ft, sets fpprec = fp, 
+         then changes variable of integration
+          [a,b] -> [-1,1],  f -> ft, using n*p digit precision
+          where n = _epsfac% and p = fpprec = fp,
+          eps0 = 10^(-rprec), and looks for convergence of 
+          the integral of f over [a,b] by successively halving 
+          h and stopping when vdiff either starts increasing or becomes
+          less than eps0. This function prints out k, newval, vdiff 
+          for each level k. ")$     
+ */     
+     
+       
+qts(%fg,a,b,rprec,fp):= 
+  block([fpprec,fpprintprec,eps0,oldval,newval,
+       vdiff,vdiffold ], local(%ft),
+     if rprec > fp then
+          (print(" rprec should be less than fp"), return(done) ),
+     fpprec:fp,
+     block([fpprec,alpha,beta],
+       fpprec : round( _epsfac% * fp ),
+       alpha:bfloat((b-a)/2),
+       beta:bfloat((a+b)/2),    
+       define (%ft(x),alpha* %fg(alpha*x + beta) )),
+     print("  rprec = ",rprec,"  fpprec = ",fpprec ),
+     eps0:bfloat(10^(-rprec)),
+     fpprintprec:8,
+     
+     
+     /* start with k = 1, h = 1/2 value */
+     oldval : qts1k(%ft,1,fp),
+     
+     print("  k       newval         vdiff "),
+     print("  "),
+     print(" ",1,"  ", oldval),
+     
+     vdiff : 1.0b0,
+     vdiffold : 2.0b0,
+     
+     
+     for k:2 thru (_kmax% + 2) do
+      ( if k > _kmax% then 
+            (print("in qts, k = _kmax% limit reached"),return(done) ),
+        newval:qts1k(%ft,k,fp),  
+        vdiff : abs(newval - oldval),
+        
+        print(" ",k,"  ",expand(newval),"  ",vdiff),
+        oldval : newval,
+        if vdiff > vdiffold then
+         ( print("vdiff > vdiffold"), return(done)),
+        if vdiff <= eps0 then return(done),
+        vdiffold : vdiff ),
+        print(" ") )$  
+
+/*********************************************/
+
+
+/***      quad_ts(f,a,b,rp,wp)
+         assumes integrand is real function
+          
+disp("quad_ts(f,a,b,rprec,fp) follows the same route
+        as qts(f,a,b,rprec,fp), but instead of printing
+        a table, just returns the list [ value, kfinal, vdiff]
+         containing the end result. ")$             
+ */         
+          
+quad_ts(%%fg,qda,qdb,rprec,fp):= 
+  block([fpprec,eps0,oldval,newval,kval,
+       vdiff,vdiffold,qdx ], local(%ft),
+     if rprec > fp then
+          (print(" rprec should be less than fp"), return(done) ),
+     if debug then print("quad_ts"),
+     if debug then print("%%fg = ",%%fg),               
+     fpprec:fp,  
+     block([fpprec,alpha,beta],
+       fpprec : round( _epsfac% * fp ),
+       alpha:bfloat((qdb-qda)/2),
+       beta:bfloat((qda+qdb)/2),    
+       if debug then print (" alpha = ",alpha),
+       if debug then print(" beta = ",beta),
+       define (%ft(qdx),alpha* %%fg(alpha*qdx + beta) )),
+     
+     eps0:bfloat(10^(-rprec)),
+  
+     
+     /* start with k = 1, h = 1/2 value */
+     oldval : qts1k(%ft,1,fp),
+
+     vdiff : 1.0b0,
+     vdiffold : 2.0b0,
+
+     for k:2 thru (_kmax%+2) do
+      ( if k > _kmax% then 
+            (print("_kmax% limit reached"),return(done) ),
+        kval : k,
+        newval:qts1k(%ft,k,fp),  
+        vdiff : abs(newval - oldval),        
+        
+        if vdiff > vdiffold then
+         ( print("quad_ts: vdiffnew > vdiffold before vdiff < eps0 reached"),
+           print("quad_ts: abort calc."),
+           newval:oldval,vdiff:vdiffold,kval:kval-1, return(done)),
+        if vdiff <= eps0 then return(done),
+        oldval : newval,
+        vdiffold : vdiff ),
+        
+        [expand(newval), kval, vdiff] )$     
+        
+ /* end of quad_ts  */
+ 
+/* tsquad_r(e,x,x1,x2,rp,wp) assumes real integrand
+   in a simple form: used for speed and accuracy
+   checks against gsquad and qbromberg (which also
+   both assume real integrand) 
+   Also doesn't do overflow checks.
+    */
+   
+tsquad_r(tse,tsv,tsa,tsb,tsrp,tsfp) :=
+block ( [tssmall:bfloat(10^(-tsrp)),tsL],
+    local(tsf),
+    define (tsf(tsv),tse),
+    tsL : quad_ts(tsf,tsa,tsb,tsrp,tsfp),    
+    if third(tsL) <= tssmall then first(tsL)
+    else false)$
+    
+    
+ 
+        
+/*  tsquad(f(x),x,x1,x2,rp,wp) calls quad_ts,
+     returns either a good value or false.
+     f(x) can be complex.
+     sends real and imaginary parts separately
+     to quad_ts.
+     
+     11/12/2012
+ */       
+        
+tsquad(ttse,tsv,tsa,tsb,tsrp,tsfp) :=
+block ( [tssmall:bfloat(10^(-tsrp)),tse,tsL,rans:0.0b0,cex ],
+    local(tsf),
+    if debug then print("tsquad"),
+    if debug then print(" ttse = ",ttse),
+    if debug then print("tssmall = ",tssmall), 
+    tse : ev(ttse,nouns,simp),
+    if debug then print("tse = ",tse),
+    
+    /* overflow checks of integrand: see quad1d */
+    
+    if overflowb(tse,tsv,tsa,tsb) then
+         (print("tsquad: overflow error return from xmax "),          
+          return(false)),  
+   
+    if overflowa(tse,tsv,tsa,tsb) then
+          (print("tsquad: overflow error return from xmin  "),
+           return(false)),  
+    
+    
+    
+    
+    /* case real expression     */
+    
+    if ( isequal(tse,realpart(tse)) or
+                   imagpart(tse) = 0 or
+                   isreal(tse,tsv,tsa,tsb,500)) then                   
+         (define (tsf(tsv),tse),
+          tsL : quad_ts(tsf,tsa,tsb,tsrp,tsfp),
+          if debug then print("tsL = ",tsL),
+          if third(tsL) <= tssmall then 
+               (if method then print("tsquad"),
+                return(first(tsL)))
+          else return(false)),
+          
+          
+     /* case pure imaginary expression    */ 
+
+    if ( isequal(expand(tse/%i), imagpart(tse)) or 
+             realpart(tse) = 0  or
+             isreal(tse/%i,tsv,tsa,tsb,500)) then        
+         (define (tsf(tsv),imagpart(tse)),
+          tsL : quad_ts(tsf,tsa,tsb,tsrp,tsfp),
+          if debug then print("tsL = ",tsL),
+          if third(tsL) <= tssmall then 
+               (if method then print("tsquad"),
+                return(%i*first(tsL)))
+          else return(false)),
+          
+     /*  case neither real nor pure imaginary */
+           /* real part calculation */
+     cex : realpart(tse),
+     if float(cex) = 0.0 then go(doimagpart),
+     define (tsf(tsv),cex ),
+     tsL : quad_ts(tsf,tsa,tsb,tsrp,tsfp),
+     if debug then print("tsL = ",tsL),
+     if third(tsL) <= tssmall then 
+         rans : first(tsL)
+      else return(false),
+     if debug then print("rans = ",rans),
+      
+     doimagpart,
+    
+          /* imag part calculation */
+                       
+     cex : imagpart(tse),
+     if float(cex) = 0.0 then
+        (if method then print("tsquad"),
+          return(rans)),
+     define (tsf(tsv),cex),
+     tsL : quad_ts(tsf,tsa,tsb,tsrp,tsfp),
+     if debug then print("tsL = ",tsL),
+     if third(tsL) <= tssmall then 
+           (if method then print("tsquad"),
+                rans + %i*first(tsL))
+      else false)$
+      
+ /**** end tsquad  ***********************/
+     
+     
+      
+        
+        
+/**********************************************/ 
+
+
+
+
+qts_test(%fg,a,b,rprec,fp):= 
+  block([fpprec,fpprintprec,eps0,oldval,newval,
+       vdiff,vdiffold,verr ], local(%ft),
+     if rprec > fp then
+          (print(" rprec should be less than fp"), return(done) ),
+     fpprec:fp,    
+     block([fpprec,alpha,beta],
+       fpprec : round( _epsfac% * fp ),
+       alpha:bfloat((b-a)/2),
+       beta:bfloat((a+b)/2),    
+       define (%ft(x),alpha* %fg(alpha*x + beta) )),
+     
+     eps0:bfloat(10^(-rprec)),
+     fpprintprec:8,
+  
+     print("  "),
+     print("      rprec = ",rprec," fpprec = ",fpprec ),
+     /* start with k = 1, h = 1/2 value */
+     oldval : qts1k(%ft,1,fp),
+     
+     verr : abs(oldval - tval),
+     print(" k     value           vdiff            verr  "),
+     print("  "),
+     printf(true,"~2d    ~14a ~14a   ~14a  ~%",1,string(oldval),"              ",string(verr)),          
+     vdiff : 1.0b0,
+     vdiffold : 2.0b0,
+     
+     
+     for k:2 thru (_kmax% + 2) do
+      ( if k > _kmax% then 
+            (print("_kmax% limit reached"),return(done) ),
+        newval:qts1k(%ft,k,fp),  
+        vdiff : abs(newval - oldval),        
+        verr : abs(newval - tval),        
+        printf(true,"~2d    ~14a ~14a   ~14a  ~%",k,string( expand(newval) ),string(vdiff),string(verr)),
+        
+        oldval : newval,
+        if vdiff > vdiffold then
+         ( print("      CAUTION: vdiff > vdiffold"), return(done)),
+        if vdiff <= eps0 then return(done),
+        vdiffold : vdiff ),
+        print(" ") )$  
+
+
+
+/********************************************/
+
+bfprint(bf,fpp):=
+  block([fpprec, fpprintprec ],
+        fpprec : fpp+2,
+        fpprintprec:fpp,
+        print("   number of digits = ",fpp),
+        print("  ",bf) )$
+        
+/*********************************************/
+        

@@ -1,0 +1,612 @@
+/********************************************
+  quad_util.mac
+  Maxima by Example, Ch.8
+   Oct. 31, 2012  
+   utilities for nint nintegrate package
+    quad_util.mac is a package of Maxima functions which 
+    contains code for using the quadpack functions of
+    Maxima. This file loads nint.lisp, also available
+    on the author's webpage. This code should work with
+    Maxima ver. 5.28.0.
+    
+    Copyright (C) 2012,  Edwin L. Woollett  <woollett@charter.net>       
+    http://www.csulb.edu/~woollett
+    
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU GENERAL PUBLIC LICENSE, Version 2, June 1991,
+    as published by the Free Software Foundation.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details. You should have received a
+    copy of the GNU General Public License along with this program.
+    If not, see http://www.fsf.org/licensing/.
+-----------------------
+this file loads nint.lisp
+nint.lisp contains code for
+    complex_number_p
+-------------------------
+ this file defines:
+
+any_of
+mvp
+multival
+integrate_noun
+bypass_integrate
+bypass_integrate2
+
+_small
+_chop%
+fchop
+fchop1
+
+finite
+
+cfloat
+chop_float
+cbfloat
+fbfloat
+
+mfloat1
+mfloat
+fintegrate
+fcintegrate
+
+good_expr
+good_var
+good_lvar
+extable
+ftable
+
+mprintx
+mprint1
+mprintl
+mprint
+
+ntest
+p
+
+codelist
+listofops
+has_bessel
+isreal
+isequal
+set_assumes_false() 
+disp_assumes()
+fcompare   
+
+--------------------
+
+  nint.lisp contains code for
+    complex_number_p 
+    
+(%i20) complex_number_p (0.66666666666667);
+(%o20) true
+(%i21) complex_number_p (2/3);
+(%o21) true
+(%i22) complex_number_p (2);
+(%o22) true
+(%i23) complex_number_p (2 + %i*3);
+(%o23) true
+    
+*****************************************************/
+
+load ("nint.lisp")$  
+  /* disp("nint.lisp")$     */
+
+/* _small% is global smallness parameter used by fchop */      
+_small% : 1.0e-14$
+
+/****  _chop%  the heart of our chop code  ****/
+                          
+_chop%(ex32) := 
+block([eex32],
+  if numberp(ex32) then
+      (eex32:float(ex32),
+       if ( abs(eex32) < _small% ) then 0.0
+       else eex32)
+   else ex32)$
+   
+ /****
+    use fchop(value) or fchop(list) to
+    set tiny floating point numbers to zero.
+    depends on global dochop which has
+    default value true.
+    
+    Use fchop1(expr,small) to override the
+    default value of the small chop value.
+****/
+
+fchop(expr31) := 
+(if dochop then (if mapatom(expr31) then _chop%(expr31) else scanmap(_chop%,expr31))
+           else expr31)$
+
+dochop:true$
+
+fchop1(expr,small ) :=
+block([oldsmall,r88],
+    oldsmall: _small%,
+    setsmall(small),
+    r88:fchop(expr),
+    setsmall(oldsmall),
+    r88)$
+
+      
+      
+      
+
+
+ any_of(list) := member(true,list)$
+ 
+/**** version 2 mvp(e,v)      
+        mvp(e,v) returns true if  e = f^g has either the
+         form %i^g(x), f(%i)^g(x),  f(x)^g with g # integer
+         
+         called by multival
+****/
+         
+
+   mvp (ex25,v25) := block([inflag:true],
+   
+       if debug then print("  mvp,  ex25 = ",ex25),
+   
+       if mapatom(ex25) then false              
+       
+       else if length(ex25) = 1 then false
+       
+       else if part(ex25,1) = -1 and
+                  member(v25,listofvars(part(ex25,2))) then true
+       
+       else if lfreeof ([v25,%i], part (ex25,1)) then false
+       
+       else if integerp(part(ex25,2)) then false
+       
+       else if member(v25,listofvars(part(ex25,1))) and
+                    not integerp(part(ex25,2)) then true                                  
+                      
+       else if member(%i,listofvars(part(ex25,1))) and 
+                  member(v25,listofvars(part(ex25,2))) then true       
+                
+       else any_of(maplist(lambda ([u],mvp(u,v25)),ex25)))$
+       
+ 
+ 
+ 
+
+/**** multival(e,x) returns true if a potentially multiple valued
+     function of x is detected in expression e     
+     
+     calls any_of and mvp.  
+     
+****/
+
+
+multival(ex26,v26) :=
+block([inflag:true,listconstvars:true],
+      if debug then print("  multival, ex26 = ",ex26),
+
+      if mapatom(ex26) then false
+
+      else if member(op(ex26), '[log, acos,acosh,acot,acoth,acsc,acsch,
+                            asec,asech,asin,asinh,atan,atan2,atanh,
+                            expintegral_el,expintegral_ei,expintegral_li,
+                             expintegral_e,expintegral_ci,expintegral_chi] ) and
+                      member(v26,listofvars(ex26)) then true
+                      
+      else if op(ex26) = "^" and mvp(ex26,v26) then true
+                      
+      else any_of(maplist(lambda ([u],multival(u,v26)),ex26)))$
+      
+integrate_noun(ee92) :=
+   (if length( intersect( listofops (ee92),
+       {nounify(integrate),nounify(limit),nounify(realpart),
+           nounify(imagpart)} )) > 0 then true else false)$
+      
+      
+bypass_integrate (eexpr,eevar) := 
+    (if length ( intersect (listofops (eexpr),
+                {airy_ai,airy_bi,hankel_1,hankel_2,
+                   struve_h,struve_l,hypergeometric})) > 0 then true
+                
+      else if multival(eexpr,eevar) then true          
+      
+      else false)$
+      
+bypass_integrate2 (eexpr,eevar1,eevar2) := 
+    (if length ( intersect (listofops (eexpr),
+                {airy_ai,airy_bi,
+                hankel_1,hankel_2,struve_h,struve_l,hypergeometric})) > 0 then true
+                
+      else if multival(eexpr,eevar1) or  multival(eexpr,eevar2)  then true          
+      
+      else false)$
+      
+
+finite (va77,vb77) := 
+      ( if length (intersect ({minf,inf},{va77,vb77})) > 0 then false
+         else true)$
+
+cfloat(expr87):= (expand(float(rectform(expr87))))$
+    
+/**** new cbfloat 5-19  ****/
+    
+cbfloat(expr88,n88) := 
+block([fpprec:n88 ],    
+    expand(bfloat(rectform(expr88))))$
+
+fbfloat(expr89,n89) := float(cbfloat(expr89,n89))$ 
+
+/****
+with domain = complex,
+
+(%i2) ee : integrate(exp(x^5),x,1,2);
+(%o2) ((-1)^(4/5)*gamma_incomplete(1/5,-32)-(-1)^(4/5)
+                                            *gamma_incomplete(1/5,-1))/5
+(%i3) cbfloat(ee,32);
+(%o3) 1.0512336862202132551041964032916b-20*%i+1.0132394896940182945174811171861b12
+(%i4) fbfloat(ee,32);
+(%o4) 1.0512336862202133E-20*%i+1.0132394896940183E+12
+****/
+    
+    
+   
+
+
+/**** see line 291 for cfloat def ****/
+
+/**** cfloat(expr87):= expand (float (rectform (expr87)))$ ****/
+
+chop_float (expr79) := fchop (cfloat (expr79))$
+
+/*** mfloat1 and mfloat are not used by the nint package;
+     they have been used to explore alternative approaches
+     to using bfloat ***/
+   
+/**** mfloat1 expects a real expression 
+  
+      called by mfloat via
+       mfloat1(realpart(mex),mdigits) and
+       mfloat1(imagpart(mex),mdigits) 
+****/    
+   
+mfloat1(mex1,ndigits) :=
+block([fpprec:16,old,new,kk,small,goodans:false,
+          nmax:5,mdiff],
+    if debug then print("mfloat1 "),
+    if debug then display(mex1,ndigits),
+    /* if bfloat can't cope, use cfloat */
+    if member(nounify(realpart),listofops(bfloat(mex1))) 
+        then return(cfloat(mex1)),
+    if member(nounify(imagpart),listofops(bfloat(mex1))) 
+        then return(cfloat(mex1)),
+    small:bfloat(10^(-(ndigits+1))),  
+    old : realpart(expand(bfloat(mex1))),
+    if debug then display(goodans,small,old),
+    
+    for kk:2 thru nmax do
+       (if debug then display(kk,old,mex1),
+        new:realpart(block([fpprec:kk*10],expand(bfloat(mex1)))),
+        if debug then display(new),
+        mdiff : realpart(block([fpprec:kk*10],expand(bfloat(abs(new-old))))),
+        if debug then display(mdiff),
+        if mdiff < small then (goodans:true,return()),
+        old:new),
+        
+     if debug then print(" end of kk loop "),
+     if debug then display(old,new,goodans),
+    if not goodans then false
+    else if not numberp(new) then false
+    else float(new))$
+    
+/**** mfloat accepts a complex expression
+ 
+   goes for a numerical result accurate to
+   mdigits, using bfloat methods,
+   calls mfloat1
+****/
+ 
+mfloat(expra,mdigits):=
+block([er,ei,err],
+    if debug then print("mfloat"),
+    if debug then display(expra,mdigits),
+    er : realpart(expra),
+    /* temp fix for float erf(%i) bug */
+    er  : subst(1.0*%i,%i,er),
+    if debug then display(er),
+    if debug then print(" send to mfloat1"),
+    err : mfloat1(er,mdigits),
+    if debug then print(" back in mfloat"),
+    if debug then display(err),
+    if not complex_number_p(err) then 
+       (print(" mfloat:  realpart not evaluated"),
+        return(false)),
+    if expand(expra - er) = 0 then err
+    else if imagpart(er) = 0 then err
+    else
+       (ei : imagpart(expra),
+        ei  : subst(1.0*%i,%i,ei),
+        if debug then display(ei),
+        if debug then print(" send to mfloat1"),
+        ei : mfloat1(ei,mdigits),
+        if debug then print("back in mfloat"),
+        if debug then display(ei),
+        if not complex_number_p(ei) then 
+           (print(" imagpart not evaluated"),
+             return(false)),
+        err + %i*ei))$   
+        
+        
+   
+/**** fintegrate gets float integrate and chops answer ****/
+      
+fintegrate(expr,var,v1,v2) :=
+         (chop_float(apply ('integrate,[expr,var,v1,v2])))$
+        
+          
+/**** fcintegrate returns false if not successful at getting a complex number
+       using integrate; doesn't use fchop
+       replace %i by 1.0*%i to avoid the float(erf(%i)) bug.
+****/
+          
+fcintegrate(expr,var,v1,v2) :=
+block([domain:complex,mytemp,ctemp],
+    mytemp : errcatch(apply('mydefint1,[expr,var,v1,v2] )),
+    if debug then display(mytemp),
+    if mytemp = [] then return(false),
+    ctemp : cfloat(part (mytemp,1)),
+    ctemp : subst (%i = 1.0*%i,ctemp),
+    if debug then display (ctemp),
+    if complex_number_p (ctemp) then ctemp else false)$
+    
+/****
+(%i41) expr23 : (if (y-2)*(y-1) <= (y-6)*(y-5) then 1 else 0)$
+(%i42) listofops(expr23);
+(%o42) {"*","+","<=","if"}
+(%i44) member("if",listofops(expr23));
+(%o44) true
+
+****/
+
+   
+    
+/**** ordinary function version ****/
+    
+good_expr(expr23,z23,a99,b99) :=
+block([a23,b23],   
+    if debug then print(" good_expr"),
+    if debug then display(expr23,z23,a99,b99),
+    a23 : min (a99,b99),
+    b23 : max (a99,b99),
+    if complex_number_p (cfloat(expr23)) then true    
+    else if finite (a23,b23) then 
+         (if complex_number_p(cfloat(subst(z23=a23+(b23-a23)/2.11111,expr23))) then true
+            else false)
+    else if (a23 = minf and b23 = inf) then
+         (if complex_number_p(cfloat(subst(z23=0.11111,expr23))) then true else false)
+    else if a23 = minf then
+         (if complex_number_p(cfloat(subst(z23=b23-3.14159,expr23))) then true else false)
+    else if b23 = inf then
+         (if complex_number_p(cfloat(subst(z23=a23+3.14159,expr23))) then true else false)
+    else false)$
+
+
+
+
+    
+/**** new
+(%i8) good_expr(1,x,1,10);
+(%o8) true
+(%i9) good_expr(x,x,1,10);
+(%o9) true
+(%i10) good_expr(a,x,1,10);
+(%o10) false
+(%i11) good_expr(x,x,minf,10);
+(%o11) true
+(%i12) good_expr(x,x,1,inf);
+(%o12) true
+(%i13) good_expr(x,x,minf,inf);
+(%o13) true
+(%i2) good_expr(exp(-abs(a*x)),x,1,inf);
+(%o2) false
+(%i3) good_expr(exp(-abs(a*x)),x,-1,inf);
+(%o3) false
+(%i5) good_expr(exp(-abs(a*x)),x,minf,-1);
+(%o5) false
+(%i6) good_expr(exp(-abs(a*x)),x,minf,1);
+(%o6) false
+(%i7) good_expr(exp(-abs(a*x)),x,minf,inf);
+(%o7) false
+(%i8) nint(exp(-abs(a*x)),x,minf,inf);
+   %e^-(abs(a)*abs(x))   is an invalid integrand for nint  
+(%o8) false
+(%i9) nint(exp(-a*x),x,1,inf);
+   %e^-(a*x)   is an invalid integrand for nint  
+(%o9) false
+
+
+****/
+    
+good_var(z23) := 
+   (if complex_number_p (cfloat(z23)) then false    
+    else if not atom(z23) then false
+     else true)$
+   
+/****
+(%i10) good_var(%i*x);
+(%o10) false
+(%i11) good_var(%i*2);
+(%o11) false
+(%i12) good_var(2);
+(%o12) false
+(%i13) good_var(%pi);
+(%o13) false
+(%i14) good_var(x);
+(%o14) true
+(%i15) good_var(a*b);
+(%o15) false
+(%i16) good_var(%i);
+(%o16) false
+****/
+
+good_lvar(z23) := 
+   ( if member(z23,[minf,inf]) then true     
+     else if numberp (cfloat(z23)) then true
+     else false)$
+     
+/****
+(%i43) good_lvar(x);
+(%o43) false
+(%i44) good_lvar(0);
+(%o44) true
+(%i45) good_lvar(inf);
+(%o45) true
+(%i46) good_lvar(minf);
+(%o46) true
+(%i47) good_lvar(%pi);
+(%o47) true
+
+****/
+
+/****  extable for table of an expression 
+      this is both new name and new syntax
+      to match makelist
+****/
+
+extable(_ex%,_var%,_x0%,_xf%,_dx%):=
+block([v],for v:_x0% step _dx% thru _xf% do
+         print ("  ",v,"  ",cfloat(subst(v,_var%,_ex%))))$
+         
+/**** ftable for table of a defined function
+    this is both new name and new syntax
+    to match that of makelist.
+    
+    see also extable and bf_extable  
+****/
+   
+ftable(func,x0,xf,dx):= 
+block([nL,fL,nfL,jj,ii],
+   nL : makelist(zz,zz,x0,xf,dx),
+   fL : map('func,nL),
+   nfL : makelist(["  ",nL[jj],"  ",fL[jj]],jj,length(nL)),
+   for ii thru length(nfL) do apply('print,nfL[ii]))$
+   
+
+/**** stavros macrakis suggested workaround for display.
+   display not working as desired in 5.26.0
+   should be back with 5.27
+   warning: mprint evaluates its arg.
+   neither print nor display evaluate their args.
+****/
+
+   
+mprintx(name,val89) := print(sconcat("  ",name," = "),val89)$
+
+mprint1(zz23) := mprintx(zz23,ev(zz23))$
+
+mprintl(ll23) := map(mprintx,ll23,map(ev,ll23))$
+
+mprint([mm23]) ::= subst(mm23,'mm23,'(mprintl('mm23)))$
+
+
+codelist : 
+      [[1,"too many subintervals done"],
+       [2,"excessive roundoff error detected"],
+       [3,"extremely bad integrand behavior observed"],
+       [4, "integration failed to converge"],
+       [5, "integral is probably divergent or slowly convergent"],
+       [6, "the input is invalid"]]$
+       
+
+
+   
+/**** listofops code from Stavros Macrakis
+****/
+  
+listofops(expr51) := block([inflag:true], if mapatom(expr51) then {} else
+         adjoin(op(expr51),xreduce(union,maplist(listofops,expr51))))$
+
+
+
+has_bessel (eexpr52) := 
+    ( if debug then print("  has_bessel "),
+    
+      if length ( intersect (listofops (eexpr52),
+                {bessel_j,bessel_y,bessel_i,bessel_k})) > 0 then true
+      else false)$
+      
+      
+/*******  isreal  *******************/
+  
+isreal(ex76,v76,v176,v276,num76):=
+block([listconstvars:true, dv76,found76:true,j76 ],
+  dv76 : (v276 - v176)/(num76 + 1),
+  for j76 thru num76 do
+    if member(%i,listofvars(cfloat(subst(v76=v176+j76*dv76,ex76)))) then
+       (found76:false, return()),
+  found76)$ 
+  
+/************* isequal ***************************/
+  
+isequal(a23,b23) :=
+ (if ratsimp(a23 - b23) = 0 then true else false)$
+ 
+/*********** setassume  ***********************/
+ 
+ set_assumes_false() :=
+   (assume_real : false, assume_imag : false,
+           assume_complex : false )$
+           
+disp_assumes() := display(assume_real,assume_imag,assume_complex)$
+ 
+ 
+/********** fcompare ****************************/
+ 
+fcompare(ee1,ee2,xx,xval,fppval):=
+block([fpprec:fppval,tval,e1f,e2f,relerr1,relerr2],
+     tval : bfloat(subst(xx=xval,ee1)),     
+     e1f : float(subst(xx=xval,ee1)),
+     e2f : float(subst(xx=xval,ee2)),
+     if tval = 0.0b0 then [e1f,e2f]
+     else     
+        (relerr1 : float(abs((e1f - tval)/tval)),
+         relerr2 :  float(abs((e2f - tval)/tval)),
+         [relerr1,relerr2]))$
+         
+         
+/****  use of fcompare:
+(%i1) load(quad);
+(%o1) "c:/work2/quad.mac"
+
+(%i2) e1 : 4^(-16)/((x - %pi/4)^2 + 16^(-16));
+(%o2) 1/(4294967296*((x-%pi/4)^2+1/18446744073709551616))
+
+(%i3) e2 : expand(e1);
+(%o3) 1/(4294967296*x^2-2147483648*%pi*x+268435456*%pi^2+1/4294967296)
+
+(%i4) xL : [0.785,0.7853,0.78539,0.785398]$
+
+(%i5) for xv in xL do
+       print(" ",xv,"  ",fcompare(e1,e2,x,xv,20))$
+
+  0.785        [1.53645769E-13,   6.40931986E-10] 
+
+  0.7853      [6.23703981E-13,   2.47483209E-9] 
+
+  0.78539    [7.500549E-12,        4.79013095E-7] 
+
+  0.785398  [3.74731578E-10,    0.00215256] 
+  
+****/   
+
+ntest():= batch ("nintyes_test.mac",test)$
+
+p():= ?print(%)$
+
+
+   
+quad_control ('control,0)$
+   
+    
+
+

@@ -1,0 +1,697 @@
+/* nint.mac
+  Nov 12, 2012
+  Maxima by Example, Ch. 8, Numerical Integration
+  Ted Woollett
+  ------------------------------
+    nint.mac is a file of Maxima functions which 
+    contains code for 1d and 2d quadrature with about
+    15 digit precision (at most).
+    
+    This file loads quad_util.mac, quad1d.mac, quad2d.mac,
+     and mydefint.mac available on the author's webpage.
+     
+    This code should work with Maxima ver. 5.28.0.
+    ------------------------------------------------------
+    Copyright (C) 2012,  Edwin L. Woollett  <woollett@charter.net>       
+    http://www.csulb.edu/~woollett
+    
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU GENERAL PUBLIC LICENSE, Version 2, June 1991,
+    as published by the Free Software Foundation.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details. You should have received a
+    copy of the GNU General Public License along with this program.
+    If not, see http://www.fsf.org/licensing/.  
+    ------------------------------------------------
+macros and functions in this file:
+  
+  nint
+  quad
+  nint1d
+  int1_filter
+  nint2d
+  int2_filter
+  mquad
+  
+*/
+
+
+
+load ("quad_util.mac")$
+  /* disp(" quad_util.mac")$ */
+load ("mydefint.mac")$
+  /* disp (" mydefint.mac")$ */
+load ("quad1d.mac")$
+  /* disp (" quad1d.mac")$ */
+load ("quad2d.mac")$
+  /* disp (" quad2d.mac")$ */
+
+
+
+/*****************  nint 
+   
+      nint calls either nint1d or nint2d
+         nint1d calls int1 and/or quad1d1
+         nint2d calls int2 and/or quad2d1.
+         
+      to (force) a bypass of integrate, use
+      quad with the same syntax as nint.
+   
+*********************************/
+   
+   /*   Oct. 31, 2012
+        allowed syntax:
+        
+        1d integral
+        
+        nint (expr,var,a,b)  
+        nint (expr,var,a,b,real)
+        nint (expr,var,a,b,imaginary)                
+        
+        nint (expr,var,a,b,strong_osc)
+        nint (expr,var,a,b,strong_osc,real)
+        nint (expr,var,a,b,strong_osc,imaginary)                
+        
+        nint (expr,var,a,b,principal_val(v0))
+        nint (expr,var,a,b, points(x1,x2,...))
+        
+        nint (expr,var,a,b,principal_val(v0))
+        nint (expr,var,a,b, points(x1,x2,...))
+        
+        2d integral
+        
+        nint (expr,[x,x1,x2],[y,y1,y2])                                
+                
+        nint (expr,[x,x1,x2],[y,y1,y2,strong_osc])        
+        
+        nint (expr,[x,x1,x2],[y,y1,y2,principal_val(y0)])        
+        
+        nint (expr,[x,x1,x2],[y,y1,y2,points(ya,yb,...)])        
+        
+        nint ([expr],var,a, b [options])  
+        
+        
+        The options: strong_osc, principal_val(v0),
+         points(x1,x2,...),  real,imaginary,digits(n) are
+         recognised; the last three should only be
+         general (non-list) options.
+        
+         The option strong_osc forces
+        use of quad_qag if integrate section is not
+        used. The strong_osc keyword should only
+        be used for a finite interval of integration.
+        
+        The option principal_val(v0) assumes that
+        expr has the form g(var)/(var - v0), and requests
+        that the quadpack routine quad_qawc be used for
+        a numerical principal value evaluation (if
+        integrate is not used or is not successful).
+        
+        The option points(x1,x2,..) forces use of
+        quad_qagp if integrate is not used
+        or is not successful.   
+      
+       
+     nint1d and nint2d is responsible to make sure the work detail lists
+     nargL and noutL are constructed and available as global
+     lists if integrate is used and is successful.
+     
+     Otherwise these lists are constructed by the
+     code in quad1d.mac or quad2d.mac.
+     
+      nargL is a global list of method and args input,
+      noutL is a global list of method and either
+      integrate or quadpack total output.
+      
+      If method is set to true, nint or quad will print out
+      the method used during work.
+      
+      If debug is set to true, details of progress
+      will be printed to the console screen.
+      
+      nint calls nint1d for a 1d integral or
+         nint2d for a 2d integral 
+     
+     future work:
+     
+         
+      1.  return results at a requested high precision
+      
+      2.  allows countour integral results to be            
+           returned.
+           
+   
+   note:  mprint evaluates the arg, display doesn't               
+   
+   ordinary maxima functions evaluate and simplify
+   their args:
+   
+(%i49) ff(z) := block(print(" z = ",z),display(z))$
+(%i50) ff(abs(x));
+ z =  abs(x) 
+(false) z = abs(x)
+
+(%o50) done
+(%i51) assume(x<0);
+(%o51) [x < 0]
+(%i52) ff(abs(x));
+ z =  -x 
+(false) z = -x
+
+(%o52) done
+                  
+*/
+    
+/*  april 28: nint converted to a macro with simp:false  */
+     
+nint([_uu%] ) ::= 
+block([simp:false, case_2d:false ],
+    domain:real,
+    case_2d : block([simp:true],listp(second(_uu%))),  
+   if case_2d then apply ('nint2d,_uu%)
+        else apply ('nint1d,_uu%))$   
+           
+  /********** end nint  ******************/
+  
+  
+  /********  quad calls quad1d or quad2d 
+       quad is a standalone wrapper for quadpack  .
+       quad calls either quad1d or quad2d.
+       quad is defined as a maxima macro.
+       **************************/
+       
+
+quad ([_ww%] ) ::= 
+block([simp:false,case_2d:false],   
+   case_2d : block([simp:true],listp(second(_ww%))),
+   if case_2d then apply ('quad2d,_ww%)
+        else apply ('quad1d,_ww%))$
+        
+/********** int2_filter may 4 
+       called by nint2d, so outer
+       integral limits are numerical.
+       
+       If integrate result reduces to
+       a complex number, int2_filter
+       defines global nargL.
+                              ***************/
+
+int2_filter(e2,xL,yL) ::=
+block([domain:complex,simp : false,x2,x21,x22,y2,y21,y22,e22,x2_eval,y2_eval,
+           qxmin,qxmax,xsign,resl0,resg0,rmd1,
+           gx : gensym("x"),gy : gensym("y"),
+           cntxy : gensym("c")],
+           
+      if debug then print (" int2_filter "),
+      if debug then display(e2,xL,yL,gx,gy,cntxy),
+           
+      [x2,x21,x22] : xL,
+      [y2,y21,y22] : yL,
+      
+      if debug then display(x2,x21,x22,y2,y21,y22),
+           
+      e22 : ev(e2,eval),
+      x2_eval : ev(x2),
+      if debug then display(e22,x2_eval),
+      e22 : substitute(gx,x2_eval, e22),
+      if debug then display(e22),
+      y21 : ev(y21),
+      y21 : substitute(gx,x2_eval,y21),
+      y22 : ev(y22),
+      y22 : substitute(gx,x2_eval,y22),
+      y2_eval : ev(y2),
+      if debug then display(y2_eval),
+      e22 : substitute(gy,y2_eval,e22),  
+      if debug then display(e22,y21,y22,x21,x22),
+      
+  block([simp:true],
+  
+      e22 : ev(e22),
+      e22 : ratsimp(e22),
+      x21 : ev(x21),
+      x22 : ev(x22),
+      if debug then display(e22,x21,x22),
+      if bypass_integrate2 (e22,gx,gy) then return (false),
+      
+      
+       /* called by nint2d so: case numerical outer integral limits */
+          
+      qxmin : min(x21,x22),
+      qxmax : max(x21,x22),
+      if qxmin = x22 then xsign:-1 else xsign:1,
+      if debug then display(qxmin,qxmax,xsign),
+      
+          /* case outer integration var doesn't change sign  */
+    
+      if (qxmin >= 0 or qxmax <= 0) then 
+          (if debug then print(" case no change in sign"),                 
+           unwind_protect((
+              cntxy : apply('supcontext, [cntxy]),
+              assume(qxmin < gx, gx < qxmax),        
+              assume(min(y21,y22) < gy, gy < max(y21,y22)),
+              rmd1 : integrate(integrate(e22,gy,y21,y22),gx,x21,x22)),          
+              killcontext(cntxy)),              
+           if complex_number_p(cfloat(rmd1)) then 
+              (nargL : [integrate,[e22,gy,y21,y22],[gx,x21,x22]],
+               if debug then display(nargL)),
+           return (xsign*rmd1)),
+
+      
+      
+         /* case outer integration var does change sign: split into
+               two integrals: (qxmin,0) + (0,qxmax)   */ 
+      if debug then print(" case outer var changes sign"),
+            
+      
+      unwind_protect((
+         cntxy : apply('supcontext, [cntxy]),
+         assume(qxmin < gx, gx < 0),        
+         assume(min(y21,y22) < gy, gy < max(y21,y22)),
+         resl0 : integrate(integrate(e22,gy,y21,y22),gx,qxmin,0),          
+         if debug then print("resl0 = ",resl0),
+         forget(qxmin < gx, gx < 0),
+         assume(gx > 0 , gx < qxmax),
+         resg0 : integrate(integrate(e22,gy,y21,y22),gx,0,qxmax),
+         if debug then print("resg0 = ",resg0),
+         rmd1 : (resl0 + resg0)),
+         killcontext(cntxy)),
+      if complex_number_p(cfloat(rmd1)) then 
+              (nargL : [[integrate,[e22,gy,y21,y22],[gx,qxmin,0]],
+                        [integrate,[e22,gy,y21,y22],[gx,0,qxmax]]],
+               if debug then display(nargL)),
+      xsign*rmd1))$
+  
+/*********  end int2_filter  may 4  ********************/
+
+/*
+(%i2) int2_filter(x*y,[x,0,1],[y,0,1]);
+(%o2) 1/4
+(%i3) nargL;
+(%o3) [integrate,[x34189*y34190,y34190,0,1],[x34189,0,1]]
+
+(%i4) int2_filter(exp(-abs(x) - abs(y)),[x,minf,inf],[y,minf,inf]);
+(%o4) 4
+(%i5) facts();
+(%o5) []
+(%i6) assume(x<0)$
+(%i7) int2_filter(exp(-abs(x) - abs(y)),[x,minf,inf],[y,minf,inf]);
+(%o7) 4
+(%i8) assume(y<0)$
+(%i9) int2_filter(exp(-abs(x) - abs(y)),[x,minf,inf],[y,minf,inf]);
+(%o9) 4
+(%i10) forget(x<0,y<0)$
+(%i11) facts();
+(%o11) []
+(%i12) nargL;
+(%o12) [[integrate,[%e^(-abs(y36285)-abs(x36284)),y36285,minf,inf],
+         [x36284,minf,0]],
+        [integrate,[%e^(-abs(y36285)-abs(x36284)),y36285,minf,inf],
+         [x36284,0,inf]]]
+(%i13) foo : a*x*y$
+(%i14) a:1$
+(%i15) int2_filter(foo,[x,0,1],[y,0,1]);
+(%o15) 1/4
+
+*/
+
+/********** nint2d  may 4, 2012
+        calls either int2_filter or quad2d  **********/
+        
+nint2d ([_ww%]) ::=
+block ([simp:false,wwint,wwint_argL],
+     if debug then print (" nint2d "),
+     /* global lists */
+     nargL : [],
+     noutL : [],
+
+     /* try integrate via int2_filter */
+     
+     wwint_argL : [first(_ww%),second(_ww%),third(_ww%)],
+     if debug then display (wwint_argL),
+     
+     wwint : apply ('int2_filter,wwint_argL),
+     if debug then display (wwint),
+     wwint : block([simp:true],fbfloat(wwint,32)),
+     if debug then display (wwint),
+     if complex_number_p(wwint) then
+        ( wwint : block([simp:true],fchop(wwint)),
+          if debug then display (wwint),          
+          noutL : [integrate,wwint],
+          if debug then display (noutL),
+          if method then print (" integrate"),
+          return (wwint)),
+          
+     /* try quadpack via quad2d  */
+     
+          /* global flags */
+     set_assumes_false(),
+     if debug then disp_assumes(),
+  
+     apply ('quad2d,_ww%))$
+     
+ /********** end nint2d ***************/
+
+/*
+(%i2) nint2d(x*y,[x,0,1],[y,0,1]);
+(%o2) 0.25
+(%i3) nint2d(exp(-abs(x) - abs(y)),[x,minf,inf],[y,minf,inf]);
+(%o3) 4.0
+(%i4) nint(exp(-abs(x) - abs(y)),[x,minf,inf],[y,minf,inf]);
+(%o4) 4.0
+(%i5) nint(x*y,[x,0,1],[y,0,1]);
+(%o5) 0.25
+(%i6) quad(x*y,[x,0,1],[y,0,1]);
+(%o6) 0.25
+(%i7) mdefint(x*y,[x,0,1],[y,0,1]);
+(%o7) 1/4
+
+*/
+
+
+
+
+
+        
+        
+/********** int1_filter  11/13/2012  *****************/
+/*  called by nint1d , returns symbolic expression.
+    if integrate answer reduces to a complex
+    number, defines global nargL   */
+
+int1_filter(wexpr,wx,wx1,wx2) ::=
+block ([domain:complex,simp:false,wgx:gensym("wx"),cntx : gensym("c"),
+             we1,wxx1,wxx2,wx_eval,rmd1],
+     if debug then print(" int1_filter"),
+     if debug then display(wexpr,wx,wx1,wx2),
+     if debug then display(domain),
+     we1 : ev(wexpr),
+     we1 : ev(we1,nouns,simp),
+     if debug then display(we1),
+     wx_eval : ev(wx),
+     if debug then display(wx_eval),
+     we1 : subst(wx_eval=wgx, we1),   
+     block([simp : true],
+          /* we1 : ev(we1), */
+          we1 : ratsimp(we1),
+           
+          wxx1 : ev (wx1),
+          wxx2 : ev (wx2),
+          if symbolic (wxx1,wxx2) 
+             then ( print (" range parameters don't reduce to numbers "),
+                    return (false)),
+          if debug then display(we1,wgx,wxx1,wxx2),
+          /* values of bessel functions for large numerical
+               args give problems */
+          if ( has_bessel(we1) and finite(wxx1,wxx2)
+                     and max(wxx1,wxx2) > 100 ) then return(false),
+          if bypass_integrate (we1,wgx) then return (false),
+          unwind_protect((
+             cntx : apply('supcontext, [cntx]),
+             assume(min(wxx1,wxx2) < wgx, wgx < max(wxx1,wxx2)),
+             if debug then print("int1_filter: ready for integrate call"),
+             if debug then display(we1,wgx,wxx1,wxx2),
+             rmd1 : errcatch(integrate(we1,wgx,wxx1,wxx2))),
+             if rmd1 = [] then rmd1:false else rmd1 : first(rmd1),
+             if debug then display(rmd1),
+             killcontext(cntx)),
+      
+         if complex_number_p(cfloat(rmd1)) then 
+              ( nargL : [integrate,we1,wgx,wxx1,wxx2],
+               if debug then display(nargL)),
+         rmd1))$
+         
+/*
+(%i2) int1_filter(1/(1+x^2),x,0,inf);
+(%o2) %pi/2
+(%i3) nargL;
+(%o3) [integrate,1/(wx34189^2+1),wx34189,0,inf]
+(%i4) nint1d(1/(1+x^2),x,0,inf);
+(%o4) 1.5707963
+(%i5) nint(1/(1+x^2),x,0,inf);
+(%o5) 1.5707963
+(%i7) mydefint1(1/(1+x^2),x,0,inf);
+(%o7) %pi/2
+(%i8) mdefint(1/(1+x^2),x,0,inf);
+(%o8) %pi/2
+*/
+
+/* practice
+(%i7) listofops(wwint);
+(%o7) {"*","^",integrate,tan}
+(%i8) member(integrate,listofops(wwint));
+(%o8) false
+(%i9) member('integrate,listofops(wwint));
+(%o9) false
+(%i10) member(nounify(integrate),listofops(wwint));
+(%o10) true
+*/
+
+        
+/********** nint1d  may 3, 2012
+        calls int1_filter and quad1d  **********/
+        
+nint1d ([_ww%]) ::=
+block ([simp:false,wwint,wwint_argL,tryint1:true],
+     if debug then print (" nint1d "),
+     /* global lists */
+     nargL : [],
+     noutL : [],     
+     /* try integrate via int1_filter */
+     
+     wwint_argL : [first(_ww%),second(_ww%),third(_ww%),fourth(_ww%)],
+     if debug then display (wwint_argL),
+     
+     wwint : apply ('int1_filter,wwint_argL),
+     
+     block([simp:true],
+      /* print("back in nint1d"),
+         print(" wwint = ",wwint),
+       */
+        if debug then print(" back in nint1d "),
+        if debug then display(wwint),
+        if wwint = false 
+          then (/* print("case wwint = false"), */ tryint1:false, return()),
+        if member(nounify(integrate),listofops(wwint))
+          then (/* print("case op(wwint) = integrate"), */ tryint1:false, 
+                return()),
+        /* print(" next call cbfloat "), */
+        
+        wwint : fbfloat(wwint,32)),
+        
+     /* print(" outside block, tryint1 = ",tryint1," wwint = ",wwint), */
+     
+     if tryint1=false 
+       then (/* print("case tryint1 = false"), */ go(tryquadpack)),
+     
+     if debug then display (wwint),
+     
+     if complex_number_p(wwint) then
+          (  wwint : block([simp:true],fchop(wwint)),           
+            if debug then display (wwint),          
+             noutL : [integrate,wwint],
+             if method then print (" integrate"),
+             if debug then display (noutL),
+             return (wwint)),
+          
+     /* try quadpack via quad1d  */
+     
+     tryquadpack,
+     
+          /* global flags */     
+     set_assumes_false(),
+  
+     apply ('quad1d,_ww%))$
+     
+ /********** end nint1d ***************/
+ 
+ /* test of nint1d alone: if int1_filter is tried
+    and doesn't return a float, quad1d is called
+    and checks args
+    
+(%i1) load(nint);
+ quad_util.mac 
+ mydefint.mac 
+ quad1d.mac 
+ quad2d.mac 
+(%o1) "c:/work2/nint.mac"
+(%i2) nint1d(1,x,0,1);
+(%o2) 1.0
+(%i3) nint1d(x,x,0,1);
+(%o3) 0.5
+(%i4) nint1d(1,x,0,a);
+   a   is an invalid range parameter  
+(%o4) false
+(%i5) mdefint(1,x,0,a);
+(%o5) a
+(%i10) nint(1,x,0,a);
+   a   is an invalid range parameter  
+(%o10) false
+(%i11) nint1d(sin(sin(x)),x,0,2,real,strong_osc);
+(%o11) 1.2470561
+(%i12) noutL;
+(%o12) [qag,1.2470561,1.38451035E-14,31,0]
+
+filter int1_filter bypasses integrate for multiple
+valued functions in integrand:
+
+(%i3) nint1d(log(1/x)/sqrt(%i*x),x,0,1);
+(%o3) 2.8284271-2.8284271*%i
+(%i4) noutL;
+(%o4) [[qags,2.8284271,3.67705866E-13,315,0],
+       [qags,-2.8284271,1.11022302E-13,315,0]]
+
+but integrate can do this integral:
+(%i5) mdefint(log(1/x)/sqrt(%i*x),x,0,1);
+(%o5) 4/(-1)^(1/4)
+(%i6) cfloat(%);
+(%o6) 2.8284271-2.8284271*%i
+
+       
+
+
+*/
+
+ 
+ 
+ 
+ 
+ /*
+ (%i1) load(nint);
+ quad_util.mac 
+ mydefint.mac 
+ quad1d.mac 
+ quad2d.mac 
+(%o1) "c:/work2/nint.mac"
+(%i2) mdefint(x,x,1,10);
+(%o2) 99/2
+(%i3) nint(x,x,1,10);
+(%o3) 49.5
+(%i4) mdefint(1/x^8,x,minf,-10);
+(%o4) 1/70000000
+(%i5) nint(1/x^8,x,minf,-10);
+(%o5) 1.42857143E-8
+
+(%i16) quad(sin(sin(x)),x,0,2,real,strong_osc);
+ quad_qag 
+ epsrel criterion  
+(%o16) 1.2470561
+
+(%i17) nint(sin(sin(x)),x,0,2,real,strong_osc);
+ quad_qag 
+ epsrel criterion  
+(%o17) 1.2470561
+
+(%i18) quad(sin(sin(x)),x,0,2,real);
+ epsrel criterion  
+ epsrel criterion 
+   quad_qag 
+(%o18) 1.2470561
+
+(%i1) load(nint);
+ quad_util.mac 
+ mydefint.mac 
+ quad1d.mac 
+ quad2d.mac 
+(%o1) "c:/work2/nint.mac"
+(%i2) facts();
+(%o2) []
+(%i3) mdefint(abs(x),x,-1,1);
+(%o3) 1
+(%i4) facts();
+(%o4) []
+(%i5) nint(abs(x),x,-1,1);
+(%o5) 1.0
+(%i6) assume(x<0)$
+(%i7) mdefint(abs(x),x,-1,1);
+(%o7) 1
+(%i8) nint(abs(x),x,-1,1);
+(%o8) 1.0
+(%i9) nargL;
+(%o9) [integrate,abs(wx34564),wx34564,-1,1]
+(%i10) quad(abs(x),x,-1,1);
+(%o10) 1.0
+(%i11) nargL;
+(%o11) [qag,abs(x34695),x34695,-1.0,1.0,3,limit = 800]
+(%i12) noutL;
+(%o12) [qag,1.0,1.11022302E-14,93,0]
+
+
+(%i13) mdefint(exp(-abs(x)),x,0,inf);
+(%o13) 1
+(%i14) facts();
+(%o14) [0 > x]
+(%i15) nint(exp(-abs(x)),x,0,inf);
+(%o15) 1.0
+(%i16) nargL;
+(%o16) [integrate,%e^-abs(wx36753),wx36753,0,inf]
+(%i17) quad(exp(-abs(x)),x,0,inf);
+(%o17) 1.0
+(%i18) nargL;
+(%o18) [qagi,%e^-abs(x36875),x36875,0.0,inf,limit = 800]
+(%i19) noutL;
+(%o19) [qagi,1.0,5.84260704E-11,135,0]
+
+problem with quad1d may 3:
+
+(%i20) forget(x<0);
+(%o20) [x < 0]
+(%i21) facts();
+(%o21) []
+(%i22) foo : cos(x/a)$
+(%i23) a : 2$
+(%i24) mdefint(foo,x,0,1);
+(%o24) 2*sin(1/2)
+(%i25) cfloat(%);
+(%o25) 0.958851
+(%i26) nint(foo,x,0,1);
+(%o26) 0.958851
+
+(%i33) foo;
+(%o33) cos(x/a)
+(%i34) a;
+(%o34) 2
+(%i36) quad(foo,x,0,1);
+(%o36) 0.958851
+(%i37) nargL;
+(%o37) [qag,cos(x39352/2),x39352,0.0,1.0,3,limit = 800]
+(%i38) noutL;
+(%o38) [qag,0.958851,1.06453854E-14,31,0]
+
+*/
+
+mquad ([zzL]) ::=
+block ([simp:false,method:false,debug:false,zintL,
+          rr1,rr1f,rr2,rr3],
+       if listp (second(zzL)) then
+          zintL : [first(zzL),second(zzL),third(zzL)]
+       else
+          zintL : [first(zzL),second(zzL),third(zzL),fourth(zzL)],
+          
+       rr1 : apply ('mdefint,zintL),
+       print (" mdefint: ",block([simp:true],ev(rr1))),
+       
+       block([simp:true],
+            rr1f : chop_float (rr1),
+            if complex_number_p(rr1f) then
+                  print (" chop_float mdefint: ",rr1f)),
+       
+       rr3 : apply ('quad, zzL),       
+       print (" quad: ", block([simp:true],ev(rr3))),
+       
+       rr2 : apply ('nint, zzL),       
+       print (" nint: ", block([simp:true],ev(rr2))))$
+       
+
+
+
+  set_assumes_false()$     
+    
+  ratprint:false$       
+ 
+  lognegint : true$  
+  
+  display2d:false$
+  

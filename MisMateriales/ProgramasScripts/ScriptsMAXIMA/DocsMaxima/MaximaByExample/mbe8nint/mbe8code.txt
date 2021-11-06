@@ -1,0 +1,395 @@
+  file mbe8code.txt  has Maxima code
+   for Maxima by Example, Chapter 8,
+   Numerical Integration.
+
+    Edwin L Woollett, 2012
+    woollett@charter.net
+    http://www.csulb.edu/~woollett
+
+
+
+8.1 Introduction
+
+8.2 Using nint and quad for One or Two Dimensional Quadrature
+
+8.2.1 Loading the nint Package
+
+(%i1) load(nint)
+
+8.2.2 nint and quad Syntax
+
+8.2.3 1D Quadrature Using mdefint and ndefint
+
+(%i1) load(nint);
+(%i2) mdefint(log(1/x)/sqrt(x),x,0,1);
+(%i3) ndefint(log(1/x)/sqrt(x),x,0,1);
+(%i4) mdefint(log(1/x)/sqrt(%i*x),x,0,1);
+(%i5) ndefint(log(1/x)/sqrt(%i*x),x,0,1);
+(%i6) mdefint(log(1/x)/sqrt(%i*x),x,0,1);
+(%i7) cfloat(%);
+(%i8) fbfloat(%o6,32);
+
+8.2.4 1D Quadrature Examples Using nint and quad
+
+(%i1) load(nint);
+(%i2) nint(log(1/x)/sqrt(%i*x),x,0,1);
+(%i3) noutL;
+(%i4) quad(log(1/x)/sqrt(%i*x),x,0,1);
+(%i5) noutL;
+(%i6) method:true$
+(%i7) nint(log(1/x)/sqrt(%i*x),x,0,1);
+(%i8) quad(log(1/x)/sqrt(%i*x),x,0,1);
+(%i9) noutL;
+(%i10) nint(x^2,x,0,2);
+(%i11) mdefint(x^2,x,0,2);
+(%i12) cfloat(%);
+
+Non-Finite Range Examples
+
+(%i13) nint(1/(1+x^2),x,0,inf);
+(%i14) nint(exp (%i*x^2),x,minf,inf);
+(%i15) quad(exp (%i*x^2),x,minf,inf);
+(%i16) mdefint(exp (%i*x^2),x,minf,inf);
+
+Further Examples
+
+(%i17) nint(sin(x)/sqrt(x),x,0,5000,real,singular);
+(%i18) ndefint(sin(x)/sqrt(x),x,0,5000);
+(%i19) nint(bessel_j(0,x)/(1+x),x,0,1,real,strong_osc);
+(%i20) quad((x-x^2)^(-1),x,-1/2,1/2,principal_val(0));
+(%i21) ndefint((x-x^2)^(-1),x,-1/2,1/2);
+(%i22) quad(1/sqrt(sin(x)),x,0,10,points(%pi,2*%pi,3*%pi));
+(%i23) ndefint(1/sqrt(sin(x)),x,0,10);
+(%i24) mdefint(1/sqrt(sin(x)),x,0,10);
+
+8.2.5 2D Quadrature Examples Using nint and quad
+
+(%i1) load(nint);
+(%i2) nint(1,[x,0,1],[y,0,1]);
+(%i3) quad(1,[x,0,1],[y,0,1]);
+(%i4) mdefint(1,[x,0,1],[y,0,1]);
+(%i5) ndefint(1,[x,0,1],[y,0,1]);
+(%i6) nint(1/sqrt(x+y),[x,0,1],[y,0,1],real);  
+(%i7) nint(sin(x*y),[x,0,1],[y,0,1],real);  
+(%i8) method:true$
+(%i9) nint(log(y)/x^(4/5),[x,0,1],[y,0,1]);
+(%i10) time(%);
+(%i11) nint(log(y)/x^(4/5),[x,0,1],[y,0,1],real);
+(%i12) time(%);
+(%i13) ndefint(log(y)/x^(4/5),[x,0,1],[y,0,1]);
+(%i14) time(%);
+(%i15) mdefint(log(y)/x^(4/5),[x,0,1],[y,0,1]);
+(%i16) time(%);
+(%i17) nint(exp(-abs(x) - abs(y)),[x,minf,inf],[y,minf,inf]);
+(%i18) quad(exp(-abs(x) - abs(y)),[x,minf,inf],[y,minf,inf]);
+(%i19) nint(sin(x*y)*exp(-x)*exp(-y),[x,0,inf],[y,0,inf],real);
+
+8.2.6 The nint Package Sets domain to complex: Caution!
+
+(%i1) load(nint);
+(%i2) domain;
+(%i3) foo :((-%pi)/2+acos(y/b)+acos(x/b))/(2*%pi)$
+(%i4) assume(b>0,x>0, x<b);
+(%i5) integrate(integrate(foo,y,0,sqrt(b^2 - x^2)),x,0,b);
+(%i6) domain:real;
+(%i7) integrate(integrate(foo,y,0,sqrt(b^2 - x^2)),x,0,b);
+
+8.2.7 Case: Symbolic Definite Integral the Difference of Two Almost Equal Numbers
+
+(%i1) load(nint);
+(%i2) ee : integrate(exp(x^5),x,1,2);
+(%i3) cfloat(ee);
+(%i4) fbfloat(ee,32);
+(%i5) fchop(%);
+(%i6) nint(exp(x^5),x,1,2);
+(%i7) noutL;
+(%i8) quad(exp(x^5),x,1,2);
+(%i9) noutL;
+(%i10) nint(exp(x^5),x,1,2);
+(%i11) nargL;
+(%i12) quad(exp(x^5),x,1,2);
+(%i13) nargL;
+
+8.2.8 Turning Off Automatic Chop of Answer
+
+(%i1) load(nint);
+(%i2) dochop;
+(%i3) nint(exp(x^5),x,1,2);
+(%i4) dochop:false$
+(%i5) nint(exp(x^5),x,1,2);
+(%i6) dochop:true$
+(%i7) nint(exp(x^5),x,1,2);
+
+8.2.9 Changing the Chop Value Used by nint
+
+(%i8) method : false$
+(%i9) nint(exp(x^5),x,1,2);
+(%i10) _small%;
+(%i11) _small% : 1.0e-30$
+(%i12) nint(exp(x^5),x,1,2);
+
+8.3 Arbitrary Precision One Dimensional Quadrature with apnint and apquad
+
+(%i1) fpprec;
+(%i2) pi16 : bfloat(%pi);
+(%i3) pi30 : bfloat(%pi),fpprec:30;
+(%i4) fpprec;
+(%i5) abs(pi16 - pi30);
+(%i6) abs(pi16 - pi30),fpprec:40;
+(%i7) pi30f : float(pi30);
+(%i8) abs(pi16 - pi30f),fpprec:40;
+
+Restart:
+
+An Accuracy Test
+
+(%i1) load(nint);   
+(%i2) integrate(sqrt(x)*log(x),x,0,1);
+(%i3) tval : bfloat(%),fpprec:45;
+(%i4) apval : apquad(sqrt(x)*log(x),x,0,1,30,40);
+(%i5) abs(apval - tval),fpprec:45;
+(%i6) apquad(sqrt(x)*log(x),x,0,1,20,30);
+(%i7) apquad(sqrt(x)*log(x),x,0,1,30,40);
+
+Some Examples
+
+(%i8) apquad(sin(x)*exp(%i*x),x,0,2,20,30);
+(%i9) method:true$
+(%i10) apnint(sin(x)*exp(%i*x),x,0,2,20,30);
+(%i11) apquad(exp(-x +%i*x),x,0,inf,20,30);
+(%i12) apnint(exp(-x +%i*x),x,0,inf,20,30);
+(%i13) integrate(bessel_j(1,x)*exp(-x),x,0,inf);
+(%i14) integrate(bessel_j(1,x)*exp(-x),x);
+(%i15) bfloat(bessel_j(1,0.5b0)*exp(-0.5b0));
+(%i16) apquad(bessel_j(1,x)*exp(-x),x,0,inf,20,30);
+(%i17) apnint(log(1/x)/sqrt(%i*x),x,0,1,20,30);
+(%i18) quad(log(-3+%i*x),x,-2,3);
+(%i19) quad(realpart(log(-3+%i*x)),x,-2,3);
+(%i20) quad(imagpart(log(-3+%i*x)),x,-2,3);
+(%i21) apnint(realpart(log(-3+%i*x)),x,-2,3,20,30);
+(%i22) apnint(imagpart(log(-3+%i*x)),x,-2,3,20,30);
+(%i23) imagpart(log(-3+%i*x));
+
+
+
+8.4 Using the Wolfram Alpha Web Site for Integrals
+
+(%i13) integrate(cos(x),x,0,1);
+(%i14) float(%);
+
+8.5 Direct Quadpack Use of quad_qags, quad_qag, and quad_qagi
+
+8.5.1 Syntax for Quadpack Functions
+
+8.5.2 Output List of Quadpack Functions and Error Code Values
+
+8.5.3 Integration Rule Parameters and Optional Arguments
+
+8.5.4 quad_qags for a Finite Interval
+
+(%i1) display2d:false;
+(%o1) false
+(%i2) domain;
+(%o2) real
+(%i3) quad_qags(exp (x^2),x,0,1);
+(%i4) quad_qags(a*x,x,0,1);
+
+Example 1
+
+(%i5) g:sqrt(x)*log(1/x)$
+(%i6) limit(g,x,0,plus);
+(%i7) (load(draw),load(qdraw))$
+(%i8) qdraw( ex(g,x,0,1) )$
+(%i9) fpprintprec:8$
+(%i10) tval : block([fpprec:20], bfloat(integrate(g,x,0,1)) );
+(%i11) qlist:quad_qags(g,x,0,1 );
+(%i12) block ([fpprec:20], bfloat(abs(first(%) - tval)));
+(%i13) est_answer : first(qlist);
+(%i14) est_abs_err : second(qlist);
+(%i15) est_rel_err : est_abs_err/est_answer;
+
+Example 2
+
+(%i1) display2d:false$
+(%i2) limit(log(sin(x)),x,0,plus);
+(%i3) ix : taylor(log(sin(x)),x,0,2);
+(%i4) int_ix:integrate(ix,x);
+(%i5) limit(int_ix,x,0,plus);
+(%i6) assume(eps>0,eps<1)$
+(%i7) integrate(ix,x,0,eps);
+(%i8) expand(%);
+(%i9) limit(eps*log(eps),eps,0,plus);
+(%i10) quad_qags(log(sin(x)),x,0,1);
+(%i11) float(li[2](1));
+(%i12) float(li[2](1+%i));
+(%i13) integrate(log(sin(x)),x,0,1);
+
+8.5.5 quad_qags for Double Integrals
+
+(%i1) (fpprintprec:8,display2d:false)$
+(%i2) g : x*y/(x+y)$
+(%i3) tval : (block [fpprec:20],bfloat (integrate (integrate (g,y,0,x/2),x,1,3) ));
+(%i4) quad_qags ( quad_qags (g,y,0,x/2)[1],x,1,3);
+(%i5) block([fpprec:20], bfloat( abs (%[1] - tval)));
+(%i6) %/tval;
+(%i7) g : exp(x-y^2)$
+(%i8) tval : block([fpprec:20],bfloat(integrate( integrate(g,y,1,2+x),x,0,1)));
+(%i9) quad_qags( quad_qags(g,y,1,2+x)[1],x,0,1);
+(%i10) block([fpprec:20],bfloat(abs (%[1] - tval)));
+(%i11) %/tval;
+
+8.5.6 quad_qag for a General Oscillatory Integrand
+
+Example 1
+(%i1) (fpprintprec:8,display2d:false)$
+(%i2) f : cos(50*x)*sin(3*x)*exp(-x)$
+(%i3) tval : block ([fpprec:20],bfloat( integrate (f,x,0,1) ));
+(%i4) (load(draw),load(qdraw))$
+(%i5) qdraw( ex(f,x,0,1) )$
+(%i6) quad_qag(f,x,0,1,6);
+(%i7) block ([fpprec:20], bfloat(abs(first(%) - tval)));
+(%i8) %/tval;
+(%i9) quad_qags(f,x,0,1 );
+(%i10) block ([fpprec:20], bfloat(abs(first(%) - tval)));
+(%i11) %/tval;
+
+Example 2
+(%i12) tval : block ([fpprec:20], bfloat( integrate (exp(x),x,0,1) ));
+(%i13) quad_qag(exp(x),x,0,1,6);
+(%i14) block ([fpprec:20], bfloat(abs(first(%) - tval)));
+(%i15) %/tval;
+(%i16) quad_qags(exp(x),x,0,1);
+(%i17) block ([fpprec:20], bfloat(abs(first(%) - tval)));
+(%i18) %/tval;
+
+Example 3
+(%i19) f : sqrt(x)*log(1/x)$
+(%i20) tval : block ([fpprec:20], bfloat( integrate (f,x,0,1) ));
+(%i21) quad_qag(f,x,0,1,3);
+(%i22) block ([fpprec:20], bfloat(abs(first(%) - tval)));
+(%i23) %/tval;
+(%i24) quad_qags(f,x,0,1);
+(%i25) block ([fpprec:20], bfloat(abs(first(%) - tval)));
+(%i26) %/tval;
+
+8.5.7 quad_qagi for a Non-finite Interval
+
+(%i1) (fpprintprec:8,display2d:false)$
+(%i2) tval : block ([fpprec:20],bfloat( integrate (exp(-x^2),x,0,inf) ));
+(%i3) quad_qagi(exp(-x^2),x,0,inf);
+(%i4) block ([fpprec:20], bfloat(abs(first(%) - tval)));
+(%i5) %/tval;
+(%i6) quad_qagi(exp(-x^2),x,minf,0);
+(%i7) block ([fpprec:20], bfloat(abs(first(%) - tval)));
+(%i8) tval : block ([fpprec:20],bfloat(2*tval));
+(%i9) quad_qagi(exp(-x^2),x,minf,inf);
+(%i10) block ([fpprec:20], bfloat(abs(first(%) - tval)));
+
+Example 1
+(%i11) g : exp(-x)*x^(5/100)$
+(%i12) tval : block ([fpprec:20],bfloat( integrate(g,x,0,inf) ));
+(%i13) quad_qagi(g,x,0,inf);
+(%i14) block ([fpprec:20], bfloat(abs(first(%) - tval)));
+(%i15) %/tval;
+
+Example 2
+(%i16) g : exp(-x)*log(x)$
+(%i17) tval : block ([fpprec:20],bfloat( integrate(g,x,0,inf) ));
+(%i18) quad_qagi(g,x,0,inf);
+(%i19) block ([fpprec:20], bfloat(abs(first(%) - tval)));
+(%i20) %/tval;
+
+Example 3
+(%i21) assume(a>0,b>0,k>0)$
+(%i22) g :a*exp(-b*x^2)$
+(%i23) gft:integrate(exp(-%i*k*x)*g,x,minf,inf)/sqrt(2*%pi);
+(%i24) f : subst([a=1,b=1,k=1],g);
+(%i25) fft : subst([a=1,b=1,k=1],gft);
+(%i26) float(fft);
+(%i27) quad_qagi(f*exp(-%i*x),x,minf,inf);
+
+8.6 Numerical Integration: Sharper Tools
+
+8.6.1 quad_qagp for Internal Integrand Singularities
+
+(%i28) quad_qagp(x^3*log(abs((x^2-1)*(x^2-2))),x,0,3,[1,sqrt(2)]);
+(%i29) quad_qags(x^3*log(abs((x^2-1)*(x^2-2))),x,0,3);
+
+8.6.2 quad_qawo for Fourier Series Coefficients
+
+(%i1) fpprintprec:8$
+(%i2) g : (x+x^4)*cos(3*x)$
+(%i3) tval : bfloat( integrate(g,x,-2,2) ),fpprec:20;
+(%i4) quad_qawo(x+x^4,x,-2,2,3,cos);
+(%i5) abs(first(%) - tval),fpprec:20;
+(%i6) %/tval,fpprec:20;
+(%i7) quad_qags(g,x,-2,2); 
+(%i8) abs(first(%) - tval),fpprec:20;
+(%i9) %/tval,fpprec:20;
+
+8.6.3 quad_qaws for End Point Algebraic and Logarithmic Singularities
+
+Example 1
+(%i1) fpprintprec:8$
+(%i2) tval : bfloat( integrate(log(x),x,0,1) ),fpprec:20;
+(%i3) quad_qaws(1,x,0,1,0,0,2);
+(%i4) abs(first(%) - tval),fpprec:20;
+(%i5) quad_qags(log(x),x,0,1);
+(%i6) abs(first(%) - tval),fpprec:20;
+
+Example 2
+(%i15) expand(bfloat(integrate(sin(x)/sqrt(x),x,0,1))),fpprec:20;
+(%i16) tval : bfloat(%),fpprec:20;
+(%i17) quad_qaws(sin(x),x,0,1,-1/2,0,1);
+(%i18) abs(first(%) - tval),fpprec:20;
+(%i19) %/tval,fpprec:20;
+(%i20) quad_qags(sin(x)/sqrt(x),x,0,1);
+(%i21) abs(first(%) - tval),fpprec:20;
+(%i22) %/tval,fpprec:20;
+
+Example 3
+(%i1) fpprintprec:8$
+(%i2) limit(log(x)/sqrt(x),x,0,plus);
+(%i3) integrate(log(x)/sqrt(x),x);
+(%i4) limit(%,x,0,plus);
+(%i5) tval : bfloat( integrate(log(x)/sqrt(x),x,0,1)),fpprec:20;
+(%i6) quad_qaws(1,x,0,1,-1/2,0,2);
+(%i7) abs(first(%) - tval),fpprec:20;
+(%i8) quad_qags(log(x)/sqrt(x),x,0,1);
+(%i9) abs(first(%) - tval),fpprec:20;
+(%i10) %/tval,fpprec:20;
+
+
+8.6.4 quad_qawc for a Cauchy Principal Value Integral
+
+(%i11) quad_qawc(1/(x^2-1),x,1,0,b);
+restart
+(%i1) fpprintprec:8$
+(%i2) assume(eps>0, eps<1)$
+(%i3) integrate(1/(x^2-1),x,0,1-eps) +
+               integrate(1/(x^2-1),x,1+eps,2);
+(%i4) limit(%,eps,0,plus);
+(%i5) tval : bfloat(%),fpprec:20;
+(%i6) quad_qawc(1/(1+x),x,1,0,2);
+(%i7) abs(first(%) - tval),fpprec:20;
+(%i8) %/tval,fpprec:20;
+(%i9) quad_qawc(1/(1+x),x,1,0,2,epsabs=1.0e-10,epsrel=0.0);
+(%i10) abs(first(%) - tval),fpprec:20;
+(%i11) %/tval,fpprec:20;
+
+
+8.6.5 quad_qawf for a Semi-infinite Range Cosine or Sine Fourier Transform
+
+(%i12) quad_qawf(exp(-a*x),x,0,w,'cos);
+restart
+(%i1) fpprintprec:8$
+(%i2) integrate (exp(-x^2)*cos(x), x, 0, inf);
+(%i3) tval : bfloat(%),fpprec:20;
+(%i4) quad_qawf (exp(-x^2), x, 0, 1, 'cos );
+(%i5) abs(first(%) - tval),fpprec:20;
+(%i6) %/tval,fpprec:20;
+
+
+8.7 Finite Region of Integration Decision Tree
+
+8.8 Non-Finite Region of Integration Decision Tree
