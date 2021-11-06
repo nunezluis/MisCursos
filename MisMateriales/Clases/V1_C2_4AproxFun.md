@@ -4,7 +4,9 @@ Esta clase tiene por objetivos comprender la aplicación de los conceptos de bas
 
 ### Actividad antes de clase
    1. Estudiar el punto 2.4 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
-   2. Rehacer los ejemplos resueltos: Mínimos Cuadrados y Aproximación Polinomial
+   2. Rehacer los ejemplos resueltos:
+      + Mínimos Cuadrados y
+      + Aproximación Polinomial
 
 ### Taller de problema.
 Utilizando MAXIMA desarrollar el problema 3 de la sección 2.4.7
