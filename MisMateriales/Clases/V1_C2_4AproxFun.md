@@ -4,12 +4,13 @@ Esta clase tiene por objetivos comprender la aplicación de los conceptos de bas
 
 ### Actividad antes de clase
    1. Estudiar el punto 2.4 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
-   2. Rehacer los ejemplos resueltos:
+   2. Seguir con detenimiento la presentación de aproximación de funciones
+   3. Rehacer los ejemplos:
       + Mínimos Cuadrados y
       + Aproximación Polinomial
 
 ### Taller de problema.
-Utilizando MAXIMA desarrollar el problema 3 de la sección 2.4.7
+Utilizando MAXIMA desarrollar el problema 3 de la sección 2.4.5
 
 ### Materiales de apoyo:
 [Video aproximación de funciones](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/2_4AproximacionFunciones.pdf)
