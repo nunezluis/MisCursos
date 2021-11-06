@@ -5,11 +5,11 @@ Esta clase tiene por objetivo, en primer lugar, introducir el concepto de indepe
 
 ### Actividad antes de clase
    1. Estudiar el punto 2.3 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
-   2. Rehacer el ejemplo resuelto: 2.8.
+   2. Rehacer el ejemplo 2.8.
 
 
 ### Taller de problemas**
-   1. Desarrollar los problemas 5 y 6 de la sección 2.3.6
+   1. Desarrollar los ejercicios 5 y 6 de la sección 2.3.6
 
 ### Materiales de apoyo
     1. [Video](https://youtu.be/TVwa7wJ0N9I) y [presentación de variedades lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/2_3IndependeLineal.pdf)
