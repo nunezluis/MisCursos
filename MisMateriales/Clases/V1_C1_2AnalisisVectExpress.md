@@ -7,7 +7,7 @@
    2. Rehacer los ejemplos 1.17, 1.19, 1.24, 1.28 y 1.30.
 
 ### Taller de problema 1 (evaluación en la clase 3)
-   1. De la sección 1.5.7 resuelva los ejercicios 2a, 2d y 2f y con MAXIMA el problema 13;
+   1. De la sección 1.5.7 resuelva los ejercicios 2a, 2d y 2f y con MAXIMA el ejercicio 13;
    2. De la sección 1.6.6 resuelva los ejercicios 2, 5 y 6.
 
 ### Materiales de apoyo

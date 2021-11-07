@@ -16,7 +16,7 @@
 ### Las clases
 **En cada clase** tendremos dos partes: una de ~30m-40m para presentar los conceptos, seguida por otra de ~60m-50m para la discusión en los ejemplos resueltos. Los conceptos habrán sido previamente expuestos en videos e indicados en los materiales de estudio.
 
-En cada clase se propondrán ejercicios y asignaciones que deben resolver, consignar y sustentar **cada tercera clase** y **cada quinta clase**, respectivamente.  Tendremos una hora de consulta para dilucidar las dudas que se les presenten tanto en la solución de los ejercicios y las asignaciones propuestos.
+En cada clase se propondrán ejercicios y asignaciones que deben resolver, consignar y sustentar **cada tercera clase, n +3** y **cada quinta clase, n+4**, respectivamente.  Tendremos una hora de consulta para dilucidar las dudas que se les presenten tanto en la solución de los ejercicios y las asignaciones propuestos.
 
 ### Las asignaciones
 Las asignación son parte fundamental del desarrollo del curso.  Algunas asignaciones será de aplicación de los conceptos y otras de discusión de artículos relacionados con los tópicos que estemos desarrollando.  Las asignaciones de aplicación buscan reforzar los conceptos del curso en la solución de un problema particular, muchas veces con visos de realidad. La discusión de artículos relacionan los conceptos del curso con su utilización específica reportada en la literatura.  Las asignaciones de aplicación serán presentadas de dos maneras: un reporte tipo artículo y una presentación de máximo 6 láminas expuestas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
@@ -87,19 +87,25 @@ La primera asignación tiene que ver con la utilización de los vectores en cris
 
 + [Clase 2: Análisis vectorial express](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_2AnalisisVectExpress.md)
 
-+ [Clase 3: Vectores y números complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
++ [Clase 3: Vectores y números complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md).
 
 ### Espacios Vectoriales lineales. (2.5 Semanas)
 <a name="EspaciosVectoriales"></a>
-+ [Clase 4: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md) Además tendremos un taller evaluado de los vectores de siempre (clases 1, 2 y 3).
++ [Clase 4: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md) Además tendremos un **taller evaluado de los vectores de siempre** (clases 1, 2 y 3).
+    1. Código en MAXIMA para calcular centroide de un triángulo (Problema 3 Sección 1.1.6).
+    2. Código en MAXIMA que reproduzca el ejercicio 6 de la Sección 1.2.7
+    3. De la sección 1.5.7 resuelva los ejercicios 2a, 2d y 2f y con MAXIMA el 13;
+    4. De la sección 1.6.6 resuelva los ejercicios 2, 5 y 6.
 
-+ [Clase 5: Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md)
++ [Clase 5: Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md). También tendremos la sustentación de Asignación 1.
 
 + [Clase 6: Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md)
-También tendremos la sustentación de Asignación 1.
+
 
 + [Clase 7: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) Taller Evaluado Espacios Lineales (clases 4, 5, y 6)
-
+    1. De la Sección 2.1.6 desarrollar los ejercicios 3 y 10
+    2. Resuelva el ejercicio 6 sección 2.2.4
+    3. Desarrollar los ejercicios 5 y 6 de la sección 2.3.6
 + Ajuste
 
 ### Asignación 2 (Entrega hasta clase 9 y discusión clase 10).
