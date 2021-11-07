@@ -4,11 +4,11 @@
 Esta busca construir espacios vectoriales duales a partir de la definición del producto interno. Identificar las bases duales asociadas a las bases de los espacios vectoriales y los vectores duales (o 1-formas) asociados a los vectores. Mostrar como un vector dual (una 1-forma) puede ser expresado como combinación lineal de la base dual.
 
 ### Actividad antes de clase
-   1. Estudiar puntos de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf) 3.1.1, 3.1.2 y 3.1.3
-   2. Rehacer los ejemplos resueltos 3 y 4 de la sección 3.1.4
+   1. Estudiar el punto 3.1 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/LibrosArticulos/VolumenUNO.pdf).
+   2. Rehacer los ejemplos 3.3 y 3.4.
 
 ### Taller de problemas
-Desarrollar ejercicios 6 y 7 de la Sección 3.1.6 .
+Desarrollar ejercicios 6 y 7 de la Sección 3.1.4 .
 
 ### Materiales de apoyo
    + [Video](https://youtu.be/9u5g5Y5bdJI) y [presentación Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/3_1FuncionalesLineales.pdf)
