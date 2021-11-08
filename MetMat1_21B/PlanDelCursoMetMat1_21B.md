@@ -26,7 +26,8 @@ Las asignación son parte fundamental del desarrollo del curso.  Algunas asignac
 ### La computación y la colaboración
 **Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  tres tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software))), otra de edición de documentos científicos de álta calidad ([overleaf](https://en.wikipedia.org/wiki/Overleaf)) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales. Adicionalmente, como homenaje al gran [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz) deberán documentar en el git la solución de los ejercicios y asignaciones utilizando [markdown](https://en.wikipedia.org/wiki/Markdown).
 
-+ MAXIMA lo pueden obtener e instalar localmente desde [aquí](http://maxima.sourceforge.net).
++ MAXIMA lo pueden obtener e instalar localmente desde [aquí](http://maxima.sourceforge.net) y en [esta carpeta](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Codigos/Maxima) están algunos ejemplos de uso de esta sistema algebráico. 
+
 + Pueden registrarse en overleaf [aquí](https://www.overleaf.com/).
 + Igualmente, pueden registrarse en github [aquí](https://github.com/)
 
@@ -91,7 +92,8 @@ La primera asignación tiene que ver con la utilización de los vectores en cris
 
 ### Espacios Vectoriales lineales. (2.5 Semanas)
 <a name="EspaciosVectoriales"></a>
-+ [Clase 4: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md) Además tendremos un **taller evaluado de los vectores de siempre** (clases 1, 2 y 3).
++ [Clase 4: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md)
+Además tendremos un **taller evaluado de los vectores de siempre** (clases 1, 2 y 3).
     1. Código en MAXIMA para calcular centroide de un triángulo (Problema 3 Sección 1.1.6).
     2. Código en MAXIMA que reproduzca el ejercicio 6 de la Sección 1.2.7
     3. De la sección 1.5.7 resuelva los ejercicios 2a, 2d y 2f y con MAXIMA el 13;
