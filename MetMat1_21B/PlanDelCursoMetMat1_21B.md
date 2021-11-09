@@ -26,7 +26,7 @@ Las asignación son parte fundamental del desarrollo del curso.  Algunas asignac
 ### La computación y la colaboración
 **Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  tres tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software))), otra de edición de documentos científicos de álta calidad ([overleaf](https://en.wikipedia.org/wiki/Overleaf)) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales. Adicionalmente, como homenaje al gran [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz) deberán documentar en el git la solución de los ejercicios y asignaciones utilizando [markdown](https://en.wikipedia.org/wiki/Markdown).
 
-+ MAXIMA lo pueden obtener e instalar localmente desde [aquí](http://maxima.sourceforge.net) y en [esta carpeta](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Codigos/Maxima) están algunos ejemplos de uso de esta sistema algebráico. 
++ MAXIMA lo pueden obtener e instalar localmente desde [aquí](http://maxima.sourceforge.net) y en [esta carpeta](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Codigos/Maxima) están algunos ejemplos de uso de esta sistema algebráico.
 
 + Pueden registrarse en overleaf [aquí](https://www.overleaf.com/).
 + Igualmente, pueden registrarse en github [aquí](https://github.com/)
@@ -57,10 +57,9 @@ Hay que enfatizar que ambos volúmenes son obras en evolución y siempre present
 
 También utilizaremos capítulos de la siguiente  bibliografía de textos clásicos en el tema  
 + Svozil, Karl.(2020) Mathematical methods of theoretical physics. World Scientific.
-+ Arfken, G. B,  Weber H. J.; Harris, Frank E. (2012) Mathematical Methods for Physicists A Comprehensive Guide New York Academic Press.
-+ Tang, K. T. (2007). Mathematical methods for engineers and scientists (Vols. 1, 2, y 3). New York: Springer.
-+ Chow, T. L. (2001). Mathematical Methods for Physicists: A concise introduction. Cambridge, Cambridge Uniersity Press.
-+ Riley, K. F., Hobson, M. P., & Bence, S. J. (1999). Mathematical methods for physics and engineering.
++ Tang, K. T. (2007). Mathematical methods for engineers and scientists (Vols. 1, 2, y 3). New York: Springer. [Disponible en la Biblioteca UIS](http://tangara.uis.edu.co)
++ Chow, T. L. (2001). Mathematical Methods for Physicists: A concise introduction. Cambridge, Cambridge Uniersity Press. [Disponible en la Biblioteca UIS](http://tangara.uis.edu.co)
++ Riley, K. F., Hobson, M. P., & Bence, S. J. (1999). Mathematical methods for physics and engineering.[Disponible en la Biblioteca UIS](http://tangara.uis.edu.co)
 + Landau, R. H., Páez, M. J., & Bordeianu, C. C. (2015). Computational physics: Problem solving with Python. John Wiley & Sons.
 
 
