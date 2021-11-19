@@ -1,9 +1,11 @@
 # Evaluación Matemáticas Avanzada
+|Num|Alumno/Actividad|
+|:---:|:---:       |
+| 1    |ANAYA VERDUGO KAREN SARAT |
+
 
 | Num  | Alumno/Actividad         | Tarea 1 | Tarea 2 |  Tarea 3 |Tarea 4 | Asignación 1 | Asignación 2 |Asignación 3 |       
-
 |:----:|:----:                    |:---     |:-----   |:-----    |:-----  |:-----        |:-----        |             |
-
 | 1    |ANAYA VERDUGO KAREN SARAT |         |         |          |         |              |              |            |
 
 | 2	   |ANGARITA LEAL ANGELICA MARIA |      |         |          |         |              |              |            |
