@@ -1,24 +1,24 @@
 # Evaluación Matemáticas Avanzada
 
-|Num  |Alumno/Actividad         |Tarea 1|Tarea 2|Tarea 3|Tarea 4|Asignación 1|Asignación 2|Asignación 3|       
-|:---:|:---:                    |:---:  |:---:  |:---:  |:---:  |:---:       |:---:       |:---:       |             
+|Num  |Alumno/Actividad       |Tarea 1|Tarea 2|Tarea 3|Tarea 4|Asignación 1|Asignación 2|Asignación 3|       
+|:---:|:---                   |---:   |---:   |---:   |---:   |---:        |---:        | ---:       |             
 | 1 |ANAYA VERDUGO KAREN SARAT|         |       |       |       |            |            |            |
-| 2	|ANGARITA LEAL ANGELICA MARIA|      |       |       |       |            |            |            |
+| 2	|ANGARITA LEAL ANGELICA MARIA|  5   |       |       |       |            |            |            |
 | 3	|AVILA NAVARRO CRISTIAN FERNANDO|   |       |       |       |            |            |            |
 | 4	| BARRERA PARADA MANUEL FELIPE|     |       |       |         |              |              |          |
-| 5	| BECERRA RODRIGUEZ MIGUEL FERNANDO| |         |          |         |              |              |          |
-| 6	| CAMACHO OLMOS JUAN JOSE | |         |          |         |              |              |          |
-| 7	| CARVAJAL GUERRERO MARIA FERNANDA | |         |          |         |              |              |          |
-| 8	| FIGUEROA HERNANDEZ JUAN DIEGO | |         |          |         |              |              |          |
-| 9	| GARAVITO BARRAGAN JOSE DAVID | |         |          |         |              |              |          |
-| 10| GARZON RUIZ LENNY JULIAN | |         |          |         |              |              |          |
-| 11|	GIRALDO LOZANO JUAN DIEGO | |         |          |         |              |              |          |
-| 12| GOMEZ CASTELLANOS CAMILO ALEJANDRO | |         |          |         |              |              |          |
-| 13|	GUARIN ROJAS JUAN ANDRES | |         |          |         |              |              |          |
-|14	| MARTINEZ GARCIA LUIS GONZALO | |         |          |         |              |              |          |
-| 15| MERCHAN LEON DAVID SANTIAGO | |         |          |         |              |              |          |
-| 16| MURCIA PEREZ JUAN CAMILO | |         |          |         |              |              |          |
-| 17| PEREZ ROJAS NATHALIA ALEXANDRA | |         |          |         |              |              |          |
-| 18| RODRIGUEZ SARMIENTO CARLOS SANTIAGO | |         |          |         |              |              |          |
-| 19| SANCHEZ ARIZA GABRIELA | |         |          |         |              |              |          |
-| 20| TOLEDO PARRA NICOLAS HERNANDO | |         |          |         |              |              |          |
+| 5	| BECERRA RODRIGUEZ MIGUEL FERNANDO||         |          |         |              |              |          |
+| 6	| CAMACHO OLMOS JUAN JOSE |         |         |          |         |              |              |          |
+| 7	| CARVAJAL GUERRERO MARIA FERNANDA| |         |          |         |              |              |          |
+| 8	| FIGUEROA HERNANDEZ JUAN DIEGO|    |         |          |         |              |              |          |
+| 9	| GARAVITO BARRAGAN JOSE DAVID |NA  |NA       |NA        |NA       |NA            |NA            |NA        |
+| 10| GARZON RUIZ LENNY JULIAN |        |         |          |         |              |              |          |
+| 11|	GIRALDO LOZANO JUAN DIEGO |       |         |          |         |              |              |          |
+| 12| GOMEZ CASTELLANOS CAMILO ALEJANDRO||        |          |         |              |              |          |
+| 13|	GUARIN ROJAS JUAN ANDRES |        |         |          |         |              |              |          |
+|14	| MARTINEZ GARCIA LUIS GONZALO|NV   |         |          |         |              |              |          |
+| 15| MERCHAN LEON DAVID SANTIAGO |     |         |          |         |              |              |          |
+| 16| MURCIA PEREZ JUAN CAMILO |        |         |          |         |              |              |          |
+| 17| PEREZ ROJAS NATHALIA ALEXANDRA | 5|         |          |         |              |              |          |
+| 18| RODRIGUEZ SARMIENTO CARLOS SANTIAGO| |      |          |         |              |              |          |
+| 19| SANCHEZ ARIZA GABRIELA |   5      |         |          |         |              |              |          |
+| 20| TOLEDO PARRA NICOLAS HERNANDO |   |         |          |         |              |              |          |
