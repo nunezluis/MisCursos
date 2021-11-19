@@ -16,9 +16,9 @@ Resuelva el ejercicio 6 sección 2.2.4
 
 ### Al finalizar estos contenidos**
 El estudiantes deberá estar en capacidad de:
-    1. Utilizar el concepto de métrica para determinar la distancia entre elementos de un espacio vectoriales y aplicarlo a varios espacios vectoriales (números, n-uplas, funciones, matrices).
-    2. Comprender que un espacio vectorial puede tener varias definiciones de métricas y por lo tanto la idea de distancia es variable.
-    3. Utilizar el concepto de norma generar la métrica. Comprender la asociación del concepto de norma con la idea de tamaño de un vector, en el sentido más amplio.
-    4. Comprender la definición de producto interno y su relación con el producto escalar en R^3
-    5. A partir de la definición de producto interno deducir los conceptos de norma y métrica en un espacio vectorial
-    6. Comprender cómo se deduce la noción de ángulo a partir del producto interno. Comprender la deducción de las versiones del Teorema del Coseno y de Pitágoras a partir de la definición del producto interno.
+1. Utilizar el concepto de métrica para determinar la distancia entre elementos de un espacio vectoriales y aplicarlo a varios espacios vectoriales (números, n-uplas, funciones, matrices).
+2. Comprender que un espacio vectorial puede tener varias definiciones de métricas y por lo tanto la idea de distancia es variable.
+3. Utilizar el concepto de norma generar la métrica. Comprender la asociación del concepto de norma con la idea de tamaño de un vector, en el sentido más amplio.
+4. Comprender la definición de producto interno y su relación con el producto escalar en R^3
+5. A partir de la definición de producto interno deducir los conceptos de norma y métrica en un espacio vectorial
+6. Comprender cómo se deduce la noción de ángulo a partir del producto interno. Comprender la deducción de las versiones del Teorema del Coseno y de Pitágoras a partir de la definición del producto interno.
