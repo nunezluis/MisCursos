@@ -15,7 +15,7 @@
 | 11|	GIRALDO LOZANO JUAN DIEGO |       |         |       |       |            |            |            |
 | 12| GOMEZ CASTELLANOS CAMILO ALEJANDRO||        |       |       |            |            |            |
 | 13|	GUARIN ROJAS JUAN ANDRES |        |         |       |       |   5.0      |            |            |
-|14	| MARTINEZ GARCIA LUIS GONZALO|NV   |         |       |       |            |            |            |
+|14	| MARTINEZ GARCIA LUIS GONZALO|NV   |         |       |       |   NV       |            |            |
 | 15| MERCHAN LEON DAVID SANTIAGO |     |         |       |       |   4.0      |            |            |
 | 16| MURCIA PEREZ JUAN CAMILO |        |         |       |       |   0.0      |            |            |
 | 17| PEREZ ROJAS NATHALIA ALEXANDRA | 5|         |       |       |   4.0      |            |            |
