@@ -1,0 +1,240 @@
+\documentclass[spanish,notitlepage,letterpaper]{article} % para articulo en castellano
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref} % navega por el doc
+\usepackage{graphicx}
+\usepackage{geometry}           % See geometry.pdf to learn the layout options.
+\geometry{letterpaper}          % ... or a4paper or a5paper or ... 
+%\geometry{landscape}           % Activate for for rotated page geometry
+%\usepackage[parfill]{parskip}  % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{epstopdf}
+\usepackage{fancyhdr} % encabezados y pies de pg
+
+\pagestyle{fancy} 
+\chead{} 
+\lhead{\textit{Topicos en Física Contemporánea}} % si se omite coloca el nombre de la seccion
+\rhead{\textbf{Modelado de Objetos Autogravitantes}} 
+\lfoot{GIRG} 
+\rfoot{Universidad Industrial de Santander} 
+%\rfoot{\thepage} 
+
+\voffset = -0.25in 
+\textheight = 8.0in 
+\textwidth = 6.5in
+\oddsidemargin = 0.in
+\headheight = 20pt 
+\headwidth = 6.5in
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0,5pt}
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+
+
+\title{\textbf{Modelado de Objetos Autogravitantes}}
+\author{
+\textbf{Grupo de Relatividad y Gravitación} \\ 
+\textit{Escuela de Física, Facultad de Ciencias, }\\
+\textit{Universidad Industrial de Santander, Colombia} 
+}
+\maketitle
+
+\section*{Pregunta de investigación}
+La intención de este trabajo es entender, o al menos intuir, 
+\textbf{¿ cuál es incidencia de los fluidos no pascalianos en la estructura estelar newtoniana y relativistas?}. Esto es, supondremos un perfil de densidad y una forma muy particular de la distribución de presiones radiales y tangenciales. A partir de esas suposiciones compraremos los perfiles de presión para un espacio de parámetros. 
+
+\section{Modelando objetos autogravitantes}
+\subsection{El concepto}
+Consideraremos una configuración material auto-gravitante esférica. Esto es un cuerpo material donde la gravitación es la única fuerza que la cohesiona. Este esquema se utiliza para modelar (hiper-simplificadamente) planetas, estrellas o cualquier cuerpo que se conforme con el campo gravitacional generado por su propia masa.
+
+En general, un posible modelado para este tipo objetos (esféricos) se construye a partir de la suposición que esos cuerpos  están formados por un fluido donde esa única fuerza los mantiene en equilibrio. Surgen entonces las ecuaciones de estructura, dos ecuaciones diferenciales ordinarias: 
+\begin{itemize}
+  \item una que relaciona el gradiente de presión radial con el resto de la variables de estado y se conoce como la ecuación de equilibrio hidrostático:
+  \begin{equation}
+\label{EcEstruct}
+\frac{\mathrm{d} P(r)}{\mathrm{d} r} = \mathcal{F} \left(m(r), \rho(r), P(r), P_{\perp}(r), r \right), 
+\end{equation}
+donde $P(r)$ es presión radial; $P_{\perp}(r)$ representan a las presiones tangenciales; $\rho(r)$, la de densidad de masa y $m(r)$ la masa contenida en una esfera de radio $r$; 
+  \item otra que vincula el gradiente de masa con su densidad
+\begin{equation}
+\label{EcMasa}
+\frac{\mathrm{d} m(r)}{\mathrm{d} r} =  4 \pi r^{2} \rho(r) \, ;
+\end{equation}
+\end{itemize}  
+y dos ecuaciones de estado entre las variables físicas del sistema en este caso: la presión radial y la presión tangencial: 
+\begin{equation}
+\label{EcEstado}
+P(r) = \mathcal{W}\left(\rho(r), r \right)    \quad \mathrm{y} \quad
+P_{\perp}(r) = \mathcal{V}\left(\rho(r), P(r), r \right) \; , 
+\end{equation}  
+respectivamente. 
+
+Es decir, estas dos ecuaciones relacionan las variables de estado del sistema y describen las propiedades físicas de los fluidos~\footnote{ver \url{https://en.wikipedia.org/wiki/Equation_of_state}}. En general, siempre pensamos fluidos pascalianos en los cuales todas las presiones son iguales: $P(r) = P_{\perp}(r)$. En el caso mas general nos podemos imaginar fluidos con ``algún tipo de estructura'' que permita una descripción mas rica donde  $P(r) \neq P_{\perp}(r)$. Como estamos en el caso de simetría esféricas tendremos que las dos presiones tangenciales son iguales y, a su vez distintas a la presión radial depende de la densidad. Ese tipo de ecuaciones se conocen como ecuaciones de estado barótropas~\footnote{En sentido estricto las ecuaciones de estado barótropas tienen la forma de $P(r) = \mathcal{W}\left(\rho(r)\right)$ pero aquí, sin perder generalidad le añadiremos la funcionalidad en $r$}. 
+
+De esta manera las ecuaciones (\ref{EcEstruct}) (\ref{EcMasa}) y (\ref{EcEstado}) conforman un sistema de cuatro ecuaciones con cuatro incógnitas.
+
+Nótese la diferencia en la funcionalidad de las ecuaciones de estado para la presión radial y la presión tangencial, lo cual permite despejar unívocamente la densidad, $\rho$ en ambas. La ecuación para la presión radial.
+
+\subsection{La ecuación de estado para la anisotropía}
+A partir de las ecuaciones de estructura (\ref{EcEstruct}) y (\ref{EcMasa}) y de las ecuaciones de estado (\ref{EcEstado}) podemos idear una estrategia para resolver el sistema.  La expresión para la presión tangencial $P_{\perp}(r) = P_{\perp}(\rho(r), P(r), r )$, la sustituimos en las ecuaciones (\ref{EcEstruct}) y (\ref{EcMasa}). Luego  despejamos $\rho~=~\mathcal{Z}(P(r), r)$ y la sustituimos en ambas ecuaciones. Entonces tendremos un sistema de dos ecuaciones diferenciales ordinarias (posiblemente no lineales) con dos incógnitas: $P(r)$ y $m(r)$:
+\begin{eqnarray}
+\frac{\mathrm{d} P}{\mathrm{d} r} & = & \mathcal{G} \left(m(r), P(r), r , P_{0}, M, R\right), \label{PPrima1} \\
+\frac{\mathrm{d} m}{\mathrm{d} r} & = &  4 \pi r^{2} \mathcal{Z}(P(r), r) \label{emePrima1} \, .
+\end{eqnarray}
+ Este sistema es integrable para un conjunto de condiciones iniciales $P (r=0)=P_{0}$ y $m(r=0)=0$. Es decir tenemos un sistema de ecuaciones diferenciales ordinarias y lo resolvemos como un problema de valores iniciales. 
+
+\subsection{La integración y las condiciones de aceptabilidad física}
+La integración (casi siempre numérica) se realiza, considerando como condiciones iniciales los valores en el centro ($P(0) = P_{\perp}(0) = P_{0}$ y $\rho(0) = \rho_{0}$) y se integra hasta que la presión radial se anule ($P(R) =0$). Note que para que el modelo sea consistente, debemos suponer que en el centro las presiones radiales y tangenciales son iguales. 
+
+El valor del $r=R$, donde la presión radial se anula, se considera el borde de la distribución y define su masa total ($m(R) = M$). Por lo tanto, los modelos quedan parametrizados por la presiones, densidades centrales, las masas totales $M$ y los radios $R$ de las distribuciones materiales. 
+
+Para que los modelos sean físicamente razonables se imponen condiciones adicionales como: que las presiones y densidades sean positivas para todo $r$ dentro de la distribución, $P(r) > 0$ y $\rho(r) > 0$; sus gradientes sean negativos
+\begin{equation}
+\label{GradrhoPpositivos}
+\frac{\mathrm{d} P(r)}{\mathrm{d} r} \leqslant 0 \; ;  \quad \frac{\mathrm{d} \rho(r)}{\mathrm{d} r} \leqslant 0 \; ;  \end{equation}
+esto quiere decir que la presiones y densidades decrecen a medida que nos acercamos a al superficie. 
+Para el caso de las configuraciones relativistas, se exige adicionalmente que las velocidades del sonido, radiales y tangenciales,
+\begin{equation}
+v^{2} = \frac{\mathrm{d} P(r)}{\mathrm{d} \rho} \leqslant c^{2}  \quad \mathrm{y} \quad v_{\perp}^{2} = \frac{\mathrm{d} P_{\perp}(r)}{\mathrm{d} \rho} \leqslant c^{2}  \quad
+\end{equation}
+sean menores que la velocidad de la luz $c$.
+
+\section{Newton y Einstein}
+ A continuación analizaremos dos casos en para distintas intensidades de campo gravitatorio y consideraremos los casos newtonianos y relativistas. 
+
+\subsection{Modelando objetos autogravitantes newtonianos anisótropos.} 
+Las ecuaciones diferenciales que describen el equilibrio hidrostático para esferas autogravitantes newtonianas son
+\begin{equation}
+\label{NewtonAni}
+\frac{\mathrm{d} P(r)}{\mathrm{d} r} = - \frac{G m(r) \rho(r)}{r^{2}} + 2\frac{P_{\perp}(r) - P(r)}{r} \qquad \mathrm{y} \qquad
+\end{equation}
+\begin{equation}
+\label{NewtonAni2}
+\frac{\mathrm{d} m(r)}{\mathrm{d} r} =  4 \pi r^{2} \rho(r), 
+\end{equation}
+donde $G$ es la constante de gravitación universal. Las ecuaciones (\ref{NewtonAni}) y (\ref{NewtonAni2}), conjuntamente con las ecuaciones de estado (\ref{EcEstado}) que proveen  de las características físicas del fluido cierran el sistema de ecuaciones de equilibrio para este tipo de objetos.
+
+\subsection{Modelando objetos autogravitantes relativistas anisótropos.} 
+Finalmente, para el caso de fluidos relativistas, anisótropos, las ecuaciones diferenciales para el equilibrio hidróstático serán~\footnote{\url{https://en.wikipedia.org/wiki/Tolman\%E2\%80\%93Oppenheimer\%E2\%80\%93Volkoff_equation}}:
+\begin{equation}
+\label{EinsteinAni1}
+\frac{\mathrm{d} P(r)}{\mathrm{d} r} = - \frac{G m(r) \rho(r)}{r^{2}}\left(1 +\frac{P(r)}{\rho(r)c^{2}}\right)\left(1 +\frac{4\pi r^{3} P(r)}{m(r)c^{2}} \right) \left(1 -2\frac{Gm(r)}{rc^{2}}\right)^{-1} + 2\frac{P_{\perp}(r) - P(r)}{r} 
+\end{equation}
+y
+\begin{equation}
+\label{EinsteinAni2}
+\frac{\mathrm{d} m(r)}{\mathrm{d} r} =  4 \pi r^{2} \rho(r), 
+\end{equation}
+completadas, de igual manera que el caso anterior  con las ecuaciones (\ref{EcEstado}) que describen las características físicas del fluido. 
+
+Al comparar (\ref{EinsteinAni1}) con (\ref{NewtonAni}) son claras las diferencias que incluyen las tres correcciones relativistas a la ecuación de equilibrio hidrostático newtoniana. 
+
+Las definiciones de masa (ecuaciones (\ref{NewtonAni2}) y (\ref{EinsteinAni2})) son las mismas en ambos sistemas. Igualmente que la incorporación de la anisotropía (el último término con la diferencia de presiones) es equivalente para ambas ecuaciones de equilibrio.
+
+\subsection{Adimensionalizando los sistemas de ecuaciones diferenciales.} Para integrar numéricamente las ecuaciones diferenciales se impone adimensionalizarlas. Para ello realizamos los siguientes cambios de variables con los parámetros característicos del sistema:
+\begin{equation}
+\label{CambiosVariab}
+\frac{P}{P_{0}} \rightarrow \tilde{P}, \quad \frac{P_{\perp}}{P_{0}} \rightarrow \tilde{P}_{\perp}, \quad \frac{\rho}{\rho_{0}} \rightarrow \tilde{\rho}, \quad 
+\frac{m}{M} \rightarrow \tilde{m}, \quad \mathrm{y} \quad \frac{r}{R} \rightarrow \tilde{r}.  
+\end{equation} 
+Donde identificamos las siguientes cantidades como 
+\begin{itemize}
+	\item $M$ y $R$, como la masa total y el radió de la configuración material, respectivamente,
+	\item $P_0$ y $\rho_0$ como la presión y la densidad central, respectivamente.
+\end{itemize}
+Claramente, las funciones $\tilde{P}$, $\tilde{P_{\perp}}$, $\tilde{\rho}$ y $\tilde{r}$ son adimensionales.  Seguidamente, organizamos las cantidades $M$, $R$, $P_0$ y $\rho_0$ y construimos los siguientes parámetros auxiliares adimensionales 
+\begin{equation}
+\mu = \frac{M}{R}\frac{G}{c^{2}}, \quad \kappa = \frac{P_{0}}{\rho_{0}c^{2}} \quad \mathrm{y} \quad
+\eta = \frac{\rho_{0}}{<\rho>} \quad \mathrm{con} \qquad <\rho> = \frac{M}{\frac{4\pi}{3}R^{3}} \, .
+\end{equation}
+
+\subsection{La Física está en los parámetros}
+Es evidente el significado físico de cada una de estos parámetros (adimensionales) característicos del sistema: 
+\begin{itemize}
+  \item $\mu = \frac{M}{R}\frac{G}{c^{2}}$ representa la relación masa/radio de la configuración
+  \item $\kappa = \frac{P_{0}}{\rho_{0}c^{2}} $ la relación presión central / densidad central y, finalmente
+  \item $\eta = \frac{\rho_{0}}{<\rho>}$ la relación entre la densidad central y la densidad promedio calculada a partir de los valores del radio y la masa total de la distribución.
+\end{itemize}
+Es importante resaltar en los valores de estos parámetros estará la física. Nóte que cada uno de esos parámetros interviene en la corrección relativista a la ecuación de equilibrio hidrostático newtoniana. Esto es
+\begin{equation}
+\frac{P(r)}{\rho(r)c^{2}} \rightarrow \kappa \frac{\tilde{P}(r)}{\tilde{\rho}(r)}, \qquad
+\frac{Gm(r)}{rc^{2}} \rightarrow  \mu \frac{\tilde{m}(r)}{\tilde{r}} \quad {\rm y} \quad
+\frac{4\pi r^{3} P(r)}{m(r)c^{2}}  \rightarrow 3 \eta \kappa \frac{\tilde{P}\tilde{r}^3}{\tilde{m}} \, .
+\end{equation}
+Como son correcciones y están comparadas con la unidad, los valores de $\mu$, $\kappa$ y $\eta$, serán pequeños.
+
+
+\subsection{Los sistemas de ecuaciones}
+Entonces construimos dos sistemas de ecuaciones (newtoniano y relativista) adimensionales, parametrizados por $\mu$, $\kappa$ y $\eta$. Estos sistemas son:
+\begin{eqnarray}
+\frac{\mathrm{d} \tilde{P}}{\mathrm{d} \tilde{r}} & = & -\frac{\mu}{\kappa} \frac{\tilde{m} \tilde{\mathcal{Z}}(\tilde{P}, r)}{\tilde{r}^{2}}
+ + 2\frac{\tilde{\mathcal{V}}\left(\tilde{\mathcal{Z}}(\tilde{P}, r), \tilde{P}, r \right) - \tilde{P}}{\tilde{r}} \label{HidroStatNewt1} \\
+\frac{\mathrm{d} \tilde{m}}{\mathrm{d} \tilde{r}} & = &  \eta \tilde{r}^{2} \tilde{\mathcal{Z}}(\tilde{P}, r), \label{MasaNewt1} 
+\end{eqnarray}
+para el caso newtoniano y 
+\begin{eqnarray}
+\frac{\mathrm{d} \tilde{P}}{\mathrm{d} \tilde{r}} & = & -\frac{\mu}{\kappa} \frac{\tilde{m} \tilde{\mathcal{Z}}(\tilde{P}, r)}{\tilde{r}^{2}}
+\left( 1 + \kappa\frac{\tilde{P}}{\tilde{\mathcal{Z}}(\tilde{P}, r)}\right)\left(1 +3\eta \kappa \frac{\tilde{P} \tilde{r}^{3}}{\tilde{m}}\right) 
+\left(1 - 2\mu \frac{\tilde{m}}{\tilde{r}}\right)^{-1}  + 2\frac{\tilde{\mathcal{V}}\left(\tilde{\mathcal{Z}}(\tilde{P}, r), \tilde{P}, r \right) - \tilde{P}}{\tilde{r}} \label{HidroStatEins1} \\
+\frac{\mathrm{d} \tilde{m}}{\mathrm{d} \tilde{r}} & = &  \eta \tilde{r}^{2} \tilde{\mathcal{Z}}(\tilde{P}, r), \label{MasaEins1} 
+\end{eqnarray}
+para el caso relativista.
+
+\subsection{Propuesta de anisotropía}
+Por falta de información experimental uno puede tomar el camino de la simplicidad propuesto por R.L. Bowers y E.P.T. Liang~\footnote{Bowers, Richard L., y E. P. T. Liang. ``Anisotropic spheres in general relativity." The Astrophysical Journal 188 (1974): 657.} para el caso relativista y más recientemente por Herrera y Barreto~\footnote{Herrera, L., y W. Barreto. ``Newtonian polytropes for anisotropic matter: General framework and applications.'' Physical Review D 87, no. 8 (2013): 087303.}, para el caso newtoniano. Esta estrategia permite integrar el sistema (\ref{EcEstruct}), (\ref{EcMasa}) y (\ref{EcEstado})  imponiendo una expresión para la diferencia de presiones radiales y tangenciales, $\Delta = P_{\perp}(r) - P(r)$. 
+
+La idea es proponer una funcionalidad para $\Delta$ que permita integrar fácilmente la ecuación de equilibrio hidrostático. De esta forma, para el caso newtoniano por simplicidad imponemos una forma de la anisotrópía
+\begin{equation}
+\label{DeltaNewt}
+\Delta = \mathcal{C} \frac{ m(r) \rho(r)}{r} \quad \Rightarrow P_{\perp} = P_{\perp}(\rho(r), P(r), r ) \equiv P(r) + \mathcal{C} \frac{ m(r) \rho(r)}{r},
+\end{equation}
+Donde $\mathcal{C}$ representa la intensidad de la anisotropía y, obviamente $\mathcal{C} = 0$ recupera el caso isótropo de los fluidos pascalianos. 
+
+Con esta suposición de anisotropía, la ecuación de equilibrio hidrostático newtoniana (\ref{NewtonAni}) se transforma en 
+\begin{equation}
+\label{MarioAniNewt}
+\frac{\mathrm{d} P(r)}{\mathrm{d} r} = - \frac{m(r) \rho(r)}{r^{2}} + 2\frac{P_{\perp}(r) - P(r)}{r} \quad \Rightarrow
+\frac{\mathrm{d} P(r)}{\mathrm{d} r} = h \frac{ m(r) \rho(r)}{r^{2}} 
+\end{equation} 
+con $h =2\mathcal{C} -1$ una constante que también mide la diferencia de presiones y, por consiguiente la anisotropía. 
+
+Del mismo modo, para el caso relativista propondremos
+\begin{equation}
+\label{DeltaRelat}
+\Delta = \frac{\mathcal{C}}{r}\left(1 +\frac{P(r)}{\rho(r)}\right)\left(1 +\frac{4\pi r^{3} P(r)}{m(r)} \right) \left(1 -2\frac{m(r)}{r}\right)^{-1}
+\end{equation}
+Con lo cual, la ecuación (\ref{EinsteinAni1}) se convierte en 
+\begin{equation}
+\label{MarioAniRel}
+\frac{\mathrm{d} P(r)}{\mathrm{d} r} = h\frac{ m(r) \rho(r)}{r^{2}}\left(1 +\frac{P(r)}{\rho(r)}\right)\left(1 +\frac{4\pi r^{3} P(r)}{m(r)} \right) \left(1 -2\frac{m(r)}{rc}\right)^{-1}  
+\end{equation}
+y otra vez  $h =2\mathcal{C} -1$ es una constante que mide la anisotropía. En ambos casos las ecuaciones (\ref{NewtonAni2}) o (\ref{EinsteinAni2}) completan cada sistema, respectivamente.
+
+Con esta propuesta de anisotropía solo tendremos que proponer una ecuación de estado para la presión radial para integrar los sistemas newtoniano (\ref{MarioAniNewt})-(\ref{NewtonAni2}) y relativista  (\ref{MarioAniRel})(\ref{EinsteinAni2}). Para simplificar aún mas la integración supondremos una perfil de densidades del tipo Gokhroo-Mehra\footnote{Gokhroo, M. K., y A. L. Mehra. ``Anisotropic spheres with variable energy density in general relativity''.General relativity and gravitation 26, no. 1 (1994): 75-84.}
+  \begin{equation}
+\label{RhoGM}
+\rho = \rho_{0}\left(1 - B\tilde{r}^{2}\right)\, . 
+\end{equation}
+Donde, la constante $B$ es  
+\[
+B = \frac{5}{3}\left(1 -\frac{3}{\eta} \right) \, .
+\]
+De esta forma el sistema puede ser integrado para un espacio de parámetros $\mu$, $\kappa$, $\eta$ y $h$.
+
+\section{¿Qué y cómo hacerlo?}
+Como planteamos inicialmente, la intención es entender, o al menos intuir, 
+\textbf{el efecto que induce la anisotropía de las presiones en los modelos estelares, tanto newtonianos como relativistas}. Para responder esa pregunta se propone construir modelos (newtonianos y relativistas) para distintos valores de los parámetros involucrados. Esto es, integrar  (\ref{NewtonAni}) y (\ref{NewtonAni2}) (y equivalentemente el sistema relativista (\ref{EinsteinAni1}) y (\ref{EinsteinAni2})) con el perfil de densidad \ref{RhoGM}, identificando para cuales valores de $\tilde{r}$ se anula la presión radial y, a partir de allí identificar el valor de la masa de la configuración $\tilde{m}$.
+
+Para un espacio de parámetros $\mu$, $\kappa$, $\eta$ y $h$ dado, estudiar el comportamiento de la ecuación de estado $\tilde{P}=\tilde{P}(\tilde{\rho})$ resultante y sacar algunas conclusiones de la incidencia de la anisotropía. 
+
+
+
+%\bibliographystyle{alpha}
+%\bibliography{/Users/luisnunez/Documents/MisDocumentos/Latex/BibTex/BiblioLN}
+
+\end{document}  
