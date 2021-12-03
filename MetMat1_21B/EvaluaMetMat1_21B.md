@@ -2,7 +2,7 @@
 
 |Num  |Alumno/Actividad       |Tarea 1  |Tarea 2  |Tarea 3|Tarea 4|Asignación 1|Asignación 2|Asignación 3|       
 |:---:|:---                   |---:     |---:     |---:   |---:   |---:        |---:        | ---:       |             
-| 1 |ANAYA VERDUGO KAREN SARAT|         |         |       |       |  4.2       |            |            |
+| 1 |ANAYA VERDUGO KAREN SARAT|         |    5    |       |       |  4.2       |            |            |
 | 2	|ANGARITA LEAL ANGELICA MARIA|  5   |         |       |       |  4.0       |            |            |
 | 3	|AVILA NAVARRO CRISTIAN FERNANDO|   |         |       |       |  2.0       |            |            |
 | 4	| BARRERA PARADA MANUEL FELIPE|     |    NV   |       |       |  0.0       |            |            |
