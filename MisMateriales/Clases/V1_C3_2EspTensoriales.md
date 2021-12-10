@@ -5,10 +5,10 @@ Esta clase tiene por objetivo construir la definición de un tensor a partir de 
 
 ### Actividad antes de clase
    1. Estudiar los puntos 3.2.1, 3.2.2, 3.2.3, 3.2.4 y 3.2.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
-   2. Rehacer los ejemplos resueltos 1 y 2 de la sección 3.2.9.
+   2. Rehacer los ejemplos resueltos 3.14 y la construcción del tensor de esfuerzos 2D
 
 ### Taller de problemas
-   + Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.11
+   + Hacer un código MAXIMA que resuelva el problema 2 sección 3.3.5
 
 ### Materiales de apoyo:
 [Video tensores y espacios tensoriales](https://youtu.be/vYqYQvEwvlo) y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/3_2Tensores1Abst.pdf)
