@@ -12,12 +12,12 @@
 | 8	| FIGUEROA HERNANDEZ JUAN DIEGO|    |    5    |       |       |   5.0      |    E       |            |
 | 9	| GARAVITO BARRAGAN JOSE DAVID |NA  |NA       |NA     |NA     |NA          |NA          |NA          |
 | 10| GARZON RUIZ LENNY JULIAN |        |         |       |       |            |    ?       |            |
-| 11|	GIRALDO LOZANO JUAN DIEGO |       |     0   |       |       |            |    ?       |            |
+| 11|	GIRALDO LOZANO JUAN DIEGO |       |     0   |       |       |            |    E       |            |
 | 12| GOMEZ CASTELLANOS CAMILO ALEJANDRO||        |       |       |            |    ?       |            |
 | 13|	GUARIN ROJAS JUAN ANDRES |        |         |       |       |   5.0      |    E       |            |
 |14	| MARTINEZ GARCIA LUIS GONZALO|NV   |         |       |       |   NV       |    ?       |            |
 | 15| MERCHAN LEON DAVID SANTIAGO |     |         |       |       |   4.0      |   X        |            |
-| 16| MURCIA PEREZ JUAN CAMILO |        |    0    |       |       |   0.0      |    ?       |            |
+| 16| MURCIA PEREZ JUAN CAMILO |        |    0    |       |       |   0.0      |    E       |            |
 | 17| PEREZ ROJAS NATHALIA ALEXANDRA | 5|         |       |       |   4.0      |   E        |            |
 | 18| RODRIGUEZ SARMIENTO CARLOS SANTIAGO| |   5  |       |       |   5.0      |   E        |            |
 | 19| SANCHEZ ARIZA GABRIELA |   5      |         |       |       |   5.0      |    X       |            |
