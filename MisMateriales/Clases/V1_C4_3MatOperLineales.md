@@ -8,7 +8,7 @@ Esta clase tiene por objetivo asociar una representación matricial a un operado
    2. Rehacer los ejemplos resueltos 2, 4 y 7 de la sección 4.2.8 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
 
 ### Taller de problemas
-Resolver el ejercicio 2 de la sección 4.3.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
+Resolver el ejercicio 2 de la sección 4.3.8 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
 
 ### Materiales de apoyo
 + Video y [Presentación Matrices y Operadores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/4_30MatricesOperadores.pdf)
