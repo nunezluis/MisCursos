@@ -137,11 +137,14 @@ Al igual que la *Asignación 1 y 2* los resultados deberán ser entregados en fo
 + [Clase 13: Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md) (18ene)
     + Evaluación
         + Ejercicio 2 y 8 sección 3.3.5
-        + Ejercicio 6 sección 3.4.3 
+        + Ejercicio 6 sección 3.4.3
 
 + [Clase 14: Matrices y Operadores Lineales, parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md)
 
-+ [Clase 15: Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md). Evaluación de los ejercicios asignados clases 11, 12 y 13.
++ [Clase 15: Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md). Evaluación de los ejercicios asignados clases 12, 13 y 14.
+    + Evaluación
+        + Ejercicios 4 y 5 de la sección 4.1.4
+        + Ejercicio 1 de la sección 4.2.9
 
 + [Clase 16: Autovalores, autovectores y conjunto completo de observables que conmutan](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md). Entrega asignación 3.
 
