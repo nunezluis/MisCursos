@@ -14,7 +14,7 @@ Esta clase tiene por objetivos:
 + Resolver los ejercicios 4 y 5 de la sección 4.1.4 de las NUEVAS [notas de clase Vol1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
 
 ### Materiales de apoyo
-+ [Video](https://youtu.be/JGcYt7Nh-kE) y [Presentación](https://github.com/nunezluis/MisCursos/blob/main/MetMat1S20B/Materiales/Presentaciones/4_1OperadLineales.pdf)
++ [Video](https://youtu.be/JGcYt7Nh-kE) y [Presentación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/4_1OperadLineales.pdf)
 
 ### Al finalizar este contenido
 Al finalizar estos contenidos el estudiante debe ser capaz de
