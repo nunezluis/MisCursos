@@ -143,30 +143,29 @@ Al igual que la *Asignación 1 y 2* los resultados deberán ser entregados en fo
 
 + Evaluación Escrita Clases 1 - 11 (25ene)
 
-+ [Clase 15: Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md).
++ [Clase 15: Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md). (28ene)
 
-+ [Clase 16: Autovalores, autovectores y conjunto completo de observables que conmutan](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md). (28ene) Entrega asignación 3.
++ [Clase 16: Autovalores, autovectores y conjunto completo de observables que conmutan](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md). (1feb)
 Evaluación de los ejercicios asignados clases 12, 13 14 y 15
     + Evaluación
         + Ejercicios 4 y 5 de la sección 4.1.4
         + Ejercicio 1 de la sección 4.2.9
         + Ejercicio 2 de la sección 4.3.8
 
-+ Ajuste y sustentación asignación 3 (1feb)
-
 ### Análisis vectorial. (2.5 Semanas)
 <a name="AnalisisVectorial"></a>
+
 + [Clase 17: Coordenadas curvilíneas generalizadas y campos tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md) (4feb)
 
 + Evaluación Escrita Clases 12 - 16 (8feb)
 
-+ [Clase 18: La fauna de los operadores vectoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
++ [Clase 18: La fauna de los operadores vectoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md) Entrega asignación 3.
 
-+ [Clase 19: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
++ Ajuste y sustentación asignación 3 (11feb)
 
-+ [Clase 20: Teoría de Potencial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md).
++ [Clase 19: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md) (15feb)
 
-+ Ajuste y sustentación asignación 4
++ [Clase 20: Teoría de Potencial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md). (18feb)
 
 ### Asignación 5 (Entrega hasta clase 25 y discusión clase 26)
 Resumir y sustentar **uno** de los siguientes artículos relacionados con el tema del análisis complejo aplicado en Física
@@ -180,15 +179,17 @@ Esto es:
 
 ### Variable Compleja (3 Semanas)
 <a name="VariableCompleja"></a>
-+ [Clase 21: Funciones y Números Complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_1VarCompleja.md).
++ [Clase 21: Funciones y Números Complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_1VarCompleja.md). (22feb)
 
-+ [Clase 22: Puntos, líneas y transformaciones en al plano complejo](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_2TransfConformes.md).
++ Ajuste y sustentación asignación 4 (25feb)
 
-+ [Clase 23: Integrales Complejas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_3IntegralesComplejas.md).
++ [Clase 22: Puntos, líneas y transformaciones en al plano complejo](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_2TransfConformes.md). (1mar)
 
-+ [Clase 24: Series de Taylor y Laurent](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_4Laurent.md).
++ [Clase 23: Integrales Complejas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_3IntegralesComplejas.md). (4mar)
 
-+ [Clase 25: Teorema del Residuo y sus Aplicaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_5ResiduosIntegrales.md). Entrega asignación 5
++ [Clase 24: Series de Taylor y Laurent](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_4Laurent.md). (8mar)
+
++ [Clase 25: Teorema del Residuo y sus Aplicaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_5ResiduosIntegrales.md). Entrega asignación 5 (11mar)
 
 + Ajuste y evaluación asignación 5
 
