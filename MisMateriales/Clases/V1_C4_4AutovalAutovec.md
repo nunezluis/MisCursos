@@ -14,7 +14,7 @@ Esta clase tiene por objetivo plantear, de manera general el problema de autoval
    2. Hacer un par de códigos en MAXIMA para resolver los ejercicios 6 y 8 de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
 
 ### Materiales de apoyo
-Video y [autovalores y autovectores](Materiales/Presentaciones/4_70AutoVectores.pdf)
+Video y [autovalores y autovectores](Materiales/Presentaciones/4_60AutoVectores.pdf)
 
 ### Al finalizar estos contenidos
 El estudiante debe ser capaz de
