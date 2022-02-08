@@ -24,7 +24,8 @@ Esta clase tiene varios objetivos presentar con detalles el caso 3D de espacios 
 
 
 ### Materiales de apoyo
-   1. [Video](XXX) y [presentación](YYY)
+   1. [Video](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md) y [presentación coordenadas generalizadas ](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/5_1CoordGeneralizadas.pdf)
+   2. [Video](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md) y [presentación campos tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/5_2CamposTensoriales.pdf)
 
 ### Al finalizar estos contenidos
    El estudiantes deberá:
