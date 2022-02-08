@@ -155,7 +155,7 @@ Evaluación de los ejercicios asignados clases 12, 13 14 y 15
 ### Análisis vectorial. (2.5 Semanas)
 <a name="AnalisisVectorial"></a>
 
-+ [Clase 17: Coordenadas curvilíneas generalizadas y campos tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md) (8feb)
++ [Clase 17: Coordenadas curvilíneas generalizadas y campos tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C5_1CoordCurviCamposTensor.md) (8feb)
 
 + Ajuste y sustentación asignación 3 (11feb)
 
