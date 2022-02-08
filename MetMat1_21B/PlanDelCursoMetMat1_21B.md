@@ -155,17 +155,16 @@ Evaluación de los ejercicios asignados clases 12, 13 14 y 15
 ### Análisis vectorial. (2.5 Semanas)
 <a name="AnalisisVectorial"></a>
 
-+ [Clase 17: Coordenadas curvilíneas generalizadas y campos tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md) (4feb)
-
-+ Evaluación Escrita Clases 12 - 16 (8feb)
-
-+ [Clase 18: La fauna de los operadores vectoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md) Entrega asignación 3.
++ [Clase 17: Coordenadas curvilíneas generalizadas y campos tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md) (8feb)
 
 + Ajuste y sustentación asignación 3 (11feb)
 
-+ [Clase 19: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md) (15feb)
++ [Clase 18: La fauna de los operadores vectoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md) (15feb)
 
-+ [Clase 20: Teoría de Potencial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md). (18feb)
+
++ [Clase 19: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md) (18feb)
+
++ [Clase 20: Teoría de Potencial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md). (22feb)
 
 ### Asignación 5 (Entrega hasta clase 25 y discusión clase 26)
 Resumir y sustentar **uno** de los siguientes artículos relacionados con el tema del análisis complejo aplicado en Física
@@ -179,9 +178,7 @@ Esto es:
 
 ### Variable Compleja (3 Semanas)
 <a name="VariableCompleja"></a>
-+ [Clase 21: Funciones y Números Complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_1VarCompleja.md). (22feb)
-
-+ Ajuste y sustentación asignación 4 (25feb)
++ [Clase 21: Funciones y Números Complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_1VarCompleja.md). (25feb)
 
 + [Clase 22: Puntos, líneas y transformaciones en al plano complejo](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_2TransfConformes.md). (1mar)
 
