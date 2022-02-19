@@ -9,12 +9,12 @@ Esta clase tiene varios objetivos comprender el significado y alcance de los ope
   - La derivada covariante resume la variación del campo vectorial y de los vectores base en los cuales se re
 
 ### Actividades **antes** de clase
-1. Estudiar los puntos contenidos en la sección 5.1 (5.1.1 al 5.1.7) de las [notas de (viejas) clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
+1. Estudiar los puntos contenidos en la sección 5.1 (5.1.1 al 5.1.7) de las [notas de (viejas) clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOShort.pdf)
 
 
 
 ### Actividad **después** de clase
-+ Resuelva los ejercicios 2, 5, 10 y 16 de las [notas de (viejas) clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
++ Resuelva los ejercicios 2, 5, 10 y 16 de las [notas de (viejas) clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOShort.pdf)
 
 ### Materiales de apoyo
 + Video y [Presentación de la Fauna de operadores diferenciales vectorial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/5_3FaunaOperadoresVect.pdf).
