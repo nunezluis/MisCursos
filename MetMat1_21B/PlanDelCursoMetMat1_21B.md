@@ -159,7 +159,7 @@ Evaluación de los ejercicios asignados clases 12, 13 14 y 15
 
 + Ajuste y sustentación asignación 3 (11feb)
 
-+ [Clase 18: La fauna de los operadores vectoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md) (15feb)
++ [Clase 18: La fauna de los operadores vectoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C5_2DerivadasVectoriales.md) (15feb)
 
 
 + [Clase 19: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md) (18feb)
