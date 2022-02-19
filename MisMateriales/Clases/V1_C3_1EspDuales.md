@@ -13,7 +13,7 @@ Desarrollar ejercicios 6 y 7 de la Sección 3.1.4 .
 ### Materiales de apoyo
    + [Video](https://youtu.be/9u5g5Y5bdJI) y [presentación Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/3_1FuncionalesLineales.pdf)
 
-### Al finalizar estos contenidos**
+### Al finalizar estos contenidos
 El estudiantes deberá
    1. Comprender el concepto de espacio vectorial dual
    2. Construir la base dual a partir de la base de un espacio vectorial y la definición del producto interno
