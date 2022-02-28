@@ -74,7 +74,7 @@ También utilizaremos capítulos de esta bibliografía
 
 <a name="PlanDetallado"></a>
 ## Plan detallado del curso
-### Espacios lineales  (17ago-3sep )
+### Espacios lineales  (1mar-11mar )
 #### Clases
 + [Clase 1. Grupos y espacios lineales abstractos ](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md)
 
@@ -84,7 +84,7 @@ También utilizaremos capítulos de esta bibliografía
 
 + [Clase 4. Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md)
 
-#### Asignación 1 (Fecha de entrega 30ago)
+#### Asignación 1 (Fecha de entrega 18mar)
 Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar el error de medición del sensor de bajo costo y, como calibrarlo para establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerDistancias/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Asignaciones/TallerDistancias/DatosDistancias) podrán encontrar los datos para desarrollar los algoritmos de calibración inteligente. Los datos patrones están contenidos en la hoja excel en la pestaña *Normal*. Los datos de las estaciones a calibrar los encontrarán en los demás archivos.   El problema deberá ser entregado por equipos de dos personas en forma de artículo y podrían seguir el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que presentamos en la descripción del curso.
 
 ### Espacios duales y Tensores
@@ -92,9 +92,9 @@ Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor e
 + [Clase 5. Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md)
 
 + Clase 6 Evaluación Asignación 1 y ejercicios
-   1. Ejercicios 5 y 6 de la sección 2.3.8
-   2. Utilizando MAXIMA desarrollar el problema 3 de la sección 2.4.7
-   3. Ejercicios 6 y 7 de la Sección 3.1.6
+   1. Ejercicios 5 y 6 de la sección 2.2.4
+   2. Utilizando MAXIMA desarrollar el problema 3 de la sección 2.4.5
+   3. Ejercicios 6 y 7 de la Sección 3.1.4
 
 
 #### Asignación 2
