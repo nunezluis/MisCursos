@@ -14,7 +14,7 @@ Esta clase tiene varios objetivos comprender el significado y alcance de los ope
 
 
 ### Actividad **después** de clase
-+ Resuelva los ejercicios 2, 5, 10 y 16 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
++ Resuelva los ejercicios 2, 5, 10 y 16 de la sección 5.2.10 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
 
 ### Materiales de apoyo
 + Video y [Presentación de la Fauna de operadores diferenciales vectorial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/5_3FaunaOperadoresVect.pdf).
