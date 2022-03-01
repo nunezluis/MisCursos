@@ -9,8 +9,8 @@ Esta clase tiene varios objetivos comprender el significado y alcance de los ope
   - La derivada covariante resume la variación del campo vectorial y de los vectores base en los cuales se re
 
 ### Actividades **antes** de clase
-1. Estudiar los puntos contenidos en la sección 5.2 (5.2.1 al 5.1.6) de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOShort.pdf)
-2. Resolver los ejemplos 3, 4, 5 y 7 de la sección 5.2.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOShort.pdf)  
+1. Estudiar los puntos contenidos en la sección 5.2 (5.2.1 al 5.1.6) de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
+2. Resolver los ejemplos 3, 4, 5 y 7 de la sección 5.2.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)  
 
 
 ### Actividad **después** de clase
@@ -33,4 +33,4 @@ El estudiante deberá identificar y poder calcular los distintos operadores dife
          - de la circulación de un campo vectorial
     8. Expresar el rotacional de un campo vectorial en las distintas coordenadas curvilineas
     9. Conocer las expresiones del operador nabla y el laplaciano en todas las coordenadas curvilíneas
-    10. Comprender el signficado de las derivada direccional de campos vectoriales y su asociación con el campo de aceleraciones de un fluido. 
+    10. Comprender el signficado de las derivada direccional de campos vectoriales y su asociación con el campo de aceleraciones de un fluido.
