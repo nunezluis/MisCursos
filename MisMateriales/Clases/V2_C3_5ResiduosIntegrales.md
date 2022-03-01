@@ -1,6 +1,4 @@
-# Métodos Matemáticos 2
-# Escuela de Física, Universidad Industrial de Santander
-## Teorema del Residuo y sus Aplicaciones
+# Teorema del Residuo y sus Aplicaciones
 
 ### Objetivos
 Los objetivos de esta clase es presentar el Teorema del Residuo y mostrar sus aplicaciones para la integración de funciones

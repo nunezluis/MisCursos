@@ -1,4 +1,3 @@
-# Métodos Matemáticos 2
 # Números y funciones de variable Compleja
 
 + **Objetivos de la clase**

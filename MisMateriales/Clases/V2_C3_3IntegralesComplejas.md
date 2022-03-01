@@ -1,4 +1,3 @@
-# Métodos Matemáticos 2
 # Integrales Complejas
 
 ## Objetivos

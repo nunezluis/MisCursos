@@ -1,4 +1,4 @@
-## Ecuaciones diferenciales Ordinarias: Generalidades
+# Ecuaciones diferenciales Ordinarias: Generalidades
 
 ### Objetivos de la clase
 Esta clase tiene varios objetivos presentar la motivación, utilidad y origen del concepto de ecuación diferencial.  Cómo se clasifican según el tipo de función incógnita, orden de sus derivadas. Diferencia entre ecuaciones diferenciales lineales y no lineales. Mostraremos además, los distintos tipos de soluciones: explícitas, implícitas, generales y particulares. Discutiremos el concepto de problema de valores iniciales y problema de valores de frontera (o contorno).

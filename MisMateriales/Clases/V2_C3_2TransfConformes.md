@@ -1,4 +1,3 @@
-# Métodos Matemáticos 2
 # Cortes, ceros y tranformaciones conformes
 + **Objetivos**
 Esta clase tiene por objetivos desarrollar los conceptos de:

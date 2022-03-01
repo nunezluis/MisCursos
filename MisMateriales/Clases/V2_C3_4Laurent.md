@@ -1,5 +1,3 @@
-# Métodos Matemáticos 2
-# Escuela de Física, Universidad Industrial de Santander
 ## Series de Laurent y Residuos
 
 ### Objetivos
