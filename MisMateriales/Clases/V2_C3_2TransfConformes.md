@@ -12,7 +12,7 @@ Esta clase tiene por objetivos desarrollar los conceptos de:
         2. El Capítulo 6 del Chow, T. L. **Mathematical Methods for Physicists: A concise introduction** (Cambridge University Press, 2000). [Disponible en la Biblioteca UIS](http://tangara.uis.edu.co)
    3. Rehacer los ejemplos resueltos 2 y 3 del punto 1.2.5 de las [notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
 
-##Taller de problemas 1 (evaluación en la clase 4)
+##Taller de problemas 
     + Desarrolle los ejercicios 2, 7 y 11 de la sección 1.2.7 de las [notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf).
 
 ##Materiales de apoyo
