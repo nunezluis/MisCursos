@@ -40,4 +40,10 @@ A partir del artículo de M. Schimassek
 + comprobar el decrecimiento Forbush que él reporta puede ser reproducido
 + verificar si ese decrecimiento ocurre en un máximo de actividad solar  
 
-[1] Schimassek, M. (2019, July). Analysis of Data from the Low-Energy Modes of the Surface Detector of the Pierre Auger Observatory. In 36th International Cosmic Ray Conference (ICRC2019) (Vol. 36, p. 1147).   
+[1] Schimassek, M. (2019, July). Analysis of Data from the Low-Energy Modes of the Surface Detector of the Pierre Auger Observatory. In 36th International Cosmic Ray Conference (ICRC2019) (Vol. 36, p. 1147).
+
+## El clima en Pampa Amarilla a través de los datos del Observatorio Pierre auger
+
+Los efectos de la variación de las variables atmosféricas en el desarrollo de las cascadas de rayos cósmicos pueden entenderse en términos de cambios locales en los parámetros atmosféricos. Los cambios en la presión atmosférica provocan cambios en las tasas de las cascadas registradas. Cuando la presión aumenta, hay más material a traves del cual fluyen los rayos cósmicos, por lo que la tasa detectada disminuye. A presión constante, si la temperatura aumenta, las partículas de la cascada se dispersan más al aumentar la distancia recorrida entre cada choque. 
+
+Las condiciones atmosféricas en el Observatorio Pierre Auger registran continuamente en cinco estaciones meteorológicas situadas en la Instalación Láser Central (CLF) (centro del arreglo de detectores de de superficie) y en cuatro puntos de la periferia del arreglo. Las estaciones meteorológicas están equipadas con sensores de temperatura, presión, humedad y velocidad del viento que registran datos cada 5 o 10 minutos. Las incertidumbres estadísticas de estos datos son de 0,2C para la temperatura, 2% para la humedad relativa, 0,1 m/s para la velocidad del viento y 0,2 hPa para la presión.  
