@@ -3,7 +3,7 @@
 A continuación enumeramos algunos proyectos para el cursos de ciencia de Datos de la cohorte 2022
 
 ## Rocas navegantes del Valle de la Muerte (Propuesto L. Núñez)
-En un artículo reciente se realizan medidas y proponen una posible solución al misterio de las rocas andantes del Valle de la Muerte en California. La pregunta de cuáles son los efectos que mueven las rocas de este valle desértico se viene repitiendo por décadas[1] y las primeras medidas que registran el movimiento de las rocas han sido tomadas por Norris y colaboradores [2]. Estos autores colocaron módulos de geoposicionamiento satelital (GPS) en varias rocas y estudiaron su desplazamiento y muestran que, aparentemente, las rocas se mueven sobre láminas de hielo que se quiebran y deslizan.
+ La pregunta de cuáles son los efectos que mueven las rocas de este valle desértico se viene repitiendo por décadas[1] y las primeras medidas que registran el movimiento de las rocas han sido tomadas por Norris y colaboradores [2]. Estos autores colocaron módulos de geoposicionamiento satelital (GPS) en varias rocas y estudiaron su desplazamiento y muestran que, aparentemente, las rocas se mueven sobre láminas de hielo que se quiebran y deslizan.
 
 ### Objetivos:
 - Interpretar gráficas: velocidad vs tiempo y posición vs tiempo y, a partir de éstas obtener información sobre la dinámica del moviendo de las rocas.
