@@ -8,7 +8,7 @@ A continuación enumeramos algunos proyectos para el cursos de ciencia de Datos 
 ### Objetivos:
 - Interpretar gráficas: velocidad vs tiempo y posición vs tiempo y, a partir de éstas obtener información sobre la dinámica del moviendo de las rocas.
 - Discutir los conceptos fuerzas de fricción en fluidos y entre materiales, haciendo énfasis en el significado de la fricción estática y dinámica y, como pueden ser calculadas a partir de los datos.
-- Discutir la nueva manera de comunicación de la ciencia en la cual los artículos están asociados a conjuntos de datos que pueden ser analizados.
+
 
 ### Actividades a desarrollar:
 + Algunas de las medidas surgidas en estos años han estimado que el coeficiente de fricción estático es mu_{e} approx 0.15. Estime la fuerza (¿máxima?) necesaria para iniciar y luego mantener en movimiento algunas de las rocas "instrumentadas" que aparecen en la tabla 2 del artículo de Norris y colaboradores.
