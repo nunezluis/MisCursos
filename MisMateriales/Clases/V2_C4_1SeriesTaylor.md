@@ -14,7 +14,7 @@ En esta oportunidad presentaremos las series de funciones en de una forma comple
  2. Luego, en la sección 2.4 de [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf) desarrollamos el concepto de series de Taylor.
  3. Recordaremos lo que se discutió el curso pasado sobre las aproximaciones de funciones. Aquí podrán recordar la expresión de las bases funcionales y con ella [ejemplos de series de Taylor](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/BasesFuncionales/BasesFuncionales.html). Aprovechamos esta sección para analizar con detalle la expansión binomial, definir la función Gamma y analizar alguna de sus propiedades. Tambien incluirmos una hoja de cálculo con las [propiedades de la función Gamma](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/FuncionGamma/funcionGamma.html).
 
-## Taller de problemas 2 (evaluación 17ago)
+## Taller de problemas 
  De [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
   1. Desarrollar el ejercicio 7 de la sección 2.3.9
   2. Desarrollar los ejercicios 4 y 6 de la sección 2.4.7
