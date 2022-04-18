@@ -60,4 +60,4 @@ ICFES realiza diferentes pruebas para monitorear el desarrollo de los estudiante
 Para el ingreso a la universidad se presentan a escala nacional la prueba saberpro 11. Esta prueba se le aplica a estudiantes que están culminando el grado undécimo de la educación media. Son dos sesiones en las que se realizan cinco pruebas (lectura crítica, matemáticas, sociales y ciudadanas, ciencias naturales e inglés).
 
 ### Objetivos
-Analizar los factores sociales que influyen en los puntajes del icfes. Para ello se debe analizar [Dataset](https://drive.google.com/file/d/1dHWqLxinhEdfGSKp2bWCbWRTLXdgkIwE/view?usp=sharing): Más de 490000 registros de pruebas de estudiantes con caracteristicas como: estrato, situación económica, tv, dtpto, otros. 
+Analizar los factores sociales que influyen en los puntajes del icfes. Para ello se debe analizar [Dataset](https://drive.google.com/file/d/1dHWqLxinhEdfGSKp2bWCbWRTLXdgkIwE/view?usp=sharing): Más de 490000 registros de pruebas de estudiantes con caracteristicas como: estrato, situación económica, tv, dtpto, otros.
