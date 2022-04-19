@@ -1,13 +1,15 @@
 # Polinomios Ortogonales
 
 ## Objetivos de la clase
-Los objetivos de esta clase son presentar
- +
+El objetivo de esta clase es presentar de forma unificada los polinomios ortogonales. mostrando
+ + Sus relaciones de ortogonalidad. Estos es sus productos internos que los generan a partir de una base de monomios
+ + Las ecuaciones diferenciales de las cuales son soluciones
+ + Sus relaciones de recurrencia y funciones generatices
+ + Sus raíces y algunas propiedades de simetría
 
 
 ## Actividad antes de iniciar la clase
-En esta oportunidad presentaremos las series de funciones en de una forma complementaria a como lo presentamos en el curso pasado.
- 1. Extenderemos
+ 1. Presentamos los polinomios de Legendre en los puntos 
 
 ## Taller de problemas
  De [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
@@ -21,4 +23,4 @@ En esta oportunidad presentaremos las series de funciones en de una forma comple
 ## Al finalizar estos contenidos
 Al finalizar estos contenidos el estudiantes deberá:
 
-    1. 
+    1.

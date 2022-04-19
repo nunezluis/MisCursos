@@ -82,6 +82,8 @@ También utilizaremos capítulos de la siguiente  bibliografía de textos clási
 <a name="SeriesFunciones"></a>
 + [Clase 1: Series de Taylor](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_1SeriesTaylor.md).
 
-+ [Clase 2: Polinomios ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md).
++ [Clase 2: Series de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_2SeriesFourier.md).
 
-+ [Clase 3: Planteamiento general Polinomios Ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md).
++ [Clase 3: Transformadas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_2TransFourier.md).
+
++ [Clase 4: Transformadas Discretas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_2TransDiscFourier.md).
