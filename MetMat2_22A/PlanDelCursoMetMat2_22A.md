@@ -84,6 +84,6 @@ También utilizaremos capítulos de la siguiente  bibliografía de textos clási
 
 + [Clase 2: Series de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_2SeriesFourier.md).
 
-+ [Clase 3: Transformadas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_2TransFourier.md).
++ [Clase 3: Transformadas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_3TransFourier.md).
 
-+ [Clase 4: Transformadas Discretas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_2TransDiscFourier.md).
++ [Clase 4: Transformadas Discretas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_4TransDiscFourier.md).
