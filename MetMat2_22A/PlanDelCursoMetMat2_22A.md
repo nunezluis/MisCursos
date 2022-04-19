@@ -73,8 +73,7 @@ También utilizaremos capítulos de la siguiente  bibliografía de textos clási
 | Temas | Tiempo (semanas) |
 | :------- | :-------: |
 | [Series de Funciones y series de Fourier](#SeriesFunciones) | 2.5 |
-| [Polinomios ortogonales](#PolinomiosOrtogonales)     
-| 1.0 |
+| [Polinomios ortogonales](#PolinomiosOrtogonales) | 1.0 |
 
 ### Asignación 1 (Entrega hasta clase 4 y discusión clase 5)
 
