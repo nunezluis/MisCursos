@@ -80,7 +80,7 @@ En  asignación se busca aislar la señal del ruido utilizando el arsenal de las
 
 En el siguiente enlace \url{https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Asignaciones/TallerFourier/DatosRayos} encontrarán tres archivos de datos correspondientes a las evolución del conteo de carga en el tiempo que puede ser asociado con la evolución. La idea es analizarlos con esa estrategia
 
-En el [siguiente documento](https://www.overleaf.com/read/gpmwzsnfgbdv) entrará mas detalles
+En el [siguiente documento](https://www.overleaf.com/read/gpmwzsnfgbdv) encontrará mas detalles para realizar la asignación
 
 
 
