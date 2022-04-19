@@ -74,7 +74,7 @@ También utilizaremos capítulos de la siguiente  bibliografía de textos clási
 | [Series de Funciones y series de Fourier](#SeriesFunciones) | 2.5 |
 | [Polinomios ortogonales](#PolinomiosOrtogonales) | 1.0 |
 
-### Asignación 1 (Entrega hasta clase 4 y discusión clase 5)
+### Asignación 1 Entre señales y Ruido (Entrega hasta clase 4 y discusión clase 5)
 En  asignación se busca aislar la señal del ruido utilizando el arsenal de las series y transformadas de Fourier. Para esto seguiremos lo que lo que hicieron en los puntos precedentes  presenta [Landau y colaboradores en el capítulo 12](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ReferenciaArticulos/LandauPaez.pdf). De manera opcional tenemos datos reales de rayos a los cuales se les puede aplicar esa técnica.
 
 En el siguiente enlace \url{https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Asignaciones/TallerFourier/DatosRayos} encontrarán tres archivos de datos correspondientes a las evolución del conteo de carga en el tiempo que puede ser asociado con la evolución. La idea es analizarlos con esa estrategia
