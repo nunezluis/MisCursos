@@ -72,13 +72,14 @@ También utilizaremos capítulos de la siguiente  bibliografía de textos clási
 
 | Temas | Tiempo (semanas) |
 | :------- | :-------: |
-| [Series de Funciones](#SeriesFunciones) | 1.5  |
-
+| [Series de Funciones y series de Fourier](#SeriesFunciones) | 2.5 |
+| [Polinomios ortogonales](#PolinomiosOrtogonales)     
+| 1.0 |
 
 ### Asignación 1 (Entrega hasta clase 4 y discusión clase 5)
 
 
-### Series de Funciones (1.5 Semanas)
+### Series de Funciones y series de Fourier (3 Semanas)
 <a name="SeriesFunciones"></a>
 + [Clase 1: Series de Taylor](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_1SeriesTaylor.md).
 
@@ -87,3 +88,11 @@ También utilizaremos capítulos de la siguiente  bibliografía de textos clási
 + [Clase 3: Transformadas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_3TransFourier.md).
 
 + [Clase 4: Transformadas Discretas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_4TransDiscFourier.md).
+
++ [ Clase 5 Evaluación y ajuste]
+
+### Polinomios ortogonales
+<a name="PoliniomiosOrtogonales"></a>
++ [Clase 6: Polinomios Ortogonales 1/2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
+
++ [Clase 7: Polinomios Ortogonales 2/2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
