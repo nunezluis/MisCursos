@@ -16,6 +16,7 @@ Presentamos el desarrollo de las series de Fourier con detalle, analizando las c
 ## Materiales de apoyo
 1. [Presentación Series de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_2_2FourierSeries.pdf)
 2. [Hoja MAPLE de series de Fourier](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/SeriesFourier/FourierSeries.html)
+3. En este [enlace](https://www.projectrhea.org/rhea/index.php/Fourier_analysis_in_Music) encontrarán un ejemplo que ilustra el [timbre](https://en.wikipedia.org/wiki/Timbre) de un instrumento musical. Al ejecutar una misma nota, en este caso un LA natural (440Hz) diferenciamos los distintos instrumentos por su espectro de potencia. Esto es por contribución de los distintos armónicos.
 
 
 ## Al finalizar estos contenidos
@@ -24,4 +25,4 @@ Presentamos el desarrollo de las series de Fourier con detalle, analizando las c
  2. Poder expandir funciones elementales en series de Fourier (reales y complejas) y entender los significados de cada uno de los coeficientes de Fourier.
  3. Ser capaz de calcular el espectro de potencias y fases para una serie de Fourier
  4. Comprender el significado físico de cada uno de los coficientes de Fourier
- 5. Comprender el significad del espectro de frecuencias y fases para una serie de Fourier
+ 5. Comprender el significado de los armónicos de una señal, el espectro de frecuencias y fases para una serie de Fourier
