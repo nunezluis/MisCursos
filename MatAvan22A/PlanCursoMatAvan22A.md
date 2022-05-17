@@ -126,7 +126,7 @@ Al igual que la *Asignación 1* los resultados deberán ser entregados en forma 
 
 ### Series y Transformadas de Fourier
 
-#### Asignación 3 
+#### Asignación 3
 Esta asignación tiene por objeto mostrar algunas aplicaciones de las series y transformadas de Fourier. Esta asignación tiene dos etapas. [La primera constituye](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TareaDiscretaFourier/TareaDiscretaFourierV2.pdf) un calentamiento para comprobar algunos de los conceptos que discutimos en clase. La segunda fase es "un trabajo de campo" la aplicación de esos conceptos a señales reales.
 
 En [esta carpeta](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Asignaciones/TareaDiscretaFourier/Datos) encontrarán varios archivos que vienen descritos en el [ReadMEDatos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TareaDiscretaFourier/Datos/ReadMEDatos.md)
@@ -146,7 +146,7 @@ Explore y hacer un espectrograma con estas señales puede ayudar
 + Clase 17 Evaluación Asignación 3
 
 ### Ecuaciones diferenciales ordinarias
-+ [Clase 18 Generalidades de Ecuaciones diferenciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
++ [Clase 18 Generalidades de Ecuaciones diferenciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C5_1EcDifOrdGeneralidades.md)
 + [Clase 19 Soluciones numéricas al problema de valores iniciales en ecuaciones diferenciales ordinarias](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 + [Clase 20 Problema de Sturm Liuville y los valores de frontera](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
