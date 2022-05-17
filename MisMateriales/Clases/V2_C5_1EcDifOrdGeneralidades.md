@@ -17,7 +17,7 @@ Esta clase tiene varios objetivos presentar la motivación, utilidad y origen de
    3. Presentación [Ecuaciones diferenciales de orden superior](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_3_2EcDifOrdN.pdf)
    4. [Hoja MAPLE de Generalidades Ecuaciones diferenciales ordinarias de orden superior](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/EcDifOrdinarias/EcDifOrdN/EcDifOrdN.html)
    5. Presentación [Solución numéricas de ecuaciones diferenciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_3_3EcDifNumericas.pdf)
-   6. [Hoja MAPLE con la integración y análisis del péndulo físico](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/Pendulo/EjemPenduloFisico.html)
+   6. [Hoja MAPLE con la integración y análisis del péndulo físico](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/Pendulo/EjemPenduloFisico1.html)
 
 
 ### Al finalizar estos contenidos
