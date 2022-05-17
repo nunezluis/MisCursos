@@ -1,0 +1,512 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>EjemPenduloFisico1.html</title>
+<!-- Created by Maple 2018.0, Mac OS X -->
+</head>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="center"><font color="#000000" size="5" face="Times New Roman"><strong>El Péndulo Físico</strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"></font><font color="#000000" size="3" face="Times New Roman"><strong><em>Luis A. Núñez</em></strong></font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman">Escuela de Física, Universidad Industrial de Santander, Bucaramanga Colombia</font>&nbsp;</p>
+<p align="center"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark2" />
+<p align="left"><font color="#000000" size="4" face="Times New Roman"><strong>Oscilador Armónico Simple</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Alguien, de los famosos de Física, dijo una vez: quien entienda el oscilador armónico simple en todas sus facetas, entiende la mitad de toda la Física. Por ello vamos a tratar de estudiarlo. Llamaremos Oscilador armónico simple o pendulo físico linealizado aquel sistema físico que tiene oscilaciones pequeñas y por lo tanto se puede linealizar la ecuación diferencial </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>restart;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark3" />
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><strong><em>Oscilador Armónico Simple Libre y no amorgiguado)</em></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">El oscilador armónico simple, libre tiene como ecuación diferecial</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ecuacosarmsimple:=diff(xsimp(t),t$2)=-(omega0^2)*xsimp(t);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_1.gif" width="350" height="47" alt="Typesetting:-mprintslash([ecuacosarmsimple := diff(xsimp(t), `$`(t, 2)) = `+`(`-`(`*`(`^`(omega0, 2), `*`(xsimp(t)))))], [diff(diff(xsimp(t), t), t) = `+`(`-`(`*`(`^`(omega0, 2), `*`(xsimp(t)))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">que tendrá como solución</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>solxsimpt:=dsolve({ecuacosarmsimple,xsimp(0)=x0,D(xsimp)(0)=v0},xsimp(t));
+<br>assign(solxsimpt);vsimp(t):=diff(xsimp(t),t);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_2.gif" width="360" height="44" alt="Typesetting:-mprintslash([solxsimpt := xsimp(t) = `+`(`/`(`*`(v0, `*`(sin(`*`(omega0, `*`(t))))), `*`(omega0)), `*`(x0, `*`(cos(`*`(omega0, `*`(t))))))], [xsimp(t) = `+`(`/`(`*`(v0, `*`(sin(`*`(omega0..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_3.gif" width="304" height="21" alt="Typesetting:-mprintslash([vsimp(t) := `+`(`-`(`*`(sin(`*`(omega0, `*`(t))), `*`(omega0, `*`(x0)))), `*`(cos(`*`(omega0, `*`(t))), `*`(v0)))], [`+`(`-`(`*`(sin(`*`(omega0, `*`(t))), `*`(omega0, `*`(x0)..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Supongamos que <img src="images/EjemPenduloFisico_4.gif" width="31" height="21" alt="omega0" align="center" border="0">= 2 y que el movil parte de x0 = 0 con distintas velocidades iniciales. Vale decir </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">v(0) = 3, 5, <img src="images/EjemPenduloFisico_5.gif" width="57" height="23" alt="`+`(`*`(2, `*`(sqrt(10))))" align="center" border="0">, 7, 8. &nbsp;&nbsp;&nbsp;</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>omega0:='omega0';x0:='x0'; v0:='v0';
+<br>Xsimp:=unapply(xsimp(t),omega0,x0,v0,t);
+<br>Vsimp:=unapply(vsimp(t),omega0,x0,v0,t);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_6.gif" width="75" height="21" alt="Typesetting:-mprintslash([omega0 := omega0], [omega0])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_7.gif" width="68" height="18" alt="Typesetting:-mprintslash([x0 := x0], [x0])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_8.gif" width="68" height="18" alt="Typesetting:-mprintslash([v0 := v0], [v0])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_9.gif" width="389" height="44" alt="Typesetting:-mprintslash([Xsimp := proc (omega0, x0, v0, t) options operator, arrow; `+`(`/`(`*`(v0, `*`(sin(`*`(omega0, `*`(t))))), `*`(omega0)), `*`(x0, `*`(cos(`*`(omega0, `*`(t)))))) end proc], [p..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_10.gif" width="411" height="21" alt="Typesetting:-mprintslash([Vsimp := proc (omega0, x0, v0, t) options operator, arrow; `+`(`-`(`*`(sin(`*`(omega0, `*`(t))), `*`(omega0, `*`(x0)))), `*`(cos(`*`(omega0, `*`(t))), `*`(v0))) end proc], [p..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">con lo cual obtendremos la siguiente gráfica posición tiempo</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot([Xsimp(2,0,3,t),Xsimp(2,0,5,t),Xsimp(2,0,2*sqrt(10),t),Xsimp(2,0,7,t),Xsimp(2,0,8,t)],t=0..4*Pi,labels=[t,"xsimp"], title="Oscilador Armonico Simple, Evolucion temporal",scaling=constrained);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_11.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y la representación en el espacio de fases será</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot({[Xsimp(2,0,3,t),Vsimp(2,0,3,t),t=0..2*Pi],
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Xsimp(2,0,5,t),Vsimp(2,0,5,t),t=0..2*Pi],
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Xsimp(2,0,2*sqrt(10),t),Vsimp(2,0,2*sqrt(10),t),t=0..2*Pi],
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Xsimp(2,0,7,t),Vsimp(2,0,7,t),t=0..2*Pi],
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Xsimp(2,0,8,t),Vsimp(2,0,8,t),t=0..2*Pi] }, 
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scaling=constrained,labels=[xsimp,vsimp],title="Oscilador Armonico Simple, Diagrama de Fase ");</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_12.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">En muchos problemas esta primera integral será fácil de obtener, no así la integral de la posición respecto al tiempo. Por ello</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">son muy útiles las gráficas V(t) vs X(t). Esas gráficas se denominan gráficas del espacio de fases, y cada</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">una de ellas representa un valor distinto para la energia. En ella los puntos de equilibrio se idenfican gráficamente. En este caso el</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">punto de equilibrio, como se esperaba, es </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Esto se obtiene fácilmente si multiplicamos por V(t) = <img src="images/EjemPenduloFisico_13.gif" width="65" height="39" alt="diff(x(t), t)" align="center" border="0"> e integrando. </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ecuacE:= E=(1/2)*omega^2 + (1/2)*omega0^2*theta^2;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_14.gif" width="205" height="46" alt="Typesetting:-mprintslash([ecuacE := E = `+`(`*`(`/`(1, 2), `*`(`^`(omega, 2))), `*`(`/`(1, 2), `*`(`^`(omega0, 2), `*`(`^`(theta, 2)))))], [E = `+`(`*`(`/`(1, 2), `*`(`^`(omega, 2))), `*`(`/`(1, 2), `..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"> primer término representa la energía cinética y el segundo la energía potencial gravitatoria. Cada una de las elipses le corresponde un valor de la Energía total</font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark4" />
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><strong><em>Oscilador Armónico Amortiguado</em></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Si consideramos el caso del oscilador armonico amortiguado, tendremos que la ecuación diferencial será</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ecuacosarmamort:=diff(xamort(t),t$2)=-2*mu*diff(xamort(t),t)-(omega0^2)*xamort(t);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_15.gif" width="515" height="47" alt="Typesetting:-mprintslash([ecuacosarmamort := diff(xamort(t), `$`(t, 2)) = `+`(`-`(`*`(2, `*`(mu, `*`(diff(xamort(t), t))))), `-`(`*`(`^`(omega0, 2), `*`(xamort(t)))))], [diff(diff(xamort(t), t), t) = ..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.2.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y su solución será</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>solxamortt:=dsolve({ecuacosarmamort,xamort(0)=x0,D(xamort)(0)=v0},xamort(t));
+<br>assign(solxamortt);vamort(t):=(diff(xamort(t),t));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_16.gif" width="688" height="52" alt="Typesetting:-mprintslash([solxamortt := xamort(t) = `+`(`/`(`*`(`/`(1, 2), `*`(`+`(`*`(`^`(`+`(`*`(`^`(mu, 2)), `-`(`*`(`^`(omega0, 2)))), `/`(1, 2)), `*`(x0)), `*`(mu, `*`(x0)), v0), `*`(exp(`*`(`+`(..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_17.gif" width="688" height="50" alt="Typesetting:-mprintslash([vamort(t) := `+`(`/`(`*`(`/`(1, 2), `*`(`+`(`*`(`^`(`+`(`*`(`^`(mu, 2)), `-`(`*`(`^`(omega0, 2)))), `/`(1, 2)), `*`(x0)), `*`(mu, `*`(x0)), v0), `*`(`+`(`-`(mu), `*`(`^`(`+`(..." align="center" border="0"><br><img src="images/EjemPenduloFisico_18.gif" width="688" height="50" alt="Typesetting:-mprintslash([vamort(t) := `+`(`/`(`*`(`/`(1, 2), `*`(`+`(`*`(`^`(`+`(`*`(`^`(mu, 2)), `-`(`*`(`^`(omega0, 2)))), `/`(1, 2)), `*`(x0)), `*`(mu, `*`(x0)), v0), `*`(`+`(`-`(mu), `*`(`^`(`+`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.2.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">con lo cual tendremos tres soluciones dependiendo del valor (mayor, igual o menor que cero) de la cantidad subradical <img src="images/EjemPenduloFisico_19.gif" width="69" height="25" alt="`+`(`*`(`^`(mu, 2)), `-`(`*`(`^`(omega0, 2))))" align="center" border="0"> &nbsp;con lo cual tendremos los casos: </font>&nbsp;</p>
+<p align="left"><ul><li><font color="#000000" size="3" face="Times New Roman">subamortiguado si <img src="images/EjemPenduloFisico_20.gif" width="69" height="25" alt="`+`(`*`(`^`(mu, 2)), `-`(`*`(`^`(omega0, 2))))" align="center" border="0"> &lt; 0; </font></li></ul>&nbsp;</p>
+<p align="left"><ul><li><font color="#000000" size="3" face="Times New Roman">sobreamortiguado si <img src="images/EjemPenduloFisico_21.gif" width="69" height="25" alt="`+`(`*`(`^`(mu, 2)), `-`(`*`(`^`(omega0, 2))))" align="center" border="0"> &gt; 0 y </font></li></ul>&nbsp;</p>
+<p align="left"><ul><li><font color="#000000" size="3" face="Times New Roman">críticamente amortiguado si <img src="images/EjemPenduloFisico_22.gif" width="69" height="25" alt="`+`(`*`(`^`(mu, 2)), `-`(`*`(`^`(omega0, 2))))" align="center" border="0"> =0 . </font></li></ul>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Estudiaremos los tres casos haciendo <img src="images/EjemPenduloFisico_23.gif" width="21" height="21" alt="mu" align="center" border="0"> = 0,5, 3,5, y 2 respectivamente.</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>mu:='mu':
+<br>Xamort:=unapply(xamort(t),mu,omega0,x0,v0,t):
+<br>Vamort:=unapply(vamort(t),mu,omega0,x0,v0,t):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Para el caso subamortiguado ( <img src="images/EjemPenduloFisico_24.gif" width="69" height="25" alt="`+`(`*`(`^`(mu, 2)), `-`(`*`(`^`(omega0, 2))))" align="center" border="0"> &lt; 0; ) tendremos la evolución del sistema, dada por</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot([Xamort(0.5,2,0,3,t),Xamort(0.5,2,0,5,t),Xamort(0.5,2,0,2*sqrt(10),t),Xamort(0.5,2,0,7,t),Xamort(0.5,2,0,8,t)],
+<br>t=0..4*Pi,labels=[t,"xamort"], title="Oscilador Armonico Amortiguado, Evolucion temporal",scaling=constrained,
+<br>view=[0..7,-1.5..3] );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_25.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y la representación en el espacio de fases será</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot({[Xamort(0.5,2,0,3,t),Vamort(0.5,2,0,3,t),t=0..2*Pi],[Xamort(0.5,2,0,5,t),Vamort(0.5,2,0,5,t),t=0..2*Pi],[Xamort(0.5,2,0,2*sqrt(10),t),Vamort(0.5,2,0,2*sqrt(10),t),t=0..2*Pi],[Xamort(0.5,2,0,7,t),Vamort(0.5,2,0,7,t),t=0..2*Pi],[Xamort(0.5,2,0,8,t),Vamort(0.5,2,0,8,t),t=0..2*Pi] }, scaling=constrained,labels=[xamort,vamort],title="Oscilador Armonico Subamortiguado, Diagrama de Fase ");</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_26.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Para el caso sobreamortiguado (si <img src="images/EjemPenduloFisico_27.gif" width="69" height="25" alt="`+`(`*`(`^`(mu, 2)), `-`(`*`(`^`(omega0, 2))))" align="center" border="0"> &gt; 0 ) la evolución temporal del oscilador será</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot([Xamort(2.1,2,0,3,t),Xamort(2.1,2,0,5,t),Xamort(2.1,2,0,2*sqrt(10),t),Xamort(2.1,2,0,7,t),Xamort(2.1,2,0,8,t)],
+<br>t=0..4*Pi,labels=[t,"xamort"], title="Oscilador Armonico Sobreamortiguado, Evolucion temporal",scaling=constrained,
+<br>view=[0..5,0..1.5] );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_28.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">mientras que el diagrama de fase será</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot({[Xamort(2.1,2,0,3,t),Vamort(2.1,2,0,3,t),t=0..2*Pi],[Xamort(2.1,2,0,5,t),Vamort(2.1,2,0,5,t),t=0..2*Pi],[Xamort(2.1,2,0,2*sqrt(10),t),Vamort(2.1,2,0,2*sqrt(10),t),t=0..2*Pi],[Xamort(2.1,2,0,7,t),Vamort(2.1,2,0,7,t),t=0..2*Pi],[Xamort(2.1,2,0,8,t),Vamort(2.1,2,0,8,t),t=0..2*Pi] }, scaling=constrained,labels=[xamort,vamort],title="Oscilador Armonico Sobreamortiguado, Diagrama de Fase ");</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_29.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+</dl>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark5" />
+<p align="left"><font color="#000000" size="4" face="Times New Roman"><strong>El Péndulo Físico</strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>restart;with(plots):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark6" />
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><strong><em>Análisis del Movimiento</em></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><strong><em>Consideremos ahora el caso sin aproximación, vale decir que la ecuación diferencial que describe la oscilación queda como</em></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ecuacosarmtot:=diff(theta(t),t$2)=-(omega0^2)*sin(theta(t));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_30.gif" width="307" height="47" alt="Typesetting:-mprintslash([ecuacosarmtot := diff(theta(t), `$`(t, 2)) = `+`(`-`(`*`(`^`(omega0, 2), `*`(sin(theta(t))))))], [diff(diff(theta(t), t), t) = `+`(`-`(`*`(`^`(omega0, 2), `*`(sin(theta(t))))..." align="center" border="0"></td>
+<td width='5%' align='center'>(2.1.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Que constituye el sistema físico: Péndulo Físico, libre y sin amortiguamiento. Es decir, el sistema equivalente, sin aproximación de ángulo pequeño, al del oscilador armónico simple.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La ecuación anterior tendrá como soluciones: &nbsp;</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>dsolve(ecuacosarmtot);assign(solthetat);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_31.gif" width="655" height="69" alt="Typesetting:-mprintslash([`+`(Int(`/`(1, `*`(`^`(`+`(`*`(2, `*`(`^`(omega0, 2), `*`(cos(_a)))), _C1), `/`(1, 2)))), _a = `` .. theta(t)), `-`(t), `-`(_C2)) = 0, `+`(Int(`+`(`-`(`/`(1, `*`(`^`(`+`(`*`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(2.1.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">las cuales corresponden a integrales elípticas de primera especie, las cuales son forzozamente resueltas numéricamente.</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Más aún, si procedemos a incorporar las condiciones iniciales, esto es, dejamos caer el cuerpo ( <img src="images/EjemPenduloFisico_32.gif" width="52" height="26" alt="omega[0] = 0" align="center" border="0"> ) el péndulo desde un ángulo <img src="images/EjemPenduloFisico_33.gif" width="73" height="26" alt="theta(0) = theta[0]" align="center" border="0"> tendremos las siguientes expresiones para la posición y la velocidad</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>solthetat:=dsolve({ecuacosarmtot,theta(0)=theta0,D(theta)(0)=dtheta0},theta(t));
+<br>assign(solthetat);omega(t):=(diff(theta(t),t));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_34.gif" width="688" height="57" alt="Typesetting:-mprintslash([solthetat := theta(t) = RootOf(`+`(`-`(Int(`/`(1, `*`(`^`(`+`(`*`(2, `*`(`^`(omega0, 2), `*`(cos(_a)))), RootOf(`+`(dtheta0, `-`(`*`(`^`(`+`(`*`(2, `*`(`^`(omega0, 2), `*`(co..." align="center" border="0"><br><img src="images/EjemPenduloFisico_35.gif" width="688" height="57" alt="Typesetting:-mprintslash([solthetat := theta(t) = RootOf(`+`(`-`(Int(`/`(1, `*`(`^`(`+`(`*`(2, `*`(`^`(omega0, 2), `*`(cos(_a)))), RootOf(`+`(dtheta0, `-`(`*`(`^`(`+`(`*`(2, `*`(`^`(omega0, 2), `*`(co..." align="center" border="0"><br><img src="images/EjemPenduloFisico_36.gif" width="688" height="57" alt="Typesetting:-mprintslash([solthetat := theta(t) = RootOf(`+`(`-`(Int(`/`(1, `*`(`^`(`+`(`*`(2, `*`(`^`(omega0, 2), `*`(cos(_a)))), RootOf(`+`(dtheta0, `-`(`*`(`^`(`+`(`*`(2, `*`(`^`(omega0, 2), `*`(co..." align="center" border="0"><br><img src="images/EjemPenduloFisico_37.gif" width="688" height="57" alt="Typesetting:-mprintslash([solthetat := theta(t) = RootOf(`+`(`-`(Int(`/`(1, `*`(`^`(`+`(`*`(2, `*`(`^`(omega0, 2), `*`(cos(_a)))), RootOf(`+`(dtheta0, `-`(`*`(`^`(`+`(`*`(2, `*`(`^`(omega0, 2), `*`(co..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_38.gif" width="688" height="16" alt="Typesetting:-mprintslash([omega(t) := `+`(`-`(`*`(`^`(`+`(`*`(2, `*`(`^`(omega0, 2), `*`(cos(RootOf(`+`(`-`(Int(`+`(`-`(`/`(1, `*`(`^`(`+`(`*`(2, `*`(`^`(omega0, 2), `*`(cos(_a)))), RootOf(`+`(dtheta0..." align="center" border="0"><br><img src="images/EjemPenduloFisico_39.gif" width="688" height="57" alt="Typesetting:-mprintslash([omega(t) := `+`(`-`(`*`(`^`(`+`(`*`(2, `*`(`^`(omega0, 2), `*`(cos(RootOf(`+`(`-`(Int(`+`(`-`(`/`(1, `*`(`^`(`+`(`*`(2, `*`(`^`(omega0, 2), `*`(cos(_a)))), RootOf(`+`(dtheta0..." align="center" border="0"><br><img src="images/EjemPenduloFisico_40.gif" width="688" height="64" alt="Typesetting:-mprintslash([omega(t) := `+`(`-`(`*`(`^`(`+`(`*`(2, `*`(`^`(omega0, 2), `*`(cos(RootOf(`+`(`-`(Int(`+`(`-`(`/`(1, `*`(`^`(`+`(`*`(2, `*`(`^`(omega0, 2), `*`(cos(_a)))), RootOf(`+`(dtheta0..." align="center" border="0"></td>
+<td width='5%' align='center'>(2.1.3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Necesariamente debemos proceder por otros métodos, en este caso analizar soluciones mediante g[raficos. La energía total del sistema vendrá dada por</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ecuacpendulofisico:=C=Thetapunt^2/2 -omega0^2*cos(Theta); </td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_41.gif" width="358" height="43" alt="Typesetting:-mprintslash([ecuacpendulofisico := C = `+`(`*`(`/`(1, 2), `*`(`^`(Thetapunt, 2))), `-`(`*`(`^`(omega0, 2), `*`(cos(Theta)))))], [C = `+`(`*`(`/`(1, 2), `*`(`^`(Thetapunt, 2))), `-`(`*`(`^..." align="center" border="0"></td>
+<td width='5%' align='center'>(2.1.4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Procedemos a graficar el diagrama de fase para el péndulo físico libre para distintos valores de C</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>ecuacpendfisico9:=solve(subs([C=3.5,omega0=2],ecuacpendulofisico),Thetapunt):
+<br>ecuacpendfisico8:=solve(subs([C=3.9,omega0=2],ecuacpendulofisico),Thetapunt):
+<br>ecuacpendfisico7:=solve(subs([C=30,omega0=2],ecuacpendulofisico),Thetapunt):
+<br>ecuacpendfisico6:=solve(subs([C=20,omega0=2],ecuacpendulofisico),Thetapunt):
+<br>ecuacpendfisico5:=solve(subs([C=10,omega0=2],ecuacpendulofisico),Thetapunt):
+<br>ecuacpendfisico4:=solve(subs([C=8,omega0=2],ecuacpendulofisico),Thetapunt):
+<br>ecuacpendfisico3:=solve(subs([C=6,omega0=2],ecuacpendulofisico),Thetapunt):
+<br>ecuacpendfisico2:=solve(subs([C=4.1,omega0=2],ecuacpendulofisico),Thetapunt):
+<br>ecuacpendfisico1:=solve(subs([C=4.01,omega0=2],ecuacpendulofisico),Thetapunt):
+<br>plot({ecuacpendfisico1[1],ecuacpendfisico1[2],ecuacpendfisico2[1],ecuacpendfisico2[2],
+<br>ecuacpendfisico3[1],ecuacpendfisico3[2],ecuacpendfisico4[1],ecuacpendfisico4[2],
+<br>ecuacpendfisico5[1],ecuacpendfisico5[2],ecuacpendfisico6[1],ecuacpendfisico6[2],
+<br>ecuacpendfisico7[1],ecuacpendfisico7[2],ecuacpendfisico8[1],ecuacpendfisico8[2],
+<br>ecuacpendfisico9[1],ecuacpendfisico9[2]
+<br>},Theta=-3*Pi..3*Pi,scaling=constrained,labels=[theta,diftheta],title="Péndulo Físico, Diagrama de Fase ");</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_42.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Las curvas cerradas respresentan trayectorias oscilatorias mientras que para las abiertas el ángulo de giro crece contínuamente</font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark7" />
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><strong><em>El Período del Péndulo Físico</em></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Analicemos como varía el período de las soluciones oscilatorias. Para ello recordamos que el período del oscilador armónico simple viene dado por</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>T0:=2*Pi*sqrt(L/g);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_43.gif" width="118" height="44" alt="Typesetting:-mprintslash([T0 := `+`(`*`(2, `*`(Pi, `*`(`^`(`/`(`*`(L), `*`(g)), `/`(1, 2))))))], [`+`(`*`(2, `*`(Pi, `*`(`^`(`/`(`*`(L), `*`(g)), `/`(1, 2))))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(2.2.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Mientra que el período para el Péndulo Físico viene de la Integración de la ecuación de la energía y es</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>4*sqrt(L/g)*Int(1/sqrt(1-sin(Phi/2)^2*sin(chi)^2 ), chi=0..Pi/2)=4*sqrt(L/g)*int(1/sqrt(1-sin(Phi/2)^2*sin(chi)^2 ), chi=0..Pi/2);
+<br>T:=4*sqrt(L/g)*int(1/sqrt(1-sin(Phi/2)^2*sin(chi)^2 ), chi=0..Pi/2):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_44.gif" width="530" height="112" alt="Typesetting:-mprintslash([`+`(`*`(4, `*`(`^`(`/`(`*`(L), `*`(g)), `/`(1, 2)), `*`(Int(`/`(1, `*`(`^`(`+`(1, `-`(`*`(`^`(sin(`+`(`*`(`/`(1, 2), `*`(Phi)))), 2), `*`(`^`(sin(chi), 2))))), `/`(1, 2)))), ..." align="center" border="0"></td>
+<td width='5%' align='center'>(2.2.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>T;T0;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_45.gif" width="214" height="44" alt="`+`(`*`(4, `*`(`^`(`/`(`*`(L), `*`(g)), `/`(1, 2)), `*`(EllipticK(abs(sin(`+`(`*`(`/`(1, 2), `*`(Phi))))))))))" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_46.gif" width="77" height="44" alt="`+`(`*`(2, `*`(Pi, `*`(`^`(`/`(`*`(L), `*`(g)), `/`(1, 2))))))" align="center" border="0"></td>
+<td width='5%' align='center'>(2.2.3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Es interesante que esa integral elíptica completa de primera especie puede ser aproximada por una serie, cuando el denominador del lado izquierdo se expande en términos del ángulo inicial de lanzamiento y se integra término a término.. </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Con este expansión en series o directamente comparando la evaluación de la integral elíptica con el valor del período para el caso del oscilador armónico simple tendremos que podremos comprobar cuan buena es la aproximación que linealiza la función seno en la ecuación diferencial</font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Así, tendremos el siguiente cuadro de aproximación</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>T00:=evalf(subs([L=2,g=9.8],T0)):
+<br>TPi12:=evalf(subs([Phi=Pi/12,L=2,g=9.8],T )):Delta12:=100*(TPi12-T00)/TPi12:
+<br>TPi6:=evalf(subs([Phi=Pi/6,L=2,g=9.8],T )): Delta6:=100*(TPi6-T00)/TPi6:
+<br>TPi4:=evalf(subs([Phi=Pi/4,L=2,g=9.8],T )):Delta4:=100*(TPi4-T00)/TPi4:
+<br>TPi3:=evalf(subs([Phi=Pi/3,L=2,g=9.8],T )):Delta3:=100*(TPi3-T00)/TPi3:
+<br>TPi2:=evalf(subs([Phi=Pi/2,L=2,g=9.8],T )):Delta2:=100*(TPi2-T00)/TPi2:
+<br>T2Pi3:=evalf(subs([Phi=2*Pi/3,L=2,g=9.8],T )):Delta23:=100*(T2Pi3-T00)/T2Pi3:
+<br>array(1..3,1..7,[
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[T00, pi/12, pi/6, pi/4, pi/3,pi/2,2*pi/3],
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["Periodo",TPi12,TPi6,TPi4,TPi3,TPi2,T2Pi3],
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;["Error",Delta12,Delta6,Delta4,Delta3,Delta2,Delta23] ]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_47.gif" width="688" height="99" alt="rtable(1 .. 3, 1 .. 7, [[2.838453790, `+`(`*`(`/`(1, 12), `*`(pi))), `+`(`*`(`/`(1, 6), `*`(pi))), `+`(`*`(`/`(1, 4), `*`(pi))), `+`(`*`(`/`(1, 3), `*`(pi))), `+`(`*`(`/`(1, 2), `*`(pi))), `+`(`*`(`/`..." align="center" border="0"></td>
+<td width='5%' align='center'>(2.2.4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Es claro que la aproximación es buena, ya que hasta ángulos cercanos a <img src="images/EjemPenduloFisico_48.gif" width="43" height="42" alt="`+`(`*`(`/`(1, 4), `*`(Pi)))" align="center" border="0"> &nbsp;el error que se obtiene es del orden del 3%</font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark8" />
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><strong><em>Integración Numérica de la Ecuación de Movimiento</em></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Proderemos a integrar numéricamente la ecuación diferencial del péndulo físico, en este caso para un ángulo inicial de lanzamiento <img src="images/EjemPenduloFisico_49.gif" width="49" height="26" alt="theta[0] = 0" align="center" border="0"> y &nbsp;para distintos valores de la velocidad inicial </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">A partir de las ecuacion</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>restart;with(plots);diff(theta(t),t$2)=-(omega0^2)*sin(theta(t));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_50.gif" width="688" height="14" alt="[animate, animate3d, animatecurve, arrow, changecoords, complexplot, complexplot3d, conformal, conformal3d, contourplot, contourplot3d, coordplot, coordplot3d, densityplot, display, dualaxisplot, fiel..." align="center" border="0"><br><img src="images/EjemPenduloFisico_51.gif" width="688" height="14" alt="[animate, animate3d, animatecurve, arrow, changecoords, complexplot, complexplot3d, conformal, conformal3d, contourplot, contourplot3d, coordplot, coordplot3d, densityplot, display, dualaxisplot, fiel..." align="center" border="0"><br><img src="images/EjemPenduloFisico_52.gif" width="688" height="14" alt="[animate, animate3d, animatecurve, arrow, changecoords, complexplot, complexplot3d, conformal, conformal3d, contourplot, contourplot3d, coordplot, coordplot3d, densityplot, display, dualaxisplot, fiel..." align="center" border="0"><br><img src="images/EjemPenduloFisico_53.gif" width="688" height="14" alt="[animate, animate3d, animatecurve, arrow, changecoords, complexplot, complexplot3d, conformal, conformal3d, contourplot, contourplot3d, coordplot, coordplot3d, densityplot, display, dualaxisplot, fiel..." align="center" border="0"><br><img src="images/EjemPenduloFisico_54.gif" width="688" height="14" alt="[animate, animate3d, animatecurve, arrow, changecoords, complexplot, complexplot3d, conformal, conformal3d, contourplot, contourplot3d, coordplot, coordplot3d, densityplot, display, dualaxisplot, fiel..." align="center" border="0"><br><img src="images/EjemPenduloFisico_55.gif" width="688" height="14" alt="[animate, animate3d, animatecurve, arrow, changecoords, complexplot, complexplot3d, conformal, conformal3d, contourplot, contourplot3d, coordplot, coordplot3d, densityplot, display, dualaxisplot, fiel..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_56.gif" width="190" height="47" alt="Typesetting:-mprintslash([diff(theta(t), `$`(t, 2)) = `+`(`-`(`*`(`^`(omega0, 2), `*`(sin(theta(t))))))], [diff(diff(theta(t), t), t) = `+`(`-`(`*`(`^`(omega0, 2), `*`(sin(theta(t))))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(2.3.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Que es una ecuación diferencial, no lineal de segundo orden, construimos varios sistemas ADIMENSIONALES de ecuaciones diferenciales ordinarias. Es importante recalcar la condición de adimensionalidad que obliga a incorporar las velocidades iniciales de lanzamiento en la constante de adimensionalización. Así los sistemas serán</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>sist1 := subs([omega0=2,phi0=3.5,tfinal=10],diff(theta(t),t)=phi0*tfinal*phi(t)),
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subs([omega0=2,phi0=3.5,tfinal=10],diff(phi(t),t)=-((omega0^2*tfinal)/phi0)*sin(theta(t)));
+<br>sist2 := subs([omega0=2,phi0=3.9,tfinal=10],diff(theta(t),t)=phi0*tfinal*phi(t)),
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subs([omega0=2,phi0=3.9,tfinal=10],diff(phi(t),t)=-((omega0^2*tfinal)/phi0)*sin(theta(t)));
+<br>sist3 := subs([omega0=2,phi0=4,tfinal=10],diff(theta(t),t)=phi0*tfinal*phi(t)),
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subs([omega0=2,phi0=4,tfinal=10],diff(phi(t),t)=-((omega0^2*tfinal)/phi0)*sin(theta(t)));
+<br>sist4 := subs([omega0=2,phi0=4.1,tfinal=10],diff(theta(t),t)=phi0*tfinal*phi(t)),
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subs([omega0=2,phi0=4.1,tfinal=10],diff(phi(t),t)=-((omega0^2*tfinal)/phi0)*sin(theta(t)));
+<br>sist5 := subs([omega0=2,phi0=4.5,tfinal=10],diff(theta(t),t)=phi0*tfinal*phi(t)),
+<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subs([omega0=2,phi0=4.5,tfinal=10],diff(phi(t),t)=-((omega0^2*tfinal)/phi0)*sin(theta(t)));
+<br>funs := {theta(t), phi(t)};
+<br>soluc1:= dsolve({sist1,theta(0)=0,phi(0)=1},funs,type=numeric,abserr=0.00001):
+<br>soluc2:= dsolve({sist2,theta(0)=0,phi(0)=1},funs,type=numeric,abserr=0.00001):
+<br>soluc3:= dsolve({sist3,theta(0)=0,phi(0)=1},funs,type=numeric,abserr=0.00001):
+<br>soluc4:= dsolve({sist4,theta(0)=0,phi(0)=1},funs,type=numeric,abserr=0.00001):
+<br>soluc5:= dsolve({sist5,theta(0)=0,phi(0)=1},funs,type=numeric,abserr=0.00001):
+<br>graf1:=odeplot(soluc1, [t,theta(t)], 0..1, numpoints=50):
+<br>graf2:=odeplot(soluc2, [t,theta(t)], 0..1, numpoints=50):
+<br>graf3:=odeplot(soluc3, [t,theta(t)], 0..1, numpoints=50):
+<br>graf4:=odeplot(soluc4, [t,theta(t)], 0..1, numpoints=50):
+<br>graf5:=odeplot(soluc5, [t,theta(t)], 0..1, numpoints=50):
+<br>graf10:=odeplot(soluc1, [theta(t),phi(t)], 0..1, numpoints=50):
+<br>graf20:=odeplot(soluc2, [theta(t),phi(t)], 0..1, numpoints=50):
+<br>graf30:=odeplot(soluc3, [theta(t),phi(t)], 0..1, numpoints=50):
+<br>graf40:=odeplot(soluc4, [theta(t),phi(t)], 0..1, numpoints=50):
+<br>graf50:=odeplot(soluc5, [theta(t),phi(t)], 0..1, numpoints=50):
+<br></td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_57.gif" width="434" height="39" alt="Typesetting:-mprintslash([sist1 := diff(theta(t), t) = `+`(`*`(35.0, `*`(phi(t)))), diff(phi(t), t) = `+`(`-`(`*`(11.42857143, `*`(sin(theta(t))))))], [diff(theta(t), t) = `+`(`*`(35.0, `*`(phi(t)))),..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_58.gif" width="434" height="39" alt="Typesetting:-mprintslash([sist2 := diff(theta(t), t) = `+`(`*`(39.0, `*`(phi(t)))), diff(phi(t), t) = `+`(`-`(`*`(10.25641026, `*`(sin(theta(t))))))], [diff(theta(t), t) = `+`(`*`(39.0, `*`(phi(t)))),..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_59.gif" width="356" height="39" alt="Typesetting:-mprintslash([sist3 := diff(theta(t), t) = `+`(`*`(40, `*`(phi(t)))), diff(phi(t), t) = `+`(`-`(`*`(10, `*`(sin(theta(t))))))], [diff(theta(t), t) = `+`(`*`(40, `*`(phi(t)))), diff(phi(t),..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_60.gif" width="434" height="39" alt="Typesetting:-mprintslash([sist4 := diff(theta(t), t) = `+`(`*`(41.0, `*`(phi(t)))), diff(phi(t), t) = `+`(`-`(`*`(9.756097561, `*`(sin(theta(t))))))], [diff(theta(t), t) = `+`(`*`(41.0, `*`(phi(t)))),..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_61.gif" width="434" height="39" alt="Typesetting:-mprintslash([sist5 := diff(theta(t), t) = `+`(`*`(45.0, `*`(phi(t)))), diff(phi(t), t) = `+`(`-`(`*`(8.888888889, `*`(sin(theta(t))))))], [diff(theta(t), t) = `+`(`*`(45.0, `*`(phi(t)))),..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_62.gif" width="147" height="21" alt="Typesetting:-mprintslash([funs := {phi(t), theta(t)}], [{phi(t), theta(t)}])" align="center" border="0"></td>
+<td width='5%' align='center'>(2.3.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Las cuales se integran numericamete y proveen las siguientes gráficas</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>display([graf1,graf2,graf3,graf4,graf5],view=[0..1,-2*Pi..2*Pi]);
+<br>display([graf10,graf20,graf30,graf40,graf50],scaling=constrained,view=[-5..5,-2..2]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_63.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EjemPenduloFisico_64.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</dl>
+</dl>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</body>
+</html>
