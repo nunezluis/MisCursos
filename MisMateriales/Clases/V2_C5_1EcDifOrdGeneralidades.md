@@ -15,7 +15,8 @@ Esta clase tiene varios objetivos presentar la motivación, utilidad y origen de
    1. Presentación  [Ecuaciones diferenciales Ordinarias](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_3_1EcDifOrd.pdf)
    2. [Hoja MAPLE de Generalidades Ecuaciones diferenciales ordinarias de primer orden](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/EcDifOrdinarias/EcDifOrdGeneral/EcDifOrdinarias2.html)
    3. Presentación [Ecuaciones diferenciales de orden superior](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_3_2EcDifOrdN.pdf)
-   4. Presentación [Solución numéricas de ecuaciones diferenciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_3_3EcDifNumericas.pdf)
+   4. [Hoja MAPLE de Generalidades Ecuaciones diferenciales ordinarias de primer orden](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/EcDifOrdinarias/EcDifOrdGeneral/EcDifOrdinarias2.html)
+   5. Presentación [Solución numéricas de ecuaciones diferenciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_3_3EcDifNumericas.pdf)
 
 ### Al finalizar estos contenidos
    El estudiantes deberá:
