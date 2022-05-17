@@ -5,11 +5,13 @@ Esta clase tiene varios objetivos presentar la motivación, utilidad y origen de
 
 ### Actividades ANTES DE CLASE
    1. Los conceptos generales de las ecuaciones diferencles ordinarias de primer orden los cubrimos en las secciones 5.1 y 5.2 de [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
-   2. El desarrollo de algunas propiedades de las ecuaciones diferenciales de orden superior se discuten en las secciones 7.1 y 7.2 [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
-   3. Revisar los ejemplos resueltos de ecuaciones diferenciales de primer orden
+   2. Algunos métodos de solución numérica de las ecuaciones diferenciales de primer orden lo pueden consultar en las sección 6.2 de [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)  
+   3. El desarrollo de algunas propiedades de las ecuaciones diferenciales de orden superior se discuten en las secciones 7.1 y 7.2 [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
+
+
 
 ### Actividad DESPUES DE CLASES
-
+ + Reproducir los ejemplos resueltos de ecuaciones diferenciales de primer orden
 
 ### Materiales de apoyo
    1. Presentación  [Ecuaciones diferenciales Ordinarias](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_3_1EcDifOrd.pdf)
