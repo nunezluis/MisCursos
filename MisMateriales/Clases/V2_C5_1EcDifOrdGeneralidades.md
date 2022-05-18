@@ -28,6 +28,6 @@ Esta clase tiene varios objetivos presentar la motivación, utilidad y origen de
    3. Identificar si la solución es implícita o explícita
    4. La familia de las ecuaciones diferenciales
    5. Distinguier entre un problemas de valores iniciales o de frontera
-   6. Ser capaz de asociar un polinomio característico a una ecuación diferencial ordinaria, lineal y homogénea de cualquier orden.
+   6. Ser capaz de asociar un polinomio característico a una ecuación diferencial ordinaria, lineal y **homogénea** de cualquier orden.
    7. Ser capaz de encontrar las soluciones de la ecuación diferencial (ordinaria, lineal y homogénea) de cualquier orden a partir de las raices del polinomo característo. Si las raíses son reales y distintas, raíces reales repetidas y raíces complejas
    8. Ser capaz de encontrar las soluciones de la ecuación diferencial (ordinaria, lineal y **inhomogénea**) de cualquier orden mediante el métodos de coeficientes indeterminados y de variación de parámetros
