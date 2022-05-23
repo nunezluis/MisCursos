@@ -20,6 +20,8 @@
 ### Las clases
 **En cada clase** tendremos dos partes: una de ~30m-40m para presentar los conceptos, seguida por otra de ~60m-50m para la discusión en los ejemplos resueltos. Los conceptos habrán sido previamente indicados en los materiales de estudio.
 
+$  V^\alpha = (\frac{1}{A},0,0,0),$
+
 En cada clase se propondrán ejercicios y asignaciones que deben resolver, consignar y sustentar **cada tercera clase** y **cada sexta clase**, respectivamente.  Tendremos una hora de consulta para dilucidar las dudas que se les presenten tanto en la solución de los ejercicios y las asignaciones propuestos.
 
 
