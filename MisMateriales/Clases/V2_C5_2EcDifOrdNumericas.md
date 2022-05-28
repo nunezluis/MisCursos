@@ -11,8 +11,11 @@ Esta clase tiene por objetivo presentar las estrategias de solución de ecuacion
 
 
 ## Actividad DESPUES DE CLASES
-Integre numericamente la siguiente ecuación diferencial
-<img src="https://render.githubusercontent.com/render/math?math=\frac{{\rm d} y(x)}{ {\rm d}x} +200y(x)^{2} +x +1=0">
+En el esta [hoja MAPLE](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/EcDifOrdinarias/EcDifNumericas/EcDifNumeric1.html) encontrarán una ecuación diferencial y su solución analítica.
+
+La idea es que
+1. Integren numéricamente esa ecuación diferencial utilizando varios métodos disponibles en  la [biblioteca Scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html#scipy.integrate.solve_ivp), suponiendo la condición inicial y(0)=3.
+2. Compare la solución numérica con la solución analítica que se le plantea en ese script MAPLE
 
 
 ## Materiales de apoyo

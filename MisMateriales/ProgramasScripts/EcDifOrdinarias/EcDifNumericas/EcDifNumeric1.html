@@ -1,0 +1,87 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>EcDifNumeric1.html</title>
+<!-- Created by Maple 2018.0, Mac OS X -->
+</head>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>restart;with(CodeGeneration):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="5" face="Times New Roman"><strong>Solución numerica de una ecuación diferencial</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Presentamos una ecuación diferencial de la forma</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Ecuacdif:= diff(y(x),x) +200*y(x)^2 +y(x)+x +1=0;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifNumeric_1.gif" width="358" height="39" alt="Typesetting:-mprintslash([Ecuacdif := `+`(diff(y(x), x), `*`(200, `*`(`^`(y(x), 2))), y(x), x, 1) = 0], [`+`(diff(y(x), x), `*`(200, `*`(`^`(y(x), 2))), y(x), x, 1) = 0])" align="center" border="0"></td>
+<td width='5%' align='center'>(1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Cuya solución analítica es </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>dsolve({Ecuacdif, y(0)=3}, y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/EcDifNumeric_2.gif" width="768" height="68" alt="y(x) = `+`(`-`(`/`(`*`(`+`(`*`(20, `*`(AiryBi(1, `+`(`-`(`*`(`/`(1, 400), `*`(`+`(799, `*`(800, `*`(x))), `*`(`^`(5, `/`(2, 3)))))))))), `-`(`/`(`*`(20, `*`(AiryAi(1, `+`(`-`(`*`(`/`(1, 400), `*`(`+`(..." align="center" border="0"><br><img src="images/EcDifNumeric_3.gif" width="768" height="68" alt="y(x) = `+`(`-`(`/`(`*`(`+`(`*`(20, `*`(AiryBi(1, `+`(`-`(`*`(`/`(1, 400), `*`(`+`(799, `*`(800, `*`(x))), `*`(`^`(5, `/`(2, 3)))))))))), `-`(`/`(`*`(20, `*`(AiryAi(1, `+`(`-`(`*`(`/`(1, 400), `*`(`+`(..." align="center" border="0"><br><img src="images/EcDifNumeric_4.gif" width="768" height="68" alt="y(x) = `+`(`-`(`/`(`*`(`+`(`*`(20, `*`(AiryBi(1, `+`(`-`(`*`(`/`(1, 400), `*`(`+`(799, `*`(800, `*`(x))), `*`(`^`(5, `/`(2, 3)))))))))), `-`(`/`(`*`(20, `*`(AiryAi(1, `+`(`-`(`*`(`/`(1, 400), `*`(`+`(..." align="center" border="0"><br><img src="images/EcDifNumeric_5.gif" width="768" height="68" alt="y(x) = `+`(`-`(`/`(`*`(`+`(`*`(20, `*`(AiryBi(1, `+`(`-`(`*`(`/`(1, 400), `*`(`+`(799, `*`(800, `*`(x))), `*`(`^`(5, `/`(2, 3)))))))))), `-`(`/`(`*`(20, `*`(AiryAi(1, `+`(`-`(`*`(`/`(1, 400), `*`(`+`(..." align="center" border="0"><br><img src="images/EcDifNumeric_6.gif" width="768" height="68" alt="y(x) = `+`(`-`(`/`(`*`(`+`(`*`(20, `*`(AiryBi(1, `+`(`-`(`*`(`/`(1, 400), `*`(`+`(799, `*`(800, `*`(x))), `*`(`^`(5, `/`(2, 3)))))))))), `-`(`/`(`*`(20, `*`(AiryAi(1, `+`(`-`(`*`(`/`(1, 400), `*`(`+`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>yplot:= -((20*AiryBi(1, -(1/400)*(799+800*x)*5^(2/3))-20*AiryAi(1, -(1/400)*(799+800*x)*5^(2/3))*(1201*AiryBi(-799*5^(2/3)*(1/400))+4*AiryBi(1, -799*5^(2/3)*(1/400))*5^(2/3))/(1201*AiryAi(-799*5^(2/3)*(1/400))+4*AiryAi(1, -799*5^(2/3)*(1/400))*5^(2/3))+5^(1/3)*(-(1201*AiryBi(-799*5^(2/3)*(1/400))+4*AiryBi(1, -799*5^(2/3)*(1/400))*5^(2/3))*AiryAi(-(1/400)*(799+800*x)*5^(2/3))/(1201*AiryAi(-799*5^(2/3)*(1/400))+4*AiryAi(1, -799*5^(2/3)*(1/400))*5^(2/3))+AiryBi(-(1/400)*(799+800*x)*5^(2/3))))*5^(2/3)/(-(2000*(1201*AiryBi(-799*5^(2/3)*(1/400))+4*AiryBi(1, -799*5^(2/3)*(1/400))*5^(2/3)))*AiryAi(-(1/400)*(799+800*x)*5^(2/3))/(1201*AiryAi(-799*5^(2/3)*(1/400))+4*AiryAi(1, -799*5^(2/3)*(1/400))*5^(2/3))+2000*AiryBi(-(1/400)*(799+800*x)*5^(2/3)))):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y al graficarla obtenemos</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot(yplot,x=0..0.4);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/EcDifNumeric_7.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La solución analítica la traducimos Python, con la salvedad de las fuciones de Airy (Ai y Bi) que están definidas en una biblioteca de funciones especiales en </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">scipy https://docs.scipy.org/doc/scipy/reference/generated/scipy.special.airy.html </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Python(yplot);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New"><u><a href="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20function%20names%20%7BAiryAi,%20AiryBi%7D%20are%20not%20recognized%20in%20the%20target%20language"></u></font><font color="#0000ff" size="3" face="Courier New"><u>Warning, the function names {AiryAi, AiryBi} are not recognized in the target language</u></font></a></td>
+</tr>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">cg = -(20 * AiryBi(1, -(799 + 800 * x) * 5 ** (0.2e1 / 0.3e1) / 400) - 20 * AiryAi(1, -(799 + 800 * x) * 5 ** (0.2e1 / 0.3e1) / 400) * (1201 * AiryBi(-0.799e3 / 0.400e3 * 5 ** (0.2e1 / 0.3e1)) + 4 * AiryBi(1, -0.799e3 / 0.400e3 * 5 ** (0.2e1 / 0.3e1)) * 5 ** (0.2e1 / 0.3e1)) / (1201 * AiryAi(-0.799e3 / 0.400e3 * 5 ** (0.2e1 / 0.3e1)) + 4 * AiryAi(1, -0.799e3 / 0.400e3 * 5 ** (0.2e1 / 0.3e1)) * 5 ** (0.2e1 / 0.3e1)) + 5 ** (0.1e1 / 0.3e1) * (-(1201 * AiryBi(-0.799e3 / 0.400e3 * 5 ** (0.2e1 / 0.3e1)) + 4 * AiryBi(1, -0.799e3 / 0.400e3 * 5 ** (0.2e1 / 0.3e1)) * 5 ** (0.2e1 / 0.3e1)) / (1201 * AiryAi(-0.799e3 / 0.400e3 * 5 ** (0.2e1 / 0.3e1)) + 4 * AiryAi(1, -0.799e3 / 0.400e3 * 5 ** (0.2e1 / 0.3e1)) * 5 ** (0.2e1 / 0.3e1)) * AiryAi(-(799 + 800 * x) * 5 ** (0.2e1 / 0.3e1) / 400) + AiryBi(-(799 + 800 * x) * 5 ** (0.2e1 / 0.3e1) / 400))) * 5 ** (0.2e1 / 0.3e1) / (-2000 * (1201 * AiryBi(-0.799e3 / 0.400e3 * 5 ** (0.2e1 / 0.3e1)) + 4 * AiryBi(1, -0.799e3 / 0.400e3 * 5 ** (0.2e1 / 0.3e1)) * 5 ** (0.2e1 / 0.3e1)) / (1201 * AiryAi(-0.799e3 / 0.400e3 * 5 ** (0.2e1 / 0.3e1)) + 4 * AiryAi(1, -0.799e3 / 0.400e3 * 5 ** (0.2e1 / 0.3e1)) * 5 ** (0.2e1 / 0.3e1)) * AiryAi(-(799 + 800 * x) * 5 ** (0.2e1 / 0.3e1) / 400) + 2000 * AiryBi(-(799 + 800 * x) * 5 ** (0.2e1 / 0.3e1) / 400))</td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</body>
+</html>
