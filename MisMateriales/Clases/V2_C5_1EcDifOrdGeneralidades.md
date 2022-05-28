@@ -1,12 +1,15 @@
 # Ecuaciones diferenciales Ordinarias: Repaso
 
 ## Objetivos de la clase
-Esta clase tiene varios objetivos presentar la motivación, utilidad y origen del concepto de ecuación diferencial.  Cómo se clasifican según el tipo de función incógnita, orden de sus derivadas. Diferencia entre ecuaciones diferenciales lineales y no lineales. Mostraremos además, los distintos tipos de soluciones: explícitas, implícitas, generales y particulares. Discutiremos el concepto de problema de valores iniciales y problema de valores de frontera (o contorno). Discutiremos también las soluciones a las ecuaciones diferenciales de orden superior, homogéneas e inhomogéneas. Específicamente como encontrar las soluciones particulares mediante el métodos de coeficientes indeterminados y de variación de parámetros
+Esta clase tiene varios objetivos, entre los cuales podemos mencionar:
+  + Presentar la motivación, utilidad y origen del concepto de ecuación diferencial.  
+  + Ilustrar cómo se clasifican según el tipo de función incógnita y el orden de sus derivadas.
+  + Diferenciarlas entre ecuaciones diferenciales lineales y no lineales.
+  Mostraremos además, los distintos tipos de soluciones: explícitas, implícitas, generales y particulares. Discutiremos el concepto de problema de valores iniciales y problema de valores de frontera (o contorno). Discutiremos también las soluciones a las ecuaciones diferenciales de orden superior, homogéneas e inhomogéneas. Específicamente como encontrar las soluciones particulares mediante el métodos de coeficientes indeterminados y de variación de parámetros
 
 ## Actividades ANTES DE CLASE
    1. Los conceptos generales de las ecuaciones diferenciales ordinarias de primer orden los cubrimos en las secciones 5.1 y 5.2 de [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
    2. El desarrollo de algunas propiedades de las ecuaciones diferenciales de orden superior se discuten en las secciones 7.1 y 7.2 [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
-
 
 
 ## Actividad DESPUES DE CLASES
@@ -27,7 +30,7 @@ Esta clase tiene varios objetivos presentar la motivación, utilidad y origen de
         + lineales y no lineales
    3. Identificar si la solución es implícita o explícita
    4. La familia de las ecuaciones diferenciales
-   5. Distinguier entre un problemas de valores iniciales o de frontera
+   5. Distinguir entre un problemas de valores iniciales o de frontera
    6. Ser capaz de asociar un polinomio característico a una ecuación diferencial ordinaria, lineal y **homogénea** de cualquier orden.
-   7. Ser capaz de encontrar las soluciones de la ecuación diferencial (ordinaria, lineal y homogénea) de cualquier orden a partir de las raices del polinomo característo. Si las raíses son reales y distintas, raíces reales repetidas y raíces complejas
+   7. Ser capaz de encontrar las soluciones de la ecuación diferencial (ordinaria, lineal y homogénea) de cualquier orden a partir de las raices del polinomo característico. Si las raíces son reales y distintas, raíces reales repetidas y raíces complejas
    8. Ser capaz de encontrar las soluciones de la ecuación diferencial (ordinaria, lineal y **inhomogénea**) de cualquier orden mediante el métodos de coeficientes indeterminados y de variación de parámetros
