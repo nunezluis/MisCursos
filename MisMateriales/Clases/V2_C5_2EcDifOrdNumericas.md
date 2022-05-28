@@ -11,8 +11,8 @@ Esta clase tiene por objetivo presentar las estrategias de solución de ecuacion
 
 
 ## Actividad DESPUES DE CLASES
-Integre numericamente la siguiente ecuación diferencial 
-<img src="https://render.githubusercontent.com/render/math?math=\frac{{\rm d} y(x)}{{\rm d}x}} +200\, y(x)^{2} +x +1=0">
+Integre numericamente la siguiente ecuación diferencial
+<img src="https://render.githubusercontent.com/render/math?math=\frac{{\rm d} y(x)}{ {\rm d}x} +200y(x)^{2} +x +1=0">
 
 
 ## Materiales de apoyo
