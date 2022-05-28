@@ -17,10 +17,10 @@ La idea es que
 1. Integren numéricamente esa ecuación diferencial utilizando varios métodos disponibles en  la [biblioteca Scipy](https://docs.scipy.org/doc/scipy/reference/generated/scipy.integrate.solve_ivp.html#scipy.integrate.solve_ivp), suponiendo la condición inicial y(0)=3.
 2. Compare la solución numérica con la solución analítica que se le plantea en ese script MAPLE
 
-
 ## Materiales de apoyo
    1. Presentación [Solución numéricas de ecuaciones diferenciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_3_3EcDifNumericas.pdf)
    2. [Hoja MAPLE con la integración y análisis del péndulo físico](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/Pendulo/EjemPenduloFisico1.html)
+   3. [Hoja MAPLE](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/EcDifOrdinarias/EcDifNumericas/EcDifNumeric1.html) con una ecuación diferencial y su solución analítica que deberá integrar numéricamente.
 
 
 ## Al finalizar estos contenidos
