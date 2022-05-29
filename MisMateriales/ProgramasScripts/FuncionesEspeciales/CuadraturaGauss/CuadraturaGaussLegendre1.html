@@ -1,0 +1,303 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>CuadraturaGaussLegendre1.html</title>
+<!-- Created by Maple 2018.0, Mac OS X -->
+</head>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<dl style="margin-left:40px"><a name="MapleAutoBookmark2" />
+<p align="left"><font color="#000000" size="5" face="Times New Roman"><strong>Ejemplos de cuadratura de Gauss Legendre</strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">A continuación se presentan varios ejemplos de aproximación de una integral </font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_1.gif" width="52" height="31" alt="int(f, x)" align="center" border="0"></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">aproximada por cuadraturas de Legendre</font>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark3" />
+<p align="left"><font color="#000000" size="5" face="Times New Roman"><strong>Ejemplos</strong></font>&nbsp;</p>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark4" />
+<p align="left"><font color="#000000" size="5" face="Times New Roman"><strong>Cuadratura</strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>restart;with(numapprox):Digits :=20:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Defines el número de dígitos con los cuales se quiere trabajar y el grado de la aproximación de la cuadratura, </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>N:= 3; </td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_2.gif" width="57" height="18" alt="Typesetting:-mprintslash([N := 3], [3])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.1.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Al definir el grado de aproximación de la cuadratura queda fijo el mayor grado del Polinomio de Legendre</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>PNx:=simplify(LegendreP(N,x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_3.gif" width="147" height="39" alt="Typesetting:-mprintslash([PNx := `+`(`*`(`/`(5, 2), `*`(`^`(x, 3))), `-`(`*`(`/`(3, 2), `*`(x))))], [`+`(`*`(`/`(5, 2), `*`(`^`(x, 3))), `-`(`*`(`/`(3, 2), `*`(x))))])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.1.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Las raíces para ese polinomio serán:</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>x := [fsolve(PNx)];</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_4.gif" width="437" height="18" alt="Typesetting:-mprintslash([x := [-.77459666924148337704, 0., .77459666924148337704]], [[-.77459666924148337704, 0., .77459666924148337704]])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.1.3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y la cuadratura de construirá a partir de un procedimiento &nbsp;se invocará según el caso. </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>Cuadratura:= f -&gt; sum(p['i']*f(x['i']),'i'=1..N);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_5.gif" width="311" height="23" alt="Typesetting:-mprintslash([Cuadratura := proc (f) options operator, arrow; sum(`*`(p['i'], `*`(f(x['i']))), 'i' = 1 .. N) end proc], [proc (f) options operator, arrow; sum(`*`(p['i'], `*`(f(x['i']))), ..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.1.4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">donde los p['i'] son los pesos a determinar y los f(x['i']) es la función a integrar evaluada en los ceros del polinomio de legendre</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>Ecuacs:= []:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>for j from 1 to N do
+<br>Ecuacs:= [op(Ecuacs), 
+<br>Cuadratura(z -&gt; z^(j-1)) = int(z^(j-1),z=-1..1)]:
+<br>end do:
+<br>Ecuacs:</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>SistEc:={op(Ecuacs)}:
+<br>variab:={seq(p[k],k=1..N)};</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_6.gif" width="152" height="23" alt="Typesetting:-mprintslash([variab := {p[1], p[2], p[3]}], [{p[1], p[2], p[3]}])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.1.5)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">finalmente los pesos se obtienen resolviendo el sistema de ecuaciones y son:</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#ff0000" size="3" face="monospace"><strong>pesos:= solve(SistEc,variab);assign(%);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_7.gif" width="648" height="21" alt="Typesetting:-mprintslash([pesos := {p[1] = .55555555555555555555, p[2] = .88888888888888888891, p[3] = .55555555555555555555}], [{p[1] = .55555555555555555555, p[2] = .88888888888888888891, p[3] = .55..." align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.1.6)</td>
+</tr>
+</table></font>&nbsp;</p>
+</dl>
+<dl style="margin-left:40px"><a name="MapleAutoBookmark5" />
+<p align="left"><font color="#000000" size="3" face="Times New Roman"><strong>A partir del número de puntos seleccionado para realizar la cuadratura aproximaremos varias funciones </strong></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/CuadraturaGaussLegendre_8.gif" width="478" height="39" alt="Funcion1 := exp(`+`(`-`(`*`(a, `*`(`+`(`*`(`/`(1, 25), `*`(z)), `-`(1))))))); 1; a := `/`(3, 5); 1; Funcion1; 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_9.gif" width="173" height="38" alt="Typesetting:-mprintslash([Funcion1 := exp(`+`(`-`(`*`(a, `*`(`+`(`*`(`/`(1, 25), `*`(z)), `-`(1)))))))], [exp(`+`(`-`(`*`(a, `*`(`+`(`*`(`/`(1, 25), `*`(z)), `-`(1)))))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_10.gif" width="65" height="39" alt="Typesetting:-mprintslash([a := `/`(3, 5)], [`/`(3, 5)])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_11.gif" width="81" height="38" alt="exp(`+`(`-`(`*`(`/`(3, 125), `*`(z))), `/`(3, 5)))" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.2.1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La integral analítica será </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/CuadraturaGaussLegendre_12.gif" width="308" height="18" alt="IntR := int(Funcion1, z = -1 .. 1); 1; evalf(%); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_13.gif" width="222" height="58" alt="Typesetting:-mprintslash([IntR := `+`(`*`(`/`(125, 3), `*`(exp(`/`(78, 125)))), `-`(`*`(`/`(125, 3), `*`(exp(`/`(72, 125))))))], [`+`(`*`(`/`(125, 3), `*`(exp(`/`(78, 125)))), `-`(`*`(`/`(125, 3), `*`..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_14.gif" width="165" height="18" alt="3.644587457666419229" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.2.2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La integral por cuadraturas con </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/CuadraturaGaussLegendre_15.gif" width="35" height="18" alt="N; 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_16.gif" width="21" height="18" alt="3" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.2.3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">puntos será </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/CuadraturaGaussLegendre_17.gif" width="382" height="18" alt="IntC := Cuadratura(unapply(Funcion1, z)); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_18.gif" width="226" height="18" alt="Typesetting:-mprintslash([IntC := 3.6445874576663971176], [3.6445874576663971176])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.2.4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y el error cometido por esta aproximación será</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/CuadraturaGaussLegendre_19.gif" width="350" height="18" alt="errorCuad := abs(evalf(`+`(IntR, `-`(IntC)))); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_20.gif" width="198" height="20" alt="Typesetting:-mprintslash([errorCuad := 0.221114e-13], [0.221114e-13])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.2.5)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/CuadraturaGaussLegendre_21.gif" width="490" height="39" alt="Funcion2 := exp(`+`(`-`(`*`(a, `*`(`+`(`*`(`/`(1, 25), `*`(`^`(z, 2))), `-`(z))))))); 1; a := `/`(3, 5); 1; Funcion2; 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_22.gif" width="183" height="38" alt="Typesetting:-mprintslash([Funcion2 := exp(`+`(`-`(`*`(`/`(3, 125), `*`(`^`(z, 2)))), `*`(`/`(3, 5), `*`(z))))], [exp(`+`(`-`(`*`(`/`(3, 125), `*`(`^`(z, 2)))), `*`(`/`(3, 5), `*`(z))))])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_23.gif" width="65" height="39" alt="Typesetting:-mprintslash([a := `/`(3, 5)], [`/`(3, 5)])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_24.gif" width="99" height="38" alt="exp(`+`(`-`(`*`(`/`(3, 125), `*`(`^`(z, 2)))), `*`(`/`(3, 5), `*`(z))))" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.2.6)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La integral anaítica será </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/CuadraturaGaussLegendre_25.gif" width="308" height="18" alt="IntR := int(Funcion2, z = -1 .. 1); 1; evalf(%); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_26.gif" width="524" height="69" alt="Typesetting:-mprintslash([IntR := `+`(`*`(`/`(5, 6), `*`(erf(`+`(`*`(`/`(27, 50), `*`(`^`(15, `/`(1, 2)))))), `*`(`^`(Pi, `/`(1, 2)), `*`(exp(`/`(15, 4)), `*`(`^`(15, `/`(1, 2))))))), `-`(`*`(`/`(5, 6..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_27.gif" width="157" height="18" alt="2.10454284239690136" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.2.7)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">La integral por cuadraturas con </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/CuadraturaGaussLegendre_28.gif" width="35" height="18" alt="N; 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_29.gif" width="21" height="18" alt="3" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.2.8)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">puntos será </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/CuadraturaGaussLegendre_30.gif" width="382" height="18" alt="IntC := Cuadratura(unapply(Funcion2, z)); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_31.gif" width="226" height="18" alt="Typesetting:-mprintslash([IntC := 2.1045435389240678856], [2.1045435389240678856])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.2.9)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">y el error cometido por esta aproximación será</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"><img src="images/CuadraturaGaussLegendre_32.gif" width="350" height="18" alt="errorCuad := abs(evalf(`+`(IntR, `-`(IntC)))); 1" align="center" border="0"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/CuadraturaGaussLegendre_33.gif" width="246" height="20" alt="Typesetting:-mprintslash([errorCuad := 0.6965271665256e-6], [0.6965271665256e-6])" align="center" border="0"></td>
+<td width='5%' align='center'>(1.1.2.10)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#ff0000" size="3" face="monospace"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</dl>
+</dl>
+</dl>
+</body>
+</html>
