@@ -107,10 +107,11 @@ En esas distintas formas de narración
 5. Taller evaluado Transformada de Fourier
 
 ### Series y Ecuaciones Diferenciales Ordinarias (4 clases = 2 Semanas. 21sep-30sep)
-1. [Soluciones numéricas al problema de valores iniciales en ecuaciones diferenciales ordinarias](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
-2. [Soluciones por serie de ecuaciones diferenciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
-3. [Funciones de Bessel](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
-4. Taller evaluado ecuaciones diferenciales ordinarias
+1. [Repaso de Ecuaciones diferenciales ordinarias]()  
+2. [Soluciones numéricas al problema de valores iniciales en ecuaciones diferenciales ordinarias](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
+3. [Soluciones por serie de ecuaciones diferenciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
+4. [Funciones de Bessel](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
+5. Taller evaluado ecuaciones diferenciales ordinarias
 
 ### El problema de Sturm Liuoville y los valores de frontera (4 clases = 2 Semanas)
 1. [Problema de Sturm Liuville y los valores de frontera](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
