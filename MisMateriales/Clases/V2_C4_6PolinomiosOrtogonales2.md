@@ -9,10 +9,12 @@ El objetivo de esta clase es presentar de form los polinomios ortogonales de Leg
  + Sus relaciones de recurrencia y funciones generatices
  + Sus raíces y algunas propiedades de simetría
 
+
 ### Actividades *antes* de clase
  1. Presentamos los polinomios de Legendre en los puntos
 
 ### Actividad *después* de clase
+
 
 ### Materiales de apoyo
   1. [Presentación series de funciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_2_1SerieFunciones.pdf)
