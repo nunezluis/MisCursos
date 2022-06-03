@@ -145,6 +145,10 @@ Explore y hacer un espectrograma con estas señales puede ayudar
 
 + Clase 17 Evaluación Asignación 3
 
+
+#### Asignación 4 (Fecha de entrega XXXX)
+Esta asignación tiene por objeto calcular la velocidad (y el desplazamiento) de un extremo de una cuerda de longitud *L*, que reacciona un impulso que se le imprime en el otro extremo. Los látigos son un sistema (una cuerda inextensible) de masa variable, donde la masa por unidad de longitud en un extremo *m_0* es mucho mayor que la masa por unidad de longitud en  el otro extremo: *m_0* >> *m_L.
+
 ### Ecuaciones diferenciales ordinarias
 + [Clase 18 Generalidades de Ecuaciones diferenciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C5_1EcDifOrdGeneralidades.md)
 + [Clase 19 Soluciones numéricas al problema de valores iniciales en ecuaciones diferenciales ordinarias](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C5_2EcDifOrdNumericas.md)
