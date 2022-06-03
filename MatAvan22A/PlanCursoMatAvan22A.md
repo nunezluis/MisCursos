@@ -160,7 +160,7 @@ Esta asignación tiene por objeto calcular la velocidad (y el desplazamiento) de
 ### Ecuaciones en derivadas parciales
 + [Clase 23 Ecuaciones diferenciales parciales: generalidades](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 + [Clase 24 Ecuaciones diferenciales parciales: la ecuación de onda ](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
-+ [Clase 25 Ecuaciones diferenciales parciales: la ecuación de onda ](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
++ [Clase 25 Ecuaciones diferenciales parciales: la ecuación de difusión ](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
 
 <a name="Avanzaevaluacion"></a>
