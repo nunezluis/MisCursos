@@ -17,7 +17,10 @@ Luego presentaremos algunas de las aplicaciones como los son
 
 ### Actividades *antes* de clase
  1. Presentamos las propiedades de los polinomios de Legendre en los puntos 4.2.1 a 4.2.5 de [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf).
- 2. La expansión multipolar la discutimos en el ejemplo 4.2.7 [las mismas notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf).  
+ 2. La expansión multipolar la discutimos en el ejemplo 4.2.7 [las mismas notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf).
+ 3. En la [Hoja MAPLE bases funcionales otra vez](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/BasesFuncionales/BasesFuncionales.html) pueden repasar como surgen los polinomios de Legendre a partir de la ortogonalización de la base de monomios.
+ 4. La utilización de polinomios de Legendre para integrar funciones por cuadratura la discutimos en el punto 4.6.2  [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf).
+ 5. La impresionante eficacia de la cuadratura de Gauss-Legendre la pueden apreciar en [esta hoja de MAPLE](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/FuncionesEspeciales/CuadraturaGauss/CuadraturaGaussLegendre1.html)
 
 ### Actividad *después* de clase
 
