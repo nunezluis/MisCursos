@@ -25,7 +25,8 @@ Luego presentaremos algunas de las aplicaciones como los son
 ### Actividad *después* de clase
 
 ### Materiales de apoyo
-  1. [Presentación series de funciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_2_1SerieFunciones.pdf)
+  1. [Presentación Polinomios de Legendre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_22Legendre.pdf)
+  2. [Presentacion de Aplicaciones de Polinomios de Legendre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_25LegendreApp.pdf)
   2. [Hoja MAPLE bases funcionales otra vez](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/BasesFuncionales/BasesFuncionales.html)
   3.
 
