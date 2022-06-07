@@ -27,8 +27,8 @@ Luego presentaremos algunas de las aplicaciones como los son
 ### Materiales de apoyo
   1. [Presentación Polinomios de Legendre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_22Legendre.pdf)
   2. [Presentacion de Aplicaciones de Polinomios de Legendre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_25LegendreApp.pdf)
-  2. [Hoja MAPLE bases funcionales otra vez](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/BasesFuncionales/BasesFuncionales.html)
-  3.
+  3. [Hoja MAPLE bases funcionales otra vez](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/BasesFuncionales/BasesFuncionales.html)
+  4. [Hoja MAPLE de cuadratura de Gauss Legendre](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/FuncionesEspeciales/CuadraturaGauss/CuadraturaGaussLegendre1.html)
 
 ### Al finalizar estos contenidos
 Al finalizar estos contenidos el estudiantes deberá:
