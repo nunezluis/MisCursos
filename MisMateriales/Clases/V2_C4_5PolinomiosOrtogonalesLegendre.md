@@ -1,4 +1,4 @@
-## Polinomios Ortogonales: Legendre y sus aplicaciones
+## Polinomios Ortogonales: Polinomios de Legendre y alguna de sus aplicaciones
 
 ### Objetivos de la clase
 El objetivo de esta clase es presentar de form los polinomios ortogonales de Legendre y algunas aplicaciones que ilustren la importancia del tema. En las próximas clases completaremos con otros polinomios ortogonales que generan importantes funciones de la Física Matemática, como son los Armónicos esféricos. Completaremos el tema con los polinomios de Hermite y una presentación general para todos los polinomios ortogonales.
@@ -13,21 +13,21 @@ De los polinomos de Legendre presentaremos:
 Luego presentaremos algunas de las aplicaciones como los son
     + Interpolación y ajuste de los datos experimentales
     + El uso de la función generatriz para obtener soluciones analíticas para el potencial generado por un dipolo, luego por un cuadrupolo y finalmente generalizaremos a una expansión multipolar
-    + Cerramos la clase con la utilización de los polinomios de Legendre para integrar numéricamente muy eficazmente. Para ello primero discutimos la lógica de la integración numérica mediante la regla de Simpson, en la cual utilizamos incrementos constantes. Luego mostramos como se puede mejorar mediante la cuadratura de Gauss Legendre
+    + Cerramos la clase con la utilización de los polinomios de Legendre para integrar numéricamente muy eficazmente. Para ello primero discutimos la lógica de la integración numérica mediante la [regla de Simpson](https://pythonnumericalmethods.berkeley.edu/notebooks/chapter21.04-Simpsons-Rule.html), en la cual utilizamos incrementos constantes. Luego mostramos como se puede mejorar mediante la cuadratura de Gauss Legendre
 
 ### Actividades *antes* de clase
  1. Presentamos las propiedades de los polinomios de Legendre en los puntos 4.2.1 a 4.2.5 de [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf).
  2. La expansión multipolar la discutimos en el ejemplo 4.2.7 [las mismas notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf).
  3. En la [Hoja MAPLE bases funcionales otra vez](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/BasesFuncionales/BasesFuncionales.html) pueden repasar como surgen los polinomios de Legendre a partir de la ortogonalización de la base de monomios.
  4. La utilización de polinomios de Legendre para integrar funciones por cuadratura la discutimos en el punto 4.6.2  [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf).
- 5. La impresionante eficacia de la cuadratura de Gauss-Legendre la pueden apreciar en [esta hoja de MAPLE](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/FuncionesEspeciales/CuadraturaGauss/CuadraturaGaussLegendre1.html)
+ 5. La impresionante eficacia de la cuadratura de Gauss-Legendre la pueden apreciar en [esta hoja de MAPLE](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/FuncionesEspeciales/CuadraturaGauss/CuadraturaGaussLegendre1.html). En esta hoja comparamos la precisión de la integral numérica respecto a los resultados de su integración analítica. Este tipo de integraciones numéricas por cuadratura, está implementada en [la mayor parte de los ambientes de cálculo](https://rosettacode.org/wiki/Numerical_integration/Gauss-Legendre_Quadrature). En [numpy la encuentran](https://numpy.org/doc/stable/reference/generated/numpy.polynomial.legendre.leggauss.html).  
 
 ### Actividad *después* de clase
 
 ### Materiales de apoyo
   1. [Presentación series de funciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_2_1SerieFunciones.pdf)
   2. [Hoja MAPLE bases funcionales otra vez](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/BasesFuncionales/BasesFuncionales.html)
-  3. [Hoja MAPLE con propiedades de la función Gamma](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/FuncionGamma/funcionGamma.html)
+  3.
 
 ### Al finalizar estos contenidos
 Al finalizar estos contenidos el estudiantes deberá:
