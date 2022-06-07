@@ -72,7 +72,7 @@ También utilizaremos capítulos de la siguiente  bibliografía de textos clási
 | Temas | Tiempo (semanas) |
 | :------- | :-------: |
 | [Series de Funciones y series de Fourier](#SeriesFunciones) | 3.0 |
-| [Polinomios ortogonales](#PolinomiosOrtogonales) | 1.0 |
+| [Polinomios ortogonales](#PolinomiosOrtogonales) | 1.5 |
 | [Distribuciones y bases continuas](#Distribuciones) | 2.0 |
 | [Ecuaciones diferenciales ordinarias](#DiferencialesOrdinarias) | 4.0 |
 | [Ecuaciones diferenciales parciales](#DiferencialesParciales) | 4.0 |
@@ -106,9 +106,9 @@ Explore y hacer un espectrograma con estas señales puede ayudar.
 
 ### Polinomios ortogonales
 <a name="PoliniomiosOrtogonales"></a>
-+ [Clase 6: Polinomios Ortogonales 1/2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
++ [Clase 6: Polinomios Ortogonales: Legendre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
-+ [Clase 7: Polinomios Ortogonales 2/2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
++ [Clase 7: Polinomios Ortogonales: Hermite y Armónicos esféricos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
 ### Distribuciones y bases contínuas
 <a name="Distribuciones"></a>
