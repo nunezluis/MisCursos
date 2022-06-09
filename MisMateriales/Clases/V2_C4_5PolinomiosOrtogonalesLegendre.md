@@ -33,6 +33,11 @@ Para fijar conceptos de los métodos de integración numérica por cuadratura re
   5. [Hoja de MAPLE funciones de Fresnel](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/FuncionesEspeciales/Fresnel/Fresnel.html)
 
 ### Al finalizar estos contenidos
-Al finalizar estos contenidos el estudiantes deberá:
-
-    1.
+Al finalizar estos contenidos el estudiantes deberá estar en capacidad de:
+    1. Identificar que los polinomios de Legendre son una base ortogonal del espacio de funciones con producto interno.
+    2. Que los polinomios de Legendre son solución de la ecuación diferencial del mismo nombre.
+    3. Que se puede construir una relación de recurrencia y que poseen una función generatriz.
+    4. Que tienen un número de raíces igual a su grado y varias propiedades de simetría
+    5. Que a partir de la función generatriz de los polinomios de Legendre se puede calcular el potencial (eléctrico o gravitacional) y que un potencial genérico se puede expresar como una serie de potencales con distintas funcionalidades en *1/r*. Esto se conoce como el desarrollo multipolar de cualquier función.
+    6. Que los Polinomios de Legendre son la base para algoritmos de integración numérica muy preciso que se conoce como la cuadratura de Gauss-Legendre_Quadrature
+    7. Como calcular el orden de un método de cuadratura y su precisión. 
