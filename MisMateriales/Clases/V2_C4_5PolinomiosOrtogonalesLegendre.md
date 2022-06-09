@@ -23,12 +23,14 @@ Luego presentaremos algunas de las aplicaciones como los son
  5. La impresionante eficacia de la cuadratura de Gauss-Legendre la pueden apreciar en [esta hoja de MAPLE](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/FuncionesEspeciales/CuadraturaGauss/CuadraturaGaussLegendre1.html). En esta hoja comparamos la precisión de la integral numérica respecto a los resultados de su integración analítica. Este tipo de integraciones numéricas por cuadratura, está implementada en [la mayor parte de los ambientes de cálculo](https://rosettacode.org/wiki/Numerical_integration/Gauss-Legendre_Quadrature). En [numpy la encuentran](https://numpy.org/doc/stable/reference/generated/numpy.polynomial.legendre.leggauss.html).  
 
 ### Actividad *después* de clase
+Para fijar conceptos de los métodos de integración numérica por cuadratura recomendamos hacer el ejercicio 1 de la sección 4.6.6 [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf). En la [hoja de MAPLE funciones de Fresnel](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/FuncionesEspeciales/Fresnel/Fresnel.html) codificamos en Python y Matlab la solución exacta de la integral.
 
 ### Materiales de apoyo
   1. [Presentación Polinomios de Legendre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_22Legendre.pdf)
   2. [Presentacion de Aplicaciones de Polinomios de Legendre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_25LegendreApp.pdf)
   3. [Hoja MAPLE bases funcionales otra vez](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/BasesFuncionales/BasesFuncionales.html)
   4. [Hoja MAPLE de cuadratura de Gauss Legendre](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/FuncionesEspeciales/CuadraturaGauss/CuadraturaGaussLegendre1.html)
+  5. [Hoja de MAPLE funciones de Fresnel](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/FuncionesEspeciales/Fresnel/Fresnel.html)
 
 ### Al finalizar estos contenidos
 Al finalizar estos contenidos el estudiantes deberá:

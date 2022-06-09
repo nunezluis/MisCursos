@@ -1,0 +1,96 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Fresnel1.html</title>
+<!-- Created by Maple 2018.0, Mac OS X -->
+</head>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>restart;with(Student[Calculus1]):with(CodeGeneration):</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Definimos la integral que habremos de resolver analíticamente</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>integral:=int(cos(x^2 +4), x);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Fresnel_1.gif" width="532" height="73" alt="Typesetting:-mprintslash([integral := `+`(`*`(`/`(1, 2), `*`(`^`(2, `/`(1, 2)), `*`(`^`(Pi, `/`(1, 2)), `*`(`+`(`*`(cos(4), `*`(FresnelC(`/`(`*`(`^`(2, `/`(1, 2)), `*`(x)), `*`(`^`(Pi, `/`(1, 2)))))))..." align="center" border="0"></td>
+<td width='5%' align='center'>(1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Codificamos esta expresión en Python y en Matlab para facilitar la vida</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Python(integral);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New"><u><a href="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20function%20names%20%7BFresnelC,%20FresnelS%7D%20are%20not%20recognized%20in%20the%20target%20language"></u></font><font color="#0000ff" size="3" face="Courier New"><u>Warning, the function names {FresnelC, FresnelS} are not recognized in the target language</u></font></a></td>
+</tr>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">cg = math.sqrt(2) * math.sqrt(math.pi) * (math.cos(4) * FresnelC(math.sqrt(2) * math.pi ** (-0.1e1 / 0.2e1) * x) - math.sin(4) * FresnelS(math.sqrt(2) * math.pi ** (-0.1e1 / 0.2e1) * x)) / 2</td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Matlab(integral);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New"><u><a href="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20the%20function%20names%20%7BFresnelC,%20FresnelS%7D%20are%20not%20recognized%20in%20the%20target%20language"></u></font><font color="#0000ff" size="3" face="Courier New"><u>Warning, the function names {FresnelC, FresnelS} are not recognized in the target language</u></font></a></td>
+</tr>&nbsp;</p>
+<p align="left"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New">cg0 = sqrt(0.2e1) * sqrt(pi) * (cos(0.4e1) * FresnelC(sqrt(0.2e1) * pi ^ (-0.1e1 / 0.2e1) * x) - sin(0.4e1) * FresnelS(sqrt(0.2e1) * pi ^ (-0.1e1 / 0.2e1) * x)) / 0.2e1;</td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Graficamos la integral</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot(integral, x=0..10, labels=["x","Fresnel"],labeldirections=["horizontal","vertical"]);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/Fresnel_2.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Calculamos las raíces de la función </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>Roots(integral,x=1..10);</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Courier New"><u><a href="http://www.maplesoft.com/support/help/errors/view.aspx?path=Warning,%20some%20roots%20are%20returned%20as%20numeric%20approximations"></u></font><font color="#0000ff" size="3" face="Courier New"><u>Warning, some roots are returned as numeric approximations</u></font></a></td>
+</tr>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Fresnel_3.gif" width="768" height="14" alt="[1.498773378, 2.413995819, 2.870742454, 3.495579578, 3.790779497, 4.314006950, 4.531002799, 4.999796675, 5.167411894, 5.602150334, 5.733983238, 6.145962547, 6.249304536, 6.646018577, 6.724724034, 7.11..." align="center" border="0"><br><img src="images/Fresnel_4.gif" width="768" height="14" alt="[1.498773378, 2.413995819, 2.870742454, 3.495579578, 3.790779497, 4.314006950, 4.531002799, 4.999796675, 5.167411894, 5.602150334, 5.733983238, 6.145962547, 6.249304536, 6.646018577, 6.724724034, 7.11..." align="center" border="0"></td>
+<td width='5%' align='center'>(2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</body>
+</html>
