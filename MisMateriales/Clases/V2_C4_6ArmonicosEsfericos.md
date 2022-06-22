@@ -1,4 +1,4 @@
-## Polinomios Ortogonales: Asociados de Legendre, Armónicos esféricos y polinomios de Hermite
+## Polinomios Asociados de Legendre, Armónicos esféricos y polinomios de Hermite
 
 ### Objetivos de la clase
 El objetivo de esta clase continuar con la presentación de los polinomios ortogonales. En particular presentaremos los polinomos asociados de Legendre, los armónicos esféricos que podemos definir a partir de esta generalización y, finalmente los polinomios de Hermite.
