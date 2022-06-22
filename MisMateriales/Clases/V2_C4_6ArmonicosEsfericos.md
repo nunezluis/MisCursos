@@ -36,7 +36,7 @@ Siguiendo el ejemplo de las funciones de Legendre presentamos los polinomios de 
 
 
 ### Materiales de apoyo
-  1. [Presentación de los Armónicos Esféricos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_23ArmonicosEsfericos.pdf)
+  1. [Presentación de los Armónicos Esféricos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_23ArmonicoEsfericos.pdf)
   2. [Presentación de Polinomios de Hermite](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_24PolHermite.pdf)
 
 ### Al finalizar estos contenidos
@@ -46,4 +46,3 @@ Al finalizar estos contenidos el estudiantes deberá estar en capacidad:
  3. Identificar la construcción de los armónicos esféricos a partir de los polinomios asociados de Legendre, sus relaciones de ortogonalidad y recurrencia
  4. Poder expresar cualquier función de dos variables angulares en la base de los armónicos esféricos.
  5. Asociar la expansión en términos de los armónicos esféricos como una expansión multipolar
-   
