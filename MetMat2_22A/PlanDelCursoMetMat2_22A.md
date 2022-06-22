@@ -108,7 +108,7 @@ Explore y hacer un espectrograma con estas señales puede ayudar.
 <a name="PoliniomiosOrtogonales"></a>
 + [Clase 6: Polinomios Ortogonales: polinomios de Legendre y algunas aplicaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_5PolinomiosOrtogonalesLegendre.md)
 
-+ [Clase 7: Polinomios Ortogonales: Hermite y Armónicos esféricos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
++ [Clase 7: Polinomios Ortogonales: Hermite y Armónicos esféricos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_6ArmonicosEsfericos.md)
 
 ### Distribuciones y bases contínuas
 <a name="Distribuciones"></a>
