@@ -1,7 +1,9 @@
-## Polinomios Ortogonales: Legendre y Hermite
+## Polinomios Ortogonales: Asociados de Legendre, Armónicos esféricos y Hermite
 
 ### Objetivos de la clase
-El objetivo de esta clase es presentar de form los polinomios ortogonales de Legendre y Hermite.
+El objetivo de esta clase continuar con la presentación de los polinomios ortogonales. En particular presentaremos los polinomos asociados de Legendre, los armónicos esféricos que podemos definir a partir de esta generalización y, finalmente los polinomios de Hermite.
+
+Primeramente presentaremos la definición de los polinomios asociados de Legendre:
  + Su definición y dominio
  + Su independencia lineal que los hace base del espacio de funciones contínuas
  + Sus relaciones de ortogonalidad fundamentada en los productos internos que los generan a partir de una base de monomios

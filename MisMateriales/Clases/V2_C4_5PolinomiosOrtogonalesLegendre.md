@@ -10,7 +10,7 @@ De los polinomos de Legendre presentaremos:
   + Las ecuaciones diferenciales de las cuales son soluciones
   + Sus relaciones de recurrencia y funciones generatices
   + Sus raíces y algunas propiedades de simetría
-Luego presentaremos algunas de las aplicaciones como los son
+Luego presentaremos algunas de las aplicaciones como los son:
     + Interpolación y ajuste de los datos experimentales
     + El uso de la función generatriz para obtener soluciones analíticas para el potencial generado por un dipolo, luego por un cuadrupolo y finalmente generalizaremos a una expansión multipolar
     + Cerramos la clase con la utilización de los polinomios de Legendre para integrar numérica y muy eficazmente funciones. Para ello primero discutimos la lógica de la integración numérica de funciones mediante la [regla de Simpson](https://pythonnumericalmethods.berkeley.edu/notebooks/chapter21.04-Simpsons-Rule.html), en la cual utilizamos incrementos constantes. Luego mostramos como se puede mejorar mediante la cuadratura de Gauss Legendre.
