@@ -128,7 +128,7 @@ Explore y hacer un espectrograma con estas señales puede ayudar.
 
 + [Clase 14 Funciones de Bessel ](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
-+ [Clase 15 Soluciones numéricas al problema de valores iniciales en ecuaciones diferenciales ordinarias](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C5_2EcDifOrdNumericas.md)
++ [Clase 15 Soluciones numéricas al problema de valores iniciales en ecuaciones diferenciales ordinarias](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C6_2EcDifOrdNumericas.md)
 
 + [Clase 16 Sistemas dinámicos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
