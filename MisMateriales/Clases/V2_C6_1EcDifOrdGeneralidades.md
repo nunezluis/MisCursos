@@ -10,6 +10,7 @@ Esta clase tiene varios objetivos, entre los cuales podemos mencionar:
 ## Actividades ANTES DE CLASE
    1. Los conceptos generales de las ecuaciones diferenciales ordinarias de primer orden los cubrimos en las secciones 5.1 y 5.2 de [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
    2. El desarrollo de algunas propiedades de las ecuaciones diferenciales de orden superior se discuten en las secciones 7.1 y 7.2 [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
+   3. Pueden disfrutar este video de Sabine Hossenfelder [*What are Differential Equations and how do they work?*](https://www.youtube.com/watch?v=Em339AlejIs&t=325s)
 
 
 ## Actividad DESPUES DE CLASES

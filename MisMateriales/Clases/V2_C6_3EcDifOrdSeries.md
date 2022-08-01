@@ -1,15 +1,11 @@
-## Bases contínuas y transformadas de Fourier
+## Ecuaciones diferenciales ordinarios y series de potencia
 
 ### Objetivos de la clase
 El objetivo de esta clase es presentar
 
 
 ### Actividades *antes* de clase
- 1. Los polinomios asociados de Legendre y los armónicos esféricos los presentamos en los puntos 4.3.1 a 4.3.8 de [las notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf).
- 2. Algunos videos que pueden ser interesantes
-        + Puntos singulares y puntos regulares de [MateFácil](https://www.youtube.com/watch?v=P-ZP7cmOelc)
-        + Ecuaciones diferenciales y Series de potencias de [MateFácil](https://www.youtube.com/watch?v=2tBU6GGTQs0&list=PL9SnRnlzoyX3xGNtApqQuSHppRaGy4ACc)
-        + Ecuaciones diferenciales y el Método de Frobenious [MateFácil](https://www.youtube.com/watch?v=2tBU6GGTQs0&list=PL9SnRnlzoyX3xGNtApqQuSHppRaGy4ACc) 
+ 1. Presentamos los polinomios de Legendre en los puntos
 
 ### Actividad *después* de clase
 

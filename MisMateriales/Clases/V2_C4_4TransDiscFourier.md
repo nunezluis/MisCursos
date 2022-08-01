@@ -10,13 +10,14 @@ Presentamos el desarrollo de las transformadas de Fourier con detalle. Se recomi
 
 2. Se recomienda la lectura de las sección 12.5 del capítulo 12, Análisis de Fourier: señales y filtros de [R. H. Landau, M. J. Páez C.C. Bordeianu, *Computational Physics: Problem solving with Python*](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ReferenciaArticulos/LandauPaez.pdf)   
 
+3. Revisar el video de [*The Fast Fourier Transform (FFT): Most Ingenious Algorithm Ever?*](https://www.youtube.com/watch?v=h7apO7q16V0&t=137s)
 
-3. Revisar los videos del *National Musical Center* de Canadá para aclarar el significado y la utilidad del espectrograma
+4. Revisar los videos del *National Musical Center* de Canadá para aclarar el significado y la utilidad del espectrograma
     + https://www.youtube.com/watch?v=_FatxGN3vAM
     + https://www.youtube.com/watch?v=P9Kozlt0tTg
     + https://www.youtube.com/watch?v=Z9QFeZPoLak
 
-4. Seguir el cálculo de los [espectrogramas para varios audios](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/Espectrogramas/FourierSenales.html). Los audios individuales los puede encontrar en [esta carpeta](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/ProgramasScripts/Espectrogramas/WAVFiles).
+5. Seguir el cálculo de los [espectrogramas para varios audios](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/Espectrogramas/FourierSenales.html). Los audios individuales los puede encontrar en [esta carpeta](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/ProgramasScripts/Espectrogramas/WAVFiles).
 
 ## Materiales de apoyo
 1. [Presentación Transformadas Discreta de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_2_4FourierDiscretas.pdf)

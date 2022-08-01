@@ -12,6 +12,10 @@ Presentamos el desarrollo de las transformadas de Fourier con detalle. Se recomi
 
 3. Seguir el desarrollo del [cálculo de la transformada de Fourier para variadas funciones](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/TransFourier/FourierTransf.html). Es importante comprobar la interrelación entre la transformada de Fourier y las serie de Fourier complejas. Un complemento para esa relación también la puede consultar en [este enlace](https://dspillustrations.com/pages/posts/misc/the-complex-fourier-series-and-its-relation-to-the-fourier-transform.html)
 
+4. Pueden disfrutar estos videos 3Blue1Brown 
+      + [*Visual Introduction to Fourier Transform*](https://www.youtube.com/watch?v=spUNpyF58BY&t=6s)
+      + [*The more general uncertainty principle, regarding Fourier transforms*](https://www.youtube.com/watch?v=MBnnXbOM5S4)
+
 
 ## Materiales de apoyo
 1. [Presentación Transformadas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_2_3FourierTransf.pdf)
