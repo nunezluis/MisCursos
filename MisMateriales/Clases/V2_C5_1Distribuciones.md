@@ -11,17 +11,18 @@ El objetivo de esta clase es presentar el concepto de distribución como la gene
 
 
 ### Actividad *después* de clase
-1. Resolver los ejercicios 1b, 2bII, 3a, 3f, 3i  4 de la sección 3.5.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
-2.
-3. Opcional pueden revisar algunos videos avanzados sobre teorías de distribuciones de *The Bright side of Mathematics*
+1. Resolver los ejercicios 1b, 2bII, 3a, 3f, 3i  y 6 de la sección 3.5.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
+2. Opcional pueden revisar algunos videos avanzados sobre teorías de distribuciones de *The Bright side of Mathematics*
 + [*Distributions Part 1: Motivation and delta function*](https://www.youtube.com/watch?v=500gENxWiSU&list=RDLVgwVEEUg8PBY&index=2)
 + [*Distributions Part 2: Test functions*](https://www.youtube.com/watch?v=ECslmuGlu-U)
 
 ### Materiales de apoyo
-  1. [Presentación series de funciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_2_1SerieFunciones.pdf)
-  2. [Hoja MAPLE bases funcionales otra vez](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/BasesFuncionales/BasesFuncionales.html)
-  3. [Hoja MAPLE con propiedades de la función Gamma](https://htmlpreview.github.io/?https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ProgramasScripts/FuncionGamma/funcionGamma.html)
+  + [Presentación series de funciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/3_51Distribuciones.pdf)
 
 ### Al finalizar estos contenidos
-Al finalizar estos contenidos el estudiantes deberá:
-  1.
+Al finalizar estos contenidos el estudiantes deberá estar en capacidad de:
+  1. diferenciar funciones de Distribuciones, indicando e qué sentido una distribución generaliza a una función
+  2. utilizar una sucesión (de distintos *Kernel*) para construir Distribuciones
+  3. evaluar integrales que las contengan deltas de Dirac a partir de sus propiedades distribucionales
+  4. construir la expresion para la densidad de carta o masa a de un arreglo de cargas o masas puntuales. Para distintas geometrías: Cartesianas, cilíndricas y esféricas
+  5. calcular el potencial y el campo electrostático para distintas geometrías de arreglos de cargas puntuales
