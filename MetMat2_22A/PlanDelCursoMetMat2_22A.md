@@ -112,7 +112,7 @@ Explore y hacer un espectrograma con estas señales puede ayudar.
 
 ### Distribuciones y bases contínuas
 <a name="Distribuciones"></a>
-+ [Clase 8: Distribuciones 1/2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
++ [Clase 8: Distribuciones 1/2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C5_1Distribuciones.md)
 
 + [Clase 9: Distribuciones 1/2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
