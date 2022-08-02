@@ -17,7 +17,7 @@ El objetivo de esta clase es presentar el concepto de distribución como la gene
 + [*Distributions Part 2: Test functions*](https://www.youtube.com/watch?v=ECslmuGlu-U)
 
 ### Materiales de apoyo
-  + [Presentación series de funciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/3_51Distribuciones.pdf)
+  + [Presentación de Distribuciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/3_51Distribuciones.pdf)
 
 ### Al finalizar estos contenidos
 Al finalizar estos contenidos el estudiantes deberá estar en capacidad de:
