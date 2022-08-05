@@ -1,0 +1,250 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Bessel1.html</title>
+<!-- Created by Maple 2018.0, Mac OS X -->
+</head>
+<a name="MapleAutoBookmark1" />
+
+<body bgcolor="FFFFFF">
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>restart;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">En general la ecuación de Bessel se escribe</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuacBessel := diff(y(x),x,x) +diff(y(x),x)/x + (1 - nu^2/x^2)*y(x) = 0;</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_1.gif" width="416" height="64" alt="Typesetting:-mprintslash([EcuacBessel := `+`(diff(y(x), `$`(x, 2)), `/`(`*`(diff(y(x), x)), `*`(x)), `*`(`+`(1, `-`(`/`(`*`(`^`(nu, 2)), `*`(`^`(x, 2))))), `*`(y(x)))) = 0], [`+`(diff(diff(y(x), x), x..." align="center" border="0"></td>
+<td width='5%' align='center'>(1)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>dsolve(EcuacBessel,y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_2.gif" width="315" height="21" alt="y(x) = `+`(`*`(_C1, `*`(BesselJ(nu, x))), `*`(_C2, `*`(BesselY(nu, x))))" align="center" border="0"></td>
+<td width='5%' align='center'>(2)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Caso 1, ν ≠ semi-entero y entero</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuacBessel34 := subs(nu = 3/4, EcuacBessel); dsolve(EcuacBessel34, y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_3.gif" width="450" height="64" alt="Typesetting:-mprintslash([EcuacBessel34 := `+`(diff(y(x), `$`(x, 2)), `/`(`*`(diff(y(x), x)), `*`(x)), `*`(`+`(1, `-`(`/`(`*`(`/`(9, 16)), `*`(`^`(x, 2))))), `*`(y(x)))) = 0], [`+`(diff(diff(y(x), x),..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_4.gif" width="341" height="39" alt="y(x) = `+`(`*`(_C1, `*`(BesselJ(`/`(3, 4), x))), `*`(_C2, `*`(BesselY(`/`(3, 4), x))))" align="center" border="0"></td>
+<td width='5%' align='center'>(3)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Caso 2, ν = 0 </font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuacBessel0 := subs(nu = 0, EcuacBessel); dsolve(EcuacBessel0, y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_5.gif" width="348" height="64" alt="Typesetting:-mprintslash([EcuacBessel0 := `+`(diff(y(x), `$`(x, 2)), `/`(`*`(diff(y(x), x)), `*`(x)), y(x)) = 0], [`+`(diff(diff(y(x), x), x), `/`(`*`(diff(y(x), x)), `*`(x)), y(x)) = 0])" align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_6.gif" width="309" height="18" alt="y(x) = `+`(`*`(_C1, `*`(BesselJ(0, x))), `*`(_C2, `*`(BesselY(0, x))))" align="center" border="0"></td>
+<td width='5%' align='center'>(4)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Caso 3, ν = &nbsp;entero</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuacBessel1 := subs(nu = 1, EcuacBessel); dsolve(EcuacBessel1, y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_7.gif" width="433" height="64" alt="Typesetting:-mprintslash([EcuacBessel1 := `+`(diff(y(x), `$`(x, 2)), `/`(`*`(diff(y(x), x)), `*`(x)), `*`(`+`(`-`(`/`(1, `*`(`^`(x, 2)))), 1), `*`(y(x)))) = 0], [`+`(diff(diff(y(x), x), x), `/`(`*`(di..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_8.gif" width="309" height="18" alt="y(x) = `+`(`*`(_C1, `*`(BesselJ(1, x))), `*`(_C2, `*`(BesselY(1, x))))" align="center" border="0"></td>
+<td width='5%' align='center'>(5)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuacBessel2 := subs(nu = 2, EcuacBessel); dsolve(EcuacBessel2, y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_9.gif" width="422" height="64" alt="Typesetting:-mprintslash([EcuacBessel2 := `+`(diff(y(x), `$`(x, 2)), `/`(`*`(diff(y(x), x)), `*`(x)), `*`(`+`(1, `-`(`/`(`*`(4), `*`(`^`(x, 2))))), `*`(y(x)))) = 0], [`+`(diff(diff(y(x), x), x), `/`(`..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_10.gif" width="309" height="18" alt="y(x) = `+`(`*`(_C1, `*`(BesselJ(2, x))), `*`(_C2, `*`(BesselY(2, x))))" align="center" border="0"></td>
+<td width='5%' align='center'>(6)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuacBessel12 := subs(nu = 1/2, EcuacBessel); dsolve(EcuacBessel12, y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_11.gif" width="442" height="64" alt="Typesetting:-mprintslash([EcuacBessel12 := `+`(diff(y(x), `$`(x, 2)), `/`(`*`(diff(y(x), x)), `*`(x)), `*`(`+`(1, `-`(`/`(`*`(`/`(1, 4)), `*`(`^`(x, 2))))), `*`(y(x)))) = 0], [`+`(diff(diff(y(x), x), ..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_12.gif" width="239" height="44" alt="y(x) = `+`(`/`(`*`(_C1, `*`(sin(x))), `*`(`^`(x, `/`(1, 2)))), `/`(`*`(_C2, `*`(cos(x))), `*`(`^`(x, `/`(1, 2)))))" align="center" border="0"></td>
+<td width='5%' align='center'>(7)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Graficando Bessel Primera especie</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot([BesselJ(3/4, x), BesselJ(0, x), BesselJ(2, x)], x=0..20, legend = ["BesselJ_3/4", "BesselJ_0", "BesselJ_2"], title = "Bessel Primera especie", titlefont=["ROMAN", 20] );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/Bessel_13.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Graficando Bessel Segunda especie</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot([BesselY(3/4, x), BesselY(0, x), BesselY(2, x)], x=0..20, legend = ["BesselY_3/4", "BesselY_0", "BesselY_2"], title = "Bessel Segunda especie", titlefont=["ROMAN", 20] );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/Bessel_14.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Comparando Primera y segunda especie para ν = 3/4</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot([BesselJ(3/4, x), BesselY(3/4, x)], x=0..20, legend = ["BesselJ_3/4", "BesselY_34"], title = "Bessel Primera y segunda especies, nu = 3/4", titlefont=["ROMAN", 20] );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/Bessel_15.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot([BesselJ(0, x), BesselY(0, x)], x=0..20, legend = ["BesselJ_0", "BesselY_0"], title = "Bessel Primera y segunda especies, nu = 0", titlefont=["ROMAN", 20] );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/Bessel_16.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>plot([BesselJ(2, x), BesselY(2, x)], x=0..20, legend = ["BesselJ_2", "BesselY_2"], title = "Bessel Primera y segunda especies, nu = 2", titlefont=["ROMAN", 20] );</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#000000" size="3" face="Times New Roman"><img src="images/Bessel_17.gif" width="400" height="400" alt="Plot_2d" align="center" border="0"></td>
+<td width='5%' align='center'></td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><font color="#000000" size="3" face="Times New Roman">Es interesante y especial el caso de las ecuaciones de Bessel semientera, esto es con &nbsp;ν = (2n-1)/2</font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuacBessel12 := subs(nu = 1/2, EcuacBessel); dsolve(EcuacBessel12, y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_18.gif" width="442" height="64" alt="Typesetting:-mprintslash([EcuacBessel12 := `+`(diff(y(x), `$`(x, 2)), `/`(`*`(diff(y(x), x)), `*`(x)), `*`(`+`(1, `-`(`/`(`*`(`/`(1, 4)), `*`(`^`(x, 2))))), `*`(y(x)))) = 0], [`+`(diff(diff(y(x), x), ..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_19.gif" width="239" height="44" alt="y(x) = `+`(`/`(`*`(_C1, `*`(sin(x))), `*`(`^`(x, `/`(1, 2)))), `/`(`*`(_C2, `*`(cos(x))), `*`(`^`(x, `/`(1, 2)))))" align="center" border="0"></td>
+<td width='5%' align='center'>(8)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuacBessel32 := subs(nu = 3/2, EcuacBessel); dsolve(EcuacBessel32, y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_20.gif" width="442" height="64" alt="Typesetting:-mprintslash([EcuacBessel32 := `+`(diff(y(x), `$`(x, 2)), `/`(`*`(diff(y(x), x)), `*`(x)), `*`(`+`(1, `-`(`/`(`*`(`/`(9, 4)), `*`(`^`(x, 2))))), `*`(y(x)))) = 0], [`+`(diff(diff(y(x), x), ..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_21.gif" width="308" height="47" alt="y(x) = `+`(`/`(`*`(_C1, `*`(exp(`*`(I, `*`(x))), `*`(`+`(x, I)))), `*`(`^`(x, `/`(3, 2)))), `/`(`*`(_C2, `*`(exp(`+`(`-`(`*`(`+`(I), `*`(x))))), `*`(`+`(`-`(x), I)))), `*`(`^`(x, `/`(3, 2)))))" align="center" border="0"></td>
+<td width='5%' align='center'>(9)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuacBessel52 := subs(nu = 5/2, EcuacBessel); dsolve(EcuacBessel52, y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_22.gif" width="442" height="64" alt="Typesetting:-mprintslash([EcuacBessel52 := `+`(diff(y(x), `$`(x, 2)), `/`(`*`(diff(y(x), x)), `*`(x)), `*`(`+`(1, `-`(`/`(`*`(`/`(25, 4)), `*`(`^`(x, 2))))), `*`(y(x)))) = 0], [`+`(diff(diff(y(x), x),..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_23.gif" width="422" height="47" alt="y(x) = `+`(`/`(`*`(_C1, `*`(exp(`*`(I, `*`(x))), `*`(`+`(`-`(3), `*`(`*`(3, `*`(I)), `*`(x)), `*`(`^`(x, 2)))))), `*`(`^`(x, `/`(5, 2)))), `/`(`*`(_C2, `*`(exp(`+`(`-`(`*`(`+`(I), `*`(x))))), `*`(`+`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(10)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"><font color="#78000e" size="3" face="Courier New"><strong>EcuacBessel72 := subs(nu = 7/2, EcuacBessel); dsolve(EcuacBessel72, y(x));</td>
+</tr>
+</table></strong></font>&nbsp;</p>
+<p align="center"><table width='100%'>
+<tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_24.gif" width="442" height="64" alt="Typesetting:-mprintslash([EcuacBessel72 := `+`(diff(y(x), `$`(x, 2)), `/`(`*`(diff(y(x), x)), `*`(x)), `*`(`+`(1, `-`(`/`(`*`(`/`(49, 4)), `*`(`^`(x, 2))))), `*`(y(x)))) = 0], [`+`(diff(diff(y(x), x),..." align="center" border="0"></td>
+</tr></font>&nbsp;</p>
+<p align="center"><tr>
+<td valign="top" align="center"><font color="#0000ff" size="3" face="Times New Roman"><img src="images/Bessel_25.gif" width="545" height="47" alt="y(x) = `+`(`/`(`*`(_C1, `*`(exp(`*`(I, `*`(x))), `*`(`+`(`*`(`*`(6, `*`(I)), `*`(`^`(x, 2))), `*`(`^`(x, 3)), `-`(`*`(15, `*`(I))), `-`(`*`(15, `*`(x))))))), `*`(`^`(x, `/`(7, 2)))), `/`(`*`(_C2, `*`(..." align="center" border="0"></td>
+<td width='5%' align='center'>(11)</td>
+</tr>
+</table></font>&nbsp;</p>
+<p align="left"><table>
+<tr>
+<td valign="top" align="center"><font color="#78000e" size="3" face="Courier New"><strong>&gt; </strong></font></td>
+<td valign="top"></td>
+</tr>
+</table>&nbsp;</p>
+</body>
+</html>
