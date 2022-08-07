@@ -22,7 +22,7 @@ El objetivo de esta clase es presentar el concepto de distribución como la gene
 ### Al finalizar estos contenidos
 Al finalizar estos contenidos el estudiantes deberá estar en capacidad de:
   1. diferenciar funciones de Distribuciones, indicando e qué sentido una distribución generaliza a una función
-  2. utilizar una sucesión (de distintos *Kernel*) para construir Distribuciones
+  2. utilizar una sucesión (con distintos *Kernel*) para construir Distribuciones
   3. evaluar integrales que las contengan deltas de Dirac a partir de sus propiedades distribucionales
   4. construir la expresion para la densidad de carta o masa a de un arreglo de cargas o masas puntuales. Para distintas geometrías: Cartesianas, cilíndricas y esféricas
   5. calcular el potencial y el campo electrostático para distintas geometrías de arreglos de cargas puntuales
