@@ -114,11 +114,10 @@ Explore y hacer un espectrograma con estas señales puede ayudar.
 <a name="Distribuciones"></a>
 + [Clase 8: Distribuciones 1/2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C5_1Distribuciones.md)
 
-+ [Clase 9: Distribuciones 1/2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
++ [Clase 9: Bases continuas y transformadas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
 + [ Clase 10 Taller y ajuste 1]
 
-+ [ Clase 12 Evaluación y ajuste 2]
 
 ### Asignación 3  (Entrega hasta clase 17 y discusión clase 18/19)
 
