@@ -9,7 +9,7 @@ El objetivo de esta clase es presentar
  2. Algunos videos que pueden ser interesantes
         + Puntos singulares y puntos regulares de [MateFácil](https://www.youtube.com/watch?v=P-ZP7cmOelc)
         + Ecuaciones diferenciales y Series de potencias de [MateFácil](https://www.youtube.com/watch?v=2tBU6GGTQs0&list=PL9SnRnlzoyX3xGNtApqQuSHppRaGy4ACc)
-        + Ecuaciones diferenciales y el Método de Frobenious [MateFácil](https://www.youtube.com/watch?v=2tBU6GGTQs0&list=PL9SnRnlzoyX3xGNtApqQuSHppRaGy4ACc) 
+        + Ecuaciones diferenciales y el Método de Frobenious [MateFácil](https://www.youtube.com/watch?v=yFJv44NpRXU)
 
 ### Actividad *después* de clase
 

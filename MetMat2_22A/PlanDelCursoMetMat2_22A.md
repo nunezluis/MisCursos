@@ -123,7 +123,7 @@ Explore y hacer un espectrograma con estas señales puede ayudar.
 
 ### Ecuaciones diferenciales ordinarias
 <a name="DiferencialesOrdinarias"></a>
-+ [Clase 13 Ecuaciones diferenciales y Series](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
++ [Clase 13 Ecuaciones diferenciales y Series](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C6_3EcDifOrdSeries.md)
 
 + [Clase 14 Funciones de Bessel ](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
