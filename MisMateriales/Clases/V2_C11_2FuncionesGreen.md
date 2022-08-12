@@ -15,7 +15,7 @@ En esta clase estudiaremos estrategias para resolver la ecuación diferencial li
 
 
 ### Materiales de apoyo
-  1. [Presentación del Método de las funciones de Green](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_3_8FuncionesGreen)
+  1. [Presentación del Método de las funciones de Green](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/M2_3_8FuncionesGreen.pdf)
   2. Video [Using Green's Functions to Solve Nonhomogeneous ODEs](https://www.youtube.com/watch?v=Jws70qd-XRw&list=PLdgVBOaXkb9ATVsK2Q84ghjBgIk5faHNc&index=13 )
 
 
