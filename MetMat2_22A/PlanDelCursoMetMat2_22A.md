@@ -135,7 +135,7 @@ Explore y hacer un espectrograma con estas señales puede ayudar.
 
 + [Clase 18 Solución de Ecuaciones diferenciales ordinarias y valores de frontera](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
-+ [Clase 19 Funciones de Green](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
++ [Clase 19 Funciones de Green](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C11_2FuncionesGreen.md)
 
 + [ Clase 20 Taller y ajuste 1]
 
