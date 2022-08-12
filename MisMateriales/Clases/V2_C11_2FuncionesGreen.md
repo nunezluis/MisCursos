@@ -2,7 +2,7 @@
 
 
 ### Objetivos de la clase
-El objetivo de esta clase es presentar
+En esta clase estudiaremos estrategias para resolver la ecuación diferencial lineal inhomogénea **L** y(x) = f(x). La técnica que utilizaremos será la función de Green, que es un *Kernel* integral que representa el operador inverso **L**^{-1}. 
 
 
 ### Actividades *antes* de clase
