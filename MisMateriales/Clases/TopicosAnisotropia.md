@@ -10,8 +10,8 @@ El objetivo de esta clase es presentar las estrategias para modelas esferas de f
 
 ### La presentación
 
-La presentación la pueden encontrar aquí
-<iframe src="https://mailuis-my.sharepoint.com/personal/lnunez_uis_edu_co/_layouts/15/Doc.aspx?sourcedoc={123b6d8c-e548-4c01-ad1a-5be7445eaa0d}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="476px" height="288px" frameborder="0">Esto es un documento de <a target="_blank" href="https://office.com">Microsoft Office</a> incrustado con tecnología de <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
+La presentación la pueden encontrar [aquí](https://docs.google.com/presentation/d/14bca1Qr5rD3iAVJXTDl0xyh43hWC7bX_/edit?usp=sharing&ouid=111698804100718023619&rtpof=true&sd=true)
+
 
 ### Actividad *después* de clase
 Para quienes les interese el tema les propongo la siguiente [asignación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerEcDifOrd1/AutogravitantesNumericasV4.pdf)
