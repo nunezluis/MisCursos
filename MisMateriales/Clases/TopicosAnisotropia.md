@@ -10,6 +10,7 @@ El objetivo de esta clase es presentar las estrategias para modelas esferas de f
 
 ### La presentación
 
+La presentación la pueden encontrar [aquí](https://mailuis-my.sharepoint.com/personal/lnunez_uis_edu_co/_layouts/15/Doc.aspx?sourcedoc=) 
 <iframe src="https://mailuis-my.sharepoint.com/personal/lnunez_uis_edu_co/_layouts/15/Doc.aspx?sourcedoc={123b6d8c-e548-4c01-ad1a-5be7445eaa0d}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="476px" height="288px" frameborder="0">Esto es un documento de <a target="_blank" href="https://office.com">Microsoft Office</a> incrustado con tecnología de <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>
 
 ### Actividad *después* de clase
