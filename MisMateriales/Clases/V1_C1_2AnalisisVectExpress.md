@@ -17,6 +17,6 @@
 ### Al finalizar estos contenidos** El estudiantes deberá
    1. Saber diferenciar vectores variables (componentes, vectores base o ambos) y poder plantear las operaciones de derivación.
    2. Identificar campos vectoriales y sus derivadas asociadas
-   3. Identificar el operador Nabla y asociarlos como un operador vectorial
+   3. Identificar el operador Nabla y asociarlo como un operador vectorial
    4. Ser capaz de realizar integrales de campos vectoriales a lo largo de trayectorias
    5. Haber refrescado el álgebra elemental de números complejos
