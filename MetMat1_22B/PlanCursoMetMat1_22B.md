@@ -82,9 +82,9 @@ La primera asignación tiene que ver con la utilización de los vectores en cris
 <a name="VectoresSiempre"></a>
 + [Clase 1: Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md)
 
-+ [Clase 2: Análisis vectorial express](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_2AnalisisVectExpress.md)
++ [Clase 2: Vectores componentes y notación de Einstein](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md)
 
-+ [Clase 3: Vectores y números complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md).
++ [Clase 3: Análisis vectorial express y número complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_2AnalisisVectExpress.md).
 
 ### Espacios Vectoriales lineales. (2.5 Semanas)
 <a name="EspaciosVectoriales"></a>
