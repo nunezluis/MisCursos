@@ -14,7 +14,7 @@
    1. Video y [presentación derivación e integración de vectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/1_5DerIntVectores.pdf)
    2. Video y [presentación vectores y números complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/1_6VectoresComplejos.pdf)
 
-### Al finalizar estos contenidos** El estudiantes deberá
+### Al finalizar estos contenidos El estudiantes deberá
    1. Saber diferenciar vectores variables (componentes, vectores base o ambos) y poder plantear las operaciones de derivación.
    2. Identificar campos vectoriales y sus derivadas asociadas
    3. Identificar el operador Nabla y asociarlo como un operador vectorial
