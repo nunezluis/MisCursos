@@ -2,7 +2,7 @@
 ## Necesidades de espacio 4 grupos
 + Grupo 1
 +
-## Grupo 1
+## Grupo 1 
  + Angela Barajas
  + Brayan Barajas
 
