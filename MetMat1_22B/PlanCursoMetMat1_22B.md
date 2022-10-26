@@ -95,9 +95,9 @@ Además tendremos un **taller evaluado de los vectores de siempre** (clases 1, 2
     3. De la sección 1.5.7 resuelva los ejercicios 2a, 2d y 2f y con MAXIMA el 13;
     4. De la sección 1.6.6 resuelva los ejercicios 2, 5 y 6.
 
-+ [Clase 5: Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md). También tendremos la sustentación de Asignación 1.
++ [Clase 5: Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md).
 
-+ [Clase 6: Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md)
++ [Clase 6: Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md) También tendremos la sustentación de Asignación 1.
 
 
 + [Clase 7: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) Taller Evaluado Espacios Lineales (clases 4, 5, y 6)
