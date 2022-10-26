@@ -1,4 +1,4 @@
-|Num  |Alumno/Actividad |Tarea 1 |Tarea 2 | Tarea 3 |Tarea 4 |Asignación1 |Asignación 2 |Asignación 3 | Examen 1 | Examen 2 |
+|Num  |Alumno/Actividad |Tarea1 |Tarea2 | Tarea3 |Tarea4 |Asignación1 |Asignación2 |Asignación3 | Examen1 | Examen2 |
 |:---:|:---             |---:    |---:     |---:    |---:    |---:        |---:         | ---:        |---:      | ---:     |
 | 1 | AMOROCHO LIZCANO BRAYAN SANTIAGO  |    5|      |      |     |      |      |      |       |      |
 | 2 | ARIZA TEJEDOR NICOLAS ANDRES      |     |      |      |     |      |      |      |       |      |
