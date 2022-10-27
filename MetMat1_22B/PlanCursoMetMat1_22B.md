@@ -80,46 +80,47 @@ La primera asignación tiene que ver con la utilización de los vectores en cris
 
 ### Los vectores de siempre (1.5 Semanas)
 <a name="VectoresSiempre"></a>
-+ [Clase 1: Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md)
++ [Clase 1: Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md) **11oct**
 
-+ [Clase 2: Vectores componentes y notación de Einstein](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md)
++ [Clase 2: Vectores componentes y notación de Einstein](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md) **13oct**
 
-+ [Clase 3: Análisis vectorial express y número complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_2AnalisisVectExpress.md).
++ [Clase 3: Análisis vectorial express y número complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_2AnalisisVectExpress.md). **18oct**
 
 ### Espacios Vectoriales lineales. (2.5 Semanas)
 <a name="EspaciosVectoriales"></a>
-+ [Clase 4: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md)
++ [Clase 4: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md) **20oct**
 Además tendremos un **taller evaluado de los vectores de siempre** (clases 1, 2 y 3).
     1. Código en MAXIMA para calcular centroide de un triángulo (Problema 3 Sección 1.1.6).
     2. Código en MAXIMA que reproduzca el ejercicio 6 de la Sección 1.2.7
     3. De la sección 1.5.7 resuelva los ejercicios 2a, 2d y 2f y con MAXIMA el 13;
     4. De la sección 1.6.6 resuelva los ejercicios 2, 5 y 6.
 
-+ [Clase 5: Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md).
++ [Clase 5: Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md). **25oct**
 
-+ [Clase 6: Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md) También tendremos la sustentación de Asignación 1.
++ [Clase 6: Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md) **27oct** **Entrega asignación 1**
 
 
-+ [Clase 7: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) Taller Evaluado Espacios Lineales (clases 4, 5, y 6)
-    1. De la Sección 2.1.6 desarrollar los ejercicios 3 y 10
-    2. Resuelva el ejercicio 6 sección 2.2.4
-    3. Desarrollar los ejercicios 5 y 6 de la sección 2.3.6
-+ Ajuste
++ [Clase 7: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) **3nov**
+    + Taller Evaluado Espacios Lineales (clases 4, 5, y 6)
+        1. De la Sección 2.1.6 desarrollar los ejercicios 3 y 10
+        2. Resuelva el ejercicio 6 sección 2.2.4
+        3. Desarrollar los ejercicios 5 y 6 de la sección 2.3.6
+    + También tendremos la sustentación de Asignación 1.
 
-### Asignación 2 (Entrega hasta clase 9 y discusión clase 10).
+### Asignación 2 (Entrega hasta clase 10 **17nov** y discusión clase 11 **22nov**).
 Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar el error de medición del sensor de bajo costo y, como calibrarlo para establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerDistancias/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Asignaciones/TallerDistancias/DatosDistancias) podrán encontrar los datos para desarrollar los algoritmos de calibración inteligente. Los datos patrones están contenidos en la hoja excel en la pestaña *Normal*. Los datos de las estaciones a calibrar los encontrarán en los demás archivos.   El problema deberá ser entregado por equipos de dos personas en forma de artículo y podrían seguir el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que presentamos en la descripción del curso.
 
 ### Espacios vectoriales duales y tensoriales. (2.5 Semanas)
 <a name="EspaciosDuales"></a>
-+ [Clase 8: Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md)
++ [Clase 8: Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md) **8nov**
 
-+ [Clase 9: Tensores y espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md).
++ [Clase 9: Tensores y espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md). **10nov**
 
-+ [Clase 10: Tensores y sus aplicaciones en Física](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_3AplicaTensores.md). Evaluación de los ejercicios asignados clases 6, 7, 8 y 9.
++ [Clase 10: Tensores y sus aplicaciones en Física](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_3AplicaTensores.md). Evaluación de los ejercicios asignados clases 6, 7, 8 y 9. **15nov**
 
-+ [Clase 11: Vectores y tensores en espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_4EspPseudoEuclid.md).
++ [Clase 11: Vectores y tensores en espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_4EspPseudoEuclid.md). **17nov** **Entrega asignación 2**
 
-+ Ajuste y sustentación asignación 2
++ Ajuste y sustentación asignación 2 **22nov**
 
 ### Asignación 3 (Entrega hasta clase 14 y discusión clase 15)
 Esta asignación tiene por objeto mostrar una aplicación de espacios tensoriales en función de datos. Primero un sistema de masas donde se calcula el Tensor de Inercia y luego construir un espacio tensorial de productos internos bruto (PIB) y comparar los gastos militares del país en los últimos 15 años con los de educación, y los de ciencia y tecnología. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensores/TallerTensoresAutovalores.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensores/DatosTensores/datosmasas.csv) podrán encontrar los datos.
@@ -129,20 +130,21 @@ Al igual que la *Asignación 1 y 2* los resultados deberán ser entregados en fo
 ### Operadores Lineales (3 Semanas)
 <a name="OperadoresLineales"></a>
 
-+ [Clase 12: Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md)
++ [Clase 12: Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md) **24nov**
 
-+ [Clase 13: Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md)
++ [Clase 13: Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md) **29nov**
     + Evaluación
         + Ejercicio 2 y 8 sección 3.3.5
         + Ejercicio 6 sección 3.4.3
 
-+ [Clase 14: Matrices y Operadores Lineales, parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md)
++ Evaluación Escrita Clases 1 - 11 **1dic**
 
-+ Evaluación Escrita Clases 1 - 11
++ [Clase 14: Matrices y Operadores Lineales, parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **8dic**
 
-+ [Clase 15: Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md).
 
-+ [Clase 16: Autovalores, autovectores y conjunto completo de observables que conmutan](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md).
++ [Clase 15: Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md). **13dic**
+
++ [Clase 16: Autovalores, autovectores y conjunto completo de observables que conmutan](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md). **15dic**
 Evaluación de los ejercicios asignados clases 12, 13 14 y 15
     + Evaluación
         + Ejercicios 4 y 5 de la sección 4.1.4
