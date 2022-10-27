@@ -127,17 +127,18 @@ Esta asignación tiene por objeto mostrar una aplicación de espacios tensoriale
 
 Al igual que la *Asignación 1 y 2* los resultados deberán ser entregados en forma de artículo siguiendo el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp).
 
++ Evaluación Escrita Clases 1 - 11 **24nov**
+
 ### Operadores Lineales (3 Semanas)
 <a name="OperadoresLineales"></a>
 
-+ [Clase 12: Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md) **24nov**
++ [Clase 12: Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md)  **29nov**
 
-+ [Clase 13: Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md) **29nov**
++ [Clase 13: Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md)  **1dic**
     + Evaluación
         + Ejercicio 2 y 8 sección 3.3.5
         + Ejercicio 6 sección 3.4.3
 
-+ Evaluación Escrita Clases 1 - 11 **1dic**
 
 + [Clase 14: Matrices y Operadores Lineales, parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **8dic**
 
