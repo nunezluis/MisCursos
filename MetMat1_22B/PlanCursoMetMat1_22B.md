@@ -38,7 +38,7 @@ La evaluación de este curso se realizará en base a tres tipos de actividades c
 
 + **Cada tercera clase (C3C)** se hará una evaluación sustentada de los *ejercicios asignados* como tarea.  Se tomarán en cuenta diez de estas evaluaciones y sumarán el 40\%. Las solución a los ejercicios C3C se compartirán desde el repositorio *git*
 
-+ **Cuatro asignaciones especiales** se sustentará una asignación especial. *Tendremos dos tipos de asignaciones cuyas evaluaciones sumarán el 30% del curso*. Los reportes y las presentaciones de las asignaciones se conpartirán desde el repositorio *git*
++ **Tres asignaciones especiales** se sustentará una asignación especial. *Tendremos dos tipos de asignaciones cuyas evaluaciones sumarán el 30% del curso*. Los reportes y las presentaciones de las asignaciones se conpartirán desde el repositorio *git*
 
 + En la **clase 14 o 15** y en **la 26 o 27** se realizará una evaluación oral (o escrita según el caso) de temas cubiertos hasta esas fechas. Esta *conversación evaluada* versará sobre un cuestionario que será enviado 24 horas antes de la actividad. Estas conversaciones evaluadas acopiarán el 30% restante.
 
@@ -117,6 +117,10 @@ Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor e
 + [Clase 9: Tensores y espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md). **10nov**
 
 + [Clase 10: Tensores y sus aplicaciones en Física](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_3AplicaTensores.md). Evaluación de los ejercicios asignados clases 6, 7, 8 y 9. **15nov**
++ los ejercicios 5 y 6 de la sección 2.3.6
++ MAXIMA desarrollar el ejercicio 3 de la sección 2.4.5
++ ejercicios 6 y 7 de la Sección 3.1.4 .
++ Hacer un código MAXIMA que resuelva el problema 2 sección 3.3.5.
 
 + [Clase 11: Vectores y tensores en espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_4EspPseudoEuclid.md). **17nov** **Entrega asignación 2**
 
