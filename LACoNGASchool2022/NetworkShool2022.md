@@ -4,7 +4,7 @@
 
 
 ### La llegada
-Desde el aeropuerto al Hotel lo más cómodo es un taxi, tiene capacidad para 3 pasajeros con poco equipaje. El costo oscila entre $40000 y $45000. [El recorrido toma cerca de 40min](https://www.rome2rio.com/es/map/Aeropuerto-Santa-Marta-SMR/Hotel-Parque-de-los-Novios-Inn-Santa-Marta).
+Desde el aeropuerto al Hotel lo más cómodo es un taxi, tiene capacidad para 3 pasajeros con poco equipaje. El costo es de $35000. [El recorrido toma cerca de 40min](https://www.rome2rio.com/es/map/Aeropuerto-Santa-Marta-SMR/Hotel-Parque-de-los-Novios-Inn-Santa-Marta).
 
 ### La programación del evento
 La programación del evento la pueden [encontrar aquí](https://eventos.redclara.net/event/1120/)
