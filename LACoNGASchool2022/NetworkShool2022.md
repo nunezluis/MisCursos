@@ -11,7 +11,7 @@ Salón Mar Caribe Norte 301 (Espacio para los lideres de la escuela). Allí almo
 
 Los almuerzos serán la terraza del edificio Mar Caribe.
 
-[Una imagen de la Universidad del Magdalena](https://github.com/nunezluis/MisCursos/blob/main/LACoNGASchool2022/mapa_unimag.png) vale mas que mil palabras
+![Una imagen de la Universidad del Magdalena](https://github.com/nunezluis/MisCursos/blob/main/LACoNGASchool2022/mapa_unimag.png) vale mas que mil palabras
 
 En el hotel tendrán la escarapela con su identificación que será requerida para ingresar a la Universidad.
 
