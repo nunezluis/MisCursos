@@ -9,7 +9,7 @@ Desde el aeropuerto al Hotel lo más cómodo es un taxi, tiene capacidad para 3 
 ### La programación del evento
 La programación del evento la pueden [encontrar aquí](https://eventos.redclara.net/event/1120/)
 
-El domingo tendremos un evento de integración desde temprano. Pregunte a los organizadores.
+El domingo tendremos una actividad de integración desde temprano. Pregunte a los organizadores.
 
 Lunes, 5dic y martes 6dic estaremos en la [Universidad del Magdalena](https://www.google.com/maps/place/Universidad+del+Magdalena/@11.2255748,-74.1877286,17z/data=!4m5!3m4!1s0x8ef4f5a5b24fb07f:0xb2cb35bcc3e481ad!8m2!3d11.2262461!4d-74.1873608) en el **Auditorio Roque Morelli**
 Salón Mar Caribe Norte 301 (Espacio para los lideres de la escuela). Allí almorzaremos y desarrollaremos todas las actividades
