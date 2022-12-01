@@ -116,11 +116,11 @@ Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor e
 
 + [Clase 9: Tensores y espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md). **10nov**
 
-+ [Clase 10: Tensores y sus aplicaciones en Física](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_3AplicaTensores.md). Evaluación de los ejercicios asignados clases 6, 7, 8 y 9. **15nov**
++ [Clase 10: Tensores y sus aplicaciones en Física](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_3AplicaTensores.md). Evaluación de los ejercicios asignados clases 6, 7, 8 y 9. **15nov**   
       1. los ejercicios 5 y 6 de la sección 2.3.6
-      2. MAXIMA desarrollar el ejercicio 3 de la sección 2.4.5
-      3. ejercicios 6 y 7 de la Sección 3.1.4 .
-      4. Hacer un código MAXIMA que resuelva el problema 2 sección 3.3.5.
+      3. MAXIMA desarrollar el ejercicio 3 de la sección 2.4.5
+      4. ejercicios 6 y 7 de la Sección 3.1.4 .
+      5. Hacer un código MAXIMA que resuelva el problema 2 sección 3.3.5.
 
 + [Clase 11: Vectores y tensores en espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_4EspPseudoEuclid.md). **17nov** **Entrega asignación 2**
 
