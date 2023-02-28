@@ -4,7 +4,7 @@
 
 <a name="metodologia"></a>
 ## La metodología
-**Antes de las clases** deberán revisar los materiales de apoyo (videos/textos) y recorrer los ejemplos resueltos de autoevaluación. Así podrán llevar dudas a la discusión que haremos en la clase. La clase quedará grabada y la discusión podrá revisarse también. La realización de esos ejemplos resueltos será tomada en cuenta durante el desarrollo de la clase. Como este curso es para dos estudiantes aprovecharemos mas la actividad de cada uno de Uds.
+**Antes de las clases** deberán revisar los materiales de apoyo (videos/textos) y recorrer los ejemplos resueltos de autoevaluación. Así podrán llevar dudas a la discusión que haremos en la clase. La realización de esos ejemplos resueltos será tomada en cuenta durante el desarrollo de la clase. Como este curso es para dos estudiantes aprovecharemos mas la actividad de cada uno de Uds.
 
 <a name="clases"></a>
 ### Las clases
@@ -12,14 +12,6 @@
 
 En cada clase se propondrán ejercicios y asignaciones que deben resolver, consignar y sustentar Tendremos una hora de consulta para dilucidar las dudas que se les presenten tanto en la solución de los ejercicios y las asignaciones propuestas.
 
-
-
-
-<a name="fechas"></a>
-## Fechas de interés
-+ **Inicio de clases:** jueves 24 de febrero de 2022
-+ **Fin de clases:** jueves 23 de junio de 2022.
-+ **Último día para registro de notas:** viernes 24 junio 2022
 
 <a name="MaterialesCurso"></a>
 ## Materiales del curso
