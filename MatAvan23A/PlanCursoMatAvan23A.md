@@ -55,6 +55,12 @@ También utilizaremos capítulos de esta bibliografía
    2. Utilizando MAXIMA desarrollar el problema 3 de la sección 2.4.5
    3. Ejercicios 6 y 7 de la Sección 3.1.4
 
+#### Asignación
+Esta asignación tiene por objeto mostrar una aplicación de espacios tensoriales en función de datos. Primero un sistema de masas donde se calcula el Tensor de Inercia y luego construir un espacio tensorial de productos internos bruto (PIB) y comparar los gastos militares del país en los últimos 15 años con los de educación, y los de ciencia y tecnología. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensores/TallerTensoresAutovalores.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensores/DatosTensores/datosmasas.csv) podrán encontrar los datos.
+
+ Los resultados deberán ser entregados en forma de artículo siguiendo el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp).
+   
+
 + [Clase 7. Tensores y espacios tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md)
 
 ### Operadores Lineales
