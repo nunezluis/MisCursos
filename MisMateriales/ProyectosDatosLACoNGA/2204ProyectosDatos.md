@@ -61,3 +61,144 @@ Para el ingreso a la universidad se presentan a escala nacional la prueba saberp
 
 ### Objetivos
 Analizar los factores sociales que influyen en los puntajes del icfes. Para ello se debe analizar [Dataset](https://drive.google.com/file/d/1dHWqLxinhEdfGSKp2bWCbWRTLXdgkIwE/view?usp=sharing): Más de 490000 registros de pruebas de estudiantes con caracteristicas como: estrato, situación económica, tv, dtpto, otros.
+
+## Simulación del modelo de Ising con el método de Monte Carlo (Propuesto por P. Pujol)
+El modelo de Ising es el modelo más sencillo de la física estadística para entender la transiciones de fase. Este permite de estudiar una transición que se puede asociar a la del ferromagnetismo.
+
+### Objetivos
+Utilizar el método de simulación de Monte Carlo [1, 2] para estudiar un modelo de Ising bi-dimensional y obtener su temperature critica, así como algunos exponentes críticos.
+
+### Actividades a desarrollar:
++ Familiarizarle con e algoritmos de Metropolis para el método de Monte Calo
++ Estudiar los resultados analíticos del modelo de Ising con interacción a primeros vecinos en la red cuadrada
++ Confirmar con el método de Monte Calo los resultados analíticos de la red cuadrada.
+
+[1] Krauth, W. (1998). [Introduction to monte carlo algorithms](https://doi.org/10.48550/arXiv.cond-mat/9612186). In Advances in Computer Simulation (pp. 1-35). Springer, Berlin, Heidelberg.
+[2] Walter, J. C., & Barkema, G. T. (2015). [An introduction to Monte Carlo methods](https://doi.org/10.48550/arXiv.1404.0209). Physica A: Statistical Mechanics and its Applications, 418, 78-87.
+
+## Simulation de un modelo de percolación (Propuesto por P. Pujol)
+El modelo geométrico de percolación [1] tiene muchas aplicaciones en diversas ramas de la física. Este modelo sencillo e intuitivo permite de acceder a la física de los fenómenos críticos y los fractales fácilmente.
+
+### Objetivos:
+Estudiar numericamente el fenómeno de percolación, estudiar el punto de concentración critica, y el « cluster » fractal de percolación que se forma en ese punto. Obtener su dimension fractal.
+
+### Actividades a desarrollar:
++ Familiarizarle con el estudio numérico de la percolación
++ Estudiar los resultados analíticos del modelo en la red cuadrada
++ Confirmar con el método numérico los resultados analíticos de la red cuadrada
+
+[1] Stauffer, D., & Aharony, A. (2018). Introduction to percolation theory. Taylor & Francis.
+
+
+
+## Medición del Xmax usando los datos del telescopio de fluorescencia del Observatorio Pierre Auger (Propuesto por C. Sarmiento)
+
+La profundidad atmosférica máxima, Xmax, es uno de los parámetros más importantes de las lluvias de partículas generadas por
+rayos cósmicos. Su importancia recae en la relación que existe entre el Xmax y la composición química de la partícula o
+núcleo que inicia la cascada de secundarios. Con el objetivo de medir este parámetro el Observatorio Pierre Auger construyó 
+cuatro telescopios de fluorescencia (FD) que captura la la interacción entre las partículas cargadas con las atmósfera y así reconstruye
+la distribución de la distribución longitudinal.
+
+### Objetivo
+Estudiar la relación entre el Xmax y la composición química de los rayos cósmicos primarios usando los datos de los
+telescopios de fluorescencia del Observatorio Pierre Auger.
+
+### Actividades
++ Estudiar en los conceptos relacionados con los rayos cósmicos y las cascadas de partículas,
++ Comprender el funcionamiento de los telescopios de fluorescencia,
++ Reproducir los resultados publicados por Auger.
+
+
+[1] Página web del observatorio: https://visitantes.auger.org.ar/
+
+[2] Analysis of Xmax Measurements from the Fluorescence Detector of the Pierre Auger Observatory (https://arxiv.org/pdf/1409.4809v3.pdf)
+
+## Análisis de datos públicos del experimento ATLAS (guiado por J. Ocariz + otros colegas ATLAS)
+
+### Objetivos
+The general aim of the ATLAS Open Data and tools released is to provide a straightforward interface to replicate the procedures used by high-energy-physics researchers and enable users to experience the analysis of particle physics data in educational environments. Therefore, it is of significant interest to check the correct modelling of several SM process by the 13 TeV ATLAS Open Data MC simulation.
+
+Both simulated events, and events from real data collected in 2016 at 13 TeV center-of-mass proton-proton collision energy are available. More details on the available datasets can be found here:
+
+http://opendata.atlas.cern/release/2020/documentation/datasets/files.html
+
+In particular, the "GamGam" sample can be used to study properties of the Higgs boson in its decay in two photons, and the "2lep" sample can be used to study properties of the Z boson in its decay in pairs of leptons (electrons or muons). Other samples can also be considered.
+
+### Actividades
+
+Develop a complete analysis chain for the selected physics process:
+
+- identify the variables to be used
+- define the parameters of interest (POI) to be measured, and their relations with the set of variables from the previous step
+- establish a statistical protocol to extract confidence intervals these PIO
+- use control samples to validate the protocol
+- perform the measurement on the signal samples
+
+
+
+## Análisis de datos públicos del experimento CMS (a ser confirmado)
+
+(TBC)
+
+## Implementar el método de recocido simulado (simulated annealing) para obtener el mínimo de clusters de Lennard-Jones (Propuesto por Luis Rincon/Ernesto Medina)
+
+Simulated annealing, también llamado recocido simulado, es un algoritmo metahuristico de optimización que emplea el algoritmo de Monte-Carlo de Metropolis. En pocas palabras, el metodo de recocido simulado consiste en mover al caminante usando el algoritmo de Metropolis y disminuir la temperatura paulatinamente a medida que la simulación avanza; en otras palabras, el sistema no mantiene la temperatura constante.
+
+### Objetivos
+
+Utilizar el método de optimización de recosido simulado (simulated annealing)[1] para obtener la configuración de menor energía de un cluster de 13 átomos que interaccionan vía el potencial de Lennard-Jones.
+
+### Actividades
+
+Los detalles de la simulación, como por ejemplo el programa de temperaturas, se encuentran en los artículos de Wille. [2] - [3]
+
+La simulación no emplea condiciones periódicas y la inicialización debe ser un cluster de N átomos colocados al azar dentro de una esfera (o un cubo).
+
+Para llegar al mínimo el algoritmo requiere usar al final de la simulación de Monte-Carlo un método de minimización local como por ejemplo L-BFGS el cual se encuentra ya implementado en muchas librerías de optimización como la de scipy de Python (scipy.optimize.minimize).
+
+La energía y geometrías de mínima energía están publicadas en la base de datos “The Cambridge Energy Landscape Database” (http://doye.chem.ox.ac.uk/jon/structures/LJ.html). Esta base de datos servira para corroborar que los resultados de la simulación coinciden con los publicados (especialmente la energía).
+
+[1] S. Kirkpatrick; C.D. Gelatt; M.P. Vecchi (1983) “Optimization by Simulated Annealing” Science 220, 671-680.
+
+[2] L.T. Wille (1987) “Minimum-energy configurations of atomic clusters: new results obtained by simulated annealing” Chem. Phys. Lett. 133, 405-410.
+
+[3] L.T. Wille (2000) “Simulated annealing and the topology of the potential energy surface of Lennard-Jones clusters” Comp. Mat. Sci. 17, 551-554.
+
+## Metadinámica en Dinamica Molecular (Propuesto por Luis Rincon/Ernesto Medina)
+
+Metadinámica es un algoritmo de dinámica molecular introducido en el 2002 por Liao y Parinello para el estudio de superficies complejas de energía potencial donde se tiene varios mínimos separados por barreras de energía que no son accesibles termicamente[1]. Metadinámica es posiblemente el método de simulación mas usado hoy en día en biofísica de proteinas. Este proyecto consiste en codificar el algoritmo de metadinámica para muestrear un potencial en 1 dimensión de dos mínimos separados por una barrera.
+
+### Objetivos
+
+-Implementar un algoritmo de dinámica molecular en 1-dimensión, usando por ejemplo el algoritmo de Verlet, y probarlo con el potencial V(q). Determinar la probabilidad de saltar de un mínimo del potencial al otro.
+
+-Incluir un término Vbias para promover transiciones entre minimos del potencial y recalcular la din ́amica. Estudiar como cambia la probabilidad de saltar entre los mínimos.
+
+### Actividades
+
+-Familiarizarse con el método de dinámica molecular (explorar la inclusión de un termostato). Este ejemplo puede ser aplicado a los diferentes termostatos usados en dinámica molecular.
+
+-Cuantificar el aumento de la probabilidad de pasar de un mínimo a otro superando la barrera al incluir el término Vbias en el potencial.
+
+-Graficar como cambia el Vbias y el potencial total con el tiempo.
+
+[1] Laio, A.; Parrinello, M. (2002). ”Escaping free-energy minima”. PNAS 99, 12562–12566.
+
+## Algoritmo de Wang-Landau Modelo de Ising 2D propiedades espectrales (Propuesto por Luis Rincon/Ernesto Medina)
+
+El algoritmo Wang-Landau es un algoritmo de Monte Carlo que permite calcu- lar la densidad de estados de un potencial sin tener ningu ́n conocimiento sobre ella. En este proyecto se empleara el algoritmo de Wang-Landau para obtener la densidad de estados de un modelo de Ising en 2D, este fue el problema orig- inalmente tratado por Wang y Landau[1], por lo que se puede comparar los resultados obtenidos con los resultados analiticos.
+
+### Objetivos
+
+-Implementar el algoritmo de Monte-Carlo de Wang-Landau para un potencial de Ising en 2D y obtener la densidad de estados del sistema.
+
+### Actividades
+
+-Familiarizarse con el m ́etodo de Monte Carlo de muestreo de importancia.
+
+- Calcular la densidad de estados para un potencial de Ising en 2D y comparar con los resultados analiticos.
+
+-A partir de la densidad de estados calcular algunas propiedades del sistema.
+
+
+[1] F. Wang, D.P. Landau,”Efficient, Multiple-Range Random Walk Algorithm to Calculate the Density of States” Phys. Rev. Lett. 86, 2050 (2001)
