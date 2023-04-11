@@ -1,17 +1,17 @@
-\BOOKMARK [1][-]{section.1}{Modelando objetos autogravitantes}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{El concepto}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{La ecuaci\363n de estado para la anisotrop\355a}{section.1}% 3
-\BOOKMARK [2][-]{subsection.1.3}{La integraci\363n y las condiciones de aceptabilidad f\355sica}{section.1}% 4
-\BOOKMARK [1][-]{section.2}{Newton y Einstein}{}% 5
-\BOOKMARK [2][-]{subsection.2.1}{Modelando objetos autogravitantes newtonianos anis\363tropos.}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.2}{Modelando objetos autogravitantes relativistas anis\363tropos.}{section.2}% 7
-\BOOKMARK [2][-]{subsection.2.3}{Adimensionalizando los sistemas de ecuaciones diferenciales.}{section.2}% 8
-\BOOKMARK [3][-]{subsubsection.2.3.1}{Estrategia 1}{subsection.2.3}% 9
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Estrategia 2}{subsection.2.3}% 10
-\BOOKMARK [3][-]{subsubsection.2.3.3}{La F\355sica est\341 en los par\341metros}{subsection.2.3}% 11
-\BOOKMARK [2][-]{subsection.2.4}{Los sistemas de ecuaciones}{section.2}% 12
-\BOOKMARK [3][-]{subsubsection.2.4.1}{Estrategia 1}{subsection.2.4}% 13
-\BOOKMARK [3][-]{subsubsection.2.4.2}{Estrategia 2}{subsection.2.4}% 14
-\BOOKMARK [2][-]{subsection.2.5}{Propuesta de anisotrop\355a}{section.2}% 15
-\BOOKMARK [2][-]{subsection.2.6}{Ecuaci\363n de Estado o Perfiles de densidad}{section.2}% 16
-\BOOKMARK [1][-]{section.3}{\277Qu\351 y c\363mo hacerlo?}{}% 17
+\BOOKMARK [1][-]{section.1}{\376\377\000M\000o\000d\000e\000l\000a\000n\000d\000o\000\040\000o\000b\000j\000e\000t\000o\000s\000\040\000a\000u\000t\000o\000g\000r\000a\000v\000i\000t\000a\000n\000t\000e\000s}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{\376\377\000E\000l\000\040\000c\000o\000n\000c\000e\000p\000t\000o}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{\376\377\000L\000a\000\040\000e\000c\000u\000a\000c\000i\000\363\000n\000\040\000d\000e\000\040\000e\000s\000t\000a\000d\000o\000\040\000p\000a\000r\000a\000\040\000l\000a\000\040\000a\000n\000i\000s\000o\000t\000r\000o\000p\000\355\000a}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{\376\377\000L\000a\000\040\000i\000n\000t\000e\000g\000r\000a\000c\000i\000\363\000n\000\040\000y\000\040\000l\000a\000s\000\040\000c\000o\000n\000d\000i\000c\000i\000o\000n\000e\000s\000\040\000d\000e\000\040\000a\000c\000e\000p\000t\000a\000b\000i\000l\000i\000d\000a\000d\000\040\000f\000\355\000s\000i\000c\000a}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{\376\377\000N\000e\000w\000t\000o\000n\000\040\000y\000\040\000E\000i\000n\000s\000t\000e\000i\000n}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{\376\377\000M\000o\000d\000e\000l\000a\000n\000d\000o\000\040\000o\000b\000j\000e\000t\000o\000s\000\040\000a\000u\000t\000o\000g\000r\000a\000v\000i\000t\000a\000n\000t\000e\000s\000\040\000n\000e\000w\000t\000o\000n\000i\000a\000n\000o\000s\000\040\000a\000n\000i\000s\000\363\000t\000r\000o\000p\000o\000s\000.}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{\376\377\000M\000o\000d\000e\000l\000a\000n\000d\000o\000\040\000o\000b\000j\000e\000t\000o\000s\000\040\000a\000u\000t\000o\000g\000r\000a\000v\000i\000t\000a\000n\000t\000e\000s\000\040\000r\000e\000l\000a\000t\000i\000v\000i\000s\000t\000a\000s\000\040\000a\000n\000i\000s\000\363\000t\000r\000o\000p\000o\000s\000.}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.3}{\376\377\000A\000d\000i\000m\000e\000n\000s\000i\000o\000n\000a\000l\000i\000z\000a\000n\000d\000o\000\040\000l\000o\000s\000\040\000s\000i\000s\000t\000e\000m\000a\000s\000\040\000d\000e\000\040\000e\000c\000u\000a\000c\000i\000o\000n\000e\000s\000\040\000d\000i\000f\000e\000r\000e\000n\000c\000i\000a\000l\000e\000s\000.}{section.2}% 8
+\BOOKMARK [3][-]{subsubsection.2.3.1}{\376\377\000E\000s\000t\000r\000a\000t\000e\000g\000i\000a\000\040\0001}{subsection.2.3}% 9
+\BOOKMARK [3][-]{subsubsection.2.3.2}{\376\377\000E\000s\000t\000r\000a\000t\000e\000g\000i\000a\000\040\0002}{subsection.2.3}% 10
+\BOOKMARK [3][-]{subsubsection.2.3.3}{\376\377\000L\000a\000\040\000F\000\355\000s\000i\000c\000a\000\040\000e\000s\000t\000\341\000\040\000e\000n\000\040\000l\000o\000s\000\040\000p\000a\000r\000\341\000m\000e\000t\000r\000o\000s}{subsection.2.3}% 11
+\BOOKMARK [2][-]{subsection.2.4}{\376\377\000L\000o\000s\000\040\000s\000i\000s\000t\000e\000m\000a\000s\000\040\000d\000e\000\040\000e\000c\000u\000a\000c\000i\000o\000n\000e\000s}{section.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.4.1}{\376\377\000E\000s\000t\000r\000a\000t\000e\000g\000i\000a\000\040\0001}{subsection.2.4}% 13
+\BOOKMARK [3][-]{subsubsection.2.4.2}{\376\377\000E\000s\000t\000r\000a\000t\000e\000g\000i\000a\000\040\0002}{subsection.2.4}% 14
+\BOOKMARK [2][-]{subsection.2.5}{\376\377\000P\000r\000o\000p\000u\000e\000s\000t\000a\000\040\000d\000e\000\040\000a\000n\000i\000s\000o\000t\000r\000o\000p\000\355\000a}{section.2}% 15
+\BOOKMARK [2][-]{subsection.2.6}{\376\377\000E\000c\000u\000a\000c\000i\000\363\000n\000\040\000d\000e\000\040\000E\000s\000t\000a\000d\000o\000\040\000o\000\040\000P\000e\000r\000f\000i\000l\000e\000s\000\040\000d\000e\000\040\000d\000e\000n\000s\000i\000d\000a\000d}{section.2}% 16
+\BOOKMARK [1][-]{section.3}{\376\377\000\277\000Q\000u\000\351\000\040\000y\000\040\000c\000\363\000m\000o\000\040\000h\000a\000c\000e\000r\000l\000o\000?}{}% 17

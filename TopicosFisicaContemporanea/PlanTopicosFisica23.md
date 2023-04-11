@@ -6,7 +6,10 @@ Bienvenidos al curso de Tópicos en Física Contemporanea de la carrera de Físi
 ## 22marzo **Fluidos no pascalianos y la estructura estelar relativista**
 ### *Luis A. Núñez* Escuela de Física UIS   
 #### Resumen
-En esta charla presentaremos la importancia que tiene la descripción de la estructura estelar relativista utilizando los idea de fluidos no pascalianos. A diferencia de los fluidos pascalianos, este tipo de fluidos distribuyen las presiones de forma anisótropa. Haremos un recorrido histórico del tema y concluiremos con las mas recientes contribuciones de nuestro grupo de investigación
+En esta charla presentaremos la importancia que tiene la descripción de la estructura estelar relativista utilizando los idea de fluidos no pascalianos. A diferencia de los fluidos pascalianos, este tipo de fluidos distribuyen las presiones de forma anisótropa. Haremos un recorrido histórico del tema, tanto para el caso Newtoniano como para el Relativista y concluiremos con las mas recientes contribuciones de nuestro grupo de investigación.
+
+#### La presentación
+[Fluidos no pascalianos y la estructura estelar relativista](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/2211AnisotropiaV4.pdf)
 
 #### Lecturas complementarias
 + Aceña, A. Una estrella bien simple. Revista Brasileira De Ensino De Física 42, (2020).
