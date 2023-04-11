@@ -19,7 +19,8 @@ En esta charla presentaremos la importancia que tiene la descripción de la estr
 + Jackson, C. B. et al. Compact objects for everyone: I. White dwarf stars. Eur J Phys 26, 695–709 (2005).
 + Silbar, R. R. & Reddy, S. Neutron stars for undergraduates. Am J Phys 72, 892–905 (2004).
 #### Actividades complementarias
-
+En este documento
+[Modelado de Objetos Autogravitantes](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerEcuacionesDifOrdinarias/AutogravitantesNumericasV4.pdf) podrán encontrar un paso a paso para el modelado de objetos Autogravitantes
 
 ## 29marzo **La sublime utilidad de la ciencia inútil**
 ### *Luis A. Núñez* Escuela de Física UIS   
