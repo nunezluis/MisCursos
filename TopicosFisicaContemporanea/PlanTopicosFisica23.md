@@ -6,9 +6,15 @@ Bienvenidos al curso de Tópicos en Física Contemporanea de la carrera de Físi
 ## 22marzo **Fluidos no pascalianos y la estructura estelar relativista**
 ### *Luis A. Núñez* Escuela de Física UIS   
 #### Resumen
+En esta charla presentaremos la importancia que tiene la descripción de la estructura estelar relativista utilizando los idea de fluidos no pascalianos. A diferencia de los fluidos pascalianos, este tipo de fluidos distribuyen las presiones de forma anisótropa. Haremos un recorrido histórico del tema y concluiremos con las mas recientes contribuciones de nuestro grupo de investigación
 
 #### Lecturas complementarias
-
++ Aceña, A. Una estrella bien simple. Revista Brasileira De Ensino De Física 42, (2020).
++ Pinochet, J. & Jan, M. V. S. Chandrasekhar limit: an elementary approach based on classical physics and quantum theory. Phys Educ 51, 035007 (2016).
++ Schmitt, A. Dense Matter in Compact Stars, A Pedagogical Introduction. Lect Notes Phys 7–27 (2010) doi:10.1007/978-3-642-12866-0_2.
++ Sagert, I., Hempel, M., Greiner, C. & Schaffner-Bielich, J. Compact stars for undergraduates. Eur J Phys 27, 577–610 (2006).
++ Jackson, C. B. et al. Compact objects for everyone: I. White dwarf stars. Eur J Phys 26, 695–709 (2005).
++ Silbar, R. R. & Reddy, S. Neutron stars for undergraduates. Am J Phys 72, 892–905 (2004).
 #### Actividades complementarias
 
 
