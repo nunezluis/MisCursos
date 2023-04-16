@@ -30,8 +30,8 @@ Esta charla estará centrada en la Física (fundamental y aplicada) de los Rayos
 Presentaremos la organización y los logros científicos de dos Observatorios de rayos cósmicos en los cuales participamos desde la UIS
 + *[El Observatorio Pierre Auger](https://www.auger.org/)*, el mayor Observatorio de rayos Cósmicos de Ultra alta energía (~10^20 Ev)  y
 + *[El Observatorio Gigante Latinoameriano](http://lagoproject.net/)* por LAGO (*Latin American Giant Observatory*) que está centrado en la observación los efectos del clima espacial y los rayos cósmicos.
-     
-Seguidamente presentamos algunas ideas de aplicaciones de los rayos cósmicos con impacto social, como lo es la muografía y la utilización de rayos para medir la humedad de suelos o la detección de minas antipersonales.
+
+Seguidamente presentamos algunas ideas de aplicaciones de los rayos cósmicos con impacto social, como lo son la muografía,  la utilización de neutrones atmosféricos para medir la humedad de suelos y la detección de minas antipersonales.
 
 #### La presentación
 [La sublime utilidad de la ciencia inútil](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/2110SublimeUtilidadUIS.pdf).
