@@ -115,8 +115,8 @@ Nuestra función como científicos no es solamente tratar de entender la natural
 #### Actividades complementarias
 
 
-## 16mayo **Compressed Baryonic Matter experiment**
-### *Jesús Peña Rodríguez*. Universidad de Wuppertal Alemania
+## *16mayo* TBD
+### *TBD*.
 
 #### Resumen
 
@@ -126,8 +126,9 @@ Nuestra función como científicos no es solamente tratar de entender la natural
 
 #### Actividades complementarias
 
-## *23mayo* TBD
-### *TBD*.
+
+## *23mayo* Compressed Baryonic Matter experiment
+### *Jesús Peña Rodríguez*. Universidad de Wuppertal Alemania
 
 #### Resumen
 
