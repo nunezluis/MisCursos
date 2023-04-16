@@ -33,7 +33,7 @@ Presentaremos la organización y los logros científicos de dos Observatorios de
 Seguidamente presentamos algunas ideas de aplicaciones de los rayos cósmicos con impacto social, como lo es la muografía y la utilización de rayos
 
 #### La presentación
-
+[La sublime utilidad de la ciencia inútil](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/2110SublimeUtilidadUIS.pdf).
 
 #### Lecturas complementarias
 + Lincoln, D. (2023). Using Cosmic Rays to See the Unseeable. The Physics Teacher, 61(4), 249-252.
@@ -44,8 +44,9 @@ Seguidamente presentamos algunas ideas de aplicaciones de los rayos cósmicos co
 + Clay, R. W., Wild, N. R., Maghrabi, A. H., & Kurban, Z. (2000). A cosmic ray muon detector for astronomy teaching. Publications of the Astronomical Society of Australia, 17(2), 171-175.
 
 #### Actividades complementarias
-Presentamos dos actividades complementarias.
-+ La primera tiene que ver con la detección de decrecimientos Forbush en los datos de los detectores de superficie del Observatorio Pierre Auger.  Los [decrecimientos Forbush](https://en.wikipedia.org/wiki/Forbush_decrease#:~:text=A%20Forbush%20decrease%20is%20a,cosmic%20rays%20away%20from%20Earth) son disminuciones transitorias del flujo de partículas en tierra producto del paso de una eyección de masa coronal.
+Presentamos dos actividades complementarias, una que tiene que ver con el análisis de datos observacionales y otra que está relacionada con la simulación de la propagación de muones en objetos geofísicos.
++ La primera tiene que ver con la detección de decrecimientos Forbush en los datos de los detectores de superficie del Observatorio Pierre Auger.  Los [decrecimientos Forbush](https://en.wikipedia.org/wiki/Forbush_decrease#:~:text=A%20Forbush%20decrease%20is%20a,cosmic%20rays%20away%20from%20Earth) son disminuciones transitorias del flujo de partículas en tierra producto del paso de una eyección de masa coronal. La actividad que proponemos la pueden encontrar [aqui](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/DecrecimientoForbush.md)
++ La segunda actividad que proponemos tiene que ver con la muografía de objetos geofísicos. Proponemos construir un código que simule la propagación de muones a través de roca estándar. La descripción de esta actividad la pueden encontrar [aqui](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/Muograf%C3%ADaUSAL.pdf).
 
 
 
@@ -53,6 +54,8 @@ Presentamos dos actividades complementarias.
 ### *Diego A. Torres*. Extensión y transferencia de conocimiento de la Universidad Nacional de Colombia sede Bogotá.
 
 #### Resumen
+Nuestra función como científicos no es solamente tratar de entender la naturaleza para nuestro placer, también es obsesionarnos por mostrar al mundo nuestros descubrimientos de forma que la sociología se apropie de ellos.
+
 
 #### Lecturas complementarias
 
