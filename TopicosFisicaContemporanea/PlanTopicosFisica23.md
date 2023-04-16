@@ -3,7 +3,7 @@
 
 Bienvenidos al curso de Tópicos en Física Contemporanea de la carrera de Física UIS. A continuación la programación de conferencias
 
-## 22marzo **Fluidos no pascalianos y la estructura estelar relativista**
+## **22marzo**  Fluidos no pascalianos y la estructura estelar relativista
 ### *Luis A. Núñez* Escuela de Física UIS   
 #### Resumen
 En esta charla presentaremos la importancia que tiene la descripción de la estructura estelar relativista utilizando los idea de fluidos no pascalianos. A diferencia de los fluidos pascalianos, este tipo de fluidos distribuyen las presiones de forma anisótropa. Haremos un recorrido histórico del tema, tanto para el caso Newtoniano como para el Relativista y concluiremos con las mas recientes contribuciones de nuestro grupo de investigación.
@@ -23,7 +23,7 @@ En esta charla presentaremos la importancia que tiene la descripción de la estr
 En este documento
 [Modelado de Objetos Autogravitantes](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerEcuacionesDifOrdinarias/AutogravitantesNumericasV4.pdf) podrán encontrar un paso a paso para el modelado de objetos Autogravitantes.
 
-## 29marzo **La sublime utilidad de la ciencia inútil**
+## **29marzo** La sublime utilidad de la ciencia inútil
 ### *Luis A. Núñez* Escuela de Física UIS   
 #### Resumen
 Esta charla estará centrada en la Física (fundamental y aplicada) de los Rayos Cósmicos y las cascadas que ellos generan. Discutiremos el posible origen de esos núcleos que impactan la alta atmósfera, sus energías y sistemas físicos asociados. Haremos énfasis en la importancia de la investigación básica para generar aplicaciones e innovaciones de alto impacto social. Por ello el título de la conferencia que lo hemos tomado prestado de otras mucho mejores que la nuestra.  
