@@ -32,6 +32,8 @@ Presentaremos la organización y los logros científicos de dos Observatorios de
 + *[El Observatorio Gigante Latinoameriano](http://lagoproject.net/)* por LAGO (*Latin American Giant Observatory*) que está centrado en la observación los efectos del clima espacial y los rayos cósmicos.     
 Seguidamente presentamos algunas ideas de aplicaciones de los rayos cósmicos con impacto social, como lo es la muografía y la utilización de rayos
 
+#### La presentación
+
 
 #### Lecturas complementarias
 + Lincoln, D. (2023). Using Cosmic Rays to See the Unseeable. The Physics Teacher, 61(4), 249-252.
