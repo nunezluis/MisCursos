@@ -54,8 +54,10 @@ Presentamos dos actividades complementarias, una que tiene que ver con el análi
 ### *Diego A. Torres*. Extensión y transferencia de conocimiento de la Universidad Nacional de Colombia sede Bogotá.
 
 #### Resumen
-Nuestra función como científicos no es solamente tratar de entender la naturaleza para nuestro placer, también es obsesionarnos por mostrar al mundo nuestros descubrimientos de forma que la sociología se apropie de ellos.
+Nuestra función como científicos no es solamente tratar de entender la naturaleza para nuestro placer, también es obsesionarnos por mostrar al mundo nuestros descubrimientos de forma que la sociología se apropie de ellos. Presentamos la motivación, el contexto y el desarrollo de la unidad de Extensión y transferencia de conocimiento de la Universidad Nacional de Colombia sede Bogotá. Mostramos como la innovación y el emprendimiento deben estar estrechamente ligadas a la formación de los estudiantes en ciencias y, particularmente en Física.
 
+#### Presentación
+[De las inútiles ciencias básicas a las Innovaciones que transforman el mundo](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/FisicaInnovacion.pdf)
 
 #### Lecturas complementarias
 
@@ -84,6 +86,8 @@ Nuestra función como científicos no es solamente tratar de entender la natural
 ### *Jáder Guerrero Bermúdez*. Escuela de Física UIS
 
 #### Resumen
+
+
 
 #### Lecturas complementarias
 
