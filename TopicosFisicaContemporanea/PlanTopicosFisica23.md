@@ -51,6 +51,7 @@ Presentamos dos actividades complementarias, una que tiene que ver con el análi
 
 
 ## *11abril* De las inútiles ciencias básicas a las Innovaciones que transforman el mundo
+
 ### *Diego A. Torres*. Extensión y transferencia de conocimiento de la Universidad Nacional de Colombia sede Bogotá.
 
 #### Resumen
@@ -69,6 +70,8 @@ Nuestra función como científicos no es solamente tratar de entender la natural
 
 #### Resumen
 
+#### La Presentación
+
 #### Lecturas complementarias
 
 #### Actividades complementarias
@@ -78,15 +81,21 @@ Nuestra función como científicos no es solamente tratar de entender la natural
 
 #### Resumen
 
+#### La Presentación
+
+
 #### Lecturas complementarias
+
 
 #### Actividades complementarias
 
-## 2mayo **Detectando el contacto óptico en los espacios cromáticos: Aplicación a la perfilometría.**
+## *2mayo* Detectando el contacto óptico en los espacios cromáticos: Aplicación a la perfilometría.
+
 ### *Jáder Guerrero Bermúdez*. Escuela de Física UIS
 
 #### Resumen
 
+#### La Presentación
 
 
 #### Lecturas complementarias
@@ -94,10 +103,12 @@ Nuestra función como científicos no es solamente tratar de entender la natural
 #### Actividades complementarias
 
 
-## 9mayo **TBD**
+## *9mayo* TBD
 ### *Laura Becerra*. Escuela de Física UIS
 
 #### Resumen
+
+#### La Presentación
 
 #### Lecturas complementarias
 
@@ -109,63 +120,77 @@ Nuestra función como científicos no es solamente tratar de entender la natural
 
 #### Resumen
 
+#### La Presentación
+
 #### Lecturas complementarias
 
 #### Actividades complementarias
 
-## 23mayo **TBD**
+## *23mayo* TBD
 ### *TBD*.
 
 #### Resumen
 
-#### Lecturas complementarias
-
-#### Actividades complementarias
-
-
-## 30mayo **TBD**
-### *TBD*.
-
-#### Resumen
+#### La Presentación
 
 #### Lecturas complementarias
 
 #### Actividades complementarias
 
 
-## 6junio **Noticias desde el Gran Colisionador de Hadrones, CERN**
-### *Reina Camacho* Experimento Atlas CERN
+## *30mayo* Materia Oscura y Simulaciones de Galaxias
+### *Arturo Núñez-Castiñeyra* Univesidad de Paris-Saclay, Francia
 
 #### Resumen
 
-#### Lecturas complementarias
-
-#### Actividades complementarias
-
-## 13junio **TBD**
-### *TBD*.
-
-#### Resumen
+#### La Presentación
 
 #### Lecturas complementarias
 
 #### Actividades complementarias
 
 
-## 20junio **TBD**
-### *TBD*.
+## *6junio* Noticias desde el Gran Colisionador de Hadrones, CERN
+### *Reina Camacho* Experimento Atlas CERN, Suiza
 
 #### Resumen
+
+#### La Presentación
+
+#### Lecturas complementarias
+
+#### Actividades complementarias
+
+## *13junio* El Sol al descubierto: los nuevos horizontes en su estudio
+### *Santiago Vargas*. Universidad Nacional de Colombia, sede Bogota
+
+#### Resumen
+
+#### La Presentación
 
 #### Lecturas complementarias
 
 #### Actividades complementarias
 
 
-## 11julio **TBD**
-### *TBD*.
+## *20junio* TBD
+### *Carlos Páez-González*. Escuela de Física UIS
 
 #### Resumen
+
+#### La Presentación
+
+#### Lecturas complementarias
+
+#### Actividades complementarias
+
+
+## *11julio* Quiralidad en magnetismo y sistemas cristalinos
+### *Andrés C. García-Castro*.
+
+#### Resumen
+
+#### La Presentación
 
 #### Lecturas complementarias
 
