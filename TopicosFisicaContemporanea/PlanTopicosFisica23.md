@@ -89,7 +89,7 @@ Por ser una tecnología en pleno desarrollo hay muchas propuestas de arquitectur
 
 ## *25abril* Física Extrema para enfermedades extremas
 ### *Hernán Asorey*.
-### Departamento Física Médica, Centro Atómico Bariloche Comisión Nacional de Energía Atómica (CNEA) y Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas, España y
+### Departamento Física Médica, Centro Atómico Bariloche Comisión Nacional de Energía Atómica (CNEA) Argentina y Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas, España.
 
 #### Resumen
 La Física Médica es una rama altamente interdisciplinaria de la física, que consiste en la aplicación de conceptos, leyes, modelos, técnicas y métodos para la prevención, el diagnóstico, el tratamiento, el seguimiento y la rehabilitación de enfermedades en el ser humano. Comprende a la radioterapia, el radiodiagnóstico, la medicina nuclear, la protección radiológica, las neurociencias, las aplicaciones de láseres y nanopartículas en medicina, las resonancias nucleares y atómicas, la ciencia de materiales, el biomagnetismo y la electromedicina.
