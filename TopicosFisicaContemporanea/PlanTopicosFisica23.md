@@ -95,7 +95,7 @@ Por ser una tecnología en pleno desarrollo hay muchas propuestas de arquitectur
 La Física Médica es una rama altamente interdisciplinaria de la física, que consiste en la aplicación de conceptos, leyes, modelos, técnicas y métodos para la prevención, el diagnóstico, el tratamiento, el seguimiento y la rehabilitación de enfermedades en el ser humano. Comprende a la radioterapia, el radiodiagnóstico, la medicina nuclear, la protección radiológica, las neurociencias, las aplicaciones de láseres y nanopartículas en medicina, las resonancias nucleares y atómicas, la ciencia de materiales, el biomagnetismo y la electromedicina.
 
 Gran parte de los avances que se han producido en aplicaciones de la física a la salud se han desarrollado en forma sinérgica y con una realimentación positiva en ambas áreas del conocimiento. En esta charla, comentaré la forma en como muchas de las tecnologías de simulación y detección de radiación, desarrolladas por nuestros grupos en la Universidad Industrial de Santander y en CNEA, están siendo aplicadas para el desarrollo de nuevos métodos de diagnóstico y tratamiento de enfermedades como el cáncer.
-![plot]()
+![plot](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/lung-cancer.png)
 
 #### La Presentación
 
