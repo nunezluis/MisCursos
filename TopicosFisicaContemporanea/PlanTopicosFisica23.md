@@ -86,6 +86,7 @@ Por ser una tecnología en pleno desarrollo hay muchas propuestas de arquitectur
 + Henriet, L., Beguin, L., Signoles, A., Lahaye, T., Browaeys, A., Reymond, G. O., & Jurczak, C. (2020). [Quantum computing with neutral atoms](https://quantum-journal.org/papers/q-2020-09-21-327/). Quantum, 4, 327.
 
 #### Actividades complementarias
+Quienes estén interesados en seguir un paso a paso de programación en cumputación cuántica pueden intentar seguir [estos *notebooks*](https://qiskit.org/textbook/content/ch-ex/)
 
 ## *25abril* Física Extrema para enfermedades extremas
 ### *Hernán Asorey*.
