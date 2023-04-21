@@ -98,7 +98,7 @@ Gran parte de los avances que se han producido en aplicaciones de la física a l
 ![plot](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/lung-cancer.png)
 
 #### La Presentación
-
+[Física Extrema para enfermedades extremas](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/DFM-Radiation-Cloud-UIS.pdf)
 
 #### Lecturas complementarias
 - C. Sarmiento-Cano, et al. (ICRC2021), [DOI:10.22323/1.395.0929](https://doi.org/10.22323/1.395.0929)
