@@ -80,20 +80,37 @@ Por ser una tecnología en pleno desarrollo hay muchas propuestas de arquitectur
 [Computación cuántica con átomos neutros](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/LaCongaQuantumComputing.pdf)
 
 #### Lecturas complementarias
-
++ [History of Quantum Computing](https://www.epiqc.cs.uchicago.edu/qc-history)
 + [Pulser Studio: the first zero-code neutral atoms quantum computing programming platform](https://www.pasqal.com/articles/pulser-studio-the-first-zero-code-neutral-atoms-quantum-computing-programming-platform)
++ [Exploring the Features of Pulser Studio](https://www.pasqal.com/articles/pulser-s-1)
++ Henriet, L., Beguin, L., Signoles, A., Lahaye, T., Browaeys, A., Reymond, G. O., & Jurczak, C. (2020). [Quantum computing with neutral atoms](https://quantum-journal.org/papers/q-2020-09-21-327/). Quantum, 4, 327.
 
 #### Actividades complementarias
 
 ## *25abril* Física Extrema para enfermedades extremas
-### *Hernán Asorey*. Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas, España
+### *Hernán Asorey*.
+### Departamento Física Médica, Centro Atómico Bariloche Comisión Nacional de Energía Atómica (CNEA) y Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas, España y
 
 #### Resumen
+La Física Médica es una rama altamente interdisciplinaria de la física, que consiste en la aplicación de conceptos, leyes, modelos, técnicas y métodos para la prevención, el diagnóstico, el tratamiento, el seguimiento y la rehabilitación de enfermedades en el ser humano. Comprende a la radioterapia, el radiodiagnóstico, la medicina nuclear, la protección radiológica, las neurociencias, las aplicaciones de láseres y nanopartículas en medicina, las resonancias nucleares y atómicas, la ciencia de materiales, el biomagnetismo y la electromedicina.
+
+Gran parte de los avances que se han producido en aplicaciones de la física a la salud se han desarrollado en forma sinérgica y con una realimentación positiva en ambas áreas del conocimiento. En esta charla, comentaré la forma en como muchas de las tecnologías de simulación y detección de radiación, desarrolladas por nuestros grupos en la Universidad Industrial de Santander y en CNEA, están siendo aplicadas para el desarrollo de nuevos métodos de diagnóstico y tratamiento de enfermedades como el cáncer.
+![plot]()
 
 #### La Presentación
 
 
 #### Lecturas complementarias
+- C. Sarmiento-Cano, et al. (ICRC2021), [DOI:10.22323/1.395.0929](https://doi.org/10.22323/1.395.0929)
+- M. Suárez-Durán, HA and LA Núñez, Space Weather, (2018),  [DOI:10.1002/2017SW001774](https://doi.org/10.1002/2017SW001774)
+- C. Sarmiento Cano et al., Eur. Phys. J. C (2022) 82: 1019 - [https://doi.org/10.1140/epjc/s10052-022-10883-z](https://doi.org/10.1140/epjc/s10052-022-10883-z)
+- JA Rubio-Montero et al (ICRC 2021) [DOI:10.22323/1.395.0261](https://doi.org/10.22323/1.395.0261)
+- H. Asorey and R. Mayo-García, J. Supercomputing 2022, [https://doi.org/10.1007/s11227-022-04981-8](https://doi.org/10.1007/s11227-022-04981-8)
+- C. Ardila et al, JAIS 2022, [https://doi.org/10.31526/jais.2022.300](https://doi.org/10.31526/jais.2022.300)
+- A. Taboada et al, JAIS 2022, [https://doi.org/10.31526/jais.2022.266](https://doi.org/10.31526/jais.2022.266)
+- H.A., M. Suárez-Durán and R. Mayo-García, ARI 196, 110752 (2023), [https://doi.org/10.1016/j.apradiso.2023.110752](https://doi.org/10.1016/j.apradiso.2023.110752)
+- H. Asorey and R. Mayo-García, J. Supercomputing 2022, [https://doi.org/10.1007/s11227-022-04981-8](https://doi.org/10.1007/s11227-022-04981-8)
+- Pérez, M. et al, JINST 2-s2.0-85112518794, [https://doi.org/10.1088/1748-0221/16/08/p08008](https://doi.org/10.1088/1748-0221/16/08/p08008)
 
 
 #### Actividades complementarias
