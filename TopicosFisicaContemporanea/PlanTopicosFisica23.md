@@ -70,15 +70,18 @@ Nuestra función como científicos no es solamente tratar de entender la natural
 ### *Alexandra de Castro*. [PASQAL](https://www.pasqal.com/) Francia
 
 #### Resumen
-La computación cuántica está evolucionando como la próxima generación de computación de alto rendimiento prometiendo ayudar a resolver los mayores retos de nuestro planeta, como lo son los problemas del medio ambiente, agricultura, salud, energía, clima, ciencia de los materiales, etc. Para muchos de estos problemas, la computación clásica está llegando al límite de sus capacidades. 
+La computación cuántica está evolucionando como la próxima generación de computación de alto rendimiento prometiendo ayudar a resolver los mayores retos de nuestro planeta, como lo son los problemas del medio ambiente, agricultura, salud, energía, clima, ciencia de los materiales, etc. Para muchos de estos problemas, la computación clásica está llegando al límite de sus capacidades.
 
 Tanto el hardware como el software de la computación cuántica están enteramente basados en los principios de la física cuántica, creando un paradigma completamente nuevo que pronto puede comenzar a superar a las supercomputadoras más sofisticadas del mundo.  A medida que la comunidad mundial de investigadores, científicos, ingenieros y líderes empresariales colaboran para hacer avanzar el ecosistema cuántico, se espera que el impacto cuántico acelere el desarrollo de todas las industrias.
 
 Por ser una tecnología en pleno desarrollo hay muchas propuestas de arquitectura. En PASQAL hemos apostado por la tecnología basada en átomos neutros, que es una de las tecnologías más versátiles y escalables que se han desarrollado hasta ahora.
 
 #### La Presentación
+[Computación cuántica con átomos neutros](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/LaCongaQuantumComputing.pdf)
 
 #### Lecturas complementarias
+
++ [Pulser Studio: the first zero-code neutral atoms quantum computing programming platform](https://www.pasqal.com/articles/pulser-studio-the-first-zero-code-neutral-atoms-quantum-computing-programming-platform)
 
 #### Actividades complementarias
 
