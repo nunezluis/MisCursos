@@ -6,7 +6,9 @@ Bienvenidos al curso de Tópicos en Física Contemporanea de la carrera de Físi
 ## *22marzo*  Fluidos no pascalianos y la estructura estelar relativista
 ### *Luis A. Núñez* Escuela de Física UIS   
 #### Resumen
-En esta charla presentaremos la importancia que tiene la descripción de la estructura estelar relativista utilizando los idea de fluidos no pascalianos. A diferencia de los fluidos pascalianos, este tipo de fluidos distribuyen las presiones de forma anisótropa. Haremos un recorrido histórico del tema, tanto para el caso Newtoniano como para el Relativista y concluiremos con las mas recientes contribuciones de nuestro grupo de investigación.
+En esta charla presentaremos la importancia que tiene la descripción de la estructura estelar relativista utilizando los idea de fluidos no pascalianos.
+
+A diferencia de los fluidos pascalianos, este tipo de fluidos distribuyen las presiones de forma anisótropa. Haremos un recorrido histórico del tema, tanto para el caso Newtoniano como para el Relativista y concluiremos con las mas recientes contribuciones de nuestro grupo de investigación.
 
 #### La presentación
 [Fluidos no pascalianos y la estructura estelar relativista](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/2211AnisotropiaV4.pdf)
@@ -56,7 +58,9 @@ Presentamos dos actividades complementarias, una que tiene que ver con el análi
 ### *Diego A. Torres*. Extensión y transferencia de conocimiento de la Universidad Nacional de Colombia sede Bogotá.
 
 #### Resumen
-Nuestra función como científicos no es solamente tratar de entender la naturaleza para nuestro placer, también es obsesionarnos por mostrar al mundo nuestros descubrimientos de forma que la sociología se apropie de ellos. Presentamos la motivación, el contexto y el desarrollo de la unidad de Extensión y transferencia de conocimiento de la Universidad Nacional de Colombia sede Bogotá. Mostramos como la innovación y el emprendimiento deben estar estrechamente ligadas a la formación de los estudiantes en ciencias y, particularmente en Física.
+En esta charla presentamos la motivación, el contexto y el desarrollo de la unidad de Extensión y transferencia de conocimiento de la Universidad Nacional de Colombia sede Bogotá. Mostramos como la innovación y el emprendimiento deben estar estrechamente ligadas a la formación de los estudiantes en ciencias y, particularmente en Física.
+
+Nuestra función como científicos no es solamente tratar de entender la naturaleza para nuestro placer, también es obsesionarnos por mostrar al mundo nuestros descubrimientos de forma que la sociología se apropie de ellos.
 
 #### Presentación
 [De las inútiles ciencias básicas a las Innovaciones que transforman el mundo](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/FisicaInnovacion.pdf)
@@ -93,10 +97,12 @@ Quienes estén interesados en seguir un paso a paso de programación en cumputac
 ### Departamento Física Médica, Centro Atómico Bariloche Comisión Nacional de Energía Atómica (CNEA) Argentina y Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas, España.
 
 #### Resumen
-La Física Médica es una rama altamente interdisciplinaria de la física, que consiste en la aplicación de conceptos, leyes, modelos, técnicas y métodos para la prevención, el diagnóstico, el tratamiento, el seguimiento y la rehabilitación de enfermedades en el ser humano. Comprende a la radioterapia, el radiodiagnóstico, la medicina nuclear, la protección radiológica, las neurociencias, las aplicaciones de láseres y nanopartículas en medicina, las resonancias nucleares y atómicas, la ciencia de materiales, el biomagnetismo y la electromedicina.
-
 Gran parte de los avances que se han producido en aplicaciones de la física a la salud se han desarrollado en forma sinérgica y con una realimentación positiva en ambas áreas del conocimiento. En esta charla, comentaré la forma en como muchas de las tecnologías de simulación y detección de radiación, desarrolladas por nuestros grupos en la Universidad Industrial de Santander y en CNEA, están siendo aplicadas para el desarrollo de nuevos métodos de diagnóstico y tratamiento de enfermedades como el cáncer.
 ![plot](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/lung-cancer.png)
+
+La Física Médica es una rama altamente interdisciplinaria de la física, que consiste en la aplicación de conceptos, leyes, modelos, técnicas y métodos para la prevención, el diagnóstico, el tratamiento, el seguimiento y la rehabilitación de enfermedades en el ser humano. Comprende a la radioterapia, el radiodiagnóstico, la medicina nuclear, la protección radiológica, las neurociencias, las aplicaciones de láseres y nanopartículas en medicina, las resonancias nucleares y atómicas, la ciencia de materiales, el biomagnetismo y la electromedicina.
+
+
 
 #### La Presentación
 [Física Extrema para enfermedades extremas](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/DFM-Radiation-Cloud-UIS.pdf)
@@ -121,11 +127,25 @@ Gran parte de los avances que se han producido en aplicaciones de la física a l
 ### *Jáder Guerrero Bermúdez*. Escuela de Física UIS
 
 #### Resumen
+El propósito de esta charla es ilustrar algunos detalles que se utilizan en microscopía por interferometría con luz blanca, para rastrear la topografía de objetos del orden de pocos nanómetros.
+
+La luz blanca se caracteriza por su baja coherencia espacial y temporal. Es decir, el tiempo y la longitud en los que dos frentes de onda, emitidos de manera aleatoria, exhiben una correlación estadísticamente significativa en el orden 10^{-14} s y 10^{-6} m.  Esta escasa longitud de coherencia se aprovecha, en microscopía por interferometría con luz blanca, para muestrear la topografía de objetos en el orden de pocos nanómetros, detectando el máximo de la envolvente de un patrón de interferencia. El patrón resulta de la superposición de un haz objeto y un haz de referencia, utilizando un objetivo que ha sido diseñado como interferómetro.
+
+Generalmente la muestra (o el objetivo de microscopio) se somete a un barrido axial con el propósito de encontrar el contacto óptico o diferencia de trayecto óptico cero para un conjunto de puntos sobre su superficie. Muy recientemente, se han elaborado propuestas para detectar el contacto óptico en los espacios cromáticos RGB (Rojo, verde y Azul) y en el sistema CIExyz.
+
 
 #### La Presentación
 
 
 #### Lecturas complementarias
+- S. S. C. Chim and G. S. Kino, “Correlation microscope,” Appl. Opt., vol. 29, no. 26, p. 3775, 1990.
+
+- P. de Groot, “Principles of interference microscopy for the measurement of surface topography,” Adv. 171 Opt. Photonics, vol. 7, pp. 1–65, 2015, doi: 10.1364/AOP.7.000001.
+
+- P. K. Upputuri, M. Pramanik, K. M. Nandigana, and M. P. Kothiyal, “Multi-colour microscopic 173 interferometry for optical metrology and imaging applications,” Opt. Lasers Eng., vol. 84, pp. 10–25, 174 2016, doi: 10.1016/j.optlaseng.2016.03.020.
+
+- J. Im, H. Kim, W. Park, J. Sung, A. Byeongil, and L. Soobong, “High   precision white light 218 interferometry based on a color CCD and peak matching algorithm,” J. Korean Phys. Soc., vol. 80, no. 7, 219 pp. 599–605, 2022, doi: 10.1007/s40042-022-00421-1.
+
 
 #### Actividades complementarias
 
