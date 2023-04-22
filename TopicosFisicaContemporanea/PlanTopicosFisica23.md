@@ -163,7 +163,7 @@ Generalmente la muestra (o el objetivo de microscopio) se somete a un barrido ax
 
 
 ## *16mayo* TBD
-### *TBD*.
+### *David A. Miranda Mercado*. Escuela de Física UIS.
 
 #### Resumen
 
