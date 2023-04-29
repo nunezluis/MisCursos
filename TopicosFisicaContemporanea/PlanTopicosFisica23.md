@@ -109,14 +109,14 @@ La Física Médica es una rama altamente interdisciplinaria de la física, que c
 
 #### Lecturas complementarias
 - C. Sarmiento-Cano, et al. (ICRC2021), [DOI:10.22323/1.395.0929](https://doi.org/10.22323/1.395.0929)
-- M. Suárez-Durán, HA and LA Núñez, Space Weather, (2018),  [DOI:10.1002/2017SW001774](https://doi.org/10.1002/2017SW001774)
+- M. Suárez-Durán, HA y LA Núñez, Space Weather, (2018),  [DOI:10.1002/2017SW001774](https://doi.org/10.1002/2017SW001774)
 - C. Sarmiento Cano et al., Eur. Phys. J. C (2022) 82: 1019 - [https://doi.org/10.1140/epjc/s10052-022-10883-z](https://doi.org/10.1140/epjc/s10052-022-10883-z)
 - JA Rubio-Montero et al (ICRC 2021) [DOI:10.22323/1.395.0261](https://doi.org/10.22323/1.395.0261)
 - H. Asorey and R. Mayo-García, J. Supercomputing 2022, [https://doi.org/10.1007/s11227-022-04981-8](https://doi.org/10.1007/s11227-022-04981-8)
 - C. Ardila et al, JAIS 2022, [https://doi.org/10.31526/jais.2022.300](https://doi.org/10.31526/jais.2022.300)
 - A. Taboada et al, JAIS 2022, [https://doi.org/10.31526/jais.2022.266](https://doi.org/10.31526/jais.2022.266)
 - H.A., M. Suárez-Durán and R. Mayo-García, ARI 196, 110752 (2023), [https://doi.org/10.1016/j.apradiso.2023.110752](https://doi.org/10.1016/j.apradiso.2023.110752)
-- H. Asorey and R. Mayo-García, J. Supercomputing 2022, [https://doi.org/10.1007/s11227-022-04981-8](https://doi.org/10.1007/s11227-022-04981-8)
+- H. Asorey y R. Mayo-García, J. Supercomputing 2022, [https://doi.org/10.1007/s11227-022-04981-8](https://doi.org/10.1007/s11227-022-04981-8)
 - Pérez, M. et al, JINST 2-s2.0-85112518794, [https://doi.org/10.1088/1748-0221/16/08/p08008](https://doi.org/10.1088/1748-0221/16/08/p08008)
 
 
@@ -138,13 +138,13 @@ Generalmente la muestra (o el objetivo de microscopio) se somete a un barrido ax
 
 
 #### Lecturas complementarias
-- S. S. C. Chim and G. S. Kino, “Correlation microscope,” Appl. Opt., vol. 29, no. 26, p. 3775, 1990.
+- S. S. C. Chim y G. S. Kino, “Correlation microscope,” Appl. Opt., vol. 29, no. 26, p. 3775, 1990.
 
 - P. de Groot, “Principles of interference microscopy for the measurement of surface topography,” Adv. 171 Opt. Photonics, vol. 7, pp. 1–65, 2015, doi: 10.1364/AOP.7.000001.
 
-- P. K. Upputuri, M. Pramanik, K. M. Nandigana, and M. P. Kothiyal, “Multi-colour microscopic 173 interferometry for optical metrology and imaging applications,” Opt. Lasers Eng., vol. 84, pp. 10–25, 174 2016, doi: 10.1016/j.optlaseng.2016.03.020.
+- P. K. Upputuri, M. Pramanik, K. M. Nandigana, y M. P. Kothiyal, “Multi-colour microscopic 173 interferometry for optical metrology and imaging applications,” Opt. Lasers Eng., vol. 84, pp. 10–25, 174 2016, doi: 10.1016/j.optlaseng.2016.03.020.
 
-- J. Im, H. Kim, W. Park, J. Sung, A. Byeongil, and L. Soobong, “High   precision white light 218 interferometry based on a color CCD and peak matching algorithm,” J. Korean Phys. Soc., vol. 80, no. 7, 219 pp. 599–605, 2022, doi: 10.1007/s40042-022-00421-1.
+- J. Im, H. Kim, W. Park, J. Sung, A. Byeongil, y L. Soobong, “High   precision white light 218 interferometry based on a color CCD and peak matching algorithm,” J. Korean Phys. Soc., vol. 80, no. 7, 219 pp. 599–605, 2022, doi: 10.1007/s40042-022-00421-1.
 
 
 #### Actividades complementarias
@@ -175,7 +175,7 @@ Generalmente la muestra (o el objetivo de microscopio) se somete a un barrido ax
 
 
 ## *23mayo* Compressed Baryonic Matter experiment
-### *Jesús Peña Rodríguez*. Universidad de Wuppertal Alemania
+### *Jesús Peña-Rodríguez*. Universidad de Wuppertal Alemania
 
 #### Resumen
 
