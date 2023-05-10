@@ -135,7 +135,7 @@ Generalmente la muestra (o el objetivo de microscopio) se somete a un barrido ax
 
 
 #### La Presentación
-
+Presentación [Detectando el contacto óptico en los espacios cromáticos: Aplicación a la perfilometría](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/Microscopia_Interferencial.pdf)
 
 #### Lecturas complementarias
 - S. S. C. Chim y G. S. Kino, “Correlation microscope,” Appl. Opt., vol. 29, no. 26, p. 3775, 1990.
@@ -148,16 +148,27 @@ Generalmente la muestra (o el objetivo de microscopio) se somete a un barrido ax
 
 
 #### Actividades complementarias
+La actividad complementaria se centrará en reproducir el artículo de [High precision white light 218 interferometry based on a color CCD and peak matching algorithm](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/2022_Jaeseung.pdf)
 
-
-## *9mayo* TBD
+## *9mayo* Las estrellas de neutrones como laboratorios astrófísicos
 ### *Laura Becerra*. Escuela de Física UIS
 
 #### Resumen
+Las estrellas de neutrones son  objetos compactos que nacen del colapso gravitacional de estrellas masivas  y en su interior  se alcanzan densidades centrales mayores que la densidad nuclear. Esto las convierte en laboratorios astrofísicos únicos para la exploración de la materia en densidades extremas.  
+
+Recientemente, la detección de ondas gravitacionales y las mediciones simultáneas de masa y radio de algunos púlsares con NICER han abierto una gran cantidad de información sobre estos objetos. Esto ha llevado a un rápido progreso en la modelación de las estrellas de neutrones y ha permitido obtener restricciones sobre la microfísica que sucede en su interior.
+
+En esta charla, exploraremos cómo las observaciones astrofísicas de las estrellas de neutrones pueden proporcionar información crucial sobre la materia en densidades extremas. Descubrirás cómo estos objetos están ayudando a avanzar en nuestro conocimiento de la física fundamental y cómo se pueden realizar avances potenciales en la descripción de la materia a través de la exploración de estos laboratorios astrofísicos únicos.
 
 #### La Presentación
 
 #### Lecturas complementarias
++ Aceña, A. Una estrella bien simple. Revista Brasileira De Ensino De Física 42, (2020).
++ Pinochet, J. & Jan, M. V. S. Chandrasekhar limit: an elementary approach based on classical physics and quantum theory. Phys Educ 51, 035007 (2016).
++ Schmitt, A. Dense Matter in Compact Stars, A Pedagogical Introduction. Lect Notes Phys 7–27 (2010) doi:10.1007/978-3-642-12866-0_2.
++ Sagert, I., Hempel, M., Greiner, C. & Schaffner-Bielich, J. Compact stars for undergraduates. Eur J Phys 27, 577–610 (2006).
++ Jackson, C. B. et al. Compact objects for everyone: I. White dwarf stars. Eur J Phys 26, 695–709 (2005).
++ Silbar, R. R. & Reddy, S. Neutron stars for undergraduates. Am J Phys 72, 892–905 (2004).
 
 #### Actividades complementarias
 
