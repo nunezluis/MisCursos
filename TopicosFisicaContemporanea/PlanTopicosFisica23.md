@@ -148,7 +148,7 @@ Presentación [Detectando el contacto óptico en los espacios cromáticos: Aplic
 
 
 #### Actividades complementarias
-La actividad complementaria se centrará en reproducir el artículo de [High precision white light 218 interferometry based on a color CCD and peak matching algorithm](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/2022_Jaeseung.pdf)
+La actividad complementaria se centrará en reproducir el artículo de [*High precision white light 218 interferometry based on a color CCD and peak matching*](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/2022_Jaeseung.pdf)
 
 ## *9mayo* Las estrellas de neutrones como laboratorios astrófísicos
 ### *Laura Becerra*. Escuela de Física UIS
@@ -171,6 +171,7 @@ En esta charla, exploraremos cómo las observaciones astrofísicas de las estrel
 + Silbar, R. R. & Reddy, S. Neutron stars for undergraduates. Am J Phys 72, 892–905 (2004).
 
 #### Actividades complementarias
+Reproducir el artículo de [*Compact stars for undergraduates*](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/sagert2006.pdf) y en [esta página](https://compose.obspm.fr/) se pueden encontrar todo tipo de ecuaciones de estado para estrellas de neutrones:
 
 
 ## *16mayo* TBD
