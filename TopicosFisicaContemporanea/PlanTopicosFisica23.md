@@ -150,7 +150,7 @@ Presentación [Detectando el contacto óptico en los espacios cromáticos: Aplic
 #### Actividades complementarias
 La actividad complementaria se centrará en reproducir el artículo de [*High precision white light 218 interferometry based on a color CCD and peak matching*](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/2022_Jaeseung.pdf)
 
-## *9mayo* Las estrellas de neutrones como laboratorios astrófísicos
+## *9mayo* Las estrellas de neutrones como laboratorios astrofísicos
 ### *Laura Becerra*. Escuela de Física UIS
 
 #### Resumen
@@ -161,6 +161,7 @@ Recientemente, la detección de ondas gravitacionales y las mediciones simultán
 En esta charla, exploraremos cómo las observaciones astrofísicas de las estrellas de neutrones pueden proporcionar información crucial sobre la materia en densidades extremas. Descubrirás cómo estos objetos están ayudando a avanzar en nuestro conocimiento de la física fundamental y cómo se pueden realizar avances potenciales en la descripción de la materia a través de la exploración de estos laboratorios astrofísicos únicos.
 
 #### La Presentación
+Presentación [Las estrellas de neutrones como laboratorios astrofísicos](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/EstrellasNeutrones.pdf)
 
 #### Lecturas complementarias
 + Aceña, A. Una estrella bien simple. Revista Brasileira De Ensino De Física 42, (2020).
