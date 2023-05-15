@@ -175,15 +175,17 @@ Presentación [Las estrellas de neutrones como laboratorios astrofísicos](https
 Reproducir el artículo de [*Compact stars for undergraduates*](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/sagert2006.pdf) y en [esta página](https://compose.obspm.fr/) se pueden encontrar todo tipo de ecuaciones de estado para estrellas de neutrones:
 
 
-## *16mayo* TBD
+## *16mayo* Sensores cuánticos y su aplicación en la detección temprana de enfermedades
 ### *David A. Miranda Mercado*. Escuela de Física UIS.
 
 #### Resumen
+La capacidad de detectar moléculas biológicas asociadas a procesos de anormalidad celular es un campo de investigación en constante desarrollo, donde el límite de detección del instrumento utilizado desempeña un papel crucial. La detección de moléculas individuales con alta sensibilidad y precision es fundamental para identificar trazas específicas de  enfermedades a partir de muestras de fluidos corporales, como sangre, saliva o excreciones glandulares. Estos sensores, conocidos como biosensores, utilizan otra molécula biológica como receptor específico y aprovechan la interacción entre ellas para su detección. Estas interacciones, regidas por las leyes de la mecánica cuántica, pueden ser evaluadas de diversas formas: mediante su actividad óptica, eléctrica o vibracional. En esta sesión se abordarán los conceptos básicos de los sensores cuánticos capacitivos y su aplicación en la detección de enfermedades.
 
 #### La Presentación
 
 #### Lecturas complementarias
-
+- Bertel, L., Miranda, D. A., & García-Martín, J. M. (2021). [Nanostructured titanium dioxide surfaces for electrochemical biosensing. Sensors](https://doi.org/10.3390/s21186167), 21(18), 6167.
+- Corzo, S. P., Bueno, P. R., & Miranda, D. A. (2021). [Improving the Analytical Reproducibility of Electrochemical Capacitive Sensors Using the Chemical Hardness of the Interface](https://doi.org/10.1109/ACCESS.2021.3135787). IEEE Access, 9, 166446-166454.
 #### Actividades complementarias
 
 
