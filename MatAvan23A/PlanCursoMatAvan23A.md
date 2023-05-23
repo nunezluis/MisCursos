@@ -59,7 +59,7 @@ También utilizaremos capítulos de esta bibliografía
 Esta asignación tiene por objeto mostrar una aplicación de espacios tensoriales en función de datos. Primero un sistema de masas donde se calcula el Tensor de Inercia y luego construir un espacio tensorial de productos internos bruto (PIB) y comparar los gastos militares del país en los últimos 15 años con los de educación, y los de ciencia y tecnología. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensores/TallerTensoresAutovalores.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensores/DatosTensores/datosmasas.csv) podrán encontrar los datos.
 
  Los resultados deberán ser entregados en forma de artículo siguiendo el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp).
-   
+
 
 + [Clase 7. Tensores y espacios tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md)
 
@@ -95,8 +95,8 @@ Esta asignación tiene por objeto mostrar una aplicación de espacios tensoriale
 + Clase 17 Evaluación Asignación 3
 
 ### Ecuaciones diferenciales ordinarias
-+ [Clase 18 Generalidades de Ecuaciones diferenciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C5_1EcDifOrdGeneralidades.md)
-+ [Clase 19 Soluciones numéricas al problema de valores iniciales en ecuaciones diferenciales ordinarias](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C5_2EcDifOrdNumericas.md)
++ [Clase 18 Generalidades de Ecuaciones diferenciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C6_1EcDifOrdGeneralidades.md)
++ [Clase 19 Soluciones numéricas al problema de valores iniciales en ecuaciones diferenciales ordinarias](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C6_2EcDifOrdNumericas.md)
 + [Clase 20 Problema de Sturm Liuville y los valores de frontera](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
 + [Clase 21 Solución de Ecuaciones diferenciales ordinarias y valores de frontera](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
