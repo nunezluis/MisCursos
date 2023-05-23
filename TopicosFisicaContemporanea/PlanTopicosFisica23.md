@@ -193,10 +193,14 @@ La capacidad de detectar moléculas biológicas asociadas a procesos de anormali
 ### *Jesús Peña-Rodríguez*. Universidad de Wuppertal Alemania
 
 #### Resumen
+La exploración de la interacción fuerte de la materia bajo condiciones extremas es uno de los campos más excitantes de la física nuclear moderna. Los nuevos descubrimientos como la fusión de estrellas de neutrones y estrellas de neutrones supermasivas retan nuestro conocimiento de la QCD a altas densidades. La misión del experimento CBM es producir e investigar la materia nuclear densa mediante colisiones energéticas de iones pesados (Ag-Ag, Au-Au) en búsqueda de transiciones o puntos críticos en el diagrama de fase.
 
 #### La Presentación
 
 #### Lecturas complementarias
+- C. Klochkov and CBM collaboration. [The Compressed Baryonic Matter Experiment at FAIR](https://www.sciencedirect.com/science/article/abs/pii/S0375947420302554). 2019
+
+Sélim Seddiki and the CBM Collaboration. [The Compressed Baryonic Matter experiment](https://iopscience.iop.org/article/10.1088/1742-6596/503/1/012027). 2013
 
 #### Actividades complementarias
 
