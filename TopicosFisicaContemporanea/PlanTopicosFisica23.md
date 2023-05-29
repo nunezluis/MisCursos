@@ -196,7 +196,7 @@ La capacidad de detectar moléculas biológicas asociadas a procesos de anormali
 La exploración de la interacción fuerte de la materia bajo condiciones extremas es uno de los campos más excitantes de la física nuclear moderna. Los nuevos descubrimientos como la fusión de estrellas de neutrones y estrellas de neutrones supermasivas retan nuestro conocimiento de la QCD a altas densidades. La misión del experimento CBM es producir e investigar la materia nuclear densa mediante colisiones energéticas de iones pesados (Ag-Ag, Au-Au) en búsqueda de transiciones o puntos críticos en el diagrama de fase.
 
 #### La Presentación
-
+Compressed Baryonic Matter experiment
 #### Lecturas complementarias
 - C. Klochkov and CBM collaboration. [The Compressed Baryonic Matter Experiment at FAIR](https://www.sciencedirect.com/science/article/abs/pii/S0375947420302554). 2019
 
@@ -205,10 +205,11 @@ Sélim Seddiki and the CBM Collaboration. [The Compressed Baryonic Matter experi
 #### Actividades complementarias
 
 
-## *30mayo* Materia Oscura y Simulaciones de Galaxias
-### *Arturo Núñez-Castiñeyra* Univesidad de Paris-Saclay, Francia
+## *30mayo* La materia oscura y la dinámica galáctica desde el punto de vista de las simulaciones numéricas.
+### *Arturo Núñez-Castiñeyra* Universidad de Paris-Saclay, Francia
 
 #### Resumen
+La materia oscura constituye uno de los problemas fundamentales de la cosmología y la astrofísica moderna. Esta materia que, o no interactua con la materia bariónica o lo hace muy debilmente, aparece como una respuesta natural a una serie de observaciones difíciles de explicar, que existen a diferentes escalas, y con diferentes técnicas de observación. Además, debería representar una gran maryoría de la materia del Universo. Sin embargo, todos los experimentos dedicados a su detección carecen de existo, la materia oscura sigue escapando la captura. Y como resultado no conocemos su verdadera naturaleza. En el modelo cosmológico actual la materia oscura cumple varios roles, sirve de chispa inicial para la formación de galaxias, es fundamental para su estabilidad rotacional y las interacciones intergalácticas. Las galaxias se forman en escalas temporales enormes, y son difíciles de observar en sus épocas tempranas. Una herramienta muy valiosa para la comprensión de la historia galáctica es el uso de simulaciones para generar experimentos numéricos controlados. En este seminario vamos a explorar un poco el escenario actual de la materia oscura desde el punto de vista de la dinámica de galaxias, y el uso de simulaciones numéricas para la compresión de la formación y la evolución de las galaxias. Sin ánimos de ser exhaustivos sino de exponer el poder de estas herramientas numéricas para guiar el futuro de la astrofísica y servir de puente entre teorías y observaciones.
 
 #### La Presentación
 
