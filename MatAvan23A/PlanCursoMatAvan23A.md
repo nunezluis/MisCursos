@@ -97,7 +97,7 @@ Esta asignación tiene por objeto mostrar una aplicación de espacios tensoriale
 ### Ecuaciones diferenciales ordinarias
 + [Clase 18 Generalidades de Ecuaciones diferenciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C6_1EcDifOrdGeneralidades.md)
 + [Clase 19 Soluciones numéricas al problema de valores iniciales en ecuaciones diferenciales ordinarias](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C6_2EcDifOrdNumericas.md)
-+ [Clase 20 Problema de Sturm Liuville y los valores de frontera](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
++ [Clase 20 Problema de Sturm Liuville y los valores de frontera](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C11_1SturmLiuoville.md)
 
 + [Clase 21 Solución de Ecuaciones diferenciales ordinarias y valores de frontera](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
 
