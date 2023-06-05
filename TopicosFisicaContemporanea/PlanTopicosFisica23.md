@@ -214,10 +214,15 @@ La materia oscura constituye uno de los problemas fundamentales de la cosmologí
 La presentación [La materia oscura y la dinámica galáctica desde el punto de vista de las simulaciones numéricas](https://docs.google.com/presentation/d/10T-j-u1PZswk6Usd2T7qLDC7_XtORKpWK-86eIzybl4/edit?usp=sharing)
 
 #### Lecturas complementarias
++ Miguel Pato, Fabio Iocco (2017) [𝚐𝚊𝚕𝚔𝚒𝚗: a new compilation of the Milky Way rotation curve data](https://arxiv.org/abs/1703.00020)
++ P. Mroz, A. Udalski, J. Skowron, M.K. Szymanski, et al (2019)  [Microlensing optical depth and event rate toward the Galactic bulge from 8 yr of OGLE-IV observations](https://arxiv.org/abs/1906.02210)
++ Anna-Christina Eilers, David W. Hogg, Hans-Walter Rix, Melissa Ness (2018) [The Circular Velocity Curve of the Milky Way from 5 to 25 kpc](https://arxiv.org/abs/1810.09466)
+
+
 
 
 #### Actividades complementarias
-Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/TareaGalaxias.ipynb) para desarrollar la tarea relacionada con dinámica de galaxias 
+Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/TareaGalaxias.ipynb) para desarrollar la tarea relacionada con dinámica de galaxias
 
 ## *6junio* Noticias desde el Gran Colisionador de Hadrones, CERN
 ### *Reina Camacho* Experimento Atlas CERN, Suiza
