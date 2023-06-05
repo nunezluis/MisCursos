@@ -215,8 +215,9 @@ La presentación [La materia oscura y la dinámica galáctica desde el punto de 
 
 #### Lecturas complementarias
 
-#### Actividades complementarias
 
+#### Actividades complementarias
+Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/TareaGalaxias.ipynb) para desarrollar la tarea relacionada con dinámica de galaxias 
 
 ## *6junio* Noticias desde el Gran Colisionador de Hadrones, CERN
 ### *Reina Camacho* Experimento Atlas CERN, Suiza
