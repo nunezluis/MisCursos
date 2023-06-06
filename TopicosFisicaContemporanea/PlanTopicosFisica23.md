@@ -228,24 +228,49 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 ### *Reina Camacho* Experimento Atlas CERN, Suiza
 
 #### Resumen
+Desde Ginebra hablaremos sobre el Gran Colisionados de Hadrones (LHC, por sus siglas inglés) en el CERN: ¿Qué es? ¿Qué estudiamos en el LHC? Y también divagaremos sobre el futuro de los aceleradores y de la física de partículas.  
+
 
 #### La Presentación
 
 #### Lecturas complementarias
++ CERN: https://home.web.cern.ch
++ ATLAS experiment: https://atlas.cern
++ The High Luminosity LHC: https://home.cern/press/2022/HL-LHC
++ Joseph D. Lykken - “The Future of Particle Physics”: https://www.youtube.com/watch?v=HiXmRtx_dK0
++ I. Shipsey. Vision and Outlook: The Future of Particle Physics: https://arxiv.org/pdf/1707.03711.pdf
 
-#### Actividades complementarias
 
-## *13junio* El Sol al descubierto: los nuevos horizontes en su estudio
+## *13junio* La importancia de las pequeñas cosas: Los bloques fundamentales de la actividad solar.
 ### *Santiago Vargas*. Universidad Nacional de Colombia, sede Bogota
 
 #### Resumen
+En esta charla exploraremos el tema de la alta resolución en astrofísica solar y por qué es crucial observar detalles cada vez mas finos en el Sol para comprender su comportamiento. La superficie del Sol, conocida como fotosfera, presenta una amplia gama de estructuras a diferentes escalas espaciales y temporales, como los flujos convectivos que transportan plasma y campos magnéticos. Estudiar la evolución de los campos magnéticos en el plasma fotosférico es esencial para comprender procesos que ocurren en las diferentes capas de la atmósfera solar, los cuales están relacionados con la liberación de energía y su impacto en el clima espacial. Desde las visibles manchas solares hasta los elementos magnéticos más pequeños, cada detalle revela información valiosa sobre la actividad solar y el ciclo solar. A través de técnicas de seguimiento de correlación y la utilización de tecnología de alta resolución, hemos logrado encontrar patrones de flujo del plasma solar y su interacción de los campos magnéticos en la fotosfera. La detección de pequeñas características magnéticas, como los Puntos Brillantes Magnéticos (MBPs) y las concentraciones magnéticas a menor escala, nos ha permitido comprender mejor la actividad solar en su conjunto. Al investigar estas pequeñas estructuras y su evolución, esperamos desentrañar los misterios del Sol y su impacto en nuestro entorno espacial.
+
 
 #### La Presentación
 
+
 #### Lecturas complementarias
++ Interaction of convective plasma and small-scale magnetic fields in the lower solar atmosphere
+https://link.springer.com/article/10.1007/s41614-022-00094-0
+
++ Observaciones solares de última generación
+https://sired.udenar.edu.co/322/
+
++ High-resolution observations of the solar photosphere, chromosphere, and transition region
+https://www.aanda.org/articles/aa/pdf/2020/09/aa38732-20.pdf
 
 #### Actividades complementarias
++ JHelioviewer
+https://www.jhelioviewer.org/demo.html
 
++ Tutorial
+https://www.youtube.com/watch?v=xzSV94LfRwc
+
++ DKIST Python Tools Tutorial
+This tutorial covers the basic use of DKIST Level 1 data in Python. It covers various aspects of the DKIST package and the ecosystem of packages that it relies on.
+https://docs.dkist.nso.edu/projects/nso-workshop/en/latest/intro.html
 
 ## *20junio* TBD
 ### *Carlos Páez-González*. Escuela de Física UIS
