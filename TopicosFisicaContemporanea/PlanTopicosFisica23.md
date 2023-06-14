@@ -232,6 +232,7 @@ Desde Ginebra hablaremos sobre el Gran Colisionados de Hadrones (LHC, por sus si
 
 
 #### La Presentación
+Presentación [Noticias desde el Gran Colisionador de Hadrones](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/DesdeElCERN2.pdf)
 
 #### Lecturas complementarias
 + CERN: https://home.web.cern.ch
