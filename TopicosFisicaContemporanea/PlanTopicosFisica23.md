@@ -250,7 +250,7 @@ En esta charla exploraremos el tema de la alta resolución en astrofísica solar
 
 
 #### La Presentación
-
+[La importancia de las pequeñas cosas](https://drive.google.com/file/d/1v3MDAmoZHj7EnH5xE-1Gf5rn20JeuK1E/view?usp=sharing)
 
 #### Lecturas complementarias
 + Interaction of convective plasma and small-scale magnetic fields in the lower solar atmosphere
@@ -273,14 +273,20 @@ https://www.youtube.com/watch?v=xzSV94LfRwc
 This tutorial covers the basic use of DKIST Level 1 data in Python. It covers various aspects of the DKIST package and the ecosystem of packages that it relies on.
 https://docs.dkist.nso.edu/projects/nso-workshop/en/latest/intro.html
 
-## *20junio* TBD
+## *20junio* Rompiendo Paradigmas: La Nueva Física de los Materiales Bidimensionales
 ### *Carlos Páez-González*. Escuela de Física UIS
 
 #### Resumen
+La investigación en materiales bidimensionales (2D) ha experimentado un crecimiento acelerado en la última década, provocando una transformación en la física de la materia condensada y la ciencia de los materiales. Los sistemas 2D, caracterizados por fuertes correlaciones, dan lugar a propiedades electrónicas y estructurales únicas en forma de excitaciones colectivas, que no tienen un equivalente directo en los materiales tridimensionales (3D) convencionales utilizados en la tecnología moderna.
+
+En esta charla, nos centraremos en dos fenómenos fundamentales que se producen en estos materiales 2D: los plasmones y los excitones. Los plasmones, oscilaciones colectivas de electrones, y los excitones, pares de electrones y huecos ligados, juegan papeles clave en determinar las propiedades ópticas y electrónicas de los materiales 2D. Su comportamiento en los materiales 2D puede diferir notablemente de sus contrapartes tridimensionales (3D) debido a la restricción de la dimensionalidad y las fuertes interacciones entre las partículas.
 
 #### La Presentación
 
 #### Lecturas complementarias
+1. [Collective Excitations in 2D Materials](https://www.nature.com/articles/s42254-020-0214-4) por Aleksandr Rodin, Maxim Trushin, Alexandra Carvalho, A. H. Castro Neto.
+
+2. [2D materials and van der Waals heterostructures](https://arxiv.org/abs/1608.03059) por K. S. Novoselov, A. Mishchenko, A. Carvalho, A. H. Castro Neto.
 
 #### Actividades complementarias
 
