@@ -71,7 +71,7 @@ Por definir
 + [Clase 8. Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md)
 
 + [Clase 9. Evaluación Ejercicios y Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md)
-    1. Hacer un código MAXIMA que resuelva el problema 2 sección 3.2.11
+    1. Hacer un código MAXIMA/Sympy que resuelva el problema 2 sección 3.2.11
     2. Resolver ejercicio 5 de la sección 4.1.6
 
 + [Clase 10. Matrices y Operadores Lineales, parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **Entrega Asignación 2**
@@ -83,4 +83,4 @@ Por definir
 + Clase 13 Evaluación Asignación 2 y ejercicios
    1. Resolver el ejercicio 2 de la sección 4.3.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
    2. Resolver los ejercicios 4, 5, y 12  de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
-   3. Hacer un par de códigos en MAXIMA para resolver los ejercicios 6 y 8 de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
+   3. Hacer un par de códigos en MAXIMA/Sympy para resolver los ejercicios 6 y 8 de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
