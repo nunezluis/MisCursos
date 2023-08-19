@@ -1,8 +1,14 @@
-# Retos de Física Semestre B 22
-## Necesidades de espacio 4 grupos
+# Retos de Física Semestre B 23
+Bienvenidos al curso de Retos de Física del semestre B2023. La intención con cada reto es plantear un modelo teoríco, realizar una simulación y contrastarla con datos experiementales. Estos tres elementos deben estar presentes cada uno de los desarrollos.
+
+Los grupos estarán conformados por tres o cuatro estudiantes
+
+
+
+Necesidades de espacio 4 grupos
 + Grupo 1
 +
-## Grupo 1 
+## Grupo 1
  + Angela Barajas
  + Brayan Barajas
 
