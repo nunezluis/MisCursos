@@ -1,7 +1,26 @@
 # Retos de Física Semestre B 23
-Bienvenidos al curso de Retos de Física del semestre B2023. La intención con cada reto es plantear un modelo teoríco, realizar una simulación y contrastarla con datos experiementales. Estos tres elementos deben estar presentes cada uno de los desarrollos.
+Bienvenidos al curso de Retos de Física del semestre B2023. La intención con cada reto es plantear un modelo teoríco, realizar una simulación y contrastarla con datos experiementales. Estos tres elementos deben estar presentes cada uno de los desarrollos. Los equipos deberán presentar informes de avances regularmente
 
-Los grupos estarán conformados por tres o cuatro estudiantes
+Los equipos de trabajo estarán conformados por tres o cuatro estudiantes. Los horarios serán miércoles y jueves de 11h a 12h
+
+El calendario del curso será el siguiente
++ **Semana 1** Conformación del equipo de trabajo y selección del reto
+    + *Entregrables (28ago):*
+       + Equipo de trabajo
+       + Reto a abordar
+       + Repositorio Git con la siguiente estructura
+         + *Referencias:* Lista de las referencias y enlaces pertinentes para la solución del reto.
+         + *Montaje experimental:* Descripción en .md del montaje experimental
+         + *Códigos:* las versiones de los códigos que se utilizarán en la simulación
+         + *Documentos:* presentaciones, reportes de avances y reporte final      
++ **Semana 2** Recopilación de información
+    + *Entregrables (4sep):* Actualización del git con la recopilación de información
++ **Semana 3 y 4:** Propuesta de investigación
+    + *Entregrables (18sep):*
+        + Presentación propuesta (5-6 laminas)
+        + Sustentación de la propuesta (10m) 
+
+
 
 
 
