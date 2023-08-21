@@ -4,8 +4,21 @@ Bienvenidos al curso de Retos de Física del semestre B2023. La intención con c
 
 Los equipos de trabajo estarán conformados por tres o cuatro estudiantes.
 
-## Propuesta de investigación
+Una parte importante del curso es el ejercicio de como hacer y presentar una propuesta. Luego como hacer y presentar un reporte de la realización del reto
 
+## Propuesta de investigación
+Una parte importante del curso es la confección de una propuesta de investigación. Típicamente la propuesta deberá contener :
++ Título, autores (con sus correspondientes filiaciones)
++ Resumen
++ Pregunta de investigación
++ Introducción (contextualizar el problema o pregunta de investigación conjuntamente con su importancia)
++ Estado del Arte (¿qué antecedentes existen para el tratamiento del problema?)
++ Objetivos (general y específicos: ¿cuál es la pregunta de investigación? ¿como se desgrana la pregunta de invesgación en subpreguntas? )
++ Metodología (¿cuales actividades generan los objetivos específcos? ¿qué se va hacer para lograr los objetivos? ¿qué resultados se esperan, y por qué?)
++ Referencias bibliográficas
+
+## Reporte o informe
+Igual que la propuesta, pero se añaden una sección con resultados y otra con conclusiones + recomendaciones.
 
 ## Calendario del Curso
 El calendario del curso será el siguiente:
@@ -22,8 +35,11 @@ El calendario del curso será el siguiente:
    + *Entregables (4sep):* Actualización del Git con las referencias del tema
 + **Semana 3 y 4**
    + *Entregables (18sep):*
-      + Actualización del git con la prestación de la propuesta
-      + Sustentación de la propuesta de investigación      
+      + Documento (enlace a *overleaf*) con la propuesta
+      + Documento presentación de la propuesta
+      + Actualización del git con la propuesta y la prestación de la propuesta
+      + Sustentación de la propuesta de investigación
+      + Listado de posibles materiales       
 
 
 
