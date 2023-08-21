@@ -7,7 +7,7 @@ Los equipos de trabajo estarán conformados por tres o cuatro estudiantes.
 Una parte importante del curso es el ejercicio de como hacer y presentar una propuesta. Luego como hacer y presentar un reporte de la realización del reto
 
 ## Propuesta de investigación
-Una parte importante del curso es la confección de una propuesta de investigación. Típicamente la propuesta deberá contener :
+Una parte importante del curso es la confección de una propuesta de investigación.  Típicamente la propuesta deberá contener :
 + Título, autores
 + Resumen
 + Pregunta de investigación
@@ -17,8 +17,30 @@ Una parte importante del curso es la confección de una propuesta de investigaci
 + Metodología (¿cuales actividades generan los objetivos específcos? ¿qué se va hacer para lograr los objetivos? ¿qué resultados se esperan, y por qué?)
 + Referencias bibliográficas
 
+Hay algunos [modelos de propuesta](
+https://files.cercomp.ufg.br/weby/up/863/o/How_to_write_a_research_proposal.pdf) que pueden consultar
+
 ## Reporte o informe
 Igual que la propuesta, pero se añaden una sección con resultados y otra con conclusiones + recomendaciones.
+
+## Presentaciones académicas
+Uno aprende a hacer las presentaciones de forma autodidáctica. Claramente si uno ha asistido a muchos seminarios puede ir definiendo un estilo personal de las presentaciones.
+
+Pero hay gente, profesional que ha reflexiodo respecto a la mejor manera de realizar presentaciones. Las presentaciones no son un artículo en imágenes. Tienen una personalidad y un estilo propio. Aquí les comparto algunos consejos para hacer buenas presentaciones
++ https://blogs.lse.ac.uk/impactofsocialsciences/2015/02/20/how-to-win-at-academic-presentations/
++ https://blogs.lse.ac.uk/careers/2017/01/27/tips-to-master-presentations/
++ https://www.princeton.edu/~archss/webpdfs08/BaharMartonosi.pdf
++ https://www.sciencefarts.com/uploads/6/3/9/8/63980147/designing_science_presentations.pdf
+
+### Poster o carteles académicos
+Los poster, al igual que las presentaciones, no son un artículo vertical. Tienen un objetivo, una organización y una estética distinta a un reporte o una presentación.  Aquí les comparto algunas estrategias para hacer posters mas profesionales.
+
++ https://www.sciencedirect.com/science/article/pii/S2049080116301303
++ https://blogs.lse.ac.uk/impactofsocialsciences/2018/05/11/how-to-design-an-award-winning-conference-poster/ 
++ https://blogs.agu.org/onthejob/2017/03/24/creating-scientific-poster-powerpoint-video-tutorial/
++ https://www.geosociety.org/gsatoday/archive/25/5/article/i1052-5173-25-5-66.htm
++ https://www.aje.com/en/arc/ways-to-create-great-research-poster/
++ https://www.eposters.net/
 
 ## Calendario del Curso
 El calendario del curso será el siguiente:
@@ -53,9 +75,9 @@ El calendario del curso será el siguiente:
 + **Semana 12, 13 y 14** Redacción y sustentacion informe final
   + *Entregables (4dic):*
       + Documento (enlace a *overleaf*) con el informe final (max 7pg sin referencias, ni autores-resumen)
-      + Presentación informe final (7láminas)
+      + Poster presentando el informe final (7láminas)
       + Sustentación informe de avance (7m sustentación + 3m preguntas)
-      + Actualización del git con informe de avance
+      + Actualización del git con informe de avance y el poster.
 
 
 ## Retos
@@ -68,7 +90,7 @@ La dinámica del chapoteo depende de factores como la forma del recipiente, sus 
 La empresa [*The Spill not*](https://thespillnot.com/)  comercializa un dispositivo que evita el los líquidos contenidos en tazas o vasos se derramen. Utilizando su celular, parametrice el fenómeno del derrame de líquidos utilizando este dispositivo.
 
 ### Reto 2 *De la atracción y las tensiones*
-Cuando dos burbujas de jabón colisionan, pueden rebotar o fusionarse. Encontrar las condiciones para que ocurran cada uno de los fenómenos. URL: https://youtu.be/BRe9M1lF4Hs
+Cuando [dos burbujas de jabón colisionan](https://youtu.be/BRe9M1lF4Hs), pueden rebotar o fusionarse. Encontrar las condiciones para que ocurran cada uno de los fenómenos.
 
 ### Reto 3 *El problema inverso y las tazas*
 Si golpea la parte superior de una taza de café con una cuchara, notará que el sonido depende en gran medida de dónde se golpee. Conociendo la geometría de la taza, se puede predecir el espectro de frecuencia del sonido emitido al tocar en diferentes puntos.
@@ -76,7 +98,7 @@ Si golpea la parte superior de una taza de café con una cuchara, notará que el
 Considere ahora el problema inverso y encuentre una técnica experimental para reconstruir la geometría de la copa a partir del sonido emitido. ¿Cuál es el conocimiento mínimo sobre la geometría de la copa que se necesita para resolver el problema?  Un ejemplo de este problema inverso lo pueden ver en el canal youtube del prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda): https://youtu.be/MfzNJE4CK_s
 
 ### Reto 4 *Perplejidades de clips y ligas*
-Hay un monton de trucos bonitos que se hacen con una [cinta de papel, clips y ligas](https://youtu.be/wGkvyN6s9cY) (bandas de goma) que pueden ver en el canal youtube del prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda)    La pregunta que les hacemos es ¿Pueden extenderlo para mas de dos vueltas de la cinta de papel? Describa los casos y plantee posibles generalizaciones ¿cuáles serían las limitaciones de los materiales?
+Hay un monton de trucos bonitos que se hacen con una [cinta de papel, clips y ligas](https://youtu.be/wGkvyN6s9cY) (bandas de goma) que pueden ver en el canal youtube del prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda). La pregunta que les hacemos es ¿Pueden extenderlo para mas de dos vueltas de la cinta de papel? Describa los casos y plantee posibles generalizaciones ¿cuáles serían las limitaciones de los materiales?
 
 ### Reto 5  *Péndulo Magnético*
  Considere un [péndulo magnético](https://youtu.be/yQeQwwXXa7A) que consta de un imán unido a un eje que puede oscilar sobre una estructura de imanes permanentes. Estudie la dinámica del péndulo y su dependencia del número de imanes permanentes y su disposición.
@@ -88,4 +110,25 @@ Inspirado en el [video de Bruce Yeany](https://youtu.be/615GTw4TNxI) construya y
 Otra vez el Prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda) nos presenta otro caso curioso de oscilaciones con [cilindros danzantes](https://youtu.be/JuuYFt8bahE) y también [extra de cilindros](https://youtu.be/5dJsOF7_GfY). Parametrice y intente generalizar ese fenómeno.
 
 ### Reto 8  *Estabilidad e inestabilidad conica*
-Otra vez el Prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda) nos presenta [un plano inclinado y dos estrucuras cónicas](https://youtu.be/Ku8BOBwD4hc), unas que ruedan cuesta abajo de forma estable y otras que nó. Analice ambos casos
+Y seguimos con los ejemplos del Prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda), ahora nos presenta [un plano inclinado y dos estrucuras cónicas](https://youtu.be/Ku8BOBwD4hc), unas que ruedan cuesta abajo de forma estable y otras que nó. Analice ambos casos.
+
+### Reto 9 *La fisica del telefonito*
+Cuando niños jugábamos con un [teléfono de vasos y cuerda](https://youtu.be/PmmGSF7TXBI). Dos tazas unidas por una cuerda nos permitían hablar a distancia. ¿Qué determina la distancia y la calidad de comunicación de un teléfono de este tipo? ¿Cómo depende la frecuencia de transmisión del sonido en el otro extremo de la cuerda de su tensión y diámetro? También Brue Yeany [nos muestra algunos ejemplos](https://youtu.be/iKKX9HAAtxQ) que debe considerar
+
+### Reto 10  *Aviocitos de papel*
+Para seguir la tónica de recuerdos de la infancia del reto anterior. Si construyes un [avioncito de papel con una hoja tipo carta](https://youtu.be/6fLh8eswOn0) ¿A qué distancia máxima puede volar un avión hecho con la hoja? ¿Cómo depende la distancia de la densidad del papel y del tipo de avión? ¿cambia al distancia máxima con el diseño?
+
+### Reto 11  *Dardos soplados*
+Muchas tibus amazónicas, africanas y los ninjas japoneses, utilizan  [cerbatanas que disparan dardos](https://youtu.be/7Zt7ytttO-A) para cazar o guerrear. Proponga la construcción óptima del sistema (cerbatana + dardo) de tal forma que  logre el máximo alcance de tiro con dardos hechos de conos de papel. Estime además el alcance de tiro.
+
+### Reto 12  *Medio vacías o medio llenas*
+Si empujas horizontalmente una botella medio llena de agua, esta rodará hacia delante con una velocidad oscilante. ¿De qué y cómo depende la magnitud de las oscilaciones de la velocidad? ¿de la cantidad o viscosidad de líquido?
+
+### Reto 13 *Orden en la pea*
+A veces, cuando colocamos un vaso boca abajo sobre una mesa plana mojada, empieza a moverse. Investiga su velocidad en función de los parámetros pertinentes e intenta maximizarla.
+
+### Reto 14 *Hidro Cañon*
+¿A qué altura puede saltar una pelota de ping-pong utilizando el [montaje del vídeo](https://youtu.be/mPOcFSHyd9o?t=478 )? ¿Cuál es la fracción máxima de la energía cinética total que puede transferirse a la pelota?
+
+### Reto 15 *Pelotas danzantes*
+Cuando una pelota sobre una superficie dura y plana,  golpeada por un chorro de agua que cae perpendicular a la superficie, [puede empezar a oscilar](https://youtu.be/yq_qSWZDHHk). Investiga cómo dependen las oscilaciones de los parámetros pertinentes.
