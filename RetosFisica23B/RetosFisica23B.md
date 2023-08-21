@@ -158,3 +158,6 @@ Cuando una pelota sobre una superficie dura y plana,  golpeada por un chorro de 
 
 ### Reto 16 *Sonidos de la altura*
 ¿A partir del sonido generado por tuercas que se dejan caer sobre una lámina metálica se puede estimar la altura desde la que se lanzan? Desarrolle la respuesta
+
+### Reto 17 *La ignoracia es la costosa*
+En el desarrollo de un hodoscopio para hacer muografía necesitabamos unos cables para conectar los paneles centelladores a la electrónica. La compañía internacional que vendió la electrónica nos cotizó los cables de 1m a casi 100 euros y necesitamos 100 de esos cables. Mirando con detenimiento las características del cable, se nos ocurrió buscarlo en proveecores locales. Conseguimos varios que quizá funcionaen. La misión es diseñar un protocolo de prueba y comparar las calidades de los cables comprados localemente y los cotizados por el proveedor internacional.
