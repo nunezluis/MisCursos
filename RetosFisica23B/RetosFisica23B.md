@@ -163,3 +163,34 @@ Cuando una pelota sobre una superficie dura y plana,  golpeada por un chorro de 
 
 ### Reto 17 *La ignoracia es la costosa*
 Constantemente dicen que la ciencia es costosa. Lo costoso es la ignorancia. En el desarrollo de un hodoscopio para hacer muografía necesitabamos unos cables para conectar los paneles centelladores a la electrónica. La compañía internacional que vendió la electrónica nos cotizó los cables de 1m a casi 100 euros y necesitamos 100 de esos cables. Mirando con detenimiento las características del cable, se nos ocurrió buscarlo en proveecores locales. Conseguimos varios que quizá funcionen. La misión es diseñar un protocolo de prueba y comparar las calidades de los cables comprados localemente y los cotizados por el proveedor internacional.
+
+
+## Avances en la evaluación
+
+| No. | Nombre y Apellido                | Reto    | Propuesta | Avances | Reporte |
+|-----|----------------------------------|---------|-----------|---------|---------|
+| 1   | ANGARITA LEAL ANGELICA MARIA     |         |           |         |         |
+| 2   | ARIZA TEJEDOR NICOLAS ANDRES     |         |           |         |         |
+| 3   | BECERRA RODRIGUEZ MIGUEL FERNANDO|         |           |         |         |
+| 4   | BLANCO PEDRAZA RAFAEL RICARDO    |         |           |         |         |
+| 5   | CARVAJAL GUERRERO MARIA FERNANDA |         |           |         |         |
+| 6   | GARCES CASTRO JESUS ALBERTO      |         |           |         |         |
+| 7   | GOMEZ HERRERA JEFFERSON          |         |           |         |         |
+| 8   | GUARIN ROJAS JUAN ANDRES         |         |           |         |         |
+| 9   | HERNANDEZ CELIS ALEJANDRO        |         |           |         |         |
+| 10  | LAMUS RINCON JUAN DAVID          |         |           |         |         |
+| 11  | LOPEZ DELGADO WILLMAR            |         |           |         |         |
+| 12  | MARTINEZ AFANADOR JOSE RAUL      |         |           |         |         |
+| 13  | MONTAÑEZ LOBO ADRIAN RICARDO     |         |           |         |         |
+| 14  | MONTAÑO VILLA LAURA MARCELA      |         |           |         |         |
+| 15  | MORALES RANGEL DANIEL FERNANDO   |         |           |         |         |
+| 16  | MURCIA PEREZ JUAN CAMILO         |         |           |         |         |
+| 17  | NIÑO BARRIOS PAULA JULIANA       |         |           |         |         |
+| 18  | PERDOMO LAMBERTINEZ ANGELA MICHELLY|       |           |         |         |
+| 19  | PINTO BASTO STHEFANIA            |         |           |         |         |
+| 20  | RIVERA ORDOÑEZ MARIAN LAMAR      |         |           |         |         |
+| 21  | RODRIGUEZ PEREZ AMBAR NIRVANA    |         |           |         |         |
+| 22  | SAAVEDRA SANTOS DANIEL STEVEEN   |         |           |         |         |
+| 23  | TELLO PRIETO PAULA ANDREA        |         |           |         |         |
+| 24  | TOLEDO PARRA NICOLAS HERNANDO    |         |           |         |         |
+| 25  | TORRES JAIMES TIHAMER            |         |           |         |         |
