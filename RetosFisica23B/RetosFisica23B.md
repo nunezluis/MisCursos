@@ -164,6 +164,12 @@ Cuando una pelota sobre una superficie dura y plana,  golpeada por un chorro de 
 ### Reto 17 *La ignoracia es la costosa*
 Constantemente dicen que la ciencia es costosa. Lo costoso es la ignorancia. En el desarrollo de un hodoscopio para hacer muografía necesitabamos unos cables para conectar los paneles centelladores a la electrónica. La compañía internacional que vendió la electrónica nos cotizó los cables de 1m a casi 100 euros y necesitamos 100 de esos cables. Mirando con detenimiento las características del cable, se nos ocurrió buscarlo en proveecores locales. Conseguimos varios que quizá funcionen. La misión es diseñar un protocolo de prueba y comparar las calidades de los cables comprados localemente y los cotizados por el proveedor internacional.
 
+### Reto 18 *Ondeando banderas*
+Estudie las banderas (o cualquier trozo de tela y otros materiales de lámina) colgadas mientras está sometida a un viento uniforme. ¿En qué condiciones empieza a ondear y a emitir sonido? Construye el anemómetro más preciso basándote en el sonido del aleteo de la bandera.
+
+#### Reto 19 *Estoraques de Arena*
+Tome un plato plano grande (de al menos 30 cm de diámetro) y llénelo de agua hasta una profundidad de 2 cm. A continuación [añada arena seca desde una altura de unos 40 cm](https://youtu.be/shu2RfdqXN0). Al cabo de un tiempo, una estalagmita de arena se eleva desde el plato. ¿Cuál es la altura máxima que se puede alcanzar con este método de construcción? ¿Cuáles son los parámetros más relevantes que controlan esa altura máxima?
+
 
 ## Avances en la evaluación
 
