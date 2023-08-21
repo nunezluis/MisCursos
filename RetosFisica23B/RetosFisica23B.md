@@ -58,6 +58,25 @@ El calendario del curso será el siguiente:
       + Actualización del git con informe de avance
 
 
+## Retos
+
+### Reto 1 *Dinámica de chapoteo*
+La dinámica de chapoteo (*Slosh dynamics*) se refiere al movimiento de líquidos dentro de un recipiente que está sometido a fuerzas externas. Este fenómeno es especialmente relevante en ingeniería, física y diversas industrias en las que es necesario comprender y gestionar la estabilidad y el rendimiento de los sistemas que contienen líquidos.
+
+La empresa [*The Spill not*](https://thespillnot.com/)  comercializa un dispositivo que evita el los líquidos contenidos en un recipiente se derrame.
+
+Parametrice el fenómeno del derrame de líquidos utilizando este dispositivo
+
+### Reto 2 *Del amor y las tensiones*
+Cuando dos burbujas de jabón colisionan, pueden rebotar o fusionarse. Encontrar las condiciones para que ocurran cada uno de los fenómenos. URL: https://youtu.be/BRe9M1lF4Hs
+
+### Reto 3 *El problema inverso y las tazas*
+Si golpea la parte superior de una taza de café con una cuchara, notará que el sonido depende en gran medida de dónde se golpee. Conociendo la geometría de la taza, se puede predecir el espectro de frecuencia del sonido emitido al tocar en diferentes puntos.
+Considere ahora el problema inverso y encuentre una técnica experimental para reconstruir la geometría de la copa a partir del sonido emitido. ¿Cuál es el conocimiento mínimo sobre la geometría de la copa que se necesita para resolver el problema?  Un ejemplo de este problema inverso lo pueden ver en el canal youtube del prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda): https://youtu.be/MfzNJE4CK_s
+
+### Reto 4 *Perplejidades de clips y ligas*
+Hay un monton de trucos bonitos que se hacen con una cita de papel, clips y ligas (bandas de goma) que pueden ver en el canal youtube del prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda)   https://youtu.be/wGkvyN6s9cY La pregunta que les hacemos es ¿Pueden extenderlo para mas de dos vueltas de la cinta de papel? Describa los casos y plantee posibles generalizaciones ¿cuáles serían las limitaciones de los materiales?
+
 Necesidades de espacio 4 grupos
 + Grupo 1
 +
@@ -67,9 +86,8 @@ Necesidades de espacio 4 grupos
 
 #### Proyecto: **Inverse Coffee Cup**
  + Descripción:
-    Si golpea la parte superior de una taza de café con una cuchara, notará que el sonido depende en gran medida de dónde se golpee. Conociendo la geometría de la taza, se puede predecir el espectro de frecuencia del sonido emitido al tocar en diferentes puntos.
-    Considere ahora el problema inverso y encuentre una técnica experimental para reconstruir la geometría de la copa a partir del sonido emitido. ¿Cuál es el conocimiento mínimo sobre la geometría de la copa que se necesita para resolver el problema?
- + URL: https://www.youtube.com/watch?v=MfzNJE4CK_s&t=5s&ab_channel=Numberphile
+
+
  + Materiales y Métodos: Pocillos, porcelanicrón para la elaboración de las asas, objeto para golpear y generar el sonido, grabadora de sonido. La idea general consiste en grabar el sonido producido a diferentes ángulos y variando la cantidad de asas del pocillo, para posteriormente analizar el espectro de frecuencias de los sonidos y determinar relaciones entre estos y la cantidad de asas.
 
 ## Grupo 2
