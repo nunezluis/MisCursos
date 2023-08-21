@@ -1,26 +1,29 @@
 # Retos de Física Semestre B 23
-Bienvenidos al curso de Retos de Física del semestre B2023. La intención con cada reto es plantear un modelo teoríco, realizar una simulación y contrastarla con datos experiementales. Estos tres elementos deben estar presentes cada uno de los desarrollos. Los equipos deberán presentar informes de avances regularmente
+## Dinámica del Curso
+Bienvenidos al curso de Retos de Física del semestre B2023. La intención con cada reto es plantear un modelo teoríco, realizar una simulación y contrastarla con datos experiementales. Estos tres elementos deben estar presentes cada uno de los desarrollos. El objetivo de este curso es reproducir todas las etapas del desarrollo y prueba de un modelo en Física.
 
-Los equipos de trabajo estarán conformados por tres o cuatro estudiantes. Los horarios serán miércoles y jueves de 11h a 12h
+Los equipos de trabajo estarán conformados por tres o cuatro estudiantes.
 
-El calendario del curso será el siguiente
-+ **Semana 1** Conformación del equipo de trabajo y selección del reto
-    + *Entregrables (28ago):*
-       + Equipo de trabajo
-       + Reto a abordar
-       + Repositorio Git con la siguiente estructura
-         + *Referencias:* Lista de las referencias y enlaces pertinentes para la solución del reto.
-         + *Montaje experimental:* Descripción en .md del montaje experimental
-         + *Códigos:* las versiones de los códigos que se utilizarán en la simulación
-         + *Documentos:* presentaciones, reportes de avances y reporte final      
-+ **Semana 2** Recopilación de información
-    + *Entregrables (4sep):* Actualización del git con la recopilación de información
-+ **Semana 3 y 4:** Propuesta de investigación
-    + *Entregrables (18sep):*
-        + Presentación propuesta (5-6 laminas)
-        + Sustentación de la propuesta (10m) 
+## Propuesta de investigación
 
 
+## Calendario del Curso
+El calendario del curso será el siguiente:
++ **Semana 1** Conformación del equipo de trabajo y selección del reto.
+   + *Entregables (28ago):*
+     + Selección del reto
+     + Conformación del equipo
+     + Repositorio del equipo, con la siguiente estructura:
+        + Referencias, enlaces a videos
+        + Montaje experimental: descripción en .md del montaje, sus partes, su precisión
+        + Códigos de simulación
+        + Documentos: Presentaciones y reportes  
++ **Semana 2** Recopilación de información. identificación de las referencias claves relacionadas con el tema: artículos, videos, tutoriales, etc.
+   + *Entregables (4sep):* Actualización del Git con las referencias del tema
++ **Semana 3 y 4**
+   + *Entregables (18sep):*
+      + Actualización del git con la prestación de la propuesta
+      + Sustentación de la propuesta de investigación      
 
 
 
