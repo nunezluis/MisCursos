@@ -4,7 +4,21 @@ Bienvenidos al curso de Retos de Física del semestre B2023. La intención con c
 
 Los equipos de trabajo estarán conformados por tres o cuatro estudiantes.
 
-Una parte importante del curso es el ejercicio de como hacer y presentar una propuesta. Luego como hacer y presentar un reporte de la realización del reto
+Una parte importante del curso es el ejercicio de como hacer y presentar una propuesta. Luego como hacer y presentar los reportes de avances y, finalmente el reporte final y el poster para sustentar la solución del reto.
+
+## Evaluación
+La evaluación de curso se divide en
++ La calidad de la solución del problema (60%). La calidad se medirá en
+   + originalidad de la solución
+   + dominio de la Física
+   + interacciones entre Teoría, simulación y resultados experiementales
+   + posibilidad de extender la solución a otros ámbitos
++ La calidad de la comunicación de los resultados (40%)
+   + Calidad (claridad, organización y presentación) de la propuesta (10%)
+   + Calidad (claridad, organización y presentación) de los informes de avances (10%)
+   + Calidad (claridad, organización y presentación) del poster final (10%)
+   + Calidad (claridad, organización y presentación) del reporte final (20%)
+
 
 ## Propuesta de investigación
 Una parte importante del curso es la confección de una propuesta de investigación.  Típicamente la propuesta deberá contener :
@@ -21,7 +35,7 @@ Hay algunos [modelos de propuesta](
 https://files.cercomp.ufg.br/weby/up/863/o/How_to_write_a_research_proposal.pdf) que pueden consultar
 
 ## Reporte o informe
-Igual que la propuesta, pero se añaden una sección con resultados y otra con conclusiones + recomendaciones.
+Igual que la propuesta, pero se añaden una sección con resultados y otra con conclusiones + recomendaciones. Para inspirarse de cómo hacer un reporte pueden utilizar [este modelito](https://www.overleaf.com/read/hfqvjnjwngnp)
 
 ## Presentaciones académicas
 Uno aprende a hacer las presentaciones de forma autodidáctica. Claramente si uno ha asistido a muchos seminarios puede ir definiendo un estilo personal de las presentaciones.
@@ -32,15 +46,18 @@ Pero hay gente, profesional que ha reflexiodo respecto a la mejor manera de real
 + https://www.princeton.edu/~archss/webpdfs08/BaharMartonosi.pdf
 + https://www.sciencefarts.com/uploads/6/3/9/8/63980147/designing_science_presentations.pdf
 
-### Poster o carteles académicos
+## Poster o carteles académicos
 Los poster, al igual que las presentaciones, no son un artículo vertical. Tienen un objetivo, una organización y una estética distinta a un reporte o una presentación.  Aquí les comparto algunas estrategias para hacer posters mas profesionales.
 
 + https://www.sciencedirect.com/science/article/pii/S2049080116301303
-+ https://blogs.lse.ac.uk/impactofsocialsciences/2018/05/11/how-to-design-an-award-winning-conference-poster/ 
++ https://blogs.lse.ac.uk/impactofsocialsciences/2018/05/11/how-to-design-an-award-winning-conference-poster/
 + https://blogs.agu.org/onthejob/2017/03/24/creating-scientific-poster-powerpoint-video-tutorial/
 + https://www.geosociety.org/gsatoday/archive/25/5/article/i1052-5173-25-5-66.htm
 + https://www.aje.com/en/arc/ways-to-create-great-research-poster/
 + https://www.eposters.net/
+
+## Reproducibilidad y la Ciencia abierta
+Para garantizar la reproducibilidad de ciencia se debe adjuntar toda la información necesaria. No solo las ideas, la metodología y los resultados que se presentan en el reporte. Además se deben adjuntar, los códigos computacionales que permiten la simulación, los datos experimentales que sustentan las conclusiones. Su reporte final tendrá que contener estos elementos que respalden lo expresado allí.
 
 ## Calendario del Curso
 El calendario del curso será el siguiente:
