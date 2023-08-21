@@ -14,10 +14,10 @@ La evaluación de curso se divide en
    + interacciones entre Teoría, simulación y resultados experiementales
    + posibilidad de extender la solución a otros ámbitos
 + La calidad de la comunicación de los resultados (40%)
-   + Calidad (claridad, organización y presentación) de la propuesta (10%)
-   + Calidad (claridad, organización y presentación) de los informes de avances (10%)
-   + Calidad (claridad, organización y presentación) del poster final (10%)
-   + Calidad (claridad, organización y presentación) del reporte final (20%)
+   + Calidad (claridad, organización y sustentación) de la propuesta (10%)
+   + Calidad (claridad, organización y sustentación) de los informes de avances (10%)
+   + Calidad (claridad, organización y sustentación) del poster final (10%)
+   + Calidad (claridad, organización y sustentación) del reporte final (20%)
 
 
 ## Propuesta de investigación
