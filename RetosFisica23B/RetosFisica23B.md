@@ -155,3 +155,6 @@ A veces, cuando colocamos un vaso boca abajo sobre una mesa plana mojada, empiez
 
 ### Reto 15 *Pelotas danzantes*
 Cuando una pelota sobre una superficie dura y plana,  golpeada por un chorro de agua que cae perpendicular a la superficie, [puede empezar a oscilar](https://youtu.be/yq_qSWZDHHk). Investiga cómo dependen las oscilaciones de los parámetros pertinentes.
+
+### Reto 16 *Sonidos de la altura*
+¿A partir del sonido generado por tuercas que se dejan caer sobre una lámina metálica se puede estimar la altura desde la que se lanzan? Desarrolle la respuesta
