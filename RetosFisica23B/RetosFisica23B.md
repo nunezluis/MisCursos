@@ -52,7 +52,7 @@ Pero hay gente, profesional que ha reflexiodo respecto a la mejor manera de real
 + https://www.princeton.edu/~archss/webpdfs08/BaharMartonosi.pdf
 + https://www.sciencefarts.com/uploads/6/3/9/8/63980147/designing_science_presentations.pdf
 
-## Poster o carteles académicos
+### Poster o carteles académicos
 Los poster, al igual que las presentaciones, no son un artículo vertical. Tienen un objetivo, una organización y una estética distinta a un reporte o una presentación.  Aquí les comparto algunas estrategias para hacer posters mas profesionales.
 
 + https://www.sciencedirect.com/science/article/pii/S2049080116301303
@@ -65,7 +65,7 @@ Los poster, al igual que las presentaciones, no son un artículo vertical. Tiene
 ## Reproducibilidad y la Ciencia abierta
 Para garantizar la reproducibilidad de ciencia se debe adjuntar toda la información necesaria. No solo las ideas, la metodología y los resultados que se presentan en el reporte. Además se deben adjuntar, los códigos computacionales que permiten la simulación, los datos experimentales que sustentan las conclusiones. Su reporte final tendrá que contener estos elementos que respalden lo expresado allí.
 
-## Calendario del Curso
+## Calendario del Curso de Retos científicos
 El calendario del curso será el siguiente:
 + **Semana 1** Conformación del equipo de trabajo y selección del reto.
   + *Entregables (28ago):*
