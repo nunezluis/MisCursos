@@ -1,26 +1,32 @@
 # Retos de Física Semestre B 23
 ## Dinámica del Curso
-Bienvenidos al curso de Retos de Física del semestre B2023. La intención con cada reto es plantear un modelo teoríco, realizar una simulación y contrastarla con datos experiementales. Estos tres elementos deben estar presentes cada uno de los desarrollos. El objetivo de este curso es reproducir todas las etapas del desarrollo y prueba de un modelo en Física.
+Bienvenidos al curso de Retos de Física del semestre B2023. **La intención con cada reto es plantear un modelo teoríco, realizar una simulación y contrastarla con datos experiementales**. Estos tres elementos deben estar presentes cada uno de los desarrollos. El objetivo de este curso es reproducir todas las etapas del desarrollo y prueba de un modelo en Física.
 
 Los equipos de trabajo estarán conformados por tres o cuatro estudiantes.
 
-Una parte importante del curso es el ejercicio de como hacer y presentar una propuesta. Luego como hacer y presentar los reportes de avances y, finalmente el reporte final y el poster para sustentar la solución del reto.
+Una parte importante del curso es el ejercicio de cómo hacer y presentar una propuesta. Luego como desarrollar y presentar los reportes de avances y, finalmente el reporte final y el poster para sustentar la solución del reto.
 
 ## Evaluación
 La evaluación de curso se divide en
-+ La calidad de la solución del problema (60%). La calidad se medirá en
++ **La calidad de la solución del problema (60%)**. La calidad se medirá en
    + originalidad de la solución
    + dominio de la Física
    + interacciones entre Teoría, simulación y resultados experiementales
    + posibilidad de extender la solución a otros ámbitos
-+ La calidad de la comunicación de los resultados (40%)
++ **La calidad de la comunicación de los resultados (40%)**
    + Calidad (claridad, organización y sustentación) de la propuesta (10%)
    + Calidad (claridad, organización y sustentación) de los informes de avances (10%)
    + Calidad (claridad, organización y sustentación) del poster final (10%)
    + Calidad (claridad, organización y sustentación) del reporte final (20%)
 
+## La Comunicación de la Ciencia
+La comunicación de la ciencia es tan clave como la obtención de resultados. De poco sirven los resultados si los pares y, peor, la comunidad no logra captar su importancia. Durante este curso haremos ejercicios de cómo expresarnos en tres géneros de la comunicación científica
++ Propuestas y reportes de Investigación
++ Presentaciones de ideas o proyectos científicos
++ Poster o carteles para presentar resultados científicos.
 
-## Propuesta de investigación
+
+### Propuesta de investigación
 Una parte importante del curso es la confección de una propuesta de investigación.  Típicamente la propuesta deberá contener :
 + Título, autores
 + Resumen
@@ -34,10 +40,10 @@ Una parte importante del curso es la confección de una propuesta de investigaci
 Hay algunos [modelos de propuesta](
 https://files.cercomp.ufg.br/weby/up/863/o/How_to_write_a_research_proposal.pdf) que pueden consultar
 
-## Reporte o informe
+### Reporte e informe
 Igual que la propuesta, pero se añaden una sección con resultados y otra con conclusiones + recomendaciones. Para inspirarse de cómo hacer un reporte pueden utilizar [este modelito](https://www.overleaf.com/read/hfqvjnjwngnp)
 
-## Presentaciones académicas
+### Presentaciones académicas
 Uno aprende a hacer las presentaciones de forma autodidáctica. Claramente si uno ha asistido a muchos seminarios puede ir definiendo un estilo personal de las presentaciones.
 
 Pero hay gente, profesional que ha reflexiodo respecto a la mejor manera de realizar presentaciones. Las presentaciones no son un artículo en imágenes. Tienen una personalidad y un estilo propio. Aquí les comparto algunos consejos para hacer buenas presentaciones
