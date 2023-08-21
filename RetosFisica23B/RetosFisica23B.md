@@ -1,17 +1,17 @@
 # Retos de Física Semestre B 23
 ## Dinámica del Curso
-Bienvenidos al curso de Retos de Física del semestre B2023. **La intención con cada reto es plantear un modelo teoríco, realizar una simulación y contrastarla con datos experiementales** para resolver un problema dada trivial. Los retos que planteamos no tinen una solución única y permiten que varios enfoques y aproximaciones. En todas las soluciones  estos tres elementos deben estar presentes. El objetivo de este curso es reproducir todas las etapas del desarrollo y prueba de un modelo en Física.
+Bienvenidos al curso de Retos de Física del semestre B2023. El objetivo de este curso es reproducir todas las etapas del desarrollo y prueba de un modelo en Física. **La intención con la solución de cada reto es: plantear un modelo teórico, realizar una simulación y contrastarla con datos experiementales** para resolver un problema nada trivial. Los retos que planteamos no tinen una solución única y permiten varios enfoques o aproximaciones. En todas las soluciones  estos tres elementos (teoría-simulación-experimentación) deben estar presentes.
 
 Los equipos de trabajo estarán conformados por tres o cuatro estudiantes. Las solución del reto deberá ser dominada por cada uno de los integrantes del equipo. Se vale la división del trabajo, pero al final cada uno de los miembros debe ser capaz de sustentar la solución.
 
-Una parte importante del curso es el ejercicio de cómo hacer y presentar una propuesta. Luego como desarrollar y presentar los reportes de avances y, finalmente el reporte final y el poster para sustentar la solución del reto.
+Una parte importante del curso es el ejercicio de comunicar la ciencia. Esto es: cómo hacer y presentar una propuesta. Luego como desarrollar y presentar los reportes de avances y, finalmente el reporte final y el poster para sustentar la solución del reto.
 
 ## Evaluación
-La evaluación de curso se divide en
+La evaluación de curso toca los dos aspectos fundamentales en la solución de un problema científico:
 + **La calidad de la solución del problema (60%)**. La calidad se medirá en
    + originalidad de la solución
-   + dominio de la Física
-   + interacciones entre Teoría, simulación y resultados experiementales
+   + lo acertado de la solución (teoría-simulación-experimentación)
+   + interacciones y acuerdos entre Teoría, simulación y resultados experiementales
    + posibilidad de extender la solución a otros ámbitos
 + **La calidad de la comunicación de los resultados (40%)**
    + Calidad (claridad, organización y sustentación) de la propuesta (10%)
@@ -22,9 +22,10 @@ La evaluación de curso se divide en
 ## La Comunicación de la Ciencia
 La comunicación de la ciencia es tan clave como la obtención de resultados. De poco sirven los resultados si los pares y, peor, la comunidad no logra captar su importancia. Durante este curso haremos ejercicios de cómo expresarnos en tres géneros de la comunicación científica
 + Propuestas y reportes de Investigación
-+ Presentaciones de ideas o proyectos científicos
++ Presentaciones de las ideas o proyectos científicos
 + Poster o carteles para presentar resultados científicos.
 
+Una referencia que recomiendo ampliamente para entender que las ideas no bastan es el librito Feibelman, P. J. (2011). A PhD is not enough!: A guide to survival in science. Basic Books. Una maravilla para entender que las ideas no bastan.
 
 ### Propuesta de investigación
 Una parte importante del curso es la confección de una propuesta de investigación.  Típicamente la propuesta deberá contener :
@@ -41,10 +42,10 @@ Hay algunos [modelos de propuesta](
 https://files.cercomp.ufg.br/weby/up/863/o/How_to_write_a_research_proposal.pdf) que pueden consultar
 
 ### Reporte e informe
-Igual que la propuesta, pero se añaden una sección con resultados y otra con conclusiones + recomendaciones. Para inspirarse de cómo hacer un reporte pueden utilizar [este modelito](https://www.overleaf.com/read/hfqvjnjwngnp)
+La estructura del informe coincide con la de la propuesta, pero se añaden una sección con resultados y otra con conclusiones + recomendaciones. Para inspirarse de cómo hacer un reporte pueden utilizar [este modelito](https://www.overleaf.com/read/hfqvjnjwngnp)
 
 ### Presentaciones académicas
-Uno aprende a hacer las presentaciones de forma autodidáctica. Claramente si uno ha asistido a muchos seminarios puede ir definiendo un estilo personal de las presentaciones.
+Uno aprende a hacer las presentaciones de forma silvestre, autodidáctica. Claramente si uno ha asistido a muchos seminarios puede ir definiendo un estilo personal de las presentaciones. Sobre todo de cómo no deben ser, que siempre es más fácil.
 
 Pero hay gente, profesional que ha reflexiodo respecto a la mejor manera de realizar presentaciones. Las presentaciones no son un artículo en imágenes. Tienen una personalidad y un estilo propio. Aquí les comparto algunos consejos para hacer buenas presentaciones
 + https://blogs.lse.ac.uk/impactofsocialsciences/2015/02/20/how-to-win-at-academic-presentations/
@@ -53,7 +54,7 @@ Pero hay gente, profesional que ha reflexiodo respecto a la mejor manera de real
 + https://www.sciencefarts.com/uploads/6/3/9/8/63980147/designing_science_presentations.pdf
 
 ### Poster o carteles académicos
-Los poster, al igual que las presentaciones, no son un artículo vertical. Tienen un objetivo, una organización y una estética distinta a un reporte o una presentación.  Aquí les comparto algunas estrategias para hacer posters mas profesionales.
+Los poster, al igual que las presentaciones, no son artículos verticales. Tienen un objetivo, una organización y una estética distinta a un reporte o una presentación.  Aquí les comparto algunas estrategias para hacer posters mas profesionales:
 
 + https://www.sciencedirect.com/science/article/pii/S2049080116301303
 + https://blogs.lse.ac.uk/impactofsocialsciences/2018/05/11/how-to-design-an-award-winning-conference-poster/
@@ -63,7 +64,7 @@ Los poster, al igual que las presentaciones, no son un artículo vertical. Tiene
 + https://www.eposters.net/
 
 ## Reproducibilidad y la Ciencia abierta
-Para garantizar la reproducibilidad de ciencia se debe adjuntar toda la información necesaria. No solo las ideas, la metodología y los resultados que se presentan en el reporte. Además se deben adjuntar, los códigos computacionales que permiten la simulación, los datos experimentales que sustentan las conclusiones. Su reporte final tendrá que contener estos elementos que respalden lo expresado allí.
+Para garantizar la reproducibilidad de ciencia se debe adjuntar toda la información necesaria. No solo las ideas, la metodología y los resultados que se presentan en los reportes o artículos. Además se deben adjuntar, los códigos computacionales que permiten la simulación, los datos experimentales que sustentan las conclusiones (datos medidos y/o simulados). El reporte final tendrá que contener estos elementos que respalden lo expresado allí.
 
 ## Calendario del Curso de Retos científicos
 El calendario del curso será el siguiente:
@@ -103,31 +104,32 @@ El calendario del curso será el siguiente:
       + Actualización del git con informe de avance y el poster.
 
 
-## Retos
+## Retos para seleccionar
+Los equipos deberán seleccionar uno de estos retos para resolverlos durante el semestre, siguiendo el calendario arriba expuesto.
 
 ### Reto 1 *Dinámica de chapoteo*
-La dinámica de chapoteo (*Slosh dynamics*) se refiere al movimiento de líquidos dentro de un recipiente que está sometido a fuerzas externas. Este fenómeno es especialmente relevante en ingeniería, física y diversas industrias en las que es necesario comprender y gestionar la estabilidad y el rendimiento de los sistemas que contienen líquidos.
+La dinámica de chapoteo ([*Slosh dynamics*](https://en.wikipedia.org/wiki/Slosh_dynamics)) se refiere al movimiento de líquidos dentro de un recipiente sometido a fuerzas externas. Este fenómeno es relevante en ingeniería, física y diversas industrias en las que es necesario comprender la estabilidad y el rendimiento de los sistemas que contienen líquidos.
 
 La dinámica del chapoteo depende de factores como la forma del recipiente, sus dimensiones, el nivel de llenado, las propiedades del líquido (densidad, viscosidad, tensión superficial), las fuerzas externas (aceleración, desaceleración, vibración) y la presencia de estructuras/mecanismos internos diseñadas para mitigarlo.
 
-La empresa [*The Spill not*](https://thespillnot.com/)  comercializa un dispositivo que evita el los líquidos contenidos en tazas o vasos se derramen. Utilizando su celular, parametrice el fenómeno del derrame de líquidos utilizando este dispositivo.
+El emprendimiento científoco [*The Spill not*](https://thespillnot.com/) comercializa un dispositivo que evita el los líquidos contenidos en tazas o vasos se derramen. Utilizando su celular, parametrice el fenómeno del derrame de líquidos utilizando este dispositivo.
 
 ### Reto 2 *De la atracción y las tensiones*
-Cuando [dos burbujas de jabón colisionan](https://youtu.be/BRe9M1lF4Hs), pueden rebotar o fusionarse. Encontrar las condiciones para que ocurran cada uno de los fenómenos.
+Cuando [dos burbujas de jabón colisionan](https://youtu.be/BRe9M1lF4Hs), pueden rebotar o fusionarse. Encuentre las condiciones para que ocurran cada uno de los fenómenos.
 
 ### Reto 3 *El problema inverso y las tazas*
 Si golpea la parte superior de una taza de café con una cuchara, notará que el sonido depende en gran medida de dónde se golpee. Conociendo la geometría de la taza, se puede predecir el espectro de frecuencia del sonido emitido al tocar en diferentes puntos.
 
-Considere ahora el problema inverso y encuentre una técnica experimental para reconstruir la geometría de la copa a partir del sonido emitido. ¿Cuál es el conocimiento mínimo sobre la geometría de la copa que se necesita para resolver el problema?  Un ejemplo de este problema inverso lo pueden ver en el canal youtube del prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda): https://youtu.be/MfzNJE4CK_s
+Considere ahora el problema inverso y encuentre una técnica experimental para reconstruir la geometría de un recipiente a partir del sonido emitido. ¿Cuál es el conocimiento mínimo sobre la geometría de la copa que se necesita para resolver el problema?  Una interesante discusión de este problema inverso lo pueden ver en el canal youtube del prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda): https://youtu.be/MfzNJE4CK_s
 
 ### Reto 4 *Perplejidades de clips y ligas*
-Hay un monton de trucos bonitos que se hacen con una [cinta de papel, clips y ligas](https://youtu.be/wGkvyN6s9cY) (bandas de goma) que pueden ver en el canal youtube del prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda). La pregunta que les hacemos es ¿Pueden extenderlo para mas de dos vueltas de la cinta de papel? Describa los casos y plantee posibles generalizaciones ¿cuáles serían las limitaciones de los materiales?
+Hay un monton de trucos bonitos que se hacen con una [cinta de papel, clips y ligas](https://youtu.be/wGkvyN6s9cY) (bandas de goma) que también pueden ver en el canal youtube del prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda). La pregunta que les hacemos es ¿Pueden extenderlo para mas de dos vueltas de la cinta de papel? Describa los casos y plantee posibles generalizaciones ¿cuáles serían las limitaciones de los materiales?
 
 ### Reto 5  *Péndulo Magnético*
- Considere un [péndulo magnético](https://youtu.be/yQeQwwXXa7A) que consta de un imán unido a un eje que puede oscilar sobre una estructura de imanes permanentes. Estudie la dinámica del péndulo y su dependencia del número de imanes permanentes y su disposición.
+ Considere un [péndulo magnético](https://youtu.be/yQeQwwXXa7A) que consta de un imán unido a un eje que puede oscilar sobre una estructura de imanes permanentes. Estudie la dinámica del péndulo y su dependencia del número y disposición de los imanes en la base.
 
 ### Reto 6  *Variedades de Péndulos*
-Inspirado en el [video de Bruce Yeany](https://youtu.be/615GTw4TNxI) construya y estudie la dinámica de alguno de los péndulos dobles que allí proponen. Compare dos péndulos dobles similares.
+Inspirado en el [video de Bruce Yeany](https://youtu.be/615GTw4TNxI) construya y estudie la dinámica de alguno de los péndulos dobles que allí proponen. Compare dos ellos, los que sean más similares. Construya un modelo teórico, simúlelo y compárelo con medidas experimentales.
 
 ### Reto 7  *Cilindros danzantes*
 Otra vez el Prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda) nos presenta otro caso curioso de oscilaciones con [cilindros danzantes](https://youtu.be/JuuYFt8bahE) y también [extra de cilindros](https://youtu.be/5dJsOF7_GfY). Parametrice y intente generalizar ese fenómeno.
@@ -144,8 +146,8 @@ Para seguir la tónica de recuerdos de la infancia del reto anterior. Si constru
 ### Reto 11  *Dardos soplados*
 Muchas tibus amazónicas, africanas y los ninjas japoneses, utilizan  [cerbatanas que disparan dardos](https://youtu.be/7Zt7ytttO-A) para cazar o guerrear. Proponga la construcción óptima del sistema (cerbatana + dardo) de tal forma que  logre el máximo alcance de tiro con dardos hechos de conos de papel. Estime además el alcance de tiro.
 
-### Reto 12  *Medio vacías o medio llenas*
-Si empujas horizontalmente una botella medio llena de agua, esta rodará hacia delante con una velocidad oscilante. ¿De qué y cómo depende la magnitud de las oscilaciones de la velocidad? ¿de la cantidad o viscosidad de líquido?
+### Reto 12  *Botellas oscilantes, medio vacías o medio llenas*
+Si empujas horizontalmente una botella medio llena de agua, rodará hacia delante con una velocidad oscilante. ¿De qué y cómo depende la magnitud de las oscilaciones de la velocidad? ¿de la cantidad o viscosidad de líquido?
 
 ### Reto 13 *Orden en la pea*
 A veces, cuando colocamos un vaso boca abajo sobre una mesa plana mojada, empieza a moverse. Investiga su velocidad en función de los parámetros pertinentes e intenta maximizarla.
@@ -160,4 +162,4 @@ Cuando una pelota sobre una superficie dura y plana,  golpeada por un chorro de 
 ¿A partir del sonido generado por tuercas que se dejan caer sobre una lámina metálica se puede estimar la altura desde la que se lanzan? Desarrolle la respuesta
 
 ### Reto 17 *La ignoracia es la costosa*
-En el desarrollo de un hodoscopio para hacer muografía necesitabamos unos cables para conectar los paneles centelladores a la electrónica. La compañía internacional que vendió la electrónica nos cotizó los cables de 1m a casi 100 euros y necesitamos 100 de esos cables. Mirando con detenimiento las características del cable, se nos ocurrió buscarlo en proveecores locales. Conseguimos varios que quizá funcionen. La misión es diseñar un protocolo de prueba y comparar las calidades de los cables comprados localemente y los cotizados por el proveedor internacional.
+Constantemente dicen que la ciencia es costosa. Lo costoso es la ignorancia. En el desarrollo de un hodoscopio para hacer muografía necesitabamos unos cables para conectar los paneles centelladores a la electrónica. La compañía internacional que vendió la electrónica nos cotizó los cables de 1m a casi 100 euros y necesitamos 100 de esos cables. Mirando con detenimiento las características del cable, se nos ocurrió buscarlo en proveecores locales. Conseguimos varios que quizá funcionen. La misión es diseñar un protocolo de prueba y comparar las calidades de los cables comprados localemente y los cotizados por el proveedor internacional.
