@@ -5,7 +5,7 @@ Esta clase tiene por objetivo explorar la estructura de los espacios vectoriales
 
 ### Actividad antes de clase
    1. Estudiar el punto 2.2 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
-   2. Rehacer con MAXIMA el ejemplo 2.7 .
+   2. Rehacer con MAXIMA/SymPy el ejemplo 2.7 .
 
 ### Taller de problemas
 Resuelva el ejercicio 6 sección 2.2.4
