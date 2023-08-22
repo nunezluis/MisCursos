@@ -1,6 +1,6 @@
 # Retos de Física Semestre B 23
 ## Dinámica del Curso
-Bienvenidos al curso de Retos de Física del semestre B2023. El objetivo de este curso es reproducir todas las etapas del desarrollo y prueba de un modelo en Física. **La intención con la solución de cada reto es: plantear un modelo teórico, realizar una simulación y contrastarla con datos experiementales** para resolver un problema nada trivial. Los retos que planteamos no tinen una solución única y permiten varios enfoques o aproximaciones. En todas las soluciones  estos tres elementos (teoría-simulación-experimentación) deben estar presentes.
+Bienvenidos al curso de Retos de Física del semestre B2023. El objetivo de este curso es reproducir todas las etapas del desarrollo y prueba de un modelo en Física. **La intención con la solución de cada reto es plantear un modelo teórico, realizar una simulación y contrastar (teoría + simulación) con los datos experiementales** para resolver un problema nada trivial. Los retos que planteamos no tinen una solución única y permiten varios enfoques o aproximaciones. En todas las soluciones  estos tres elementos (teoría-simulación-experimentación) deben estar presentes.
 
 Los equipos de trabajo estarán conformados por tres o cuatro estudiantes. Las solución del reto deberá ser dominada por cada uno de los integrantes del equipo. Se vale la división del trabajo, pero al final cada uno de los miembros debe ser capaz de sustentar la solución.
 
