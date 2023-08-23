@@ -176,27 +176,27 @@ Tome un plato plano grande (de al menos 30 cm de diámetro) y llénelo de agua h
 | No. | Nombre y Apellido                | Reto    | Propuesta | Avances | Reporte |
 |-----|----------------------------------|---------|-----------|---------|---------|
 | 1   | ANGARITA LEAL ANGELICA MARIA     |         |           |         |         |
-| 2   | ARIZA TEJEDOR NICOLAS ANDRES     |         |           |         |         |
-| 3   | BECERRA RODRIGUEZ MIGUEL FERNANDO|         |           |         |         |
-| 4   | BLANCO PEDRAZA RAFAEL RICARDO    |         |           |         |         |
-| 5   | CARVAJAL GUERRERO MARIA FERNANDA |         |           |         |         |
-| 6   | GARCES CASTRO JESUS ALBERTO      |         |           |         |         |
+| 2   | ARIZA TEJEDOR NICOLAS ANDRES     |  5 - 19   |           |         |         |
+| 3   | BECERRA RODRIGUEZ MIGUEL FERNANDO|  1 - 9  |           |         |         |
+| 4   | BLANCO PEDRAZA RAFAEL RICARDO    |  2      |           |         |         |
+| 5   | CARVAJAL GUERRERO MARIA FERNANDA |  3 - 18|           |         |         |
+| 6   | GARCES CASTRO JESUS ALBERTO      |  4 - 5  |           |         |         |
 | 7   | GOMEZ HERRERA JEFFERSON          |         |           |         |         |
-| 8   | GUARIN ROJAS JUAN ANDRES         |         |           |         |         |
-| 9   | HERNANDEZ CELIS ALEJANDRO        |         |           |         |         |
+| 8   | GUARIN ROJAS JUAN ANDRES         |  3       |           |         |         |
+| 9   | HERNANDEZ CELIS ALEJANDRO        |   4 -5    |           |         |         |
 | 10  | LAMUS RINCON JUAN DAVID          |         |           |         |         |
 | 11  | LOPEZ DELGADO WILLMAR            |         |           |         |         |
-| 12  | MARTINEZ AFANADOR JOSE RAUL      |         |           |         |         |
+| 12  | MARTINEZ AFANADOR JOSE RAUL      |   1 - 9 |           |         |         |
 | 13  | MONTAÑEZ LOBO ADRIAN RICARDO     |         |           |         |         |
-| 14  | MONTAÑO VILLA LAURA MARCELA      |         |           |         |         |
-| 15  | MORALES RANGEL DANIEL FERNANDO   |         |           |         |         |
+| 14  | MONTAÑO VILLA LAURA MARCELA      |   3      |           |         |         |
+| 15  | MORALES RANGEL DANIEL FERNANDO   | 5 - 19   |           |         |         |
 | 16  | MURCIA PEREZ JUAN CAMILO         |         |           |         |         |
 | 17  | NIÑO BARRIOS PAULA JULIANA       |         |           |         |         |
 | 18  | PERDOMO LAMBERTINEZ ANGELA MICHELLY|       |           |         |         |
-| 19  | PINTO BASTO STHEFANIA            |         |           |         |         |
-| 20  | RIVERA ORDOÑEZ MARIAN LAMAR      |         |           |         |         |
+| 19  | PINTO BASTO STHEFANIA            |    1- 9    |           |         |         |
+| 20  | RIVERA ORDOÑEZ MARIAN LAMAR      |    1 -9     |           |         |         |
 | 21  | RODRIGUEZ PEREZ AMBAR NIRVANA    |         |           |         |         |
-| 22  | SAAVEDRA SANTOS DANIEL STEVEEN   |         |           |         |         |
+| 22  | SAAVEDRA SANTOS DANIEL STEVEEN   |   4 -5    |           |         |         |
 | 23  | TELLO PRIETO PAULA ANDREA        |         |           |         |         |
 | 24  | TOLEDO PARRA NICOLAS HERNANDO    |         |           |         |         |
-| 25  | TORRES JAIMES TIHAMER            |         |           |         |         |
+| 25  | TORRES JAIMES TIHAMER            |   5 -19
