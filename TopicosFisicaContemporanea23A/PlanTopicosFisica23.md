@@ -49,7 +49,7 @@ Seguidamente presentamos algunas ideas de aplicaciones de los rayos cósmicos co
 #### Actividades complementarias
 Presentamos dos actividades complementarias, una que tiene que ver con el análisis de datos observacionales y otra que está relacionada con la simulación de la propagación de muones en objetos geofísicos.
 + La primera tiene que ver con la detección de decrecimientos Forbush en los datos de los detectores de superficie del Observatorio Pierre Auger.  Los [decrecimientos Forbush](https://en.wikipedia.org/wiki/Forbush_decrease#:~:text=A%20Forbush%20decrease%20is%20a,cosmic%20rays%20away%20from%20Earth) son disminuciones transitorias del flujo de partículas en tierra producto del paso de una eyección de masa coronal. La actividad que proponemos la pueden encontrar [aqui](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/DecrecimientoForbush.md)
-+ La segunda actividad que proponemos tiene que ver con la muografía de objetos geofísicos. Proponemos construir un código que simule la propagación de muones a través de roca estándar. La descripción de esta actividad la pueden encontrar [aqui](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/Muograf%C3%ADaUSAL.pdf).
++ La segunda actividad que proponemos tiene que ver con la muografía de objetos geofísicos. Proponemos construir un código que simule la propagación de muones a través de roca estándar. La descripción de esta actividad la pueden encontrar [aqui](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/MuografiaUSAL.pdf).
 
 
 
