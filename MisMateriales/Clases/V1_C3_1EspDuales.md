@@ -4,7 +4,7 @@
 Esta busca construir espacios vectoriales duales a partir de la definición del producto interno. Identificar las bases duales asociadas a las bases de los espacios vectoriales y los vectores duales (o 1-formas) asociados a los vectores. Mostrar como un vector dual (una 1-forma) puede ser expresado como combinación lineal de la base dual.
 
 ### Actividad antes de clase
-   1. Estudiar el punto 3.1 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf).
+   1. Estudiar el punto 3.1 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf).
    2. Rehacer los ejemplos 3.3 y 3.4.
 
 ### Taller de problemas
