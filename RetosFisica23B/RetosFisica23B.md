@@ -173,9 +173,9 @@ Tome un plato plano grande (de al menos 30 cm de diámetro) y llénelo de agua h
 
 ## Avances en la evaluación
 
-| No. | Nombre y Apellido                | Equipo/Reto    | Propuesta | Avances | Reporte |
+| No. | Nombre y Apellido                | Equipo/Reto| Propuesta | Avances | Reporte |
 |-----|----------------------------------|---------|-----------|---------|---------|
-| 1   | ANGARITA LEAL ANGELICA MARIA     |  6/16      |           |         |         |
+| 1   | ANGARITA LEAL ANGELICA MARIA     |  6/16   |           |         |         |
 | 2   | ARIZA TEJEDOR NICOLAS ANDRES     |  5/19 |           |         |         |
 | 3   | BECERRA RODRIGUEZ MIGUEL FERNANDO|  1/9  |           |         |         |
 | 4   | BLANCO PEDRAZA RAFAEL RICARDO    |  2/11    |           |         |         |
