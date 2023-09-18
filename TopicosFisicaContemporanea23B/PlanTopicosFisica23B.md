@@ -65,7 +65,7 @@ En el contexto de este seminario-charla, vamos a adentrarnos en el apasionante m
 
 
 ## *26september*  TBD
-### *Christian Sarmiento-Cano* Escuela de Física, UIS    
+### *Sergio Pinilla* Heuritech, Francia    
 #### Resumen
 
 #### La presentación
