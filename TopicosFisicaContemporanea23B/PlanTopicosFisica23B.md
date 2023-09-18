@@ -64,7 +64,7 @@ En el contexto de este seminario-charla, vamos a adentrarnos en el apasionante m
 #### Actividades complementarias
 
 
-## *26sep*  TBD
+## *26september*  TBD
 ### *Christian Sarmiento-Cano* Escuela de Física, UIS    
 #### Resumen
 
@@ -76,7 +76,28 @@ En el contexto de este seminario-charla, vamos a adentrarnos en el apasionante m
 #### Actividades complementarias
 
 
-## *3octubre* La materia oscura y la dinámica galáctica desde el punto de vista de las simulaciones numéricas.
+## *3octubre*  TBD
+### *Eduardo Orozco* Escuela de Física UIS  
+#### Resumen
+
+#### La presentación
+
+#### Lecturas complementarias
+
+
+#### Actividades complementarias
+
+
+## *10octubre*  TBD
+### *Eduardo Orozco* Escuela de Física UIS  
+#### Resumen
+
+#### La presentación
+
+#### Lecturas complementarias
+
+
+## *17octubre* La materia oscura y la dinámica galáctica desde el punto de vista de las simulaciones numéricas.
 ### *Arturo Núñez-Castiñeyra* Universidad de Paris-Saclay, Francia
 
 #### Resumen
@@ -96,36 +117,21 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 
 
 
-## *XXsep*  ZZZZZZ
-### *XXXXX* YYY   
-#### Resumen
-
-#### La presentación
-
-#### Lecturas complementarias
 
 
 #### Actividades complementarias
 
-## *XXsep*  ZZZZZZ
-### *XXXXX* YYY   
+
+## *24octubre*  Análisis de la dinámica espacio-temporal de enjambres sísmicos en sistemas volcánicos utilizando herramientas de inteligencia artificial.
+### *Manuel Flores* Escuela de Física UIS    
 #### Resumen
 
 #### La presentación
 
 #### Lecturas complementarias
++ https://www.science.org/doi/full/10.1126/science.aau0323
 
-
-#### Actividades complementarias
-
-## *XXsep*  ZZZZZZ
-### *XXXXX* YYY   
-#### Resumen
-
-#### La presentación
-
-#### Lecturas complementarias
-
++ https://www.nature.com/articles/s41467-020-17591-w
 
 #### Actividades complementarias
 
