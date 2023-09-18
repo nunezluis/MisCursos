@@ -135,7 +135,7 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 
 #### Actividades complementarias
 
-## *XXsep*  ZZZZZZ
+## *31octubre*  ZZZZZZ
 ### *XXXXX* YYY   
 #### Resumen
 
@@ -146,7 +146,18 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 
 #### Actividades complementarias
 
-## *XXsep*  ZZZZZZ
+## *7noviembre*  TBD
+### *Andrés Camilo García* Escuela de Física, UIS    
+#### Resumen
+
+#### La presentación
+
+#### Lecturas complementarias
+
+
+#### Actividades complementarias
+
+## *14noviembre*  ZZZZZZ
 ### *XXXXX* YYY   
 #### Resumen
 
@@ -157,7 +168,7 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 
 #### Actividades complementarias
 
-## *XXsep*  ZZZZZZ
+## *21noviembre*  ZZZZZZ
 ### *XXXXX* YYY   
 #### Resumen
 
@@ -168,7 +179,10 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 
 #### Actividades complementarias
 
-## *XXsep*  ZZZZZZ
+
+#### Actividades complementarias
+
+## *28noviembre*  ZZZZZZ
 ### *XXXXX* YYY   
 #### Resumen
 

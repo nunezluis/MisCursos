@@ -219,8 +219,6 @@ La presentación [La materia oscura y la dinámica galáctica desde el punto de 
 + Anna-Christina Eilers, David W. Hogg, Hans-Walter Rix, Melissa Ness (2018) [The Circular Velocity Curve of the Milky Way from 5 to 25 kpc](https://arxiv.org/abs/1810.09466)
 
 
-
-
 #### Actividades complementarias
 Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/TareaGalaxias.ipynb) para desarrollar la tarea relacionada con dinámica de galaxias
 
