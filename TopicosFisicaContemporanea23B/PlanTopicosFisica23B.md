@@ -25,7 +25,7 @@ En este documento
 [Modelado de Objetos Autogravitantes](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerEcuacionesDifOrdinarias/AutogravitantesNumericasV4.pdf) podrán encontrar un paso a paso para el modelado de objetos Autogravitantes.
 
 
-## *29marzo* La sublime utilidad de la ciencia inútil
+## *12sep* La sublime utilidad de la ciencia inútil
 ### *Luis A. Núñez* Escuela de Física UIS   
 #### Resumen
 Esta charla estará centrada en la Física (fundamental y aplicada) de los Rayos Cósmicos y las cascadas que ellos generan. Discutiremos el posible origen de esos núcleos que impactan la alta atmósfera, sus energías y sistemas físicos asociados. Haremos énfasis en la importancia de la investigación básica para generar aplicaciones e innovaciones de alto impacto social. Por ello el título de la conferencia que lo hemos tomado prestado de otras mucho mejores que la nuestra.  
@@ -50,3 +50,125 @@ Seguidamente presentamos algunas ideas de aplicaciones de los rayos cósmicos co
 Presentamos dos actividades complementarias, una que tiene que ver con el análisis de datos observacionales y otra que está relacionada con la simulación de la propagación de muones en objetos geofísicos.
 + La primera tiene que ver con la detección de decrecimientos Forbush en los datos de los detectores de superficie del Observatorio Pierre Auger.  Los [decrecimientos Forbush](https://en.wikipedia.org/wiki/Forbush_decrease#:~:text=A%20Forbush%20decrease%20is%20a,cosmic%20rays%20away%20from%20Earth) son disminuciones transitorias del flujo de partículas en tierra producto del paso de una eyección de masa coronal. La actividad que proponemos la pueden encontrar [aqui](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/DecrecimientoForbush.md)
 + La segunda actividad que proponemos tiene que ver con la muografía de objetos geofísicos. Proponemos construir un código que simule la propagación de muones a través de roca estándar. La descripción de esta actividad la pueden encontrar [aqui](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/MuografiaUSAL.pdf).
+
+## *19sep*  Explorando la dinámica solar a través la topología y Series de tiempo
+### *David Sierra-Porta* Facultad de Ciencias Básicas, Universidad Tecnológica de Bolívar, Cartagena   
+#### Resumen
+En el contexto de este seminario-charla, vamos a adentrarnos en el apasionante mundo de la dinámica solar a través de una perspectiva única que combina topología y análisis de series de tiempo. Exploraremos cómo estas herramientas nos permiten desvelar patrones ocultos y revelar la fascinante complejidad de los fenómenos solares. A lo largo de nuestra presentación, descubriremos cómo la topología y el análisis de series temporales se entrelazan para proporcionar una visión profunda de la actividad solar y cómo estos enfoques nos ayudan a comprender mejor la dinámica en juego en el sol y sus interacciones con el espacio.
+
+#### La presentación
+
+#### Lecturas complementarias
+
+
+#### Actividades complementarias
+
+
+## *26sep*  TBD
+### *Christian Sarmiento-Cano* Escuela de Física, UIS    
+#### Resumen
+
+#### La presentación
+
+#### Lecturas complementarias
+
+
+#### Actividades complementarias
+
+
+## *3octubre* La materia oscura y la dinámica galáctica desde el punto de vista de las simulaciones numéricas.
+### *Arturo Núñez-Castiñeyra* Universidad de Paris-Saclay, Francia
+
+#### Resumen
+La materia oscura constituye uno de los problemas fundamentales de la cosmología y la astrofísica moderna. Esta materia que, o no interactua con la materia bariónica o lo hace muy debilmente, aparece como una respuesta natural a una serie de observaciones difíciles de explicar, que existen a diferentes escalas, y con diferentes técnicas de observación. Además, debería representar una gran maryoría de la materia del Universo. Sin embargo, todos los experimentos dedicados a su detección carecen de existo, la materia oscura sigue escapando la captura. Y como resultado no conocemos su verdadera naturaleza. En el modelo cosmológico actual la materia oscura cumple varios roles, sirve de chispa inicial para la formación de galaxias, es fundamental para su estabilidad rotacional y las interacciones intergalácticas. Las galaxias se forman en escalas temporales enormes, y son difíciles de observar en sus épocas tempranas. Una herramienta muy valiosa para la comprensión de la historia galáctica es el uso de simulaciones para generar experimentos numéricos controlados. En este seminario vamos a explorar un poco el escenario actual de la materia oscura desde el punto de vista de la dinámica de galaxias, y el uso de simulaciones numéricas para la compresión de la formación y la evolución de las galaxias. Sin ánimos de ser exhaustivos sino de exponer el poder de estas herramientas numéricas para guiar el futuro de la astrofísica y servir de puente entre teorías y observaciones.
+
+#### La Presentación
+La presentación [La materia oscura y la dinámica galáctica desde el punto de vista de las simulaciones numéricas](https://docs.google.com/presentation/d/10T-j-u1PZswk6Usd2T7qLDC7_XtORKpWK-86eIzybl4/edit?usp=sharing)
+
+#### Lecturas complementarias
++ Miguel Pato, Fabio Iocco (2017) [𝚐𝚊𝚕𝚔𝚒𝚗: a new compilation of the Milky Way rotation curve data](https://arxiv.org/abs/1703.00020)
++ P. Mroz, A. Udalski, J. Skowron, M.K. Szymanski, et al (2019)  [Microlensing optical depth and event rate toward the Galactic bulge from 8 yr of OGLE-IV observations](https://arxiv.org/abs/1906.02210)
++ Anna-Christina Eilers, David W. Hogg, Hans-Walter Rix, Melissa Ness (2018) [The Circular Velocity Curve of the Milky Way from 5 to 25 kpc](https://arxiv.org/abs/1810.09466)
+
+
+#### Actividades complementarias
+Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/TareaGalaxias.ipynb) para desarrollar la tarea relacionada con dinámica de galaxias
+
+
+
+## *XXsep*  ZZZZZZ
+### *XXXXX* YYY   
+#### Resumen
+
+#### La presentación
+
+#### Lecturas complementarias
+
+
+#### Actividades complementarias
+
+## *XXsep*  ZZZZZZ
+### *XXXXX* YYY   
+#### Resumen
+
+#### La presentación
+
+#### Lecturas complementarias
+
+
+#### Actividades complementarias
+
+## *XXsep*  ZZZZZZ
+### *XXXXX* YYY   
+#### Resumen
+
+#### La presentación
+
+#### Lecturas complementarias
+
+
+#### Actividades complementarias
+
+## *XXsep*  ZZZZZZ
+### *XXXXX* YYY   
+#### Resumen
+
+#### La presentación
+
+#### Lecturas complementarias
+
+
+#### Actividades complementarias
+
+## *XXsep*  ZZZZZZ
+### *XXXXX* YYY   
+#### Resumen
+
+#### La presentación
+
+#### Lecturas complementarias
+
+
+#### Actividades complementarias
+
+## *XXsep*  ZZZZZZ
+### *XXXXX* YYY   
+#### Resumen
+
+#### La presentación
+
+#### Lecturas complementarias
+
+
+#### Actividades complementarias
+
+## *XXsep*  ZZZZZZ
+### *XXXXX* YYY   
+#### Resumen
+
+#### La presentación
+
+#### Lecturas complementarias
+
+
+#### Actividades complementarias
