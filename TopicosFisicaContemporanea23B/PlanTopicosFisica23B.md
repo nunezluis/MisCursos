@@ -157,8 +157,8 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 
 #### Actividades complementarias
 
-## *14noviembre*  ZZZZZZ
-### *XXXXX* YYY   
+## *14noviembre*  La nueva basura originada por los viejos trastos y las malas costumbres: Microplásticos
+### *Rafael Cabanzo* Escuela de Física UIS    
 #### Resumen
 
 #### La presentación
@@ -168,7 +168,7 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 
 #### Actividades complementarias
 
-## *21noviembre*  ZZZZZZ
+## *21noviembre*  XXXX
 ### *XXXXX* YYY   
 #### Resumen
 
