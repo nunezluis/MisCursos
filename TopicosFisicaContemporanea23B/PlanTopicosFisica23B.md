@@ -168,8 +168,8 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 
 #### Actividades complementarias
 
-## *21noviembre*  XXXX
-### *XXXXX* YYY   
+## *21noviembre*  TBD
+### *Antonio Calixto Gutierrez-Piñeres* Escuela de Física UIS    
 #### Resumen
 
 #### La presentación
