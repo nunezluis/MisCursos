@@ -182,8 +182,8 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 
 #### Actividades complementarias
 
-## *28noviembre*  ZZZZZZ
-### *XXXXX* YYY   
+## *28noviembre*  TBD
+### *Carlos Leonardo Beltrán Ríos* YYY   
 #### Resumen
 
 #### La presentación
