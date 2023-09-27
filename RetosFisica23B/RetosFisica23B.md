@@ -67,7 +67,9 @@ Los poster, al igual que las presentaciones, no son artículos verticales. Tiene
 Para garantizar la reproducibilidad de ciencia se debe adjuntar toda la información necesaria. No solo las ideas, la metodología y los resultados que se presentan en los reportes o artículos. Además se deben adjuntar, los códigos computacionales que permiten la simulación, los datos experimentales que sustentan las conclusiones (datos medidos y/o simulados). El reporte final tendrá que contener estos elementos que respalden lo expresado allí.
 
 ## Algunas referencias
++ Kaps, A., Splith, T. & Stallmach, F. Implementation of smartphone-based experimental exercises for physics courses at universities. Phys. Educ. 56, 035004 (2021).
 + Poultney, S. K. Measurement and Its Reliability: An Introductory Laboratory Experiment. Am. J. Phys. 39, 176–182 (1971).
++ Schectman, R. M. The Use of Computer Generated Data in Experiment Design—A Student Exercise. Am. J. Phys. 40, 1742–1747 (1972).
 + Vieyra, R., Vieyra, C., Jeanjacquot, P., Marti, A. & Monteiro, M. Turn your smartphone into lab. Sci Teach 82, 32–40 (2015).
 
 
