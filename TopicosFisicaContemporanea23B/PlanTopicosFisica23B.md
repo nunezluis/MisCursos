@@ -1,6 +1,11 @@
 # Topicos Fisica Contemporanea Semestre B 23
 ## Dinámica del Curso
 
+## Referencias
++ Pérez, A. T., García-Sánchez, P., Quintanilla, M. A. S. & Fernández-Prieto, A. Levitation? Yes, it is possible! Am. J. Phys. 87, 270–274 (2019).
+
+
+
 
 ## *5sep*  Fluidos no pascalianos y la estructura estelar relativista
 ### *Luis A. Núñez* Escuela de Física UIS   

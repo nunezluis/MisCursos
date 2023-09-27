@@ -66,6 +66,10 @@ Los poster, al igual que las presentaciones, no son artículos verticales. Tiene
 ## Reproducibilidad y la Ciencia abierta
 Para garantizar la reproducibilidad de ciencia se debe adjuntar toda la información necesaria. No solo las ideas, la metodología y los resultados que se presentan en los reportes o artículos. Además se deben adjuntar, los códigos computacionales que permiten la simulación, los datos experimentales que sustentan las conclusiones (datos medidos y/o simulados). El reporte final tendrá que contener estos elementos que respalden lo expresado allí.
 
+## Algunas referencias
++ Poultney, S. K. Measurement and Its Reliability: An Introductory Laboratory Experiment. Am. J. Phys. 39, 176–182 (1971).
+
+
 ## Calendario del Curso de Retos científicos
 El calendario del curso será el siguiente:
 + **Semana 1** Conformación del equipo de trabajo y selección del reto.
