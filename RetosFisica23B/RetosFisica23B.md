@@ -68,6 +68,7 @@ Para garantizar la reproducibilidad de ciencia se debe adjuntar toda la informac
 
 ## Algunas referencias
 + Poultney, S. K. Measurement and Its Reliability: An Introductory Laboratory Experiment. Am. J. Phys. 39, 176–182 (1971).
++ Vieyra, R., Vieyra, C., Jeanjacquot, P., Marti, A. & Monteiro, M. Turn your smartphone into lab. Sci Teach 82, 32–40 (2015).
 
 
 ## Calendario del Curso de Retos científicos
