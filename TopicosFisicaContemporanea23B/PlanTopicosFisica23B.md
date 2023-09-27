@@ -2,10 +2,10 @@
 ## Dinámica del Curso
 
 ## Referencias
-
+Crouch, C. H. & Hirshfeld, J. W. Teaching the electrical origins of the electrocardiogram: An introductory physics laboratory for life science students. Am. J. Phys. 88, 526 (2020).
 + Freitas, F. C., Byju, S., Hassan, A., Oliveira, R. J. de & Whitford, P. C. Quantifying biomolecular diffusion with a “spherical cow” model. Am. J. Phys. 90, 225–238 (2022).
 + Pérez, A. T., García-Sánchez, P., Quintanilla, M. A. S. & Fernández-Prieto, A. Levitation? Yes, it is possible! Am. J. Phys. 87, 270–274 (2019).
-
++ Seeley, L. H. Tutorials in climate modeling. Am. J. Phys. 91, 690–695 (2023).
 
 ## *5sep*  Fluidos no pascalianos y la estructura estelar relativista
 ### *Luis A. Núñez* Escuela de Física UIS   
