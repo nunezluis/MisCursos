@@ -7,6 +7,7 @@
 + Corcovilos, T. A. A Simple game simulating quantum measurements of qubits. arXiv (2018) doi:10.48550/arxiv.1804.08417.
 + Crouch, C. H. & Hirshfeld, J. W. Teaching the electrical origins of the electrocardiogram: An introductory physics laboratory for life science students. Am. J. Phys. 88, 526 (2020).
 + Freitas, F. C., Byju, S., Hassan, A., Oliveira, R. J. de & Whitford, P. C. Quantifying biomolecular diffusion with a “spherical cow” model. Am. J. Phys. 90, 225–238 (2022).
++ Major, S. A. Footprinting in a course on energy. arXiv (2023) doi:10.48550/arxiv.2308.12263.
 + Pérez, A. T., García-Sánchez, P., Quintanilla, M. A. S. & Fernández-Prieto, A. Levitation? Yes, it is possible! Am. J. Phys. 87, 270–274 (2019).
 + Seeley, L. H. Tutorials in climate modeling. Am. J. Phys. 91, 690–695 (2023).
 

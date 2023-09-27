@@ -68,6 +68,7 @@ Para garantizar la reproducibilidad de ciencia se debe adjuntar toda la informac
 
 ## Algunas referencias
 + Kaps, A., Splith, T. & Stallmach, F. Implementation of smartphone-based experimental exercises for physics courses at universities. Phys. Educ. 56, 035004 (2021).
++ Monteiro, M. & Martí, A. C. Resource Letter MDS-1: Mobile devices and sensors for physics teaching. Am. J. Phys. 90, 328–343 (2022).
 + Poultney, S. K. Measurement and Its Reliability: An Introductory Laboratory Experiment. Am. J. Phys. 39, 176–182 (1971).
 + Schectman, R. M. The Use of Computer Generated Data in Experiment Design—A Student Exercise. Am. J. Phys. 40, 1742–1747 (1972).
 + Vieyra, R., Vieyra, C., Jeanjacquot, P., Marti, A. & Monteiro, M. Turn your smartphone into lab. Sci Teach 82, 32–40 (2015).
