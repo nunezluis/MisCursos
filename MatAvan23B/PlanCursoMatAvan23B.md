@@ -84,3 +84,13 @@ Por definir
    1. Resolver el ejercicio 2 de la sección 4.3.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
    2. Resolver los ejercicios 4, 5, y 12  de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
    3. Hacer un par de códigos en MAXIMA/Sympy para resolver los ejercicios 6 y 8 de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
+
+### Series y Transformadas de Fourier
+
+#### Clases
+
++ [Clase 14. Series de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_2SeriesFourier.md)
+
++ [Clase 15. Transformadas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_3TransFourier.md)
+
++ [Clase 16. Transformadas de Fourier Discreta](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_4TransDiscFourier.md)
