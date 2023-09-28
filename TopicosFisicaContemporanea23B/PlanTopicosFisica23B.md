@@ -88,9 +88,9 @@ De manera general, saber aprovechar los datos permite a las organizaciones tomar
 #### La presentación
 
 #### Lecturas complementarias
-HERMES: Hybrid Error-corrector Model with inclusion of External Signals for nonstationary fashion time series: https://arxiv.org/abs/2202.03224
-Identifiability of discrete Input-output hidden Markov models with external signals: https://hal.science/hal-03787440
-DyTox: Transformers for Continual Learning with DYnamic TOken eXpansion : https://arxiv.org/abs/2111.11326
++ HERMES: Hybrid Error-corrector Model with inclusion of External Signals for nonstationary fashion time series: https://arxiv.org/abs/2202.03224
++ Identifiability of discrete Input-output hidden Markov models with external signals: https://hal.science/hal-03787440
++ DyTox: Transformers for Continual Learning with DYnamic TOken eXpansion : https://arxiv.org/abs/2111.11326
 
 #### Actividades complementarias
 
