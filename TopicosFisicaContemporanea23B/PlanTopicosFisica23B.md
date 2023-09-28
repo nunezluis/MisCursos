@@ -74,16 +74,23 @@ En el contexto de este seminario-charla, vamos a adentrarnos en el apasionante m
 
 
 #### Actividades complementarias
+Las actividades complementarias se basan en utilizar [un código Python en JupyerLab](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea23B/SierraPorta/TimeSeries_HVG.ipynb) para una tarea dirigida de ejemplo de cálculos con Horizontal Visibility Graph. Los datos estan en la [carpeta](https://github.com/nunezluis/MisCursos/tree/main/TopicosFisicaContemporanea23B/SierraPorta)
 
-
-## *26september*  TBD
-### *Sergio Pinilla* Heuritech, Francia    
+## *26september*  Predicción de tendencias de moda utilizando imágenes de redes sociales e inteligencia artificial
+### *Sergio Pinilla* [Heuritech](https://www.heuritech.com), Francia    
 #### Resumen
+En un sector altamente competitivo como la industria de la moda, las empresas tienden a vender y producir cada vez más, poniendo en riesgo su rentabilidad si las proyecciones de ventas no se cumplen. Adicionalmente, la industria de la moda genera gran cantidad de residuos debido a su proceso productivo como a los saldos de inventarios no vendidos. Heuritech, startup francesa creada por investigadores en inteligencia artificial, proporciona una herramienta para ayudar a dichas organizaciones a producir únicamente los productos que los consumidores desean y reducir por tanto los invendidos.
+
+Utilizando algoritmos de visión por ordenador y análisis de series temporales, esta solución permite analizar mensualmente millones de imágenes provenientes de redes sociales y predecir con un alto nivel de precisión y un nivel de detalle muy fino las prendas, zapatos y accesorios que serán usados por las personas en el mundo durante el próximo año.
+
+De manera general, saber aprovechar los datos permite a las organizaciones tomar mejores decisiones para ser más eficientes y adaptarse mejor a los cambios. La transformación digital de las industrias requiere profesionales de distintas disciplinas, entre ellos científicos. Además de hablar sobre mi trabajo en Heuritech, en esta charla también abordaré el tema de inserción profesional para gente con estudios en física.
 
 #### La presentación
 
 #### Lecturas complementarias
-
+HERMES: Hybrid Error-corrector Model with inclusion of External Signals for nonstationary fashion time series: https://arxiv.org/abs/2202.03224
+Identifiability of discrete Input-output hidden Markov models with external signals: https://hal.science/hal-03787440
+DyTox: Transformers for Continual Learning with DYnamic TOken eXpansion : https://arxiv.org/abs/2111.11326
 
 #### Actividades complementarias
 
@@ -113,7 +120,7 @@ En el contexto de este seminario-charla, vamos a adentrarnos en el apasionante m
 ### *Arturo Núñez-Castiñeyra* Universidad de Paris-Saclay, Francia
 
 #### Resumen
-La materia oscura constituye uno de los problemas fundamentales de la cosmología y la astrofísica moderna. Esta materia que, o no interactua con la materia bariónica o lo hace muy debilmente, aparece como una respuesta natural a una serie de observaciones difíciles de explicar, que existen a diferentes escalas, y con diferentes técnicas de observación. Además, debería representar una gran maryoría de la materia del Universo. Sin embargo, todos los experimentos dedicados a su detección carecen de existo, la materia oscura sigue escapando la captura. Y como resultado no conocemos su verdadera naturaleza. En el modelo cosmológico actual la materia oscura cumple varios roles, sirve de chispa inicial para la formación de galaxias, es fundamental para su estabilidad rotacional y las interacciones intergalácticas. Las galaxias se forman en escalas temporales enormes, y son difíciles de observar en sus épocas tempranas. Una herramienta muy valiosa para la comprensión de la historia galáctica es el uso de simulaciones para generar experimentos numéricos controlados. En este seminario vamos a explorar un poco el escenario actual de la materia oscura desde el punto de vista de la dinámica de galaxias, y el uso de simulaciones numéricas para la compresión de la formación y la evolución de las galaxias. Sin ánimos de ser exhaustivos sino de exponer el poder de estas herramientas numéricas para guiar el futuro de la astrofísica y servir de puente entre teorías y observaciones.
+La materia oscura constituye uno de los problemas fundamentales de la cosmología y la astrofísica moderna. Esta materia que, o no interactua con la materia bariónica o lo hace muy débilmente, aparece como una respuesta natural a una serie de observaciones difíciles de explicar, que existen a diferentes escalas, y con diferentes técnicas de observación. Además, debería representar una gran mayoría de la materia del Universo. Sin embargo, todos los experimentos dedicados a su detección carecen de existo, la materia oscura sigue escapando la captura. Y como resultado no conocemos su verdadera naturaleza. En el modelo cosmológico actual la materia oscura cumple varios roles, sirve de chispa inicial para la formación de galaxias, es fundamental para su estabilidad rotacional y las interacciones intergalácticas. Las galaxias se forman en escalas temporales enormes, y son difíciles de observar en sus épocas tempranas. Una herramienta muy valiosa para la comprensión de la historia galáctica es el uso de simulaciones para generar experimentos numéricos controlados. En este seminario vamos a explorar un poco el escenario actual de la materia oscura desde el punto de vista de la dinámica de galaxias, y el uso de simulaciones numéricas para la compresión de la formación y la evolución de las galaxias. Sin ánimos de ser exhaustivos sino de exponer el poder de estas herramientas numéricas para guiar el futuro de la astrofísica y servir de puente entre teorías y observaciones.
 
 #### La Presentación
 La presentación [La materia oscura y la dinámica galáctica desde el punto de vista de las simulaciones numéricas](https://docs.google.com/presentation/d/10T-j-u1PZswk6Usd2T7qLDC7_XtORKpWK-86eIzybl4/edit?usp=sharing)
