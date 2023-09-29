@@ -186,25 +186,26 @@ Tome un plato plano grande (de al menos 30 cm de diámetro) y llénelo de agua h
 | 1   | ANGARITA LEAL ANGELICA MARIA     |  6/16   | 3.5       |         |         |
 | 2   | ARIZA TEJEDOR NICOLAS ANDRES     |  5/19   | 3.0       |         |         |
 | 3   | BECERRA RODRIGUEZ MIGUEL FERNANDO|  1/9    | 3.0       |         |         |
-| 4   | BLANCO PEDRAZA RAFAEL RICARDO    |  2/11   | 3.0       |         |         |
+| 4   | BLANCO PEDRAZA RAFAEL RICARDO    |  2/11   | 3.5       |         |         |
 | 5   | CARVAJAL GUERRERO MARIA FERNANDA |  3/18   | 3.5       |         |         |
 | 6   | GARCES CASTRO JESUS ALBERTO      |  4/5    | 3.0       |         |         |
 | 7   | GOMEZ HERRERA JEFFERSON          |  6/16   | 3.5       |         |         |
 | 8   | GUARIN ROJAS JUAN ANDRES         |  3/18   | 3.5       |         |         |
 | 9   | HERNANDEZ CELIS ALEJANDRO        |   4/5   | 3.0       |         |         |
-| 10  | LAMUS RINCON JUAN DAVID          |  7/2    | 3.0       |         |         |
-| 11  | LOPEZ DELGADO WILLMAR            |         | 3.0       |         |         |
-| 12  | MARTINEZ AFANADOR JOSE RAUL      |   1/9   | 3.0       |         |         |
-| 13  | MONTAÑEZ LOBO ADRIAN RICARDO     |   8/10  | 3.0       |         |         |
-| 14  | MONTAÑO VILLA LAURA MARCELA      |   3/18  | 3.5       |         |         |
-| 15  | MORALES RANGEL DANIEL FERNANDO   | 5/19    | 3.0       |         |         |
-| 16  | MURCIA PEREZ JUAN CAMILO         |   8/10  | 3.0       |         |         |
-| 17  | NIÑO BARRIOS PAULA JULIANA       |         | 3.0       |         |         |
-| 18  | PERDOMO LAMBERTINEZ ANGELA MICHELLY|  2/11 | 3.0       |         |         |
-| 19  | PINTO BASTO STHEFANIA            |  1/9    | 3.0       |         |         |
-| 20  | RIVERA ORDOÑEZ MARIAN LAMAR      |    1/9  | 3.0       |         |         |
-| 21  | RODRIGUEZ PEREZ AMBAR NIRVANA    |    7/2  | 3.0       |         |         |
-| 22  | SAAVEDRA SANTOS DANIEL STEVEEN   |   4/5   | 3.0       |         |         |
-| 23  | TELLO PRIETO PAULA ANDREA        |   7/2   | 3.0       |         |         |
-| 24  | TOLEDO PARRA NICOLAS HERNANDO    |   6/16  | 3.5       |         |         |
-| 25  | TORRES JAIMES TIHAMER            |   5/19  | 3.0       |         |         |
+| 10  | Jaimes Teheran, Jorge            |  6/16   | 3.5       |         |         |
+| 11  | LAMUS RINCON JUAN DAVID          |  7/2    | 3.0       |         |         |
+| 12  | LOPEZ DELGADO WILLMAR            |  5/19   | 3.0       |         |         |
+| 13  | MARTINEZ AFANADOR JOSE RAUL      |   1/9   | 3.0       |         |         |
+| 14  | MONTAÑEZ LOBO ADRIAN RICARDO     |   8/10  | 3.0       |         |         |
+| 15  | MONTAÑO VILLA LAURA MARCELA      |   3/18  | 3.5       |         |         |
+| 16  | MORALES RANGEL DANIEL FERNANDO   |   5/19  | 3.0       |         |         |
+| 17  | MURCIA PEREZ JUAN CAMILO         |   8/10  | 3.0       |         |         |
+| 18  | NIÑO BARRIOS PAULA JULIANA       |   2/11  | 3.5       |         |         |
+| 19  | PERDOMO LAMBERTINEZ ANGELA MICHELLY|  2/11 | 3.5       |         |         |
+| 20  | PINTO BASTO STHEFANIA            |  1/9    | 3.0       |         |         |
+| 21  | RIVERA ORDOÑEZ MARIAN LAMAR      |    1/9  | 3.0       |         |         |
+| 22  | RODRIGUEZ PEREZ AMBAR NIRVANA    |    7/2  | 3.0       |         |         |
+| 23  | SAAVEDRA SANTOS DANIEL STEVEEN   |   4/5   | 3.0       |         |         |
+| 24  | TELLO PRIETO PAULA ANDREA        |   7/2   | 3.0       |         |         |
+| 25  | TOLEDO PARRA NICOLAS HERNANDO    |   6/16  | 3.5       |         |         |
+| 26  | TORRES JAIMES TIHAMER            |   5/19  | 3.0       |         |         |
