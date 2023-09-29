@@ -1,19 +1,19 @@
 # Retos de Física Semestre B 23
 ## Dinámica del Curso
-Bienvenidos al curso de Retos de Física del semestre B2023. El objetivo de este curso es reproducir todas las etapas del desarrollo y prueba de un modelo en Física. **La intención con la solución de cada reto es plantear un modelo teórico, realizar una simulación y contrastar (teoría + simulación) con los datos experiementales** para resolver un problema nada trivial. Los retos que planteamos no tinen una solución única y permiten varios enfoques o aproximaciones. En todas las soluciones  estos tres elementos (teoría-simulación-experimentación) deben estar presentes.
+Bienvenidos al curso de Retos de Física del semestre B2023. El objetivo de este curso es reproducir todas las etapas del desarrollo y prueba de un modelo en Física. **La intención con la solución de cada reto es plantear un modelo teórico, realizar una simulación y contrastar (teoría + simulación) con los datos experimentales** para resolver un problema nada trivial. Los retos que planteamos no tienen una solución única y permiten varios enfoques o aproximaciones. En todas las soluciones  estos tres elementos (teoría-simulación-experimentación) deben estar presentes.
 
-Los equipos de trabajo estarán conformados por tres o cuatro estudiantes. Las solución del reto deberá ser dominada por cada uno de los integrantes del equipo. Se vale la división del trabajo, pero al final cada uno de los miembros debe ser capaz de sustentar la solución.
+Los equipos de trabajo estarán conformados por tres o cuatro estudiantes. La solución del reto deberá ser dominada por cada uno de los integrantes del equipo. Se vale la división del trabajo, pero al final cada uno de los miembros debe ser capaz de sustentar la solución.
 
-Una parte importante del curso es el ejercicio de comunicar la ciencia. Esto es: cómo hacer y presentar una propuesta. Luego como desarrollar y presentar los reportes de avances y, finalmente el reporte final y el poster para sustentar la solución del reto.
+Una parte importante del curso es el ejercicio de comunicar la ciencia. Esto es: cómo hacer y presentar una propuesta. Luego cómo desarrollar y presentar los reportes de avances y, finalmente, el reporte final mas un *poster* para sustentar la solución del reto.
 
 ## Evaluación
 La evaluación de curso toca los dos aspectos fundamentales en la solución de un problema científico:
-+ **La calidad de la solución del problema (60%)**. La calidad se medirá en
++ **La calidad de la solución del problema (50%)**. La calidad se medirá en
    + originalidad de la solución
    + lo acertado de la solución (teoría-simulación-experimentación)
-   + interacciones y acuerdos entre Teoría, simulación y resultados experiementales
+   + interacciones y acuerdos entre teoría, simulación y resultados experimentales
    + posibilidad de extender la solución a otros ámbitos
-+ **La calidad de la comunicación de los resultados (40%)**
++ **La calidad de la comunicación de los resultados (50%)**
    + Calidad (claridad, organización y sustentación) de la propuesta (10%)
    + Calidad (claridad, organización y sustentación) de los informes de avances (10%)
    + Calidad (claridad, organización y sustentación) del poster final (10%)
@@ -21,7 +21,7 @@ La evaluación de curso toca los dos aspectos fundamentales en la solución de u
 
 ## La Comunicación de la Ciencia
 La comunicación de la ciencia es tan clave como la obtención de resultados. De poco sirven los resultados si los pares y, peor, la comunidad no logra captar su importancia. Durante este curso haremos ejercicios de cómo expresarnos en tres géneros de la comunicación científica
-+ Propuestas y reportes de Investigación
++ Propuestas y reportes de investigación
 + Presentaciones de las ideas o proyectos científicos
 + Poster o carteles para presentar resultados científicos.
 
@@ -34,8 +34,8 @@ Una parte importante del curso es la confección de una propuesta de investigaci
 + Pregunta de investigación
 + Introducción (contextualizar el problema o pregunta de investigación conjuntamente con su importancia)
 + Estado del Arte (¿qué antecedentes existen para el tratamiento del problema?)
-+ Objetivos (general y específicos: ¿cuál es la pregunta de investigación? ¿como se desgrana la pregunta de invesgación en subpreguntas? )
-+ Metodología (¿cuales actividades generan los objetivos específcos? ¿qué se va hacer para lograr los objetivos? ¿qué resultados se esperan, y por qué?)
++ Objetivos (general y específicos: ¿cuál es la pregunta de investigación? ¿cómo se desgrana la pregunta de investigación en subpreguntas? )
++ Metodología (¿cuáles actividades generan los objetivos específicos? ¿qué se va hacer para lograr los objetivos? ¿qué resultados se esperan, y por qué?)
 + Referencias bibliográficas
 
 Hay algunos [modelos de propuesta](
@@ -45,16 +45,16 @@ https://files.cercomp.ufg.br/weby/up/863/o/How_to_write_a_research_proposal.pdf)
 La estructura del informe coincide con la de la propuesta, pero se añaden una sección con resultados y otra con conclusiones + recomendaciones. Para inspirarse de cómo hacer un reporte pueden utilizar [este modelito](https://www.overleaf.com/read/hfqvjnjwngnp)
 
 ### Presentaciones académicas
-Uno aprende a hacer las presentaciones de forma silvestre, autodidáctica. Claramente si uno ha asistido a muchos seminarios puede ir definiendo un estilo personal de las presentaciones. Sobre todo de cómo no deben ser, que siempre es más fácil.
+Uno aprende a hacer las presentaciones de forma silvestre, autodidacta. Claramente si uno ha asistido a muchos seminarios puede ir definiendo un estilo personal de las presentaciones. Sobre todo de cómo no deben ser, que siempre es más fácil.
 
-Pero hay gente, profesional que ha reflexiodo respecto a la mejor manera de realizar presentaciones. Las presentaciones no son un artículo en imágenes. Tienen una personalidad y un estilo propio. Aquí les comparto algunos consejos para hacer buenas presentaciones
+Pero hay gente, profesional que ha reflexionado respecto a la mejor manera de realizar presentaciones. Las presentaciones no son un artículo en imágenes. Tienen una personalidad y un estilo propio. Aquí les comparto algunos consejos para hacer buenas presentaciones
 + https://blogs.lse.ac.uk/impactofsocialsciences/2015/02/20/how-to-win-at-academic-presentations/
 + https://blogs.lse.ac.uk/careers/2017/01/27/tips-to-master-presentations/
 + https://www.princeton.edu/~archss/webpdfs08/BaharMartonosi.pdf
 + https://www.sciencefarts.com/uploads/6/3/9/8/63980147/designing_science_presentations.pdf
 
 ### Poster o carteles académicos
-Los poster, al igual que las presentaciones, no son artículos verticales. Tienen un objetivo, una organización y una estética distinta a un reporte o una presentación.  Aquí les comparto algunas estrategias para hacer posters mas profesionales:
+Los poster, al igual que las presentaciones, no son artículos verticales. Tienen un objetivo, una organización y una estética distinta a un reporte o una presentación.  Aquí les dejo algunas estrategias para hacer *posters* mas profesionales:
 
 + https://www.sciencedirect.com/science/article/pii/S2049080116301303
 + https://blogs.lse.ac.uk/impactofsocialsciences/2018/05/11/how-to-design-an-award-winning-conference-poster/
@@ -82,7 +82,7 @@ El calendario del curso será el siguiente:
      + Conformación del equipo
      + Repositorio del equipo, con la siguiente estructura:
         + Referencias, enlaces a videos
-        + Montaje experimental: descripción en .md del montaje, sus partes, su precisión
+        + Montaje experimental: descripción en *.md* del montaje, sus partes, su precisión
         + Códigos de simulación
         + Documentos: Presentaciones y reportes  
 + **Semana 2** Recopilación de información. identificación de las referencias claves relacionadas con el tema: artículos, videos, tutoriales, etc.
@@ -120,7 +120,7 @@ La dinámica de chapoteo ([*Slosh dynamics*](https://en.wikipedia.org/wiki/Slosh
 
 La dinámica del chapoteo depende de factores como la forma del recipiente, sus dimensiones, el nivel de llenado, las propiedades del líquido (densidad, viscosidad, tensión superficial), las fuerzas externas (aceleración, desaceleración, vibración) y la presencia de estructuras/mecanismos internos diseñadas para mitigarlo.
 
-El emprendimiento científoco [*The Spill not*](https://thespillnot.com/) comercializa un dispositivo que evita el los líquidos contenidos en tazas o vasos se derramen. Utilizando su celular, parametrice el fenómeno del derrame de líquidos utilizando este dispositivo.
+El emprendimiento científico [*The Spill not*](https://thespillnot.com/) comercializa un dispositivo que evita el los líquidos contenidos en tazas o vasos se derramen. Utilizando su celular, parametrice el fenómeno del derrame de líquidos utilizando este dispositivo.
 
 ### Reto 2 *De la atracción y las tensiones* (Equipo 7)
 Cuando [dos burbujas de jabón colisionan](https://youtu.be/BRe9M1lF4Hs), pueden rebotar o fusionarse. Encuentre las condiciones para que ocurran cada uno de los fenómenos.
@@ -183,28 +183,28 @@ Tome un plato plano grande (de al menos 30 cm de diámetro) y llénelo de agua h
 
 | No. | Nombre y Apellido                | Equipo/Reto| Propuesta | Avances | Reporte |
 |-----|----------------------------------|---------|-----------|---------|---------|
-| 1   | ANGARITA LEAL ANGELICA MARIA     |  6/16   |           |         |         |
-| 2   | ARIZA TEJEDOR NICOLAS ANDRES     |  5/19 |           |         |         |
-| 3   | BECERRA RODRIGUEZ MIGUEL FERNANDO|  1/9  |           |         |         |
-| 4   | BLANCO PEDRAZA RAFAEL RICARDO    |  2/11    |           |         |         |
-| 5   | CARVAJAL GUERRERO MARIA FERNANDA |  3/18 |           |         |         |
-| 6   | GARCES CASTRO JESUS ALBERTO      |  4/5  |           |         |         |
-| 7   | GOMEZ HERRERA JEFFERSON          |  6/16    |           |         |         |
-| 8   | GUARIN ROJAS JUAN ANDRES         |  3/18 |           |         |         |
-| 9   | HERNANDEZ CELIS ALEJANDRO        |   4/5  |           |         |         |
-| 10  | LAMUS RINCON JUAN DAVID          |7/2   |           |         |         |
-| 11  | LOPEZ DELGADO WILLMAR            |         |           |         |         |
-| 12  | MARTINEZ AFANADOR JOSE RAUL      |   1/9 |           |         |         |
-| 13  | MONTAÑEZ LOBO ADRIAN RICARDO     |   8/10      |           |         |         |
-| 14  | MONTAÑO VILLA LAURA MARCELA      |   3/18  |           |         |         |
-| 15  | MORALES RANGEL DANIEL FERNANDO   | 5/19  |           |         |         |
-| 16  | MURCIA PEREZ JUAN CAMILO         |   8/10      |           |         |         |
-| 17  | NIÑO BARRIOS PAULA JULIANA       |         |           |         |         |
-| 18  | PERDOMO LAMBERTINEZ ANGELA MICHELLY|   2/11 |           |         |         |
-| 19  | PINTO BASTO STHEFANIA            |  1/9   |           |         |         |
-| 20  | RIVERA ORDOÑEZ MARIAN LAMAR      |    1/9 |           |         |         |
-| 21  | RODRIGUEZ PEREZ AMBAR NIRVANA    |    7/2     |           |         |         |
-| 22  | SAAVEDRA SANTOS DANIEL STEVEEN   |   4/5  |           |         |         |
-| 23  | TELLO PRIETO PAULA ANDREA        |   7/2    |           |         |         |
-| 24  | TOLEDO PARRA NICOLAS HERNANDO    |   6/16   |           |         |         |
-| 25  | TORRES JAIMES TIHAMER            |   5/19 |           |         |         |
+| 1   | ANGARITA LEAL ANGELICA MARIA     |  6/16   | 3.5       |         |         |
+| 2   | ARIZA TEJEDOR NICOLAS ANDRES     |  5/19   | 3.0       |         |         |
+| 3   | BECERRA RODRIGUEZ MIGUEL FERNANDO|  1/9    | 3.0       |         |         |
+| 4   | BLANCO PEDRAZA RAFAEL RICARDO    |  2/11   | 3.0       |         |         |
+| 5   | CARVAJAL GUERRERO MARIA FERNANDA |  3/18   | 3.5       |         |         |
+| 6   | GARCES CASTRO JESUS ALBERTO      |  4/5    | 3.0       |         |         |
+| 7   | GOMEZ HERRERA JEFFERSON          |  6/16   | 3.5       |         |         |
+| 8   | GUARIN ROJAS JUAN ANDRES         |  3/18   | 3.5       |         |         |
+| 9   | HERNANDEZ CELIS ALEJANDRO        |   4/5   | 3.0       |         |         |
+| 10  | LAMUS RINCON JUAN DAVID          |  7/2    | 3.0       |         |         |
+| 11  | LOPEZ DELGADO WILLMAR            |         | 3.0       |         |         |
+| 12  | MARTINEZ AFANADOR JOSE RAUL      |   1/9   | 3.0       |         |         |
+| 13  | MONTAÑEZ LOBO ADRIAN RICARDO     |   8/10  | 3.0       |         |         |
+| 14  | MONTAÑO VILLA LAURA MARCELA      |   3/18  | 3.5       |         |         |
+| 15  | MORALES RANGEL DANIEL FERNANDO   | 5/19    | 3.0       |         |         |
+| 16  | MURCIA PEREZ JUAN CAMILO         |   8/10  | 3.0       |         |         |
+| 17  | NIÑO BARRIOS PAULA JULIANA       |         | 3.0       |         |         |
+| 18  | PERDOMO LAMBERTINEZ ANGELA MICHELLY|  2/11 | 3.0       |         |         |
+| 19  | PINTO BASTO STHEFANIA            |  1/9    | 3.0       |         |         |
+| 20  | RIVERA ORDOÑEZ MARIAN LAMAR      |    1/9  | 3.0       |         |         |
+| 21  | RODRIGUEZ PEREZ AMBAR NIRVANA    |    7/2  | 3.0       |         |         |
+| 22  | SAAVEDRA SANTOS DANIEL STEVEEN   |   4/5   | 3.0       |         |         |
+| 23  | TELLO PRIETO PAULA ANDREA        |   7/2   | 3.0       |         |         |
+| 24  | TOLEDO PARRA NICOLAS HERNANDO    |   6/16  | 3.5       |         |         |
+| 25  | TORRES JAIMES TIHAMER            |   5/19  | 3.0       |         |         |
