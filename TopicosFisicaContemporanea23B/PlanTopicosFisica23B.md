@@ -176,7 +176,7 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 
 
 ## *24octubre*  Análisis de la dinámica espacio-temporal de enjambres sísmicos en sistemas volcánicos utilizando herramientas de inteligencia artificial.
-### *Manuel Flores* Escuela de Física UIS    
+### *Manuel Florez* Escuela de Física UIS    
 #### Resumen
 
 #### La presentación
