@@ -95,25 +95,59 @@ De manera general, saber aprovechar los datos permite a las organizaciones tomar
 #### Actividades complementarias
 
 
-## *3octubre*  TBD
-### *Eduardo Orozco* Escuela de Física UIS  
+## *3octubre*  Plasmas de fusión confinados magnéticamente
+### *Jesús López Durán* Escuela de Física UIS  
 #### Resumen
+Los dispositivos toroidales basados en confinamiento magnético para propiciar las reacciones de fusión en un reactor termonuclear prometen ser la solución al problema energético mundial. Sin embargo, uno de los retos actuales consiste en mejorar las condiciones de estabilidad de la columna de plasma en el régimen de alto confinamiento, donde surgen un gran número de inestabilidades. Ejemplo de ello son los modos de borde exterior, que al ser inestabilidades ubicadas en la periferia del plasma, promueven la fuga y el rápido enfriamiento del mismo. En esta charla, se realizará una breve introducción a las generalidades del plasma y los principios de fusión nuclear. El objetivo final es dar a conocer la necesidad y gran impacto de las investigaciones actuales en este campo y las respectivas herramientas disponibles para tal fin; así como presentar los trabajos desarrollados y por desarrollar en el grupo FITEK.
 
+Organizaremos la charla de la siguiente forma
+1.	Generalidades de plasmas (Introducción)
+2.	Principios de la fusión nuclear
+3.	Confinamiento magnético (Stellerators y Tokamaks)
+4.	Modelo MHD
+5.	Equilibrio MHD en Tokamaks- Ecuación de Grad-Shafranov
+6.	Modelo de simulación
+7.	Inestabilidades MHD en Tokamaks
 #### La presentación
 
 #### Lecturas complementarias
-
+1.	Freidberg, J. P. (2014). ideal MHD. Cambridge University Press.
+2.	López, J. E., Orozco, E. A., & Dougar-Zhabon, V. D. (2019). Fixed boundary Grad-Shafranov solver using finite difference method in nonhomogeneous meshgrid. In Journal of Physics: Conference Series (Vol. 1159, No. 1, p. 012017). IOP Publishing
 
 #### Actividades complementarias
+Equilibrio de Soloviev:
 
++ Verificar que el equilibrio de Soloviev representa una solución a la ecuación de GradShafranov,
++ Graficar los contornos de Flujo Poloidal constante en el plano rz, así como el perfil de presión para una configuración tipo tokamak dada,
++ Establecer analíticamente la posición del eje magnético según la solución de Soloviev
++ Calcular el campo poloidal y graficar la dependencia a lo largo del eje radial.
 
-## *10octubre*  TBD
+## *10octubre*  Aceleradores de partículas basados en plasmas
 ### *Eduardo Orozco* Escuela de Física UIS  
 #### Resumen
+La aceleración de partículas cargadas ha tenido un gran impacto en las últimas décadas, ya que se ha convertido en una herramienta clave para entender la física de partículas. Además, ha encontrado aplicaciones importantes en sectores como la industria de semiconductores, el sector de la salud y áreas de investigación relacionadas, como la biología. No obstante, los aceleradores actuales enfrentan limitaciones en términos de tamaño y gradiente de aceleración. Por lo tanto, un desafío actual es explorar, estudiar y desarrollar mecanismos compactos de aceleración de partículas. En este contexto, los aceleradores basados en plasma se presentan como una posible solución a estas limitaciones. Por esta razón, en esta charla se abordarán los conceptos teóricos fundamentales más relevantes en torno a la aceleración de partículas cargadas basada en plasma. Además, se realizará una revisión bibliográfica centrada en la aceleración Wakefield, destacando sus éxitos y los desafíos que enfrenta en el futuro
+
+Organizaremos la charla de la siguiente forma
+1.	Generalidades de aceleradores de partículas actuales (Introducción)
+2.	¿Qué es un plasma?
+3.	Fuerza ponderomotríz
+4.	Formación de la onda plásmica
+5.	Generalidades de la aceleración basada en plasma
+6.	Descripción cinética del plasma
+7.	Simulaciones cinéticas
+8.	Aceleración en wakefield en guías de ondas
+
 
 #### La presentación
 
 #### Lecturas complementarias
+1.	Cakir, A., & Guzel, O. (2019). A Brief Review of Plasma Wakefield Acceleration. arXiv preprint arXiv:1908.07207.
+2.	Esarey, E., Sprangle, P., Krall, J., & Ting, A. (1996). Overview of plasma-based accelerator concepts. IEEE Transactions on plasma science, 24(2), 252-288.
+
+#### Actividades complementarias
+Obtener analíticamente, paso a paso:
++ la ecuación de movimiento de una partícula cargada afectada por una onda electromagnética plana y
++ la expresión analítica asociada a la fuerza ponderomotríz, según referencias recomendadas.
 
 
 ## *17octubre* La materia oscura y la dinámica galáctica desde el punto de vista de las simulaciones numéricas.
