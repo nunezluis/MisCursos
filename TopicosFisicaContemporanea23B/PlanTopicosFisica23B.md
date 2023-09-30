@@ -14,7 +14,7 @@
 + Pinochet, J. El límite de Chandrasekhar para principiantes. Revista Mexicana De Física E 17, 125–132 (2020).
 + Seeley, L. H. Tutorials in climate modeling. Am. J. Phys. 91, 690–695 (2023).
 
-## *5sep*  Fluidos no pascalianos y la estructura estelar relativista
+## *5 septiembre*  Fluidos no pascalianos y la estructura estelar relativista
 ### *Luis A. Núñez* Escuela de Física UIS   
 #### Resumen
 En esta charla presentaremos la importancia que tiene la descripción de la estructura estelar relativista utilizando los idea de fluidos no pascalianos.
@@ -37,7 +37,7 @@ En este documento
 [Modelado de Objetos Autogravitantes](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerEcuacionesDifOrdinarias/AutogravitantesNumericasV4.pdf) podrán encontrar un paso a paso para el modelado de objetos Autogravitantes.
 
 
-## *12sep* La sublime utilidad de la ciencia inútil
+## *12 septiembre* La sublime utilidad de la ciencia inútil
 ### *Luis A. Núñez* Escuela de Física UIS   
 #### Resumen
 Esta charla estará centrada en la Física (fundamental y aplicada) de los Rayos Cósmicos y las cascadas que ellos generan. Discutiremos el posible origen de esos núcleos que impactan la alta atmósfera, sus energías y sistemas físicos asociados. Haremos énfasis en la importancia de la investigación básica para generar aplicaciones e innovaciones de alto impacto social. Por ello el título de la conferencia que lo hemos tomado prestado de otras mucho mejores que la nuestra.  
@@ -63,7 +63,7 @@ Presentamos dos actividades complementarias, una que tiene que ver con el análi
 + La primera tiene que ver con la detección de decrecimientos Forbush en los datos de los detectores de superficie del Observatorio Pierre Auger.  Los [decrecimientos Forbush](https://en.wikipedia.org/wiki/Forbush_decrease#:~:text=A%20Forbush%20decrease%20is%20a,cosmic%20rays%20away%20from%20Earth) son disminuciones transitorias del flujo de partículas en tierra producto del paso de una eyección de masa coronal. La actividad que proponemos la pueden encontrar [aqui](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/DecrecimientoForbush.md)
 + La segunda actividad que proponemos tiene que ver con la muografía de objetos geofísicos. Proponemos construir un código que simule la propagación de muones a través de roca estándar. La descripción de esta actividad la pueden encontrar [aqui](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/MuografiaUSAL.pdf).
 
-## *19sep*  Explorando la dinámica solar a través la topología y Series de tiempo
+## *19 septiembre*  Explorando la dinámica solar a través la topología y Series de tiempo
 ### *David Sierra-Porta* Facultad de Ciencias Básicas, Universidad Tecnológica de Bolívar, Cartagena   
 #### Resumen
 En el contexto de este seminario-charla, vamos a adentrarnos en el apasionante mundo de la dinámica solar a través de una perspectiva única que combina topología y análisis de series de tiempo. Exploraremos cómo estas herramientas nos permiten desvelar patrones ocultos y revelar la fascinante complejidad de los fenómenos solares. A lo largo de nuestra presentación, descubriremos cómo la topología y el análisis de series temporales se entrelazan para proporcionar una visión profunda de la actividad solar y cómo estos enfoques nos ayudan a comprender mejor la dinámica en juego en el sol y sus interacciones con el espacio.
@@ -76,7 +76,7 @@ En el contexto de este seminario-charla, vamos a adentrarnos en el apasionante m
 #### Actividades complementarias
 Las actividades complementarias se basan en utilizar [un código Python en JupyerLab](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea23B/SierraPorta/TimeSeries_HVG.ipynb) para una tarea dirigida de ejemplo de cálculos con Horizontal Visibility Graph. Los datos estan en la [carpeta](https://github.com/nunezluis/MisCursos/tree/main/TopicosFisicaContemporanea23B/SierraPorta)
 
-## *26september*  Predicción de tendencias de moda utilizando imágenes de redes sociales e inteligencia artificial
+## *26 septiembre*  Predicción de tendencias de moda utilizando imágenes de redes sociales e inteligencia artificial
 ### *Sergio Pinilla* [Heuritech](https://www.heuritech.com), Francia    
 #### Resumen
 En un sector altamente competitivo como la industria de la moda, las empresas tienden a vender y producir cada vez más, poniendo en riesgo su rentabilidad si las proyecciones de ventas no se cumplen. Adicionalmente, la industria de la moda genera gran cantidad de residuos debido a su proceso productivo como a los saldos de inventarios no vendidos. Heuritech, startup francesa creada por investigadores en inteligencia artificial, proporciona una herramienta para ayudar a dichas organizaciones a producir únicamente los productos que los consumidores desean y reducir por tanto los invendidos.
@@ -95,7 +95,7 @@ De manera general, saber aprovechar los datos permite a las organizaciones tomar
 #### Actividades complementarias
 
 
-## *3octubre*  Plasmas de fusión confinados magnéticamente
+## *3 octubre*  Plasmas de fusión confinados magnéticamente
 ### *Jesús López Durán* Escuela de Física UIS  
 #### Resumen
 Los dispositivos toroidales basados en confinamiento magnético para propiciar las reacciones de fusión en un reactor termonuclear prometen ser la solución al problema energético mundial. Sin embargo, uno de los retos actuales consiste en mejorar las condiciones de estabilidad de la columna de plasma en el régimen de alto confinamiento, donde surgen un gran número de inestabilidades. Ejemplo de ello son los modos de borde exterior, que al ser inestabilidades ubicadas en la periferia del plasma, promueven la fuga y el rápido enfriamiento del mismo. En esta charla, se realizará una breve introducción a las generalidades del plasma y los principios de fusión nuclear. El objetivo final es dar a conocer la necesidad y gran impacto de las investigaciones actuales en este campo y las respectivas herramientas disponibles para tal fin; así como presentar los trabajos desarrollados y por desarrollar en el grupo FITEK.
@@ -122,7 +122,7 @@ Equilibrio de Soloviev:
 + Establecer analíticamente la posición del eje magnético según la solución de Soloviev
 + Calcular el campo poloidal y graficar la dependencia a lo largo del eje radial.
 
-## *10octubre*  Aceleradores de partículas basados en plasmas
+## *10 octubre*  Aceleradores de partículas basados en plasmas
 ### *Eduardo Orozco* Escuela de Física UIS  
 #### Resumen
 La aceleración de partículas cargadas ha tenido un gran impacto en las últimas décadas, ya que se ha convertido en una herramienta clave para entender la física de partículas. Además, ha encontrado aplicaciones importantes en sectores como la industria de semiconductores, el sector de la salud y áreas de investigación relacionadas, como la biología. No obstante, los aceleradores actuales enfrentan limitaciones en términos de tamaño y gradiente de aceleración. Por lo tanto, un desafío actual es explorar, estudiar y desarrollar mecanismos compactos de aceleración de partículas. En este contexto, los aceleradores basados en plasma se presentan como una posible solución a estas limitaciones. Por esta razón, en esta charla se abordarán los conceptos teóricos fundamentales más relevantes en torno a la aceleración de partículas cargadas basada en plasma. Además, se realizará una revisión bibliográfica centrada en la aceleración Wakefield, destacando sus éxitos y los desafíos que enfrenta en el futuro
@@ -150,7 +150,7 @@ Obtener analíticamente, paso a paso:
 + la expresión analítica asociada a la fuerza ponderomotríz, según referencias recomendadas.
 
 
-## *17octubre* La materia oscura y la dinámica galáctica desde el punto de vista de las simulaciones numéricas.
+## *17 octubre* La materia oscura y la dinámica galáctica desde el punto de vista de las simulaciones numéricas.
 ### *Arturo Núñez-Castiñeyra* Universidad de Paris-Saclay, Francia
 
 #### Resumen
@@ -170,12 +170,7 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 
 
 
-
-
-#### Actividades complementarias
-
-
-## *24octubre*  Análisis de la dinámica espacio-temporal de enjambres sísmicos en sistemas volcánicos utilizando herramientas de inteligencia artificial.
+## *24 octubre*  Análisis de la dinámica espacio-temporal de enjambres sísmicos en sistemas volcánicos utilizando herramientas de inteligencia artificial.
 ### *Manuel Florez* Escuela de Física UIS    
 #### Resumen
 
@@ -188,7 +183,7 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 
 #### Actividades complementarias
 
-## *31octubre*  ZZZZZZ
+## *31 octubre*  ZZZZZZ
 ### *XXXXX* YYY   
 #### Resumen
 
@@ -199,7 +194,7 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 
 #### Actividades complementarias
 
-## *7noviembre*  TBD
+## *7 noviembre*  TBD
 ### *Andrés Camilo García* Escuela de Física, UIS    
 #### Resumen
 
@@ -210,7 +205,7 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 
 #### Actividades complementarias
 
-## *14noviembre*  La nueva basura originada por los viejos trastos y las malas costumbres: Microplásticos
+## *14 noviembre*  La nueva basura originada por los viejos trastos y las malas costumbres: Microplásticos
 ### *Rafael Cabanzo* Escuela de Física UIS    
 #### Resumen
 
@@ -221,7 +216,7 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 
 #### Actividades complementarias
 
-## *21noviembre*  TBD
+## *21 noviembre*  TBD
 ### *Antonio Calixto Gutierrez-Piñeres* Escuela de Física UIS    
 #### Resumen
 
@@ -233,9 +228,7 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 #### Actividades complementarias
 
 
-#### Actividades complementarias
-
-## *28noviembre*  TBD
+## *28 noviembre*  TBD
 ### *Carlos Leonardo Beltrán Ríos* YYY   
 #### Resumen
 
