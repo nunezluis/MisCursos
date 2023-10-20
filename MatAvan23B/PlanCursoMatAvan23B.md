@@ -94,3 +94,15 @@ Por definir
 + [Clase 15. Transformadas de Fourier](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_3TransFourier.md)
 
 + [Clase 16. Transformadas de Fourier Discreta](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C4_4TransDiscFourier.md)
+
+### Ecuaciones diferenciales ordinarias
++ [Clase 18 Generalidades de Ecuaciones diferenciales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C6_1EcDifOrdGeneralidades.md)
++ [Clase 19 Soluciones numéricas al problema de valores iniciales en ecuaciones diferenciales ordinarias](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C6_2EcDifOrdNumericas.md)
+
+#### Asignación Ecuaciones diferenciales ordinarias
+En este documento
+[Modelado de Objetos Autogravitantes](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerEcuacionesDifOrdinarias/AutogravitantesNumericasV4.pdf) podrán encontrar un paso a paso para el modelado de objetos Autogravitantes mediante la solución numérica de ecuaciones diferenciales ordinarias. La idea es que Uds los sigan y muestren como pueden modelar este tipo de situaciones.
+
++ [Clase 20 Problema de Sturm Liuville y los valores de frontera](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C11_1SturmLiuoville.md)
+
++ [Clase 21 Solución de Ecuaciones diferenciales ordinarias y valores de frontera](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md)
