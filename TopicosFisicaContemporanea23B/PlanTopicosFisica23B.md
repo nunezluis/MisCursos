@@ -183,11 +183,13 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 
 #### Actividades complementarias
 
-## *31 octubre*  ZZZZZZ
-### *XXXXX* YYY   
+## *31 octubre*  Nomadismo en la Física
+### *Justino Martínez* Departamento de Oceanografía Física y Tecnológica. Instituto de Ciencias del Mar (CSIC) 
 #### Resumen
+Esta es una charla en la que explico la experiencia que he ido adquiriendo en diversos campos de la física a lo largo de mi carrera científica (y no científica). En cómo no hay por qué estar constreñido a un solo campo de investigación a lo largo del tiempo y cómo es conveniente perder el miedo al cambio de temática si nos pica la curiosidad algún tema del que (creemos) que no sabemos nada sin morir en el intento. Expondré ideas generales sobre cómo introducir los procesos de transporte en el colapso de estrellas densas, como se obtiene datos físicos usando satélites o que son las estructuras lagrangianas coherentes, que ayudan a explicar como se autoorganizan los flujos oceánicos dando, además, una pincelada sobre las olas de calor marinas.  
 
 #### La presentación
+Aquí pueden encontrar [la presentación](https://nuvol.cmima.csic.es/owncloud/s/fwprEdT9SXMa52M)
 
 #### Lecturas complementarias
 
