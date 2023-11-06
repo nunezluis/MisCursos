@@ -184,7 +184,7 @@ Aquí podrán encontrar un [notebook de Python](https://github.com/nunezluis/Mis
 #### Actividades complementarias
 
 ## *31 octubre*  Nomadismo en la Física
-### *Justino Martínez* Departamento de Oceanografía Física y Tecnológica. Instituto de Ciencias del Mar (CSIC) 
+### *Justino Martínez* Departamento de Oceanografía Física y Tecnológica. Instituto de Ciencias del Mar (CSIC)
 #### Resumen
 Esta es una charla en la que explico la experiencia que he ido adquiriendo en diversos campos de la física a lo largo de mi carrera científica (y no científica). En cómo no hay por qué estar constreñido a un solo campo de investigación a lo largo del tiempo y cómo es conveniente perder el miedo al cambio de temática si nos pica la curiosidad algún tema del que (creemos) que no sabemos nada sin morir en el intento. Expondré ideas generales sobre cómo introducir los procesos de transporte en el colapso de estrellas densas, como se obtiene datos físicos usando satélites o que son las estructuras lagrangianas coherentes, que ayudan a explicar como se autoorganizan los flujos oceánicos dando, además, una pincelada sobre las olas de calor marinas.  
 
@@ -196,13 +196,18 @@ Aquí pueden encontrar [la presentación](https://nuvol.cmima.csic.es/owncloud/s
 
 #### Actividades complementarias
 
-## *7 noviembre*  TBD
-### *Andrés Camilo García* Escuela de Física, UIS    
+## *7 noviembre*  Quiralidad en magnetismo y sistemas cristalinos
+### *Andrés Camilo García-Castro* Escuela de Física, UIS    
 #### Resumen
+El progreso de las civilizaciones ha estado delimitado por el avance de los materiales que preceden su época de desarrollo. Así entonces, pasamos de la Edad de Piedra a la Edad de los Metales y estos materiales marcaron puntos divergentes en los avances tecnológicos que impulsaron. En la edad actual, denominada Edad del Silicio, hemos sido testigos del desarrollo de la electrónica avanzada, computación y telecomunicaciones gracias a este semiconductor. Aunado a esto, y basados en el descubrimiento de los estados topológicos de la materia y la necesidad del control del espín del electrón, una nueva era tecnológica se asoma en el horizonte en la cual, los materiales cuánticos topológicos marcaran la pauta para la implementación de nuevos desarrollos tecnológicos, por ejemplo, en computación cuántica. No obstante, para alcanzar este nivel de avance, los sistemas cristalinos en los cuales el espín, el magnetismo y las fases topológicas coexisten necesitan ser completamente entendidos y controlados al detalle. Es en este punto donde la simetría de quiralidad, i.e. propiedad de un sistema de no ser superponible con su imagen especular, ofrece todas las condiciones físicas necesarias de rompimiento de inversión de simetría espacial y temporal para lograr la convergencia de estos nuevos estados de la materia. En esta charla abordaremos los conceptos necesarios para entender el acople de la respuesta magnética quiral en nuevos sistemas cristalinos con simetría cristalográfica quiral en 3D. Esto abrirá una puerta al entendimiento del efecto de esta simetría particular en el origen de las propiedades electrónicas, topológicas y magnéticas de los sistemas en cuestión. Todo el análisis anterior dentro del marco de la materia condensada y contemplando como base de estudio la Teoría Funcional de la Densidad (DFT).
 
 #### La presentación
-
+Aquí pueden encontrar la presentación
 #### Lecturas complementarias
++ U von Barth, Basic Density-Functional Theory—an Overview, Physica Scripta, T109, Phys. Scr. 9, (2004).
++ Palash B. Pal, Dirac, Majorana, and Weyl fermions, American Journal of Physics 79, 485–498 (2011).
++ Sang-Wook Cheong, Xianghan Xu, Magnetic chirality, npj Quantum Materials, 7,  40 (2022).
++ Gerhard H Fecher, Jurgen Kubler, and Claudia Felser, Chirality in the Solid State: Chiral Crystal Structures in Chiral and Achiral Space Groups, Materials,15, 17, 5812, (2022).
 
 
 #### Actividades complementarias
