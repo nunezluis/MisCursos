@@ -139,6 +139,8 @@ Organizaremos la charla de la siguiente forma
 
 
 #### La presentación
+La presentación la pueden encontrar [aquí](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea23B/F%C3%ADsicaContempor%C3%A1nea_AccBasadaEnPlasma.pdf)
+
 
 #### Lecturas complementarias
 1.	Cakir, A., & Guzel, O. (2019). A Brief Review of Plasma Wakefield Acceleration. arXiv preprint arXiv:1908.07207.
