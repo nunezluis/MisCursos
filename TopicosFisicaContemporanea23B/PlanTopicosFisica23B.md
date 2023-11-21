@@ -228,6 +228,7 @@ Aquí pueden encontrar [la presentación](https://github.com/nunezluis/MisCursos
 ## *21 noviembre*  TBD
 ### *Antonio Calixto Gutierrez-Piñeres* Escuela de Física UIS    
 #### Resumen
+En esta charla exploraremos la posible existencia de dos tipos de anomalías del espaciotiempo en la teoría de la gravedad de Einstein: las singularidades desnudas y los agujeros de gusano. La presencia de una singularidad desnuda sugiere la posibilidad de una gravedad repulsiva, que según la teoría se basa en los valores propios del tensor de curvatura. Los agujeros de gusano, por su parte, se han popularizado en la ciencia ficción como medio para realizar viajes interestelares rápidos. En esta presentación, daremos soluciones a las ecuaciones de campo de Einstein que abordan estos intrigantes temas.
 
 #### La presentación
 
