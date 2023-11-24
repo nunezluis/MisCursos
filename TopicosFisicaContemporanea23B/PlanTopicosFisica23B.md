@@ -238,13 +238,16 @@ En esta charla exploraremos la posible existencia de dos tipos de anomalías del
 #### Actividades complementarias
 
 
-## *28 noviembre*  TBD
-### *Carlos Leonardo Beltrán Ríos* YYY   
+## *28 noviembre*  PUNTOS CUANTICOSNovel de química 2023
+### *Carlos Leonardo Beltrán Ríos* Escuela de Física UIS    
 #### Resumen
+Los desarrollos tecnológico  en la fabricación de las denominadas estructuras solidas de baja dimensionalidad han permitido la fabricación de las mismas a gusto del consumidor. Estas estructuras cuyo tamaño son de unas cuantas centenas de nanómetros han permitido el desarrollo de tecnologías a partir de los fenómenos cuánticos asociados al transporte electrónico, efecto túnel, transiciones cuánticas en sistemas de dos niveles. Específicamente los puntos cuánticos son estructuras que poseen todo un “zoologico” de formas y tamaños. Estas estructuras son ampliamente estudiadas por sus aplicaciones en campos como las comunicaciones, la electrónica, la biología y por ende la medicina. Su fabricación controlada permitió el otorgamiento del premio Nobel 2023 en el campo de la química. La física ha sido parte del desarrollo y entendimiento de estas estructuras
 
 #### La presentación
 
 #### Lecturas complementarias
-
+Quantum dots synthetization and future prospect applications (degruyter.com)
+https://youtu.be/gIA3bqRTdlc?si=wkEEZvfO16DPl37a
+Frontiers | CsPbBr3/CdS Core/Shell Structure Quantum Dots for Inverted Light-Emitting Diodes Application (frontiersin.org)
 
 #### Actividades complementarias
