@@ -23,7 +23,7 @@ Las asignación son parte fundamental del desarrollo del curso.  Algunas asignac
 
 <a name="colaboracion"></a>
 ### La computación y la colaboración
-**Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  tres tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software))), otra de edición de documentos científicos de alta calidad ([overleaf](https://en.wikipedia.org/wiki/Overleaf)) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales. Adicionalmente, como homenaje al gran [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz) deberán documentar en el git la solución de los ejercicios y asignaciones utilizando [markdown](https://en.wikipedia.org/wiki/Markdown).
+**Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  tres tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software)) o [SymPy](https://www.sympy.org/en/index.html) si prefieren trabajar en un ambiente de Jupyter notebooks), otra de edición de documentos científicos de alta calidad ([overleaf](https://en.wikipedia.org/wiki/Overleaf)) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales. Adicionalmente, como homenaje al gran [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz) deberán documentar en el git la solución de los ejercicios y asignaciones utilizando [markdown](https://en.wikipedia.org/wiki/Markdown).
 
 + MAXIMA lo pueden obtener e instalar localmente desde [aquí](http://maxima.sourceforge.net) y en [esta carpeta](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Codigos/Maxima) están algunos ejemplos de uso de esta sistema algebraico.
 
@@ -124,7 +124,7 @@ Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor e
 
 + [Clase 11: Vectores y tensores en espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_4EspPseudoEuclid.md). **17nov** **Entrega asignación 2**
 
-+ Ajuste y sustentación asignación 2 **22nov** 
++ Ajuste y sustentación asignación 2 **22nov**
 
 ### Asignación 3 (Entrega hasta clase 14 y discusión clase 15)
 Esta asignación tiene por objeto mostrar una aplicación de espacios tensoriales en función de datos. Primero un sistema de masas donde se calcula el Tensor de Inercia y luego construir un espacio tensorial de productos internos bruto (PIB) y comparar los gastos militares del país en los últimos 15 años con los de educación, y los de ciencia y tecnología. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensores/TallerTensoresAutovalores.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensores/DatosTensores/datosmasas.csv) podrán encontrar los datos.
