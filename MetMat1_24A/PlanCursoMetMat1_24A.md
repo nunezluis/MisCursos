@@ -68,8 +68,8 @@ También utilizaremos capítulos de la siguiente  bibliografía de textos clási
 
 | Temas | Tiempo (semanas) |
 | :------- | :-------: |
-| [Los vectores de siempre](#VectoresSiempre) | 1.5  |
-| [Espacios Vectoriales lineales](#EspaciosVectoriales) | 2.5  |
+| [Los vectores de siempre](#VectoresSiempre) | 1  |
+| [Espacios Vectoriales lineales](#EspaciosVectoriales) | 3.0  |
 | [Espacios duales y tensoriales](#EspaciosDuales) |  2.5  |
 | [Operadores Lineales](#OperadoresLineales) | 3 |
 | [Análisis vectorial](#AnalisisVectorial)| 2.5  |
