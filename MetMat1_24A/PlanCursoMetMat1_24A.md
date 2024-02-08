@@ -78,27 +78,26 @@ También utilizaremos capítulos de la siguiente  bibliografía de textos clási
 ### Asignación 1
 La primera asignación tiene que ver con la utilización de los vectores en cristalografía. La intención es que desarrollen y entreguen el ejercicio 9 del punto 1.3.3 de las notas de [Matematicas Avanzadas Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf). El problema deberá ser entregado por equipos de dos personas.El reporte deberá ser entregado en forma de artículo siguiendo el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp).
 
-### Los vectores de siempre (1.5 Semanas)
+### Los vectores de siempre (1 Semana)
 <a name="VectoresSiempre"></a>
 + [Clase 1: Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md) **8feb**
 
-+ [Clase 2: Vectores componentes y notación de Einstein](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md) **13feb**
-
-+ [Clase 3: Análisis vectorial express y número complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_2AnalisisVectExpress.md). **15feb**
++ [Clase 2: Análisis vectorial express y número complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_2AnalisisVectExpress.md). **13feb**
 
 ### Espacios Vectoriales lineales. (2.5 Semanas)
 <a name="EspaciosVectoriales"></a>
-+ [Clase 4: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md) **20feb**
++ [Clase 4: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md) **15feb**
 Además tendremos un **taller evaluado de los vectores de siempre** (clases 1, 2 y 3).
     1. Código en MAXIMA/PYTHON/Python para calcular centroide de un triángulo (Problema 3 Sección 1.1.6).
     2. Código en MAXIMA/PYTHON que reproduzca el ejercicio 6 de la Sección 1.2.7
     3. De la sección 1.5.7 resuelva los ejercicios 2a, 2d y 2f y con MAXIMA/PYTHON el 13;
     4. De la sección 1.6.6 resuelva los ejercicios 2, 5 y 6.
 
-+ [Clase 5: Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md). **22feb**
++ [Clase 5: Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md). **20feb**
 
-+ [Clase 6: Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md) **27feb** **Entrega asignación 1**
++ [Clase 6: Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md) **22feb** **Entrega asignación 1**
 
+Ajuste **27feb**
 
 + [Clase 7: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) **29feb**
     1. Taller Evaluado Espacios Lineales (clases 4, 5, y 6)
