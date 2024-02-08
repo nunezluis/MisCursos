@@ -23,9 +23,9 @@ Las asignación son parte fundamental del desarrollo del curso.  Algunas asignac
 
 <a name="colaboracion"></a>
 ### La computación y la colaboración
-**Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  tres tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software)) o [SymPy](https://www.sympy.org/en/index.html) si prefieren trabajar en un ambiente de Jupyter notebooks), otra de edición de documentos científicos de alta calidad ([overleaf](https://en.wikipedia.org/wiki/Overleaf)) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales. Adicionalmente, como homenaje al gran [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz) deberán documentar en el git la solución de los ejercicios y asignaciones utilizando [markdown](https://en.wikipedia.org/wiki/Markdown).
+**Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  tres tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([MAXIMA](https://en.wikipedia.org/wiki/MAXIMA/PYTHON_(software)) o [SymPy](https://www.sympy.org/en/index.html) si prefieren trabajar en un ambiente de Jupyter notebooks), otra de edición de documentos científicos de alta calidad ([overleaf](https://en.wikipedia.org/wiki/Overleaf)) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales. Adicionalmente, como homenaje al gran [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz) deberán documentar en el git la solución de los ejercicios y asignaciones utilizando [markdown](https://en.wikipedia.org/wiki/Markdown).
 
-+ MAXIMA lo pueden obtener e instalar localmente desde [aquí](http://maxima.sourceforge.net) y en [esta carpeta](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Codigos/Maxima) están algunos ejemplos de uso de esta sistema algebraico.
++ MAXIMA/PYTHON lo pueden obtener e instalar localmente desde [aquí](http://MAXIMA/PYTHON.sourceforge.net) y en [esta carpeta](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Codigos/MAXIMA/PYTHON) están algunos ejemplos de uso de esta sistema algebraico.
 
 + Pueden registrarse en overleaf [aquí](https://www.overleaf.com/).
 + Igualmente, pueden registrarse en github [aquí](https://github.com/)
@@ -80,49 +80,49 @@ La primera asignación tiene que ver con la utilización de los vectores en cris
 
 ### Los vectores de siempre (1.5 Semanas)
 <a name="VectoresSiempre"></a>
-+ [Clase 1: Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md) **11oct**
++ [Clase 1: Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md) **8feb**
 
-+ [Clase 2: Vectores componentes y notación de Einstein](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md) **13oct**
++ [Clase 2: Vectores componentes y notación de Einstein](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md) **13feb**
 
-+ [Clase 3: Análisis vectorial express y número complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_2AnalisisVectExpress.md). **18oct**
++ [Clase 3: Análisis vectorial express y número complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_2AnalisisVectExpress.md). **15feb**
 
 ### Espacios Vectoriales lineales. (2.5 Semanas)
 <a name="EspaciosVectoriales"></a>
-+ [Clase 4: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md) **20oct**
++ [Clase 4: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md) **20feb**
 Además tendremos un **taller evaluado de los vectores de siempre** (clases 1, 2 y 3).
-    1. Código en MAXIMA para calcular centroide de un triángulo (Problema 3 Sección 1.1.6).
-    2. Código en MAXIMA que reproduzca el ejercicio 6 de la Sección 1.2.7
-    3. De la sección 1.5.7 resuelva los ejercicios 2a, 2d y 2f y con MAXIMA el 13;
+    1. Código en MAXIMA/PYTHON/Python para calcular centroide de un triángulo (Problema 3 Sección 1.1.6).
+    2. Código en MAXIMA/PYTHON que reproduzca el ejercicio 6 de la Sección 1.2.7
+    3. De la sección 1.5.7 resuelva los ejercicios 2a, 2d y 2f y con MAXIMA/PYTHON el 13;
     4. De la sección 1.6.6 resuelva los ejercicios 2, 5 y 6.
 
-+ [Clase 5: Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md). **25oct**
++ [Clase 5: Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md). **22feb**
 
-+ [Clase 6: Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md) **27oct** **Entrega asignación 1**
++ [Clase 6: Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md) **27feb** **Entrega asignación 1**
 
 
-+ [Clase 7: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) **3nov**
++ [Clase 7: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) **29feb**
     1. Taller Evaluado Espacios Lineales (clases 4, 5, y 6)
         1. De la Sección 2.1.6 desarrollar los ejercicios 3 y 10
         2. Resuelva el ejercicio 6 sección 2.2.4
         3. Desarrollar los ejercicios 5 y 6 de la sección 2.3.6
     2. También tendremos la sustentación de Asignación 1.
 
-### Asignación 2 (Entrega hasta clase 10 **17nov** y discusión clase 11 **22nov**).
+### Asignación 2 (Entrega hasta clase 10 **12mar** y discusión clase 11 **14mar**).
 Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar el error de medición del sensor de bajo costo y, como calibrarlo para establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerDistancias/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Asignaciones/TallerDistancias/DatosDistancias) podrán encontrar los datos para desarrollar los algoritmos de calibración inteligente. Los datos patrones están contenidos en la hoja excel en la pestaña *Normal*. Los datos de las estaciones a calibrar los encontrarán en los demás archivos.   El problema deberá ser entregado por equipos de dos personas en forma de artículo y podrían seguir el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que presentamos en la descripción del curso.
 
 ### Espacios vectoriales duales y tensoriales. (2.5 Semanas)
 <a name="EspaciosDuales"></a>
-+ [Clase 8: Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md) **8nov**
++ [Clase 8: Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md) **5mar**
 
-+ [Clase 9: Tensores y espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md). **10nov**
++ [Clase 9: Tensores y espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md). **7mar**
 
-+ [Clase 10: Tensores y sus aplicaciones en Física](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_3AplicaTensores.md). Evaluación de los ejercicios asignados clases 6, 7, 8 y 9. **15nov**   
++ [Clase 10: Tensores y sus aplicaciones en Física](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_3AplicaTensores.md). Evaluación de los ejercicios asignados clases 6, 7, 8 y 9. **12mar**   
   1. los ejercicios 5 y 6 de la sección 2.3.6
-  2. MAXIMA desarrollar el ejercicio 3 de la sección 2.4.5
+  2. MAXIMA/PYTHON desarrollar el ejercicio 3 de la sección 2.4.5
   3. ejercicios 6 y 7 de la Sección 3.1.4 .
-  4. Hacer un código MAXIMA que resuelva el problema 2 sección 3.3.5.
+  4. Hacer un código MAXIMA/PYTHON que resuelva el problema 2 sección 3.3.5.
 
-+ [Clase 11: Vectores y tensores en espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_4EspPseudoEuclid.md). **17nov** **Entrega asignación 2**
++ [Clase 11: Vectores y tensores en espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_4EspPseudoEuclid.md). **14Mar** **Entrega asignación 2**
 
 + Ajuste y sustentación asignación 2 **22nov**
 
