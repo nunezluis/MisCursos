@@ -38,7 +38,7 @@ La evaluación de este curso se realizará en base a tres tipos de actividades c
 
 + **Cada tercera clase (C3C)** se hará una evaluación sustentada de los *ejercicios asignados* como tarea.  Se tomarán en cuenta diez de estas evaluaciones y sumarán el 40\%. Las solución a los ejercicios C3C se compartirán desde el repositorio *git*
 
-+ **Tres asignaciones especiales** se sustentará una asignación especial. *Tendremos dos tipos de asignaciones cuyas evaluaciones sumarán el 30% del curso*. Los reportes y las presentaciones de las asignaciones se conpartirán desde el repositorio *git*
++ **Tres asignaciones especiales** se sustentará una asignación especial. *Tendremos dos tipos de asignaciones cuyas evaluaciones sumarán el 30% del curso*. Los reportes y las presentaciones de las asignaciones se compartirán desde el repositorio *git*
 
 + En la **clase 14 o 15** y en **la 26 o 27** se realizará una evaluación oral (o escrita según el caso) de temas cubiertos hasta esas fechas. Esta *conversación evaluada* versará sobre un cuestionario que será enviado 24 horas antes de la actividad. Estas conversaciones evaluadas acopiarán el 30% restante.
 
@@ -49,7 +49,7 @@ La evaluación de este curso se realizará en base a tres tipos de actividades c
 
 ### Libros textos
 Los materiales que utilizaremos en este curso son unas notas de clase
-+ **Temas seleccionados** del libro [Matematicas Avanzadas Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
++ **Temas seleccionados** del libro [Matematicas Avanzadas Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
 + El **capítulo de Variable Compleja** del libro [Matematicas Avanzadas Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
 
 Hay que enfatizar que ambos volúmenes son obras en evolución y siempre presentaremos la última versión que puede haber variado. Con eso estamos diciendo que **NO LOS IMPRIMAN**. Consulten la última versión en formato electrónico que les presentamos en los enlaces antes mencionados.
@@ -76,7 +76,7 @@ También utilizaremos capítulos de la siguiente  bibliografía de textos clási
 | [Variable compleja](#VariableCompleja) |3|
 
 ### Asignación 1
-La primera asignación tiene que ver con la utilización de los vectores en cristalografía. La intención es que desarrollen y entreguen el ejercicio 9 del punto 1.3.3 de las notas de [Matematicas Avanzadas Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf). El problema deberá ser entregado por equipos de dos personas.El reporte deberá ser entregado en forma de artículo siguiendo el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp).
+La primera asignación tiene que ver con la utilización de los vectores en cristalografía. La intención es que desarrollen y entreguen el ejercicio 9 del punto 1.3.3 de las notas de [Matematicas Avanzadas Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf). El problema deberá ser entregado por equipos de dos personas.El reporte deberá ser entregado en forma de artículo siguiendo el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp).
 
 ### Los vectores de siempre (1.5 Semanas)
 <a name="VectoresSiempre"></a>
