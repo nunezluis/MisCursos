@@ -1,22 +1,21 @@
 ## Los vectores de siempre
 ### Objetivos de la clase
 
-Esta clase tiene varios objetivos. Primero incorporar tres herramientas profesionales, dos de ellas colaborativas. [LATEX](https://en.wikipedia.org/wiki/LaTeX), [MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software)) y los repositorios [git](http://github.com/).
-
+Esta clase tiene varios objetivos. Primero incorporar tres herramientas profesionales, dos de ellas colaborativas. [LATEX](https://en.wikipedia.org/wiki/LaTeX), [MAXIMA](https://en.wikipedia.org/wiki/MAXIMA/PYTHON_(software) o [SymPy](https://www.sympy.org/en/index.html).
 El segundo objetivo es utilizar la excusa del conocimiento previo vectores cartesianos para introducir conceptos fundamentales que emplearemos en este curso. Entre estos conceptos fundamentales podemos mencionar: las operaciones que definen un espacio vectorial, el concepto de independencia lineal y los distintos productos que se consideran entre vectores cartesianos.
 
 El tercer objetivo es iniciar a los estudiantes en la utilización de la notación de Einstein para desarrollar álgebra de vectores utilizando índices. En este contexto se explicará el uso de la [delta de Kronecker](https://en.wikipedia.org/wiki/Kronecker_delta) y el [símbolo de Levi-Civita](https://en.wikipedia.org/wiki/Levi-Civita_symbol)
 
 ### Actividad antes de iniciar la clase
-1. Instalar y configurar MAXIMA
+1. Instalar y configurar MAXIMA/PYTHON
 2. Registrarse en overleaf
 3. Registrarse y configurar repositorio git
 4. Estudiar puntos 1.1.1, 1.1.2 y 1.1.3 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
 5. Rehacer los ejemplos 1.3, 1.4, 1.10 y 1.15.
 
 ### Taller de problemas 1 (evaluación en la clase 3)
-1. Realice un código en MAXIMA para el cual, dado tres vectores que formen los lados de un triángulo calcule el centroide (Problema 3 Sección 1.1.6). Trate de hacer este problema de forma que pueda reutilizar su código para tres vectores cualesquiera.
-2. Realice un código en MAXIMA que reproduzca el ejercicio 6 de la Sección 1.2.7
+1. Realice un código en MAXIMA/PYTHON para el cual, dado tres vectores que formen los lados de un triángulo calcule el centroide (Problema 3 Sección 1.1.6). Trate de hacer este problema de forma que pueda reutilizar su código para tres vectores cualesquiera.
+2. Realice un código en MAXIMA/PYTHON que reproduzca el ejercicio 6 de la Sección 1.2.7
 
 ### Materiales de apoyo
 1. [Video](https://youtu.be/2LhoaImegV4) y [presentación generalidades de vectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/1_1Vectores.pdf)
