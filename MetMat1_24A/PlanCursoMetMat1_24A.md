@@ -84,60 +84,60 @@ La primera asignación tiene que ver con la utilización de los vectores en cris
 
 + [Clase 2: Análisis vectorial express y número complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_2AnalisisVectExpress.md). **13feb**
 
-### Espacios Vectoriales lineales. (2.5 Semanas)
+### Espacios Vectoriales lineales. (3.0 Semanas)
 <a name="EspaciosVectoriales"></a>
-+ [Clase 4: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md) **15feb**
++ [Clase 3: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md) **15feb**
 Además tendremos un **taller evaluado de los vectores de siempre** (clases 1, 2 y 3).
     1. Código en MAXIMA/PYTHON/Python para calcular centroide de un triángulo (Problema 3 Sección 1.1.6).
     2. Código en MAXIMA/PYTHON que reproduzca el ejercicio 6 de la Sección 1.2.7
     3. De la sección 1.5.7 resuelva los ejercicios 2a, 2d y 2f y con MAXIMA/PYTHON el 13;
     4. De la sección 1.6.6 resuelva los ejercicios 2, 5 y 6.
 
-+ [Clase 5: Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md). **20feb**
++ [Clase 4: Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md). **20feb**
 
-+ [Clase 6: Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md) **22feb** **Entrega asignación 1**
++ [Clase 5: Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md) **22feb** **Entrega asignación 1**
 
 Ajuste **27feb**
 
-+ [Clase 7: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) **29feb**
++ [Clase 6: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) **29feb**
     1. Taller Evaluado Espacios Lineales (clases 4, 5, y 6)
         1. De la Sección 2.1.6 desarrollar los ejercicios 3 y 10
         2. Resuelva el ejercicio 6 sección 2.2.4
         3. Desarrollar los ejercicios 5 y 6 de la sección 2.3.6
     2. También tendremos la sustentación de Asignación 1.
 
-### Asignación 2 (Entrega hasta clase 10 y discusión clase 11).
+### Asignación 2 (Entrega hasta clase 9 y discusión clase 10).
 Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar el error de medición del sensor de bajo costo y, como calibrarlo para establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerDistancias/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Asignaciones/TallerDistancias/DatosDistancias) podrán encontrar los datos para desarrollar los algoritmos de calibración inteligente. Los datos patrones están contenidos en la hoja excel en la pestaña *Normal*. Los datos de las estaciones a calibrar los encontrarán en los demás archivos.   El problema deberá ser entregado por equipos de dos personas en forma de artículo y podrían seguir el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que presentamos en la descripción del curso.
 
 ### Espacios vectoriales duales y tensoriales. (2.5 Semanas)
 <a name="EspaciosDuales"></a>
-+ [Clase 8: Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md) **5mar**
++ [Clase 7: Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md) **5mar**
 
-+ [Clase 9: Tensores y espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md). **7mar**
++ [Clase 8: Tensores y espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md). **7mar**
 
-+ [Clase 10: Tensores y sus aplicaciones en Física](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_3AplicaTensores.md). Evaluación de los ejercicios asignados clases 6, 7, 8 y 9. **12mar**   
++ [Clase 9: Tensores y sus aplicaciones en Física](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_3AplicaTensores.md). Evaluación de los ejercicios asignados clases 6, 7, 8 y 9. **12mar**   
   1. los ejercicios 5 y 6 de la sección 2.3.6
   2. MAXIMA/PYTHON desarrollar el ejercicio 3 de la sección 2.4.5
   3. ejercicios 6 y 7 de la Sección 3.1.4 .
   4. Hacer un código MAXIMA/PYTHON que resuelva el problema 2 sección 3.3.5.
 
-+ [Clase 11: Vectores y tensores en espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_4EspPseudoEuclid.md). **14Mar** **Entrega asignación 2**
++ [Clase 10: Vectores y tensores en espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_4EspPseudoEuclid.md). **14Mar** **Entrega asignación 2**
 
 + Ajuste y sustentación asignación 2 **19mar**
 
-### Asignación 3 (Entrega hasta clase 14 y discusión clase 15)
+### Asignación 3 (Entrega hasta clase 13 y discusión clase 14)
 Esta asignación tiene por objeto mostrar una aplicación de espacios tensoriales en función de datos. Primero un sistema de masas donde se calcula el Tensor de Inercia y luego construir un espacio tensorial de productos internos bruto (PIB) y comparar los gastos militares del país en los últimos 15 años con los de educación, y los de ciencia y tecnología. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensores/TallerTensoresAutovalores.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensores/DatosTensores/datosmasas.csv) podrán encontrar los datos.
 
 Al igual que la *Asignación 1 y 2* los resultados deberán ser entregados en forma de artículo siguiendo el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp).
 
-+ Evaluación Escrita Clases 1 - 11 **21mar**
++ Evaluación Escrita Clases 1 - 10 **21mar**
 
 ### Operadores Lineales (3 Semanas)
 <a name="OperadoresLineales"></a>
 
-+ [Clase 12: Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md)  **2abr**
++ [Clase 11: Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md)  **2abr**
 
-+ [Clase 13: Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md)  **4abr**
++ [Clase 12: Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md)  **4abr**
     + Evaluación
         + Ejercicio 2 y 8 sección 3.3.5
         + Ejercicio 6 sección 3.4.3
