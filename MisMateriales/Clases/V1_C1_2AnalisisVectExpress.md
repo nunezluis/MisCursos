@@ -1,13 +1,13 @@
 ## Análisis vectorial express
 ### Objetivos de la clase
-   Esta clase tiene por objetivo realizar una aproximación intuitiva a los conceptos de análisis vectorial. En particular interpretar la derivación e integración de campos vectoriales en coordenadas cartesianas. Mas adelante, en el desarrollo del curso, se formalizarán estos conceptos, haciendo un énfasis en varios sistemas coordenados. También se refrescarán los conceptos de números complejos empleando una analogía con los vectores en dos dimensiones.
+   Esta clase tiene por objetivo realizar una aproximación intuitiva a los conceptos de análisis vectorial. En particular interpretar la derivación e integración de campos vectoriales en coordenadas cartesianas. Mas adelante, en el desarrollo del curso, se formalizarán estos conceptos haciendo un énfasis en varios sistemas coordenados. También se refrescarán los conceptos de números complejos empleando una analogía con los vectores en dos dimensiones.
 
 ### Actividad antes de clase
-   1. Estudiar puntos 1.5 y 1.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
+   1. Estudiar puntos 1.5 y 1.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
    2. Rehacer los ejemplos 1.17, 1.19, 1.24, 1.28 y 1.30.
 
 ### Taller de problema 1 (evaluación en la clase 3)
-   1. De la sección 1.5.7 resuelva los ejercicios 2a, 2d y 2f y con MAXIMA el ejercicio 13;
+   1. De la sección 1.5.7 resuelva los ejercicios 2a, 2d y 2f y con MAXIMA/PYTHON el ejercicio 13;
    2. De la sección 1.6.6 resuelva los ejercicios 2, 5 y 6.
 
 ### Materiales de apoyo
