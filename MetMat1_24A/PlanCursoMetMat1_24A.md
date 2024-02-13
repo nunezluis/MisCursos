@@ -76,7 +76,7 @@ También utilizaremos capítulos de la siguiente  bibliografía de textos clási
 | [Variable compleja](#VariableCompleja) |3|
 
 ### Asignación 1
-La primera asignación tiene que ver con la utilización de los vectores en cristalografía. La intención es que desarrollen y entreguen el ejercicio 9 del punto 1.3.3 de las notas de [Matematicas Avanzadas Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf). El problema deberá ser entregado por equipos de dos personas.El reporte deberá ser entregado en forma de artículo siguiendo el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp).
+La primera asignación tiene que ver con la utilización de los vectores en cristalografía. La intención es que desarrollen y entreguen el ejercicio 9 del punto 1.3.3 de las notas de [Matematicas Avanzadas Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf). El problema deberá ser entregado por equipos de dos personas.
 
 ### Los vectores de siempre (1 Semana)
 <a name="VectoresSiempre"></a>
@@ -87,7 +87,7 @@ La primera asignación tiene que ver con la utilización de los vectores en cris
 ### Espacios Vectoriales lineales. (3.0 Semanas)
 <a name="EspaciosVectoriales"></a>
 + [Clase 3: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md) **15feb**
-Además tendremos un **taller evaluado de los vectores de siempre** (clases 1, 2 y 3).
+Además tendremos un **taller evaluado de los vectores de siempre** (clases 1 y 2).
     1. Código en MAXIMA/PYTHON/Python para calcular centroide de un triángulo (Problema 3 Sección 1.1.6).
     2. Código en MAXIMA/PYTHON que reproduzca el ejercicio 6 de la Sección 1.2.7
     3. De la sección 1.5.7 resuelva los ejercicios 2a, 2d y 2f y con MAXIMA/PYTHON el 13;
@@ -100,7 +100,7 @@ Además tendremos un **taller evaluado de los vectores de siempre** (clases 1, 2
 Ajuste **27feb**
 
 + [Clase 6: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) **29feb**
-    1. Taller Evaluado Espacios Lineales (clases 4, 5, y 6)
+    1. Taller Evaluado Espacios Lineales (clases 3, 4, y 5)
         1. De la Sección 2.1.6 desarrollar los ejercicios 3 y 10
         2. Resuelva el ejercicio 6 sección 2.2.4
         3. Desarrollar los ejercicios 5 y 6 de la sección 2.3.6
