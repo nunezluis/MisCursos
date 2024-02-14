@@ -157,7 +157,3 @@ Cuando una pelota sobre una superficie dura y plana,  golpeada por un chorro de 
 
 
 ## Avances en la evaluación
-
-| No. | Nombre y Apellido                |Equipo/Reto|Propuesta|Avances | Reporte |
-|-----|----------------------------------|---------|-----------|---------|---------|
-|    |                                   |         |           |         |      |
