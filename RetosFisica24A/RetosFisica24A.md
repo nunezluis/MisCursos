@@ -154,6 +154,5 @@ A veces, cuando colocamos un vaso boca abajo sobre una mesa plana mojada, empiez
 Cuando una pelota sobre una superficie dura y plana,  golpeada por un chorro de agua que cae perpendicular a la superficie, [puede empezar a oscilar](https://youtu.be/yq_qSWZDHHk). Investiga cómo dependen las oscilaciones de los parámetros pertinentes.
 
 
-
-
 ## Avances en la evaluación
+[Aquí](https://github.com/nunezluis/MisCursos/blob/main/RetosFisica24A/CalificaRetos24A.md) avanza la evaluación de este curso
