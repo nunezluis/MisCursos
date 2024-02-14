@@ -123,7 +123,7 @@ La dinámica del chapoteo depende de factores como la forma del recipiente, sus 
 El emprendimiento científico [*The Spill not*](https://thespillnot.com/) comercializa un dispositivo que evita el los líquidos contenidos en tazas o vasos se derramen. Utilizando su celular, parametrice el fenómeno del derrame de líquidos utilizando este dispositivo.
 
 
-### Reto 2 *El problema inverso y las tazas*
+### Reto 2 *El problema inverso y las tazas* **(Equipo 4)**
 Si golpea la parte superior de una taza de café con una cuchara, notará que el sonido depende en gran medida de dónde se golpee. Conociendo la geometría de la taza, se puede predecir el espectro de frecuencia del sonido emitido al tocar en diferentes puntos.
 
 Considere ahora el problema inverso y encuentre una técnica experimental para reconstruir la geometría de un recipiente a partir del sonido emitido. ¿Cuál es el conocimiento mínimo sobre la geometría de la copa que se necesita para resolver el problema?  Una interesante discusión de este problema inverso lo pueden ver en el canal youtube del prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda): https://youtu.be/MfzNJE4CK_s
@@ -135,7 +135,7 @@ Hay un monton de trucos bonitos que se hacen con una [cinta de papel, clips y li
 ### Reto 4  *Variedades de Péndulos*
 Inspirado en el [video de Bruce Yeany](https://youtu.be/615GTw4TNxI) construya y estudie la dinámica de alguno de los péndulos dobles que allí proponen. Compare dos ellos, los que sean más similares. Construya un modelo teórico, simúlelo y compárelo con medidas experimentales.
 
-### Reto 5  *Cilindros danzantes*
+### Reto 5  *Cilindros danzantes* **(Equipo 2)**
 Otra vez el Prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda) nos presenta otro caso curioso de oscilaciones con [cilindros danzantes](https://youtu.be/JuuYFt8bahE) y también [extra de cilindros](https://youtu.be/5dJsOF7_GfY). Parametrice y intente generalizar ese fenómeno.
 
 ### Reto 6  *Estabilidad e inestabilidad conica*
@@ -145,12 +145,12 @@ Y seguimos con los ejemplos del Prof [Tadashi Tokieda](https://en.wikipedia.org/
 Si empujas horizontalmente una botella medio llena de agua, rodará hacia delante con una velocidad oscilante. ¿De qué y cómo depende la magnitud de las oscilaciones de la velocidad? ¿de la cantidad o viscosidad de líquido?
 
 ### Reto 8 *Orden en la pea*
-A veces, cuando colocamos un vaso boca abajo sobre una mesa plana mojada, empieza a moverse. Investiga su velocidad en función de los parámetros pertinentes e intenta maximizarla.
+A veces, cuando colocamos un vaso boca abajo sobre una mesa plana mojada, empieza a moverse. Investiga su velocidad en función de los parámetros pertinentes e intenta maximizarla. Algo de [información](https://www.quora.com/Why-does-a-simple-drinking-glass-which-is-just-washed-and-kept-upside-down-start-to-move) 
 
-### Reto 9 *Hidro Cañon*
+### Reto 9 *Hidro Cañon* **(Equipo 1)**
 ¿A qué altura puede saltar una pelota de ping-pong utilizando el [montaje del vídeo](https://youtu.be/mPOcFSHyd9o?t=478 )? ¿Cuál es la fracción máxima de la energía cinética total que puede transferirse a la pelota?
 
-### Reto 10 *Pelotas danzantes*
+### Reto 10 *Pelotas danzantes* **(Equipo 3)**
 Cuando una pelota sobre una superficie dura y plana,  golpeada por un chorro de agua que cae perpendicular a la superficie, [puede empezar a oscilar](https://youtu.be/yq_qSWZDHHk). Investiga cómo dependen las oscilaciones de los parámetros pertinentes.
 
 
