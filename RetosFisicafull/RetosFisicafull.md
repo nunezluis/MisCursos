@@ -7,7 +7,7 @@ La dinámica del chapoteo depende de factores como la forma del recipiente, sus 
 
 El emprendimiento científico [*The Spill not*](https://thespillnot.com/) comercializa un dispositivo que evita el los líquidos contenidos en tazas o vasos se derramen. Utilizando su celular, parametrice el fenómeno del derrame de líquidos utilizando este dispositivo.
 
-### Reto 2 *De la atracción y las tensiones* 
+### Reto 2 *De la atracción y las tensiones*
 Cuando [dos burbujas de jabón colisionan](https://youtu.be/BRe9M1lF4Hs), pueden rebotar o fusionarse. Encuentre las condiciones para que ocurran cada uno de los fenómenos.
 
 ### Reto 3 *El problema inverso y las tazas*
@@ -55,7 +55,7 @@ Cuando una pelota sobre una superficie dura y plana,  golpeada por un chorro de 
 ¿A partir del sonido generado por tuercas que se dejan caer sobre una lámina metálica se puede estimar la altura desde la que se lanzan? Desarrolle la respuesta
 
 ### Reto 17 *La ignoracia es la costosa*
-Constantemente dicen que la ciencia es costosa. Lo costoso es la ignorancia. En el desarrollo de un hodoscopio para hacer muografía necesitabamos unos cables para conectar los paneles centelladores a la electrónica. La compañía internacional que vendió la electrónica nos cotizó los cables de 1m a casi 100 euros y necesitamos 100 de esos cables. Mirando con detenimiento las características del cable, se nos ocurrió buscarlo en proveecores locales. Conseguimos varios que quizá funcionen. La misión es diseñar un protocolo de prueba y comparar las calidades de los cables comprados localemente y los cotizados por el proveedor internacional.
+Constantemente dicen que la ciencia es costosa. Lo costoso es la ignorancia. En el desarrollo de un hodoscopio para hacer muografía necesitabamos unos cables para conectar los paneles centelladores a la electrónica. La compañía internacional que vendió la electrónica nos cotizó los cables de 1m a casi 100 euros y necesitamos 100 de esos cables. Mirando con detenimiento las características del cable, se nos ocurrió buscarlo en proveedores locales. Conseguimos varios que quizá funcionen. La misión es diseñar un protocolo de prueba y comparar las calidades de los cables comprados localemente y los cotizados por el proveedor internacional.
 
 ### Reto 18 *Ondeando banderas*
 Estudie las banderas (o cualquier trozo de tela y otros materiales de lámina) colgadas mientras está sometida a un viento uniforme. ¿En qué condiciones empieza a ondear y a emitir sonido? Construye el anemómetro más preciso basándote en el sonido del aleteo de la bandera.
@@ -69,5 +69,5 @@ En las condiciones adecuadas, si se da la vuelta a un vaso mojado y se coloca so
 ### Reto 20 *El big bang*
 Cuando un globo explota, produce un sonido corto y fuerte. ¿Puedes predecir la geometría y la presión interna del globo explotado a partir del sonido de la explosión? ¿Hay algún parámetro externo que afecte al sonido?
 
-### Reto 20 *Desenrollar cinta adhesiva*
+### Reto 20 *Cinta adhesiva escandalosas*
 Al desenrollar un rollo de cinta adhesiva, puede producirse un fuerte sonido. Explica la física de la emisión del sonido. Busca formas de maximizar y minimizar el ruido.
