@@ -145,7 +145,7 @@ Y seguimos con los ejemplos del Prof [Tadashi Tokieda](https://en.wikipedia.org/
 Si empujas horizontalmente una botella medio llena de agua, rodará hacia delante con una velocidad oscilante. ¿De qué y cómo depende la magnitud de las oscilaciones de la velocidad? ¿de la cantidad o viscosidad de líquido?
 
 ### Reto 8 *Orden en la pea*
-A veces, cuando colocamos un vaso boca abajo sobre una mesa plana mojada, empieza a moverse. Investiga su velocidad en función de los parámetros pertinentes e intenta maximizarla. Algo de [información al respecto](https://www.quora.com/Why-does-a-simple-drinking-glass-which-is-just-washed-and-kept-upside-down-start-to-move) 
+A veces, cuando colocamos un vaso boca abajo sobre una mesa plana mojada, empieza a moverse. Investiga su velocidad en función de los parámetros pertinentes e intenta maximizarla. Algo de [información al respecto](https://www.quora.com/Why-does-a-simple-drinking-glass-which-is-just-washed-and-kept-upside-down-start-to-move)
 
 ### Reto 9 *Hidro Cañon* **(Equipo 1)**
 ¿A qué altura puede saltar una pelota de ping-pong utilizando el [montaje del vídeo](https://youtu.be/mPOcFSHyd9o?t=478 )? ¿Cuál es la fracción máxima de la energía cinética total que puede transferirse a la pelota?
@@ -153,6 +153,10 @@ A veces, cuando colocamos un vaso boca abajo sobre una mesa plana mojada, empiez
 ### Reto 10 *Pelotas danzantes* **(Equipo 3)**
 Cuando una pelota sobre una superficie dura y plana,  golpeada por un chorro de agua que cae perpendicular a la superficie, [puede empezar a oscilar](https://youtu.be/yq_qSWZDHHk). Investiga cómo dependen las oscilaciones de los parámetros pertinentes.
 
+### Reto 11 *Vasos mojados burbujeantes*
+En las condiciones adecuadas, si se da la vuelta a un vaso mojado y se coloca sobre una superficie plana (pero no necesariamente pulida), empiezan a aparecer burbujas de aire en la parte inferior del mismo. Reproduce y explica el fenómeno. ¿Qué parámetros definen el número de burbujas (y las líneas en las que se agrupan) y su duración? ¿Se puede formar un círculo completo de burbujas a lo largo de la pared interior del vaso? Aquí un [videito](https://youtu.be/7CIT1KvoUpU)
+
+Traducción realizada con la versión gratuita del traductor www.DeepL.com/Translator
 
 ## Avances en la evaluación
 [Aquí](https://github.com/nunezluis/MisCursos/blob/main/RetosFisica24A/CalificaRetos24A.md) avanza la evaluación de este curso
