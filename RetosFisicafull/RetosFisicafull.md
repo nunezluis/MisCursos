@@ -69,7 +69,7 @@ En las condiciones adecuadas, si se da la vuelta a un vaso mojado y se coloca so
 ### Reto 21 *El big bang*
 Cuando un globo explota, produce un sonido corto y fuerte. ¿Puedes predecir la geometría y la presión interna del globo explotado a partir del sonido de la explosión? ¿Hay algún parámetro externo que afecte al sonido?
 
-### Reto 22 *Cinta adhesiva escandalosas*
+### Reto 22 *Cinta adhesiva escandalosa*
 Al desenrollar un rollo de cinta adhesiva, puede producirse un fuerte sonido. Explica la física de la emisión del sonido. Busca formas de maximizar y minimizar el ruido.
 
 ### Reto 23 *Deformaciones del Espacio tiempo*
