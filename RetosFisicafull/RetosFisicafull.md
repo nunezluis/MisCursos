@@ -66,8 +66,8 @@ Tome un plato plano grande (de al menos 30 cm de diámetro) y llénelo de agua h
 ### Reto 20 *Vasos mojados burbujeantes*
 En las condiciones adecuadas, si se da la vuelta a un vaso mojado y se coloca sobre una superficie plana (pero no necesariamente pulida), empiezan a aparecer burbujas de aire en la parte inferior del mismo. Reproduce y explica el fenómeno. ¿Qué parámetros definen el número de burbujas (y las líneas en las que se agrupan) y su duración? ¿Se puede formar un círculo completo de burbujas a lo largo de la pared interior del vaso? Aquí un [videito](https://youtu.be/7CIT1KvoUpU)
 
-### Reto 20 *El big bang*
+### Reto 21 *El big bang*
 Cuando un globo explota, produce un sonido corto y fuerte. ¿Puedes predecir la geometría y la presión interna del globo explotado a partir del sonido de la explosión? ¿Hay algún parámetro externo que afecte al sonido?
 
-### Reto 20 *Cinta adhesiva escandalosas*
+### Reto 22 *Cinta adhesiva escandalosas*
 Al desenrollar un rollo de cinta adhesiva, puede producirse un fuerte sonido. Explica la física de la emisión del sonido. Busca formas de maximizar y minimizar el ruido.
