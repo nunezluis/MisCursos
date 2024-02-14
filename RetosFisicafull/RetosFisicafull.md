@@ -71,3 +71,6 @@ Cuando un globo explota, produce un sonido corto y fuerte. ¿Puedes predecir la 
 
 ### Reto 22 *Cinta adhesiva escandalosas*
 Al desenrollar un rollo de cinta adhesiva, puede producirse un fuerte sonido. Explica la física de la emisión del sonido. Busca formas de maximizar y minimizar el ruido.
+
+### Reto 23 *Deformaciones del Espacio tiempo*
+Con una tela elástica contruya un ambiente que reproduzca la deformación del espacio tiempo y pueda calcular, simular y registrar las trayectorias de partículas de prueba alrededor de cuerpos masivo. Compárelo con las geodésicas en Relatividad General. Puede inspirarse en este [video](https://www.youtube.com/watch?v=MTY1Kje0yLg) y apoyarse en Postiglione, A., & De Angelis, I. (2021). Experience gravity in the classroom using the rubber sheet: an educational proposal from the collaboration between university and school. Physics Education, 56(2), 025019.  
