@@ -5,7 +5,7 @@
 | 3   | Juan Jose Camacho Olmos        |   5     |        |        |        |             |             |             |         |         |
 | 4   | Camila Valentina Castillo Lopez|        |        |        |        |             |             |             |         |         |
 | 5   | Carlos Eduardo Contreras Moreno|        |        |        |        |             |             |             |         |         |
-| 6   | Santiago Correa Vergara        |        |        |        |        |             |             |             |         |         |
+| 6   | Santiago Correa Vergara        |     1   |        |        |        |             |             |             |         |         |
 | 7   | Maria Fernanda Estupiñan Aguilar|        |        |        |        |             |             |             |         |         |
 | 8   | Jeicor Esneider Florez Pabon   |        |        |        |        |             |             |             |         |         |
 | 9   | Lenny Julian Garzon Ruiz       |        |        |        |        |             |             |             |         |         |
