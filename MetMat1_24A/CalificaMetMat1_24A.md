@@ -2,7 +2,7 @@
 |-----|--------------------------------|--------|--------|--------|--------|-------------|-------------|-------------|---------|---------|
 | 1   | Manuel Felipe Barrera Parada   |        |        |        |        |             |             |             |         |         |
 | 2   | Henyerbel Aldayr Bohorquez Niño|        |        |        |        |             |             |             |         |         |
-| 3   | Juan Jose Camacho Olmos        |        |        |        |        |             |             |             |         |         |
+| 3   | Juan Jose Camacho Olmos        |   5     |        |        |        |             |             |             |         |         |
 | 4   | Camila Valentina Castillo Lopez|        |        |        |        |             |             |             |         |         |
 | 5   | Carlos Eduardo Contreras Moreno|        |        |        |        |             |             |             |         |         |
 | 6   | Santiago Correa Vergara        |        |        |        |        |             |             |             |         |         |
