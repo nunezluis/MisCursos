@@ -10,7 +10,7 @@
 | 8   | Jeicor Esneider Florez Pabon   |        |        |        |        |             |             |             |         |         |
 | 9   | Lenny Julian Garzon Ruiz       |        |        |        |        |             |             |             |         |         |
 | 10  | Ciro Alejandro Gelvez Olaya    |        |        |        |        |             |             |             |         |         |
-| 11  | Raul Joseph Guerrero Villamizar|        |        |        |        |             |             |             |         |         |
+| 11  | Raul Joseph Guerrero Villamizar|    5    |        |        |        |             |             |             |         |         |
 | 12  | Luis Gonzalo Martinez Garcia   |        |        |        |        |             |             |             |         |         |
 | 13  | Juan Manuel Murillo Vanegas    |        |        |        |        |             |             |             |         |         |
 | 14  | Robert Orcasitas Garcia        |        |        |        |        |             |             |             |         |         |
