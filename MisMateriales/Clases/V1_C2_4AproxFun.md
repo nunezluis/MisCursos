@@ -10,7 +10,7 @@ Esta clase tiene por objetivos comprender la aplicación de los conceptos de bas
       + Aproximación Polinomial
 
 ### Taller de problema.
-Utilizando MAXIMA desarrollar el ejercicio 3 de la sección 2.4.5
+Utilizando MAXIMA/SymPy desarrollar el ejercicio 3 de la sección 2.4.5
 
 ### Materiales de apoyo:
 [Video aproximación de funciones](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/2_4AproximacionFunciones.pdf)

@@ -66,8 +66,8 @@ También utilizaremos capítulos de la siguiente  bibliografía de textos clási
 
 ### Temas y tiempos en un vistazo
 
-| Temas | Tiempo (semanas) |
-| :------- | :-------: |
+| Temas    | Tiempo (semanas) |
+| :------- | :-------:        |
 | [Los vectores de siempre](#VectoresSiempre) | 1  |
 | [Espacios Vectoriales lineales](#EspaciosVectoriales) | 3.0  |
 | [Espacios duales y tensoriales](#EspaciosDuales) |  2.5  |
