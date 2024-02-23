@@ -5,13 +5,13 @@ Esta clase tiempo por objetivos hacer un repaso de números complejos y discutir
 
 
 + **Actividad antes de iniciar la clase**
-   1. Como repaso a los números complejos estudiar lo puntos 1.6.1 al 1.6.4 de las [notas de clase Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
-   2. Rehacer los ejemplos resueltos: 2 y 3 sección 1.6.5 las [notas de clase Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
+   1. Como repaso a los números complejos estudiar lo puntos 1.6.1 al 1.6.4 de las [notas de clase Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
+   2. Rehacer los ejemplos resueltos: 2 y 3 sección 1.6.5 las [notas de clase Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
    3. Estudiar los puntos 1.1.1, 1.1.2, 1.1.3, 1.1.4 y 1.1.5 de las [notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
    4. Rehacer los ejemplos resueltos 2 y 5 de la sección 1.1.6 de las [notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
 
 + **Taller de problemas 1 (evaluación en la clase 4)**
-   + Desarrolle los ejercicios 6 y 10 de la sección 1.6.7 de las [notas de clase Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
+   + Desarrolle los ejercicios 6 y 10 de la sección 1.6.7 de las [notas de clase Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
    + Desarrolle los ejercicios 4 y 7 de la sección 1.1.8 de las [notas de clase Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf).
 
 + **Materiales de apoyo**

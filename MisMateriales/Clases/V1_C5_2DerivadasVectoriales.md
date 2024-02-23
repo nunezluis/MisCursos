@@ -9,12 +9,12 @@ Esta clase tiene varios objetivos comprender el significado y alcance de los ope
   - La derivada covariante resume la variación del campo vectorial y de los vectores base en los cuales se re
 
 ### Actividades **antes** de clase
-1. Estudiar los puntos contenidos en la sección 5.2 (5.2.1 al 5.1.6) de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
-2. Resolver los ejemplos 3, 4, 5 y 7 de la sección 5.2.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)  
+1. Estudiar los puntos contenidos en la sección 5.2 (5.2.1 al 5.1.6) de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
+2. Resolver los ejemplos 3, 4, 5 y 7 de la sección 5.2.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)  
 
 
 ### Actividad **después** de clase
-+ Resuelva los ejercicios 2, 5, 10 y 16 de la sección 5.2.10 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
++ Resuelva los ejercicios 2, 5, 10 y 16 de la sección 5.2.10 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
 
 ### Materiales de apoyo
 + Video y [Presentación de la Fauna de operadores diferenciales vectorial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/5_3FaunaOperadoresVect.pdf).

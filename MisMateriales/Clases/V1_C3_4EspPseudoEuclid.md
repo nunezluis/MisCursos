@@ -4,8 +4,8 @@
 Esta clase tiene por objetivo extender los conceptos, vectores, formas lineales,  distancia, norma y producto interno de los espacios vectoriales euclideanos a los pseudoeuclideanos. Adicionalmente, se presenta la aplicación de estas extensiones a la construcción de los principios de la relatividad especial.
 
 ### Actividades **antes** de clase
-1. Estudiar los puntos 3.4.1 y 3.4.2  de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
-2. Rehacer los ejemplos 3.15 y 3.16 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
+1. Estudiar los puntos 3.4.1 y 3.4.2  de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
+2. Rehacer los ejemplos 3.15 y 3.16 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
 
 ### Actividad **después** de clase
 Resolver los ejercicios 1 y 6 de la sección 3.4.3
