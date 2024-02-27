@@ -6,7 +6,7 @@
 #### Resumen
 La regresión por mínimos cuadrados parciales (PLSR, Partial Least Squares Regression) es una herramienta notable en dominios que demandan modelos numéricos de predicción y clasificación de datos, entre otros, quimiometría y econometría. Como toda regresión, PLSR requiere datos para la calibración y la validación de su desempeño, y su éxito radica, como siempre, en la calidad y cantidad de datos que se manejen, de manera que se asegure un adecuado número de grados de libertad, así como aplicar con rigor las métricas para evaluar el desempeño.
 En esta exposición se presenta una estrategia, apoyada en la correlación entre el error estándar de calibración y el error estándar de validación cruzada, para seleccionar una partición de datos (de calibración) que evita el sobreajuste (overfitting) y mantiene valores razonables en las figuras de desempeño del modelo.
-[imangen](./Figuras/FiguraJader.pdf)
+![imangen](./Figuras/FiguraJader.pdf)
 
 
 #### La presentación
