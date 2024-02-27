@@ -85,3 +85,69 @@ Seguidamente presentamos algunas ideas de aplicaciones de los rayos cósmicos co
 Presentamos dos actividades complementarias, una que tiene que ver con el análisis de datos observacionales y otra que está relacionada con la simulación de la propagación de muones en objetos geofísicos.
 + La primera tiene que ver con la detección de decrecimientos Forbush en los datos de los detectores de superficie del Observatorio Pierre Auger.  Los [decrecimientos Forbush](https://en.wikipedia.org/wiki/Forbush_decrease#:~:text=A%20Forbush%20decrease%20is%20a,cosmic%20rays%20away%20from%20Earth) son disminuciones transitorias del flujo de partículas en tierra producto del paso de una eyección de masa coronal. La actividad que proponemos la pueden encontrar [aqui](https://github.com/nunezluis/MisCursos/blob/main/TopicosFisicaContemporanea/DecrecimientoForbush.md)
 + La segunda actividad que proponemos tiene que ver con la muografía de objetos geofísicos. Proponemos construir un código que simule la propagación de muones a través de roca estándar. La descripción de esta actividad la pueden encontrar [aqui](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/MuografiaUSAL.pdf).
+
+
+## *2 abril*  XXXXX
+### *YYYY* Escuela de Física UIS   
+#### Resumen
+
+#### La presentación
+
+#### Lecturas complementarias
+
+
+#### Actividades complementarias
+
+
+## *9 abril*  XXXXX
+### *YYYY* Escuela de Física UIS   
+#### Resumen
+
+#### La presentación
+
+#### Lecturas complementarias
+
+
+#### Actividades complementarias
+
+
+## *16 abril*  XXXXX
+### *YYYY* Escuela de Física UIS   
+#### Resumen
+
+#### La presentación
+
+#### Lecturas complementarias
+
+
+#### Actividades complementarias
+
+
+## *23 abril*  MICROPLÁSTICOS: UN PROBLEMA REAL Y ACTUAL
+### *Rafael Cabanzo* Escuela de Física UIS   
+#### Resumen
+Los microplásticos (MPs), polímeros menores a 5 mm. Han sido reportados como contaminantes en diferentes ambientes: Tierras de cultivo, ciudades y poblaciones y acuíferos de todo tipo: ríos y mares. En el caso marino, estas micropartículas han sido detectadas en playas, manglares y en mar abierto, incluso en sedimentos marinos. Se consideran contaminantes en los ecosistemas marinos debido a su naturaleza y al constituirse en vectores de una amplia variedad de químicos de reconocida toxicidad que se adhieren a su superficie. La ingesta de MPs por parte de animales marinos, incluso el zooplancton es de alto riesgo debido al proceso de bioacumulación y constituye una amenaza para toda la biota involucrada en la cadena trófica.
+Independiente de su origen, como material particulado que resulta de un proceso industrial (MPs primarios) o por desintegración inducida por factores externos (MPs secundarios), se trata de un problema en ascenso, a una tasa proporcional al descuido de la emisión de estos residuos, y con denuncias que datan de principio de 1970. En esta conferencia se hará la presentación de los resultados del proyecto: EVALUACIÓN DE LA CONTAMINACIÓN POR MICROPLÁSTICOS SOBRE LA COMUNIDAD DE ZOOPLANCTON EN EL PARQUE NACIONAL NATURAL CORALES DE PROFUNDIDAD Y EN EL PARQUE NACIONAL NATURAL LOS CORALES DEL ROSARIO Y DE SAN BERNARDO. Proyecto Financiado por la Vicerrectoría de Investigación y Extensión de la UIS y Parques Nacionales Naturales de Colombia.
+
+#### La presentación
+
+#### Lecturas complementarias
+Finding Microplastics in Soils: A Review of Analytical Methods. J. N. Möller, M. G. J. Löder, and C. Laforsch. Environ. Sci. Technol. 2020, 54, 2078−2090. Doi: 10.1021/acs.est.9b04618
+
+
+#### Actividades complementarias
+ Lea el documento y establezca cual método sería posible desarrollar en un laboratorio de la universidad.
+
+
+## *30 abril*  ÓXIDO DE GRAFENO: ¿EL GRAFENO DE LOS POBRES Y MATERIAL MARAVILLA?
+### *Rafael Cabanzo* Escuela de Física UIS   
+#### Resumen
+A partir de la obtención del premio Nobel de Física por Gein y Novoselov en el año 2010 por sus investigaciones fundamentales sobre “el grafeno, un material bidimensional de extraordinarias propiedades" se despertó el interés por los materiales bidimensionales y en particular por el óxido de grafeno. Éste último material se conoce desde 1859, obtenido por Benjamin C. Brodie en Oxford University y a través del tiempo han aparecido diferentes variaciones en la ruta de síntesis con el fin de mejorar sus propiedades químicas y físicas. El Laboratorio de Espectroscopía Atómica y Molecular – LEAM ha desarrollado una línea de trabajo con la síntesis y aplicaciones del óxido de grafeno a diferentes campos de investigación: Tratamiento de aguas, captura y remoción de diferentes contaminantes; Recuperación terciaria en petróleo (EOR); Hipertermia en petróleo mediante OG y nanopartículas de magnetita, entre otras. En esta conferencia se hará la presentación de algunos trabajos realizados en el laboratorio y que actualmente se están aplicando en el campo de interés.
+
+#### La presentación
+
+#### Lecturas complementarias
+Photoluminescent Carbon Quantum Dots: Synthetic Approaches and Photophysical Properties. K. Hagiwara, S. Horikoshi and N. Serpone. Chem. Eur. J. Doi: 10.1002/chem.202100823
+
+#### Actividades complementarias
+Lea el artículo y elabore un reporte donde defina los CQD y sus diferentes aplicaciones.
