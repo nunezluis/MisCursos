@@ -204,8 +204,8 @@ Tome un plato plano grande (de al menos 30 cm de diámetro) y llénelo de agua h
 | 19  | PERDOMO LAMBERTINEZ ANGELA MICHELLY|  2/11 |  4.5      |
 | 20  | PINTO BASTO STHEFANIA            |  1/9    |  4.8      |
 | 21  | RIVERA ORDOÑEZ MARIAN LAMAR      |    1/9  |  4.8      |  
-| 22  | RODRIGUEZ PEREZ AMBAR NIRVANA    |    7/2  | 3.0       |         |         |
-| 23  | SAAVEDRA SANTOS DANIEL STEVEEN   |   4/5   | 3.0       |         |         |
-| 24  | TELLO PRIETO PAULA ANDREA        |   7/2   | 3.0       |         |         |
-| 25  | TOLEDO PARRA NICOLAS HERNANDO    |   6/16  | 3.5       |         |         |
-| 26  | TORRES JAIMES TIHAMER            |   5/19  | 3.0       |         |         |
+| 22  | RODRIGUEZ PEREZ AMBAR NIRVANA    |    7/2  |  4.3      |
+| 23  | SAAVEDRA SANTOS DANIEL STEVEEN   |   4/5   |  4.3      |  
+| 24  | TELLO PRIETO PAULA ANDREA        |   7/2   |  4.3      |   
+| 25  | TOLEDO PARRA NICOLAS HERNANDO    |   6/16  |  4.5      |
+| 26  | TORRES JAIMES TIHAMER            |   5/19  |  4.5      |
