@@ -1,7 +1,7 @@
 ## Los vectores de siempre
 ### Objetivos de la clase
 
-Esta clase tiene varios objetivos. Primero, incorporar tres herramientas profesionales, dos de ellas colaborativas. [LATEX](https://en.wikipedia.org/wiki/LaTeX), [MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software)) y los repositorios [git](http://github.com/).
+Esta clase tiene varios objetivos. Primero incorporar tres herramientas profesionales, dos de ellas colaborativas. [LATEX](https://en.wikipedia.org/wiki/LaTeX), [MAXIMA](https://en.wikipedia.org/wiki/Maxima_(software)) y los repositorios [git](http://github.com/).
 
 El segundo objetivo es utilizar la excusa del conocimiento previo vectores cartesianos para introducir conceptos fundamentales que emplearemos en este curso. Entre estos conceptos fundamentales podemos mencionar: las operaciones que definen un espacio vectorial, el concepto de independencia lineal y los distintos productos que se consideran entre vectores cartesianos.
 
