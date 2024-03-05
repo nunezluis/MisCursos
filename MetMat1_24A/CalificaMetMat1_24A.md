@@ -15,7 +15,7 @@
 | 13  | Juan Manuel Murillo Vanegas    |        |        |        |        |             |             |             |         |         |
 | 14  | Robert Orcasitas Garcia        |   3.5     |        |        |        |             |             |             |         |         |
 | 15  | Damian Steven Ospina Alvarez   |    3.5    |        |        |        |             |             |             |         |         |
-| 16  | Deivy Alexander Rodriguez Olago|        |        |        |        |             |             |             |         |         |
+| 16  | Deivy Alexander Rodriguez Olago|    3.2    |        |        |        |             |             |             |         |         |
 | 17  | Samuel David Rosado Contreras  |        |        |        |        |             |             |             |         |         |
 | 18  | Jorge Andres Silva Serrano     |        |        |        |        |             |             |             |         |         |
 | 19  | Juan David Vega Jurado         |        |        |        |        |             |             |             |         |         |
