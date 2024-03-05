@@ -1,4 +1,4 @@
-# Plan del Curso de Métodos Matemáticos de la Física 1 (Semestre B22)
+# Plan del Curso de Métodos Matemáticos de la Física 1 (Semestre A24)
 1. [La metodología](#metodologia)
    1. [Clases](#clases)
    2. [Colaboración y computación](#colaboracion)
@@ -106,7 +106,7 @@ Ajuste **27feb**
         3. Desarrollar los ejercicios 5 y 6 de la sección 2.3.6
     2. También tendremos la sustentación de Asignación 1.
 
-### Asignación 2 (Entrega hasta clase 9 y discusión clase 10).
+### Asignación 2 (Entrega hasta clase 10 y discusión clase 11).
 Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor está íntimamente ligada a la idea de métrica en un espacio vectorial de datos. El problema que planteamos es cuantificar el error de medición del sensor de bajo costo y, como calibrarlo para establecer nuevas lecturas que sean mas precisas. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerDistancias/TallerDistancias.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/tree/main/MisMateriales/Asignaciones/TallerDistancias/DatosDistancias) podrán encontrar los datos para desarrollar los algoritmos de calibración inteligente. Los datos patrones están contenidos en la hoja excel en la pestaña *Normal*. Los datos de las estaciones a calibrar los encontrarán en los demás archivos.   El problema deberá ser entregado por equipos de dos personas en forma de artículo y podrían seguir el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que presentamos en la descripción del curso.
 
 ### Espacios vectoriales duales y tensoriales. (2.5 Semanas)
