@@ -14,7 +14,7 @@
 | 12  | Luis Gonzalo Martinez Garcia   |        |        |        |        |             |             |             |         |         |
 | 13  | Juan Manuel Murillo Vanegas    |        |        |        |        |             |             |             |         |         |
 | 14  | Robert Orcasitas Garcia        |   3.2     |        |        |        |             |             |             |         |         |
-| 15  | Damian Steven Ospina Alvarez   |        |        |        |        |             |             |             |         |         |
+| 15  | Damian Steven Ospina Alvarez   |    3.2    |        |        |        |             |             |             |         |         |
 | 16  | Deivy Alexander Rodriguez Olago|        |        |        |        |             |             |             |         |         |
 | 17  | Samuel David Rosado Contreras  |        |        |        |        |             |             |             |         |         |
 | 18  | Jorge Andres Silva Serrano     |        |        |        |        |             |             |             |         |         |
