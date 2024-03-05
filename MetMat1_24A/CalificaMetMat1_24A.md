@@ -6,7 +6,7 @@
 | 4   | Camila Valentina Castillo Lopez|        |        |        |        |             |             |             |         |         |
 | 5   | Carlos Eduardo Contreras Moreno|        |        |        |        |             |             |             |         |         |
 | 6   | Santiago Correa Vergara        |     1   |        |        |        |             |             |             |         |         |
-| 7   | Maria Fernanda Estupiñan Aguilar|        |        |        |        |             |             |             |         |         |
+| 7   | Maria Fernanda Estupiñan Aguilar|     |        |        |        |        5+     |             |             |         |         |
 | 8   | Jeicor Esneider Florez Pabon   |        |        |        |        |             |             |             |         |         |
 | 9   | Lenny Julian Garzon Ruiz       |        |        |        |        |             |             |             |         |         |
 | 10  | Ciro Alejandro Gelvez Olaya    |        |        |        |        |             |             |             |         |         |
@@ -15,7 +15,7 @@
 | 13  | Juan Manuel Murillo Vanegas    |        |        |        |        |             |             |             |         |         |
 | 14  | Robert Orcasitas Garcia        |   3.5     |        |        |        |             |             |             |         |         |
 | 15  | Damian Steven Ospina Alvarez   |    3.5    |        |        |        |             |             |             |         |         |
-| 16  | Deivy Alexander Rodriguez Olago|    3.2    |        |        |        |             |             |             |         |         |
+| 16  | Deivy Alexander Rodriguez Olago|       |        |        |        |      3.2       |             |             |         |         |
 | 17  | Samuel David Rosado Contreras  |        |        |        |        |             |             |             |         |         |
 | 18  | Jorge Andres Silva Serrano     |        |        |        |        |             |             |             |         |         |
 | 19  | Juan David Vega Jurado         |        |        |        |        |             |             |             |         |         |
