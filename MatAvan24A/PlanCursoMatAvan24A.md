@@ -61,11 +61,9 @@ Son importantes las primeras referencias que tienen que ver con *Machine Learnin
 
 
 #### Asignación
-Por definir
-
-Los resultados deberán ser entregados en forma de artículo siguiendo el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp).
-
-
+Exponer uno de estos artículos
++ Rehman, M. H. ur et al. Big Data Reduction Methods: A Survey. Data Sci Eng 1, 265–284 (2016).
++ Lu, H., Plataniotis, K. N. & Venetsanopoulos, A. N. A survey of multilinear subspace learning for tensor data. Pattern Recogn 44, 1540–1551 (2011).
 
 ### Operadores Lineales
 #### Clases
