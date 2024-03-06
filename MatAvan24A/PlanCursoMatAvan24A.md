@@ -47,41 +47,47 @@ Son importantes las primeras referencias que tienen que ver con *Machine Learnin
 
 + [Clase 3. Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md) **28feb**
    + Sección 2.1.6, desarrolle los ejercicios 3 y 10.
-   + Sección 2.2.4, desarrolle el ejercicio 4.
+   + Sección 2.2.4, desarrolle el ejercicio 7.
 
 + [Clase 4. Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) **1mar**
 
 ### Espacios Duales y Tensores
 #### Clases
 + [Clase 5. Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md) **6mar**
-  + Sección 2.3.6, desarrolle los ejercicios 5 y 6.
+  + Sección 2.3.6, desarrolle el ejercicio 5.
   + Sección 2.4.5, desarrolle el ejercicio 3 utilizando [MAXIMA](https://maxima.sourceforge.io/) o [Sympy](https://scipy-lectures.org/packages/sympy.html)
 
-+ [Clase 6. Tensores y espacios tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md)
++ [Clase 6. Tensores y espacios tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md) **8mar**
 
 
-#### Asignación
+#### Asignación (**sustentación 22mar**)
 Exponer uno de estos artículos
 + Rehman, M. H. ur et al. Big Data Reduction Methods: A Survey. Data Sci Eng 1, 265–284 (2016).
 + Lu, H., Plataniotis, K. N. & Venetsanopoulos, A. N. A survey of multilinear subspace learning for tensor data. Pattern Recogn 44, 1540–1551 (2011).
 
 ### Operadores Lineales
 #### Clases
-+ [Clase 7. Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md)
-   +
-+ [Clase 8. Evaluación Ejercicios y Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md)
-    1. Hacer un código MAXIMA/Sympy que resuelva el problema 2 sección 3.2.11
-    2. Resolver ejercicio 5 de la sección 4.1.6
++ [Clase 7. Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md) **13mar** Además este día tienen que entregar los problemas de tareas y exponerlos.
+    + Sección 2.1.6, desarrolle los ejercicios 3 y 10.
+    + Sección 2.2.4, desarrolle el ejercicio 7.
+    + Sección 2.3.6, desarrolle el ejercicio 5.
+    + Sección 2.4.5, desarrolle el ejercicio 3 utilizando [MAXIMA](https://maxima.sourceforge.io/) o [Sympy](https://scipy-lectures.org/packages/sympy.html)
 
-+ [Clase 10. Matrices y Operadores Lineales, parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **Entrega Asignación 2**
++ [Clase 8. Evaluación Ejercicios y Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md) **15mar**
+    1. De la sección 3.1.4 resuelva los ejercicios 2 y 7
+    2. Hacer un código MAXIMA/Sympy que resuelva el problema 2 sección 3.2.5
+    3. Resolver ejercicio 5 de la sección 4.1.6
 
-+ [Clase 11. Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md)
++ [Clase 10. Matrices y Operadores Lineales, parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **20mar**
+    1. Resolver los ejercicios 2 y 8 de la sección 4.3.7 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
 
-+ [Clase 12. Autovalores y Autovectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md)
++ [Clase 11. Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **3abr**
 
-+ Clase 13 Evaluación Asignación 2 y ejercicios
-   1. Resolver el ejercicio 2 de la sección 4.3.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
-   2. Resolver los ejercicios 4, 5, y 12  de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
++ [Clase 12. Autovalores y Autovectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md) **5abr**
+
++ Clase 13 Evaluación y ejercicios
+   1. Resolver el ejercicio 2 de la sección 4.3.7 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
+   2. Resolver los ejercicios 4, 5, y 12  de la sección 4.6.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
    3. Hacer un par de códigos en MAXIMA/Sympy para resolver los ejercicios 6 y 8 de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
 
 ### Series y Transformadas de Fourier

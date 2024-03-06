@@ -120,6 +120,7 @@ Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor e
   2. MAXIMA/PYTHON desarrollar el ejercicio 3 de la sección 2.4.5
   3. ejercicios 6 y 7 de la Sección 3.1.4 .
   4. Hacer un código MAXIMA/PYTHON que resuelva el problema 2 sección 3.3.5.
+  5. Desarrolle los problemas 7 y 8 de esa misma sección 3.3.5
 
 + [Clase 10: Vectores y tensores en espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_4EspPseudoEuclid.md). **14Mar** **Entrega asignación 2**
 
