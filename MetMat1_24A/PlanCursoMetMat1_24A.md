@@ -97,7 +97,7 @@ Además tendremos un **taller evaluado de los vectores de siempre** (clases 1 y 
 
 + [Clase 5: Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md) **22feb** **Entrega asignación 1**
 
-Ajuste **27feb**
++ Ajuste **27feb**
 
 + [Clase 6: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) **29feb**
     1. Taller Evaluado Espacios Lineales (clases 3, 4, y 5)
@@ -113,43 +113,40 @@ Esta asignación tiene por objeto mostrar que la acción de calibrar un sensor e
 <a name="EspaciosDuales"></a>
 + [Clase 7: Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md) **5mar**
 
-+ [Clase 8: Tensores y espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md). **7mar**
++ [Clase 8: Tensores y espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md). **12mar**
 
-+ [Clase 9: Tensores y sus aplicaciones en Física](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_3AplicaTensores.md). Evaluación de los ejercicios asignados clases 6, 7, 8 y 9. **12mar**   
-  1. los ejercicios 5 y 6 de la sección 2.3.6
-  2. MAXIMA/PYTHON desarrollar el ejercicio 3 de la sección 2.4.5
-  3. ejercicios 6 y 7 de la Sección 3.1.4 .
-  4. Hacer un código MAXIMA/PYTHON que resuelva el problema 2 sección 3.3.5.
-  5. Desarrolle los problemas 7 y 8 de esa misma sección 3.3.5
++ [Clase 9: Tensores y sus aplicaciones en Física](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_3AplicaTensores.md). **14mar**
 
-+ [Clase 10: Vectores y tensores en espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_4EspPseudoEuclid.md). **14Mar** **Entrega asignación 2**
++ [Clase 10: Vectores y tensores en espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_4EspPseudoEuclid.md). **19Mar**
+Evaluación de los ejercicios asignados clases 6, 7, 8 y 9.    
+ 1. los ejercicios 5 y 6 de la sección 2.3.6
+ 2. MAXIMA/PYTHON desarrollar el ejercicio 3 de la sección 2.4.5
+ 3. ejercicios 6 y 7 de la Sección 3.1.4 .
+ 4. Hacer un código MAXIMA/PYTHON que resuelva el problema 2 sección 3.3.5.
+ 5. Desarrolle los problemas 7 y 8 de esa misma sección 3.3.
 
-+ Ajuste y sustentación asignación 2 **19mar**
++ Primera evaluación escrita **21mar**
 
 ### Asignación 3 (Entrega hasta clase 13 y discusión clase 14)
-Esta asignación tiene por objeto mostrar una aplicación de espacios tensoriales en función de datos. Primero un sistema de masas donde se calcula el Tensor de Inercia y luego construir un espacio tensorial de productos internos bruto (PIB) y comparar los gastos militares del país en los últimos 15 años con los de educación, y los de ciencia y tecnología. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensores/TallerTensoresAutovalores.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensores/DatosTensores/datosmasas.csv) podrán encontrar los datos.
-
-Al igual que la *Asignación 1 y 2* los resultados deberán ser entregados en forma de artículo siguiendo el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp).
-
-+ Evaluación Escrita Clases 1 - 10 **21mar**
+Esta asignación tiene por objeto mostrar una aplicación de espacios tensoriales en función de datos. Primero un sistema de masas donde se calcula el Tensor de Inercia y luego construir un espacio tensorial de productos internos bruto (PIB) y comparar los gastos militares del país en los últimos 15 años con los de educación, y los de ciencia y tecnología. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensores/TallerTensoresAutovalores.pdf) podrán encontrar el planteamiento y el alcance del problema. [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerTensores/DatosTensores/datosmasas.csv) podrán encontrar los datos. Para la *Asignación 2* los resultados deberán ser entregados en forma de artículo siguiendo el [modelo](https://www.overleaf.com/read/hfqvjnjwngnp).
 
 ### Operadores Lineales (3 Semanas)
 <a name="OperadoresLineales"></a>
 
-+ [Clase 11: Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md)  **2abr**
++ [Clase 11: Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md)  **2abr** **Entrega asignación 2**
 
 + [Clase 12: Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md)  **4abr**
     + Evaluación
         + Ejercicio 2 y 8 sección 3.3.5
         + Ejercicio 6 sección 3.4.3
 
++ ** Sustentación asignación 2** **9abr**
 
-+ [Clase 14: Matrices y Operadores Lineales, parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **9abr**
++ [Clase 14: Matrices y Operadores Lineales, parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **11abr**
 
++ [Clase 15: Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md). **16abr**
 
-+ [Clase 15: Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md). **11abr**
-
-+ [Clase 16: Autovalores, autovectores y conjunto completo de observables que conmutan](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md). **16abr**
++ [Clase 16: Autovalores, autovectores y conjunto completo de observables que conmutan](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md). **18abr**
 Evaluación de los ejercicios asignados clases 12, 13 14 y 15
     + Evaluación
         + Ejercicios 4 y 5 de la sección 4.1.4
@@ -159,32 +156,32 @@ Evaluación de los ejercicios asignados clases 12, 13 14 y 15
 ### Análisis vectorial. (2.5 Semanas)
 <a name="AnalisisVectorial"></a>
 
-+ [Clase 17: Coordenadas curvilíneas generalizadas y campos tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C5_1CoordCurviCamposTensor.md) **18abr**
++ [Clase 17: Coordenadas curvilíneas generalizadas y campos tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C5_1CoordCurviCamposTensor.md) **23abr**
 
-+ Ajuste y sustentación asignación 3
++ Ajuste y sustentación asignación 3 **25abr**
 
-+ [Clase 18: La fauna de los operadores vectoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C5_2DerivadasVectoriales.md) **23abr**
++ [Clase 18: La fauna de los operadores vectoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C5_2DerivadasVectoriales.md) **30abr**
 
-
-+ [Clase 19: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C5_3TeoremasIntegrales.md) **25abr**
++ [Clase 19: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C5_3TeoremasIntegrales.md) **2may**
 
 + [Clase 20: Teoría de Potencial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md).
 
-
 ### Variable Compleja (3 Semanas)
 <a name="VariableCompleja"></a>
-+ [Clase 21: Funciones y Números Complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_1VarCompleja.md). **30abr**
++ [Clase 21: Funciones y Números Complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_1VarCompleja.md). **7may**
 
-+ [Clase 22: Puntos, líneas y transformaciones en al plano complejo](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_2TransfConformes.md). **2may**
++ [Clase 22: Puntos, líneas y transformaciones en al plano complejo](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_2TransfConformes.md). **9may**
 
-+ [Clase 23: Integrales Complejas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_3IntegralesComplejas.md). **7may**
++ [Clase 23: Integrales Complejas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_3IntegralesComplejas.md). **14may**
 
-+ [Clase 24: Series de Taylor y Laurent](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_4Laurent.md). **9may**
++ [Clase 24: Series de Taylor y Laurent](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_4Laurent.md). **16may**
 
-+ [Clase 25: Teorema del Residuo y sus Aplicaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_5ResiduosIntegrales.md). **14may**
++ [Clase 25: Teorema del Residuo y sus Aplicaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V2_C3_5ResiduosIntegrales.md). **21may**
 
-+ Ajuste y evaluación **16may** **21may** **23**
++ Ajuste   **23may**
+
++ Segunda evaluación escrita **30May**
 
 <a name="Avanzaevaluacion"></a>
-## La evaluación **30May**
+## La evaluación
 [Aquí](https://github.com/nunezluis/MisCursos/blob/main/MetMat1_24A/CalificaMetMat1_24A.md) avanza la evaluación de este curso
