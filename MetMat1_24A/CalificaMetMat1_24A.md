@@ -1,8 +1,8 @@
 | Num | Alumno/Actividad               | Tarea1 | Tarea2 | Tarea3 | Tarea4 | Asignación1 | Asignación2 | Asignación3 | Examen1 | Examen2 |
 |-----|--------------------------------|--------|--------|--------|--------|-------------|-------------|-------------|---------|---------|
-| 1   | Manuel Felipe Barrera Parada   |    1    |        |        |        |             |             |             |         |         |
+| 1   | Manuel Felipe Barrera Parada   |    1    |        |        |        |  4.0        |             |             |         |         |
 | 2   | Henyerbel Aldayr Bohorquez Niño|        |        |        |        |             |             |             |         |         |
-| 3   | Juan Jose Camacho Olmos        |   5     |        |        |        |             |             |             |         |         |
+| 3   | Juan Jose Camacho Olmos        |   5     |        |        |        |  4.0        |             |             |         |         |
 | 4   | Camila Valentina Castillo Lopez|        |    4.5    |        |        |             |             |             |         |         |
 | 5   | Carlos Eduardo Contreras Moreno|        |        |        |        |             |             |             |         |         |
 | 6   | Santiago Correa Vergara        |     1   |        |        |        |             |             |             |         |         |
