@@ -16,4 +16,4 @@ Esta clase tiene por objetivo mostrar tres aplicaciones de tensores en Física. 
 ### Al finalizar estos contenidos
    El estudiantes deberá:
    1. comprender la diferencia entre vectores, tensores y escalares
-   2. Ser capaz de deducir tanto el tensor de esfuerzos 2D como el tensor de inercia a partir de un sistema de partículas
+   2. ser capaz de deducir tanto el tensor de esfuerzos 2D como el tensor de inercia a partir de un sistema de partículas
