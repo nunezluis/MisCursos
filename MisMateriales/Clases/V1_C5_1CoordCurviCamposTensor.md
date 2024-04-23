@@ -13,9 +13,9 @@ Esta clase tiene varios objetivos presentar con detalles el caso 3D de espacios 
 
 
 ### Actividades *antes* de clase
-  1. Estudiar el punto 1.1 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO_5.pdf)   
-  2. Rehacer los ejemplos 2, 4, 6 y 7, de la sección 1.1.8 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO_5.pdf)
-  3. Rehacer los ejemplos de resueltos en máxima de la sección 1.1.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO_5.pdf)  
+  1. Estudiar el punto 1.1 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)   
+  2. Rehacer los ejemplos 2, 4, 6 y 7, de la sección 1.1.8 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
+  3. Rehacer los ejemplos de resueltos en máxima de la sección 1.1.9 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)  
 
 ### Actividad *después* de clase
   1. Resolver los ejercicios 4, 9, 10 y 11.
