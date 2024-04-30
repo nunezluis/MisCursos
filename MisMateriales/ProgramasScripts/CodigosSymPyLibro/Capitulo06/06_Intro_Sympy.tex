@@ -1,0 +1,3368 @@
+\documentclass[11pt]{article}
+
+    \usepackage[breakable]{tcolorbox}
+    \usepackage{parskip} % Stop auto-indenting (to mimic markdown behaviour)
+    
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % Maintain compatibility with old templates. Remove in nbconvert 6.0
+    \let\Oldincludegraphics\includegraphics
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionFormat{nocaption}{}
+    \captionsetup{format=nocaption,aboveskip=0pt,belowskip=0pt}
+
+    \usepackage{float}
+    \floatplacement{figure}{H} % forces figures to be placed at the correct location
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+
+    \usepackage{iftex}
+    \ifPDFTeX
+        \usepackage[T1]{fontenc}
+        \IfFileExists{alphabeta.sty}{
+              \usepackage{alphabeta}
+          }{
+              \usepackage[mathletters]{ucs}
+              \usepackage[utf8x]{inputenc}
+          }
+    \else
+        \usepackage{fontspec}
+        \usepackage{unicode-math}
+    \fi
+
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics
+                         % to support a larger range
+    \makeatletter % fix for old versions of grffile with XeLaTeX
+    \@ifpackagelater{grffile}{2019/11/01}
+    {
+      % Do nothing on new versions
+    }
+    {
+      \def\Gread@@xetex#1{%
+        \IfFileExists{"\Gin@base".bb}%
+        {\Gread@eps{\Gin@base.bb}}%
+        {\Gread@@xetex@aux#1}%
+      }
+    }
+    \makeatother
+    \usepackage[Export]{adjustbox} % Used to constrain images to a maximum size
+    \adjustboxset{max size={0.9\linewidth}{0.9\paperheight}}
+
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    % The default LaTeX title has an obnoxious amount of whitespace. By default,
+    % titling removes some of it. It also provides customization options.
+    \usepackage{titling}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage{array}     % table support for pandoc >= 2.11.3
+    \usepackage{calc}      % table minipage width calculation for pandoc >= 2.11.1
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    \usepackage{soul}      % strikethrough (\st) support for pandoc >= 3.0.0
+    \usepackage{mathrsfs}
+    
+
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+    \definecolor{ansi-default-inverse-fg}{HTML}{FFFFFF}
+    \definecolor{ansi-default-inverse-bg}{HTML}{000000}
+
+    % common color for the border for error outputs.
+    \definecolor{outerrorbackground}{HTML}{FFDFDF}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+
+
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatibility definitions
+    \def\gt{>}
+    \def\lt{<}
+    \let\Oldtex\TeX
+    \let\Oldlatex\LaTeX
+    \renewcommand{\TeX}{\textrm{\Oldtex}}
+    \renewcommand{\LaTeX}{\textrm{\Oldlatex}}
+    % Document parameters
+    % Document title
+    \title{06\_Intro\_Sympy}
+    
+    
+    
+    
+    
+    
+    
+% Pygments definitions
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\@namedef{PY@tok@w}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\@namedef{PY@tok@c}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.24,0.48,0.48}{##1}}}
+\@namedef{PY@tok@cp}{\def\PY@tc##1{\textcolor[rgb]{0.61,0.40,0.00}{##1}}}
+\@namedef{PY@tok@k}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kp}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kt}{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\@namedef{PY@tok@o}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@ow}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\@namedef{PY@tok@nb}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@nf}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PY@tok@nc}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PY@tok@nn}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PY@tok@ne}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.80,0.25,0.22}{##1}}}
+\@namedef{PY@tok@nv}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@no}{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\@namedef{PY@tok@nl}{\def\PY@tc##1{\textcolor[rgb]{0.46,0.46,0.00}{##1}}}
+\@namedef{PY@tok@ni}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.44,0.44,0.44}{##1}}}
+\@namedef{PY@tok@na}{\def\PY@tc##1{\textcolor[rgb]{0.41,0.47,0.13}{##1}}}
+\@namedef{PY@tok@nt}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@nd}{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\@namedef{PY@tok@s}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@sd}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@si}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.64,0.35,0.47}{##1}}}
+\@namedef{PY@tok@se}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.36,0.12}{##1}}}
+\@namedef{PY@tok@sr}{\def\PY@tc##1{\textcolor[rgb]{0.64,0.35,0.47}{##1}}}
+\@namedef{PY@tok@ss}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@sx}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@m}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@gh}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\@namedef{PY@tok@gu}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\@namedef{PY@tok@gd}{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\@namedef{PY@tok@gi}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.52,0.00}{##1}}}
+\@namedef{PY@tok@gr}{\def\PY@tc##1{\textcolor[rgb]{0.89,0.00,0.00}{##1}}}
+\@namedef{PY@tok@ge}{\let\PY@it=\textit}
+\@namedef{PY@tok@gs}{\let\PY@bf=\textbf}
+\@namedef{PY@tok@gp}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\@namedef{PY@tok@go}{\def\PY@tc##1{\textcolor[rgb]{0.44,0.44,0.44}{##1}}}
+\@namedef{PY@tok@gt}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\@namedef{PY@tok@err}{\def\PY@bc##1{{\setlength{\fboxsep}{\string -\fboxrule}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}}
+\@namedef{PY@tok@kc}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kd}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kn}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@kr}{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@bp}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\@namedef{PY@tok@fm}{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\@namedef{PY@tok@vc}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@vg}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@vi}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@vm}{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\@namedef{PY@tok@sa}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@sb}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@sc}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@dl}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@s2}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@sh}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@s1}{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\@namedef{PY@tok@mb}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@mf}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@mh}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@mi}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@il}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@mo}{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\@namedef{PY@tok@ch}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.24,0.48,0.48}{##1}}}
+\@namedef{PY@tok@cm}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.24,0.48,0.48}{##1}}}
+\@namedef{PY@tok@cpf}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.24,0.48,0.48}{##1}}}
+\@namedef{PY@tok@c1}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.24,0.48,0.48}{##1}}}
+\@namedef{PY@tok@cs}{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.24,0.48,0.48}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % For linebreaks inside Verbatim environment from package fancyvrb.
+    \makeatletter
+        \newbox\Wrappedcontinuationbox
+        \newbox\Wrappedvisiblespacebox
+        \newcommand*\Wrappedvisiblespace {\textcolor{red}{\textvisiblespace}}
+        \newcommand*\Wrappedcontinuationsymbol {\textcolor{red}{\llap{\tiny$\m@th\hookrightarrow$}}}
+        \newcommand*\Wrappedcontinuationindent {3ex }
+        \newcommand*\Wrappedafterbreak {\kern\Wrappedcontinuationindent\copy\Wrappedcontinuationbox}
+        % Take advantage of the already applied Pygments mark-up to insert
+        % potential linebreaks for TeX processing.
+        %        {, <, #, %, $, ' and ": go to next line.
+        %        _, }, ^, &, >, - and ~: stay at end of broken line.
+        % Use of \textquotesingle for straight quote.
+        \newcommand*\Wrappedbreaksatspecials {%
+            \def\PYGZus{\discretionary{\char`\_}{\Wrappedafterbreak}{\char`\_}}%
+            \def\PYGZob{\discretionary{}{\Wrappedafterbreak\char`\{}{\char`\{}}%
+            \def\PYGZcb{\discretionary{\char`\}}{\Wrappedafterbreak}{\char`\}}}%
+            \def\PYGZca{\discretionary{\char`\^}{\Wrappedafterbreak}{\char`\^}}%
+            \def\PYGZam{\discretionary{\char`\&}{\Wrappedafterbreak}{\char`\&}}%
+            \def\PYGZlt{\discretionary{}{\Wrappedafterbreak\char`\<}{\char`\<}}%
+            \def\PYGZgt{\discretionary{\char`\>}{\Wrappedafterbreak}{\char`\>}}%
+            \def\PYGZsh{\discretionary{}{\Wrappedafterbreak\char`\#}{\char`\#}}%
+            \def\PYGZpc{\discretionary{}{\Wrappedafterbreak\char`\%}{\char`\%}}%
+            \def\PYGZdl{\discretionary{}{\Wrappedafterbreak\char`\$}{\char`\$}}%
+            \def\PYGZhy{\discretionary{\char`\-}{\Wrappedafterbreak}{\char`\-}}%
+            \def\PYGZsq{\discretionary{}{\Wrappedafterbreak\textquotesingle}{\textquotesingle}}%
+            \def\PYGZdq{\discretionary{}{\Wrappedafterbreak\char`\"}{\char`\"}}%
+            \def\PYGZti{\discretionary{\char`\~}{\Wrappedafterbreak}{\char`\~}}%
+        }
+        % Some characters . , ; ? ! / are not pygmentized.
+        % This macro makes them "active" and they will insert potential linebreaks
+        \newcommand*\Wrappedbreaksatpunct {%
+            \lccode`\~`\.\lowercase{\def~}{\discretionary{\hbox{\char`\.}}{\Wrappedafterbreak}{\hbox{\char`\.}}}%
+            \lccode`\~`\,\lowercase{\def~}{\discretionary{\hbox{\char`\,}}{\Wrappedafterbreak}{\hbox{\char`\,}}}%
+            \lccode`\~`\;\lowercase{\def~}{\discretionary{\hbox{\char`\;}}{\Wrappedafterbreak}{\hbox{\char`\;}}}%
+            \lccode`\~`\:\lowercase{\def~}{\discretionary{\hbox{\char`\:}}{\Wrappedafterbreak}{\hbox{\char`\:}}}%
+            \lccode`\~`\?\lowercase{\def~}{\discretionary{\hbox{\char`\?}}{\Wrappedafterbreak}{\hbox{\char`\?}}}%
+            \lccode`\~`\!\lowercase{\def~}{\discretionary{\hbox{\char`\!}}{\Wrappedafterbreak}{\hbox{\char`\!}}}%
+            \lccode`\~`\/\lowercase{\def~}{\discretionary{\hbox{\char`\/}}{\Wrappedafterbreak}{\hbox{\char`\/}}}%
+            \catcode`\.\active
+            \catcode`\,\active
+            \catcode`\;\active
+            \catcode`\:\active
+            \catcode`\?\active
+            \catcode`\!\active
+            \catcode`\/\active
+            \lccode`\~`\~
+        }
+    \makeatother
+
+    \let\OriginalVerbatim=\Verbatim
+    \makeatletter
+    \renewcommand{\Verbatim}[1][1]{%
+        %\parskip\z@skip
+        \sbox\Wrappedcontinuationbox {\Wrappedcontinuationsymbol}%
+        \sbox\Wrappedvisiblespacebox {\FV@SetupFont\Wrappedvisiblespace}%
+        \def\FancyVerbFormatLine ##1{\hsize\linewidth
+            \vtop{\raggedright\hyphenpenalty\z@\exhyphenpenalty\z@
+                \doublehyphendemerits\z@\finalhyphendemerits\z@
+                \strut ##1\strut}%
+        }%
+        % If the linebreak is at a space, the latter will be displayed as visible
+        % space at end of first line, and a continuation symbol starts next line.
+        % Stretch/shrink are however usually zero for typewriter font.
+        \def\FV@Space {%
+            \nobreak\hskip\z@ plus\fontdimen3\font minus\fontdimen4\font
+            \discretionary{\copy\Wrappedvisiblespacebox}{\Wrappedafterbreak}
+            {\kern\fontdimen2\font}%
+        }%
+
+        % Allow breaks at special characters using \PYG... macros.
+        \Wrappedbreaksatspecials
+        % Breaks at punctuation characters . , ; ? ! and / need catcode=\active
+        \OriginalVerbatim[#1,codes*=\Wrappedbreaksatpunct]%
+    }
+    \makeatother
+
+    % Exact colors from NB
+    \definecolor{incolor}{HTML}{303F9F}
+    \definecolor{outcolor}{HTML}{D84315}
+    \definecolor{cellborder}{HTML}{CFCFCF}
+    \definecolor{cellbackground}{HTML}{F7F7F7}
+
+    % prompt
+    \makeatletter
+    \newcommand{\boxspacing}{\kern\kvtcb@left@rule\kern\kvtcb@boxsep}
+    \makeatother
+    \newcommand{\prompt}[4]{
+        {\ttfamily\llap{{\color{#2}[#3]:\hspace{3pt}#4}}\vspace{-\baselineskip}}
+    }
+    
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+\begin{document}
+    
+    \maketitle
+    
+    
+
+    
+    \hypertarget{sistemas-de-uxe1lgebra-computacional}{%
+\section{Sistemas de Álgebra
+Computacional}\label{sistemas-de-uxe1lgebra-computacional}}
+
+    Los Sistemas de Computación Algebraica (CAS, por sus siglas en inglés)
+son herramientas poderosas que utilizan algoritmos y técnicas
+computacionales para realizar cálculos simbólicos en matemáticas y
+ciencias afines. Esto significa que el computador puede efectuar
+operaciones con ecuaciones y fórmulas simbólicamente, es decir,
+\(a+b=c\) se interpreta como la suma de variables y no como la suma de
+números previamente asignados. Por lo tanto, estos sistemas son capaces
+de manipular expresiones algebraicas, resolver ecuaciones, derivar e
+integrar funciones, realizar operaciones matriciales, entre otras
+tareas, todo de manera simbólica.
+
+En el ámbito de la enseñanza, los CAS facilitan el aprendizaje y la
+comprensión de conceptos matemáticos y científicos. Al proporcionar una
+plataforma interactiva y dinámica, los estudiantes pueden explorar
+conceptos abstractos de manera visual y práctica, lo que les ayuda a
+internalizar y aplicar esos conceptos de manera más efectiva. Además,
+los CAS permiten a los estudiantes experimentar con diferentes
+escenarios y casos, lo que fomenta la experimentación y la resolución de
+problemas. En la investigación, son herramientas indispensables para
+realizar cálculos complejos y llevar a cabo análisis simbólicos
+detallados. Los investigadores pueden utilizar estos sistemas para
+explorar nuevas teorías, validar resultados teóricos, resolver
+ecuaciones diferenciales y realizar simulaciones, entre otras
+aplicaciones. La capacidad de automatizar tareas repetitivas y manipular
+expresiones simbólicas de manera eficiente ahorra tiempo y esfuerzo, lo
+que permite a los investigadores concentrarse en aspectos más creativos
+y analíticos de su trabajo.
+
+Estas herramientas computacionales permiten operar de manera exacta con
+sí­mbolos que representan objetos matemáticos tales como: - Números
+(Enteros, racionales, reales, complejos\ldots) - Polinómios, Funciones
+Racionales, Sistemas de Ecuaciones. - Grupos, Anillos, Algebras . . .
+
+A diferencia de los sistemas tradicionales de computación numérica:
+
+\begin{itemize}
+\tightlist
+\item
+  FORTRAN, Basic, C, C++, Java \(=>\) Precisión fija (Punto Flotante)
+\end{itemize}
+
+Otra característica principal radica en el hecho de que son interactivos
+(interpretados o ejecutados al momento de proveer una instrucción).
+
+Existe, o han existido, una enorme cantidad de sistemas algebráicos
+(Ver:
+https://en.wikipedia.org/wiki/List\_of\_computer\_algebra\_systems)
+donde destacan: Maple, Mathematica, Matlab que son pagos y los que son
+software libre como Maxima y SymPy.
+
+    \hypertarget{sympy}{%
+\subsection{SymPy}\label{sympy}}
+
+\textbf{SymPy} es una biblioteca de computación simbólica en Python que
+ofrece una amplia gama de herramientas para realizar cálculos
+matemáticos y simbólicos. Se destaca por ser gratuita, de código abierto
+y altamente flexible, lo que la convierte en una opción popular tanto
+para estudiantes como para profesionales en matemáticas, física,
+ingeniería y otras disciplinas científicas.
+
+Esta biblioteca permite realizar una variedad de operaciones simbólicas,
+como manipulación de expresiones algebraicas, resolución de ecuaciones,
+cálculo diferencial e integral, álgebra lineal, optimización, entre
+otras. Además, SymPy está diseñada para ser fácilmente extensible, lo
+que permite a los usuarios crear y agregar sus propias funciones y
+módulos personalizados.
+
+Una de las características más destacadas de SymPy es su integración con
+el lenguaje de programación Python. Esto significa que los usuarios
+pueden combinar la potencia de SymPy con las capacidades de programación
+de Python, lo que facilita la automatización de tareas, la creación de
+scripts personalizados y el desarrollo de aplicaciones más complejas.
+
+SymPy es ampliamente utilizado en entornos académicos, de investigación
+y de desarrollo, tanto para el aprendizaje y la enseñanza de conceptos
+matemáticos como para la resolución de problemas del mundo real. Su
+naturaleza de código abierto fomenta la colaboración y el intercambio de
+ideas entre la comunidad de usuarios, lo que contribuye a su constante
+mejora y evolución.
+
+Por ser una biblioteca de Python, puede ser utilizada en una variedad de
+entornos de desarrollo y plataformas que admitan Python. Algunas de las
+opciones comunes para usar SymPy incluyen:
+
+Entornos de desarrollo integrado (IDE):
+
+\begin{itemize}
+\item
+  Visual Studio Code: Visual Studio Code es un popular IDE de código
+  abierto que admite Python y proporciona funcionalidades avanzadas para
+  el desarrollo de software, incluida la integración con SymPy.
+\item
+  PyCharm: PyCharm es otro IDE ampliamente utilizado para el desarrollo
+  de Python que ofrece características avanzadas como depuración,
+  análisis estático y soporte para SymPy.
+\end{itemize}
+
+Notebooks de Jupyter
+
+\begin{itemize}
+\item
+  Jupyter Notebook: Jupyter Notebook es una herramienta poderosa para la
+  computación interactiva que permite crear y compartir documentos que
+  contienen código ejecutable, visualizaciones y texto explicativo.
+  SymPy puede ser utilizado en cuadernos Jupyter para realizar cálculos
+  simbólicos interactivos.
+\item
+  Google Colab: Google Colab es una plataforma de Google que permite
+  ejecutar cuadernos Jupyter en la nube de forma gratuita. Proporciona
+  acceso gratuito a recursos de cómputo, lo que lo convierte en una
+  opción popular para trabajar con SymPy y otros paquetes de Python.
+\end{itemize}
+
+Entornos de desarrollo Python:
+
+\begin{itemize}
+\item
+  Python en línea de comandos: SymPy se puede utilizar directamente en
+  el intérprete de Python en la línea de comandos para realizar cálculos
+  rápidos y experimentar con la biblioteca.
+\item
+  Scripts de Python: SymPy también se puede utilizar en scripts de
+  Python para automatizar tareas y realizar cálculos en lotes.
+  Plataformas en la nube y servicios de alojamiento:
+\item
+  Plataformas en la nube como AWS, Azure y otros servicios de
+  alojamiento de Python ofrecen la posibilidad de ejecutar código
+  Python, incluido SymPy, en entornos en la nube escalables y seguros.
+\end{itemize}
+
+Este tutorial tiene como objetivo brindar una introducción a SymPy para
+usuarios no especializados en el uso de herramientas computacionales. Y
+la documentación se encuentra en:
+https://docs.sympy.org/latest/index.html
+
+    Primero que todo debemos incorporar, de la enorme cantidad de librerías
+que existen para Python, la librería \textbf{\emph{sympy}}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{1}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} 6/4/2024 \PYZlt{}= Esta linea es un comentario gracias al \PYZsh{}}
+\PY{k+kn}{import} \PY{n+nn}{sympy}
+\PY{k+kn}{from} \PY{n+nn}{sympy} \PY{k+kn}{import} \PY{o}{*}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{2}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{\PYZus{}\PYZus{}version\PYZus{}\PYZus{}}  \PY{c+c1}{\PYZsh{} Esto es opcional y permite ver la versión de Sympy que estamos usando}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{2}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+'1.12'
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \hypertarget{sintuxe1xis-buxe1sica}{%
+\section{1) Sintáxis básica}\label{sintuxe1xis-buxe1sica}}
+
+    Si queremos calcular: \(3!+2^3-1\) debemos escribir:
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{3}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{factorial}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)} \PY{o}{+} \PY{l+m+mi}{2}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{3} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{3}{}
+    
+    $\displaystyle 13$
+
+    
+
+    El valor de: \(\sqrt{8}\)
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{4}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{sqrt}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{4}{}
+    
+    $\displaystyle 2 \sqrt{2}$
+
+    
+
+    Si queremos el valor numérico podemosmos usar \textbf{float}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{5}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nb}{float}\PY{p}{(}\PY{n}{sqrt}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{5}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+2.8284271247461903
+\end{Verbatim}
+\end{tcolorbox}
+        
+    Otras variantes
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{6}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{N}\PY{p}{(}\PY{n}{sqrt}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{)}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{6}{}
+    
+    $\displaystyle 2.828427125$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{7}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{sqrt}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{)}\PY{o}{.}\PY{n}{evalf}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{7}{}
+    
+    $\displaystyle 2.828427125$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{8}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{N}\PY{p}{(}\PY{n}{sqrt}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{)}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{8}{}
+    
+    $\displaystyle 2.83$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{9}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{pi} \PY{c+c1}{\PYZsh{} La constante π}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{9}{}
+    
+    $\displaystyle \pi$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{10}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{pi}\PY{o}{.}\PY{n}{evalf}\PY{p}{(}\PY{l+m+mi}{50}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{10}{}
+    
+    $\displaystyle 3.1415926535897932384626433832795028841971693993751$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{11}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{ln}\PY{p}{(}\PY{n}{E}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{11}{}
+    
+    $\displaystyle 1$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{12}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{log}\PY{p}{(}\PY{n}{E}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{12}{}
+    
+    $\displaystyle 1$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{13}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{ln}\PY{p}{(}\PY{n}{E}\PY{p}{)}\PY{o}{.}\PY{n}{evalf}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{13}{}
+    
+    $\displaystyle 1.0$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{14}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{log}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{14}{}
+    
+    $\displaystyle \log{\left(10 \right)}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{15}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{log}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{)}\PY{o}{.}\PY{n}{evalf}\PY{p}{(}\PY{l+m+mi}{5}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{15}{}
+    
+    $\displaystyle 2.3026$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{16}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{log}\PY{p}{(}\PY{l+m+mi}{10}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{16}{}
+    
+    $\displaystyle 1$
+
+    
+
+    Consideremos ahora una combinación de operaciones matemáticas
+
+    \[
+\frac{\sqrt{8}}{3} + \ln(e+1) + \log_{10}(3) + e^{\pi^2} + (e^{\pi})^2 - 6! \sin\left(\frac{\pi}{3}\right)  + \sqrt{-1}
+\]
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{17}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{sqrt}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{)}\PY{o}{/}\PY{l+m+mi}{3}\PY{o}{+}\PY{n}{ln}\PY{p}{(}\PY{n}{E}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{+}\PY{n}{log}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{)}\PY{o}{+}\PY{n}{E}\PY{o}{*}\PY{o}{*}\PY{p}{(}\PY{n}{pi}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}\PY{o}{+}\PY{n}{exp}\PY{p}{(}\PY{n}{pi}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{\PYZhy{}}\PY{n}{factorial}\PY{p}{(}\PY{l+m+mi}{6}\PY{p}{)}\PY{o}{*}\PY{n}{sin}\PY{p}{(}\PY{n}{pi}\PY{o}{/}\PY{l+m+mi}{3}\PY{p}{)}\PY{o}{+}\PY{n}{sqrt}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{17}{}
+    
+    $\displaystyle - 360 \sqrt{3} + \frac{\log{\left(3 \right)}}{\log{\left(10 \right)}} + \frac{2 \sqrt{2}}{3} + \log{\left(1 + e \right)} + e^{2 \pi} + e^{\pi^{2}} + i$
+
+    
+
+    Aquí aprenderemos un atajo. Queremos reutilizar la última salida en el
+siguiente comando.
+
+Para hacer esto se utiliza \_ como el argumento del comando. En este
+caso el comando que utilizaremos es \textbf{round}, que nos dará el
+valor númerico de la expresión anterior con los decimales que
+especifiquemos
+
+    \textbf{round}() devuelve un número en coma flotante pero redondeado y
+con el número de decimales especificado.
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{18}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nb}{round}\PY{p}{(}\PY{n}{\PYZus{}}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{18}{}
+    
+    $\displaystyle 19248.37563115 + i$
+
+    
+
+    Escribamos nuevamente la expresión, pero sin la parte imaginaria, y la
+asignaremos a la variable \(x\)
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{19}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{x}\PY{o}{=}\PY{n}{sqrt}\PY{p}{(}\PY{l+m+mi}{8}\PY{p}{)}\PY{o}{/}\PY{l+m+mi}{3}\PY{o}{+}\PY{n}{ln}\PY{p}{(}\PY{n}{E}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{+}\PY{n}{log}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{)}\PY{o}{+}\PY{n}{E}\PY{o}{*}\PY{o}{*}\PY{p}{(}\PY{n}{pi}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}\PY{o}{+}\PY{n}{exp}\PY{p}{(}\PY{n}{pi}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{20}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{x}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{20}{}
+    
+    $\displaystyle \frac{\log{\left(3 \right)}}{\log{\left(10 \right)}} + \frac{2 \sqrt{2}}{3} + \log{\left(1 + e \right)} + e^{2 \pi} + e^{\pi^{2}}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{21}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nb}{float}\PY{p}{(}\PY{n}{\PYZus{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{21}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+19871.91392187373
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{22}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n+nb}{round}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{22}{}
+    
+    $\displaystyle 19871.91$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{23}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{N}\PY{p}{(}\PY{n}{\PYZus{}}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{23}{}
+    
+    $\displaystyle 2.0 \cdot 10^{4}$
+
+    
+
+    Como pudimos ver, el programa se entiende perfectamente con los números
+imaginarios, por ejemplo: \(\sqrt{-1}+2i\)
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{24}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{sqrt}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{+}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{I}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{24}{}
+    
+    $\displaystyle 3 i$
+
+    
+
+    Una de las ecuaciones más bonitas de las matemáticas:
+
+    \(e^{2\pi i} =1\)
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{25}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{exp}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{pi}\PY{o}{*}\PY{n}{I}\PY{p}{)}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{25}{}
+    
+    $\displaystyle 0$
+
+    
+
+    A diferencia de muchos sistemas de manipulación simbólica, en SymPy las
+variables deben definirse antes de usarse.
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{26}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{t}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{,} \PY{n}{z}\PY{p}{,} \PY{n}{n}\PY{p}{,} \PY{n}{a}\PY{p}{,} \PY{n}{b}\PY{p}{,} \PY{n}{c} \PY{o}{=} \PY{n}{symbols}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{t x y z n a b c}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{27}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{r} \PY{o}{=} \PY{n}{x} \PY{o}{+} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{y}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{28}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{r}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{28}{}
+    
+    $\displaystyle x + 2 y$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{29}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{p}\PY{o}{=}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{r}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{3}
+\PY{n}{p}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{29}{}
+    
+    $\displaystyle x^{2} \left(x + 2 y\right)^{3}$
+
+    
+
+    Algunas funciones de manipulación simbolica
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{30}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{expand}\PY{p}{(}\PY{n}{p}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{30}{}
+    
+    $\displaystyle x^{5} + 6 x^{4} y + 12 x^{3} y^{2} + 8 x^{2} y^{3}$
+
+    
+
+    Lo inverso de expandir es factorizar
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{31}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{factor}\PY{p}{(}\PY{n}{\PYZus{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{31}{}
+    
+    $\displaystyle x^{2} \left(x + 2 y\right)^{3}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{32}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{expand}\PY{p}{(}\PY{n}{\PYZus{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{32}{}
+    
+    $\displaystyle x^{5} + 6 x^{4} y + 12 x^{3} y^{2} + 8 x^{2} y^{3}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{33}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{collect}\PY{p}{(}\PY{n}{\PYZus{}}\PY{p}{,}\PY{n}{x}\PY{o}{*}\PY{n}{y}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{33}{}
+    
+    $\displaystyle x^{5} + 6 x^{4} y + x^{2} y^{2} \cdot \left(12 x + 8 y\right)$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{34}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{simplify}\PY{p}{(}\PY{n}{\PYZus{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{34}{}
+    
+    $\displaystyle x^{2} \left(x^{3} + 6 x^{2} y + y^{2} \cdot \left(12 x + 8 y\right)\right)$
+
+    
+
+    Escribamos el siguiente polinomio
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{35}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{P} \PY{o}{=} \PY{p}{(}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{*}\PY{p}{(}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{)}\PY{o}{*}\PY{p}{(}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{)}
+\PY{n}{P}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{35}{}
+    
+    $\displaystyle \left(x - 3\right) \left(x - 2\right) \left(x - 1\right)$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{36}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{P}\PY{o}{.}\PY{n}{expand}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{36}{}
+    
+    $\displaystyle x^{3} - 6 x^{2} + 11 x - 6$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{37}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{raices} \PY{o}{=} \PY{n}{solve}\PY{p}{(}\PY{n}{P}\PY{p}{,} \PY{n}{x}\PY{p}{)}
+\PY{n}{raices}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{37}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+[1, 2, 3]
+\end{Verbatim}
+\end{tcolorbox}
+        
+    La solución es escrita en el formato de una lista: \([a, b, c, d]\),
+donde el primer elemento está etiquetado con cero, el segundo con uno,
+el tercero cosconn dos\ldots{}
+
+Por lo tanto, para extraer los elementos de una lista podemos hacer lo
+siguiente:
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{38}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{raices}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{38}{}
+    
+    $\displaystyle 1$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{39}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{raices}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{+}\PY{n}{raices}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{+}\PY{n}{raices}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{39}{}
+    
+    $\displaystyle 6$
+
+    
+
+    Por lo tanto: \(P - (x-x_0)(x-x_1)(x-x_2)=0\)
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{40}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{simplify}\PY{p}{(}\PY{n}{P} \PY{o}{\PYZhy{}} \PY{p}{(}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{n}{raices}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}\PY{o}{*}\PY{p}{(}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{n}{raices}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}\PY{o}{*}\PY{p}{(}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{n}{raices}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{)} \PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{40}{}
+    
+    $\displaystyle 0$
+
+    
+
+    Podemos simplificar expresiones trigonométricas
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{41}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{simplify}\PY{p}{(} \PY{n}{sin}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{o}{*}\PY{n}{cos}\PY{p}{(}\PY{n}{y}\PY{p}{)}\PY{o}{+}\PY{n}{cos}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{o}{*}\PY{n}{sin}\PY{p}{(}\PY{n}{y}\PY{p}{)} \PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{41}{}
+    
+    $\displaystyle \sin{\left(x + y \right)}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{42}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{expr} \PY{o}{=} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{sin}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{+}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{cos}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}
+\PY{n}{expr}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{42}{}
+    
+    $\displaystyle 2 \sin^{2}{\left(x \right)} + 2 \cos^{2}{\left(x \right)}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{43}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{trigsimp}\PY{p}{(}\PY{n}{expr}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{43}{}
+    
+    $\displaystyle 2$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{44}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{p}{(}\PY{n}{sin}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{4}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{cos}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{sin}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{+}\PY{n}{cos}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{4}\PY{p}{)}\PY{o}{.}\PY{n}{simplify}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{44}{}
+    
+    $\displaystyle \frac{\cos{\left(4 x \right)}}{2} + \frac{1}{2}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{45}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{expand\PYZus{}trig}\PY{p}{(}\PY{n}{sin}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{x}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{45}{}
+    
+    $\displaystyle 2 \sin{\left(x \right)} \cos{\left(x \right)}$
+
+    
+
+    \hypertarget{cuxe1lculos-elementales}{%
+\section{2) Cálculos elementales}\label{cuxe1lculos-elementales}}
+
+    Vamos a ver una forma de trabajar con funciones como una asignación a
+una variable. Luego mostraremos otras posibilidades
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{46}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{f}\PY{o}{=}\PY{n}{sin}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{o}{/}\PY{n}{exp}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{47}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{f}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{47}{}
+    
+    $\displaystyle e^{- x} \sin{\left(x \right)}$
+
+    
+
+    La primera derivada
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{48}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{df}\PY{o}{=}\PY{n}{diff}\PY{p}{(}\PY{n}{f}\PY{p}{,}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{49}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{df}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{49}{}
+    
+    $\displaystyle - e^{- x} \sin{\left(x \right)} + e^{- x} \cos{\left(x \right)}$
+
+    
+
+    Otra manera de hacer lo mismo es
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{50}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{df}\PY{o}{=}\PY{n}{f}\PY{o}{.}\PY{n}{diff}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+\PY{n}{df}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{50}{}
+    
+    $\displaystyle - e^{- x} \sin{\left(x \right)} + e^{- x} \cos{\left(x \right)}$
+
+    
+
+    Simplificamos
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{51}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{df}\PY{o}{.}\PY{n}{simplify}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{51}{}
+    
+    $\displaystyle \sqrt{2} e^{- x} \cos{\left(x + \frac{\pi}{4} \right)}$
+
+    
+
+    La integral
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{52}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{integrate}\PY{p}{(}\PY{n}{df}\PY{p}{,}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{52}{}
+    
+    $\displaystyle e^{- x} \sin{\left(x \right)}$
+
+    
+
+    Derivadas de orden superior
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{53}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{diff}\PY{p}{(}\PY{n}{f}\PY{p}{,}\PY{n}{x}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{53}{}
+    
+    $\displaystyle 4 \left(\sin{\left(x \right)} - \cos{\left(x \right)}\right) e^{- x}$
+
+    
+
+    Para evaluar la funcíon en un punto
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{54}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{f}\PY{o}{.}\PY{n}{subs}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{pi}\PY{o}{/}\PY{l+m+mi}{2}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{54}{}
+    
+    $\displaystyle e^{- \frac{\pi}{2}}$
+
+    
+
+    Para funciones de varias variables
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{55}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{f}\PY{o}{=}\PY{n}{exp}\PY{p}{(}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{+}\PY{n}{y}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}\PY{o}{/}\PY{p}{(}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{n}{y}\PY{p}{)}
+\PY{n}{f}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{55}{}
+    
+    $\displaystyle \frac{e^{x^{2} + y^{2}}}{x - y}$
+
+    
+
+    La derivadas cruzadas:
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{56}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{diff}\PY{p}{(}\PY{n}{diff}\PY{p}{(}\PY{n}{f}\PY{p}{,}\PY{n}{y}\PY{p}{)}\PY{p}{,}\PY{n}{x}\PY{p}{)}\PY{o}{.}\PY{n}{factor}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{56}{}
+    
+    $\displaystyle \frac{2 \cdot \left(2 x^{3} y - 4 x^{2} y^{2} + x^{2} + 2 x y^{3} - 2 x y + y^{2} - 1\right) e^{x^{2}} e^{y^{2}}}{\left(x - y\right)^{3}}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{57}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{p}{(}\PY{n}{diff}\PY{p}{(}\PY{n}{f}\PY{p}{,}\PY{n}{x}\PY{p}{)} \PY{o}{+} \PY{n}{diff}\PY{p}{(}\PY{n}{f}\PY{p}{,}\PY{n}{y}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{factor}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{57}{}
+    
+    $\displaystyle \frac{2 \left(x + y\right) e^{x^{2}} e^{y^{2}}}{x - y}$
+
+    
+
+    Las derivadas también pueden ejecutarse de la siguiente manera
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{58}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{f}\PY{o}{.}\PY{n}{diff}\PY{p}{(}\PY{n}{x}\PY{p}{)} \PY{o}{+} \PY{n}{f}\PY{o}{.}\PY{n}{diff}\PY{p}{(}\PY{n}{y}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{58}{}
+    
+    $\displaystyle \frac{2 x e^{x^{2} + y^{2}}}{x - y} + \frac{2 y e^{x^{2} + y^{2}}}{x - y}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{59}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{factor}\PY{p}{(}\PY{n}{\PYZus{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{59}{}
+    
+    $\displaystyle \frac{2 \left(x + y\right) e^{x^{2}} e^{y^{2}}}{x - y}$
+
+    
+
+    Si las queremos dejar indicadas las operaciones matemáticas:
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{60}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Derivative}\PY{p}{(}\PY{n}{f}\PY{p}{,}\PY{n}{x}\PY{p}{)}\PY{o}{+}\PY{n}{Derivative}\PY{p}{(}\PY{n}{f}\PY{p}{,}\PY{n}{y}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{60}{}
+    
+    $\displaystyle \frac{\partial}{\partial x} \frac{e^{x^{2} + y^{2}}}{x - y} + \frac{\partial}{\partial y} \frac{e^{x^{2} + y^{2}}}{x - y}$
+
+    
+
+    Y luego le pedimos al programa que ejecute la operación indicada con
+anterioridad
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{61}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{p}{(}\PY{n}{\PYZus{}}\PY{p}{)}\PY{o}{.}\PY{n}{doit}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{61}{}
+    
+    $\displaystyle \frac{2 x e^{x^{2} + y^{2}}}{x - y} + \frac{2 y e^{x^{2} + y^{2}}}{x - y}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{62}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Integral}\PY{p}{(}\PY{n}{f}\PY{p}{,}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{62}{}
+    
+    $\displaystyle \int \frac{e^{x^{2} + y^{2}}}{x - y}\, dx$
+
+    
+
+    Para asignarle valores a las variables
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{63}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{f}\PY{o}{.}\PY{n}{subs}\PY{p}{(}\PY{p}{[}\PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,} \PY{p}{(}\PY{n}{y}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{63}{}
+    
+    $\displaystyle e^{5}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{64}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{f}\PY{o}{.}\PY{n}{evalf}\PY{p}{(}\PY{n}{subs}\PY{o}{=}\PY{p}{\PYZob{}}\PY{n}{x}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{,}\PY{n}{y}\PY{p}{:}\PY{l+m+mi}{1}\PY{p}{\PYZcb{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{64}{}
+    
+    $\displaystyle 148.413159102577$
+
+    
+
+    Consideremos otra función y varios cálculos con ella.
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{65}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{σ} \PY{o}{=}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{x}\PY{o}{/}\PY{n}{sqrt}\PY{p}{(}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}
+\PY{n}{σ}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{65}{}
+    
+    $\displaystyle \frac{2 x}{\sqrt{x^{2} + 1}}$
+
+    
+
+    Calculamos la primera derivada y la asignaremos a la variable
+\(d\sigma\)
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{66}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{dσ}\PY{o}{=} \PY{n}{σ}\PY{o}{.}\PY{n}{diff}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{o}{.}\PY{n}{factor}\PY{p}{(}\PY{p}{)}
+\PY{n}{dσ}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{66}{}
+    
+    $\displaystyle \frac{2}{\left(x^{2} + 1\right)^{\frac{3}{2}}}$
+
+    
+
+    La derivada cuarta y al mismo tiempo que se factorice
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{67}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{σ}\PY{o}{.}\PY{n}{diff}\PY{p}{(}\PY{n}{x}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}\PY{o}{.}\PY{n}{factor}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{67}{}
+    
+    $\displaystyle - \frac{30 x \left(4 x^{2} - 3\right)}{\left(x^{2} + 1\right)^{\frac{9}{2}}}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{68}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{integrate}\PY{p}{(}\PY{n}{σ} \PY{p}{,}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{68}{}
+    
+    $\displaystyle 2 \sqrt{x^{2} + 1}$
+
+    
+
+    La integral definida
+
+    \$ \int\_a\^{}b \sigma dx \$
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{69}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{integrate}\PY{p}{(}\PY{n}{σ} \PY{p}{,}\PY{p}{[}\PY{n}{x}\PY{p}{,}\PY{n}{a}\PY{p}{,}\PY{n}{b}\PY{p}{]}\PY{p}{)}\PY{o}{.}\PY{n}{factor}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{69}{}
+    
+    $\displaystyle - 2 \left(\sqrt{a^{2} + 1} - \sqrt{b^{2} + 1}\right)$
+
+    
+
+    \$\lim\_\{x\rightarrow 1/2\} \sigma \$
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{70}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{limit}\PY{p}{(}\PY{n}{σ} \PY{p}{,}\PY{n}{x}\PY{p}{,} \PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{2} \PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{70}{}
+    
+    $\displaystyle 0.894427190999916$
+
+    
+
+    SymPy no nos devolvió un resultado simbólico sino un número punto
+flotante. Esto es porque SymPy define tres tipos de números: Real,
+Racional y Entero.
+
+Para SymPy el \(\frac12\) significa \(0,5\). Para evitar que haga esta
+interpretación podemos escribir
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{71}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Rational}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{71}{}
+    
+    $\displaystyle \frac{1}{2}$
+
+    
+
+    De manera equivalente, también se puede escribir:
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{72}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{S}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{/}\PY{l+m+mi}{2}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{72}{}
+    
+    $\displaystyle \frac{1}{2}$
+
+    
+
+    Por lo tanto:
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{73}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{limit}\PY{p}{(}\PY{n}{σ} \PY{p}{,}\PY{n}{x}\PY{p}{,} \PY{n}{S}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{o}{/}\PY{l+m+mi}{2} \PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{73}{}
+    
+    $\displaystyle \frac{2 \sqrt{5}}{5}$
+
+    
+
+    Los límites por la izquierda y por la derecha
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{74}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{limit}\PY{p}{(}\PY{n}{σ} \PY{p}{,}\PY{n}{x}\PY{p}{,} \PY{l+m+mi}{1} \PY{p}{,} \PY{n+nb}{dir}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{+}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{74}{}
+    
+    $\displaystyle \sqrt{2}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{75}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{limit}\PY{p}{(}\PY{n}{σ} \PY{p}{,}\PY{n}{x}\PY{p}{,} \PY{l+m+mi}{1} \PY{p}{,} \PY{n+nb}{dir}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{75}{}
+    
+    $\displaystyle \sqrt{2}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{76}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Limit}\PY{p}{(}\PY{n}{σ} \PY{p}{,}\PY{n}{x}\PY{p}{,} \PY{n}{oo}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{76}{}
+    
+    $\displaystyle \lim_{x \to \infty}\left(\frac{2 x}{\sqrt{x^{2} + 1}}\right)$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{77}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{p}{(}\PY{n}{\PYZus{}}\PY{p}{)}\PY{o}{.}\PY{n}{doit}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{77}{}
+    
+    $\displaystyle 2$
+
+    
+
+    Para las series de Taylor al rededor de \(x=0\)
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{78}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{series}\PY{p}{(}\PY{n}{σ} \PY{p}{,}\PY{n}{x}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{8}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{78}{}
+    
+    $\displaystyle 2 x - x^{3} + \frac{3 x^{5}}{4} - \frac{5 x^{7}}{8} + O\left(x^{8}\right)$
+
+    
+
+    Al rededor de \(x=4\)
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{79}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{series}\PY{p}{(}\PY{n}{σ} \PY{p}{,}\PY{n}{x}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{79}{}
+    
+    $\displaystyle \frac{8 \sqrt{17}}{17} + \frac{2 \sqrt{17} \left(x - 4\right)}{289} - \frac{12 \sqrt{17} \left(x - 4\right)^{2}}{4913} + O\left(\left(x - 4\right)^{3}; x\rightarrow 4\right)$
+
+    
+
+    Series de Taylor de funciones elementales
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{80}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{series}\PY{p}{(}\PY{n}{sin}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{80}{}
+    
+    $\displaystyle x - \frac{x^{3}}{6} + \frac{x^{5}}{120} - \frac{x^{7}}{5040} + O\left(x^{8}\right)$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{81}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{series}\PY{p}{(}\PY{n}{cos}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{81}{}
+    
+    $\displaystyle 1 - \frac{x^{2}}{2} + \frac{x^{4}}{24} - \frac{x^{6}}{720} + O\left(x^{8}\right)$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{82}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{series}\PY{p}{(}\PY{n}{E}\PY{o}{*}\PY{o}{*}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{8}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{82}{}
+    
+    $\displaystyle 1 + x + \frac{x^{2}}{2} + \frac{x^{3}}{6} + \frac{x^{4}}{24} + \frac{x^{5}}{120} + \frac{x^{6}}{720} + \frac{x^{7}}{5040} + O\left(x^{8}\right)$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{83}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{series}\PY{p}{(}\PY{n}{ln}\PY{p}{(}\PY{n}{x}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{83}{}
+    
+    $\displaystyle x - \frac{x^{2}}{2} + \frac{x^{3}}{3} - \frac{x^{4}}{4} + \frac{x^{5}}{5} + O\left(x^{6}\right)$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{84}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{summation}\PY{p}{(}\PY{n}{σ}\PY{p}{,}\PY{p}{(}\PY{n}{x}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{84}{}
+    
+    $\displaystyle \sqrt{2} + \frac{4 \sqrt{5}}{5} + \frac{3 \sqrt{10}}{5} + \frac{8 \sqrt{17}}{17} + \frac{5 \sqrt{26}}{13} + \frac{12 \sqrt{37}}{37}$
+
+    
+
+    La gráfica más sencilla que podemos hacer es de la manera siguiente
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{85}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{plot}\PY{p}{(}\PY{n}{σ}\PY{p}{,}\PY{p}{(}\PY{n}{x}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{06_Intro_Sympy_files/06_Intro_Sympy_136_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{85}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<sympy.plotting.plot.Plot at 0x118aad110>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    O si lo preferimos
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{86}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Creamos la gráfica}
+\PY{n}{p} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{σ}\PY{p}{,}\PY{p}{(}\PY{n}{x}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{5}\PY{p}{)}\PY{p}{,} \PY{n}{show}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}
+\PY{c+c1}{\PYZsh{} Cambiamos los colores y etiquetas de cada función}
+\PY{n}{p}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{line\PYZus{}color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{red}\PY{l+s+s1}{\PYZsq{}}
+\PY{n}{p}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{σ(x)}\PY{l+s+s1}{\PYZsq{}}
+\PY{c+c1}{\PYZsh{} Agregamos un título a la gráfica y a los ejes}
+\PY{n}{p}\PY{o}{.}\PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{σ(x)}\PY{l+s+s1}{\PYZsq{}}
+\PY{n}{p}\PY{o}{.}\PY{n}{xlabel} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x}\PY{l+s+s1}{\PYZsq{}}
+\PY{n}{p}\PY{o}{.}\PY{n}{ylabel} \PY{o}{=} \PY{k+kc}{False}
+\PY{c+c1}{\PYZsh{} Agregamos una leyenda}
+\PY{n}{p}\PY{o}{.}\PY{n}{legend} \PY{o}{=} \PY{k+kc}{True}
+\PY{n}{p}\PY{o}{.}\PY{n}{legend\PYZus{}loc} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{upper left}\PY{l+s+s1}{\PYZsq{}}
+\PY{c+c1}{\PYZsh{} Mostramos la gráfica}
+\PY{n}{p}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{06_Intro_Sympy_files/06_Intro_Sympy_138_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Las funciones podemos definirlas de manera abstracta para usarlas como
+objetos matemáticos
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{87}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{f} \PY{o}{=} \PY{n}{Function}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{f}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{g} \PY{o}{=} \PY{n}{Function}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{g}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{88}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{f}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{88}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+f
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{89}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{g}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{89}{}
+    
+    $\displaystyle g{\left(x \right)}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{90}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{p}{(}\PY{n}{f}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{o}{+}\PY{n}{g}\PY{p}{)}\PY{o}{.}\PY{n}{diff}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{90}{}
+    
+    $\displaystyle \frac{d}{d x} f{\left(x \right)} + \frac{d}{d x} g{\left(x \right)}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{91}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{f} \PY{o}{=} \PY{n}{Function}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{f}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+\PY{n}{f}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{91}{}
+    
+    $\displaystyle f{\left(x \right)}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{92}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{integrate}\PY{p}{(}\PY{n}{g}\PY{p}{,}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{92}{}
+    
+    $\displaystyle \int g{\left(x \right)}\, dx$
+
+    
+
+    La regla de la cadena
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{93}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{diff}\PY{p}{(}\PY{n}{f}\PY{o}{*}\PY{n}{g}\PY{p}{,}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{93}{}
+    
+    $\displaystyle f{\left(x \right)} \frac{d}{d x} g{\left(x \right)} + g{\left(x \right)} \frac{d}{d x} f{\left(x \right)}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{94}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{diff}\PY{p}{(}\PY{n}{g}\PY{o}{/}\PY{n}{f}\PY{p}{,}\PY{n}{x}\PY{p}{)}\PY{o}{.}\PY{n}{factor}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{94}{}
+    
+    $\displaystyle - \frac{- f{\left(x \right)} \frac{d}{d x} g{\left(x \right)} + g{\left(x \right)} \frac{d}{d x} f{\left(x \right)}}{f^{2}{\left(x \right)}}$
+
+    
+
+    \hypertarget{ecuaciones-algebruxe1icas}{%
+\section{3) Ecuaciones algebráicas}\label{ecuaciones-algebruxe1icas}}
+
+    Para escribir ecuaciones usamos la siguiente sintáxis
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{95}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Eq}\PY{p}{(}\PY{n}{Function}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{f}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{,}\PY{n}{Sum}\PY{p}{(}\PY{n}{x}\PY{p}{,}\PY{p}{(}\PY{n}{x}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{10}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{95}{}
+    
+    $\displaystyle f{\left(x \right)} = \sum_{x=1}^{10} x$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{96}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Eq}\PY{p}{(}\PY{n}{x}\PY{o}{+}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{96}{}
+    
+    $\displaystyle x + 5 = 3$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{97}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{solveset}\PY{p}{(}\PY{n}{Eq}\PY{p}{(}\PY{n}{x}\PY{o}{+}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{97}{}
+    
+    $\displaystyle \left\{-2\right\}$
+
+    
+
+    Otro ejemplo la ecuación: \(cos(x)=1\), la resolveremos para \(x\)
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{98}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{solveset}\PY{p}{(}\PY{n}{Eq}\PY{p}{(}\PY{n}{cos}\PY{p}{(}\PY{n}{x}\PY{p}{)}\PY{p}{,}\PY{l+m+mi}{1} \PY{p}{)}\PY{p}{,} \PY{n}{x}\PY{p}{,} \PY{n}{domain}\PY{o}{=}\PY{n}{S}\PY{o}{.}\PY{n}{Reals}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{98}{}
+    
+    $\displaystyle \left\{2 n \pi\; \middle|\; n \in \mathbb{Z}\right\}$
+
+    
+
+    ``solveset'' devuelve un objeto ``set''. Para los casos en los que no
+``conoce'' todas las soluciones devuelve un ``ConditionSet'' con una
+solución parcial. Para la entrada sólo toma la ecuación, las variables a
+resolver y el argumento opcional ``dominio'' sobre el que se va a
+resolver la ecuación.
+
+    Consideremos el siguiente ejemplo
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{99}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Ec1}\PY{o}{=}\PY{n}{Eq}\PY{p}{(}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{+}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{x}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{)}
+\PY{n}{Ec1}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{99}{}
+    
+    $\displaystyle x^{2} + 2 x = 1$
+
+    
+
+    La función ``solve'' se utiliza principalmente para resolver ecuaciones
+algebraicas y sistemas de ecuaciones algebraicas. Puede manejar una
+amplia gama de ecuaciones algebraicas y puede devolver soluciones en
+forma de símbolos, números reales o complejos. La salida es una lista.
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{100}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{solve}\PY{p}{(}\PY{n}{Ec1}\PY{p}{,}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{100}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+[-1 + sqrt(2), -sqrt(2) - 1]
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{101}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Ec}\PY{o}{=}\PY{n}{Eq}\PY{p}{(}\PY{n}{a}\PY{o}{*}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{+}\PY{n}{b}\PY{o}{*}\PY{n}{x}\PY{o}{+}\PY{n}{c}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{Ec}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{101}{}
+    
+    $\displaystyle a x^{2} + b x + c = 0$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{102}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{solveset}\PY{p}{(}\PY{n}{Ec}\PY{p}{,} \PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{102}{}
+    
+    $\displaystyle \left\{- \frac{b}{2 a} - \frac{\sqrt{- 4 a c + b^{2}}}{2 a}, - \frac{b}{2 a} + \frac{\sqrt{- 4 a c + b^{2}}}{2 a}\right\}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{103}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{solveset}\PY{p}{(}\PY{n}{Ec1}\PY{p}{,} \PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{103}{}
+    
+    $\displaystyle \left\{-1 + \sqrt{2}, - \sqrt{2} - 1\right\}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{104}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Ec2}\PY{o}{=}\PY{n}{Eq}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{+}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{x}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}
+\PY{n}{Ec2}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{104}{}
+    
+    $\displaystyle 2 x^{2} + 2 x = -1$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{105}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{solve}\PY{p}{(}\PY{n}{Ec2}\PY{p}{,} \PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{105}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+[-1/2 - I/2, -1/2 + I/2]
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{106}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Ec3}\PY{o}{=} \PY{n}{Eq}\PY{p}{(}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{6}\PY{o}{+}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{4}\PY{o}{\PYZhy{}}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{3}\PY{o}{+}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{Ec3}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{106}{}
+    
+    $\displaystyle x^{6} + x^{4} - x^{3} + x - 2 = 0$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{107}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{factor}\PY{p}{(}\PY{n}{Ec3}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{107}{}
+    
+    $\displaystyle \left(x - 1\right) \left(x + 1\right) \left(x^{2} - x + 1\right) \left(x^{2} + x + 2\right) = 0$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{108}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{solveset}\PY{p}{(}\PY{n}{Ec3}\PY{p}{,} \PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{108}{}
+    
+    $\displaystyle \left\{-1, 1, - \frac{1}{2} - \frac{\sqrt{7} i}{2}, - \frac{1}{2} + \frac{\sqrt{7} i}{2}, \frac{1}{2} - \frac{\sqrt{3} i}{2}, \frac{1}{2} + \frac{\sqrt{3} i}{2}\right\}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{109}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Ec4}\PY{o}{=} \PY{n}{Eq}\PY{p}{(}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{7}\PY{o}{+}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{4}\PY{o}{\PYZhy{}}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{3}\PY{o}{+}\PY{n}{x}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{Ec4}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{109}{}
+    
+    $\displaystyle x^{7} + x^{4} - x^{3} + x = 2$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{110}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{solve}\PY{p}{(}\PY{n}{Ec4}\PY{p}{,} \PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{110}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+[1,
+ CRootOf(x**6 + x**5 + x**4 + 2*x**3 + x**2 + x + 2, 0),
+ CRootOf(x**6 + x**5 + x**4 + 2*x**3 + x**2 + x + 2, 1),
+ CRootOf(x**6 + x**5 + x**4 + 2*x**3 + x**2 + x + 2, 2),
+ CRootOf(x**6 + x**5 + x**4 + 2*x**3 + x**2 + x + 2, 3),
+ CRootOf(x**6 + x**5 + x**4 + 2*x**3 + x**2 + x + 2, 4),
+ CRootOf(x**6 + x**5 + x**4 + 2*x**3 + x**2 + x + 2, 5)]
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{111}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{sols} \PY{o}{=} \PY{n}{solveset}\PY{p}{(}\PY{n}{Ec4}\PY{p}{,} \PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{112}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{sols}\PY{o}{.}\PY{n}{evalf}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{112}{}
+    
+    $\displaystyle \left\{1.0, -1.12 - 0.339 i, -1.12 + 0.339 i, -0.0158 - 1.16 i, -0.0158 + 1.16 i, 0.633 - 0.83 i, 0.633 + 0.83 i\right\}$
+
+    
+
+    Para resolver sistemas de ecuaciones, como por ejemplo: \[
+x+y+z-1=0 \\
+x+y+2z-3=0 \\
+x-y+z-1=0
+\]
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{113}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{linsolve}\PY{p}{(}\PY{p}{[}\PY{n}{x} \PY{o}{+} \PY{n}{y} \PY{o}{+} \PY{n}{z} \PY{o}{\PYZhy{}} \PY{l+m+mi}{1}\PY{p}{,} \PY{n}{x} \PY{o}{+} \PY{n}{y} \PY{o}{+} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{z} \PY{o}{\PYZhy{}} \PY{l+m+mi}{3}\PY{p}{,} \PY{n}{x}\PY{o}{\PYZhy{}}\PY{n}{y}\PY{o}{+}\PY{n}{z}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1} \PY{p}{]}\PY{p}{,} \PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{,} \PY{n}{z}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{113}{}
+    
+    $\displaystyle \left\{\left( -1, \  0, \  2\right)\right\}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{114}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Ec1}\PY{o}{=}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{y}\PY{o}{+}\PY{n}{z}\PY{o}{+}\PY{l+m+mi}{3}
+\PY{n}{Ec2}\PY{o}{=}\PY{n}{x}\PY{o}{+}\PY{l+m+mi}{3}\PY{o}{*}\PY{n}{y}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{z}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}
+\PY{n}{Ec3}\PY{o}{=}\PY{l+m+mi}{3}\PY{o}{*}\PY{n}{x}\PY{o}{\PYZhy{}}\PY{n}{y}\PY{o}{\PYZhy{}}\PY{n}{z}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}
+\PY{n}{linsolve}\PY{p}{(}\PY{p}{[}\PY{n}{Ec1}\PY{p}{,} \PY{n}{Ec2}\PY{p}{,} \PY{n}{Ec3} \PY{p}{]}\PY{p}{,} \PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{n}{y}\PY{p}{,} \PY{n}{z}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{114}{}
+    
+    $\displaystyle \left\{\left( - \frac{7}{5}, \  -2, \  - \frac{21}{5}\right)\right\}$
+
+    
+
+    \hypertarget{ecuaciones-diferenciales}{%
+\section{4) Ecuaciones diferenciales}\label{ecuaciones-diferenciales}}
+
+    Definamos la función \(f=f(x)\)
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{115}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{f} \PY{o}{=} \PY{n}{Function}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{f}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    Resolvamosla ecuación diferencial \[
+f(x)-\frac{df(x)}{dx}=0
+\]
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{116}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{dsolve}\PY{p}{(} \PY{n}{f} \PY{o}{\PYZhy{}} \PY{n}{diff}\PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{n}{x}\PY{p}{)}\PY{p}{,} \PY{n}{f} \PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{116}{}
+    
+    $\displaystyle f{\left(x \right)} = C_{1} e^{x}$
+
+    
+
+    También podemos escribir primero la ecuación diferencial
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{117}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{ed} \PY{o}{=} \PY{n}{Eq}\PY{p}{(}\PY{n}{f} \PY{o}{\PYZhy{}} \PY{n}{diff}\PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{n}{x}\PY{p}{)}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{ed}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{117}{}
+    
+    $\displaystyle f{\left(x \right)} - \frac{d}{d x} f{\left(x \right)} = 0$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{118}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{dsolve}\PY{p}{(}\PY{n}{ed}\PY{p}{,} \PY{n}{f}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{118}{}
+    
+    $\displaystyle f{\left(x \right)} = C_{1} e^{x}$
+
+    
+
+    Veamos la ecuación para el oscilador armónico simple \[
+\frac{d^2y(t)}{dt^2}+\omega_0^2 y(t)=0
+\]
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{119}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{ω0} \PY{o}{=} \PY{n}{symbols}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{ω0}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{y} \PY{o}{=} \PY{n}{Function}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{y}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{(}\PY{n}{t}\PY{p}{)}
+\PY{n}{ed1} \PY{o}{=} \PY{n}{Eq}\PY{p}{(}\PY{n}{y}\PY{o}{.}\PY{n}{diff}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}  \PY{o}{+} \PY{n}{ω0}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{y}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{)}
+\PY{n}{ed1}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{119}{}
+    
+    $\displaystyle ω_{0}^{2} y{\left(t \right)} + \frac{d^{2}}{d t^{2}} y{\left(t \right)} = 0$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{120}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{dsolve}\PY{p}{(}\PY{n}{ed1}\PY{p}{,} \PY{n}{y}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{120}{}
+    
+    $\displaystyle y{\left(t \right)} = C_{1} e^{- i t ω_{0}} + C_{2} e^{i t ω_{0}}$
+
+    
+
+    Una de las ventajas de los sistemas de manipulación simbólica es que son
+de gran utilidad cuando necesitamos hacer cálculos largos y tediosos.
+
+Por ejemplo, queremos demostrar que la función \[
+F(x,y,z) =\frac{\sin \left(\frac{n z \sqrt{z^2+y^2+x^2}}{\sqrt{z^2+y^2}}\right)}{\sqrt{z^2+y^2+x^2}}
+\] satisface la ecuación diferencial: \[
+\frac{\partial^4 F}{\partial x^4}+\frac{\partial^4 F}{\partial y^2 x^2}+\frac{\partial^4 F}{\partial z^2 x^2}+n^2\left[\frac{\partial^2 F}{\partial x^2}+\frac{\partial^2 F}{\partial y^2}\right]=0
+\]
+
+Primero debemos escribir la función \(F\)
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{121}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{F}\PY{o}{=}\PY{n}{sin}\PY{p}{(}\PY{n}{n}\PY{o}{*}\PY{n}{z}\PY{o}{*}\PY{n}{sqrt}\PY{p}{(}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{+}\PY{n}{y}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{+}\PY{n}{z}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}\PY{o}{/}\PY{n}{sqrt}\PY{p}{(}\PY{n}{y}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{+}\PY{n}{z}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{o}{/}\PY{n}{sqrt}\PY{p}{(}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{+}\PY{n}{y}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{+}\PY{n}{z}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{p}{)}
+\PY{n}{F}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{121}{}
+    
+    $\displaystyle \frac{\sin{\left(\frac{n z \sqrt{x^{2} + z^{2} + y^{2}{\left(t \right)}}}{\sqrt{z^{2} + y^{2}{\left(t \right)}}} \right)}}{\sqrt{x^{2} + z^{2} + y^{2}{\left(t \right)}}}$
+
+    
+
+    Luego podríamos usar \textbf{Derivative} para escribir la ecuación y
+verificar que la escribimos bien
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{122}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Derivative}\PY{p}{(}\PY{n}{F}\PY{p}{,}\PY{n}{x}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}\PY{o}{+}\PY{n}{Derivative}\PY{p}{(}\PY{n}{Derivative}\PY{p}{(}\PY{n}{F}\PY{p}{,}\PY{n}{x}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,}\PY{n}{y}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{o}{+} \PYZbs{}
+\PY{n}{Derivative}\PY{p}{(}\PY{n}{Derivative}\PY{p}{(}\PY{n}{F}\PY{p}{,}\PY{n}{x}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,}\PY{n}{z}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)} \PY{o}{+} \PYZbs{}
+\PY{n}{n}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{*}\PY{p}{(}\PY{n}{Derivative}\PY{p}{(}\PY{n}{F}\PY{p}{,}\PY{n}{x}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{o}{+}\PY{n}{Derivative}\PY{p}{(}\PY{n}{F}\PY{p}{,}\PY{n}{y}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{122}{}
+    
+    $\displaystyle n^{2} \left(\frac{\partial^{2}}{\partial x^{2}} \frac{\sin{\left(\frac{n z \sqrt{x^{2} + z^{2} + y^{2}{\left(t \right)}}}{\sqrt{z^{2} + y^{2}{\left(t \right)}}} \right)}}{\sqrt{x^{2} + z^{2} + y^{2}{\left(t \right)}}} + \frac{\partial^{2}}{\partial y{\left(t \right)}^{2}} \frac{\sin{\left(\frac{n z \sqrt{x^{2} + z^{2} + y^{2}{\left(t \right)}}}{\sqrt{z^{2} + y^{2}{\left(t \right)}}} \right)}}{\sqrt{x^{2} + z^{2} + y^{2}{\left(t \right)}}}\right) + \frac{\partial^{4}}{\partial x^{4}} \frac{\sin{\left(\frac{n z \sqrt{x^{2} + z^{2} + y^{2}{\left(t \right)}}}{\sqrt{z^{2} + y^{2}{\left(t \right)}}} \right)}}{\sqrt{x^{2} + z^{2} + y^{2}{\left(t \right)}}} + \frac{\partial^{4}}{\partial z^{2}\partial x^{2}} \frac{\sin{\left(\frac{n z \sqrt{x^{2} + z^{2} + y^{2}{\left(t \right)}}}{\sqrt{z^{2} + y^{2}{\left(t \right)}}} \right)}}{\sqrt{x^{2} + z^{2} + y^{2}{\left(t \right)}}} + \frac{\partial^{4}}{\partial y{\left(t \right)}^{2}\partial x^{2}} \frac{\sin{\left(\frac{n z \sqrt{x^{2} + z^{2} + y^{2}{\left(t \right)}}}{\sqrt{z^{2} + y^{2}{\left(t \right)}}} \right)}}{\sqrt{x^{2} + z^{2} + y^{2}{\left(t \right)}}}$
+
+    
+
+    Ahora le pedimos al programa que realice todas las derivadas indicadas y
+que luego factorice
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{123}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{factor}\PY{p}{(}\PY{p}{(}\PY{n}{\PYZus{}}\PY{p}{)}\PY{o}{.}\PY{n}{doit}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{123}{}
+    
+    $\displaystyle 0$
+
+    
+
+    En este caso el programa demora bastante tiempo en realizar los cálculos
+porque ha representado todas las derivadas y luego hace la
+factorización.
+
+    También se puede hacer la demostración de manera más directa y el tiempo
+de ejecución será mucho menor
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{124}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{p}{(}\PY{n}{diff}\PY{p}{(}\PY{n}{F}\PY{p}{,}\PY{n}{x}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{)}\PY{o}{+}\PY{n}{diff}\PY{p}{(}\PY{n}{diff}\PY{p}{(}\PY{n}{F}\PY{p}{,}\PY{n}{x}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,}\PY{n}{y}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{o}{+}\PY{n}{diff}\PY{p}{(}\PY{n}{diff}\PY{p}{(}\PY{n}{F}\PY{p}{,}\PY{n}{x}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,}\PY{n}{z}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{o}{+}
+ \PY{n}{n}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{*}\PY{p}{(}\PY{n}{diff}\PY{p}{(}\PY{n}{F}\PY{p}{,}\PY{n}{x}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{o}{+}\PY{n}{diff}\PY{p}{(}\PY{n}{F}\PY{p}{,}\PY{n}{y}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{factor}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{124}{}
+    
+    $\displaystyle 0$
+
+    
+
+    \hypertarget{algebra-vectorial-y-matricial}{%
+\section{5) Algebra vectorial y
+matricial}\label{algebra-vectorial-y-matricial}}
+
+    A los vectores podemos tratarlos como objetos matriciales
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{125}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{A} \PY{o}{=} \PY{n}{Matrix}\PY{p}{(}\PY{p}{[}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{]}\PY{p}{]}\PY{p}{)} \PY{c+c1}{\PYZsh{} un vector fila 1x3}
+\PY{n}{A}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{125}{}
+    
+    $\displaystyle \left[\begin{matrix}4 & 5 & 6\end{matrix}\right]$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{126}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{B} \PY{o}{=} \PY{n}{Matrix} \PY{p}{(}\PY{p}{[}\PY{p}{[}\PY{l+m+mi}{7}\PY{p}{]} \PY{p}{,}\PY{p}{[}\PY{l+m+mi}{8}\PY{p}{]} \PY{p}{,} \PY{p}{[}\PY{l+m+mi}{9}\PY{p}{]}\PY{p}{]}\PY{p}{)} \PY{c+c1}{\PYZsh{} un vector columna 3x1}
+\PY{n}{B}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{126}{}
+    
+    $\displaystyle \left[\begin{matrix}7\\8\\9\end{matrix}\right]$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{127}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{B}\PY{o}{.}\PY{n}{T} \PY{c+c1}{\PYZsh{} vector traspuesta de B}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{127}{}
+    
+    $\displaystyle \left[\begin{matrix}7 & 8 & 9\end{matrix}\right]$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{128}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{A}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]} \PY{c+c1}{\PYZsh{} Primera componente del vector A (índice 0)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{128}{}
+    
+    $\displaystyle 4$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{129}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{A}\PY{o}{.}\PY{n}{norm}\PY{p}{(}\PY{p}{)} \PY{c+c1}{\PYZsh{} norma del vector A}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{129}{}
+    
+    $\displaystyle \sqrt{77}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{130}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Ahat} \PY{o}{=} \PY{n}{A}\PY{o}{/}\PY{n}{A}\PY{o}{.}\PY{n}{norm}\PY{p}{(}\PY{p}{)} \PY{c+c1}{\PYZsh{} vector unitario asociada a A}
+\PY{n}{Ahat}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{130}{}
+    
+    $\displaystyle \left[\begin{matrix}\frac{4 \sqrt{77}}{77} & \frac{5 \sqrt{77}}{77} & \frac{6 \sqrt{77}}{77}\end{matrix}\right]$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{131}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{Ahat}\PY{o}{.}\PY{n}{norm}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{131}{}
+    
+    $\displaystyle 1$
+
+    
+
+    Definamos los siguientes vectores \[
+\mathbf{a}=2 \mathbf{i}+4 \mathbf{j}+6 \mathbf{k}, \quad \mathbf{b}=5 \mathbf{i}+7 \mathbf{j}+9 \mathbf{k} \,\,\text { y }\,\,  \mathbf{c}=\mathbf{i}+3 \mathbf{j}
+\]
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{132}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{a} \PY{o}{=} \PY{n}{Matrix}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{4}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{]}\PY{p}{)}
+\PY{n}{b} \PY{o}{=} \PY{n}{Matrix}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{9}\PY{p}{]}\PY{p}{)}
+\PY{n}{c} \PY{o}{=} \PY{n}{Matrix}\PY{p}{(}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{3}\PY{p}{,}\PY{l+m+mi}{0}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{133}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{a}\PY{o}{+}\PY{n}{b}\PY{o}{+}\PY{n}{c}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{133}{}
+    
+    $\displaystyle \left[\begin{matrix}8\\14\\15\end{matrix}\right]$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{134}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{l+m+mi}{3}\PY{o}{*}\PY{n}{a}\PY{o}{+}\PY{l+m+mi}{5}\PY{o}{*}\PY{n}{b}\PY{o}{\PYZhy{}}\PY{n}{c}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{134}{}
+    
+    $\displaystyle \left[\begin{matrix}30\\44\\63\end{matrix}\right]$
+
+    
+
+    Recordemos que el primer elemento será la primer componente del vector
+
+    El producto escalar: \[
+\mathbf{a} \cdot \mathbf{b} \equiv a_x b_x+a_y b_y+a_z b_z \equiv\|\mathbf{a}\|\|\mathbf{b}\| \cos (\varphi) \in \mathbb{R}
+\]
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{135}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{a}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{b}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{135}{}
+    
+    $\displaystyle 92$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{136}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{b}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{a}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{136}{}
+    
+    $\displaystyle 92$
+
+    
+
+    El ángulo entre los vectores \[
+\varphi= \arccos\left[ \frac{\mathbf{a} \cdot \mathbf{b}}{\|\mathbf{a}\|\|\mathbf{b}\|}\right]
+\]
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{137}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{acos}\PY{p}{(}\PY{n}{a}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{b}\PY{p}{)}\PY{o}{/}\PY{p}{(}\PY{n}{a}\PY{o}{.}\PY{n}{norm}\PY{p}{(}\PY{p}{)}\PY{o}{*}\PY{n}{b}\PY{o}{.}\PY{n}{norm}\PY{p}{(}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{round}\PY{p}{(}\PY{l+m+mi}{3}\PY{p}{)} \PY{c+c1}{\PYZsh{} En radianes}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{137}{}
+    
+    $\displaystyle 0.158$
+
+    
+
+    En grados sería:
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{138}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{p}{(}\PY{p}{(}\PY{n}{\PYZus{}}\PY{p}{)}\PY{o}{*}\PY{l+m+mi}{180}\PY{o}{/}\PY{n}{pi}\PY{p}{)}\PY{o}{.}\PY{n}{evalf}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)} \PY{c+c1}{\PYZsh{} grados}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{138}{}
+    
+    $\displaystyle 9.052$
+
+    
+
+    El producto vectorial de dos vectores en 3 dimensiones es: \[
+\mathbf{a} \times \mathbf{b}=a_y b_z-a_z b_y,\,\, a_z b_x-a_x b_z, \,\, a_x b_y-a_y b_x
+\]
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{139}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{a}\PY{o}{.}\PY{n}{cross}\PY{p}{(}\PY{n}{b}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{139}{}
+    
+    $\displaystyle \left[\begin{matrix}-6\\12\\-6\end{matrix}\right]$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{140}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{b}\PY{o}{.}\PY{n}{cross}\PY{p}{(}\PY{n}{a}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{140}{}
+    
+    $\displaystyle \left[\begin{matrix}6\\-12\\6\end{matrix}\right]$
+
+    
+
+    El producto tripe: \[
+\mathbf{c}\cdot \left(\mathbf{a} \times \mathbf{b}\right)
+\]
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{141}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{p}{(}\PY{n}{a}\PY{o}{.}\PY{n}{cross}\PY{p}{(}\PY{n}{b}\PY{p}{)}\PY{p}{)}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{c}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{141}{}
+    
+    $\displaystyle 30$
+
+    
+
+    Tenemos otra opción para el cálculo vectorial, esta vez utilizando una
+libreria llamada \textbf{sympy.vector}, como se muestra a continuación
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{142}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{from} \PY{n+nn}{sympy}\PY{n+nn}{.}\PY{n+nn}{vector} \PY{k+kn}{import} \PY{o}{*}
+\PY{n}{R} \PY{o}{=} \PY{n}{CoordSys3D}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{R}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{143}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{A} \PY{o}{=} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{R}\PY{o}{.}\PY{n}{i} \PY{o}{+} \PY{l+m+mi}{4}\PY{o}{*}\PY{n}{R}\PY{o}{.}\PY{n}{j} \PY{o}{\PYZhy{}} \PY{l+m+mi}{6}\PY{o}{*}\PY{n}{R}\PY{o}{.}\PY{n}{k}
+\PY{n}{B} \PY{o}{=} \PY{n}{R}\PY{o}{.}\PY{n}{i} \PY{o}{\PYZhy{}} \PY{l+m+mi}{3}\PY{o}{*}\PY{n}{R}\PY{o}{.}\PY{n}{j} \PY{o}{+} \PY{l+m+mi}{5}\PY{o}{*}\PY{n}{R}\PY{o}{.}\PY{n}{k}
+\PY{n}{C}\PY{o}{=} \PY{n}{R}\PY{o}{.}\PY{n}{i} \PY{o}{+} \PY{n}{R}\PY{o}{.}\PY{n}{j} \PY{o}{+} \PY{n}{R}\PY{o}{.}\PY{n}{k}
+\end{Verbatim}
+\end{tcolorbox}
+
+    R.i, R.j y R.k representan los vectores unitarios \(i, j, k\)
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{144}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} El vector A}
+\PY{n}{A}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{144}{}
+    
+    $\displaystyle \left(2\right)\mathbf{\hat{i}_{R}} + \left(4\right)\mathbf{\hat{j}_{R}} + \left(-6\right)\mathbf{\hat{k}_{R}}$
+
+    
+
+    Operaciones básicas con vectores
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{145}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{A} \PY{o}{+} \PY{l+m+mi}{2}\PY{o}{*}\PY{n}{B} \PY{o}{\PYZhy{}} \PY{n}{C}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{145}{}
+    
+    $\displaystyle \left(3\right)\mathbf{\hat{i}_{R}} + \left(-3\right)\mathbf{\hat{j}_{R}} + \left(3\right)\mathbf{\hat{k}_{R}}$
+
+    
+
+    El módulo del vector \(|\vec{A}|=\sqrt{\vec{A}\cdot \vec{A}}\)
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{146}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{sqrt}\PY{p}{(}\PY{n}{A}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{A}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{146}{}
+    
+    $\displaystyle 2 \sqrt{14}$
+
+    
+
+    Aunque tenemos funciones en Sympy para la magnitud
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{147}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{A}\PY{o}{.}\PY{n}{magnitude}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{147}{}
+    
+    $\displaystyle 2 \sqrt{14}$
+
+    
+
+    El vector unitario asociado a \textbf{A}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{148}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{A}\PY{o}{.}\PY{n}{normalize}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{148}{}
+    
+    $\displaystyle \left(\frac{\sqrt{14}}{14}\right)\mathbf{\hat{i}_{R}} + \left(\frac{\sqrt{14}}{7}\right)\mathbf{\hat{j}_{R}} + \left(- \frac{3 \sqrt{14}}{14}\right)\mathbf{\hat{k}_{R}}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{149}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{p}{(}\PY{n}{\PYZus{}}\PY{p}{)}\PY{o}{.}\PY{n}{magnitude}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{149}{}
+    
+    $\displaystyle 1$
+
+    
+
+    El producto escalar \(A.B\)
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{150}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{A}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{B}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{150}{}
+    
+    $\displaystyle -40$
+
+    
+
+    \emph{El} producto vectorial \(A \times B\)
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{151}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{A}\PY{o}{.}\PY{n}{cross}\PY{p}{(}\PY{n}{B}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{151}{}
+    
+    $\displaystyle \left(2\right)\mathbf{\hat{i}_{R}} + \left(-16\right)\mathbf{\hat{j}_{R}} + \left(-10\right)\mathbf{\hat{k}_{R}}$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{152}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{B}\PY{o}{.}\PY{n}{cross}\PY{p}{(}\PY{n}{A}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{152}{}
+    
+    $\displaystyle \left(-2\right)\mathbf{\hat{i}_{R}} + \left(16\right)\mathbf{\hat{j}_{R}} + \left(10\right)\mathbf{\hat{k}_{R}}$
+
+    
+
+    El producto triple \((A\times B) \cdot C\)
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{153}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{A}\PY{o}{.}\PY{n}{cross}\PY{p}{(}\PY{n}{B}\PY{p}{)}\PY{o}{.}\PY{n}{dot}\PY{p}{(}\PY{n}{C}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{153}{}
+    
+    $\displaystyle -24$
+
+    
+
+    Veamos ahora algunos operaciones con matrices
+
+Definamos la matriz A
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{154}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{init\PYZus{}printing}\PY{p}{(}\PY{n}{use\PYZus{}unicode}\PY{o}{=}\PY{k+kc}{True}\PY{p}{)}
+\PY{n}{A} \PY{o}{=} \PY{n}{Matrix}\PY{p}{(}\PY{p}{[} \PY{p}{[} \PY{l+m+mi}{2}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{l+m+mi}{3}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{l+m+mi}{8}\PY{p}{,} \PY{l+m+mi}{7}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{l+m+mi}{7}\PY{p}{]}\PY{p}{,}\PY{p}{[} \PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{6}\PY{p}{]} \PY{p}{]}\PY{p}{)}
+\PY{n}{A}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{154}{}
+    
+    $\displaystyle \left[\begin{matrix}2 & -3 & -8 & 7\\-2 & -2 & 2 & -7\\1 & 0 & -5 & 6\end{matrix}\right]$
+
+    
+
+    La función ``init\_printing(use\_unicode=True)'' configura la salida de
+las expresiones simbólicas para que se muestren de manera más legible
+cuando se imprimen en la consola o en entornos interactivos como Jupyter
+Notebook.
+
+Cuando se agrega ``use\_unicode=True'', SymPy utiliza caracteres Unicode
+para representar símbolos matemáticos como letras griegas, operadores y
+símbolos especiales. Esto mejora significativamente la legibilidad de
+las expresiones matemáticas impresas.
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{155}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{A}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]} \PY{c+c1}{\PYZsh{} fila 0, columna 1 de A}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{155}{}
+    
+    $\displaystyle -3$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{156}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{A}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{:}\PY{l+m+mi}{3}\PY{p}{]} \PY{c+c1}{\PYZsh{} submatriz 2x3 de A}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{156}{}
+    
+    $\displaystyle \left[\begin{matrix}2 & -3 & -8\\-2 & -2 & 2\end{matrix}\right]$
+
+    
+
+    La matiz identidad
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{157}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{eye}\PY{p}{(}\PY{l+m+mi}{4}\PY{p}{)} \PY{c+c1}{\PYZsh{} 4x4}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{157}{}
+    
+    $\displaystyle \left[\begin{matrix}1 & 0 & 0 & 0\\0 & 1 & 0 & 0\\0 & 0 & 1 & 0\\0 & 0 & 0 & 1\end{matrix}\right]$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{158}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{zeros}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{)} \PY{c+c1}{\PYZsh{} 2x3}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{158}{}
+    
+    $\displaystyle \left[\begin{matrix}0 & 0 & 0\\0 & 0 & 0\end{matrix}\right]$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{159}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{A}\PY{o}{.}\PY{n}{transpose}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{159}{}
+    
+    $\displaystyle \left[\begin{matrix}2 & -2 & 1\\-3 & -2 & 0\\-8 & 2 & -5\\7 & -7 & 6\end{matrix}\right]$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{160}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{B} \PY{o}{=} \PY{n}{Matrix}\PY{p}{(}\PY{p}{[} \PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{24}\PY{p}{,} \PY{l+m+mi}{18}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{]}\PY{p}{,}\PY{p}{[}\PY{l+m+mi}{20}\PY{p}{,}\PY{o}{\PYZhy{}}\PY{l+m+mi}{15}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]} \PY{p}{]}\PY{p}{)}
+\PY{n}{B}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{160}{}
+    
+    $\displaystyle \left[\begin{matrix}-24 & 18 & 5\\20 & -15 & -4\\-5 & 4 & 1\end{matrix}\right]$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{161}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{B}\PY{o}{.}\PY{n}{det}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{161}{}
+    
+    $\displaystyle 1$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{162}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{B}\PY{o}{.}\PY{n}{inv}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{162}{}
+    
+    $\displaystyle \left[\begin{matrix}1 & 2 & 3\\0 & 1 & 4\\5 & 6 & 0\end{matrix}\right]$
+
+    
+
+    La función ``rref()'' calcula la forma escalonada reducida por filas de
+una matriz. La forma escalonada reducida por filas (en inglés, Reduced
+Row Echelon Form o RREF) es una forma canónica de representar una matriz
+en álgebra lineal, que simplifica su análisis y facilita la resolución
+de sistemas de ecuaciones lineales y otras operaciones.
+
+La forma RREF de una matriz tiene las siguientes propiedades:
+
+\begin{itemize}
+\tightlist
+\item
+  Cada fila no nula comienza con un ``1'' (llamado pivote), y los ``1''
+  de cada fila están a la derecha de los ``1'' de las filas superiores.
+\item
+  En cada columna que contiene un ``1'' (pivote), todas las otras
+  entradas son ``0''.
+\item
+  Las filas con todos ceros están al final, si existen.
+\end{itemize}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{163}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{B}\PY{o}{.}\PY{n}{rref}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{163}{}
+    
+    $\displaystyle \left( \left[\begin{matrix}1 & 0 & 0\\0 & 1 & 0\\0 & 0 & 1\end{matrix}\right], \  \left( 0, \  1, \  2\right)\right)$
+
+    
+
+    La primera primera salida es la forma escalonada reducida de la matriz y
+la segunda salida es una tupla de índices de las columnas pivoteables.
+Esto significa que las columnas pivotales están en las columnas con
+índices 0, 1 y 2 respectivamente. Las columnas que no están en pivots
+son columnas libres (que no contienen pivotes).
+
+    Veamos otros ejemplos
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{164}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{M} \PY{o}{=} \PY{n}{Matrix}\PY{p}{(}\PY{p}{[}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{,} \PY{l+m+mi}{3}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+\PY{n}{N} \PY{o}{=} \PY{n}{Matrix}\PY{p}{(}\PY{p}{[}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{5}\PY{p}{,}\PY{l+m+mi}{6}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{5}\PY{p}{,} \PY{l+m+mi}{4}\PY{p}{,} \PY{l+m+mi}{1}\PY{p}{]}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{165}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{α} \PY{p}{,}\PY{n}{β} \PY{o}{=} \PY{n}{symbols}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{α β}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{α}\PY{o}{*}\PY{n}{M} \PY{o}{+} \PY{n}{β}\PY{o}{*}\PY{n}{N}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{165}{}
+    
+    $\displaystyle \left[\begin{matrix}α + 4 β & 2 α + 5 β & 3 α + 6 β\\- 2 α & 3 α + 7 β & α + β\\- 5 α - 5 β & 4 α + 4 β & α + β\end{matrix}\right]$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{166}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{M}\PY{o}{*}\PY{n}{N}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{166}{}
+    
+    $\displaystyle \left[\begin{matrix}-11 & 31 & 11\\-13 & 15 & -8\\-25 & 7 & -25\end{matrix}\right]$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{167}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{M}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{167}{}
+    
+    $\displaystyle \left[\begin{matrix}-18 & 20 & 8\\-13 & 9 & -2\\-18 & 6 & -10\end{matrix}\right]$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{168}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{M}\PY{o}{*}\PY{o}{*}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{168}{}
+    
+    $\displaystyle \left[\begin{matrix}- \frac{1}{14} & \frac{5}{7} & - \frac{1}{2}\\- \frac{3}{14} & \frac{8}{7} & - \frac{1}{2}\\\frac{1}{2} & -1 & \frac{1}{2}\end{matrix}\right]$
+
+    
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{169}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{M}\PY{o}{*}\PY{n}{N}\PY{o}{*}\PY{o}{*}\PY{p}{(}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+ 
+            
+\prompt{Out}{outcolor}{169}{}
+    
+    $\displaystyle \left[\begin{matrix}\frac{98}{197} & - \frac{36}{197} & \frac{39}{197}\\\frac{14}{197} & \frac{23}{197} & \frac{90}{197}\\0 & 0 & 1\end{matrix}\right]$
+
+    
+
+    \hypertarget{gruxe1ficos}{%
+\section{6) Gráficos}\label{gruxe1ficos}}
+
+    El hecho de que SymPy sea una biblioteca de Python se abren infinitas
+posibilidades para hacer gráficas con diferentes complejidades.
+
+Lo más sencillo es con el uso del comando \textbf{Plot}, pero
+mostraremos algunos ejemplos más elaborados.
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{170}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{f}\PY{o}{=}\PY{l+m+mi}{4}\PY{o}{*}\PY{n}{sin}\PY{p}{(}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{t}\PY{p}{)}
+\PY{n}{plot}\PY{p}{(}\PY{n}{f}\PY{p}{,} \PY{p}{(}\PY{n}{t}\PY{p}{,} \PY{l+m+mi}{0}\PY{p}{,} \PY{l+m+mi}{10}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{06_Intro_Sympy_files/06_Intro_Sympy_267_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{170}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+<sympy.plotting.plot.Plot at 0x11fbecd90>
+\end{Verbatim}
+\end{tcolorbox}
+        
+    La siguiente figura es con más elaboración, en este caso queremos
+graficar varias funciones
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{171}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{f1}\PY{o}{=}\PY{n}{x}\PY{o}{*}\PY{o}{*}\PY{l+m+mi}{2}\PY{o}{\PYZhy{}}\PY{l+m+mi}{4}
+\PY{n}{f2}\PY{o}{=}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{cos}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+\PY{n}{f3}\PY{o}{=}\PY{l+m+mi}{2}\PY{o}{*}\PY{n}{sin}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{172}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Tres funciones en una mísma gráfica}
+\PY{n}{p} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{f1}\PY{p}{,} \PY{n}{f2}\PY{p}{,} \PY{n}{f3}\PY{p}{,} \PY{p}{(}\PY{n}{x}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{n}{pi}\PY{p}{,} \PY{n}{pi}\PY{p}{)}\PY{p}{,}\PY{n}{show}\PY{o}{=}\PY{k+kc}{False}\PY{p}{)}
+\PY{c+c1}{\PYZsh{} Ponemos colores y etiquetamos cada función}
+\PY{n}{p}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{line\PYZus{}color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{red}\PY{l+s+s1}{\PYZsq{}}
+\PY{n}{p}\PY{p}{[}\PY{l+m+mi}{0}\PY{p}{]}\PY{o}{.}\PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZdl{}f\PYZus{}1(x)\PYZdl{}}\PY{l+s+s1}{\PYZsq{}}
+\PY{n}{p}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{line\PYZus{}color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{blue}\PY{l+s+s1}{\PYZsq{}}
+\PY{n}{p}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{o}{.}\PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZdl{}f\PYZus{}2(x)\PYZdl{}}\PY{l+s+s1}{\PYZsq{}}
+\PY{n}{p}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{line\PYZus{}color} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{green}\PY{l+s+s1}{\PYZsq{}}
+\PY{n}{p}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{o}{.}\PY{n}{label} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZdl{}f\PYZus{}3(x)\PYZdl{}}\PY{l+s+s1}{\PYZsq{}}
+\PY{c+c1}{\PYZsh{} El título de la gráfica y de los ejes}
+\PY{n}{p}\PY{o}{.}\PY{n}{title} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Diferentes funciones}\PY{l+s+s1}{\PYZsq{}}
+\PY{n}{p}\PY{o}{.}\PY{n}{xlabel} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{x}\PY{l+s+s1}{\PYZsq{}}
+\PY{n}{p}\PY{o}{.}\PY{n}{ylabel} \PY{o}{=} \PY{k+kc}{False}
+\PY{c+c1}{\PYZsh{} Agregamos una leyenda}
+\PY{n}{p}\PY{o}{.}\PY{n}{legend} \PY{o}{=} \PY{k+kc}{True}
+\PY{n}{p}\PY{o}{.}\PY{n}{legend\PYZus{}loc} \PY{o}{=} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{upper left}\PY{l+s+s1}{\PYZsq{}}
+\PY{c+c1}{\PYZsh{} Mostramos la gráfica}
+\PY{n}{p}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{06_Intro_Sympy_files/06_Intro_Sympy_270_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    Existe una librería muy potente para graficar que se llama
+\textbf{matplotlib}
+
+Más información en: https://matplotlib.org/
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{173}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{k+kn}{import} \PY{n+nn}{matplotlib}\PY{n+nn}{.}\PY{n+nn}{pyplot} \PY{k}{as} \PY{n+nn}{plt}
+\end{Verbatim}
+\end{tcolorbox}
+
+    Grafiquemos un conjunto de datos
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{174}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Los datos se escriben como una lista [dato1,dato2,...]}
+\PY{n}{yn} \PY{o}{=}\PY{p}{[}\PY{l+m+mf}{1.00}\PY{p}{,} \PY{l+m+mf}{1.40}\PY{p}{,} \PY{l+m+mf}{1.51}\PY{p}{,} \PY{l+m+mf}{2.03}\PY{p}{,} \PY{l+m+mf}{2.75}\PY{p}{,} \PY{l+m+mf}{3.59}\PY{p}{,} \PY{l+m+mf}{4.87}\PY{p}{,} \PY{l+m+mf}{5.23}\PY{p}{,} \PY{l+m+mf}{5.44}\PY{p}{,} \PY{l+m+mf}{5.95}\PY{p}{,} \PY{l+m+mf}{6.37}\PY{p}{]}
+\PY{n}{xn} \PY{o}{=}\PY{p}{[}\PY{l+m+mf}{0.00}\PY{p}{,} \PY{l+m+mf}{0.10}\PY{p}{,} \PY{l+m+mf}{0.20}\PY{p}{,} \PY{l+m+mf}{0.30}\PY{p}{,} \PY{l+m+mf}{0.40}\PY{p}{,} \PY{l+m+mf}{0.50}\PY{p}{,} \PY{l+m+mf}{0.60}\PY{p}{,} \PY{l+m+mf}{0.70}\PY{p}{,} \PY{l+m+mf}{0.80}\PY{p}{,} \PY{l+m+mf}{0.90}\PY{p}{,} \PY{l+m+mf}{1.00}\PY{p}{]}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{175}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{xn}\PY{p}{,} \PY{n}{yn}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{*}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,}\PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{blue}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Velocidad vs tiempo}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{20}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZdl{}t\PYZdl{}  [s]}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{16}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZdl{}v(t)\PYZdl{}    [m/s]}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{16}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{06_Intro_Sympy_files/06_Intro_Sympy_275_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    A continuación más ejemplos con datos
+
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{176}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{n}{d} \PY{o}{=} \PY{p}{[}\PY{l+m+mf}{15.12}\PY{p}{,} \PY{l+m+mf}{15.10}\PY{p}{,} \PY{l+m+mf}{15.15}\PY{p}{,} \PY{l+m+mf}{15.17}\PY{p}{,} \PY{l+m+mf}{15.14}\PY{p}{,} \PY{l+m+mf}{15.16}\PY{p}{,} \PY{l+m+mf}{15.14}\PY{p}{,} \PY{l+m+mf}{15.12}\PY{p}{,}
+     \PY{l+m+mf}{15.12}\PY{p}{,} \PY{l+m+mf}{15.14}\PY{p}{,} \PY{l+m+mf}{15.15}\PY{p}{,} \PY{l+m+mf}{15.14}\PY{p}{,} \PY{l+m+mf}{15.13}\PY{p}{,} \PY{l+m+mf}{15.14}\PY{p}{,} \PY{l+m+mf}{15.13}\PY{p}{,} \PY{l+m+mf}{15.13}\PY{p}{,}
+     \PY{l+m+mf}{15.14}\PY{p}{,} \PY{l+m+mf}{15.14}\PY{p}{,} \PY{l+m+mf}{15.14}\PY{p}{,} \PY{l+m+mf}{15.13}\PY{p}{,} \PY{l+m+mf}{15.15}\PY{p}{,} \PY{l+m+mf}{15.13}\PY{p}{,} \PY{l+m+mf}{15.11}\PY{p}{,} \PY{l+m+mf}{15.13}\PY{p}{,} \PY{l+m+mf}{15.15}\PY{p}{]}
+\PY{n}{plt}\PY{o}{.}\PY{n}{hist}\PY{p}{(}\PY{n}{d}\PY{p}{,}\PY{n}{edgecolor} \PY{o}{=} \PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{white}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{bins}\PY{o}{=}\PY{l+m+mi}{8}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Diámetros}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Frecuencia}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{Histograma}\PY{l+s+s2}{\PYZdq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{show}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{06_Intro_Sympy_files/06_Intro_Sympy_277_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{177}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Lista de datos con las temeraturas máxima en algún lugar día por día}
+\PY{c+c1}{\PYZsh{} Aquí temp1 serán los datos para representar en el eje de las ordenadas (eje y)}
+\PY{n}{temp1} \PY{o}{=}\PY{p}{[}\PY{l+m+mf}{18.40}\PY{p}{,} \PY{l+m+mf}{18.45}\PY{p}{,} \PY{l+m+mf}{18.65}\PY{p}{,} \PY{l+m+mf}{18.85}\PY{p}{,} \PY{l+m+mf}{18.85}\PY{p}{,} \PY{l+m+mf}{18.85}\PY{p}{,} \PY{l+m+mf}{19.05}\PY{p}{,} \PY{l+m+mf}{18.95}\PY{p}{,} \PY{l+m+mf}{18.60}\PY{p}{,} \PY{l+m+mf}{18.70}\PY{p}{,} \PY{l+m+mf}{18.70}\PY{p}{,} \PY{l+m+mf}{18.70}\PY{p}{,}
+        \PY{l+m+mf}{18.70}\PY{p}{,} \PY{l+m+mf}{18.75}\PY{p}{,} \PY{l+m+mf}{18.90}\PY{p}{,} \PY{l+m+mf}{18.85}\PY{p}{,} \PY{l+m+mf}{18.85}\PY{p}{,} \PY{l+m+mf}{19.00}\PY{p}{,} \PY{l+m+mf}{19.00}\PY{p}{,} \PY{l+m+mf}{19.00}\PY{p}{,} \PY{l+m+mf}{19.10}\PY{p}{,} \PY{l+m+mf}{19.35}\PY{p}{,} \PY{l+m+mf}{19.65}\PY{p}{,} \PY{l+m+mf}{19.55}\PY{p}{,}
+        \PY{l+m+mf}{19.55}\PY{p}{,} \PY{l+m+mf}{19.55}\PY{p}{,} \PY{l+m+mf}{19.55}\PY{p}{,} \PY{l+m+mf}{19.55}\PY{p}{,} \PY{l+m+mf}{19.60}\PY{p}{,} \PY{l+m+mf}{19.65}\PY{p}{,} \PY{l+m+mf}{19.40}\PY{p}{,} \PY{l+m+mf}{19.50}\PY{p}{,} \PY{l+m+mf}{19.50}\PY{p}{,} \PY{l+m+mf}{19.50}\PY{p}{,} \PY{l+m+mf}{19.50}\PY{p}{,} \PY{l+m+mf}{19.60}\PY{p}{,}
+        \PY{l+m+mf}{19.65}\PY{p}{,} \PY{l+m+mf}{19.95}\PY{p}{,} \PY{l+m+mf}{20.00}\PY{p}{,} \PY{l+m+mf}{20.00}\PY{p}{,} \PY{l+m+mf}{20.00}\PY{p}{,} \PY{l+m+mf}{20.00}\PY{p}{,} \PY{l+m+mf}{20.00}\PY{p}{,} \PY{l+m+mf}{19.90}\PY{p}{,} \PY{l+m+mf}{19.70}\PY{p}{,} \PY{l+m+mf}{19.75}\PY{p}{,} \PY{l+m+mf}{19.75}\PY{p}{,} \PY{l+m+mf}{19.75}\PY{p}{,}
+        \PY{l+m+mf}{19.90}\PY{p}{,} \PY{l+m+mf}{19.85}\PY{p}{,} \PY{l+m+mf}{19.90}\PY{p}{,} \PY{l+m+mf}{19.95}\PY{p}{,} \PY{l+m+mf}{19.95}\PY{p}{,} \PY{l+m+mf}{19.95}\PY{p}{,} \PY{l+m+mf}{19.95}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.10}\PY{p}{,} \PY{l+m+mf}{20.15}\PY{p}{,} \PY{l+m+mf}{20.25}\PY{p}{,}
+        \PY{l+m+mf}{20.25}\PY{p}{,} \PY{l+m+mf}{20.25}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.35}\PY{p}{,} \PY{l+m+mf}{20.40}\PY{p}{,} \PY{l+m+mf}{20.40}\PY{p}{,} \PY{l+m+mf}{20.25}\PY{p}{,} \PY{l+m+mf}{20.25}\PY{p}{,} \PY{l+m+mf}{20.25}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,}
+        \PY{l+m+mf}{20.35}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.25}\PY{p}{,} \PY{l+m+mf}{20.30}\PY{p}{,} \PY{l+m+mf}{20.25}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,}
+        \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.15}\PY{p}{,} \PY{l+m+mf}{20.15}\PY{p}{,} \PY{l+m+mf}{20.15}\PY{p}{,} \PY{l+m+mf}{20.15}\PY{p}{,} \PY{l+m+mf}{20.15}\PY{p}{,} \PY{l+m+mf}{20.15}\PY{p}{,} \PY{l+m+mf}{20.15}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,}
+        \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.15}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.15}\PY{p}{,}
+        \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.20}\PY{p}{,} \PY{l+m+mf}{20.25}\PY{p}{,} \PY{l+m+mf}{20.25}\PY{p}{,} \PY{l+m+mf}{20.25}\PY{p}{,} \PY{l+m+mf}{20.55}\PY{p}{,} \PY{l+m+mf}{20.55}\PY{p}{,} \PY{l+m+mf}{20.55}\PY{p}{,} \PY{l+m+mf}{20.55}\PY{p}{,} \PY{l+m+mf}{20.55}\PY{p}{,} \PY{l+m+mf}{20.55}\PY{p}{,}
+        \PY{l+m+mf}{21.20}\PY{p}{,} \PY{l+m+mf}{23.00}\PY{p}{,} \PY{l+m+mf}{21.80}\PY{p}{,} \PY{l+m+mf}{21.80}\PY{p}{,} \PY{l+m+mf}{21.80}\PY{p}{,} \PY{l+m+mf}{21.90}\PY{p}{,} \PY{l+m+mf}{22.40}\PY{p}{,} \PY{l+m+mf}{22.70}\PY{p}{,} \PY{l+m+mf}{22.70}\PY{p}{,} \PY{l+m+mf}{23.20}\PY{p}{,} \PY{l+m+mf}{23.20}\PY{p}{,} \PY{l+m+mf}{23.20}\PY{p}{,}
+        \PY{l+m+mf}{24.80}\PY{p}{,} \PY{l+m+mf}{24.00}\PY{p}{,} \PY{l+m+mf}{24.30}\PY{p}{,} \PY{l+m+mf}{24.30}\PY{p}{,} \PY{l+m+mf}{24.40}\PY{p}{,} \PY{l+m+mf}{24.40}\PY{p}{,} \PY{l+m+mf}{24.40}\PY{p}{,} \PY{l+m+mf}{24.40}\PY{p}{,} \PY{l+m+mf}{24.30}\PY{p}{,} \PY{l+m+mf}{24.40}\PY{p}{,} \PY{l+m+mf}{24.60}\PY{p}{,} \PY{l+m+mf}{24.60}\PY{p}{,}
+        \PY{l+m+mf}{24.60}\PY{p}{,} \PY{l+m+mf}{24.60}\PY{p}{,} \PY{l+m+mf}{24.70}\PY{p}{,} \PY{l+m+mf}{24.90}\PY{p}{,} \PY{l+m+mf}{24.90}\PY{p}{,} \PY{l+m+mf}{24.90}\PY{p}{,} \PY{l+m+mf}{24.90}\PY{p}{,} \PY{l+m+mf}{24.90}\PY{p}{,} \PY{l+m+mf}{24.90}\PY{p}{,} \PY{l+m+mf}{24.90}\PY{p}{,} \PY{l+m+mf}{24.90}\PY{p}{,} \PY{l+m+mf}{24.90}\PY{p}{,}
+        \PY{l+m+mf}{24.90}\PY{p}{,} \PY{l+m+mf}{25.30}\PY{p}{,} \PY{l+m+mf}{25.30}\PY{p}{,} \PY{l+m+mf}{25.30}\PY{p}{,} \PY{l+m+mf}{26.00}\PY{p}{,} \PY{l+m+mf}{25.80}\PY{p}{,} \PY{l+m+mf}{26.00}\PY{p}{,} \PY{l+m+mf}{27.70}\PY{p}{,} \PY{l+m+mf}{28.30}\PY{p}{,} \PY{l+m+mf}{28.30}\PY{p}{,} \PY{l+m+mf}{28.30}\PY{p}{,} \PY{l+m+mf}{27.60}\PY{p}{,}
+        \PY{l+m+mf}{27.70}\PY{p}{,} \PY{l+m+mf}{27.70}\PY{p}{,} \PY{l+m+mf}{27.50}\PY{p}{,} \PY{l+m+mf}{27.00}\PY{p}{,} \PY{l+m+mf}{27.00}\PY{p}{,} \PY{l+m+mf}{27.00}\PY{p}{,} \PY{l+m+mf}{27.00}\PY{p}{,} \PY{l+m+mf}{27.10}\PY{p}{,} \PY{l+m+mf}{27.40}\PY{p}{,} \PY{l+m+mf}{28.10}\PY{p}{,} \PY{l+m+mf}{28.90}\PY{p}{,} \PY{l+m+mf}{28.90}\PY{p}{,}
+        \PY{l+m+mf}{28.90}\PY{p}{,} \PY{l+m+mf}{28.30}\PY{p}{,} \PY{l+m+mf}{27.80}\PY{p}{,} \PY{l+m+mf}{28.10}\PY{p}{,} \PY{l+m+mf}{28.00}\PY{p}{,} \PY{l+m+mf}{27.90}\PY{p}{,} \PY{l+m+mf}{27.90}\PY{p}{,} \PY{l+m+mf}{27.90}\PY{p}{,} \PY{l+m+mf}{27.90}\PY{p}{,} \PY{l+m+mf}{27.30}\PY{p}{,} \PY{l+m+mf}{27.40}\PY{p}{,} \PY{l+m+mf}{27.20}\PY{p}{,}
+        \PY{l+m+mf}{27.20}\PY{p}{,} \PY{l+m+mf}{27.20}\PY{p}{,} \PY{l+m+mf}{27.20}\PY{p}{,} \PY{l+m+mf}{27.30}\PY{p}{,} \PY{l+m+mf}{27.50}\PY{p}{,} \PY{l+m+mf}{27.60}\PY{p}{,} \PY{l+m+mf}{27.70}\PY{p}{,} \PY{l+m+mf}{27.60}\PY{p}{,} \PY{l+m+mf}{27.60}\PY{p}{,} \PY{l+m+mf}{27.60}\PY{p}{,} \PY{l+m+mf}{27.60}\PY{p}{,} \PY{l+m+mf}{27.50}\PY{p}{,}
+        \PY{l+m+mf}{27.40}\PY{p}{,} \PY{l+m+mf}{27.40}\PY{p}{,} \PY{l+m+mf}{27.40}\PY{p}{,} \PY{l+m+mf}{27.40}\PY{p}{,} \PY{l+m+mf}{27.40}\PY{p}{,} \PY{l+m+mf}{27.30}\PY{p}{,} \PY{l+m+mf}{27.40}\PY{p}{,} \PY{l+m+mf}{27.50}\PY{p}{,} \PY{l+m+mf}{27.50}\PY{p}{,} \PY{l+m+mf}{27.30}\PY{p}{,} \PY{l+m+mf}{27.30}\PY{p}{,} \PY{l+m+mf}{27.30}\PY{p}{,}
+        \PY{l+m+mf}{27.40}\PY{p}{,} \PY{l+m+mf}{27.40}\PY{p}{,} \PY{l+m+mf}{27.60}\PY{p}{,} \PY{l+m+mf}{28.10}\PY{p}{,} \PY{l+m+mf}{29.20}\PY{p}{,} \PY{l+m+mf}{29.20}\PY{p}{,} \PY{l+m+mf}{29.20}\PY{p}{,} \PY{l+m+mf}{30.00}\PY{p}{,} \PY{l+m+mf}{29.60}\PY{p}{,} \PY{l+m+mf}{30.00}\PY{p}{,} \PY{l+m+mf}{29.80}\PY{p}{,} \PY{l+m+mf}{29.80}\PY{p}{,}
+        \PY{l+m+mf}{29.80}\PY{p}{,} \PY{l+m+mf}{29.80}\PY{p}{,} \PY{l+m+mf}{29.00}\PY{p}{,} \PY{l+m+mf}{30.00}\PY{p}{,} \PY{l+m+mf}{30.20}\PY{p}{,} \PY{l+m+mf}{30.50}\PY{p}{,} \PY{l+m+mf}{30.90}\PY{p}{,} \PY{l+m+mf}{30.90}\PY{p}{,} \PY{l+m+mf}{30.90}\PY{p}{,} \PY{l+m+mf}{30.90}\PY{p}{,} \PY{l+m+mf}{31.40}\PY{p}{,} \PY{l+m+mf}{32.00}\PY{p}{,}
+        \PY{l+m+mf}{32.60}\PY{p}{,} \PY{l+m+mf}{32.80}\PY{p}{,} \PY{l+m+mf}{31.00}\PY{p}{,} \PY{l+m+mf}{30.50}\PY{p}{,} \PY{l+m+mf}{30.40}\PY{p}{,} \PY{l+m+mf}{30.20}\PY{p}{]}
+\PY{c+c1}{\PYZsh{} La variable \PYZsq{}dia\PYZsq{} lo representarmos en el eje de las abscisas (eje x):}
+\PY{n}{dia} \PY{o}{=} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{,}\PY{l+m+mi}{247}\PY{p}{)}  \PY{c+c1}{\PYZsh{} días del 1 al 247}
+\PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{dia}\PY{p}{,} \PY{n}{temp1}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+            \begin{tcolorbox}[breakable, size=fbox, boxrule=.5pt, pad at break*=1mm, opacityfill=0]
+\prompt{Out}{outcolor}{177}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+[<matplotlib.lines.Line2D at 0x14e81b890>]
+\end{Verbatim}
+\end{tcolorbox}
+        
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{06_Intro_Sympy_files/06_Intro_Sympy_278_1.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \begin{tcolorbox}[breakable, size=fbox, boxrule=1pt, pad at break*=1mm,colback=cellbackground, colframe=cellborder]
+\prompt{In}{incolor}{178}{\boxspacing}
+\begin{Verbatim}[commandchars=\\\{\}]
+\PY{c+c1}{\PYZsh{} Comparamos las temperaturas anteriores con otros datos de temperaturas de otro lugar}
+\PY{n}{temp2} \PY{o}{=} \PY{p}{[}\PY{l+m+mf}{15.57}\PY{p}{,} \PY{l+m+mf}{15.92}\PY{p}{,} \PY{l+m+mf}{16.02}\PY{p}{,} \PY{l+m+mf}{16.14}\PY{p}{,} \PY{l+m+mf}{16.19}\PY{p}{,} \PY{l+m+mf}{16.10}\PY{p}{,} \PY{l+m+mf}{15.90}\PY{p}{,} \PY{l+m+mf}{16.18}\PY{p}{,} \PY{l+m+mf}{16.63}\PY{p}{,}
+         \PY{l+m+mf}{16.48}\PY{p}{,} \PY{l+m+mf}{17.26}\PY{p}{,} \PY{l+m+mf}{17.01}\PY{p}{,} \PY{l+m+mf}{17.37}\PY{p}{,} \PY{l+m+mf}{17.63}\PY{p}{]}
+\PY{c+c1}{\PYZsh{} ... y un registro del tiempo diferente}
+\PY{n}{dia\PYZus{}2} \PY{o}{=} \PY{p}{[}\PY{l+m+mi}{1}\PY{p}{,} \PY{l+m+mi}{18}\PY{p}{,} \PY{l+m+mi}{36}\PY{p}{,} \PY{l+m+mi}{53}\PY{p}{,} \PY{l+m+mi}{71}\PY{p}{,} \PY{l+m+mi}{88}\PY{p}{,} \PY{l+m+mi}{106}\PY{p}{,} \PY{l+m+mi}{123}\PY{p}{,} \PY{l+m+mi}{141}\PY{p}{,} \PY{l+m+mi}{158}\PY{p}{,} \PY{l+m+mi}{176}\PY{p}{,} \PY{l+m+mi}{193}\PY{p}{,} \PY{l+m+mi}{211}\PY{p}{,} \PY{l+m+mi}{228}\PY{p}{]}
+
+\PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{dia}  \PY{p}{,} \PY{n}{temp1} \PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{\PYZhy{}}\PY{l+s+s1}{\PYZsq{}}  \PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Temp. lugar 1}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{plot}\PY{p}{(}\PY{n}{dia\PYZus{}2}\PY{p}{,} \PY{n}{temp2} \PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{o\PYZhy{}}\PY{l+s+s1}{\PYZsq{}} \PY{p}{,} \PY{n}{color}\PY{o}{=}\PY{l+s+s2}{\PYZdq{}}\PY{l+s+s2}{r}\PY{l+s+s2}{\PYZdq{}}\PY{p}{,} \PY{n}{label}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Temp. lugar 2}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{xlabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Día del año }\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{16}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{ylabel}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Temperatura [ºC]}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{16}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{title}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Temperaturas en 2023}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{n}{fontsize}\PY{o}{=}\PY{l+m+mi}{20}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{legend}\PY{p}{(}\PY{p}{)}
+\PY{n}{plt}\PY{o}{.}\PY{n}{grid}\PY{p}{(}\PY{k+kc}{True}\PY{p}{)}
+\end{Verbatim}
+\end{tcolorbox}
+
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{06_Intro_Sympy_files/06_Intro_Sympy_279_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+    \textbf{F I N}
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+\end{document}
