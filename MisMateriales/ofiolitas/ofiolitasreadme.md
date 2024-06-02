@@ -7,4 +7,6 @@ Este carpeta contiene varios artículos para irse empapando del tema de las ofio
 
 + El artículo Blay-Roger, R. et al. Natural hydrogen in the energy transition: Fundamentals, promise, and enigmas. Renew. Sustain. Energy Rev. 189, 113888 (2024). (NaturalH2Review) es un precioso resumen de la importancia del H2 en la trasición energética.
 
-+  En el artícul Olah, L. et al. Plans for Muography of Samail Ophiolite. J. Adv. Instrum. Sci. 2024, (2024), (muografiaOfiolitas) se muestra como se usa la muografía para detectar ofiolitas para estudios geológicos
++  En el artículo Olah, L. et al. Plans for Muography of Samail Ophiolite. J. Adv. Instrum. Sci. 2024, (2024), (muografiaOfiolitas) se muestra como se usa la muografía para detectar ofiolitas para estudios geológicos
+
++ En el artículo Dugamin, E., Truche, L. & Donze, F. V. Natural Hydrogen Exploration Guide. Geonum Ed  ISRN GEONUM-NST--2019-01--ENG (2019). es eso una guía que ilustra como se explora el H2
