@@ -8,10 +8,10 @@ Esta clase tiene por objetivos:
 ### Actividad antes de clase
 1. Estudiar el punto 4.1  de las NUEVAS [notas de clase Vol1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
 2. Seguir el video de espacios vectoriales abstractos el [video de 3blue-1brown](https://www.youtube.com/watch?v=TgKwz5Ikpc8)
-3. Rehacer los ejemplos resueltos 4.2 y 4.3 de las NUEVAS [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
+3. Rehacer los ejemplos resueltos 4.2 y 4.3 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
 
 ### Taller de problemas
-+ Resolver los ejercicios 4 y 5 de la sección 4.1.4 de las NUEVAS [notas de clase Vol1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
++ Resolver los ejercicios 4 y 5 de la sección 4.1.8 de las [notas de clase Vol1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
 
 ### Materiales de apoyo
 + [Video](https://youtu.be/JGcYt7Nh-kE) y [Presentación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/4_1OperadLineales.pdf)
