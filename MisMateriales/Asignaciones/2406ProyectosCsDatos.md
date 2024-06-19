@@ -1,6 +1,6 @@
 # Proyectos Ciencia de Datos
 
-A continuación enumeramos algunos proyectos para el cursos de ciencia de Datos de la cohorte 2022
+A continuación enumeramos algunos proyectos para el cursos de ciencia de Datos de la cohorte 2024
 
 ## Rocas navegantes del Valle de la Muerte (Propuesto L.A. Núñez)
  La pregunta de cuáles son los efectos que mueven las rocas de este valle desértico se viene repitiendo por décadas[1] y las primeras medidas que registran el movimiento de las rocas han sido tomadas por Norris y colaboradores [2]. Estos autores colocaron módulos de geoposicionamiento satelital (GPS) en varias rocas y estudiaron su desplazamiento y muestran que, aparentemente, las rocas se mueven sobre láminas de hielo que se quiebran y deslizan.
@@ -116,20 +116,20 @@ telescopios de fluorescencia del Observatorio Pierre Auger.
 ## Análisis de datos públicos del experimento ATLAS (guiado por J. Ocariz + otros colegas ATLAS)
 
 ### Objetivos
-The general aim of the ATLAS Open Data and tools released is to provide a straightforward interface to replicate the procedures used by high-energy-physics researchers and enable users to experience the analysis of particle physics data in educational environments. Therefore, it is of significant interest to check the correct modelling of several SM process by the 13 TeV ATLAS Open Data MC simulation.
+The ATLAS Open Data and tools released aim to provide a straightforward interface to replicate the procedures used by high-energy-physics researchers and enable users to experience the analysis of particle physics data in educational environments. Therefore, it is of significant interest to check the correct modelling of several SM processes by the 13 TeV ATLAS Open Data MC simulation.
 
-Both simulated events, and events from real data collected in 2016 at 13 TeV center-of-mass proton-proton collision energy are available. More details on the available datasets can be found here:
+Both simulated events and events from real data collected in 2016 at 13 TeV center-of-mass proton-proton collision energy are available. More details on the available datasets can be found here:
 
 http://opendata.atlas.cern/release/2020/documentation/datasets/files.html
 
-In particular, the "GamGam" sample can be used to study properties of the Higgs boson in its decay in two photons, and the "2lep" sample can be used to study properties of the Z boson in its decay in pairs of leptons (electrons or muons). Other samples can also be considered.
+In particular, the "GamGam" sample can be used to study the properties of the Higgs boson in its decay in two photons, and the "2lep" sample can be used to study the properties of the Z boson in its decay in pairs of leptons (electrons or muons). Other samples can also be considered.
 
 ### Actividades
 
 Develop a complete analysis chain for the selected physics process:
 
 - identify the variables to be used
-- define the parameters of interest (POI) to be measured, and their relations with the set of variables from the previous step
+- define the parameters of interest (POI) to be measured and their relations with the set of variables from the previous step
 - establish a statistical protocol to extract confidence intervals these PIO
 - use control samples to validate the protocol
 - perform the measurement on the signal samples
