@@ -4,6 +4,6 @@ Tendremos cuatro ahora de teoría (martes y jueves) y una el viernes. La hora de
 
 ## Bibliografía
 ### Libro texto
-Seguiremos como libro texto: Mecánica Clásica (2016) preprint de mi gran amigo Mario Cosenza  
+Seguiremos como libro texto: [Mecánica Clásica (2016)](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Cosenza2016PrePrint.pdf) preprint de mi gran amigo [Mario Cosenza](https://scholar.google.co.ve/citations?hl=es&user=wmSC_7EAAAAJ)   
 
 ### Referencias adicionales
