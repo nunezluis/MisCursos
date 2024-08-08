@@ -20,21 +20,24 @@ Como apoyo bibliográfico tendremos
 ## Programa del Curso
 
 ### Clase S1-C1/C2 Leyes de Newton
-+ **Estudiar**
++ **Estudie**
   + Leyes de Newton y mecánica de una partícula
   + Mecánica de Sistemas de Partículas
-+ **Rehacer** los ejemplos 1. (p13), 3.(p14) y 4. (p17)
++ **Rehaga** los ejemplos 1. (p13), 3.(p14) y 4. (p17)
 #### Problemas S1
 
 
 
 ### Clase S2-C3/C4
-Leer
-+ Coordenadas generalizadas
-+ Principios variacionales y ecuaciones de Euler
-+ Principios de minima acción
-+ Propiedades de las ecuaciones de Lagrange
-+ Ecuaciones de Lagrange para varios Sistemas
++ **Estudie**
+  + Coordenadas generalizadas
+  + Principios variacionales y ecuaciones de Euler
+  + Principios de minima acción
+  + Propiedades de las ecuaciones de Lagrange
+  + Ecuaciones de Lagrange para varios Sistemas
++ **Rehaga** los ejemplos 1. (p35), 3. (p37), 4. (p39), 1. (p49), 3. (p41), 5. (p52), 6. (p54)
++ **Resuelva**
+  + Numéricamente el péndulo doble que presentamos en [este ejercicio](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerEcuacionesDifOrdinarias/MetMatPendulo2/CaosPenduloDoble.pdf)   
 
 #### Problemas S2
 
