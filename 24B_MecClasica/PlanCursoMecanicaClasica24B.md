@@ -37,7 +37,7 @@ Como apoyo bibliográfico tendremos
   + Ecuaciones de Lagrange para varios Sistemas
 + **Rehaga** los ejemplos 1. (p35), 3. (p37), 4. (p39), 1. (p49), 3. (p41), 5. (p52), 6. (p54)
 + **Resuelva**
-  + Numéricamente el péndulo doble que presentamos en [este ejercicio](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerEcuacionesDifOrdinarias/MetMatPendulo2/MecClasPendulo2.pdf)   
+  + Como primera asignación resuelva numéricamente el péndulo doble que presentamos en [este ejercicio](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerEcuacionesDifOrdinarias/MetMatPendulo2/MecClasPendulo2.pdf)   
 
 #### Problemas S2
 
