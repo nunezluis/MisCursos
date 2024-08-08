@@ -3,10 +3,14 @@
 Tendremos cuatro ahora de teoría (martes y jueves) y una el viernes. La hora del viernes será para desarrollar una evaluación contínua. Cada viernes tendrán que presentar problemas que han quedado de los contenidos que hemos desarrollado en la semanas
 
 ## Evaluación
-Nos organizaremos en grupos de dos estudiantes y cada grupo debe crear un git y según el modelo que se muestra [aquí](https://github.com/nunezluis/TareasCursos20B). Esto es, se debe clonar este repositorio y compartirlos para poderlo revisar.  
+Nos organizaremos en grupos de dos estudiantes y cada grupo debe crear un git y según el modelo que se muestra [aquí](https://github.com/nunezluis/TareasCursos20B). Esto es, se debe clonar este repositorio y compartirlos para poder revisar las tareas, asignaciones y proyectos que desarrollemos durante el curso..  
 + **Evaluación continua 30%** Los problemas de los viernes. Deben ser cargados en un Git para evaluarlos y serán sustentados al azar cada viernes.
 + **Dos previos, 20% c/u** Dos exámenes presenciales estándares
 + **Cuatro asignaciones 10% c/u** A definir
+
+### Las asignaciones
+Las asignación son parte fundamental del desarrollo del curso.  Algunas asignaciones será de aplicación de los conceptos y otras de discusión de artículos relacionados con los tópicos que estemos desarrollando.  Las asignaciones de aplicación buscan reforzar los conceptos del curso en la solución de un problema particular, muchas veces con visos de realidad. La discusión de artículos relacionan los conceptos del curso con su utilización específica reportada en la literatura.  Las asignaciones de aplicación serán presentadas de dos maneras: un reporte tipo artículo y una presentación de máximo 6 láminas expuestas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
+
 
 ## Bibliografía
 ### Libro texto
