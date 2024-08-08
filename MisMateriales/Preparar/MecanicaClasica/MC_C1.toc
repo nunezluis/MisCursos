@@ -8,8 +8,3 @@
 \beamer@subsectionintoc {3}{4}{Energ\IeC {\'\i }a potencial y energ\IeC {\'\i }a total}{24}{0}{3}
 \beamer@sectionintoc {4}{Sistemas de Part\IeC {\'\i }culas}{29}{0}{4}
 \beamer@sectionintoc {5}{Din\'amica de sistemas de part\IeC {\'\i }culas}{32}{0}{5}
-\beamer@sectionintoc {6}{Din\'amica de sistemas de part\IeC {\'\i }culas}{40}{0}{6}
-\beamer@sectionintoc {7}{Din\'amica de sistemas de part\IeC {\'\i }culas}{43}{0}{7}
-\beamer@sectionintoc {8}{Din\'amica de sistemas de part\IeC {\'\i }culas}{46}{0}{8}
-\beamer@sectionintoc {9}{Din\'amica de sistemas de part\IeC {\'\i }culas}{49}{0}{9}
-\beamer@sectionintoc {10}{Recapitulando}{52}{0}{10}
