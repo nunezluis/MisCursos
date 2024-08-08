@@ -30,7 +30,8 @@ Como apoyo bibliográfico tendremos
 + **Rehaga** los ejemplos 1. (p13), 3.(p14) y 4. (p17)
 #### Problemas S1
 
-
+#### Materiales
++ [Presentación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_C1.pdf) 
 
 ### Clase S2-C3/C4
 + **Estudie**
