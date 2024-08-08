@@ -4,7 +4,7 @@ Tendremos cuatro ahora de teoría (martes y jueves) y una el viernes. La hora de
 
 ## Evaluación
 + **Evaluación contínua 40%** Los problemas de los viernes. Deben ser cargados en un Git para evaluarlos y serán sustentados al azar cada viernes.
-+ **Dos previos, 20% c/u** Dos exámenes presenciales
++ **Dos previos, 20% c/u** Dos exámenes presenciales estándares
 + **Dos asignaciones 10% c/u** A definir
 
 ## Bibliografía
@@ -19,10 +19,10 @@ Como apoyo bibliográfico tendremos
 ## Programa del Curso
 
 ### Clase S1-C1/C2 Leyes de Newton
-Leer
-+ Leyes de Newton y mecánica de una partícula
-+ Mecánica de Sistemas de Partículas
-Rehacer los ejemplos 1. (p13), 3.(p14) y 4. (p17)
++ **Estudiar**
+  + Leyes de Newton y mecánica de una partícula
+  + Mecánica de Sistemas de Partículas
++ **Rehacer** los ejemplos 1. (p13), 3.(p14) y 4. (p17)
 #### Problemas S1
 
 
@@ -30,7 +30,10 @@ Rehacer los ejemplos 1. (p13), 3.(p14) y 4. (p17)
 ### Clase S2-C3/C4
 Leer
 + Coordenadas generalizadas
-+
++ Principios variacionales y ecuaciones de Euler
++ Principios de minima acción
++ Propiedades de las ecuaciones de Lagrange
++ Ecuaciones de Lagrange para varios Sistemas
 
 #### Problemas S2
 
