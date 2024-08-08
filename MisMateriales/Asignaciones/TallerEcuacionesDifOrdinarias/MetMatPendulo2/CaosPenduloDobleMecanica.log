@@ -431,4 +431,52 @@ LaTeX Info: Redefining \nameref on input line 42.
 * \textheight=578.15999pt
 * \oddsidemargin=0.0pt
 * \evensidemargin=19.8752pt
-* \topmargin=-13
+* \topmargin=-13.87262pt
+* \headheight=20.0pt
+* \headsep=25.0pt
+* \topskip=11.0pt
+* \footskip=30.0pt
+* \marginparwidth=59.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=-18.06749pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+
+! LaTeX Error: Invalid UTF-8 byte sequence (énd).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.53 \begin
+           {abstract}
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.53 \begin
+           {abstract}
+The document does not appear to be in UTF-8 encoding.
+Try adding \UseRawInputEncoding as the first line of the file
+or specify an encoding such as \usepackage [latin1]{inputenc}
+in the document preamble.
+Alternatively, save the file in UTF-8 using your editor or another tool
+
+ 
+Here is how much of TeX's memory you used:
+ 11783 strings out of 478268
+ 183524 string characters out of 5846347
+ 482270 words of memory out of 5000000
+ 29865 multiletter control sequences out of 15000+600000
+ 471096 words of font info for 31 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 60i,1n,63p,270b,363s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
