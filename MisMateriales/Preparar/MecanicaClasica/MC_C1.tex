@@ -70,21 +70,167 @@ $$
     \end{itemize}
 }
 
-%%%%% Diapo 2
-\section{Sección}
+%%%%% Diapo 3
+\section{Conceptos Básicos}
 \frame{
-  \frametitle{Título transparencia}
+  \frametitle{Posición}
+  \begin{figure}[t]
+\begin{center}
+\includegraphics[width=2.0in]{Figuras/Posicion.png}
+%\caption{Vectores atados}
+%\label{fig1vectcartes}
+\end{center}
+\end{figure}
+
    \begin{itemize}  
-  \item<1-> 
+  	\item<1->  {\bf Sistema de referencia u observador inercial}: convención para designar una posición (en coordenadas cartesianas) ${\bf r} = (x, y, z) \equiv (x^1, x^2, x^3)$ o ubicación espacial a una partícula u objeto con respecto a un origen o punto escogido O. El observador no puede estar acelerado
+	\item<2-> La posición puede depender del tiempo ${\bf r}(t) = (x^1(t), x^2(t), x^3(t))$
+    \end{itemize}
+}
+
+%%%%% Diapo 4
+\subsection{Desplazamiento, velocidad y Aceleración}
+\frame{
+  \frametitle{Desplazamiento, velocidad y Aceleración}
+   \begin{itemize}  
+  	\item<1->  desplazamiento ${\rm d}{\bf r} = {\bf r} (t + \Delta t) -{\bf r} (t)$ 
+	\item<2->  velocidad ${\bf v} = \lim_{\Delta t \rightarrow 0} \frac{{\bf r} (t + \Delta t) -{\bf r} (t)}{\Delta t} = \dot{ {\bf r} }$
+	\item<3->  aceleración ${\bf a} = \lim_{\Delta t \rightarrow 0} \frac{{\bf v} (t + \Delta t) -{\bf v} (t)}{\Delta t} = \dot{{\bf v}} = \ddot{{\bf r}} $
+	\item<4-> cantidad de momiento ${\bf p} = m{\bf v}$
+	\item<5-> Encuentre ${\bf r}(r)$ para los siguientes sistemas 
+			\begin{figure}[t]
+			\includegraphics[width=1.4in]{Figuras/Oscilador.png} \hspace{1cm} \includegraphics[width=1.4in]{Figuras/NoInercial.pdf} \\ \includegraphics[width=1.4in]{Figuras/Cohete.png}
+   		         \end{figure}
+   \end{itemize}
+}
+
+
+%%%%% Diapo 5
+\subsection{Cantidad de movimiento angular, energía cinética y trabajo}
+\frame{
+  \frametitle{Cantidad de movimiento angular}
+   \begin{itemize}  
+  	\item<1->  Para una partícula ubicada en la posición {\bf r}, con velocidad  {\bf v}, el momento angular será $\mathbf{L} \equiv \mathbf{r} \times \mathbf{p}= \mathbf{r} \times m \mathbf{v}$
+	\item<2-> El torque ejercido por una fuerza $\mathbf{F}$ sobre una partícula ubicada en $\mathbf{r}$ es $ \boldsymbol{\tau} \equiv \mathbf{r} \times \mathbf{F} = \mathbf{r} \times \frac{{\rm d} {\bf p}}{{\rm d} t} = \frac{{\rm d} (\mathbf{r} \times {\bf p})}{{\rm d} t} - \frac{{\rm d} \mathbf{r} }{{\rm d} t} \times {\bf p} \equiv \frac{{\rm d} (\mathbf{L})}{{\rm d} t}$
+	\item<3-> Para una fuerza central $\mathbf{F}=f(r) \hat{\mathbf{r}}$, el torque se anula y {\bf L} = cte
+	\item<4-> La energía cinética de una partícula con masa $m$ y velocidad {\bf v} es un escalar $T = \frac{1}{2} m v^2$
+	\item<5-> El trabajo realizado por una $\mathbf{F}$ externa sobre una partícula desde una posición $\mathbf{r}_1$ hasta una posición $\mathbf{r}_2$, como la integral de línea $W_{12} \equiv \int_1^2 \mathbf{F} \cdot {\rm d} \mathbf{s}$ donde ${\rm d} \mathbf{s}$ es el vector tangente a la trayectoria que une la posición $\mathbf{r}_1$ con la posición $\mathbf{r}_2$.
+	\item<6-> Entonces $m \int_1^2\left(\frac{{\rm d} \mathbf{v}}{{\rm d} t}\right) \cdot (\mathbf{v} {\rm d} t)  =\frac{1}{2} m \int_1^2 \mathbf{v} \cdot {\rm d} \mathbf{v} = \frac{1}{2} m \int_1^2 {\rm d}\left(v^2\right) = T_2 -T_1$.  El trabajo de $\mathbf{F}$ desde la posición $\mathbf{r}_1$ hasta la posición $\mathbf{r}_2$ depende solamente de la diferencia entre la energía cinética en las posiciones $\mathbf{r}_2$ y $\mathbf{r}_1$.
+   \end{itemize}
+}
+
+%%%%% Diapo 6
+\subsection{Fuerzas conservativas}
+\frame{
+  \frametitle{Fuerzas conservativas}
+  \begin{figure}[t]
+	\includegraphics[width=1.6in]{Figuras/Trayectoria.png} \hspace{1cm} \includegraphics[width=1.6in]{Figuras/Caminos.png} 
+  \end{figure}
+  \begin{itemize}  
+  	\item<1-> Si el trabajo $W_{12}$ de una fuerza externa $\mathbf{F}$ es independiente de la trayectoria entre $\mathbf{r}_1$ y $\mathbf{r}_2$, entonces $\mathbf{F}$ se llama fuerza conservativa: 
+$\underbrace{\int_1^2 \mathbf{F} \cdot {\rm d} \mathbf{s}}_{\text {camino A }} =
+  \underbrace{\int_1^2 \mathbf{F} \cdot {\rm d} \mathbf{s}}_{\text {camino B }} \Rightarrow 
+  \underbrace{\int_1^2 \mathbf{F} \cdot {\rm d} \mathbf{s}}_{\text {camino A }} + 
+  \underbrace{\int_2^1 \mathbf{F} \cdot {\rm d} \mathbf{s}}_{\text{camino -B }} = 0 
+ \Rightarrow \oint \mathbf{F} \cdot {\rm d} \mathbf{s} = 0$
+ 	\item<2-> Más aún $\oint_C \mathbf{F} \cdot {\rm d} \mathbf{s}=\int_S(\nabla \times \mathbf{F}) \cdot {\rm d} \mathbf{a}=0 \Rightarrow \nabla \times \mathbf{F} = 0 \Leftrightarrow \mathbf{F}=-\nabla V(\mathbf{r})$
+  \end{itemize}
+}
+%%%%% Diapo 7
+\subsection{Energía potencial y energía total}
+\frame{
+  \frametitle{Energía potencial y energía total}
+   \begin{itemize}  
+  	\item<1-> Se define la función escalar $V(\mathbf{r})=V(x, y, z)$ tal que $W_{12}  =-\int_1^2 \nabla V \cdot d \mathbf{s}  =-\int_1^2\left(\sum_{i=1}^3 \frac{\partial V}{\partial x_i} {\rm d} x_i\right)=-\int_1^2 {\rm d} V  =V_1-V_2$. Para una fuerza conservativa, el trabajo es la variación de la función potencial (energía potencial).
+  	\item<2->  Para una fuerza conservativa $T_2 -T_1 = W_{12} = V_2 -V_1 \Rightarrow T_1 +V_1 = E_1 = E_2 = T_2 +V_2 $, la enegía total se conserva
+	\item<3-> Si $\frac{{\rm d} E}{{\rm d} t} = 0 = \frac{{\rm d} T + V}{{\rm d} t}$. Como $\frac{{\rm d} T}{{\rm d} t} =  =m \frac{{\rm d} \mathbf{v}}{{\rm d} t} \cdot \mathbf{v}=\mathbf{F} \cdot \mathbf{v}=-\nabla V \cdot \mathbf{v} $. \\
+	Por otro lado $\frac{{\rm d} V(\mathbf{r}, t)}{{\rm d} t}  =\sum_{i=1}^3 \frac{\partial V}{\partial x_i} \dot{x}_i+\frac{\partial V}{\partial t}=\nabla V \cdot \mathbf{v}+\frac{\partial V}{\partial t}$.
+	\item<4-> Luego, $\frac{{\rm d} E}{{\rm d} t}=-\nabla V \cdot \mathbf{v}+\nabla V \cdot \mathbf{v}+\frac{\partial V}{\partial t}=\frac{\partial V}{\partial t}$, i.e.  
+	$\frac{\partial V}{\partial t}=0 \Rightarrow \frac{{\rm d} E}{{\rm d} t}=0$
+	\item<5-> La energía potencial $V$ puede ser definida para sistemas no conservativos, pero $V$ depende explícitamente tanto de la posición como del tiempo, $V(\mathbf{r}, t)$. La fuerza puede expresarse como $\mathbf{F}=-\nabla V(\mathbf{r}, t)$. El trabajo para mover una partícula entre los puntos $\mathbf{r}_1$ y $\mathbf{r}_2$ no es $V_1-V_2$, puesto que $V$ cambia con el tiempo. La energía total es $E=T+V$,  no se conserva durante el movimiento.
+    \end{itemize}
+}
+%%%%% Diapo 2
+\section{Sistemas de Partículas}
+\frame{
+\begin{figure}[t]
+	\includegraphics[width=1.6in]{Figuras/SistParticulas.png} \hspace{1cm} \includegraphics[width=1.6in]{Figuras/terceraley.png} 
+  \end{figure}
+  \frametitle{Sistemas de Partículas}
+   \begin{itemize}  
+  	\item<1-> La posición del centro de masa de un sistema de partículas es $\mathbf{R} \equiv \frac{\sum_i m_i \mathbf{r}_i}{\sum_i m_i}=\frac{\sum_i m_i \mathbf{r}_i}{M_{\mathrm{T}}}$,  donde $M_{\mathrm{T}}=\sum_i m_i$ es la masa total.
+	\item<2-> La velocidad del centro de masa es $\mathbf{v}_{\mathrm{cm}}=\frac{d \mathbf{R}}{d t}=\frac{1}{M_{\mathrm{T}}} \sum_i m_i \frac{d \mathbf{r}_i}{d t}$
+	\item<3-> El momento lineal total del sistema de $N$ partículas es $ \mathbf{P}_{\mathrm{T}}=\sum_i \mathbf{p}_i=\sum_i m_i \frac{d \mathbf{r}_i}{d t}=M_{\mathrm{T}} \frac{d \mathbf{R}}{d t}=M_{\mathrm{T}} \mathbf{v}_{\mathrm{cm}}$
+    \end{itemize}
+}
+
+
+%%%%% Diapo 2
+\section{Dinámica de sistemas de partículas}
+\frame{
+  \frametitle{Dinámica de sistemas de partículas}
+   \begin{itemize}  
+  	\item<1-> Si $\mathbf{F}_{j i}$ es la fuerza (interna) que la partícula $j$ ejerce sobre la partícula $i$, y $\mathbf{F}_{\text {ext }}(i)$ es la fuerza externa total sobre la partícula $i$. \\ Entonces $\mathbf{F}_{j i}=-\mathbf{F}_{i j}$.
+	\item<2-> Si $\mathbf{F}_{i j}$ es central, $\mathbf{F}_{i j}=f_{i j}\left(\left|\mathbf{r}_{i j}\right|\right) \frac{\mathbf{r}_{i j}}{\left|\mathbf{r}_{i j}\right|}$. Entonces las fuerzas sobre las partículas van en la dirección (paralela o antiparalela) del vector $\mathbf{r}_{i j}$.
+	\item<3-> Esta condición sobre fuerzas centrales se conoce como forma fuerte de la ley de acción y reacción. No todas las fuerzas cumplen esta condición. Las fuerzas magnéticas entre dos cargas en movimiento no siempre son centrales 
+ \end{itemize}
+}
+
+%%%%% Diapo 2
+%\section{Dinámica de sistemas de partículas}
+\frame{
+  \frametitle{Dinámica de sistemas de partículas}
+   \begin{itemize}  
+  	\item<1-> La ecuación de movimiento para la partícula $i$ se escribe $\sum_{j \neq i}  \mathbf{F}_{j i}^0+ \mathbf{F}_{\mathrm{ext}}(i)= \dot{\mathbf{p}}_i$
+	\item<2-> Para la fuerza total sobre el sistema, sumamos sobre todas las partículas $\sum_i \sum_j \mathbf{F}_{j i}^0+\sum_i \mathbf{F}_{\mathrm{ext}}(i)=\sum_i \dot{\mathbf{p}}_i=\sum_i \frac{d}{d t}\left(m_i \mathbf{v}_i\right)$
+	\item<3->  El primer término es cero porque contiene sumas de pares de fuerzas $\mathbf{F}_{j i}+\mathbf{F}_{i j}$ que se anulan debido a la Tercera Ley de Newton.
+	\item<4-> Si $m_i$ es constante $\forall i$, entonces $\sum_i \mathbf{F}_{\mathrm{ext}}(i)=\sum_i m_i \frac{d^2 \mathbf{r}_i}{d t^2} =M_T \frac{d^2 \mathbf{R}}{d t^2}$
+	\item<5-> Luego, $\mathbf{F}_{\mathrm{ext}}(\text { total }) \equiv \sum_i \mathbf{F}_{\mathrm{ext}}(i)=\frac{d \mathbf{P}_{\mathrm{T}}}{d t}$
+    \end{itemize}
+}
+
+
+%%%%% Diapo 2
+\section{Dinámica de sistemas de partículas}
+\frame{
+  \frametitle{Dinámica de sistemas de partículas}
+   \begin{itemize}  
+  	\item<1-> 
+	\item<2-> 
+	\item<3-> 
     \end{itemize}
 }
 
 %%%%% Diapo 2
-\section{Sección}
+\section{Dinámica de sistemas de partículas}
 \frame{
-  \frametitle{Título transparencia}
+  \frametitle{Dinámica de sistemas de partículas}
    \begin{itemize}  
-  \item<1-> 
+  	\item<1-> 
+	\item<2-> 
+	\item<3-> 
+    \end{itemize}
+}
+
+%%%%% Diapo 2
+\section{Dinámica de sistemas de partículas}
+\frame{
+  \frametitle{Dinámica de sistemas de partículas}
+   \begin{itemize}  
+  	\item<1-> 
+	\item<2-> 
+	\item<3-> 
+    \end{itemize}
+}
+
+%%%%% Diapo 2
+\section{Dinámica de sistemas de partículas}
+\frame{
+  \frametitle{Dinámica de sistemas de partículas}
+   \begin{itemize}  
+  	\item<1-> 
+	\item<2-> 
+	\item<3-> 
     \end{itemize}
 }
 
@@ -102,12 +248,12 @@ En presentación consideramos
 
 \begin{figure}[t]
 \begin{center}
-\includegraphics[width=3.6in]
-{Figuras/VectoresAtados.jpg}
+\includegraphics[width=3.6in]{Figuras/VectoresAtados.jpg}
 \caption{Vectores atados}
 %\label{fig1vectcartes}
 \end{center}
-\end{figure}}
+\end{figure}
+
 
 1. La tercera ley de Newton, puede ser violada en sistemas donde las interacciones en un entorno fuera de equilibrio, como partículas mesoscópicas en plasmas complejos (Ivlev, A., et al (2014). Statistical Mechanics where Newton's Third Law is Broken. Physical Review X, 5, 011035. https://doi.org/10.1103/PhysRevX.5.011035.)
 
