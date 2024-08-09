@@ -38,15 +38,32 @@
 \headcommand {\sectionentry {4}{Sistemas de Part\IeC {\'\i }culas}{29}{Sistemas de Part\IeC {\'\i }culas}{0}}
 \headcommand {\slideentry {4}{0}{1}{29/31}{}{0}}
 \headcommand {\beamer@framepages {29}{31}}
-\headcommand {\beamer@sectionpages {29}{31}}
 \headcommand {\beamer@subsectionpages {29}{31}}
-\headcommand {\sectionentry {5}{Din\'amica de sistemas de part\IeC {\'\i }culas}{32}{Din\'amica de sistemas de part\IeC {\'\i }culas}{0}}
-\headcommand {\slideentry {5}{0}{1}{32/34}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{32}{Din\'amica de sistemas de part\IeC {\'\i }culas}}
+\headcommand {\slideentry {4}{1}{1}{32/34}{Din\'amica de sistemas de part\IeC {\'\i }culas}{0}}
 \headcommand {\beamer@framepages {32}{34}}
-\headcommand {\slideentry {5}{0}{2}{35/39}{}{0}}
+\headcommand {\slideentry {4}{1}{2}{35/39}{Din\'amica de sistemas de part\IeC {\'\i }culas}{0}}
 \headcommand {\beamer@framepages {35}{39}}
-\headcommand {\beamer@partpages {1}{39}}
 \headcommand {\beamer@subsectionpages {32}{39}}
-\headcommand {\beamer@sectionpages {32}{39}}
-\headcommand {\beamer@documentpages {39}}
-\headcommand {\gdef \inserttotalframenumber {12}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{40}{Cantidad de Movimiento Angular}}
+\headcommand {\slideentry {4}{2}{1}{40/43}{Cantidad de Movimiento Angular}{0}}
+\headcommand {\beamer@framepages {40}{43}}
+\headcommand {\slideentry {4}{2}{2}{44/46}{Cantidad de Movimiento Angular}{0}}
+\headcommand {\beamer@framepages {44}{46}}
+\headcommand {\beamer@subsectionpages {40}{46}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{47}{Energ\IeC {\'\i }a cin\'etica de un sistemas de part\IeC {\'\i }culas}}
+\headcommand {\slideentry {4}{3}{1}{47/49}{Energ\IeC {\'\i }a cin\'etica de un sistemas de part\IeC {\'\i }culas}{0}}
+\headcommand {\beamer@framepages {47}{49}}
+\headcommand {\beamer@subsectionpages {47}{49}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{50}{Energ\IeC {\'\i }a potencial de un sistemas de part\IeC {\'\i }culas}}
+\headcommand {\slideentry {4}{4}{1}{50/54}{Energ\IeC {\'\i }a potencial de un sistemas de part\IeC {\'\i }culas}{0}}
+\headcommand {\beamer@framepages {50}{54}}
+\headcommand {\beamer@subsectionpages {50}{54}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{55}{Energ\IeC {\'\i }a Total de un sistemas de part\IeC {\'\i }culas}}
+\headcommand {\slideentry {4}{5}{1}{55/60}{Energ\IeC {\'\i }a Total de un sistemas de part\IeC {\'\i }culas}{0}}
+\headcommand {\beamer@framepages {55}{60}}
+\headcommand {\beamer@partpages {1}{60}}
+\headcommand {\beamer@subsectionpages {55}{60}}
+\headcommand {\beamer@sectionpages {29}{60}}
+\headcommand {\beamer@documentpages {60}}
+\headcommand {\gdef \inserttotalframenumber {17}}

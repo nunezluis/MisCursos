@@ -7,4 +7,8 @@
 \beamer@subsectionintoc {3}{3}{Fuerzas conservativas}{22}{0}{3}
 \beamer@subsectionintoc {3}{4}{Energ\IeC {\'\i }a potencial y energ\IeC {\'\i }a total}{24}{0}{3}
 \beamer@sectionintoc {4}{Sistemas de Part\IeC {\'\i }culas}{29}{0}{4}
-\beamer@sectionintoc {5}{Din\'amica de sistemas de part\IeC {\'\i }culas}{32}{0}{5}
+\beamer@subsectionintoc {4}{1}{Din\'amica de sistemas de part\IeC {\'\i }culas}{32}{0}{4}
+\beamer@subsectionintoc {4}{2}{Cantidad de Movimiento Angular}{40}{0}{4}
+\beamer@subsectionintoc {4}{3}{Energ\IeC {\'\i }a cin\'etica de un sistemas de part\IeC {\'\i }culas}{47}{0}{4}
+\beamer@subsectionintoc {4}{4}{Energ\IeC {\'\i }a potencial de un sistemas de part\IeC {\'\i }culas}{50}{0}{4}
+\beamer@subsectionintoc {4}{5}{Energ\IeC {\'\i }a Total de un sistemas de part\IeC {\'\i }culas}{55}{0}{4}

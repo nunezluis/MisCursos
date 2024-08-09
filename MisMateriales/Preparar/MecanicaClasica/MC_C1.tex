@@ -150,7 +150,7 @@ $\underbrace{\int_1^2 \mathbf{F} \cdot {\rm d} \mathbf{s}}_{\text {camino A }} =
 	\item<5-> La energía potencial $V$ puede ser definida para sistemas no conservativos, pero $V$ depende explícitamente tanto de la posición como del tiempo, $V(\mathbf{r}, t)$. La fuerza puede expresarse como $\mathbf{F}=-\nabla V(\mathbf{r}, t)$. El trabajo para mover una partícula entre los puntos $\mathbf{r}_1$ y $\mathbf{r}_2$ no es $V_1-V_2$, puesto que $V$ cambia con el tiempo. La energía total es $E=T+V$,  no se conserva durante el movimiento.
     \end{itemize}
 }
-%%%%% Diapo 2
+%%%%% Diapo 8
 \section{Sistemas de Partículas}
 \frame{
 \begin{figure}[t]
@@ -165,29 +165,112 @@ $\underbrace{\int_1^2 \mathbf{F} \cdot {\rm d} \mathbf{s}}_{\text {camino A }} =
 }
 
 
-%%%%% Diapo 2
-\section{Dinámica de sistemas de partículas}
+%%%%% Diapo 9
+\subsection{Dinámica de sistemas de partículas}
 \frame{
   \frametitle{Dinámica de sistemas de partículas}
    \begin{itemize}  
   	\item<1-> Si $\mathbf{F}_{j i}$ es la fuerza (interna) que la partícula $j$ ejerce sobre la partícula $i$, y $\mathbf{F}_{\text {ext }}(i)$ es la fuerza externa total sobre la partícula $i$. \\ Entonces $\mathbf{F}_{j i}=-\mathbf{F}_{i j}$.
 	\item<2-> Si $\mathbf{F}_{i j}$ es central, $\mathbf{F}_{i j}=f_{i j}\left(\left|\mathbf{r}_{i j}\right|\right) \frac{\mathbf{r}_{i j}}{\left|\mathbf{r}_{i j}\right|}$. Entonces las fuerzas sobre las partículas van en la dirección (paralela o antiparalela) del vector $\mathbf{r}_{i j}$.
-	\item<3-> Esta condición sobre fuerzas centrales se conoce como forma fuerte de la ley de acción y reacción. No todas las fuerzas cumplen esta condición. Las fuerzas magnéticas entre dos cargas en movimiento no siempre son centrales 
+	\item<3-> Esta condición sobre fuerzas centrales se conoce  como {\bf forma fuerte de la ley de acción y reacción}. No todas las fuerzas cumplen esta condición. Las fuerzas magnéticas entre dos cargas en movimiento no siempre son centrales 
  \end{itemize}
 }
 
-%%%%% Diapo 2
+%%%%% Diapo 10
 %\section{Dinámica de sistemas de partículas}
 \frame{
   \frametitle{Dinámica de sistemas de partículas}
    \begin{itemize}  
   	\item<1-> La ecuación de movimiento para la partícula $i$ se escribe $\sum_{j \neq i}  \mathbf{F}_{j i}^0+ \mathbf{F}_{\mathrm{ext}}(i)= \dot{\mathbf{p}}_i$
-	\item<2-> Para la fuerza total sobre el sistema, sumamos sobre todas las partículas $\sum_i \sum_j \mathbf{F}_{j i}^0+\sum_i \mathbf{F}_{\mathrm{ext}}(i)=\sum_i \dot{\mathbf{p}}_i=\sum_i \frac{d}{d t}\left(m_i \mathbf{v}_i\right)$
-	\item<3->  El primer término es cero porque contiene sumas de pares de fuerzas $\mathbf{F}_{j i}+\mathbf{F}_{i j}$ que se anulan debido a la Tercera Ley de Newton.
+	\item<2-> Para la fuerza total sobre el sistema, sumamos sobre todas las partículas $\sum_i \sum_{j \neq i} \mathbf{F}_{j i}^0+\sum_i \mathbf{F}_{\mathrm{ext}}(i)=\sum_i \dot{\mathbf{p}}_i=\sum_i \frac{d}{d t}\left(m_i \mathbf{v}_i\right)$
+	\item<3->  El primer término es cero porque contiene sumas de pares de fuerzas $\mathbf{F}_{j i}+\mathbf{F}_{i j} =0$ que se anulan debido a la Tercera Ley de Newton.
 	\item<4-> Si $m_i$ es constante $\forall i$, entonces $\sum_i \mathbf{F}_{\mathrm{ext}}(i)=\sum_i m_i \frac{d^2 \mathbf{r}_i}{d t^2} =M_T \frac{d^2 \mathbf{R}}{d t^2}$
 	\item<5-> Luego, $\mathbf{F}_{\mathrm{ext}}(\text { total }) \equiv \sum_i \mathbf{F}_{\mathrm{ext}}(i)=\frac{d \mathbf{P}_{\mathrm{T}}}{d t}$
     \end{itemize}
 }
+%%%%% Diapo 11
+\subsection{Cantidad de Movimiento Angular}
+\frame{
+  \frametitle{Cantidad de Movimiento Angular}
+   \begin{itemize}  
+  	\item<1-> La cantidad de movimiento angular total del sistema de partículas es $\mathbf{L}_{\mathrm{T}}=\sum_i \mathbf{L}_i=\sum_i\left(\mathbf{r}_i \times \mathbf{p}_i\right)=\sum_i\left(\mathbf{r}_i \times m_i \mathbf{v}_i\right)$
+	\item<2-> Si la posición de la partícula $i$, respecto al centro de masa es $\mathbf{r}_i^{\prime}=\mathbf{r}_i-\mathbf{R}$, la velocidad de la partícula $i$ con respecto al centro de masa será $\mathbf{v}_i^{\prime}=\frac{{\rm d} \mathbf{r}_i^{\prime}}{{\rm d} t}=\mathbf{v}_i-\mathbf{v}_{\mathrm{cm}}$.
+	\item<3-> En términos del centro de masa podemos escribir
+	$\mathbf{L}_{\mathrm{T}}=  \sum_i\left(\mathbf{r}_i^{\prime}+\mathbf{R}\right) \times m_i\left(\mathbf{v}_i^{\prime}+\mathbf{v}_{\mathrm{cm}}\right) = \sum_i\left(\mathbf{r}_i^{\prime} \times m_i \mathbf{v}_i^{\prime}\right) +  $ \\  
+	$ 	+ \underbrace {\left(\sum_i m_i \mathbf{r}_i^{\prime}\right) \times \mathbf{v}_{\mathrm{cm}}}_{= 0} + \underbrace{\mathbf{R} \times \left(\sum_i m_i \mathbf{v}_i^{\prime}\right)}_{=0} +\mathbf{R} \times \left(\sum_i m_i \mathbf{v}_{\mathrm{cm}}\right)$
+	\item<3-> Los términos que se anulan son la posición del centro de masa respecto al centro de masa y la velocidad del centro de masa respecto al centro de masa, respectivamente.
+	\item<4-> El momento angular de un sistema de partículas es ${\bf L}_T = \sum_i\left(\mathbf{r}_i^{\prime} \times \mathbf{p}_i^{\prime}\right) +  \mathbf{R} \times \mathbf{p}_{\mathrm{cm}}$. \\ Cantidad de movimiento angular respecto CM + la del CM.
+    \end{itemize}
+}
+
+%%%%% Diapo 12
+%\section{Dinámica de sistemas de partículas}
+\frame{
+  \frametitle{Cantidad de Movimiento Angular}
+   \begin{itemize}  
+  	\item<1-> La variación de la cantidad de movimiento angular respecto a un sistema de partículas es
+	$\frac{{\rm d} \mathbf{L}_{\mathrm{T}}}{{\rm d} t}=\sum_{i=1}^N \frac{{\rm d}}{{\rm d} t}\left(\mathbf{r}_i \times \mathbf{p}_i\right)= \underbrace{\sum_i\left(\mathbf{v}_i \times m \mathbf{v}_i\right)}_{=0} +\sum_i \mathbf{r}_i \times \dot{\mathbf{p}}_i $ \\ 
+	$\frac{{\rm d} \mathbf{L}_{\mathrm{T}}}{{\rm d} t} =\sum_i \mathbf{r}_i \times\left(\mathbf{F}_{\mathrm{ext}}(i)+\sum_{j \neq i} \mathbf{F}_{j i}\right) $ \\
+	$\frac{{\rm d} \mathbf{L}_{\mathrm{T}}}{{\rm d} t} =\sum_i \mathbf{r}_i \times \mathbf{F}_{\mathrm{ext}}(i)
+	+\underbrace{\sum_i \sum_{j \neq i}\left(\mathbf{r}_i \times \mathbf{F}_{j i}\right)}_{=0}$
+	\item<2-> Entonces, $\frac{d \mathbf{L}_{\mathrm{T}}}{d t}=\sum_i \mathbf{r}_i \times \mathbf{F}_{\text {ext }}(i)=\sum_i \boldsymbol{\tau}_{\text {ext }}(i)=\boldsymbol{\tau}_{\text {ext }}(\text {total })$.
+	\item<3-> Si el torque externo total en un sistema es cero, entonces el momento angular total $\mathbf{L}_{\mathrm{T}}$ es constante.
+    \end{itemize}
+}
+%%%%% Diapo 2
+\subsection{Energía cinética de un sistemas de partículas}
+\frame{
+  \frametitle{Energía cinética de un sistemas de partículas}
+   \begin{itemize}  
+  	\item<1-> La energía cinética total sistema de partículas es $T_{\text {total }}=\frac{1}{2} \sum_i m_i v_i^2 .
+$
+	\item<2-> En coordenadas del centro de masa, $\mathbf{v}_i=\mathbf{v}_i^{\prime}+\mathbf{v}_{\mathrm{cm}}$,  podemos escribir $T_{\text {total }}  =\frac{1}{2} \sum_i m_i\left(\mathbf{v}_i^{\prime}+\mathbf{v}_{\mathrm{cm}}\right) \cdot\left(\mathbf{v}_i^{\prime}+\mathbf{v}_{\mathrm{cm}}\right)$ \\
+	$T_{\text {total }}  =\frac{1}{2} \sum_i m_i v_{\mathrm{cm}}^2+\frac{1}{2} \sum_i m_i v_i^{\prime 2}+\frac{1}{2} 2 \mathbf{v}_{\mathrm{cm}} \cdot \underbrace{\sum_i m_i \mathbf{v}_i^{\prime}}_{=0} $ \\
+	Por lo tanto $T_{\text {total }}=\frac{1}{2} M_T v_{\mathrm{cm}}^2+\frac{1}{2} \sum_i m_i v_i^{\prime 2}$
+	\item<3-> La energía cinética total  tiene dos contribuciones: \\
+(i) la energía cinética del centro de masa, $\frac{1}{2} M_T v_{\mathrm{cm}}^2$; \\
+(ii) la energía cinética relativa al centro de masa, $\frac{1}{2} \sum_i m_i v_i^{\prime 2}$.
+    \end{itemize}
+}
+
+%%%%% Diapo 2
+\subsection{Energía potencial de un sistemas de partículas}
+\frame{
+  \frametitle{Energía potencial de un sistemas de partículas}
+   \begin{itemize}  
+  	\item<1->  Partimos de la ecuación de movimiento para una partícula 
+	$\mathbf{F}_{\mathrm{ext}}(i)+\sum_{j \neq i} \mathbf{F}_{j i}=\frac{d}{d t}\left(m_i \mathbf{v}_i\right)$
+	\item<2-> Las partículas interactuan mediante fuerzas centrales, entonces
+	$\mathbf{F}_{j i} \propto f_{i j}\left(\left|\mathbf{r}_{i j}\right|\right) \frac{\mathbf{r}_{i j}}{\left|\mathbf{r}_{i j}\right|}$, donde $\mathbf{r}_{i j} =\left(\mathbf{r}_j-\mathbf{r}_i\right) $
+	\item<3-> Si la energía potencial de interacción es $V_{i j}\left(\left|\mathbf{r}_{i j}\right|\right)$ tendremos $\mathbf{F}_{j i}=-\nabla_i V_{j i}\left(\left|\mathbf{r}_{i j}\right|\right)$, con $\nabla_i=\partial / \partial \mathbf{r}_i$. Como $\mathbf{F}_{j i}=-\mathbf{F}_{i j}$, las funciones $f_{i j}=f_{j i}$ son simétricas con respecto al intercambio de $i$ y $j$.
+	\item <4-> Entonces $V_{i j}\left(\left|\mathbf{r}_{i j}\right|\right)=V_{j i}\left(\left|\mathbf{r}_{i j}\right|\right)$ y, ambas $\mathbf{F}_{j i}$ y $\mathbf{F}_{i j}$ son derivables de una energía potencial de interacción entre la partícula $i$ y la partícula $j$. Así $\mathbf{F}_{j i}=-\nabla_i V_{i j}\left(\left|\mathbf{r}_{i j}\right|\right) \equiv -\nabla_j V_{i j}\left(\left|\mathbf{r}_{i j}\right|\right)$. 
+	\item<5->  Las masas $m_i$ son constantes, entonces $\mathbf{F}_{\text {ext }}(i)-\sum_{j \neq i} \nabla_i V_{i j}\left(\left|\mathbf{r}_{i j}\right|\right)=m_i \frac{{\rm d} \mathbf{v}_i}{{\rm d} t}$. Hacemos el producto escalar con $\mathbf{v}_i$, obtenemos
+$\mathbf{v}_i \cdot \mathbf{F}_{\text {ext }}(i)-\mathbf{v}_i \cdot \sum_{j \neq i} \nabla_i V_{i j}\left(\left|\mathbf{r}_{i j}\right|\right)=\frac{1}{2} m_i \frac{{\rm d} v_i^2}{{\rm d} t}$
+
+    \end{itemize}
+}
+%%%%% Diapo 2
+\subsection{Energía Total de un sistemas de partículas}
+\frame{
+  \frametitle{Energía Total de un sistemas de partículas}
+   \begin{itemize}  
+     	\item<1-> Sumando sobre todas las partículas, obtenemos $\frac{d}{d t}\left(\sum_i \frac{1}{2} m_i v_i^2\right) =$
+	$=\sum_i \mathbf{v}_i \cdot \mathbf{F}_{\text {ext }}(i)-\sum_i \sum_{j \neq i} \mathbf{v}_i \cdot \nabla_i V_{i j}\left(\left|\mathbf{r}_{i j}\right|\right)$ \\
+	$=\sum_i \mathbf{v}_i \cdot \mathbf{F}_{\text {ext }}(i)-\frac{1}{2} \sum_i \sum_{j \neq i}\left[\mathbf{v}_i \cdot \nabla_i V_{i j}\left(\left|\mathbf{r}_{i j}\right|\right)+\mathbf{v}_j \cdot \nabla_j V_{j i}\left(\left|\mathbf{r}_{i j}\right|\right)\right]$ \\
+	$=\sum_i \mathbf{v}_i \cdot \mathbf{F}_{\text {ext }}(i)-\frac{1}{2} \sum_i \sum_{j \neq i}\left[\nabla_i V_{i j}\left(\left|\mathbf{r}_{i j}\right|\right) \cdot \mathbf{v}_i+\nabla_j V_{i j}\left(\left|\mathbf{r}_{i j}\right|\right) \cdot \mathbf{v}_j\right]$ \\
+	$ =\sum_i \mathbf{v}_i \cdot \mathbf{F}_{\text {ext }}(i)-\frac{1}{2} \sum_i \sum_{j \neq i} \frac{d}{d t} V_{i j}\left(\left|\mathbf{r}_{i j}\right|\right)$ \\
+donde hemos usado $V_{i j}\left(\left|\mathbf{r}_{i j}\right|\right)=V_{j i}\left(\left|\mathbf{r}_{i j}\right|\right)$
+	\item<2-> Entonces, podemos escribir $\frac{d}{d t}\left[\left(\sum_i \frac{1}{2} m_i v_i^2\right)+\frac{1}{2} \sum_i \sum_{j \neq i} V_{i j}\left(\left|\mathbf{r}_{i j}\right|\right)\right]=\sum_i \mathbf{v}_i \cdot \mathbf{F}_{\mathrm{ext}}(i)
+$
+	\item<3-> Como las fuerzas externas son conservativas, $\mathbf{F}_{\text {ext }}(i)=-\nabla V_{\text {ext }}(i)$, tenemos, $\sum_i \mathbf{v}_i \cdot \mathbf{F}_{\text {ext }}(i)=-\sum_i \mathbf{v}_i \cdot \nabla V_{\text {ext }}(i)=-\frac{d}{d t}\left(\sum_i V_{\text {ext }}(i)\right)$.
+	\item<4-> Entonces $\frac{d}{d t}\left[\left(\sum_i \frac{1}{2} m_i v_i^2\right)+\frac{1}{2} \sum_i \sum_{j \neq i} V_{i j}\left(\left|\mathbf{r}_{i j}\right|\right)+\sum_i V_{\mathrm{ext}}(i)\right]=0$
+	\item<5-> La energía cinética total es $T_{\text {total }}=\sum_i \frac{1}{2} m_i v_i^2$ y la energía potencial total, $V_{\text {total }}=\sum_i V_{\text {ext }}(i)+\frac{1}{2} \sum_i \sum_{j \neq i} V_{i j}\left(\left|\mathbf{r}_{i j}\right|\right)$.
+	\item<6-> Finalmente, la energía total del sistema se conserva, $E_{\text {total }}=T_{\text {total }}+V_{\text {total }}=\text { constante}.$
+
+    \end{itemize}
+}
+
+
   
 \end{document}
 
