@@ -10,7 +10,7 @@ Nos organizaremos en grupos de dos estudiantes y cada grupo debe crear un git y 
 
 ### Las asignaciones
 Las asignación son parte fundamental del desarrollo del curso.  Algunas asignaciones será de aplicación de los conceptos y otras de discusión de artículos relacionados con los tópicos que estemos desarrollando.  Las asignaciones de aplicación buscan reforzar los conceptos del curso en la solución de un problema particular, muchas veces con visos de realidad. La discusión de artículos relacionan los conceptos del curso con su utilización específica reportada en la literatura.  Las asignaciones de aplicación serán presentadas de dos maneras: un reporte tipo artículo y una presentación de máximo 6 láminas expuestas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
-
+  + Como primera asignación resuelva numéricamente el péndulo doble que presentamos en [este ejercicio](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/MecanicaClasica/MecClasPendulo2.pdf)  
 
 ## Bibliografía
 ### Libro texto
@@ -23,18 +23,23 @@ Como apoyo bibliográfico tendremos
 
 ## Programa del Curso
 
-### Clase S1-C1/C2 Leyes de Newton
+### Semana 1 C1/C2 Leyes de Newton
+#### Antes de clase
 + **Estudie**
   + Leyes de Newton y mecánica de una partícula
   + Mecánica de Sistemas de Partículas
 + **Rehaga** los ejemplos 1. (p13), 3.(p14) y 4. (p17)
+
 #### Problemas S1
 Los problemas para discutir en clase los pueden encontrar [aquí](https://www.overleaf.com/read/tjknrqvvrtgv#521a1e)
 
 #### Materiales
 + [Presentación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S1DinamicaNewtonia.pdf)
 
-### Clase S2-C3/C4
+#### Al finalizar
+
+### Semana 1 C3/C4 Coordenadas generalizadas
+#### Antes de clase
 + **Estudie**
   + Coordenadas generalizadas
   + Principios variacionales y ecuaciones de Euler
@@ -42,8 +47,7 @@ Los problemas para discutir en clase los pueden encontrar [aquí](https://www.ov
   + Propiedades de las ecuaciones de Lagrange
   + Ecuaciones de Lagrange para varios Sistemas
 + **Rehaga** los ejemplos 1. (p35), 3. (p37), 4. (p39), 1. (p49), 3. (p41), 5. (p52), 6. (p54)
-+ **Resuelva**
-  + Como primera asignación resuelva numéricamente el péndulo doble que presentamos en [este ejercicio](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/TallerEcuacionesDifOrdinarias/MetMatPendulo2/MecClasPendulo2.pdf)   
+
 
 #### Problemas S2
 
