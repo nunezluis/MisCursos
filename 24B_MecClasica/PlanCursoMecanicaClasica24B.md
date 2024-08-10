@@ -29,9 +29,10 @@ Como apoyo bibliográfico tendremos
   + Mecánica de Sistemas de Partículas
 + **Rehaga** los ejemplos 1. (p13), 3.(p14) y 4. (p17)
 #### Problemas S1
+Los problemas para discutir en clase los pueden encontrar [aquí](https://www.overleaf.com/read/tjknrqvvrtgv#521a1e)
 
 #### Materiales
-+ [Presentación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_C1.pdf) 
++ [Presentación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_C1.pdf)
 
 ### Clase S2-C3/C4
 + **Estudie**
