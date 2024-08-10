@@ -7,6 +7,7 @@
 \usepackage{dsfont}
 \usepackage{graphicx}
 \usepackage{geometry}
+%\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref} % navega por el doc
 \usetheme{Madrid}
 \usecolortheme{beaver}
 \usepackage{textpos}
@@ -142,7 +143,7 @@ $\underbrace{\int_1^2 \mathbf{F} \cdot {\rm d} \mathbf{s}}_{\text {camino A }} =
   \frametitle{Energía potencial y energía total}
    \begin{itemize}  
   	\item<1-> Se define la función escalar $V(\mathbf{r})=V(x, y, z)$ tal que $W_{12}  =-\int_1^2 \nabla V \cdot d \mathbf{s}  =-\int_1^2\left(\sum_{i=1}^3 \frac{\partial V}{\partial x_i} {\rm d} x_i\right)=-\int_1^2 {\rm d} V  =V_1-V_2$. Para una fuerza conservativa, el trabajo es la variación de la función potencial (energía potencial).
-  	\item<2->  Para una fuerza conservativa $T_2 -T_1 = W_{12} = V_2 -V_1 \Rightarrow T_1 +V_1 = E_1 = E_2 = T_2 +V_2 $, la enegía total se conserva
+  	\item<2->  Para una fuerza conservativa $T_2 -T_1 = W_{12} = V_1 -V_2 \Rightarrow T_1 +V_1 = E_1 = E_2 = T_2 +V_2 $, la enegía total se conserva
 	\item<3-> Si $\frac{{\rm d} E}{{\rm d} t} = 0 = \frac{{\rm d} T + V}{{\rm d} t}$. Como $\frac{{\rm d} T}{{\rm d} t} =  =m \frac{{\rm d} \mathbf{v}}{{\rm d} t} \cdot \mathbf{v}=\mathbf{F} \cdot \mathbf{v}=-\nabla V \cdot \mathbf{v} $. \\
 	Por otro lado $\frac{{\rm d} V(\mathbf{r}, t)}{{\rm d} t}  =\sum_{i=1}^3 \frac{\partial V}{\partial x_i} \dot{x}_i+\frac{\partial V}{\partial t}=\nabla V \cdot \mathbf{v}+\frac{\partial V}{\partial t}$.
 	\item<4-> Luego, $\frac{{\rm d} E}{{\rm d} t}=-\nabla V \cdot \mathbf{v}+\nabla V \cdot \mathbf{v}+\frac{\partial V}{\partial t}=\frac{\partial V}{\partial t}$, i.e.  

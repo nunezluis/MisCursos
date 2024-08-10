@@ -10,7 +10,7 @@ Nos organizaremos en grupos de dos estudiantes y cada grupo debe crear un git y 
 
 ### Las asignaciones
 Las asignación son parte fundamental del desarrollo del curso.  Algunas asignaciones será de aplicación de los conceptos y otras de discusión de artículos relacionados con los tópicos que estemos desarrollando.  Las asignaciones de aplicación buscan reforzar los conceptos del curso en la solución de un problema particular, muchas veces con visos de realidad. La discusión de artículos relacionan los conceptos del curso con su utilización específica reportada en la literatura.  Las asignaciones de aplicación serán presentadas de dos maneras: un reporte tipo artículo y una presentación de máximo 6 láminas expuestas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
-  + Como primera asignación resuelva numéricamente el péndulo doble que presentamos en [este ejercicio](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Asignaciones/MecanicaClasica/MecClasPendulo2.pdf)  
+  + Como primera asignación analice el caso de dos péndulos acoplados que presentamos en [este documento](https://www.overleaf.com/read/tjknrqvvrtgv#521a1e)  
 
 ## Bibliografía
 ### Libro texto
