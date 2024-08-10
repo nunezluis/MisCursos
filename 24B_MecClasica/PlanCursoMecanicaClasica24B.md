@@ -32,7 +32,7 @@ Como apoyo bibliográfico tendremos
 Los problemas para discutir en clase los pueden encontrar [aquí](https://www.overleaf.com/read/tjknrqvvrtgv#521a1e)
 
 #### Materiales
-+ [Presentación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_C1.pdf)
++ [Presentación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S1DinamicaNewtonia.pdf)
 
 ### Clase S2-C3/C4
 + **Estudie**
