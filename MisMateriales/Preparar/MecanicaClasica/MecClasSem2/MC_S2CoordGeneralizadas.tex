@@ -35,7 +35,7 @@
 
 
 %%%%% Diapo 1
-\section{Coordenadas y vínculos}
+\section{Coordenadas Generalizadas}
 \frame{
   \frametitle{Coordenadas Generalizadas}
    \begin{itemize}  
@@ -49,21 +49,31 @@
     \end{itemize}
 }
 %%%%% Diapo 2
-\subsection{Vínculos holónomos y no holónomos}
+\section{Vínculos holónomos y no holónomos}
 \frame{
   \frametitle{Vínculos holónomos y no holónomos}
   \begin{itemize}  
-  	\item<1-> 
+  	\item<1-> Los vínculos holónomos son funciones de las coordenadas generalizadas y, posiblemente, del tiempo $f_i(q_1, q_2, \dots, q_N, t) = 0$. 
+	\item<2->Estas restricciones reducen el número de coordenadas independientes.
+	\item<3-> En un péndulo simple de longitud $l$, la posición de la masa en coordenadas \((x, y)\) debe satisfacer la restricción: $x^2 + y^2 - l^2 = 0$, reduciendo los grados de libertad de dos a uno.
+	\item<4-> Los vínculos holónomos son integrables y permiten describir el movimiento del sistema con menos coordenadas.
+	\item<5-> Los vínculos no holónomos son $g(q_1, q_2, \dots, q_n, \dot{q}_1, \dot{q}_2, \dots, \dot{q}_n, t) \leq 0$ o también $g(q_1, q_2, \dots, q_n, \dot{q}_1, \dot{q}_2, \dots, \dot{q}_n, t) = 0$
+	\item<6-> En un disco que rueda sin deslizar sobre un plano se tiene una restricción que involucra las velocidades del centro de masa y la velocidad angular: $ \dot{x}_{cm} - R\dot{\theta} = 0$.
+	\item<7-> Los vínculos no holónomos no pueden integrarse e involucran relaciones entre coordenadas y velocidades. 
+
    \end{itemize}
 }
-%%%%% Diapo 2
-\section{Sección}
+%%%%% Diapo 3
+\section{Ejemplos}
 \frame{
-  \frametitle{Título transparencia}
-  \begin{itemize}  
-  	\item<1-> 
-   \end{itemize}
+  \frametitle{Ejemplos}
+			\begin{figure}[t]
+			\includegraphics[width=1.4in]{Figuras/Pendulo.png} \hspace{1cm} \includegraphics[width=1.4in]{Figuras/PenduloDoble.png} \\ \includegraphics[width=1.4in]{Figuras/Cono.png} \hspace{1cm} \includegraphics[width=2.8in]{Figuras/RuedaSinDeslizar.png} 
+   		         \end{figure}
 }
+  
+\end{document}
+
 %%%%% Diapo 2
 \section{Sección}
 \frame{
@@ -106,5 +116,3 @@ En presentación consideramos
   \item<1->
     \end{enumerate}
 }
-  
-\end{document}

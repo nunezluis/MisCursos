@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  10 AUG 2024 09:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  10 AUG 2024 10:55
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1124,7 +1124,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 58.
+stitucional/UISLOGO.png  used on input line 65.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
 
 Overfull \hbox (20.52408pt too wide) has occurred while \output is active
@@ -1139,7 +1139,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 68.
+stitucional/UISLOGO.png  used on input line 65.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
 
 Overfull \hbox (20.52408pt too wide) has occurred while \output is active
@@ -1149,6 +1149,117 @@ Overfull \hbox (20.52408pt too wide) has occurred while \output is active
 [11
 
 ]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 65.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (20.52408pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[12
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 65.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (20.52408pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[13
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 65.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (20.52408pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[14
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 65.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (20.52408pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[15
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 65.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (20.52408pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[16
+
+]
+<Figuras/Pendulo.png, id=481, 734.745pt x 652.4375pt>
+File: Figuras/Pendulo.png Graphic file (type png)
+<use Figuras/Pendulo.png>
+Package pdftex.def Info: Figuras/Pendulo.png  used on input line 73.
+(pdftex.def)             Requested size: 101.17755pt x 89.83736pt.
+<Figuras/PenduloDoble.png, id=482, 764.8575pt x 580.1675pt>
+File: Figuras/PenduloDoble.png Graphic file (type png)
+<use Figuras/PenduloDoble.png>
+Package pdftex.def Info: Figuras/PenduloDoble.png  used on input line 73.
+(pdftex.def)             Requested size: 101.17755pt x 76.74345pt.
+<Figuras/Cono.png, id=483, 727.71875pt x 663.47874pt>
+File: Figuras/Cono.png Graphic file (type png)
+<use Figuras/Cono.png>
+Package pdftex.def Info: Figuras/Cono.png  used on input line 73.
+(pdftex.def)             Requested size: 101.17755pt x 92.23845pt.
+<Figuras/RuedaSinDeslizar.png, id=484, 1081.03876pt x 410.53375pt>
+File: Figuras/RuedaSinDeslizar.png Graphic file (type png)
+<use Figuras/RuedaSinDeslizar.png>
+Package pdftex.def Info: Figuras/RuedaSinDeslizar.png  used on input line 73.
+(pdftex.def)             Requested size: 202.35622pt x 76.84334pt.
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 73.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (20.52408pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[17
+
+ <./Figuras/Pendulo.png> <./Figuras/PenduloDoble.png> <./Figuras/Cono.png> <./F
+iguras/RuedaSinDeslizar.png>]
 \tf@nav=\write6
 \openout6 = `MC_S2CoordGeneralizadas.nav'.
 
@@ -1164,13 +1275,13 @@ LaTeX Info: Redefining \% on input line 25.
 )
 Package rerunfilecheck Info: File `MC_S2CoordGeneralizadas.out' has not changed
 .
-(rerunfilecheck)             Checksum: 8DE0A1B6018CB6F51DA5DA6C47EC0EEE;351.
+(rerunfilecheck)             Checksum: 8E62F3725FE3331DB1ACC2DEDAFE344E;483.
  ) 
 Here is how much of TeX's memory you used:
- 23649 strings out of 478268
- 464986 string characters out of 5846347
- 724395 words of memory out of 5000000
- 41324 multiletter control sequences out of 15000+600000
+ 23679 strings out of 478268
+ 465467 string characters out of 5846347
+ 725395 words of memory out of 5000000
+ 41337 multiletter control sequences out of 15000+600000
  477536 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,491b,857s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1182,10 +1293,10 @@ sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></
 usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></
 usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></u
 sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on MC_S2CoordGeneralizadas.pdf (11 pages, 139790 bytes).
+Output written on MC_S2CoordGeneralizadas.pdf (17 pages, 1398014 bytes).
 PDF statistics:
- 393 PDF objects out of 1000 (max. 8388607)
- 342 compressed objects within 4 object streams
- 26 named destinations out of 1000 (max. 500000)
- 120 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 563 PDF objects out of 1000 (max. 8388607)
+ 497 compressed objects within 5 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 140 words of extra memory for PDF output out of 10000 (max. 10000000)
 
