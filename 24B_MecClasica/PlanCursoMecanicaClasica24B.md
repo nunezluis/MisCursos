@@ -34,7 +34,8 @@ Como apoyo bibliográfico tendremos
 Los problemas para discutir en clase los pueden encontrar [aquí](https://www.overleaf.com/read/tjknrqvvrtgv#521a1e)
 
 #### Materiales
-+ [Presentación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S1DinamicaNewtonia.pdf)
++ [Presentación Semana 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S1DinamicaNewtonia.pdf)
+
 
 #### Al finalizar
 
@@ -48,9 +49,16 @@ Los problemas para discutir en clase los pueden encontrar [aquí](https://www.ov
   + Ecuaciones de Euler-Lagrange para varios Sistemas
 + **Rehaga** los ejemplos 1. (p35), 3. (p37), 4. (p39), 1. (p49), 3. (p41), 5. (p52), 6. (p54)
 
-
 #### Problemas S2
 
+
+#### Materiales
++ Presentaciones
+  + [Coordenadas Generalizadas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S2CoordGeneralizadas.pdf)
+  + [Cálculo Variacional](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S2T2Variacional.pdf)
++ Lecturas adicionales
+  + Ray, J. R. (1966). Nonholonomic constraints. American Journal of Physics, 34(5), 406-408.
+  + Grabowski, J., De León, M., Marrero, J. C., & Martín de Diego, D. (2009). Nonholonomic constraints: a new viewpoint. Journal of mathematical physics, 50(1).
 ### Clase S3-C5/C6
 
 ### Clase S4-C7/C8
