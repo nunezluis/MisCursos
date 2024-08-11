@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  10 AUG 2024 15:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  10 AUG 2024 17:19
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**MC_S2CoordGeneralizadas.tex
-(./MC_S2CoordGeneralizadas.tex
+**MC_S2T2Variacional.tex
+(./MC_S2T2Variacional.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24>
 (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamer.cls
@@ -743,11 +743,11 @@ Grid set 16 x 16 = 22.7622pt x 17.07166pt
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count336
 \l__pdf_internal_box=\box76
-) (./MC_S2CoordGeneralizadas.aux
+) (./MC_S2T2Variacional.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-\openout1 = `MC_S2CoordGeneralizadas.aux'.
+\openout1 = `MC_S2T2Variacional.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
@@ -841,9 +841,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
 LaTeX Info: Redefining \nameref on input line 19.
- (./MC_S2CoordGeneralizadas.out) (./MC_S2CoordGeneralizadas.out)
+ (./MC_S2T2Variacional.out) (./MC_S2T2Variacional.out)
 \@outlinefile=\write5
-\openout5 = `MC_S2CoordGeneralizadas.out'.
+\openout5 = `MC_S2T2Variacional.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 19.
@@ -948,13 +948,13 @@ Dictionary: translator-theorem-dictionary, Language: Spanish
 )
 LaTeX Info: Redefining \. on input line 19.
 LaTeX Info: Redefining \% on input line 19.
- (./MC_S2CoordGeneralizadas.nav)
+ (./MC_S2T2Variacional.nav)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 22.
 
 </Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png,
- id=38, 184.5294pt x 136.1085pt>
+ id=42, 184.5294pt x 136.1085pt>
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
@@ -966,7 +966,7 @@ stitucional/UISLOGO.png  used on input line 28.
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/
 luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png>]
-(./MC_S2CoordGeneralizadas.toc
+(./MC_S2T2Variacional.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
@@ -980,57 +980,81 @@ stitucional/UISLOGO.png  used on input line 34.
  [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
 
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
 
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 50.
+ut line 49.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 50.
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 50.
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 50.
+<Figuras/Trayectoria.png, id=116, 663.47874pt x 490.83376pt>
+File: Figuras/Trayectoria.png Graphic file (type png)
+<use Figuras/Trayectoria.png>
+Package pdftex.def Info: Figuras/Trayectoria.png  used on input line 49.
+(pdftex.def)             Requested size: 101.17755pt x 74.84267pt.
+<Figuras/TrayectoriaPerturbada.png, id=117, 597.23125pt x 483.8075pt>
+File: Figuras/TrayectoriaPerturbada.png Graphic file (type png)
+<use Figuras/TrayectoriaPerturbada.png>
+Package pdftex.def Info: Figuras/TrayectoriaPerturbada.png  used on input line 
+49.
+(pdftex.def)             Requested size: 101.17755pt x 81.95827pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 50.
+stitucional/UISLOGO.png  used on input line 49.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [3
 
-]
+ <./Figuras/Trayectoria.png> <./Figuras/TrayectoriaPerturbada.png>]
+File: Figuras/Trayectoria.png Graphic file (type png)
+<use Figuras/Trayectoria.png>
+Package pdftex.def Info: Figuras/Trayectoria.png  used on input line 49.
+(pdftex.def)             Requested size: 101.17755pt x 74.84267pt.
+File: Figuras/TrayectoriaPerturbada.png Graphic file (type png)
+<use Figuras/TrayectoriaPerturbada.png>
+Package pdftex.def Info: Figuras/TrayectoriaPerturbada.png  used on input line 
+49.
+(pdftex.def)             Requested size: 101.17755pt x 81.95827pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 50.
+stitucional/UISLOGO.png  used on input line 49.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [4
+
+[4
 
 ]
+File: Figuras/Trayectoria.png Graphic file (type png)
+<use Figuras/Trayectoria.png>
+Package pdftex.def Info: Figuras/Trayectoria.png  used on input line 49.
+(pdftex.def)             Requested size: 101.17755pt x 74.84267pt.
+File: Figuras/TrayectoriaPerturbada.png Graphic file (type png)
+<use Figuras/TrayectoriaPerturbada.png>
+Package pdftex.def Info: Figuras/TrayectoriaPerturbada.png  used on input line 
+49.
+(pdftex.def)             Requested size: 101.17755pt x 81.95827pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 50.
+stitucional/UISLOGO.png  used on input line 49.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [5
 
@@ -1040,7 +1064,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 50.
+stitucional/UISLOGO.png  used on input line 62.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [6
 
@@ -1050,7 +1074,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 50.
+stitucional/UISLOGO.png  used on input line 62.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [7
 
@@ -1060,7 +1084,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 50.
+stitucional/UISLOGO.png  used on input line 62.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [8
 
@@ -1070,7 +1094,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 50.
+stitucional/UISLOGO.png  used on input line 62.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [9
 
@@ -1080,7 +1104,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 65.
+stitucional/UISLOGO.png  used on input line 62.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [10
 
@@ -1090,7 +1114,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 65.
+stitucional/UISLOGO.png  used on input line 62.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [11
 
@@ -1100,7 +1124,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 65.
+stitucional/UISLOGO.png  used on input line 78.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [12
 
@@ -1110,7 +1134,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 65.
+stitucional/UISLOGO.png  used on input line 78.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [13
 
@@ -1120,7 +1144,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 65.
+stitucional/UISLOGO.png  used on input line 78.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [14
 
@@ -1130,7 +1154,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 65.
+stitucional/UISLOGO.png  used on input line 78.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [15
 
@@ -1140,79 +1164,114 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 65.
+stitucional/UISLOGO.png  used on input line 78.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [16
 
 ]
-<Figuras/Pendulo.png, id=481, 734.745pt x 652.4375pt>
-File: Figuras/Pendulo.png Graphic file (type png)
-<use Figuras/Pendulo.png>
-Package pdftex.def Info: Figuras/Pendulo.png  used on input line 73.
-(pdftex.def)             Requested size: 101.17755pt x 89.83736pt.
-<Figuras/PenduloDoble.png, id=482, 764.8575pt x 580.1675pt>
-File: Figuras/PenduloDoble.png Graphic file (type png)
-<use Figuras/PenduloDoble.png>
-Package pdftex.def Info: Figuras/PenduloDoble.png  used on input line 73.
-(pdftex.def)             Requested size: 101.17755pt x 76.74345pt.
-<Figuras/Cono.png, id=483, 727.71875pt x 663.47874pt>
-File: Figuras/Cono.png Graphic file (type png)
-<use Figuras/Cono.png>
-Package pdftex.def Info: Figuras/Cono.png  used on input line 73.
-(pdftex.def)             Requested size: 101.17755pt x 92.23845pt.
-<Figuras/RuedaSinDeslizar.png, id=484, 1081.03876pt x 410.53375pt>
-File: Figuras/RuedaSinDeslizar.png Graphic file (type png)
-<use Figuras/RuedaSinDeslizar.png>
-Package pdftex.def Info: Figuras/RuedaSinDeslizar.png  used on input line 73.
-(pdftex.def)             Requested size: 202.35622pt x 76.84334pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 73.
+stitucional/UISLOGO.png  used on input line 78.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [17
 
- <./Figuras/Pendulo.png> <./Figuras/PenduloDoble.png> <./Figuras/Cono.png> <./F
-iguras/RuedaSinDeslizar.png>]
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 90.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [18
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 90.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [19
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 90.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+[20
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 90.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [21
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 90.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [22
+
+]
 \tf@nav=\write6
-\openout6 = `MC_S2CoordGeneralizadas.nav'.
+\openout6 = `MC_S2T2Variacional.nav'.
 
 \tf@toc=\write7
-\openout7 = `MC_S2CoordGeneralizadas.toc'.
+\openout7 = `MC_S2T2Variacional.toc'.
 
 \tf@snm=\write8
-\openout8 = `MC_S2CoordGeneralizadas.snm'.
+\openout8 = `MC_S2T2Variacional.snm'.
 
- (./MC_S2CoordGeneralizadas.aux
+ (./MC_S2T2Variacional.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package rerunfilecheck Info: File `MC_S2CoordGeneralizadas.out' has not changed
-.
-(rerunfilecheck)             Checksum: 8E62F3725FE3331DB1ACC2DEDAFE344E;483.
+Package rerunfilecheck Info: File `MC_S2T2Variacional.out' has not changed.
+(rerunfilecheck)             Checksum: C09FD61202611AE51277D6C6B7D7582C;739.
  ) 
 Here is how much of TeX's memory you used:
- 23679 strings out of 478268
- 465467 string characters out of 5846347
- 725395 words of memory out of 5000000
- 41337 multiletter control sequences out of 15000+600000
- 477536 words of font info for 57 fonts, out of 8000000 for 9000
+ 23682 strings out of 478268
+ 465211 string characters out of 5846347
+ 731365 words of memory out of 5000000
+ 41329 multiletter control sequences out of 15000+600000
+ 477842 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,16n,122p,491b,857s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb>
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on MC_S2CoordGeneralizadas.pdf (17 pages, 1397075 bytes).
+ 128i,16n,122p,486b,857s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
+ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on MC_S2T2Variacional.pdf (22 pages, 471165 bytes).
 PDF statistics:
- 563 PDF objects out of 1000 (max. 8388607)
- 497 compressed objects within 5 object streams
- 38 named destinations out of 1000 (max. 500000)
- 140 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 729 PDF objects out of 1000 (max. 8388607)
+ 648 compressed objects within 7 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

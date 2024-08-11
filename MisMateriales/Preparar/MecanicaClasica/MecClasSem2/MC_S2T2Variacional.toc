@@ -1,0 +1,5 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Extremos de un funcional}{3}{0}{1}
+\beamer@sectionintoc {2}{Trayectorias cercanas a la extrema}{6}{0}{2}
+\beamer@sectionintoc {3}{Variaciones de un funcional}{12}{0}{3}
+\beamer@sectionintoc {4}{La ecuaci\'on de Euler}{18}{0}{4}

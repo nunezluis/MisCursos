@@ -42,10 +42,10 @@ Los problemas para discutir en clase los pueden encontrar [aquí](https://www.ov
 #### Antes de clase
 + **Estudie**
   + Coordenadas generalizadas
-  + Principios variacionales y ecuaciones de Euler
+  + Principios variacionales y ecuaciones de Euler-Lagrange
   + Principios de minima acción
-  + Propiedades de las ecuaciones de Lagrange
-  + Ecuaciones de Lagrange para varios Sistemas
+  + Propiedades de las ecuaciones de Euler-Lagrange
+  + Ecuaciones de Euler-Lagrange para varios Sistemas
 + **Rehaga** los ejemplos 1. (p35), 3. (p37), 4. (p39), 1. (p49), 3. (p41), 5. (p52), 6. (p54)
 
 
