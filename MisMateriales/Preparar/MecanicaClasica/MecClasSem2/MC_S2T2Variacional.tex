@@ -39,9 +39,9 @@
 \frame{
   \frametitle{Extremos de un funcional}
    \begin{itemize}  
-  	\item<1-> En los problemas de extremos del cálculo diferencial se busca el valor de una variable $x$ para el cual una función $y = g(x)$ es máxima o mínima. 
-  	\item<2-> En los problemas de extremos en el cálculo variacional se busca una función $f(x)$ con cual un funcional, $I=\mathcal{F}[f(x)]$, sea extremo (máximo o mínimo). 
-	\item<3-> Entonces anularemos las variaciones del funcional, $\delta I = \delta \mathcal{F}[f(x)] = 0$, para determinar la $f(x)$ que lo hace extremo.
+  	\item<1-> En los problemas de extremos del cálculo diferencial se busca el valor de una variable $x$ para el cual una función $g = g(x)$ es máxima o mínima. 
+  	\item<2-> En los problemas de extremos en el cálculo variacional se busca una función $y(x)$ con cual un funcional, $I=\mathcal{F}[y(x)]$, sea extremo (máximo o mínimo). 
+	\item<3-> Entonces anularemos las variaciones del funcional, $\delta I = \delta \mathcal{F}[y(x)] = 0$, para determinar la $y(x)$ que lo hace extremo.
 			\begin{figure}[t]
 			\includegraphics[width=1.4in]{Figuras/Trayectoria.png} \hspace{1cm} \includegraphics[width=1.4in]{Figuras/TrayectoriaPerturbada.png} 
    		         \end{figure}
@@ -52,7 +52,7 @@
 \frame{
   \frametitle{Trayectorias cercanas a la extrema}
   \begin{itemize}  
-  	\item<1->  Sea $y(x)$ la función que hace extremo el funcional $I = \mathcal{F}[f(x)] = \int_{x_1}^{x_2} {\rm d}x \; f(y(x), y^{\prime}(x), x)$. 
+  	\item<1->  Sea $y(x)$ la función que hace extremo el funcional $I = \mathcal{F}[y(x)] = \int_{x_1}^{x_2} {\rm d}x \; f(y(x), y^{\prime}(x), x)$. 
 	\item<2->  Consideremos todas las funciones cercanas a $y(x)$ de la forma $y(x,\alpha) = y(x) + \alpha \eta(x)$, con lo cual $y(x, 0) = y(x)$
 	\item<3->  La función $\eta(x)$ es diferenciable y $\eta(x_1) = \eta(x_2) = 0$, con lo cual $y(x_1, 0) = y(x_1) \equiv y_1$ y consecuentemente $y(x_2, 0) = y(x_2) \equiv y_2$
 	\item<4->  Entonces hemos transformado el funcional en una función $I(\alpha) = \mathcal{F}[f(x, \alpha)] = \int_{x_1}^{x_2} {\rm d}x \; f(y(x, \alpha), y^{\prime}(x, \alpha), x)$
@@ -86,10 +86,42 @@
 	\item<3-> Con lo cual $\frac{d}{d x}\left(\frac{\partial f}{\partial y^{\prime}}\right)-\frac{\partial f}{\partial y}=0$
 	\item<4-> La ecuación de Euler expresa la condición que debe satisfacer la función $y(x)$ para que el funcionl $I$ sea extremo. 
 	\item<5-> Es una ecuación diferencial de segundo orden para $y(x)$ para las condiciones dadas.
+	\item<6-> Los principios variacionales pueden extenderse a funcionales de varias funciones y sus derivadas $f\left(y_i(x), y_i^{\prime}(x), \ldots, x\right)$, con  $i=1,2, \ldots, s,$. Buscaremos las $y_i(x), i=1,2, \ldots, s$, que pasan por $x_1$ y $x_2$ y que hacen que $I$ adquiera un valor extremo, i.e., $\delta I=0$.
+	\item<7-> Entonces $I[y_i]=\int_{x_1}^{x_2} f\left(y_i(x), y_i^{\prime}(x), x\right) {\rm d} x \Rightarrow \delta I = 0 \Rightarrow$ \\$ \Rightarrow \frac{{\rm d}}{{\rm d} x}\left(\frac{\partial f}{\partial y_i^{\prime}}\right)-\frac{\partial f}{\partial y_i}=0$ para $ i=1,2, \ldots, s$
    \end{itemize}
 }
-
-
+%%%%% Diapo 2
+\section{Cálculo de variaciones con restricciones}
+\subsection{Multiplicadores de Lagrange}
+\frame{
+  \frametitle{Cálculo de variaciones con restricciones}
+  \begin{itemize}  
+  	\item<1-> El cálculo variacional con restricciones holónomas se implementa mediante multiplicadores de Lagrange. 
+	\item<2-> Esto  nos permite encontrar extremos de funcionales introduciendo variables adicionales (los multiplicadores de Lagrange) que garantizan esas restricciones y conducen a ecuaciones de Euler-Lagrange modificadas que deben resolverse.
+	\item<3-> Supongamos que queremos encontrar una función \( y(x) \) que minimice (o maximice) un funcional \( I = \mathcal{F}[y] = \int_{x_1}^{x_2} f(x, y(x), y'(x)) \, {\rm d}x \), donde se cumplan la restricción $g(x, y(x), y'(x)) = 0$. 
+	\item<4-> Introducimos un multiplicador de Lagrange \( \lambda(x) \) y el funcional modificado a extremar pasa a ser:
+	$\tilde{I}[y, \lambda] = \int_{x_1}^{x_2} \left( f(x, y(x), y'(x)) + \lambda(x) g(x, y(x), y'(x)) \right){\rm  d}x.$
+	\item<5-> Las ecuaciones de Euler-Lagrange, modificadas por la presencia del multiplicador de Lagrange son:
+	$\frac{\partial f}{\partial y} - \frac{{\rm  d}}{{\rm  d}x} \left( \frac{\partial f}{\partial y'} \right) + \lambda \frac{\partial g}{\partial y} - \frac{{\rm  d}}{{\rm  d}x} \left( \lambda \frac{\partial G}{\partial y'} \right) = 0$ con la restricción $G(x, y(x), y'(x)) = 0$
+   \end{itemize}
+}
+%%%%%%%%%%%%%%
+\subsection{Partícula libre moviéndose sobre una esfera}
+\frame{
+  \frametitle{Partícula libre sobre una esfera}
+  \begin{itemize}  
+  	\item<1-> Consideremos el siguiente funcional  \( I = \mathcal{F}[y] = \int_{x_1,y_1,z_1}^{x_2,y_2,z_2}  \frac{1}{2}m(\dot{x}(t)^2 + \dot{y}(t)^2 + \dot{z}(t)^2) \, {\rm d}t \), sujeto a la restricción $x^2 + y^2 + z^2 - R^2 = 0$.
+	\item<2-> Construimos una acción modifica que incorpore la restricción
+	\( \tilde{I} =  \int_{x_1,y_1,z_1}^{x_2,y_2,z_2} \left( \frac{1}{2}m(\dot{x}(t)^2 + \dot{y}(t)^2 + \dot{z}(t)^2) + \lambda (x^2 + y^2 + z^2 - R^2) \right) {\rm d}t \)
+	\item<3-> Las ecuaciones de Euler-Lagrange serán 
+	$\frac{{\rm d}}{{\rm d}t} \left( m\dot{x} \right) - \lambda \cdot 2x = 0 \Rightarrow m\ddot{x} = 2\lambda x$ \\
+	$\frac{{\rm d}}{{\rm d}t} \left( m\dot{y} \right) - \lambda \cdot 2y = 0 \Rightarrow m\ddot{y} = 2\lambda y$ \\
+	$\frac{{\rm d}}{{\rm d}t} \left( m\dot{z} \right) - \lambda \cdot 2z = 0 \Rightarrow m\ddot{x} = 2\lambda z$ 
+	\item<4-> Derivando la restricción $\frac{{\rm d}^2}{{\rm d}t^2} (x^2 + y^2 + z^2 - R^2) = 2\dot{x}^2 + 2x\ddot{x} + 2\dot{y}^2 + 2y\ddot{y} + 2\dot{z}^2 + 2z\ddot{z} = 0$
+	\item<5-> Sustituyendo  \( \ddot{x}, \ddot{y}, \ddot{z} \) tendremos $2(\dot{x}^2 + \dot{y}^2 + \dot{z}^2) + 2\lambda R^2 = 0$ y despejamos $\lambda = -\frac{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}{R^2}$
+	\item<6-> Las ecuaciones de movimento serán $m\ddot{x} = -2x\frac{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}{R^2}$ igual para $y$ y para $z$.  Las soluciones $x(t)$, $y(t)$ y $z(t)$ extreman la acción $\tilde{I}$ 
+   \end{itemize}
+}
   
 \end{document}
 
@@ -102,7 +134,7 @@
    \end{itemize}
 }
 %%%%% Diapo 2
-\section{Sección}
+\subsection{Ejemplo: Partícula sobre una esfera}
 \frame{
   \frametitle{Título transparencia}
   \begin{itemize}  
