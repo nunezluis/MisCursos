@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  10 AUG 2024 15:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  11 AUG 2024 16:50
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
-**MC_S2CoordGeneralizadas.tex
-(./MC_S2CoordGeneralizadas.tex
+**MC_S2T1CoordGeneralizadas.tex
+(./MC_S2T1CoordGeneralizadas.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24>
 (/usr/local/texlive/2022/texmf-dist/tex/latex/beamer/beamer.cls
@@ -743,11 +743,11 @@ Grid set 16 x 16 = 22.7622pt x 17.07166pt
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count336
 \l__pdf_internal_box=\box76
-) (./MC_S2CoordGeneralizadas.aux
+) (./MC_S2T1CoordGeneralizadas.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-\openout1 = `MC_S2CoordGeneralizadas.aux'.
+\openout1 = `MC_S2T1CoordGeneralizadas.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
@@ -841,9 +841,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
 LaTeX Info: Redefining \nameref on input line 19.
- (./MC_S2CoordGeneralizadas.out) (./MC_S2CoordGeneralizadas.out)
+ (./MC_S2T1CoordGeneralizadas.out) (./MC_S2T1CoordGeneralizadas.out)
 \@outlinefile=\write5
-\openout5 = `MC_S2CoordGeneralizadas.out'.
+\openout5 = `MC_S2T1CoordGeneralizadas.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 19.
@@ -948,7 +948,7 @@ Dictionary: translator-theorem-dictionary, Language: Spanish
 )
 LaTeX Info: Redefining \. on input line 19.
 LaTeX Info: Redefining \% on input line 19.
- (./MC_S2CoordGeneralizadas.nav)
+ (./MC_S2T1CoordGeneralizadas.nav)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 22.
@@ -966,7 +966,7 @@ stitucional/UISLOGO.png  used on input line 28.
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/
 luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png>]
-(./MC_S2CoordGeneralizadas.toc
+(./MC_S2T1CoordGeneralizadas.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 )
@@ -1177,30 +1177,30 @@ stitucional/UISLOGO.png  used on input line 73.
  <./Figuras/Pendulo.png> <./Figuras/PenduloDoble.png> <./Figuras/Cono.png> <./F
 iguras/RuedaSinDeslizar.png>]
 \tf@nav=\write6
-\openout6 = `MC_S2CoordGeneralizadas.nav'.
+\openout6 = `MC_S2T1CoordGeneralizadas.nav'.
 
 \tf@toc=\write7
-\openout7 = `MC_S2CoordGeneralizadas.toc'.
+\openout7 = `MC_S2T1CoordGeneralizadas.toc'.
 
 \tf@snm=\write8
-\openout8 = `MC_S2CoordGeneralizadas.snm'.
+\openout8 = `MC_S2T1CoordGeneralizadas.snm'.
 
- (./MC_S2CoordGeneralizadas.aux
+ (./MC_S2T1CoordGeneralizadas.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package rerunfilecheck Info: File `MC_S2CoordGeneralizadas.out' has not changed
-.
+Package rerunfilecheck Info: File `MC_S2T1CoordGeneralizadas.out' has not chang
+ed.
 (rerunfilecheck)             Checksum: 8E62F3725FE3331DB1ACC2DEDAFE344E;483.
  ) 
 Here is how much of TeX's memory you used:
  23679 strings out of 478268
- 465467 string characters out of 5846347
- 725395 words of memory out of 5000000
+ 465517 string characters out of 5846347
+ 725407 words of memory out of 5000000
  41337 multiletter control sequences out of 15000+600000
  477536 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,16n,122p,491b,857s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,16n,122p,493b,857s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 ></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb>
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><
@@ -1209,7 +1209,7 @@ sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></
 usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></
 usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></u
 sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on MC_S2CoordGeneralizadas.pdf (17 pages, 1397075 bytes).
+Output written on MC_S2T1CoordGeneralizadas.pdf (17 pages, 1397075 bytes).
 PDF statistics:
  563 PDF objects out of 1000 (max. 8388607)
  497 compressed objects within 5 object streams
