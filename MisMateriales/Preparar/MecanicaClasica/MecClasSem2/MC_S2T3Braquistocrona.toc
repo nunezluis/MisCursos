@@ -1,4 +1,6 @@
 \babel@toc {spanish}{}\relax 
-\beamer@sectionintoc {1}{El problema}{3}{0}{1}
-\beamer@sectionintoc {2}{El funcional y la Ecuaci\'on Euler}{4}{0}{2}
-\beamer@sectionintoc {3}{La trayectoria}{11}{0}{3}
+\beamer@sectionintoc {1}{La Braquistocrona}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{El Problema}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{El funcional y la Ecuaci\'on Euler}{4}{0}{1}
+\beamer@subsectionintoc {1}{3}{La trayectoria}{11}{0}{1}
+\beamer@sectionintoc {2}{Principio de Fermat}{15}{0}{2}

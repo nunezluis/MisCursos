@@ -18,7 +18,7 @@
 
 \begin{document}
 
-\title{\textbf{Braquistocrona} }
+\title{\textbf{Tiempo mínimo: \\ Braquistocrona y Principio de Fermat} }
 \author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
 \institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
 \textit{Universidad Industrial de Santander, Santander, Colombia } \\
@@ -35,7 +35,8 @@
 
 
 %%%%% Diapo 1
-\section{El problema}
+\section{La Braquistocrona}
+\subsection{El Problema}
 \frame{
   \frametitle{El Problema}
    \begin{itemize}  
@@ -46,7 +47,7 @@
     \end{itemize}
 }
 %%%%% Diapo 2
-\section{El funcional y la Ecuación Euler}
+\subsection{El funcional y la Ecuación Euler}
 \frame{
   \frametitle{El funcional y la ecuación de Euler}
    \begin{itemize}  
@@ -61,7 +62,7 @@
 }
 
 %%%%% Diapo 2
-\section{La trayectoria}
+\subsection{La trayectoria}
 \frame{
   \frametitle{La trayectoria}
   \begin{itemize}  
@@ -73,6 +74,33 @@
 		\includegraphics[width=2.4in]{Figuras/Cicloide.png} 
 	\end{figure}  
 
+   \end{itemize}
+}
+
+%%%%% Diapo 2
+\section{Principio de Fermat}
+\frame{
+  \frametitle{Principio de Fermat}
+  \begin{itemize}  
+  	\item<1-> La luz se propaga entre dos puntos siguiendo la trayectoria que corresponde al tiempo mínimo
+	\item<2-> La velocidad de la luz en un medio con índice de refracción $n$ es $v=c / n$, donde $c$ es la velocidad de la luz en el vacío.
+	  	\begin{figure}[t]
+		\includegraphics[width=1.4in]{Figuras/Fermat.png} 
+	\end{figure}
+	\item<3-> El tiempo para viajar entre los puntos 1 y 2 es 
+	$t_{1 \rightarrow 2} = \int_1^2 \frac{{\rm d} s}{v}=\int_1^2 n \frac{\sqrt{{\rm d} x^2+{\rm d} y^2}}{c} =\frac{1}{c} \int_{y_1}^{y_2} n \sqrt{1+\left(x^{\prime}\right)^2} {\rm d} y$
+	\item<4-> Tenemos dos índices de refracción $n=n_1$, para $y>0$, y $n=n_2$, para $y<0$, tal que $\frac{d n}{d y} \neq 0$ sólo en $y=0$.  
+   \end{itemize}
+}
+%%%%% Diapo 2
+\frame{
+  \frametitle{Principio de Fermat}
+  \begin{itemize}  
+  	\item<1-> Entonces podemos identificar $f\left(x, x^{\prime}, y\right)=n \sqrt{1+\left(x^{\prime}\right)^2}$, que satisface la ecuación de Euler, $\frac{d}{d y}\left(\frac{\partial f}{\partial x^{\prime}}\right)-\frac{\partial f}{\partial x}=0$
+	\item<2-> Con lo cual $\frac{n x^{\prime}}{\sqrt{1+x^{\prime 2}}}=$ cte. 
+	\item<3-> Adicionalmente, $x^{\prime}=\frac{d x}{d y}=-\tan \theta$, con $\theta$ el ángulo de la trayectoria de la luz con el eje $y$ (normal a la interfase). 
+	\item<4-> Con lo cual obtenemos $-\frac{n \tan \theta}{\sqrt{1+\tan ^2 \theta}} =\text { cte. } \Rightarrow n \operatorname{sen} \theta  =\text { cte. }$, 
+	\item<5-> Finalmente, implica la ley de refracción, $n_1 \operatorname{sen} \theta_1=n_2 \operatorname{sen} \theta_2$
    \end{itemize}
 }
 
