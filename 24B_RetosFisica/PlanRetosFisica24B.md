@@ -1,6 +1,6 @@
 # Retos de Física Semestre A 24
 ## Dinámica del Curso
-Bienvenidos al curso de Retos de Física del semestre A2024. El objetivo de este curso es reproducir todas las etapas del desarrollo y prueba de un modelo en Física. **La intención con la solución de cada reto es plantear un modelo teórico, realizar una simulación y contrastar (teoría + simulación) con los datos experimentales** para resolver un problema nada trivial. Los retos que planteamos no tienen una solución única y permiten varios enfoques o aproximaciones. En todas las soluciones  estos tres elementos (teoría-simulación-experimentación) deben estar presentes.
+Bienvenidos al curso de Retos de Física del semestre B2024. El objetivo de este curso es reproducir todas las etapas del desarrollo y prueba de un modelo en Física. **La intención con la solución de cada reto es plantear un modelo teórico, realizar una simulación y contrastar (teoría + simulación) con los datos experimentales** para resolver un problema nada trivial. Los retos que planteamos no tienen una solución única y permiten varios enfoques o aproximaciones. En todas las soluciones  estos tres elementos (teoría-simulación-experimentación) deben estar presentes.
 
 Los equipos de trabajo estarán conformados por tres estudiantes. La solución del reto deberá ser dominada por cada uno de los integrantes del equipo. Se vale la división del trabajo, pero al final cada uno de los miembros debe ser capaz de sustentar la solución.
 
@@ -77,7 +77,7 @@ Para garantizar la reproducibilidad de ciencia se debe adjuntar toda la informac
 ## Calendario del Curso de Retos científicos
 El calendario del curso será el siguiente:
 + **Semana 1** Conformación del equipo de trabajo y selección del reto.
-  + *Entregables (20feb):*
+  + *Entregables (21ago):*
      + Selección del reto
      + Conformación del equipo
      + Repositorio del equipo, con la siguiente estructura:
@@ -86,26 +86,26 @@ El calendario del curso será el siguiente:
         + Códigos de simulación
         + Documentos: Presentaciones y reportes  
 + **Semana 2** Recopilación de información. identificación de las referencias claves relacionadas con el tema: artículos, videos, tutoriales, etc.
-   + *Entregables (27feb):* Actualización del Git con las referencias del tema
+   + *Entregables (28ago):* Actualización del Git con las referencias del tema
 + **Semanas 3 y 4** Redacción y sustentación de la propuesta de investigación
-  + *Entregables (12mar):*
+  + *Entregables (11sep):*
       + Documento (enlace a *overleaf*) con la propuesta (max 5pg sin referencias, ni autores-resumen)
       + Documento presentación de la propuesta (7láminas)
       + Sustentación de la propuesta de investigación (10m sustentación + 5m preguntas)
       + Listado de posibles materiales
       + Actualización del git con la propuesta, la prestación de la propuesta y el listado de materiales       
 + **Semanas 5, 6 y 7** Desarrollo de la experiencia
-  + *Entregables (2abr):*
+  + *Entregables (2oct):*
       + Informe de avance (3-4láminas)
       + Sustentación informe de avance (7m sustentación + 3m preguntas)
       + Actualización del git con informe de avance
 + **Semanas 8, 9, 10 y 11** Desarrollo de la experiencia
-  + *Entregables (30abr):*
+  + *Entregables (30oct):*
       + Informe de avance (3-4láminas)
       + Sustentación informe de avance (7m sustentación + 3m preguntas)
       + Actualización del git con informe de avance
 + **Semana 12, 13 y 14** Redacción y sustentacion informe final
-  + *Entregables (21may):*
+  + *Entregables (20nov):*
       + Documento (enlace a *overleaf*) con el informe final (max 7pg sin referencias, ni autores-resumen)
       + Poster presentando el informe final (7láminas)
       + Sustentación informe de avance (7m sustentación + 3m preguntas)
@@ -123,7 +123,7 @@ La dinámica del chapoteo depende de factores como la forma del recipiente, sus 
 El emprendimiento científico [*The Spill not*](https://thespillnot.com/) comercializa un dispositivo que evita el los líquidos contenidos en tazas o vasos se derramen. Utilizando su celular, parametrice el fenómeno del derrame de líquidos utilizando este dispositivo.
 
 
-### Reto 2 *El problema inverso y las tazas* **(Equipo 4)**
+### Reto 2 *El problema inverso y las tazas*
 Si golpea la parte superior de una taza de café con una cuchara, notará que el sonido depende en gran medida de dónde se golpee. Conociendo la geometría de la taza, se puede predecir el espectro de frecuencia del sonido emitido al tocar en diferentes puntos.
 
 Considere ahora el problema inverso y encuentre una técnica experimental para reconstruir la geometría de un recipiente a partir del sonido emitido. ¿Cuál es el conocimiento mínimo sobre la geometría de la copa que se necesita para resolver el problema?  Una interesante discusión de este problema inverso lo pueden ver en el canal youtube del prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda): https://youtu.be/MfzNJE4CK_s
@@ -135,7 +135,7 @@ Hay un monton de trucos bonitos que se hacen con una [cinta de papel, clips y li
 ### Reto 4  *Variedades de Péndulos*
 Inspirado en el [video de Bruce Yeany](https://youtu.be/615GTw4TNxI) construya y estudie la dinámica de alguno de los péndulos dobles que allí proponen. Compare dos ellos, los que sean más similares. Construya un modelo teórico, simúlelo y compárelo con medidas experimentales.
 
-### Reto 5  *Cilindros danzantes* **(Equipo 2)**
+### Reto 5  *Cilindros danzantes*
 Otra vez el Prof [Tadashi Tokieda](https://en.wikipedia.org/wiki/Tadashi_Tokieda) nos presenta otro caso curioso de oscilaciones con [cilindros danzantes](https://youtu.be/JuuYFt8bahE) y también [extra de cilindros](https://youtu.be/5dJsOF7_GfY). Parametrice y intente generalizar ese fenómeno.
 
 ### Reto 6  *Estabilidad e inestabilidad conica*
@@ -147,10 +147,10 @@ Si empujas horizontalmente una botella medio llena de agua, rodará hacia delant
 ### Reto 8 *Orden en la pea*
 A veces, cuando colocamos un vaso boca abajo sobre una mesa plana mojada, empieza a moverse. Investiga su velocidad en función de los parámetros pertinentes e intenta maximizarla. Algo de [información al respecto](https://www.quora.com/Why-does-a-simple-drinking-glass-which-is-just-washed-and-kept-upside-down-start-to-move)
 
-### Reto 9 *Hidro Cañon* **(Equipo 1)**
+### Reto 9 *Hidro Cañon*
 ¿A qué altura puede saltar una pelota de ping-pong utilizando el [montaje del vídeo](https://youtu.be/mPOcFSHyd9o?t=478 )? ¿Cuál es la fracción máxima de la energía cinética total que puede transferirse a la pelota?
 
-### Reto 10 *Pelotas danzantes* **(Equipo 3)**
+### Reto 10 *Pelotas danzantes*
 Cuando una pelota sobre una superficie dura y plana,  golpeada por un chorro de agua que cae perpendicular a la superficie, [puede empezar a oscilar](https://youtu.be/yq_qSWZDHHk). Investiga cómo dependen las oscilaciones de los parámetros pertinentes.
 
 ### Reto 11 *Vasos mojados burbujeantes*
