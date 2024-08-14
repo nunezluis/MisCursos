@@ -105,7 +105,7 @@ El calendario del curso será el siguiente:
       + Sustentación informe de avance (7m sustentación + 3m preguntas)
       + Actualización del git con informe de avance
 + **Semana 12, 13 y 14** Redacción y sustentacion informe final
-  + *Entregables (20nov):*
+  + *Entregables (27nov):*
       + Documento (enlace a *overleaf*) con el informe final (max 7pg sin referencias, ni autores-resumen)
       + Poster presentando el informe final (7láminas)
       + Sustentación informe de avance (7m sustentación + 3m preguntas)
