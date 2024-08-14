@@ -74,3 +74,12 @@ Al desenrollar un rollo de cinta adhesiva, puede producirse un fuerte sonido. Ex
 
 ### Reto 23 *Deformaciones del Espacio tiempo*
 Con una tela elástica contruya un ambiente que reproduzca la deformación del espacio tiempo y pueda calcular, simular y registrar las trayectorias de partículas de prueba alrededor de cuerpos masivo. Compárelo con las geodésicas en Relatividad General. Puede inspirarse en este [video](https://www.youtube.com/watch?v=MTY1Kje0yLg) y apoyarse en Postiglione, A., & De Angelis, I. (2021). Experience gravity in the classroom using the rubber sheet: an educational proposal from the collaboration between university and school. Physics Education, 56(2), 025019.  
+
+### Reto 24  *Aro saltarín*
+Considere un aro con una masa unida que los desbalancea. Se le imprime una cantidad de movimiento y se pone a rodar. Hay casos en los cuales el sistema presenta saltos cuando está rodando. Explica el fenómeno y cómo depende de los parámetros relevantes. ¿Es posible reproducir este comportamiento con cualquier distribución desequilibrada de masas en una rueda? ¿Qué ocurre cuando se modifica el perfil del suelo, por ejemplo un plano inclinado? Puede revisar el siguiente [video](https://youtu.be/ETRpkp03stQ)
+
+### Reto 25 *El big bang*
+Cuando un globo explota, produce un sonido corto y fuerte. ¿Puedes predecir la geometría y la presión interna del globo explotado a partir del sonido de la explosión? ¿Hay algún parámetro externo que afecte al sonido?
+
+### Reto 26 Antiburbujas
+Llena un recipiente con agua cuya tensión superficial haya disminuido. A continuación, deja caer una gota de agua normal en el recipiente (muy lentamente). La gota creará la llamada "antiburbuja". Investiga el fenómeno. Maximiza el tamaño y la duración de la antiburbuja. ¿Están relacionadas estas cantidades? Puedes inspirarte en este [video](https://youtu.be/w5UMyck8D64) 
