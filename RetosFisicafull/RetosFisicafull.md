@@ -78,8 +78,9 @@ Con una tela elástica contruya un ambiente que reproduzca la deformación del e
 ### Reto 24  *Aro saltarín*
 Considere un aro con una masa unida que los desbalancea. Se le imprime una cantidad de movimiento y se pone a rodar. Hay casos en los cuales el sistema presenta saltos cuando está rodando. Explica el fenómeno y cómo depende de los parámetros relevantes. ¿Es posible reproducir este comportamiento con cualquier distribución desequilibrada de masas en una rueda? ¿Qué ocurre cuando se modifica el perfil del suelo, por ejemplo un plano inclinado? Puede revisar el siguiente [video](https://youtu.be/ETRpkp03stQ)
 
-### Reto 25 *El big bang*
-Cuando un globo explota, produce un sonido corto y fuerte. ¿Puedes predecir la geometría y la presión interna del globo explotado a partir del sonido de la explosión? ¿Hay algún parámetro externo que afecte al sonido?
+### Reto 25 *Antiburbujas*
+Llena un recipiente con agua cuya tensión superficial haya disminuido. A continuación, deja caer una gota de agua normal en el recipiente (muy lentamente). La gota creará la llamada "antiburbuja". Investiga el fenómeno. Maximiza el tamaño y la duración de la antiburbuja. ¿Están relacionadas estas cantidades? Puedes inspirarte en este [video](https://youtu.be/w5UMyck8D64)
 
-### Reto 26 Antiburbujas
-Llena un recipiente con agua cuya tensión superficial haya disminuido. A continuación, deja caer una gota de agua normal en el recipiente (muy lentamente). La gota creará la llamada "antiburbuja". Investiga el fenómeno. Maximiza el tamaño y la duración de la antiburbuja. ¿Están relacionadas estas cantidades? Puedes inspirarte en este [video](https://youtu.be/w5UMyck8D64) 
+### Reto 26 *Rebotes de pelotas de ligas*
+¿Cómo varía el "rebote" de una pelota hecha de ligas o bandas de goma en función de su tamaño?
+desde una altura de 1 m, ¿cuántas ligas elásticas maximizan la altura de rebote? La pelota debe estar compuesta en su totalidad por gomas elásticas tal y como muestra este [video](https://youtu.be/cvq2ylWdwvY?si=nOTEA9zSVqUk0Fyx)

@@ -122,10 +122,10 @@ La dinámica del chapoteo depende de factores como la forma del recipiente, sus 
 
 El emprendimiento científico [*The Spill not*](https://thespillnot.com/) comercializa un dispositivo que evita el los líquidos contenidos en tazas o vasos se derramen. Utilizando su celular, parametrice el fenómeno del derrame de líquidos utilizando este dispositivo.
 
-### Reto 2 *La fisica del telefonito* (Equipo 1)
+### Reto 2 *La fisica del telefonito*
 Cuando niños jugábamos con un [teléfono de vasos y cuerda](https://youtu.be/PmmGSF7TXBI). Dos tazas unidas por una cuerda nos permitían hablar a distancia. ¿Qué determina la distancia y la calidad de comunicación de un teléfono de este tipo? ¿Cómo depende la frecuencia de transmisión del sonido en el otro extremo de la cuerda de su tensión y diámetro? También Brue Yeany [nos muestra algunos ejemplos](https://youtu.be/iKKX9HAAtxQ) que debe considerar
 
-### Reto 3  *Aviocitos de papel* (Equipo 8)
+### Reto 3  *Aviocitos de papel*
 Para seguir la tónica de recuerdos de la infancia del reto anterior. Si construyes un [avioncito de papel con una hoja tipo carta](https://youtu.be/6fLh8eswOn0) ¿A qué distancia máxima puede volar un avión hecho con la hoja? ¿Cómo depende la distancia de la densidad del papel y del tipo de avión? ¿cambia al distancia máxima con el diseño?
 
 ### Reto 4  *Botellas oscilantes, medio vacías o medio llenas*
@@ -155,5 +155,8 @@ Con una tela elástica contruya un ambiente que reproduzca la deformación del e
 ### Reto 12 *Antiburbujas*
 Llena un recipiente con agua cuya tensión superficial haya disminuido. A continuación, deja caer una gota de agua normal en el recipiente (muy lentamente). La gota creará la llamada "antiburbuja". Investiga el fenómeno. Maximiza el tamaño y la duración de la antiburbuja. ¿Están relacionadas estas cantidades? Puedes inspirarte en este [video](https://youtu.be/w5UMyck8D64)
 
+### Reto 13 *Rebotes de pelotas de ligas*
+¿Cómo varía el rebote de una pelota hecha de ligas o bandas de goma en función de su tamaño
+cuando se lanza desde una altura de 1 m? ¿cuántas ligas elásticas maximizan la altura de rebote? La pelota debe estar compuesta en su totalidad por gomas elásticas tal y como muestra este [video](https://youtu.be/cvq2ylWdwvY?si=nOTEA9zSVqUk0Fyx)
 
 ## Avances en la evaluación
