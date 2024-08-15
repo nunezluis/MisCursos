@@ -5,4 +5,4 @@
 \beamer@sectionintoc {4}{\IeC {\textquestiondown }Qu\'e traen las Ecuaciones de Lagrange?}{13}{0}{4}
 \beamer@sectionintoc {5}{Propiedades de las Ecuaciones de Lagrange}{29}{0}{5}
 \beamer@subsectionintoc {5}{1}{Lagrangeanos equivalentes}{29}{0}{5}
-\beamer@subsectionintoc {5}{2}{Invariancia respecto a las coordenadas generalizadas}{33}{0}{5}
+\beamer@subsectionintoc {5}{2}{Invariancia respecto a transformaciones de coordenadas generalizadas}{33}{0}{5}

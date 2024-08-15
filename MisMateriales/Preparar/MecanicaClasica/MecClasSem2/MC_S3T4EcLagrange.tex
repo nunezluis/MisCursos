@@ -133,7 +133,7 @@ $$
     \end{itemize}
 }
 %%%%% Diapo 2
-\subsection{Invariancia respecto a las coordenadas generalizadas}
+\subsection{Invariancia respecto a transformaciones de coordenadas generalizadas}
 \frame{
   \frametitle{Invariancia respecto a las coordenadas generalizadas}
    \begin{itemize}  
@@ -144,27 +144,30 @@ $$
 	$q_i=q_i\left(Q_1, \ldots, Q_s, t\right) \Leftrightarrow Q_j=Q_j\left(q_1, \ldots, q_s, t\right)$,  \\
 	 $\mathcal{L}\left(Q_i, \dot{Q}_i, t\right)$,  también satisface $\frac{{\rm d}}{{\rm d} t}\left(\frac{\partial \mathcal{L}}{\partial \dot{Q}_i}\right)-\frac{\partial \mathcal{L}}{\partial Q_i}=0$
 	\item<5-> Entonces calculamos $\dot{q}_i=\frac{{\rm d} q_i}{{\rm d} t}=\sum_{k=1}^s \frac{\partial q_i}{\partial Q_k} \dot{Q}_k+\frac{\partial q_i}{\partial t}$
-	\item<6-> El ``nuevo'' Lagrangiano será $\mathcal{L}\left(Q_1, \ldots, \dot{Q}_1, \ldots, t\right)=\mathcal{L}\left[q_i\left(Q_1, \ldots, t\right), \dot{q}_i\left(Q_1, \ldots, t\right), t\right]$
+	\item<6-> El ``nuevo'' Lagrangiano será $\mathcal{L}\left(Q_1, \ldots, \dot{Q}_1, \ldots, t\right)=\mathcal{L}\left[q_i\left(Q_1, \ldots, t\right), \dot{q}_i\left(Q_1, \ldots, \dot{Q}_1, \ldots, t\right), t\right]$
 
     \end{itemize}
 }
 %%%%% Diapo 2
 %\section{Sección}
 \frame{
-  \frametitle{Invariancia respecto a las coordenadas generalizadas}
+  \frametitle{Invariancia respecto las coordenadas generalizadas}
    \begin{itemize}  
-  	\item<1-> 
+  	\item<1-> Entonces 
+	$\frac{\partial \mathcal{L}}{\partial Q_i}  =\sum_{j=1}^s\left(\frac{\partial \mathcal{L}}{\partial q_j} \frac{\partial q_j}{\partial Q_i}+\frac{\partial \mathcal{L}}{\partial \dot{q}_j} \frac{\partial \dot{q}_j}{\partial Q_i}\right)$ y
+	$\frac{\partial \mathcal{L}}{\partial \dot{Q}_i}  =
+	\sum_{j=1}^s\left(\underbrace{\frac{\partial \mathcal{L}}{\partial q_j} \frac{\partial q_j}{\partial \dot{Q}_i}}_{=0}
+	+\frac{\partial L}{\partial \dot{q}_j} \frac{\partial \dot{q}_j}{\partial \dot{Q}_i}\right)=\sum_{j=1}^s \frac{\partial L}{\partial \dot{q}_j} \frac{\partial \dot{q}_j}{\partial \dot{Q}_i} $
+	%
+	\item<2-> Además $\frac{\partial \dot{q}_j}{\partial \dot{Q}_i}  =\sum_{k=1}^s \frac{\partial q_j}{\partial Q_k} \frac{\partial \dot{Q}_k}{\partial \dot{Q}_i}  =\sum_{k=1}^s \frac{\partial q_j}{\partial Q_k} \delta_{i k}=\frac{\partial q_j}{\partial Q_i}$
+	%
+	\item<3-> Entonces, $\frac{{\rm d}}{{\rm d} t}\left(\frac{\partial \mathcal{L}}{\partial \dot{Q}_i}\right)-\frac{\partial \mathcal{L}}{\partial Q_i}=\frac{{\rm d}}{{\rm d} t}\left(\sum_{j=1}^s \frac{\partial \mathcal{L}}{\partial \dot{q}_j} \frac{\partial q_j}{\partial Q_i}\right)-\sum_{j=1}^s\left(\frac{\partial \mathcal{L}}{\partial q_j} \frac{\partial q_j}{\partial Q_i}+\frac{\partial \mathcal{L}}{\partial \dot{q}_j} \frac{\partial \dot{q}_j}{\partial Q_i}\right) =$
+	$=\sum_{j=1}^s\left[\frac{\partial q_j}{\partial Q_i} 
+	\underbrace{\left(\frac{{\rm d}}{{\rm d} t}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_j} \right)	-\frac{\partial \mathcal{L}}{\partial q_j}\right)}_{=0} 
+	+\frac{\partial \mathcal{L}}{\partial \dot{q}_j}
+	\underbrace{\left(\frac{{\rm d}}{{\rm d} t}\left(\frac{\partial q_j}{\partial Q_i}\right)-\frac{\partial \dot{q}_j}{\partial Q_i}\right)}_{=0}\right]$
+	\item<4-> Por lo tanto $\frac{{\rm d}}{{\rm d} t}\left(\frac{\partial \mathcal{L}}{\partial \dot{Q}_i}\right)-\frac{\partial \mathcal{L}}{\partial Q_i}=0$
     \end{itemize}
 }
-
-%%%%% Diapo 2
-%\section{Sección}
-\frame{
-  \frametitle{Propiedades de las Ecuaciones de Lagrange}
-   \begin{itemize}  
-  	\item<1-> 
-    \end{itemize}
-}
-
   
 \end{document}
