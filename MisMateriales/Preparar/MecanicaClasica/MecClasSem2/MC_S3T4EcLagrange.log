@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  15 AUG 2024 11:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  15 AUG 2024 12:03
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1421,7 +1421,7 @@ LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
 Package rerunfilecheck Info: File `MC_S3T4EcLagrange.out' has not changed.
-(rerunfilecheck)             Checksum: BFB930EDBC92A8E7805EB1A753157F18;1793.
+(rerunfilecheck)             Checksum: 840A8CFBD5467D7F289FE422A20FF705;1869.
  ) 
 Here is how much of TeX's memory you used:
  23757 strings out of 478268
@@ -1446,7 +1446,7 @@ texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/t
 exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on MC_S3T4EcLagrange.pdf (42 pages, 314126 bytes).
+Output written on MC_S3T4EcLagrange.pdf (42 pages, 313836 bytes).
 PDF statistics:
  1283 PDF objects out of 1440 (max. 8388607)
  1179 compressed objects within 12 object streams
