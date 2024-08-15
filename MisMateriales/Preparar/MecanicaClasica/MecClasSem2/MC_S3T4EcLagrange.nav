@@ -9,16 +9,38 @@
 \headcommand {\beamer@framepages {3}{6}}
 \headcommand {\beamer@sectionpages {3}{6}}
 \headcommand {\beamer@subsectionpages {3}{6}}
-\headcommand {\sectionentry {2}{Secci\'on}{7}{Secci\'on}{0}}
+\headcommand {\sectionentry {2}{Principios de M\IeC {\'\i }nima Acci\'on y Extremos Variacionales}{7}{Principios de M\IeC {\'\i }nima Acci\'on y Extremos Variacionales}{0}}
 \headcommand {\slideentry {2}{0}{1}{7/7}{}{0}}
 \headcommand {\beamer@framepages {7}{7}}
 \headcommand {\beamer@sectionpages {7}{7}}
 \headcommand {\beamer@subsectionpages {7}{7}}
-\headcommand {\sectionentry {3}{Recapitulando}{8}{Recapitulando}{0}}
-\headcommand {\slideentry {3}{0}{1}{8/8}{}{0}}
-\headcommand {\beamer@framepages {8}{8}}
-\headcommand {\beamer@partpages {1}{8}}
-\headcommand {\beamer@subsectionpages {8}{8}}
-\headcommand {\beamer@sectionpages {8}{8}}
-\headcommand {\beamer@documentpages {8}}
-\headcommand {\gdef \inserttotalframenumber {5}}
+\headcommand {\sectionentry {3}{Ecuaciones de Lagrange}{8}{Ecuaciones de Lagrange}{0}}
+\headcommand {\slideentry {3}{0}{1}{8/12}{}{0}}
+\headcommand {\beamer@framepages {8}{12}}
+\headcommand {\beamer@sectionpages {8}{12}}
+\headcommand {\beamer@subsectionpages {8}{12}}
+\headcommand {\sectionentry {4}{\IeC {\textquestiondown }Qu\'e traen las Ecuaciones de Lagrange?}{13}{\IeC {\textquestiondown }Qu\'e traen las Ecuaciones de Lagrange?}{0}}
+\headcommand {\slideentry {4}{0}{1}{13/18}{}{0}}
+\headcommand {\beamer@framepages {13}{18}}
+\headcommand {\slideentry {4}{0}{2}{19/23}{}{0}}
+\headcommand {\beamer@framepages {19}{23}}
+\headcommand {\slideentry {4}{0}{3}{24/28}{}{0}}
+\headcommand {\beamer@framepages {24}{28}}
+\headcommand {\beamer@sectionpages {13}{28}}
+\headcommand {\beamer@subsectionpages {13}{28}}
+\headcommand {\sectionentry {5}{Propiedades de las Ecuaciones de Lagrange}{29}{Propiedades de las Ecuaciones de Lagrange}{0}}
+\headcommand {\beamer@subsectionpages {29}{28}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{29}{Lagrangeanos equivalentes}}
+\headcommand {\slideentry {5}{1}{1}{29/32}{Lagrangeanos equivalentes}{0}}
+\headcommand {\beamer@framepages {29}{32}}
+\headcommand {\beamer@subsectionpages {29}{32}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{33}{Invariancia respecto a las coordenadas generalizadas}}
+\headcommand {\slideentry {5}{2}{1}{33/38}{Invariancia respecto a las coordenadas generalizadas}{0}}
+\headcommand {\beamer@framepages {33}{38}}
+\headcommand {\slideentry {5}{2}{2}{39/39}{Invariancia respecto a las coordenadas generalizadas}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\beamer@partpages {1}{39}}
+\headcommand {\beamer@subsectionpages {33}{39}}
+\headcommand {\beamer@sectionpages {29}{39}}
+\headcommand {\beamer@documentpages {39}}
+\headcommand {\gdef \inserttotalframenumber {11}}

@@ -39,31 +39,132 @@
 \frame{
   \frametitle{Principio de Mínima Acción}
    \begin{itemize}  
-  	\item<1-> Consideremos un sistema descrito por $s$ coordenadas generalizadas $\left\{q_1, q_2, \ldots, q_s\right\}$ y sus $s$ velocidades generalizadas $\left\{\dot{q}_1, \dot{q}_2, \ldots, \dot{q}_s\right\}$. 
-  	\item<2-> Definimos una función $\mathcal{L}$ de $\left\{q_j\right\},\left\{\dot{q}_j\right\}$ y $t$, de la forma $\mathcal{L}\left(q_j, \dot{q}_j, t\right) \equiv T-V, \quad j=1,2, \ldots, s$, donde $T$ y $V$ son la energía cinética y la energía potencial del sistema, respectivamente.
-	\item<3-> El estado del sistema, en $t=t_1$ y $t=t_2$, está descrito por $t_1:\left\{q_j\left(t_1\right)\right\},\left\{\dot{q}_j\left(t_1\right)\right\}$ y  $t_2:\left\{q_j\left(t_2\right)\right\},\left\{\dot{q}_j\left(t_2\right)\right\}$
-	\item<4-> El Principio de mínima acción, implica que la evolución del sistema entre el estado en $t_1$ al $t_2$ es tal que el valor de la integral definida
-$S=\int_{t_1}^{t_2} \mathcal{L}\left(q_j, \dot{q}_j, t\right) {\rm d} t,$
-denominada la acción del sistema, sea mínima; es decir, $\delta S=0$ ( $S$ es un extremo).
+  	\item<1-> Consideremos un sistema descrito por las coordenadas generalizadas $\left\{q_1(t), q_2(t), \ldots, q_s(t)\right\}$ y sus velocidades $\left\{\dot{q}_1(t), \dot{q}_2(t), \ldots, \dot{q}_s(t)\right\}$. 
+  	\item<2-> Definimos una función de la forma $\mathcal{L}\left(q_j(t), \dot{q}_j(t), t\right) \equiv T-V,$  para $j=1,2, \ldots, s$, donde $T$ y $V$ son la energía cinética y potencial.
+	\item<3-> El estado del sistema está descrito por $t_1:\left\{q_j\left(t_1\right)\right\},\left\{\dot{q}_j\left(t_1\right)\right\}$ y  $t_2:\left\{q_j\left(t_2\right)\right\},\left\{\dot{q}_j\left(t_2\right)\right\}$
+	\item<4-> El Principio de mínima acción, implica que la evolución del sistema entre el estado en $t_1$ al $t_2$ es tal que el valor de la integral definida $S=\int_{t_1}^{t_2} \mathcal{L}\left(q_j, \dot{q}_j, t\right) {\rm d} t,$ denominada la acción del sistema, sea mínima; es decir, $\delta S=0$ ( $S$ es un extremo).
     \end{itemize}
 }
 %%%%% Diapo 2
-\section{Sección}
+\section{Principios de Mínima Acción y Extremos Variacionales}
 \frame{
-  \frametitle{Título transparencia}
+  \frametitle{Principios de Mínima Acción y Variacional}
+  Se pueden establecer una analogía entre el Principio de mínima acción y un principio variacional para funciones de varias variables:
+$$
+\begin{aligned}
+S=\int_{t_1}^{t_2} \mathcal{L}\left(q_j, \dot{q}_j, t\right) {\rm d} t & \leftrightarrow  I=\int_{x_1}^{x_2} f\left(y_i, y_i^{\prime}, x\right) {\rm d} x \\
+\mathcal{L}\left(q_j, \dot{q}_j, t\right) & \leftrightarrow f\left(y_i, y_i^{\prime}, x\right) \\
+t & \leftrightarrow x \\
+q_j & \leftrightarrow y_i \\
+\dot{q}_j & \leftrightarrow y_i^{\prime} \\
+\delta q_j(t) & \leftrightarrow \eta_i(x) \\
+\delta \dot{q}_j(t) & \leftrightarrow \eta_i^{\prime}(x) \\
+\frac{d}{d t}\left(\frac{\partial L}{\partial \dot{q}_j}\right)-\frac{\partial L}{\partial q_j}=0 & \leftrightarrow  \frac{{\rm d}}{{\rm d} x}\left(\frac{\partial f}{\partial y_i^{\prime}}\right)-\frac{\partial f}{\partial y_i}=0 .
+\end{aligned}
+$$
+
+}
+%%%%% Diapo 2
+\section{Ecuaciones de Lagrange}
+\frame{
+  \frametitle{Ecuaciones de Lagrange}
    \begin{itemize}  
-  \item<1-> 
+  	\item<1-> Para encontrar las ecuaciones de movimiento a partir del Principio de mínima acción, se requiere identificar las trayectorias $q_j(t), j=1, \ldots, s$, que hacen extrema a $S$.
+	\item<2-> Consideremos las trayectorias perturbadas de $q_j$ como $q_j(t)+\delta q_j(t)$, y consecuentemente $\dot{q}_j$ como $\dot{q}_j(t)+\delta \dot{q}_j(t)$.
+	\item<3-> La variación en $S$ cuando $q_j(t)$ es $q_j(t)+\delta q_j(t)$, y $\dot{q}_j$ es $\dot{q}_j(t)+\delta \dot{q}_j(t)$, resulta en $\delta S  =\int_{t_1}^{t_2} \mathcal{L}\left(q_j+\delta q_j, \dot{q}_j+\delta \dot{q}_j, t\right) {\rm d} t-\int_{t_1}^{t_2} \mathcal{L}\left(q_j, \dot{q}_j, t\right) {\rm d} t  \Rightarrow$
+	$\delta S  = \int_{t_1}^{t_2} \delta \mathcal{L}\left(q_j, \dot{q}_j, t\right) {\rm d} t=\int_{t_1}^{t_2} \sum_{j=1}^s\left[\frac{\partial \mathcal{L}}{\partial q_j} \delta q_j+\frac{\partial \mathcal{L}}{\partial \dot{q}_j} \delta \dot{q}_j\right] {\rm d} t $
+	\item<4-> Podemos expresar el segundo término como  $\int_{t_1}^{t_2} \frac{\partial \mathcal{L}}{\partial \dot{q}_j} \frac{d}{d t}\left(\delta q_j\right) {\rm d} t= \underbrace{\left.\frac{\partial \mathcal{L}}{\partial \dot{q}_j} \delta q_j\right|_{t_1} ^{t_2}}_{=0} -\int_{t_1}^{t_2} \frac{{\rm d}}{{\rm d} t}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\right) \delta q_j$.
+	\item<5-> Finalmente $\delta S=\int_{t_1}^{t_2} \sum_{j=1}^s\left[\frac{\partial \mathcal{L}}{\partial q_j}-\frac{{\rm d}}{{\rm d} t}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\right)\right] \delta q_j {\rm d} t=0$
+
+   
+    \end{itemize}
+}
+%%%%% Diapo 2
+\section{¿Qué traen las Ecuaciones de Lagrange?}
+\frame{
+  \frametitle{¿Qué traen las Ecuaciones de Lagrange? 1/3}
+   \begin{itemize}  
+  	\item<1->  Las ecuaciones de Lagrange son un conjunto de $s$ ecuaciones diferenciales de segundo orden acopladas para las $s$ coordenadas generalizadas $q_j(t)$, las cuales describen la evolución del sistema en el tiempo: $\frac{{\rm d}}{{\rm d} t}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\right)-\frac{\partial \mathcal{L}}{\partial q_j}=0, \quad j=1, \ldots, s$
+  	\item<2-> Las ecuaciones de Lagrange son equivalentes a la Segunda Ley de Newton si las coordenadas generalizadas corresponden a las coordenadas cartesianas de las partículas del sistema.
+	\item<3-> consideremos $N$ partículas denotadas por $\alpha=1,2, \ldots, N$. Sea $x_{j \, \alpha}$ la componente cartesiana $j=1,2,3$ de la posición $\mathbf{r}_\alpha$ de la partícula $\alpha$
+	\item<4-> Si la energía cinética del sistema es $T=\sum_{\alpha=1}^N \sum_{i=1}^3 \frac{1}{2} m_\alpha \dot{x}_{i\, \alpha}^2$
+	\item<5-> La energía potencial es $V=\sum_{\alpha=1}^N V_\alpha(\mathbf{r}_1, \mathbf{r}_2, \ldots, \mathbf{r}_N)$
+	\item<6-> El Lagrangiano está dado por $\mathcal{L}=T-V=\sum_{\alpha=1}^N \sum_{i=1}^3 \frac{1}{2} m_\alpha \dot{x}_{i\, \alpha}^2-\sum_{\alpha=1}^N V_\alpha(\mathbf{r}_1, \mathbf{r}_2, \ldots, \mathbf{r}_N)$	
+    \end{itemize}
+}
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+  \frametitle{¿Qué traen las Ecuaciones de Lagrange? 2/3}
+   \begin{itemize}  
+  	\item<1-> La ecuación de Lagrange para la coordenada $x_{j \, \alpha}$ de la partícula $\alpha$ es $\frac{{\rm d}}{{\rm d} t}\left(\frac{\partial \mathcal{L}}{\partial \dot{x}_{j \,\alpha} }\right)-\frac{\partial \mathcal{L}}{\partial x_{j \,\alpha}}=0$
+	\item<2-> Por lo tanto $\frac{\partial \mathcal{L}}{\partial \dot{x}_{j \, \alpha}}  =\frac{\partial T}{\partial \dot{x}_{j \, \alpha}}=m(\alpha) \dot{x}_{j \, \alpha}=p_{j \, \alpha},$ y 
+	$\frac{\partial L}{\partial x_{j \, \alpha}}  =-\frac{\partial V_\alpha}{\partial x_{j \, \alpha}}=F_{j \, \alpha}$
+	\item<3-> La ecuación de Lagrange para $x_{j \, \alpha}$ es $\frac{d p_{j \, \alpha}}{d t}=F_{j \, \alpha}$ que corresponde a la Segunda ley de Newton para la componente $j$ de las coordenadas cartesianas de la partícula $\alpha$.
+	\item<4-> Las ecuaciones de Lagrange no constituyen una nueva teoría del movimiento
+	\item<5-> Los resultados de la formulación Lagrangiana o de la formulación Newtoniana del movimiento de un sistema dado son los mismos, pero Las ecuaciones de Lagrange son más generales que la segunda Ley de Newton y son aplicables a cualquier conjunto de coordenadas generalizadas de un sistema.  
     \end{itemize}
 }
 
-%%%%% Diapo Fin
-\section{Recapitulando}
+%%%%% Diapo 2
+%\section{Sección}
 \frame{
-  \frametitle{Recapitulando}
-En presentación consideramos
-  \begin{enumerate}
-  \item<1->
-    \end{enumerate}
+  \frametitle{¿Qué traen las Ecuaciones de Lagrange? 3/3}
+   \begin{itemize}  
+  	\item<1-> Las leyes de Newton enfatizan {\bf causas externas vectoriales (fuerzas)} actuando sobre un cuerpo, mientras que la formulación Lagrangiana se enfoca en {\bf cantidades escalares (energías cinética y potencial)} asociadas con el cuerpo.
+	\item<2-> La formulación Newtoniana describe el movimiento de un sistema partícula por partícula, mientras la formulación Lagrangiana describe el movimiento como una propiedad de todo el sistema.
+	\item<3-> {\bf El punto de vista Newtoniano explica el movimiento por causa-efecto. El Principio de mínima acción interpreta el movimiento como el resultado de un propósito de la Naturaleza}
+	\item<4-> La formulación Newtoniana, requiere que las ligaduras sean descritas como ``fuerzas''  actuando sobre las partículas. La formulación Lagrangiana incluye las ligaduras dentro de las coordenadas generalizadas.
+	\item<5-> La formulación Lagrangiana permite descubrir simetrías fundamentales de los sistemas físicos
+    \end{itemize}
 }
+%%%%% Diapo 2
+\section{Propiedades de las Ecuaciones de Lagrange}
+\subsection{Lagrangeanos equivalentes}
+\frame{
+  \frametitle{Lagrangeanos equivalentes}
+   \begin{itemize}  
+  	\item<1->  Las ecuaciones de movimiento de un sistema son invariantes si a su Lagrangiano se le agrega una derivada total temporal de una función $f\left(q_j, t\right)$.
+	\item<2-> Sea $\mathcal{L}\left(q_j, \dot{q}_j, t\right)$ el Lagrangiano del sistema para el cual $\delta S=0$. El nuevo Lagrangiano será $\mathcal{L}^{\prime}\left(q_j, \dot{q}_j, t\right)=\mathcal{L}\left(q_j, \dot{q}_j, t\right)+\frac{{\rm d} f\left(q_j, t\right)}{{\rm d} t}$
+	\item<3-> La nueva acción es $S^{\prime}  =\int_{t_1}^{t_2} \mathcal{L}^{\prime}\left(q_j, \dot{q}_j, t\right) {\rm d} t \Rightarrow$
+	$ S^{\prime} =\int_{t_1}^{t_2} \mathcal{L}\left(q_j, \dot{q}_j, t\right) {\rm d} t+f\left(q_j\left(t_2\right), t_2\right)-f\left(q_j\left(t_1\right), t_1\right) $
+	\item<4-> Luego, $\delta S^{\prime}=\delta S+ \underbrace{\delta f\left(q_j\left(t_2\right), t_2\right)}_{=0} - \underbrace{\delta f\left(q_j\left(t_1\right), t_1\right)}_{=0} \Rightarrow \delta S^{\prime}=\delta S$
+	\item<4-> Por lo tanto $\frac{{\rm d}}{{\rm d} t}\left(\frac{\partial \mathcal{L}^{\prime}}{\partial \dot{x}_{j \,\alpha} }\right)-\frac{\partial \mathcal{L}^{\prime}}{\partial x_{j \,\alpha}} \equiv \frac{{\rm d}}{{\rm d} t}\left(\frac{\partial \mathcal{L}}{\partial \dot{x}_{j \,\alpha} }\right)-\frac{\partial \mathcal{L}}{\partial x_{j \,\alpha}}=0$
+    \end{itemize}
+}
+%%%%% Diapo 2
+\subsection{Invariancia respecto a las coordenadas generalizadas}
+\frame{
+  \frametitle{Invariancia respecto a las coordenadas generalizadas}
+   \begin{itemize}  
+  	\item<1->  La forma de las ecuaciones de Lagrange es invariante bajo transformacioes de coordenadas generalizadas.
+	\item<2->  Sean las $q_i,s \quad i=1, \ldots, s$, las coordenadas generalizadas de un sistema con $s$ grados de libertad y cuyo Lagrangiano es $\mathcal{L}\left(q_i, \dot{q}_i, t\right)$.
+	\item<3-> Con las ecuaciones de Lagrange $\frac{{\rm d}}{{\rm d} t}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\right)-\frac{\partial \mathcal{L}}{\partial q_j}=0$
+	\item<4-> Bajo la transformación de coordenadas 
+	$q_i=q_i\left(Q_1, \ldots, Q_s, t\right) \Leftrightarrow Q_j=Q_j\left(q_1, \ldots, q_s, t\right)$,  \\
+	 $\mathcal{L}\left(Q_i, \dot{Q}_i, t\right)$,  también satisface $\frac{{\rm d}}{{\rm d} t}\left(\frac{\partial \mathcal{L}}{\partial \dot{Q}_i}\right)-\frac{\partial \mathcal{L}}{\partial Q_i}=0$
+	\item<5-> Entonces calculamos $\dot{q}_i=\frac{{\rm d} q_i}{{\rm d} t}=\sum_{k=1}^s \frac{\partial q_i}{\partial Q_k} \dot{Q}_k+\frac{\partial q_i}{\partial t}$
+	\item<6-> El ``nuevo'' Lagrangiano será $\mathcal{L}\left(Q_1, \ldots, \dot{Q}_1, \ldots, t\right)=\mathcal{L}\left[q_i\left(Q_1, \ldots, t\right), \dot{q}_i\left(Q_1, \ldots, t\right), t\right]$
+
+    \end{itemize}
+}
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+  \frametitle{Invariancia respecto a las coordenadas generalizadas}
+   \begin{itemize}  
+  	\item<1-> 
+    \end{itemize}
+}
+
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+  \frametitle{Propiedades de las Ecuaciones de Lagrange}
+   \begin{itemize}  
+  	\item<1-> 
+    \end{itemize}
+}
+
   
 \end{document}
