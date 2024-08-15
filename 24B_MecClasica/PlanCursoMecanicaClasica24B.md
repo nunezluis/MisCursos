@@ -57,6 +57,7 @@ Los problemas para discutir en clase los pueden encontrar [aquí](https://www.ov
   + [Coordenadas Generalizadas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S2CoordGeneralizadas.pdf)
   + [Cálculo Variacional](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S2T2Variacional.pdf)
   + [Tiempo mínimo: la Braquistocrona y el principio de Fermat](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S2T3Braquistocrona.pdf)
+  + [Principio de Mínima Acción y las ecuaciones de Lagrange](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S3T4EcLagrange.pdf)
 + Lecturas adicionales
   + Ray, J. R. (1966). Nonholonomic constraints. American Journal of Physics, 34(5), 406-408.
   + Grabowski, J., De León, M., Marrero, J. C., & Martín de Diego, D. (2009). Nonholonomic constraints: a new viewpoint. Journal of mathematical physics, 50(1).
