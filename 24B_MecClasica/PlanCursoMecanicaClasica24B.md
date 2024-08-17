@@ -16,11 +16,12 @@ Las asignación son parte fundamental del desarrollo del curso.  Algunas asignac
 ### Libro texto
 Seguiremos como libro texto: [Mecánica Clásica (2016)](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Cosenza2016PrePrint.pdf) preprint de mi gran amigo [Mario Cosenza](https://scholar.google.co.ve/citations?hl=es&user=wmSC_7EAAAAJ)   
 
+
 ### Referencias adicionales
 Como apoyo bibliográfico tendremos
 + Thornton, S. T., & Marion, J. (2019). Classical dynamics of particles and systems Thomson Book/Cole Singapur
 + Gregory, R. D. (2006). Classical mechanics. Cambridge University Press.
-
++ Las clases de [Leonard Susskind](https://www.youtube.com/watch?v=ApUFtLCrU90&list=PL47F408D36D4CF129) de la universidad de Stanford
 ## Programa del Curso
 
 ### Semana 1 C1/C2 Leyes de Newton
@@ -65,6 +66,9 @@ Los problemas para discutir en clase los pueden encontrar [aquí](https://www.ov
   + Vratanar, B., & Saje, M. (1998). On the analytical solution of the brachistochrone problem in a non-conservative field. International Journal of Non-Linear Mechanics, 33(3), 489–505. doi:10.1016/s0020-7462(97)00026-7
   + Existen algunos sitios web donde se muestran aplicaciones del [cálculo en variaciones](http://www.sc.ehu.es/sbweb/fisica3/dinamica/variaciones/variaciones.html) y varios ejemplos de [Braquistocrona](http://www.sc.ehu.es/sbweb/fisica3/dinamica/variaciones/variaciones_2.html)
   + Igualmente algunos [videos](https://www.youtube.com/watch?v=Cld0p3a43fU)
++ Hay videos interesantes
+  + [Lagrangian and Hamiltonian Mechanics](Lagrangian and Hamiltonian Mechanics)
+  + [Newtonian/Lagrangian/Hamiltonian mechanics are not equivalent](https://www.youtube.com/watch?v=9VNW7NHwnuM)
 ### Clase S3-C5/C6
 
 ### Clase S4-C7/C8
