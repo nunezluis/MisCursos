@@ -23,8 +23,11 @@
 | PEÑA ACOSTA ALEXANDRA                 |           |              |         |
 | PINZON QUINTERO SHARITH DAYANNA       |           |              |         |
 | QUINTERO PEREZ JESUS LEONARDO         |           |              |         |
+| RODRIGUEZ OLAGO DEIVY ALEXANDER       |           |              |         |
 | SANCHEZ MANJARRES MARIA JOSE          |           |              |         |
 | SANDOVAL REYES ANGIE YULIANA          |           |              |         |
 | SERRANO MENDOZA ALEXANDRA             |           |              |         |
 | SILVA SERRANO JORGE ANDRES            |           |              |         |
 | URIBE MESA PAULA ANDREA               |           |              |         |
+| VEGA JUAN DAVID                       |           |              |         |
+| VERANO RAMIREZ JUAN DAVID             |           |              |         |
