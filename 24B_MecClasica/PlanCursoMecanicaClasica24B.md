@@ -98,4 +98,5 @@ Los problemas para discutir en clase los pueden encontrar [aquí](https://www.ov
 ### Clase S16-C31/32
 
 ## La evaluación
-[Aquí](https://github.com/nunezluis/MisCursos/blob/main/24B_MecClasica/CalificaMecClas24B.md) avanza la evaluación de este curso
+[Aquí la lista del curso](https://github.com/nunezluis/MisCursos/blob/main/24B_MecClasica/CalificaMecClas24B.md) avanza la evaluación de este curso
+[Aquí los grupos del curso](https://github.com/nunezluis/MisCursos/blob/main/24B_MecClasica/GruposMecClasica24B.md) avanza la evaluación de este curso
