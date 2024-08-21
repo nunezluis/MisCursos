@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  20 AUG 2024 18:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  21 AUG 2024 05:35
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1143,19 +1143,13 @@ stitucional/UISLOGO.png  used on input line 123.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-
-Package rerunfilecheck Warning: File `MC_S3T1Noether.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `MC_S3T1Noether.out':
-(rerunfilecheck)             Before: 896A13EEFF0AAAE4AF562BC61E094233;794
-(rerunfilecheck)             After:  9887E76B27252FD6B458FA5755B9DF4D;858.
+Package rerunfilecheck Info: File `MC_S3T1Noether.out' has not changed.
+(rerunfilecheck)             Checksum: 9887E76B27252FD6B458FA5755B9DF4D;858.
  ) 
 Here is how much of TeX's memory you used:
  23682 strings out of 478268
  464887 string characters out of 5846347
- 725341 words of memory out of 5000000
+ 725340 words of memory out of 5000000
  41343 multiletter control sequences out of 15000+600000
  477242 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1169,11 +1163,12 @@ r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/
 local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr
 /local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr
 /local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/
-local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on MC_S3T1Noether.pdf (15 pages, 157968 bytes).
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
+ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on MC_S3T1Noether.pdf (15 pages, 166661 bytes).
 PDF statistics:
- 543 PDF objects out of 1000 (max. 8388607)
- 483 compressed objects within 5 object streams
+ 548 PDF objects out of 1000 (max. 8388607)
+ 486 compressed objects within 5 object streams
  40 named destinations out of 1000 (max. 500000)
  168 words of extra memory for PDF output out of 10000 (max. 10000000)
 
