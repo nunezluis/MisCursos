@@ -50,11 +50,26 @@
 }
 %
 %%%%% Diapo 2
-\section{Sección}
+\section{Ejemplo: Partícula cono invertido}
 \frame{
-  \frametitle{Título transparencia}
+  \frametitle{Partícula sobre un cono invertido}
    \begin{itemize}  
-  \item<1-> 
+  	\item<1-> Consideremos una partícula que se mueve sobre una supreficie cónica
+	\begin{figure}[t]
+		\includegraphics[width=1.4in]{Figuras/Cono.png}
+   	\end{figure}
+	\item<2-> Su Lagrangeano es  $\mathcal{L}(r, \dot{r}, \dot{\varphi})=\frac{1}{2} m\left(\dot{r}^2 \csc ^2 \alpha+r^2 \dot{\varphi}^2\right)-m g r \cot \alpha$
+	\item<3-> La coordenada $\varphi$ es cíclica. El momento conjugado $p_{\varphi}$ asociado con la coordenada angular $\varphi$ es constante, 
+	$p_{\varphi}=\frac{ \partial \mathcal{L}}{\partial \dot{\varphi}}=m r^2 \dot{\varphi}=\text { cte }$.
+	\item<4-> El momento angular de la partícula, 
+	$\mathbf{L}=\mathbf{r} \times m \mathbf{v} = 
+	m\left|\begin{array}{ccc}
+		\hat{\mathbf{x}} & \hat{\mathbf{y}} & \hat{\mathbf{z}} \\
+		x & y & z \\
+		\dot{x} & \dot{y} & \dot{z}
+	\end{array}\right| $ 
+	\ La componente $z$ del vector $\mathbf{l}$ es  $L_z=m(x \dot{y}-y \dot{x})$
+
     \end{itemize}
 }
 
@@ -64,7 +79,7 @@
 \frame{
   \frametitle{Título transparencia}
    \begin{itemize}  
-  \item<1-> 
+	\item<1-> El momento conjugado $p_r$ asociado a $r$ es $p_r=\frac{ \partial \mathcal{L}}{\partial \dot{r}}=m \dot{r} \csc ^2 \alpha$.
     \end{itemize}
 }
 %

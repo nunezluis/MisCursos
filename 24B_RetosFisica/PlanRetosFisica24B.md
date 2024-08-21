@@ -115,17 +115,17 @@ El calendario del curso será el siguiente:
 ## Retos para seleccionar
 Los equipos deberán seleccionar uno de estos retos para resolverlos durante el semestre, siguiendo el calendario arriba expuesto.
 
-### Reto 1 *Dinámica de chapoteo*
+### Reto 1 *Dinámica de chapoteo* Grupo 7 (Barrientos, Moreno, Molano)
 La dinámica de chapoteo ([*Slosh dynamics*](https://en.wikipedia.org/wiki/Slosh_dynamics)) se refiere al movimiento de líquidos dentro de un recipiente sometido a fuerzas externas. Este fenómeno es relevante en ingeniería, física y diversas industrias en las que es necesario comprender la estabilidad y el rendimiento de los sistemas que contienen líquidos.
 
 La dinámica del chapoteo depende de factores como la forma del recipiente, sus dimensiones, el nivel de llenado, las propiedades del líquido (densidad, viscosidad, tensión superficial), las fuerzas externas (aceleración, desaceleración, vibración) y la presencia de estructuras/mecanismos internos diseñadas para mitigarlo.
 
 El emprendimiento científico [*The Spill not*](https://thespillnot.com/) comercializa un dispositivo que evita el los líquidos contenidos en tazas o vasos se derramen. Utilizando su celular, parametrice el fenómeno del derrame de líquidos utilizando este dispositivo.
 
-### Reto 2 *La fisica del telefonito*
+### Reto 2 *La fisica del telefonito* Grupo 3 (Andica, Perez, Angarita)
 Cuando niños jugábamos con un [teléfono de vasos y cuerda](https://youtu.be/PmmGSF7TXBI). Dos tazas unidas por una cuerda nos permitían hablar a distancia. ¿Qué determina la distancia y la calidad de comunicación de un teléfono de este tipo? ¿Cómo depende la frecuencia de transmisión del sonido en el otro extremo de la cuerda de su tensión y diámetro? También Brue Yeany [nos muestra algunos ejemplos](https://youtu.be/iKKX9HAAtxQ) que debe considerar
 
-### Reto 3  *Aviocitos de papel*
+### Reto 3  *Aviocitos de papel* Grupo 2 (Coy, Moreno, Pulgarin)
 Para seguir la tónica de recuerdos de la infancia del reto anterior. Si construyes un [avioncito de papel con una hoja tipo carta](https://youtu.be/6fLh8eswOn0) ¿A qué distancia máxima puede volar un avión hecho con la hoja? ¿Cómo depende la distancia de la densidad del papel y del tipo de avión? ¿cambia al distancia máxima con el diseño?
 
 ### Reto 4  *Botellas oscilantes, medio vacías o medio llenas*
@@ -134,22 +134,22 @@ Si empujas horizontalmente una botella medio llena de agua, rodará hacia delant
 ### Reto 5 *Orden en la pea*
 A veces, cuando colocamos un vaso boca abajo sobre una mesa plana mojada, empieza a moverse. Investiga su velocidad en función de los parámetros pertinentes e intenta maximizarla. Algo de [información al respecto](https://www.quora.com/Why-does-a-simple-drinking-glass-which-is-just-washed-and-kept-upside-down-start-to-move)
 
-### Reto 6 *Hidro Cañon*
+### Reto 6 *Hidro Cañon* Grupo 1 (Serrano, Contreras, Ospina)
 ¿A qué altura puede saltar una pelota de ping-pong utilizando el [montaje del vídeo](https://youtu.be/mPOcFSHyd9o?t=478 )? ¿Cuál es la fracción máxima de la energía cinética total que puede transferirse a la pelota?
 
 ### Reto 7 *Vasos mojados burbujeantes*
 En las condiciones adecuadas, si se da la vuelta a un vaso mojado y se coloca sobre una superficie plana (pero no necesariamente pulida), empiezan a aparecer burbujas de aire en la parte inferior del mismo. Reproduce y explica el fenómeno. ¿Qué parámetros definen el número de burbujas (y las líneas en las que se agrupan) y su duración? ¿Se puede formar un círculo completo de burbujas a lo largo de la pared interior del vaso? Aquí un [videito](https://youtu.be/7CIT1KvoUpU)
 
-### Reto 8  *Aro saltarín*
+### Reto 8  *Aro saltarín* Grupo 5 (Celis, Orcasitas, Castellanos)
 Considere un aro con una masa unida que los desbalancea. Se le imprime una cantidad de movimiento y se pone a rodar. Hay casos en los cuales el sistema presenta saltos cuando está rodando. Explica el fenómeno y cómo depende de los parámetros relevantes. ¿Es posible reproducir este comportamiento con cualquier distribución desequilibrada de masas en una rueda? ¿Qué ocurre cuando se modifica el perfil del suelo, por ejemplo un plano inclinado? Puede revisar el siguiente [video](https://youtu.be/ETRpkp03stQ)
 
-### Reto 9 *El big bang*
+### Reto 9 *El big bang* Grupo 6 (Correa, Verano, Calderon)
 Cuando un globo explota, produce un sonido corto y fuerte. ¿Puedes predecir la geometría y la presión interna del globo explotado a partir del sonido de la explosión? ¿Hay algún parámetro externo que afecte al sonido?
 
 ### Reto 10 *Cinta adhesiva escandalosa*
 Al desenrollar un rollo de cinta adhesiva, puede producirse un fuerte sonido. Explica la física de la emisión del sonido. Busca formas de maximizar y minimizar el ruido.
 
-### Reto 11 *Deformaciones del Espacio tiempo*
+### Reto 11 *Deformaciones del Espacio tiempo* Grupo 8 (Rodríguez, García, Camacho)
 Con una tela elástica contruya un ambiente que reproduzca la deformación del espacio tiempo y pueda calcular, simular y registrar las trayectorias de partículas de prueba alrededor de cuerpos masivo. Compárelo con las geodésicas en Relatividad General. Puede inspirarse en este [video](https://www.youtube.com/watch?v=MTY1Kje0yLg) y apoyarse en Postiglione, A., & De Angelis, I. (2021). Experience gravity in the classroom using the rubber sheet: an educational proposal from the collaboration between university and school. Physics Education, 56(2), 025019.  
 
 ### Reto 12 *Antiburbujas*
@@ -158,5 +158,8 @@ Llena un recipiente con agua cuya tensión superficial haya disminuido. A contin
 ### Reto 13 *Rebotes de pelotas de ligas*
 ¿Cómo varía el rebote de una pelota hecha de ligas o bandas de goma en función de su tamaño
 cuando se lanza desde una altura de 1 m? ¿cuántas ligas elásticas maximizan la altura de rebote? La pelota debe estar compuesta en su totalidad por gomas elásticas tal y como muestra este [video](https://youtu.be/cvq2ylWdwvY?si=nOTEA9zSVqUk0Fyx)
+
+### Reto 14  *Variedades de Péndulos* Grupo 4 (Parra, Espinel, Gamboa)
+Inspirado en el [video de Bruce Yeany](https://youtu.be/615GTw4TNxI) construya y estudie la dinámica de alguno de los péndulos dobles que allí proponen. Compare dos ellos, los que sean más similares. Construya un modelo teórico, simúlelo y compárelo con medidas experimentales.
 
 ## Avances en la evaluación
