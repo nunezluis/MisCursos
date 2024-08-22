@@ -43,7 +43,7 @@
 	\item<2-> El $p_j$ no necesariamente es el momento lineal. También puede corresponder al momento angular o a otra cantidad física.
 	\item<3-> Si un Lagrangiano $\mathcal{L}$ de un sistema no contiene explícitamente una coordenada $q_i$ (puede contener $\dot{q}_i$ y $t$ ), se dice que $q_i$ es una coordenada cíclica o ignorable. 
 	\item<4-> Entonces,  el momento conjugado $p_i$ asociado a una coordenada cíclica, $q_i$, es constante. Luego, la cantidad $p_i\left(q_j, \dot{q}_j, t\right)$ es una cantidad conservada, i.e. una primera integral del movimiento.
-	\item<5-> Si una coordenada $q_i$ es cíclica, entonces $\frac{\partial \mathcal{L}}{\partial q_i}=0$, y la ecuación de Lagrange para esa coordenada cíclica $q_i$ es $\frac{d}{d t}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_i}\right)  =\frac{d p_i}{d t}=0 
+	\item<5-> Si una coordenada $q_i$ es cíclica, entonces $\frac{\partial \mathcal{L}}{\partial q_i}=0$, y la ecuación de Lagrange para esa coordenada cíclica $q_i$ es $ \frac{{\rm d}}{{\rm d} t}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_i}\right)  =\frac{{\rm d} p_i}{{\rm d} t}=0 
 \Rightarrow p_i  =\text { cte. }$
   
     \end{itemize}
@@ -68,68 +68,155 @@
 		x & y & z \\
 		\dot{x} & \dot{y} & \dot{z}
 	\end{array}\right| $ 
-	\item<5-> La componente $z$ es $L_z=m(x \dot{y}-y \dot{x}) =m r^2 \dot{\varphi} \equiv p_{\varphi} = {\rm cte}$, \\ 
+	\item<5-> La componente $z$ es  $ \mathcal{L}_z=m(x \dot{y}-y \dot{x}) =m r^2 \dot{\varphi} \equiv p_{\varphi} = {\rm cte}$, \\ 
 	ya que
 	$\begin{array}{ll}
-		x=r \cos \varphi, & \quad \dot{x}=\dot{r} \cos \varphi-r \dot{\varphi} \sin \varphi \\
-		y=r \sin \varphi, &  \quad \dot{y}=\dot{r} \sin \varphi+r \dot{\varphi} \cos \varphi
+		x=r \cos \varphi, & \quad \dot{x}=\dot{r} \cos \varphi-r \dot{\varphi} {\rm sen} \, \varphi \\
+		y=r {\rm sen} \, \varphi, &  \quad \dot{y}=\dot{r} {\rm sen} \, \varphi+r \dot{\varphi} \cos \varphi
 	\end{array}$
 
     \end{itemize}
 }
+%
+%%%%% Diapo 3
+\section{Ejemplo: Partícula en medio viscoso}
+\frame{
+  \frametitle{Partícula en medio viscoso}
+   \begin{itemize}  
+	\item<1-> Consideremos una partícula de masa $m$ que se mueve con velocidad $\mathbf{v}$ en un medio viscoso, con coeficiente de fricción $\alpha$.
+	\begin{figure}[t]
+		\includegraphics[width=1.0in]{Figuras/ParticulaViscoso.png}
+   	\end{figure}
+	\item<2-> Se mueve en la dirección $x$, de modo que  $ \mathcal{L}=\frac{1}{2} m \dot{x}^2 e^{\frac{\alpha}{m} t}$
+	\item<3-> La coordenada $x$ es cíclica, i.e., $\frac{ \partial \mathcal{L}}{\partial x}=0$. El momento conjugado $p_x$ es constante, $ p_x=\frac{ \partial \mathcal{L}}{\partial \dot{x}}=m \dot{x} e^{\frac{\alpha}{m} t}=\text { cte } = m v_0 \Rightarrow \dot{x}=v_x(t)=v_0 e^{-\frac{\alpha}{m} t}$.
+	\item<4-> Note que el momento conjugado es distinto del momento lineal $p=m v_x(t)$, que no es constante.
+	\item<5-> La posición será $x(t)=x_0+\frac{v_0 m}{\alpha}\left(1-e^{-(\alpha / m) t}\right)$
+	\item<6-> A partir del Lagrangiano se obtiene la ecuación de movimiento, $m \ddot{x}=-\alpha \dot{x}$
+	\item<7-> Que es la Segunda Ley de Newton para la componente $x$ de la fuerza $\mathbf{F}=-\alpha \mathbf{v}$ ejercida por el fluido sobre la partícula.
 
+    \end{itemize}
+}
 %
-%%%%% Diapo 2
-\section{Sección}
+%%%%% Diapo 4
+\section{Teorema de Noether}
 \frame{
-  \frametitle{Título transparencia}
+  \frametitle{Teorema de Noether}
    \begin{itemize}  
-	\item<1-> El momento conjugado $p_r$ asociado a $r$ es $p_r=\frac{ \partial \mathcal{L}}{\partial \dot{r}}=m \dot{r} \csc ^2 \alpha$.
+  	\item<1-> Consideremos una transformación infinitesimal del Lagrangiano  $ \mathcal{L} \rightarrow \mathcal{L}^{\prime}=\mathcal{L}+ \delta \mathcal{L}$ que no modifica las ecuaciones de movimiento.  
+	\item<2-> Esta transformación infinitesimal representa una simetría del sistema, {\bf una simetría de la acción} y se dice que {\bf la acción es invariante bajo esa transformación}.
+	\item<3-> {\bf Teorema de Noether en Mecánica Clásica}
+	\begin{itemize}
+		\item Si la acción de un sistema es invariante bajo una transformación infinitesimal de coordenadas $q_j^{\prime}=q_j+\delta q_j$ que cambia el Lagrangiano a  $ \mathcal{L}^{\prime}=\mathcal{L}+ \delta \mathcal{L}$, tal que $ \delta \mathcal{L}=\frac{{\rm d} f\left(q_j, t\right)}{{\rm d} t}$ para alguna función $f\left(q_j, t\right)$. 
+		\item Entonces el Lagrangiano (y el sistema)  $ \mathcal{L}\left(q_j, \dot{q}_j, t\right)$ posee una simetría y la función $ \mathcal{J}\left(q_j, \dot{q}_j, t\right)=\sum_{j=1}^s \frac{ \partial \mathcal{L}}{\partial q_j} \delta q_j-f$ constituye una cantidad conservada asociada a esa transformación.
+		\item La cantidad $\mathcal{J}$ se denomina corriente de Noether.
+	\end{itemize}
+    \end{itemize}
+}
+%
+%%%%% Diapo 5
+%\section{Sección}
+\frame{
+  \frametitle{Demostración del Teorema de Noether}
+   \begin{itemize}  
+  	\item<1-> La transformación $q_j^{\prime}=q_j+\delta q_j$ (donde $t$ es fijo, $\delta t=0$ ) produce la siguiente variación  $ \delta \mathcal{L}\left(q_j, \dot{q}_j, t\right)=\sum_{j=1}^s \frac{ \partial \mathcal{L}}{\partial q_j} \delta q_j+\sum_{j=1}^s \frac{ \partial \mathcal{L}}{\partial \dot{q}_j} \delta \dot{q}_j$
+	\item<2-> Las ecuaciones de Lagrange, conducen a 
+	$ \delta \mathcal{L}  =\sum_{j=1}^s  \frac{{\rm d}}{{\rm d} t}\left(\frac{ \partial \mathcal{L}}{\partial \dot{q}_j}\right) \delta q_j+\sum_{j=1}^s \frac{ \partial \mathcal{L}}{\partial \dot{q}_j}  \frac{{\rm d}}{{\rm d} t}\left(\delta q_j\right)  = \frac{{\rm d}}{{\rm d} t}\left(\sum_{j=1}^s \frac{ \partial \mathcal{L}}{\partial \dot{q}_j} \delta q_j\right)$
+	\item<3-> Según el teorema, la variación $\delta \mathcal{L} $ se puede escribir $\delta \mathcal{L} =\frac{{\rm d} f\left(q_j, t\right)}{{\rm d} t}$.
+	\item<4-> Luego  $ \frac{{\rm d}}{{\rm d} t}\left(\sum_{j=1}^s \frac{\partial \mathcal{L} }{\partial \dot{q}_j} \delta q_j\right)=\frac{{\rm d} f\left(q_j, t\right)}{{\rm d} t} \Rightarrow  \frac{{\rm d}}{{\rm d} t}\left(\sum_{j=1}^s \frac{\partial \mathcal{L} }{\partial \dot{q}_j} \delta q_j-f\right)=0 \Rightarrow  \mathcal{J}\left(q_j, \dot{q}_j, t\right) \equiv \sum_{j=1}^s \frac{\partial \mathcal{L} }{\partial \dot{q}_j} \delta q_j-f=\text { cte. }$
+	\item<5-> El Teorema de Noether establece que a cada simetría de un sistema, le corresponde una cantidad conservada
+	\item<6-> Las simetrías y cantidades conservadas permiten conocer propiedades de un sistema y hacer predicciones sobre su comportamiento.
+	\item<7-> Las ecuaciones de movimiento son ecuaciones diferenciales de segundo orden para las $q_j$, mientras que las cantidades conservadas $\mathcal{J}\left(q_j, \dot{q}_j, t\right)= cte$, son ecuaciones diferenciales de primer orden
+
+    \end{itemize}
+}
+%
+%%%%% Diapo 6
+\section{Ejemplo: Coordenada cíclica}
+\frame{
+  \frametitle{Coordenada cíclica}
+   \begin{itemize}  
+  	\item<1-> Supongamos que la coordenada $q_i$ es cíclica, $\frac{\partial \mathcal{L} }{\partial q_i}=0$, para un Lagrangiano $ \mathcal{L} \left(q_j, \dot{q}_j, t\right)$.
+	\item<2->  La transformación de coordenadas $q_i^{\prime}=q_i+\delta q_i$, con $\delta q_i=$ cte, y $q_j^{\prime}=q_j, \delta q_j=0$, para $i \neq j$, no produce cambios $\delta \mathcal{L} $ en el Lagrangiano. 
+	Esto es $\delta \mathcal{L} = \sum_j \frac{\partial \mathcal{L} }{\partial q_j} \delta q_j +\sum_j \frac{\partial \mathcal{L} }{\partial \dot{q}_j} \underbrace{\delta \dot{q}_j}_{=0}=\underbrace{\frac{\partial \mathcal{L} }{\partial q_i}}_{=0} \delta q_i=0$
+	\item<3-> Por otro lado, la función $f$ surge de $\delta \mathcal{L} =\frac{{\rm d} f}{{\rm d} t}=0 \quad \Rightarrow f=c=\mathrm{cte}$
+	\item<4-> La corriente de Noether conservada $ \mathcal{J} $ es $ \mathcal{J}   =\sum_j \frac{\partial \mathcal{L} }{\partial \dot{q}_j} \delta q_j-f=\text { cte } \Rightarrow \frac{\partial \mathcal{L} }{\partial \dot{q}_i} \delta q_i-c=\text { cte }  \Rightarrow \frac{\partial \mathcal{L} }{\partial \dot{q}_i} \equiv p_i=\text { cte. }$
+	\item<5-> El momento conjugado $p_i$ asociado a $q_i$ es constante.
+    \end{itemize}
+}
+%
+%%%%% Diapo 7
+\section{Ejemplo: Partícula en campo gravitatorio}
+\frame{
+  \frametitle{Partícula en campo gravitatorio}
+   \begin{itemize}  
+  	\item<1-> Consideremos una partícula en movimiento vertical en el campo gravitacional con un lagrangiano $ \mathcal{L} =\frac{1}{2} m \dot{y}^2-m g y$
+	\begin{figure}[t]
+		\includegraphics[width=1.5in]{Figuras/Parabolico.png}
+   	\end{figure}
+	\item<2-> El cambio en $ \mathcal{L} $ bajo la transformación de coordenadas, $y^{\prime}=y+\delta y$, con $\delta y=$ cte,  es $\delta \mathcal{L} =\frac{\partial \mathcal{L} }{\partial y} \delta y+\frac{\partial \mathcal{L} }{\partial \dot{y}}  \underbrace{\delta \dot{y}}_{=0} \equiv -m g \delta y$
+	\item<3-> Con lo cual $\delta \mathcal{L}   =\frac{{\rm d} f}{{\rm d} t}=-m g \delta y \Rightarrow \quad f  =-m g \, t \, \delta y$
+	\item<4-> Con la cantidad conservada $ \mathcal{J}  =\frac{\partial \mathcal{L} }{\partial \dot{y}} \delta y-f=\mathrm{cte}  \Rightarrow m \dot{y} \delta y+m g t \delta y=\mathrm{cte} \Rightarrow \dot{y}+g t=\mathrm{cte}$
+
+    \end{itemize}
+}
+%
+%%%%% Diapo 8
+\section{Homogeneidad del espacio y conservación del momento lineal}
+\frame{
+  \frametitle{Conservación del momento lineal 1/2}
+   \begin{itemize}
+   	\item<1-> Consideremos un sistema de $N$ partículas con posiciones $\mathbf{r}_\alpha=\left(x_{ 1 \, \alpha}, x_{ 2 \, \alpha}, x_{ 3 \, \alpha}\right)$ $\alpha=1, \ldots, N$, con un Lagrangiano $\mathcal{L}\left(\mathbf{r}_\alpha, \dot{\mathbf{r}}_\alpha, t\right)$.  
+  	\item<2-> Homogenidad del espacio significa que las propiedades mecánicas de un sistema no cambian si todo el sistema es desplazado en una dirección arbitraria del espacio.
+	\begin{figure}[t]
+		\includegraphics[width=1.2in]{Figuras/Traslacion.png}
+   	\end{figure}
+	\item<3-> Supongamos la transformación de coordenadas $\mathbf{r}_\alpha^{\prime}=\mathbf{r}_\alpha+\delta \mathbf{r}$, donde $\delta \mathbf{r}=\left(\delta x_1, \delta x_2, \delta x_3\right)$ es un vector infinitesimal cuyas componentes $\delta x_j$ son constantes; i. e., $\delta \dot{\mathbf{r}}=0$.
+	\item<4-> Homogeneidad del espacio implica que la transformación infinitesimal no produce cambios en el Lagrangiano del sistema, $\delta \mathcal{L}=0 =\frac{{\rm d} f}{{\rm d} t}$ implica que $f$ es constante. 
+    \end{itemize}
+}
+%
+%%%%% Diapo 9
+%\section{Sección}
+\frame{
+  \frametitle{Conservación del momento lineal 2/2}
+   \begin{itemize}  
+  	\item<1-> La corriente conservada es $\mathcal{J}  =\sum_{\alpha=1}^N \sum_{j=1}^3 \frac{\partial \mathcal{L}}{\partial \dot{x}_{j \, \alpha}} \delta x_j-f=\mathrm{cte}  \Rightarrow \sum_{\alpha=1}^N \sum_{j=1}^3 \frac{\partial \mathcal{L}}{\partial \dot{x}_{j \, \alpha}} \delta x_j=\mathrm{cte}  \Rightarrow \sum_{\alpha=1}^N \frac{\partial \mathcal{L}}{\partial \dot{\mathbf{r}}_\alpha} \cdot \delta \mathbf{r}=\mathrm{cte}$
+	\item<2-> Donde $\frac{\partial \mathcal{L}}{\partial \dot{\mathbf{r}}_\alpha} \equiv\left(\frac{\partial \mathcal{L}}{\partial \dot{x}_{ 1 \, \alpha}}, \frac{\partial \mathcal{L}}{\partial \dot{x}_{ 2 \, \alpha}}, \frac{\partial \mathcal{L}}{\partial \dot{x}_{ 3 \, \alpha}}\right)$
+	\item<3-> Como $\delta \mathbf{r}$ es constante, $\mathbf{P}_{\mathrm{T}} \equiv \sum_{\alpha=1}^N \frac{\partial L}{\partial \dot{\mathbf{r}}_\alpha}=\mathrm{cte}$
+	\item<4-> La cantidad $\mathbf{P}_{\mathrm{T}}$ es el momento lineal total del sistema.
+	\item<5-> Si el Lagrangiano de un sistema cuya energía potencial depende solamente de las coordenadas, $L=\frac{1}{2} \sum_{\alpha=1}^N m_\alpha \dot{\mathbf{r}}_\alpha^2-V\left(\mathbf{r}_1, \mathbf{r}_2, \ldots, \mathbf{r}_N\right)$
+	\item<6-> Entonces, $\mathbf{P}_{\mathrm{T}}=\sum_{\alpha=1}^N \frac{\partial L}{\partial \dot{\mathbf{r}}_\alpha}=\sum_{\alpha=1}^N m_\alpha \dot{\mathbf{r}}=\sum_{\alpha=1}^N m_\alpha \mathbf{v}_\alpha$
+	\item<7-> El momento lineal de una partícula es $\mathbf{p}_\alpha=m_\alpha \mathbf{v}_\alpha=\frac{\partial L}{\partial \dot{\mathbf{r}}_\alpha}$
+	\item<8-> En un sistema donde existe simetría translacional en una dirección espacial, la componente del momento lineal total del sistema en esa dirección se conserva.
+    \end{itemize}
+}
+%
+%%%%% Diapo 10
+\section{Isotropía del espacio y conservación del momento angular}
+\frame{
+  \frametitle{Conservación del momento angular}
+   \begin{itemize}  
+  	\item<1-> Consideremos una partícula en la posición $\mathbf{r}=(x, y, z)$ respecto a $O$ y una rotación infinitesimal del vector $\mathbf{r}$ alrededor del eje con $|\mathbf{r}|$ fijo.
+	\begin{figure}[t]
+		\includegraphics[width=1.2in]{Figuras/Rotacion.png}
+   	\end{figure}
+	\item<2-> Sea $\delta \varphi$ la magnitud constante del ángulo rotado en sentido antihorario.
+	\item<3-> El vector de posición de la partícula transformado por la rotación infinitesimal es $\mathbf{r}^{\prime}=\mathbf{r}+\delta \mathbf{r}$
+	\item<4-> Sonde $\delta \mathbf{r}$ tiene dirección perpendicular al plano $(\mathbf{r}, \delta \varphi)$ y magnitud $\delta r=$ $r \, {\rm sen} \, \theta \delta \varphi$, con $\theta$ es el ángulo entre $\delta \varphi$ y $r$. Entonces $\delta \mathbf{r}=\delta \varphi \times \mathbf{r}$
+	\item<5-> Consideremos a continuación un sistema de $N$ partículas con posiciones $\mathbf{r}_\alpha, \alpha=$ $1, \ldots, N$, sujeto a una rotación infinitesimal $\delta \varphi$
+
+  
     \end{itemize}
 }
 %
 %%%%% Diapo 2
-\section{Sección}
+%\section{Sección}
 \frame{
-  \frametitle{Título transparencia}
+  \frametitle{Conservación del momento angular}
    \begin{itemize}  
-  \item<1-> 
-    \end{itemize}
-}
-%
-%%%%% Diapo 2
-\section{Sección}
-\frame{
-  \frametitle{Título transparencia}
-   \begin{itemize}  
-  \item<1-> 
-    \end{itemize}
-}
-%
-%%%%% Diapo 2
-\section{Sección}
-\frame{
-  \frametitle{Título transparencia}
-   \begin{itemize}  
-  \item<1-> 
-    \end{itemize}
-}
-%
-%%%%% Diapo 2
-\section{Sección}
-\frame{
-  \frametitle{Título transparencia}
-   \begin{itemize}  
-  \item<1-> 
-    \end{itemize}
-}
-%
-%%%%% Diapo 2
-\section{Sección}
-\frame{
-  \frametitle{Título transparencia}
-   \begin{itemize}  
-  \item<1-> 
+  	\item<1-> El cambio en el vector de posición de la partícula $\alpha$ es $\delta \mathbf{r}_\alpha=\delta \varphi \times \mathbf{r}_\alpha$. 
+	\item<2-> La isotropía del espacio implica que esta transformación infinitesimal no introduce cambios en el Lagrangiano del sistema; i. e., $\delta L=0$. Expresando $\delta L=\frac{d f}{d t}$, obtenemos $f=$ cte
+	\item<3-> Entonces, el teorema de Noether establece  $J  =\sum_{\alpha=1}^N \sum_{j=1}^3 \frac{\partial L}{\partial \dot{x}_j(\alpha)} \delta x_j(\alpha)-f=\text { cte }  \Rightarrow \sum_{\alpha=1}^N \sum_{j=1}^3 \frac{\partial L}{\partial \dot{x}_j(\alpha)} \delta x_j(\alpha)=\text { cte }  \Rightarrow \sum_{\alpha=1}^N \frac{\partial L}{\partial \dot{\mathbf{r}}_\alpha} \cdot \delta \mathbf{r}_\alpha=\text { cte. }$
     \end{itemize}
 }
 %

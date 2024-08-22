@@ -71,6 +71,13 @@ Los problemas para discutir en clase los pueden encontrar [aquí](https://www.ov
   + [Newtonian/Lagrangian/Hamiltonian mechanics are not equivalent](https://www.youtube.com/watch?v=9VNW7NHwnuM)
 ### Clase S3-C5/C6
 
+
+#### Materiales
+
++ Videos
+  + [Emmy Noether CSIC](https://www.youtube.com/watch?v=N4to1dp6_lo)
+  + [Emmy Noether Fermilab](https://www.youtube.com/watch?v=Rqfj7n5aSwY)
+
 ### Clase S4-C7/C8
 
 ### Clase S5-C9/C10
