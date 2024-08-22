@@ -7,4 +7,4 @@
 \beamer@sectionintoc {6}{Ejemplo: Part\IeC {\'\i }cula en campo gravitatorio}{35}{0}{6}
 \beamer@sectionintoc {7}{Homogeneidad del espacio y conservaci\'on del momento lineal}{39}{0}{7}
 \beamer@sectionintoc {8}{Isotrop\IeC {\'\i }a del espacio y conservaci\'on del momento angular}{51}{0}{8}
-\beamer@sectionintoc {9}{Secci\'on}{59}{0}{9}
+\beamer@sectionintoc {9}{Ejemplo: Oscilador arm\'onico bidimensional}{63}{0}{9}

@@ -52,7 +52,6 @@ Los problemas para discutir en clase los pueden encontrar [aquí](https://www.ov
 
 #### Problemas S2
 
-
 #### Materiales
 + Presentaciones
   + [Coordenadas Generalizadas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S2CoordGeneralizadas.pdf)
@@ -69,16 +68,30 @@ Los problemas para discutir en clase los pueden encontrar [aquí](https://www.ov
 + Hay videos interesantes
   + [Lagrangian and Hamiltonian Mechanics](Lagrangian and Hamiltonian Mechanics)
   + [Newtonian/Lagrangian/Hamiltonian mechanics are not equivalent](https://www.youtube.com/watch?v=9VNW7NHwnuM)
-### Clase S3-C5/C6
+
+### Clase S3-C5/C6  Leyes de conservación y simetrías
+#### Antes de clases
+Estudiar los puntos
++ Momento conjugado
++ Teorema de Noether
++ Homogeneidad del espacio y conservación del momento lineal
++ Isotropía del espacio y conservación del momento angular
 
 
 #### Materiales
-
++ Presentación El teorema de Noether y leyes de conservación  
 + Videos
   + [Emmy Noether CSIC](https://www.youtube.com/watch?v=N4to1dp6_lo)
   + [Emmy Noether Fermilab](https://www.youtube.com/watch?v=Rqfj7n5aSwY)
 
 ### Clase S4-C7/C8
+#### Antes de clase
+Estudiar los puntos
++ Homogeneidad del tiempo y conservación de la energía
++ Teorema de Euler para la energía cinética
++ Fuerzas generalizadas: partícula en un campo electromagnético
++ Sistemas integrables y sistemas caóticos
++ Sistema integrable: movimiento unidimensional
 
 ### Clase S5-C9/C10
 
