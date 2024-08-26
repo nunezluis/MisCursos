@@ -37,19 +37,33 @@
 
 
 %%%%% Diapo 1
-\section{Sección}
+\section{Fuerza de Lorentz una {\it una fuerza generalizada} }
 \frame{
-  \frametitle{Título transparencia}
+  \frametitle{Fuerza de Lorentz}
    \begin{itemize}  
-  	\item<1->  
+  	\item<1->   Una partícula de masa $m$ y carga $q$, moviéndose con velocidad $\mathbf{v}$, en presencia de un campo eléctrico $\mathbf{E}(\mathbf{r}, t)$ y un campo magnético $\mathbf{B}(\mathbf{r}, t)$, está sujeta a fuerza de Lorentz
+	$\mathbf{F}=q\left(\mathbf{E}+\frac{\mathbf{v}}{c} \times \mathbf{B}\right)$
+	\item<2-> Consideremos una partícula con una energía potencial función de su posición y velocidad en coordenadas cartesianas: $V(\mathbf{r}, \dot{\mathbf{r}})$. 
+	\item<3-> El Lagrangiano, en coordenadas cartesianas, es $L=T(\dot{\mathbf{r}})-V(\mathbf{r}, \dot{\mathbf{r}})$, donde $T(\dot{\mathbf{r}})=\frac{1}{2} m\left(\dot{x}^2+\dot{y}^2+\dot{z}^2\right)=\frac{1}{2} m v^2$
+	\item<4-> La ecuación de Lagrange es $\frac{d}{d t}\left(\frac{\partial L}{\partial \dot{x}_i}\right)-\frac{\partial L}{\partial x_i}=0$
+	\item<5-> Con lo cual $\frac{d}{d t}\left(\frac{\partial T}{\partial \dot{x_i}}\right.\left.-\frac{\partial V}{\partial \dot{x}_i}\right)+\frac{\partial V}{\partial x_i}=0 \Rightarrow \frac{d}{d t}\left(\frac{\partial T}{\partial \dot{x}_i}\right)=-\frac{\partial V}{\partial x_i}+\frac{d}{d t}\left(\frac{\partial V}{\partial \dot{x_i}}\right) $
+	\item<6-> Es decir: $m \ddot{x}_i=F_i \Rightarrow F_i \equiv-\frac{\partial V}{\partial x_i}+\frac{d}{d t}\left(\frac{\partial V}{\partial \dot{x_i}}\right)$
+	\item<7-> Las fuerzas generalizadas dependen de coordenadas y de velocidades. 
+	\item<8-> La fuerza de Lorentz constituye una fuerza generalizada
     \end{itemize}
 }
 %%%%% Diapo 2
-\section{Sección}
+\section{El potencial vector}
 \frame{
-  \frametitle{Título transparencia}
+  \frametitle{El potencial vector}
    \begin{itemize}  
-  \item<1-> 
+  	\item<1-> Consideremos las ecuaciones de Maxwell
+	$\nabla \cdot \mathbf{E}=4 \pi \rho \qquad \nabla \times \mathbf{E}+\frac{1}{c} \frac{\partial \mathbf{B}}{\partial t}=0$ \\
+	$\nabla \cdot \mathbf{B}=0 \qquad \quad \nabla \times \mathbf{B}-\frac{1}{c} \frac{\partial \mathbf{E}}{\partial t}=\frac{4 \pi}{c} \mathbf{J}$
+	\item<2-> Claramente $\nabla \cdot \mathbf{B}=0 \Rightarrow \mathbf{B}=\nabla \times \mathbf{A}$
+	\item<3-> Con lo cual 
+	$\nabla \times \mathbf{E}+\frac{1}{c} \frac{\partial}{\partial t}(\nabla \times \mathbf{A})=0 \Rightarrow
+\nabla \times\left(\mathbf{E}+\frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}\right)=0$
     \end{itemize}
 }
 
