@@ -60,10 +60,14 @@
   	\item<1-> Consideremos las ecuaciones de Maxwell
 	$\nabla \cdot \mathbf{E}=4 \pi \rho \qquad \nabla \times \mathbf{E}+\frac{1}{c} \frac{\partial \mathbf{B}}{\partial t}=0$ \\
 	$\nabla \cdot \mathbf{B}=0 \qquad \quad \nabla \times \mathbf{B}-\frac{1}{c} \frac{\partial \mathbf{E}}{\partial t}=\frac{4 \pi}{c} \mathbf{J}$
-	\item<2-> Claramente $\nabla \cdot \mathbf{B}=0 \Rightarrow \mathbf{B}=\nabla \times \mathbf{A}$
+	\item<2-> Claramente $\nabla \cdot \mathbf{B}=0 \Rightarrow \mathbf{B}=\nabla \times \mathbf{A}$, con $\mathbf{A}(\mathbf{r}, t)$ un potencial vector
 	\item<3-> Con lo cual 
-	$\nabla \times \mathbf{E}+\frac{1}{c} \frac{\partial}{\partial t}(\nabla \times \mathbf{A})=0 \Rightarrow
-\nabla \times\left(\mathbf{E}+\frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}\right)=0$
+	$\nabla \times \mathbf{E}+\frac{1}{c} \frac{\partial}{\partial t}(\nabla \times \mathbf{A})=0 \Rightarrow \nabla \times\left(\mathbf{E}+\frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}\right)=0$
+	\item<4-> Entonces $\mathbf{E}+\frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}=-\nabla \varphi  \Rightarrow \mathbf{E}=-\nabla \varphi-\frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}$
+	\item<5-> La fuerza de Lorentz será $\mathbf{F}=q\left[-\nabla \varphi-\frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}+\frac{\mathbf{v}}{c} \times(\nabla \times \mathbf{A})\right]$
+	\item<6-> y también $\mathbf{F}=q\left[-\nabla \varphi+\frac{1}{c} \nabla(\mathbf{A} \cdot \mathbf{v})-\frac{1}{c}(\mathbf{v} \cdot \nabla) \mathbf{A}-\frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}\right]$
+	\item<7-> Donde $\mathbf{v} \times(\nabla \times \mathbf{A})=\nabla(\mathbf{A} \cdot \mathbf{v})-(\mathbf{v} \cdot \nabla) \mathbf{A}$
+
     \end{itemize}
 }
 

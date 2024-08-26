@@ -1,4 +1,4 @@
 \babel@toc {spanish}{}\relax 
 \beamer@sectionintoc {1}{Fuerza de Lorentz una {\it una fuerza generalizada} }{3}{0}{1}
 \beamer@sectionintoc {2}{El potencial vector}{11}{0}{2}
-\beamer@sectionintoc {3}{Secci\'on}{14}{0}{3}
+\beamer@sectionintoc {3}{Secci\'on}{17}{0}{3}
