@@ -2,6 +2,8 @@
 \usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
 \usepackage[spanish]{babel}    % silabea palabras castellanas
 \usepackage{amsmath}
+\usepackage{mathtools,cancel} % cancela con una flecha \cancelto{0}{XXXX}
+\renewcommand{\CancelColor}{\color{red}} %change cancel color to red
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{dsfont}
@@ -50,7 +52,7 @@
 }
 %
 %%%%% Diapo 2
-\section{Ejemplo: Partícula cono invertido}
+\subsection{Ejemplo: Partícula cono invertido}
 \frame{
   \frametitle{Partícula sobre un cono invertido}
    \begin{itemize}  
@@ -79,7 +81,7 @@
 }
 %
 %%%%% Diapo 3
-\section{Ejemplo: Partícula en medio viscoso}
+\subsection{Ejemplo: Partícula en medio viscoso}
 \frame{
   \frametitle{Partícula en medio viscoso}
    \begin{itemize}  
@@ -131,7 +133,7 @@
 }
 %
 %%%%% Diapo 6
-\section{Ejemplo: Coordenada cíclica}
+\subsection{Ejemplo: Coordenada cíclica}
 \frame{
   \frametitle{Coordenada cíclica}
    \begin{itemize}  
@@ -145,7 +147,7 @@
 }
 %
 %%%%% Diapo 7
-\section{Ejemplo: Partícula en campo gravitatorio}
+\subsection{Ejemplo: Partícula en campo gravitatorio}
 \frame{
   \frametitle{Partícula en campo gravitatorio}
    \begin{itemize}  
@@ -226,7 +228,7 @@
 }
 %
 %%%%% Diapo 2
-\section{Ejemplo: Oscilador armónico bidimensional}
+\subsection{Ejemplo: Oscilador armónico bidimensional}
 \frame{
   \frametitle{Oscilador armónico bidimensional}
    \begin{itemize}  
@@ -241,8 +243,37 @@
 	\item<9-> El momento conjugado $p_{\varphi}=\frac{\partial \mathcal{L}}{\partial \dot{\varphi}}=m r^2 \dot{\varphi}=\text { cte. }$
     \end{itemize}
 }
+%
+%%%%% Diapo 2
+\section{Homogeneidad del tiempo y conservación de la energía}
+\frame{
+  \frametitle{Conservación de la energía}
+   \begin{itemize}  
+  	\item<1-> Homogeneidad del tiempo significa que las propiedades mecánicas de un sistema no dependen del intervalo de tiempo en el cual se observen.  
+	\item<2-> Consideremos un sistema homogéneo en el tiempo, el Lagrangiano $\mathcal{L}$ no depende explícitamente de $t: \mathcal{L}=\mathcal{L}\left(q_j, \dot{q}_j\right)$.
+	\item<3-> El cambio total de $\mathcal{L}$ será
+	$\frac{ {\rm d} \mathcal{L}}{{\rm d} t}=\sum_{j=1}^s\left[\frac{\partial \mathcal{L}}{\partial q_j} \dot{q}_j+\frac{\partial \mathcal{L}}{\partial \dot{q}_j} \ddot{q}_j\right]+\cancelto{0}{\frac{\partial \mathcal{L}}{\partial t}}$
+	\item<4-> Usamos la ecuación de Lagrange, $\frac{\partial \mathcal{L}}{\partial q_j}=\frac{d}{{\rm d} t}\left(\frac{\partial \mathcal{L}}{\partial q_j}\right)$,
+	\item<5-> Tendremos $\frac{ {\rm d} \mathcal{L}}{{\rm d} t} =\sum_{j=1}^s\left[\frac{d}{{\rm d} t}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}_j}\right) \dot{q}_j+\frac{\partial \mathcal{L}}{\partial \dot{q}_j} \ddot{q}_j\right]  =\frac{d}{{\rm d} t}\left[\sum_{j=1}^s \frac{\partial \mathcal{L}}{\partial \dot{q}_j} \dot{q}_j\right]$
+	\item<6-> Con lo cual $ \frac{d}{{\rm d} t}\left[\sum_{j=1}^s \frac{\partial \mathcal{L}}{\partial \dot{q}_j} \dot{q}_j-\mathcal{L}\right]=0 \Rightarrow \quad \sum_{j=1}^s \frac{\partial \mathcal{L}}{\partial \dot{q}_j} \dot{q}_j-\mathcal{L}=\text { cte. }$
+	\item<7-> La energía es la cantidad escalar $E\left(q_j, \dot{q}_j, t\right) \equiv \sum_{j=1}^s \frac{\partial \mathcal{L}}{\partial \dot{q}_j} \dot{q}_j-\mathcal{L}$
+    \end{itemize}
+}
+\section{Energía y Potenciales dependientes de las velocidades $V= V(q_j, \dot{q}_j, )$}
+\frame{
+  \frametitle{Energía y Potenciales $V= V(q_j, \dot{q}_j, )$}
+   \begin{itemize}  
+  	\item<1->  Existen sistemas donde la energía potencial depende tanto de las coordenadas como de las velocidades generalizadas: $V\left(q_j, \dot{q}_j\right)$. 
+	\item<2-> El Lagrangiano tiene la forma $\mathcal{L}=T\left(\dot{q}_j\right)-V\left(q_j, \dot{q}_j\right)$. y se define una función de energía como 
+	$E\left(q_j, \dot{q}_j\right)  =\sum_{j=1}^s \frac{\partial \mathcal{L}}{\partial \dot{q}_j} \dot{q}_j-\mathcal{L} =\sum_{j=1}^s \frac{\partial T}{\partial \dot{q}_j} \dot{q}_j-\sum_{j=1}^s \frac{\partial V}{\partial \dot{q}_j} \dot{q}_j-(T-V)$
+	\item<3-> Como en general $T\left(\dot{q}_1, \ldots, \dot{q}_s\right)=\frac{1}{2} \sum_{i j}^s \mathcal{T}_{i j} \dot{q}_i \dot{q}_j \Rightarrow \sum_{j}^s \frac{\partial T}{\partial \dot{q}_j}\dot{q}_j = \left(\sum_{j}^s \mathcal{T}_{jj} \dot{q}_j \right)\dot{q}_j = 2T$
+	\item<4-> Entonces $E\left(q_j, \dot{q}_j\right) = 2 T-\sum_{j=1}^s \frac{\partial V}{\partial \dot{q}_j} \dot{q}_j-T+V =T+V-\sum_{j=1}^s \frac{\partial V}{\partial \dot{q}_j} \dot{q}_j$
+	\item<5-> Si la energía potencial $V$ es independiente de las velocidades, $\frac{\partial V}{\partial \dot{q}_j}=0$; entonces la función de energía es igual a la energía mecánica total, $E\left(q_j, \dot{q}_j\right)=T+V$
+	\item<6-> Si $V= V(q_j, \dot{q}_j, )$, la función de energía contiene términos adicionales a $T+V$.
+	
+    \end{itemize}
+}
 
-  
 \end{document}
 
 %
@@ -272,10 +303,3 @@
     \end{itemize}
 }%
 %%%%% Diapo 2
-\section{Sección}
-\frame{
-  \frametitle{Título transparencia}
-   \begin{itemize}  
-  \item<1-> 
-    \end{itemize}
-}
