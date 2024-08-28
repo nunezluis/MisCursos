@@ -129,7 +129,7 @@ Cuando niños jugábamos con un [teléfono de vasos y cuerda](https://youtu.be/P
 Para seguir la tónica de recuerdos de la infancia del reto anterior. Si construyes un [avioncito de papel con una hoja tipo carta](https://youtu.be/6fLh8eswOn0) ¿A qué distancia máxima puede volar un avión hecho con la hoja? ¿Cómo depende la distancia de la densidad del papel y del tipo de avión? ¿cambia al distancia máxima con el diseño?
 
 ### Reto 4  *Botellas oscilantes, medio vacías o medio llenas*
-Si empujas horizontalmente una botella medio llena de agua, rodará hacia delante con una velocidad oscilante. ¿De qué y cómo depende la magnitud de las oscilaciones de la velocidad? ¿de la cantidad o viscosidad de líquido?
+Si empujas horizontalmente una botella medio llena de agua, rodará hacia delante con una velocidad oscilante. ¿De qué y cómo depende la magnitud de las oscilaciones de la velocidad? ¿de la cantidad o viscosidad de líquido? Puede inspirarse en el artículo de Gu, Y., Bai, Y., Xin, Y., Xiao, L., Wang, S., & Sun, H. (2021). Dynamic Stabilization of Water Bottles. arXiv preprint arXiv:2112.10585.
 
 ### Reto 5 *Orden en la pea*
 A veces, cuando colocamos un vaso boca abajo sobre una mesa plana mojada, empieza a moverse. Investiga su velocidad en función de los parámetros pertinentes e intenta maximizarla. Algo de [información al respecto](https://www.quora.com/Why-does-a-simple-drinking-glass-which-is-just-washed-and-kept-upside-down-start-to-move)
@@ -155,7 +155,7 @@ Con una tela elástica contruya un ambiente que reproduzca la deformación del e
 ### Reto 12 *Antiburbujas*
 Llena un recipiente con agua cuya tensión superficial haya disminuido. A continuación, deja caer una gota de agua normal en el recipiente (muy lentamente). La gota creará la llamada "antiburbuja". Investiga el fenómeno. Maximiza el tamaño y la duración de la antiburbuja. ¿Están relacionadas estas cantidades? Puedes inspirarte en este [video](https://youtu.be/w5UMyck8D64)
 
-### Reto 13 *Rebotes de pelotas de ligas* Grupo 9 (Rojas, Sanchez) 
+### Reto 13 *Rebotes de pelotas de ligas* Grupo 9 (Rojas, Sanchez)
 ¿Cómo varía el rebote de una pelota hecha de ligas o bandas de goma en función de su tamaño
 cuando se lanza desde una altura de 1 m? ¿cuántas ligas elásticas maximizan la altura de rebote? La pelota debe estar compuesta en su totalidad por gomas elásticas tal y como muestra este [video](https://youtu.be/cvq2ylWdwvY?si=nOTEA9zSVqUk0Fyx)
 
