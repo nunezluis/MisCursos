@@ -80,7 +80,7 @@ Estudiar los puntos
 
 #### Materiales
 + Presentación [El teorema de Noether y leyes de conservación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S3T1Noether.pdf
-) 
+)
 + Videos
   + [Emmy Noether CSIC](https://www.youtube.com/watch?v=N4to1dp6_lo)
   + [Emmy Noether Fermilab](https://www.youtube.com/watch?v=Rqfj7n5aSwY)
@@ -93,6 +93,9 @@ Estudiar los puntos
 + Fuerzas generalizadas: partícula en un campo electromagnético
 + Sistemas integrables y sistemas caóticos
 + Sistema integrable: movimiento unidimensional
+
+#### Materiales
++ Presentación [Fuerzas generalizadas y descripción de una partícula moviéndose en un campo electromagnético](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S4T1ParticulaCampoElectromagnetico.pdf)
 
 ### Clase S5-C9/C10
 
