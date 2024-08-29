@@ -37,21 +37,37 @@
 
 
 %%%%% Diapo 1
-\section{Primeras integrales del movimiento}
+\section{Integrales del movimiento}
 \frame{
   \frametitle{Primeras integrales del movimiento}
    \begin{itemize}  
-  	\item<1-> Las cantidades conservadas (funciones de las coordenadas y velocidades) constituyen primeras integrales del movimiento de un sistema.
-	\item<2-> El conjunto de cantidades conservadas en un sistema serán $I_k\left(q_j, \dot{q}_j\right)=C_k$, donde $C_k=$ constante, y $k=1, \ldots, n$
-    \end{itemize}
+  	\item<1-> Las cantidades conservadas, $I_k\left(q_j, \dot{q}_j\right)=C_k$, donde $C_k=$ constante, y $k=1, \ldots, n$
+, son primeras integrales del movimiento de un sistema.
+	\item<2-> Un sistema con $s$ grados de libertad es integrable si posee $s$ cantidades conservadas; es decir, si $n=s$.
+	\item<3-> A partir de esa integración las demás coordenadas pueden, en principio, ser integradas. 
+	\item<4-> Un sistema para el cual existen más cantidades conservadas que grados de libertad $(n>s)$ se llama superintegrable.
+	\item<5-> El ejemplo más simple de sistema superintegrable es una partícula libre. Otro ejemplo es el problema de dos cuerpos sujetos a interacción gravitacional.
+	\item<6-> Si un sistema con $s$ grados de libertad tiene menos de $s$ cantidades conservadas $(n<s)$, se denomina no integrable.
+   \end{itemize}
 }
 %
 %%%%% Diapo 2
 \section{Sección}
 \frame{
   \frametitle{Título transparencia}
-   	\begin{itemize}  
-  \item<1-> 
+   \begin{itemize}
+   	\item<1-> Ejemplos de sistemas integrables
+	\begin{itemize}
+		\item Oscilador armónico simple: $s=1 ; C_1=E=$ cte, $n=1$; es integrable.
+		\item  Péndulo simple: $s=1 ; C_1=E=\mathrm{cte}, n=1$; es integrable.
+		\item  Partícula sobre un cono: $s=2, C_1=l_z=$ cte, $C_2=E=$ cte, $n=2$; es integrable.
+		\item  Péndulo doble: $s=2 ; C_1=E=$ cte, $n=1$; no es integrable.
+		\item  Péndulo cuyo soporte gira en un círculo en plano vertical con velocidad angular constante: $s=1, n=0$; no es integrable.
+		\item  Péndulo de resorte: $s=2 ; C_1=E=$ cte, $n=1$; no es integrable.
+		\item  Péndulo paramétrico cuya longitud varía en el tiempo: $s=1, n=0$; no es integrable.
+		\item  Partícula libre es superintegrable: $s=3 ; n=4$ : $C_1=E=$ cte, $C_2=p_x=$ cte, $C_2=p_y=\mathrm{cte}, C_2=p_z=\mathrm{cte}$.
+	\end{itemize}  
+	\item<2-> La integrabilidad es un tipo de simetría presente en varios sistemas dinámicos, y que conduce a una evolución regular (periódica o estacionaria) de las variables del sistema en el tiempo
     \end{itemize}
 }
 %
