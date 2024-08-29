@@ -1,0 +1,66 @@
+\documentclass[spanish]{beamer}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath}
+\usepackage{mathtools,cancel} % cancela con una flecha \cancelto{0}{XXXX}
+\renewcommand{\CancelColor}{\color{red}} %change cancel color to red
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usepackage{textpos}
+% Logo  en el comienzo 
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+\end{textblock*}}
+
+\begin{document}
+
+\title{\textbf{Título presentación} }
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
+\textit{Universidad Industrial de Santander, Santander, Colombia } \\
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+}
+\date{\today}
+\maketitle
+
+
+\begin{frame}
+\frametitle{Agenda}
+  \tableofcontents
+\end{frame}
+
+
+%%%%% Diapo 1
+\section{Sección}
+\frame{
+  \frametitle{Título transparencia}
+   \begin{itemize}  
+  	\item<1-> 
+    \end{itemize}
+}
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+  \frametitle{Título transparencia}
+   	\begin{itemize}  
+  \item<1-> 
+    \end{itemize}
+}
+
+%%%%% Diapo Fin
+\section{Recapitulando}
+\frame{
+  \frametitle{Recapitulando}
+En presentación consideramos
+  \begin{enumerate}
+  	\item<1->
+   \end{enumerate}
+}
+  
+\end{document}
