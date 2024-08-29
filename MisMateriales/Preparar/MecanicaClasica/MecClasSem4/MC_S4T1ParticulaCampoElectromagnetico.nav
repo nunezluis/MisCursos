@@ -10,15 +10,19 @@
 \headcommand {\beamer@sectionpages {3}{10}}
 \headcommand {\beamer@subsectionpages {3}{10}}
 \headcommand {\sectionentry {2}{El potencial vector}{11}{El potencial vector}{0}}
-\headcommand {\slideentry {2}{0}{1}{11/18}{}{0}}
-\headcommand {\beamer@framepages {11}{18}}
-\headcommand {\beamer@sectionpages {11}{18}}
-\headcommand {\beamer@subsectionpages {11}{18}}
-\headcommand {\sectionentry {3}{Secci\'on}{19}{Secci\'on}{0}}
-\headcommand {\slideentry {3}{0}{1}{19/19}{}{0}}
-\headcommand {\beamer@framepages {19}{19}}
-\headcommand {\beamer@partpages {1}{19}}
-\headcommand {\beamer@subsectionpages {19}{19}}
-\headcommand {\beamer@sectionpages {19}{19}}
-\headcommand {\beamer@documentpages {19}}
-\headcommand {\gdef \inserttotalframenumber {5}}
+\headcommand {\slideentry {2}{0}{1}{11/20}{}{0}}
+\headcommand {\beamer@framepages {11}{20}}
+\headcommand {\slideentry {2}{0}{2}{21/27}{}{0}}
+\headcommand {\beamer@framepages {21}{27}}
+\headcommand {\beamer@sectionpages {11}{27}}
+\headcommand {\beamer@subsectionpages {11}{27}}
+\headcommand {\sectionentry {3}{Simetr\IeC {\'\i }a de Calibre}{28}{Simetr\IeC {\'\i }a de Calibre}{0}}
+\headcommand {\slideentry {3}{0}{1}{28/33}{}{0}}
+\headcommand {\beamer@framepages {28}{33}}
+\headcommand {\slideentry {3}{0}{2}{34/40}{}{0}}
+\headcommand {\beamer@framepages {34}{40}}
+\headcommand {\beamer@partpages {1}{40}}
+\headcommand {\beamer@subsectionpages {28}{40}}
+\headcommand {\beamer@sectionpages {28}{40}}
+\headcommand {\beamer@documentpages {40}}
+\headcommand {\gdef \inserttotalframenumber {7}}
