@@ -1,4 +1,5 @@
 \babel@toc {spanish}{}\relax 
 \beamer@sectionintoc {1}{Integrales del movimiento}{3}{0}{1}
-\beamer@sectionintoc {2}{Secci\'on}{9}{0}{2}
-\beamer@sectionintoc {3}{Secci\'on}{11}{0}{3}
+\beamer@sectionintoc {2}{Sistemas Integrables}{9}{0}{2}
+\beamer@sectionintoc {3}{Integrabilidad }{11}{0}{3}
+\beamer@sectionintoc {4}{Ejemplo}{18}{0}{4}

@@ -9,16 +9,25 @@
 \headcommand {\beamer@framepages {3}{8}}
 \headcommand {\beamer@sectionpages {3}{8}}
 \headcommand {\beamer@subsectionpages {3}{8}}
-\headcommand {\sectionentry {2}{Secci\'on}{9}{Secci\'on}{0}}
+\headcommand {\sectionentry {2}{Sistemas Integrables}{9}{Sistemas Integrables}{0}}
 \headcommand {\slideentry {2}{0}{1}{9/10}{}{0}}
 \headcommand {\beamer@framepages {9}{10}}
 \headcommand {\beamer@sectionpages {9}{10}}
 \headcommand {\beamer@subsectionpages {9}{10}}
-\headcommand {\sectionentry {3}{Secci\'on}{11}{Secci\'on}{0}}
-\headcommand {\slideentry {3}{0}{1}{11/11}{}{0}}
-\headcommand {\beamer@framepages {11}{11}}
-\headcommand {\beamer@partpages {1}{11}}
-\headcommand {\beamer@subsectionpages {11}{11}}
-\headcommand {\beamer@sectionpages {11}{11}}
-\headcommand {\beamer@documentpages {11}}
-\headcommand {\gdef \inserttotalframenumber {5}}
+\headcommand {\sectionentry {3}{Integrabilidad }{11}{Integrabilidad }{0}}
+\headcommand {\slideentry {3}{0}{1}{11/17}{}{0}}
+\headcommand {\beamer@framepages {11}{17}}
+\headcommand {\beamer@sectionpages {11}{17}}
+\headcommand {\beamer@subsectionpages {11}{17}}
+\headcommand {\sectionentry {4}{Ejemplo}{18}{Ejemplo}{0}}
+\headcommand {\slideentry {4}{0}{1}{18/21}{}{0}}
+\headcommand {\beamer@framepages {18}{21}}
+\headcommand {\slideentry {4}{0}{2}{22/26}{}{0}}
+\headcommand {\beamer@framepages {22}{26}}
+\headcommand {\slideentry {4}{0}{3}{27/27}{}{0}}
+\headcommand {\beamer@framepages {27}{27}}
+\headcommand {\beamer@partpages {1}{27}}
+\headcommand {\beamer@subsectionpages {18}{27}}
+\headcommand {\beamer@sectionpages {18}{27}}
+\headcommand {\beamer@documentpages {27}}
+\headcommand {\gdef \inserttotalframenumber {8}}
