@@ -51,6 +51,7 @@ Los problemas para discutir en clase los pueden encontrar [aquí](https://www.ov
 + **Rehaga** los ejemplos 1. (p35), 3. (p37), 4. (p39), 1. (p49), 3. (p41), 5. (p52), 6. (p54)
 
 #### Problemas S2
+Desarrolle los problemas del [240816](https://www.overleaf.com/read/tjknrqvvrtgv#521a1e)
 
 #### Materiales
 + Presentaciones
@@ -71,12 +72,12 @@ Los problemas para discutir en clase los pueden encontrar [aquí](https://www.ov
 
 ### Clase S3-C5/C6  Leyes de conservación y simetrías
 #### Antes de clases
-Estudiar los puntos
-+ Momento conjugado
-+ Teorema de Noether
-+ Homogeneidad del espacio y conservación del momento lineal
-+ Isotropía del espacio y conservación del momento angular
-
++ **Estudie**
+  + Momento conjugado
+  + Teorema de Noether
+  + Homogeneidad del espacio y conservación del momento lineal
+  + Isotropía del espacio y conservación del momento angular
++ **Rehaga** los ejemplos 2., 3  (p76), 1. (p79), 1. (p81)
 
 #### Materiales
 + Presentación [El teorema de Noether y leyes de conservación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S3T1Noether.pdf
@@ -85,21 +86,41 @@ Estudiar los puntos
   + [Emmy Noether CSIC](https://www.youtube.com/watch?v=N4to1dp6_lo)
   + [Emmy Noether Fermilab](https://www.youtube.com/watch?v=Rqfj7n5aSwY)
 
-### Clase S4-C7/C8
+#### Problemas S3
+Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv#521a1e)
+
+### Clase S4-C7/C8 Fuerzas generalizadas
 #### Antes de clase
-Estudiar los puntos
-+ Homogeneidad del tiempo y conservación de la energía
-+ Teorema de Euler para la energía cinética
-+ Fuerzas generalizadas: partícula en un campo electromagnético
-+ Sistemas integrables y sistemas caóticos
-+ Sistema integrable: movimiento unidimensional
++ **Estudie**
+  + Homogeneidad del tiempo y conservación de la energía
+  + Teorema de Euler para la energía cinética
+  + Fuerzas generalizadas: partícula en un campo electromagnético
+  + Sistemas integrables y sistemas caóticos
+  + Sistema integrable: movimiento unidimensional
++ **Rehaga** los ejemplos 1. (p97), 2. (p98), 3. (p99)
+
+#### Problemas S3
+Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv#521a1e)
+
 
 #### Materiales
 + Presentación [Fuerzas generalizadas y descripción de una partícula moviéndose en un campo electromagnético](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S4T1ParticulaCampoElectromagnetico.pdf)
 
-### Clase S5-C9/C10
+### Clase S5-C9/C10 Fuerzas Centrales
+####Antes de clase
++ **Estudie**
+  + Problema de dos cuerpos
+  + Potencial efectivo
+  + Ecuación diferencial de la órbita
+  + Fuerza gravitacional y problema de Kepler
+  + Leyes de Kepler y dependencia temporal
+
 
 ### Clase S6-C11/C12  
++ **Estudie**
+  + El vector de Laplace-Runge-Lenz
+  + Dispersión en campo de fuerza central
+  + Sección eficaz de dispersión
 
 ### Clase S7-C13/C14
 
