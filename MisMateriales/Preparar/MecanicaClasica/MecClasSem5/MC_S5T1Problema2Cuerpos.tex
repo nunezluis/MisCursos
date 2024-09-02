@@ -39,17 +39,49 @@
 %%%%% Diapo 1
 \section{Problema de dos cuerpos}
 \frame{
-  \frametitle{Problema de dos cuerpos}
+  \frametitle{Problema de dos cuerpos 1/3}
    \begin{itemize}  
-  	\item<1-> 
+  	\item<1-> Consideremos dos partículas $m_1$ y $m_2$ en $\mathbf{r}_1$ y $\mathbf{r}_2$, respecto a un origen $O$ de un sistema de referencia inercial. 
+	\item<2-> Supongamos que las partículas interaccionan mediante un potencial que depende solamente de sus posiciones relativas, $V\left(\mathbf{r}_1, \mathbf{r}_2\right)=V\left(\mathbf{r}_2-\mathbf{r}_1\right) $. Este sistema se conoce como el problema de dos cuerpos. 
+	\item<3-> El sistema posee seis grados de libertad: tres coordenadas para $\mathbf{r}_1$ de la partícula 1 y  tres para $\mathbf{r}_2$.
+	\item<4-> Definimos el vector de posición del centro de masa (CM) del sistema como $\mathbf{R}=\frac{m_1 \mathbf{r}_1+m_2 \mathbf{r}_2}{m_1+m_2}$ y posición relativa como $\mathbf{r}=\mathbf{r}_2-\mathbf{r}_1$
+	\begin{figure}[t]
+		\includegraphics[width=1.7in]{Figuras/DosCuerpos.png}
+   	\end{figure}
     \end{itemize}
 }
 %%%%% Diapo 2
-\section{Sección}
+%\section{Sección}
 \frame{
-  \frametitle{Título transparencia}
-   	\begin{itemize}  
-  \item<1-> 
+  \frametitle{Problema de dos cuerpos 2/3}
+   \begin{itemize}  
+  	\item<1-> Las posiciones de las partículas relativas al centro de masa son $\mathbf{r}_1^{\prime}  =\mathbf{r}_1-\mathbf{R}$ y $\mathbf{r}_2^{\prime} =\mathbf{r}_2-\mathbf{R}$
+	\item<2-> Es decir: $\mathbf{r}_1^{\prime}=\mathbf{r}_1-\frac{m_1 \mathbf{r}_1+m_2 \mathbf{r}_2}{m_1+m_2}=\frac{m_2\left(\mathbf{r}_1-\mathbf{r}_2\right)}{\left(m_1+m_2\right)}=-\frac{m_2}{\left(m_1+m_2\right)} \mathbf{r}$ y 
+	$ \mathbf{r}_2^{\prime}=\mathbf{r}_2-\frac{m_1 \mathbf{r}_1+m_2 \mathbf{r}_2}{m_1+m_2}=\frac{m_1\left(\mathbf{r}_2-\mathbf{r}_1\right)}{\left(m_1+m_2\right)}=\frac{m_1}{\left(m_1+m_2\right)} \mathbf{r}$
+	\item<3-> La energía cinética total del sistema será $T=T_{\mathrm{cm}}+T_{\mathrm{rel}}$
+	\item<4-> Entonces $T_{\mathrm{cm}} =\frac{1}{2} M_T \dot{\mathbf{R}}^2=\frac{1}{2}\left(m_1+m_2\right) \dot{\mathbf{R}}^2$
+	\item<5-> y $T_{\mathrm{rel}} =\frac{1}{2} m_1 \dot{\mathbf{r}}_1^{\prime 2}+\frac{1}{2} m_2 \dot{\mathbf{r}}_2^{\prime 2} =\frac{1}{2} \frac{m_1 m_2^2}{\left(m_1+m_2\right)^2} \dot{\mathbf{r}}^2+\frac{1}{2} \frac{m_1^2 m_2}{\left(m_1+m_2\right)^2} \dot{\mathbf{r}}^2 =\frac{1}{2} \frac{m_1 m_2}{\left(m_1+m_2\right)} \dot{\mathbf{r}}^2$
+	\item<6-> y si definimos la masa reducida, $\mu \equiv \frac{m_1 m_2}{\left(m_1+m_2\right)}$
+	\item<7-> El Lagrangiano del sistema es 
+	$L(\mathbf{r}, \mathbf{R}, \dot{\mathbf{r}}, \dot{\mathbf{R}}) =T-V\left(\mathbf{r}_2-\mathbf{r}_1\right) =\frac{1}{2}\left(m_1+m_2\right) \dot{\mathbf{R}}^2+\frac{1}{2} \mu \dot{\mathbf{r}}^2-V(\mathbf{r})$
+	\item<8-> Los seis grados de libertad del sistema se describen mediante las componentes de los vectores $\mathbf{r}$ y $\mathbf{R}$.
+    \end{itemize}
+}
+
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+  \frametitle{Problema de dos cuerpos 3/3}
+   \begin{itemize}  
+  	\item<1-> Las componentes cartesianas de $\mathbf{R}$ son coordenadas cíclicas, lo que implica $M_{\mathrm{T}} \dot{\mathbf{R}} \equiv (m_1+m_2)\dot{\mathbf{R}}=$ cte. \\ Es decir: {\bf el momento lineal total del sistema se conserva}
+	\item<2-> Como no hay fuerzas externas sobre el sistema : $\mathbf{F}_{\text {externa total }}=0 \Rightarrow \mathbf{P}_{\mathrm{T}}=M_{\mathrm{T}} \dot{\mathbf{R}}=$ cte. El centro de masa se mantiene en reposo o se mueve con velocidad constante, $\dot{\mathbf{R}}=$ $\mathbf{v}_{\mathrm{cm}}=$ cte.
+	\item<3-> Existirán tres cantidades conservadas correspondientes a las tres componentes del momento lineal total o, equivalentemente, a las tres componentes de la velocidad del centro de masa.
+	\item<4-> El término $T_{\mathrm{cm}}$, la energía cinética del centro de masa es constante y se omite en el Lagrangiano, $L=\frac{1}{2} \mu \dot{\mathbf{r}}^2-V(\mathbf{r})$
+	\item<5-> El problema de dos cuerpos se reduce al de una partícula de masa $\mu$ en la posición relativa $\mathbf{r}(t)$ con respecto a un origen $O^{\prime}$.
+	\begin{figure}[t]
+		\includegraphics[width=1.7in]{Figuras/EquivalenciaDosCuerpos.png}
+   	\end{figure}
+
     \end{itemize}
 }
 
