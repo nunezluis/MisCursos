@@ -1,0 +1,3 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{El potencial efectivo}{3}{0}{1}
+\beamer@sectionintoc {2}{Las trayectorias}{9}{0}{2}
