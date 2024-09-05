@@ -1,0 +1,3621 @@
+%% This document created by Scientific Word (R) Version 3.0
+
+\documentclass[spanish,titlepage,11pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[spanish]{babel}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%TCIDATA{OutputFilter=latex2.dll}
+%TCIDATA{CSTFile=LaTeX article (bright).cst}
+%TCIDATA{Created=Sat Nov 24 05:21:45 2001}
+%TCIDATA{LastRevised=Sat Nov 24 07:19:00 2001}
+%TCIDATA{<META NAME="GraphicsSave" CONTENT="32">}
+%TCIDATA{<META NAME="DocumentShell" CONTENT="Journal Articles\MiArticulo">}
+%TCIDATA{Language=Spanish}
+\hyphenation{La-ti-noa-me-ri-ca-na Fa-cul-tad Ren-di-mien-to}
+\setlength{\topmargin}{-0.15in}
+\setlength{\textheight}{8.4in}
+\setlength{\oddsidemargin}{0.0in}
+\setlength{\evensidemargin}{0.0in}
+\setlength{\textwidth}{6.75in}
+
+
+\begin{document}
+
+
+\title{\textbf{10 Clases }\\\textbf{de }\\\textbf{Herramientas Computacionales Num\'{e}ricas}}
+\author{\textbf{L. A. N\'{u}\~{n}ez\thanks{ e-mail: nunez@ciens.ula.ve}}\\\textit{Centro de Astrof\'{\i}sica Te\'{o}rica,}\\\textit{Departamento de F\'{\i}sica, Facultad de Ciencias, }\\\textit{Universidad de Los Andes, M\'{e}rida 5101, Venezuela}\\y\\\textit{Centro Nacional de C\'{a}lculo Cient\'{\i}fico}\\\textit{Universidad de Los Andes }\textsc{(CeCalCULA)}\textit{,}\\\textit{Corporaci\'{o}n Parque Tecnol\'{o}gico de M\'{e}rida,}\\\textit{M\'{e}rida 5101, Venezuela}}
+\date{Borrador Muy Preliminar}
+\date{Borrador Muy Preliminar}
+\maketitle
+\tableofcontents
+
+
+
+\newpage
+
+\section{\textbf{Clase 1: Errores en el C\'{o}mputo.}}
+
+\subsection{Vocabulario: Palabras, byte y Kilobytes,}
+
+\begin{itemize}
+\item  N\'{u}meros Binarios = $0,1$= expresados en base 2.
+
+\item 1 byte = $1B\equiv8Bits$ = Bits para almacenar un car\'{a}cter ``x'' o
+``y''\newline 1 Palabra = bits requeridos para almacenar un n\'{u}mero $\equiv8Bits=1B$
+
+\item 1 Kilobyte = $1KB=2^{10}$ bytes = $1024$ bytes
+
+\item 512 Kilobytes = $2^{9}=524.288Bits=$
+\end{itemize}
+
+\subsection{Enteros y Puntos Flotantes}
+
+Los n\'{u}meros enteros se representan
+\begin{equation}
+x_{ent}=\operatorname*{sign}\times binario
+\end{equation}%
+\begin{align}
+-2^{N-1}  &  <x_{ent}<2^{N-1}\\
+-2147483647  &  \simeq-2^{31}<x_{ent}<2^{31}\simeq2147483647
+\end{align}
+para sistemas con palabras de 32 bits, (4bytes)
+
+En general los n\'{u}meros reales o puntos flotantes, se representan en el
+computadores siguiendo la convenci\'{o}n
+\begin{equation}
+x_{float}=\operatorname*{sign}\left(  x_{float}\right)  \times M\times2^{p}%
+\end{equation}
+donde $\operatorname*{sign}\left(  x_{float}\right)  $es el signo del
+n\'{u}mero $x_{float}$, la mantisa es $M$ con $0<M\leq1$ y el entero positivo,
+$p,$ el exponente. Obviamente cualquier n\'{u}mero real puede ser expresado de
+esa manera. Con algunas convenciones adicionales. Signo, exponente y mantisa
+se expresan en n\'{u}meros binario. Para representaciones punto flotantes con
+palabras de 4 bytes (32 bits) se separan: un bit para el signo, 8 bits para el
+exponente y los 23 bits restantes para la mantisa.
+
+As\'{\i} cualquier
+\begin{equation}
+x_{float}=\operatorname*{sign}\left(  x_{float}\right)  \times2^{\frac
+{\ln\left\|  x_{float}\right\|  }{\ln2}-\left[  \frac{\ln\left\|
+x_{float}\right\|  }{\ln2}\right]  }\times2^{\left[  \frac{\ln\left\|
+x_{float}\right\|  }{\ln2}\right]  }%
+\end{equation}
+en donde, identificando
+\begin{align}
+M  &  =2^{\frac{\ln\left\|  x_{float}\right\|  }{\ln2}-\left[  \frac
+{\ln\left\|  x_{float}\right\|  }{\ln2}\right]  }\\
+p  &  =\left[  \frac{\ln\left\|  x_{float}\right\|  }{\ln2}\right]
+\end{align}
+con $\left[  x\right]  $ la parte entera de $x.$ Dado que $p$ viene
+representado por un n\'{u}mero binario de 8 d\'{\i}gitos el n\'{u}mero entero
+m\'{a}ximo que puede representar es $2^{8}=256\Longrightarrow p\in\left[
+0,255\right]  $ , para lo cual se establece una correspondencia a un intervalo
+que permita exponentes negativos. De modo que el nuevo exponente
+$P=p-127\Longrightarrow P\in\left[  -127,128\right]  .$ Queda entonces
+determinar como expresar la mantisa en n\'{u}meros binarios, para lo cual se
+sigue la manera tradicional de expresar n\'{u}meros fraccionarios
+\begin{equation}
+0.6254=6\times10^{-1}+2\times10^{-2}+5\times10^{-3}+4\times10^{-4}%
+\end{equation}
+que en general una expresi\'{o}n $B$ -fracci\'{o}n
+\begin{equation}
+x_{F}=\sum_{n=1}^{\infty}a_{k}B^{-k}%
+\end{equation}
+donde $B$ es la base (diez en el caso decimal, o dos en el caso binario). Para
+encontrar la expresi\'{o}n de la mantisa en n\'{u}meros binarios basta con
+encontrar el conjunto de coeficientes $a_{k}$ en base $B=2.$ \pagebreak 
+
+Vale decir
+\begin{align}
+0.6254  &  =\sum_{n=1}^{\infty}a_{k}2^{-k}\\
+2\times0.6254  &  =1+0.2508=a_{1}+\sum_{n=1}^{\infty}a_{k+1}2^{-k}%
+\Longrightarrow a_{1}=1\\
+2\times0.2508  &  =0+0.5016=a_{2+}\sum_{n=1}^{\infty}a_{k+2}2^{-k}%
+\Longrightarrow a_{2}=0\\
+2\times0.5016  &  =1+0.0032=a_{3+}\sum_{n=1}^{\infty}a_{k+3}2^{-k}%
+\Longrightarrow a_{3}=1\\
+2\times0.0032  &  =0+0.0064=a_{4+}\sum_{n=1}^{\infty}a_{k+4}2^{-k}%
+\Longrightarrow a_{4}=0\\
+2\times0.0064  &  =0+0.0128=a_{5+}\sum_{n=1}^{\infty}a_{k+5}2^{-k}%
+\Longrightarrow a_{5}=0\\
+2\times0.0128  &  =0+0.0512=a_{6+}\sum_{n=1}^{\infty}a_{k+6}2^{-k}%
+\Longrightarrow a_{6}=0\\
+2\times0.0512  &  =0+0.1024=a_{7+}\sum_{n=1}^{\infty}a_{k+7}2^{-k}%
+\Longrightarrow a_{7}=0\\
+2\times0.1024  &  =0+0.1024=a_{8+}\sum_{n=1}^{\infty}a_{k+8}2^{-k}%
+\Longrightarrow a_{8}=0
+\end{align}
+as\'{\i}, finalmente
+\begin{equation}
+0.6254\simeq10100000
+\end{equation}
+n\'{o}tese que es una representaci\'{o}n aproximada, limitada por el
+n\'{u}mero de cifras permitidas por el tama\~{n}o de la palabra y que, tal y
+como ocurre en los n\'{u}meros decimales el coeficiente de las potencias
+mayores va primero.
+
+\subsection{\textit{Underflows y overflows}}
+
+En precisi\'{o}n simple se usan 4 bytes (32 bits) para representar un
+n\'{u}mero, por lo tanto el m\'{a}ximo n\'{u}mero real que puede ser
+representado es
+\begin{equation}
+2^{128}\equiv3.4\times10^{38}=\overset{\operatorname*{sign}}{\overbrace{0}%
+}\ \overset{p}{\overbrace{11111111}}\ \overset{M}{\overbrace
+{11111111111111111111111}}%
+\end{equation}
+equivalentemente el m\'{i}nimo ser\'{a} $2^{-128}\equiv2.9\times10^{-39}.$ Si
+se utiliza doble precisi\'{o}n, dos palabras (8 bytes $\equiv$ 64 bits)
+representar\'{a}n cada numero. De los 64 bits, 11 representar\'{a}n el
+exponente y los restantes 52 para la mantisa. En doble precisi\'{o}n
+\begin{equation}
+10^{-322}\leq doble\leq10^{308}%
+\end{equation}
+Los n\'{u}meros menores que los m\'{i}nimos (tanto en precisi\'{o}n simple
+como en doble) son considerados \textit{underflows} mientras que cifras
+mayores que los mayores son \textit{overflows}. El siguiente programa en
+pseudoc\'{o}digos identifica estas anomal\'{i}as
+\begin{verbatim}
+under <------- 1.0
+over<------- 1.0
+    mientras N< Nfinal
+    haga
+        under = under/2.0
+        over = over*2.0
+    finmientras
+escriba Nfinal, under, over
+\end{verbatim}
+
+Hay compiladores que asignan los \textit{underflows y overflows} a cero y eso
+hay que chequearlo.
+
+\subsection{Precisi\'{o}n del compilador}
+
+Cuando se suman dos n\'{u}meros de \'{o}rdenes de magnitud diferentes, al
+igual que el caso decimal hay que igualar exponentes para luego sumar las
+mantisas.
+\begin{equation}
+7+10^{-7}=0.7\times10^{-1}+0.000001\times10^{-1}%
+\end{equation}
+el exponente del n\'{u}mero menor se hace cada vez mayor a costa de
+decrementar la mantisa y en el caso de las sumas en las m\'{a}quinas las
+representaciones (precisi\'{o}n simple o doble, puede no ser suficiente)
+
+Por ejemplo
+\begin{align}
+10^{-7}  &  =0\quad01100000\quad1101\ 0110\ 1011\ 1111\ 1001\ 010\\
+7  &  =0\quad10000010\quad1110\ 0000\ 0000\ 0000\ 0000\ 000
+\end{align}
+la suma binaria se logra a\~{n}adiendo ceros a la mantisa
+\begin{align}
+10^{-7}  &  =0\quad01100001\quad0110\ 1011\ 0101\ 1111\ 1100\ 101\left(
+0\right) \\
+&  =0\quad01100010\quad0011\ 0101\ 1010\ 1111\ 1110\ 010\left(  10\right) \\
+&  =\vdots\\
+&  =0\quad10000010\quad0000\ 0000\ 0000\ 0000\ 0000\ 000\left(
+1101\ 0110\cdots\right)
+\end{align}
+por lo cual
+\begin{equation}
+7+10^{-7}=7
+\end{equation}
+La verificaci\'{o}n de la precisi\'{o}n del compilador se logra sum\'{a}ndole
+a un numero otro cada vez menor y comparando la suma con el n\'{u}mero. Cuando
+la suma es igual a la numero en ese momento el sumando es la precisi\'{o}n,
+por cuanto puede ser sumado sin que afecte al sumando.
+\begin{equation}
+1+\epsilon_{p}=1
+\end{equation}
+y t\'{\i}picamente
+\begin{align}
+\epsilon_{p}  &  \sim10^{-7}\longleftarrow\text{Precisi\'{o}n simple}\\
+\epsilon_{p}  &  \sim10^{-16}\longleftarrow\text{Precisi\'{o}n doble}%
+\end{align}
+
+\subsection{Tipos de Errores}
+
+\begin{itemize}
+\item \textbf{Equivocaciones:} Errores tipogr\'{a}ficos en el c\'{o}digo o en
+los datos (o ambos)
+
+\item \textbf{Eventuales:} Fluctuaciones electr\'{o}nicas en la circuiter\'{\i
+}a (nunca ocurren)
+
+\item \textbf{Algor\'{\i}tmicos}: Ocurren por aproximaci\'{o}n de las
+matem\'{a}ticas en el algoritmo, t\'{\i}picamente
+\begin{equation}
+e^{x}=\sum_{n=0}^{\infty}\frac{x^{n}}{n!}\simeq\sum_{n=0}^{N}\frac{x^{n}}%
+{n!}+O(x,N)
+\end{equation}
+Obviamente que $N\longrightarrow\infty\Longrightarrow O(x,N)\longrightarrow0.$
+Por lo tanto puede modelarse como
+\begin{equation}
+\epsilon_{aprox}\simeq\frac{\alpha}{N^{\beta}}%
+\end{equation}
+
+\item \textbf{Errores de redondeo}: Son equivalentes a los errores
+experimentales debido a las limitaciones del aparato de medida. En nuestro
+caso por las limitaciones de la representaci\'{o}n de los n\'{u}meros en la
+m\'{a}quina.
+\[
+2\left(  \frac{1}{3}\right)  -\frac{2}{3}=0.6666666-0.6666667=-0.0000001\neq0
+\]
+Si $x$ es un n\'{u}mero exacto, llamaremos $x_{c}$ su representaci\'{o}n en el
+computador. De esta forma
+\begin{equation}
+x=11223344556677889900=1.1223344556677889900\times10^{19}%
+\end{equation}
+dado que el exponente y la mantisa se almacenan en forma separada. El
+exponente se almacenara con toda precisi\'{o}n por cuanto es un n\'{u}mero
+peque\~{n}o. No as\'{\i} la mantisa, la cual ser\'{a} almacenada dependiendo
+del tama\~{n}o de la palabra. A\'{u}n con dos palabras se almacenar\'{a} en
+1.12233 y 44556677. Se pierden las cifras 8899 por incapacidad del
+instrumento.\newline Dado que la multiplicaci\'{o}n es m\'{a}s costosa que la
+suma, el error de redondeo de modela en base al error de redondeo
+multiplicativo
+\begin{equation}
+\epsilon_{red}\simeq\sqrt{N}\epsilon_{m}%
+\end{equation}
+donde $\epsilon_{m}$ lo constituye la precisi\'{o}n de la m\'{a}quina.
+
+\item \textbf{Error Total}: Es la suma del error de redondeo m\'{a}s el error
+de aproximaci\'{o}n. Los errores de aproximaci\'{o}n disminuye y los errores
+de redondeo aumentan. Llega un punto en el cual el error de redondeo es mayor
+que el algor\'{\i}tmico.. Ese punto se alcanza en un n\'{u}mero de ejecuciones
+\'{o}ptimas. El \textbf{error total}, m\'{\i}nimo da una idea de la eficiencia
+del programa que estamos utilizando.
+\begin{equation}
+\epsilon_{t}=\epsilon_{aprox}+\epsilon_{red}=\frac{\alpha}{N^{\beta}}+\sqrt
+{N}\epsilon_{m}%
+\end{equation}
+\end{itemize}
+
+\subsection{Cancelaci\'{o}n en la resta}
+
+Dependiendo de como se opere se pueden obtener errores mayores o menores
+
+\begin{center}%
+\begin{tabular}
+[c]{lll}%
+$a=b-c$ & $\longrightarrow$ & $a_{c}=b_{c}-c_{c}$\\
+&  & $a_{c}=b\left(  1+\epsilon_{b}\right)  -c\left(  1+\epsilon_{c}\right)
+$\\
+&  & $a_{c}=\left(  b-c\right)  +b\epsilon_{b}-c\epsilon_{c}$\\
+& $\Longrightarrow$ & $\frac{a_{c}}{a}=1+\frac{b}{a}\epsilon_{b}-\frac{c}%
+{a}\epsilon_{c}$\\
+&  & $\frac{a_{c}}{a}=\left(  1+\epsilon_{a}\right)  =1+\frac{b}{a}%
+\epsilon_{b}-\frac{c}{a}\epsilon_{c}$\\
+si $a\ll1$ & $b\simeq a$ & $\epsilon_{a}\simeq\frac{b}{a}\left(  \epsilon
+_{b}-\epsilon_{c}\right)  $%
+\end{tabular}
+\end{center}
+
+por lo cual a\'{u}n en el caso de que los errores en $b$ y $c$ se parezcan, al
+estar multiplicados por un n\'{u}mero muy grande, $\frac{b}{a},$ ya que $a $
+es muy peque\~{n}o, existir\'{a} una diferencia entre $a$ y $a_{c}.$ La idea
+por lo tanto es evitar las restas de dos n\'{u}meros parecidos. El caso
+m\'{a}s pat\'{e}tico es la ecuaci\'{o}n de segundo grado
+\begin{equation}
+ax^{2}+bx+c=0
+\end{equation}
+donde las ra\'{\i}ces vienen dadas indistintamente por
+\begin{align}
+x_{1,2}  &  =\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}\label{sintilde}\\
+\tilde{x}_{1,2}  &  =\frac{-2c}{b\pm\sqrt{b^{2}-4ac}} \label{contilde}%
+\end{align}
+de forma que las ra\'{\i}ces podr\'{a}n ser calculadas en sin la
+amplificaci\'{o}n por sustracci\'{o}n si
+\begin{align}
+b  &  >0\Longrightarrow\left\{
+\begin{array}
+[c]{c}%
+x_{1}=\frac{-2c}{b+\sqrt{b^{2}-4ac}}\\
+\\
+x_{2}=\frac{-b-\sqrt{b^{2}-4ac}}{2a}%
+\end{array}
+\right. \\
+b  &  <0\Longrightarrow\left\{
+\begin{array}
+[c]{c}%
+x_{2}=\frac{-2c}{b-\sqrt{b^{2}-4ac}}\\
+\\
+x_{1}=\frac{-b+\sqrt{b^{2}-4ac}}{2a}%
+\end{array}
+\right.
+\end{align}
+
+\subsection{Errores Multiplicativos}
+
+Los errores multiplicativos ocurren en de las siguiente forma
+
+\begin{center}%
+\begin{tabular}
+[c]{lll}%
+$a=b\times c$ & $\longrightarrow$ & $a_{c}=b_{c}\times c_{c}$\\
+&  & $a_{c}=b\times c\times\left(  1+\epsilon_{b}\right)  \times\left(
+1+\epsilon_{c}\right)  $\\
+& $\Longrightarrow$ & $\frac{a_{c}}{a}\simeq1+\epsilon_{b}+\epsilon_{c}$%
+\end{tabular}
+\end{center}
+
+y dependiendo del signo de los errores en $b$ y $c$ sera mayor o menor. Por lo
+tanto sigue un patr\'{o}n aleatorio y se comportar\'{a} como
+\begin{equation}
+\epsilon_{red}=\sqrt{N}\epsilon_{m}%
+\end{equation}
+
+\subsection{Error Total y Ejecuci\'{o}n Optima}
+
+Existe un estimado del n\'{u}mero de pasos \'{o}ptimo para el cual el error de
+aproximaci\'{o}n es m\'{\i}nimo y el error de redondeo no ha crecido lo
+suficiente. Para ello
+\begin{equation}
+\frac{\mathrm{d}\ \epsilon_{tot}}{\mathrm{d}\ N}=\frac{\mathrm{d}\ \left(
+\frac{\alpha}{N^{\beta}}+\sqrt{N}\epsilon_{m}\right)  }{\mathrm{d}\ N}=0
+\end{equation}
+si
+\begin{equation}
+\epsilon_{aprox}\simeq\frac{1}{N^{2}}\Longrightarrow\frac{\mathrm{d}%
+\ \epsilon_{tot}}{\mathrm{d}\ N}=-2\frac{1}{N^{3}}+\frac{N^{3/2}}{2}%
+\epsilon_{m}=0\Longrightarrow N^{5/2}=\frac{4}{\epsilon_{m}}%
+\end{equation}
+para $\epsilon_{m}\simeq10^{-7}$ en precisi\'{o}n simple tenemos $N\simeq1099$
+y el
+\begin{equation}
+\epsilon_{tot}=\frac{\alpha}{N^{\beta}}+\sqrt{N}\epsilon_{m}\simeq
+4\times10^{-6}%
+\end{equation}
+
+\subsection{Integraci\'{o}n num\'{e}rica, sus pasos y sus errores}
+
+Para el caso de la integraci\'{o}n num\'{e}rica, la idea es el valor m\'{a}s
+exacto de la integral con el menor n\'{u}mero de intervalos de integraci\'{o}%
+n. El error algor\'{\i}tmico puede estimarse con el grado de aproximaci\'{o}n
+en series de Taylor en un intervalo de integraci\'{o}n multiplicado por el
+n\'{u}mero de subintervalos utilizados para evaluar la integral definida en
+$\left[  a,b\right]  $ . Esto es
+\begin{align}
+I_{\left(  x_{i},x_{i+1}\right)  }  &  =\int_{x_{i}}^{x_{i}+h}\left(
+f(x_{i})+xf^{\prime}(x_{i})+\frac{1}{2}x^{2}f^{\prime\prime}(x_{i})+\frac
+{1}{3!}x^{3}f^{\prime\prime\prime}(x_{i})+\cdots\right)  \ {\normalsize d}x\\
+I_{\left(  x_{i},x_{i+1}\right)  }  &  =h\left(  \frac{1}{2}f(x_{i})+\frac
+{1}{2}f(x_{i+1})\right)  +E(h^{n},f^{\left(  n\right)  }(x_{i}))
+\end{align}
+con
+\begin{align}
+E_{\left(  x_{i},x_{i+1}\right)  }  &  =\int_{x_{i}}^{x_{i}+h}\left(  \frac
+{1}{2}x^{2}f^{\prime\prime}(x_{i})+\frac{1}{3!}x^{3}f^{\prime\prime\prime
+}(x_{i})+\cdots\right)  \ {\normalsize d}x\\
+E_{\left(  a,b\right)  }  &  =N\int_{x_{i}}^{x_{i}+h}\left(  \frac{1}{2}%
+x^{2}f^{\prime\prime}(x_{i})+\frac{1}{3!}x^{3}f^{\prime\prime\prime}%
+(x_{i})+\cdots\right)  \ {\normalsize d}x
+\end{align}
+De tal forma que dependiendo del m\'{e}todo utilizado, tendremos que los
+t\'{e}rminos que lideran las series de los errores algor\'{\i}tmicos
+ser\'{a}n
+\begin{align}
+E_{t}  &  =\frac{\left(  b-a\right)  ^{3}}{N^{2}}f^{\left(  2\right)  }\\
+E_{s}  &  =\frac{\left(  b-a\right)  ^{5}}{N^{5}}f^{\left(  5\right)  }%
+\end{align}
+para los m\'{e}todos de trapecios y Simpson, respectivamente.
+
+Para estimar el error total de cada uno de estos m\'{e}todos procedemos de la
+siguiente forma. El error total ser\'{a}
+\begin{equation}
+\epsilon_{tot}=\epsilon_{red}+\epsilon_{aprox}=\epsilon_{red}+\frac{E_{t,s}%
+}{f}=\sqrt{N}\epsilon_{m}+\frac{\left(  \frac{\left(  b-a\right)  ^{3}}{N^{2}%
+}f^{\left(  2\right)  },\frac{\left(  b-a\right)  ^{5}}{N^{5}}f^{\left(
+5\right)  }\right)  }{f}%
+\end{equation}
+dependiendo del m\'{e}todo seleccionado.
+
+Si si suponemos que buscamos el paso caracter\'{i}stico, $h,$ para el cual los
+errores de redondeo y algor\'{i}tmico son comparables, esto es
+\begin{equation}
+\epsilon_{red}\approx\epsilon_{aprox}\Rightarrow\sqrt{N}\epsilon_{m}%
+\approx\left\{
+\begin{array}
+[c]{c}%
+\frac{\left(  b-a\right)  ^{3}f^{\left(  2\right)  }}{N^{2\ }f}\qquad
+\text{Trapecios}\\
+\frac{\left(  b-a\right)  ^{5}f^{\left(  5\right)  }}{N^{5}\ f}\qquad
+\text{Simpson}%
+\end{array}
+\right.
+\end{equation}
+adem\'{a}s establecemos escalas t\'{i}picas para el intervalo las funciones y
+las derivadas de tal forma que
+\begin{equation}
+b-a=1\Longrightarrow h=\frac{1}{N};\qquad\text{y}\qquad\frac{f^{\left(
+n\right)  }}{f}\simeq1
+\end{equation}
+tendremos
+\begin{equation}
+N=\frac{1}{h}\approx\left\{
+\begin{array}
+[c]{c}%
+\frac{1}{\left(  \epsilon_{m}\right)  ^{2/5}}=\left\{
+\begin{array}
+[c]{c}%
+631\qquad\text{Precisi\'{o}n Simple}\\
+10^{6}\qquad\text{Precisi\'{o}n Doble}%
+\end{array}
+\right. \\
+\frac{1}{\left(  \epsilon_{m}\right)  ^{2/9}}=\left\{
+\begin{array}
+[c]{c}%
+36\qquad\text{Precisi\'{o}n Simple}\\
+2154\qquad\text{Precisi\'{o}n Doble}%
+\end{array}
+\right.
+\end{array}
+\right.
+\end{equation}
+y los errores de redondeo pueden ser estimados en
+\begin{equation}
+\epsilon_{red}\approx\sqrt{N}\epsilon_{m}=\left\{
+\begin{array}
+[c]{c}%
+\left\{
+\begin{array}
+[c]{c}%
+3\times10^{-6}\qquad\text{Precisi\'{o}n Simple}\\
+10^{-12}\qquad\text{Precisi\'{o}n Doble}%
+\end{array}
+\right. \\
+\left\{
+\begin{array}
+[c]{c}%
+3\times10^{-7}\qquad\text{Precisi\'{o}n Simple}\\
+10^{-14}\qquad\text{Precisi\'{o}n Doble}%
+\end{array}
+\right.
+\end{array}
+\right.
+\end{equation}
+para los cuales hemos utilizados los valores t\'{i}picos de precisi\'{o}n de
+la m\'{a}quina
+\begin{equation}
+\epsilon_{m}=\left\{
+\begin{array}
+[c]{c}%
+10^{-7}\qquad\text{Precisi\'{o}n Simple}\\
+10^{-15}\qquad\text{Precisi\'{o}n Doble}%
+\end{array}
+\right.
+\end{equation}
+Del an\'{a}lisis anterior se desprende que:
+
+\begin{itemize}
+\item  El m\'{e}todo de Simpson es superior en precisi\'{o}n al m\'{e}todo de
+integraci\'{o}n por trapecios, logr\'{a}ndose resultados cercanos a la
+precisi\'{o}n de la m\'{a}quina.
+
+\item  La integraci\'{o}n num\'{e}rica con una tolerancia de error razonable
+se logra con un n\'{u}mero caracter\'{\i}stico de intervalos del orden de
+$N\approx1000$ lo cual esta muy lejos de hacer $N\leadsto\infty$
+\end{itemize}
+
+\subsection{An\'{a}lisis Emp\'{i}rico del Error}
+
+Supongamos que la respuesta exacta para nuestro problema es $\mathcal{R}$
+mientras que la respuesta aproximada despu\'{e}s de $N$ iteraciones es
+$R\left(  N\right)  .$ Entonces la idea es comparar nuestra respuesta en $N$
+iteraciones con la respuesta en $2N.$ Cuando se alcanza el valor
+asint\'{o}tico y el error de redondeo no es dominante tendremos
+\begin{align}
+R(N)  &  \simeq\mathcal{R}+\frac{\alpha}{N^{\beta}}\\
+R\left(  N\right)  -R\left(  2N\right)   &  \simeq\frac{\alpha}{N^{\beta}}%
+\end{align}
+donde es claro que representar\'{a} una l\'{i}nea recta en un gr\'{a}fico
+$\log_{10}\left(  R\left(  N\right)  -R\left(  2N\right)  \right)  $ vs
+$\log_{10}\left(  N\right)  .$ Si $N$ no es suficientemente grande para
+obtener un valor asint\'{o}tico, no habr\'{a} recta. Luego al crecer $N$ se
+obtiene la recta y cuando ella cambia de pendiente, se obtiene el n\'{u}mero
+\'{o}ptimo de iteraciones. y como el logaritmo es en base 10 se obtiene el
+n\'{u}mero de cifras significativas
+
+\newpage
+
+\section{\textbf{Clase 2: Ceros de una Funci\'{o}n y Derivadas Num\'{e}ricas}}
+
+\subsection{Ra\'{i}ces de una Funci\'{o}n}
+
+Encontrar las ra\'{\i}ces o los ceros, $x_{r},$ de una ecuaci\'{o}n,
+$f(x_{r})=0,$ para funciones monovaluadas es una las operaciones num\'{e}ricas
+b\'{a}sicas. No es as\'{\i} para el caso de funciones multivaluadas,
+$f(\mathbf{\vec{x}}_{r})=0,$ y mucho menos en el caso multidimensional,
+$\mathbf{\vec{f}(\vec{x}}_{r}\mathbf{)=0}$ .Todos los m\'{e}todos que
+consideraremos ser\'{a}n iterativo. Estudiaremos dos categor\'{\i}as de
+m\'{e}todos para encontrar ra\'{\i}ces de funciones monovaluadas: los de
+acotamiento de la ra\'{\i}z, y los de sustituciones sucesivas. Estos
+m\'{e}todos son validos para cualquier ecuaci\'{o}n $f(x_{r})=0,$ donde
+$f(x_{r})$ es una funci\'{o}n no lineal continua en el intervalo en el cual
+est\'{a} definida. Existen otros m\'{e}todos para encontrar ra\'{\i}ces de
+$f(x_{r})=0$ donde $f(x_{r})$ es un polinomio. Esos ser\'{a}n considerados
+m\'{a}s adelante.
+
+\subsection{Acotamiento}
+
+Dada una funci\'{o}n que cambia de signo en un intervalo, ella debe tener al
+menos una ra\'{\i}z en \'{e}ste y se encuentra acont\'{a}ndola reduciendo el
+intervalo con alg\'{u}n tipo de criterio
+
+\subsubsection{Bisecci\'{o}n}
+
+Es el m\'{e}todo m\'{a}s intuitivo y elemental. El intervalo se acota mediante
+corriendo uno de los extremos a la mitad del intervalo. Vale decir:
+\[
+f(x)\quad\text{cont\'{i}nua con }x\in\left[  a_{0},b_{0}\right]  \qquad
+\wedge\qquad f(a_{0})f(b_{0})\leqslant0
+\]
+
+\begin{quotation}
+$n\leftarrow0$
+
+\texttt{Mientras tolerancia}$\qquad<\left\|  f(a_{n})-f(b_{n})\right\|
+\qquad$\texttt{haga}
+
+\texttt{\qquad}$m\leftarrow\frac{(a_{0}+b_{0})}{2}$
+
+\texttt{\qquad Si\qquad}$f(a_{0})f(m)\leqslant0$
+
+\texttt{\qquad Entonces}
+
+$\qquad\qquad a_{n+1}\leftarrow a_{n};\qquad b_{n+1}\leftarrow m$
+
+\texttt{\qquad si no}
+
+\texttt{\qquad\qquad}$b_{n+1}\leftarrow b_{n};\qquad a_{n+1}\leftarrow m$
+
+\qquad$n\leftarrow n+1$
+
+\texttt{finmientras}
+
+\texttt{ra\'{\i}z\ }$\leftarrow a_{n}$
+\end{quotation}
+
+\subsubsection{Regula Falsi}
+
+El intervalo se acota corriendo uno de los extremos al punto de
+intersecci\'{o}n de una recta construida a partir de los dos extremos del
+intervalo anterior. Para funciones que son suaves alrededor de las ra\'{\i}ces
+estos m\'{e}todos convergen mucho m\'{a}s r\'{a}pido que el m\'{e}todo de
+bisecci\'{o}n. Trataremos algunas variantes de estos m\'{e}todos.
+
+El m\'{e}todo de \textit{Regula Falsi (}posici\'{o}n falsa) se basa en
+encontrar un punto que acontando la ra\'{\i}z avance m\'{a}s r\'{a}pido que el
+punto medio. Si%
+
+\[
+f(x)\quad\text{cont\'{\i}nua con }x\in\left[  a_{0},b_{0}\right]  \qquad
+\wedge\qquad f(a_{0})f(b_{0})\leqslant0
+\]
+este punto se define a partir de un promedio ponderado
+\[
+w_{n+1}=\frac{(f(b_{n})a_{n}+f(a_{n})b_{n})}{\left(  f(b_{n})-f(a_{n})\right)
+}
+\]
+
+Entonces, una variante de
+
+\begin{quotation}
+$n\leftarrow0;\qquad F\leftarrow f(a_{0});\qquad G\leftarrow f(b_{0});\qquad
+w_{0}\leftarrow a_{0}$
+
+\texttt{Mientras tolerancia}$\qquad<\left\|  f(a_{n})-f(b_{n})\right\|
+\qquad$\texttt{haga}
+
+\texttt{\qquad}$w_{n+1}\leftarrow\frac{(Ga_{n}+Fb_{n})}{\left(  G-F\right)  }$
+
+\texttt{\qquad Si\qquad}$f(a_{n})f(w_{n+1})\leqslant0$
+
+\texttt{\qquad Entonces}
+
+$\qquad\qquad a_{n+1}\leftarrow a_{n};\qquad b_{n+1}\leftarrow w_{n+1};\qquad
+G\leftarrow f(w_{n+1})$
+
+\qquad\qquad\texttt{Si\qquad}$f(w_{n})f(w_{n+1})>0\qquad$\texttt{Entonces}%
+$\qquad F\leftarrow F/2$
+
+\texttt{\qquad si no}
+
+\qquad\texttt{\qquad\qquad}$F\leftarrow f(w_{n+1});\qquad a_{n+1}\leftarrow
+w_{n+1;\qquad}b_{n+1}\leftarrow b_{n}$
+
+\qquad\qquad\texttt{Si\qquad}$f(w_{n})f(w_{n+1})>0\qquad$\texttt{Entonces}%
+$\qquad G\leftarrow G/2$
+
+\qquad$n\leftarrow n+1$
+
+\texttt{finmientras}
+
+\texttt{ra\'{\i}z\ }$\leftarrow a_{n}$
+\end{quotation}
+
+\subsection{Sustituciones sucesivas}
+
+Se fundamenta en aproximar la soluci\'{o}n de la ecuaci\'{o}n $f(x)=0$ a
+partir de reescribirla como $x=F(x)$ y un una propuesta de soluci\'{o}n
+$x=x_{0}$ la cual debe estar cerca de las soluci\'{o}n verdadera para que
+converja. A partir de esa propuesta se generan un conjunto de iteraciones
+\[
+\text{si }x_{s}\text{es soluci\'{o}n}\Rightarrow f(x_{s})=0\Leftrightarrow
+x_{s}=F(x_{s})\Longrightarrow x_{n+1}=F(x_{n})
+\]
+
+\subsubsection{Secante}
+
+Dado dos puntos $x_{0}$ y $x_{-1}$
+
+\begin{quotation}
+$\mathtt{n\leftarrow0}$
+
+$\mathtt{x}_{n}\mathtt{\leftarrow x}_{0}$
+
+$\mathtt{x}_{n-1}\mathtt{\leftarrow x}_{-1}$
+
+\texttt{Mientras }$f(x_{n})>$\texttt{\ tolerancia haga}
+
+\qquad$x_{n+1}\leftarrow\frac{\left(  f(x_{n})x_{n-1}-f(x_{n-1})x_{n}\right)
+}{\left(  f(x_{n})-f(x_{n-1})\right)  }$
+
+\qquad$n\leftarrow n+1$
+
+\texttt{finmientras}
+
+\texttt{raiz}$\leftarrow x_{n}$
+\end{quotation}
+
+Es claro que el punto
+\[
+x_{n+1}=\frac{\left(  f(x_{n})x_{n-1}-f(x_{n-1})x_{n}\right)  }{\left(
+f(x_{n})-f(x_{n-1})\right)  }=x_{n}-f(x_{n})\frac{x_{n}-x_{n-1}}{\left(
+f(x_{n})-f(x_{n-1})\right)  }
+\]
+corresponde al punto de corte con el eje $x$ de la recta secante que pasa por
+los puntos $\left(  f(x_{n}),x_{n}\right)  $ y $\left(  f(x_{n-1}%
+),x_{n-1}\right)  .$
+
+\subsubsection{Newton Rapson}
+
+Este m\'{e}todo es el m\'{a}s vers\'{a}til y conocido. De hecho es el
+\'{u}nico m\'{e}todo razonable para resolver sistemas de ecuaciones no
+lineales del tipo $\mathbf{\vec{f}(\vec{x}}_{r}\mathbf{)=0.}$ Trataremos ahora
+\'{u}nicamente en caso unidimensional
+
+Dado un punto inicial $x_{0}$ y la funci\'{o}n y su derivada en ese punto
+
+\begin{quotation}
+$\mathtt{n\leftarrow0}$
+
+$\mathtt{x}_{n}\mathtt{\leftarrow x}_{0}$
+
+\texttt{Mientras }$f(x_{n})>$\texttt{\ tolerancia haga}
+
+\qquad$x_{n+1}\leftarrow x_{n}-\frac{f(x_{n})}{f^{\prime}(x_{n})}$
+
+\qquad$n\leftarrow n+1$
+
+\texttt{finmientras}
+
+\texttt{raiz}$\leftarrow x_{n}$
+\end{quotation}
+
+Es claro que el entorno de la solucion
+\[
+x_{n+1}-x_{n}=-\frac{f(x_{n})}{f^{\prime}(x_{n})}
+\]
+se puede entender mediante una expansi\'{o}n a primer orden en series de
+Taylor
+\[
+\text{si }f(x+\delta)=0\approx f(x)+f^{\prime}(x)\delta\Rightarrow
+\delta\approx-\frac{f(x)}{f^{\prime}(x)}
+\]
+y su poder radica en que su convergencia cuadr\'{a}tica. La cual pued ser
+intuida. de esta forma. Si $x_{s}$ es soluci\'{o}n de $f(x)=0$ se cumple que
+\begin{align}
+x_{n+1}  &  =x_{n}-\frac{f(x_{n})}{f^{\prime}(x_{n})}\Rightarrow\qquad
+-x_{s}+x_{n+1}=-x_{s}+x_{n}-\frac{f(x_{n})}{f^{\prime}(x_{n})}\Rightarrow\\
+\epsilon_{n+1}  &  =\epsilon_{n}-\frac{f(x_{n})}{f^{\prime}(x_{n})}%
+\end{align}
+dado que
+\begin{align}
+f(x+\delta)  &  =f(x)+f^{\prime}(x)\delta+\frac{f^{\prime\prime}(x)}{2}%
+\delta^{2}+\cdots\\
+f^{\prime}(x+\delta)  &  =f^{\prime}(x)+f^{\prime\prime}(x)\delta
++\frac{f^{\prime\prime\prime}(x)}{2}\delta^{2}+\cdots
+\end{align}
+se tiene
+\begin{equation}
+\epsilon_{n+1}=-\epsilon_{n}^{2}\frac{f^{\prime\prime}(x_{n})}{2f^{\prime
+}(x_{n})}%
+\end{equation}
+
+En el m\'{e}todo de Newton-Rapson uno puede verse tentado a sustituir
+\begin{equation}
+\frac{1}{f^{\prime}(x)}\sim\frac{x_{n}-x_{n-1}}{\left(  f(x_{n})-f(x_{n-1}%
+)\right)  }%
+\end{equation}
+pero esto degrada la convergencia (requier una evaluaci\'{o}n adicional para
+la funcion) y aumenta el error de redondeo. En general la convergencia local
+(cuando la propuesta inicial de $x_{0}$ est\'{a} cercana a la soluci\'{o}n
+$x_{s}$) de este m\'{e}todo es bueno, no as\'{\i} la global (si esa propuesta
+est\'{a} lejos de la soluci\'{o}n). En este caso se combina con el m\'{e}todo
+de bisecci\'{o}n para logra un hibrido eficiente.
+
+\subsection{Derivaci\'{o}n Num\'{e}rica}
+
+Normalmente, se dispone de un tabla de datos experimentales de la forma
+
+\begin{center}%
+\begin{tabular}
+[c]{cc}%
+$x$ & $f(x)$\\
+$\vdots$ & $\vdots$\\
+$x_{i-1}$ & $f(x_{i-1})$\\
+$x_{i}$ & $f(x_{i})$\\
+$x_{i+1}$ & $f(x_{i+1})$\\
+$\vdots$ & $\vdots$%
+\end{tabular}
+\end{center}
+
+y se desea calcular la derivada de esta funci\'{o}n.
+
+Como siempre, por definici\'{o}n
+\[
+f^{\prime}(x)=\lim_{h\ \rightarrow\ 0}\frac{f(x+h)-f(x)}{h}\equiv
+\lim_{h\ \rightarrow\ 0}\frac{\triangle f(x)}{h}
+\]
+ahora bien, uno tambi\'{e}n puede pensar $f^{\prime}(x)$ en t\'{e}rminos de
+\[
+f^{\prime}(x)=\lim_{h\ \rightarrow\ 0}\frac{f(x)-f(x-h)}{h}\equiv
+\lim_{h\ \rightarrow\ 0}\frac{\nabla f(x)}{h}
+\]
+y tambi\'{e}n
+\[
+f^{\prime}(x)=\lim_{h\ \rightarrow\ 0}\frac{f\left(  x+\frac{h}{2}\right)
+-f\left(  x-\frac{h}{2}\right)  }{h}\equiv\lim_{h\ \rightarrow\ 0}\frac{\delta
+f(x)}{h}
+\]
+donde $\triangle f(x),$ $\nabla f(x),\delta f(x)$ se conocen como diferencias
+finitas
+\[
+f\ ^{\prime}(x)\simeq\left\{
+\begin{array}
+[c]{c}%
+\nabla f(x)\rightarrow\mathrm{diferencia\ atrasada}\\
+\delta f(x)\rightarrow\mathrm{diferencia\ centrada}\\
+\triangle f(x)\rightarrow\mathrm{diferencia\ adelantada}%
+\end{array}
+\right.
+\]
+y $\triangle\left(  \bullet\right)  ,$ $\nabla\left(  \bullet\right)
+,\delta\left(  \bullet\right)  $ actuan como operadores diferenciales lineales
+sobre la funci\'{o}n $f(x).$
+
+En t\'{e}rminos de una serie de Taylor se puede observar que
+\begin{align*}
+f(x-h)  &  =f(x)-h\ f\ ^{\prime}(x)+\frac{h^{2}}{2!}f\ ^{\prime\prime
+}(x)-\frac{h^{3}}{3!}f\ ^{\prime\prime\prime}(x)+\cdots\\
+f(x-h/2)  &  =f(x)-\frac{h}{2}\ f\ ^{\prime}(x)+\frac{h^{2}}{2!\cdot2^{2}%
+}f\ ^{\prime\prime}(x)-\frac{h^{3}}{3!\cdot2^{3}}f\ ^{\prime\prime\prime
+}(x)+\cdots\\
+f(x+h/2)  &  =f(x)+\frac{h}{2}\ f\ ^{\prime}(x)+\frac{h^{2}}{2!\cdot2^{2}%
+}f\ ^{\prime\prime}(x)+\frac{h^{3}}{3!\cdot2^{3}}f\ ^{\prime\prime\prime
+}(x)+\cdots\\
+f(x+h)  &  =f(x)+h\ f\ ^{\prime}(x)+\frac{h^{2}}{2!}f\ ^{\prime\prime
+}(x)+\frac{h^{3}}{3!}f\ ^{\prime\prime\prime}(x)+\cdots
+\end{align*}
+por lo cual
+\begin{align*}
+\bar{f}\ _{b}^{\prime}(x)  &  \simeq\frac{\nabla f(x)}{h}=\ f\ ^{\prime
+}(x)\overbrace{\qquad-\frac{h}{2!}f\ ^{\prime\prime}(x)+\frac{h^{2}}%
+{3!}f\ ^{\prime\prime\prime}(x)+\cdots}\\
+\bar{f}\ _{c}^{\prime}(x)  &  \simeq\frac{\delta f(x)}{h}=\ f\ ^{\prime
+}(x)\overbrace{\qquad+\frac{h^{2}}{3!\cdot2^{2}}f\ ^{\prime\prime\prime
+}(x)+\cdots}\\
+\bar{f}\ _{f}^{\prime}(x)  &  \simeq\frac{\triangle f(x)}{h}=\ f\ ^{\prime
+}(x)\overbrace{\qquad+\frac{h}{2!}f\ ^{\prime\prime}(x)+\frac{h^{2}}%
+{3!}f\ ^{\prime\prime\prime}(x)+\cdots}%
+\end{align*}
+Finalmente, para obtener derivadas de orden superior pensamos en t\'{e}rmino
+de operadores
+
+\begin{center}%
+\begin{tabular}
+[c]{cll}%
+$E(\bigstar)$ & $E\ f=f(x+h)$ & desplazamiento\\
+$\triangle(\bigstar)$ & $\triangle\ \ f=f(x+h)-f(x)$ & diferencia adelantada\\
+$D(\bigstar)$ & $D\ f=f\ ^{\prime}(x)$ & diferenciaci\'{o}n\\
+$\delta(\bigstar)$ & $\delta\ f=f\left(  x+\frac{h}{2}\right)  -f\left(
+x-\frac{h}{2}\right)  $ & diferencia centrada\\
+$\mu(\bigstar)$ & $\mu\ f=\frac{1}{2}\left(  f\left(  x+\frac{h}{2}\right)
+-f\left(  x-\frac{h}{2}\right)  \right)  $ & promedio\\
+$\nabla(\bigstar)$ & $\nabla\ \ f=f(x)-f(x-h)$ & diferencia retrasada
+\end{tabular}
+\end{center}
+
+son operadores que funcionan sobre secuencias
+\[
+\triangle\ \ f=f(x+h)-f(x)
+\]
+\begin{align*}
+\triangle\ \ f_{n}  &  =f_{n+1}-f_{n}=E\ f_{n}-f_{n}\\
+\triangle\ \ f_{n-1}  &  =f_{n}-f_{n-1}%
+\end{align*}
+por lo tanto
+\[
+\triangle^{2}\ \ f_{n}=\triangle\ \left(  \ f_{n+1}-f_{n}\right)
+=\ f_{n+2}-2\ f_{n+1}+f_{n}=E^{2}\ f-2E\ f_{n}+f_{n}
+\]
+en general
+\[
+\triangle^{k}=\left(  E-1\right)  ^{k}\quad\longleftrightarrow\quad
+E^{k}=\left(  1+\triangle\right)  ^{k}
+\]
+por otro lado la serie de Taylor puede ser re-escrita como
+\begin{align*}
+f(x+h)  &  =f(x)+h\ f\ ^{\prime}(x)+\frac{h^{2}}{2!}f\ ^{\prime\prime
+}(x)+\frac{h^{3}}{3!}f\ ^{\prime\prime\prime}(x)+\cdots\\
+E\ f  &  =\left(  1+hD+\frac{\left(  hD\right)  ^{2}}{2!}+\frac{\left(
+hD\right)  ^{3}}{3!}+\cdots\right)  f(x)\\
+E\ f  &  =e^{hD}f(x)
+\end{align*}
+finalmente podemos expresar las relaciones entre los distintos operadores como%
+
+\begin{tabular}
+[c]{l|ccccc}\hline
+& $E$ & $\Delta$ & $\delta$ & $\nabla$ & $D$\\\hline\hline
+\multicolumn{1}{c|}{$E$} & $E$ & $1+\Delta$ & $1+\frac{\delta^{2}}{2}%
++\delta\sqrt{1+\frac{\delta^{2}}{4}}$ & $\frac{1}{1-\nabla}$ & \textrm{e}%
+$^{hD}$\\\hline
+\multicolumn{1}{c|}{$\Delta$} & $E-1$ & $\Delta$ & $\delta\sqrt{1+\frac
+{\delta^{2}}{4}}+\frac{\delta^{2}}{2}$ & $\frac{\nabla}{1-\nabla}$ &
+\textrm{e}$^{hD}-1$\\\hline
+\multicolumn{1}{c|}{$\delta$} & $E^{1/2}-E^{-1/2}$ & $\frac{\Delta}%
+{\sqrt{1+\Delta}}$ & $\delta$ & $\frac{\nabla}{\sqrt{1-\nabla}}$ &
+$2\sinh\left(  \frac{hD}{2}\right)  $\\\hline
+\multicolumn{1}{c|}{$\nabla$} & $1-E^{-1}$ & $\frac{\Delta}{1+\Delta}$ &
+$\delta\sqrt{1+\frac{\delta^{2}}{4}}-\frac{\delta^{2}}{2}$ & $\nabla$ &
+$1-$\textrm{e}$^{hD}$\\\hline
+\multicolumn{1}{c|}{$D$} & $\frac{1}{h}\ln E$ & $\frac{\ln\left(
+1+\Delta\right)  }{h}$ & $\frac{2\sinh^{-1}\left(  \frac{\delta}{2}\right)
+}{h}$ & $\frac{\ln\left(  \frac{1}{1-\nabla}\right)  }{h}$ & $D$\\\hline
+\multicolumn{1}{c|}{$\mu$} & $\frac{E^{1/2}-E^{-1/2}}{2}$ & $\frac{\left(
+1+\frac{\Delta}{2}\right)  }{\sqrt{1+\Delta}}$ & $\sqrt{1+\frac{\delta^{2}}%
+{4}}$ & $\frac{\left(  1-\frac{\nabla}{2}\right)  }{\sqrt{1-\nabla}}$ &
+$\cosh\left(  \frac{hD}{2}\right)  $%
+\end{tabular}
+
+\section{\textbf{Clase 3: }Integraci\'{o}n Num\'{e}rica}
+
+\begin{quotation}
+``...\textit{deriva el que sabe, integra el que puede} ...''
+\end{quotation}
+
+En infinidad de problemas en ciencias e ingenier\'{\i}as se requiere resolver
+\begin{equation}
+I=\int_{a}^{b}f(x)\ {\normalsize d}x
+\end{equation}
+num\'{e}ricamente. La soluci\'{o}n de este problema es mucho m\'{a}s sencilla
+que la anal\'{\i}tica, y pasa por la conceptualizaci\'{o}n de la
+definici\'{o}n de la integral Riemman
+\begin{equation}
+I=\int_{a}^{b}f(x)\ {\normalsize d}x=\lim_{h\longrightarrow0}\left[
+h\sum_{i=1}^{\left(  b-a\right)  /h}f(x_{i})\right]
+\end{equation}
+En general, la idea es aproximar la integral por el \'{a}rea bajo la curva
+medida en cuadr\'{\i}culas (por ello toma el nombre de cuadratura) y la
+expresi\'{o}n general ser\'{a}
+\begin{equation}
+I=\int_{a}^{b}f(x)\ {\normalsize d}x\approx\sum_{i=1}^{N}f(x_{i})\ w_{i}
+\label{intaprox}%
+\end{equation}
+donde $w_{i}$ son los pesos asociados al m\'{e}todo y las $f(x_{i})$ son las
+funciones evaluadas en el punto $x_{i}.$ La aplicaci\'{o}n m\'{a}s obvia de
+este esquema es el esquema (cerrado) de Newton-Cotes para funciones
+razonablemente bien comportadas. Los puntos, $x_{i},$ en el intervalo se
+encuentran igualmente espaciados (i.e. $x_{i+1}=x_{i}+h=x_{0}+\left(
+i+1\right)  h,$ con $h=const$). As\'{\i}, si expandimos el integrando en
+series de potencias nos queda
+\begin{equation}
+I=\int_{x_{i}}^{x_{i}+h}\left(  f(x_{i})+xf^{\prime}(x_{i})+\dfrac{1}{2}%
+x^{2}f^{\prime\prime}(x_{i})+\dfrac{1}{3!}x^{3}f^{\prime\prime\prime}%
+(x_{i})+\cdots\right)  \ {\normalsize d}x
+\end{equation}
+conservando los dos primeros t\'{e}rminos (aproximando la funci\'{o}n con una
+recta) se tiene
+\begin{equation}
+I_{\left(  x_{i},x_{i+1}\right)  }=\int_{x_{i}}^{x_{i}+h}\left(
+f(x_{i})+xf^{\prime}(x_{i})+O(x^{2})\right)  \ {\normalsize d}x\approx
+h\left(  \dfrac{1}{2}f(x_{i})+\dfrac{1}{2}f(x_{i+1})\right)
+\end{equation}
+que constituye la integraci\'{o}n por trapecios. Integrando en todo el
+intervalo se obtiene
+\begin{equation}
+I=\int_{a}^{b}f(x)\ {\normalsize d}x\approx\dfrac{h}{2}f(x_{1})+hf(x_{2}%
+)+\cdots+hf(x_{i})+\cdots+\dfrac{h}{2}f(x_{N})
+\end{equation}
+En donde es claro que los pesos $w_{i}$ son
+\begin{equation}
+w_{i}=\left\{  \dfrac{h}{2},h,\cdots,h,\dfrac{h}{2}\right\}
+\end{equation}
+
+Extendiendo la aproximaci\'{o}n, ahora hasta conservar el t\'{e}rmino
+cuadr\'{a}tico, se obtiene
+\begin{align}
+I_{\left(  x_{i},x_{i+2}\right)  } &  =\int_{x_{i}}^{x_{i}+2h}\left(
+f(x_{i})+xf^{\prime}(x_{i})+\dfrac{1}{2}x^{2}f^{\prime\prime}(x_{i}%
+)+O(x^{3})\right)  \ {\normalsize d}x\\
+&  \approx h\left(  \dfrac{1}{3}f(x_{i-1})+\dfrac{4}{3}f(x_{i})+\dfrac{1}%
+{3}f(x_{i+1})\right)
+\end{align}
+lo que es equivalente a aproximar la funci\'{o}n $f(x)$ en el intervalo
+$\left(  x_{i},x_{i+2}\right)  $ por par\'{a}bolas. N\'{o}tese que se integra
+en dobles intervalos, o lo que es lo mismo, el n\'{u}mero total de intervalos
+debe ser par. Igual que en el caso anterior, en todo el intervalo la integral
+queda
+\begin{align}
+I &  =\int_{a}^{b}f(x)\ {\normalsize d}x\\
+&  \approx\dfrac{h}{3}f(x_{1})+\dfrac{4h}{3}f(x_{2})+\dfrac{2h}{3}%
+f(x_{3})+\dfrac{4h}{3}f(x_{4})+\cdots+\dfrac{4h}{3}f(x_{N-1})+\dfrac{h}%
+{3}f(x_{N})
+\end{align}
+por lo cual los pesos pueden identificarse como
+\begin{equation}
+w_{i}=\left\{  \dfrac{h}{3},\dfrac{4h}{3},\dfrac{2h}{3},\dfrac{4h}{3}%
+,\cdots,\dfrac{4h}{3},\dfrac{h}{2}\right\}
+\end{equation}
+
+Un resumen de los m\'{e}todos y sus \'{o}rdenes es
+
+\begin{center}%
+\begin{tabular}
+[c]{ccc}\hline\hline
+\textbf{M\'{e}todo} & \textbf{Orden} & \textbf{Pesos}\\\hline\hline
+\multicolumn{1}{l}{Trapezoides} & \multicolumn{1}{r}{1} & $\left(
+h/2,h/2\right)  $\\
+\multicolumn{1}{l}{Simpson} & \multicolumn{1}{r}{2} & $\left(
+h/3,4h/3,h/3\right)  $\\
+\multicolumn{1}{l}{$3/8$} & \multicolumn{1}{r}{3} & $\left(
+3h/8,9h/8,9h/8,3h/8\right)  $\\
+\multicolumn{1}{l}{Milne} & \multicolumn{1}{r}{4} & $\left(
+14h/45,64h/45,24h/45,64h/45,14h/45\right)  $%
+\end{tabular}
+\end{center}
+
+En general uno lo que ha hecho es aproximar $f(x)$ en el intervalo $\left(
+x_{i},x_{i+1}\right)  $ por una recta (regla de trapecios), $f(x)$ en el
+intervalo $\left(  x_{i},x_{i+2}\right)  $ por una par\'{a}bola, $f(x)$ en el
+intervalo $\left(  x_{i},x_{i+3}\right)  $ por un polinomio de tercer
+grado.... Es claro que podemos pensar
+\begin{equation}
+I=\int_{\alpha}^{\beta}f(x)\ {\normalsize d}x\equiv\int_{\alpha}^{\beta
+}W(x)F(x)\ {\normalsize d}x\approx\sum_{i=1}^{N}F(x_{i})\ w_{i}%
+\end{equation}
+como una expresi\'{o}n en la cual aproximamos la funci\'{o}n $f(x)$ en el
+intervalo $\left[  a,b\right]  $ por un polinomio de grado $2N-1$. M\'{a}s
+a\'{u}n, uno pudiera generalizar el planteamiento a aproximar la funci\'{o}n
+en una base cualquiera de polinomios $\left|  \phi_{i}\right\rangle $
+ortogonales:
+\begin{equation}
+f(x)=\sum_{i=1}^{N}c_{i}\left|  \phi_{i}\right\rangle
+\end{equation}
+con un producto interno definido por
+\begin{equation}
+\int_{\gamma}^{\zeta}\phi_{l}(x)w(x)\phi_{m}(x)\mathrm{d}x=\left\langle
+\phi_{l}\right.  \left|  \phi_{m}\right\rangle =\mathcal{N}_{l}\delta_{lm}%
+\end{equation}
+
+De esta forma se seleccionan los $x_{i}$ para que sean las ra\'{\i}ces de los
+polinomios ortogonales, y los pesos
+\begin{align}
+\phi_{l}(x_{i})  &  =0\\
+w_{i}  &  =\dfrac{-a_{N}\mathcal{N}_{N}}{\phi_{N}^{\prime}(x_{i})\phi
+_{N+1}(x_{i})}%
+\end{align}
+con $n=1,2,\cdots N$ y $a_{N}=\dfrac{A_{N+1}}{A_{N}}$ donde $A_{N}$ es el
+coeficiente del t\'{e}rmino $x^{N}$ en $\phi_{N}(x)$ . Con esta selecci\'{o}n
+de pesos, $w_{i},$ y abscisas, $x_{i}$ , se minimiza el error. En general el
+error $\Delta I$ viene acotado
+\begin{align}
+I  &  =\int_{\alpha}^{\beta}f(x)\ {\normalsize d}x\equiv\int_{\alpha}^{\beta
+}W(x)F(x)\ {\normalsize d}x=\sum_{i=1}^{N}F(x_{i})\ w_{i}+\Delta I\\
+\Delta I  &  =\dfrac{\mathcal{N}_{N}}{A_{N}\left(  2N\right)  !}f^{\left(
+2N\right)  }(x_{0})
+\end{align}
+
+Los pesos y las abscisas vienen tabulados (ver Abramowitz, M. y Stegun, I.
+(1964), \textit{Handbook of Mathematical Functions, (}Dover; New York)).
+
+Un resumen de los tipos de integrales, pesos y abscisas sera dada por las
+siguiente tabla de f\'{o}rmulas.
+
+\begin{center}%
+\begin{tabular}
+[c]{llll}%
+\textbf{Integral} & \textbf{Nombre} & \textbf{Pesos} & \textbf{Abscisas}\\
+$\int_{-1}^{1}f(x)\mathrm{d}x$ & Gauss & $w_{i}=\dfrac{-\dfrac{2}{2N+1}}%
+{P_{N}^{\prime}(x_{i})P_{N+1}(x_{i})}$ & $P_{N}(x_{i})=0$\\
+$\int_{-1}^{1}\dfrac{f(x)}{\sqrt{1-x^{2}}}\mathrm{d}x$ & Gauss-Chebyshev &
+$w_{i}=\dfrac{\pi}{N}$ & $x_{i}=\cos\dfrac{\left(  2i-1\right)  \pi}{2N}$\\
+$\int_{-\infty}^{\infty}\mathrm{e}^{-x^{2}}f(x)\mathrm{d}x$ & Gauss-Hermitte &
+$w_{i}=\dfrac{2^{N-1}N!\sqrt{\pi}}{N^{2}H_{N-1}^{2}(x_{i})} $ & $H_{N}%
+(x_{i})=0$\\
+$\int_{0}^{\infty}\mathrm{e}^{-x}f(x)\mathrm{d}x$ & Gauss-Laguerre &
+$w_{i}=\dfrac{\left(  N!\right)  ^{2}x_{i}}{\left(  N+1\right)  ^{2}%
+L_{N+1}^{2}(x_{i})}$ & $L_{N}(x_{i})=0$%
+\end{tabular}
+\end{center}
+
+queda por tratar algunas transformaciones de coordenadas y re-escalamiento
+para llevar
+\begin{align}
+\left[  a,b\right]   &  \longrightarrow\left(  \alpha,\beta\right) \\
+\left(  x_{i},w_{i}\right)   &  \longrightarrow\left(  y_{i},\varpi
+_{i}\right)
+\end{align}
+
+As\'{\i}
+\begin{align}
+\left[  a,b\right]   &  \longrightarrow\left(  -1,1\right) \\
+\left(  x_{i},w_{i}\right)   &  \longrightarrow\left(  \dfrac{b+a}{2}%
++y_{i}\dfrac{b-a}{2},\dfrac{2}{b-a}w_{i}\right)
+\end{align}
+
+\paragraph{Integraci\'{o}n por el M\'{e}todo de Monte Carlo}
+
+La t\'{e}cnica b\'{a}sica de la integraci\'{o}n por el m\'{e}todo de Monte
+Carlo es trivial y basada en la fuerza bruta de c\'{o}mputo fundament\'{a}%
+ndose en el teorema del valor medio para las integrales
+\begin{equation}
+I=\int_{a}^{b}\mathrm{d}x\ f(x)=\left(  b-a\right)  \left\langle
+f\right\rangle \simeq\left(  b-a\right)  \dfrac{1}{N}\sum_{i=1}^{N}f(x_{i})
+\end{equation}
+de donde son claros los $N$ pesos constantes $w_{i}=\dfrac{\left(  b-a\right)
+}{N}$ y los $x_{i}$ son seleccionados aleatoriamente. Siempre se puede hacer
+un cambio de variables para transformar el intervalo $\left(  a,b\right)  $ en
+uno m\'{a}s simple $\left(  0,1\right)  $%
+\begin{equation}
+x\longrightarrow\dfrac{x-a}{b-a}%
+\end{equation}
+de tal forma que
+\begin{equation}
+I=\int_{-1}^{1}\mathrm{d}x\ f(x)=\left\langle f\right\rangle \simeq\dfrac
+{1}{N}\sum_{i=1}^{N}f(x_{i})
+\end{equation}
+
+\newpage\newpage
+
+\section{\textbf{Clase 4: Tratamiento de Datos}}
+
+\subsection{Los Datos y las Funciones}
+
+Dada una tabla de datos (te\'{o}ricos o experimentales), digamos la
+secci\'{o}n transversal de dispersi\'{o}n en funci\'{o}n de la energ\'{\i}a de
+incidencia de la part\'{\i}cula. Normalmente la situaci\'{o}n que encontramos
+es, normalmente, unos valores medidos experimentalmente y otros obtenidos de
+la descripci\'{o}n te\'{o}rica del fen\'{o}meno
+
+\begin{center}
+$%
+\begin{array}
+[c]{llllllllll}%
+E(MeV) & 0 & 25 & 50 & 75 & 100 & 125 & 150 & 175 & 200\\
+\multicolumn{1}{r}{\sigma_{ex}(mb)} & \multicolumn{1}{r}{10.60} &
+\multicolumn{1}{r}{16.00} & \multicolumn{1}{r}{45.00} &
+\multicolumn{1}{r}{83.50} & \multicolumn{1}{r}{52.80} &
+\multicolumn{1}{r}{19.90} & \multicolumn{1}{r}{10.80} &
+\multicolumn{1}{r}{8.25} & \multicolumn{1}{r}{4.70}\\
+\multicolumn{1}{r}{\sigma_{te}(mb)} & \multicolumn{1}{r}{9.34} &
+\multicolumn{1}{r}{17.90} & \multicolumn{1}{r}{41.50} &
+\multicolumn{1}{r}{85.50} & \multicolumn{1}{r}{51.50} &
+\multicolumn{1}{r}{21.50} & \multicolumn{1}{r}{10.80} &
+\multicolumn{1}{r}{6.29} & \multicolumn{1}{r}{4.09}%
+\end{array}
+$
+\end{center}
+
+En principio tenemos dos posibles visiones del problema. Una consiste en
+determinar los valores intermedios de la secci\'{o}n transversal experimental
+para dos energ\'{\i}as medidas. La segunda visi\'{o}n del problema ser\'{\i}a:
+s\'{\i}, se considera correcta la descripci\'{o}n te\'{o}rica del
+fen\'{o}meno, como ajustar algunos de los par\'{a}metros all\'{\i} presentes
+para apegar su descripci\'{o}n lo m\'{a}s posible a las mediciones
+experimentales y as\'{\i} obtener alguna informaci\'{o}n adicional.
+
+La primera visi\'{o}n t\'{e}cnicamente debe considerarse como un problema de
+interpolaci\'{o}n: dados dos puntos $\left(  x_{1},f(x_{1})\right)  $ y
+$\left(  x_{2},f(x_{2})\right)  $ encontrar los valores de la funci\'{o}n
+$f(x_{n})$ para construir los puntos $\left(  \frac{x}{n},f\left(  \frac{x}%
+{n}\right)  \right)  $ con $x_{n}=\frac{x}{n}$
+
+La segunda, corresponde al problema de ajuste de una curva (funci\'{o}n) a
+conjunto de datos experimentales. Esta \'{u}ltima visi\'{o}n del problema
+admite dos enfoques. Uno global, en el cual una \'{u}nica funci\'{o}n (como
+corresponder\'{\i}a te\'{o}ricamente) describe el fen\'{o}meno y los errores
+son de la medici\'{o}n. M\'{a}s a\'{u}n del ajuste de una \'{u}nica
+funci\'{o}n uno obtiene una informaci\'{o}n adicional. Por ejemplo, la
+funci\'{o}n de Breit-Wigner
+\begin{equation}
+\sigma=\frac{\sigma_{0}}{\left(  E-E_{r}\right)  ^{2}+\frac{\gamma^{2}}{4}}%
+\end{equation}
+describe (te\'{o}ricamente) la secci\'{o}n transversal y las constantes
+$E_{r},\sigma_{0}$ y $\gamma$ deber\'{a}n ser determinadas del ajuste y
+corresponden a propiedades m\'{a}s complicadas del experimento.
+
+El otro enfoque, (te\'{o}ricamente) m\'{a}s modesto y menos frecuente es aquel
+que impone el mejor ajuste local y a partir de all\'{\i} se construye una
+funci\'{o}n a partir de los datos experimentales.
+
+As\'{\i}, interpolaci\'{o}n y ajuste de curvas son dos herramientas orientadas
+a tratar las tablas de n\'{u}meros como funciones anal\'{\i}ticas. La
+Interpolaci\'{o}n se invoca para inferir informaci\'{o}n local de un conjunto
+de datos incompletos, mientras que el ajuste de curvas pretende darnos una
+idea del comportamiento global de la funci\'{o}n
+
+\subsection{Interpolaci\'{o}n}
+
+Lo primero que se nos ocurre cuando abordamos el problema de una tabla de datos
+
+\begin{center}%
+\begin{tabular}
+[c]{llllllll}%
+$x$ & $x_{1}$ & $x_{2}$ & $\cdots$ & $x_{i}$ & $x_{i+1}$ & $\cdots$ & $x_{n}%
+$\\
+$f\left(  x\right)  $ & $f\left(  x_{1}\right)  $ & $f\left(  x_{2}\right)  $%
+& $\cdots$ & $f\left(  x_{i}\right)  $ & $f\left(  x_{i+1}\right)  $ &
+$\cdots$ & $f\left(  x_{n}\right)  $%
+\end{tabular}
+\end{center}
+
+es trazar una l\'{i}nea recta entre los puntos $\left(  x_{i},f\left(
+x_{i}\right)  \equiv f_{i}\right)  $ y $\left(  x_{i+1},f\left(
+x_{i+1}\right)  \equiv f_{i+1}\right)  .$ Vale decir,
+\begin{equation}
+f(x)=f_{i}+\frac{x-x_{i}}{x_{i+1}-x_{i}}\left(  f_{i+1}-f_{i}\right)  +\Delta
+f(x)\qquad x\in\left[  x_{i},x_{i+1}\right]
+\end{equation}
+o equivalentemente
+\begin{equation}
+f(x)=\frac{x-x_{i+1}}{x_{i}-x_{i+1}}f_{i}+\frac{x-x_{i}}{x_{i+1}-x_{i}}%
+f_{i+1}+\Delta f(x)\qquad x\in\left[  x_{i},x_{i+1}\right]  \label{lineal}%
+\end{equation}
+con
+\begin{equation}
+P_{k}^{(1)}(x)=\frac{x-x_{m}}{x_{k}-x_{m}}\qquad\wedge\quad m\neq k
+\end{equation}
+y donde el error viene acotado por el segundo t\'{e}rmino en la expansi\'{o}n
+en Taylor
+\begin{equation}
+\left\|  \Delta f(x)\right\|  \sim\frac{\max\left[  \left\|  f^{\prime\prime
+}(x)\right\|  \right]  }{8}\left(  x_{i+1}-x_{i}\right)  ^{2}%
+\end{equation}
+De igual forma, uno puede pensar que localmente la funci\'{o}n que describe
+los datos puede corresponder a un polinomio de bajo grado, digamos $\left(
+n-1\right)  $. As\'{i}
+\begin{equation}
+f_{i}(x)=\sum_{j=0}^{n-1}a_{j}x^{j}%
+\end{equation}
+por lo cual existir\'{a}n varios conjuntos para distintas regiones de la tabla
+de datos. En todos los casos esos polinomios ``tocar\'{a}n'' los $n$ puntos
+contenidos en la tabla de datos. Uno puede verse tentado a describir toda la
+tabla de datos con un \'{u}nico conjunto $\left\{  a_{0},a_{1},\cdots
+a_{n-1}\right\}  ,$ pero eso lo haremos cuando exista una muy buena raz\'{o}n
+para intuir ese comportamiento de los datos. De esta forma si generalizamos la
+expresi\'{o}n (\ref{lineal}) tendremos que
+\begin{equation}
+f(x)=\underset{\text{polinomio de orden }n}{\underbrace{\sum_{k=1}^{n+1}%
+P_{k}^{(n)}(x)\ f_{k}}}+\Delta f(x)\qquad x\in\left[  x_{i},x_{i+1}\right]
+\end{equation}
+y ahora los multiplicadores de Lagrange, vienen dados por
+\begin{equation}
+P_{k}^{(n)}(x)=\prod_{m\neq k}^{n+1}\frac{x-x_{m}}{x_{k}-x_{m}}%
+\end{equation}
+El error estar\'{a} representado por
+\begin{align}
+\Delta f(x)  &  =\frac{f^{\left(  n+1\right)  }\left(  a\right)  }{\left(
+n+1\right)  !}\left(  x-x_{1}\right)  \left(  x-x_{2}\right)  \cdots\left(
+x-x_{n+1}\right)  \qquad a\in\left[  x_{i},x_{i+1}\right] \\
+\left\|  \Delta f(x)\right\|   &  \leq\frac{\max\left[  f^{\left(  n+1\right)
+}\left(  a\right)  \right]  }{4\left(  n+1\right)  }h^{n+1}%
+\end{align}
+Tradicionalmente los coeficientes $f_{k}$ se generan mediante una tabla de
+\textit{diferencias divididas} mediante el siguiente algoritmo
+
+\begin{quotation}
+\texttt{Para k=0,...n haga}
+
+\qquad\texttt{Para i=0,...n-k, haga}
+
+\qquad\qquad\texttt{Calcule}
+
+\qquad\qquad$f\left[  x_{i}\cdots x_{i+k}\right]  =\frac{f\left[  x_{i}\cdots
+x_{i+k}\right]  -f\left[  x_{i}\cdots x_{i+k-1}\right]  }{x_{i+k}-x_{i}}$
+
+\qquad\texttt{Fin HagaPara i}
+
+\texttt{Fin HagaPara k}
+\end{quotation}
+
+y la tabla generada para $n=4$ es
+
+\begin{center}%
+\begin{tabular}
+[c]{cccccc}\hline\hline
+$x_{i}$ & $f\left[  {}\right]  \equiv f\left(  {}\right)  $ & $f\left[
+,\right]  $ & $f\left[  ,,\right]  $ & $f\left[  ,,,\right]  $ & $f\left[
+,,,,\right]  $\\\hline\hline
+$x_{0}$ & $f\left[  x_{0}\right]  $ &  &  &  & \\
+&  & $f\left[  x_{0},x_{1}\right]  $ &  &  & \\
+$x_{1}$ & $f\left[  x_{1}\right]  $ &  & $f\left[  x_{0},x_{1},x_{2}\right]  $%
+&  & \\
+&  & $f\left[  x_{1},x_{2}\right]  $ &  & $f\left[  x_{0},x_{1},x_{2}%
+,x_{3}\right]  $ & \\
+$x_{2}$ & $f\left[  x_{2}\right]  $ &  & $f\left[  x_{1},x_{2},x_{3}\right]  $%
+&  & $f\left[  x_{0},x_{1},x_{2},x_{3},x_{4}\right]  $\\
+&  & $f\left[  x_{2},x_{3}\right]  $ &  & $f\left[  x_{1},x_{2},x_{3}%
+,x_{4}\right]  $ & \\
+$x_{3}$ & $f\left[  x_{3}\right]  $ &  & $f\left[  x_{2},x_{3},x_{4}\right]  $%
+&  & \\
+&  & $f\left[  x_{3},x_{4}\right]  $ &  &  & \\
+$x_{4}$ & $f\left[  x_{4}\right]  $ &  &  &  &
+\end{tabular}
+\end{center}
+
+y el error estar\'{a} por el orden de
+\[
+\Delta f(x)\approx\frac{\left\|  f\left[  x_{0},x_{1},x_{2},x_{3}%
+,x_{4}\right]  -f\left[  x_{0},x_{1},x_{2},x_{3}\right]  \right\|  +\left\|
+f\left[  x_{0},x_{1},x_{2},x_{3},x_{4}\right]  -f\left[  x_{1},x_{2}%
+,x_{3},x_{4}\right]  \right\|  }{2}
+\]
+
+Supongamos como ejemplo (ya perdido en la historia) como lo es aproximar el
+valor de la funci\'{o}n coseno conocidos cuatro valores de la funci\'{o}n para
+\'{a}ngulos medidos en radianes
+
+\begin{center}%
+\begin{tabular}
+[c]{cccccc}\hline\hline
+$\theta_{i}$ & $\cos\theta_{i}$ & $\cos\left[  ,\right]  $ & $\cos\left[
+,,\right]  $ & $\cos\left[  ,,,\right]  $ & $\cos\left[  ,,,,\right]
+$\\\hline\hline
+$0.0$ & $1.0000000$ &  &  &  & \\
+&  & $-0.09966715$ &  &  & \\
+$0.2$ & $0.98006657$ &  & $-0.4921125$ &  & \\
+&  & $-0.24730090$ &  & $0.0371062$ & \\
+$0.3$ & $0.95533648$ &  & $-0.4772700$ &  & $0.0396700$\\
+&  & $-0.34275490$ &  & $0.0609082$ & \\
+$0.4$ & $0.92106099$ &  & $-0.4529067$ &  & \\
+&  & $-0.47862690$ &  &  & \\
+$0.6$ & $0.82533561$ &  &  &  &
+\end{tabular}
+\end{center}
+
+Si utilizamos tres puntos de interpolaci\'{o}n tendremos un polinomio
+cuadr\'{a}tico en $\theta$ de la forma
+\[
+\cos\theta\cong p^{(2)}(\theta)=\cos\theta_{0}+\left(  \theta-\theta
+_{0}\right)  \cos\left[  \theta_{0},\theta_{1}\right]  +\left(  \theta
+-\theta_{0}\right)  \left(  \theta-\theta_{1}\right)  \cos\left[  \theta
+_{0},\theta_{1},\theta_{2}\right]
+\]
+y as\'{i}
+\begin{align*}
+\cos\left(  0.25\right)   &  \simeq0.98006657+\left(  0.05\right)  \left(
+-0.24730090\right)  +\left(  0.05\right)  \left(  -0.05\right)  \left(
+-0.4772700\right) \\
+\cos(0.25)  &  \simeq0.9688947
+\end{align*}
+
+\newpage
+
+\section{\textbf{Clase 5: Tratamiento Estad\'{i}stico de Datos}}
+
+\subsection{Distribuciones, Promedios y Desviaciones.}
+
+Las limitaciones impuestas por la realidad obligan a un conjunto de errores en
+la medici\'{o}n de cantidades. Estas limitaciones son compartidas tanto por el
+aparato de medida como por el objeto de medici\'{o}n y, muchas veces, las
+limitaciones son inherentes a la teor\'{i}a que estamos utilizando para poder
+medir. Por ello la descripci\'{o}n estad\'{i}stica de los datos experimentales
+se hace necesaria. En estos casos la disparidad de una misma medici\'{o}n nos
+lleva a reflexionar sobre cual ser\'{a} el valor \textit{real} de esa
+medici\'{o}n y, de igual forma, cual ser\'{a} el valor m\'{a}s probable de ese
+valor. Esto nos obliga a adscribir ese valor a una distribuci\'{o}n
+estad\'{i}stica. Veamos algunos elementos quiz\'{a} conocidos por Uds en esta
+descripci\'{o}n de los datos:
+
+\textbf{El Promedio o valor esperado }$\bar{\mu}$ de ocurrencia de una medida
+$x_{i}$ en $N$ ensayos es
+\[
+\bar{\mu}=\left\langle x\right\rangle =\bar{x}=\frac{1}{N}\sum_{i=1}^{N}x_{i}
+\]
+y $\mu,$ tambi\'{e}n promedio, si $N\rightarrow\infty$ i.e.
+\[
+\mu=\lim_{N\rightarrow\infty}\frac{1}{N}\sum_{i=1}^{N}x_{i}\rightarrow\mu
+=\int_{a}^{b}\mathrm{d}x\ xp(x)\qquad\mathrm{con}\quad\int_{a}^{b}%
+\mathrm{d}x\ p(x)=1
+\]
+donde $p(x)$ es la \textbf{distribuci\'{o}n} continua de ocurrencia asociada a
+la medida $x.$
+
+Por lo tanto, otras cantidades relacionadas con esta distribuci\'{o}n emergen:
+la \textbf{mediana}
+\[
+\mu_{\frac{1}{2}}\Rightarrow p(x>\mu_{\frac{1}{2}})=p(x<\mu_{\frac{1}{2}})
+\]
+el \textbf{modo o valor m\'{a}s probable}
+\[
+\mu_{\max}\Rightarrow p(x=\mu_{\max})\eqslantgtr p(x\neq\mu_{\max})
+\]
+\textbf{la desviaci\'{o}n media absoluta}
+\[
+\operatorname{ADev}(x_{1},\cdots,x_{N})=\frac{1}{N}\sum_{i=1}^{N}\left\|
+x_{i}-\mu\right\|
+\]
+y \textbf{la variancia, }$\operatorname{Var}(x_{1},\cdots,x_{N}),$\textbf{\ o
+desviaci\'{o}n cuadr\'{a}tica media,} $\sigma,$ de un valor del promedio
+\[
+\sigma^{2}=\lim_{N\rightarrow\infty}\operatorname{Var}(x_{1},\cdots
+,x_{N})=\lim_{N\rightarrow\infty}\frac{1}{N}\sum_{i=1}^{N}\left(  x_{i}%
+-\mu\right)  ^{2}\rightarrow\sigma^{2}=\int_{a}^{b}\mathrm{d}x\ \left(
+x-\mu\right)  ^{2}p(x)
+\]
+Existe una sutileza adicional que corrige la variancia si el promedio $\mu$ de
+la variable se desconoce a priori y se calcula de la data experimental. En ese
+caso la desviaci\'{o}n cuadr\'{a}tica media se calcula como
+\[
+s=\sqrt{\frac{N}{N-1}\ \operatorname{Var}(x_{1},\cdots,x_{N})}=\sqrt
+{\frac{\sum_{i=1}^{N}\left(  x_{i}-\mu\right)  ^{2}}{N-1}}
+\]
+La variancia en cualquiera de sus formas, claramente se asocia con el error en
+una medida. De hecho, el \textbf{error probable }$e$ de una medida se define
+si
+\[
+\int_{\mu-e}^{\mu+e}\mathrm{d}x\ p(x)=\frac{1}{2}
+\]
+En general todas esta cantidades est\'{a}n asociadas a los \textbf{momentos de
+una distribuci\'{o}n}
+\[
+\mu_{r}=\int_{a}^{b}\mathrm{d}x\ \left(  x-\mu\right)  ^{r}p(x)\qquad
+\Leftarrow\,\left\{
+\begin{array}
+[c]{l}%
+r=0\Rightarrow\text{condici\'{o}n de normalizaci\'{o}n}\\
+r=1\Rightarrow\text{promedio}\\
+r=2\Rightarrow\text{variancia}\\
+r=3\Rightarrow\text{simetr\'{\i}a}\\
+r=4\Rightarrow\text{exceso o \textit{kurtosis}}\\
+\vdots
+\end{array}
+\right.
+\]
+Los momentos de menor orden ($r=1$ y $r=2$) son m\'{a}s robustos que los de
+mayor orden . M\'{a}s a\'{u}n, la desviaci\'{o}n absoluta es m\'{a}s robusta
+que el promedio y si acaso se utilizan los momentos de orden superior deben
+ser considerados mucho cuidado. El concepto de \textit{robustez} tiene que ver
+con la insensibilidad de la definici\'{o}n a diferentes tipos de datos. En
+otras palabras que siempre se comporta igual. La simetr\'{\i}a ($r=3$), como
+su nombre lo indica muestra cuan sim\'{e}trica es una distribuci\'{o}n. el
+exceso o \textit{kurtosis} indica cuan plana (alrededor del promedio) es la
+distribuci\'{o}n.
+
+\subsection{ Distribuciones Te\'{o}ricas m\'{a}s populares}
+
+Es claro que requerimos asociar una distribuci\'{o}n $p(x)$ a un conjunto de
+medidas para poder obtener una cantidad adicional de informaci\'{o}n. Existen
+varias opciones de distribuci\'{o}n asociadas con comportamientos particulares
+de los datos a los cuales se les asocia.
+
+La \textbf{distribuci\'{o}n binomial o de Bernoulli} $P_{B}(N,n,p)$ describe
+la o\-cu\-rren\-cia de $n$ eventos independientes con probabilidad individual
+$p $ en $N$ ensayos
+\[
+P_{B}(N,n,p)=\left(
+\begin{array}
+[c]{c}%
+N\\
+n
+\end{array}
+\right)  p^{n}\ \left(  1-p\right)  ^{N-n}\equiv\frac{N!}{\left(  N-n\right)
+!n!}\ p^{n}\ \left(  1-p\right)  ^{N-n}
+\]
+con las consecuentes cantidades m\'{a}s robustas y utilizadas%
+
+\[
+P_{B}(N,n,p)\qquad\Rightarrow\,\left\{
+\begin{tabular}
+[c]{ll}%
+$\mu_{B}=Np$ & $\text{Promedio}$\\
+$\sigma_{B}=\sqrt{Np\left(  1-p\right)  }$ & Desviaci\'{o}n Cuadr\'{a}tica
+\end{tabular}
+\right.
+\]
+
+La \textbf{distribuci\'{o}n de Poisson}
+\begin{align*}
+P_{P}(n,\mu)  &  =\frac{\mu^{n}}{n!}\ \mathrm{e}^{-n}\qquad\mathrm{con\quad
+}\mu\equiv N\ p\\
+P_{P}(n,\mu)  &  =\lim_{N\rightarrow\infty\quad p\rightarrow0}P_{B}(N,n,p)
+\end{align*}
+describe experimentos en los cuales existe un n\'{u}mero elevado de ensayos
+con probabilidades peque\~{n}as de ocurrencia de eventos. Los curiosos valores
+para el promedio y la variancia son
+\[
+P_{P}(n,\mu)\qquad\Rightarrow\,\left\{
+\begin{tabular}
+[c]{ll}%
+$\mu_{P}=\mu_{B}=Np$ & $\text{Promedio}$\\
+$\sigma_{P}=\sqrt{\mu_{B}}=Np$ & Desviaci\'{o}n Cuadr\'{a}tica
+\end{tabular}
+\right.
+\]
+Esta distribuci\'{o}n est\'{a} caracterizada por un \'{u}nico par\'{a}metro
+$\mu$ constante. Es asim\'{e}trica para valores de $\mu\ll1$ y se aproxima a
+la \textbf{distribuci\'{o}n normal o Gaussiana} para $\mu\gg1$
+
+La \textbf{distribuci\'{o}n normal o Gaussiana} describe situaciones en las
+cuales la probabilidad individual de $p$ ocurrencia se mantiene constante
+inde\-pen\-dien\-te\-men\-te del n\'{u}mero de ensayos $N$ que se planteen.
+Viene descrita por
+\[
+P_{G}(x,\mu,\sigma)=\lim_{N\rightarrow\infty\quad p\neq0}P_{B}(N,n,p)=\frac
+{1}{\sigma\sqrt{2\pi}}{\Large e}^{\tfrac{-\left(  x-\mu\right)  ^{2}}%
+{2\sigma^{2}}}\
+\]
+La raz\'{o}n de la popularidad de esta distribuci\'{o}n se apoya en el Teorema
+Central del L\'{\i}mite o tambi\'{e}n de Convergencia Normal, que afirma que
+cualquier distribuci\'{o}n converge asint\'{o}ticamente a la distribuci\'{o}n
+Normal para $N$ suficientemente grandes.
+\[
+P_{G}(n,\mu,\sigma)\qquad\Rightarrow\,\left\{
+\begin{tabular}
+[c]{ll}%
+$\mu_{G}=\mu_{B}=Np$ & $\text{Promedio}$\\
+$\sigma_{G}=\sqrt{Np\left(  1-p\right)  }$ & Desviaci\'{o}n Cuadr\'{a}tica
+\end{tabular}
+\right.
+\]
+
+Para finalizar mencionamos de pasada la \textbf{distribuci\'{o}n Lorentziana}
+\[
+P_{L}(x,\mu,\sigma)=\frac{1}{\pi}\frac{\sigma}{\left(  x-\mu\right)
+^{2}+\sigma^{2}}
+\]
+la cual se encuentra en varios fen\'{o}menos f\'{\i}sicos como lo son la
+disipaci\'{o}n de potencia en funci\'{o}n de la frecuencia a trav\'{e}s de una
+resistencia de un circuito RLC o su equivalente mec\'{a}nico. Tambi\'{e}n
+describe la forma natural de una l\'{\i}nea de emisi\'{o}n cuando un sistema
+cu\'{a}ntico decae de un estado excitado a otro de menor energ\'{\i}a. Esta
+forma natural de la l\'{\i}nea descrita por esta distribuci\'{o}n se expresa
+en que el ``ancho'' de la distribuci\'{o}n a media altura es igual a dos
+desviaciones est\'{a}ndares.
+
+\subsection{Funciones Probabilistas}
+
+A partir de las distribuciones te\'{o}ricas se pueden definir un conjunto de
+funciones probabilistas del tipo
+\[
+\left.
+\begin{array}
+[c]{c}%
+P(x)=\int_{-\infty}^{x}p(t)\ \mathrm{d}t\\
+\\
+Q(x)=\int_{x}^{\infty}p(t)\ \mathrm{d}t\\
+\\
+A(x)=\int_{-x}^{x}p(t)\ \mathrm{d}t
+\end{array}
+\right\}  \Rightarrow\left\{
+\begin{array}
+[c]{c}%
+P(x)+Q(x)=1\\
+P(-x)=Q(x)\\
+A(x)=2P(x)-1
+\end{array}
+\right.
+\]
+algunas de las cuales, para el caso particular de la distribuci\'{o}n normal,
+se convierten en funciones conocidas
+\[
+A\left(  \sqrt{2}x\right)  =2P\left(  \sqrt{2}x\right)  -1=\frac{2}{\sqrt
+{2\pi}}\int_{-\infty}^{\sqrt{2}x}\exp\left(  \frac{-t^{2}}{2}\right)
+\ \mathrm{d}t\equiv\operatorname{erf}(x)
+\]
+
+\subsection{Un Experimento Ilustrativo.}
+
+Considere un conjunto de mediciones tendientes a determinar el largo de la
+cuadras en una hipot\'{e}tica ciudad. La siguiente tabla representa 25 medidas
+en metros
+
+\begin{center}%
+\begin{tabular}
+[c]{|llllll|}\hline
+Med. \# & \multicolumn{1}{|l}{Largo} & \multicolumn{1}{||l}{Med \#} &
+\multicolumn{1}{|l}{Largo} & \multicolumn{1}{||l}{Med \#} &
+\multicolumn{1}{|l|}{Largo}\\\hline
+\multicolumn{1}{|r}{1} & \multicolumn{1}{|r}{50.6} & \multicolumn{1}{||r}{2} &
+\multicolumn{1}{|r}{50.3} & \multicolumn{1}{||r}{3} &
+\multicolumn{1}{|r|}{50.6}\\
+\multicolumn{1}{|r}{4} & \multicolumn{1}{|r}{47.7} & \multicolumn{1}{||r}{5} &
+\multicolumn{1}{|r}{50.7} & \multicolumn{1}{||r}{6} &
+\multicolumn{1}{|r|}{49.4}\\
+\multicolumn{1}{|r}{7} & \multicolumn{1}{|r}{50.6} & \multicolumn{1}{||r}{8} &
+\multicolumn{1}{|r}{50.7} & \multicolumn{1}{||r}{9} &
+\multicolumn{1}{|r|}{48.7}\\
+\multicolumn{1}{|r}{10} & \multicolumn{1}{|r}{50.7} & \multicolumn{1}{||r}{11}%
+& \multicolumn{1}{|r}{50.5} & \multicolumn{1}{||r}{12} &
+\multicolumn{1}{|r|}{49.3}\\
+\multicolumn{1}{|r}{13} & \multicolumn{1}{|r}{50.5} & \multicolumn{1}{||r}{14}%
+& \multicolumn{1}{|r}{48.9} & \multicolumn{1}{||r}{15} &
+\multicolumn{1}{|r|}{50.2}\\
+\multicolumn{1}{|r}{16} & \multicolumn{1}{|r}{49.2} & \multicolumn{1}{||r}{17}%
+& \multicolumn{1}{|r}{51.0} & \multicolumn{1}{||r}{18} &
+\multicolumn{1}{|r|}{48.3}\\
+\multicolumn{1}{|r}{19} & \multicolumn{1}{|r}{50.7} & \multicolumn{1}{||r}{20}%
+& \multicolumn{1}{|r}{49.9} & \multicolumn{1}{||r}{21} &
+\multicolumn{1}{|r|}{51.2}\\
+\multicolumn{1}{|r}{22} & \multicolumn{1}{|r}{48.7} & \multicolumn{1}{||r}{23}%
+& \multicolumn{1}{|r}{48.6} & \multicolumn{1}{||r}{24} &
+\multicolumn{1}{|r|}{49.1}\\
+\multicolumn{1}{|r}{24} & \multicolumn{1}{|r}{51.6} & \multicolumn{1}{||r}{} &
+\multicolumn{1}{|r}{} & \multicolumn{1}{||r}{} & \multicolumn{1}{|r|}{}%
+\\\hline
+\multicolumn{1}{|r}{} & \multicolumn{1}{r}{} & \multicolumn{1}{r}{$\mu$} &
+$=49.9$ & \multicolumn{1}{r}{$\sigma$} & $=1.0$\\\hline
+\end{tabular}
+\end{center}
+
+Para ajustar estos datos a una distribuci\'{o}n te\'{o}rica construimos un
+histograma de tal forma que las columnas indiquen el n\'{u}mero de ocurrencia
+de una determinada medida a intervalos de 1 m. As\'{\i} para
+\begin{align*}
+47  &  \leq\mathit{l}<48\Rightarrow n=1\\
+48  &  \leq\mathit{l}<49\Rightarrow n=5\\
+49  &  \leq\mathit{l}<50\Rightarrow n=5\\
+50  &  \leq\mathit{l}<51\Rightarrow n=11\\
+48  &  \leq\mathit{l}<49\Rightarrow n=3
+\end{align*}
+Dependiendo de nuestra capacidad de medida podemos tener varias tablas como
+\'{e}sta o por el contrario, otra con muchas m\'{a}s medidas. En el caso de
+que tengamos varias (digamos 25) tablas con 25 medidas tendremos que
+seleccionar la distribuci\'{o}n te\'{o}rica a la cual ajustar nuestro conjunto
+de medidas. En este caso construimos 25 histogramas siguiendo el esquema
+arriba indicado. Cada columna tendr\'{a} una distribuci\'{o}n de alturas con
+una dispersi\'{o}n relacionada con la distribuci\'{o}n seleccionada. Si el
+rango de error de la altura alcanza la distribuci\'{o}n te\'{o}rica tendremos
+un criterio para aceptarla o descartarla.
+
+En el caso de que nuestro aparato de medida pueda tomar muchas medidas en un
+mismo experimento (digamos 2500 medidas) entonces podremos suponer (siguiendo
+el Teorema de Convergencia Normal ) que este conjunto de medidas sigue una
+distribuci\'{o}n normal o Gaussiana. En ese caso podremos hacer algunas
+inferencias a partir de los datos que hemos obtenidos. Por ejemplo:
+\[
+A(\sigma)=\int_{\mu-\sigma}^{\mu+\sigma}P_{G}(t,\mu,\sigma)\ \mathrm{d}%
+t=\frac{1}{\sigma\sqrt{2\pi}}\int_{\mu-\sigma}^{\mu+\sigma}{\Large e}%
+^{\tfrac{-\left(  t-\mu\right)  ^{2}}{2\sigma^{2}}}\ \mathrm{d}t=0.68
+\]
+con lo cual estamos diciendo que si hacemos 100 medidas del largo de la
+cuadra, obtendremos 68 veces valores del largo entre 48.9m y 50.9m.
+
+\subsection{La Estad\'{i}stica y la Propagaci\'{o}n de errores}
+
+La incidencia de los errores experimentales (bien sea de medida o errores
+aleatorios) en una cantidad funci\'{o}n de una variable independiente se puede
+expresar como
+\[
+y=f(x)\Rightarrow y\pm\Delta y=f\left(  x\pm\Delta x\right)  =f(x)+\left(
+\pm\Delta x\right)  \frac{\mathrm{d}f}{\mathrm{d}x}+\cdots\Rightarrow\Delta
+y\approx\frac{\mathrm{d}f}{\mathrm{d}x}\Delta x
+\]
+y equivalentemente para una funci\'{o}n de varias variables a trav\'{e}s de un
+diferencial total
+\[
+y=f(u,v,w,\cdots)\Rightarrow\Delta y\approx\frac{\partial f}{\partial u}\Delta
+u+\frac{\partial f}{\partial v}\Delta v+\frac{\partial f}{\partial w}\Delta w
+\]
+y es com\'{u}n asociar $\Delta u_{i}=\left(  u_{i}-\left\langle u\right\rangle
+\right)  \equiv\left(  u_{i}-\mu_{u}\right)  $ por lo cual
+\[
+\Delta y_{i}=\left(  y_{i}-\mu_{y}\right)  =\left\{  \frac{\partial
+f}{\partial u}\left(  u_{i}-\mu_{u}\right)  +\frac{\partial f}{\partial
+v}\left(  v_{i}-\mu_{v}\right)  +\frac{\partial f}{\partial w}\left(
+w_{i}-\mu_{w}\right)  \right\}
+\]
+por lo cual
+\begin{align*}
+\sigma_{y}^{2}  &  \equiv\lim_{N\rightarrow\infty}\frac{1}{N}\sum_{i=1}%
+^{N}\left(  y_{i}-\mu_{y}\right)  ^{2}\\
+&  =\lim_{N\rightarrow\infty}\frac{1}{N}\sum_{i=1}^{N}\left\{  \frac{\partial
+f}{\partial u}\left(  u_{i}-\mu_{u}\right)  +\frac{\partial f}{\partial
+v}\left(  v_{i}-\mu_{v}\right)  +\frac{\partial f}{\partial w}\left(
+w_{i}-\mu_{w}\right)  \right\}  ^{2}%
+\end{align*}
+por lo cual
+\begin{align*}
+\sigma_{y}^{2}  &  =\lim_{N\rightarrow\infty}\frac{1}{N}\sum_{i=1}^{N}\left\{
+\left[  \frac{\partial f}{\partial u}\left(  u_{i}-\mu_{u}\right)  \right]
+^{2}+\left[  \frac{\partial f}{\partial v}\left(  v_{i}-\mu_{v}\right)
+\right]  ^{2}+\left[  \frac{\partial f}{\partial w}\left(  w_{i}-\mu
+_{w}\right)  \right]  ^{2}+\right. \\
+&  +2\frac{\partial f}{\partial u}\left(  u_{i}-\mu_{u}\right)  \frac{\partial
+f}{\partial v}\left(  v_{i}-\mu_{v}\right)  +2\frac{\partial f}{\partial
+u}\left(  u_{i}-\mu_{u}\right)  \frac{\partial f}{\partial w}\left(  w_{i}%
+-\mu_{w}\right) \\
+&  \left.  +2\frac{\partial f}{\partial v}\left(  v_{i}-\mu_{v}\right)
+\frac{\partial f}{\partial w}\left(  w_{i}-\mu_{w}\right)  \right\} \\
+\sigma_{y}^{2}  &  =\left(  \frac{\partial f}{\partial u}\right)  ^{2}%
+\sigma_{u}^{2}+\left(  \frac{\partial f}{\partial v}\right)  ^{2}\sigma
+_{v}^{2}+\left(  \frac{\partial f}{\partial w}\right)  ^{2}\sigma_{w}%
+^{2}+2\frac{\partial f}{\partial u}\frac{\partial f}{\partial v}\sigma
+_{uv}^{2}+2\frac{\partial f}{\partial u}\frac{\partial f}{\partial w}%
+\sigma_{uw}^{2}+2\frac{\partial f}{\partial w}\frac{\partial f}{\partial
+v}\sigma_{wv}^{2}%
+\end{align*}
+donde hemos extendido la definici\'{o}n de variancia a \textit{covariancia.}
+\[
+\sigma_{uv}^{2}=\lim_{N\rightarrow\infty}\frac{1}{N}\sum_{i=1}^{N}\left(
+u_{i}-\mu_{u}\right)  \left(  v_{i}-\mu_{v}\right)
+\]
+Si $u$ y $v$ no est\'{a}n correlacionadas, i.e. si la probabilidad de obtener
+un valor $u_{i}$ es totalmente independiente de obtener un valor $v_{i}$ o,
+m\'{a}s directamente en t\'{e}rmino de errores, si el error en la media de $u$
+no incide en la medida de $v$ entonces $\sigma_{uv}^{2}=0$
+
+Supongamos los siguientes ejemplos
+\begin{align*}
+y  &  =au\pm bv\Rightarrow\left\{
+\begin{array}
+[c]{c}%
+\frac{\partial f}{\partial u}=a\\
+\frac{\partial f}{\partial v}=b
+\end{array}
+\right\}  \Rightarrow\sigma_{y}^{2}=a^{2}\sigma_{u}^{2}+b^{2}\sigma_{v}^{2}%
+\pm2ab\sigma_{uv}^{2}\\
+& \\
+y  &  =auv\Rightarrow\left\{
+\begin{array}
+[c]{c}%
+\frac{\partial f}{\partial u}=av\\
+\frac{\partial f}{\partial v}=au
+\end{array}
+\right\}  \Rightarrow\sigma_{y}^{2}=\left(  av\right)  ^{2}\sigma_{u}%
+^{2}+\left(  au\right)  ^{2}\sigma_{v}^{2}+2a^{2}uv\sigma_{uv}^{2}=y2\left(
+\frac{\sigma_{u}^{2}}{u^{2}}+\frac{\sigma_{v}^{2}}{v^{2}}+2\frac{\sigma
+_{uv}^{2}}{uv}\right) \\
+& \\
+y  &  =a\frac{u}{v}\Rightarrow\left\{
+\begin{array}
+[c]{c}%
+\frac{\partial f}{\partial u}=\frac{a}{v}\\
+\frac{\partial f}{\partial v}=-a\frac{u}{v^{2}}%
+\end{array}
+\right\}  \Rightarrow\sigma_{y}^{2}=\left(  \frac{a}{v}\right)  ^{2}\sigma
+_{u}^{2}+\left(  \frac{au}{v^{2}}\right)  ^{2}\sigma_{v}-2\frac{a^{2}u}{v^{3}%
+}\sigma_{uv}^{2}=y2\left(  \frac{\sigma_{u}^{2}}{u^{2}}+\frac{\sigma_{v}^{2}%
+}{v^{2}}-2\frac{\sigma_{uv}^{2}}{uv}\right)
+\end{align*}
+
+\subsection{La Funci\'{o}n m\'{a}s Probable}
+
+Supongamos el caso del decaimiento espont\'{a}neo en el cual partimos con un
+n\'{u}mero $N_{0}$ de part\'{\i}culas en $t=0$ y al cabo de un $\Delta t$,
+$\Delta N$ part\'{\i}culas han deca\'{\i}do
+\[
+\Delta N=-\frac{1}{\tau}N(t)\Delta t\Rightarrow\frac{\Delta N}{\Delta
+t}=-\frac{1}{\tau}N(t)\Rightarrow N(t)=N_{0}\underset{\tau p(t)}%
+{\underbrace{\mathrm{e}^{-t/\tau}}}
+\]
+es decir, hemos reinterpretado la ecuaci\'{o}n del decaimiento espont\'{a}neo
+como una ecuaci\'{o}n probabilista en la cual $p(t)=\frac{1}{\tau}%
+\mathrm{e}^{-t/\tau}$ es la probabilidad de observar una part\'{\i}cula
+decayendo en el tiempo $t.$ Si medimos en distintos tiempos: $t_{1}%
+,t_{2,}t_{3\cdots}$ y queremos determinar la mejor funci\'{o}n $\mathcal{L}%
+(\tau)$ que se describe el proceso de decaimiento tendremos
+\[
+\mathcal{L}(\tau)=\prod_{i=1}^{N}p(t_{i})=\prod_{i=1}^{N}\exp\left(
+-\frac{t_{i}}{\tau}-\ln\tau\right)  =\exp\left(  -\frac{1}{\tau}\left[
+\sum_{i=1}^{N}t_{i}\right]  -N\ln\tau\right)
+\]
+donde $\tau$ todav\'{\i}a es desconocida, pero
+\[
+\frac{\mathrm{d}\mathcal{L}(\tau)}{\mathrm{d}\tau}=\left(  \frac{1}{\tau^{2}%
+}\left[  \sum_{i=1}^{N}t_{i}\right]  -\frac{N}{\tau}\right)  \mathcal{L}%
+(\tau)=0\quad\Rightarrow\bar{\tau}=\frac{1}{N}\sum_{i=1}^{N}t_{i}
+\]
+es el valor de $\tau=\bar{\tau}$ que maximiza la funci\'{o}n $\mathcal{L}%
+(\tau).$ Si queremos determinar el grado de incertidumbre asociado con el
+par\'{a}metro $\bar{\tau}\equiv\mu_{\tau}$ es claro que
+\[
+\mathcal{L}(\tau)\underset{N\rightarrow\infty}{\longmapsto}\frac{1}%
+{\sigma_{\tau}\sqrt{2\pi}}{\Large e}^{\tfrac{-\left(  \tau-\mu_{\tau}\right)
+^{2}}{2\sigma_{\tau}^{2}}}\quad\Rightarrow0=\frac{\mathrm{d\ln}\left(
+\mathcal{L}(\tau)\right)  }{\mathrm{d}\tau}=-\frac{\tau-\mu_{\tau}}%
+{\sigma_{\tau}^{2}}\quad\Rightarrow\sigma_{\tau}=\left[  \frac{1}{\tau
+-\mu_{\tau}}\frac{\mathrm{d\ln}\left(  \mathcal{L}(\tau)\right)  }%
+{\mathrm{d}\tau}\right]  ^{-1/2}
+\]
+Ahora bien si
+\[
+\mathcal{L}(\tau)=\exp\left(  -\frac{1}{\tau}\left[  \sum_{i=1}^{N}%
+t_{i}\right]  -N\ln\tau\right)  \quad\Rightarrow\sigma_{\tau}=\frac{\tau
+}{\sqrt{N}}
+\]
+M\'{a}s a\'{u}n, para cada punto de la medida podemos suponer una
+distribuci\'{o}n de tal forma que en cada punto inciden errores
+\[
+p(x_{i})\mathrm{d}x_{i}=\frac{1}{\sigma_{i}\sqrt{2\pi}}{\Large e}%
+^{\tfrac{-\left(  x_{i}-\mu\right)  ^{2}}{2\sigma_{i}^{2}}}\mathrm{d}%
+x_{i}\quad\Rightarrow\mathcal{L}(\mu)=\left(  \prod_{i=1}^{N}\frac{1}%
+{\sigma_{i}\sqrt{2\pi}}\right)  \exp\left(  -\frac{1}{2}\sum_{i=1}^{N}\left[
+\tfrac{\left(  x_{i}-\mu\right)  }{\sigma_{i}}\right]  ^{2}\right)
+\]
+con el m\'{a}ximo que implica el mejor valor de $\bar{\mu}$ que
+\[
+0=\frac{\mathrm{d\ln}\left(  \mathcal{L}(\mu)\right)  }{\mathrm{d}\mu}%
+\quad\Rightarrow\frac{\mathrm{d}\left(  \tfrac{\left(  x_{i}-\mu\right)
+}{\sigma_{i}}\right)  ^{2}}{\mathrm{d}\mu}=0\quad\Rightarrow\bar{\mu}=\left(
+\sum_{i=1}^{N}\frac{1}{\sigma_{i}^{2}}\right)  ^{-1}\sum_{i=1}^{N}\frac
+{1}{\sigma_{i}^{2}}x_{i}
+\]
+Obviamene si la incertidumbre, $\sigma_{i},$ en cada uno de los puntos es la
+misma se obtiene la expresi\'{o}n tradicional del promedio. Adicionalmente, la
+incertidumbre en el valor de ese promedio $\bar{\mu}$ ser\'{a}
+\begin{align*}
+\sigma_{\mu}^{2}  &  =\sum_{i=1}^{N}\left[  \sigma_{i}\left(  \frac
+{\partial\mu}{\partial x_{i}}\right)  ^{2}\right]  =\sum_{i=1}^{N}\left[
+\sigma_{i}\left(  \frac{\partial}{\partial x_{i}}\left\{  \left(  \sum
+_{i=1}^{N}\frac{1}{\sigma_{i}^{2}}\right)  ^{-1}\sum_{i=1}^{N}\frac{1}%
+{\sigma_{i}^{2}}x_{i}\right\}  \right)  ^{2}\right] \\
+&  =\sum_{i=1}^{N}\left[  \sigma_{i}\left(  \left[  \sum_{i=1}^{N}\frac
+{1}{\sigma_{i}^{2}}\right]  ^{-1}\frac{1}{\sigma_{i}^{2}}\right)  ^{2}\right]
+=\sum_{i=1}^{N}\frac{1}{\sigma_{i}^{2}}%
+\end{align*}
+siempre y cuando se ignoren las correlaciones entre los errores de las
+diferentes medidas
+
+\subsection{M\'{e}todo de M\'{i}nimos Cuadrados}
+
+En general, una funci\'{o}n que describa los datos experimentales tiene la
+forma de
+\[
+y=f(x;a_{1},a_{2},a_{3},\cdots,a_{n})
+\]
+donde los par\'{a}metros $a_{1},a_{2},a_{3},\cdots,a_{n}$ deben tomar los
+valores \'{o}ptimos para que $f(x;a_{1},a_{2},a_{3},\cdots,a_{n})$ la mejor
+funci\'{o}n que permita la descripci\'{o}n de los datos experimentales. Si
+$y_{i}$ son los valores experimentales en $x=x_{i}$ podemos suponer que podran
+ser asociados a una distribuci\'{o}n normal de la forma
+\[
+p(t)\ \mathrm{d}x=\frac{1}{\sigma_{i}\sqrt{2\pi}}{\Large e}^{\tfrac{-\left(
+y_{i}-f_{i}\right)  ^{2}}{2\sigma_{i}^{2}}}\ \mathrm{d}x\qquad\mathrm{con\quad
+}f_{i}=f(x_{i};a_{1},a_{2},a_{3},\cdots,a_{n})
+\]
+por lo cual
+\[
+\mathcal{L}(a_{1},a_{2},a_{3},\cdots,a_{n})=\prod_{i=1}^{N}\left\{  \frac
+{1}{\sigma_{i}\sqrt{2\pi}}{\Large e}^{\tfrac{-\left(  y_{i}-f_{i}\right)
+^{2}}{2\sigma_{i}^{2}}}\right\}  =\left(  \prod_{i=1}^{N}\frac{1}{\sigma
+_{i}\sqrt{2\pi}}\right)  \exp\left(  -\frac{1}{2}\sum_{i=1}^{N}\left[
+\tfrac{\left(  y_{i}-f_{i}\right)  }{\sigma_{i}}\right]  ^{2}\right)
+\]
+siguiendo con el proceso arriba mencionado tenemos $n$ ecuaciones con $n$
+incognitas
+\[
+\frac{\partial\left(  \sum_{i=1}^{N}\left[  \tfrac{\left(  y_{i}-f_{i}\right)
+}{\sigma_{i}}\right]  ^{2}\right)  }{\partial a_{k}}\equiv\frac{\partial
+\chi^{2}}{\partial a_{k}}=-2\sum_{i=1}^{N}\left[  \tfrac{\left(  y_{i}%
+-f_{i}\right)  }{\sigma_{i}}\right]  \frac{\partial f_{i}}{\partial a_{k}%
+}=0\qquad\mathrm{con\quad}k=1,2,3,\cdots,n
+\]
+
+\newpage
+
+\section{\textbf{Clase 6: Ecuaciones Diferenciales Ordinarias I}}
+
+\subsection{Vocabulario}
+
+Ecuaci\'{o}n diferencial
+\[
+\frac{\mathrm{d}y(t)}{\mathrm{d}t}=F(y(t),t)
+\]
+donde $y(t)$ es la \textbf{funci\'{o}n inc\'{o}gnita o variable dependiente} y
+$t$ es la \textbf{variable independiente}
+
+El \textbf{orden} de una ecuaci\'{o}n diferencial se refiere al grado de la
+derivada\newline
+\begin{tabular}
+[c]{ll}%
+$\frac{\mathrm{d}y(t)}{\mathrm{d}t}+g_{0}(t)y(t)=f(t)$ & primer orden\\
+& \\
+$\frac{\mathrm{d}^{2}y(t)}{\mathrm{d}t^{2}}+\tilde{g}_{1}(t)\frac
+{\mathrm{d}y(t)}{\mathrm{d}t}+\tilde{g}_{0}(t)y(t)=\tilde{f}(t)$ & segundo
+orden\\
+& \\
+$\vdots$ & \\
+$\frac{\mathrm{d}^{n}y(t)}{\mathrm{d}t^{n}}+\bar{g}_{n-1}(t)\frac
+{\mathrm{d}^{n-1}y(t)}{\mathrm{d}t^{n-1}}+\cdots+\bar{g}_{1}(t)\frac
+{\mathrm{d}y(t)}{\mathrm{d}t}+\tilde{g}_{0}(t)y(t)=\bar{f}(y(t),t)$ &
+\textit{n}-esimo orden
+\end{tabular}
+\newline mientras que el calificativo de\textbf{\ lineal o no-lineal} tiene
+que ver con el exponente (o el tipo de funci\'{o}n) que presenten la
+funci\'{o}n y sus derivadas y o los productos mixtos\newline
+\begin{tabular}
+[c]{ll}%
+$\left(  \frac{\mathrm{d}y(t)}{\mathrm{d}t}\right)  ^{q}+g_{0}(t)y^{p}%
+(t)=f(t)$ & no lineal primer orden\\
+& \\
+$\frac{\mathrm{d}^{2}y(t)}{\mathrm{d}t^{2}}+\tilde{g}_{1}(t)\left(
+\frac{\mathrm{d}y(t)}{\mathrm{d}t}\right)  ^{q}+\tilde{g}_{10}(t)\left(
+\frac{\mathrm{d}y(t)}{\mathrm{d}t}\right)  ^{m}y^{n}(t)+\tilde{g}_{0}%
+(t)y^{p}(t)=\tilde{f}(t)$ & no lineal segundo orden
+\end{tabular}
+\newline Si $f(t)=0$ la ecuaci\'{o}n diferencial se dice \textbf{homog\'{e}%
+nea} y si $f(t)\neq0$ ser\'{a} \textbf{inhomog\'{e}nea. }
+
+La ecuaci\'{o}n del p\'{e}ndulo f\'{\i}sico amortiguado y forzado, una vez
+adimensionalizada con $\sqrt{l/g}$ como unidad de tiempo, vale decir
+$t\rightarrow\tau=t/\sqrt{l/g},$ puede ser escrita como\newline
+\begin{tabular}
+[c]{ll}%
+$\frac{\mathrm{d}^{2}\theta(\tau)}{\mathrm{d}\tau^{2}}+\frac{k}{m}%
+\frac{\mathrm{d}\theta(\tau)}{\mathrm{d}t}+\operatorname*{sen}\theta
+(\tau)=\frac{A}{ml}\cos\omega_{0}\theta(\tau)$ & no lineal segundo orden,
+inhomog\'{e}nea\\
+& \\
+$\frac{\mathrm{d}^{2}\theta(t)}{\mathrm{d}t^{2}}+\frac{k}{m}\frac
+{\mathrm{d}\theta(\tau)}{\mathrm{d}\tau}+\theta(\tau)=\frac{A}{ml}\cos
+\omega_{0}\theta(\tau)$ & $\left.
+\begin{array}
+[c]{c}%
+\text{lineal segundo orden inhomog\'{e}nea}\\
+\text{s\'{\i} }\theta(\tau)\approx\operatorname*{sen}\theta(\tau)
+\end{array}
+\right.  $,
+\end{tabular}
+
+Las ecuaciones diferenciales pueden ser \textbf{ordinarias} si existe una sola
+va\-ria\-ble independiente o \textbf{parcial} cuando son varias variables
+independientes\newline
+\begin{tabular}
+[c]{l}%
+$p\ \frac{\partial^{2}\phi}{\partial x^{2}}+q\ \frac{\partial^{2}\phi
+}{\partial x\ \partial y}+r\ \frac{\partial^{2}\phi}{\partial y^{2}}%
++s\ \frac{\partial\phi}{\partial x}+t\ \frac{\partial\phi}{\partial y}%
++u\ \phi+v=0$\\
+\\
+lineales \qquad$\Rightarrow$ $\left\{
+\begin{array}
+[c]{c}%
+p=p(x,y)\\
+q=q(x,y)\\
+r=r(x,y)\\
+s=s(x,y)\\
+t=t(x,y)\\
+u=u(x,y)\\
+v=v(x,y)
+\end{array}
+\right.  $\\
+\\
+no lineales\qquad$\Rightarrow$ $\left\{
+\begin{array}
+[c]{c}%
+p=p(x,y,\partial_{x}\phi,\partial_{y}\phi,\partial_{xy}\phi,\partial_{y}%
+^{2}\phi,\partial_{x}^{2}\phi)\\
+q=q(x,y,\partial_{x}\phi,\partial_{y}\phi,\partial_{xy}\phi,\partial_{y}%
+^{2}\phi,\partial_{x}^{2}\phi)\\
+r=r(x,y,\partial_{x}\phi,\partial_{y}\phi,\partial_{xy}\phi,\partial_{y}%
+^{2}\phi,\partial_{x}^{2}\phi)\\
+s=s(x,y,\partial_{x}\phi,\partial_{y}\phi,\partial_{xy}\phi,\partial_{y}%
+^{2}\phi,\partial_{x}^{2}\phi)\\
+t=t(x,y,\partial_{x}\phi,\partial_{y}\phi,\partial_{xy}\phi,\partial_{y}%
+^{2}\phi,\partial_{x}^{2}\phi)\\
+u=u(x,y,\partial_{x}\phi,\partial_{y}\phi,\partial_{xy}\phi,\partial_{y}%
+^{2}\phi,\partial_{x}^{2}\phi)\\
+v=v(x,y,\partial_{x}\phi,\partial_{y}\phi,\partial_{xy}\phi,\partial_{y}%
+^{2}\phi,\partial_{x}^{2}\phi)
+\end{array}
+\right.  $\\
+\\
+\multicolumn{1}{r}{$\left.
+\begin{array}
+[c]{c}%
+\text{El\'{\i}pticas}\\
+\text{Parab\'{o}licas}\\
+\text{Hiperb\'{o}licas}%
+\end{array}
+\right.  \left.
+\begin{array}
+[c]{c}%
+\Rightarrow\\
+\Rightarrow\\
+\Rightarrow
+\end{array}
+\right.  \left.
+\begin{array}
+[c]{c}%
+q^{2}<4pr\\
+q^{2}=4pr\\
+q^{2}>4pr
+\end{array}
+\right.  $}%
+\end{tabular}
+\newline Los casos t\'{\i}pico de ecuaciones lineales en derivadas parciales
+son los si\-guien\-tes:\newline
+\begin{tabular}
+[c]{lll}%
+$\nabla^{2}\phi\left(  x,y\right)  =\frac{\partial^{2}\phi}{\partial x^{2}%
+}+\frac{\partial^{2}\phi}{\partial y^{2}}=\rho\left(  x,y\right)  $ &
+Ecuaci\'{o}n de Poisson & \textsf{El\'{\i}ptica}\\
+&  & \\
+$\frac{\partial^{2}\phi\left(  x,t\right)  }{\partial x^{2}}=\frac
+{\partial\phi\left(  x,t\right)  }{\partial t}$ & Ecuaci\'{o}n del Calor &
+\textsf{Parab\'{o}lica}\\
+&  & \\
+$\frac{\partial^{2}\phi\left(  x,t\right)  }{\partial x^{2}}=\frac{1}{v^{2}%
+}\frac{\partial^{2}\phi\left(  x,t\right)  }{\partial t^{2}}$ & Ecuaci\'{o}n
+de Onda & \textsf{Hiperb\'{o}lica}\\
+&  &
+\end{tabular}
+
+Adicionalmente, est\'{a}n los \textbf{problemas de valores iniciales y los
+pro\-ble\-mas de frontera}.\newline
+\begin{tabular}
+[c]{ll}%
+\textbf{Valores iniciales} & \\
+$\frac{\mathrm{d}^{2}y(t)}{\mathrm{d}t^{2}}+\tilde{g}_{1}(t)\frac
+{\mathrm{d}y(t)}{\mathrm{d}t}+\tilde{g}_{0}(t)y(t)=\tilde{f}(t)$ & $\left\{
+\begin{array}
+[c]{c}%
+y(t=0)=y(0)=y_{0}\\
+\frac{\mathrm{d}y(t=0)}{\mathrm{d}t}=\dot{y}(0)=\dot{y}_{0}%
+\end{array}
+\right.  $\\
+\textbf{Valores de Frontera} & \\
+$\frac{\mathrm{d}^{2}y(t)}{\mathrm{d}t^{2}}+\tilde{g}_{1}(t)\frac
+{\mathrm{d}y(t)}{\mathrm{d}t}+\tilde{g}_{0}(t)y(t)=\tilde{f}(t)$ & $\left\{
+\begin{array}
+[c]{c}%
+y(a)=y_{a};\quad y(b)=y_{b}\\
+\dot{y}(a)=\dot{y}_{a};\quad y(b)=y_{b}\\
+y(a)=y_{a};\quad\dot{y}(b)=\dot{y}_{b}\\
+\dot{y}(a)=y_{a};\quad\dot{y}(b)=y_{b}%
+\end{array}
+\right.  \left.
+\begin{array}
+[c]{c}%
+\text{Dirichlet}\\
+\text{Cauchy}\\
+\text{Cauchy}\\
+\text{Neuman}%
+\end{array}
+\right.  $%
+\end{tabular}
+
+\subsection{Sistemas Din\'{a}micos}
+
+Dada una ecuaci\'{o}n diferencial de segundo orden de la forma
+\[
+\frac{\mathrm{d}^{2}x(t)}{\mathrm{d}t^{2}}=F\left(  \frac{\mathrm{d\ }%
+x(t)}{\mathrm{d}t},x(t),t\right)
+\]
+siempre se puede convertir en un sistema de ecuaciones lineales al extender el
+espacio de variables de la forma
+\[
+\left.
+\begin{array}
+[c]{c}%
+\frac{\mathrm{d\ }x(t)}{\mathrm{d}t}\overset{\text{def}}{=}p(t)\\
+x(t)\overset{\text{def}}{=}q(t)
+\end{array}
+\right\}  \Rightarrow\frac{\mathrm{d}^{2}x(t)}{\mathrm{d}t^{2}}=F\left(
+\frac{\mathrm{d\ }x(t)}{\mathrm{d}t},x(t),t\right)  \Leftrightarrow\left\{
+\begin{array}
+[c]{c}%
+\frac{\mathrm{d\ }q(t)}{\mathrm{d}t}=p(t)\\
+\frac{\mathrm{d\ }p(t)}{\mathrm{d}t}=F\left(  p(t),q(t),t\right)
+\end{array}
+\right.
+\]
+la cual puede ser re-arreglada en forma vectorial
+\[
+\frac{\mathrm{d\ }\left(
+\begin{array}
+[c]{c}%
+q(t)\\
+p(t)
+\end{array}
+\right)  }{\mathrm{d}t}=\left(
+\begin{array}
+[c]{c}%
+p(t)\\
+F\left(  p(t),q(t),t\right)
+\end{array}
+\right)  \quad\Leftrightarrow\quad\frac{\mathrm{d\ }\mathbf{Q(}t\mathbf{)}%
+}{\mathrm{d}t}=\mathbf{F}\left(  \mathbf{Q(}t\mathbf{),}t\right)
+\]
+
+As\'{\i} dado un conjunto de potenciales el\'{a}sticos y las fuerzas que de
+ellos derivan,
+\[
+V(x)=\left\{
+\begin{array}
+[c]{c}%
+kx\quad\quad\leftarrow p=1\\
+\\
+\frac{1}{2}kx^{2}\quad\leftarrow p=2\\
+\\
+\frac{1}{3}kx^{3}\quad\leftarrow p=3\\
+\vdots\\
+\frac{1}{p}k\left\|  x\right\|  ^{p}%
+\end{array}
+\right.  \Rightarrow F_{k}(x)=-\frac{\mathrm{d\ }V\mathbf{(}x\mathbf{)}%
+}{\mathrm{d}x}\Rightarrow F_{k}(x)=\left\{
+\begin{array}
+[c]{c}%
+-k\frac{x}{\left\|  x\right\|  }\\
+\\
+-kx\\
+\\
+-kx^{2}\\
+\vdots\\
+-k\left\|  x\right\|  ^{p-1}\frac{x}{\left\|  x\right\|  }%
+\end{array}
+\right.
+\]
+el sistema din\'{a}mico correspondiente a la ecuaci\'{o}n de Newton
+correspondiente ser\'{a}
+\[
+\frac{\mathrm{d\ }\mathbf{Q(}t\mathbf{)}}{\mathrm{d}t}=\mathbf{F}\left(
+\mathbf{Q(}t\mathbf{),}t\right)  \Rightarrow\frac{\mathrm{d\ }\left(
+\begin{array}
+[c]{c}%
+x(t)\\
+\\
+p(t)
+\end{array}
+\right)  }{\mathrm{d}t}=\left(
+\begin{array}
+[c]{c}%
+p(t)\\
+\\
+\frac{1}{m}\left[  F_{ext}\left(  x(t),t\right)  \right]  -k\left\|
+x(t)\right\|  ^{p-1}\frac{x(t)}{\left\|  x(t)\right\|  }%
+\end{array}
+\right)
+\]
+
+\subsection{Los M\'{e}todos y su Clasificaci\'{o}n}
+
+Dada una ecuaci\'{o}n diferencial de primer orden, $\frac{\mathrm{d}%
+y(x)}{\mathrm{d}x}=y^{\prime}(x)=f(y(x),x),$ con $y_{k}$ el valor de la
+funci\'{o}n obtenida con el m\'{e}todo, con $y_{k}\neq y(x_{k}),$ donde
+$x_{k}=x_{0}+kh$ y $h$ el paso. Diremos que un m\'{e}todo es de \textbf{paso
+\'{u}nico} si la determinaci\'{o}n de $y_{k+1}$ s\'{o}lo involucra un
+\'{u}nico valor de $y_{k}$ y \textbf{m\'{u}ltiple paso} si para calcularlo se
+utilizan varios valores $y_{k},y_{k-1},\cdots,y_{k-p}.$ Por otra parte se
+denomina un m\'{e}todo \textbf{expl\'{\i}cito} si para determinar $y_{k+1}$ se
+utilizan valores anteriores $y_{k},y_{k-1},\cdots,y_{k-p}$ y \textbf{impl\'{\i
+}cito} si se utilizan una funci\'{o}n del mismo valor $y_{k+1}.$ As\'{\i}
+\[
+y_{k+1}=y_{k-1}+2h\ f\left(  x_{k},y_{k}\right)
+\]
+representa un m\'{e}todo \textbf{expl\'{\i}cito de paso \'{u}nico} mientras
+que
+\[
+y_{k+1}=y_{k}+\frac{h}{2}\ \left[  f\left(  x_{k},y_{k}\right)  +f\left(
+x_{k+1},y_{k+1}\right)  \right]
+\]
+ser\'{a} \textbf{impl\'{\i}cito de m\'{u}ltiples pasos.}
+
+\subsection{El Rebusque de Taylor}
+
+Tal y como hemos dicho arriba, dada una ecuaci\'{o}n diferencial, su
+soluci\'{o}n a trav\'{e}s de un m\'{e}todo de paso \'{u}nico puede ser escrita
+como
+\[
+y^{\prime}(x)=f(y(x),x)\Rightarrow y_{k+1}=y_{k}+\ \varphi\left(  x_{k}%
+,y_{k},h\right)  \qquad\text{con\quad}h=x_{i+1}-x_{i};
+\]
+Lo primero que se puede hacer es expandir por Taylor alrededor del punto
+$x=x_{k}$%
+\[
+y(x)=y(x_{k})+\left(  x-x_{k}\right)  \ y^{\prime}(x_{k})+\frac{1}{2!}\left(
+x-x_{k}\right)  ^{2}\ y^{\prime\prime}(x_{k})+\cdots+\frac{1}{n!}\left(
+x-x_{k}\right)  ^{n}\ y^{(n)}(x_{k})+\cdots
+\]
+e identificamos
+\begin{align*}
+y(x_{k})  &  \rightarrow y_{k}y^{\prime}(x)=f(y(x),x)\\
+y^{\prime}(x_{k})  &  \rightarrow f(y_{k},x_{k})\\
+y^{\prime\prime}(x_{k})  &  \rightarrow f^{\prime}(y_{k},x_{k})=\left.
+\frac{\partial\ f}{\partial x}\right|  _{\substack{x=x_{x} \\y=y_{k}
+}}+\left.  \frac{\partial\ f}{\partial y}\right|  _{\substack{x=x_{x}
+\\y=y_{k} }}y_{k}^{\prime}\\
+y^{\prime\prime\prime}(x_{k})  &  \rightarrow f^{\prime\prime}(y_{k}%
+,x_{k})=\partial_{x}f^{\prime}+\partial_{y}f^{\prime}\ y_{k}^{\prime}%
+=\partial_{xx}f+\left(  \partial_{xy}f\right)  y_{k}^{\prime}+\left[
+\partial_{yx}f+\left(  \partial_{yy}f\right)  y_{k}^{\prime}\right]
+y_{k}^{\prime}+\partial_{y}f\ y_{k}^{\prime\prime}\\
+&  \vdots
+\end{align*}
+por lo que reconstruimos la serie de Taylor hasta el orden que podamos o
+requiramos
+\[
+y_{n+1}=y_{n}+h\ f(y_{k},x_{k})+\frac{1}{2!}h^{2}\ f^{\prime}(y_{k}%
+,x_{k})+\frac{1}{3!}h^{3}\ f^{\prime\prime}(y_{k},x_{k})+\cdots+\frac{1}%
+{n!}\ h^{n}\ f^{(n-1)}(y_{k},x_{k})+\cdots
+\]
+quedando acotado el error por
+\[
+\varepsilon_{red}=\frac{1}{\left(  n+1\right)  !}\ h^{n+1}\ f^{(n)}%
+(y(\xi),x(\xi))
+\]
+
+\subsection{La idea de la Integraci\'{o}n}
+
+La idea de integrar una ecuaci\'{o}n diferencial ordinaria puede ilustrarse,
+formalmente de la siguiente forma
+\[
+y^{\prime}(x)=f(y(x),x)\Rightarrow y_{k+1}=y_{k}+\int_{x_{k}}^{x_{k+1}%
+}\mathrm{d}\xi\ f\left(  \xi,y(\xi)\right)
+\]
+entonces el metodo se centra en como se aproxima la funci\'{o}n dentro de la
+integral\newline
+\begin{tabular}
+[c]{ll}%
+& \\
+\textbf{Euler} & Se aproxima la funci\'{o}n con en el punto anterior\\
+$f\left(  x_{k},y_{k}\right)  $ & $\Rightarrow y_{k+1}=y_{k}+h\ f\left(
+x_{k},y_{k}\right)  $\\
+\textbf{Euler Mejorado o Heuns} & Se aproxima la funci\'{o}n mediante un
+promedio en los extremos\\
+$\frac{1}{2}\left[  f\left(  x_{k},y_{k}\right)  +f\left(  x_{k+1}%
+,y_{k+1}\right)  \right]  $ & $\Rightarrow y_{k+1}=y_{k}+\frac{h}{2}\left[
+f\left(  x_{k},y_{k}\right)  +f\left(  x_{k+1},y_{k+1}\right)  \right]  $\\
+& \\
+& $\Rightarrow y_{k+1}=y_{k}+\frac{h}{2}\left[  f\left(  x_{k},y_{k}\right)
++f\left(  x_{k+1},y_{k}+h\ f\left(  x_{k},y_{k}\right)  \right)  \right]  $\\
+&
+\end{tabular}
+\newline con $h=x_{i+1}-x_{i}$ el paso de integraci\'{o}n. N\'{o}tese
+adem\'{a}s que hemos utilizado Euler otra vez para expresar $y_{k+1}%
+=y_{k+1}(y_{k},x_{k})$
+
+El M\'{e}todo de Euler constituye una expansi\'{o}n por Taylor hasta primer
+orden por lo que el error es claramente de segundo orden por cuanto si
+comparamos con la expansi\'{o}n en series de Taylor correspondiente tendremos
+\begin{align*}
+y_{k+1}  &  =y_{k}+h\left.  \frac{\mathrm{d\ }y}{\mathrm{d}x}\right|
+_{x=x_{k}}+\frac{h^{2}}{2!}\left.  \frac{\mathrm{d}^{2}y}{\mathrm{d}x^{2}%
+}\right|  _{x=x_{k}}+\cdots\\
+\left\|  \varepsilon_{tot}\right\|   &  \propto\frac{h^{2}}{2!}\left.
+\frac{\mathrm{d}^{2}y}{\mathrm{d}x^{2}}\right|  _{x=x_{k}}%
+\end{align*}
+
+\subsection{El M\'{e}todo de Euler y el problema de Valores Iniciales}
+
+Este m\'{e}todo si bien no se utiliza en la pr\'{a}ctica en su forma
+est\'{a}ndar para ecuaciones diferenciales ordinarias, si ilustra el proceso
+de discretizaci\'{o}n de una ecuaci\'{o}n diferencial y su soluci\'{o}n
+mediante m\'{e}todos num\'{e}ricos.
+
+Para resolver la ecuaci\'{o}n de un oscilador arm\'{o}nico libre que parte del
+reposo, i.e.
+\[
+\frac{\mathrm{d}^{2}\phi(t)}{\mathrm{d}t^{2}}+\omega_{0}^{2}\phi
+(t)=0\quad\text{con: }\omega_{0}^{2}=\frac{k}{m};\quad\phi\left(
+t_{0}\right)  =1;\quad\text{y\quad}\left.  \frac{\mathrm{d}\phi(t)}%
+{\mathrm{d}t}\right|  _{t=t_{0}}=0
+\]
+en la cual $\phi(t)$ representa la posici\'{o}n de un cuerpo de masa $m$ unido
+a un resorte de constante el\'{a}stica $k.$
+
+Discretizando mediante diferencia centrada
+\[
+h=t_{i+1}-t_{i};\qquad\frac{\mathrm{d}^{2}\phi(t)}{\mathrm{d}t^{2}}%
+\approx\frac{1}{h^{2}}\left[  \phi(t_{i+1})-2\phi(t_{i})+\phi(t_{i-1})\right]
+\equiv\frac{1}{h^{2}}\left[  \phi_{i+1}-2\phi_{i}+\phi_{i-1}\right]
+\]
+con lo cual la ecuaci\'{o}n del oscilador libre queda como
+\[
+\frac{\mathrm{d}^{2}\phi(t)}{\mathrm{d}t^{2}}+\omega_{0}^{2}\phi
+(t)=0\qquad\Rightarrow\phi_{i+1}-\left(  2-h^{2}\omega_{0}^{2}\right)
+\phi_{i}+\phi_{i-1}=0
+\]
+esta \'{u}ltima ecuaci\'{o}n es la versi\'{o}n en \textbf{diferencias finitas}
+de la ecuaci\'{o}n diferencial y es claro que se convierte en una ecuaci\'{o}n
+algebraica. Finalmente, los dos valores iniciales para la iteraci\'{o}n
+$\phi_{0}$ y $\phi_{1}$ surgen de las condiciones iniciales
+\begin{align*}
+\phi_{0}  &  \equiv\phi\left(  t=t_{0}\right)  =1\\
+\left.  \frac{\mathrm{d}\phi(t)}{\mathrm{d}t}\right|  _{t=t_{0}}  &
+=0\quad\Rightarrow\phi_{1}\approx\phi_{0}%
+\end{align*}
+
+\subsection{El M\'{e}todo de Euler y el Problema de los Valores de Frontera}
+
+Con la misma metodolog\'{\i}a podemos abordar el problema de valores de
+frontera para la ecuaci\'{o}n que representa la variaci\'{o}n de la
+presi\'{o}n $\phi(x)$ a lo largo de un tubo de longitud $\mathit{l}$%
+\[
+\frac{\mathrm{d}^{2}\phi(x)}{\mathrm{d}x^{2}}+\kappa^{2}\phi(x)=0\qquad
+\text{con\quad}\phi_{0}=\phi(x=0)=p\quad\text{y\quad}\phi_{N}=\phi
+(x=\mathit{l})=p
+\]
+esta vez discretizamos respecto a la variable espacial
+\[
+\frac{\mathrm{d}^{2}\phi(x)}{\mathrm{d}x^{2}}+\kappa^{2}\phi(x)=0\qquad
+\Rightarrow\phi_{i+1}-\left(  2-h^{2}\kappa^{2}\right)  \phi_{i}+\phi
+_{i-1}=0\quad\text{con\ \quad}h=x_{i+1}-x_{i}
+\]
+y armamos un sistema de ecuaciones algebraicas que debemos resolver, ahora no
+de forma iterativa, i.e.
+\begin{align*}
+\phi_{2}-\left(  2-h^{2}\kappa^{2}\right)  \phi_{1}+p  &  =0\\
+\phi_{3}-\left(  2-h^{2}\kappa^{2}\right)  \phi_{2}+\phi_{1}  &  =0\\
+\phi_{4}-\left(  2-h^{2}\kappa^{2}\right)  \phi_{3}+\phi_{2}  &  =0\\
+\vdots &  =0\\
+\phi_{N-1}-\left(  2-h^{2}\kappa^{2}\right)  \phi_{N-2}+\phi_{N-3}  &  =0\\
+p-\left(  2-h^{2}\kappa^{2}\right)  \phi_{N-1}+\phi_{N-2}  &  =0
+\end{align*}
+que se convierte en notaci\'{o}n matricial en
+\[
+\left(
+\begin{array}
+[c]{ccccc}%
+\left(  2-h^{2}\kappa^{2}\right)  & 1 & \cdots & 0 & 0\\
+1 & 2-h^{2}\kappa^{2} & 1 & \ddots & 0\\
+\vdots & 1 & \ddots & 1 & \vdots\\
+0 & \cdots & 1 & \left(  2-h^{2}\kappa^{2}\right)  & 1\\
+0 & 0 & \cdots & 1 & \left(  2-h^{2}\kappa^{2}\right)
+\end{array}
+\right)  \left(
+\begin{array}
+[c]{l}%
+\phi_{1}\\
+\phi_{2}\\
+\vdots\\
+\phi_{N-2}\\
+\phi_{N-1}%
+\end{array}
+\right)  =\left(
+\begin{array}
+[c]{l}%
+-p\\
+0\\
+\vdots\\
+0\\
+-p
+\end{array}
+\right)
+\]
+al resolver el sistema tendremos el valor de la funci\'{o}n en todas las
+posiciones:
+\[
+\phi_{0}=p;\phi_{1}=\phi(x=h);\phi_{2}=\phi(x=2h);\cdots\quad\cdots;\phi
+_{N-1}=\phi(x=\left(  N-1\right)  h);\phi_{N}=p
+\]
+
+\subsection{Los M\'{e}todos de Runge-Kutta}
+
+Es el conjunto de m\'{e}todos m\'{a}s populares y de mayor uso. La idea del
+m\'{e}todo de Runge-Kutta es producir resultados equivalentes a desarrollos en
+Taylor de orden superior a Euler en m\'{e}todos de un \'{u}nico paso por lo
+tanto
+\[
+y^{\prime}(x)=f(y(x),x)\Rightarrow y_{k+1}=y_{k}+\int_{x_{k}}^{x_{k+1}%
+}\mathrm{d}\xi\ f\left(  \xi,y(\xi)\right)
+\]
+y se aproxima la funci\'{o}n con un promedio ponderado.
+\[
+f\left(  \xi,y(\xi)\right)  \approx\left[  \alpha\ f\left(  y_{k}%
+,x_{k}\right)  +\beta\ f\left(  y_{k}+\delta\ f\left(  y_{k},x_{k}\right)
+h_{k},x_{k}+\gamma\ h_{k}\right)  \right]  \quad\text{con\ \quad}h_{k}%
+=x_{k+1}-x_{k}
+\]
+donde $\alpha,\beta,\gamma$ y $\delta$ son los pesos estad\'{\i}sticos a ser
+determinados. Por lo tanto
+\[
+y_{k+1}=y_{k}+\left[  \alpha\ f\left(  y_{k},x_{k}\right)  +\beta\ f\left(
+y_{k}+\delta\ f\left(  y_{k},x_{k}\right)  h_{k},x_{k}+\gamma\ h_{k}\right)
+\right]  h_{k}
+\]
+Expandiendo por Taylor de dos variables
+\[
+g\left(  x+\lambda,\ y+\mu\right)  =g\left(  x,y\right)  +\left[
+\lambda\ \partial_{x}g+\mu\ \partial_{y}g\right]  +\frac{1}{2!}\left[
+\lambda^{2}\ \partial_{x}^{2}g+2\lambda\mu\ \partial_{xy}g+\mu^{2}%
+\ \partial_{y}^{2}g\right]  +\cdots
+\]
+tendremos
+\begin{align*}
+y_{k+1}  &  =y_{k}+\left[  \alpha+\beta\right]  f_{k}\ h_{k}+\beta\left[
+\gamma\ \partial_{x}f_{k}+\delta\ f_{k}\ \partial_{y}f_{k}\right]  h_{k}%
+^{2}+\\
+&  +\beta\left[  \frac{\gamma^{2}}{2}\partial_{x}^{2}f_{k}+2\gamma
+\delta\ f_{k}\ \partial_{xy}f_{k}+\frac{\delta^{2}}{2}\ f_{k}^{2}%
+\ \partial_{y}^{2}f_{k}\right]  h_{k}^{3}+\cdots
+\end{align*}
+con $f_{k}=f\left(  y_{k},x_{k}\right)  $ y como se ve claramente, queda
+libertad para escoger\newline
+\begin{tabular}
+[c]{ll}%
+& \\
+\textbf{Euler Mejorado o Heuns} & $\alpha=\beta=\frac{1}{2};\quad\gamma
+=\delta=1$\\
+& \\
+& $y_{k+1}=y_{k}+f_{k}\ h_{k}+\frac{1}{2}\left[  \partial_{x}f_{k}%
++\ f_{k}\ \partial_{y}f_{k}\right]  h_{k}^{2}$\\
+& \\
+\textbf{Euler Modificado} & $\alpha=0;\quad\beta=1;\quad\gamma=\delta=\frac
+{1}{2}$\\
+& \\
+& $y_{k+1}=y_{k}+f_{k}\ h_{k}+\left[  \frac{1}{2}\partial_{x}f_{k}+\frac{1}%
+{2}\ f_{k}\ \partial_{y}f_{k}\right]  h_{k}^{2}$\\
+&
+\end{tabular}
+\newline Runge-Kutta de cuarto orden aproxima la funci\'{o}n $f\left(
+\xi,y(\xi)\right)  $ en cuatro puntos intermedios en el intervalo
+$x_{k}<x<x_{k+1}$ por lo cual
+\[
+y_{k+1}=y_{k}+\left[  \alpha\ \kappa_{1}+\beta\ \kappa_{2}+\gamma\ \kappa
+_{3}+\delta\ \kappa_{4}\right]  h_{k}
+\]
+podemos plantearnos varias formas de hacerlo
+\[
+y_{k+1}=y_{k}+\frac{h_{k}}{6}\left[  \kappa_{1}+2\kappa_{2}+2\kappa_{3}%
++\kappa_{4}\right]
+\]
+donde
+\begin{align*}
+\kappa_{1}  &  =f\left(  x_{k},y_{k}\right) \\
+\kappa_{2}  &  =f\left(  x_{k}+\frac{1}{2}h_{k},\ y_{k}+\frac{1}{2}\kappa
+_{1}\right) \\
+\kappa_{3}  &  =f\left(  x_{k}+\frac{1}{2}h_{k},\ y_{k}+\frac{1}{2}\kappa
+_{2}\right) \\
+\kappa_{4}  &  =f\left(  x_{k}+h_{k},\ y_{k}+\kappa_{3}\right)
+\end{align*}
+o tambi\'{e}n
+\[
+y_{k+1}=y_{k}+\frac{h_{k}}{8}\left[  \kappa_{1}+3\kappa_{2}+3\kappa_{3}%
++\kappa_{4}\right]
+\]
+donde
+\begin{align*}
+\kappa_{1}  &  =f\left(  x_{k},y_{k}\right) \\
+\kappa_{2}  &  =f\left(  x_{k}+\frac{1}{3}h_{k},\ y_{k}+\frac{1}{3}\kappa
+_{1}\right) \\
+\kappa_{3}  &  =f\left(  x_{k}+\frac{1}{3}h_{k},\ y_{k}+\frac{1}{3}\kappa
+_{2}\right) \\
+\kappa_{4}  &  =f\left(  x_{k}+h_{k},\ y_{k}+\kappa_{3}\right)
+\end{align*}
+
+M\'{a}s a\'{u}n el m\'{e}todo de \textbf{Fehlberg de 4/5 orden} se puede
+escribir como
+\[
+y_{k+1}=y_{k}+h_{k}\left[  C_{1}\kappa_{1}+C_{2}\kappa_{2}+C_{3}\kappa
+_{3}+C_{4}\kappa_{4}+C_{5}\kappa_{5}+C_{6}\kappa_{6}\right]  +O(h^{6})
+\]
+\begin{align*}
+\kappa_{1}  &  =f\left(  x_{k},y_{k}\right) \\
+\kappa_{2}  &  =f\left(  x_{k}+a_{2}h_{k},\ y_{k}+b_{21}\kappa_{1}\right) \\
+\kappa_{3}  &  =f\left(  x_{k}+a_{3}h_{k},\ y_{k}+b_{31}\kappa_{1}%
++b_{32}\kappa_{2}\right) \\
+\kappa_{4}  &  =f\left(  x_{k}+a_{4}h_{k},\ y_{k}+b_{41}\kappa_{1}%
++b_{42}\kappa_{2}+b_{43}\kappa_{3}\right) \\
+&  \vdots\\
+\kappa_{6}  &  =f\left(  x_{k}+a_{6}h_{k},\ y_{k}+b_{61}\kappa_{1}%
++b_{62}\kappa_{2}+b_{63}\kappa_{3}+b_{64}\kappa_{4}+b_{65}\kappa_{5}\right)
+\end{align*}
+la cual puede ser redefinida y truncada para obtener%
+
+\[
+\tilde{y}_{k+1}=y_{k}+h_{k}\left[  \tilde{C}_{1}\kappa_{1}+\tilde{C}_{2}%
+\kappa_{2}+\tilde{C}_{3}\kappa_{3}+\tilde{C}_{4}\kappa_{4}+\tilde{C}_{5}%
+\kappa_{5}\right]  +O(h^{5})
+\]
+
+\newpage
+
+\section{\textbf{Clase 7: Ecuaciones Diferenciales Ordinarias, II}}
+
+\subsection{M\'{e}todos Multipaso}
+
+Los m\'{e}todos multipaso se basan encontrar el valor $y_{n+k}$ como una
+funci\'{o}n de $k$ valores precedentes: $y_{n+k-1,}\ y_{n+k-2,}\ y_{n+k-3,}%
+\ \cdots y_{n}$ . Para $k=1$, retomamos los m\'{e}todos de paso \'{u}nico del
+tipo Euler o Runge-Kutta. Ser\'{a} \textit{expl\'{i}cito (abierto}) si el
+valor $y_{n+k}$ puede ser calculado directamente o \textit{impl\'{i}cito}
+(\textit{abierto}) si la f\'{o}rmula contiene el valor $y_{n+k}$ deseado.
+
+Otra vez la idea est\'{a} en aproximar el argumento de la integraci\'{o}n
+formal
+\[
+y^{\prime}(x)=f(y(x),x)\Rightarrow y_{i+1}=y_{i}+\int_{x_{i-k}}^{x_{i+1}%
+}\mathrm{d}\xi\ f\left(  \xi,y(\xi)\right)
+\]
+n\'{o}tese en este caso que el punto $i+1$ recibe la contribuci\'{o}n de $k$
+puntos anteriores. El integrando $f\left(  \xi,y(\xi)\right)  $ lo
+aproximaremos con un polinomio de interpolaci\'{o}n de Newton de orden $n$.
+Tal que
+\[
+f\left(  \xi,y(\xi)\right)  \rightarrow f\left(  \xi\right)  =p_{n}\left(
+\xi\right)  +R_{n}\left(  \xi\right)
+\]
+con $p_{n}\left(  \xi\right)  $ el polinomio de interpolaci\'{o}n y
+$R_{n}\left(  \xi\right)  $ el residuo. Donde $_{i}$%
+\begin{align*}
+p_{n}\left(  x\right)   &  =f\left[  x_{n}\right]  +\left(  x-x_{n}\right)
+f\left[  x_{n},x_{n-1}\right]  +\left(  x-x_{n}\right)  \left(  x-x_{n-1}%
+\right)  f\left[  x_{n},x_{n-1},x_{n-2}\right]  +\cdots\\
+&  +\left(  x-x_{n}\right)  \left(  x-x_{n-1}\right)  \left(  x-x_{n-2}%
+\right)  \cdots\left(  x-x_{1}\right)  f\left[  x_{n},x_{n-1},x_{n-2}%
+,x_{n-3},\cdots x_{0}\right] \\
+R_{n}\left(  x\right)   &  =\left(  x-x_{n}\right)  \left(  x-x_{n-1}\right)
+\left(  x-x_{n-2}\right)  \cdots\left(  x-x_{0}\right)  \frac{f^{(n+1)}%
+(\zeta)}{\left(  n+1\right)  !}\qquad\text{con }x_{0}<\zeta<x_{n}%
+\end{align*}
+haciendo $p_{n}\left(  x\right)  \equiv f\left(  x_{n}+\alpha h\right)  $ con
+$\alpha$ cero o negativo de tal modo que en t\'{e}rminos del operador
+diferencias atrasada $\nabla f(x)=f(x)-f(x-h)$ siendo $h$ el incremento
+\begin{align*}
+f\left(  x_{n}+\alpha h\right)   &  =f_{n}+\alpha\nabla f_{n}+\frac
+{\alpha\left(  \alpha+1\right)  }{2!}\nabla^{2}f_{n}+\frac{\alpha\left(
+\alpha+1\right)  \left(  \alpha+2\right)  }{3!}\nabla^{3}f_{n}+\\
+&  +\frac{\alpha\left(  \alpha+1\right)  \left(  \alpha+2\right)
+\cdots\left(  \alpha+r-1\right)  }{r!}\nabla^{r}f_{n}%
+\end{align*}
+donde hemos denotado $f_{n}\equiv f\left(  x_{n},y(x_{n})\right)  $,
+$\nabla^{m}f_{n}\equiv\left.  \nabla^{m}f\right|  _{x=x_{n}}$, y
+$\alpha=\left(  x-x_{i}\right)  /h$ Por lo tanto
+\begin{align*}
+y_{i+1}  &  =y_{i}+\int_{x_{i-k}}^{x_{i+1}}\mathrm{d}\xi\ f\left(  \xi
+,y(\xi)\right) \\
+&  =y_{i}+h\int_{-k}^{1}\mathrm{d}\alpha\ f\left(  x_{n}+\alpha h\right) \\
+y_{i+1}  &  =y_{i}+h\left[  \alpha f_{i}+\frac{\alpha^{2}}{2}\nabla
+f_{i}+\alpha^{2}\left(  \frac{\alpha}{3}+\frac{1}{2}\right)  \frac{\nabla
+^{2}f_{i}}{2!}+\alpha^{2}\left(  \frac{\alpha^{2}}{4}+\alpha+1\right)
+\frac{\nabla^{3}f_{i}}{3!}+\right. \\
+&  \left.  \qquad\qquad+\alpha^{2}\left(  \frac{\alpha^{3}}{5}+\frac
+{3\alpha^{2}}{2}+\frac{11\alpha}{3}+3\right)  \frac{\nabla^{4}f_{i}}%
+{4!}+\cdots\right]  _{-k}^{1}%
+\end{align*}
+por razones de conveniencia que son evidentes al hacer el desarrollo, se toman
+las f\'{o}rmulas para $k=r$ y $k$ impar y obtendremos
+\[%
+\begin{array}
+[c]{ll}%
+\left.
+\begin{array}
+[c]{l}%
+k=0\\
+r=3
+\end{array}
+\right\}  & \Rightarrow\left\{
+\begin{array}
+[c]{l}%
+y_{i+1}=y_{i}+h\left[  f_{i}+\frac{1}{2}\nabla f_{i}+\frac{5}{12}\nabla
+^{2}f_{i}+\frac{3}{8}\nabla^{3}f_{i}\right] \\
+\\
+R=\frac{251}{720}h^{5}f^{(4)}\left(  \zeta\right)
+\end{array}
+\right. \\
+\left.
+\begin{array}
+[c]{l}%
+k=1\\
+r=1
+\end{array}
+\right\}  & \Rightarrow\left\{
+\begin{array}
+[c]{l}%
+y_{i+1}=y_{i}+h\left[  2f_{i}+0\nabla f_{i}\right] \\
+\\
+R=\frac{1}{3}h^{3}f^{(2)}\left(  \zeta\right)
+\end{array}
+\right. \\
+\left.
+\begin{array}
+[c]{l}%
+k=3\\
+r=3
+\end{array}
+\right\}  & \Rightarrow\left\{
+\begin{array}
+[c]{l}%
+y_{i+1}=y_{i}+h\left[  4f_{i}-4\nabla f_{i}+\frac{3}{8}\nabla^{2}f_{i}%
++0\nabla^{3}f_{i}\right] \\
+\\
+R=\frac{14}{45}h^{5}f^{(4)}\left(  \zeta\right)
+\end{array}
+\right. \\
+\left.
+\begin{array}
+[c]{l}%
+k=5\\
+r=5
+\end{array}
+\right\}  & \Rightarrow\left\{
+\begin{array}
+[c]{l}%
+y_{i+1}=y_{i}+h\left[  6f_{i}-12\nabla f_{i}+15\nabla^{2}f_{i}-9\nabla
+^{3}f_{i}+\frac{33}{10}\nabla^{4}f_{i}\right] \\
+\\
+R=\frac{41}{140}h^{7}f^{(6)}\left(  \zeta\right)
+\end{array}
+\right.
+\end{array}
+\]
+y al expresar las diferencias atrasadas las f\'{o}rmulas expl\'{i}citas
+(abierta) quedan expresadas como
+\[%
+\begin{array}
+[c]{lll}%
+\left.
+\begin{array}
+[c]{l}%
+k=0\\
+r=3
+\end{array}
+\right\}  & y_{i+1}=y_{i}+\frac{h}{24}\left[  55f_{i}-59f_{i-1}+37f_{i-2}%
+-9f_{i-3}\right]  & R\sim O\left(  h^{5}\right) \\
+\left.
+\begin{array}
+[c]{l}%
+k=1\\
+r=1
+\end{array}
+\right\}  & y_{i+1}=y_{i}+2hf_{i} & R\sim O\left(  h^{3}\right) \\
+\left.
+\begin{array}
+[c]{l}%
+k=3\\
+r=3
+\end{array}
+\right\}  & y_{i+1}=y_{i}+\frac{4h}{3}\left[  2f_{i}-f_{i-1}+2f_{i-2}\right]
+& R\sim O\left(  h^{5}\right) \\
+\left.
+\begin{array}
+[c]{l}%
+k=5\\
+r=5
+\end{array}
+\right\}  & y_{i+1}=y_{i}+\frac{3h}{10}\left[  11f_{i}-14f_{i-1}%
++26f_{i-2}-14f_{i-3}+11f_{i-4}\right]  & R\sim O\left(  h^{7}\right)
+\end{array}
+\]
+
+Siguiendo el mis procedimiento se pueden escribir las f\'{o}rmulas
+impl\'{i}citas (cerradas) para las mismas ``curiosas'' situaciones. Para este
+caso la conveniencia se obtienes para $k$ impar y $r=k+2$
+\[%
+\begin{array}
+[c]{ll}%
+\left.
+\begin{array}
+[c]{l}%
+k=0\\
+r=3
+\end{array}
+\right\}  & \Rightarrow\left\{
+\begin{array}
+[c]{l}%
+y_{i+1}=y_{i}+h\left[  f_{i+1}-\frac{1}{2}\nabla f_{i+1}-\frac{1}{12}%
+\nabla^{2}f_{i+1}-\frac{1}{24}\nabla^{3}f_{i+1}\right] \\
+\\
+R=\frac{-19}{720}h^{5}f^{(4)}\left(  \zeta\right)
+\end{array}
+\right. \\
+\left.
+\begin{array}
+[c]{l}%
+k=1\\
+r=3
+\end{array}
+\right\}  & \Rightarrow\left\{
+\begin{array}
+[c]{l}%
+y_{i+1}=y_{i-1}+h\left[  2f_{i+1}-2\nabla f_{i}-\frac{1}{3}\nabla^{2}%
+f_{i+1}-0\nabla^{3}f_{i+1}\right] \\
+\\
+R=\frac{-1}{90}h^{5}f^{(4)}\left(  \zeta\right)
+\end{array}
+\right. \\
+\left.
+\begin{array}
+[c]{l}%
+k=3\\
+r=5
+\end{array}
+\right\}  & \Rightarrow\left\{
+\begin{array}
+[c]{l}%
+y_{i+1}=y_{i-3}+h\left[  4f_{i+1}-8\nabla f_{i}-\frac{20}{3}\nabla^{2}%
+f_{i+1}-\frac{8}{3}\nabla^{3}f_{i+1}+\frac{14}{45}\nabla^{4}f_{i+1}\right] \\
+\\
+R=\frac{-8}{945}h^{5}f^{(4)}\left(  \zeta\right)
+\end{array}
+\right.
+\end{array}
+\]
+desarrollando las diferencias atrasadas, tendremos
+\[%
+\begin{array}
+[c]{lll}%
+\left.
+\begin{array}
+[c]{l}%
+k=0\\
+r=3
+\end{array}
+\right\}  & y_{i+1}=y_{i}+\frac{h}{24}\left[  9f_{i+1}+19f_{i-1}%
+-5f_{i-1}+9f_{i-2}\right]  & R\sim O\left(  h^{5}\right) \\
+\left.
+\begin{array}
+[c]{l}%
+k=1\\
+r=3
+\end{array}
+\right\}  & y_{i+1}=y_{i-1}+\frac{h}{3}\left[  f_{i+1}+f_{i}+f_{i-1}\right]  &
+R\sim O\left(  h^{5}\right) \\
+\left.
+\begin{array}
+[c]{l}%
+k=3\\
+r=5
+\end{array}
+\right\}  & y_{i+1}=y_{i-3}+\frac{2h}{45}\left[  7f_{i+1}+32f_{i}%
++12f_{i-1}+32f_{i-2}+7f_{i-3}\right]  & R\sim O\left(  h^{7}\right)
+\end{array}
+\]
+
+Se debe puntualizar lo siguiente respecto a las f\'{o}rmulas expl\'{i}citas e
+impl\'{i}citas de los m\'{e}todos multipaso antes mencionados
+
+\begin{itemize}
+\item  Los m\'{e}todos multipasos, normalmente, requieren menos evaluaciones
+de las funciones que los m\'{e}todos monopaso para un mismo nivel de
+precisi\'{o}n.
+
+\item  Los m\'{e}todos multipaso requieren de un m\'{e}todo monopaso que le
+permita determinar los $y_{n+k-1,}\ y_{n+k-2,}\ y_{n+k-3,}\ \cdots,y_{n}$
+puntos iniciales.
+
+\item  Las f\'{o}rmulas expl\'{i}citas son, normalmente, menos precisas que
+las impl\'{i}citas. La raz\'{o}n se fundamenta en que, mientras las
+expl\'{i}citas extrapolan la soluci\'{o}n al punto $y_{i+1},$ las
+impl\'{i}citas la interpolan, por cuanto la toman en cuenta en el momento de calcularla.
+
+\item  Las f\'{o}rmulas expl\'{i}citas e impl\'{i}citas deben ser consideradas
+como complementarias, por cuanto las expl\'{i}citas pueden \textit{predecir}
+el valor de $y_{i+1}$ necesario para la $f_{i+1}=f(x_{i+1},y_{i+1}) $ del
+c\'{a}lculo de $y_{i+1}^{*}$ en la f\'{o}rmula impl\'{i}cita.\newline Existen
+varias combinaciones \textit{predictor-corrector}, entre ellas
+mencionamos:\newline \textbf{Milne de cuarto orden}
+
+\begin{itemize}
+\item  Predictor
+\[
+y_{i+1}=y_{i-3}+\frac{4h}{3}\left[  2f_{i}-f_{i-1}+2f_{i-2}\right]
+\]
+
+\item  Corrector
+\[
+y_{i+1}=y_{i-1}+\frac{h}{3}\left[  f_{i+1}-4f_{i}+f_{i-1}\right]
+\]
+\end{itemize}
+
+\textbf{Milne de sexto orden}
+
+\begin{itemize}
+\item  Predictor
+\[
+y_{i+1}=y_{i-5}+\frac{3h}{10}\left[  11f_{i}-14f_{i-1}+26f_{i-2}%
+-14f_{i-3}+11f_{i-4}\right]
+\]
+
+\item  Corrector
+\[
+y_{i+1}=y_{i-3}+\frac{2h}{45}\left[  7f_{i+1}+32f_{i}+12f_{i-1}+32f_{i-2}%
++7f_{i-3}\right]
+\]
+\end{itemize}
+
+\textbf{Adams Modificado o Adams Moulton}
+
+\begin{itemize}
+\item  Predictor
+\[
+y_{i+1}=y_{i}+\frac{h}{24}\left[  55f_{i}-59f_{i-1}+37f_{i-2}-9f_{i-3}%
+\right]
+\]
+
+\item  Corrector
+\[
+y_{i+1}=y_{i}+\frac{h}{24}\left[  9f_{i+1}+19f_{i}-5f_{i-1}+f_{i-2}\right]
+\]
+\end{itemize}
+\end{itemize}
+
+El m\'{e}todo de extrapolaci\'{o}n multipaso m\'{a}s exitoso (conjuntamente
+con los m\'{e}todos de paso \'{u}nico del tipo \textbf{Runge-Kutta}) es el de
+extrapolaci\'{o}n racional de \textbf{Bulirsch-Stoer} en el cual se define un
+paso superior de $H$ y una serie de subpaso $h_{\eta}=H/\eta$ con el aumento
+del n\'{u}mero de subpasos, en alg\'{u}n momento siguiendo alg\'{u}n criterio
+de convergencia se hace una extrapolaci\'{o}n (racional) que representa el
+l\'{i}mite $\eta\rightarrow\infty.$
+
+El m\'{e}todo de Bulirsch-Stoer tiene una estrategia diferente al los
+anteriores y posee, como motor de aproximaci\'{o}n el m\'{e}todo del punto
+medio modificado o salto de rana (\textit{leap frog}). Este esquema se utiliza
+con frecuencia en discretizaciones de ecuaciones diferenciales en derivadas
+parciales y se basa en aproximar la derivada por el valor el promedio en los
+dos extremos:
+\[
+y^{\prime}(x)=f(y(x),x)\Rightarrow y^{\prime}(x_{n})=f(y(x_{n}),x_{n}%
+)=\frac{y(x_{n})-y(_{n-1})}{2h}
+\]
+por lo tanto
+\begin{align*}
+z_{0}  &  \equiv y(x)\\
+z_{1}  &  =z_{0}+hf(x,z_{0})\\
+&  \vdots\\
+z_{n+1}  &  =z_{n-1}-2hf(x+nh,z_{n})
+\end{align*}
+para finalmente calcular
+\[
+y(x+H)\approx y_{n}\equiv\frac{1}{2}\left[  z_{n}+z_{n-1}+hf\left(
+x+H,z_{n}\right)  \right]
+\]
+N\'{o}tese que si reacomodamos
+\[
+y(x+H)\approx\frac{4y_{n}-y_{n/2}}{3}
+\]
+obtendremos un m\'{e}todo de cuarto orden que requiere menos evaluaciones de
+$f(y(x_{n}),x_{n})$ por paso $h$
+
+\subsection{Control del Paso}
+
+\textbf{En General para m\'{e}todos de 4}$^{\text{to}}$\textbf{\ orden. }Tal y
+como se mencion\'{o} en el caso de la integraci\'{o}n num\'{e}rica, el primer
+criterio que surge es dividir el paso $h$ en la midad, calcular todo de nuevo
+y comparar los resultados a ver si est\'{a} dentro del los l\'{i}mites de
+tolerancia que nos hemos impuesto
+\begin{align*}
+\left\|  \frac{y_{h}-y_{h/2}}{y_{h}}\right\|   &  \equiv\Delta\left(
+y_{h},y_{h/2}\right)  <\varepsilon_{\max}\Rightarrow\\
+\frac{\varepsilon_{\max}}{\Delta\left(  y_{h},y_{h/2}\right)  }  &
+\approx\left(  \frac{h_{0}}{h_{t}}\right)  ^{5}\Rightarrow h_{0}=h_{t}\left(
+\frac{\varepsilon_{\max}}{\Delta\left(  y_{h},y_{h/2}\right)  }\right)  ^{1/5}%
+\end{align*}
+donde hemos denotado $h_{0}$ como el paso ideal. Esta relaci\'{o}n es general
+para cualquier m\'{e}todo de 4 orden de paso \'{u}nico, multipaso,
+impl\'{i}cito o expl\'{i}cito.
+
+M\'{a}s a\'{u}n, la pr\'{a}ctica ha indicado que
+\[
+h_{0}=\left\{
+\begin{array}
+[c]{c}%
+\mathcal{M}h_{t}\left(  \frac{\varepsilon_{\max}}{\Delta\left(  y_{h}%
+,y_{h}^{*}\right)  }\right)  ^{0.20}\equiv\mathcal{M}h_{t}\left(
+\begin{array}
+[c]{c}%
+\Delta_{0}\\
+\Delta_{h}%
+\end{array}
+\right)  ^{0.20}\quad\Delta_{0}\geq\Delta_{1}\\
+\\
+\mathcal{M}h_{t}\left(  \frac{\varepsilon_{\max}}{\Delta\left(  y_{h}%
+,y_{h}^{*}\right)  }\right)  ^{0.25}\equiv\mathcal{M}h_{t}\left(
+\begin{array}
+[c]{c}%
+\Delta_{0}\\
+\Delta_{h}%
+\end{array}
+\right)  ^{0.25}\quad\Delta_{0}<\Delta_{1}%
+\end{array}
+\right.
+\]
+donde $0<\mathcal{M}<1$ un factor de seguridad
+
+\textbf{Para m\'{e}todos Runge-Kutta}. es importante mencionar que se utilizan
+mayoritariamente m\'{e}todos hasta cuarto orden porque de mayor orden ($M$,
+por ejemplo) involucran m\'{a}s de $M$ evaluaciones (y menos $M-2$) de la
+derivada. Por ello para este tipo de m\'{e}todos se descubri\'{o} que
+considerando el mismo n\'{u}mero de puntos para la evaluaci\'{o}n intermedia
+se pueden generar m\'{e}todos de distinto orden, y para colomo de suerte el
+menor orden de esta situacion se expresa para m\'{e}todos de 4 y 5 orden. En
+particular Runge-Kutta de 5 orden se puede escribir como:
+\[
+y_{k+1}=y_{k}+h_{k}\left[  C_{1}\kappa_{1}+C_{2}\kappa_{2}+C_{3}\kappa
+_{3}+C_{4}\kappa_{4}+C_{5}\kappa_{5}+C_{6}\kappa_{6}\right]  +O(h^{6})
+\]
+\begin{align*}
+\kappa_{1}  &  =f\left(  x_{k},y_{k}\right) \\
+\kappa_{2}  &  =f\left(  x_{k}+a_{2}h_{k},\ y_{k}+b_{21}\kappa_{1}\right) \\
+\kappa_{3}  &  =f\left(  x_{k}+a_{3}h_{k},\ y_{k}+b_{31}\kappa_{1}%
++b_{32}\kappa_{2}\right) \\
+\kappa_{4}  &  =f\left(  x_{k}+a_{4}h_{k},\ y_{k}+b_{41}\kappa_{1}%
++b_{42}\kappa_{2}+b_{43}\kappa_{3}\right) \\
+&  \vdots\\
+\kappa_{6}  &  =f\left(  x_{k}+a_{6}h_{k},\ y_{k}+b_{61}\kappa_{1}%
++b_{62}\kappa_{2}+b_{63}\kappa_{3}+b_{64}\kappa_{4}+b_{65}\kappa_{5}\right)
+\end{align*}
+y con los mismos puntos (\textexclamdown\ las mismas evaluaciones !) se puede
+reescribir para 4 orden como:%
+
+\[
+\tilde{y}_{k+1}=y_{k}+h_{k}\left[  \tilde{C}_{1}\kappa_{1}+\tilde{C}_{2}%
+\kappa_{2}+\tilde{C}_{3}\kappa_{3}+\tilde{C}_{4}\kappa_{4}+\tilde{C}_{5}%
+\kappa_{5}\right]  +O(h^{5})
+\]
+por lo tanto el error se puede estimar
+\[
+\Delta\left(  y_{k+1},\tilde{y}_{k+1}\right)  =\sum_{i=1}^{6}\left(
+C_{i}-\tilde{C}_{i}\right)  k_{i}
+\]
+y el control del paso se utiliza exactamente igual
+\[
+h_{0}=h_{t}\left(  \frac{\varepsilon_{\max}}{\Delta\left(  y_{h},\tilde{y}%
+_{h}\right)  }\right)  ^{0.20}
+\]
+\textbf{Para m\'{e}todos multipasos y predictor corrector} la situaci\'{o}n
+puede tener un refinamiento adicional antes de proceder a modificar el paso
+$h$. El esquema ser\'{i}a para un m\'{e}todo predictor corrector del tipo
+Adams Modificado o Adams Moulton, donde el
+
+\begin{itemize}
+\item  Predictor
+\[
+y_{i+1}=y_{i}+\frac{h}{24}\left[  55f_{i}-59f_{i-1}+37f_{i-2}-9f_{i-3}%
+\right]
+\]
+
+\item  Corrector
+\[
+y_{i+1}=y_{i}+\frac{h}{24}\left[  9f_{i+1}+19f_{i}-5f_{i-1}+f_{i-2}\right]
+\]
+\newline 
+\end{itemize}
+
+se realiza una serie de iteraciones dentro de la f\'{o}rmula de corrector,
+i.e.
+\[
+\underset{1}{y_{i+1}}=y_{i}+\frac{h}{24}\left[  9f\left(  x_{i+1},\underset
+{0}{y_{i+1}}\right)  +19f\left(  x_{i},y_{i}\right)  -5f\left(  x_{i-1}%
+,y_{i-1}\right)  +f\left(  x_{i-2},y_{i-2}\right)  \right]
+\]
+
+\newpage
+
+\section{\textbf{Clase 8: Ecuaciones Diferenciales Ordinarias, III}}
+
+\subsection{El problema de valores de frontera....}
+
+Se requiere resolver un sistema de $N$ ecuaciones diferenciales ordinarias,
+acopladas y de primer orden, las cuales satisfacen $n_{a}$ condiciones en el
+punto inicial, $x_{a},$ del intervalo de integraci\'{o}n y las restantes
+$n_{b}=N-n_{a}$ condiciones son satisfechas en $x_{2},$ el otro extremo del
+intervalo. Esto es
+\[
+\frac{\mathrm{d}y_{i}(x)}{\mathrm{d}x}=g_{i}\left(  x,y_{1},y_{2},\cdots
+,y_{N}\right)  \quad\Leftarrow\left\{
+\begin{array}
+[c]{c}%
+B_{aj}\left(  x_{a},y_{1},y_{2},\cdots,y_{N}\right)  =0\\
+\\
+B_{bk}\left(  x_{b},y_{1},y_{2},\cdots,y_{N}\right)  =0
+\end{array}
+\right.  \quad\left\{
+\begin{array}
+[c]{c}%
+i=1,2,3,\cdots,N\\
+j=1,2,3,\cdots,n_{a}\\
+k=1,2,3,\cdots,n_{b}%
+\end{array}
+\right.
+\]
+Recordamos que esta afirmaci\'{o}n tambi\'{e}n compete a una ecuaci\'{o}n
+diferencial de orden $N$, por cuanto son equivalentes.
+
+Hay dos situaciones que pueden ser resueltas expres\'{a}ndolas como un
+problema de valores de contorno. Una de ellas es aquella en la cual existen
+$M$ par\'{a}metros en el sistema de ecuaciones diferenciales. Este es
+\textit{el problema de autovalores} para una ecuaci\'{o}n diferencial....
+\[
+\frac{\mathrm{d}y_{i}(x)}{\mathrm{d}x}=g_{i}\left(  x,y_{1},y_{2},\cdots
+,y_{N},\lambda_{1},\lambda_{2},\cdots,\lambda_{M}\right)  \qquad
+\mathrm{con}\quad i=1,2,3,\cdots,N
+\]
+En este caso definimos
+\[
+y_{N+\alpha}\equiv\lambda_{\alpha}\quad\wedge\quad\frac{\mathrm{d}y_{N+\alpha
+}(x)}{\mathrm{d}x}=0\qquad\mathrm{con}\quad\alpha=1,2,\cdots M
+\]
+y resolvemos el sistema de dimensi\'{o}n $N+M.$
+
+La segunda situaci\'{o}n es aquella en la cual uno de los extremos de
+integraci\'{o}n no fue especificado y se requiere que el sistema de ecuaciones
+diferenciales satisfaga $N+1$ condiciones de frontera. En ese caso,
+a\~{n}adimos una funci\'{o}n inc\'{o}gnita adicional,
+\[
+y_{N+1}\equiv x_{b}-x_{a}\qquad\mathrm{con\quad}\frac{\mathrm{d}y_{N+1}%
+(x)}{\mathrm{d}x}=0
+\]
+y hacemos un cambio de variable
+\[
+x-x_{a}\rightarrow t\qquad\mathrm{con\quad}t\in\left[  0,1\right]
+\]
+
+\subsection{Estrategias de Soluci\'{o}n}
+
+Existen dos estrategias de soluci\'{o}n num\'{e}rica al problema de valores de
+frontera y cada una de ellas tiene algunas variantes: los M\'{e}todos de
+Disparo (\textit{shooting}) y los M\'{e}todos de Relajaci\'{o}n.
+
+La familia de m\'{e}todos de disparo se fundamentan en:
+
+\begin{itemize}
+\item  la elecci\'{o}n de todas las condiciones sobre la frontera inicial,
+unas dadas por el problema y las restantes son provistas con alg\'{u}n tipo de
+intuici\'{o}n
+
+\item  la integraci\'{o}n de la ecuaci\'{o}n diferencial como si fuera un
+problema de valores iniciales y
+
+\item  el ajuste con las condiciones sobre la otra frontera con las
+condiciones dadas en el problema,
+
+\item  en base a ese ajuste se corrigen las condiciones iniciales intuidas por
+alg\'{u}n mecanismo iterativo.
+
+Existe una variante sobre esta estrategia como lo es la integraci\'{o}n desde
+ambas fronteras hasta un punto intermedio del intervalo
+\end{itemize}
+
+Los M\'{e}todos de Relajaci\'{o}n se basan en discretizar el intervalo y en
+reemplazar la ecuaci\'{o}n diferencial resolver con su representaci\'{o}n en
+diferencias finitas. Una intuici\'{o}n inicial sobre el valor de la
+funci\'{o}n en cada uno de los puntos de la malla es corregida iterativamente
+para que se adapte a las condiciones de borde.
+
+Cada uno de los m\'{e}todos de adapta mejor a situaciones particulares. Los
+primeros son recomendados siempre como primera opci\'{o}n para cualquier tipo
+de funci\'{o}n inc\'{o}gnita.. Los segundos, a pesar de lucir muy complicados
+y costosos se adaptan sorprendentemente bien para situaciones en las cuales se
+tienen funciones suaves, bien comportadas y no oscilantes. De hecho, para este
+tipo de funciones los m\'{e}todos de relajaci\'{o}n son m\'{a}s eficientes que
+los de disparo. Sin embargo cuando no se pueda intuir el comportamiento de la
+funci\'{o}n se recomienda probar con alg\'{u}n esquema de soluci\'{o}n tipo
+disparo y luego se procede a optimizar mediante esquemas de relajaci\'{o}n.
+
+\subsection{Disparos a un intervalo}
+
+El algoritmo que se mencion\'{o} anteriormente para implantar el m\'{e}todo
+t\'{i}pico de disparo recuerda (y es) el m\'{e}todo de Newton-Rapson para
+resolver un sistema de ecuaciones algebraicas. Buscamos $n_{b}$ funciones de
+$n_{b}$ variables que integran el sistema de ecuaciones diferenciales entre
+$x_{a}$ y $x_{b}$ . Formalicemos un poco el algoritmo para resolver
+\[
+\frac{\mathrm{d}y_{i}(x)}{\mathrm{d}x}=g_{i}\left(  x,y_{1},y_{2},\cdots
+,y_{N}\right)  \quad\mathrm{con\quad}\left\{
+\begin{array}
+[c]{c}%
+B_{aj}\left(  x_{a},y_{1},y_{2},\cdots,y_{N}\right)  =0\\
+\\
+B_{bk}\left(  x_{b},y_{1},y_{2},\cdots,y_{N}\right)  =0
+\end{array}
+\right.  \quad\mathrm{para\quad}\left\{
+\begin{array}
+[c]{c}%
+i=1,2,3,\cdots,N\\
+j=1,2,3,\cdots,n_{a}\\
+k=1,2,3,\cdots,n_{b}%
+\end{array}
+\right.
+\]
+para $x\in\left[  x_{a},x_{b}\right]  $
+
+Se procede as\'{i}
+
+\begin{itemize}
+\item \textit{Se proveen \textbf{todas} las condiciones (iniciales) en }%
+$x_{a}$ . \newline Esto es
+\[
+B_{aj}\left(  x_{a},y_{1},y_{2},\cdots,y_{N}\right)  =0\quad\Rightarrow
+y_{i}(x_{a})=y_{i}\left(  x_{a},V_{1},V_{2},\cdots,V_{n_{b}}\right)
+\quad\mathrm{con\quad}i=1,2,3,\cdots,N
+\]
+Donde $\mathbf{V}$ es un vector de dimensi\'{o}n $n_{b}$ correspondiente a las
+condiciones iniciales faltantes en $x_{a}$. Entonces dado un vector de
+condiciones iniciales faltantes se obtiene (a trav\'{e}s de un conjunto de
+relaciones algebraicas provistas por $B_{aj}\left(  x_{a},y_{1},y_{2}%
+,\cdots,y_{N}\right)  =0$) el vector de condiciones iniciales $\left.
+\mathbf{y}\right|  _{x=x_{a}}$
+
+\item \textit{Se integra el sistema de ecuaciones diferenciales como si fuera
+un pro\-ble\-ma de valores iniciales}
+
+\item \textit{Se compara el valor de la funci\'{o}n al final de la
+integraci\'{o}n, }$\mathbf{\tilde{y}=}\left.  \mathbf{y}\right|  _{x=x_{b}},$
+\textit{con las condiciones} $B_{2k}\left(  x_{b},y_{1},y_{2},\cdots
+,y_{N}\right)  =0. $ Es decir se construye un vector diferencia
+\[
+F_{k}=B_{bk}\left(  x_{b},\tilde{y}_{1},\tilde{y}_{2},\cdots,\tilde{y}%
+_{N}\right)
+\]
+
+\item \textit{Se corrige con alg\'{u}n mecanismo iterativo las condiciones
+iniciales intuidas}. As\'{i},
+\[
+\mathbf{V}^{\mathrm{pr\acute{o}ximo}}=\mathbf{V}^{\mathrm{anterior}}%
++\delta\mathbf{V\qquad\Rightarrow\quad}y_{i}^{\mathrm{pr\acute{o}ximo}}%
+(x_{a})=y_{i}\left(  x_{a},\mathbf{V}^{\mathrm{anterior}}+\delta
+\mathbf{V}\right)
+\]
+y para encontrar el valor de $\delta\mathbf{V}$ procedemos notamos que en el
+caso del algoritmo de Newton Rapson para encontrar $\beta$ ra\'{i}ces
+$\alpha_{\eta}$ que anulen el sistema de ecuaciones algebraico
+\[
+\textsl{P}_{l}\left(  \alpha_{1},\alpha_{2},\cdots,\alpha_{\beta}\right)
+=0\quad\mathrm{con\quad}l=1,2,3,\cdots,\beta
+\]
+Taylor viene al rescate proveyendo
+\begin{align*}
+P_{l}\left(  \mathbf{\alpha}^{\mathrm{anterior}}+\delta\mathbf{\alpha
+}\right)   &  =P_{l}\left(  \mathbf{\alpha}^{\mathrm{anterior}}\right)
++\sum_{m=1}^{\beta}\frac{\partial P_{l}}{\partial\alpha_{m}}\delta\alpha
+_{m}+O\left(  \delta\mathbf{\alpha}^{2}\right)  \quad\mathrm{con\quad
+}l=1,2,3,\cdots,\beta\\
+& \\
+\mathbf{P}\left(  \mathbf{\alpha}^{\mathrm{anterior}}+\delta\mathbf{\alpha
+}\right)   &  =\mathbf{P}\left(  \mathbf{\alpha}^{\mathrm{anterior}}\right)
++\mathbf{J\bullet}\delta\mathbf{\alpha}+O\left(  \delta\mathbf{\alpha}%
+^{2}\right)  \Rightarrow\mathbf{P}\left(  \mathbf{\alpha}^{\mathrm{anterior}%
+}\right)  =-\mathbf{J\bullet}\delta\mathbf{\alpha}\\
+&
+\end{align*}
+con $\mathbf{J}\longleftrightarrow J_{lm}=\frac{\partial P_{l}}{\partial
+\alpha_{m}},$ y para lo cual hemos despreciado $O\left(  \delta\mathbf{\alpha
+}^{2}\right)  $ e impuesto (hasta el grado de precisi\'{o}n deseado)
+$\mathbf{P}\left(  \mathbf{\alpha}^{\mathrm{anterior}}+\delta\mathbf{\alpha
+}\right)  =0$. Por lo tanto, tendremos un sistema de ecuaciones algebraico que
+con $\beta$ inc\'{o}gnitas $\delta\alpha_{l}$ las cuales se despejan mediante
+t\'{e}cnicas matriciales y se procede iterativamente seg\'{u}n el esquema
+$\mathbf{\alpha}^{\mathrm{pr\acute{o}ximo}}=\mathbf{\alpha}^{\mathrm{anterior}%
+}+\delta\mathbf{\alpha}$ hasta lograr alguna convergencia.
+
+Hacemos entonces el paralelo con la presentaci\'{o}n anterior, de tal forma
+que
+\begin{align*}
+F_{k}  &  =B_{bk}\left(  x_{b},\mathbf{\tilde{y}}\right)  \Rightarrow
+\mathbf{F}\left(  x_{b},E\left[  \mathbf{V}^{\mathrm{anterior}}\right]
+\right)  =-\mathbf{J\bullet}\delta\mathbf{V}\\
+& \\
+\mathbf{J}  &  \longleftrightarrow J_{ij}=\frac{\partial F_{i}}{\partial
+x_{j}}\approx\frac{F_{i}\left(  x_{b},E\left[  \mathbf{V}^{\mathrm{anterior}%
+}+\Delta\mathbf{V}\right]  \right)  -F_{i}\left(  x_{b},E\left[
+\mathbf{V}^{\mathrm{anterior}}\right]  \right)  }{\Delta\mathbf{V}}%
+\end{align*}
+Donde $E\left[  \mathbf{\bullet}\right]  $ indica la ecuaci\'{o}n diferencial
+(representada por un operador de evoluci\'{o}n) que propaga los valores
+iniciales $\mathbf{V}^{\mathrm{anterior}}$ a la soluci\'{o}n de la
+ecuaci\'{o}n diferencial $\mathbf{\tilde{y},}$ en $x_{b}.$
+
+\item \textbf{Disgresi\'{o}n del m\'{e}todo de Newton Rapson
+multidimensional....}\newline No hay un m\'{e}todo eficaz para encontrar
+ra\'{i}ces simult\'{a}neas de m\'{a}s de una ecuaci\'{o}n no lineal. De hecho
+el \'{u}nico m\'{e}todo medianamente efectivo es el de Newton-Rapson y a\'{u}n
+as\'{i} no converge sin una intuici\'{o}n inicial muy eficaz de la ra\'{i}z.
+\end{itemize}
+
+\subsection{Disparos a medio intervalo}
+
+Otra de las estrategias que puede ser implantada como variante de los
+m\'{e}todos de disparo es disparar simult\'{a}neamente hacia un punto medio
+desde los extremos del intervalo de integraci\'{o}n, vale decir a un punto
+$x_{m}$ entre $x_{a}$ y $x_{b}.$ Por lo cual
+\[
+\left[  \left.
+\begin{array}
+[c]{l}%
+n_{a}\quad{\normalsize condiciones\ de\ borde}\\
+n_{b}\quad\mathrm{condiciones\ libres\ \Rightarrow}\mathbf{V}_{n_{b}}%
+\end{array}
+\right.  \left[  x_{a}\rightarrow x_{m}\leftarrow x_{b}\right]  \left.
+\begin{array}
+[c]{l}%
+n_{a}\quad{\normalsize condiciones\ libres}\mathrm{\ \Rightarrow}%
+\mathbf{V}_{n_{a}}\\
+n_{b}\quad\mathrm{condiciones\ de\ borde}%
+\end{array}
+\right.  \right]
+\]
+entonces
+\[
+\left.
+\begin{array}
+[c]{c}%
+B_{aj}\left(  x_{a},\mathbf{y}\right)  =0\quad\Rightarrow y_{i}(x_{a}%
+)=y_{i}\left(  x_{a},\mathbf{V}_{n_{b}}\right) \\
+B_{bk}\left(  x_{b},\mathbf{y}\right)  =0\quad\Rightarrow y_{i}(x_{b}%
+)=y_{i}\left(  x_{b},\mathbf{V}_{n_{a}}\right)
+\end{array}
+\right\}  \Rightarrow y_{i}\left(  x_{m},E\left[  \mathbf{V}_{n_{b}}\right]
+\right)  =y_{i}\left(  x_{m},E\left[  \mathbf{V}_{n_{a}}\right]  \right)
+\]
+o lo que es lo mismo
+\[
+y_{i}\left(  x_{m},E\left[  \mathbf{V}_{n_{b}}\right]  \right)  =y_{i}\left(
+x_{m},E\left[  \mathbf{V}_{n_{a}}\right]  \right)  \leftrightarrows
+\mathbf{F}\left(  x_{a},E\left[  \mathbf{V}_{n_{b}}\right]  \right)
+=\mathbf{F}\left(  x_{b},E\left[  \mathbf{V}_{n_{a}}\right]  \right)
+\]
+
+\subsection{M\'{e}todos de Relajaci\'{o}n}
+
+Trataremos de mostrar, a trav\'{e}s de un ejemplo la utilizaci\'{o}n de los
+m\'{e}todos de relajaci\'{o}n. En general las ecuaciones que m\'{a}s
+necesitamos resolver son de segundo grado. Partiremos de un tipo muy
+particular pero los m\'{e}todos no ser restringen a ella. Tendremos, entonces
+que
+\[
+\frac{\mathrm{d}^{2}\phi(x)}{\mathrm{d}x^{2}}+g(x)\phi(x)=0
+\]
+en un intervalo $\left[  x_{0},x_{n}\right]  $ y sujetas a dos condiciones de
+borde $\phi(x_{0})=\alpha_{0}\quad\wedge\quad$ $\phi(x_{N})=\alpha_{N} $
+.Estas ecuaciones se traducen a diferencias finitas, en algunas de sus
+variantes, como...
+\[
+\frac{\mathrm{d}^{2}\phi(x)}{\mathrm{d}x^{2}}+g(x)\phi(x)=0\quad
+\rightarrow\frac{1}{h^{2}}\left\{  \phi(x_{k+1})-2\phi(x_{k})+\phi
+(x_{k-1})\right\}  +g(x_{k})\phi(x_{k})=0
+\]
+en la cual hemos supuesto un paso $h=x_{k}-x_{k-1},$ constante (eso se puede
+remediar con un paso variable controlado con alg\'{u}n criterio). Pero, si los
+intervalos no son igualmente espaciados podr\'{i}a pensarse en cosas como
+\'{e}stas
+\[
+\frac{\mathrm{d}^{2}\phi(x)}{\mathrm{d}x^{2}}\quad\rightarrow\frac{1}%
+{h_{k+1}h_{k}\left(  h_{k+1}+h_{k}\right)  }\left\{  h_{k}\phi(x_{k+1}%
+)-\left(  h_{k+1}+h_{k}\right)  \phi(x_{k})+h_{k+1}\phi(x_{k-1})\right\}
+\]
+sin embargo, nos mantendremos en un paso $h$ constante. As\'{i}, podemos,
+armar el siguiente sistema...
+\begin{align*}
+\phi(x_{0})  &  =\alpha_{0}\\
+\left\{  \phi(x_{k+1})-2\phi(x_{k})+\phi(x_{k-1})\right\}  +h^{2}g(x_{k}%
+)\phi(x_{k})  &  =0\qquad\qquad k=1,2,\cdots\left(  N-1\right) \\
+\phi(x_{N})  &  =\alpha_{N}%
+\end{align*}
+que no es otra cosa que una relaci\'{o}n \qquad$\mathbf{A\bullet Y=b}$ donde
+\[
+\mathbf{A=}\left(
+\begin{array}
+[c]{llllll}%
+1 & 0 & 0 & 0 & \cdots & 0\\
+-1 & \eta_{1} & -1 & 0 & \cdots & 0\\
+0 & -1 & \eta_{2} & -1 & \cdots & 0\\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots\\
+0 & \cdots & \cdots & -1 & \eta_{N-1} & -1\\
+0 & \cdots & \cdots & \cdots & 0 & 1
+\end{array}
+\right)  ;\qquad\mathbf{Y}=\left(
+\begin{array}
+[c]{l}%
+\phi(x_{0})\\
+\phi(x_{1})\\
+\phi(x_{2})\\
+\vdots\\
+\phi(x_{N-1})\\
+\phi(x_{N})
+\end{array}
+\right)  \quad\mathrm{y\qquad}\mathbf{b=}\left(
+\begin{array}
+[c]{l}%
+\alpha_{0}\\
+0\\
+0\\
+\vdots\\
+0\\
+\alpha_{N}%
+\end{array}
+\right)
+\]
+con $\eta_{k}=\left(  2-h^{2}g(x_{k})\right)  $
+
+Hay m\'{a}s de una forma de resolver este problema de forma eficiente.
+Mostraremos varias de ellas y todas est\'{a}n fundamentadas en iteraciones.
+Conceptualmente si planteamos un problema pedag\'{o}gico (in\'{u}til)
+dividiendo en cuatro puntos el intervalo de integraci\'{o}n podemos resumir el
+sistema en
+\[
+\left.
+\begin{array}
+[c]{c}%
+A_{11}\ Y_{1}+A_{12}\ Y_{2}+A_{13}\ Y_{3}+A_{14}\ Y_{4}=b_{1}\\
+A_{21}\ Y_{1}+A_{22}\ Y_{2}+A_{23}\ Y_{3}+A_{24}\ Y_{4}=b_{2}\\
+A_{31}\ Y_{1}+A_{32}\ Y_{2}+A_{33}\ Y_{3}+A_{34}\ Y_{4}=b_{3}\\
+A_{41}Y_{1}+A_{42}\ Y_{2}+A_{43}\ Y_{3}+A_{44}\ Y_{4}=b_{4}%
+\end{array}
+\right\}  \Rightarrow\quad\sum_{k=1}^{4}A_{jk}\ Y_{k}=b_{j}\quad j=1\cdots4
+\]
+m\'{a}s a\'{u}n se puede despejar y armar una iteraci\'{o}n con $\mathbf{Y}$
+de la forma
+\begin{align*}
+Y_{1}^{(i+1)}  &  =\frac{1}{A_{11}}\left\{  b_{1}-A_{12}\ Y_{2}^{\left(
+i\right)  }-A_{13}\ Y_{3}^{\left(  i\right)  }-A_{14}\ Y_{4}^{\left(
+i\right)  }\right\} \\
+Y_{2}^{(i+1)}  &  =\frac{1}{A_{21}}\left\{  b_{2}-A_{22}\ Y_{2}^{\left(
+i\right)  }-A_{23}\ Y_{3}^{\left(  i\right)  }-A_{24}\ Y_{4}^{\left(
+i\right)  }\right\} \\
+Y_{3}^{(i+1)}  &  =\frac{1}{A_{33}}\left\{  b_{3}-A_{32}\ Y_{2}^{\left(
+i\right)  }-A_{33}\ Y_{3}^{\left(  i\right)  }-A_{34}\ Y_{4}^{\left(
+i\right)  }\right\} \\
+Y_{4}^{(i+1)}  &  =\frac{1}{A_{44}}\left\{  b_{4}-A_{42}\ Y_{2}^{\left(
+i\right)  }-A_{43}\ Y_{3}^{\left(  i\right)  }-A_{44}\ Y_{4}^{\left(
+i\right)  }\right\}
+\end{align*}
+o m\'{a}s conciso y general, conocido como el m\'{e}todo de Jacobi
+\[
+Y_{j}^{(i+1)}=\frac{1}{A_{jj}}\left\{  b_{j}-\sum_{k=1}^{j-1}A_{jk}%
+\ Y_{k}^{\left(  i\right)  }-\sum_{k=j+1}^{N}A_{jk}\ Y_{k}^{\left(  i\right)
+}\right\}
+\]
+Aqu\'{i} el libre albedr\'{i}o y la creatividad se impone. Podemos mencionar
+algunas estrategias intuitivas para controlar el paso y evaluar la
+convergencia. Entre ellas
+\begin{align*}
+\left|  Y_{j}^{(i+1)}-Y_{j}^{(i)}\right|   &  \leq\epsilon\\
+\sqrt{\left(  Y_{j}^{(i+1)}\right)  ^{2}-\left(  Y_{j}^{(i)}\right)  ^{2}}  &
+\leq\epsilon\\
+\max\left|  Y_{j}^{(i+1)}-Y_{j}^{(i)}\right|   &  \leq\epsilon
+\end{align*}
+Adem\'{a}s del m\'{e}todo de Jacobi varias estrategias se han planteado para
+hacer m\'{a}s eficiente la iteraci\'{o}n. Mencionamos, Gauss-Seidel
+\[
+Y_{j}^{(i+1)}=\frac{1}{A_{jj}}\left\{  b_{j}-\sum_{k=1}^{j-1}A_{jk}%
+\ Y_{k}^{\left(  i+1\right)  }-\sum_{k=j+1}^{N}A_{jk}\ Y_{k}^{\left(
+i\right)  }\right\}
+\]
+m\'{a}s a\'{u}n, podemos controlar la convergencia con un par\'{a}metro
+artificial $\varpi$ de tal modo que
+\[
+Y_{j}^{(i+1)}=\frac{\varpi}{A_{jj}}\left\{  b_{j}-\sum_{k=1}^{j-1}%
+A_{jk}\ Y_{k}^{\left(  i+1\right)  }-\sum_{k=j+1}^{N}A_{jk}\ Y_{k}^{\left(
+i\right)  }\right\}
+\]
+de tal modo que
+\begin{align*}
+\varpi &  <1\qquad\Rightarrow\quad\mathrm{subrelajaci\acute{o}n}\\
+\varpi &  =1\qquad\Rightarrow\quad\mathrm{Gauss-Seidel}\\
+\varpi &  >1\qquad\Rightarrow\quad\mathrm{sobrerelajaci\acute{o}n}%
+\end{align*}
+en particular se recomienda , $1<\varpi<2$
+
+De aqu\'{i} podemos despejar un criterio de error para garantizar la
+convergencia restando .$Y_{j}^{(i)}$ a ambos miembros
+\[
+\varepsilon_{j}^{\left(  i+1\right)  }\approx\triangle Y_{j}^{(i+1)}%
+=Y_{j}^{(i+1)}-Y_{j}^{(i)}=\frac{1}{A_{jj}}\left\{  b_{j}-\sum_{k=1}%
+^{j-1}A_{jk}\ Y_{k}^{\left(  i+1\right)  }-\sum_{k=j}^{N}A_{jk}\ Y_{k}%
+^{\left(  i\right)  }\right\}
+\]
+
+\newpage
+
+\section{\textbf{Clase 9: Ecuaciones Diferenciales en Derivadas Parciales}}
+
+\subsection{Clasificaci\'{o}n}
+
+Tal y como mencionamos con anterioridad, las ecuaciones diferenciales, de
+segundo orden en derivadas parciales del tipo
+\[
+p\ \frac{\partial^{2}\phi}{\partial x^{2}}+q\ \frac{\partial^{2}\phi}{\partial
+x\ \partial y}+r\ \frac{\partial^{2}\phi}{\partial y^{2}}+s\ \frac
+{\partial\phi}{\partial x}+t\ \frac{\partial\phi}{\partial y}+u\ \phi+v=0
+\]
+pueden clasificarse en
+\[
+\left.
+\begin{array}
+[c]{c}%
+\text{El\'{\i}pticas}\\
+\text{Parab\'{o}licas}\\
+\text{Hiperb\'{o}licas}%
+\end{array}
+\right.  \left.
+\begin{array}
+[c]{c}%
+\Rightarrow\\
+\Rightarrow\\
+\Rightarrow
+\end{array}
+\right.  \left.
+\begin{array}
+[c]{c}%
+q^{2}<4pr\\
+q^{2}=4pr\\
+q^{2}>4pr
+\end{array}
+\right.
+\]
+y tambi\'{e}n en
+\[
+\mathrm{lineales\ si\ }\left\{
+\begin{array}
+[c]{c}%
+p=p(x,y)\\
+q=q(x,y)\\
+r=r(x,y)\\
+s=s(x,y)\\
+t=t(x,y)\\
+u=u(x,y)\\
+v=v(x,y)
+\end{array}
+\right.  \mathrm{\quad o\ nolineales\ si\ }\left\{
+\begin{array}
+[c]{c}%
+p=p(x,y,\partial_{x}\phi,\partial_{y}\phi,\partial_{xy}\phi,\partial_{y}%
+^{2}\phi,\partial_{x}^{2}\phi)\\
+q=q(x,y,\partial_{x}\phi,\partial_{y}\phi,\partial_{xy}\phi,\partial_{y}%
+^{2}\phi,\partial_{x}^{2}\phi)\\
+r=r(x,y,\partial_{x}\phi,\partial_{y}\phi,\partial_{xy}\phi,\partial_{y}%
+^{2}\phi,\partial_{x}^{2}\phi)\\
+s=s(x,y,\partial_{x}\phi,\partial_{y}\phi,\partial_{xy}\phi,\partial_{y}%
+^{2}\phi,\partial_{x}^{2}\phi)\\
+t=t(x,y,\partial_{x}\phi,\partial_{y}\phi,\partial_{xy}\phi,\partial_{y}%
+^{2}\phi,\partial_{x}^{2}\phi)\\
+u=u(x,y,\partial_{x}\phi,\partial_{y}\phi,\partial_{xy}\phi,\partial_{y}%
+^{2}\phi,\partial_{x}^{2}\phi)\\
+v=v(x,y,\partial_{x}\phi,\partial_{y}\phi,\partial_{xy}\phi,\partial_{y}%
+^{2}\phi,\partial_{x}^{2}\phi)
+\end{array}
+\right.
+\]
+
+Los casos protot\'{i}picos de ecuaciones lineales en derivadas parciales son
+los si\-guien\-tes:\newline
+\begin{tabular}
+[c]{lll}%
+$\nabla^{2}\phi\left(  x,y\right)  =\frac{\partial^{2}\phi\left(  x,y\right)
+}{\partial x^{2}}+\frac{\partial^{2}\phi\left(  x,y\right)  }{\partial y^{2}%
+}=\rho\left(  x,y\right)  $ & $\left\{
+\begin{array}
+[c]{c}%
+\mathrm{Ecuaci\acute{o}n\ de\ Poisson\quad}\rho\left(  x,y\right)  \neq0\\
+\mathrm{Ecuaci\acute{o}n\ de\ Laplace\quad}\rho\left(  x,y\right)  =0
+\end{array}
+\right.  $ & \textsf{El\'{\i}ptica}\\
+&  & \\
+$\frac{\partial}{\partial x}\left(  \mathcal{D}\frac{\partial\phi\left(
+x,t\right)  }{\partial x}\right)  =\frac{\partial\phi\left(  x,t\right)
+}{\partial t}$ & Ecuaci\'{o}n del Calor & \textsf{Parab\'{o}lica}\\
+&  & \\
+$\frac{\partial^{2}\phi\left(  x,t\right)  }{\partial x^{2}}=\frac{1}{v^{2}%
+}\frac{\partial^{2}\phi\left(  x,t\right)  }{\partial t^{2}}$ & Ecuaci\'{o}n
+de Onda & \textsf{Hiperb\'{o}lica}\\
+&  &
+\end{tabular}
+
+\subsection{El m\'{e}todo de separaci\'{o}n de variables}
+
+Dada una ecuaci\'{o}n diferencial, digamos de Laplace
+\[
+\nabla^{2}\phi\left(  x,y\right)  =\frac{\partial^{2}\phi\left(  x,y\right)
+}{\partial x^{2}}+\frac{\partial^{2}\phi\left(  x,y\right)  }{\partial y^{2}%
+}=\phi_{xx}+\phi_{yy}=0
+\]
+el m\'{e}todo est\'{a}ndar desde lo tiempos de d'Alembert, D. Bernoulli y
+Euler es suponer una soluci\'{o}n del tipo $\phi\left(  x,y\right)  =X\left(
+x\right)  Y\left(  y\right)  $ esto conlleva
+\[
+\phi_{xx}+\phi_{yy}=0\quad\Rightarrow X_{xx}Y+XY_{yy}=0\quad\Rightarrow
+\dfrac{X_{xx}}{X}=\lambda=-\dfrac{Y_{yy}}{Y}\quad\Rightarrow\left\{
+\begin{array}
+[c]{c}%
+\lambda>0\\
+\lambda=0\\
+\lambda<0
+\end{array}
+\right.
+\]
+por lo cual
+\begin{align*}
+\lambda &  >0\quad\Rightarrow\left\{
+\begin{array}
+[c]{l}%
+X(x)=C_{1}\operatorname*{senh}\sqrt{-\lambda}x+C_{2}\cosh\sqrt{-\lambda}x\\
+Y(y)=\tilde{C}_{1}\operatorname*{sen}\sqrt{\lambda}y+\tilde{C}_{2}\cos
+\sqrt{\lambda}y
+\end{array}
+\right. \\
+\lambda &  =0\quad\Rightarrow\left\{
+\begin{array}
+[c]{l}%
+X(x)=C_{1}x+C_{2}\\
+Y(y)=\tilde{C}_{1}y+\tilde{C}_{2}%
+\end{array}
+\right. \\
+\lambda &  <0\quad\Rightarrow\left\{
+\begin{array}
+[c]{l}%
+X(x)=C_{1}\operatorname*{sen}\sqrt{-\lambda}x+C_{2}\cos\sqrt{-\lambda}x\\
+Y(y)=\tilde{C}_{1}\operatorname*{senh}\sqrt{\lambda}y+\tilde{C}_{2}\cosh
+\sqrt{\lambda}y
+\end{array}
+\right.
+\end{align*}
+ahora bien la suposici\'{o}n $\phi\left(  x,y\right)  =X\left(  x\right)
+Y\left(  y\right)  $ limita el espacio de soluciones y no necesariamente
+representa la forma general de la soluci\'{o}n.
+
+\subsection{Clasificaci\'{o}n y Computaci\'{o}n}
+
+Si bien la clasificaci\'{o}n arriba expuesta es heredada del terreno
+anal\'{i}tico, desde el punto de vista computacional se establecen diferencias
+cualitativas entre dos grupos: las ecuaciones Parab\'{o}licas e Hiperb\'{o}%
+licas, por un lado y las ecuaciones El\'{i}pticas por otro.
+\[
+\left.
+\begin{array}
+[c]{c}%
+\frac{\partial}{\partial x}\left(  \mathcal{D}\frac{\partial\phi\left(
+x,t\right)  }{\partial x}\right)  =\frac{\partial\phi\left(  x,t\right)
+}{\partial t}\\
+\mathsf{Parab\acute{o}lica}\\
+\\
+\frac{\partial^{2}\phi\left(  x,t\right)  }{\partial x^{2}}=\frac{1}{v^{2}%
+}\frac{\partial^{2}\phi\left(  x,t\right)  }{\partial t^{2}}\\
+\mathsf{Hiperb\acute{o}lica}%
+\end{array}
+\right\}  \qquad\mathrm{vs\qquad}\left\{
+\begin{array}
+[c]{c}%
+\nabla^{2}\phi\left(  x,y\right)  =\frac{\partial^{2}\phi\left(  x,y\right)
+}{\partial x^{2}}+\frac{\partial^{2}\phi\left(  x,y\right)  }{\partial y^{2}%
+}=\rho\left(  x,y\right) \\
+\mathsf{El\acute{\imath}ptica}%
+\end{array}
+\right.
+\]
+En el primer caso, las ecuaciones describen la evoluci\'{o}n de la funci\'{o}n
+$\phi\left(  x,t\right)  $ y por lo tanto se mezclan los problemas de valores
+de frontera con los de valores iniciales mientras que en el segundo la
+soluci\'{o}n, $\phi\left(  x,y\right)  $, es puramente est\'{a}tica (problema
+de valores de frontera)
+
+La \textit{estabilidad} de los algoritmos que involucran la soluci\'{o}n de
+las ecuaciones parab\'{o}licas e hiperb\'{o}licas es preocupaci\'{o}n
+principal en el primer caso, mientras que la \textit{eficiencia computacional}
+en el manejo de memoria (carga o tama\~{n}o del problem), conjuntamente con la
+capacidad de almancenamiento, son los problemas centrales en la
+implantaci\'{o}n de m\'{e}todos para atacar problemas de ecuaciones
+el\'{i}pticas. Este tipo de problema se transforma normalmente en la
+soluci\'{o}n de grandes problemas de soluci\'{o}n se sistemas algebraicos de
+ecuaciones, los cuales involucran significativos problemas matriciales.
+
+Exiten toda una fauna de m\'{e}todos para resolver este tipo de problemas.
+Entre ellos podemos mencionar
+
+\begin{itemize}
+\item \textit{Diferencias Finitas}. Aquellos que hemos de tratar con alg\'{u}n detalle
+
+\item \textit{Elementos Finitos}. Utiles en mec\'{a}nica de s\'{o}lidos y
+problemas de ingenier\'{i}a estructural donde las geometr\'{i}a es altamente
+irregular. En estos m\'{e}todos el espacio es dividido en sectores (elementos)
+y en ellos la soluci\'{o}n es aproximada por funciones elementales
+caracterizadas por pocos par\'{a}metros.
+
+\item \textit{M\'{e}todos Espectrales}. Eficaces cuando la geometr\'{i}a es
+simple y convergen r\'{a}pidamente.
+\end{itemize}
+
+\subsection{A manera de ejemplo}
+
+Consideraremos para comenzar la soluci\'{o}n del problema de valores de
+contorno basado en el m\'{e}todo de diferencias finitas. As\'{i} la
+soluci\'{o}n a la ecuaci\'{o}n de Poisson
+\[
+\frac{\partial^{2}\phi\left(  x,y\right)  }{\partial x^{2}}+\frac{\partial
+^{2}\phi\left(  x,y\right)  }{\partial y^{2}}=-\rho\left(  x,y\right)
+\quad\mathrm{con}\ \phi\left(  x=\pm\mathcal{L},y\right)  =\phi\left(
+x,y=\pm\mathcal{L}\right)  =\phi_{0}
+\]
+representa el potencial electrost\'{a}tico, $\phi\left(  x,y\right)  ,$
+generado por una distribuci\'{o}n longitudinal infinita de carga $\rho\left(
+x,y\right)  $. Geom\'{e}tricamente el problema est\'{a} dado por un hilo
+cargado alineado con el eje $z$ que genera un potencial sobre una
+geometr\'{i}a rectangular de lado $2\mathcal{L}.$ Por simplicidad hemos
+supondremos, adicionalmente $\phi_{0}=0.$ Las condiciones de Frontera
+categorizan este problema como de tipo Dirichlet (los valores de la
+funci\'{o}n est\'{a}n dados sobre la frontera). De igual modo pudieron haber
+sido provistos los valores de las derivadas $\left.  \partial_{x}\phi\left(
+x,y\right)  \right|  _{x=\pm\mathcal{L}}=A_{0};\ \left.  \partial\phi\left(
+x,y\right)  \right|  _{y=\pm\mathcal{L}}=B_{0}$ (Problema de Neuman) o un
+problema mixto.
+
+La version de diferencias finitas del problema anterior es
+\[
+\dfrac{\phi_{i+1,\ j}-2\phi_{i,\ j}+\phi_{i-1,\ j}}{\left(  \triangle
+x\right)  ^{2}}+\dfrac{\phi_{i,\ j+1}-2\phi_{i,\ j}+\phi_{i,\ j-1}}{\left(
+\triangle y\right)  ^{2}}=-\rho_{i,\ j}\qquad\mathrm{donde\ }\left\{
+\begin{array}
+[c]{c}%
+\phi_{i,\ j}\equiv\phi\left(  x_{i},y_{j}\right) \\
+\rho_{i,\ j}\equiv\rho\left(  x_{i},y_{j}\right) \\
+\triangle x\equiv x_{i+1}-x_{i}\\
+\triangle y\equiv y_{j+1}-y_{j}%
+\end{array}
+\right.
+\]
+m\'{a}s a\'{u}n, si $\triangle x=\triangle y=h$ entonces
+\[
+\phi_{i+1,\ j}+\phi_{i-1,\ j}+\phi_{i,\ j+1}-4\phi_{i,\ j}+\phi_{i,\ j-1}%
+=-h^{2}\rho_{i,\ j}
+\]
+por lo cual, siguiendo el esquema Jacobi para los m\'{e}todos de
+relajaci\'{o}n
+\[
+\phi_{i,\ j}^{(n+1)}=\dfrac{1}{4}\left\{  \phi_{i+1,\ j}^{\left(  n\right)
+}+\phi_{i-1,\ j}^{\left(  n\right)  }+\phi_{i,\ j+1}^{\left(  n\right)  }%
++\phi_{i,\ j-1}^{\left(  n\right)  }+h^{2}\rho_{i,\ j}\right\}
+\]
+o equivalentemente Gauss Seidel
+\[
+\phi_{i,\ j}^{(n+1)}=\phi_{i,\ j}^{(n)}-\dfrac{\varpi}{4}\left\{
+\phi_{i+1,\ j}^{\left(  n\right)  }+\phi_{i-1,\ j}^{\left(  n+1\right)  }%
+-\phi_{i,\ j}^{(n)}+\phi_{i,\ j+1}^{\left(  n\right)  }+\phi_{i,\ j-1}%
+^{\left(  n+1\right)  }+h^{2}\rho_{i,\ j}\right\}
+\]
+para $\varpi<1$ subrelajacion, $\varpi=1$ Gauss-Seidel o $\varpi>1$
+sobrerelajaci\'{o}n
+
+\subsection{Problema de Valores iniciales con conservaci\'{o}n de Flujo}
+
+Un conjunto numeroso de problemas de valores iniciales puede plantearse en
+t\'{e}rmino de ecuaciones del tipo
+\[
+\dfrac{\partial\mathbf{\Phi}}{\partial t}=-\dfrac{\partial\mathbf{F}}{\partial
+x}
+\]
+donde $\mathbf{\Phi}$ y $\mathbf{F}$ son vectores. Por su parte $\mathbf{F}$
+puede depender de $\mathbf{\Phi,}$ de sus derivadas o de ambas.
+
+As\'{i}, la ecuaci\'{o}n (hiperb\'{o}lica) de onda
+\[
+\frac{\partial^{2}\phi\left(  x,t\right)  }{\partial t^{2}}=v^{2}%
+\frac{\partial^{2}\phi\left(  x,t\right)  }{\partial x^{2}}\quad
+\Rightarrow\left\{
+\begin{array}
+[c]{c}%
+\frac{\partial\chi}{\partial t}=v\frac{\partial\psi}{\partial x}\\
+\\
+\frac{\partial\psi}{\partial t}=v\frac{\partial\chi}{\partial x}%
+\end{array}
+\right.  \quad\mathrm{con\ }\left\{
+\begin{array}
+[c]{c}%
+\chi\equiv v\frac{\partial\phi\left(  x,t\right)  }{\partial x}\\
+\\
+\psi\equiv v\frac{\partial\phi\left(  x,t\right)  }{\partial t}%
+\end{array}
+\right.
+\]
+y la ecuaci\'{o}n (parab\'{o}lica) de difusi\'{o}n
+\[
+\frac{\partial\phi\left(  x,t\right)  }{\partial t}=\frac{\partial}{\partial
+x}\left(  \mathcal{D}\frac{\partial\phi\left(  x,t\right)  }{\partial
+x}\right)  \quad\Rightarrow F=\mathcal{D}\frac{\partial\phi\left(  x,t\right)
+}{\partial x}%
+\]
+\end{document}
