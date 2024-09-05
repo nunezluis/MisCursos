@@ -42,11 +42,11 @@
   \frametitle{El potencial efectivo}
    \begin{itemize}  
   	\item<1-> Para el problema de dos cuerpos con un potencial central $V(r)$ 
-	$L=\frac{1}{2} \mu\left(\dot{r}^2+r^2 \dot{\theta^2}\right)-V(r) \Rightarrow \frac{d}{d t}\left(\frac{\partial L}{\partial \dot{r}}\right)-\frac{\partial L}{\partial r}=0 \Rightarrow \mu \ddot{r}=-\frac{\partial V}{\partial r}+\frac{l^2}{\mu r^3}$
-	\item<2-> La fuerza radial $f(r)=-\frac{\partial V}{\partial r}$ entonces $\mu \ddot{r}=f(r)+\frac{l^2}{\mu r^3} \Rightarrow \mu \ddot{r}=f_{\mathrm{ef}}(r)$
-	\item<3-> La fuerza efectiva surge de las contribuciones de la fuerza central $f(r)=-\frac{\partial V}{\partial r}$ y el efecto no inercial $F_{ni} \equiv \frac{l^2}{\mu r^3}=\mu r \dot{\theta}^2$
-	\item<4-> Se define una energía potencial efectiva, $V_{\mathrm{ef}}(r) \equiv V(r)+\frac{l^2}{2 \mu r^2}$,  tal que $f_{\mathrm{ef}}(r) \equiv-\frac{\partial V_{\mathrm{ef}}}{\partial r}$
-	\item<5-> La energía total será $E  =\frac{1}{2} \mu \dot{r}^2+\frac{l^2}{2 \mu r^2}+V(r)  =\frac{1}{2} \mu \dot{r}^2+V_{\mathrm{ef}}(r)=$ cte.
+	$\mathcal{L}=\frac{1}{2} \mu\left(\dot{r}^2+r^2 \dot{\theta^2}\right)-V(r) \Rightarrow \frac{d}{d t}\left(\frac{\partial \mathcal{L}}{\partial \dot{r}}\right)-\frac{\partial \mathcal{L}}{\partial r}=0 \Rightarrow \mu \ddot{r}=-\frac{\partial V}{\partial r}+\frac{L^2}{\mu r^3}$
+	\item<2-> La fuerza radial $f(r)=-\frac{\partial V}{\partial r}$ entonces $\mu \ddot{r}=f(r)+\frac{L^2}{\mu r^3} \Rightarrow \mu \ddot{r}=f_{\mathrm{ef}}(r)$
+	\item<3-> La fuerza efectiva surge de las contribuciones de la fuerza central $f(r)=-\frac{\partial V}{\partial r}$ y el efecto no inercial $F_{ni} \equiv \frac{L^2}{\mu r^3}=\mu r \dot{\theta}^2$
+	\item<4-> Se define una energía potencial efectiva, $V_{\mathrm{ef}}(r) \equiv V(r)+\frac{L^2}{2 \mu r^2}$,  tal que $f_{\mathrm{ef}}(r) \equiv-\frac{\partial V_{\mathrm{ef}}}{\partial r}$
+	\item<5-> La energía total será $E  =\frac{1}{2} \mu \dot{r}^2+\frac{L^2}{2 \mu r^2}+V(r)  =\frac{1}{2} \mu \dot{r}^2+V_{\mathrm{ef}}(r)=$ cte.
 	\item<6-> Una partícula de masa $\mu$, moviéndose en la dimensión $r$ con energía potencial $V_{\mathrm{ef}}(r)$.
     \end{itemize}
 }
@@ -57,7 +57,7 @@
    \begin{itemize}  
   	\item<1-> La condición $\dot{r}^2 \geq 0$ implica que este movimento ocurre para valores de $r$ tales que $E \geq V_{\mathrm{ef}}(r)$ 
 	\item<2-> Los puntos de retorno están dados por la condición $\dot{r}=0$, i.e. 
-	$E  =V_{\mathrm{ef}}(r)=\frac{l^2}{2 \mu r^2}+V(r)  \Rightarrow E r^2-V(r) r^2-\frac{l^2}{2 \mu}=0$
+	$E  =V_{\mathrm{ef}}(r)=\frac{L^2}{2 \mu r^2}+V(r)  \Rightarrow E r^2-V(r) r^2-\frac{L^2}{2 \mu}=0$
 	\item<3-> Es una ecuación algebraica de segundo grado en $r$ y pueden existir dos raíces reales, $r=r_{\min }, r=r_{\max }$. 
 	\begin{figure}[t]
 		\includegraphics[width=1.5in]{Figuras/Trayectorias.png}
@@ -75,21 +75,74 @@
 \frame{
   \frametitle{Las trayectorias 2/2}
   \begin{enumerate}
-	\item<1-> Como $\dot{\theta}=\frac{l}{\mu r^2} \geq 0$, la velocidad angular $\dot{\theta}$ nunca cambia de signo.
+	\item<1-> Como $\dot{\theta}=\frac{L}{\mu r^2} \geq 0$, la velocidad angular $\dot{\theta}$ nunca cambia de signo.
 	\item<2-> El ángulo $\theta$ siempre se incrementa en el tiempo y el movimiento siempre ocurre en una misma dirección sobre el plano $(r, \theta)$.
 	\item<3-> Para encontrar la condición de choque $r \rightarrow 0$, i.e. $r_{\min }=0$
 	\item<4-> De la ecuación para la energía tenemos  
-	$\frac{1}{2} \mu \dot{r}^2  =E-V(r)-\frac{l^2}{2 \mu r^2}>0  \Rightarrow E r^2-V(r) r^2-\frac{l^2}{2 \mu}>0$
-	\item<5-> Tomando el límite $r \rightarrow 0$ tendremos $\lim _{r \rightarrow 0}\left[V(r) r^2\right]<-\frac{l^2}{2 \mu}$
-	\item<6-> Consideremos un potencial atractivo de la forma $V(r)=-k / r^n$, entonces $\lim _{r \rightarrow 0}\left[V(r) r^2\right]<-\frac{l^2}{2 \mu} \Rightarrow n>2$
+	$\frac{1}{2} \mu \dot{r}^2  =E-V(r)-\frac{L^2}{2 \mu r^2}>0  \Rightarrow E r^2-V(r) r^2-\frac{L^2}{2 \mu}>0$
+	\item<5-> Tomando el límite $r \rightarrow 0$ tendremos $\lim _{r \rightarrow 0}\left[V(r) r^2\right]<-\frac{L^2}{2 \mu}$
+	\item<6-> Consideremos un potencial atractivo de la forma $V(r)=-k / r^n$, entonces $\lim _{r \rightarrow 0}\left[V(r) r^2\right]<-\frac{L^2}{2 \mu} \Rightarrow n>2$
 	\begin{itemize}
 		\item $V(r)=-k / r^3$ permite caer al centro, $r_{\min }=0$
-		\item $V(r)=-k / r^2$, requiere $k>\frac{l^2}{2 \mu}$ para caer al centro de atracción
+		\item $V(r)=-k / r^2$, requiere $k>\frac{L^2}{2 \mu}$ para caer al centro de atracción
 		\item $V(r)=-k / r$ no permite alcanzar $r_{\min }=0$
 	\end{itemize} 
   \end{enumerate}
 }
+%%%%% Diapo 2
+\section{Ejemplos}
+\subsection{Potencial $V=-\frac{k}{r^3}$}
+\frame{
+  \frametitle{Potencial $V=-\frac{k}{r^3}$}
+   \begin{itemize}  
+  	\item<1-> Si el Potencial $V=-\frac{k}{r^3}$ el potencial efectivo será $V_{\mathrm{ef}}(r)=-\frac{k}{r^3}+\frac{L^2}{2 \mu r^2}$
+	\begin{figure}[t]
+		\includegraphics[width=2.0in]{Figuras/Potencialkr3.png}
+   	\end{figure}
+	\item<2-> El potencial efectivo exhibe un máximo $V_{\text {ef }(\max )}$ que representa una barrera de potencial si $E<V_{\text {ef }(\max )}$. Los posibles movimientos son
+	\begin{itemize}
+		\item  $E=E_1>V_{\text {ef }(\max )}$; movimiento existe $\forall r$.
+		\item $E=E_2<V_{\text {ef }(\max )}$; hay dos puntos de retorno $r_1$ y $r_2$ que satisfacen $E=V_{\text {ef }}$. El movimiento ocurre para $r \in\left[0, r_1\right]$ y para $r \geq r_2$. En Mecánica Clásica, el movimiento es imposible para $r \in\left[r_1, r_2\right]$.
+		\item $E<0$; movimiento ocurre para $r \in\left[0, r_1\right]$.
+	\end{itemize}
+\end{itemize}
+}
+%%%%% Diapo 2
+\subsection{Potencial $V=\frac{1}{2} k r^2$}
+\frame{
+  \frametitle{Potencial $V=\frac{1}{2} k r^2$}
+   	\begin{itemize}  
+  	\item<1-> Si el Potencial $V=-\frac{k}{2 \, r^2}$, el efectivo será $V_{\mathrm{ef}}(r)=-\frac{k}{2 r^2}+\frac{L^2}{2 \mu r^2}$
+	\begin{figure}[t]
+		\includegraphics[width=2.0in]{Figuras/Potencialkr2.png}
+   	\end{figure}
+	\item<2->  $V=-\frac{k}{2 \, r^2}$ corresponde a un oscilador armónico tridimensional.
+	\item<3->  $E \geq V_{\text {ef }}(r)$ implica que existen puntos de retorno $r_{\min }, r_{\max } \neq 0$; 
+	\item<4-> Es un movimiento radial es oscilatorio.
+	\item<5-> La fuerza radial $\mathbf{f}=-\frac{\partial V}{\partial r}\hat{\mathbf{r}} = -k r\hat{\mathbf{r}} = -k x {\bf i} -k y {\bf j}$ 
+	\item<6-> El movimiento radial es el resultado de dos oscilaciones simples, perpendiculares entre sí, con igual frecuencia $\omega_x^2=\omega_y^2=k / \mu$.
+    \end{itemize}
+}
+%%%%% Diapo 2
+\subsection{Potencial $V=-\frac{k}{r}$}
+\frame{
+  \frametitle{Potencial $V=-\frac{k}{r}$}
+   \begin{itemize}  
+  	\item<1-> El potencial es $V=-\frac{k}{r}$, el efectivo $V_{\mathrm{ef}}=V(r)+\frac{L^2}{2 \mu r^2}=-\frac{k}{r}+\frac{L^2}{2 \mu r^2}$
+	\begin{figure}[t]
+		\includegraphics[width=2.0in]{Figuras/Potencialkr.png}
+   	\end{figure}
 
+	\item<2-> El valor mínimo del potencial efectivo proviene de  $\left.\frac{\partial V_{\mathrm{ef}}}{\partial r}\right|_{r=r_0}=0$
+	\item<3-> Los posibles movimientos para diferentes valores de la energía $E$ son:
+	\begin{itemize}
+		\item $E=E_1>0 \Rightarrow r_{\min }>0$ y $r_{\max } \rightarrow \infty$; órbita abierta.
+		\item $E=E_2=0 \Rightarrow r_{\min }>0$ y $r_{\max } \rightarrow \infty$; órbita abierta.
+		\item $E=E_3<0 \Rightarrow r \in\left[r_{\min }, r_{\max }\right]$; movimiento radial oscilatorio.
+		\item $E=E_4=V_{\text {ef }(\min )}<0 \Rightarrow ; r_{\min }=r_{\max }=r_0$; órbita circular con $r=r_0$.
+	\end{itemize}
+    \end{itemize}
+}
   
 \end{document}
 
@@ -102,3 +155,12 @@ En presentación consideramos
   	\item<1->
    \end{enumerate}
 }
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+  \frametitle{Título transparencia}
+   	\begin{itemize}  
+  \item<1-> 
+    \end{itemize}
+}
+
