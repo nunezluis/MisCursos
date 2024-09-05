@@ -117,7 +117,7 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
 + Presentación del [Potencial efectivo](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S5T2PotencialEfectivo.pdf)
 + Presentación [Ecuaciones diferenciales generalidades](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S5EcDifOrd.pdf)
 + Presentación [Solución numérica de ecuaciones diferenciales ordinarias](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S5EcDifNumericas.pdf)
-
++ [Diez clases de soluciones computacionales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/DiezClasesComputacionales.pdf)
 ### Clase S6-C11/C12  
 + **Estudie**
   + Ecuación diferencial de la órbita
