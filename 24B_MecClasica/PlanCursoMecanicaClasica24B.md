@@ -111,15 +111,18 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
 + **Estudie**
   + Problema de dos cuerpos
   + Potencial efectivo
-  + Ecuación diferencial de la órbita
-  + Fuerza gravitacional y problema de Kepler
-  + Leyes de Kepler y dependencia temporal
+
 #### Materiales
 + Presentación del [problema de dos cuerpos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S5T1Problema2Cuerpos.pdf)
 + Presentación del [Potencial efectivo](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S5T2PotencialEfectivo.pdf)
++ Presentación [Ecuaciones diferenciales generalidades](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S5EcDifOrd.pdf)
++ Presentación [Solución numérica de ecuaciones diferenciales ordinarias](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S5EcDifNumericas.pdf)
 
 ### Clase S6-C11/C12  
 + **Estudie**
+  + Ecuación diferencial de la órbita
+  + Fuerza gravitacional y problema de Kepler
+  + Leyes de Kepler y dependencia temporal
   + El vector de Laplace-Runge-Lenz
   + Dispersión en campo de fuerza central
   + Sección eficaz de dispersión
