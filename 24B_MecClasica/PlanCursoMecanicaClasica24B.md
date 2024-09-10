@@ -129,6 +129,8 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
   + Dispersión en campo de fuerza central
   + Sección eficaz de dispersión
 
+[Libro de Marion](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/ClassicalDynamicsParticlesSystems.pdf)
+
 ### Clase S7-C13/C14
 
 ### Clase S8-C15/C16  
