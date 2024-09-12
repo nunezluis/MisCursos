@@ -131,6 +131,8 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
 
 [Libro de Marion](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/ClassicalDynamicsParticlesSystems.pdf)
 
+[Asistencia Gravitacional](https://en.wikipedia.org/wiki/Gravity_assist)
+
 ### Clase S7-C13/C14
 
 ### Clase S8-C15/C16  

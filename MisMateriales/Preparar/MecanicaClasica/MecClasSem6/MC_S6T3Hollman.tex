@@ -1,0 +1,133 @@
+\documentclass[spanish]{beamer}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath}
+\usepackage{mathtools,cancel} % cancela con una flecha \cancelto{0}{XXXX}
+\renewcommand{\CancelColor}{\color{red}} %change cancel color to red
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usepackage{textpos}
+% Logo  en el comienzo 
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+\end{textblock*}}
+
+\begin{document}
+
+\title{\textbf{Transferencia Hohmann \\ y \\ la asitencia gravitacional} }
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
+\textit{Universidad Industrial de Santander, Santander, Colombia } \\
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+}
+\date{\today}
+\maketitle
+
+
+\begin{frame}
+\frametitle{Agenda}
+  \tableofcontents
+\end{frame}
+
+
+%%%%% Diapo 1
+\section{Transferencia Hohmann}
+\subsection{¿Qué es?}
+\frame{
+  \frametitle{Transferencia Hohmann ¿Qué es?}
+   \begin{itemize}  
+  	\item<1-> La transferencia Hohmann es una maniobra orbital que emplea dos encendidos de motor para trasladar una nave espacial entre dos órbitas circulares mediante una trayectoria elíptica. 
+	\item<2-> Este método minimiza el consumo de combustible y es comúnmente utilizado en misiones satelitales e interplanetarias debido a su bajo requerimiento energético.
+	 \begin{figure}[t]
+		\includegraphics[width=2.0in]{Figuras/HohmannTransf.png}
+   	\end{figure}
+    \end{itemize}
+}
+%%%%% Diapo 2
+\subsection{¿Cómo ocurre?}
+\frame{
+  \frametitle{Transferencia Hohmann ¿Cómo ocurre?}
+   \begin{itemize}  
+  	\item<1->  La nave espacial comienza en una órbita circular $v_1$ estable alrededor de un cuerpo celeste
+	\item<3-> La nave espacial enciende sus motores e incrementa su velocidad para lograr una velocidad $v_{t 1}$ se una trayectoria elíptica que une al cuerpo de partida con el de llegada. 
+	\item<4-> Es la transferencia entre la órbita circular y una órbita elíptica, con el incremento de velocidad $\Delta v_1$
+	\item<5-> La nave espacial se deja llevar por la trayectoria elíptica hasta alcanzar el cuerpo objetivo.
+	\item<6-> La nave espacial vuelve a encender sus motores para lograr la velocidad necesaria para permanecer en una órbita circular alrededor del cuerpo objetivo
+    \end{itemize}
+}
+  
+%%%%% Diapo 2
+\subsection{Los cálculos}
+\frame{
+  \frametitle{Transferencia Hohmann: Los cálculos}
+  \begin{itemize}  
+  	\item<1-> Primero se determina la velocidad de la nave espacial en la órbita (circular) terrestre alrededor del Sol 
+	\item<2-> Luego se calcula la velocidad adicional requerida para ``impulsarla'' hacia una órbita elíptica que alcance la órbita de Marte.
+	\item<3-> En esa trayectoria elíptica con el Sol en uno de sus focos los valores $r_{\min }$ y $r_{\max }$ constituyen los puntos de retorno del movimiento radial con $E<0$, y corresponden a las raíces de la ecuación $E=V_{\mathrm{ef}}=-\frac{k}{r}+\frac{l^2}{2 \mu r^2} \Rightarrow \quad E r^2+k r-\frac{l^2}{2 \mu}=0$
+	\item<4-> Con lo cual $r_{\min }=-\frac{k}{2 E}\left(1-\sqrt{1+\frac{2 E l^2}{\mu k^2}}\right)=\frac{k}{2|E|}(1-e)$ \\  $r_{\max }=-\frac{k}{2 E}\left(1+\sqrt{1+\frac{2 E l^2}{\mu k^2}}\right)=\frac{k}{2|E|}(1+e)$
+	\item<5-> 	El semieje mayor de la elipse es $r_{\min }+r_{\max }=2 a$, luego, $a=\frac{k}{2|E|}$
+	\item<6-> Para la trayectoria circular alrededor del Sol tenemos 
+	$E=-\frac{k}{2 r_1}=\frac{1}{2} m v_1^2-\frac{k}{r_1} \Rightarrow v_1=\sqrt{\frac{k}{m r_1}}$
+    \end{itemize}
+}
+%%%%% Diapo 2
+\subsection{Eficiente en energía, no en tiempo}
+\frame{
+  \frametitle{Transferencia Hohmann ineficiente en tiempo}
+   \begin{itemize}  
+	\item<1-> La energía de la trayectoria elíptica será $E_t=\frac{-k}{r_1+r_2}=\frac{1}{2} m v_{t 1}^2-\frac{k}{r_1}$,  con $v_{t 1}$ la nueva velocidad.
+	\item<2-> Con lo cual $v_{t 1}=\sqrt{\frac{2 k}{m r_1}\left(\frac{r_2}{r_1+r_2}\right)}$ y el incremento de velocidad para iniciar la trayectoria elíptica es $\Delta v_1=v_{t 1}-v_1 = \sqrt{\frac{k}{m r_1}}\left(\sqrt{\frac{2r_2}{r_1+r_2}} - 1\right) > 0$
+	\item<3-> Para la transferencia de la elipse a la órbita circular de radio $r_2$, tenemos $\Delta v_2 = v_2 - v_{t 2}  = \sqrt{\frac{k}{m r_2}}\left( 1 - \sqrt{\frac{2r_1}{r_1+r_2}} \right) > 0$
+	\item<4-> El tiempo para realizar la transferencia $T_t$ es un semiperiodo de la órbita de transferencia $T_t =\frac{\tau_t}{2} = \pi \sqrt{\frac{m}{k}} a_t^{3 / 2}$
+	\item<5-> La trayectoria de transferencia de Hohmann representa el menor gasto energético, no representa el menor tiempo.
+	\item<6-> Para un viaje de ida y vuelta de la Tierra a Marte, la nave espacial tendría que permanecer en Marte durante 460 días hasta que la Tierra y Marte estuvieran posicionados para el viaje de vuelta. El viaje total (259+460+259=978 días =2,7 años)
+    \end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Asistencia gravitacional}
+\subsection{Marte: ida y vuelta con el ``empujón'' de Venus}
+
+\frame{
+  \frametitle{Marte: ida y vuelta con el ``empujón'' de Venus}
+   \begin{itemize}  
+  	\item<1-> Una misión de ida y vuelta a Marte podría realizarse en menos de 2 años, con sólo unas pocas semanas cerca (o sobre) Marte con el ``empujón'' de Venus
+	\begin{figure}[t]
+		\includegraphics[width=2.0in]{Figuras/IdaVueltaMarte.png}
+   	\end{figure}
+
+    \end{itemize}
+}
+\subsection{Dispersión elástica con el planeta}
+\frame{
+  \frametitle{Dispersión elástica con el planeta}
+  \begin{itemize}  
+  	\item<1->  Una nave espacial desde el infinito se aproxima a un cuerpo, $B$, con el cual interactúa con $B$ y retrocede. La trayectoria es una hipérbola 
+	\item<2-> Las velocidades inicial y final, respecto a $B$, se denotan por $v_i^{\prime}$ y $v_f^{\prime}$. 
+	\item<3-> El módulo de esas velocidades es el mismo y el efecto neto sobre la nave espacial es un ángulo de desviación de $\delta$ con respecto a $B$.
+	\begin{figure}[t]
+		\includegraphics[width=0.80in]{Figuras/Hiperbola.png}
+		\includegraphics[width=1.0in]{Figuras/vectoresVelocidad.png}
+   	\end{figure}
+	\item<4-> Respecto al Sol la nave ha aumentado su velocidad y ha cambiado su dirección. Un aumento en la velocidad ocurre cuando la nave espacial pasa por detrás de la dirección de movimiento de B.
+	\item<5-> Del mismo modo, una disminución de la velocidad se produce cuando la nave espacial pasa por delante de $B $. 
+    \end{itemize}
+}
+
+\end{document}
+%%%%% Diapo 2
+
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+  \frametitle{Título transparencia}
+   	\begin{itemize}  
+  \item<1-> 
+    \end{itemize}
+}
