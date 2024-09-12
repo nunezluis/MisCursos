@@ -125,15 +125,23 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
   + Ecuación diferencial de la órbita
   + Fuerza gravitacional y problema de Kepler
   + Leyes de Kepler y dependencia temporal
-  + El vector de Laplace-Runge-Lenz
-  + Dispersión en campo de fuerza central
-  + Sección eficaz de dispersión
+
 
 [Libro de Marion](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/ClassicalDynamicsParticlesSystems.pdf)
 
+[Transferencia Hohmann](https://en.wikipedia.org/wiki/Hohmann_transfer_orbit)
+
 [Asistencia Gravitacional](https://en.wikipedia.org/wiki/Gravity_assist)
 
+Van Allen, J. A. (2003). Gravitational assist in celestial mechanics—a tutorial. American Journal of Physics, 71(5), 448-451.
+
+Berg, P. (2023). The fundamental concepts of the gravity-assist manoeuvre. European Journal of Physics, 44(2), 025002.
+
 ### Clase S7-C13/C14
++ **Estudie**
++ El vector de Laplace-Runge-Lenz
++ Dispersión en campo de fuerza central
++ Sección eficaz de dispersión
 
 ### Clase S8-C15/C16  
 
