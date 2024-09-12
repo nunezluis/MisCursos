@@ -2,7 +2,8 @@
 \beamer@sectionintoc {1}{Estabilidad de \'orbitas circulares}{3}{0}{1}
 \beamer@sectionintoc {2}{Perturbaciones $r=r_0+\eta $}{10}{0}{2}
 \beamer@sectionintoc {3}{Oscilaciones radiales}{14}{0}{3}
-\beamer@sectionintoc {4}{Precesi\'on}{18}{0}{4}
-\beamer@sectionintoc {5}{Secci\'on}{23}{0}{5}
-\beamer@sectionintoc {6}{Secci\'on}{24}{0}{6}
-\beamer@sectionintoc {7}{Secci\'on}{25}{0}{7}
+\beamer@sectionintoc {4}{Estabilidad para $V(r)=\frac {-k}{r} e^{-(r / a)}$}{17}{0}{4}
+\beamer@sectionintoc {5}{Precesi\'on}{25}{0}{5}
+\beamer@sectionintoc {6}{Precesi\'on de orbitas planetarias}{30}{0}{6}
+\beamer@sectionintoc {7}{Orbitas Cerradas}{31}{0}{7}
+\beamer@sectionintoc {8}{Precesi\'on para $V(r)=g(r)-\frac {k}{r}$}{39}{0}{8}

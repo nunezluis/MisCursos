@@ -20,7 +20,7 @@
 
 \begin{document}
 
-\title{\textbf{Estabilidad Órbitas Circulares} }
+\title{\textbf{Estabilidad y Precesión de Órbitas} }
 \author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
 \institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
 \textit{Universidad Industrial de Santander, Santander, Colombia } \\
@@ -85,12 +85,26 @@
 \section{Estabilidad para $V(r)=\frac{-k}{r} e^{-(r / a)}$}
 \frame{
   \frametitle{Estabilidad para $V(r)=\frac{-k}{r} e^{-(r / a)}$}
+  Investigar la estabilidad de órbitas circulares descritas por el potencial $V(r)=\frac{-k}{r} e^{-(r / a)}$ donde $k>0$ y $a>0$.
    \begin{itemize}  
-  	\item<1-> Investigar la estabilidad de órbitas circulares descritas por el potencial $V(r)=\frac{-k}{r} e^{-(r / a)}$ donde $k>0$ y $a>0$.
-	\item<2->
+	\item<1-> Es el potencial de Coulomb apantallado (cuando $k=Z e^2 / 4 \pi \varepsilon_0$, donde $Z$ es el número atómico y $e$ es la carga del electrón)
+	\item<2->  disminuye con la distancia más rápidamente que $1 / r$. Por tanto, aproxima el potencial electrostático del núcleo atómico en las proximidades del núcleo teniendo en cuenta la «cancelación» parcial o el «apantallamiento» de la carga nuclear por los electrones atómicos.
+	\item<3-> la fuerza será $f(r)=-\frac{\partial V}{\partial r}=-k\left(\frac{1}{a r}+\frac{1}{r^2}\right) e^{-(r / a)}$
+	\item<4-> con lo cual $\frac{\partial f}{\partial r}=k\left(\frac{1}{a^2 r}+\frac{2}{a r^2}+\frac{2}{r^3}\right) e^{-(r / a)}$
+	\item<5-> la condicion de estabilidad es $ \frac{3 f(r_0)}{r_0}+f^{\prime}\left(r_0\right)<0 \Rightarrow 3 +\frac{r_0 \, f^{\prime}\left(r_0\right)}{f(r_0)} >0$
+	\item<6-> Por lo tanto: $3+\frac{r_0 k\left(\frac{1}{a^2 r_0}+\frac{2}{a r_0^2}+\frac{2}{r_0^3}\right)}{-k\left(\frac{1}{a r_0}+\frac{1}{r_0^2}\right)}>0 \Rightarrow frac{a^2}{r_0^2}+\frac{a}{r_0}-1>0$
+	\item<7-> Entonces, $q^2+q-1=0$, con $q \equiv a / r_0$, solución $q=\frac{a}{r_0} \gtrsim 0.62$
     \end{itemize}
 }
-
+%
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+  \frametitle{Coulomb Apantallado}
+   \begin{figure}[t]
+		\includegraphics[width=2.5in]{Figuras/CoulombApantallado.png}
+   	\end{figure}
+}
 %%%%% Diapo 2
 \section{Precesión}
 \frame{
@@ -104,26 +118,51 @@
 	 \begin{figure}[t]
 		\includegraphics[width=1.5in]{Figuras/Precesa.png}
    	\end{figure}
-
-
     \end{itemize}
 }
+
 %
 %%%%% Diapo 2
-\section{Sección}
+\section{Precesión de orbitas planetarias}
 \frame{
-  \frametitle{Título transparencia}
-   	\begin{itemize}  
-  \item<1-> 
-    \end{itemize}
+\frametitle{Precesión de orbitas planetarias}
+\begin{figure}[t]
+	\includegraphics[width=4.5in]{Figuras/PrecesaPlanetas.png}
+\end{figure}  
+}
+
+%
+%%%%% Diapo 2
+\section{Orbitas Cerradas}
+\frame{
+\frametitle{Orbitas Cerradas}
+\begin{itemize}  
+	\item<1-> Una órbita finita, con $r \in\left[r_{\min }, r_{\max }\right]$, es cerrada si las coordenadas $r$ y $\theta$ se repiten periódicamente.
+	\item<2-> Se cierra si el ángulo de precesión $\Delta \theta$ es múltiplo racional de $2 \pi$. 
+	\item<3-> Esto es $\Delta \theta=\left(\frac{m}{n}\right) 2 \pi,$ con $m, n$, enteros,  $\frac{\dot{\theta}}{\omega_r}=\frac{m}{n} \quad \Rightarrow  n T_r=m T_\theta$
+	\item<4-> Después de $n$ períodos radiales $\left(r_{\min } \rightarrow r_{\max } \rightarrow r_{\min }\right.$ ), el perihelio completa $m$ revoluciones $(m 2 \pi)$ y la órbita se cierra.
+	\item<5-> Si $\dot{\theta} / \omega_r$ es un número irracional, la órbita resultante se denomina cuasiperiódica y nunca se cierra.
+	\item<6-> El ángulo $\theta$ en función de $r$ puede calcularse
+	$\theta=\frac{L}{\sqrt{2 \mu}} \int_{r_0}^r \frac{d r}{r^2 \sqrt{E-V(r)-\frac{L^2}{2 \mu r^2}}}+\theta_0 \Leftrightarrow 
+	\Delta \theta=\frac{2 L}{\sqrt{2 \mu}} \int_{r_{\min }}^{r_{\max }} \frac{d r}{r^2 \sqrt{E-\frac{L^2}{2 \mu r^2}-V(r)}}$
+	\item<7-> El  ángulo de precesión $\Delta \theta$ depende del potencial central $V(r)$
+	\item<8-> {\bf Teorema de Bertrand} Las únicas formas funcionales de potenciales centrales $V(r)$ que producen órbitas cerradas son $V(r) \propto \frac{1}{r}$ (gravitacional) y $V(r) \propto r^2$ (oscilador armónico).
+\end{itemize}
 }
 %%%%% Diapo 2
-\section{Sección}
+\section{Precesión para $V(r)=g(r)-\frac{k}{r}$}
 \frame{
-  \frametitle{Título transparencia}
-   	\begin{itemize}  
-  \item<1-> 
-    \end{itemize}
+\frametitle{Precesión para $V(r)=g(r)-\frac{k}{r}$}
+  Calcular el ángulo de precesión $\Delta \theta$ para oscilaciones radiales alrededor de una órbita circular de radio $r_0$ para una partícula en el potencial $V(r)=g(r)-\frac{k}{r}$, donde $g(r)$ es una función de $r$ y $k=$ cte.
+\begin{itemize}  
+	\item<1-> El potencial efectivo es $V_{\mathrm{ef}}(r)=V(r)+\frac{L^2}{2 \mu r^2}=g(r)-\frac{k}{r}+\frac{L^2}{2 \mu r^2}$
+	\item<2-> Entonces $\left.\frac{\partial V_{\mathrm{ef}}}{\partial r}\right|_{r_0}=g^{\prime}\left(r_0\right)+\frac{k}{r_0^2}-\frac{L^2}{\mu r_0^3}=0 \Rightarrow L^2=\mu\left(g^{\prime}\left(r_0\right) r_0^3+k r_0\right)$
+	\item<3-> La frecuencia radial es $\omega_r^2=\left.\frac{1}{\mu} \frac{\partial^2 V_{\mathrm{ef}}}{\partial r^2}\right|_{r_0}=\frac{1}{\mu}\left(g^{\prime \prime}\left(r_0\right)-\frac{2 k}{r_0^3}+\frac{3 l^2}{\mu r_0^4}\right)$
+	\item<4-> Con $L^2$ tendremos  $\omega_r^2  =\frac{1}{\mu}\left[g^{\prime \prime}\left(r_0\right)-\frac{2 k}{r_0^3}+\frac{3}{r_0^4}\left(g^{\prime}\left(r_0\right) r_0^3+k r_0\right)\right]  =\frac{1}{\mu}\left(g^{\prime \prime}\left(r_0\right)+\frac{3}{r_0} g^{\prime}\left(r_0\right)+\frac{k}{r_0^3}\right)$
+	\item<5-> Además la velocidad angular es $\dot{\theta}=\frac{l}{\mu r_0^2}=\left[\frac{1}{\mu}\left(\frac{g^{\prime}\left(r_0\right)}{r_0}+\frac{k}{r_0^3}\right)\right]^{1 / 2}$
+	\item<6-> El ángulo de precesión es 
+	$\Delta \theta=2 \pi\left(\frac{\dot{\theta}}{\omega_r}\right)   =2 \pi\left(\frac{g^{\prime}\left(r_o\right) r_o^2+k}{g^{\prime \prime}\left(r_o\right) r_o^3+3 g^{\prime}\left(r_o\right) r_o^2+k}\right)^{1 / 2}$
+\end{itemize}
 }
   
 \end{document}
