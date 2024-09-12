@@ -133,14 +133,10 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
 #### Materiales
 + [Presentación del Problema de Kepler](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S6T1ProbKepler.pdf)
 + [Presentación del Leyes de Kepler](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S6T2LeyesKepler.pdf)
-+ [Presentación de Transferencia de Hohmann y asistencia gravitacional](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S5T2PotencialEfectivo.pdf)
-[Transferencia Hohmann](https://en.wikipedia.org/wiki/Hohmann_transfer_orbit)
-
-[Asistencia Gravitacional](https://en.wikipedia.org/wiki/Gravity_assist)
-
-Van Allen, J. A. (2003). Gravitational assist in celestial mechanics—a tutorial. American Journal of Physics, 71(5), 448-451.
-
-Berg, P. (2023). The fundamental concepts of the gravity-assist manoeuvre. European Journal of Physics, 44(2), 025002.
++ [Presentación de Transferencia de Hohmann y asistencia gravitacional](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S6T3Hollman.pdf) Adicionalmente consultar [Transferencia Hohmann](https://en.wikipedia.org/wiki/Hohmann_transfer_orbit) y [Asistencia Gravitacional](https://en.wikipedia.org/wiki/Gravity_assist) en wikipedia. En este tema hay un par de buenas referencias
+  + Van Allen, J. A. (2003). Gravitational assist in celestial mechanics—a tutorial. American Journal of Physics, 71(5), 448-451.
+  + Berg, P. (2023). The fundamental concepts of the gravity-assist manoeuvre. European Journal of Physics, 44(2), 025002.
++ [Presentación de perturbaciones y precesión de órbitas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S6T4Perturbaciones.pdf)
 
 ### Clase S7-C13/C14
 + **Estudie**
