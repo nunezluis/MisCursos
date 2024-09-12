@@ -1,0 +1,8 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Estabilidad de \'orbitas circulares}{3}{0}{1}
+\beamer@sectionintoc {2}{Perturbaciones $r=r_0+\eta $}{10}{0}{2}
+\beamer@sectionintoc {3}{Oscilaciones radiales}{14}{0}{3}
+\beamer@sectionintoc {4}{Precesi\'on}{18}{0}{4}
+\beamer@sectionintoc {5}{Secci\'on}{23}{0}{5}
+\beamer@sectionintoc {6}{Secci\'on}{24}{0}{6}
+\beamer@sectionintoc {7}{Secci\'on}{25}{0}{7}
