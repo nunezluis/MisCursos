@@ -97,6 +97,7 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
   + Fuerzas generalizadas: partícula en un campo electromagnético
   + Sistemas integrables y sistemas caóticos
   + Sistema integrable: movimiento unidimensional
+
 + **Rehaga** los ejemplos 1. (p97), 2. (p98), 3. (p99)
 
 #### Problemas S3
@@ -124,11 +125,15 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
 + **Estudie**
   + Ecuación diferencial de la órbita
   + Fuerza gravitacional y problema de Kepler
-  + Leyes de Kepler y dependencia temporal
+  + Leyes de Kepler
+  + Transferencia de Hohmann y Asistencia gravitacional
+  + Estabilidad y precesion de órbitas
++ **Rehaga** los ejemplos 1. pg 114; 1. pg 131; 2. pg 132; 1. y 2. pg 137
 
-
-[Libro de Marion](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/ClassicalDynamicsParticlesSystems.pdf)
-
+#### Materiales
++ [Presentación del Problema de Kepler](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S6T1ProbKepler.pdf)
++ [Presentación del Leyes de Kepler](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S6T2LeyesKepler.pdf)
++ [Presentación de Transferencia de Hohmann y asistencia gravitacional](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S5T2PotencialEfectivo.pdf)
 [Transferencia Hohmann](https://en.wikipedia.org/wiki/Hohmann_transfer_orbit)
 
 [Asistencia Gravitacional](https://en.wikipedia.org/wiki/Gravity_assist)
