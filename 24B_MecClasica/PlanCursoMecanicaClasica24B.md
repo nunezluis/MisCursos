@@ -147,9 +147,12 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
 #### Materiales
 ##### Presentaciones
 + [Vector Laplace-Runge-Lenz](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S7T1LAPLACERungeLenz.pdf)
-[dispersion hiperbolica](https://www.youtube.com/watch?v=HjIarTx5itY)
-[Oumuamua](https://science.nasa.gov/solar-system/comets/oumuamua/)
-[Borisov](https://science.nasa.gov/solar-system/comets/2i-borisov/)
++ [Dispersión](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S7T2Scatering.pdf)
+
+##### Videos
++ [dispersion hiperbolica](https://www.youtube.com/watch?v=HjIarTx5itY)
++ [Oumuamua](https://science.nasa.gov/solar-system/comets/oumuamua/)
++ [Borisov](https://science.nasa.gov/solar-system/comets/2i-borisov/)
 
 ### Clase S8-C15/C16  
 
