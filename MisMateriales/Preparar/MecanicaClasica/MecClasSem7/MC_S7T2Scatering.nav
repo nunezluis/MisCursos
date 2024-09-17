@@ -39,8 +39,12 @@
 \headcommand {\sectionentry {7}{El experimento de Rutherford}{35}{El experimento de Rutherford}{0}}
 \headcommand {\slideentry {7}{0}{1}{35/38}{}{0}}
 \headcommand {\beamer@framepages {35}{38}}
-\headcommand {\beamer@partpages {1}{38}}
-\headcommand {\beamer@subsectionpages {35}{38}}
-\headcommand {\beamer@sectionpages {35}{38}}
-\headcommand {\beamer@documentpages {38}}
-\headcommand {\gdef \inserttotalframenumber {10}}
+\headcommand {\slideentry {7}{0}{2}{39/45}{}{0}}
+\headcommand {\beamer@framepages {39}{45}}
+\headcommand {\slideentry {7}{0}{3}{46/52}{}{0}}
+\headcommand {\beamer@framepages {46}{52}}
+\headcommand {\beamer@partpages {1}{52}}
+\headcommand {\beamer@subsectionpages {35}{52}}
+\headcommand {\beamer@sectionpages {35}{52}}
+\headcommand {\beamer@documentpages {52}}
+\headcommand {\gdef \inserttotalframenumber {12}}
