@@ -20,7 +20,7 @@
 
 \begin{document}
 
-\title{\textbf{Título presentación} }
+\title{\textbf{Dispersión} }
 \author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
 \institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
 \textit{Universidad Industrial de Santander, Santander, Colombia } \\
@@ -66,9 +66,9 @@
 }
 %
 %%%%% Diapo 2
-\section{Dispersión Hiperbólica}
+\section{Dispersión Hiperbólica para $V(r)=-\frac{k}{r}$}
 \frame{
-\frametitle{Dispersión Hiperbólica}
+\frametitle{Dispersión Hiperbólica para $V(r)=-\frac{k}{r}$}
 \begin{itemize}  
 	\item<1-> La magnitud del momento angular de la partícula será $L=  r p \sin (\pi-\theta)=m v_0 r \sin \theta=m v_0 b \Rightarrow L^2=  m^2 v_0^2 b^2=2 E m b^2$
 	\item<2-> Si  $V(r)=-\frac{k}{r}$, la órbita con $E>0$ es una hipérbola, $\frac{q}{r}=1+e \cos \theta$, con 
@@ -79,7 +79,83 @@
 	\begin{figure}[t]
 		\includegraphics[width=1.5in]{Figuras/DispersionHiperbolica.png}
    	\end{figure} 
-	\item<6-> Oumuamua \url{https://science.nasa.gov/solar-system/comets/oumuamua/}
+	\item<6-> Oumuamua y Borisov
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Dispersión hiperbólica para $V(r)= \frac{k}{r}$}
+\frame{
+\frametitle{Dispersión hiperbólica para $V(r)= \frac{k}{r}$ 1/2}
+\begin{itemize}  
+	\item<1-> La ecuación de la órbita para un potencial repulsivo $V(r)=\frac{k}{r}$ es $\frac{L^2}{m}\left(u^{\prime \prime}+u\right)=-\frac{d V}{d u} \Rightarrow u^{\prime \prime}+u=-\frac{m k}{L^2}$, con $u=1 / r$
+	\item<2-> Su solución es $u=u_h+u_p$ con $u_h=A \cos (\theta-\theta_0)$ y $u_p=-\frac{m k}{L^2}$
+	\item<3-> Con lo cual la órbita será $u=\frac{1}{r}=\frac{m k}{l^2}(e \cos \theta-1)$
+	\begin{figure}[t]
+		\includegraphics[width=1.5in]{Figuras/DispersionHiperbolicaRepulsiva.png}
+   	\end{figure} 
+	\item<4-> Donde $r_{\min } =\frac{q}{e-1}$ para $\theta=0$ y \\ $r_{\max } \rightarrow \infty,$  para $\cos \theta_{\max }  =\frac{1}{e}<1 \Rightarrow \theta_{\max }<\frac{\pi}{2}$
+	\item<5-> La órbita hiperbólica no encierra al foco y el ángulo de dispersión es $\chi=\pi-2 \theta_{\max }$, i.e.  ${\rm sen} \left(\frac{\chi}{2}\right)=\frac{1}{e}$
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Dispersión hiperbólica para $V(r)= \frac{k}{r}$ 2/2}
+\begin{itemize}  
+	\item<1-> El ángulo de dispersión $\chi$ se determina geométricamente con $\theta_{\max }$
+	\item<2-> Este ángulo es $\theta_{\max }  =\frac{l}{\sqrt{2 m}} \int_{r_{\min }}^{r_{\max }} \frac{d r}{r^2 \sqrt{E-V(r)-\frac{l^2}{2 m r^2}}}  =b \int_{r_{\min }}^{\infty} \frac{d r}{r^2 \sqrt{1-\frac{V(r)}{E}-\frac{b^2}{r^2}}}$
+	\item<3-> Es decir $\theta_{\max }=b \int_0^{u_m} \frac{d u}{\sqrt{1-\frac{V(u)}{E}-b^2 u^2}}$ donde  $u=1 / r$, con $u=0(r \rightarrow \infty)$ y $u_m=1 / r_{\min }$
+\end{itemize}
+}
+
+
+%
+%%%%% Diapo 2
+\section{Sección eficaz}
+\frame{
+\frametitle{Sección eficaz}
+\begin{itemize}  
+	\item<1-> Se emplea un haz de partículas idénticas con distintos parámetros de impacto las cuales  son dispersadas con diferentes ángulos $\chi$.
+	\item<2-> La intensidad del flujo $I$ es el número de partículas incidentes por unidad de área y por unidad de tiempo $I=\frac{\# \text { part. }}{\text { área } \times t}$
+	\begin{figure}[t]
+		\includegraphics[width=1.5in]{Figuras/SeccionEficaz.png} 
+   	\end{figure}
+	\item<3-> Las partículas con el mismo valor $b$ son dispersadas en un cono con vértice en $f$ y ángulo  $\chi$, 
+	\item<4-> El cono encierra un ángulo sólido $\Omega$. 
+	\item<5-> El ángulo sólido diferencial $d \Omega=\frac{d A}{r^2}=\frac{(2 \pi r \sin \chi)(r d \chi)}{r^2}=2 \pi \sin \chi d \chi $
+	\item<6-> La sección eficaz de dispersión $\sigma(\Omega)$ es la fracción de partículas incidentes que son desviadas dentro del ángulo sólido $\Omega$,
+\end{itemize}
+}%
+%%%%% Diapo 2
+\section{Sección eficaz diferencial}
+\frame{
+\frametitle{Sección eficaz diferencial}
+\begin{itemize}  
+	\item<1-> Entonces $\sigma(\Omega) d \Omega=\frac{n(\Omega)}{I} d \Omega$, corresponde a la fracción de partículas dispersadas por unidad de tiempo en $d \Omega$.
+	\begin{figure}[t]
+		\includegraphics[width=1.2in]{Figuras/SeccionEficazDiferencial.png}
+   	\end{figure}
+	\item<2-> Es la probabilidad de dispersión en un diferencial de ángulo sólido $d \Omega$.
+	\item<3-> Las partículas incidentes en el anillo de radio $b$ y ancho $d b$ por unidad de tiempo debe ser igual a aquellas dispersadas en el diferencial de ángulo $d \Omega$ por unidad de tiempo, $n(\Omega) d \Omega$.
+	\item<4-> Esto es $I 2 \pi b d b  =I \sigma(\Omega) d \Omega \Leftrightarrow 2 \pi b d b =\sigma(\Omega) 2 \pi {\rm sen}\, \chi d \chi$
+	\item<5-> La sección eficaz en función del ángulo de dispersión es $\sigma(\chi)=\frac{b}{\sin \chi}\left|\frac{d b}{d \chi}\right|$. 
+\end{itemize}
+}%
+%%%%% Diapo 2
+\section{El experimento de Rutherford}
+\frame{
+\frametitle{El experimento de Rutherford}
+\begin{itemize}  
+	\item<1-> Tenemos un potencial de Coulomb repulsivo $V(r)=q q^{\prime} / r$, el núcleo actúa como centro dispersor de carga $q=+Z e$. 
+	\item<2-> Las partículas incidentes son partículas $\alpha$ con carga $q^{\prime}=+2 e$.
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/Rutherford.png}
+   	\end{figure}
+	\item<3-> Calculemos el ángulo de dispersión $\chi$ para una partícula incidente con energía $E>0$ y parámetro de impacto $b$ en un potencial central repulsivo $V(r)=k / r$, con $k=q q^{\prime}=$ $2 Z e^2$.
+	\item<4-> La integral para $\theta_{\text {max }}$ con este potencial es $\theta_{\max }=b \int_0^{u_m} \frac{d u}{\sqrt{1-\frac{k}{E} u-b^2 u^2}}$
+	\item<4-> Entonces $\theta_{\max }=\left.\cos ^{-1}\left[\frac{\left(1+\frac{2 b^2 E}{k} u\right)}{\sqrt{1+\left(\frac{2 b E}{k}\right)^2}}\right]\right|_0 ^{u_m}=\left.\cos ^{-1}\left[\frac{1}{e}\left(1+\frac{2 b^2 E}{k} u\right)\right]\right|_0 ^{u_m}$
 \end{itemize}
 }
 %
@@ -91,14 +167,15 @@
 	\item<1-> 
 \end{itemize}
 }
+
+\end{document}
 %
 %%%%% Diapo 2
 \section{Sección}
 \frame{
 \frametitle{Título transparencia}
-	\begin{itemize}  
-\item<1-> 
-    \end{itemize}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
 }
-  
-\end{document}
+
