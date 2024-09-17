@@ -1,0 +1,6 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Dispersi\'on: El concepto}{3}{0}{1}
+\beamer@sectionintoc {2}{Par\'ametro de Impacto}{7}{0}{2}
+\beamer@sectionintoc {3}{Dispersi\'on Hiperb\'olica}{10}{0}{3}
+\beamer@sectionintoc {4}{Secci\'on}{16}{0}{4}
+\beamer@sectionintoc {5}{Secci\'on}{17}{0}{5}

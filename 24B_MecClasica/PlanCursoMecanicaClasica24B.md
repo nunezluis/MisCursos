@@ -144,6 +144,10 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
 + Dispersión en campo de fuerza central
 + Sección eficaz de dispersión
 
+[dispersion hiperbolica](https://www.youtube.com/watch?v=HjIarTx5itY)
+[Oumuamua](https://science.nasa.gov/solar-system/comets/oumuamua/)
+[Borisov](https://science.nasa.gov/solar-system/comets/2i-borisov/)
+
 ### Clase S8-C15/C16  
 
 ### Clase S9-C17/C18
