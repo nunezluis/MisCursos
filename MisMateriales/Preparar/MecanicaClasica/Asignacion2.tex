@@ -1,0 +1,227 @@
+%%%%%%
+Develop the calculation of the cross-section for the coulomb potential V(r) = k/r
+%%%%%%
+The **Coulomb potential** is given by \( V(r) = \frac{k}{r} \), where \( k \) is a constant (related to the charge or mass depending on the context), and \( r \) is the radial distance from the source of the potential.
+
+To compute the **scattering cross-section** for the Coulomb potential, we will use the **Rutherford scattering** formalism, which applies to particles interacting via a \( 1/r \) potential, such as the Coulomb potential between charged particles (like electrons and protons). This method is grounded in classical mechanics.
+
+### Steps to Derive the Scattering Cross-Section:
+
+1. **Coulomb Force**:
+   The force corresponding to the Coulomb potential \( V(r) \) is:
+   \[
+   F(r) = -\frac{dV(r)}{dr} = -\frac{k}{r^2}
+   \]
+
+2. **Impact Parameter and Deflection Angle**:
+   The scattering process is determined by the **impact parameter** \( b \) and the **scattering angle** \( \theta \).
+
+   For a projectile of charge \( q_1 \) and a target of charge \( q_2 \), the interaction potential is \( V(r) = \frac{k}{r} = \frac{q_1 q_2}{4 \pi \epsilon_0 r} \).
+
+   The relationship between the impact parameter \( b \) and the scattering angle \( \theta \) is:
+   \[
+   \theta = 2 \arctan\left( \frac{k}{mv^2 b} \right)
+   \]
+   where:
+   - \( m \) is the mass of the projectile,
+   - \( v \) is the velocity of the incoming particle.
+
+3. **Differential Cross-Section**:
+   The differential cross-section \( \frac{d\sigma}{d\Omega} \) relates the probability of scattering into a specific solid angle \( d\Omega \) to the impact parameter. The expression for the differential cross-section is given by:
+
+   \[
+   \frac{d\sigma}{d\Omega} = \frac{b}{\sin\theta} \left| \frac{db}{d\theta} \right|
+   \]
+
+   Using the relationship between \( b \) and \( \theta \) from the scattering angle formula, we can express the differential cross-section for a Coulomb potential.
+
+4. **Rutherford Formula for Cross-Section**:
+   The well-known result for Rutherford scattering (which applies to the Coulomb potential) is:
+
+   \[
+   \frac{d\sigma}{d\Omega} = \left( \frac{k}{4 E \sin^2\left(\frac{\theta}{2}\right)} \right)^2
+   \]
+   where:
+   - \( E = \frac{1}{2} mv^2 \) is the kinetic energy of the incoming particle,
+   - \( \theta \) is the scattering angle,
+   - \( k = \frac{q_1 q_2}{4 \pi \epsilon_0} \).
+
+   This formula describes the scattering cross-section for particles interacting via a Coulomb potential and shows that the cross-section falls off as \( 1/\sin^4(\theta/2) \), meaning most particles are scattered at small angles.
+
+### Total Cross-Section:
+
+The **total cross-section** can be obtained by integrating the differential cross-section over the entire solid angle. However, for Coulomb scattering, the total cross-section diverges due to the long-range nature of the Coulomb force. This divergence indicates that, in theory, particles can be scattered at arbitrarily small angles, leading to an infinite cross-section.
+
+In practice, experimental setups introduce angular cutoffs to deal with this issue.
+
+### Conclusion:
+
+The scattering cross-section for the Coulomb potential \( V(r) = \frac{k}{r} \) is given by the Rutherford scattering formula:
+
+\[
+\frac{d\sigma}{d\Omega} = \left( \frac{k}{4 E \sin^2\left(\frac{\theta}{2}\right)} \right)^2
+\]
+
+This result describes the angular dependence of the scattering process, with most scattering occurring at small angles. The total cross-section is formally infinite but can be regularized with appropriate physical cutoffs.
+
+%%%%%%
+Develop the calculation of the cross-section for the screened coulomb potential V(r) = k/r*exp(-alpha*r)
+%%%%%%
+To calculate the **differential cross-section** for the **screened Coulomb potential**:
+
+\[
+V(r) = \frac{k}{r} e^{-\alpha r}
+\]
+
+where:
+- \( k = \frac{q_1 q_2}{4\pi \epsilon_0} \),
+- \( \alpha \) is the screening parameter, 
+- \( r \) is the distance between interacting particles,
+
+we must use the **Born approximation** since this potential deviates from the pure Coulomb potential.
+
+### Step 1: Born Approximation for Differential Cross-Section
+The Born approximation is used to compute the scattering amplitude for potentials that are weak or when the interaction occurs at high energy. The **scattering amplitude** \( f(\theta) \) in the Born approximation is given by the Fourier transform of the potential:
+
+\[
+f(\mathbf{q}) = -\frac{m}{2\pi \hbar^2} \int e^{-i\mathbf{q} \cdot \mathbf{r}} V(r) d^3r
+\]
+
+Where:
+- \( \mathbf{q} \) is the momentum transfer vector with magnitude \( q = 2k \sin\left(\frac{\theta}{2}\right) \),
+- \( V(r) = \frac{k}{r} e^{-\alpha r} \) is the potential.
+
+### Step 2: Fourier Transform of the Potential
+
+We now calculate the Fourier transform of the potential \( V(r) = \frac{k}{r} e^{-\alpha r} \):
+
+\[
+f(\mathbf{q}) = -\frac{m}{2\pi \hbar^2} \int_0^\infty \int_0^\pi \int_0^{2\pi} \frac{k}{r} e^{-\alpha r} e^{-i q r \cos\theta} r^2 \sin\theta \, d\phi \, d\theta \, dr
+\]
+
+This simplifies to:
+
+\[
+f(\mathbf{q}) = -\frac{2mk}{\hbar^2} \int_0^\infty \frac{e^{-\alpha r}}{r} \frac{\sin(qr)}{qr} r^2 \, dr
+\]
+
+### Step 3: Solving the Radial Integral
+
+The integral to be solved is:
+
+\[
+I = \int_0^\infty \frac{e^{-\alpha r} \sin(qr)}{qr} r \, dr
+\]
+
+Using standard integral tables or solving via contour integration, the result of this integral is:
+
+\[
+I = \frac{1}{q(q^2 + \alpha^2)}
+\]
+
+Thus, the scattering amplitude becomes:
+
+\[
+f(\mathbf{q}) = -\frac{2mk}{\hbar^2} \frac{1}{q(q^2 + \alpha^2)}
+\]
+
+### Step 4: Differential Cross-Section
+
+The differential cross-section is related to the modulus squared of the scattering amplitude:
+
+\[
+\frac{d\sigma}{d\Omega} = |f(\mathbf{q})|^2 = \left( \frac{2mk}{\hbar^2} \right)^2 \frac{1}{q^2 (q^2 + \alpha^2)^2}
+\]
+
+Substituting \( q = 2k \sin\left(\frac{\theta}{2}\right) \), we get:
+
+\[
+\frac{d\sigma}{d\Omega} = \left( \frac{2mk}{\hbar^2} \right)^2 \frac{1}{4k^2 \sin^2\left(\frac{\theta}{2}\right) \left( 4k^2 \sin^2\left(\frac{\theta}{2}\right) + \alpha^2 \right)^2}
+\]
+
+### Conclusion:
+
+The **differential cross-section** for the screened Coulomb potential is:
+
+\[
+\frac{d\sigma}{d\Omega} = \left( \frac{2mk}{\hbar^2} \right)^2 \frac{1}{4k^2 \sin^2\left(\frac{\theta}{2}\right) \left( 4k^2 \sin^2\left(\frac{\theta}{2}\right) + \alpha^2 \right)^2}
+\]
+
+This formula describes how the scattering cross-section depends on the angle \( \theta \) for a Coulomb potential that is exponentially screened. The parameter \( \alpha \) controls the range of the interaction, and as \( \alpha \to 0 \), this expression reduces to the Rutherford scattering result for a pure Coulomb potential.
+
+%%%%%%%%
+Compare the coulomb and the screened coulomb cross-section for different initial energies. Identify the relation between the screened parameter alpha with the initial energy
+%%%%%%%%
+### Comparison of the Coulomb and Screened Coulomb Cross-Sections
+
+The Coulomb potential and the screened Coulomb potential describe two different types of interactions:
+1. **Coulomb Potential**: \( V(r) = \frac{k}{r} \), represents a long-range force that decays slowly as \( r \to \infty \).
+2. **Screened Coulomb Potential**: \( V(r) = \frac{k}{r} e^{-\alpha r} \), adds an exponential decay to account for screening effects, such as those encountered in plasmas or when a charged particle is shielded by other charges.
+
+We will compare the **differential cross-sections** for these potentials, with a particular focus on the dependence of the **screening parameter \( \alpha \)** on the **initial energy** of the particles.
+
+### 1. **Coulomb Cross-Section** (Rutherford Scattering)
+
+For the pure Coulomb potential, the differential cross-section is given by the Rutherford formula:
+
+\[
+\frac{d\sigma_{\text{Coulomb}}}{d\Omega} = \left( \frac{k}{4 E \sin^2\left(\frac{\theta}{2}\right)} \right)^2
+\]
+
+Where:
+- \( k = \frac{q_1 q_2}{4 \pi \epsilon_0} \),
+- \( E \) is the initial kinetic energy of the projectile,
+- \( \theta \) is the scattering angle.
+
+### 2. **Screened Coulomb Cross-Section**
+
+For the screened Coulomb potential, the differential cross-section derived using the Born approximation is:
+
+\[
+\frac{d\sigma_{\text{screened}}}{d\Omega} = \left( \frac{2 m k}{\hbar^2} \right)^2 \frac{1}{4 k^2 \sin^2\left( \frac{\theta}{2} \right) \left( 4 k^2 \sin^2\left( \frac{\theta}{2} \right) + \alpha^2 \right)^2}
+\]
+
+Here, \( \alpha \) is the screening parameter, which introduces a cut-off to the long-range nature of the Coulomb potential.
+
+### 3. **Energy Dependence and Comparison**
+
+#### Low Energy Case (Small \( E \)):
+
+- **Coulomb Potential**: The differential cross-section behaves as \( 1 / \sin^4\left(\frac{\theta}{2}\right) \), which means there is a strong dependence on the scattering angle, with most scattering occurring at small angles.
+  
+- **Screened Coulomb Potential**: When \( \alpha \) is large (i.e., strong screening), the term \( 4k^2 \sin^2\left( \frac{\theta}{2} \right) \) becomes small compared to \( \alpha^2 \). Thus, the differential cross-section falls off more rapidly than for the Coulomb potential, reducing the likelihood of long-range interactions. For small energies, \( \alpha \) dominates, meaning the exponential decay has a significant impact, leading to a smaller cross-section compared to the Coulomb case.
+
+#### High Energy Case (Large \( E \)):
+
+- **Coulomb Potential**: At higher energies, the overall cross-section decreases as \( E^{-2} \), meaning that fast-moving particles are less likely to be scattered by the potential.
+  
+- **Screened Coulomb Potential**: For large energies, the term \( 4k^2 \sin^2\left( \frac{\theta}{2} \right) \) becomes much larger than \( \alpha^2 \), so the screening effect becomes negligible at small angles. In this limit, the screened cross-section approximates the Coulomb cross-section, meaning that for very high energies, the screening is less effective.
+
+### 4. **Relation Between \( \alpha \) and Initial Energy**
+
+The **screening parameter \( \alpha \)** introduces a cutoff in the range of the interaction, and its effect becomes more pronounced at **low energies**. As energy increases, the contribution from \( \alpha \) diminishes.
+
+- For **low energies** \( E \), the screening parameter \( \alpha \) dominates because the term \( \alpha^2 \) in the denominator of the screened Coulomb cross-section plays a significant role. The screening effectively reduces the range of interaction, leading to a smaller cross-section.
+  
+- For **high energies** \( E \), the term \( 4k^2 \sin^2\left( \frac{\theta}{2} \right) \) grows larger, and the effect of \( \alpha \) becomes negligible. The screened cross-section begins to resemble the Coulomb cross-section, and the screening parameter has a much smaller impact.
+
+### 5. **Relation Between \( \alpha \) and Energy Thresholds**
+
+The **screening parameter \( \alpha \)** can be related to the **Debye screening length** \( \lambda_D \), which is often energy-dependent in plasmas or other media. The parameter \( \alpha \) is inversely proportional to the screening length:
+
+\[
+\alpha \sim \frac{1}{\lambda_D}
+\]
+
+And the **Debye screening length** \( \lambda_D \) depends on the kinetic energy (or temperature \( T \)) of the particles. As energy increases, the screening length becomes longer, meaning \( \alpha \) becomes smaller at high energies.
+
+### Summary of \( \alpha \)-Energy Relationship:
+- **Low energy**: Large \( \alpha \) (short screening length), significant deviation from Coulomb scattering.
+- **High energy**: Small \( \alpha \) (long screening length), behavior approaches the Coulomb potential.
+
+### Conclusion:
+
+- For **low initial energies**, the screened Coulomb potential results in a much smaller cross-section due to the screening effect, which effectively reduces the range of interaction.
+- For **high initial energies**, the screening becomes negligible, and the screened Coulomb cross-section approaches the pure Coulomb cross-section.
+  
+The screening parameter \( \alpha \) is inversely related to the energy or temperature of the interacting particles, becoming smaller (weaker screening) at higher energies and larger (stronger screening) at lower energies.
