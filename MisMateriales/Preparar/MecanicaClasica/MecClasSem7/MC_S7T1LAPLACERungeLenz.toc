@@ -1,0 +1,7 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{El problema de Kepler y el vector $\mathbf {A}$, Laplace-Runge-Lenz }{3}{0}{1}
+\beamer@sectionintoc {2}{El vector $\mathbf {A}$ como cantidad conservada}{8}{0}{2}
+\beamer@sectionintoc {3}{Secci\'on}{9}{0}{3}
+\beamer@sectionintoc {4}{Secci\'on}{10}{0}{4}
+\beamer@sectionintoc {5}{Secci\'on}{11}{0}{5}
+\beamer@sectionintoc {6}{Secci\'on}{12}{0}{6}

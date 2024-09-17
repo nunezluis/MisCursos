@@ -20,7 +20,7 @@
 
 \begin{document}
 
-\title{\textbf{Título presentación} }
+\title{\textbf{Vector Laplace-Runge-Lenz} }
 \author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
 \institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
 \textit{Universidad Industrial de Santander, Santander, Colombia } \\
@@ -37,19 +37,28 @@
 
 
 %%%%% Diapo 1
-\section{Sección}
+\section{El problema de Kepler y el vector $\mathbf{A}$, Laplace-Runge-Lenz }
 \frame{
-  \frametitle{Título transparencia}
+  \frametitle{El vector $\mathbf{A}$}
    \begin{itemize}  
-  	\item<1-> 
+  	\item<1-> La trayectoria del problema de Kepler con el potencial central $V(r)=-k / r$ y la fuerza gravitacional $\mathbf{f}(r)=f(r) \hat{\mathbf{r}}$, con $f(r)=-k / r^2$, es una sección cónica, $\frac{q}{r}=1+e \cos \theta$, donde $q=L^2 / \mu k$, y $e=\sqrt{1+\frac{2 E L^2}{\mu k^2}}$.
+	\item<2-> Podemos definir $\mathbf{r} \cdot \mathbf{A}= r A \cos \theta = L^2-\mu k r$, con $A \equiv \mu k e =$ cte.
+	\item<3-> $\mathbf{A}$ es un vector de magnitud es constante y dirección debe estar en la dirección del perihelio. Si la dirección está en el eje $x$,  $\mathbf{A}=\mu k e \hat{\mathbf{i}}$.
+	  \begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/VectorA.png}
+   	\end{figure}
+	\item<4-> Como $L^2=\mathbf{L} \cdot \mathbf{L}=\mathbf{L} \cdot(\mathbf{r} \times \mathbf{p})=\mathbf{r} \cdot(\mathbf{p} \times \mathbf{l}) \Rightarrow \mathbf{r} \cdot \mathbf{A}=\mathbf{r} \cdot[(\mathbf{p} \times \mathbf{L})-\mu k \hat{\mathbf{r}}]$
+	\item<5-> Donde $\mathbf{A} \equiv \mathbf{p} \times \mathbf{L} -\mu k \hat{\mathbf{r}}$ y también $\mathbf{A} \cdot \mathbf{L}=0$
+	 
     \end{itemize}
 }
 %%%%% Diapo 2
-\section{Sección}
+\section{El vector $\mathbf{A}$ como cantidad conservada}
 \frame{
-  \frametitle{Título transparencia}
-   	\begin{itemize}  
-  \item<1-> 
+  \frametitle{$\mathbf{A}$ es cantidad conservada}
+   \begin{itemize}  
+  	\item<1-> Consideremos $\frac{d \mathbf{A}}{d t}=\frac{d}{d t}(\mathbf{p} \times \mathbf{L})-\mu k \frac{d \hat{\mathbf{r}}}{d t}$
+	\item<2-> 
     \end{itemize}
 }
 
