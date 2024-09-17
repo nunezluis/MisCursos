@@ -44,10 +44,10 @@
   	\item<1-> La trayectoria del problema de Kepler con el potencial central $V(r)=-k / r$ y la fuerza gravitacional $\mathbf{f}(r)=f(r) \hat{\mathbf{r}}$, con $f(r)=-k / r^2$, es una sección cónica, $\frac{q}{r}=1+e \cos \theta$, donde $q=L^2 / \mu k$, y $e=\sqrt{1+\frac{2 E L^2}{\mu k^2}}$.
 	\item<2-> Podemos definir $\mathbf{r} \cdot \mathbf{A}= r A \cos \theta = L^2-\mu k r$, con $A \equiv \mu k e =$ cte.
 	\item<3-> $\mathbf{A}$ es un vector de magnitud es constante y dirección debe estar en la dirección del perihelio. Si la dirección está en el eje $x$,  $\mathbf{A}=\mu k e \hat{\mathbf{i}}$.
-	  \begin{figure}[t]
+	\begin{figure}[t]
 		\includegraphics[width=1.8in]{Figuras/VectorA.png}
    	\end{figure}
-	\item<4-> Como $L^2=\mathbf{L} \cdot \mathbf{L}=\mathbf{L} \cdot(\mathbf{r} \times \mathbf{p})=\mathbf{r} \cdot(\mathbf{p} \times \mathbf{l}) \Rightarrow \mathbf{r} \cdot \mathbf{A}=\mathbf{r} \cdot[(\mathbf{p} \times \mathbf{L})-\mu k \hat{\mathbf{r}}]$
+	\item<4-> Como $L^2=\mathbf{L} \cdot \mathbf{L}=\mathbf{L} \cdot(\mathbf{r} \times \mathbf{p})=\mathbf{r} \cdot(\mathbf{p} \times \mathbf{L}) \Rightarrow \mathbf{r} \cdot \mathbf{A}=\mathbf{r} \cdot[(\mathbf{p} \times \mathbf{L})-\mu k \hat{\mathbf{r}}]$
 	\item<5-> Donde $\mathbf{A} \equiv \mathbf{p} \times \mathbf{L} -\mu k \hat{\mathbf{r}}$ y también $\mathbf{A} \cdot \mathbf{L}=0$
 	 
     \end{itemize}
@@ -58,17 +58,32 @@
   \frametitle{$\mathbf{A}$ es cantidad conservada}
    \begin{itemize}  
   	\item<1-> Consideremos $\frac{d \mathbf{A}}{d t}=\frac{d}{d t}(\mathbf{p} \times \mathbf{L})-\mu k \frac{d \hat{\mathbf{r}}}{d t}$
-	\item<2-> 
-    \end{itemize}
+	\item<2-> El primer término $\frac{d}{d t}(\mathbf{p} \times \mathbf{L})=\frac{d \mathbf{p}}{d t} \times \mathbf{L}+\mathbf{p} \times \cancelto{0}{\frac{d \mathbf{L}}{d t}} =\frac{d \mathbf{p}}{d t} \times(\mathbf{r} \times \mu \mathbf{v})$
+	\item<3-> Por otro lado, $\frac{d \mathbf{p}}{d t}=\mathbf{f}(r)=f(r) \hat{\mathbf{r}}=f(r) \frac{\mathbf{r}}{r}$ 
+	\item<4-> Entonces $\frac{d}{d t}(\mathbf{p} \times \mathbf{L})=\mu \frac{f(r)}{r}\left[\mathbf{r} \times\left(\mathbf{r} \times \frac{d \mathbf{r}}{d t}\right)\right] = \mu \frac{f(r)}{r}\left[\mathbf{r}\left(\mathbf{r} \cdot \frac{d \mathbf{r}}{d t}\right)-r^2 \frac{d \mathbf{r}}{d t}\right] $ \\ ya que $\mathbf{a} \times(\mathbf{b} \times \mathbf{c})=\mathbf{b}(\mathbf{a} \cdot \mathbf{c})-\mathbf{c}(\mathbf{a} \cdot \mathbf{b})$
+	\item<5-> Como $\frac{d}{d t}(\mathbf{r} \cdot \mathbf{r})=2 \mathbf{r} \cdot \frac{d \mathbf{r}}{d t}=\frac{d}{d t}\left(r^2\right)=2 r \frac{d r}{d t}$ 
+	\item<6-> Tendremos $\frac{d}{d t}(\mathbf{p} \times \mathbf{L})=\mu f(r)\left[\mathbf{r} \frac{d r}{d t}-r \frac{d \mathbf{r}}{d t}\right]$
+	\item<7-> Además $\frac{d}{d t}\left(\frac{\mathbf{r}}{r}\right)  =\frac{d \mathbf{r}}{d t} \frac{1}{r}-\frac{\mathbf{r}}{r^2} \frac{d r}{d t} \Rightarrow \quad-r^2 \frac{d}{d t}\left(\frac{\mathbf{r}}{r}\right)  =\mathbf{r} \frac{d r}{d t}-r \frac{d \mathbf{r}}{d t}$
+	\item<8-> Con lo cual $\frac{d}{d t}(\mathbf{p} \times \mathbf{L})=-\mu f(r) r^2 \frac{d}{d t}\left(\frac{\mathbf{r}}{r}\right) = \mu k \frac{d}{d t}\left(\frac{\mathbf{r}}{r}\right)=\mu k \frac{d \hat{\mathbf{r}}}{d t}$ para $f(r)=-k / r^2$
+	\item<9-> y finalmente $\frac{d \mathbf{A}}{d t}=0 \Rightarrow \mathbf{A} \equiv \mathbf{p} \times \mathbf{L} -\mu k \hat{\mathbf{r}} =$cte
+
+\end{itemize}
 }
 
 %%%%% Diapo 2
-\section{Sección}
+\section{Problema Kepler superintegrable}
 \frame{
-  \frametitle{Título transparencia}
-   	\begin{itemize}  
-  \item<1-> 
-    \end{itemize}
+\frametitle{Kepler superintegrable}
+\begin{itemize}  
+	\item<1-> La magnitud del vector \textbf{A} para la fuerza gravitacional se expresa en términos de $L$ y $E$ como $A^2=(\mu k e)^2=\mu^2 k^2+2 \mu E L^2=$ cte
+	\item<2-> La dirección de $\mathbf{A}$, correspondiente a la dirección del perihelio, provee una nueva cantidad conservada en el problema de Kepler.
+	\begin{figure}[t]
+		\includegraphics[width=1.5in]{Figuras/DirA.png}
+   	\end{figure}
+	\item<3-> El sistema de dos cuerpos sujetos a la fuerza gravitacional que varía como el inverso del cuadrado de la distancia constituye un sistema superintegrable. La constancia de la dirección $\hat{\mathbf{A}}$ implica que una órbita en el potencial $V(r)=-k / r$ no presenta precesión.
+	\item<4-> Existen seis grados de libertad (tres para cada partícula) y siete cantidades conservadas: las tres componentes de la velocidad del centro de masa $\mathbf{v}_{c m}$, la dirección del momento angular $\mathbf{L}$, su magnitud $L$, la energía $E$ y la dirección del vector de Laplace-Runge-Lenz $\hat{\mathbf{A}}$
+
+\end{itemize}
 }
 %%%%% Diapo 2
 \section{Sección}
