@@ -1,12 +1,12 @@
 | Estudiantes                           | Problemas | Asignaciones | Previos |
 |---------------------------------------|-----------|--------------|---------|
 | ANDICA CORREDOR JURIANNY PATRICIA     |           |              |         |
-| ARCHILA CASTRO FABIAN ALEJANDRO       |           |              |         |
+| ARCHILA CASTRO FABIAN ALEJANDRO       | P2NE,P3NE |              |         |
 | BAEZ FLOREZ WILSON DAVID              |           |              |         |
 | BALCARCEL DUARTE OSCAR ISAAC          |           |              |         |
-| CALDERON MARTINEZ MICHEL SNEYDER      |           |              |         |
-| CAMACHO OLMOS JUAN JOSE               |           |              |         |
-| CORREA VERGARA SANTIAGO               |           |              |         |
+| CALDERON MARTINEZ MICHEL SNEYDER      |           |  NE          |         |
+| CAMACHO OLMOS JUAN JOSE               | P2NE,P3NE |              |         |
+| CORREA VERGARA SANTIAGO               | P2NE,P3NE |              |         |
 | CORZO LAVERDE LAURA NATALIA           |           |              |         |
 | FONSECA RINCON MANDIUS                |           |              |         |
 | GARCIA CASTELLANOS DAVID LEONARDO     |           |              |         |
@@ -17,17 +17,17 @@
 | MONTAGUT PINO ALONSO                  |           |              |         |
 | MORALES RANGEL DANIEL FERNANDO        |           |              |         |
 | MORENO RUEDA LAURA VALENTINA          |           |              |         |
-| MURCIA PEREZ JUAN CAMILO              |           |              |         |
+| MURCIA PEREZ JUAN CAMILO              |           | NE           |         |
 | OSPINA ALVAREZ DAMIAN STEVEN          |           |              |         |
 | PEREZ OSORIO MARIA JOSE               |           |              |         |
 | PEÑA ACOSTA ALEXANDRA                 |           |              |         |
-| PINZON QUINTERO SHARITH DAYANNA       |           |              |         |
+| PINZON QUINTERO SHARITH DAYANNA       |           | NE             |         |
 | QUINTERO PEREZ JESUS LEONARDO         |           |              |         |
-| RODRIGUEZ OLAGO DEIVY ALEXANDER       |           |              |         |
+| RODRIGUEZ OLAGO DEIVY ALEXANDER       | P2NE,P3NE |              |         |
 | SANCHEZ MANJARRES MARIA JOSE          |           |              |         |
-| SANDOVAL REYES ANGIE YULIANA          |           |              |         |
+| SANDOVAL REYES ANGIE YULIANA          |           | NE             |         |
 | SERRANO MENDOZA ALEXANDRA             |           |              |         |
 | SILVA SERRANO JORGE ANDRES            |           |              |         |
 | URIBE MESA PAULA ANDREA               |           |              |         |
-| VEGA JUAN DAVID                       |           |              |         |
+| VEGA JUAN DAVID                       |P2NE,P3NE  |              |         |
 | VERANO RAMIREZ JUAN DAVID             |           |              |         |
