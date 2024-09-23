@@ -25,7 +25,7 @@
 | QUINTERO PEREZ JESUS LEONARDO         |           |              |         |
 | RODRIGUEZ OLAGO DEIVY ALEXANDER       | P2NE,P3NE |              |         |
 | SANCHEZ MANJARRES MARIA JOSE          | P3NE      |              |         |
-| SANDOVAL REYES ANGIE YULIANA          |           | NE             |         |
+| SANDOVAL REYES ANGIE YULIANA          | P3NE      | NE             |         |
 | SERRANO MENDOZA ALEXANDRA             |           |              |         |
 | SILVA SERRANO JORGE ANDRES            |           |              |         |
 | URIBE MESA PAULA ANDREA               |           |              |         |
