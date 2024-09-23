@@ -13,21 +13,21 @@
 | GONZALEZ RONDON JEYSSON GUILLERMO     |           |              |         |
 | LEON PULGARIN JUAN FELIPE             |           |              |         |
 | MERCHAN LEON DAVID SANTIAGO           |           |              |         |
-| MOLANO LEON BRAYAN STEVEN             |           |              |         |
+| MOLANO LEON BRAYAN STEVEN             | P3NE      |              |         |
 | MONTAGUT PINO ALONSO                  |           |              |         |
 | MORALES RANGEL DANIEL FERNANDO        |           |              |         |
-| MORENO RUEDA LAURA VALENTINA          |           |              |         |
+| MORENO RUEDA LAURA VALENTINA          | P3NE      |              |         |
 | MURCIA PEREZ JUAN CAMILO              |           | NE           |         |
 | OSPINA ALVAREZ DAMIAN STEVEN          |           |              |         |
 | PEREZ OSORIO MARIA JOSE               |           |              |         |
 | PEÑA ACOSTA ALEXANDRA                 |           |              |         |
-| PINZON QUINTERO SHARITH DAYANNA       |           | NE             |         |
+| PINZON QUINTERO SHARITH DAYANNA       | P3NE      | NE             |         |
 | QUINTERO PEREZ JESUS LEONARDO         |           |              |         |
 | RODRIGUEZ OLAGO DEIVY ALEXANDER       | P2NE,P3NE |              |         |
-| SANCHEZ MANJARRES MARIA JOSE          |           |              |         |
+| SANCHEZ MANJARRES MARIA JOSE          | P3NE      |              |         |
 | SANDOVAL REYES ANGIE YULIANA          |           | NE             |         |
 | SERRANO MENDOZA ALEXANDRA             |           |              |         |
 | SILVA SERRANO JORGE ANDRES            |           |              |         |
 | URIBE MESA PAULA ANDREA               |           |              |         |
 | VEGA JUAN DAVID                       |P2NE,P3NE  |              |         |
-| VERANO RAMIREZ JUAN DAVID             |           |              |         |
+| VERANO RAMIREZ JUAN DAVID             |P3NE       |              |         |
