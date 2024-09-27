@@ -14,25 +14,22 @@
 \headcommand {\sectionentry {2}{Oscilaciones con varios grados de libertad}{13}{Oscilaciones con varios grados de libertad}{0}}
 \headcommand {\slideentry {2}{0}{1}{13/16}{}{0}}
 \headcommand {\beamer@framepages {13}{16}}
-\headcommand {\slideentry {2}{0}{2}{17/20}{}{0}}
-\headcommand {\beamer@framepages {17}{20}}
-\headcommand {\beamer@sectionpages {13}{20}}
-\headcommand {\beamer@subsectionpages {13}{20}}
-\headcommand {\sectionentry {3}{Secci\'on}{21}{Secci\'on}{0}}
-\headcommand {\slideentry {3}{0}{1}{21/21}{}{0}}
-\headcommand {\beamer@framepages {21}{21}}
-\headcommand {\beamer@sectionpages {21}{21}}
-\headcommand {\beamer@subsectionpages {21}{21}}
-\headcommand {\sectionentry {4}{Secci\'on}{22}{Secci\'on}{0}}
-\headcommand {\slideentry {4}{0}{1}{22/22}{}{0}}
-\headcommand {\beamer@framepages {22}{22}}
-\headcommand {\beamer@sectionpages {22}{22}}
-\headcommand {\beamer@subsectionpages {22}{22}}
-\headcommand {\sectionentry {5}{Secci\'on}{23}{Secci\'on}{0}}
-\headcommand {\slideentry {5}{0}{1}{23/23}{}{0}}
-\headcommand {\beamer@framepages {23}{23}}
-\headcommand {\beamer@partpages {1}{23}}
-\headcommand {\beamer@subsectionpages {23}{23}}
-\headcommand {\beamer@sectionpages {23}{23}}
-\headcommand {\beamer@documentpages {23}}
+\headcommand {\slideentry {2}{0}{2}{17/23}{}{0}}
+\headcommand {\beamer@framepages {17}{23}}
+\headcommand {\beamer@sectionpages {13}{23}}
+\headcommand {\beamer@subsectionpages {13}{23}}
+\headcommand {\sectionentry {3}{Secci\'on}{24}{Secci\'on}{0}}
+\headcommand {\slideentry {3}{0}{1}{24/30}{}{0}}
+\headcommand {\beamer@framepages {24}{30}}
+\headcommand {\beamer@sectionpages {24}{30}}
+\headcommand {\beamer@subsectionpages {24}{30}}
+\headcommand {\sectionentry {4}{Ejemplo: Osciladores Acoplados}{31}{Ejemplo: Osciladores Acoplados}{0}}
+\headcommand {\slideentry {4}{0}{1}{31/35}{}{0}}
+\headcommand {\beamer@framepages {31}{35}}
+\headcommand {\slideentry {4}{0}{2}{36/40}{}{0}}
+\headcommand {\beamer@framepages {36}{40}}
+\headcommand {\beamer@partpages {1}{40}}
+\headcommand {\beamer@subsectionpages {31}{40}}
+\headcommand {\beamer@sectionpages {31}{40}}
+\headcommand {\beamer@documentpages {40}}
 \headcommand {\gdef \inserttotalframenumber {9}}
