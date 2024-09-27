@@ -154,7 +154,11 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
 + [Oumuamua](https://science.nasa.gov/solar-system/comets/oumuamua/)
 + [Borisov](https://science.nasa.gov/solar-system/comets/2i-borisov/)
 
-### Clase S8-C15/C16  
+### Clase S8-C15/C16
+
+[Pequeñas oscilaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T1Oscilaciones.pdf) 
+
+
 
 ### Clase S9-C17/C18
 
