@@ -1,9 +1,9 @@
 | Estudiantes                           | Problemas | Asignaciones | Previos |
 |---------------------------------------|-----------|--------------|---------|
-| ANDICA CORREDOR JURIANNY PATRICIA     |           |              |         |
+| ANDICA CORREDOR JURIANNY PATRICIA     |           |              |*        |
 | ARCHILA CASTRO FABIAN ALEJANDRO       | P2NE,P3NE |              |         |
 | BAEZ FLOREZ WILSON DAVID              |           |              |         |
-| BALCARCEL DUARTE OSCAR ISAAC          |           |              |         |
+| BALCARCEL DUARTE OSCAR ISAAC          |           |              |*        |
 | CALDERON MARTINEZ MICHEL SNEYDER      |           |  NE          |         |
 | CAMACHO OLMOS JUAN JOSE               | P2NE,P3NE |              |*        |
 | CORREA VERGARA SANTIAGO               | P2NE,P3NE |              |*        |
@@ -15,11 +15,11 @@
 | MERCHAN LEON DAVID SANTIAGO           |           |              |*        |
 | MOLANO LEON BRAYAN STEVEN             | P3NE      |              |         |
 | MONTAGUT PINO ALONSO                  |           |              |*        |
-| MORALES RANGEL DANIEL FERNANDO        |           |              |         |
+| MORALES RANGEL DANIEL FERNANDO        |           |              |*        |
 | MORENO RUEDA LAURA VALENTINA          | P3NE      |              |         |
 | MURCIA PEREZ JUAN CAMILO              |           | NE           |*        |
 | OSPINA ALVAREZ DAMIAN STEVEN          |           |              |         |
-| PINZON QUINTERO SHARITH DAYANNA       | P3NE      | NE             |         |
+| PEREZ OSORIO MARIA JOSE               |           |              |*        |
 | PEÑA ACOSTA ALEXANDRA                 |           |              |*        |
 | PINZON QUINTERO SHARITH DAYANNA       | P3NE      | NE           |         |
 | QUINTERO PEREZ JESUS LEONARDO         |           |              |         |
