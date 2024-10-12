@@ -3,7 +3,7 @@
 | ANDICA CORREDOR JURIANNY PATRICIA     |           |  3.0         |*  3.0      |
 | ARCHILA CASTRO FABIAN ALEJANDRO       | P2NE,P3NE |  1.5         |         |
 | BAEZ FLOREZ WILSON DAVID              |           | 3.0          |* 3.3       |
-| BALCARCEL DUARTE OSCAR ISAAC          |           |              |* 3.0       |
+| BALCARCEL DUARTE OSCAR ISAAC          |           | 3.5          |* 3.0       |
 | CALDERON MARTINEZ MICHEL SNEYDER      |           |  NE          |         |
 | CAMACHO OLMOS JUAN JOSE               | P2NE,P3NE | 1.5          |* 3.75       |
 | CORREA VERGARA SANTIAGO               | P2NE,P3NE | 1.5          |* 2.5       |
@@ -28,6 +28,6 @@
 | SANDOVAL REYES ANGIE YULIANA          | P3NE      | 2.5          |* 2.75       |
 | SERRANO MENDOZA ALEXANDRA             |           |              |* 3.0       |
 | SILVA SERRANO JORGE ANDRES            |           | 2.0          |* 3.5     |
-| URIBE MESA PAULA ANDREA               |           |              |* 3.25       |
+| URIBE MESA PAULA ANDREA               |           | 3.5          |* 3.25       |
 | VEGA JUAN DAVID                       |P2NE,P3NE  |              |         |
 | VERANO RAMIREZ JUAN DAVID             |P3NE       |              |* 1.0        |
