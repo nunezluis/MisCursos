@@ -163,9 +163,23 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
 ### Clase S9-C17/C18
 
 ### Clase S10-C19/C20  
++ **Estudie**
+  + Oscilaciones pequeñas en una dimensión
+  + Oscilaciones con varios grados de libertad
+  + Modos normales
 
-[Modos normales de oscilación y neutrinos](https://www.youtube.com/watch?v=YqVF3NSc5xg)
-[Oscilación de la molécula CO2](https://www.youtube.com/watch?v=K6dSM_nDee8)
++ **Rehaga los ejemplos resueltos**
+  + Oscilaciones con varios grados de libertad
+  + Modos normales
+
+#### Materiales
+##### Presentaciones
++ [Pequeñas oscilaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T1Oscilaciones.pdf)
++ [Modos normales de oscilación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S10T1ModosNormales.pdf)
+
+##### Videos
++ [Modos normales de oscilación y neutrinos](https://www.youtube.com/watch?v=YqVF3NSc5xg)
++ [Oscilación de la molécula CO2](https://www.youtube.com/watch?v=K6dSM_nDee8)
 
 ### Clase S11-C21/C22
 
