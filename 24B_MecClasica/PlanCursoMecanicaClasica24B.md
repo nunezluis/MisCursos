@@ -156,13 +156,16 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
 
 ### Clase S8-C15/C16
 
-[Pequeñas oscilaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T1Oscilaciones.pdf) 
+[Pequeñas oscilaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T1Oscilaciones.pdf)
 
 
 
 ### Clase S9-C17/C18
 
 ### Clase S10-C19/C20  
+
+[Modos normales de oscilación y neutrinos](https://www.youtube.com/watch?v=YqVF3NSc5xg)
+[Oscilación de la molécula CO2](https://www.youtube.com/watch?v=K6dSM_nDee8)
 
 ### Clase S11-C21/C22
 
