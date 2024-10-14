@@ -1,6 +1,8 @@
 \babel@toc {spanish}{}\relax 
-\beamer@sectionintoc {1}{Modos normales}{3}{0}{1}
-\beamer@sectionintoc {2}{Secci\'on}{14}{0}{2}
-\beamer@sectionintoc {3}{Secci\'on}{15}{0}{3}
-\beamer@sectionintoc {4}{Secci\'on}{16}{0}{4}
-\beamer@sectionintoc {5}{Secci\'on}{17}{0}{5}
+\beamer@sectionintoc {1}{Marco te\'orico: Modos normales de oscilaci\'on}{3}{0}{1}
+\beamer@sectionintoc {2}{Un ejemplo: Modos Normales Oscilaci\'on para el CO2}{14}{0}{2}
+\beamer@subsectionintoc {2}{1}{Descripci\'on del sistema CO2}{14}{0}{2}
+\beamer@subsectionintoc {2}{2}{Energ\IeC {\'\i }as cin\'etica y potencial}{16}{0}{2}
+\beamer@subsectionintoc {2}{3}{Las frecuencias de oscilaci\'on $\omega _k$}{22}{0}{2}
+\beamer@subsectionintoc {2}{4}{Modo normal de oscilaci\'on para $\omega _1=0$}{25}{0}{2}
+\beamer@subsectionintoc {2}{5}{Modo normal de oscilaci\'on para $\omega _2=\sqrt {\frac {k}{m}}$}{28}{0}{2}

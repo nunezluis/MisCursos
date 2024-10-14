@@ -37,7 +37,7 @@
 
 
 %%%%% Diapo 1
-\section{Modos normales de oscilación}
+\section{Marco teórico: Modos normales de oscilación}
 \frame{
   \frametitle{Modos normales de oscilación 1/2}
    \begin{itemize}  
@@ -67,33 +67,85 @@ $,  2 pequeños desplazamientos que oscilas con la frecuencia $\omega_2$ alrededo
 
 }
 %%%%% Diapo 2
-\section{Sección}
+\section{Un ejemplo: Modos Normales Oscilación para el CO2}
+\subsection{Descripción del sistema CO2}
 \frame{
-\frametitle{Título transparencia}
+\frametitle{Descripción del sistema CO2}
 \begin{itemize}  
-	\item<1-> 
+	\item<1-> Consideremos el siguiente sistema que representa la molécula de CO2
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/OscilaCO2.png}
+   	\end{figure}
+	$M$ masa del átomo $\mathrm{C}; m$ masa de los átomos $\mathrm{O}$; $l$ la separación entre posiciones de equilibrio; la constante elástica $k$ de interacción C-O; $l_1$, $l_2$, las distancias de los átomos fuera del equilibrio.
+	\item<2-> Sean $x_{01}, x_{02}, x_{03}$ las posiciones de equilibrio de las tres partículas y $\eta_i=x_i-x_{0 i}$, con $i=1,2,3$ los desplazamientos del equilibrio.
 \end{itemize}
 }
 %%%%% Diapo 2
-\section{Sección}
+\subsection{Energías cinética y potencial}
 \frame{
-\frametitle{Título transparencia}
-\begin{itemize}  
-	\item<1-> 
+\frametitle{Energías cinética y potencial}
+\begin{itemize}
+	\item<1-> La energía cinética es $T = \frac{1}{2} m \dot{\eta}_1^2+\frac{1}{2} M \dot{\eta}_2^2+\frac{1}{2} m \dot{\eta}_3^2$
+	\item<2-> La energía potencial es $V=\frac{1}{2} k\left(l_1-l\right)^2+\frac{1}{2} k\left(l_2-l\right)^2$. 
+	\item<3-> Como $ l_1-l=\left(x_2-x_1\right)-\left(x_{02}-x_{01}\right)=\eta_2-\eta_1$ y \\  $l_2-l=\left(x_3-x_2\right)-\left(x_{03}-x_{02}\right)=\eta_3-\eta_2$
+	\item<4-> Tendremos $V  =\frac{1}{2} k\left(\eta_2-\eta_1\right)^2+\frac{1}{2} k\left(\eta_3-\eta_2\right)^2 \Rightarrow $ \\ $V =\frac{1}{2} k\left(\eta_1^2+2 \eta_2^2+\eta_3^2-2 \eta_1 \eta_2-2 \eta_2 \eta_3\right)$
+	\item<4-> Entonces, como $T=\frac{1}{2} \sum_{i, j} T_{i j} \dot{\eta}_i \dot{\eta}_j$, y  $V=\frac{1}{2} \sum_{i, j} V_{i j} \eta_i \eta_j$
+	\item<5-> Tendremos 
+	$T_{ij} = \left(
+	\begin{array}{lll}
+	T_{11}=m & T_{12}=0 & T_{13}=0 \\
+	T_{21}=0 & T_{22}=M & T_{23}=0 \\
+	T_{31}=0 & T_{32}=0 & T_{33}=m
+	\end{array}
+	\right)$
+	\item<6-> y 
+	$V_{ij} = \left(
+	\begin{array}{lll}
+		V_{11}=k & V_{12}=-k & V_{13}=0 \\
+		V_{21}=-k & V_{22}=2 k & V_{23}=-k \\
+		V_{31}=0 & V_{32}=-k & V_{33}=k
+	\end{array} \right)$
 \end{itemize}
 }
 %%%%% Diapo 2
-\section{Sección}
+\subsection{Las frecuencias de oscilación $\omega_k$}
 \frame{
-\frametitle{Título transparencia}
+\frametitle{Las frecuencias de oscilación $\omega_k$}
 \begin{itemize}  
-	\item<1-> 
+	\item<1-> La condición det $\left|V_{i j}-\omega^2 T_{i j}\right|=0$, implica
+	$\left|\begin{array}{ccc}
+		k-\omega^2 m & -k & 0 \\
+		-k & 2 k-\omega^2 M & -k \\
+		0 & -k & k-\omega^2 m
+	\end{array}\right|=0$ para las frecuencias $\omega_k$
+	\item<2-> La ecuación característica cúbica para $\omega_k$, es $\left(k-\omega^2 m\right)\left[\left(2 k-\omega^2 M\right)\left(k-\omega^2 m\right)-k^2\right]-k^2\left(k-\omega^2 m\right)=0$  \\ $\Rightarrow \quad \omega^2\left(k-\omega^2 m\right)\left[k(M+2 m)-\omega^2 M m\right]=0$
+	\item<3-> Con soluciones $\omega_1=0, \quad \omega_2=\sqrt{\frac{k}{m}}, \quad \omega_3=\sqrt{\frac{k}{m}\left(1+\frac{2 m}{M}\right)}$ 
 \end{itemize}
 }
 %%%%% Diapo 2
-\section{Sección}
+\subsection{Modo normal de oscilación para $\omega_1=0$}
 \frame{
-\frametitle{Título transparencia}
+\frametitle{Modo normal de oscilación para $\omega_1=0$}
+\begin{itemize}  
+	\item<1-> Las amplitudes $a_i$ surgen de las 3 ecuaciones para cada $\omega_k$,
+	$\begin{array}{cccc}
+		i=1: & \left(k-\omega_k^2 m\right) a_1-k a_2 & = & 0 \\
+		i=2: & -k a_1+\left(2 k-\omega_k^2 M\right) a_2-k a_3 & =0 \\
+		i=3: & -k a_2+\left(k-\omega_k^2 m\right) a_3 & = & 0
+		\end{array}$
+	\item<2-> La frecuencia angular $\omega_1=0$ es una traslación uniforme de la molécula ya que 
+	$\ddot{\zeta}_1=0 \Rightarrow \dot{\zeta}_1=\text { cte } \Rightarrow$ reposo o velocidad constante
+	\item<3-> Entonces para $\omega_1=0$, tenemos  $a_1(\omega_1)=a_2(\omega_1)=a_3(\omega_1)$
+
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/OscilaCO2Modo1.png}
+   	\end{figure}
+\end{itemize}
+}  
+%%%%% Diapo 2
+\subsection{Modo normal de oscilación para $\omega_2=\sqrt{\frac{k}{m}}$}
+\frame{
+\frametitle{Modo normal de oscilación para $\omega_2=\sqrt{\frac{k}{m}}$}
 \begin{itemize}  
 	\item<1-> 
 \end{itemize}
