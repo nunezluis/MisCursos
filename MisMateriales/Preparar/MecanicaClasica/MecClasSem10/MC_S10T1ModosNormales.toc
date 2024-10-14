@@ -4,5 +4,5 @@
 \beamer@subsectionintoc {2}{1}{Descripci\'on del sistema CO2}{14}{0}{2}
 \beamer@subsectionintoc {2}{2}{Energ\IeC {\'\i }as cin\'etica y potencial}{16}{0}{2}
 \beamer@subsectionintoc {2}{3}{Las frecuencias de oscilaci\'on $\omega _n$}{22}{0}{2}
-\beamer@subsectionintoc {2}{4}{Modo normal de oscilaci\'on para $\omega _1=0$}{25}{0}{2}
+\beamer@subsectionintoc {2}{4}{Ecuaciones generales y modo normal de oscilaci\'on para $\omega _1=0$}{25}{0}{2}
 \beamer@subsectionintoc {2}{5}{Modos normales para $\omega _2=\sqrt {\frac {k}{m}}$ y $\omega _3=\sqrt {\frac {k}{m}\left (1+\frac {2 m}{M}\right )}$}{28}{0}{2}
