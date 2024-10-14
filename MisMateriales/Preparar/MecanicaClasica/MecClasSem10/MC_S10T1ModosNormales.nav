@@ -21,19 +21,19 @@
 \headcommand {\slideentry {2}{2}{1}{16/21}{Energ\IeC {\'\i }as cin\'etica y potencial}{0}}
 \headcommand {\beamer@framepages {16}{21}}
 \headcommand {\beamer@subsectionpages {16}{21}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{22}{Las frecuencias de oscilaci\'on $\omega _k$}}
-\headcommand {\slideentry {2}{3}{1}{22/24}{Las frecuencias de oscilaci\'on $\omega _k$}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{22}{Las frecuencias de oscilaci\'on $\omega _n$}}
+\headcommand {\slideentry {2}{3}{1}{22/24}{Las frecuencias de oscilaci\'on $\omega _n$}{0}}
 \headcommand {\beamer@framepages {22}{24}}
 \headcommand {\beamer@subsectionpages {22}{24}}
 \headcommand {\beamer@subsectionentry {0}{2}{4}{25}{Modo normal de oscilaci\'on para $\omega _1=0$}}
 \headcommand {\slideentry {2}{4}{1}{25/27}{Modo normal de oscilaci\'on para $\omega _1=0$}{0}}
 \headcommand {\beamer@framepages {25}{27}}
 \headcommand {\beamer@subsectionpages {25}{27}}
-\headcommand {\beamer@subsectionentry {0}{2}{5}{28}{Modo normal de oscilaci\'on para $\omega _2=\sqrt {\frac {k}{m}}$}}
-\headcommand {\slideentry {2}{5}{1}{28/28}{Modo normal de oscilaci\'on para $\omega _2=\sqrt {\frac {k}{m}}$}{0}}
-\headcommand {\beamer@framepages {28}{28}}
-\headcommand {\beamer@partpages {1}{28}}
-\headcommand {\beamer@subsectionpages {28}{28}}
-\headcommand {\beamer@sectionpages {14}{28}}
-\headcommand {\beamer@documentpages {28}}
+\headcommand {\beamer@subsectionentry {0}{2}{5}{28}{Modos normales para $\omega _2=\sqrt {\frac {k}{m}}$ y $\omega _3=\sqrt {\frac {k}{m}\left (1+\frac {2 m}{M}\right )}$}}
+\headcommand {\slideentry {2}{5}{1}{28/30}{Modos normales para $\omega _2=\sqrt {\frac {k}{m}}$ y $\omega _3=\sqrt {\frac {k}{m}\left (1+\frac {2 m}{M}\right )}$}{0}}
+\headcommand {\beamer@framepages {28}{30}}
+\headcommand {\beamer@partpages {1}{30}}
+\headcommand {\beamer@subsectionpages {28}{30}}
+\headcommand {\beamer@sectionpages {14}{30}}
+\headcommand {\beamer@documentpages {30}}
 \headcommand {\gdef \inserttotalframenumber {9}}
