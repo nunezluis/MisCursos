@@ -183,6 +183,10 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
 
 ### Clase S11-C21/C22
 
+La semana 1 del sólido rígido
++ [generalidades del sólido rígido, ángulos y velocidades de Euler](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T1SolidoDef.pdf)
++ [La energía cinética y el tensor de inercia](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T2SolidoEnergCin.pdf) 
+
 ### Clase S12-C23/C24  
 
 ### Clase S13-C25/C26

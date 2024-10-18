@@ -1,4 +1,0 @@
-\babel@toc {spanish}{}\relax 
-\beamer@sectionintoc {1}{Peque\~nas oscilaciones 1D}{3}{0}{1}
-\beamer@sectionintoc {2}{Oscilaciones con varios grados de libertad}{13}{0}{2}
-\beamer@sectionintoc {3}{Ejemplo: Osciladores Acoplados}{31}{0}{3}

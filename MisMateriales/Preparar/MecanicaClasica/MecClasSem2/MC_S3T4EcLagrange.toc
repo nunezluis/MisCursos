@@ -1,8 +1,0 @@
-\babel@toc {spanish}{}\relax 
-\beamer@sectionintoc {1}{Principio de M\IeC {\'\i }nima Acci\'on}{3}{0}{1}
-\beamer@sectionintoc {2}{Principios de M\IeC {\'\i }nima Acci\'on y Extremos Variacionales}{7}{0}{2}
-\beamer@sectionintoc {3}{Ecuaciones de Lagrange}{8}{0}{3}
-\beamer@sectionintoc {4}{\IeC {\textquestiondown }Por qu\'e son importantes las Ecuaciones de Lagrange?}{13}{0}{4}
-\beamer@sectionintoc {5}{Propiedades de las Ecuaciones de Lagrange}{29}{0}{5}
-\beamer@subsectionintoc {5}{1}{Lagrangeanos equivalentes}{29}{0}{5}
-\beamer@subsectionintoc {5}{2}{Invariancia respecto a transformaciones de coordenadas generalizadas}{33}{0}{5}

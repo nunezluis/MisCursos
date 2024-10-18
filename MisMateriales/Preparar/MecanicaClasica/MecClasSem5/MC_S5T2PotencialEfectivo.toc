@@ -1,7 +1,0 @@
-\babel@toc {spanish}{}\relax 
-\beamer@sectionintoc {1}{El potencial efectivo}{3}{0}{1}
-\beamer@sectionintoc {2}{Las trayectorias}{9}{0}{2}
-\beamer@sectionintoc {3}{Ejemplos}{18}{0}{3}
-\beamer@subsectionintoc {3}{1}{Potencial $V=-\frac {k}{r^3}$}{18}{0}{3}
-\beamer@subsectionintoc {3}{2}{Potencial $V=\frac {1}{2} k r^2$}{20}{0}{3}
-\beamer@subsectionintoc {3}{3}{Potencial $V=-\frac {k}{r}$}{26}{0}{3}

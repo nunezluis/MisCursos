@@ -1,0 +1,165 @@
+\documentclass[spanish]{beamer}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath}
+\usepackage{mathtools,cancel} % cancela con una flecha \cancelto{0}{XXXX}
+\renewcommand{\CancelColor}{\color{red}} %change cancel color to red
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usepackage{textpos}
+% Logo  en el comienzo 
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+\end{textblock*}}
+
+\begin{document}
+
+\title{\textbf{Cuerpo Rígido: ángulos y velocidades de Euler} }
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
+\textit{Universidad Industrial de Santander, Santander, Colombia } \\
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+}
+\date{\today}
+\maketitle
+
+
+\begin{frame}
+\frametitle{Agenda}
+  \tableofcontents
+\end{frame}
+
+
+%%%%% Diapo 1
+\section{Definiciones}
+\frame{
+  \frametitle{Definiciones}
+   \begin{itemize}  
+  	\item<1-> Un cuerpo rígido es un sistema de partículas cuyas distancias relativas son fijas
+	\item<2-> Su movimiento se describe en términos de la posición de su centro de masa y de la orientación relativa del cuerpo en el espacio
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/SolidRef.png}
+   	\end{figure}
+	\item<3-> Esto requiere de dos sistemas de coordenadas:
+   	\begin{itemize}
+	\item Un sistema inercial o laboratorio, denotado por $(x, y, z)$ y con origen en un punto fijo $O$
+	\item  Un sistema en movimiento, fijo en el cuerpo, con origen en el centro de masa (CM), identificado por $\left(x_1, x_2, x_3\right)$
+	\end{itemize} 
+    \end{itemize}
+}
+%%%%% Diapo 2
+\section{Desplazamiento general del cuerpo rígido}
+\frame{
+\frametitle{Desplazamiento general del cuerpo rígido}
+\begin{itemize}  
+	\item<1-> Un desplazamiento general del cuerpo rígido se representa como la suma de dos movimientos:
+	\begin{itemize}  
+		\item<1-> Translación del centro de masa, sin cambiar la orientación relativa entre $(x, y, z)$ y $\left(x_1, x_2, x_3\right)$.
+		\item<2-> Rotación de las coordenadas $\left(x_1, x_2, x_3\right)$ alrededor de un eje que pasa por el centro de masa.
+	\end{itemize}
+	\item<2-> La posición $\mathbf{R}$ de un punto $P$ del cuerpo rígido con respecto al sistema de referencia del laboratorio $(x, y, z)$ es $\mathbf{R}=\mathbf{R}_{\mathrm{cm}}+\mathbf{r}$
+	\item<3-> Un desplazamiento infinitesimal de $P$ será $d \mathbf{R}=d \mathbf{R}_{\mathrm{cm}}+d \mathbf{r}$
+	\begin{figure}[t]
+		\includegraphics[width=1.2in]{Figuras/Infinitesimal.png}
+   	\end{figure}
+	\item<4-> Un cambio infinitesimal $d \mathbf{r}$  sólo puede deberse a un cambio de dirección del vector $\mathbf{r}$, no a un cambio de su magnitud
+\end{itemize}
+}
+%%%%% Diapo 2
+\section{Velocidades en un cuerpo rígido}
+\frame{
+\frametitle{Velocidades en un cuerpo rígido}
+\begin{itemize}  
+	\item<1-> Si $\theta$ el ángulo entre la dirección $d \phi$ y el vector $\mathbf{r}$, entonces el vector $d \mathbf{r}$ es perpendicular al plano $(d \phi, \mathbf{r})$.
+	\item<2-> Su magnitud es $d r=(r \operatorname{sen} \, \theta) d \phi$ y su dirección $d \mathbf{r}=d \mathbf{\phi} \times \mathbf{r}$
+	\item<3-> La velocidad de $P$, es $\mathbf{v}_P=\mathbf{v}_{\mathrm{cm}}+\boldsymbol{\Omega} \times \mathbf{r} \Leftrightarrow \frac{d \mathbf{R}}{d t}=\frac{d \mathbf{R}_{\mathrm{cm}}}{d t}+\frac{d \phi}{d t} \times \mathbf{r}$
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/VelocidadP.png}
+   	\end{figure}
+	\item<4-> 
+	$\mathbf{v}_P=\frac{d \mathbf{R}}{d t}$: velocidad de $P$ en el laboratorio $(x, y, z),$ \\
+	$\mathbf{v}_{\mathrm{cm}}=\frac{d \mathbf{R}_{\mathrm{cm}}}{d t}$ velocidad de traslación del centro de masa en $(x, y, z)$, \\
+	$\boldsymbol{\Omega}=\frac{d \boldsymbol{\phi}}{d t}$:  velocidad angular instantánea de rotación. 
+	\item<5-> La dirección de la velocidad angular instantánea $\boldsymbol{\Omega}$ es la misma que la del vector $d \boldsymbol{\phi}$
+\end{itemize}
+}
+%%%%% Diapo 2
+\section{Precesión, nutación y rotación}
+\frame{
+\frametitle{Precesión, nutación y rotación}
+\begin{itemize}  
+	\item<1-> Distinguiremos tres movimientos en un cuerpo rígido
+	\begin{itemize}
+		\item<1-> {\bf precesión:} rotación alrededor de un eje fijo en el laboratorio, 
+		\item<2-> {\bf nutación:} inclinación con respecto al eje fijo y 
+		\item<3-> {\bf rotación:} rotación del cuerpo sobre sí mismo.
+	\end{itemize}
+	\begin{figure}[t]
+		\includegraphics[width=1.0in]{Figuras/PrecesionNutacion.png}
+   	\end{figure}
+	\item<2-> 
+	\begin{itemize}
+		\item<1-> {\bf Angulo Euler de precesión}, $\phi \in[0,2 \pi]$ : ángulo de rotación con respecto al eje $z$, sobre el plano $(x, y)$,
+		\item<2-> {\bf Angulo Euler de nutación}, $\theta \in[0, \pi]$ : ángulo de rotación con respecto a la línea nodal $N$, medido desde $z$ hasta $x_3$.
+		\item<3-> {\bf Angulo Euler de rotación}, $\psi \in[0,2 \pi]$ : ángulo de rotación con respecto al eje $x_3$, sobre el plano $\left(x_1, x_2\right)$, medido desde $N$ a $x_1$.
+	\end{itemize}
+\end{itemize}
+}
+%%%%% Diapo 2
+\section{Velocidad ${\bf \Omega}$, ángulos y velocidades de Euler}
+\frame{
+\frametitle{Velocidad ${\bf \Omega}$ ángulos y velocidades de Euler}
+\begin{itemize}
+	\item<1-> Las velocidades angulares $\dot{\phi}, \dot{\theta}$ y $\dot{\psi}$ pueden expresarse en términos de sus proyecciones sobre los ejes $\left(x_1, x_2, x_3\right)$ como
+	\begin{itemize}
+		\item $\dot{\psi}_1  =0$, $\dot{\psi}_2  =0$ y $\dot{\psi}_3  =\dot{\psi}$;
+		\item $\dot{\theta}_1  =\dot{\theta} \cos \psi$, $\dot{\theta}_2  =-\dot{\theta} \operatorname{sen} \, \psi$ y $\dot{\theta}_3  =0$,  ya que $\dot{\theta}$ es perpendicular a  $x_3$
+		\item $\dot{\phi}_1=(\dot{\phi} \operatorname{sen} \, \theta) \operatorname{sen} \, \psi $,  $\dot{\phi}_2=(\dot{\phi} \operatorname{sen} \, \theta) \cos \psi$ y $\dot{\phi_3}=\dot{\phi} \cos \theta$
+	\end{itemize}  
+	\item<2-> La velocidad angular instantánea $\boldsymbol{\Omega}$ es una combinación de rotaciones asociadas a los tres ángulos de Euler. 
+	\item<3-> Las componentes del vector $\boldsymbol{\Omega}=\left(\Omega_1, \Omega_2, \Omega_3\right)$ se expresan en términos de los ángulos de $(\theta, \phi, \psi)$ y de sus velocidades angulares $(\dot{\theta}, \dot{\phi}, \dot{\psi})$.
+	\item<4-> Para cada componente $\Omega_i$, tenemos $\Omega_i=\dot{\theta}_i+\dot{\phi}_i+\dot{\psi}_i, \quad i=1,2,3$. \\
+	$\Omega_1  = \dot{\phi} \operatorname{sen} \, \theta \operatorname{sen} \, \psi+\dot{\theta} \cos \psi $ \\
+	$\Omega_2  = \dot{\phi} \operatorname{sen} \, \theta \cos \psi-\dot{\theta} \operatorname{sen} \, \psi $ \\
+	$\Omega_3  = \dot{\psi}+\dot{\phi} \cos \theta$
+	\item<4-> 
+\end{itemize}
+}
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Componentes y velocidades angulares}
+\begin{figure}[t]
+	\includegraphics[width=1.5in]{Figuras/VelocidadesEuler.png}
+	\includegraphics[width=2.8in]{Figuras/ComponentesVelocidades.png}
+\end{figure}
+}
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+  
+\end{document}
+
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
+   	\end{figure}
+	

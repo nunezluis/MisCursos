@@ -1,9 +1,0 @@
-\babel@toc {spanish}{}\relax 
-\beamer@sectionintoc {1}{Transferencia Hohmann}{3}{0}{1}
-\beamer@subsectionintoc {1}{1}{\IeC {\textquestiondown }Qu\'e es?}{3}{0}{1}
-\beamer@subsectionintoc {1}{2}{\IeC {\textquestiondown }C\'omo ocurre?}{5}{0}{1}
-\beamer@subsectionintoc {1}{3}{Los c\'alculos}{11}{0}{1}
-\beamer@subsectionintoc {1}{4}{Eficiente en energ\IeC {\'\i }a, no en tiempo}{17}{0}{1}
-\beamer@sectionintoc {2}{Asistencia gravitacional}{23}{0}{2}
-\beamer@subsectionintoc {2}{1}{Marte: ida y vuelta con el ``empuj\'on'' de Venus}{23}{0}{2}
-\beamer@subsectionintoc {2}{2}{Dispersi\'on el\'astica con el planeta}{24}{0}{2}
