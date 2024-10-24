@@ -183,9 +183,11 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
 
 ### Clase S11-C21/C22
 
-La semana 1 del sólido rígido
+La semana 11 del sólido rígido
 + [generalidades del sólido rígido, ángulos y velocidades de Euler](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T1SolidoDef.pdf)
-+ [La energía cinética y el tensor de inercia](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T2SolidoEnergCin.pdf) 
++ [La energía cinética y el tensor de inercia](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T2SolidoEnergCin.pdf)
++ [Momento angular de un cuerpo rígido](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T3SolidoMomAngular.pdf)
++ [El Trompo de Lagrange](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T4ElTrompo.pdf) 
 
 ### Clase S12-C23/C24  
 
