@@ -1,0 +1,130 @@
+\documentclass[spanish]{beamer}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath}
+\usepackage{mathtools,cancel} % cancela con una flecha \cancelto{0}{XXXX}
+\renewcommand{\CancelColor}{\color{red}} %change cancel color to red
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usepackage{textpos}
+% Logo  en el comienzo 
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+\end{textblock*}}
+
+\begin{document}
+
+\title{\textbf{Momento angular de un cuerpo rígido} }
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
+\textit{Universidad Industrial de Santander, Santander, Colombia } \\
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+}
+\date{\today}
+\maketitle
+
+
+\begin{frame}
+\frametitle{Agenda}
+  \tableofcontents
+\end{frame}
+
+
+%%%%% Diapo 1
+\section{Momento Angular de un cuerpo rígido}
+\frame{
+  \frametitle{Momento Angular de un cuerpo rígido}
+   \begin{itemize}  
+  	\item<1-> Escogemos el sistema de coordenadas ( $x_1, x_2, x_3$ ) con origen en el centro de masa para definir el momento angular del cuerpo.
+	\item<2-> Si $\mathbf{r}_j$ es el vector de posición de la particula $j$ en $\left(x_1, x_2, x_3\right)$, tenemos $\mathbf{l}=\sum_j \mathbf{r}_j \times \mathbf{p}_j=\sum_j m_j\left(\mathbf{r}_j \times \mathbf{v}_j\right)$, con $\mathbf{v}_j=\boldsymbol{\Omega} \times \mathbf{r}_j$.
+	\item<3-> Entonces $\mathbf{L}=\sum_j m_j \mathbf{r}_j \times\left(\boldsymbol{\Omega} \times \mathbf{r}_j\right) \equiv \sum_j m_j\left[r_j^2 \boldsymbol{\Omega}-\left(\mathbf{r}_j \cdot \boldsymbol{\Omega}\right) \mathbf{r}_j\right]$. \\ Hemos usado $\mathbf{A} \times(\mathbf{B} \times \mathbf{C})=(\mathbf{A} \cdot \mathbf{C}) \mathbf{B}-(\mathbf{A} \cdot \mathbf{B}) \mathbf{C}$
+	\item<4-> Las componentes del momento angular serán: \\
+	$L_i  =\sum_j m_j\left[r_j^2 \Omega_i-x_{i j} \sum_k x_{k j} \Omega_k\right] $ \\ $L_i =\sum_j m_j\left[\sum_k \Omega_k r_j^2 \delta_{i k}-\sum_k x_{i j} x_{k j} \Omega_k\right] $ \\
+	$L_i =\sum_j m_j \sum_k \Omega_k\left[r_j^2 \delta_{i k}-x_{i j} x_{k j}\right] =\sum_k \Omega_k \sum_j m_j\left[r_j^2 \delta_{i k}-x_{i j} x_{k j}\right]$
+	\item<5-> Finalmente  $L_i=\sum_{k=1}^3 I_{i k} \Omega_k \Leftrightarrow \mathbf{L}=I \boldsymbol{\Omega} $ ya que el tensor de inercia es $I_{i k}=\sum_j m_j\left[r_j^2 \delta_{i k}-x_{i j} x_{k j}\right]$
+    \end{itemize}
+}
+%%%%% Diapo 2
+\section{Generalidades para ${\bf L}$ y ${\bf \Omega}$}
+\frame{
+\frametitle{${\bf L}$ y ${\bf \Omega}$}
+\begin{itemize}  
+	\item<1-> Hay casos particulares en los cuales podremos escribir $\mathbf{l}=I \boldsymbol{\Omega}$
+	\item<2-> El momento angular y la velocidad angular apuntan en una misma dirección y sentido. Entonces 
+	$ L_1  =I_{11} \Omega_1$,  $L_2  =I_{22} \Omega_2,$ y $ L_3  =I_{33} \Omega_3$
+	\item<3-> Pero en general, el momento angular ${\bf L}$ no es paralelo a la dirección de la velocidad angular $\boldsymbol{\Omega}$ y $\mathbf{L}$ es paralelo a $\boldsymbol{\Omega}$
+	\begin{figure}[t]
+		\includegraphics[width=1.2in]{Figuras/TrompoIdeal.png}
+   	\end{figure}
+	\item<4-> Si el vector $\boldsymbol{\Omega}$ posee solamente una componente sobre un eje $x_k$, tenemos $\boldsymbol{\Omega}=\boldsymbol{\Omega} \, \hat{\mathbf{x}}_k$ y por lo tanto $\mathbf{L}=I_{k k} \Omega \; \hat{\mathbf{x}}_k$.
+	\item<5-> Para cuerpos esféricos, $I_{11}=I_{22}=I_{33}$, y $\mathbf{L}=I_{11} \boldsymbol{\Omega}: \mathbf{L}$ es paralelo a $\boldsymbol{\Omega}$ 
+\end{itemize}
+}
+%%%%% Diapo 2
+\section{Ecuaciones de movimiento para cuerpos rígidos}
+\frame{
+\frametitle{Ecuaciones de movimiento para cuerpos rígidos}
+\begin{itemize}  
+	\item<1-> Las ecuaciones de Lagrange para cuerpos rígidos se plantean en términos de los ángulos de Euler.
+	\item<2-> La energía cinética de rotación de un cuerpo rígido es  $T_{\mathrm{rot}}=\frac{1}{2} \sum_{i, k} I_{i k} \Omega_i \Omega_k$
+	\item<3-> Las componentes $\Omega_i$ de la velocidad angular pueden expresarse en función de los ángulos de Euler $(\theta, \phi, \psi)$ y de sus velocidades
+	\item<4-> La energía potencial del cuerpo corresponde a la energía potencial de su centro de masa, y se expresa en términos de los ángulos de Euler
+	\item<5-> El Lagrangiano queda como $\mathcal{L}=T-V=L(\theta, \phi, \psi, \dot{\theta}, \dot{\phi}, \dot{\psi}, t)$
+	\item<6-> Las ecuaciones de Lagrange para cuerpos rígidos son complicadas
+	\item<7-> Los casos más simples son los que presentan simetrías: axial (trompos) o esférica
+\end{itemize}
+}
+%%%%% Diapo 2
+\section{Ejemplo: Cilindro de masa $M$ y radio $a$, rodando sin deslizar}
+\subsection{Angulos y velocidades}
+\frame{
+\frametitle{Ejemplo: Cilindro de masa $M$ y radio $a$. 1/2 }
+\begin{itemize}  
+	\item<1-> Consideremos un cilindro de masa $M$ y radio $a$, rodando $\sin$ deslizar dentro de una superficie cilíndrica fija de radio $R>a$.
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/CilindroEnCilindro.png}
+		\includegraphics[width=0.8in]{Figuras/PrecesionNutacion.png}
+   	\end{figure}
+	\item<2-> Sea $z$ el eje del cilindro fijo de radio $R$ y $x_3$ el del rodante de radio $a$.
+	\item<3-> 	El ángulo de nutación entre los ejes $x_3$ y $z$ es $\theta=0$. 
+	\item<4->  El ángulo de precesión alrededor de $z$ es $\phi$.
+	\item<5->  La energía cinética respecto al sistema fijo es $T=T_{\mathrm{cm}}+T_{\text {rot }}$.
+	\item<6->  La energía cinética del centro de masa es $T_{\mathrm{cm}}=\frac{1}{2} M v_{\mathrm{cm}}^2$, con $v_{\mathrm{cm}}=(R-a) \dot{\phi}$
+	\item<7-> La energía cinética de rotación es $T_{\text {rot }}=\frac{1}{2} I_{33} \Omega_3^2$
+\end{itemize}
+}
+%%%%% Diapo 2
+\subsection{Ecuaciones de movimiento}
+\frame{
+\frametitle{Cilindro de masa $M$ y radio $a$. 2/2 }
+\begin{itemize}  
+	\item<1-> Rodar sin deslizar implica $v_{\mathrm{cm}}=a \Omega_3 \Rightarrow \Omega_3=\frac{v_{\mathrm{cm}}}{a}=\frac{(R-a) \dot{\phi}}{a}$
+	\item<2-> El momento de inercia del cilindro rodante es $I_{33}=\frac{1}{2} M a^2$.
+	\item<3-> Entonces $T =\frac{1}{2} M(R-a)^2 \dot{\phi}^2+\frac{1}{2} I_{33} \frac{(R-a)^2}{a^2} \dot{\phi}^2  =\frac{3}{4} M(R-a)^2 \dot{\phi}^2$
+	\item<4-> La energía potencial del centro de masa es $V=-M g(R-a) \cos \phi$.
+	\item<5-> El Lagrangiano es $\mathcal{L}=T-V=\frac{3}{4} M(R-a)^2 \dot{\phi}^2+M g(R-a) \cos \phi$
+	\item<6-> La ecuación de movimiento queda $\frac{3}{2} \ddot{\phi}+\frac{g}{(R-a)} \operatorname{sen} \phi=0$.
+	\item<7-> Para pequeñas oscilaciones tenemos $\ddot{\phi}+\frac{2 g}{3(R-a)} \phi=0$.
+	\item<8-> La ecuación de movimiento de un oscilador armónico simple con frecuencia $\omega^2=\frac{2 g}{3(R-a)}$.
+\end{itemize}
+}
+  
+\end{document}
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
+   	\end{figure}
+	
