@@ -129,7 +129,46 @@
    	\end{figure}
 \end{itemize}
 }
-  
+%%%%% Diapo 2
+\section{Teorema de los ejes paralelos en los momentos de inercia}
+\frame{
+\frametitle{Teorema de los ejes paralelos}
+Sea $I_{i k}$ el tensor de inercia de un cuerpo rígido en el sistema de coordenadas ( $x_1, x_2, x_3$ ) con origen en el centro de masa del cuerpo. Un sistema de coordenadas paralelas fijas ( $x_1^{\prime}, x_2^{\prime}, x_3^{\prime}$ ) cuyo origen $O^{\prime}$ se encuentra en una posición $\mathbf{a}=\left(a_1, a_2, a_3\right)$ con respecto al centro de masa del cuerpo. Entonces el tensor de inercia es $I_{i k}^{\prime}=I_{i k}+\sum_j m_j\left(a^2 \delta_{i k}-a_i a_k\right)$.
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/EjesParalelos.png}
+   	\end{figure}
+	}
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Demostración Teorema de Steiner}
+\begin{itemize}  
+	\item<1-> El tensor de inercia en el sistema de coordenadas $\left(x_1, x_2, x_3\right)$ con origen en el centro de masa del cuerpo, es $I_{i k}=\sum_j m_j\left(r_j^2 \delta_{i k}-x_i x_k\right)$.
+	\item<2-> Supongamos un sistema de coordenadas fijas $\left(x_1^{\prime}, x_2^{\prime}, x_3^{\prime}\right)$, con origen $O^{\prime}$ en una posición $\mathbf{a}$ respecto al centro de masa del cuerpo.
+	\item<3->  La posición de un punto $P$ respecto $\left(x_1, x_2, x_3\right)$ es $\mathbf{r}_j  =\mathbf{a}+\mathbf{r}_j^{\prime} \Rightarrow x_i  =a_i+x_i^{\prime}$
+	\item<4-> Para $\left(x_1^{\prime}, x_2^{\prime}, x_3^{\prime}\right)$, tenemos $I_{i k}^{\prime}=\sum_j m_j\left(r_j^{\prime 2} \delta_{i k}-x_i^{\prime} x_k^{\prime}\right)$, con $r_j^{\prime 2}=\left(\mathbf{r}_j-\mathbf{a}\right)^2=r_j^2+a^2-2 \sum_l x_l a_l$.
+	\item<5-> Sustituyendo, 
+	$I_{i k}^{\prime}=  \sum_j m_j\left[\left(r_j^2+a^2-2 \sum_l x_l a_l\right) \delta_{i k}-\left(x_i-a_i\right)\left(x_k-a_k\right)\right]$
+	$I_{i k}^{\prime}=  \sum_j m_j\left(r_j^2 \delta_{i k}-x_i x_k\right)+\sum_j m_j\left(a^2 \delta_{i k}-a_i a_k\right)$
+	$\qquad -2 \sum_j m_j \sum_l x_l a_l \delta_{i k}+\sum_j m_j x_i a_k+\sum_j m_j x_k a_i$
+\end{itemize}
+}
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Demostración Teorema de Steiner}
+\begin{itemize}  
+	\item<1-> Pero en el sistema de coordenadas $\left(x_1, x_2, x_3\right)$, tenemos
+$$	\begin{aligned}
+& \sum_j m_j x_i a_k=a_k \cancelto{0}{\left(\sum_j m_j x_i(j)\right)}=0, \\
+& \sum_j m_j x_k a_i=a_i\cancelto{0}{\left(\sum_j m_j x_k(j)\right)}=0 \text {, } \\
+& \sum_j m_j \sum_l x_l a_l=\sum_l a_l \cancelto{0}{\left(\sum_j m_j x_l(j)\right)}=0 .
+\end{aligned}
+$$
+	\item<2-> Luego tenemos, $I_{i k}^{\prime}=I_{i k}+\sum_j m_j\left(a^2 \delta_{i k}-a_i a_k\right)$
+\end{itemize}
+}
+	
 \end{document}
 %%%%% Diapo 2
 \section{Sección}

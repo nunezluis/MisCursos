@@ -5,3 +5,4 @@
 \beamer@sectionintoc {4}{El Trompo de Lagrange: Primeras integrales}{21}{0}{4}
 \beamer@sectionintoc {5}{El Trompo de Lagrange: Potencial efectivo}{25}{0}{5}
 \beamer@sectionintoc {6}{El Trompo de Lagrange: Nutaci\'on y rotaci\'on}{30}{0}{6}
+\beamer@sectionintoc {7}{Teorema de los ejes paralelos en los momentos de inercia}{35}{0}{7}

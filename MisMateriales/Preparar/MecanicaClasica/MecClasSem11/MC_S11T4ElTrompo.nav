@@ -32,8 +32,17 @@
 \headcommand {\sectionentry {6}{El Trompo de Lagrange: Nutaci\'on y rotaci\'on}{30}{El Trompo de Lagrange: Nutaci\'on y rotaci\'on}{0}}
 \headcommand {\slideentry {6}{0}{1}{30/34}{}{0}}
 \headcommand {\beamer@framepages {30}{34}}
-\headcommand {\beamer@partpages {1}{34}}
-\headcommand {\beamer@subsectionpages {30}{34}}
 \headcommand {\beamer@sectionpages {30}{34}}
-\headcommand {\beamer@documentpages {34}}
-\headcommand {\gdef \inserttotalframenumber {8}}
+\headcommand {\beamer@subsectionpages {30}{34}}
+\headcommand {\sectionentry {7}{Teorema de los ejes paralelos en los momentos de inercia}{35}{Teorema de los ejes paralelos en los momentos de inercia}{0}}
+\headcommand {\slideentry {7}{0}{1}{35/35}{}{0}}
+\headcommand {\beamer@framepages {35}{35}}
+\headcommand {\slideentry {7}{0}{2}{36/40}{}{0}}
+\headcommand {\beamer@framepages {36}{40}}
+\headcommand {\slideentry {7}{0}{3}{41/42}{}{0}}
+\headcommand {\beamer@framepages {41}{42}}
+\headcommand {\beamer@partpages {1}{42}}
+\headcommand {\beamer@subsectionpages {35}{42}}
+\headcommand {\beamer@sectionpages {35}{42}}
+\headcommand {\beamer@documentpages {42}}
+\headcommand {\gdef \inserttotalframenumber {11}}
