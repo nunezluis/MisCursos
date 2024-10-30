@@ -145,10 +145,18 @@
 \frametitle{Del sistema Centro de Masa al Laboratorio 1/2}
 \begin{itemize}
 	\item<1->  La transformación entre el sistema Centro de Masa y Laboratorio se construye concatenando tres transformaciones lineales independiente, cada una siguiendo un ángulo de Euler ($\phi$, $\theta$, $\psi$). 
-	\item<2-> Si $\mathbf{r}_L$ son las coordenadas de un punto en el sistema $S_{xyz}$ laboratorio y $\tilde{\mathbf{r}}_{cm}$ las  de un punto en el sistema $\tilde{S}_{x_1 x_2 x_3}$ centro de masa, queremos un par de transformaciones tales que \\
+	\item<2-> Si $\mathbf{r}_L$ son las coordenadas de un punto en el sistema $S_{xyz}$ laboratorio y $\tilde{\mathbf{r}}_{cm}$ las  de un punto en el sistema $\tilde{S}_{x_1 x_2 x_3}$ centro de masa, queremos un par de transformaciones tales que 
 	$\tilde{\mathbf{r}}_{cm} = \tilde{\mathbb{U}}\, \mathbf{r}_L \Leftrightarrow \tilde{r}^i = \tilde{U}^i_j \, r^j \quad$ y 
 	$\quad \mathbf{r}_{L} = \mathbb{U}\, \mathbf{r}_{cm} \Leftrightarrow r^i = U^i_j \, \tilde{r}^j$ 
 	\item<3> Claramente $\mathbb{U}\tilde{\mathbb{U}} \equiv \tilde{\mathbb{U}}\mathbb{U} = \mathbb{I} \Rightarrow \tilde{\mathbb{U}} = \mathbb{U}^{-1}$ 
+	\item<4-> Rotamos tres veces $\tilde{S}_{x_1,x_2,x_3}$ respecto a $S_{x,y,z}$.
+	\begin{figure}[t]
+		\includegraphics[width=2.5in]{Figuras/RotacionesEuler.png}
+   	\end{figure}
+	{\tiny $\tilde{\mathbb{U}}_\phi=\left(\begin{array}{ccc}\cos \phi & \sin \phi & 0 \\ -\sin \phi & \cos \phi & 0 \\ 0 & 0 & 1\end{array}\right)$, 
+	$\tilde{\mathbb{U}}_\theta=\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & \cos \theta & \sin \theta \\ 0 & -\sin \theta & \cos \theta\end{array}\right)$  
+ 	$\tilde{\mathbb{U}}_\psi=\left(\begin{array}{ccc}\cos \psi & \sin \psi & 0 \\ -\sin \psi & \cos \psi & 0 \\ 0 & 0 & 1\end{array}\right)$ }.  
+
 \end{itemize}
 }
 %%%%% Diapo 2
@@ -160,9 +168,9 @@
 	\begin{figure}[t]
 		\includegraphics[width=2.5in]{Figuras/RotacionesEuler.png}
    	\end{figure}
-	$\tilde{\mathbb{U}}_\phi=\left(\begin{array}{ccc}\cos \phi & \sin \phi & 0 \\ -\sin \phi & \cos \phi & 0 \\ 0 & 0 & 1\end{array}\right)$, 
-	$\tilde{\mathbb{U}}_\theta=\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & \cos \theta & \sin \theta \\ 0 & -\sin \theta & \cos \theta\end{array}\right)$ y, finalmente 
- 	$\tilde{\mathbb{U}}_\psi=\left(\begin{array}{ccc}\cos \psi & \sin \psi & 0 \\ -\sin \psi & \cos \psi & 0 \\ 0 & 0 & 1\end{array}\right)$.  
+	{\tiny $\tilde{\mathbb{U}}_\phi=\left(\begin{array}{ccc}\cos \phi & \sin \phi & 0 \\ -\sin \phi & \cos \phi & 0 \\ 0 & 0 & 1\end{array}\right)$, 
+	$\tilde{\mathbb{U}}_\theta=\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & \cos \theta & \sin \theta \\ 0 & -\sin \theta & \cos \theta\end{array}\right)$  
+ 	$\tilde{\mathbb{U}}_\psi=\left(\begin{array}{ccc}\cos \psi & \sin \psi & 0 \\ -\sin \psi & \cos \psi & 0 \\ 0 & 0 & 1\end{array}\right)$ }.  
 	\item<2-> En general concatenamos las tres rotaciones como $\tilde{\mathbb{U}}_{\psi \theta \phi} = \tilde{\mathbb{U}}_{\psi} \tilde{\mathbb{U}}_{\theta} \tilde{\mathbb{U}}_{\phi}$
 	{\tiny  $\tilde{\mathbb{U}}_{\psi \theta \phi}  = \begin{pmatrix} \cos \psi \cos \phi - \sin \psi \cos \theta \sin \phi & \cos \psi \sin \phi + \sin \psi \cos \theta \cos \phi & \sin \psi \sin \theta \\ -\sin \psi \cos \phi - \cos \psi \cos \theta \sin \phi & -\sin \psi \sin \phi + \cos \psi \cos \theta \cos \phi & \cos \psi \sin \theta \\
  \sin \theta \sin \phi & -\sin \theta \cos \phi & \cos \theta \end{pmatrix}
