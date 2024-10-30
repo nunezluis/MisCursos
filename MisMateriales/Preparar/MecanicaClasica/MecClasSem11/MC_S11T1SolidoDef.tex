@@ -153,9 +153,9 @@
 	\begin{figure}[t]
 		\includegraphics[width=2.5in]{Figuras/RotacionesEuler.png}
    	\end{figure}
-	{\tiny $\tilde{\mathbb{U}}_\phi=\left(\begin{array}{ccc}\cos \phi & \sin \phi & 0 \\ -\sin \phi & \cos \phi & 0 \\ 0 & 0 & 1\end{array}\right)$, 
-	$\tilde{\mathbb{U}}_\theta=\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & \cos \theta & \sin \theta \\ 0 & -\sin \theta & \cos \theta\end{array}\right)$  
- 	$\tilde{\mathbb{U}}_\psi=\left(\begin{array}{ccc}\cos \psi & \sin \psi & 0 \\ -\sin \psi & \cos \psi & 0 \\ 0 & 0 & 1\end{array}\right)$ }.  
+	{\tiny $\tilde{\mathbb{U}}_\phi=\left(\begin{array}{ccc}\cos \phi & \operatorname{sen} \phi & 0 \\ -\operatorname{sen} \phi & \cos \phi & 0 \\ 0 & 0 & 1\end{array}\right)$, 
+	$\tilde{\mathbb{U}}_\theta=\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & \cos \theta & \operatorname{sen} \theta \\ 0 & -\operatorname{sen} \theta & \cos \theta\end{array}\right)$  
+ 	$\tilde{\mathbb{U}}_\psi=\left(\begin{array}{ccc}\cos \psi & \operatorname{sen} \psi & 0 \\ -\operatorname{sen} \psi & \cos \psi & 0 \\ 0 & 0 & 1\end{array}\right)$ }.  
 
 \end{itemize}
 }
@@ -163,18 +163,24 @@
 \section{Sección}
 \frame{
 \frametitle{Título transparencia}
-\begin{itemize}
-	\item<1-> Inicialemente $S_{x,y,z}$ y $\tilde{S}_{x_1,x_2,x_3}$ coinciden y rotamos tres veces $\tilde{S}_{x_1,x_2,x_3}$ respecto a $S_{x,y,z}$.
-	\begin{figure}[t]
-		\includegraphics[width=2.5in]{Figuras/RotacionesEuler.png}
-   	\end{figure}
-	{\tiny $\tilde{\mathbb{U}}_\phi=\left(\begin{array}{ccc}\cos \phi & \sin \phi & 0 \\ -\sin \phi & \cos \phi & 0 \\ 0 & 0 & 1\end{array}\right)$, 
-	$\tilde{\mathbb{U}}_\theta=\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & \cos \theta & \sin \theta \\ 0 & -\sin \theta & \cos \theta\end{array}\right)$  
- 	$\tilde{\mathbb{U}}_\psi=\left(\begin{array}{ccc}\cos \psi & \sin \psi & 0 \\ -\sin \psi & \cos \psi & 0 \\ 0 & 0 & 1\end{array}\right)$ }.  
-	\item<2-> En general concatenamos las tres rotaciones como $\tilde{\mathbb{U}}_{\psi \theta \phi} = \tilde{\mathbb{U}}_{\psi} \tilde{\mathbb{U}}_{\theta} \tilde{\mathbb{U}}_{\phi}$
-	{\tiny  $\tilde{\mathbb{U}}_{\psi \theta \phi}  = \begin{pmatrix} \cos \psi \cos \phi - \sin \psi \cos \theta \sin \phi & \cos \psi \sin \phi + \sin \psi \cos \theta \cos \phi & \sin \psi \sin \theta \\ -\sin \psi \cos \phi - \cos \psi \cos \theta \sin \phi & -\sin \psi \sin \phi + \cos \psi \cos \theta \cos \phi & \cos \psi \sin \theta \\
- \sin \theta \sin \phi & -\sin \theta \cos \phi & \cos \theta \end{pmatrix}
-$}
+\begin{itemize} 
+	\item<1-> En general concatenamos las tres rotaciones como $\tilde{\mathbb{U}}_{\psi \theta \phi} = \tilde{\mathbb{U}}_{\psi} \tilde{\mathbb{U}}_{\theta} \tilde{\mathbb{U}}_{\phi}$
+	{\tiny  $\tilde{\mathbb{U}}_{\psi \theta \phi}  = \begin{pmatrix} \cos \psi \cos \phi - \operatorname{sen} \psi \cos \theta \operatorname{sen} \phi & \cos \psi \operatorname{sen} \phi + \operatorname{sen} \psi \cos \theta \cos \phi & \operatorname{sen} \psi \operatorname{sen} \theta \\ -\operatorname{sen} \psi \cos \phi - \cos \psi \cos \theta \operatorname{sen} \phi & -\operatorname{sen} \psi \operatorname{sen} \phi + \cos \psi \cos \theta \cos \phi & \cos \psi \operatorname{sen} \theta \\
+	\operatorname{sen} \theta \operatorname{sen} \phi & -\operatorname{sen} \theta \cos \phi & \cos \theta \end{pmatrix}
+	$}
+	\item<2-> Como tenemos $\tilde{\mathbb{U}}_{\psi \theta \phi} = \tilde{\mathbb{U}}_{\psi} \tilde{\mathbb{U}}_{\theta} \tilde{\mathbb{U}}_{\phi}$ también tendremos $\tilde{\mathbb{U}}_{\psi \theta \phi}^{-1} \equiv \mathbb{U}_{\phi \theta \psi} =  \mathbb{U}_{-\phi} \mathbb{U}_{-\theta} \mathbb{U}_{-\psi}$.
+	\item<3-> Por lo tanto
+		{\tiny $\tilde{\mathbb{U}}_{-\phi}=\left(\begin{array}{ccc}\cos \phi & -\operatorname{sen} \phi & 0 \\ \operatorname{sen} \phi & \cos \phi & 0 \\ 0 & 0 & 1\end{array}\right)$, 
+	$\tilde{\mathbb{U}}_{-\theta}=\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & \cos \theta & -\operatorname{sen} \theta \\ 0 & \operatorname{sen} \theta & \cos \theta\end{array}\right)$  
+ 	$\tilde{\mathbb{U}}_{-\psi}=\left(\begin{array}{ccc}\cos \psi & -\operatorname{sen} \psi & 0 \\ \operatorname{sen} \psi & \cos \psi & 0 \\ 0 & 0 & 1\end{array}\right)$ }.
+	\item<4-> Finalmente tenemos que las matricies de rotación son matrices ortogonales. Esto es que la traspuesta es la inversa $\tilde{\mathbb{U}}_{\psi \theta \phi}^{-1} = \tilde{\mathbb{U}}_{\psi \theta \phi}^{T}$ y eso se ve claramente en las matrices arriba. Además la inversa de una multiplicación de matrices invierte el orden.
+	\item<5-> {\tiny $\tilde{\mathbb{U}}^{-1} = \tilde{\mathbb{U}}^T = 
+	\begin{pmatrix} 
+	\cos \psi \cos \phi - \operatorname{sen} \psi \cos \theta \operatorname{sen} \phi & -\operatorname{sen} \psi \cos \phi - \cos \psi \cos \theta \operatorname{sen} \phi & \operatorname{sen} \theta \operatorname{sen} \phi \\ 
+	\cos \psi \operatorname{sen} \phi + \operatorname{sen} \psi \cos \theta \cos \phi & -\operatorname{sen} \psi \operatorname{sen} \phi + \cos \psi \cos \theta \cos \phi & -\operatorname{sen} \theta \cos \phi \\ \operatorname{sen} \psi \operatorname{sen} \theta & \cos \psi \operatorname{sen} \theta & \cos \theta
+	\end{pmatrix}$ } 
+
+	  
 \end{itemize}
 }
   

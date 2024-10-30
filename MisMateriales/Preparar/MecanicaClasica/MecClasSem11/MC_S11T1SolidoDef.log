@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  30 OCT 2024 07:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  30 OCT 2024 12:13
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1523,16 +1523,12 @@ Overfull \hbox (8.63074pt too wide) has occurred while \output is active
 [26
 
 ]
-File: Figuras/RotacionesEuler.png Graphic file (type png)
-<use Figuras/RotacionesEuler.png>
-Package pdftex.def Info: Figuras/RotacionesEuler.png  used on input line 179.
-(pdftex.def)             Requested size: 180.67499pt x 73.66515pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 179.
+stitucional/UISLOGO.png  used on input line 185.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
 
 Overfull \hbox (8.63074pt too wide) has occurred while \output is active
@@ -1542,16 +1538,12 @@ Overfull \hbox (8.63074pt too wide) has occurred while \output is active
 [27
 
 ]
-File: Figuras/RotacionesEuler.png Graphic file (type png)
-<use Figuras/RotacionesEuler.png>
-Package pdftex.def Info: Figuras/RotacionesEuler.png  used on input line 179.
-(pdftex.def)             Requested size: 180.67499pt x 73.66515pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 179.
+stitucional/UISLOGO.png  used on input line 185.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
 
 Overfull \hbox (8.63074pt too wide) has occurred while \output is active
@@ -1559,6 +1551,51 @@ Overfull \hbox (8.63074pt too wide) has occurred while \output is active
  []
 
 [28
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 185.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (8.63074pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[29
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 185.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (8.63074pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[30
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 185.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (8.63074pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[31
 
 ]
 \tf@nav=\write6
@@ -1578,13 +1615,13 @@ Package rerunfilecheck Info: File `MC_S11T1SolidoDef.out' has not changed.
 (rerunfilecheck)             Checksum: 83238B221F883E8748CA4B2F9EEDC007;1517.
  ) 
 Here is how much of TeX's memory you used:
- 24480 strings out of 478268
- 480500 string characters out of 5846347
- 744386 words of memory out of 5000000
+ 24486 strings out of 478268
+ 480557 string characters out of 5846347
+ 751387 words of memory out of 5000000
  42080 multiletter control sequences out of 15000+600000
  488764 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,16n,122p,485b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,16n,122p,520b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7
 .pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
 pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pf
@@ -1601,14 +1638,15 @@ cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/l
 ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/l
 ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/lo
 cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
-exlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on MC_S11T1SolidoDef.pdf (28 pages, 3134322 bytes).
+al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
+live/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on MC_S11T1SolidoDef.pdf (31 pages, 3153430 bytes).
 PDF statistics:
- 947 PDF objects out of 1000 (max. 8388607)
- 835 compressed objects within 9 object streams
- 64 named destinations out of 1000 (max. 500000)
+ 1033 PDF objects out of 1200 (max. 8388607)
+ 915 compressed objects within 10 object streams
+ 70 named destinations out of 1000 (max. 500000)
  193 words of extra memory for PDF output out of 10000 (max. 10000000)
 
