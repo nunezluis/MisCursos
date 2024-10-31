@@ -187,8 +187,9 @@ La semana 11 del sólido rígido
 + [generalidades del sólido rígido, ángulos y velocidades de Euler](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T1SolidoDef.pdf)
 + [La energía cinética y el tensor de inercia](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T2SolidoEnergCin.pdf)
 + [Momento angular de un cuerpo rígido](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T3SolidoMomAngular.pdf)
-+ [El Trompo de Lagrange](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T4ElTrompo.pdf) 
++ [El Trompo de Lagrange](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T4ElTrompo.pdf)
 
++ [Las Monedas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S12T1LaMoneda.pdf) 
 ### Clase S12-C23/C24  
 
 ### Clase S13-C25/C26
