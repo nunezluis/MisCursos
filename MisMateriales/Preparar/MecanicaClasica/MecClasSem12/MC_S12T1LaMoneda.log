@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  30 OCT 2024 21:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  31 OCT 2024 09:52
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -988,7 +988,7 @@ Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 24.
 
 </Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png,
- id=42, 184.5294pt x 136.1085pt>
+ id=50, 184.5294pt x 136.1085pt>
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
@@ -1033,7 +1033,7 @@ ut line 53.
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-<Figuras/Moneda.pdf, id=115, 1423.3175pt x 528.97626pt>
+<Figuras/Moneda.pdf, id=126, 1423.3175pt x 528.97626pt>
 File: Figuras/Moneda.pdf Graphic file (type pdf)
 <use Figuras/Moneda.pdf>
 Package pdftex.def Info: Figuras/Moneda.pdf  used on input line 53.
@@ -1172,6 +1172,31 @@ stitucional/UISLOGO.png  used on input line 88.
 [12
 
 ]
+<Figuras/MonedaInclinada.png, id=408, 1416.29124pt x 577.15625pt>
+File: Figuras/MonedaInclinada.png Graphic file (type png)
+<use Figuras/MonedaInclinada.png>
+Package pdftex.def Info: Figuras/MonedaInclinada.png  used on input line 98.
+(pdftex.def)             Requested size: 216.81pt x 88.34865pt.
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 98.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [13
+
+ <./Figuras/MonedaInclinada.png>]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 106.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [14
+
+]
 \tf@nav=\write6
 \openout6 = `MC_S12T1LaMoneda.nav'.
 
@@ -1185,30 +1210,40 @@ stitucional/UISLOGO.png  used on input line 88.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package rerunfilecheck Info: File `MC_S12T1LaMoneda.out' has not changed.
-(rerunfilecheck)             Checksum: 51EA33CB5F661478E1A351520691BACE;513.
+
+Package rerunfilecheck Warning: File `MC_S12T1LaMoneda.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `MC_S12T1LaMoneda.out':
+(rerunfilecheck)             Before: 315600A00045E2F6DE6BD930467CCCD2;803
+(rerunfilecheck)             After:  766A05DDCA794A5062662B16267B1487;1095.
  ) 
 Here is how much of TeX's memory you used:
- 24310 strings out of 478268
- 477523 string characters out of 5846347
+ 24336 strings out of 478268
+ 477927 string characters out of 5846347
  740383 words of memory out of 5000000
- 41966 multiletter control sequences out of 15000+600000
+ 41983 multiletter control sequences out of 15000+600000
  477536 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,16n,122p,484b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></us
-r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></us
-r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on MC_S12T1LaMoneda.pdf (12 pages, 993877 bytes).
+ 128i,16n,122p,637b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Outline0.3} has been referenced but does not exist,
+ replaced by a fixed one
+
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr
+/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr
+/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on MC_S12T1LaMoneda.pdf (14 pages, 1217798 bytes).
 PDF statistics:
- 445 PDF objects out of 1000 (max. 8388607)
- 381 compressed objects within 4 object streams
- 29 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 517 PDF objects out of 1000 (max. 8388607)
+ 448 compressed objects within 5 object streams
+ 37 named destinations out of 1000 (max. 500000)
+ 154 words of extra memory for PDF output out of 10000 (max. 10000000)
 
