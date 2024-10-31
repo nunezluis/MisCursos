@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  31 OCT 2024 09:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  31 OCT 2024 11:16
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -988,7 +988,7 @@ Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 24.
 
 </Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png,
- id=66, 184.5294pt x 136.1085pt>
+ id=70, 184.5294pt x 136.1085pt>
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
@@ -1047,7 +1047,7 @@ Overfull \hbox (8.63074pt too wide) has occurred while \output is active
 [2
 
 ]
-<Figuras/SolidRef.png, id=151, 746.79pt x 532.99126pt>
+<Figuras/SolidRef.png, id=156, 746.79pt x 532.99126pt>
 File: Figuras/SolidRef.png Graphic file (type png)
 <use Figuras/SolidRef.png>
 Package pdftex.def Info: Figuras/SolidRef.png  used on input line 55.
@@ -1111,7 +1111,7 @@ Overfull \hbox (8.63074pt too wide) has occurred while \output is active
 [5
 
 ]
-<Figuras/Infinitesimal.png, id=235, 684.5575pt x 540.0175pt>
+<Figuras/Infinitesimal.png, id=240, 684.5575pt x 540.0175pt>
 File: Figuras/Infinitesimal.png Graphic file (type png)
 <use Figuras/Infinitesimal.png>
 Package pdftex.def Info: Figuras/Infinitesimal.png  used on input line 73.
@@ -1188,7 +1188,7 @@ Overfull \hbox (8.63074pt too wide) has occurred while \output is active
 [9
 
 ]
-<Figuras/VelocidadP.png, id=343, 940.51375pt x 670.505pt>
+<Figuras/VelocidadP.png, id=348, 940.51375pt x 670.505pt>
 File: Figuras/VelocidadP.png Graphic file (type png)
 <use Figuras/VelocidadP.png>
 Package pdftex.def Info: Figuras/VelocidadP.png  used on input line 91.
@@ -1284,7 +1284,7 @@ Overfull \hbox (8.63074pt too wide) has occurred while \output is active
 [14
 
 ]
-<Figuras/PrecesionNutacion.png, id=482, 513.92pt x 717.68124pt>
+<Figuras/PrecesionNutacion.png, id=487, 513.92pt x 717.68124pt>
 File: Figuras/PrecesionNutacion.png Graphic file (type png)
 <use Figuras/PrecesionNutacion.png>
 Package pdftex.def Info: Figuras/PrecesionNutacion.png  used on input line 113.
@@ -1420,12 +1420,12 @@ Overfull \hbox (8.63074pt too wide) has occurred while \output is active
 [21
 
 ]
-<Figuras/VelocidadesEuler.png, id=668, 772.8875pt x 730.73pt>
+<Figuras/VelocidadesEuler.png, id=673, 772.8875pt x 730.73pt>
 File: Figuras/VelocidadesEuler.png Graphic file (type png)
 <use Figuras/VelocidadesEuler.png>
 Package pdftex.def Info: Figuras/VelocidadesEuler.png  used on input line 141.
 (pdftex.def)             Requested size: 108.405pt x 102.49104pt.
-<Figuras/ComponentesVelocidades.png, id=669, 1049.9225pt x 627.34375pt>
+<Figuras/ComponentesVelocidades.png, id=674, 1049.9225pt x 627.34375pt>
 File: Figuras/ComponentesVelocidades.png Graphic file (type png)
 <use Figuras/ComponentesVelocidades.png>
 Package pdftex.def Info: Figuras/ComponentesVelocidades.png  used on input line
@@ -1446,7 +1446,7 @@ Overfull \hbox (8.63074pt too wide) has occurred while \output is active
 [22
 
  <./Figuras/VelocidadesEuler.png> <./Figuras/ComponentesVelocidades.png>]
-<Figuras/RotacionesEuler.png, id=697, 1371.1225pt x 559.08875pt>
+<Figuras/RotacionesEuler.png, id=702, 1371.1225pt x 559.08875pt>
 File: Figuras/RotacionesEuler.png Graphic file (type png)
 <use Figuras/RotacionesEuler.png>
 Package pdftex.def Info: Figuras/RotacionesEuler.png  used on input line 162.
@@ -1738,6 +1738,51 @@ Overfull \hbox (8.63074pt too wide) has occurred while \output is active
 [39
 
 ]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 265.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (8.63074pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[40
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 265.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (8.63074pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[41
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 265.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (8.63074pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[42
+
+]
 \tf@nav=\write6
 \openout6 = `MC_S11T1SolidoDef.nav'.
 
@@ -1751,42 +1796,52 @@ Overfull \hbox (8.63074pt too wide) has occurred while \output is active
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package rerunfilecheck Info: File `MC_S11T1SolidoDef.out' has not changed.
-(rerunfilecheck)             Checksum: 352184789062A3E6240422BCF11C6C90;2096.
+
+Package rerunfilecheck Warning: File `MC_S11T1SolidoDef.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `MC_S11T1SolidoDef.out':
+(rerunfilecheck)             Before: 90002FC3E00EC64F9B8C4388EC397B81;2248
+(rerunfilecheck)             After:  7C7A7ABE22554F77B786AD4361B32757;2248.
  ) 
 Here is how much of TeX's memory you used:
- 24533 strings out of 478268
- 481437 string characters out of 5846347
+ 24546 strings out of 478268
+ 481573 string characters out of 5846347
  751390 words of memory out of 5000000
- 42108 multiletter control sequences out of 15000+600000
+ 42113 multiletter control sequences out of 15000+600000
  488764 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,520b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7
-.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
-pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pf
-b></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pf
-b></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></us
-r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr
-/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/
-local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/lo
-cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/l
-ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/l
-ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/lo
-cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/t
-exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/tex
-live/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on MC_S11T1SolidoDef.pdf (39 pages, 3179096 bytes).
+
+pdfTeX warning (dest): name{Outline0.6.5.41} has been referenced but does not e
+xist, replaced by a fixed one
+
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.p
+fb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pf
+b></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb>
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb>
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/l
+ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/tex
+live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
+ve/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on MC_S11T1SolidoDef.pdf (42 pages, 3187771 bytes).
 PDF statistics:
- 1265 PDF objects out of 1440 (max. 8388607)
- 1137 compressed objects within 12 object streams
- 89 named destinations out of 1000 (max. 500000)
- 217 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1352 PDF objects out of 1440 (max. 8388607)
+ 1220 compressed objects within 13 object streams
+ 97 named destinations out of 1000 (max. 500000)
+ 225 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -56,21 +56,21 @@ Un disco homogéneo (una moneda) de radio $a$ y masa $M$ rueda sin deslizar por u
 \frame{
 \frametitle{Moneda que rueda sin deslizar: Lagrangeano}
 \begin{itemize}
-	\item<1-> Por su parte, respecto al sistema centro de masa, $\tilde{S}$ tenemos $\vec{r}(cp) = -a {\bf x}^2$, y $\vec{\Omega} \times \vec{r}(cp) = 
+	\item<1-> Por su parte, respecto al sistema centro de masa, $\tilde{S}$ tenemos $\vec{r}(cp) = -a {\bf \hat{x}}^2$, y $\vec{\Omega} \times \vec{r}(cp) = 
 	\left|
 	\begin{array}{ccc} 
-	{\bf x}^1 & {\bf x}^2 & {\bf x}^3 \\
+	{\bf \hat{x}}^1 & {\bf \hat{x}}^2 & {\bf \hat{x}}^3 \\
 	\tilde{\Omega}^1 & \tilde{\Omega}^2 & \Omega^3 \\
 	0 & -a & 0
-	\end{array}\right| = a(\Omega^3 \, {\bf x}_1 -\Omega^1\, {\bf x}_3) $
+	\end{array}\right| = a(\Omega^3 \, {\bf \hat{x}}_1 -\Omega^1\, {\bf \hat{x}}_3) $
 	\item<2-> Respecto al sistema centro de masa 
 	$\Omega_1  = \dot{\phi} \operatorname{sen} \, \theta \operatorname{sen} \, \psi+\dot{\theta} \cos \psi $ \\
 	$\Omega_2  = \dot{\phi} \operatorname{sen} \, \theta \cos \psi-\dot{\theta} \operatorname{sen} \, \psi \quad $  y 
 	$\quad \Omega_3  = \dot{\psi}+\dot{\phi} \cos \theta$
 	\item<2-> Proyectamos la ecuación $0=\dot{\vec{R}}+  \vec{\Omega} \times \vec{r}(cp)$ al sistema $S$, (${\bf i}$, ${\bf j}$, ${\bf k}$) tendremos 
-	$\dot{x} + a(\Omega_3 \, {\bf i} \cdot {\bf x}_1 -\Omega_1\, {\bf i} \cdot {\bf x}_3) = 0 $ \\
-	$\dot{y} + a(\Omega_3 \, {\bf j} \cdot {\bf x}_1 -\Omega_1\, {\bf j} \cdot {\bf x}_3) = 0 $ \\
-	$\dot{z} + a(\Omega_3 \, {\bf k} \cdot {\bf x}_1 -\Omega_1\, {\bf k} \cdot {\bf x}_3) = 0 $
+	$\dot{x} + a(\Omega_3 \, {\bf i} \cdot {\bf \hat{x}}_1 -\Omega_1\, {\bf i} \cdot {\bf \hat{x}}_3) = 0 $ \\
+	$\dot{y} + a(\Omega_3 \, {\bf j} \cdot {\bf \hat{x}}_1 -\Omega_1\, {\bf j} \cdot {\bf \hat{x}}_3) = 0 $ \\
+	$\dot{z} + a(\Omega_3 \, {\bf k} \cdot {\bf \hat{x}}_1 -\Omega_1\, {\bf k} \cdot {\bf \hat{x}}_3) = 0 $
 \end{itemize} 
 }
 %%%%% Diapo 2
@@ -101,12 +101,46 @@ Un disco delgado, uniforme, de masa $M$ y radio a está enganchado a una varilla 
 \frame{
 \frametitle{Coordenadas y ligaduras}
 \begin{itemize}  
-	\item<1-> 
+	\item<1-> En principio tenemos seis grados de libertad $(x, y, z, \phi, \psi, \theta)$
+	\item<2-> $\theta=$ constante implica  $\theta+\beta=\frac{\pi}{2}, \quad \tan \beta=\frac{a}{b}, \quad \theta=\frac{\pi}{2}-\arctan \frac{a}{b}$
+	\item<3-> $|{\bf R}| = b$. Más aún, ${\bf R} =b {\bf \hat{x}}_3= b\left[\operatorname{sen} \phi \operatorname{sen} \theta {\bf \hat{x}}-\cos \phi \operatorname{sen} \theta {\bf \hat{y}}+\cos \theta {\bf \hat{z}}\right]$,
+	\item<4-> Entonces $x = b\operatorname{sen} \phi \operatorname{sen} \theta $; $\quad y =-b\cos \phi \operatorname{sen} \theta \quad$ y $z = b\cos \theta $ que cumplen con la ecuación $x^2 +y^2 +z^2 = b^2$
+	\item<5-> Derivándolas con $\theta=$ const., se obtiene: $
+\dot{x}=b \dot{\phi} \cos \phi \operatorname{sen} \theta, \quad \dot{y}=b \dot{\phi} \operatorname{sen} \phi \operatorname{sen} \theta, \quad \dot{z}=0$
+	\item<6-> Rodar sin deslizar implica que la velocidad del punto $p$ es cero : ${\bf r}_{op}={\bf R}+{\bf r}_{cp} \Rightarrow \dot{{\bf r}}_{op} = 0=\dot{{\bf R}}+  \tilde{ {\bf \Omega}} \times {\bf r}_{cp}$.
+	\item<7-> Respecto al sistema centro de masa, $\tilde{S}$ tenemos ${\bf r}_{cp} = -a {\bf \hat{x}}_2$, y $\tilde{{\bf \Omega}} \times {\bf r}_{cp} = 
+	\left|
+	\begin{array}{ccc} 
+	{\bf \hat{x}}_1 & {\bf \hat{x}}_2 & {\bf \hat{x}}_3 \\
+	\tilde{\Omega}^1 & \tilde{\Omega}^2 & {\tilde \Omega}^3 \\
+	0 & -a & 0
+	\end{array}\right| = a(\tilde{\Omega}^3 \, {\bf \hat{x}}_1 -\tilde{\Omega}^1\, {\bf \hat{x}}_3) $
+	con cual respecto al centro de masa $b \dot{{\bf \hat{x}}}_3 +a(\tilde{\Omega}^3 \, {\bf \hat{x}}_1 -\tilde{\Omega}^1\, {\bf \hat{x}}_3) =0$
+
 \end{itemize}
 }
 
-  
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}
+	\item<1-> Al proyectar la ecuación de ligadura $0=\dot{{\bf R}}+ a(\tilde{\Omega}^3 \, {\bf \hat{x}}_1 -\tilde{\Omega}^1\, {\bf \hat{x}}_3) $ 
+	respecto a la base del Sistema laboratorio tendremos \\
+	$\dot{x} + a(\tilde{\Omega}^3 ({\bf \hat{x}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{x}} \cdot {\bf \hat{x}}_3))=0 $; $\quad \dot{y} + a(\tilde{\Omega}^3  ({\bf \hat{y}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{y}} \cdot {\bf \hat{x}}_3)) =0$ $\quad \dot{z} + a(\tilde{\Omega}^3  ({\bf \hat{z}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{z}} \cdot {\bf \hat{x}}_3)) =0 $;
+	\item<2-> que se convierte en 
+	$ \dot{x}+a(\dot{\psi} \cos \phi+\dot{\phi} \cos \phi \cos \theta-\dot{\theta} \operatorname{sen} \phi \operatorname{sen} \theta)=0$ \\
+	$ \dot{y}+a(\dot{\psi} \operatorname{sen} \phi+\dot{\phi} \operatorname{sen} \phi \cos \theta+\dot{\theta} \cos \phi \operatorname{sen} \theta)=0$ \\
+	$ \dot{z}-a \dot{\theta} \cos \theta=0 $
+	\item<3-> Usando las otras ecuaciones de ligadura $\dot{x}=b \dot{\phi} \cos \phi \operatorname{sen} \theta, \quad \dot{y}=b \dot{\phi} \operatorname{sen} \phi \operatorname{sen} \theta, \quad \dot{z}=0$, obtenemos $\dot{\psi}+\dot{\phi}\left[\frac{b}{a} \operatorname{sen} \theta+\cos \theta\right]=0 \Rightarrow \psi=-\frac{\sqrt{a^2+b^2}}{a} \phi$
+	\item<4-> Donde hemos sustituido el valor de $\theta$ que implica $\operatorname{sen} \theta=b / \sqrt{a^2+b^2}$ y $\cos \theta=a / \sqrt{a^2+b^2}$.
+\end{itemize}
+}
+ 
 \end{document}
+
+
+	\item<3->  La ligadura de rodar sin deslizar implica que la velocidad del punto $p$, en contacto con la superficie, es instantáneamente cero.
+	\item<4-> Esto es: $\vec{r}(op)=\vec{R}+\vec{r}(cp) \Rightarrow \dot{\vec{r}}(op) = 0=\dot{\vec{R}}+  \vec{\Omega} \times \vec{r}(cp)$
 
 %%%%% Diapo 2
 \section{Sección}

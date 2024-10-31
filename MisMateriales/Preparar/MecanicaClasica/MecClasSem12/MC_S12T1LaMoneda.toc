@@ -6,3 +6,4 @@
 \beamer@sectionintoc {2}{Moneda en un plano inclinado}{13}{0}{2}
 \beamer@subsectionintoc {2}{1}{Planteamiento del problema}{13}{0}{2}
 \beamer@subsectionintoc {2}{2}{Coordenadas y ligaduras}{14}{0}{2}
+\beamer@sectionintoc {3}{Secci\'on}{21}{0}{3}
