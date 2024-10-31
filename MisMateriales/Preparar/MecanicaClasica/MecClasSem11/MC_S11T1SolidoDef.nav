@@ -44,8 +44,12 @@
 \headcommand {\beamer@subsectionentry {0}{6}{3}{32}{Velocidades Angulares ${\bf \Omega }$ y ${\bf \tilde {\Omega }}$}}
 \headcommand {\slideentry {6}{3}{1}{32/35}{Velocidades Angulares ${\bf \Omega }$ y ${\bf \tilde {\Omega }}$}{0}}
 \headcommand {\beamer@framepages {32}{35}}
-\headcommand {\beamer@partpages {1}{35}}
 \headcommand {\beamer@subsectionpages {32}{35}}
-\headcommand {\beamer@sectionpages {23}{35}}
-\headcommand {\beamer@documentpages {35}}
-\headcommand {\gdef \inserttotalframenumber {11}}
+\headcommand {\beamer@subsectionentry {0}{6}{4}{36}{Productos escalares}}
+\headcommand {\slideentry {6}{4}{1}{36/39}{Productos escalares}{0}}
+\headcommand {\beamer@framepages {36}{39}}
+\headcommand {\beamer@partpages {1}{39}}
+\headcommand {\beamer@subsectionpages {36}{39}}
+\headcommand {\beamer@sectionpages {23}{39}}
+\headcommand {\beamer@documentpages {39}}
+\headcommand {\gdef \inserttotalframenumber {12}}

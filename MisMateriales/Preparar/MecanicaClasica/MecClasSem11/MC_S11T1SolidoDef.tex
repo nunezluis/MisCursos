@@ -210,11 +210,46 @@
 	\item<4-> Tendremos para el sistema laboratorio \\
 	$\Omega^1 = \dot{\theta} \cos \phi+\dot{\psi} \operatorname{sen} \phi \operatorname{sen} \theta$ \\
 	$\Omega^2 =\dot{\theta} \operatorname{sen} \phi-\dot{\psi} \cos \phi \operatorname{sen} \theta$ \\
-	$\Omega^3 =\dot{\phi}+\dot{\psi} \cos \theta$
-
-	
+	$\Omega^3 =\dot{\phi}+\dot{\psi} \cos \theta$	
 \end{itemize}
 }
+%%%%% Diapo 10
+\subsection{Productos escalares}
+\frame{
+\frametitle{Productos escalares}
+\begin{itemize}  
+	\item<1-> En general tenemos que $\vec{{\bf \Omega}} = \Omega^1 {\bf \hat{x}} +\Omega^2 {\bf \hat{y}} +\Omega^3 {\bf \hat{z}} =  \tilde{\Omega}^1{\bf \hat{x}_1} + \tilde{\Omega}^2{\bf \hat{x}_2} +\tilde{\Omega}^3{\bf \hat{x}_3}$
+	\item<2-> Por lo tanto \\
+	$\Omega^1 = {\bf \hat{x}} \cdot {\bf \hat{x}_1} \tilde{\Omega}^1 + {\bf \hat{x}} \cdot {\bf \hat{x}_2} \tilde{\Omega}^2 + {\bf \hat{x}} \cdot {\bf \hat{x}_3} \tilde{\Omega}^3$ \\
+	$\Omega^2 = {\bf \hat{y}} \cdot {\bf \hat{x}_1} \tilde{\Omega}^1 + {\bf \hat{y}} \cdot {\bf \hat{x}_2} \tilde{\Omega}^2 + {\bf \hat{y}} \cdot {\bf \hat{x}_3} \tilde{\Omega}^3$ \\
+	$\Omega^3 = {\bf \hat{z}} \cdot {\bf \hat{x}_1} \tilde{\Omega}^1 + {\bf \hat{z}} \cdot {\bf \hat{x}_2} \tilde{\Omega}^2 + {\bf \hat{z}} \cdot {\bf \hat{x}_3} \tilde{\Omega}^3$
+	\item<3-> {\tiny
+	$
+	\begin{pmatrix} 
+		\Omega^1 \\ \Omega^2 \\ \Omega^3 
+	\end{pmatrix} = 
+	\begin{pmatrix} 
+	\cos \psi \cos \phi - \operatorname{sen} \psi \cos \theta \operatorname{sen} \phi & -\operatorname{sen} \psi \cos \phi - \cos \psi \cos \theta \operatorname{sen} \phi & \operatorname{sen} \theta \operatorname{sen} \phi \\ 
+	\cos \psi \operatorname{sen} \phi + \operatorname{sen} \psi \cos \theta \cos \phi & -\operatorname{sen} \psi \operatorname{sen} \phi + \cos \psi \cos \theta \cos \phi & -\operatorname{sen} \theta \cos \phi \\ 
+	\operatorname{sen} \psi \operatorname{sen} \theta & \cos \psi \operatorname{sen} \theta & \cos \theta 
+	\end{pmatrix} 
+	\begin{pmatrix} 
+		\tilde{\Omega}^1 \\ \tilde{\Omega}^2 \\ \tilde{\Omega}^3 
+	\end{pmatrix}
+	$ 
+	}
+	\item<4-> ${\bf \hat{x}} \cdot {\bf \hat{x}_1} = \cos \psi \cos \phi - \operatorname{sen} \psi \cos \theta \operatorname{sen} \phi $;
+	${\bf \hat{x}} \cdot {\bf \hat{x}_2} = -\operatorname{sen} \psi \cos \phi - \cos \psi \cos \theta \operatorname{sen} \phi $;
+	$\quad {\bf \hat{x}} \cdot {\bf \hat{x}_3} = \operatorname{sen} \theta \operatorname{sen} \phi$ ;
+	${\bf \hat{y}} \cdot {\bf \hat{x}_1} = \cos \psi \operatorname{sen} \phi + \operatorname{sen} \psi \cos \theta \cos \phi$;
+	${\bf \hat{y}} \cdot {\bf \hat{x}_2}= -\operatorname{sen} \psi \operatorname{sen} \phi + \cos \psi \cos \theta \cos \phi$; 
+	$ \quad {\bf \hat{y}} \cdot {\bf \hat{x}_3} = -\operatorname{sen} \theta \cos \phi$;
+	${\bf \hat{z}} \cdot {\bf \hat{x}_1} = \operatorname{sen} \psi \operatorname{sen} \theta$;
+	$\quad {\bf \hat{z}} \cdot {\bf \hat{x}_2} = \cos \psi \operatorname{sen} \theta$;
+	$\quad {\bf \hat{z}} \cdot {\bf \hat{x}_3} = \cos \theta$. 
+\end{itemize}
+}
+
 
 \end{document}
 

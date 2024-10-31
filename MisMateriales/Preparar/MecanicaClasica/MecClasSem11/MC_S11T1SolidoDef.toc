@@ -8,3 +8,4 @@
 \beamer@subsectionintoc {6}{1}{Rotaciones de Euler}{23}{0}{6}
 \beamer@subsectionintoc {6}{2}{Matrices de Euler}{27}{0}{6}
 \beamer@subsectionintoc {6}{3}{Velocidades Angulares ${\bf \Omega }$ y ${\bf \tilde {\Omega }}$}{32}{0}{6}
+\beamer@subsectionintoc {6}{4}{Productos escalares}{36}{0}{6}

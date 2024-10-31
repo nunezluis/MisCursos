@@ -46,7 +46,7 @@ Un disco homogéneo (una moneda) de radio $a$ y masa $M$ rueda sin deslizar por u
 	\includegraphics[width=2.8in]{Figuras/Moneda.pdf}
 \end{figure}
    \begin{itemize}  
-  	\item<1-> En principio tendremos seis grados de libertad $(x, y, z, \phi, \psi, \theta)$: tres de traslación y tres ángulos de Euler. 
+  	\item<1-> En principio tendremos seis grados de libertad $(x, y, z, \phi, \psi, \theta)$: \\ tres de traslación y tres ángulos de Euler. 
 	\item<3->  La ligadura de rodar sin deslizar implica que la velocidad del punto $p$, en contacto con la superficie, es instantáneamente cero.
 	\item<4-> Esto es: $\vec{r}(op)=\vec{R}+\vec{r}(cp) \Rightarrow \dot{\vec{r}}(op)_{p}=0=\dot{\vec{R}}+  \vec{\Omega} \times \vec{r}(cp)$ 
     \end{itemize}
@@ -56,13 +56,13 @@ Un disco homogéneo (una moneda) de radio $a$ y masa $M$ rueda sin deslizar por u
 \frame{
 \frametitle{Moneda que rueda sin deslizar: Lagrangeano}
 \begin{itemize}
-	\item<1-> Por su parte, respecto al sistema centro de masa, $\tilde{S}$ tenemos $\vec{r}(cp) = -a {\bf x}_2$, y $\vec{\Omega} \times \vec{r}(cp) = 
+	\item<1-> Por su parte, respecto al sistema centro de masa, $\tilde{S}$ tenemos $\vec{r}(cp) = -a {\bf x}^2$, y $\vec{\Omega} \times \vec{r}(cp) = 
 	\left|
 	\begin{array}{ccc} 
-	{\bf x}_1 & {\bf x}_2 & {\bf x}_3 \\
-	\Omega_1 & \Omega_2 & \Omega_3 \\
+	{\bf x}^1 & {\bf x}^2 & {\bf x}^3 \\
+	\tilde{\Omega}^1 & \tilde{\Omega}^2 & \Omega^3 \\
 	0 & -a & 0
-	\end{array}\right| = a(\Omega_3 \, {\bf x}_1 -\Omega_1\, {\bf x}_3) $
+	\end{array}\right| = a(\Omega^3 \, {\bf x}^1 -\Omega^1\, {\bf x}^3) $
 	\item<2-> Respecto al sistema centro de masa 
 	$\Omega_1  = \dot{\phi} \operatorname{sen} \, \theta \operatorname{sen} \, \psi+\dot{\theta} \cos \psi $ \\
 	$\Omega_2  = \dot{\phi} \operatorname{sen} \, \theta \cos \psi-\dot{\theta} \operatorname{sen} \, \psi \quad $  y 
