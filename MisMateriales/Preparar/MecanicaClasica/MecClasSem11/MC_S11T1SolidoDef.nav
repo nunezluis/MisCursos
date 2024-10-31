@@ -32,15 +32,20 @@
 \headcommand {\beamer@sectionpages {18}{22}}
 \headcommand {\beamer@subsectionpages {18}{22}}
 \headcommand {\sectionentry {6}{Transformaciones entre el sistema Centro de Masa y Laboratorio}{23}{Transformaciones entre el sistema Centro de Masa y Laboratorio}{0}}
-\headcommand {\slideentry {6}{0}{1}{23/26}{}{0}}
+\headcommand {\beamer@subsectionpages {23}{22}}
+\headcommand {\beamer@subsectionentry {0}{6}{1}{23}{Rotaciones de Euler}}
+\headcommand {\slideentry {6}{1}{1}{23/26}{Rotaciones de Euler}{0}}
 \headcommand {\beamer@framepages {23}{26}}
-\headcommand {\beamer@sectionpages {23}{26}}
 \headcommand {\beamer@subsectionpages {23}{26}}
-\headcommand {\sectionentry {7}{Secci\'on}{27}{Secci\'on}{0}}
-\headcommand {\slideentry {7}{0}{1}{27/31}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{6}{2}{27}{Matrices de Euler}}
+\headcommand {\slideentry {6}{2}{1}{27/31}{Matrices de Euler}{0}}
 \headcommand {\beamer@framepages {27}{31}}
-\headcommand {\beamer@partpages {1}{31}}
 \headcommand {\beamer@subsectionpages {27}{31}}
-\headcommand {\beamer@sectionpages {27}{31}}
-\headcommand {\beamer@documentpages {31}}
-\headcommand {\gdef \inserttotalframenumber {10}}
+\headcommand {\beamer@subsectionentry {0}{6}{3}{32}{Velocidades Angulares ${\bf \Omega }$ y ${\bf \tilde {\Omega }}$}}
+\headcommand {\slideentry {6}{3}{1}{32/35}{Velocidades Angulares ${\bf \Omega }$ y ${\bf \tilde {\Omega }}$}{0}}
+\headcommand {\beamer@framepages {32}{35}}
+\headcommand {\beamer@partpages {1}{35}}
+\headcommand {\beamer@subsectionpages {32}{35}}
+\headcommand {\beamer@sectionpages {23}{35}}
+\headcommand {\beamer@documentpages {35}}
+\headcommand {\gdef \inserttotalframenumber {11}}

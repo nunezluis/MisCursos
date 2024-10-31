@@ -5,4 +5,6 @@
 \beamer@sectionintoc {4}{Precesi\'on, nutaci\'on y rotaci\'on}{15}{0}{4}
 \beamer@sectionintoc {5}{Velocidad ${\bf \Omega }$, \'angulos y velocidades de Euler}{18}{0}{5}
 \beamer@sectionintoc {6}{Transformaciones entre el sistema Centro de Masa y Laboratorio}{23}{0}{6}
-\beamer@sectionintoc {7}{Secci\'on}{27}{0}{7}
+\beamer@subsectionintoc {6}{1}{Rotaciones de Euler}{23}{0}{6}
+\beamer@subsectionintoc {6}{2}{Matrices de Euler}{27}{0}{6}
+\beamer@subsectionintoc {6}{3}{Velocidades Angulares ${\bf \Omega }$ y ${\bf \tilde {\Omega }}$}{32}{0}{6}

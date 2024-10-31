@@ -71,7 +71,7 @@
 	\item<4-> Un cambio infinitesimal $d \mathbf{r}$  sólo puede deberse a un cambio de dirección del vector $\mathbf{r}$, no a un cambio de su magnitud
 \end{itemize}
 }
-%%%%% Diapo 2
+%%%%% Diapo 3
 \section{Velocidades en un cuerpo rígido}
 \frame{
 \frametitle{Velocidades en un cuerpo rígido}
@@ -89,7 +89,7 @@
 	\item<5-> La dirección de la velocidad angular instantánea $\boldsymbol{\Omega}$ es la misma que la del vector $d \boldsymbol{\phi}$
 \end{itemize}
 }
-%%%%% Diapo 2
+%%%%% Diapo 4
 \section{Precesión, nutación y rotación}
 \frame{
 \frametitle{Precesión, nutación y rotación}
@@ -111,7 +111,7 @@
 	\end{itemize}
 \end{itemize}
 }
-%%%%% Diapo 2
+%%%%% Diapo 5
 \section{Velocidad ${\bf \Omega}$, ángulos y velocidades de Euler}
 \frame{
 \frametitle{Velocidad ${\bf \Omega}$ ángulos y velocidades de Euler}
@@ -130,7 +130,7 @@
 	$\Omega_3  = \dot{\psi}+\dot{\phi} \cos \theta$
 \end{itemize}
 }
-%%%%% Diapo 2
+%%%%% Diapo 6
 %\section{Sección}
 \frame{
 \frametitle{Componentes y velocidades angulares}
@@ -139,8 +139,9 @@
 	\includegraphics[width=2.8in]{Figuras/ComponentesVelocidades.png}
 \end{figure}
 }
-%%%%% Diapo 2
+%%%%% Diapo 7
 \section{Transformaciones entre el sistema Centro de Masa y Laboratorio}
+\subsection{Rotaciones de Euler}
 \frame{
 \frametitle{Del sistema Centro de Masa al Laboratorio 1/2}
 \begin{itemize}
@@ -159,10 +160,10 @@
 
 \end{itemize}
 }
-%%%%% Diapo 2
-\section{Sección}
+%%%%% Diapo 8
+\subsection{Matrices de Euler}
 \frame{
-\frametitle{Título transparencia}
+\frametitle{Matrices de Euler}
 \begin{itemize} 
 	\item<1-> En general concatenamos las tres rotaciones como $\tilde{\mathbb{U}}_{\psi \theta \phi} = \tilde{\mathbb{U}}_{\psi} \tilde{\mathbb{U}}_{\theta} \tilde{\mathbb{U}}_{\phi}$
 	{\tiny  $\tilde{\mathbb{U}}_{\psi \theta \phi}  = \begin{pmatrix} \cos \psi \cos \phi - \operatorname{sen} \psi \cos \theta \operatorname{sen} \phi & \cos \psi \operatorname{sen} \phi + \operatorname{sen} \psi \cos \theta \cos \phi & \operatorname{sen} \psi \operatorname{sen} \theta \\ -\operatorname{sen} \psi \cos \phi - \cos \psi \cos \theta \operatorname{sen} \phi & -\operatorname{sen} \psi \operatorname{sen} \phi + \cos \psi \cos \theta \cos \phi & \cos \psi \operatorname{sen} \theta \\
@@ -178,14 +179,53 @@
 	\begin{pmatrix} 
 	\cos \psi \cos \phi - \operatorname{sen} \psi \cos \theta \operatorname{sen} \phi & -\operatorname{sen} \psi \cos \phi - \cos \psi \cos \theta \operatorname{sen} \phi & \operatorname{sen} \theta \operatorname{sen} \phi \\ 
 	\cos \psi \operatorname{sen} \phi + \operatorname{sen} \psi \cos \theta \cos \phi & -\operatorname{sen} \psi \operatorname{sen} \phi + \cos \psi \cos \theta \cos \phi & -\operatorname{sen} \theta \cos \phi \\ \operatorname{sen} \psi \operatorname{sen} \theta & \cos \psi \operatorname{sen} \theta & \cos \theta
-	\end{pmatrix}$ } 
-
-	  
+	\end{pmatrix}$ } 	  
 \end{itemize}
 }
-  
+%%%%% Diapo 9
+\subsection{Velocidades Angulares ${\bf \Omega}$ y ${\bf \tilde{\Omega}}$}
+\frame{
+\frametitle{Velocidades Angulares ${\bf \Omega}$ y ${\bf \tilde{\Omega}}$}
+\begin{itemize}  
+	\item<1-> Estas matrices nos permiten calcular las componentes de la velocidad angular respecto al sistema laboratorio $\Omega^1, \Omega^2, \Omega^3$ a partir de las componentes respecto al sistema centro de masa $\tilde{\Omega}^1, \tilde{\Omega}^2, \tilde{\Omega}^3$.
+	\item<2-> {\tiny
+	$
+	\begin{pmatrix} 
+		\Omega^1 \\ \Omega^2 \\ \Omega^3 
+	\end{pmatrix} = 
+	\begin{pmatrix} 
+	\cos \psi \cos \phi - \operatorname{sen} \psi \cos \theta \operatorname{sen} \phi & -\operatorname{sen} \psi \cos \phi - \cos \psi \cos \theta \operatorname{sen} \phi & \operatorname{sen} \theta \operatorname{sen} \phi \\ 
+	\cos \psi \operatorname{sen} \phi + \operatorname{sen} \psi \cos \theta \cos \phi & -\operatorname{sen} \psi \operatorname{sen} \phi + \cos \psi \cos \theta \cos \phi & -\operatorname{sen} \theta \cos \phi \\ 
+	\operatorname{sen} \psi \operatorname{sen} \theta & \cos \psi \operatorname{sen} \theta & \cos \theta 
+	\end{pmatrix} 
+	\begin{pmatrix} 
+		\tilde{\Omega}^1 \\ \tilde{\Omega}^2 \\ \tilde{\Omega}^3 
+	\end{pmatrix}
+	$ 
+	}
+	\item<3-> Dado que para el centro de masa \\
+	$\tilde{\Omega}^1  = \dot{\phi} \operatorname{sen} \, \theta \operatorname{sen} \, \psi+\dot{\theta} \cos \psi $ \\
+	$\tilde{\Omega}^2  = \dot{\phi} \operatorname{sen} \, \theta \cos \psi-\dot{\theta} \operatorname{sen} \, \psi $ \\
+	$\tilde{\Omega}^3  = \dot{\psi}+\dot{\phi} \cos \theta$
+	\item<4-> Tendremos para el sistema laboratorio \\
+	$\Omega^1 = \dot{\theta} \cos \phi+\dot{\psi} \operatorname{sen} \phi \operatorname{sen} \theta$ \\
+	$\Omega^2 =\dot{\theta} \operatorname{sen} \phi-\dot{\psi} \cos \phi \operatorname{sen} \theta$ \\
+	$\Omega^3 =\dot{\phi}+\dot{\psi} \cos \theta$
+
+	
+\end{itemize}
+}
+
 \end{document}
 
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
 	\begin{figure}[t]
 		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
    	\end{figure}
