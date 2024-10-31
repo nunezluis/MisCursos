@@ -33,8 +33,12 @@
 \headcommand {\sectionentry {3}{Secci\'on}{21}{Secci\'on}{0}}
 \headcommand {\slideentry {3}{0}{1}{21/24}{}{0}}
 \headcommand {\beamer@framepages {21}{24}}
-\headcommand {\beamer@partpages {1}{24}}
 \headcommand {\beamer@subsectionpages {21}{24}}
-\headcommand {\beamer@sectionpages {21}{24}}
-\headcommand {\beamer@documentpages {24}}
-\headcommand {\gdef \inserttotalframenumber {8}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{25}{Energ\IeC {\'\i }as Cin\'etica, Potencial y el Lagrangeano}}
+\headcommand {\slideentry {3}{1}{1}{25/29}{Energ\IeC {\'\i }as Cin\'etica, Potencial y el Lagrangeano}{0}}
+\headcommand {\beamer@framepages {25}{29}}
+\headcommand {\beamer@partpages {1}{29}}
+\headcommand {\beamer@subsectionpages {25}{29}}
+\headcommand {\beamer@sectionpages {21}{29}}
+\headcommand {\beamer@documentpages {29}}
+\headcommand {\gdef \inserttotalframenumber {9}}

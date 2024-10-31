@@ -91,7 +91,11 @@ Un disco homogéneo (una moneda) de radio $a$ y masa $M$ rueda sin deslizar por u
 \subsection{Planteamiento del problema}
 \frame{
 \frametitle{Planteamiento del problema}
-Un disco delgado, uniforme, de masa $M$ y radio a está enganchado a una varilla $A C$ sin masa de longitud $b$. El sistema está en un plano inclinado perfectamente rugoso que forma un ángulo $\alpha$ con la horizontal. El punto $A$ de la varilla se mantiene fijo en un punto $O$ del plano inclinado mientras que el disco puede rodar libremente sin deslizar. Tomamos como sistema $S$ uno con origen en $O$, eje $z$ perpendicular al plano inclinado y el eje $y$ hacia arriba del plano y para el sistema $\tilde{S}$ origen también en $O$ y eje $\tilde{3}$ en la direción $A C$. Encontrar las ecuaciones de movimiento.
+Un disco delgado, uniforme, de masa $M$ y radio a está enganchado a una varilla $A C$ sin masa de longitud $b$. El sistema está en un plano inclinado perfectamente rugoso que forma un ángulo $\alpha$ con la horizontal. El punto $A$ de la varilla se mantiene fijo en un punto $O$ del plano inclinado mientras que el disco puede rodar libremente sin deslizar. Tomamos como sistema $S$ uno con origen en $O$, eje $z$ perpendicular al plano inclinado y el eje $y$ hacia arriba del plano y para el sistema $\tilde{S}$ origen también en $O$ y eje $\tilde{3}$ en la direción $A C$. Encontrar las ecuaciones de movimiento para 
+\begin{itemize}
+	\item $\alpha = 0$
+	\item $\alpha \neq 0$
+\end{itemize}
 \begin{figure}[t]
 	\includegraphics[width=3.0in]{Figuras/MonedaInclinada.png}
 \end{figure}
@@ -101,7 +105,7 @@ Un disco delgado, uniforme, de masa $M$ y radio a está enganchado a una varilla 
 \frame{
 \frametitle{Coordenadas y ligaduras}
 \begin{itemize}  
-	\item<1-> En principio tenemos seis grados de libertad $(x, y, z, \phi, \psi, \theta)$
+	\item<1-> En principio tenemos seis grados de libertad $(x, y, z, \phi, \psi, \theta)$ y cinco ligaduras
 	\item<2-> $\theta=$ constante implica  $\theta+\beta=\frac{\pi}{2}, \quad \tan \beta=\frac{a}{b}, \quad \theta=\frac{\pi}{2}-\arctan \frac{a}{b}$
 	\item<3-> $|{\bf R}| = b$. Más aún, ${\bf R} =b {\bf \hat{x}}_3= b\left[\operatorname{sen} \phi \operatorname{sen} \theta {\bf \hat{x}}-\cos \phi \operatorname{sen} \theta {\bf \hat{y}}+\cos \theta {\bf \hat{z}}\right]$,
 	\item<4-> Entonces $x = b\operatorname{sen} \phi \operatorname{sen} \theta $; $\quad y =-b\cos \phi \operatorname{sen} \theta \quad$ y $z = b\cos \theta $ que cumplen con la ecuación $x^2 +y^2 +z^2 = b^2$
@@ -126,13 +130,31 @@ Un disco delgado, uniforme, de masa $M$ y radio a está enganchado a una varilla 
 \begin{itemize}
 	\item<1-> Al proyectar la ecuación de ligadura $0=\dot{{\bf R}}+ a(\tilde{\Omega}^3 \, {\bf \hat{x}}_1 -\tilde{\Omega}^1\, {\bf \hat{x}}_3) $ 
 	respecto a la base del Sistema laboratorio tendremos \\
-	$\dot{x} + a(\tilde{\Omega}^3 ({\bf \hat{x}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{x}} \cdot {\bf \hat{x}}_3))=0 $; $\quad \dot{y} + a(\tilde{\Omega}^3  ({\bf \hat{y}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{y}} \cdot {\bf \hat{x}}_3)) =0$ $\quad \dot{z} + a(\tilde{\Omega}^3  ({\bf \hat{z}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{z}} \cdot {\bf \hat{x}}_3)) =0 $;
+	$\dot{x} + a(\tilde{\Omega}^3 ({\bf \hat{x}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{x}} \cdot {\bf \hat{x}}_3))=0 $; $\quad \dot{y} + a(\tilde{\Omega}^3  ({\bf \hat{y}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{y}} \cdot {\bf \hat{x}}_3)) =0$; $\quad \dot{z} + a(\tilde{\Omega}^3  ({\bf \hat{z}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{z}} \cdot {\bf \hat{x}}_3)) =0 $.
 	\item<2-> que se convierte en 
 	$ \dot{x}+a(\dot{\psi} \cos \phi+\dot{\phi} \cos \phi \cos \theta-\dot{\theta} \operatorname{sen} \phi \operatorname{sen} \theta)=0$ \\
 	$ \dot{y}+a(\dot{\psi} \operatorname{sen} \phi+\dot{\phi} \operatorname{sen} \phi \cos \theta+\dot{\theta} \cos \phi \operatorname{sen} \theta)=0$ \\
 	$ \dot{z}-a \dot{\theta} \cos \theta=0 $
-	\item<3-> Usando las otras ecuaciones de ligadura $\dot{x}=b \dot{\phi} \cos \phi \operatorname{sen} \theta, \quad \dot{y}=b \dot{\phi} \operatorname{sen} \phi \operatorname{sen} \theta, \quad \dot{z}=0$, obtenemos $\dot{\psi}+\dot{\phi}\left[\frac{b}{a} \operatorname{sen} \theta+\cos \theta\right]=0 \Rightarrow \psi=-\frac{\sqrt{a^2+b^2}}{a} \phi$
+	\item<3-> y usando las otras ecuaciones de ligadura $\dot{x}=b \dot{\phi} \cos \phi \operatorname{sen} \theta, \quad \dot{y}=b \dot{\phi} \operatorname{sen} \phi \operatorname{sen} \theta, \quad \dot{z}=0$, obtenemos $\dot{\psi}+\dot{\phi}\left[\frac{b}{a} \operatorname{sen} \theta+\cos \theta\right]=0 \Rightarrow \psi=-\frac{\sqrt{a^2+b^2}}{a} \phi$
 	\item<4-> Donde hemos sustituido el valor de $\theta$ que implica $\operatorname{sen} \theta=b / \sqrt{a^2+b^2}$ y $\cos \theta=a / \sqrt{a^2+b^2}$.
+\end{itemize}
+}
+%%%%% Diapo 2
+\subsection{Energías Cinética, Potencial y el Lagrangeano}
+\frame{
+\frametitle{Energías Cinética, Potencial y el Lagrangeano}
+\begin{itemize}  
+	\item<1-> Como siempre la energía cinética se construye como 
+	$T= T_{tras} + T_{rot} = \frac{1}{2} M(\dot{x}^2+\dot{y}^2+\dot{z}^2)
+	+\frac{1}{2}( I_{11} \tilde{\Omega}_1^2 +I_{22} \tilde{\Omega}_2^2 +I_{33} \tilde{\Omega}_3^2 )$
+	\item<2-> Los momentos de inercia son: $I_{11} = I_{22}=\frac{1}{4} M a^2$ y $I_{33}=\frac{1}{2} M a^2$.
+	\item<3-> Las componentes de la velocidad angular son 
+	$\tilde{\Omega}_1  = \dot{\phi} \operatorname{sen} \, \theta \operatorname{sen} \, \psi+\dot{\theta} \cos \psi$; 
+	$\quad \tilde{\Omega}_2  = \dot{\phi} \operatorname{sen} \, \theta \cos \psi-\dot{\theta} \operatorname{sen} \, \psi$; 
+	$\quad \tilde{\Omega}_3  = \dot{\psi}+\dot{\phi} \cos \theta$.
+	\item<4-> Finalmente la energía cinética queda como $T=\frac{M}{8} \frac{a^2 b^2+6 b^4}{a^2+b^2} \dot{\phi}^2$.
+	\item<5-> Para $\alpha = 0$ la energía potencial será $Mg \frac{ba}{\sqrt{a^2 + b^2}}$
+
 \end{itemize}
 }
  
