@@ -82,6 +82,7 @@ Un disco homogéneo (una moneda) de radio $a$ y masa $M$ rueda sin deslizar por u
 	\item<2-> Donde $I_{11} = I_{22}=\frac{1}{4} M a^2$ y $I_{33}=\frac{1}{2} M a^2$.
 	\item<3-> Por su parte, la energía potencial $V = mga \operatorname{sen} \theta$
 	\item<4-> El Lagrangeano $\mathcal{L} = T-V \Rightarrow$  $\quad \mathcal{L} = \frac{1}{2} M\left(\dot{x}^2+\dot{y}^2+\dot{z}^2\right)+\frac{1}{8} M a^2\left[\dot{\phi}^2 \operatorname{sen}^2 \theta+\dot{\theta}^2+2\left(\dot{\phi} \cos \theta^2+\dot{\psi}\right)^2\right] - mga \operatorname{sen} \theta$
+	\item<5-> La ecuación de movimiento será $\ddot{\phi}=-g \operatorname{sen} \alpha \frac{4\left(a^2+b^2\right)^{3 / 2}}{a^2+6 b^2} \operatorname{sen} \phi$
 
 \end{itemize}
 }
@@ -99,10 +100,6 @@ Un disco homogéneo (una moneda) de radio $a$ y masa $M$ rueda sin deslizar por u
 \frame{
 \frametitle{Planteamiento del problema}
 Un disco delgado, uniforme, de masa $M$ y radio a está enganchado a una varilla $A C$ sin masa de longitud $b$. El sistema está en un plano inclinado perfectamente rugoso que forma un ángulo $\alpha$ con la horizontal. El punto $A$ de la varilla se mantiene fijo en un punto $O$ del plano inclinado mientras que el disco puede rodar libremente sin deslizar. Tomamos como sistema $S$ uno con origen en $O$, eje $z$ perpendicular al plano inclinado y el eje $y$ hacia arriba del plano y para el sistema $\tilde{S}$ origen también en $O$ y eje $\tilde{3}$ en la direción $A C$. Encontrar las ecuaciones de movimiento para 
-\begin{itemize}
-	\item $\alpha = 0$
-	\item $\alpha \neq 0$
-\end{itemize}
 \begin{figure}[t]
 	\includegraphics[width=3.0in]{Figuras/MonedaInclinada.png}
 \end{figure}
@@ -160,8 +157,9 @@ Un disco delgado, uniforme, de masa $M$ y radio a está enganchado a una varilla 
 	$\quad \tilde{\Omega}_2  = \dot{\phi} \operatorname{sen} \, \theta \cos \psi-\dot{\theta} \operatorname{sen} \, \psi$; 
 	$\quad \tilde{\Omega}_3  = \dot{\psi}+\dot{\phi} \cos \theta$.
 	\item<4-> Finalmente la energía cinética queda como $T=\frac{M}{8} \frac{a^2 b^2+6 b^4}{a^2+b^2} \dot{\phi}^2$.
-	\item<5-> Para $\alpha = 0$ la energía potencial será $Mg \frac{ba}{\sqrt{a^2 + b^2}}$
-
+	\item<5-> En general la energía potencial la derivamos de la única fuerza posible: la gravitacional ${\bf F} = -Mg(\operatorname{sen} \alpha {\bf \hat{y}} + \cos \alpha {\bf \hat{z}} ) = -{\bf \nabla} V $
+	\item<6-> La energía potencial será $V = Mg(y \operatorname{sen} \alpha +z \cos \alpha ) \equiv Mgb(-\cos \phi \operatorname{sen} \theta \operatorname{sen} \alpha +\cos \theta \cos \alpha )$
+	\item<7-> La ecuación de movimiento será $\ddot{\phi}=-g \operatorname{sen} \alpha \frac{4\left(a^2+b^2\right)^{3 / 2}}{a^2+6 b^2} \operatorname{sen} \phi$
 \end{itemize}
 }
  
