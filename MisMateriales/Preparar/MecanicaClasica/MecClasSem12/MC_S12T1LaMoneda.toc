@@ -2,9 +2,9 @@
 \beamer@sectionintoc {1}{Moneda que rueda sin deslizar}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{Ligaduras}{3}{0}{1}
 \beamer@subsectionintoc {1}{2}{El Lagrangeano}{7}{0}{1}
-\beamer@subsectionintoc {1}{3}{Secci\'on}{10}{0}{1}
-\beamer@sectionintoc {2}{Moneda en un plano inclinado}{15}{0}{2}
-\beamer@subsectionintoc {2}{1}{Planteamiento del problema}{15}{0}{2}
-\beamer@subsectionintoc {2}{2}{Coordenadas y ligaduras}{16}{0}{2}
-\beamer@subsectionintoc {2}{3}{Integraci\'on de ligaduras}{23}{0}{2}
-\beamer@subsectionintoc {2}{4}{Energ\IeC {\'\i }as Cin\'etica, Potencial y el Lagrangeano}{27}{0}{2}
+\beamer@subsectionintoc {1}{3}{Las ecuaciones de movimiento}{11}{0}{1}
+\beamer@sectionintoc {2}{Moneda en un plano inclinado}{18}{0}{2}
+\beamer@subsectionintoc {2}{1}{Planteamiento del problema}{18}{0}{2}
+\beamer@subsectionintoc {2}{2}{Coordenadas y ligaduras}{19}{0}{2}
+\beamer@subsectionintoc {2}{3}{Integraci\'on de ligaduras}{26}{0}{2}
+\beamer@subsectionintoc {2}{4}{Energ\IeC {\'\i }as Cin\'etica, Potencial y el Lagrangeano}{30}{0}{2}
