@@ -42,6 +42,7 @@
 \frame{
   \frametitle{Moneda que rueda sin deslizar: Ligaduras}
 Un disco homogéneo (una moneda) de radio $a$ y masa $M$ rueda sin deslizar por una superficie plana. Escriba las ecuaciones de movimiento y encuentre una solución en el caso en que la inclinación del disco sea constante.
+Algunas animaciones ilustrativas en \url{https://rotations.berkeley.edu/the-rolling-disk/\#Korteweg}
 \begin{figure}[t]
 	\includegraphics[width=2.8in]{Figuras/Moneda.pdf}
 \end{figure}
@@ -56,17 +57,18 @@ Un disco homogéneo (una moneda) de radio $a$ y masa $M$ rueda sin deslizar por u
 \frame{
 \frametitle{Moneda que rueda sin deslizar: Lagrangeano}
 \begin{itemize}
-	\item<1-> Por su parte, respecto al centro de masa, $\tilde{S}$ tenemos ${\bf r}_{cp} = -a {\bf \hat{x}}_2$, y $\tilde{{\bf \Omega}} \times {\bf r}_{cp} = 
+	\item<1-> Como ${\bf r}_{cp} = -a {\bf \hat{x}}_2$, al proyectar la primera ecuación tendremos $x_{op} = x   -a {\bf \hat{x}} \cdot {\bf \hat{x}}_2$, $y_{op} = y   -a {\bf \hat{y}} \cdot {\bf \hat{x}}_2$ y $0 = z   -a {\bf \hat{z}} \cdot {\bf \hat{x}}_2$.
+	\item<2->  Que se convierten en  $x_{op} = x   +a (\operatorname{sen} \psi \cos \phi + \cos \psi \cos \theta \operatorname{sen} \phi)$;  $y_{op} = y   +a (\operatorname{sen} \psi \operatorname{sen} \phi - \cos \psi \cos \theta \cos \phi)$ y $z_{op} = 0 = z   -a \cos \psi \operatorname{sen} \theta$
+	\item<3-> Por su parte, $\tilde{{\bf \Omega}} \times {\bf r}_{cp} = 
 	\left|
 	\begin{array}{ccc} 
 	{\bf \hat{x}}_1 & {\bf \hat{x}}_2 & {\bf \hat{x}}_3 \\
 	\tilde{\Omega}^1 & \tilde{\Omega}^2 & {\tilde \Omega}^3 \\
 	0 & -a & 0
 	\end{array}\right| = a(\tilde{\Omega}^3 \, {\bf \hat{x}}_1 -\tilde{\Omega}^1\, {\bf \hat{x}}_3) $
-	\item<2-> Al proyectar la ecuación de ligadura $0=\dot{{\bf R}}+ a(\tilde{\Omega}^3 \, {\bf \hat{x}}_1 -\tilde{\Omega}^1\, {\bf \hat{x}}_3) $ respecto a la base del Sistema laboratorio tendremos \\
+	\item<4-> Al proyectar la ecuación de ligadura $0=\dot{{\bf R}}+ a(\tilde{\Omega}^3 \, {\bf \hat{x}}_1 -\tilde{\Omega}^1\, {\bf \hat{x}}_3)$ respecto a la base del Sistema laboratorio tendremos \\
 	$\dot{x} + a(\tilde{\Omega}^3 ({\bf \hat{x}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{x}} \cdot {\bf \hat{x}}_3))=0 $; $\quad \dot{y} + a(\tilde{\Omega}^3  ({\bf \hat{y}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{y}} \cdot {\bf \hat{x}}_3)) =0$;  $\quad \dot{z} + a(\tilde{\Omega}^3  ({\bf \hat{z}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{z}} \cdot {\bf \hat{x}}_3)) =0 $.
-	\item<3> Es decir $ \dot{x}+a \dot{\phi} \cos \phi \cos \theta-a \dot{\theta} \operatorname{sen} \phi \operatorname{sen} \theta+a \dot{\psi} \cos \phi  =0$; $ \dot{y}+a \dot{\phi} \operatorname{sen} \phi \cos \theta+a \dot{\theta} \cos \phi \operatorname{sen} \theta+a \dot{\psi} \operatorname{sen} \phi  =0 $;  $\quad \dot{z}-a \dot{\theta} \cos \theta =0$ 
-	\item<4-> La tercera ecuación es integrable y nos da $z=a \operatorname{sen} \theta$.
+	\item<5-> Es decir $ \dot{x}+a \dot{\phi} \cos \phi \cos \theta-a \dot{\theta} \operatorname{sen} \phi \operatorname{sen} \theta+a \dot{\psi} \cos \phi  =0$; $ \dot{y}+a \dot{\phi} \operatorname{sen} \phi \cos \theta+a \dot{\theta} \cos \phi \operatorname{sen} \theta+a \dot{\psi} \operatorname{sen} \phi  =0 $;  $\quad \dot{z}-a \dot{\theta} \cos \theta =0$ 
 \end{itemize} 
 }
 %%%%% Diapo 2
@@ -74,6 +76,7 @@ Un disco homogéneo (una moneda) de radio $a$ y masa $M$ rueda sin deslizar por u
 \frame{
 \frametitle{Las ecuaciones de movimiento}
 \begin{itemize}
+	\item<1-> La tercera ecuación es integrable y nos da $z=a \operatorname{sen} \theta$.
 	\item<1-> La energía cinética será 	$T= T_{tras} + T_{rot} = \frac{1}{2} M(\dot{x}^2+\dot{y}^2+\dot{z}^2)
 	+\frac{1}{2}( I_{11} \tilde{\Omega}_1^2 +I_{22} \tilde{\Omega}_2^2 +I_{33} \tilde{\Omega}_3^2 )$ 
 	\item<2-> Como  
