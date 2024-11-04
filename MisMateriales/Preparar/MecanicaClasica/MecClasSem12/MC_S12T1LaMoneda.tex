@@ -72,25 +72,39 @@ Algunas animaciones ilustrativas en \url{https://rotations.berkeley.edu/the-roll
 \end{itemize} 
 }
 %%%%% Diapo 2
-\subsection{Las ecuaciones de movimiento}
+\subsection{Energías cinética y potencial}
 \frame{
-\frametitle{Las ecuaciones de movimiento}
+\frametitle{Energías cinética y potencial}
 \begin{itemize}
-	\item<1-> La tercera ecuación es integrable y nos da $z=a \operatorname{sen} \theta$.
-	\item<1-> La energía cinética será 	$T= T_{tras} + T_{rot} = \frac{1}{2} M(\dot{x}^2+\dot{y}^2+\dot{z}^2)
+	\item<1-> La tercera ecuación es integrable y nos da $z=a \operatorname{sen} \theta$,  las otras ecuaciones constituyen vínculos no integrables.
+	\item<2-> La energía cinética será 	$T= T_{tras} + T_{rot} = \frac{1}{2} M(\dot{x}^2+\dot{y}^2+\dot{z}^2)
 	+\frac{1}{2}( I_{11} \tilde{\Omega}_1^2 +I_{22} \tilde{\Omega}_2^2 +I_{33} \tilde{\Omega}_3^2 )$ 
-	\item<2-> Como  
+	\item<3-> Como  
 	$\tilde{\Omega}^1  = \dot{\phi} \operatorname{sen} \, \theta \operatorname{sen} \, \psi+\dot{\theta} \cos \psi $ \\
 	$\tilde{\Omega}^2  = \dot{\phi} \operatorname{sen} \, \theta \cos \psi-\dot{\theta} \operatorname{sen} \, \psi \quad $  y 
-	$\quad \tilde{\Omega}^3  = \dot{\psi}+\dot{\phi} \cos \theta$	
-	\item<3-> 	$T=\frac{1}{2} M\left(\dot{x}^2+\dot{y}^2+\dot{z}^2\right)+\frac{1}{8} M a^2\left[\dot{\phi}^2 \operatorname{sen}^2 \theta+\dot{\theta}^2+2\left(\dot{\phi} \cos \theta^2+\dot{\psi}\right)^2\right]$
-	\item<4-> Donde $I_{11} = I_{22}=\frac{1}{4} M a^2$ y $I_{33}=\frac{1}{2} M a^2$.
-	\item<5-> Por su parte, la energía potencial $V =mg z = mga \operatorname{sen} \theta$
-	\item<6-> El Lagrangeano $\mathcal{L} = T-V \Rightarrow$  $\quad \mathcal{L} = \frac{1}{2} M\left(\dot{x}^2+\dot{y}^2+\dot{z}^2\right)+\frac{1}{8} M a^2\left[\dot{\phi}^2 \operatorname{sen}^2 \theta+\dot{\theta}^2+2\left(\dot{\phi} \cos \theta^2+\dot{\psi}\right)^2\right] - mga \operatorname{sen} \theta$
-	\item<7-> La ecuación de movimiento será
+	$\quad \tilde{\Omega}^3  = \dot{\psi}+\dot{\phi} \cos \theta$
+	\item<4-> y $I_{11} = I_{22}=\frac{1}{4} M a^2$ y $I_{33}=\frac{1}{2} M a^2$.	
+	\item<5->  Tendremos $T=\frac{1}{2} M\left(\dot{x}^2+\dot{y}^2+\dot{z}^2\right)$ $+\frac{1}{8} M a^2\left[\dot{\phi}^2 \operatorname{sen}^2 \theta+\dot{\theta}^2+2\left(\dot{\phi} \cos \theta^2+\dot{\psi}\right)^2\right]$
+	\item<6-> Que se simplifica a cuando incorporamos las ligaduras  $T = \frac{1}{32} a^2 M \left(\dot{\phi}^2 (\cos 4 \theta+13) +32 \dot{\phi} \dot{\psi} \cos \theta +2 \dot{\phi} (5 \dot{\phi} +4 \dot{\psi}) \cos 2 \theta \right.$ $\qquad \left.+8 \dot{\phi} \dot{\psi}+24 \dot{\psi}^2+20 \dot{\theta}^2\right)$
+	\item<7-> Por su parte, la energía potencial $V =mg z = mga \operatorname{sen} \theta$
+\end{itemize}
+}
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> El Lagrangeano $\mathcal{L} = T-V \Rightarrow$ $\mathcal{L} = \frac{1}{32} a M \left(4 \left(6 a  \dot{\psi}^2+5 a  \dot{\theta}^2-8 g \sin  \theta \right)+8 a  \dot{\phi}  \dot{\psi} (4 \cos  \theta+\cos 2 \theta+1) \right.$ $\qquad \left.+a  \dot{\phi}^2 (10 \cos 2  \theta+\cos 4 \theta+13)\right)$
+	%
+	\item<2-> Las coordenadas $\psi$ y $\phi$ son cíclicas y por lo tanto sus momentos conjugados serán constantes $p_{\psi} = \frac{\partial \mathcal{L}}{\partial \dot{\psi}} =$cte y $p_{\phi} = \frac{\partial \mathcal{L}}{\partial \dot{\phi}} =$cte
+	\item<3-> $p_{\psi} = \frac{\partial \mathcal{L}}{\partial \dot{\psi}} = \frac{1}{16} a^2 M \left(\dot{\phi} (10 \cos 2 \theta +\cos 4 \theta +13)+4 \dot{\psi} (4 \cos \theta +\cos 2 \theta  +1)\right) = C_1$
+	\item<4-> $p_{\phi} = \frac{\partial \mathcal{L}}{\partial \dot{\phi}} = \frac{1}{4} a^2 M \left(\dot{\phi} (4 \cos \theta +\cos 2 \theta +1)+6 \dot{\psi}\right) = C_2$
+	\item<5->  
 \end{itemize}
 }
 
+%	\item<8-> El Lagrangeano $\mathcal{L} = T-V \Rightarrow$  $\quad \mathcal{L} = \frac{1}{2} M\left(\dot{x}^2+\dot{y}^2+\dot{z}^2\right)+\frac{1}{8} M a^2\left[\dot{\phi}^2 \operatorname{sen}^2 \theta+\dot{\theta}^2+2\left(\dot{\phi} \cos \theta^2+\dot{\psi}\right)^2\right] - mga \operatorname{sen} \theta$
+%	\item<7-> La ecuación de movimiento será
 %	\item<2-> Los momentos de inercia son: $I_{11} = I_{22}=\frac{1}{4} M a^2$ y $I_{33}=\frac{1}{2} M a^2$.
 %	\item<3-> Las componentes de la velocidad angular son 
 %	$\tilde{\Omega}_1  = \dot{\phi} \operatorname{sen} \, \theta \operatorname{sen} \, \psi+\dot{\theta} \cos \psi$; 
