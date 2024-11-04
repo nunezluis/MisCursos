@@ -90,16 +90,19 @@ Algunas animaciones ilustrativas en \url{https://rotations.berkeley.edu/the-roll
 \end{itemize}
 }
 %%%%% Diapo 2
-\section{Sección}
+\subsection{Simetrías y Constantes de movimiento}
 \frame{
-\frametitle{Título transparencia}
+\frametitle{Simetrías y Constantes de movimiento}
 \begin{itemize}  
 	\item<1-> El Lagrangeano $\mathcal{L} = T-V \Rightarrow$ $\mathcal{L} = \frac{1}{32} a M \left(4 \left(6 a  \dot{\psi}^2+5 a  \dot{\theta}^2-8 g \sin  \theta \right)+8 a  \dot{\phi}  \dot{\psi} (4 \cos  \theta+\cos 2 \theta+1) \right.$ $\qquad \left.+a  \dot{\phi}^2 (10 \cos 2  \theta+\cos 4 \theta+13)\right)$
 	%
 	\item<2-> Las coordenadas $\psi$ y $\phi$ son cíclicas y por lo tanto sus momentos conjugados serán constantes $p_{\psi} = \frac{\partial \mathcal{L}}{\partial \dot{\psi}} =$cte y $p_{\phi} = \frac{\partial \mathcal{L}}{\partial \dot{\phi}} =$cte
 	\item<3-> $p_{\psi} = \frac{\partial \mathcal{L}}{\partial \dot{\psi}} = \frac{1}{16} a^2 M \left(\dot{\phi} (10 \cos 2 \theta +\cos 4 \theta +13)+4 \dot{\psi} (4 \cos \theta +\cos 2 \theta  +1)\right) = C_1$
 	\item<4-> $p_{\phi} = \frac{\partial \mathcal{L}}{\partial \dot{\phi}} = \frac{1}{4} a^2 M \left(\dot{\phi} (4 \cos \theta +\cos 2 \theta +1)+6 \dot{\psi}\right) = C_2$
-	\item<5->  
+	\item<5-> Por lo tanto 
+	$\dot{\phi}\to \frac{\csc ^2\left(\frac{\theta}{2}\right) (-6 C_1+4 C_2 \cos \theta+C_2 \cos 2 \theta+C_2)}{a^2 M (-2 \cos 2 \theta+\cos 3 \theta-5)}$
+	$\dot{\psi}\to \frac{\csc ^2\left(\frac{\theta}{2}\right) (4 (2 C_1-5 C_2) \cos 2 \theta+32 C_1 \cos \theta+8 C_1-2 C_2 \cos 4 \theta-26 C_2)}{8 a^2 M (-2 \cos 2 \theta+\cos 3 \theta-5)}$ 
+	\item<6-> La ecuación de movimiento para $\theta$ es  $ 10  \ddot{\theta}+ 4  \dot{\phi}  \dot{\psi} \sin^3\theta \csc ^2\left(\frac{\theta}{2}\right)+  \dot{\phi}^2 (5 \sin 2 \theta+\sin 4 \theta)+ \frac{8g}{a} \cos \theta \ = 0$
 \end{itemize}
 }
 
