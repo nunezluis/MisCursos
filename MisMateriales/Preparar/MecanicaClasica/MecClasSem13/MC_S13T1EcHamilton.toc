@@ -1,0 +1,5 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Entre Lagrange y Hamilton}{3}{0}{1}
+\beamer@sectionintoc {2}{La formulaci\'on lagrangiana}{3}{0}{2}
+\beamer@subsectionintoc {2}{1}{La formulaci\'on hamiltoniana}{7}{0}{2}
+\beamer@sectionintoc {3}{Secci\'on}{11}{0}{3}

@@ -1,0 +1,86 @@
+\documentclass[spanish]{beamer}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath}
+\usepackage{mathtools,cancel} % cancela con una flecha \cancelto{0}{XXXX}
+\renewcommand{\CancelColor}{\color{red}} %change cancel color to red
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usepackage{textpos}
+% Logo  en el comienzo 
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+\end{textblock*}}
+
+\begin{document}
+
+\title{\textbf{Dinámica Hamiltoniana} }
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
+\textit{Universidad Industrial de Santander, Santander, Colombia } \\
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+}
+\date{\today}
+\maketitle
+
+
+\begin{frame}
+\frametitle{Agenda}
+  \tableofcontents
+\end{frame}
+
+
+%%%%% Diapo 1
+\section{Entre Lagrange y Hamilton}
+\section{La formulación lagrangiana}
+\frame{
+  \frametitle{La formulación lagrangiana}
+   \begin{itemize}  
+  	\item<1-> La formulación lagrangiana de la  Mecánica describe el movimiento a partir de una función $L\left(q_i, \dot{q}_i, t\right), i=1,2, \ldots, s$, sus coordenadas y velocidades generalizadas en el el espacio de configuración $\left(q_i, \dot{q}_i\right)$.
+	\item<2-> En la formulación lagrangiana el movimiento de un sistema mecánico con $n$ grados de libertad se rige por $n$ ecuaciones diferenciales ordinarias de segundo orden.
+	\item<3-> El movimiento del sistema se determina unívocamente al especificar las $2 n$ condiciones iniciales: los valores de las coordenadas $q_s$ y velocidades $\dot{q}_s$ para un instante particular $t_0$.
+	\item<4-> El movimiento se representa geométricamente mediante una trayectoria en el espacio de configuración $n$-dimensional descrito por las coordenadas generalizadas $q_1, \ldots, q_n$
+    \end{itemize}
+}
+%%%%% Diapo 2
+\subsection{La formulación hamiltoniana}
+\frame{
+\frametitle{La formulación hamiltoniana}
+\begin{itemize}
+	\item<1-> La formulación hamiltoniana se desarrolla en el espacio de fase $\left(p_i, q_i\right)$, en términos del conjunto de sus coordenadas generalizadas $q_i$ y de sus momentos conjugados $p_i$.  
+	\item<2-> La dinámica de hamiltoniana consiste en sustituir las $n$ ecuaciones de Lagrange por un conjunto equivalente de $n$ ecuaciones diferenciales ordinarias de primer orden.
+	\item<3-> El movimiento se representa por una curva descrita en el espacio de fase, un espacio de $2 n$ dimensiones cuyas coordenadas son las variables independientes $q_i$ y $p_i$.
+	\item<4-> La importancia del formalismo hamiltoniano radica en que proporciona un método potente, general y flexible para la investigación de las cuestiones estructurales más profundas de la mecánica clásica y también en que sirve de fundamento a la mecánica cuántica y a la mecánica estadística.
+\end{itemize}
+}
+
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> No se trata de sustituir tivialmente las $n$ ecuaciones de Lagrange por un sistema de $2n$ ecuaciones primer orden equivalente mediante un variables $s_i=\dot{q}_i$, $i=1, \ldots, n$,  tratando $q_1, \ldots, q_n$ y  $s_1, \ldots, s_n$ como variables independientes. 
+	\item<2-> Es decir  $\dot{q}_i=s_i,$ $\Rightarrow \frac{d}{d t}\left(\frac{\partial L}{\partial s_i}\right)-\frac{\partial L}{\partial q_i}=0,$ para $i=1, \ldots, n$, donde $L(q_i, s_i, t)$ es el Lagrangiano del sistema.
+	\item<3-> Estas ecuaciones, involucran a las $q_i$ y $s_i$ de forma muy asimétrica y no son especialmente útiles.
+\end{itemize}
+}  
+\end{document}
+%
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
+   	\end{figure}
+	
