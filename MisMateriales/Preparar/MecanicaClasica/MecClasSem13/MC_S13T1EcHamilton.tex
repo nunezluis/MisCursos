@@ -38,9 +38,9 @@
 
 %%%%% Diapo 1
 \section{Entre Lagrange y Hamilton}
-\section{La formulación lagrangiana}
+\subsection{La idea lagrangiana}
 \frame{
-  \frametitle{La formulación lagrangiana}
+  \frametitle{La idea lagrangiana}
    \begin{itemize}  
   	\item<1-> La formulación lagrangiana de la  Mecánica describe el movimiento a partir de una función $L\left(q_i, \dot{q}_i, t\right), i=1,2, \ldots, s$, sus coordenadas y velocidades generalizadas en el el espacio de configuración $\left(q_i, \dot{q}_i\right)$.
 	\item<2-> En la formulación lagrangiana el movimiento de un sistema mecánico con $n$ grados de libertad se rige por $n$ ecuaciones diferenciales ordinarias de segundo orden.
@@ -49,9 +49,9 @@
     \end{itemize}
 }
 %%%%% Diapo 2
-\subsection{La formulación hamiltoniana}
+\subsection{La idea hamiltoniana}
 \frame{
-\frametitle{La formulación hamiltoniana}
+\frametitle{La idea hamiltoniana}
 \begin{itemize}
 	\item<1-> La formulación hamiltoniana se desarrolla en el espacio de fase $\left(p_i, q_i\right)$, en términos del conjunto de sus coordenadas generalizadas $q_i$ y de sus momentos conjugados $p_i$.  
 	\item<2-> La dinámica de hamiltoniana consiste en sustituir las $n$ ecuaciones de Lagrange por un conjunto equivalente de $n$ ecuaciones diferenciales ordinarias de primer orden.
@@ -61,15 +61,46 @@
 }
 
 %%%%% Diapo 2
-\section{Sección}
+\subsection{Velocidades generalizada y momentos conjugados}
 \frame{
-\frametitle{Título transparencia}
+\frametitle{Velocidades generalizada y momentos conjugados}
 \begin{itemize}  
 	\item<1-> No se trata de sustituir tivialmente las $n$ ecuaciones de Lagrange por un sistema de $2n$ ecuaciones primer orden equivalente mediante un variables $s_i=\dot{q}_i$, $i=1, \ldots, n$,  tratando $q_1, \ldots, q_n$ y  $s_1, \ldots, s_n$ como variables independientes. 
 	\item<2-> Es decir  $\dot{q}_i=s_i,$ $\Rightarrow \frac{d}{d t}\left(\frac{\partial L}{\partial s_i}\right)-\frac{\partial L}{\partial q_i}=0,$ para $i=1, \ldots, n$, donde $L(q_i, s_i, t)$ es el Lagrangiano del sistema.
 	\item<3-> Estas ecuaciones, involucran a las $q_i$ y $s_i$ de forma muy asimétrica y no son especialmente útiles.
+	\item<4-> Bajar el orden del sistema de ecuaciones dinámicas, se consigue describiendo la evolución del sistema mediante $2 n$, cantidades: las posiciones $q_1, \ldots, q_n$ y los momentos conjugados $p_1, \ldots, p_n$, definidos por $p_i=\frac{\partial L}{\partial \dot{q}_i}, \quad i=1, \ldots, n$.
 \end{itemize}
 }  
+%
+%%%%% Diapo 2
+\section{El esquema Hamiltoniano}
+\subsection{Del lagrangeano al hamiltoniano}
+\frame{
+\frametitle{Del lagrangeano al hamiltoniano}
+\begin{itemize}  
+	\item<1-> La descripción hamiltoniana implica sustituir las variables $(q_i, \dot{q}_i)$ por  $(q_i, p_i)$ en todas las magnitudes mecánicas y sustituir la función el Lagrangiano $L(q, \dot{q}, t)$ por $H(q, p, t)$ como generador de la dinámica.
+	\item<2-> Definimos $H(q, p, t)=\sum_{i=1}^n \dot{q}_i p_i-L(q, \dot{q}, t)$ como la transformación de Legendre del lagrangiano $L(q, \dot{q}, t)$. En el lado derecho las velocidades se expresan como ${\dot {q}}_{i}=f_{i}(q,p,t)$.
+	\item<3-> Las ecuaciones dinámicas serán $\dot{q}_i=\frac{\partial H}{\partial p_i}, \quad \dot{p}_i=-\frac{\partial H}{\partial q_i}, \quad i=1, \ldots, n$
+	\item<4-> El planteamiento hamiltoniano de la dinámica implica los siguientes pasos
+	\begin{itemize}
+		\item Fija las coordenadas generalizadas y construye el lagrangeano a partir de las energías cinética y potencial
+		\item Expresa la velocidades generalizadas en término de los momentos canónicos conjungados ${\dot {q}}_{i}=f_{i}(q,p,t)$.
+		\item Construye el Hamiltoniano a partir de la transformación de Legendre del Lagrangeano
+		\item Plantea las ecuaciones dinámicas de Hamilton
+	\end{itemize}
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+
+
 \end{document}
 %
 %%%%% Diapo 2

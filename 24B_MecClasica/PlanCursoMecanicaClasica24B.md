@@ -82,6 +82,7 @@ Desarrolle los problemas del [240816](https://www.overleaf.com/read/tjknrqvvrtgv
 #### Materiales
 + Presentación [El teorema de Noether y leyes de conservación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S3T1Noether.pdf
 )
++ Sitio web de [dinámica lagrangiana](https://profoundphysics.com/lagrangian-mechanics-for-beginners/)
 + Videos
   + [Emmy Noether CSIC](https://www.youtube.com/watch?v=N4to1dp6_lo)
   + [Emmy Noether Fermilab](https://www.youtube.com/watch?v=Rqfj7n5aSwY)
@@ -97,7 +98,6 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
   + Fuerzas generalizadas: partícula en un campo electromagnético
   + Sistemas integrables y sistemas caóticos
   + Sistema integrable: movimiento unidimensional
-
 + **Rehaga** los ejemplos 1. (p97), 2. (p98), 3. (p99)
 
 #### Problemas S3
@@ -189,7 +189,7 @@ La semana 11 del sólido rígido
 + [Momento angular de un cuerpo rígido](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T3SolidoMomAngular.pdf)
 + [El Trompo de Lagrange](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T4ElTrompo.pdf)
 
-+ [Las Monedas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S12T1LaMoneda.pdf) 
++ [Las Monedas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S12T1LaMoneda.pdf)
 ### Clase S12-C23/C24  
 
 ### Clase S13-C25/C26

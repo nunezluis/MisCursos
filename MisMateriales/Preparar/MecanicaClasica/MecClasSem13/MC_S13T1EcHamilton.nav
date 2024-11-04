@@ -5,22 +5,27 @@
 \headcommand {\beamer@sectionpages {1}{2}}
 \headcommand {\beamer@subsectionpages {1}{2}}
 \headcommand {\sectionentry {1}{Entre Lagrange y Hamilton}{3}{Entre Lagrange y Hamilton}{0}}
-\headcommand {\beamer@sectionpages {3}{2}}
 \headcommand {\beamer@subsectionpages {3}{2}}
-\headcommand {\sectionentry {2}{La formulaci\'on lagrangiana}{3}{La formulaci\'on lagrangiana}{0}}
-\headcommand {\slideentry {2}{0}{1}{3/6}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{La idea lagrangiana}}
+\headcommand {\slideentry {1}{1}{1}{3/6}{La idea lagrangiana}{0}}
 \headcommand {\beamer@framepages {3}{6}}
 \headcommand {\beamer@subsectionpages {3}{6}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{7}{La formulaci\'on hamiltoniana}}
-\headcommand {\slideentry {2}{1}{1}{7/10}{La formulaci\'on hamiltoniana}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{7}{La idea hamiltoniana}}
+\headcommand {\slideentry {1}{2}{1}{7/10}{La idea hamiltoniana}{0}}
 \headcommand {\beamer@framepages {7}{10}}
-\headcommand {\beamer@sectionpages {3}{10}}
 \headcommand {\beamer@subsectionpages {7}{10}}
-\headcommand {\sectionentry {3}{Secci\'on}{11}{Secci\'on}{0}}
-\headcommand {\slideentry {3}{0}{1}{11/13}{}{0}}
-\headcommand {\beamer@framepages {11}{13}}
-\headcommand {\beamer@partpages {1}{13}}
-\headcommand {\beamer@subsectionpages {11}{13}}
-\headcommand {\beamer@sectionpages {11}{13}}
-\headcommand {\beamer@documentpages {13}}
-\headcommand {\gdef \inserttotalframenumber {5}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{11}{Velocidades generalizada y momentos conjugados}}
+\headcommand {\slideentry {1}{3}{1}{11/14}{Velocidades generalizada y momentos conjugados}{0}}
+\headcommand {\beamer@framepages {11}{14}}
+\headcommand {\beamer@sectionpages {3}{14}}
+\headcommand {\beamer@subsectionpages {11}{14}}
+\headcommand {\sectionentry {2}{El esquema Hamiltoniano}{15}{El esquema Hamiltoniano}{0}}
+\headcommand {\beamer@subsectionpages {15}{14}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{15}{Del lagrangeano al hamiltoniano}}
+\headcommand {\slideentry {2}{1}{1}{15/18}{Del lagrangeano al hamiltoniano}{0}}
+\headcommand {\beamer@framepages {15}{18}}
+\headcommand {\beamer@partpages {1}{18}}
+\headcommand {\beamer@subsectionpages {15}{18}}
+\headcommand {\beamer@sectionpages {15}{18}}
+\headcommand {\beamer@documentpages {18}}
+\headcommand {\gdef \inserttotalframenumber {6}}
