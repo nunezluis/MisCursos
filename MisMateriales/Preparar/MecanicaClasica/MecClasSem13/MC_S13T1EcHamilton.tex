@@ -90,6 +90,35 @@
 	\end{itemize}
 \end{itemize}
 }
+\subsection{La transformación de Legendre}
+\frame{
+\frametitle{La transformación de Legendre 1/2}
+\begin{itemize}  
+	\item<1-> Dada una función $f(x)$, la transformación de Legendre permite encontrar otra función $g(y)$ que contiene la misma información que $f(x)$, usando como argumento la pendiente $y=f^{\prime}(x)$
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/TransfLegendre.png}
+   	\end{figure}
+	\item<2-> Cada punto $(f, x)$ en la curva $f(x)$ define una línea recta que pasa por un punto $(0, b)$ con pendiente $y=f^{\prime}(x)$.
+	\item<3-> El conjunto de todas las rectas $(y, b)$ describe las envolventes de la curva $f(x)$ y contiene la misma información que $f(x)$.
+	\item<4-> Ambas descripciones  $(f, x)$ o de $(y, b)$, son equivalentes.
+	\item<5-> \url{https://youtu.be/vgLq90cOI_M?si=bLGxc5GFEGesVJId}
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{La transformación de Legendre 2/2}
+\begin{itemize}  
+	\item<1-> La transformada de Legendre de una función $f(x)$ se define como $g(y) \equiv y x(y)-f(x(y))$
+	\item<2-> Matemáticamente, los puntos $(g, y)$ corresponden a $(-b, y)$ y, describen la misma curva que $f(x)$.
+	\item<3-> Si tenemos una función de $s$ variables $f\left(x_1, x_2, \ldots, x_s\right)$, existen $s$ derivadas $y_i=\frac{\partial f}{\partial x_i}=y_i\left(x_1, x_2, \ldots, x_s\right)$ para $i=1,2, \ldots, s$.
+	\item<4-> y la transformada de Legendre de $f\left(x_1, x_2, \ldots, x_s\right)$ será  $g\left(y_1, y_2, \ldots, y_s\right)=\sum_{i=1}^s x_i y_i-f\left(x_1, x_2, \ldots, x_s\right)$, con $x_i=x_i\left(y_1, y_2, \ldots, y_s\right) $
+	\item<5-> Variables termodinámicas conjugadas: (Presión-Volumen); (Temperatura-Entropía); (Potencial Químico-Número de partículas).
+	\item<6-> Potenciales termodinámicos: entalpía $H(S, p) =U+pV$; Energía libre de Helmholtz $F(T,V)=U-T S$; y Energía libre de Gibbs $G(T, p) = H-T S = U +pV -TS$
+
+\end{itemize}
+}
 %
 %%%%% Diapo 2
 \subsection{El oscilador armónico}
@@ -141,8 +170,9 @@
 %
 %%%%% Diapo 2
 \section{Simetrías y leyes de conservación}
+\subsection{El Hamiltoniano y la Energía}
 \frame{
-\frametitle{Simetrías y leyes de conservación}
+\frametitle{El Hamiltoniano y la Energía}
 \begin{itemize}  
 	\item<1-> El Hamiltoniano $\mathcal{H}$ es equivalente a la función de energía $\mathcal{E}$
 	$\mathcal{E}\left(q_i, \dot{q}_i, t\right) =\sum_{i=1}^s \frac{\partial \mathcal{L}}{\partial \dot{q}_i} \dot{q}_i-\mathcal{L}(q_i, \dot{q}_i, t) =\sum_{i=1}^s p_i \dot{q}_i-\mathcal{L}=\mathcal{H}(q_i, p_i, t)$ 
@@ -156,9 +186,9 @@
 }
 %
 %%%%% Diapo 2
-\section{Sección}
+\subsection{Un ejemplo de la realción entre Hamiltoniano y la Energía total}
 \frame{
-\frametitle{Título transparencia}
+\frametitle{El Hamiltoniano y la Energía}
 \begin{itemize}  
 	\item<1-> Consideremos una cuenta de masa $m$ que desliza por una barra, sin masa, que rota sobre un plano con velocidad angular $\omega$ constante.
 	\begin{figure}[t]

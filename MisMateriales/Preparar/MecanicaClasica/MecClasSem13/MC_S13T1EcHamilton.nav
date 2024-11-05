@@ -25,29 +25,36 @@
 \headcommand {\slideentry {2}{1}{1}{15/18}{Del lagrangeano al hamiltoniano}{0}}
 \headcommand {\beamer@framepages {15}{18}}
 \headcommand {\beamer@subsectionpages {15}{18}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{19}{El oscilador arm\'onico}}
-\headcommand {\slideentry {2}{2}{1}{19/25}{El oscilador arm\'onico}{0}}
-\headcommand {\beamer@framepages {19}{25}}
-\headcommand {\beamer@subsectionpages {19}{25}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{26}{Part\IeC {\'\i }cula movi\'endose en cono vertical}}
-\headcommand {\slideentry {2}{3}{1}{26/32}{Part\IeC {\'\i }cula movi\'endose en cono vertical}{0}}
-\headcommand {\beamer@framepages {26}{32}}
-\headcommand {\beamer@subsectionpages {26}{32}}
-\headcommand {\beamer@subsectionentry {0}{2}{4}{33}{Part\IeC {\'\i }cula en un potencial central}}
-\headcommand {\slideentry {2}{4}{1}{33/37}{Part\IeC {\'\i }cula en un potencial central}{0}}
-\headcommand {\beamer@framepages {33}{37}}
-\headcommand {\beamer@sectionpages {15}{37}}
-\headcommand {\beamer@subsectionpages {33}{37}}
-\headcommand {\sectionentry {3}{Simetr\IeC {\'\i }as y leyes de conservaci\'on}{38}{Simetr\IeC {\'\i }as y leyes de conservaci\'on}{0}}
-\headcommand {\slideentry {3}{0}{1}{38/44}{}{0}}
-\headcommand {\beamer@framepages {38}{44}}
-\headcommand {\beamer@sectionpages {38}{44}}
-\headcommand {\beamer@subsectionpages {38}{44}}
-\headcommand {\sectionentry {4}{Secci\'on}{45}{Secci\'on}{0}}
-\headcommand {\slideentry {4}{0}{1}{45/50}{}{0}}
-\headcommand {\beamer@framepages {45}{50}}
-\headcommand {\beamer@partpages {1}{50}}
-\headcommand {\beamer@subsectionpages {45}{50}}
-\headcommand {\beamer@sectionpages {45}{50}}
-\headcommand {\beamer@documentpages {50}}
-\headcommand {\gdef \inserttotalframenumber {11}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{19}{La transformaci\'on de Legendre}}
+\headcommand {\slideentry {2}{2}{1}{19/23}{La transformaci\'on de Legendre}{0}}
+\headcommand {\beamer@framepages {19}{23}}
+\headcommand {\slideentry {2}{2}{2}{24/29}{La transformaci\'on de Legendre}{0}}
+\headcommand {\beamer@framepages {24}{29}}
+\headcommand {\beamer@subsectionpages {19}{29}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{30}{El oscilador arm\'onico}}
+\headcommand {\slideentry {2}{3}{1}{30/36}{El oscilador arm\'onico}{0}}
+\headcommand {\beamer@framepages {30}{36}}
+\headcommand {\beamer@subsectionpages {30}{36}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{37}{Part\IeC {\'\i }cula movi\'endose en cono vertical}}
+\headcommand {\slideentry {2}{4}{1}{37/43}{Part\IeC {\'\i }cula movi\'endose en cono vertical}{0}}
+\headcommand {\beamer@framepages {37}{43}}
+\headcommand {\beamer@subsectionpages {37}{43}}
+\headcommand {\beamer@subsectionentry {0}{2}{5}{44}{Part\IeC {\'\i }cula en un potencial central}}
+\headcommand {\slideentry {2}{5}{1}{44/48}{Part\IeC {\'\i }cula en un potencial central}{0}}
+\headcommand {\beamer@framepages {44}{48}}
+\headcommand {\beamer@sectionpages {15}{48}}
+\headcommand {\beamer@subsectionpages {44}{48}}
+\headcommand {\sectionentry {3}{Simetr\IeC {\'\i }as y leyes de conservaci\'on}{49}{Simetr\IeC {\'\i }as y leyes de conservaci\'on}{0}}
+\headcommand {\beamer@subsectionpages {49}{48}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{49}{El Hamiltoniano y la Energ\IeC {\'\i }a}}
+\headcommand {\slideentry {3}{1}{1}{49/55}{El Hamiltoniano y la Energ\IeC {\'\i }a}{0}}
+\headcommand {\beamer@framepages {49}{55}}
+\headcommand {\beamer@subsectionpages {49}{55}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{56}{Un ejemplo de la realci\'on entre Hamiltoniano y la Energ\IeC {\'\i }a total}}
+\headcommand {\slideentry {3}{2}{1}{56/61}{Un ejemplo de la realci\'on entre Hamiltoniano y la Energ\IeC {\'\i }a total}{0}}
+\headcommand {\beamer@framepages {56}{61}}
+\headcommand {\beamer@partpages {1}{61}}
+\headcommand {\beamer@subsectionpages {56}{61}}
+\headcommand {\beamer@sectionpages {49}{61}}
+\headcommand {\beamer@documentpages {61}}
+\headcommand {\gdef \inserttotalframenumber {13}}
