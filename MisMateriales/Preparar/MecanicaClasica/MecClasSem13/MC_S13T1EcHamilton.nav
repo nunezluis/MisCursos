@@ -24,8 +24,16 @@
 \headcommand {\beamer@subsectionentry {0}{2}{1}{15}{Del lagrangeano al hamiltoniano}}
 \headcommand {\slideentry {2}{1}{1}{15/18}{Del lagrangeano al hamiltoniano}{0}}
 \headcommand {\beamer@framepages {15}{18}}
-\headcommand {\beamer@partpages {1}{18}}
 \headcommand {\beamer@subsectionpages {15}{18}}
-\headcommand {\beamer@sectionpages {15}{18}}
-\headcommand {\beamer@documentpages {18}}
-\headcommand {\gdef \inserttotalframenumber {6}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{19}{El oscilador arm\'onico}}
+\headcommand {\slideentry {2}{2}{1}{19/25}{El oscilador arm\'onico}{0}}
+\headcommand {\beamer@framepages {19}{25}}
+\headcommand {\beamer@subsectionpages {19}{25}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{26}{Part\IeC {\'\i }cula movi\'endose en cono vertical}}
+\headcommand {\slideentry {2}{3}{1}{26/32}{Part\IeC {\'\i }cula movi\'endose en cono vertical}{0}}
+\headcommand {\beamer@framepages {26}{32}}
+\headcommand {\beamer@partpages {1}{32}}
+\headcommand {\beamer@subsectionpages {26}{32}}
+\headcommand {\beamer@sectionpages {15}{32}}
+\headcommand {\beamer@documentpages {32}}
+\headcommand {\gdef \inserttotalframenumber {8}}

@@ -5,3 +5,5 @@
 \beamer@subsectionintoc {1}{3}{Velocidades generalizada y momentos conjugados}{11}{0}{1}
 \beamer@sectionintoc {2}{El esquema Hamiltoniano}{15}{0}{2}
 \beamer@subsectionintoc {2}{1}{Del lagrangeano al hamiltoniano}{15}{0}{2}
+\beamer@subsectionintoc {2}{2}{El oscilador arm\'onico}{19}{0}{2}
+\beamer@subsectionintoc {2}{3}{Part\IeC {\'\i }cula movi\'endose en cono vertical}{26}{0}{2}
