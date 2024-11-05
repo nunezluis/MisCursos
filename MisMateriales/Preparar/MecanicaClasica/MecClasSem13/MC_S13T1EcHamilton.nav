@@ -32,8 +32,22 @@
 \headcommand {\beamer@subsectionentry {0}{2}{3}{26}{Part\IeC {\'\i }cula movi\'endose en cono vertical}}
 \headcommand {\slideentry {2}{3}{1}{26/32}{Part\IeC {\'\i }cula movi\'endose en cono vertical}{0}}
 \headcommand {\beamer@framepages {26}{32}}
-\headcommand {\beamer@partpages {1}{32}}
 \headcommand {\beamer@subsectionpages {26}{32}}
-\headcommand {\beamer@sectionpages {15}{32}}
-\headcommand {\beamer@documentpages {32}}
-\headcommand {\gdef \inserttotalframenumber {8}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{33}{Part\IeC {\'\i }cula en un potencial central}}
+\headcommand {\slideentry {2}{4}{1}{33/37}{Part\IeC {\'\i }cula en un potencial central}{0}}
+\headcommand {\beamer@framepages {33}{37}}
+\headcommand {\beamer@sectionpages {15}{37}}
+\headcommand {\beamer@subsectionpages {33}{37}}
+\headcommand {\sectionentry {3}{Simetr\IeC {\'\i }as y leyes de conservaci\'on}{38}{Simetr\IeC {\'\i }as y leyes de conservaci\'on}{0}}
+\headcommand {\slideentry {3}{0}{1}{38/44}{}{0}}
+\headcommand {\beamer@framepages {38}{44}}
+\headcommand {\beamer@sectionpages {38}{44}}
+\headcommand {\beamer@subsectionpages {38}{44}}
+\headcommand {\sectionentry {4}{Secci\'on}{45}{Secci\'on}{0}}
+\headcommand {\slideentry {4}{0}{1}{45/50}{}{0}}
+\headcommand {\beamer@framepages {45}{50}}
+\headcommand {\beamer@partpages {1}{50}}
+\headcommand {\beamer@subsectionpages {45}{50}}
+\headcommand {\beamer@sectionpages {45}{50}}
+\headcommand {\beamer@documentpages {50}}
+\headcommand {\gdef \inserttotalframenumber {11}}
