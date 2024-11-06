@@ -1,0 +1,5 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Transformaciones Puntuales}{3}{0}{1}
+\beamer@sectionintoc {2}{Transformaciones Can\'onicas}{9}{0}{2}
+\beamer@sectionintoc {3}{Transformacion Can\'onica y Principio de M\IeC {\'\i }nima Acci\'on}{11}{0}{3}
+\beamer@sectionintoc {4}{Funci\'on Generadora}{18}{0}{4}

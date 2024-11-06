@@ -1,0 +1,121 @@
+\documentclass[spanish]{beamer}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath}
+\usepackage{mathtools,cancel} % cancela con una flecha \cancelto{0}{XXXX}
+\renewcommand{\CancelColor}{\color{red}} %change cancel color to red
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usepackage{textpos}
+% Logo  en el comienzo 
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+\end{textblock*}}
+
+\begin{document}
+
+\title{\textbf{Transformaciones Canónicas} }
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
+\textit{Universidad Industrial de Santander, Santander, Colombia } \\
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+}
+\date{\today}
+\maketitle
+
+
+\begin{frame}
+\frametitle{Agenda}
+  \tableofcontents
+\end{frame}
+%
+%%%%% Diapo 1
+\section{Transformaciones Puntuales}
+\frame{
+  \frametitle{Transformaciones Puntuales}
+   \begin{itemize}  
+  	\item<1-> Las posiciones en el espacio pueden ser descritas por diferentes sistemas de coordenadas $\left\{q_i\right\}$: cartesianas, esféricas, cilíndricas, etc.
+	\item<2-> La forma de las ecuaciones de Lagrange no depende del conjunto de coordenadas $\left\{q_i\right\} \leftrightarrow \left\{Q_i\right\}$: 
+	$\frac{d}{d t}\left(\frac{\partial L}{\partial \dot{q}_i}\right)-\frac{\partial L}{\partial q_i}=0 \leftrightarrow  \frac{d}{d t}\left(\frac{\partial L}{\partial \dot{Q}_i}\right)-\frac{\partial L}{\partial Q_i}=0$ 
+	\item<3-> En el espacio de fase podemos realizar una {\bf transformación puntual de coordenadas} 
+	$\left\{q_i, p_i\right\} \leftrightarrow \left\{Q_i, P_i\right\}\Rightarrow \mathcal{H}\left(q_i, p_i, t\right) \leftrightarrow \tilde{\mathcal{H}}\left(Q_i, P_i, t\right)$
+	\item<4-> En general, la forma de las ecuaciones de Hamilton no se preserva en las nuevas coordenadas y momentos $\left\{Q_i, P_i\right\}$.
+	\item<5-> Consideremos la siguiente transformacion puntual $\left\{q_i, p_i\right\} \rightarrow\left\{Q_i, P_i\right\}$ en el espacio de fase, $Q_i=p_i, \quad P_i=q_i$
+	\item<6-> Entonces
+	$\dot{q}_i=\frac{\partial \mathcal{H}}{\partial p_i} \Rightarrow \dot{P}_i=\frac{\partial \tilde{\mathcal{H}}}{\partial p_i}=\sum_{k=1}^s\left(\frac{\partial \tilde{\mathcal{H}}}{\partial Q_k} \frac{\partial Q_k}{\partial p_i}+\frac{\partial \tilde{\mathcal{H}}}{\partial P_k} \frac{\partial P_k}{\partial p_i}\right) 
+=-\sum_k \frac{\partial \tilde{\mathcal{H}}}{\partial Q_k} \delta_{i k}=-\frac{\partial \tilde{\mathcal{H}}}{\partial Q_i}$ \\
+$\dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i} \Rightarrow \dot{Q}_i=-\frac{\partial \tilde{\mathcal{H}}}{\partial q_i}=-\sum_{k=1}^s\left(\frac{\partial \tilde{\mathcal{H}}}{\partial Q_k} \frac{\partial Q_k}{\partial q_i}+\frac{\partial \tilde{\mathcal{H}}}{\partial P_k} \frac{\partial P_k}{\partial q_i}\right) 
+=-\sum_k \frac{\partial \tilde{\mathcal{H}}}{\partial P_k} \delta_{i k}=-\frac{\partial \tilde{\mathcal{H}}}{\partial P_i}$ Claramente no se cumplen
+    \end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Transformaciones Canónicas}
+\frame{
+\frametitle{Transformaciones Canónicas}
+\begin{itemize}  
+	\item<1-> Una {\bf transformación canónica} es una transformación puntual que mantiene invariante la forma de las ecuaciones de Hamilton.
+	$$
+	\begin{array}{r|c|l}
+	\mathcal{H}\left(q_i, p_i, t\right) & \rightarrow \text { Transformación canónica }  \rightarrow & \tilde{\mathcal{H}}\left(Q_i, P_i, t\right) \\
+	\dot{q}_i=\frac{\partial \mathcal{H}}{\partial p_i} &  P_i=P_i\left(q_j, p_j, t\right)   &  \dot{Q}_i=\frac{\partial \tilde{\mathcal{H}}}{\partial P_i}\\
+	\dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i} & Q_i\left(q_j, p_j, t\right) &  \dot{P}_i=-\frac{\partial \tilde{\mathcal{H}}}{\partial Q_i}  
+	\end{array}
+	$$
+	\item<2-> Las transformaciones canónicas son particularmente útiles cuando el Hamiltoniano transformado $\tilde{\mathcal{H}}\left(Q_i, P_i, t\right)$ no depende explícitamente de alguna coordenada $Q_j$ o momento $P_j$
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Transformacion Canónica y Principio de Mínima Acción}
+\frame{
+\frametitle{Principio de Mínima Acción}
+\begin{itemize}  
+	\item<1-> La condición para que una transformación $\left\{q_i, p_i\right\} \rightarrow\left\{Q_i, P_i\right\}$ sea canónica se deriva a partir de la equivalencia del Principio de Mínima Acción en ambos conjuntos de variables del espacio de fase.
+	\item<2-> El Principio de Mínima Acción para las variables $\left\{q_i, p_i\right\}$, implica $S  =\int_{t_1}^{t_2} \mathcal{L} d t \Rightarrow \delta S=0  \Rightarrow \delta\left(\int_{t_1}^{t_2} \mathcal{L} d t\right)=0$
+ 	\item<3-> Como el Hamiltoniano $\mathcal{H}\left(q_i, p_i, t\right)=\sum_{i=1}^s p_i \dot{q}_i- \mathcal{L}$
+	\item<4-> Tendremos 
+	$\delta S=\delta\left(\int_{t_1}^{t_2} \sum_{i=1}^s p_i \dot{q}_i-\mathcal{H}\right) d t=0 \Leftrightarrow$ $ 
+	\delta \tilde{S} = \delta\left(\int_{t_1}^{t_2} \sum_{i=1}^s P_i \dot{Q}_i-\tilde{\mathcal{H}}\right) d t=0$
+	\item<5-> Ambas formulaciones del Principio de Mínima Acción conducen a ecuaciones equivalentes si los integrandos  difieren, en una derivada total 
+	$\sum_{i=1}^s p_i \dot{q}_i-\mathcal{H}=\sum_{i=1}^s P_i \dot{Q}_i- \tilde{\tilde{\mathcal{H}}} +\frac{d  \mathcal{F}}{d t}$
+	\item<6-> Con lo cual $\frac{d  \mathcal{F}}{d t}=\sum_{i=1}^s p_i \dot{q}_i-\sum_{i=1}^s P_i \dot{Q}_i+\left(\tilde{\mathcal{H}}-\tilde{\mathcal{H}}\right)$ 
+	\item<7-> La función  $\mathcal{F}$ se llama función generadora de la transformación canónica $\left\{q_i, p_i\right\} \rightarrow$ $\left\{Q_i, P_i\right\}$.
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Función Generadora}
+\frame{
+\frametitle{Función Generadora}
+\begin{itemize}  
+	\item<1->  Dada una  $\mathcal{F}\left(q_i, p_i, Q_i, P_i, t\right)$, su derivada total $\frac{d  \mathcal{F}}{d t}$ debe satisfacer la condición 
+	$\frac{d  \mathcal{F}}{d t}=\sum_{i=1}^s p_i \dot{q}_i-\sum_{i=1}^s P_i \dot{Q}_i+\left(\tilde{\mathcal{H}}-\tilde{\mathcal{H}}\right)$  para que la transformación $\left\{q_i, p_i\right\} \rightarrow\left\{Q_i, P_i\right\}$ sea canónica.
+	\item<2-> Las derivadas parciales de  $\mathcal{F}$ con respecto a sus argumentos, contenidas en la expresión de $\frac{d  \mathcal{F}}{d t}$, permiten establecer la relación entre las variables $\left\{Q_i, P_i\right\}$ y $\left\{q_i, p_i\right\}$ y los tipos de función generadora.
+	\item<3->  La transformación canónica asociada a una función generadora  $\mathcal{F}$ es una propiedad característica de la función  $\mathcal{F}$ y no depende del Hamiltoniano de un sistema específico. 
+	\item<4-> Dada una función generadora $\mathcal{F}$, es posible encontrar una transformación canónica asociada a $\mathcal{F}$.
+	\item<5-> Dada una transformación canónica, en principio es posible obtener la función generadora que produce esa transformación.
+	\item<6-> La relación entre el Hamiltoniano $\mathcal{H}\left(q_i, p_i, t\right)$ y el Hamiltoniano transformado $\tilde{\mathcal{H}}\left(Q_i, P_i, t\right)$ resultante de la transformación canónica $\left\{q_i, p_i, t\right\} \rightarrow\left\{Q_i, P_i, t\right\}$ generada por una $\mathcal{F}$ siempre es $\tilde{\mathcal{H}}=\mathcal{H}+\frac{\partial \mathcal{F}}{\partial t}$
+\end{itemize}
+}
+  
+\end{document}
+%
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
+   	\end{figure}
+	
