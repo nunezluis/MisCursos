@@ -192,7 +192,6 @@ La semana 11 del sólido rígido
 ### Clase S12-C23/C24  
 
 + [El Trompo de Lagrange](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T4ElTrompo.pdf)
-
 + [Dos Monedas que rotan sin deslizar](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S12T1LaMoneda.pdf)
 
 ### Clase S13-C25/C26
