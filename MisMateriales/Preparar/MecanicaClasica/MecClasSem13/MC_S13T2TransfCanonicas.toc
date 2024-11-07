@@ -3,3 +3,9 @@
 \beamer@sectionintoc {2}{Transformaciones Can\'onicas}{9}{0}{2}
 \beamer@sectionintoc {3}{Transformacion Can\'onica y Principio de M\IeC {\'\i }nima Acci\'on}{11}{0}{3}
 \beamer@sectionintoc {4}{Funci\'on Generadora}{18}{0}{4}
+\beamer@sectionintoc {5}{Ejemplo de Funci\'on Generadora 1/2}{24}{0}{5}
+\beamer@sectionintoc {6}{Ejemplo de Funci\'on Generadora 2/2}{28}{0}{6}
+\beamer@sectionintoc {7}{Ejemplo de Funci\'on Generadora 2/2}{29}{0}{7}
+\beamer@sectionintoc {8}{Ejemplo de Funci\'on Generadora 2/2}{30}{0}{8}
+\beamer@sectionintoc {9}{Ejemplo de Funci\'on Generadora 2/2}{31}{0}{9}
+\beamer@sectionintoc {10}{Ejemplo de Funci\'on Generadora 2/2}{32}{0}{10}

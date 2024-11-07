@@ -22,8 +22,30 @@
 \headcommand {\sectionentry {4}{Funci\'on Generadora}{18}{Funci\'on Generadora}{0}}
 \headcommand {\slideentry {4}{0}{1}{18/23}{}{0}}
 \headcommand {\beamer@framepages {18}{23}}
-\headcommand {\beamer@partpages {1}{23}}
-\headcommand {\beamer@subsectionpages {18}{23}}
 \headcommand {\beamer@sectionpages {18}{23}}
-\headcommand {\beamer@documentpages {23}}
-\headcommand {\gdef \inserttotalframenumber {6}}
+\headcommand {\beamer@subsectionpages {18}{23}}
+\headcommand {\sectionentry {5}{Ejemplo de Funci\'on Generadora 1/2}{24}{Ejemplo de Funci\'on Generadora 1/2}{0}}
+\headcommand {\slideentry {5}{0}{1}{24/27}{}{0}}
+\headcommand {\beamer@framepages {24}{27}}
+\headcommand {\beamer@sectionpages {24}{27}}
+\headcommand {\beamer@subsectionpages {24}{27}}
+\headcommand {\sectionentry {6}{Ejemplo de Funci\'on Generadora 2/2}{28}{Ejemplo de Funci\'on Generadora 2/2}{0}}
+\headcommand {\beamer@sectionpages {24}{28}}
+\headcommand {\beamer@subsectionpages {24}{28}}
+\headcommand {\sectionentry {7}{Ejemplo de Funci\'on Generadora 2/2}{29}{Ejemplo de Funci\'on Generadora 2/2}{0}}
+\headcommand {\beamer@sectionpages {24}{29}}
+\headcommand {\beamer@subsectionpages {24}{29}}
+\headcommand {\sectionentry {8}{Ejemplo de Funci\'on Generadora 2/2}{30}{Ejemplo de Funci\'on Generadora 2/2}{0}}
+\headcommand {\beamer@sectionpages {24}{30}}
+\headcommand {\beamer@subsectionpages {24}{30}}
+\headcommand {\sectionentry {9}{Ejemplo de Funci\'on Generadora 2/2}{31}{Ejemplo de Funci\'on Generadora 2/2}{0}}
+\headcommand {\beamer@sectionpages {24}{31}}
+\headcommand {\beamer@subsectionpages {24}{31}}
+\headcommand {\sectionentry {10}{Ejemplo de Funci\'on Generadora 2/2}{32}{Ejemplo de Funci\'on Generadora 2/2}{0}}
+\headcommand {\slideentry {10}{0}{0}{28/32}{}{0}}
+\headcommand {\beamer@framepages {28}{32}}
+\headcommand {\beamer@partpages {1}{32}}
+\headcommand {\beamer@subsectionpages {24}{32}}
+\headcommand {\beamer@sectionpages {24}{32}}
+\headcommand {\beamer@documentpages {32}}
+\headcommand {\gdef \inserttotalframenumber {8}}

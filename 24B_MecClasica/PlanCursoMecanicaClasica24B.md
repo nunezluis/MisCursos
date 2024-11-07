@@ -69,6 +69,7 @@ Desarrolle los problemas del [240816](https://www.overleaf.com/read/tjknrqvvrtgv
 + Hay videos interesantes
   + [Lagrangian and Hamiltonian Mechanics](Lagrangian and Hamiltonian Mechanics)
   + [Newtonian/Lagrangian/Hamiltonian mechanics are not equivalent](https://www.youtube.com/watch?v=9VNW7NHwnuM)
+  + [La historia bien bonita del principio de mínima acción](https://youtu.be/Q10_srZ-pbs?si=eZM-zbC1_tUHcuz4)
 
 ### Clase S3-C5/C6  Leyes de conservación y simetrías
 #### Antes de clases

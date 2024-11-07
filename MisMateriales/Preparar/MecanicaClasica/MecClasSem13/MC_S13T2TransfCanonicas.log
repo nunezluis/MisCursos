@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  6 NOV 2024 15:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  6 NOV 2024 20:24
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -988,7 +988,7 @@ Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 24.
 
 </Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png,
- id=42, 184.5294pt x 136.1085pt>
+ id=50, 184.5294pt x 136.1085pt>
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
@@ -1244,6 +1244,56 @@ stitucional/UISLOGO.png  used on input line 106.
  [23
 
 ]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 120.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [24
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 120.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [25
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 120.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [26
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 120.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [27
+
+] [28
+
+] [29
+
+] [30
+
+] [31
+
+] [32
+
+]
 \tf@nav=\write6
 \openout6 = `MC_S13T2TransfCanonicas.nav'.
 
@@ -1253,19 +1303,26 @@ stitucional/UISLOGO.png  used on input line 106.
 \tf@snm=\write8
 \openout8 = `MC_S13T2TransfCanonicas.snm'.
 
- (./MC_S13T2TransfCanonicas.aux
+
+(./MC_S13T2TransfCanonicas.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package rerunfilecheck Info: File `MC_S13T2TransfCanonicas.out' has not changed
-.
-(rerunfilecheck)             Checksum: A7EBF6680A2E6187F2D9FF28066E9883;824.
+
+Package rerunfilecheck Warning: File `MC_S13T2TransfCanonicas.out' has changed.
+
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `MC_S13T2TransfCanonicas.out':
+(rerunfilecheck)             Before: B001358390DA2B1820ED8BFAEEB89000;1105
+(rerunfilecheck)             After:  FD75D2C24FAB358018ED4CD7AD4A5FD2;2164.
  ) 
 Here is how much of TeX's memory you used:
- 24313 strings out of 478268
- 477342 string characters out of 5846347
- 747422 words of memory out of 5000000
- 41949 multiletter control sequences out of 15000+600000
+ 24350 strings out of 478268
+ 477696 string characters out of 5846347
+ 747423 words of memory out of 5000000
+ 41962 multiletter control sequences out of 15000+600000
  477242 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,491b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1280,10 +1337,10 @@ local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr
 /local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/
 local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on MC_S13T2TransfCanonicas.pdf (23 pages, 212593 bytes).
+Output written on MC_S13T2TransfCanonicas.pdf (32 pages, 243836 bytes).
 PDF statistics:
- 736 PDF objects out of 1000 (max. 8388607)
- 664 compressed objects within 7 object streams
- 51 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 994 PDF objects out of 1000 (max. 8388607)
+ 910 compressed objects within 10 object streams
+ 75 named destinations out of 1000 (max. 500000)
+ 144 words of extra memory for PDF output out of 10000 (max. 10000000)
 

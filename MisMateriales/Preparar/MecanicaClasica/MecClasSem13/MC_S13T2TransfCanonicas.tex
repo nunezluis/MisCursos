@@ -104,7 +104,36 @@ $\dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i} \Rightarrow \dot{Q}_i=-\fr
 	\item<6-> La relación entre el Hamiltoniano $\mathcal{H}\left(q_i, p_i, t\right)$ y el Hamiltoniano transformado $\tilde{\mathcal{H}}\left(Q_i, P_i, t\right)$ resultante de la transformación canónica $\left\{q_i, p_i, t\right\} \rightarrow\left\{Q_i, P_i, t\right\}$ generada por una $\mathcal{F}$ siempre es $\tilde{\mathcal{H}}=\mathcal{H}+\frac{\partial \mathcal{F}}{\partial t}$
 \end{itemize}
 }
-  
+%
+%%%%% Diapo 2
+\section{Ejemplo de Función Generadora 1/2}
+\frame{
+\frametitle{Ejemplo de Función Generadora}
+Encontrar la transformación canónica $\left\{q_i, p_i\right\} \rightarrow\left\{Q_i, P_i\right\}, i=1,2$, generada por la función $\mathcal{G}=q_1\left(P_1+2 p_2\right)+p_2 P_2$.
+\begin{itemize}  
+	\item<1-> $\mathcal{G}\left(q_1, P_1, p_2, P_2\right) \Rightarrow $ 
+	$\frac{d \mathcal{G}}{d t} =\frac{\partial \mathcal{G}}{\partial q_1} \dot{q}_1+\frac{\partial \mathcal{G}}{\partial P_1} \dot{P}_1+\frac{\partial \mathcal{G}}{\partial p_2} \dot{p}_2+\frac{\partial \mathcal{G}}{\partial P_2} \dot{P}_2 \Rightarrow $ \\ $ \frac{d \mathcal{G}}{d t} = \left(P_1+2 p_2\right) \dot{q}_1+q_1 \dot{P}_1+\left(2 q_1+P_2\right) \dot{p}_2+p_2 \dot{P}_2$
+	\item<2-> Comparando con $\frac{d \mathcal{F}}{d t}  =\sum_{i=1}^2 p_i \dot{q}_i-\sum_{i=1}^2 P_i \dot{Q}_i+\left(H^{\prime}-H\right) \Rightarrow $ \\ $\frac{d \mathcal{F}}{d t}= p_1 \dot{q}_1+p_2 \dot{q}_2-P_1 \dot{Q}_1-P_2 \dot{Q}_2+\left(H^{\prime}-H\right)$
+	\item<3-> Para llevarlo a esa forma hacemos $p_2 \dot{q}_2 =\frac{d}{d t}\left(p_2 q_2\right)-q_2 \dot{p}_2$; $\quad P_1 \dot{Q}_1 =\frac{d}{d t}\left(P_1 Q_1\right)-Q_1 \dot{P}_1$;  $\quad P_2 \dot{Q}_2 =\frac{d}{d t}\left(P_2 Q_2\right)-Q_2 \dot{P}_2$
+	\item<4-> Con lo cual $\frac{d F}{d t}=p_1 \dot{q}_1-q_2 \dot{p}_2+Q_1 \dot{P}_1+Q_2 \dot{P}_2+\frac{d}{d t}\left(p_2 q_2-P_1 Q_1-P_2 Q_2\right)+\left(H^{\prime}-H\right)$ 
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\section{Ejemplo de Función Generadora 2/2}
+\begin{itemize} 
+	\item<1-> Es decir\\ 
+	$\frac{d}{d t}\left(F+P_1 Q_1+P_2 Q_2-p_2 q_2\right)=p_1 \dot{q}_1-q_2 \dot{p}_2+Q_1 \dot{P}_1+Q_2 \dot{P}_2+\left(H^{\prime}-H\right)$  
+	\item<2-> El lado izquierdo es la derivada total de una función que depende de las variables $\left(q_i, p_i, Q_i, P_i\right), i=1,2$,
+	\item<3-> Comparando con $\frac{d \mathcal{G}}{d t} = \left(P_1+2 p_2\right) \dot{q}_1+q_1 \dot{P}_1+\left(2 q_1+P_2\right) \dot{p}_2+p_2 \dot{P}_2$
+	\item<4-> Tenemos $G=F+P_1 Q_1+P_2 Q_2-p_2 q_2$; $\quad p_1=P_1+2 p_2$; $\quad Q_1=q_1$;  $\quad -q_2=2 q_1+P_2$;  $\quad Q_2=p_2$
+	\item<5-> La transformación canónica $\left\{q_i, p_i\right\} \rightarrow\left\{Q_i, P_i\right\}$ generada por $G$ es
+	$P_1  =p_1-2 p_2$ $\quad Q_1  =q_1$;  $\quad P_2 =-2 q_1-q_2$ $\quad Q_2  =p_2 $.
+
+\end{itemize}
+}  
 \end{document}
 %
 %%%%% Diapo 2
@@ -118,4 +147,16 @@ $\dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i} \Rightarrow \dot{Q}_i=-\fr
 	\begin{figure}[t]
 		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
    	\end{figure}
-	
+%
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+Las funciones generadores pueden no depender de todas las variables $\left(q_i, p_i, Q_i, P_i, t\right)$ y 
+ $\frac{d  \mathcal{F}}{d t}=\sum_{i=1}^s p_i \dot{q}_i-\sum_{i=1}^s P_i \dot{Q}_i+\left(\tilde{\mathcal{H}}-\tilde{\mathcal{H}}\right)$ nos permite identificar varias 
+\begin{itemize}
+	\item<1-> La función $\mathcal{F}_1\left(q_i, Q_i, t\right)$ genera  $p_i=p_i(q, Q, t), P_i=P_i(q, Q, t)$  
+	\item<1-> $\mathcal{F}_1=\mathcal{F}_1\left(q_i, Q_i, t\right) \Rightarrow \frac{d \mathcal{F}_1}{d t}=\sum_{i=1}^s\left(\frac{\partial \mathcal{F}_1}{\partial q_i} \dot{q}_i+\frac{\partial \mathcal{F}_1}{\partial Q_i} \dot{Q}_i\right)+\frac{\partial \mathcal{F}_1}{\partial t}$.
+	\item<1-> $p_i=\frac{\partial \mathcal{F}_1}{\partial q_i} =p_i(q, Q, t); \quad P_i=-\frac{\partial \mathcal{F}_1}{\partial Q_i} =P_i(q, Q, t); \quad \tilde{\mathcal{H}} =\mathcal{H}+\frac{\partial \mathcal{F}_1}{\partial t}$
+\end{itemize}
+}	
