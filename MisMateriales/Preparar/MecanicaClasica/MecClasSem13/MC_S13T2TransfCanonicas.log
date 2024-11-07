@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  7 NOV 2024 15:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  7 NOV 2024 15:58
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -777,7 +777,10 @@ Grid set 16 x 16 = 22.7622pt x 17.07166pt
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count340
 \l__pdf_internal_box=\box77
-) (./MC_S13T2TransfCanonicas.aux)
+) (./MC_S13T2TransfCanonicas.aux
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
+)
 \openout1 = `MC_S13T2TransfCanonicas.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -985,7 +988,7 @@ Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 24.
 
 </Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png,
- id=26, 184.5294pt x 136.1085pt>
+ id=70, 184.5294pt x 136.1085pt>
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
@@ -1493,29 +1496,29 @@ stitucional/UISLOGO.png  used on input line 205.
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 227.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 228.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 227.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 228.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 227.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 228.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 227.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 228.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <7> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 227.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 228.
 
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 227.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 228.
 
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 227.
+stitucional/UISLOGO.png  used on input line 228.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
 
 [49
@@ -1526,9 +1529,19 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 227.
+stitucional/UISLOGO.png  used on input line 228.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [50
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 228.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [51
 
 ]
 \tf@nav=\write6
@@ -1544,21 +1557,15 @@ stitucional/UISLOGO.png  used on input line 227.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-
-Package rerunfilecheck Warning: File `MC_S13T2TransfCanonicas.out' has changed.
-
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `MC_S13T2TransfCanonicas.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  B6B3A6658103E6439AC7F2B31546CCFB;2040.
+Package rerunfilecheck Info: File `MC_S13T2TransfCanonicas.out' has not changed
+.
+(rerunfilecheck)             Checksum: B6B3A6658103E6439AC7F2B31546CCFB;2040.
  ) 
 Here is how much of TeX's memory you used:
- 24475 strings out of 478268
- 480134 string characters out of 5846347
- 751455 words of memory out of 5000000
- 42048 multiletter control sequences out of 15000+600000
+ 24489 strings out of 478268
+ 480330 string characters out of 5846347
+ 752429 words of memory out of 5000000
+ 42060 multiletter control sequences out of 15000+600000
  482212 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,496b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1580,10 +1587,10 @@ live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texli
 ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
 /2022/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MC_S13T2TransfCanonicas.pdf (50 pages, 361190 bytes).
+Output written on MC_S13T2TransfCanonicas.pdf (51 pages, 367361 bytes).
 PDF statistics:
- 1502 PDF objects out of 1728 (max. 8388607)
- 1381 compressed objects within 14 object streams
- 112 named destinations out of 1000 (max. 500000)
- 102 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1563 PDF objects out of 1728 (max. 8388607)
+ 1440 compressed objects within 15 object streams
+ 114 named destinations out of 1000 (max. 500000)
+ 190 words of extra memory for PDF output out of 10000 (max. 10000000)
 
