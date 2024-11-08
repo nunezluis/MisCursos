@@ -76,20 +76,31 @@ $\dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i} \Rightarrow \dot{Q}_i=-\fr
 %%%%% Diapo 2
 \subsection{Transformacion Canónica y Principio de Mínima Acción}
 \frame{
-\frametitle{Principio de Mínima Acción}
+\frametitle{Principio de Mínima Acción 1/2}
 \begin{itemize}  
 	\item<1-> La condición para que una transformación $\left\{q_i, p_i\right\} \rightarrow\left\{Q_i, P_i\right\}$ sea canónica se deriva a partir de la equivalencia del Principio de Mínima Acción en ambos conjuntos de variables del espacio de fase.
 	\item<2-> El Principio de Mínima Acción para las variables $\left\{q_i, p_i\right\}$, implica $S  =\int_{t_1}^{t_2} \mathcal{L} d t \Rightarrow \delta S=0  \Rightarrow \delta\left(\int_{t_1}^{t_2} \mathcal{L} d t\right)=0$
  	\item<3-> Como el Hamiltoniano $\mathcal{H}\left(q_i, p_i, t\right)=\sum_{i=1}^s p_i \dot{q}_i- \mathcal{L}$
 	\item<4-> Tendremos 
-	$\delta S=\delta\left(\int_{t_1}^{t_2} \sum_{i=1}^s p_i \dot{q}_i-\mathcal{H}\right) d t=0 \Leftrightarrow$ $ 
-	\delta \tilde{S} = \delta\left(\int_{t_1}^{t_2} \sum_{i=1}^s P_i \dot{Q}_i-\mathcal{H}\right) d t=0$
-	\item<5-> Ambas formulaciones del Principio de Mínima Acción conducen a ecuaciones equivalentes si los integrandos  difieren, en una derivada total 
-	$\sum_{i=1}^s p_i \dot{q}_i-\mathcal{H}=\sum_{i=1}^s P_i \dot{Q}_i- \tilde{\mathcal{H}} +\frac{d  \mathcal{F}}{d t}$
-	\item<6-> Con lo cual $\frac{d  \mathcal{F}}{d t}=\sum_{i=1}^s p_i \dot{q}_i-\sum_{i=1}^s P_i \dot{Q}_i+\left(\tilde{\mathcal{H}}-\mathcal{H}\right)$ 
-	\item<7-> La función  $\mathcal{F}$ se llama función generadora de la transformación canónica $\left\{q_i, p_i\right\} \rightarrow$ $\left\{Q_i, P_i\right\}$.
+	$\delta S=\delta\left(\int_{t_1}^{t_2} \sum_{i=1}^s p_i \dot{q}_i-\mathcal{H}\right) d t=0 \Leftrightarrow$ genera las ecuaciones
+	$\dot{q}_i=\frac{\partial \mathcal{H}}{\partial p_i}, \quad \dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i}, \quad i=1, \ldots, n$
+	\item<5->	Por su parte $ \delta \tilde{S} = \delta\left(\int_{t_1}^{t_2} \sum_{i=1}^s P_i \dot{Q}_i- \tilde{\mathcal{H}}\right) d t=0$ genera $\dot{Q}_i=\frac{\partial \tilde{\mathcal{H}}}{\partial P_i}, \quad \dot{P}_i=-\frac{\partial \tilde{\mathcal{H}}}{\partial Q_i}, \quad i=1, \ldots, n$
 \end{itemize}
 }
+%
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Principio de Mínima Acción 2/2}
+\begin{itemize}
+	\item<1-> Como las variaciones  $\delta S=0$ y  $ \delta \tilde{S} =0$ de forma independiente generan las correspondientes ecuaciones de Hamilton para las variables $\left\{q_i, p_i\right\}$ y $\left\{Q_i, P_i\right\}$ . 
+	\item<2-> Ambas formulaciones del Principio de Mínima Acción conducen a ecuaciones equivalentes si los integrandos  difieren, en una derivada total 
+	$\sum_{i=1}^s p_i \dot{q}_i-\mathcal{H}=\sum_{i=1}^s P_i \dot{Q}_i- \tilde{\mathcal{H}} +\frac{d  \mathcal{F}}{d t}$
+	\item<3-> Con lo cual $\frac{d  \mathcal{F}}{d t}=\sum_{i=1}^s p_i \dot{q}_i-\sum_{i=1}^s P_i \dot{Q}_i+\left(\tilde{\mathcal{H}}-\mathcal{H}\right)$ 
+	\item<4-> La función  $\mathcal{F}$ se llama función generadora de la transformación canónica $\left\{q_i, p_i\right\} \rightarrow$ $\left\{Q_i, P_i\right\}$.
+\end{itemize}
+}
+
 %
 %%%%% Diapo 2
 \subsection{Función Generadora}
@@ -161,11 +172,11 @@ Encontrar la transformación canónica $\left\{q_i, p_i\right\} \rightarrow\left\{
 \frametitle{Paréntesis de Poisson: Definición}
 \begin{itemize}  
 	\item<1-> Sea una función $f\left(q_i, p_i, t\right)$ en el espacio de fase $\left(q_i, p_i\right)$, $i=1, \ldots, s$, de un sistema mecánico con un Hamiltoniano $\mathcal{H}\left(q_i, p_i, t\right)$.
-	\item<2-> La derivada total de $f$ es $\frac{d \mathcal{F}}{d t}=\sum_{i=1}^s\left(\frac{\partial f}{\partial q_i} \dot{q}_i+\frac{\partial f}{\partial p_i} \dot{p}_i\right)+\frac{\partial f}{\partial t}$.
+	\item<2-> La derivada total de $f$ es $\frac{d f}{d t}=\sum_{i=1}^s\left(\frac{\partial f}{\partial q_i} \dot{q}_i+\frac{\partial f}{\partial p_i} \dot{p}_i\right)+\frac{\partial f}{\partial t}$.
 	\item<3-> Sus ecuaciones de Hamilton son $\dot{q}_i=\frac{\partial \mathcal{H}}{\partial p_i}, \quad \dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i}$
-	\item<4-> Sustituyendo, tenemos $\frac{d \mathcal{F}}{d t}=\sum_{i=1}^s\left(\frac{\partial f}{\partial q_i} \frac{\partial \mathcal{H}}{\partial p_i}-\frac{\partial f}{\partial p_i} \frac{\partial \mathcal{H}}{\partial q_i}\right)+\frac{\partial f}{\partial t}$
+	\item<4-> Sustituyendo, tenemos $\frac{d f}{d t}=\sum_{i=1}^s\left(\frac{\partial f}{\partial q_i} \frac{\partial \mathcal{H}}{\partial p_i}-\frac{\partial f}{\partial p_i} \frac{\partial \mathcal{H}}{\partial q_i}\right)+\frac{\partial f}{\partial t}$
 	\item<5-> Entonces el paréntesis de Poisson de la función $f$ para un sistema con hamiltoniano $\mathcal{H}$ es $\{f, \mathcal{H}\} \equiv \sum_{i=1}^s\left(\frac{\partial f}{\partial q_i} \frac{\partial \mathcal{H}}{\partial p_i}-\frac{\partial f}{\partial p_i} \frac{\partial \mathcal{H}}{\partial q_i}\right)$.
-	\item<6-> Con lo cual $\frac{d \mathcal{F}}{d t}=\{f, \mathcal{H}\}+\frac{\partial f}{\partial t} $
+	\item<6-> Con lo cual $\frac{d f}{d t}=\{f, \mathcal{H}\}+\frac{\partial f}{\partial t} $
 	\item<7-> Si $f$ no depende explícitamente del tiempo (cantidad conservada), tenemos $\{f, \mathcal{H}\}=0$
 	\item<8-> Para $f\left(q_i, p_i, t\right)$ y $g\left(q_i, p_i, t\right)$ podemos definir el paréntesis de Poisson de ${f}$ y $g$ como $\{f, g\} \equiv \sum_{i=1}^s\left(\frac{\partial f}{\partial q_i} \frac{\partial g}{\partial p_i}-\frac{\partial f}{\partial p_i} \frac{\partial g}{\partial q_i}\right) .$
 \end{itemize}
