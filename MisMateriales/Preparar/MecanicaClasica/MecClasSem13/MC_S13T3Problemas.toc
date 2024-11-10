@@ -1,0 +1,5 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Hamiltoniano y P\'endulo}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{El problema y las coordenadas}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{El Lagrangeano y el Hamiltoniano}{5}{0}{1}
+\beamer@sectionintoc {2}{$\mathcal {H}=q+t e^p$ y la transformaci\'on $Q=q+e^{p}, P=p$}{10}{0}{2}

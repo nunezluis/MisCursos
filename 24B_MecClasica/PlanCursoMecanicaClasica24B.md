@@ -107,6 +107,7 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
 
 #### Materiales
 + Presentación [Fuerzas generalizadas y descripción de una partícula moviéndose en un campo electromagnético](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S4T1ParticulaCampoElectromagnetico.pdf)
++ Sitio web de [Lagrangian Mechanics for beginners](https://profoundphysics.com/lagrangian-mechanics-for-beginners/)
 
 ### Clase S5-C9/C10 Fuerzas Centrales
 ####Antes de clase
