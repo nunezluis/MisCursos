@@ -20,7 +20,7 @@
 
 \begin{document}
 
-\title{\textbf{Aplicaciones Transformaciones Canónicas} }
+\title{\textbf{Simetrías y Cantidades Conservadas} }
 \author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
 \institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
 \textit{Universidad Industrial de Santander, Santander, Colombia } \\
@@ -111,22 +111,49 @@ $Q_j  \equiv q_j\left(t_0+d t\right) =q_j\left(t_0\right)+\dot{q}_j d t+\cdots=q
 	$\{Q_i, P_j\} =\sum_{k=1}^s\left[\delta_{i k} \delta_{j k}+\left(\delta_{j k} \frac{\partial \dot{q}_i}{\partial q_k}+\delta_{i k} \frac{\partial \dot{p}_j}{\partial p_k}\right) d t\right] \Rightarrow$ \\
 	$\{Q_i, P_j\} = \delta_{i j}+\left(\frac{\partial \dot{q}_i}{\partial q_j}+\frac{\partial \dot{p}_j}{\partial p_i}\right) d t \equiv \delta_{i j}+\left(\frac{\partial^2 H}{\partial q_j \partial p_i}-\frac{\partial^2 H}{\partial p_i \partial q_j}\right) \delta t=\delta_{i j} $
 	\item<2-> Por lo tanto, la transformación infinitesimal es canónica y se escribe
-	$P_j =p_j\left(t_0\right)-\frac{\partial H}{\partial q_i}\left(q_i\left(t_0\right), p_i\left(t_0\right)\right) d t+\cdots$ \\
-	$Q_j  =q_j\left(t_0\right)+\frac{\partial H}{\partial p_j}\left(q_i\left(t_0\right), p_i\left(t_0\right)\right) d t+\cdots$ 
+	$P_j =p_j\left(t_0\right)-\frac{\partial \mathcal{H}}{\partial q_i}\left(q_i\left(t_0\right), p_i\left(t_0\right)\right) d t+\cdots$ \\
+	$Q_j  =q_j\left(t_0\right)+\frac{\partial \mathcal{H}}{\partial p_j}\left(q_i\left(t_0\right), p_i\left(t_0\right)\right) d t+\cdots$ 
 	\item<3-> El Hamiltoniano es la función generadora de la transformación canónica infinitesimal $\left\{q_i\left(t_0\right), p_i\left(t_0\right)\right\} \rightarrow\left\{q_i\left(t_0+d t\right), p_i\left(t_0+d t\right)\right\}$
 	\item<4-> La evolución temporal de un sistema en su espacio de fase es una transformación canónica inducida por el Hamiltoniano. 
 \end{itemize}
 }
 %
 %%%%% Diapo 2
-\section{Sección}
+\section{Transformaciones y Coordenadas Hamiltonianas Cíclicas}
 \frame{
-\frametitle{Título transparencia}
+\frametitle{Coordenadas Hamiltonianas Cíclicas 1/2}
 \begin{itemize}  
-	\item<1-> 
+	\item<1-> Una transformación canónica $Q_i=Q_i\left(q_j, p_j, t\right), P_i=P_i\left(q_j, p_j, t\right)$ es conveniente cuando el cambio de variables hace desaparecer alguna coordenada $Q_j$ o momento $P_k$ en el Hamiltoniano $\tilde{\mathcal{H}}\left(Q_i, P_i, t\right)$.
+	\item<2-> Se dice que esa coordenada o momento es cíclica para $\tilde{\mathcal{H}}$.
+	\item<3-> Si $\frac{\partial \tilde{\mathcal{H}}}{\partial Q_j}=0$,  entonces, la ecuación de Hamilton para el momento $P_j$ es $\dot{P}_j=-\frac{\partial \tilde{\mathcal{H}}}{\partial Q_j}=0 \quad \Rightarrow \quad P_j=$ cte. Es decir, {\bf momento conservado}.
+	\item<4-> Sea un oscilador armónico  $\mathcal{H}(q, p)=\frac{p^2}{2 m}+\frac{1}{2} k q^2=\frac{1}{2 m}\left(p^2+m^2 \omega^2 q^2\right)$
+	\item<5-> Encontrar la transformación canónica $\{p, q\} \rightarrow\{P, Q\}$ con $Q$ cíclica en $\tilde{\mathcal{H}}(Q, P)$. 
+	\item<6-> Sea una transformación canónica 
+	$p  =f(P) \cos Q$  y $q  =\frac{f(P)}{m \omega} \sin Q$, donde debemos determinar $f(P)$
+	\item<7-> $\tilde{\mathcal{H}}(Q, P)=\frac{1}{2 m}\left[(p(Q, P))^2+m^2 \omega^2(q(Q, P))^2\right]=\frac{1}{2 m}[f(P)]^2$
+	\item<8-> La transformación se reescribe como $p=m \omega q \cot Q \quad \Rightarrow p=p(q, Q) \Rightarrow \mathcal{F}_1(q, Q)$
 \end{itemize}
 }
-  
+%
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Coordenadas Hamiltonianas Cíclicas 2/2}
+\begin{itemize}  
+	\item<1-> Para $\mathcal{F}_1$ tenemos $p=\frac{\partial \mathcal{F}_1}{\partial q}=p(q, Q) \quad$  y $\quad P=-\frac{\partial \mathcal{F}_1}{\partial Q}=P(q, Q)$
+	\item<2-> Entonces $\frac{\partial \mathcal{F}_1}{\partial q}=m \omega q \cot Q$ por lo tanto $\mathcal{F}_1(q, Q)=\frac{m \omega q^2}{2} \cot Q$
+	\item<3-> Por otro lado $P=-\frac{\partial \mathcal{F}_1}{\partial Q}=\frac{m \omega q^2}{2} \csc ^2 Q \Rightarrow$ $q=\sqrt{\frac{2 P}{m \omega}} \sin Q=q(Q, P)$
+	\item<4-> Sustituyendo $q$, obtenemos $p=\sqrt{2 m \omega P} \cos Q=p(Q, P)$. 
+	\item<5-> Comparando vemos que $f(P)=(2 m \omega P)^{1 / 2}$ y $\tilde{\mathcal{H}}(Q, P)=\omega P$
+	\item<6-> Puesto que $\frac{\partial \mathcal{F}_1}{\partial t}=0$, tenemos $\mathcal{H}(q, p)=\tilde{\mathcal{H}}(Q, P)$
+	\item<7-> Como, tenemos $\frac{\partial \mathcal{H}}{\partial t}=0  \Rightarrow \tilde{\mathcal{H}}= \mathcal{H}=E=$cte, con $E$ la energía total.
+	\item<8-> Las ecuaciones de Hamilton para $Q$ y $P$ son 
+	$\dot{P}=-\frac{\partial \tilde{\mathcal{H}}}{\partial Q}=0 \Rightarrow P=\mathrm{cte} \Rightarrow P=\frac{E}{\omega}$\\ $\dot{Q}=\frac{\partial \tilde{\mathcal{H}}}{\partial P}=\omega \Rightarrow Q(t)=\omega t+\varphi$
+	\item<9-> Sustituyendo en $q(P, Q)$ y $p(P, Q)$ obtenemos  $q(t)=\sqrt{\frac{2 E}{m \omega^2}} \sin (\omega t+\varphi)\quad $ y $\quad p(t)=\sqrt{2 E m} \cos (\omega t+\varphi)$
+	\item<10-> Donde $\left(\frac{2 E}{m \omega^2}\right)^{1 / 2}$ es la amplitud y $\varphi$ es la fase.
+
+\end{itemize}
+}  
 \end{document}
 %
 %%%%% Diapo 2
