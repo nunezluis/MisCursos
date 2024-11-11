@@ -1,0 +1,144 @@
+\documentclass[spanish]{beamer}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath}
+\usepackage{mathtools,cancel} % cancela con una flecha \cancelto{0}{XXXX}
+\renewcommand{\CancelColor}{\color{red}} %change cancel color to red
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usepackage{textpos}
+% Logo  en el comienzo 
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+\end{textblock*}}
+
+\begin{document}
+
+\title{\textbf{Aplicaciones Transformaciones Canónicas} }
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
+\textit{Universidad Industrial de Santander, Santander, Colombia } \\
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+}
+\date{\today}
+\maketitle
+
+
+\begin{frame}
+\frametitle{Agenda}
+  \tableofcontents
+\end{frame}
+
+
+%%%%% Diapo 1
+\section{Transformaciones canónicas infinitesimales}
+\frame{
+  \frametitle{Transformaciones canónicas infinitesimales}
+   \begin{itemize}  
+  	\item<1-> Consideremos una transformación infinitesimal de la forma $Q_i  =q_i+\epsilon f_i\left(q_j, p_j\right)$ y $P_i  =p_i+\epsilon g_i\left(q_j, p_j\right)$, donde $f_i\left(q_j, p_j\right)$ y, $g_i\left(q_j, p_j\right)$ son funciones dadas y $\epsilon \lll 1$.
+	\item<2-> Podemos considerar que la transformación $\{q_i, p_i \} \rightarrow \{Q_i, P_i \}$ es una desviación infinitesimal de una transformación identidad. 
+	\item<3-> Para que la transformación sea canónica debe existir una función generadora $\mathcal{F}_2\left(q_i, P_i\right)=\sum_{i=1}^s q_i P_i+\epsilon \mathcal{G}\left(q_i, P_i\right)$, con $\mathcal{G}\left(q_i, P_i\right)$ una función a determinar.
+	\item<4-> La función generadora es una pequeña desviación de la función generadora para la transformación identidad
+	\item<5-> La transformación canónica generada por  $\mathcal{F}_2\left(q_i, P_i\right)$ es $p_i  =\frac{\partial \mathcal{F}_2}{\partial q_i}=P_i+\epsilon \frac{\partial \mathcal{G}}{\partial q_i} \quad$ y $\quad Q_i  =\frac{\partial \mathcal{F}_2}{\partial P_i}=q_i+\epsilon \frac{\partial \mathcal{G}}{\partial P_i}$
+	\item<6-> Entonces $f_i\left(q_j, p_j\right)  =\frac{\partial \mathcal{G}}{\partial P_i} \quad$ y
+$\quad g_i\left(q_j, p_j\right)  =-\frac{\partial \mathcal{G}}{\partial q_i}$
+	\item<7-> Si existe $\mathcal{G}\left(q_i, P_i\right)$, entonces la transformación infinitesimal es canónica.
+    \end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Invariancia bajo transformaciones infinitesimales}
+\frame{
+\frametitle{Invariancia bajo transformaciones infinitesimales}
+\begin{itemize}  
+	\item<1->  $f_i\left(q_j, p_j\right)=\frac{\partial \mathcal{G}}{\partial P_i} = \sum_j\left(\frac{\partial \mathcal{G}}{\partial p_j} \frac{\partial p_j}{\partial P_i}+\frac{\partial \mathcal{G}}{\partial q_j} \frac{\partial q_j}{\partial P_i}\right)$ y hasta primer orden en $\epsilon$,
+	$\Rightarrow f_i\left(q_j, p_j\right) =\sum_j\left(\frac{\partial \mathcal{G}}{\partial p_j} \delta_{i j}+\mathcal{O}(\epsilon)\right)  =\frac{\partial \mathcal{G}}{\partial p_i}+\mathcal{O}(\epsilon)$
+	\item<2-> Consideremos el comportamiento del Hamiltoniano bajo una transformación canónica infinitesimal generada por una función $G$. 
+	\item<3-> El cambio en la función $K\left(q_i, p_i\right)$ definida en el espacio de fase, debido a una transformación canónica infinitesimal es
+	$\delta K = K\left(Q_i, P_i\right)-K\left(q_i, p_i\right) =K\left(q_i+\epsilon f_i, p_i+\epsilon g_i\right)-K\left(q_i, p_i\right)$
+	\item<4-> Desarrollando por Taylor  $\delta K  =\epsilon \sum_{i=1}^s\left(\frac{\partial K}{\partial q_i} f_i+\frac{\partial K}{\partial p_i} g_i\right)$ 
+	\item<5-> Sustituyendo $f_i$ y $g_i$, 
+	$\delta K =\epsilon \sum_{i=1}^s\left(\frac{\partial K}{\partial q_i} \frac{\partial \mathcal{G}}{\partial p_i}-\frac{\partial K}{\partial p_i} \frac{\partial \mathcal{G}}{\partial q_i}\right) =\epsilon\{K,  \mathcal{G}\}$
+	\item<6-> Si una función $K\left(q_i, p_i\right)$ en el espacio de fase es invariante bajo una transformación canónica infinitesimal, entonces $\delta K=0$ y $\{K,  \mathcal{G}\}=0$.
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Simetrías y cantidades conservadas}
+\frame{
+\frametitle{Simetrías y cantidades conservadas}
+\begin{itemize}  
+	\item<1-> Si $K=\mathcal{H}$ entonces el cambio en el Hamiltoniano debido a una transformación canónica infinitesimal es  $\delta \mathcal{H}=\epsilon\{\mathcal{H}, \mathcal{G}\}$
+	\item<2-> Si el Hamiltoniano es invariante bajo una transformación canónica infinitesimal, tendremos $\delta \mathcal{H}=0 \Leftrightarrow \{\mathcal{H}, \mathcal{G}\}=0$
+	\item<3-> Por lo tanto 
+	$\frac{d G}{d t}=\sum_{i=1}^s\left(\frac{\partial \mathcal{G}}{\partial q_i} \dot{q}_i+\frac{\partial \mathcal{G}}{\partial p_i} \dot{p}_i\right)=\{G, \mathcal{H}\} + \cancelto{0}{\frac{\partial \mathcal{G}}{\partial t}}=0 \quad \Rightarrow  G\left(q_i, P_i\right)=$cte.
+	\item<4-> Si el Hamiltoniano de un sistema es invariante bajo una transformación canónica infinitesimal, la función generadora de esa transformación es una cantidad conservada.
+	\item<5-> Este resultado es la conexión entre simetrías y leyes de conservación para un sistema, y es equivalente al Teorema de Noether en el formalismo hamiltoniano.
+	\item<6->  La relación entre invariancia y constantes de movimiento se expresa más simple en la formulación hamiltoniana.
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Transformación como evolución}
+\frame{
+\frametitle{Transformación como evolución 1/2}
+\begin{itemize}  
+	\item<1-> Consideremos la evolución de una condición inicial en el espacio de fase en un intervalo de tiempo infinitesimal $d t$. \\ $\left(q_i\left(t_0\right), p_i\left(t_0\right)\right) \rightarrow\left(q_i\left(t_0+d t\right), p_i\left(t_0+d t\right)\right) \equiv \left(Q_i\left(t\right), P_i\left(t\right)\right)$
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/Evolucion.png}
+   	\end{figure}	
+	\item<2-> Entonces tendremos la transformación $P_j \equiv p_j\left(t_0+d t\right) =p_j\left(t_0\right)+\dot{p}_j d t+\cdots=p_j+\dot{p}_j d t+\cdots$  y\\
+$Q_j  \equiv q_j\left(t_0+d t\right) =q_j\left(t_0\right)+\dot{q}_j d t+\cdots=q_j+\dot{q}_j d t+\cdots$
+
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Transformación como evolución 1/2}
+\begin{itemize}  
+	\item<1-> El paréntesis de Poisson entre las nuevas coordenadas será
+	$\{Q_i, P_j\} =\sum_{k=1}^s\left(\frac{\partial Q_i}{\partial q_k} \frac{\partial P_j}{\partial p_k}-\frac{\partial Q_i}{\partial p_k} \frac{\partial P_j}{\partial q_k}\right) =\sum_{k=1}^s \frac{\partial Q_i}{\partial q_k} \frac{\partial P_j}{\partial p_k} \Rightarrow$ \\
+	$\{Q_i, P_j\} = \sum_{k=1}^s\left(\frac{\partial q_i}{\partial q_k}+\frac{\partial \dot{q}_i}{\partial q_k} d t\right)\left(\frac{\partial p_j}{\partial p_k}+\frac{\partial \dot{p}_j}{\partial p_k} d t\right) \Rightarrow$
+	$\{Q_i, P_j\} =\sum_{k=1}^s\left(\delta_{i k}+\frac{\partial \dot{q}_i}{\partial q_k} d t\right)\left(\delta_{j k}+\frac{\partial \dot{p}_j}{\partial p_k} d t\right) \Rightarrow$ \\
+	$\{Q_i, P_j\} =\sum_{k=1}^s\left[\delta_{i k} \delta_{j k}+\left(\delta_{j k} \frac{\partial \dot{q}_i}{\partial q_k}+\delta_{i k} \frac{\partial \dot{p}_j}{\partial p_k}\right) d t\right] \Rightarrow$ \\
+	$\{Q_i, P_j\} = \delta_{i j}+\left(\frac{\partial \dot{q}_i}{\partial q_j}+\frac{\partial \dot{p}_j}{\partial p_i}\right) d t \equiv \delta_{i j}+\left(\frac{\partial^2 H}{\partial q_j \partial p_i}-\frac{\partial^2 H}{\partial p_i \partial q_j}\right) \delta t=\delta_{i j} $
+	\item<2-> Por lo tanto, la transformación infinitesimal es canónica y se escribe
+	$P_j =p_j\left(t_0\right)-\frac{\partial H}{\partial q_i}\left(q_i\left(t_0\right), p_i\left(t_0\right)\right) d t+\cdots$ \\
+	$Q_j  =q_j\left(t_0\right)+\frac{\partial H}{\partial p_j}\left(q_i\left(t_0\right), p_i\left(t_0\right)\right) d t+\cdots$ 
+	\item<3-> El Hamiltoniano es la función generadora de la transformación canónica infinitesimal $\left\{q_i\left(t_0\right), p_i\left(t_0\right)\right\} \rightarrow\left\{q_i\left(t_0+d t\right), p_i\left(t_0+d t\right)\right\}$
+	\item<4-> La evolución temporal de un sistema en su espacio de fase es una transformación canónica inducida por el Hamiltoniano. 
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+  
+\end{document}
+%
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
+   	\end{figure}
+	
