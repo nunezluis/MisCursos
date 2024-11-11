@@ -199,7 +199,7 @@ La semana 11 del sólido rígido
 
 + [Dinamica Hamiltoniana](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T1EcHamilton.pdf)
 + [Transformaciones Canónicas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T2TransfCanonicas.pdf)
-
++ [Paréntesis de Poisson](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T3ParentesisPoisson.pdf)
 ### Clase S14-C27/C28
 
 ### Clase S15-C29/30
