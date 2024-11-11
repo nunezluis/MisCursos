@@ -1,0 +1,5 @@
+\babel@toc {spanish}{}\relax 
+\beamer@subsectionintoc {0}{1}{Definici\'on}{3}{0}{0}
+\beamer@subsectionintoc {0}{2}{Propiedades}{11}{0}{0}
+\beamer@subsectionintoc {0}{3}{Dos ejemplos}{18}{0}{0}
+\beamer@subsectionintoc {0}{4}{Par\'entesis de Poisson y Transformaciones Can\'onicas}{21}{0}{0}
