@@ -2,5 +2,6 @@
 \beamer@sectionintoc {1}{Transformaciones can\'onicas infinitesimales}{3}{0}{1}
 \beamer@sectionintoc {2}{Invariancia bajo transformaciones infinitesimales}{10}{0}{2}
 \beamer@sectionintoc {3}{Simetr\IeC {\'\i }as y cantidades conservadas}{16}{0}{3}
-\beamer@sectionintoc {4}{Transformaci\'on como evoluci\'on}{22}{0}{4}
-\beamer@sectionintoc {5}{Transformaciones y Coordenadas Hamiltonianas C\IeC {\'\i }clicas}{28}{0}{5}
+\beamer@sectionintoc {4}{Ejemplo: $\mathcal {H}=q_1 p_1+q_2 p_2+a p_1^2+b p_2^2$}{22}{0}{4}
+\beamer@sectionintoc {5}{Transformaci\'on como evoluci\'on}{26}{0}{5}
+\beamer@sectionintoc {6}{Transformaciones y Coordenadas Hamiltonianas C\IeC {\'\i }clicas}{32}{0}{6}

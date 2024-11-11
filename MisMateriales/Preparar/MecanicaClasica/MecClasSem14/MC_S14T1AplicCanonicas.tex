@@ -47,7 +47,7 @@
 	\item<4-> La función generadora es una pequeña desviación de la función generadora para la transformación identidad
 	\item<5-> La transformación canónica generada por  $\mathcal{F}_2\left(q_i, P_i\right)$ es $p_i  =\frac{\partial \mathcal{F}_2}{\partial q_i}=P_i+\epsilon \frac{\partial \mathcal{G}}{\partial q_i} \quad$ y $\quad Q_i  =\frac{\partial \mathcal{F}_2}{\partial P_i}=q_i+\epsilon \frac{\partial \mathcal{G}}{\partial P_i}$
 	\item<6-> Entonces $f_i\left(q_j, p_j\right)  =\frac{\partial \mathcal{G}}{\partial P_i} \quad$ y
-$\quad g_i\left(q_j, p_j\right)  =-\frac{\partial \mathcal{G}}{\partial q_i}$
+$\quad \mathcal{G}_i\left(q_j, p_j\right)  =-\frac{\partial \mathcal{G}}{\partial q_i}$
 	\item<7-> Si existe $\mathcal{G}\left(q_i, P_i\right)$, entonces la transformación infinitesimal es canónica.
     \end{itemize}
 }
@@ -77,12 +77,43 @@ $\quad g_i\left(q_j, p_j\right)  =-\frac{\partial \mathcal{G}}{\partial q_i}$
 	\item<1-> Si $K=\mathcal{H}$ entonces el cambio en el Hamiltoniano debido a una transformación canónica infinitesimal es  $\delta \mathcal{H}=\epsilon\{\mathcal{H}, \mathcal{G}\}$
 	\item<2-> Si el Hamiltoniano es invariante bajo una transformación canónica infinitesimal, tendremos $\delta \mathcal{H}=0 \Leftrightarrow \{\mathcal{H}, \mathcal{G}\}=0$
 	\item<3-> Por lo tanto 
-	$\frac{d G}{d t}=\sum_{i=1}^s\left(\frac{\partial \mathcal{G}}{\partial q_i} \dot{q}_i+\frac{\partial \mathcal{G}}{\partial p_i} \dot{p}_i\right)=\{G, \mathcal{H}\} + \cancelto{0}{\frac{\partial \mathcal{G}}{\partial t}}=0 \quad \Rightarrow  G\left(q_i, P_i\right)=$cte.
+	$\frac{d \mathcal{G}}{d t}=\sum_{i=1}^s\left(\frac{\partial \mathcal{G}}{\partial q_i} \dot{q}_i+\frac{\partial \mathcal{G}}{\partial p_i} \dot{p}_i\right)=\{\mathcal{G}, \mathcal{H}\} + \cancelto{0}{\frac{\partial \mathcal{G}}{\partial t}}=0 \quad \Rightarrow  \mathcal{G}\left(q_i, P_i\right)=$cte.
 	\item<4-> Si el Hamiltoniano de un sistema es invariante bajo una transformación canónica infinitesimal, la función generadora de esa transformación es una cantidad conservada.
 	\item<5-> Este resultado es la conexión entre simetrías y leyes de conservación para un sistema, y es equivalente al Teorema de Noether en el formalismo hamiltoniano.
 	\item<6->  La relación entre invariancia y constantes de movimiento se expresa más simple en la formulación hamiltoniana.
 \end{itemize}
 }
+%
+%%%%% Diapo 2
+\section{Ejemplo: $\mathcal{H}=q_1 p_1+q_2 p_2+a p_1^2+b p_2^2$}
+\frame{
+\frametitle{Ejemplo: $\mathcal{H}=q_1 p_1+q_2 p_2+a p_1^2+b p_2^2$}
+\begin{itemize}  
+	\item<1-> Considere un hamiltoniano $\mathcal{H}=q_1 p_1+q_2 p_2+a p_1^2+b p_2^2$
+	\item<2-> Donde $f_1=p_1\left(q_1+a p_1\right)$, y  $f_2=\frac{p_1}{p_2}$ son constantes del movimiento. 
+	\item<3-> Para comprobar que son constantes tenemos  
+	$\left[f_1, \mathcal{H}\right] =\sum_{i=1}^s\left(\frac{\partial f_1}{\partial q_i} \frac{\partial \mathcal{H}}{\partial p_i} -\frac{\partial f_1}{\partial p_i} \frac{\partial \mathcal{H}}{\partial q_i} \right) \Rightarrow$ \\ 
+	$\left[f_1, \mathcal{H}\right] = p_1\left(q_1+2 a p_1\right)-\left(q_1+2 a p_1\right) p_1=0$, del mismo modo \\
+	$\left[f_2, \mathcal{H}\right] =-\frac{1}{p_2} p_1+\frac{p_1}{p_2^2} p_2=0 $. {\bf Son constantes de movimiento}
+	\item<4-> Por simetría podemos proponer $f_3=p_2\left( q_2 +a p_2 \right)$ y al evaluar 
+	$\left[f_3, H\right]=\sum_{i=1}^s\left(\frac{\partial f_1}{\partial q_i} \frac{\partial \mathcal{H}}{\partial p_i} -\frac{\partial f_1}{\partial p_i} \frac{\partial \mathcal{H}}{\partial q_i} \right) \Rightarrow$ \\ 
+	$\left[f_3, H\right] = p_2\left(q_2+2 a p_2\right)-\left(q_2+2 a p_2\right) p_1=0$, {\bf también es constante}
+	\item<5-> Para encontrar $f_4$, se pueden usar las ecuaciones de movimiento:
+
+$$
+\dot{p}_1=-p_1
+$$
+
+cuya solución es
+
+$$
+p_1(t)=A e^{-t}
+$$
+
+donde $A$ es una constante de integración
+\end{itemize}
+}
+
 %
 %%%%% Diapo 2
 \section{Transformación como evolución}
