@@ -110,12 +110,33 @@
 %%%%% Diapo 2
 \subsection{Paréntesis de Poisson y Transformaciones Canónicas}
 \frame{
-\frametitle{Paréntesis de Poisson y Transformaciones}
+\frametitle{Paréntesis de Poisson y Transformaciones 1/2}
+Para una transformación canónica $Q_j=Q_j(q_k, p_k, t)$ y $P_i=P_i(q_k, p_k, t)$ se cumple que  $\left\{Q_i, Q_j\right\}=0, \quad\left\{P_i, P_j\right\}=0, \quad\left\{Q_i, P_j\right\}=\delta_{i j}$
 \begin{itemize}  
-	\item<1-> 
+	\item<1-> Sea $Q=q+e^p \quad \& \quad P=p$
+	\item<2-> $\{Q, Q\} = \frac{\partial Q}{\partial q} \frac{\partial Q}{\partial p} - \frac{\partial Q}{\partial p} \frac{\partial Q}{\partial q} = (1)(e^p) - (e^p)(1) = 0$;
+	\item<3-> $\{P, P\} = \frac{\partial P}{\partial q} \frac{\partial P}{\partial p} - \frac{\partial P}{\partial p} \frac{\partial P}{\partial q} = (0)(1) - (1)(0) = 0$; y finalmente
+	\item<4-> $\{Q, P\} = \frac{\partial Q}{\partial q} \frac{\partial P}{\partial p} - \frac{\partial Q}{\partial p} \frac{\partial P}{\partial q}$. Calculando cada una
+	$\frac{\partial Q}{\partial q} = 1$, $\frac{\partial Q}{\partial p} = e^p$, $\frac{\partial P}{\partial q} = 0$, y $\frac{\partial P}{\partial p} = 1$, obtenemos $\{Q, P\} = (1)(1) - (e^p)(0) = 1$.  
+	\item<5-> Por lo tanto, como la tranformación cumple con 
+	$\{Q, Q\} = 0, \quad \{P, P\} = 0, \quad \text{y} \quad \{Q, P\} = 1$. {\bf Es canónica}
 \end{itemize}
 }
- 
+%
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Paréntesis de Poisson y Transformaciones 2/2}
+Consideremos la siguiente transformación \\ $P_1=p_1-2 p_2, \quad Q_1=q_1$ y  $P_2=-2 q_1-q_2, \quad Q_2=p_2$
+\begin{itemize}  
+	\item<1-> $\left[Q_1, P_1\right] =\sum_{i=1}^s\left(\frac{\partial Q_1}{\partial q_i} \frac{\partial P_1}{\partial p_i}-\frac{\partial Q_1}{\partial p_i} \frac{\partial P_1}{\partial q_i}\right)$ \\
+	$\left[Q_1, P_1\right] =\left(\frac{\partial Q_1}{\partial q_1} \frac{\partial P_1}{\partial p_1}-\frac{\partial Q_1}{\partial p_1} \frac{\partial P_1}{\partial q_1}\right)+\left(\frac{\partial Q_1}{\partial q_2} \frac{\partial P_1}{\partial p_2}-\frac{\partial Q_1}{\partial p_2} \frac{\partial P_1}{\partial q_2}\right)=1 $
+	\item<2-> $\left[Q_2, P_2\right] =\left(\frac{\partial Q_2}{\partial q_1} \frac{\partial P_2}{\partial p_1}-\frac{\partial Q_2}{\partial p_1} \frac{\partial P_2}{\partial q_1}\right)+\left(\frac{\partial Q_2}{\partial q_2} \frac{\partial P_2}{\partial p_2}-\frac{\partial Q_2}{\partial p_2} \frac{\partial P_2}{\partial q_2}\right)=1$
+	\item<3-> $\left[Q_2, P_1\right] =\left(\frac{\partial Q_2}{\partial q_1} \frac{\partial P_1}{\partial p_1}-\frac{\partial Q_2}{\partial p_1} \frac{\partial P_1}{\partial q_1}\right)+\left(\frac{\partial Q_2}{\partial q_2} \frac{\partial P_1}{\partial p_2}-\frac{\partial Q_2}{\partial p_2} \frac{\partial P_1}{\partial q_2}\right)=0$
+	\item<4-> $\left[Q_1, P_2\right] =\left(\frac{\partial Q_1}{\partial q_1} \frac{\partial P_2}{\partial p_1}-\frac{\partial Q_1}{\partial p_1} \frac{\partial P_2}{\partial q_1}\right)+\left(\frac{\partial Q_1}{\partial q_2} \frac{\partial P_2}{\partial p_2}-\frac{\partial Q_1}{\partial p_2} \frac{\partial P_2}{\partial q_2}\right)=0$
+	\item<5-> Por lo tanto, la tranformación  {\bf Es canónica}
+\end{itemize}
+} 
 \end{document}
 %
 %%%%% Diapo 2
