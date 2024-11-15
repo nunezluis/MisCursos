@@ -61,7 +61,7 @@ El punto de suspensión de un péndulo está obligado a moverse a lo largo de la pa
 	$ T  =\frac{1}{2} m\left(\dot{x}^{\prime 2}+\dot{y}^{\prime 2}\right) \Rightarrow$ $T =\frac{1}{2} m\left(\dot{x}^2+l^2 \dot{\theta}^2+4 a^2 x^2 \dot{x}^2+2 l \dot{x} \dot{\theta} \cos \theta+4 a x l \dot{x} \dot{\theta} \operatorname{sen} \theta\right)$
 	\item<2-> y la energía potencial por: $V=m g y^{\prime}=m g\left(a x^2-l \cos \theta\right)$
 	\item<3-> A partir del lagrangiano $\mathcal{L}=T-V$, obtenemos 
-	$p_x  =\frac{\partial L}{\partial \dot{x}}=m \dot{x}\left(1+4 a^2 x^2\right)+m l \dot{\theta}(\cos \theta+2 a x \operatorname{sen} \theta)$ 
+	$p_x  =\frac{\partial \mathcal{L}}{\partial \dot{x}}=m \dot{x}\left(1+4 a^2 x^2\right)+m l \dot{\theta}(\cos \theta+2 a x \operatorname{sen} \theta)$ 
 	$p_\theta  =m l^2 \dot{\theta}+m l \dot{x}(\cos \theta+2 a x \operatorname{sen} \theta)$
 	\item<4-> Despejando las velocidades
 	$\dot{x} =\frac{p_x}{m} \frac{1}{(\operatorname{sen} \theta-2 a x \cos \theta)^2}-\frac{p_\theta}{m l} \frac{\cos \theta+2 a x \operatorname{sen} \theta}{(\operatorname{sen} \theta-2 a x \cos \theta)^2}$ 
@@ -109,8 +109,35 @@ Para encontrar la función generadora $ F $ supondremos una función generadora de
 \frame{
 \frametitle{$\mathcal{H}=\frac{p^2}{2 m}-A \left(\frac{p}{m} \cos \gamma t + \gamma q \operatorname{sen} \gamma t\right)+\frac{1}{2} k q^2$}
 \begin{itemize}  
-	\item<1-> El Lagrangeano será $L =\dot{q} p-H$. De la ecuación de movimiento 
-	$\dot{q}=\frac{\partial H}{\partial p}=\frac{p}{m}-\frac{A}{m} \cos \gamma t, \quad \Rightarrow \quad p=m \dot{q}+A \cos \gamma t$
+	\item<1-> El Lagrangeano será $\mathcal{L} =\dot{q} p-\mathcal{H}$. De la ecuación de movimiento 
+	$\dot{q}=\frac{\partial \mathcal{H}}{\partial p}=\frac{p}{m}-\frac{A}{m} \cos \gamma t, \quad \Rightarrow \quad p=m \dot{q}+A \cos \gamma t$
+	\item<2-> Entonces 
+	$\mathcal{L}  =\dot{q} p-\mathcal{H}=\frac{1}{2} m \dot{q}^2 -\frac{1}{2} k q^2 +A \dot{q} \cos \gamma t+\frac{A^2}{2 m} \cos ^2 \gamma t-A \gamma q \operatorname{sen} \gamma t$ \\
+	\item<3-> Queremos construir un lagrangeano de la forma $\mathcal{L}  =  \mathcal{L}^{\prime}+\frac{d \Lambda}{d t} $ \\
+	\item<4->$\mathcal{L}  = \underbrace{\frac{1}{2} a \dot{q}^2-\frac{1}{2} k q^2}_{\mathcal{L}^{\prime}}+\frac{d}{d t}\left[A q \cos \gamma t+\frac{A^2}{4 \gamma m}(\gamma t+\operatorname{sen} \gamma t \cos \gamma t)\right]$
+	\item<5->  El nuevo momento $p^{\prime}=\frac{\partial \mathcal{L}^{\prime}}{\partial \dot{q}}=m \dot{q}, \quad \Rightarrow \quad \dot{q}=\frac{p^{\prime}}{m}$
+	\item<6-> El nuevo Hamiltoniano $\mathcal{H}^{\prime}=p^{\prime} \dot{q}-\mathcal{L}^{\prime}=\frac{p^{\prime 2}}{2 m}+\frac{1}{2} k q^2$
+	\item<7-> Como $p=\frac{\partial \mathcal{L}}{\partial \dot{q}} \equiv \frac{\partial \mathcal{L}^{\prime}}{\partial \dot{q}}+\frac{\partial}{\partial \dot{q}}\left(\frac{\partial \Lambda}{\partial q} \dot{q}+\frac{\partial \Lambda}{\partial t}\right)=p^{\prime}+\frac{\partial \Lambda}{\partial q}$
+	\item<8-> Por lo tanto 
+	$\mathcal{H}  =p \dot{q}-\mathcal{L}=p^{\prime} \dot{q}+\frac{\partial \Lambda}{\partial q} \dot{q}-\mathcal{L}^{\prime}-\frac{d \Lambda}{d t}=\mathcal{H}^{\prime}+\frac{\partial \Lambda}{\partial q} \dot{q}-\frac{\partial \Lambda}{\partial q} \dot{q}-\frac{\partial \Lambda}{\partial t} =\mathcal{H}^{\prime}-\frac{\partial \Lambda}{\partial t}$
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{$\mathcal{H}=\mathcal{H}\left(f\left(q_1, p_1\right), q_2, q_3, \ldots, q_n, p_2, p_3, \ldots, p_n\right)$}
+\frame{
+\frametitle{$\mathcal{H}=\mathcal{H}\left(f\left(q_1, p_1\right), q_2, q_3, \ldots, q_n, p_2, p_3, \ldots, p_n\right)$}
+Sea un hamiltoniano de la forma
+$\mathcal{H}=\mathcal{H}\left(f\left(q_1, p_1\right), q_2, \ldots, q_n, p_2,  \ldots, p_n\right)$
+\begin{itemize}  
+	\item<1-> $f\left(q_1, p_1\right)$ es una constante del movimiento 
+	 $\{f, \mathcal{H}\}=\frac{\partial f}{\partial q_1} \frac{\partial \mathcal{H}}{\partial p_1}-\frac{\partial f}{\partial p_1} \frac{\partial \mathcal{H}}{\partial q_1}=\frac{\partial f}{\partial q_1} \frac{\partial \mathcal{H}}{\partial f} \frac{\partial f}{\partial p_1}-\frac{\partial f}{\partial p_1} \frac{\partial \mathcal{H}}{\partial f} \frac{\partial f}{\partial q_1}=0$
+	 \item<2-> Con el pontencial $V=\frac{\vec{a} \cdot \vec{r}}{r^3}$, y $\vec{a} = a_z {\bf \hat{z}}$ construimos el hamiltoniano $\mathcal{H}=\frac{1}{2 m}\left(p_x^2+p_y^2+p_z^2\right)+\frac{\vec{a} \cdot \vec{r}}{r^3} = \frac{p_r^2}{2 m}+\frac{p_\theta^2}{2 m r^2}+\frac{p_\phi^2}{2 m r^2 \operatorname{sen}^2 \theta}+\frac{a_z r \cos \theta}{r^3}$
+	 \item<3-> $\phi$ es una coordenada cíclica y $p_\phi$ es una constante del movimiento.
+	 \item<4-> Por lo tanto podemos escribir 
+	 $\mathcal{H}=\frac{p_r^2}{2 m}+
+	 \underbrace{\frac{1}{2 m r^2}\left(p_\theta^2+\frac{p_\phi^2}{\operatorname{sen}^2 \theta}+2 m a \cos \theta\right)}_{f(\theta, p_{\theta})}$
+	 \item<5-> Es decir $f(\theta, p_{\theta})= \frac{1}{2 m r^2}\left(p_\theta^2+\frac{p_\phi^2}{\operatorname{sen}^2 \theta}+2 m a \cos \theta\right)=$cte
 \end{itemize}
 }
 

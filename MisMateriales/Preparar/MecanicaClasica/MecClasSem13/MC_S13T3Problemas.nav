@@ -23,10 +23,15 @@
 \headcommand {\beamer@sectionpages {10}{16}}
 \headcommand {\beamer@subsectionpages {10}{16}}
 \headcommand {\sectionentry {3}{$\mathcal {H}=\frac {p^2}{2 m}-A \left (\frac {p}{m} \qopname \relax o{cos}\gamma t + \gamma q \operatorname {sen} \gamma t\right )+\frac {1}{2} k q^2$}{17}{$\mathcal {H}=\frac {p^2}{2 m}-A \left (\frac {p}{m} \qopname \relax o{cos}\gamma t + \gamma q \operatorname {sen} \gamma t\right )+\frac {1}{2} k q^2$}{0}}
-\headcommand {\slideentry {3}{0}{1}{17/17}{}{0}}
-\headcommand {\beamer@framepages {17}{17}}
-\headcommand {\beamer@partpages {1}{17}}
-\headcommand {\beamer@subsectionpages {17}{17}}
-\headcommand {\beamer@sectionpages {17}{17}}
-\headcommand {\beamer@documentpages {17}}
-\headcommand {\gdef \inserttotalframenumber {7}}
+\headcommand {\slideentry {3}{0}{1}{17/24}{}{0}}
+\headcommand {\beamer@framepages {17}{24}}
+\headcommand {\beamer@sectionpages {17}{24}}
+\headcommand {\beamer@subsectionpages {17}{24}}
+\headcommand {\sectionentry {4}{$\mathcal {H}=\mathcal {H}\left (f\left (q_1, p_1\right ), q_2, q_3, \ldots , q_n, p_2, p_3, \ldots , p_n\right )$}{25}{$\mathcal {H}=\mathcal {H}\left (f\left (q_1, p_1\right ), q_2, q_3, \ldots , q_n, p_2, p_3, \ldots , p_n\right )$}{0}}
+\headcommand {\slideentry {4}{0}{1}{25/29}{}{0}}
+\headcommand {\beamer@framepages {25}{29}}
+\headcommand {\beamer@partpages {1}{29}}
+\headcommand {\beamer@subsectionpages {25}{29}}
+\headcommand {\beamer@sectionpages {25}{29}}
+\headcommand {\beamer@documentpages {29}}
+\headcommand {\gdef \inserttotalframenumber {8}}
