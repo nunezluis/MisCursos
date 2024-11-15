@@ -3,3 +3,4 @@
 \beamer@subsectionintoc {1}{1}{El problema y las coordenadas}{3}{0}{1}
 \beamer@subsectionintoc {1}{2}{El Lagrangeano y el Hamiltoniano}{5}{0}{1}
 \beamer@sectionintoc {2}{$\mathcal {H}=q+t e^p$ y la transformaci\'on $Q=q+e^{p}, P=p$}{10}{0}{2}
+\beamer@sectionintoc {3}{$\mathcal {H}=\frac {p^2}{2 m}-A \left (\frac {p}{m} \qopname \relax o{cos}\gamma t + \gamma q \operatorname {sen} \gamma t\right )+\frac {1}{2} k q^2$}{17}{0}{3}

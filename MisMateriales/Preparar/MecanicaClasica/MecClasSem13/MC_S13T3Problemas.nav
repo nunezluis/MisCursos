@@ -20,8 +20,13 @@
 \headcommand {\beamer@framepages {10}{13}}
 \headcommand {\slideentry {2}{0}{2}{14/16}{}{0}}
 \headcommand {\beamer@framepages {14}{16}}
-\headcommand {\beamer@partpages {1}{16}}
-\headcommand {\beamer@subsectionpages {10}{16}}
 \headcommand {\beamer@sectionpages {10}{16}}
-\headcommand {\beamer@documentpages {16}}
-\headcommand {\gdef \inserttotalframenumber {6}}
+\headcommand {\beamer@subsectionpages {10}{16}}
+\headcommand {\sectionentry {3}{$\mathcal {H}=\frac {p^2}{2 m}-A \left (\frac {p}{m} \qopname \relax o{cos}\gamma t + \gamma q \operatorname {sen} \gamma t\right )+\frac {1}{2} k q^2$}{17}{$\mathcal {H}=\frac {p^2}{2 m}-A \left (\frac {p}{m} \qopname \relax o{cos}\gamma t + \gamma q \operatorname {sen} \gamma t\right )+\frac {1}{2} k q^2$}{0}}
+\headcommand {\slideentry {3}{0}{1}{17/17}{}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\beamer@partpages {1}{17}}
+\headcommand {\beamer@subsectionpages {17}{17}}
+\headcommand {\beamer@sectionpages {17}{17}}
+\headcommand {\beamer@documentpages {17}}
+\headcommand {\gdef \inserttotalframenumber {7}}
