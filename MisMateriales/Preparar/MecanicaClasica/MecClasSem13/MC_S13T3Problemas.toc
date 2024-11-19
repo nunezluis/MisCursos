@@ -5,3 +5,4 @@
 \beamer@sectionintoc {2}{$\mathcal {H}=q+t e^p$ y la transformaci\'on $Q=q+e^{p}, P=p$}{10}{0}{2}
 \beamer@sectionintoc {3}{$\mathcal {H}=\frac {p^2}{2 m}-A \left (\frac {p}{m} \qopname \relax o{cos}\gamma t + \gamma q \operatorname {sen} \gamma t\right )+\frac {1}{2} k q^2$}{17}{0}{3}
 \beamer@sectionintoc {4}{$\mathcal {H}=\mathcal {H}\left (f\left (q_1, p_1\right ), q_2, q_3, \ldots , q_n, p_2, p_3, \ldots , p_n\right )$}{25}{0}{4}
+\beamer@sectionintoc {5}{$q=Q \qopname \relax o{cos}\gamma t+\frac {P}{m \omega } \operatorname {sen} \gamma t, \hskip 1em\relax p=-m \omega Q \operatorname {sen} \gamma t+P \qopname \relax o{cos}\gamma t$}{30}{0}{5}

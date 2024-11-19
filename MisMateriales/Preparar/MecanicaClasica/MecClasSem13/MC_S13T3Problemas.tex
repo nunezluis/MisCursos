@@ -140,8 +140,23 @@ $\mathcal{H}=\mathcal{H}\left(f\left(q_1, p_1\right), q_2, \ldots, q_n, p_2,  \l
 	 \item<5-> Es decir $f(\theta, p_{\theta})= \frac{1}{2 m r^2}\left(p_\theta^2+\frac{p_\phi^2}{\operatorname{sen}^2 \theta}+2 m a \cos \theta\right)=$cte
 \end{itemize}
 }
-
-  
+%
+%%%%% Diapo 2
+\section{$q=Q \cos \gamma t+\frac{P}{m \omega} \operatorname{sen} \gamma t, \quad p=-m \omega Q \operatorname{sen} \gamma t+P \cos \gamma t$}
+\frame{
+\frametitle{$q=Q \cos \gamma t+\frac{P}{m \omega} \operatorname{sen} \gamma t, \quad p=-m \omega Q \operatorname{sen} \gamma t+P \cos \gamma t$}
+Mostrar que la transformación: $q=Q \cos \gamma t+\frac{P}{m \omega} \operatorname{sen} \gamma t$, $p=-m \omega Q \operatorname{sen} \gamma t+P \cos \gamma t$ es canónica. Determinar la función $\mathcal{F}_2 = \mathcal{F}_2\left(q_i, P_i, t\right)$.  Aplicar esta transformación al oscilador armónico.
+\begin{itemize}  
+	\item<1-> Si $q = q(Q, P, t)$ y $p = p(Q, P, t)$ es canónica entonces $\{q, p\}=\frac{\partial q}{\partial Q} \frac{\partial p}{\partial P}-\frac{\partial q}{\partial P} \frac{\partial p}{\partial Q}=\cos ^2 \gamma t+\operatorname{sen}^2 \gamma t=1$ $\checkmark$
+	\item<2-> Claramente $Q=\frac{q}{\cos \gamma t}-\frac{P}{m \omega} \tan \gamma t\, , \quad$ y  $\quad p=\frac{P}{\cos \gamma t}-q m \omega \tan \gamma t$
+	\item<3-> Por lo tanto, ara encontrar la función generadora $\mathcal{F}_2 = \mathcal{F}_2\left(q_i, P_i, t\right)$, integramos las ecuaciones $\frac{\partial \mathcal{F}_2}{\partial q}  =p=\frac{P}{\cos \gamma t}-q m \omega \tan \gamma t$, y $\frac{\partial \mathcal{F}_2}{\partial P} =Q=\frac{q}{\cos \gamma t}-\frac{P}{m \omega} \tan \gamma t$
+	\item<4-> La solución es $\mathcal{F}_2(q, P, t)=\frac{q P}{\cos \gamma t}-\frac{1}{2} q^2 m \omega \tan \gamma t-\frac{1}{2} \frac{P^2}{m \omega} \tan \gamma t$
+	\item<5-> Podemos construir $\mathcal{F}(q, p(q, P, t), t) =\mathcal{F}_2(q, P, t) - Q(q, P, t) P$
+	\item<6-> Finalemente si $\mathcal{H}=\frac{p^2}{2 m}+\frac{1}{2} m \omega^2 q^2$, tendremos 
+	$\tilde{\mathcal{H}}=\mathcal{H}+\frac{\partial \mathcal{F}_2}{\partial t}=\mathcal{H}-\frac{P^2}{2 m \omega} \gamma-\frac{1}{2} m \omega Q^2 \gamma=\left(\frac{P^2}{2 m}+\frac{1}{2} m \omega^2 Q^2\right)\left(1-\frac{\gamma}{\omega}\right)$
+\end{itemize}
+}
+ 
 \end{document}
 %
 %%%%% Diapo 2
