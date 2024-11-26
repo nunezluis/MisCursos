@@ -11,4 +11,4 @@
 \beamer@subsectionintoc {2}{4}{Energ\IeC {\'\i }as Cin\'etica, Potencial y el Lagrangeano}{38}{0}{2}
 \beamer@sectionintoc {3}{Un cono que rueda en un plano horizontal}{45}{0}{3}
 \beamer@subsectionintoc {3}{1}{Coordenadas y ligaduras}{45}{0}{3}
-\beamer@subsectionintoc {3}{2}{Rodar sin deslizar}{51}{0}{3}
+\beamer@subsectionintoc {3}{2}{Rodar sin deslizar y energ\IeC {\'\i }a cin\'etica}{51}{0}{3}

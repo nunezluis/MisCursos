@@ -206,21 +206,28 @@ Un cono circular uniforme de altura $h$, ángulo de vértice $\alpha$ y masa $m$ r
 }
 %
 %%%%% Diapo 2
-\subsection{Rodar sin deslizar}
+\subsection{Rodar sin deslizar y energía cinética}
 \frame{
-\frametitle{Rodar sin deslizar}
+\frametitle{Rodar sin deslizar y energía cinética}
 \begin{itemize}
 	\item<1-> La ligadura de rodar sin deslizar implica $\dot{{\bf r}}_{op} = 0=\dot{{\bf R}}+  \tilde{ {\bf \Omega}} \times {\bf r}_{cp}$.  
 	\item<2->  Por su parte, $\tilde{{\bf \Omega}} \times {\bf r}_{cp} = 
 	\left|
 	\begin{array}{ccc} 
 	{\bf \hat{x}}_1 & {\bf \hat{x}}_2 & {\bf \hat{x}}_3 \\
-	\tilde{\Omega}_1 & \tilde{\Omega}_2 & {\tilde \Omega}_3 \\
+	\tilde{\Omega}^1 & \tilde{\Omega}^2 & {\tilde \Omega}^3 \\
 	0 & -b & 0
-	\end{array}\right| = b(\tilde{\Omega}_3 \, {\bf \hat{x}}_1 -\tilde{\Omega}_1\, {\bf \hat{x}}_3) $
+	\end{array}\right| = b(\tilde{\Omega}^3 \, {\bf \hat{x}}_1 -\tilde{\Omega}^1\, {\bf \hat{x}}_3) $
 	\item<3->  Al proyectar la ecuación de ligadura respecto a la base del Sistema laboratorio tendremos 
 	$\dot{x} + b(\tilde{\Omega}^3 ({\bf \hat{x}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{x}} \cdot {\bf \hat{x}}_3))=0 $; $\quad \dot{y} + b(\tilde{\Omega}^3  ({\bf \hat{y}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{y}} \cdot {\bf \hat{x}}_3)) =0$;  $\quad a(\tilde{\Omega}^3  ({\bf \hat{z}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{z}} \cdot {\bf \hat{x}}_3)) =0 $.
-	\item<4-> Que se convierten en $\dot{x}+b \dot{\phi} \cos \phi \cos \theta+b \dot{\psi} \cos \phi  =0$ y $\dot{y}+b \dot{\phi} \operatorname{sen} \phi \cos \theta+b \dot{\psi} \operatorname{sen} \phi =0$
+	\item<4-> Por otro lado para el centro de masa \\
+	$\tilde{\Omega}^1  = \dot{\phi} \operatorname{sen} \, \theta \operatorname{sen} \, \psi $ 
+	$\quad \tilde{\Omega}^2  = \dot{\phi} \operatorname{sen} \, \theta \cos \psi $ 
+	$\quad \tilde{\Omega}^3  = \dot{\psi}+\dot{\phi} \cos \theta$
+	\item<5-> Entonces, rodar sin deslizar se convierte en $\dot{x}+b \dot{\phi} \cos \phi \cos \theta+b \dot{\psi} \cos \phi  =0$  $\quad \dot{y}+b \dot{\phi} \operatorname{sen} \phi \cos \theta+b \dot{\psi} \operatorname{sen} \phi =0$
+	\item<6-> Finalmente la energía cinética es 
+	$T = T_{tras} + T_{rot} =\frac{1}{2} M\left(\dot{x}^2+\dot{y}^2\right)+\frac{I_{11}}{2} \left[(\Omega^{1})^2+(\Omega^{2})^2\right]+\frac{I_{33}}{2}  (\Omega^{3})^2$ \\
+	$T=\frac{1}{2} M\left(\dot{x}^2+\dot{y}^2\right)+\frac{I_{11}}{2} I \dot{\phi}^2 \cos ^2 \alpha+\frac{I_{33}}{2} (\dot{\phi} \operatorname{sen} \alpha+\dot{\psi})^2$
 \end{itemize}
 }
 
