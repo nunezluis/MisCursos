@@ -20,7 +20,7 @@
 
 \begin{document}
 
-\title{\textbf{Dos monedas} }
+\title{\textbf{Monedas y Conos} }
 \author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
 \institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
 \textit{Universidad Industrial de Santander, Santander, Colombia } \\
@@ -71,7 +71,7 @@ Algunas animaciones ilustrativas en \url{https://rotations.berkeley.edu/the-roll
 	\item<5-> Es decir $ \dot{x}+a \dot{\phi} \cos \phi \cos \theta-a \dot{\theta} \operatorname{sen} \phi \operatorname{sen} \theta+a \dot{\psi} \cos \phi  =0$; $ \dot{y}+a \dot{\phi} \operatorname{sen} \phi \cos \theta+a \dot{\theta} \cos \phi \operatorname{sen} \theta+a \dot{\psi} \operatorname{sen} \phi  =0 $;  $\quad \dot{z}-a \dot{\theta} \cos \theta =0$ 
 \end{itemize} 
 }
-%%%%% Diapo 2
+%%%%% Diapo 3
 \subsection{Energías cinética y potencial}
 \frame{
 \frametitle{Energías cinética y potencial}
@@ -89,7 +89,7 @@ Algunas animaciones ilustrativas en \url{https://rotations.berkeley.edu/the-roll
 	\item<7-> Por su parte, la energía potencial $V =mg z = mga \operatorname{sen} \theta$
 \end{itemize}
 }
-%%%%% Diapo 2
+%%%%% Diapo 4
 \subsection{Simetrías y Constantes de movimiento}
 \frame{
 \frametitle{Simetrías y Constantes de movimiento}
@@ -115,7 +115,7 @@ Algunas animaciones ilustrativas en \url{https://rotations.berkeley.edu/the-roll
 %	$\quad \tilde{\Omega}_3  = \dot{\psi}+\dot{\phi} \cos \theta$.
 
 
-%%%%% Diapo 2
+%%%%% Diapo 5
 \section{Moneda en un plano inclinado}
 \subsection{Planteamiento del problema}
 \frame{
@@ -125,12 +125,12 @@ Un disco delgado, uniforme, de masa $M$ y radio a está enganchado a una varilla 
 	\includegraphics[width=3.0in]{Figuras/MonedaInclinada.png}
 \end{figure}
 }
-%%%%% Diapo 2
+%%%%% Diapo 6
 \subsection{Coordenadas y ligaduras}
 \frame{
 \frametitle{Coordenadas y ligaduras}
 \begin{itemize}  
-	\item<1-> En principio tenemos seis grados de libertad $(x, y, z, \phi, \psi, \theta)$ y cinco ligaduras
+	\item<1->  Tenemos seis grados de libertad $(x, y, z, \phi, \psi, \theta)$ y cinco ligaduras
 	\item<2-> $\theta=$ constante implica  $\theta+\beta=\frac{\pi}{2}, \quad \tan \beta=\frac{a}{b}, \quad \theta=\frac{\pi}{2}-\arctan \frac{a}{b}$
 	\item<3-> $|{\bf R}| = b$. Más aún, ${\bf R} =b {\bf \hat{x}}_3= b\left[\operatorname{sen} \phi \operatorname{sen} \theta {\bf \hat{x}}-\cos \phi \operatorname{sen} \theta {\bf \hat{y}}+\cos \theta {\bf \hat{z}}\right]$,
 	\item<4-> Entonces $x = b\operatorname{sen} \phi \operatorname{sen} \theta $; $\quad y =-b\cos \phi \operatorname{sen} \theta \quad$ y $z = b\cos \theta $ que cumplen con la ecuación $x^2 +y^2 +z^2 = b^2$
@@ -144,11 +144,11 @@ Un disco delgado, uniforme, de masa $M$ y radio a está enganchado a una varilla 
 	\tilde{\Omega}^1 & \tilde{\Omega}^2 & {\tilde \Omega}^3 \\
 	0 & -a & 0
 	\end{array}\right| = a(\tilde{\Omega}^3 \, {\bf \hat{x}}_1 -\tilde{\Omega}^1\, {\bf \hat{x}}_3) $
-	con cual respecto al centro de masa $b \dot{{\bf \hat{x}}}_3 +a(\tilde{\Omega}^3 \, {\bf \hat{x}}_1 -\tilde{\Omega}^1\, {\bf \hat{x}}_3) =0$
+	\item<8-> Con cual  $b \dot{\hat{{\bf x}}}_3 +a(\tilde{\Omega}^3 \, {\bf \hat{x}}_1 -\tilde{\Omega}^1\, {\bf \hat{x}}_3) =0$
 
 \end{itemize}
 }
-
+%%%%% Diapo 7
 \subsection{Integración de ligaduras}
 \frame{
 \frametitle{Integración de ligaduras}
@@ -164,7 +164,7 @@ Un disco delgado, uniforme, de masa $M$ y radio a está enganchado a una varilla 
 	\item<4-> Donde hemos sustituido el valor de $\theta$ que implica $\operatorname{sen} \theta=b / \sqrt{a^2+b^2}$ y $\cos \theta=a / \sqrt{a^2+b^2}$.
 \end{itemize}
 }
-%%%%% Diapo 2
+%%%%% Diapo 8
 \subsection{Energías Cinética, Potencial y el Lagrangeano}
 \frame{
 \frametitle{Energías Cinética, Potencial y el Lagrangeano}
@@ -183,13 +183,69 @@ Un disco delgado, uniforme, de masa $M$ y radio a está enganchado a una varilla 
 	\item<7-> La ecuación de movimiento será $\ddot{\phi}=-g \operatorname{sen} \alpha \frac{4\left(a^2+b^2\right)^{3 / 2}}{a^2+6 b^2} \operatorname{sen} \phi$
 \end{itemize}
 }
+%
+%%%%% Diapo 9
+\section{Un cono que rueda en un plano horizontal}
+\subsection{Coordenadas y ligaduras}
+\frame{
+\frametitle{Coordenadas y ligaduras}
+Un cono circular uniforme de altura $h$, ángulo de vértice $\alpha$ y masa $m$ rueda sobre su lado sin deslizar sobre el plano horizontal $(x, y)$.
+\begin{figure}[t]
+	\includegraphics[width=0.7in]{Figuras/PrecesionNutacion.png}
+	\includegraphics[width=1.5in]{Figuras/ConoRodando1.png}
+	\includegraphics[width=1.5in]{Figuras/ConoRodando2.png}
+\end{figure}
+\begin{itemize}  
+	\item<1-> Tenemos seis grados de libertad $(x, y, z, \phi, \psi, \theta)$ y cinco ligaduras.
+	\item<2-> $\theta=$ const  $\Rightarrow \theta+\alpha=\frac{\pi}{2}, \quad \tan \alpha=\frac{cp}{oc}, \quad \theta=\frac{\pi}{2}-\arctan \frac{cp}{oc}$	
+	\item<4-> Entonces ${\bf R} = \frac{3h}{4} {\bf \hat{x}}_3 \equiv \frac{3h}{4}\left[\cos \phi \cos \alpha \,{\bf \hat{x}} + \operatorname{sen} \phi \cos \alpha  \, {\bf \hat{y}} +\operatorname{sen} \alpha  \,{\bf \hat{z}}\right]$, 
+	\item<4->  Es decir ${\bf R} = \frac{3h}{4} {\bf \hat{x}}_3 \equiv \frac{3h}{4}\left[\cos \phi \operatorname{sen} \theta   \, {\bf \hat{x}} + \operatorname{sen} \phi \operatorname{sen} \theta  \, {\bf \hat{y}} +\cos \theta  \, {\bf \hat{z}}\right]$, 
+	\item<5-> Con lo cual $x= \frac{3h}{4}\cos \phi \operatorname{sen} \theta$, $\quad y= \frac{3h}{4}\operatorname{sen} \phi \operatorname{sen} \theta$ $\quad z = \frac{3h}{4} \cos \theta $, 
+	\item<6-> Derivando $\dot{x}=-\frac{3h}{4} \dot{\phi} \operatorname{sen} \phi \operatorname{sen} \theta$ $\quad \dot{y}= \frac{3h}{4}  \dot{\phi} \cos \phi \operatorname{sen} \theta$ $\quad \dot{z}=0$
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{Rodar sin deslizar}
+\frame{
+\frametitle{Rodar sin deslizar}
+\begin{itemize}
+	\item<1-> La ligadura de rodar sin deslizar implica $\dot{{\bf r}}_{op} = 0=\dot{{\bf R}}+  \tilde{ {\bf \Omega}} \times {\bf r}_{cp}$.  
+	\item<2->  Por su parte, $\tilde{{\bf \Omega}} \times {\bf r}_{cp} = 
+	\left|
+	\begin{array}{ccc} 
+	{\bf \hat{x}}_1 & {\bf \hat{x}}_2 & {\bf \hat{x}}_3 \\
+	\tilde{\Omega}_1 & \tilde{\Omega}_2 & {\tilde \Omega}_3 \\
+	0 & -b & 0
+	\end{array}\right| = b(\tilde{\Omega}_3 \, {\bf \hat{x}}_1 -\tilde{\Omega}_1\, {\bf \hat{x}}_3) $
+	\item<3->  Al proyectar la ecuación de ligadura respecto a la base del Sistema laboratorio tendremos 
+	$\dot{x} + b(\tilde{\Omega}^3 ({\bf \hat{x}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{x}} \cdot {\bf \hat{x}}_3))=0 $; $\quad \dot{y} + b(\tilde{\Omega}^3  ({\bf \hat{y}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{y}} \cdot {\bf \hat{x}}_3)) =0$;  $\quad a(\tilde{\Omega}^3  ({\bf \hat{z}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{z}} \cdot {\bf \hat{x}}_3)) =0 $.
+	\item<4-> Que se convierten en $\dot{x}+b \dot{\phi} \cos \phi \cos \theta+b \dot{\psi} \cos \phi  =0$ y $\dot{y}+b \dot{\phi} \operatorname{sen} \phi \cos \theta+b \dot{\psi} \operatorname{sen} \phi =0$
+\end{itemize}
+}
+
  
 \end{document}
+
+\frac{3h}{4}\left[\operatorname{sen} \phi \operatorname{sen} \theta {\bf \hat{x}}-\cos \phi \operatorname{sen} \theta {\bf \hat{y}}+\cos \theta {\bf \hat{z}}\right]$
+
+La energía cinética será 	$T= T_{tras} + T_{rot} = \frac{1}{2} M(\dot{x}^2+\dot{y}^2)
+	+\frac{1}{2}( I_{11} \tilde{\Omega}_1^2 +I_{22} \tilde{\Omega}_2^2 +I_{33} \tilde{\Omega}_3^2 )$ 
+
+	\item<3-> Por su parte, $\tilde{{\bf \Omega}} \times {\bf r}_{cp} = 
+	\left|
+	\begin{array}{ccc} 
+	{\bf \hat{x}}_1 & {\bf \hat{x}}_2 & {\bf \hat{x}}_3 \\
+	\tilde{\Omega}^1 & \tilde{\Omega}^2 & {\tilde \Omega}^3 \\
+	0 & -a & 0
+	\end{array}\right| = a(\tilde{\Omega}^3 \, {\bf \hat{x}}_1 -\tilde{\Omega}^1\, {\bf \hat{x}}_3) $
+
+
 
 
 	\item<3->  La ligadura de rodar sin deslizar implica que la velocidad del punto $p$, en contacto con la superficie, es instantáneamente cero.
 	\item<4-> Esto es: $\vec{r}(op)=\vec{R}+\vec{r}(cp) \Rightarrow \dot{\vec{r}}(op) = 0=\dot{\vec{R}}+  \vec{\Omega} \times \vec{r}(cp)$
-
+%
 %%%%% Diapo 2
 \section{Sección}
 \frame{

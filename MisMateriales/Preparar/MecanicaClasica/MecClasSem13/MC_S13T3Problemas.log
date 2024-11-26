@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  19 NOV 2024 06:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  25 NOV 2024 17:15
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1667,7 +1667,7 @@ Package rerunfilecheck Info: File `MC_S13T3Problemas.out' has not changed.
 Here is how much of TeX's memory you used:
  24416 strings out of 478268
  478844 string characters out of 5846347
- 750389 words of memory out of 5000000
+ 750390 words of memory out of 5000000
  42019 multiletter control sequences out of 15000+600000
  483862 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1688,7 +1688,7 @@ al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loca
 l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/
 texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on MC_S13T3Problemas.pdf (35 pages, 489427 bytes).
+Output written on MC_S13T3Problemas.pdf (35 pages, 489392 bytes).
 PDF statistics:
  1101 PDF objects out of 1200 (max. 8388607)
  1001 compressed objects within 11 object streams
