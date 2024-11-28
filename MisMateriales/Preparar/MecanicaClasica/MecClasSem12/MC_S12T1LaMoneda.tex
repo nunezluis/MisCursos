@@ -68,7 +68,7 @@ Algunas animaciones ilustrativas en \url{https://rotations.berkeley.edu/the-roll
 	\end{array}\right| = a(\tilde{\Omega}^3 \, {\bf \hat{x}}_1 -\tilde{\Omega}^1\, {\bf \hat{x}}_3) $
 	\item<4-> Al proyectar la ecuación de ligadura $0=\dot{{\bf R}}+ a(\tilde{\Omega}^3 \, {\bf \hat{x}}_1 -\tilde{\Omega}^1\, {\bf \hat{x}}_3)$ respecto a la base del Sistema laboratorio tendremos \\
 	$\dot{x} + a(\tilde{\Omega}^3 ({\bf \hat{x}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{x}} \cdot {\bf \hat{x}}_3))=0 $; $\quad \dot{y} + a(\tilde{\Omega}^3  ({\bf \hat{y}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{y}} \cdot {\bf \hat{x}}_3)) =0$;  $\quad \dot{z} + a(\tilde{\Omega}^3  ({\bf \hat{z}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{z}} \cdot {\bf \hat{x}}_3)) =0 $.
-	\item<5-> Es decir $ \dot{x}+a \dot{\phi} \cos \phi \cos \theta-a \dot{\theta} \operatorname{sen} \phi \operatorname{sen} \theta+a \dot{\psi} \cos \phi  =0$; $ \dot{y}+a \dot{\phi} \operatorname{sen} \phi \cos \theta+a \dot{\theta} \cos \phi \operatorname{sen} \theta+a \dot{\psi} \operatorname{sen} \phi  =0 $;  $\quad \dot{z}-a \dot{\theta} \cos \theta =0$ 
+	\item<5-> Es decir $ \dot{x}+a \dot{\phi} \cos \phi \cos \theta-a \dot{\theta} \operatorname{sen} \phi \operatorname{sen} \theta+a \dot{\psi} \cos \phi  =0$; $ \dot{y}+a \dot{\phi} \operatorname{sen} \phi \cos \theta+a \dot{\theta} \cos \phi \operatorname{sen} \theta+a \dot{\psi} \operatorname{sen} \phi  =0 $;  $\quad \dot{z}-a \dot{\theta} \cos \theta =0$. Nótese que hemos tomado $\psi = 0$ por la simetria respecto al eje ${\bf \hat{x}}_3$.  
 \end{itemize} 
 }
 %%%%% Diapo 3
@@ -79,11 +79,8 @@ Algunas animaciones ilustrativas en \url{https://rotations.berkeley.edu/the-roll
 	\item<1-> La tercera ecuación es integrable y nos da $z=a \operatorname{sen} \theta$,  las otras ecuaciones constituyen vínculos no integrables.
 	\item<2-> La energía cinética será 	$T= T_{tras} + T_{rot} = \frac{1}{2} M(\dot{x}^2+\dot{y}^2+\dot{z}^2)
 	+\frac{1}{2}( I_{11} \tilde{\Omega}_1^2 +I_{22} \tilde{\Omega}_2^2 +I_{33} \tilde{\Omega}_3^2 )$ 
-	\item<3-> Como  
-	$\tilde{\Omega}^1  = \dot{\phi} \operatorname{sen} \, \theta \operatorname{sen} \, \psi+\dot{\theta} \cos \psi $ \\
-	$\tilde{\Omega}^2  = \dot{\phi} \operatorname{sen} \, \theta \cos \psi-\dot{\theta} \operatorname{sen} \, \psi \quad $  y 
-	$\quad \tilde{\Omega}^3  = \dot{\psi}+\dot{\phi} \cos \theta$
-	\item<4-> y $I_{11} = I_{22}=\frac{1}{4} M a^2$ y $I_{33}=\frac{1}{2} M a^2$.	
+	\item<3-> Como  $\tilde{\Omega}^1  = \dot{\theta} $ $\quad \tilde{\Omega}^2  = \dot{\phi} \operatorname{sen} \, \theta \quad $  y  $\quad \tilde{\Omega}^3  = \dot{\psi}+\dot{\phi} \cos \theta$
+	\item<4-> Adicionalmente, $I_{11} = I_{22}=\frac{1}{4} M a^2$ y $I_{33}=\frac{1}{2} M a^2$.	
 	\item<5->  Tendremos $T=\frac{1}{2} M\left(\dot{x}^2+\dot{y}^2+\dot{z}^2\right)$ $+\frac{1}{8} M a^2\left[\dot{\phi}^2 \operatorname{sen}^2 \theta+\dot{\theta}^2+2\left(\dot{\phi} \cos \theta^2+\dot{\psi}\right)^2\right]$
 	\item<6-> Que se simplifica a cuando incorporamos las ligaduras  $T = \frac{1}{32} a^2 M \left(\dot{\phi}^2 (\cos 4 \theta+13) +32 \dot{\phi} \dot{\psi} \cos \theta +2 \dot{\phi} (5 \dot{\phi} +4 \dot{\psi}) \cos 2 \theta \right.$ $\qquad \left.+8 \dot{\phi} \dot{\psi}+24 \dot{\psi}^2+20 \dot{\theta}^2\right)$
 	\item<7-> Por su parte, la energía potencial $V =mg z = mga \operatorname{sen} \theta$
@@ -97,7 +94,8 @@ Algunas animaciones ilustrativas en \url{https://rotations.berkeley.edu/the-roll
 	\item<1-> El Lagrangeano $\mathcal{L} = T-V \Rightarrow$ $\mathcal{L} = \frac{1}{32} a M \left(4 \left(6 a  \dot{\psi}^2+5 a  \dot{\theta}^2-8 g \sin  \theta \right)+8 a  \dot{\phi}  \dot{\psi} (4 \cos  \theta+\cos 2 \theta+1) \right.$ $\qquad \left.+a  \dot{\phi}^2 (10 \cos 2  \theta+\cos 4 \theta+13)\right)$
 	%
 	\item<2-> Las coordenadas $\psi$ y $\phi$ son cíclicas y por lo tanto sus momentos conjugados serán constantes $p_{\psi} = \frac{\partial \mathcal{L}}{\partial \dot{\psi}} =$cte y $p_{\phi} = \frac{\partial \mathcal{L}}{\partial \dot{\phi}} =$cte
-	\item<3-> $p_{\psi} = \frac{\partial \mathcal{L}}{\partial \dot{\psi}} = \frac{1}{16} a^2 M \left(\dot{\phi} (10 \cos 2 \theta +\cos 4 \theta +13)+4 \dot{\psi} (4 \cos \theta +\cos 2 \theta  +1)\right) = C_1$
+	\item<3-> $p_{\psi} = \frac{\partial \mathcal{L}}{\partial \dot{\psi}} = {\rm cte} \quad \Rightarrow$
+	$\frac{1}{16} a^2 M \left(\dot{\phi} (10 \cos 2 \theta +\cos 4 \theta +13)+4 \dot{\psi} (4 \cos \theta +\cos 2 \theta  +1)\right) = C_1$
 	\item<4-> $p_{\phi} = \frac{\partial \mathcal{L}}{\partial \dot{\phi}} = \frac{1}{4} a^2 M \left(\dot{\phi} (4 \cos \theta +\cos 2 \theta +1)+6 \dot{\psi}\right) = C_2$
 	\item<5-> Por lo tanto 
 	$\dot{\phi}\to \frac{\csc ^2\left(\frac{\theta}{2}\right) (-6 C_1+4 C_2 \cos \theta+C_2 \cos 2 \theta+C_2)}{a^2 M (-2 \cos 2 \theta+\cos 3 \theta-5)}$
@@ -157,9 +155,9 @@ Un disco delgado, uniforme, de masa $M$ y radio a está enganchado a una varilla 
 	respecto a la base del Sistema laboratorio tendremos \\
 	$\dot{x} + a(\tilde{\Omega}^3 ({\bf \hat{x}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{x}} \cdot {\bf \hat{x}}_3))=0 $; $\quad \dot{y} + a(\tilde{\Omega}^3  ({\bf \hat{y}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{y}} \cdot {\bf \hat{x}}_3)) =0$; $\quad \dot{z} + a(\tilde{\Omega}^3  ({\bf \hat{z}} \cdot {\bf \hat{x}}_1) -\tilde{\Omega}^1 ({\bf \hat{z}} \cdot {\bf \hat{x}}_3)) =0 $.
 	\item<2-> que se convierte en 
-	$ \dot{x}+a(\dot{\psi} \cos \phi+\dot{\phi} \cos \phi \cos \theta-\dot{\theta} \operatorname{sen} \phi \operatorname{sen} \theta)=0$ \\
-	$ \dot{y}+a(\dot{\psi} \operatorname{sen} \phi+\dot{\phi} \operatorname{sen} \phi \cos \theta+\dot{\theta} \cos \phi \operatorname{sen} \theta)=0$ \\
-	$ \dot{z}-a \dot{\theta} \cos \theta=0 $
+	$ \dot{x}+a(\dot{\psi} \cos \phi+\dot{\phi} \cos \phi \cos \theta-\dot{\theta} \operatorname{sen} \phi \operatorname{sen} \theta)=0$,  \\
+	$ \dot{y}+a(\dot{\psi} \operatorname{sen} \phi+\dot{\phi} \operatorname{sen} \phi \cos \theta+\dot{\theta} \cos \phi \operatorname{sen} \theta)=0 $ y  
+	$\quad  \dot{z}-a \dot{\theta} \cos \theta=0$. Hemos tomado $\psi = 0$ por la simetría del cuerpo respecto a ${\bf \hat{x}}_3$. 
 	\item<3-> y usando las otras ecuaciones de ligadura $\dot{x}=b \dot{\phi} \cos \phi \operatorname{sen} \theta, \quad \dot{y}=b \dot{\phi} \operatorname{sen} \phi \operatorname{sen} \theta, \quad \dot{z}=0$, obtenemos $\dot{\psi}+\dot{\phi}\left[\frac{b}{a} \operatorname{sen} \theta+\cos \theta\right]=0 \Rightarrow \psi=-\frac{\sqrt{a^2+b^2}}{a} \phi$
 	\item<4-> Donde hemos sustituido el valor de $\theta$ que implica $\operatorname{sen} \theta=b / \sqrt{a^2+b^2}$ y $\cos \theta=a / \sqrt{a^2+b^2}$.
 \end{itemize}
