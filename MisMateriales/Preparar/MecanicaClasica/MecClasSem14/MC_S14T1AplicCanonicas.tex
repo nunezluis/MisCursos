@@ -130,7 +130,7 @@ $Q_j  \equiv q_j\left(t_0+d t\right) =q_j\left(t_0\right)+\dot{q}_j d t+\cdots=q
 	$\{Q_i, P_j\} = \sum_{k=1}^s\left(\frac{\partial q_i}{\partial q_k}+\frac{\partial \dot{q}_i}{\partial q_k} d t\right)\left(\frac{\partial p_j}{\partial p_k}+\frac{\partial \dot{p}_j}{\partial p_k} d t\right) \Rightarrow$
 	$\{Q_i, P_j\} =\sum_{k=1}^s\left(\delta_{i k}+\frac{\partial \dot{q}_i}{\partial q_k} d t\right)\left(\delta_{j k}+\frac{\partial \dot{p}_j}{\partial p_k} d t\right) \Rightarrow$ \\
 	$\{Q_i, P_j\} =\sum_{k=1}^s\left[\delta_{i k} \delta_{j k}+\left(\delta_{j k} \frac{\partial \dot{q}_i}{\partial q_k}+\delta_{i k} \frac{\partial \dot{p}_j}{\partial p_k}\right) d t\right] \Rightarrow$ \\
-	$\{Q_i, P_j\} = \delta_{i j}+\left(\frac{\partial \dot{q}_i}{\partial q_j}+\frac{\partial \dot{p}_j}{\partial p_i}\right) d t \equiv \delta_{i j}+\left(\frac{\partial^2 H}{\partial q_j \partial p_i}-\frac{\partial^2 H}{\partial p_i \partial q_j}\right) \delta t=\delta_{i j} $
+	$\{Q_i, P_j\} = \delta_{i j}+\left(\frac{\partial \dot{q}_i}{\partial q_j}+\frac{\partial \dot{p}_j}{\partial p_i}\right) d t \equiv \delta_{i j}+\left(\frac{\partial^2 \mathcal{H}}{\partial q_j \partial p_i}-\frac{\partial^2 \mathcal{H}}{\partial p_i \partial q_j}\right) \delta t=\delta_{i j} $
 	\item<2-> Por lo tanto, la transformación infinitesimal es canónica y se escribe
 	$P_j =p_j\left(t_0\right)-\frac{\partial \mathcal{H}}{\partial q_i}\left(q_i\left(t_0\right), p_i\left(t_0\right)\right) d t+\cdots$ \\
 	$Q_j  =q_j\left(t_0\right)+\frac{\partial \mathcal{H}}{\partial p_j}\left(q_i\left(t_0\right), p_i\left(t_0\right)\right) d t+\cdots$ 
@@ -144,15 +144,14 @@ $Q_j  \equiv q_j\left(t_0+d t\right) =q_j\left(t_0\right)+\dot{q}_j d t+\cdots=q
 \frame{
 \frametitle{Coordenadas Hamiltonianas Cíclicas 1/2}
 \begin{itemize}  
-	\item<1-> Una transformación canónica $Q_i=Q_i\left(q_j, p_j, t\right), P_i=P_i\left(q_j, p_j, t\right)$ es conveniente cuando el cambio de variables hace desaparecer alguna coordenada $Q_j$ o momento $P_k$ en el Hamiltoniano $\tilde{\mathcal{H}}\left(Q_i, P_i, t\right)$.
-	\item<2-> Se dice que esa coordenada o momento es cíclica para $\tilde{\mathcal{H}}$.
-	\item<3-> Si $\frac{\partial \tilde{\mathcal{H}}}{\partial Q_j}=0$,  entonces, la ecuación de Hamilton para el momento $P_j$ es $\dot{P}_j=-\frac{\partial \tilde{\mathcal{H}}}{\partial Q_j}=0 \quad \Rightarrow \quad P_j=$ cte. Es decir, {\bf momento conservado}.
-	\item<4-> Sea un oscilador armónico  $\mathcal{H}(q, p)=\frac{p^2}{2 m}+\frac{1}{2} k q^2=\frac{1}{2 m}\left(p^2+m^2 \omega^2 q^2\right)$
-	\item<5-> Encontrar la transformación canónica $\{p, q\} \rightarrow\{P, Q\}$ con $Q$ cíclica en $\tilde{\mathcal{H}}(Q, P)$. 
-	\item<6-> Sea una transformación canónica 
-	$p  =f(P) \cos Q$  y $q  =\frac{f(P)}{m \omega} \sin Q$, donde debemos determinar $f(P)$
-	\item<7-> $\tilde{\mathcal{H}}(Q, P)=\frac{1}{2 m}\left[(p(Q, P))^2+m^2 \omega^2(q(Q, P))^2\right]=\frac{1}{2 m}[f(P)]^2$
-	\item<8-> La transformación se reescribe como $p=m \omega q \cot Q \quad \Rightarrow p=p(q, Q) \Rightarrow \mathcal{F}_1(q, Q)$
+	\item<1-> Una transformación canónica $Q_i=Q_i\left(q_j, p_j, t\right), P_i=P_i\left(q_j, p_j, t\right)$ es conveniente cuando el cambio de variables hace cíclica alguna coordenada $Q_j$ o momento $P_k$ en el Hamiltoniano $\tilde{\mathcal{H}}\left(Q_i, P_i, t\right)$.
+	\item<2-> Si $\frac{\partial \tilde{\mathcal{H}}}{\partial Q_j}=0$,  entonces, la ecuación de Hamilton para el momento $P_j$ es $\dot{P}_j=-\frac{\partial \tilde{\mathcal{H}}}{\partial Q_j}=0 \quad \Rightarrow \quad P_j=$ cte. Es decir, {\bf momento conservado}.
+	\item<3-> Sea un oscilador armónico  $\mathcal{H}(q, p)=\frac{p^2}{2 m}+\frac{1}{2} k q^2=\frac{1}{2 m}\left(p^2+m^2 \omega^2 q^2\right)$
+	\item<4-> Encontrar la transformación canónica $\{p, q\} \rightarrow\{P, Q\}$ con $Q$ cíclica en $\tilde{\mathcal{H}}(Q, P)$. 
+	\item<5-> Sea una transformación canónica 
+	$p  =f(P) \cos Q$  y $q  =\frac{f(P)}{m \omega} \operatorname{sen} Q$, entonces debemos determinar $f(P)$
+	\item<6-> $\tilde{\mathcal{H}}(Q, P)=\frac{1}{2 m}\left[(p(Q, P))^2+m^2 \omega^2(q(Q, P))^2\right]=\frac{1}{2 m}[f(P)]^2$
+	\item<7-> La transformación se reescribe como $p=m \omega q \cot Q \quad \Rightarrow p=p(q, Q) \Rightarrow \mathcal{F}_1(q, Q)$
 \end{itemize}
 }
 %
