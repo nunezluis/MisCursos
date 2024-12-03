@@ -1,4 +1,4 @@
 \babel@toc {spanish}{}\relax 
 \beamer@sectionintoc {1}{Ecuaci\'on de Hamilton Jacobi}{3}{0}{1}
-\beamer@sectionintoc {2}{Secci\'on}{10}{0}{2}
-\beamer@sectionintoc {3}{Recapitulando}{11}{0}{3}
+\beamer@sectionintoc {2}{Hamilton-Jacobi y el Principio de M\IeC {\'\i }nima Acci\'on}{10}{0}{2}
+\beamer@sectionintoc {3}{Secci\'on}{15}{0}{3}
