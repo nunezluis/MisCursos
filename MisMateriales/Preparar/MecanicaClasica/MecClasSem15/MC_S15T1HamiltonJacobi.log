@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  2 DEC 2024 19:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  3 DEC 2024 08:32
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1014,20 +1014,20 @@ stitucional/UISLOGO.png  used on input line 36.
  [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 48.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 49.
 
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 48.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 49.
 
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 48.
+ut line 49.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
@@ -1038,7 +1038,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 48.
+stitucional/UISLOGO.png  used on input line 49.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [3
 
@@ -1048,7 +1048,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 48.
+stitucional/UISLOGO.png  used on input line 49.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [4
 
@@ -1058,7 +1058,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 48.
+stitucional/UISLOGO.png  used on input line 49.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [5
 
@@ -1068,7 +1068,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 57.
+stitucional/UISLOGO.png  used on input line 49.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [6
 
@@ -1078,9 +1078,19 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 67.
+stitucional/UISLOGO.png  used on input line 58.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [7
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 68.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [8
 
 ]
 \tf@nav=\write6
@@ -1101,9 +1111,9 @@ Package rerunfilecheck Info: File `MC_S15T1HamiltonJacobi.out' has not changed.
 (rerunfilecheck)             Checksum: CB611E978258F17EAF34263C8638EDC4;379.
  ) 
 Here is how much of TeX's memory you used:
- 24276 strings out of 478268
- 476987 string characters out of 5846347
- 735414 words of memory out of 5000000
+ 24278 strings out of 478268
+ 477004 string characters out of 5846347
+ 737414 words of memory out of 5000000
  41945 multiletter control sequences out of 15000+600000
  477242 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1117,10 +1127,10 @@ usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></
 usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></u
 sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on MC_S15T1HamiltonJacobi.pdf (7 pages, 128380 bytes).
+Output written on MC_S15T1HamiltonJacobi.pdf (8 pages, 134208 bytes).
 PDF statistics:
- 291 PDF objects out of 1000 (max. 8388607)
- 243 compressed objects within 3 object streams
- 18 named destinations out of 1000 (max. 500000)
+ 318 PDF objects out of 1000 (max. 8388607)
+ 269 compressed objects within 3 object streams
+ 20 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 
