@@ -104,9 +104,14 @@ $W(q, E)  =\int\left(2 m E-m^2 \omega^2 q^2\right)^{1 / 2} d q \equiv S(q, E, t)
 \frame{
 \frametitle{Una vez mas el Oscilador Armónico, continuación}
 \begin{itemize}  
-	\item<1-> La función $S(q, E, t)$ permite encontrar las relaciones de la transformación canónica generada por $S$ a partir de sus derivadas parciales, $p=\frac{\partial S}{\partial q}=\frac{\partial W}{\partial q} = \sqrt{2 m E-m^2 \omega^2 q^2}$. \\ Mientras $Q=\frac{\partial S}{\partial P}=\frac{\partial S}{\partial E}=\sqrt{\frac{m}{2 E}} \int \frac{d q}{\sqrt{1-\frac{m \omega^2 q^2}{2 E}}}-t=\beta=$cte.
+	\item<1-> La función $S(q, E, t)$ permite encontrar transformación canónica generada por $S$ a partir de sus derivadas parciales, $p=\frac{\partial S}{\partial q}=\frac{\partial W}{\partial q} = \sqrt{2 m E-m^2 \omega^2 q^2}$ y \\ $Q=\frac{\partial S}{\partial P}=\frac{\partial S}{\partial E}=\sqrt{\frac{m}{2 E}} \int \frac{d q}{\sqrt{1-\frac{m \omega^2 q^2}{2 E}}}-t=\beta=$cte.
 	\item<2-> Integrando obtenemos $Q+t=\frac{1}{\omega} \operatorname{sen}^{-1}\left(\omega q \sqrt{\frac{m}{2 E}}\right)$ 
 	\item<3-> Con cual, $q(Q, E, t)=\sqrt{\frac{2 E}{m \omega^2}} \operatorname{sen} \left(\omega t+\beta^{\prime}\right)$, con $\quad \beta^{\prime}=Q \omega=$ cte. 
+	\item<4-> Entonces $p=\frac{\partial W}{\partial q}=\sqrt{2 m E-m^2 \omega^2 q^2} \equiv \sqrt{2 m E} \cos \left(\omega t+\beta^{\prime}\right)$
+	\item<5-> Evaluando para $t = 0$, tendremos $q_0 =\sqrt{\frac{2 E}{m \omega^2}} \operatorname{sen} (\omega Q)$ y $p_0  =\sqrt{2 m E} \cos (\omega Q)$
+	\item<6-> Con lo cual $\tan (\omega Q)=m \omega \frac{q_0}{p_0} \quad \Rightarrow \quad Q=\frac{1}{\omega} \tan ^{-1}\left(m \omega \frac{q_0}{p_0}\right)$.
+	\item<7-> Mientras que $E=\frac{1}{2 m}\left(p_0^2+m^2 \omega^2 q_0^2\right)=P$
+	\item<8-> Las ecuaciones $p=p\left(q_0, p_0, t\right)$ y $q=q\left(q_0, p_0, t\right)$ expresan la solución de las ecuaciones de Hamilton para el oscilador armónico en términos de las condiciones iniciales.
 \end{itemize}
 }
 
