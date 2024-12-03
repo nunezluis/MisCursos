@@ -57,7 +57,7 @@
 \frametitle{Paréntesis de Poisson: Propiedades 1/2}
 \begin{itemize}  
 	\item<1-> El paréntesis de Poisson puede ser considerado como una operación entre dos funciones definidas en un espacio algebraico que asigna otra función en ese espacio.
-	\item<2-> El paréntesis de Poisson, como operación algebraica, posee las siguientes propiedades (características de lo que se denomina álgebra de Lie):
+	\item<2-> El paréntesis de Poisson, como operación algebraica, posee las siguientes propiedades (características de un álgebra de Lie):
 	\begin{itemize}
 		\item $\{f, g\}=-\{g, f\}, \quad\{f, f\}=0 \quad$ (antisimetría).
 		\item $\{f, c\}=0, \quad$ si $c=$ cte.
@@ -76,10 +76,10 @@
 	\item<1-> Como $p_i$ y $q_i$ representan coordenadas independientes tenemos $\left\{q_i, f\right\}=\sum_{k=1}^s\left(\frac{\partial q_i}{\partial q_k} \frac{\partial f}{\partial p_k}-
 	\cancelto{0}{\frac{\partial q_k}{ \partial p_k}} \frac{\partial f}{\partial q_k}\right)=\sum_{k=1}^s \delta_{i k} \frac{\partial f}{\partial p_k}=\frac{\partial f}{\partial p_i}$ 
 	$\left\{p_i, f\right\}=\sum_{k=1}^s \left(\cancelto{0} {\frac{\partial p^{\prime}}{ \partial q_k}} \frac{\partial f}{\partial p_k}-\frac{\partial p_i}{\partial p_k} \frac{\partial f}{\partial q_k}\right)=-\sum_{k=1}^s \delta_{i k} \frac{\partial f}{\partial q_k}=-\frac{\partial f}{\partial q_i} .$
-	\item<2-> Si $f=p_j$, ó $f=q_j$, $\left\{q_i, q_j\right\}=0, \quad\left\{p_i, p_j\right\}=0, \quad\left\{q_i, p_j\right\}=\delta_{i j}$
-	\item<3-> Utilizando paréntesis de Poisson, las ecuaciones de Hamilton pueden escribirse como 
+	\item<2-> Si $f=p_j$, ó $f=q_j$, $\Rightarrow \left\{q_i, q_j\right\}=0, \quad\left\{p_i, p_j\right\}=0, \quad\left\{q_i, p_j\right\}=\delta_{i j}$
+	\item<3-> Las ecuaciones de Hamilton pueden escribirse como 
 	$\dot{q}_i  =\frac{\partial \mathcal{H}}{\partial p_i}=\left\{q_i, \mathcal{H}\right\} \quad \dot{p}_i  =-\frac{\partial \mathcal{H}}{\partial q_i}=\left\{p_i, \mathcal{H}\right\}$
-	\item<4-> En Mecánica Cuántica, la operación $[A, B]=A B-B A$ se denomina el conmutador de los operadores u observables $A$ y $B$.
+	\item<4-> En Mecánica Cuántica, la operación $[A, B]=A B-B A$ es el conmutador de los operadores u observables $A$ y $B$.
 	\item<5-> La estructura algebraica de la Mecánica Clásica, expresada en las propiedades de los paréntesis de Poisson, se preserva en la Mecánica Cuántica. En particular, $\left\{q_i, p_j\right\}=i \hbar \delta_{i j}$, donde $\hbar$ es la constante de Planck (dividida por $2 \pi)$.
 \end{itemize}
 }
@@ -103,7 +103,7 @@
  $\left\{L_x, L_y\right\} =\sum_{i=1}^3\left(\frac{\partial L_x}{\partial q_i} \frac{\partial L_y}{\partial p_i}-\frac{\partial L_x}{\partial p_i} \frac{\partial L_y}{\partial q_i}\right)$ \\$ 
 		\left\{L_x, L_y\right\} = \left(\frac{\partial L_x}{\partial x} \frac{\partial L_y}{\partial p_x}-\frac{\partial L_x}{\partial p_x} \frac{\partial L_y}{\partial x}\right)+\left(\frac{\partial L_x}{\partial y} \frac{\partial L_y}{\partial p_y}-\frac{\partial L_x}{\partial p_y} \frac{\partial L_y}{\partial y}\right)+\left(\frac{\partial L_x}{\partial z} \frac{\partial L_y}{\partial p_z}-\frac{\partial L_x}{\partial p_z} \frac{\partial L_y}{\partial z}\right)$ \\
 	$\left\{L_x, L_y\right\} =x p_y-y p_x=L_z$; $\quad \left\{L_y, L_z\right\}  =L_x$ $\quad \left\{L_z, L_x\right\}  =L_y$
-	\item<3-> 	En general, $\left\{L_i, L_j\right\}=\epsilon_{i j k} L_k$. En Mecánica Cuántica,  $\left[L_i, L_j\right]=i \hbar \epsilon_{i j k} L_k$.	
+	\item<3-> 	Entonces, $\left\{L_i, L_j\right\}=\epsilon_{i j k} L_k$. En Mecánica Cuántica,  $\left[L_i, L_j\right]=i \hbar \epsilon_{i j k} L_k$.	
 \end{itemize}
 }
 %
@@ -129,11 +129,11 @@ Para una transformación canónica $Q_j=Q_j(q_k, p_k, t)$ y $P_i=P_i(q_k, p_k, t)$
 \frametitle{Paréntesis de Poisson y Transformaciones 2/2}
 Consideremos la siguiente transformación \\ $P_1=p_1-2 p_2, \quad Q_1=q_1$ y  $P_2=-2 q_1-q_2, \quad Q_2=p_2$
 \begin{itemize}  
-	\item<1-> $\left[Q_1, P_1\right] =\sum_{i=1}^s\left(\frac{\partial Q_1}{\partial q_i} \frac{\partial P_1}{\partial p_i}-\frac{\partial Q_1}{\partial p_i} \frac{\partial P_1}{\partial q_i}\right)$ \\
-	$\left[Q_1, P_1\right] =\left(\frac{\partial Q_1}{\partial q_1} \frac{\partial P_1}{\partial p_1}-\frac{\partial Q_1}{\partial p_1} \frac{\partial P_1}{\partial q_1}\right)+\left(\frac{\partial Q_1}{\partial q_2} \frac{\partial P_1}{\partial p_2}-\frac{\partial Q_1}{\partial p_2} \frac{\partial P_1}{\partial q_2}\right)=1 $
-	\item<2-> $\left[Q_2, P_2\right] =\left(\frac{\partial Q_2}{\partial q_1} \frac{\partial P_2}{\partial p_1}-\frac{\partial Q_2}{\partial p_1} \frac{\partial P_2}{\partial q_1}\right)+\left(\frac{\partial Q_2}{\partial q_2} \frac{\partial P_2}{\partial p_2}-\frac{\partial Q_2}{\partial p_2} \frac{\partial P_2}{\partial q_2}\right)=1$
-	\item<3-> $\left[Q_2, P_1\right] =\left(\frac{\partial Q_2}{\partial q_1} \frac{\partial P_1}{\partial p_1}-\frac{\partial Q_2}{\partial p_1} \frac{\partial P_1}{\partial q_1}\right)+\left(\frac{\partial Q_2}{\partial q_2} \frac{\partial P_1}{\partial p_2}-\frac{\partial Q_2}{\partial p_2} \frac{\partial P_1}{\partial q_2}\right)=0$
-	\item<4-> $\left[Q_1, P_2\right] =\left(\frac{\partial Q_1}{\partial q_1} \frac{\partial P_2}{\partial p_1}-\frac{\partial Q_1}{\partial p_1} \frac{\partial P_2}{\partial q_1}\right)+\left(\frac{\partial Q_1}{\partial q_2} \frac{\partial P_2}{\partial p_2}-\frac{\partial Q_1}{\partial p_2} \frac{\partial P_2}{\partial q_2}\right)=0$
+	\item<1-> $\{Q_1, P_1\} =\sum_{i=1}^s\left(\frac{\partial Q_1}{\partial q_i} \frac{\partial P_1}{\partial p_i}-\frac{\partial Q_1}{\partial p_i} \frac{\partial P_1}{\partial q_i}\right)$ \\
+	$\{Q_1, P_1\} =\left(\frac{\partial Q_1}{\partial q_1} \frac{\partial P_1}{\partial p_1}-\frac{\partial Q_1}{\partial p_1} \frac{\partial P_1}{\partial q_1}\right)+\left(\frac{\partial Q_1}{\partial q_2} \frac{\partial P_1}{\partial p_2}-\frac{\partial Q_1}{\partial p_2} \frac{\partial P_1}{\partial q_2}\right)=1 $
+	\item<2-> $\{Q_2, P_2\} =\left(\frac{\partial Q_2}{\partial q_1} \frac{\partial P_2}{\partial p_1}-\frac{\partial Q_2}{\partial p_1} \frac{\partial P_2}{\partial q_1}\right)+\left(\frac{\partial Q_2}{\partial q_2} \frac{\partial P_2}{\partial p_2}-\frac{\partial Q_2}{\partial p_2} \frac{\partial P_2}{\partial q_2}\right)=1$
+	\item<3-> $\{Q_2, P_1\} =\left(\frac{\partial Q_2}{\partial q_1} \frac{\partial P_1}{\partial p_1}-\frac{\partial Q_2}{\partial p_1} \frac{\partial P_1}{\partial q_1}\right)+\left(\frac{\partial Q_2}{\partial q_2} \frac{\partial P_1}{\partial p_2}-\frac{\partial Q_2}{\partial p_2} \frac{\partial P_1}{\partial q_2}\right)=0$
+	\item<4-> $\{Q_1, P_2\} =\left(\frac{\partial Q_1}{\partial q_1} \frac{\partial P_2}{\partial p_1}-\frac{\partial Q_1}{\partial p_1} \frac{\partial P_2}{\partial q_1}\right)+\left(\frac{\partial Q_1}{\partial q_2} \frac{\partial P_2}{\partial p_2}-\frac{\partial Q_1}{\partial p_2} \frac{\partial P_2}{\partial q_2}\right)=0$
 	\item<5-> Por lo tanto, la tranformación  {\bf Es canónica}
 \end{itemize}
 } 

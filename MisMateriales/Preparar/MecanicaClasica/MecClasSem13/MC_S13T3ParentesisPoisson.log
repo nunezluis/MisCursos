@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  11 NOV 2024 07:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  3 DEC 2024 05:50
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1208,11 +1208,7 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 108.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
-
-Overfull \vbox (7.71083pt too high) detected at line 108
- []
-
-[18
+ [18
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1222,9 +1218,6 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 108.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
-
-Overfull \vbox (7.71083pt too high) detected at line 108
- []
 
 [19
 
@@ -1236,11 +1229,7 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 108.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
-
-Overfull \vbox (7.71083pt too high) detected at line 108
- []
-
-[20
+ [20
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1364,7 +1353,7 @@ ed.
 Here is how much of TeX's memory you used:
  24371 strings out of 478268
  478502 string characters out of 5846347
- 753433 words of memory out of 5000000
+ 752433 words of memory out of 5000000
  41991 multiletter control sequences out of 15000+600000
  482212 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1384,7 +1373,7 @@ al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local
 /texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
 exlive/2022/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/lo
 cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MC_S13T3ParentesisPoisson.pdf (30 pages, 263742 bytes).
+Output written on MC_S13T3ParentesisPoisson.pdf (30 pages, 263481 bytes).
 PDF statistics:
  943 PDF objects out of 1000 (max. 8388607)
  854 compressed objects within 9 object streams
