@@ -1,4 +1,3 @@
 \babel@toc {spanish}{}\relax 
 \beamer@sectionintoc {1}{Ecuaci\'on de Hamilton Jacobi}{3}{0}{1}
-\beamer@sectionintoc {2}{Hamilton-Jacobi y el Principio de M\IeC {\'\i }nima Acci\'on}{10}{0}{2}
-\beamer@sectionintoc {3}{Ejemplo: Una vez mas el Oscilador Arm\'onico}{21}{0}{3}
+\beamer@sectionintoc {2}{Hamilton-Jacobi y el Principio de M\IeC {\'\i }nima Acci\'on}{10}{0}{
