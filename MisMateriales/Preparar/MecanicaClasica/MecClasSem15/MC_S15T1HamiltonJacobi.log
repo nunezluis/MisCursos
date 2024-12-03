@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  3 DEC 2024 09:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  3 DEC 2024 09:42
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1131,54 +1131,115 @@ Overfull \vbox (4.25868pt too high) detected at line 52
 [9
 
 ]
+<Figuras/Trayectorias1.png, id=299, 924.45375pt x 674.52pt>
+File: Figuras/Trayectorias1.png Graphic file (type png)
+<use Figuras/Trayectorias1.png>
+Package pdftex.def Info: Figuras/Trayectorias1.png  used on input line 71.
+(pdftex.def)             Requested size: 108.405pt x 79.09657pt.
+<Figuras/Trayectorias2.png, id=300, 882.29625pt x 727.71875pt>
+File: Figuras/Trayectorias2.png Graphic file (type png)
+<use Figuras/Trayectorias2.png>
+Package pdftex.def Info: Figuras/Trayectorias2.png  used on input line 71.
+(pdftex.def)             Requested size: 108.405pt x 89.41003pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 65.
+stitucional/UISLOGO.png  used on input line 71.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [10
 
-]
+ <./Figuras/Trayectorias1.png> <./Figuras/Trayectorias2.png>]
+File: Figuras/Trayectorias1.png Graphic file (type png)
+<use Figuras/Trayectorias1.png>
+Package pdftex.def Info: Figuras/Trayectorias1.png  used on input line 71.
+(pdftex.def)             Requested size: 108.405pt x 79.09657pt.
+File: Figuras/Trayectorias2.png Graphic file (type png)
+<use Figuras/Trayectorias2.png>
+Package pdftex.def Info: Figuras/Trayectorias2.png  used on input line 71.
+(pdftex.def)             Requested size: 108.405pt x 89.41003pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 65.
+stitucional/UISLOGO.png  used on input line 71.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [11
 
 ]
+File: Figuras/Trayectorias1.png Graphic file (type png)
+<use Figuras/Trayectorias1.png>
+Package pdftex.def Info: Figuras/Trayectorias1.png  used on input line 71.
+(pdftex.def)             Requested size: 108.405pt x 79.09657pt.
+File: Figuras/Trayectorias2.png Graphic file (type png)
+<use Figuras/Trayectorias2.png>
+Package pdftex.def Info: Figuras/Trayectorias2.png  used on input line 71.
+(pdftex.def)             Requested size: 108.405pt x 89.41003pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 65.
+stitucional/UISLOGO.png  used on input line 71.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [12
+
+[12
 
 ]
+File: Figuras/Trayectorias1.png Graphic file (type png)
+<use Figuras/Trayectorias1.png>
+Package pdftex.def Info: Figuras/Trayectorias1.png  used on input line 71.
+(pdftex.def)             Requested size: 108.405pt x 79.09657pt.
+File: Figuras/Trayectorias2.png Graphic file (type png)
+<use Figuras/Trayectorias2.png>
+Package pdftex.def Info: Figuras/Trayectorias2.png  used on input line 71.
+(pdftex.def)             Requested size: 108.405pt x 89.41003pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 65.
+stitucional/UISLOGO.png  used on input line 71.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [13
 
 ]
+File: Figuras/Trayectorias1.png Graphic file (type png)
+<use Figuras/Trayectorias1.png>
+Package pdftex.def Info: Figuras/Trayectorias1.png  used on input line 71.
+(pdftex.def)             Requested size: 108.405pt x 79.09657pt.
+File: Figuras/Trayectorias2.png Graphic file (type png)
+<use Figuras/Trayectorias2.png>
+Package pdftex.def Info: Figuras/Trayectorias2.png  used on input line 71.
+(pdftex.def)             Requested size: 108.405pt x 89.41003pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 65.
+stitucional/UISLOGO.png  used on input line 71.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [14
+
+]
+File: Figuras/Trayectorias1.png Graphic file (type png)
+<use Figuras/Trayectorias1.png>
+Package pdftex.def Info: Figuras/Trayectorias1.png  used on input line 71.
+(pdftex.def)             Requested size: 108.405pt x 79.09657pt.
+File: Figuras/Trayectorias2.png Graphic file (type png)
+<use Figuras/Trayectorias2.png>
+Package pdftex.def Info: Figuras/Trayectorias2.png  used on input line 71.
+(pdftex.def)             Requested size: 108.405pt x 89.41003pt.
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 71.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [15
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1186,9 +1247,9 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 74.
+stitucional/UISLOGO.png  used on input line 80.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [15
+ [16
 
 ]
 \tf@nav=\write6
@@ -1209,10 +1270,10 @@ Package rerunfilecheck Info: File `MC_S15T1HamiltonJacobi.out' has not changed.
 (rerunfilecheck)             Checksum: D7C8C7499870536B06765EBF45782CD1;573.
  ) 
 Here is how much of TeX's memory you used:
- 24281 strings out of 478268
- 476793 string characters out of 5846347
+ 24299 strings out of 478268
+ 477233 string characters out of 5846347
  741416 words of memory out of 5000000
- 41934 multiletter control sequences out of 15000+600000
+ 41947 multiletter control sequences out of 15000+600000
  477242 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,490b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1227,10 +1288,10 @@ local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr
 /local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/
 local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on MC_S15T1HamiltonJacobi.pdf (15 pages, 174568 bytes).
+Output written on MC_S15T1HamiltonJacobi.pdf (16 pages, 659075 bytes).
 PDF statistics:
- 515 PDF objects out of 1000 (max. 8388607)
- 453 compressed objects within 5 object streams
- 34 named destinations out of 1000 (max. 500000)
- 120 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 545 PDF objects out of 1000 (max. 8388607)
+ 478 compressed objects within 5 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 130 words of extra memory for PDF output out of 10000 (max. 10000000)
 
