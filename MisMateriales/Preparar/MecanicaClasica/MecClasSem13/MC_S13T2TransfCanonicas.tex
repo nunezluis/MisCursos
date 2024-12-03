@@ -49,9 +49,9 @@
 	\item<5-> Consideremos la siguiente transformacion puntual $\left\{q_i, p_i\right\} \rightarrow\left\{Q_i, P_i\right\}$ en el espacio de fase, $Q_i=-p_i, \quad P_i=q_i$
 	\item<6-> Entonces
 	$\dot{q}_i=\frac{\partial \mathcal{H}}{\partial p_i} \Rightarrow \dot{P}_i=\frac{\partial \tilde{\mathcal{H}}}{\partial p_i}=\sum_{k=1}^s\left(\frac{\partial \tilde{\mathcal{H}}}{\partial Q_k} \frac{\partial Q_k}{\partial p_i}+\frac{\partial \tilde{\mathcal{H}}}{\partial P_k} \frac{\partial P_k}{\partial p_i}\right) 
-=-\sum_k \frac{\partial \tilde{\mathcal{H}}}{\partial Q_k} \delta_{i k}=-\frac{\partial \tilde{\mathcal{H}}}{\partial Q_i}$ \\
+=\sum_k \frac{\partial \tilde{\mathcal{H}}}{\partial Q_k} (-\delta_{i k})=-\frac{\partial \tilde{\mathcal{H}}}{\partial Q_i}$ \\
 $\dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i} \Rightarrow \dot{Q}_i=-\frac{\partial \tilde{\mathcal{H}}}{\partial q_i}=-\sum_{k=1}^s\left(\frac{\partial \tilde{\mathcal{H}}}{\partial Q_k} \frac{\partial Q_k}{\partial q_i}+\frac{\partial \tilde{\mathcal{H}}}{\partial P_k} \frac{\partial P_k}{\partial q_i}\right) 
-=-\sum_k \frac{\partial \tilde{\mathcal{H}}}{\partial P_k} \delta_{i k}=-\frac{\partial \tilde{\mathcal{H}}}{\partial P_i}$ Claramente no se cumplen
+=\sum_k \frac{\partial \tilde{\mathcal{H}}}{\partial P_k} (-\delta_{i k})=-\frac{\partial \tilde{\mathcal{H}}}{\partial P_i}$ Claramente no se cumplen
     \end{itemize}
 }
 %
@@ -68,7 +68,7 @@ $\dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i} \Rightarrow \dot{Q}_i=-\fr
 	\dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i} & Q_i\left(q_j, p_j, t\right) &  \dot{P}_i=-\frac{\partial \tilde{\mathcal{H}}}{\partial Q_i}  
 	\end{array}
 	$$
-	\item<2-> Las transformaciones canónicas son particularmente útiles cuando el Hamiltoniano transformado $\tilde{\mathcal{H}}\left(Q_i, P_i, t\right)$ no depende explícitamente de alguna coordenada $Q_j$ o momento $P_j$
+	\item<2-> Las transformaciones canónicas son particularmente útiles cuando el Hamiltoniano transformado $\tilde{\mathcal{H}}\left(Q_i, P_i, t\right)$ no depende explícitamente de alguna coordenada $Q_j$ o momento $P_j$. Es decir, son cíclicas.
 \end{itemize}
 }
 %
@@ -77,7 +77,7 @@ $\dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i} \Rightarrow \dot{Q}_i=-\fr
 \frame{
 \frametitle{Principio de Mínima Acción 1/2}
 \begin{itemize}  
-	\item<1-> La condición para que una transformación $\left\{q_i, p_i\right\} \rightarrow\left\{Q_i, P_i\right\}$ sea canónica se deriva a partir de la equivalencia del Principio de Mínima Acción en ambos conjuntos de variables del espacio de fase.
+	\item<1-> La condición para que una transformación $\left\{q_i, p_i\right\} \rightarrow\left\{Q_i, P_i\right\}$ sea canónica se deriva del {\it Principio de Mínima Acción} en ambos conjuntos de variables del espacio de fase.
 	\item<2-> El Principio de Mínima Acción para las variables $\left\{q_i, p_i\right\}$, implica $S  =\int_{t_1}^{t_2} \mathcal{L} d t \Rightarrow \delta S=0  \Rightarrow \delta\left(\int_{t_1}^{t_2} \mathcal{L} d t\right)=0$
  	\item<3-> Como el Hamiltoniano $\mathcal{H}\left(q_i, p_i, t\right)=\sum_{i=1}^s p_i \dot{q}_i- \mathcal{L}$
 	\item<4-> Tendremos 
@@ -111,7 +111,7 @@ $\dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i} \Rightarrow \dot{Q}_i=-\fr
 	\item<2-> Las derivadas parciales de  $\mathcal{F}$ con respecto a sus argumentos, contenidas en la expresión de $\frac{d  \mathcal{F}}{d t}$, permiten establecer la relación entre las variables $\left\{Q_i, P_i\right\}$ y $\left\{q_i, p_i\right\}$ y los tipos de función generadora.
 	\item<3->  La transformación canónica asociada a una función generadora  $\mathcal{F}$ es una propiedad característica de la función  $\mathcal{F}$ y no depende del Hamiltoniano de un sistema específico. 
 	\item<4-> Dada una función generadora $\mathcal{F}$, es posible encontrar una transformación canónica asociada a $\mathcal{F}$.
-	\item<5-> Dada una transformación canónica, en principio es posible obtener la función generadora que produce esa transformación.
+	\item<5-> Dada una transformación canónica, en principio es posible obtener la función generadora, $\mathcal{F}$, que produce esa transformación.
 	\item<6-> La relación entre el Hamiltoniano $\mathcal{H}\left(q_i, p_i, t\right)$ y el Hamiltoniano transformado $\tilde{\mathcal{H}}\left(Q_i, P_i, t\right)$ resultante de la transformación canónica $\left\{q_i, p_i, t\right\} \rightarrow\left\{Q_i, P_i, t\right\}$ generada por una $\mathcal{F}$ siempre es $\tilde{\mathcal{H}}=\mathcal{H}+\frac{\partial \mathcal{F}}{\partial t}$
 \end{itemize}
 }
