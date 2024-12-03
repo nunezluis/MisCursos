@@ -81,6 +81,35 @@
 	\item<6-> Más aún, la acción $S$ puede interpretarse como una función generadora tipo $\mathcal{F}_2\left(q_i, P_i, t\right)$, tal que $P_i=\alpha_i=$ cte, $Q_i=\beta_i=$ cte.
 \end{itemize}
 }
+
+%
+%%%%% Diapo 2
+\section{Ejemplo: Una vez mas el Oscilador Armónico}
+\frame{
+\frametitle{Ejemplo: Una vez mas el Oscilador Armónico}
+Ecuación de Hamilton-Jacobi para un oscilador armónico simple y la acción asociada a este sistema.
+\begin{itemize}  
+	\item<1-> El Hamiltoniano es $\mathcal{H}(q, p)=\frac{1}{2 m}\left(p^2+m^2 \omega^2 q^2\right)$
+	\item<2-> La ecuación de Hamilton-Jacobi es $\frac{\partial S}{\partial t}(q, t)+H(p, q)=0$
+	\item<3-> Como $p=\frac{\partial S}{\partial q}(q, t)$, obtenemos $\frac{\partial S}{\partial t}+\frac{1}{2 m}\left[\left(\frac{\partial S}{\partial q}\right)^2+m^2 \omega^2 q^2\right]=0$.\\  Una ecuacion diferencial parcial de primer orden
+	\item<5-> Puesto que $\frac{\partial \mathcal{H}}{\partial t}=0$, el Hamitoniano es constante e igual a la energía total del sistema, $\mathcal{H}=E$
+	\item<6-> Buscamos una solución por separación de variables, $S(q, E, t)=W(q, E)-E t$, con $P=E=\alpha$   constante de integración 
+	\item<7-> Entonces, $\frac{1}{2 m}\left[\left(\frac{\partial W}{\partial q}\right)^2+m^2 \omega^2 q^2\right]=E \Rightarrow \frac{\partial W}{\partial q} =\left(2 m E-m^2 \omega^2 q^2\right)^{1 / 2} \Rightarrow$,  
+$W(q, E)  =\int\left(2 m E-m^2 \omega^2 q^2\right)^{1 / 2} d q \equiv S(q, E, t) +Et$
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Una vez mas el Oscilador Armónico, continuación}
+\begin{itemize}  
+	\item<1-> La función $S(q, E, t)$ permite encontrar las relaciones de la transformación canónica generada por $S$ a partir de sus derivadas parciales, $p=\frac{\partial S}{\partial q}=\frac{\partial W}{\partial q} = \sqrt{2 m E-m^2 \omega^2 q^2}$. \\ Mientras $Q=\frac{\partial S}{\partial P}=\frac{\partial S}{\partial E}=\sqrt{\frac{m}{2 E}} \int \frac{d q}{\sqrt{1-\frac{m \omega^2 q^2}{2 E}}}-t=\beta=$cte.
+	\item<2-> Integrando obtenemos $Q+t=\frac{1}{\omega} \operatorname{sen}^{-1}\left(\omega q \sqrt{\frac{m}{2 E}}\right)$ 
+	\item<3-> Con cual, $q(Q, E, t)=\sqrt{\frac{2 E}{m \omega^2}} \operatorname{sen} \left(\omega t+\beta^{\prime}\right)$, con $\quad \beta^{\prime}=Q \omega=$ cte. 
+\end{itemize}
+}
+
   
 \end{document}
 %

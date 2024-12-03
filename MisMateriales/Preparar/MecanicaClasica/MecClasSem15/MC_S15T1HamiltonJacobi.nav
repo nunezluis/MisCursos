@@ -14,8 +14,15 @@
 \headcommand {\beamer@framepages {10}{14}}
 \headcommand {\slideentry {2}{0}{2}{15/20}{}{0}}
 \headcommand {\beamer@framepages {15}{20}}
-\headcommand {\beamer@partpages {1}{20}}
-\headcommand {\beamer@subsectionpages {10}{20}}
 \headcommand {\beamer@sectionpages {10}{20}}
-\headcommand {\beamer@documentpages {20}}
-\headcommand {\gdef \inserttotalframenumber {5}}
+\headcommand {\beamer@subsectionpages {10}{20}}
+\headcommand {\sectionentry {3}{Ejemplo: Una vez mas el Oscilador Arm\'onico}{21}{Ejemplo: Una vez mas el Oscilador Arm\'onico}{0}}
+\headcommand {\slideentry {3}{0}{1}{21/27}{}{0}}
+\headcommand {\beamer@framepages {21}{27}}
+\headcommand {\slideentry {3}{0}{2}{28/30}{}{0}}
+\headcommand {\beamer@framepages {28}{30}}
+\headcommand {\beamer@partpages {1}{30}}
+\headcommand {\beamer@subsectionpages {21}{30}}
+\headcommand {\beamer@sectionpages {21}{30}}
+\headcommand {\beamer@documentpages {30}}
+\headcommand {\gdef \inserttotalframenumber {7}}
