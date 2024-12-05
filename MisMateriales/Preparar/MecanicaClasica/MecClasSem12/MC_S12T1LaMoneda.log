@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  28 NOV 2024 09:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  5 DEC 2024 07:44
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1705,7 +1705,7 @@ Package rerunfilecheck Info: File `MC_S12T1LaMoneda.out' has not changed.
 Here is how much of TeX's memory you used:
  24484 strings out of 478268
  479788 string characters out of 5846347
- 748390 words of memory out of 5000000
+ 748389 words of memory out of 5000000
  42036 multiletter control sequences out of 15000+600000
  478304 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1724,7 +1724,7 @@ al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/loca
 l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
 exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on MC_S12T1LaMoneda.pdf (56 pages, 2426988 bytes).
+Output written on MC_S12T1LaMoneda.pdf (56 pages, 2426755 bytes).
 PDF statistics:
  1713 PDF objects out of 1728 (max. 8388607)
  1575 compressed objects within 16 object streams
