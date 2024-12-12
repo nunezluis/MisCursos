@@ -7,7 +7,7 @@
 | CALDERON MARTINEZ MICHEL SNEYDER      |           |  NE          |         |
 | CAMACHO OLMOS JUAN JOSE               | P2NE,P3NE | 1.5          |* 3.75 + 3.75 +4.0     |
 | CORREA VERGARA SANTIAGO               | P2NE,P3NE | 1.5          |* 2.5  +2.5 +2.5    |
-| CORZO LAVERDE LAURA NATALIA           |           | 4.0          |* 2.5 + 2.0 +2.75     |
+| CORZO LAVERDE LAURA NATALIA           |           | 4.0          |* 2.5 + 2.0 +3.0     |
 | FONSECA RINCON MANDIUS                |           | 4.0          |* 2.5 + 2.5 + 2.0      |
 | GARCIA CASTELLANOS DAVID LEONARDO     |           | 4.0          |*  1.0  + 5.0 +3.0   |
 | GONZALEZ RONDON JEYSSON GUILLERMO     |           | 2.0          |*  2.5 + 2.0 +4.0   |
