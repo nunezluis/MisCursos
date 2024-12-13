@@ -11,7 +11,7 @@
 | FONSECA RINCON MANDIUS                |           | 4.0          |* 2.5 + 2.5 + 2.0      |
 | GARCIA CASTELLANOS DAVID LEONARDO     |           | 4.0          |*  1.0  + 5.0 +3.0   |
 | GONZALEZ RONDON JEYSSON GUILLERMO     |           | 2.0          |*  2.5 + 2.0 +4.0   |
-| LEON PULGARIN JUAN FELIPE             |           | 3.0           |* 1.0  + 2.0 +2.0    |
+| LEON PULGARIN JUAN FELIPE             |           | 3.0           |* 1.0  + 2.0 +3.0    |
 | MERCHAN LEON DAVID SANTIAGO           |           | 3.0          |* 3.3  + 2.0 +4.25     |
 | MOLANO LEON BRAYAN STEVEN             | P3NE      | 2.0          |* 2.5 +2.0 + 4.25   |
 | MONTAGUT PINO ALONSO                  |           | 2.5          |* 3.0  + 2.5 +4.0    |
