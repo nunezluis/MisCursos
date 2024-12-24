@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  20 DEC 2024 23:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  20 DEC 2024 23:48
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -777,8 +777,10 @@ Grid set 16 x 16 = 22.7622pt x 17.07166pt
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count340
 \l__pdf_internal_box=\box77
+) (./MC_S3T1Noether.aux
+LaTeX Info: Redefining \. on input line 25.
+LaTeX Info: Redefining \% on input line 25.
 )
-No file MC_S3T1Noether.aux.
 \openout1 = `MC_S3T1Noether.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -799,6 +801,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1002,7 +1005,28 @@ stitucional/UISLOGO.png  used on input line 30.
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/
 luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png>]
-No file MC_S3T1Noether.toc.
+(./MC_S3T1Noether.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 12.
+
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 12.
+
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
+ut line 12.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
+))
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
@@ -1010,27 +1034,9 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 36.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
-[2
+ [2
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 52.
-
- (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 52.
-
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 52.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
-File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
-thkerncmss.
-)
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
@@ -1081,7 +1087,7 @@ stitucional/UISLOGO.png  used on input line 52.
  [7
 
 ]
-<Figuras/Cono.png, id=285, 727.71875pt x 663.47874pt>
+<Figuras/Cono.png, id=306, 727.71875pt x 663.47874pt>
 File: Figuras/Cono.png Graphic file (type png)
 <use Figuras/Cono.png>
 Package pdftex.def Info: Figuras/Cono.png  used on input line 81.
@@ -1158,7 +1164,7 @@ stitucional/UISLOGO.png  used on input line 81.
  [12
 
 ]
-<Figuras/ParticulaViscoso.png, id=419, 765.86125pt x 343.2825pt>
+<Figuras/ParticulaViscoso.png, id=439, 765.86125pt x 343.2825pt>
 File: Figuras/ParticulaViscoso.png Graphic file (type png)
 <use Figuras/ParticulaViscoso.png>
 Package pdftex.def Info: Figuras/ParticulaViscoso.png  used on input line 100.
@@ -1444,7 +1450,7 @@ stitucional/UISLOGO.png  used on input line 147.
  [34
 
 ]
-<Figuras/Parabolico.png, id=1009, 778.91pt x 422.57875pt>
+<Figuras/Parabolico.png, id=1026, 778.91pt x 422.57875pt>
 File: Figuras/Parabolico.png Graphic file (type png)
 <use Figuras/Parabolico.png>
 Package pdftex.def Info: Figuras/Parabolico.png  used on input line 163.
@@ -1502,7 +1508,7 @@ stitucional/UISLOGO.png  used on input line 163.
 [38
 
 ]
-<Figuras/Traslacion.png, id=1115, 703.62875pt x 605.26125pt>
+<Figuras/Traslacion.png, id=1133, 703.62875pt x 605.26125pt>
 File: Figuras/Traslacion.png Graphic file (type png)
 <use Figuras/Traslacion.png>
 Package pdftex.def Info: Figuras/Traslacion.png  used on input line 178.
@@ -1655,7 +1661,7 @@ stitucional/UISLOGO.png  used on input line 194.
  [50
 
 ]
-<Figuras/Rotacion.png, id=1434, 753.81625pt x 552.0625pt>
+<Figuras/Rotacion.png, id=1451, 753.81625pt x 552.0625pt>
 File: Figuras/Rotacion.png Graphic file (type png)
 <use Figuras/Rotacion.png>
 Package pdftex.def Info: Figuras/Rotacion.png  used on input line 212.
@@ -2069,23 +2075,17 @@ stitucional/UISLOGO.png  used on input line 275.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-
-Package rerunfilecheck Warning: File `MC_S3T1Noether.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `MC_S3T1Noether.out':
-(rerunfilecheck)             Before: A45F0C6A89EE62AEE9328B758AED8B4F;3037
-(rerunfilecheck)             After:  5170931877ED2F00491902F4B481A729;3229.
+Package rerunfilecheck Info: File `MC_S3T1Noether.out' has not changed.
+(rerunfilecheck)             Checksum: 5170931877ED2F00491902F4B481A729;3229.
  ) 
 Here is how much of TeX's memory you used:
- 24601 strings out of 478268
- 481227 string characters out of 5846347
- 746416 words of memory out of 5000000
- 42080 multiletter control sequences out of 15000+600000
+ 24652 strings out of 478268
+ 482767 string characters out of 5846347
+ 745378 words of memory out of 5000000
+ 42127 multiletter control sequences out of 15000+600000
  491548 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,15n,122p,528b,651s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,15n,122p,528b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 }</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
@@ -2116,10 +2116,10 @@ mf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2022/texmf
 -dist/fonts/type1/public/cm-super/sfsx0600.pfb></usr/local/texlive/2022/texmf-d
 ist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2022/texmf-dis
 t/fonts/type1/public/cm-super/sfsx1440.pfb>
-Output written on MC_S3T1Noether.pdf (84 pages, 1206198 bytes).
+Output written on MC_S3T1Noether.pdf (84 pages, 1208276 bytes).
 PDF statistics:
- 2501 PDF objects out of 2984 (max. 8388607)
- 2305 compressed objects within 24 object streams
+ 2514 PDF objects out of 2984 (max. 8388607)
+ 2317 compressed objects within 24 object streams
  180 named destinations out of 1000 (max. 500000)
- 209 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 215 words of extra memory for PDF output out of 10000 (max. 10000000)
 
