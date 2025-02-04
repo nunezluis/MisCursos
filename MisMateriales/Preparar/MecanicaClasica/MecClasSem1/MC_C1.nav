@@ -19,55 +19,55 @@
 \headcommand {\beamer@framepages {9}{10}}
 \headcommand {\beamer@subsectionpages {9}{10}}
 \headcommand {\beamer@subsectionentry {0}{3}{1}{11}{Sistema de Referencia Inercial}}
-\headcommand {\slideentry {3}{1}{1}{11/13}{Sistema de Referencia Inercial}{0}}
-\headcommand {\beamer@framepages {11}{13}}
-\headcommand {\beamer@subsectionpages {11}{13}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{14}{Desplazamiento, velocidad y Aceleraci\'on}}
-\headcommand {\slideentry {3}{2}{1}{14/18}{Desplazamiento, velocidad y Aceleraci\'on}{0}}
-\headcommand {\beamer@framepages {14}{18}}
-\headcommand {\beamer@subsectionpages {14}{18}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{19}{Cantidad de movimiento angular, energ\IeC {\'\i }a cin\'etica y trabajo}}
-\headcommand {\slideentry {3}{3}{1}{19/24}{Cantidad de movimiento angular, energ\IeC {\'\i }a cin\'etica y trabajo}{0}}
-\headcommand {\beamer@framepages {19}{24}}
-\headcommand {\beamer@subsectionpages {19}{24}}
-\headcommand {\beamer@subsectionentry {0}{3}{4}{25}{Fuerzas conservativas}}
-\headcommand {\slideentry {3}{4}{1}{25/26}{Fuerzas conservativas}{0}}
-\headcommand {\beamer@framepages {25}{26}}
-\headcommand {\beamer@subsectionpages {25}{26}}
-\headcommand {\beamer@subsectionentry {0}{3}{5}{27}{Energ\IeC {\'\i }a potencial y energ\IeC {\'\i }a total}}
-\headcommand {\slideentry {3}{5}{1}{27/31}{Energ\IeC {\'\i }a potencial y energ\IeC {\'\i }a total}{0}}
-\headcommand {\beamer@framepages {27}{31}}
-\headcommand {\beamer@sectionpages {9}{31}}
-\headcommand {\beamer@subsectionpages {27}{31}}
-\headcommand {\sectionentry {4}{Sistemas de Part\IeC {\'\i }culas}{32}{Sistemas de Part\IeC {\'\i }culas}{0}}
-\headcommand {\slideentry {4}{0}{1}{32/34}{}{0}}
-\headcommand {\beamer@framepages {32}{34}}
-\headcommand {\beamer@subsectionpages {32}{34}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{35}{Din\'amica de sistemas de part\IeC {\'\i }culas}}
-\headcommand {\slideentry {4}{1}{1}{35/37}{Din\'amica de sistemas de part\IeC {\'\i }culas}{0}}
+\headcommand {\slideentry {3}{1}{1}{11/16}{Sistema de Referencia Inercial}{0}}
+\headcommand {\beamer@framepages {11}{16}}
+\headcommand {\beamer@subsectionpages {11}{16}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{17}{Desplazamiento, velocidad y Aceleraci\'on}}
+\headcommand {\slideentry {3}{2}{1}{17/21}{Desplazamiento, velocidad y Aceleraci\'on}{0}}
+\headcommand {\beamer@framepages {17}{21}}
+\headcommand {\beamer@subsectionpages {17}{21}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{22}{Cantidad de movimiento angular, energ\IeC {\'\i }a cin\'etica y trabajo}}
+\headcommand {\slideentry {3}{3}{1}{22/27}{Cantidad de movimiento angular, energ\IeC {\'\i }a cin\'etica y trabajo}{0}}
+\headcommand {\beamer@framepages {22}{27}}
+\headcommand {\beamer@subsectionpages {22}{27}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{28}{Fuerzas conservativas}}
+\headcommand {\slideentry {3}{4}{1}{28/29}{Fuerzas conservativas}{0}}
+\headcommand {\beamer@framepages {28}{29}}
+\headcommand {\beamer@subsectionpages {28}{29}}
+\headcommand {\beamer@subsectionentry {0}{3}{5}{30}{Energ\IeC {\'\i }a potencial y energ\IeC {\'\i }a total}}
+\headcommand {\slideentry {3}{5}{1}{30/34}{Energ\IeC {\'\i }a potencial y energ\IeC {\'\i }a total}{0}}
+\headcommand {\beamer@framepages {30}{34}}
+\headcommand {\beamer@sectionpages {9}{34}}
+\headcommand {\beamer@subsectionpages {30}{34}}
+\headcommand {\sectionentry {4}{Sistemas de Part\IeC {\'\i }culas}{35}{Sistemas de Part\IeC {\'\i }culas}{0}}
+\headcommand {\slideentry {4}{0}{1}{35/37}{}{0}}
 \headcommand {\beamer@framepages {35}{37}}
-\headcommand {\slideentry {4}{1}{2}{38/42}{Din\'amica de sistemas de part\IeC {\'\i }culas}{0}}
-\headcommand {\beamer@framepages {38}{42}}
-\headcommand {\beamer@subsectionpages {35}{42}}
-\headcommand {\beamer@subsectionentry {0}{4}{2}{43}{Cantidad de Movimiento Angular}}
-\headcommand {\slideentry {4}{2}{1}{43/46}{Cantidad de Movimiento Angular}{0}}
-\headcommand {\beamer@framepages {43}{46}}
-\headcommand {\slideentry {4}{2}{2}{47/49}{Cantidad de Movimiento Angular}{0}}
-\headcommand {\beamer@framepages {47}{49}}
-\headcommand {\beamer@subsectionpages {43}{49}}
-\headcommand {\beamer@subsectionentry {0}{4}{3}{50}{Energ\IeC {\'\i }a cin\'etica de un sistemas de part\IeC {\'\i }culas}}
-\headcommand {\slideentry {4}{3}{1}{50/52}{Energ\IeC {\'\i }a cin\'etica de un sistemas de part\IeC {\'\i }culas}{0}}
+\headcommand {\beamer@subsectionpages {35}{37}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{38}{Din\'amica de sistemas de part\IeC {\'\i }culas}}
+\headcommand {\slideentry {4}{1}{1}{38/40}{Din\'amica de sistemas de part\IeC {\'\i }culas}{0}}
+\headcommand {\beamer@framepages {38}{40}}
+\headcommand {\slideentry {4}{1}{2}{41/45}{Din\'amica de sistemas de part\IeC {\'\i }culas}{0}}
+\headcommand {\beamer@framepages {41}{45}}
+\headcommand {\beamer@subsectionpages {38}{45}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{46}{Cantidad de Movimiento Angular}}
+\headcommand {\slideentry {4}{2}{1}{46/49}{Cantidad de Movimiento Angular}{0}}
+\headcommand {\beamer@framepages {46}{49}}
+\headcommand {\slideentry {4}{2}{2}{50/52}{Cantidad de Movimiento Angular}{0}}
 \headcommand {\beamer@framepages {50}{52}}
-\headcommand {\beamer@subsectionpages {50}{52}}
-\headcommand {\beamer@subsectionentry {0}{4}{4}{53}{Energ\IeC {\'\i }a potencial de un sistemas de part\IeC {\'\i }culas}}
-\headcommand {\slideentry {4}{4}{1}{53/57}{Energ\IeC {\'\i }a potencial de un sistemas de part\IeC {\'\i }culas}{0}}
-\headcommand {\beamer@framepages {53}{57}}
-\headcommand {\beamer@subsectionpages {53}{57}}
-\headcommand {\beamer@subsectionentry {0}{4}{5}{58}{Energ\IeC {\'\i }a Total de un sistemas de part\IeC {\'\i }culas}}
-\headcommand {\slideentry {4}{5}{1}{58/63}{Energ\IeC {\'\i }a Total de un sistemas de part\IeC {\'\i }culas}{0}}
-\headcommand {\beamer@framepages {58}{63}}
-\headcommand {\beamer@partpages {1}{63}}
-\headcommand {\beamer@subsectionpages {58}{63}}
-\headcommand {\beamer@sectionpages {32}{63}}
-\headcommand {\beamer@documentpages {63}}
+\headcommand {\beamer@subsectionpages {46}{52}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{53}{Energ\IeC {\'\i }a cin\'etica de un sistemas de part\IeC {\'\i }culas}}
+\headcommand {\slideentry {4}{3}{1}{53/55}{Energ\IeC {\'\i }a cin\'etica de un sistemas de part\IeC {\'\i }culas}{0}}
+\headcommand {\beamer@framepages {53}{55}}
+\headcommand {\beamer@subsectionpages {53}{55}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{56}{Energ\IeC {\'\i }a potencial de un sistemas de part\IeC {\'\i }culas}}
+\headcommand {\slideentry {4}{4}{1}{56/60}{Energ\IeC {\'\i }a potencial de un sistemas de part\IeC {\'\i }culas}{0}}
+\headcommand {\beamer@framepages {56}{60}}
+\headcommand {\beamer@subsectionpages {56}{60}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{61}{Energ\IeC {\'\i }a Total de un sistemas de part\IeC {\'\i }culas}}
+\headcommand {\slideentry {4}{5}{1}{61/66}{Energ\IeC {\'\i }a Total de un sistemas de part\IeC {\'\i }culas}{0}}
+\headcommand {\beamer@framepages {61}{66}}
+\headcommand {\beamer@partpages {1}{66}}
+\headcommand {\beamer@subsectionpages {61}{66}}
+\headcommand {\beamer@sectionpages {35}{66}}
+\headcommand {\beamer@documentpages {66}}
 \headcommand {\gdef \inserttotalframenumber {18}}

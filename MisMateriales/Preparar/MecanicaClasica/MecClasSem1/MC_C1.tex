@@ -94,10 +94,18 @@ $$
 \frame{
   \frametitle{Sistema de Referencia Inercial}
    \begin{itemize}  
-  	\item<1-> Se define como un marco en el cual una partícula libre (con $\dot{m}=0$) se desplaza en línea recta, $\mathbf{r}=\mathbf{r}_0+\mathbf{v} t$
-	\item<2-> La primera ley de Newton garantiza que tales marcos existen y son infinitos.
-	\item<3-> Sea $S$ un marco inercial. Entonces hay 10 transformaciones linealmente independientes $S  \rightarrow S^{\prime}$ tal que $S^{\prime}$ es también un marco inercial
-	 
+  	\item<1-> Se define como un marco inercial $S$ aquel en el cual una partícula libre (con $\dot{m}=0$) se desplaza en línea recta, $\mathbf{r}=\mathbf{r}_0+\mathbf{v} t$
+	\item<2-> La primera ley de Newton garantiza que existen infinitos $S$.
+	\item<3-> Diez transformaciones, $S  \rightarrow S^{\prime}$, que la ``inercialidad'' y son: 
+	\begin{itemize}
+		\item tres rotaciones: $\quad \mathbf{r}^{\prime}=\mathbb{O} \mathbf{r}$ donde $\mathbb{O}$ es un operador lineal representado por una matriz {\bf ortogonal} de $3 \times 3$.
+		\item tres traslaciones $\mathbf{r}^{\prime}=\mathbf{r}+\mathbf{a}$ para un vector constante $\mathbf{a}$.
+		\item tres impulsos ({\it boost}): $\mathbf{r}^{\prime}=\mathbf{r}+\mathbf{v} t$ para una velocidad constante $\mathbf{v}$.
+		\item una traslación temporal: $t^{\prime}=t+\alpha$, con $\alpha$ un número real constante.
+	 \end{itemize} 
+	\item<4-> Estas transformaciones constituyen el grupo de Galileo bajo el cual las leyes de Newton son invariantes. 
+	\item<5-> En relatividad especial las leyes del movimiento de Einstein son invariantes bajo el grupo de transformaciones de Lorentz que, junto con las traslaciones, forman el grupo de Poincaré.
+	 \item<6-> Podemos recuperar el grupo de Galileo a partir del grupo de Poincaré en el límite de la velocidad tendiendo a infinito.
     \end{itemize}
 }
 
