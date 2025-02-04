@@ -3,6 +3,7 @@
 \usepackage[spanish]{babel}    % silabea palabras castellanas
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage{mathtools,cancel} % cancela con una flecha \cancelto{0}{XXXX}
 \usepackage{amssymb}
 \usepackage{dsfont}
 \usepackage{graphicx}
@@ -119,7 +120,7 @@ $$
 	\item<2->  velocidad ${\bf v} = \lim_{\Delta t \rightarrow 0} \frac{{\bf r} (t + \Delta t) -{\bf r} (t)}{\Delta t} = \dot{ {\bf r} }$
 	\item<3->  aceleración ${\bf a} = \lim_{\Delta t \rightarrow 0} \frac{{\bf v} (t + \Delta t) -{\bf v} (t)}{\Delta t} = \dot{{\bf v}} = \ddot{{\bf r}} $
 	\item<4-> cantidad de momiento ${\bf p} = m{\bf v}$
-	\item<5-> Encuentre ${\bf r}(r)$ para los siguientes sistemas 
+	\item<5-> Encuentre ${\bf r}(t)$ para los siguientes sistemas 
 			\begin{figure}[t]
 			\includegraphics[width=1.4in]{Figuras/Oscilador.png} \hspace{1cm} \includegraphics[width=1.4in]{Figuras/NoInercial.pdf} \\ \includegraphics[width=1.4in]{Figuras/Cohete.png}
    		         \end{figure}
@@ -133,7 +134,8 @@ $$
   \frametitle{Cantidad de movimiento angular}
    \begin{itemize}  
   	\item<1->  Para una partícula ubicada en la posición {\bf r}, con velocidad  {\bf v}, el momento angular será $\mathbf{L} \equiv \mathbf{r} \times \mathbf{p}= \mathbf{r} \times m \mathbf{v}$
-	\item<2-> El torque ejercido por una fuerza $\mathbf{F}$ sobre una partícula ubicada en $\mathbf{r}$ es $ \boldsymbol{\tau} \equiv \mathbf{r} \times \mathbf{F} = \mathbf{r} \times \frac{{\rm d} {\bf p}}{{\rm d} t} = \frac{{\rm d} (\mathbf{r} \times {\bf p})}{{\rm d} t} - \frac{{\rm d} \mathbf{r} }{{\rm d} t} \times {\bf p} \equiv \frac{{\rm d} (\mathbf{L})}{{\rm d} t}$
+	\item<2-> El torque ejercido por una fuerza $\mathbf{F}$ sobre una partícula ubicada en $\mathbf{r}$ es $ \boldsymbol{\tau} \equiv \mathbf{r} \times \mathbf{F} = \mathbf{r} \times \frac{{\rm d} {\bf p}}{{\rm d} t} = \frac{{\rm d} (\mathbf{r} \times {\bf p})}{{\rm d} t} - \cancelto{0}{\frac{{\rm d} \mathbf{r} }{{\rm d} t} \times {\bf p}} \equiv \frac{{\rm d} (\mathbf{L})}{{\rm d} t}$
+	%
 	\item<3-> Para una fuerza central $\mathbf{F}=f(r) \hat{\mathbf{r}}$, el torque se anula y {\bf L} = cte
 	\item<4-> La energía cinética de una partícula con masa $m$ y velocidad {\bf v} es un escalar $T = \frac{1}{2} m v^2$
 	\item<5-> El trabajo realizado por una $\mathbf{F}$ externa sobre una partícula desde una posición $\mathbf{r}_1$ hasta una posición $\mathbf{r}_2$, como la integral de línea $W_{12} \equiv \int_1^2 \mathbf{F} \cdot {\rm d} \mathbf{s}$ donde ${\rm d} \mathbf{s}$ es el vector tangente a la trayectoria que une la posición $\mathbf{r}_1$ con la posición $\mathbf{r}_2$.
@@ -165,7 +167,7 @@ $\underbrace{\int_1^2 \mathbf{F} \cdot {\rm d} \mathbf{s}}_{\text {camino A }} =
    \begin{itemize}  
   	\item<1-> Se define la función escalar $V(\mathbf{r})=V(x, y, z)$ tal que $W_{12}  =-\int_1^2 \nabla V \cdot d \mathbf{s}  =-\int_1^2\left(\sum_{i=1}^3 \frac{\partial V}{\partial x_i} {\rm d} x_i\right)=-\int_1^2 {\rm d} V  =V_1-V_2$. Para una fuerza conservativa, el trabajo es la variación de la función potencial (energía potencial).
   	\item<2->  Para una fuerza conservativa $T_2 -T_1 = W_{12} = V_1 -V_2 \Rightarrow T_1 +V_1 = E_1 = E_2 = T_2 +V_2 $, la enegía total se conserva
-	\item<3-> Si $\frac{{\rm d} E}{{\rm d} t} = 0 = \frac{{\rm d} T + V}{{\rm d} t}$. Como $\frac{{\rm d} T}{{\rm d} t} =  =m \frac{{\rm d} \mathbf{v}}{{\rm d} t} \cdot \mathbf{v}=\mathbf{F} \cdot \mathbf{v}=-\nabla V \cdot \mathbf{v} $. \\
+	\item<3-> Si $\frac{{\rm d} E}{{\rm d} t} = 0 = \frac{{\rm d} T + V}{{\rm d} t}$. Como $\frac{{\rm d} T}{{\rm d} t} =  m \frac{{\rm d} \mathbf{v}}{{\rm d} t} \cdot \mathbf{v}=\mathbf{F} \cdot \mathbf{v}=-\nabla V \cdot \mathbf{v} $. \\
 	Por otro lado $\frac{{\rm d} V(\mathbf{r}, t)}{{\rm d} t}  =\sum_{i=1}^3 \frac{\partial V}{\partial x_i} \dot{x}_i+\frac{\partial V}{\partial t}=\nabla V \cdot \mathbf{v}+\frac{\partial V}{\partial t}$.
 	\item<4-> Luego, $\frac{{\rm d} E}{{\rm d} t}=-\nabla V \cdot \mathbf{v}+\nabla V \cdot \mathbf{v}+\frac{\partial V}{\partial t}=\frac{\partial V}{\partial t}$, i.e.  
 	$\frac{\partial V}{\partial t}=0 \Rightarrow \frac{{\rm d} E}{{\rm d} t}=0$
