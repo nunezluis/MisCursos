@@ -89,6 +89,19 @@ $$
     \end{itemize}
 }
 
+%%%%% Diapo 2
+\subsection{Sistema de Referencia Inercial}
+\frame{
+  \frametitle{Sistema de Referencia Inercial}
+   \begin{itemize}  
+  	\item<1-> Se define como un marco en el cual una partícula libre (con $\dot{m}=0$) se desplaza en línea recta, $\mathbf{r}=\mathbf{r}_0+\mathbf{v} t$
+	\item<2-> La primera ley de Newton garantiza que tales marcos existen y son infinitos.
+	\item<3-> Sea $S$ un marco inercial. Entonces hay 10 transformaciones linealmente independientes $S  \rightarrow S^{\prime}$ tal que $S^{\prime}$ es también un marco inercial
+	 
+    \end{itemize}
+}
+
+
 %%%%% Diapo 4
 \subsection{Desplazamiento, velocidad y Aceleración}
 \frame{
@@ -348,3 +361,38 @@ En presentación consideramos
 https://doi.org/10.1098/rspa.2006.1795.
 
 5. Pruebas Sondas Pioneer sugieren que las leyes de Newton podrían no describir completamente las interacciones gravitacionales a largas distancias, como aquellas que involucran órbitas planetarias o fuerzas a escala del sistema solar Reynaud, S., & Jaekel, M. (2005). TESTING THE NEWTON LAW AT LONG DISTANCES. International Journal of Modern Physics A, 20, 2294-2303. https://doi.org/10.1142/S0217751X05024523.
+
+
+
+Equation (1.1) is not quite correct as stated: we must add the caveat that it holds only in an inertial frame. This is defined to be a frame in which a free particle with $\dot{m}=0$ travels in a straight line,
+
+$$
+\mathbf{r}=\mathbf{r}_0+\mathbf{v} t
+$$
+
+
+Newtons's first law is the statement that such frames exist.
+An inertial frame is not unique. In fact, there are an infinite number of inertial frames. Let $S$ be an inertial frame. Then there are 10 linearly independent transformations $S \rightarrow S^{\prime}$ such that $S^{\prime}$ is also an inertial frame (i.e. if (1.2) holds in $S$, then it also holds in $\left.S^{\prime}\right)$. These are
+- 3 Rotations: $\quad \mathbf{r}^{\prime}=O \mathbf{r}$ where $O$ is a $3 \times 3$ orthogonal matrix.
+- 3 Translations: $\mathbf{r}^{\prime}=\mathbf{r}+\mathbf{c}$ for a constant vector $\mathbf{c}$.
+- 3 Boosts: $\mathbf{r}^{\prime}=\mathbf{r}+\mathbf{u t}$ for a constant velocity $\mathbf{u}$.
+- 1 Time Translation: $t^{\prime}=t+c$ for a constant real number $c$
+
+If motion is uniform in $S$, it will also be uniform in $S^{\prime}$. These transformations make up the Galilean Group under which Newton's laws are invariant. They will be important in section 2.4 where we will see that these symmetries of space and time are the underlying reason for conservation laws. As a parenthetical remark, recall from special relativity that Einstein's laws of motion are invariant under Lorentz transformations which, together with translations, make up the Poincaré group. We can recover the Galilean group from the Poincaré group by taking the speed of light to infinity.
+
+
+La ecuación (1.1) no es del todo correcta tal como está planteada: debemos añadir la advertencia de que sólo es válida en un marco inercial. Éste se define como un marco en el que una partícula libre con $\dot{m}=0$ se desplaza en línea recta,
+
+$$
+\mathbf{r}=\mathbf{r}_0+\mathbf{v} t
+$$
+
+
+La primera ley de Newton es la afirmación de que tales marcos existen.
+Un marco inercial no es único. De hecho, hay un número infinito de marcos inerciales. Sea $S$ un marco inercial. Entonces hay 10 transformaciones linealmente independientes $S \\rightarrow S^{\prime}$ tal que $S^{\prime}$ es también un marco inercial (es decir, si (1,2) se mantiene en $S$, entonces también se mantiene en $\left.S^{\prime}\right)$. Estos son
+- 3 Rotaciones: $\quad \mathbf{r}^{{prime}=O \mathbf{r}$ donde $O$ es una matriz ortogonal de $3 veces 3$.
+- 3 Traslaciones: $\mathbf{r}^{{prime}=\mathbf{r}+\mathbf{c}$ para un vector constante $\mathbf{c}$.
+- 3 Impulsos: $\mathbf{r}^{\prime}=\mathbf{r}+\mathbf{u t}$ para una velocidad constante $\mathbf{u}$.
+- 1 Traslación temporal: $t^{{prime}=t+c$ para un número real constante $c$.
+
+Si el movimiento es uniforme en $S$, también lo será en $S^{{prime}}$. Estas transformaciones constituyen el grupo galileano bajo el cual las leyes de Newton son invariantes. Serán importantes en la sección 2.4, donde veremos que estas simetrías de espacio y tiempo son la razón subyacente de las leyes de conservación. Como observación parentética, recordemos de la relatividad especial que las leyes del movimiento de Einstein son invariantes bajo transformaciones de Lorentz que, junto con las traslaciones, forman el grupo de Poincaré. Podemos recuperar el grupo galileano a partir del grupo de Poincaré llevando la velocidad de la luz al infinito.

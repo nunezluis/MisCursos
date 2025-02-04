@@ -2,13 +2,14 @@
 \beamer@sectionintoc {1}{Din\'amica de Part\IeC {\'\i }culas}{3}{0}{1}
 \beamer@sectionintoc {2}{Limitaciones del Marco Newtoniano}{6}{0}{2}
 \beamer@sectionintoc {3}{Conceptos B\'asicos}{9}{0}{3}
-\beamer@subsectionintoc {3}{1}{Desplazamiento, velocidad y Aceleraci\'on}{11}{0}{3}
-\beamer@subsectionintoc {3}{2}{Cantidad de movimiento angular, energ\IeC {\'\i }a cin\'etica y trabajo}{16}{0}{3}
-\beamer@subsectionintoc {3}{3}{Fuerzas conservativas}{22}{0}{3}
-\beamer@subsectionintoc {3}{4}{Energ\IeC {\'\i }a potencial y energ\IeC {\'\i }a total}{24}{0}{3}
-\beamer@sectionintoc {4}{Sistemas de Part\IeC {\'\i }culas}{29}{0}{4}
-\beamer@subsectionintoc {4}{1}{Din\'amica de sistemas de part\IeC {\'\i }culas}{32}{0}{4}
-\beamer@subsectionintoc {4}{2}{Cantidad de Movimiento Angular}{40}{0}{4}
-\beamer@subsectionintoc {4}{3}{Energ\IeC {\'\i }a cin\'etica de un sistemas de part\IeC {\'\i }culas}{47}{0}{4}
-\beamer@subsectionintoc {4}{4}{Energ\IeC {\'\i }a potencial de un sistemas de part\IeC {\'\i }culas}{50}{0}{4}
-\beamer@subsectionintoc {4}{5}{Energ\IeC {\'\i }a Total de un sistemas de part\IeC {\'\i }culas}{55}{0}{4}
+\beamer@subsectionintoc {3}{1}{Sistema de Referencia Inercial}{11}{0}{3}
+\beamer@subsectionintoc {3}{2}{Desplazamiento, velocidad y Aceleraci\'on}{14}{0}{3}
+\beamer@subsectionintoc {3}{3}{Cantidad de movimiento angular, energ\IeC {\'\i }a cin\'etica y trabajo}{19}{0}{3}
+\beamer@subsectionintoc {3}{4}{Fuerzas conservativas}{25}{0}{3}
+\beamer@subsectionintoc {3}{5}{Energ\IeC {\'\i }a potencial y energ\IeC {\'\i }a total}{27}{0}{3}
+\beamer@sectionintoc {4}{Sistemas de Part\IeC {\'\i }culas}{32}{0}{4}
+\beamer@subsectionintoc {4}{1}{Din\'amica de sistemas de part\IeC {\'\i }culas}{35}{0}{4}
+\beamer@subsectionintoc {4}{2}{Cantidad de Movimiento Angular}{43}{0}{4}
+\beamer@subsectionintoc {4}{3}{Energ\IeC {\'\i }a cin\'etica de un sistemas de part\IeC {\'\i }culas}{50}{0}{4}
+\beamer@subsectionintoc {4}{4}{Energ\IeC {\'\i }a potencial de un sistemas de part\IeC {\'\i }culas}{53}{0}{4}
+\beamer@subsectionintoc {4}{5}{Energ\IeC {\'\i }a Total de un sistemas de part\IeC {\'\i }culas}{58}{0}{4}
