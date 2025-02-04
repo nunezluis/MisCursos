@@ -1,16 +1,15 @@
-# Mecánica Clásica Semestre B 2024
+# Mecánica Clásica Semestre A 2025
 ## Metodología
 Tendremos cuatro ahora de teoría (martes y jueves) y una el viernes. La hora del viernes será para desarrollar una evaluación contínua. Cada viernes tendrán que presentar problemas que han quedado de los contenidos que hemos desarrollado en la semanas
 
 ## Evaluación
 Nos organizaremos en grupos de dos estudiantes y cada grupo debe crear un git y según el modelo que se muestra [aquí](https://github.com/nunezluis/TareasCursos20B). Esto es, se debe clonar este repositorio y compartirlos para poder revisar las tareas, asignaciones y proyectos que desarrollemos durante el curso..  
 + **Evaluación continua 30%** Los problemas de los viernes. Deben ser cargados en un Git para evaluarlos y serán sustentados al azar cada viernes.
-+ **Dos previos, 20% c/u** Dos exámenes presenciales estándares
-+ **Cuatro asignaciones 10% c/u** A definir
++ **Tres parciales, 20% c/u** Dos exámenes presenciales estándares (Tienen que aprobar dos)
++ **Una asignaciones 10% c/u** A definir
 
 ### Las asignaciones
-Las asignación son parte fundamental del desarrollo del curso.  Algunas asignaciones será de aplicación de los conceptos y otras de discusión de artículos relacionados con los tópicos que estemos desarrollando.  Las asignaciones de aplicación buscan reforzar los conceptos del curso en la solución de un problema particular, muchas veces con visos de realidad. La discusión de artículos relacionan los conceptos del curso con su utilización específica reportada en la literatura.  Las asignaciones de aplicación serán presentadas de dos maneras: un reporte tipo artículo y una presentación de máximo 6 láminas expuestas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
-  + Como primera asignación analice el caso de dos péndulos acoplados que presentamos en [este documento](https://www.overleaf.com/read/tjknrqvvrtgv#521a1e)  
+La asignación es parte fundamental del desarrollo del curso.  Algunas asignaciones será de aplicación de los conceptos y otras de discusión de artículos relacionados con los tópicos que estemos desarrollando.  Las asignaciones de aplicación buscan reforzar los conceptos del curso en la solución de un problema particular, muchas veces con visos de realidad. La discusión de artículos relacionan los conceptos del curso con su utilización específica reportada en la literatura.  Las asignaciones de aplicación serán presentadas de dos maneras: un reporte tipo artículo y una presentación de máximo 6 láminas expuestas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
 
 ## Bibliografía
 ### Libro texto
@@ -32,13 +31,17 @@ Como apoyo bibliográfico tendremos
 + **Rehaga** los ejemplos 1. (p13), 3.(p14) y 4. (p17)
 
 #### Problemas S1
-Los problemas para discutir en clase los pueden encontrar [aquí](https://www.overleaf.com/read/tjknrqvvrtgv#521a1e)
+Los problemas para discutir en clase los pueden encontrar [aquí](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)
 
 #### Materiales
 + [Presentación Semana 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S1DinamicaNewtonia.pdf)
 
-
 #### Al finalizar
+Al finalizar esta semana habremos repasado algunos conceptos de Mecánica que vimos en otros curso:
++ Sistemas de referencias inerciales y no inerciales
++ Leyes de Newton
++ Cantidad de movimiento angular
++ Sistemas de Partículas
 
 ### Semana 1 C3/C4 Coordenadas generalizadas
 #### Antes de clase
@@ -51,7 +54,7 @@ Los problemas para discutir en clase los pueden encontrar [aquí](https://www.ov
 + **Rehaga** los ejemplos 1. (p35), 3. (p37), 4. (p39), 1. (p49), 3. (p41), 5. (p52), 6. (p54)
 
 #### Problemas S2
-Desarrolle los problemas del [240816](https://www.overleaf.com/read/tjknrqvvrtgv#521a1e)
+Desarrolle los problemas del [240816](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)
 
 #### Materiales
 + Presentaciones
@@ -89,7 +92,7 @@ Desarrolle los problemas del [240816](https://www.overleaf.com/read/tjknrqvvrtgv
   + [Emmy Noether Fermilab](https://www.youtube.com/watch?v=Rqfj7n5aSwY)
 
 #### Problemas S3
-Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv#521a1e)
+Desarrolle los problemas del [240823](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)
 
 ### Clase S4-C7/C8 Fuerzas generalizadas
 #### Antes de clase
@@ -102,7 +105,7 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv
 + **Rehaga** los ejemplos 1. (p97), 2. (p98), 3. (p99)
 
 #### Problemas S3
-Desarrolle los problemas del [240823](https://www.overleaf.com/read/tjknrqvvrtgv#521a1e)
+Desarrolle los problemas del [240823](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)
 
 
 #### Materiales
