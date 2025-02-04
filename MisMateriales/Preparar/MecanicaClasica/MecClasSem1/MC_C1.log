@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  4 FEB 2025 08:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  4 FEB 2025 15:11
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1164,17 +1164,17 @@ stitucional/UISLOGO.png  used on input line 110.
  [16
 
 ]
-<Figuras/Oscilador.png, id=563, 986.68625pt x 354.32375pt>
+<Figuras/Oscilador.png, id=562, 986.68625pt x 354.32375pt>
 File: Figuras/Oscilador.png Graphic file (type png)
 <use Figuras/Oscilador.png>
 Package pdftex.def Info: Figuras/Oscilador.png  used on input line 127.
 (pdftex.def)             Requested size: 101.17755pt x 36.33192pt.
-<Figuras/NoInercial.pdf, id=564, 1471.4975pt x 890.32625pt>
+<Figuras/NoInercial.pdf, id=563, 1471.4975pt x 890.32625pt>
 File: Figuras/NoInercial.pdf Graphic file (type pdf)
 <use Figuras/NoInercial.pdf>
 Package pdftex.def Info: Figuras/NoInercial.pdf  used on input line 127.
 (pdftex.def)             Requested size: 101.17755pt x 61.21521pt.
-<Figuras/Cohete.png, id=565, 931.48pt x 811.03pt>
+<Figuras/Cohete.png, id=564, 931.48pt x 811.03pt>
 File: Figuras/Cohete.png Graphic file (type png)
 <use Figuras/Cohete.png>
 Package pdftex.def Info: Figuras/Cohete.png  used on input line 127.
@@ -1337,12 +1337,12 @@ stitucional/UISLOGO.png  used on input line 142.
  [27
 
 ]
-<Figuras/Trayectoria.png, id=867, 901.3675pt x 780.9175pt>
+<Figuras/Trayectoria.png, id=864, 901.3675pt x 780.9175pt>
 File: Figuras/Trayectoria.png Graphic file (type png)
 <use Figuras/Trayectoria.png>
 Package pdftex.def Info: Figuras/Trayectoria.png  used on input line 160.
 (pdftex.def)             Requested size: 115.63243pt x 100.17635pt.
-<Figuras/Caminos.png, id=868, 1446.40375pt x 531.9875pt>
+<Figuras/Caminos.png, id=865, 1446.40375pt x 531.9875pt>
 File: Figuras/Caminos.png Graphic file (type png)
 <use Figuras/Caminos.png>
 Package pdftex.def Info: Figuras/Caminos.png  used on input line 160.
@@ -1425,12 +1425,12 @@ stitucional/UISLOGO.png  used on input line 174.
  [34
 
 ]
-<Figuras/SistParticulas.png, id=1056, 814.04124pt x 604.2575pt>
+<Figuras/SistParticulas.png, id=1051, 814.04124pt x 604.2575pt>
 File: Figuras/SistParticulas.png Graphic file (type png)
 <use Figuras/SistParticulas.png>
 Package pdftex.def Info: Figuras/SistParticulas.png  used on input line 187.
 (pdftex.def)             Requested size: 115.63243pt x 85.83098pt.
-<Figuras/terceraley.png, id=1057, 1022.82124pt x 496.85625pt>
+<Figuras/terceraley.png, id=1052, 1022.82124pt x 496.85625pt>
 File: Figuras/terceraley.png Graphic file (type png)
 <use Figuras/terceraley.png>
 Package pdftex.def Info: Figuras/terceraley.png  used on input line 187.
@@ -1803,87 +1803,41 @@ stitucional/UISLOGO.png  used on input line 293.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-
-Package rerunfilecheck Warning: File `MC_C1.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `MC_C1.out':
-(rerunfilecheck)             Before: 7994754D07D92E3F41832CABD9151D19;3324
-(rerunfilecheck)             After:  515FCB1F90F822DF7D29F2232E8E03DF;3324.
+Package rerunfilecheck Info: File `MC_C1.out' has not changed.
+(rerunfilecheck)             Checksum: 515FCB1F90F822DF7D29F2232E8E03DF;3324.
  ) 
 Here is how much of TeX's memory you used:
- 23991 strings out of 478268
- 470043 string characters out of 5846347
+ 23981 strings out of 478268
+ 469896 string characters out of 5846347
  734294 words of memory out of 5000000
  41512 multiletter control sequences out of 15000+600000
  487340 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,473b,857s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{Navigation67} has been referenced but does not exis
-t, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Outline0.4.5.62} has been referenced but does not e
-xist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Outline0.4.4.57} has been referenced but does not e
-xist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Outline0.4.3.54} has been referenced but does not e
-xist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Outline0.4.2.47} has been referenced but does not e
-xist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Outline0.4.1.39} has been referenced but does not e
-xist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Outline0.3.5.31} has been referenced but does not e
-xist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Outline0.3.4.29} has been referenced but does not e
-xist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Outline0.3.3.23} has been referenced but does not e
-xist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Outline0.3.2.18} has been referenced but does not e
-xist, replaced by a fixed one
-
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pf
-b></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
-></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/
-local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/loca
-l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/t
-exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/
-texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/
-texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/t
-exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texl
-ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
-e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
-2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MC_C1.pdf (66 pages, 1118735 bytes).
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.
+pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
+fb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb
+></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/l
+ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
+ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
+e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive
+/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on MC_C1.pdf (66 pages, 1118532 bytes).
 PDF statistics:
- 2031 PDF objects out of 2073 (max. 8388607)
- 1867 compressed objects within 19 object streams
- 157 named destinations out of 1000 (max. 500000)
+ 2019 PDF objects out of 2073 (max. 8388607)
+ 1855 compressed objects within 19 object streams
+ 147 named destinations out of 1000 (max. 500000)
  254 words of extra memory for PDF output out of 10000 (max. 10000000)
 
