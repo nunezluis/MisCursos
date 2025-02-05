@@ -8,16 +8,23 @@ La otra parte importante del curso es el ejercicio de comunicar la ciencia. Esto
 
 ## Evaluación
 La evaluación de curso toca los dos aspectos fundamentales en la solución de un problema científico:
-+ **La calidad de la solución del problema (50%)**. La calidad se medirá en
++ **La calidad de la solución del problema (40%)**. La calidad se medirá en
    + originalidad de la solución
    + lo acertado de la solución (teoría-simulación-experimentación)
    + interacciones y acuerdos entre teoría, simulación y resultados experimentales
    + posibilidad de extender la solución a otros ámbitos
-+ **La calidad de la comunicación de los resultados (50%)**
++ **La calidad de la comunicación de los resultados (60%)**
+   + Calidad  (claridad, organización y sustentación) de los avances semanales (20%)
    + Calidad (claridad, organización y sustentación) de la propuesta (10%)
    + Calidad (claridad, organización y sustentación) de los informes de avances (10%)
    + Calidad (claridad, organización y sustentación) del poster final (10%)
    + Calidad (claridad, organización y sustentación) del reporte final (20%)
+
+## El "Toque" semanal
+Cada semana cada grupo tiene que presentar un reporte de avance en 3 minutos. En tres transparencias tiene que decir
++ ¿Qué lo que quieren lograr (el objetivo del reto)
++ ¿Cuáles fueron los avances en esta semana y cuáles fueron las dificultades?
++
 
 ## La Comunicación de la Ciencia
 La comunicación de la ciencia es tan clave como la obtención de resultados. De poco sirven los resultados si los pares y, peor, la comunidad no logra captar su importancia. Durante este curso haremos ejercicios de cómo expresarnos en tres géneros de la comunicación científica
@@ -52,11 +59,14 @@ Pero hay gente, profesional que ha reflexionado respecto a la mejor manera de re
 + https://www.princeton.edu/~archss/webpdfs08/BaharMartonosi.pdf
 + https://www.sciencefarts.com/uploads/6/3/9/8/63980147/designing_science_presentations.pdf
 
+#### videos de gente profesional
++  https://youtu.be/SFxVihJ1KSo?si=dtT4D8xEVw18eTns
+
 ### Poster o carteles académicos
 Los poster, al igual que las presentaciones, no son artículos verticales. Tienen un objetivo, una organización y una estética distinta a un reporte o una presentación.  Aquí les dejo algunas estrategias para hacer *posters* mas profesionales:
 
 + https://www.sciencedirect.com/science/article/pii/S2049080116301303
-+ https://blogs.lse.ac.uk/impactofsocialsciences/2018/05/11/how-to-design-an-award-winning-conference-poster/
++  https://blogs.lse.ac.uk/impactofsocialsciences/2018/05/11/how-to-design-an-award-winning-conference-poster/
 + https://blogs.agu.org/onthejob/2017/03/24/creating-scientific-poster-powerpoint-video-tutorial/
 + https://www.geosociety.org/gsatoday/archive/25/5/article/i1052-5173-25-5-66.htm
 + https://www.aje.com/en/arc/ways-to-create-great-research-poster/
@@ -115,7 +125,7 @@ El calendario del curso será el siguiente:
 Los equipos deberán seleccionar uno de estos retos para resolverlos durante el semestre, siguiendo el calendario arriba expuesto.
 
 ### Reto 1 *Deformaciones del Espacio tiempo*
-Con una tela elástica contruya un ambiente que reproduzca la deformación del espacio tiempo y pueda calcular, simular y registrar las trayectorias de partículas de prueba alrededor de cuerpos masivo. Compárelo con las geodésicas en Relatividad General. Puede inspirarse en este [video](https://www.youtube.com/watch?v=MTY1Kje0yLg) y apoyarse en Postiglione, A., & De Angelis, I. (2021). Experience gravity in the classroom using the rubber sheet: an educational proposal from the collaboration between university and school. Physics Education, 56(2), 025019. 
+Con una tela elástica contruya un ambiente que reproduzca la deformación del espacio tiempo y pueda calcular, simular y registrar las trayectorias de partículas de prueba alrededor de cuerpos masivo. Compárelo con las geodésicas en Relatividad General. Puede inspirarse en este [video](https://www.youtube.com/watch?v=MTY1Kje0yLg) y apoyarse en Postiglione, A., & De Angelis, I. (2021). Experience gravity in the classroom using the rubber sheet: an educational proposal from the collaboration between university and school. Physics Education, 56(2), 025019. La idea es, además de utilizar una tele elástica, que pueda construir una estructura de latón.
 
 ### Reto 1 *Dinámica de chapoteo* Grupo 7 (Barrientos, Moreno, Molano)
 La dinámica de chapoteo ([*Slosh dynamics*](https://en.wikipedia.org/wiki/Slosh_dynamics)) se refiere al movimiento de líquidos dentro de un recipiente sometido a fuerzas externas. Este fenómeno es relevante en ingeniería, física y diversas industrias en las que es necesario comprender la estabilidad y el rendimiento de los sistemas que contienen líquidos.
