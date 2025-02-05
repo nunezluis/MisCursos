@@ -1,10 +1,10 @@
-# Retos de Física Semestre B 24
-## Dinámica del Curso 
-Bienvenidos al curso de Retos de Física del semestre B2024. El objetivo de este curso es reproducir todas las etapas del desarrollo y prueba de un modelo en Física. **La intención con la solución de cada reto es plantear un modelo teórico, realizar una simulación y contrastar (teoría + simulación) con los datos experimentales** para resolver un problema nada trivial. Los retos que planteamos no tienen una solución única y permiten varios enfoques o aproximaciones. En todas las soluciones tendremos que estos tres elementos (teoría-simulación-experimentación) deben estar presentes.
+# Retos de Física Semestre A 25
+## Dinámica del Curso
+Bienvenidos al curso de Retos de Física del semestre A2025. El objetivo de este curso es reproducir todas las etapas del desarrollo y prueba de un modelo en Física. **La intención con la solución de cada reto es plantear un modelo teórico, realizar una simulación y contrastar (teoría + simulación) con los datos experimentales** para resolver un problema nada trivial. Los retos que planteamos no tienen una solución única y permiten varios enfoques o aproximaciones. En todas las soluciones tendremos que estos tres elementos (teoría-simulación-experimentación) deben estar presentes.
 
-Los equipos de trabajo estarán conformados por tres estudiantes. La solución del reto deberá ser dominada por cada uno de los integrantes del equipo. Se vale la división del trabajo, pero al final cada uno de los miembros debe ser capaz de sustentar la solución.
+Los equipos de trabajo estarán conformados por tres estudiantes. La solución del reto deberá ser dominada por cada uno de los integrantes del equipo. Se vale la división del trabajo, pero al final cada uno de los miembros debe ser capaz de sustentar la solución en todas sus facetas. No vale: *el/ella hizo la simulación*
 
-Una parte importante del curso es el ejercicio de comunicar la ciencia. Esto es: cómo hacer y presentar una propuesta. Luego cómo desarrollar y presentar los reportes de avances y, finalmente, el reporte final mas un *poster* para sustentar la solución del reto.
+La otra parte importante del curso es el ejercicio de comunicar la ciencia. Esto es: cómo hacer y presentar una propuesta. Luego cómo desarrollar y presentar los reportes de avances y, finalmente, el reporte final mas un *poster* para sustentar la solución del reto.
 
 ## Evaluación
 La evaluación de curso toca los dos aspectos fundamentales en la solución de un problema científico:
