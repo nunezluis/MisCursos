@@ -84,3 +84,7 @@ Llena un recipiente con agua cuya tensión superficial haya disminuido. A contin
 ### Reto 26 *Rebotes de pelotas de ligas*
 ¿Cómo varía el "rebote" de una pelota hecha de ligas o bandas de goma en función de su tamaño?
 desde una altura de 1 m, ¿cuántas ligas elásticas maximizan la altura de rebote? La pelota debe estar compuesta en su totalidad por gomas elásticas tal y como muestra este [video](https://youtu.be/cvq2ylWdwvY?si=nOTEA9zSVqUk0Fyx)
+
+### Reto 27 *Bicicleta escandalosa*
+
+### Reto 28 *Rattlback physics*
