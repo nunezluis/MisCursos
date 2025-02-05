@@ -114,6 +114,9 @@ El calendario del curso será el siguiente:
 ## Retos para seleccionar
 Los equipos deberán seleccionar uno de estos retos para resolverlos durante el semestre, siguiendo el calendario arriba expuesto.
 
+### Reto 1 *Deformaciones del Espacio tiempo*
+Con una tela elástica contruya un ambiente que reproduzca la deformación del espacio tiempo y pueda calcular, simular y registrar las trayectorias de partículas de prueba alrededor de cuerpos masivo. Compárelo con las geodésicas en Relatividad General. Puede inspirarse en este [video](https://www.youtube.com/watch?v=MTY1Kje0yLg) y apoyarse en Postiglione, A., & De Angelis, I. (2021). Experience gravity in the classroom using the rubber sheet: an educational proposal from the collaboration between university and school. Physics Education, 56(2), 025019. 
+
 ### Reto 1 *Dinámica de chapoteo* Grupo 7 (Barrientos, Moreno, Molano)
 La dinámica de chapoteo ([*Slosh dynamics*](https://en.wikipedia.org/wiki/Slosh_dynamics)) se refiere al movimiento de líquidos dentro de un recipiente sometido a fuerzas externas. Este fenómeno es relevante en ingeniería, física y diversas industrias en las que es necesario comprender la estabilidad y el rendimiento de los sistemas que contienen líquidos.
 
