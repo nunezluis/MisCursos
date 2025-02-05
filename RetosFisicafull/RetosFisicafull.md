@@ -117,3 +117,7 @@ Cuando las gotas caen sobre una superficie cubierta por una capa de arena, se fo
 Romper un espagueti seco suele provocar su fragmentación en tres o más trozos. Este fenómeno desconcertó incluso al físico Richard Feynman. En 2005, dos investigadores franceses Basile Audoly y Sébastien Neukirch dieron una explicación: cuando un espagueti se dobla, se rompe en el punto de máxima curvatura. Esta rotura inicial envía una onda de "retroceso" a través de los trozos restantes, aumentando su curvatura y provocando nuevas fracturas.  Sobre la base de esta comprensión, un estudio de 2018 realizado por investigadores del MIT descubrió que al retorcer el espagueti antes de doblarlo, es posible romperlo en solo dos piezas. Descubrieron que retorcer el fideo hasta un grado crítico antes de doblarlo reduce el efecto de retroceso, evitando más fracturas.
 El efecto pueden verlo https://youtu.be/ADD7QlQoFFI?si=FEB9uBq8t31XNRK1
 Convénzase y convénzanos que eso es así
+
+### Reto 36 *Equilibrio estable, inestable y el huevo de Colón*
+La expresión *huevo de Colón* se ha convertido en sinónimo de ideas o soluciones que parecen simples o sencillas después de que alguien las ha demostrado. Muchos retos parecen fáciles una vez que se revela la solución.
+Aquí algunos ejemplos y algunas explicaciones muy superficiales de puntos de equilibrio y rotación https://youtu.be/CGoxvDmgUAg?si=s-ecRAcluuJEsobv Describa mas en detalle estos ejemplos.
