@@ -112,3 +112,8 @@ Proponga un experimento utilizando únicamente una cámara y/o los sensores de s
 
 ### Reto 34 *Huellas de gotas de arena*
 Cuando las gotas caen sobre una superficie cubierta por una capa de arena, se forman interesantes patrones. Estudie el proceso de formación de esos patrónes. ¿Qué parámetros de las gotas pueden deducirse del cráter resultante?
+
+### Reto 35 *Fracturas en espagueti*
+Romper un espagueti seco suele provocar su fragmentación en tres o más trozos. Este fenómeno desconcertó incluso al físico Richard Feynman. En 2005, dos investigadores franceses Basile Audoly y Sébastien Neukirch dieron una explicación: cuando un espagueti se dobla, se rompe en el punto de máxima curvatura. Esta rotura inicial envía una onda de "retroceso" a través de los trozos restantes, aumentando su curvatura y provocando nuevas fracturas.  Sobre la base de esta comprensión, un estudio de 2018 realizado por investigadores del MIT descubrió que al retorcer el espagueti antes de doblarlo, es posible romperlo en solo dos piezas. Descubrieron que retorcer el fideo hasta un grado crítico antes de doblarlo reduce el efecto de retroceso, evitando más fracturas.
+El efecto pueden verlo https://youtu.be/ADD7QlQoFFI?si=FEB9uBq8t31XNRK1
+Convénzase y convénzanos que eso es así
