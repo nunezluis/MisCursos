@@ -25,7 +25,7 @@ La comunicación de la ciencia es tan clave como la obtención de resultados. De
 + Presentaciones de las ideas o proyectos científicos
 + Poster o carteles para presentar resultados científicos.
 
-Una referencia que recomiendo ampliamente para entender que las ideas no bastan es el librito Feibelman, P. J. (2011). A PhD is not enough!: A guide to survival in science. Basic Books. Una maravilla para entender que las ideas no bastan.
+Una referencia que recomiendo ampliamente para entender que las ideas no bastan es el librito Feibelman, P. J. (2011). A PhD is not enough!: A guide to survival in science. Basic Books. Una maravilla para entender que las ideas, las cuentas o las simulaciones no bastan.
 
 ### Propuesta de investigación
 Una parte importante del curso es la confección de una propuesta de investigación.  Típicamente la propuesta deberá contener :
@@ -38,8 +38,7 @@ Una parte importante del curso es la confección de una propuesta de investigaci
 + Metodología (¿cuáles actividades generan los objetivos específicos? ¿qué se va hacer para lograr los objetivos? ¿qué resultados se esperan, y por qué?)
 + Referencias bibliográficas
 
-Hay algunos [modelos de propuesta](
-https://files.cercomp.ufg.br/weby/up/863/o/How_to_write_a_research_proposal.pdf) que pueden consultar
+Hay algunos [modelos de propuesta](https://files.cercomp.ufg.br/weby/up/863/o/How_to_write_a_research_proposal.pdf) que pueden consultar
 
 ### Reporte e informe
 La estructura del informe coincide con la de la propuesta, pero se añaden una sección con resultados y otra con conclusiones + recomendaciones. Para inspirarse de cómo hacer un reporte pueden utilizar [este modelito](https://www.overleaf.com/read/hfqvjnjwngnp)
@@ -77,7 +76,7 @@ Para garantizar la reproducibilidad de ciencia se debe adjuntar toda la informac
 ## Calendario del Curso de Retos científicos
 El calendario del curso será el siguiente:
 + **Semana 1** Conformación del equipo de trabajo y selección del reto.
-  + *Entregables (21ago):*
+  + *Entregables (6feb):*
      + Selección del reto
      + Conformación del equipo
      + Repositorio del equipo, con la siguiente estructura:
@@ -86,26 +85,26 @@ El calendario del curso será el siguiente:
         + Códigos de simulación
         + Documentos: Presentaciones y reportes  
 + **Semana 2** Recopilación de información. identificación de las referencias claves relacionadas con el tema: artículos, videos, tutoriales, etc.
-   + *Entregables (28ago):* Actualización del Git con las referencias del tema
+   + *Entregables (13feb):* Actualización del Git con las referencias del tema
 + **Semanas 3 y 4** Redacción y sustentación de la propuesta de investigación
-  + *Entregables (11sep):*
+  + *Entregables (6mar):*
       + Documento (enlace a *overleaf*) con la propuesta (max 5pg sin referencias, ni autores-resumen)
       + Documento presentación de la propuesta (7láminas)
       + Sustentación de la propuesta de investigación (10m sustentación + 5m preguntas)
       + Listado de posibles materiales
       + Actualización del git con la propuesta, la prestación de la propuesta y el listado de materiales       
 + **Semanas 5, 6 y 7** Desarrollo de la experiencia
-  + *Entregables (2oct):*
+  + *Entregables (27mar):*
       + Informe de avance (3-4láminas)
       + Sustentación informe de avance (7m sustentación + 3m preguntas)
       + Actualización del git con informe de avance
 + **Semanas 8, 9, 10 y 11** Desarrollo de la experiencia
-  + *Entregables (30oct):*
+  + *Entregables (8may):*
       + Informe de avance (3-4láminas)
       + Sustentación informe de avance (7m sustentación + 3m preguntas)
       + Actualización del git con informe de avance
 + **Semana 12, 13 y 14** Redacción y sustentacion informe final
-  + *Entregables (27nov):*
+  + *Entregables (29may):*
       + Documento (enlace a *overleaf*) con el informe final (max 7pg sin referencias, ni autores-resumen)
       + Poster presentando el informe final (7láminas)
       + Sustentación informe de avance (7m sustentación + 3m preguntas)
