@@ -127,24 +127,30 @@ Los equipos deberán seleccionar uno de estos retos para resolverlos durante el 
 ### Reto 1 *Deformaciones del Espacio tiempo*
 Con una tela elástica contruya un ambiente que reproduzca la deformación del espacio tiempo y pueda calcular, simular y registrar las trayectorias de partículas de prueba alrededor de cuerpos masivo. Compárelo con las geodésicas en Relatividad General. Puede inspirarse en este [video](https://www.youtube.com/watch?v=MTY1Kje0yLg) y apoyarse en Postiglione, A., & De Angelis, I. (2021). Experience gravity in the classroom using the rubber sheet: an educational proposal from the collaboration between university and school. Physics Education, 56(2), 025019. La idea es, además de utilizar una tele elástica, que pueda construir una estructura de latón.
 
-### Reto 1 *Dinámica de chapoteo* Grupo 7 (Barrientos, Moreno, Molano)
-La dinámica de chapoteo ([*Slosh dynamics*](https://en.wikipedia.org/wiki/Slosh_dynamics)) se refiere al movimiento de líquidos dentro de un recipiente sometido a fuerzas externas. Este fenómeno es relevante en ingeniería, física y diversas industrias en las que es necesario comprender la estabilidad y el rendimiento de los sistemas que contienen líquidos.
-
-La dinámica del chapoteo depende de factores como la forma del recipiente, sus dimensiones, el nivel de llenado, las propiedades del líquido (densidad, viscosidad, tensión superficial), las fuerzas externas (aceleración, desaceleración, vibración) y la presencia de estructuras/mecanismos internos diseñadas para mitigarlo.
-
-El emprendimiento científico [*The Spill not*](https://thespillnot.com/) comercializa un dispositivo que evita el los líquidos contenidos en tazas o vasos se derramen. Utilizando su celular, parametrice el fenómeno del derrame de líquidos utilizando este dispositivo.
-
-### Reto 2 *La fisica del telefonito* Grupo 3 (Andica, Perez, Angarita)
-Cuando niños jugábamos con un [teléfono de vasos y cuerda](https://youtu.be/PmmGSF7TXBI). Dos tazas unidas por una cuerda nos permitían hablar a distancia. ¿Qué determina la distancia y la calidad de comunicación de un teléfono de este tipo? ¿Cómo depende la frecuencia de transmisión del sonido en el otro extremo de la cuerda de su tensión y diámetro? También Brue Yeany [nos muestra algunos ejemplos](https://youtu.be/iKKX9HAAtxQ) que debe considerar
-
-### Reto 3  *Aviocitos de papel* Grupo 2 (Coy, Moreno, Pulgarin)
-Para seguir la tónica de recuerdos de la infancia del reto anterior. Si construyes un [avioncito de papel con una hoja tipo carta](https://youtu.be/6fLh8eswOn0) ¿A qué distancia máxima puede volar un avión hecho con la hoja? ¿Cómo depende la distancia de la densidad del papel y del tipo de avión? ¿cambia al distancia máxima con el diseño?
-
-### Reto 4  *Botellas oscilantes, medio vacías o medio llenas*
+### Reto 2  *Botellas oscilantes, medio vacías o medio llenas*
 Si empujas horizontalmente una botella medio llena de agua, rodará hacia delante con una velocidad oscilante. ¿De qué y cómo depende la magnitud de las oscilaciones de la velocidad? ¿de la cantidad o viscosidad de líquido? Puede inspirarse en el artículo de Gu, Y., Bai, Y., Xin, Y., Xiao, L., Wang, S., & Sun, H. (2021). Dynamic Stabilization of Water Bottles. arXiv preprint arXiv:2112.10585.
 
-### Reto 5 *Orden en la pea*
+### Reto 3 *El big bang*
+Cuando un globo explota, produce un sonido corto y fuerte. ¿Puedes predecir la geometría y la presión interna del globo explotado a partir del sonido de la explosión? ¿Hay algún parámetro externo que afecte al sonido?
+
+### Reto 4  *Aro saltarín*
+Considere un aro con una masa unida que los desbalancea. Se le imprime una cantidad de movimiento y se pone a rodar. Hay casos en los cuales el sistema presenta saltos cuando está rodando. Explica el fenómeno y cómo depende de los parámetros relevantes. ¿Es posible reproducir este comportamiento con cualquier distribución desequilibrada de masas en una rueda? ¿Qué ocurre cuando se modifica el perfil del suelo, por ejemplo un plano inclinado? Puede revisar el siguiente [video](https://youtu.be/ETRpkp03stQ)
+
+### Reto 5  *Variedades de Péndulos*
+Inspirado en el [video de Bruce Yeany](https://youtu.be/615GTw4TNxI) construya y estudie la dinámica de alguno de los péndulos dobles que allí proponen. Compare dos ellos, los que sean más similares. Construya un modelo teórico, simúlelo y compárelo con medidas experimentales.
+
+### Reto 6 *Orden en la pea*
 A veces, cuando colocamos un vaso boca abajo sobre una mesa plana mojada, empieza a moverse. Investiga su velocidad en función de los parámetros pertinentes e intenta maximizarla. Algo de [información al respecto](https://www.quora.com/Why-does-a-simple-drinking-glass-which-is-just-washed-and-kept-upside-down-start-to-move)
+
+### Reto 7 *Rattlback physics*
+Un *rattleback*, también conocido como "piedra celta" o "anagyre", es un objeto semielipsoidal que muestra un comportamiento físico contraintuitivo. Cuando se hace girar sobre una superficie plana en una dirección, gira suavemente; sin embargo, cuando se hace girar en la dirección opuesta, se vuelve inestable, comienza a tambalearse (o «traquetear»), se enlences y luego invierte su giro a la dirección preferida https://youtu.be/LmEf7aIhpF8 Describa cuantitativamente el comportamiento de este objeto
+
+### Reto 8 El *Gömböc*
+El Gömböc es un objeto tridimensional, convexo y homogéneo que tiene un punto de equilibrio estable y otro inestable. Cuando se coloca sobre una superficie plana, independientemente de cómo se coloque el Gömböc, siempre volverá a su punto de equilibrio estable, de forma similar a un juguete que se endereza solo. A diferencia de estos juguetes, que dependen de una base lastrada, la capacidad de autoenderezamiento del Gömböc se debe exclusivamente a su forma geométrica específica.  
+
+La existencia de esta forma fue conjeturada por el matemático ruso Vladimir Arnold en 1995 y demostrada en 2006 por Gábor Domokos y Péter Várkonyi, que construyeron un modelo matemático y un ejemplo físico del Gömböc. El Gömböc también ha permitido comprender fenómenos naturales como la forma del caparazón de algunas tortugas que ayuda a estos animales a enderezarse cuando se ponen boca arriba.
+
+Construya un Gömböc y estudie su movimiento dependiendo de las condiciones iniciales que le imprima
 
 ### Reto 6 *Hidro Cañon* Grupo 1 (Serrano, Contreras, Ospina)
 ¿A qué altura puede saltar una pelota de ping-pong utilizando el [montaje del vídeo](https://youtu.be/mPOcFSHyd9o?t=478 )? ¿Cuál es la fracción máxima de la energía cinética total que puede transferirse a la pelota?
@@ -152,11 +158,10 @@ A veces, cuando colocamos un vaso boca abajo sobre una mesa plana mojada, empiez
 ### Reto 7 *Vasos mojados burbujeantes*
 En las condiciones adecuadas, si se da la vuelta a un vaso mojado y se coloca sobre una superficie plana (pero no necesariamente pulida), empiezan a aparecer burbujas de aire en la parte inferior del mismo. Reproduce y explica el fenómeno. ¿Qué parámetros definen el número de burbujas (y las líneas en las que se agrupan) y su duración? ¿Se puede formar un círculo completo de burbujas a lo largo de la pared interior del vaso? Aquí un [videito](https://youtu.be/7CIT1KvoUpU)
 
-### Reto 8  *Aro saltarín* Grupo 5 (Celis, Orcasitas, Castellanos)
-Considere un aro con una masa unida que los desbalancea. Se le imprime una cantidad de movimiento y se pone a rodar. Hay casos en los cuales el sistema presenta saltos cuando está rodando. Explica el fenómeno y cómo depende de los parámetros relevantes. ¿Es posible reproducir este comportamiento con cualquier distribución desequilibrada de masas en una rueda? ¿Qué ocurre cuando se modifica el perfil del suelo, por ejemplo un plano inclinado? Puede revisar el siguiente [video](https://youtu.be/ETRpkp03stQ)
+### Reto 8 Contando fósforos
+¿Con qué precisión se puede determinar el número de fósforos de una caja, a partir del sonido que producen al agitarla? ¿Se pueden aplicar los mismos métodos a una caja que contenga chicles?  
 
-### Reto 9 *El big bang* Grupo 6 (Correa, Verano, Calderon)
-Cuando un globo explota, produce un sonido corto y fuerte. ¿Puedes predecir la geometría y la presión interna del globo explotado a partir del sonido de la explosión? ¿Hay algún parámetro externo que afecte al sonido?
+
 
 ### Reto 10 *Cinta adhesiva escandalosa*
 Al desenrollar un rollo de cinta adhesiva, puede producirse un fuerte sonido. Explica la física de la emisión del sonido. Busca formas de maximizar y minimizar el ruido.
@@ -171,7 +176,6 @@ Llena un recipiente con agua cuya tensión superficial haya disminuido. A contin
 ¿Cómo varía el rebote de una pelota hecha de ligas o bandas de goma en función de su tamaño
 cuando se lanza desde una altura de 1 m? ¿cuántas ligas elásticas maximizan la altura de rebote? La pelota debe estar compuesta en su totalidad por gomas elásticas tal y como muestra este [video](https://youtu.be/cvq2ylWdwvY?si=nOTEA9zSVqUk0Fyx)
 
-### Reto 14  *Variedades de Péndulos* Grupo 4 (Parra, Espinel, Gamboa)
-Inspirado en el [video de Bruce Yeany](https://youtu.be/615GTw4TNxI) construya y estudie la dinámica de alguno de los péndulos dobles que allí proponen. Compare dos ellos, los que sean más similares. Construya un modelo teórico, simúlelo y compárelo con medidas experimentales.
+
 
 ## Avances en la evaluación
