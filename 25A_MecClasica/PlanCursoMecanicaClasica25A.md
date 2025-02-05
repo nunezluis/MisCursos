@@ -54,7 +54,7 @@ Al finalizar esta semana habremos repasado algunos conceptos de Mecánica que vi
 + **Rehaga** los ejemplos 1. (p35), 3. (p37), 4. (p39), 1. (p49), 3. (p41), 5. (p52), 6. (p54)
 
 #### Problemas S2
-Desarrolle los problemas del [240816](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)
+<!--Desarrolle los problemas del [240816](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)-->
 
 #### Materiales
 + Presentaciones
@@ -92,7 +92,7 @@ Desarrolle los problemas del [240816](https://www.overleaf.com/read/qfmyrjrznngf
   + [Emmy Noether Fermilab](https://www.youtube.com/watch?v=Rqfj7n5aSwY)
 
 #### Problemas S3
-Desarrolle los problemas del [240823](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)
+<!-- Desarrolle los problemas del [240823](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)-->
 
 ### Clase S4-C7/C8 Fuerzas generalizadas
 #### Antes de clase
@@ -105,7 +105,7 @@ Desarrolle los problemas del [240823](https://www.overleaf.com/read/qfmyrjrznngf
 + **Rehaga** los ejemplos 1. (p97), 2. (p98), 3. (p99)
 
 #### Problemas S3
-Desarrolle los problemas del [240823](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)
+<!--Desarrolle los problemas del [240823](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)-->
 
 
 #### Materiales
