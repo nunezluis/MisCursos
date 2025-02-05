@@ -91,11 +91,24 @@ desde una altura de 1 m, ¿cuántas ligas elásticas maximizan la altura de rebo
 ### Reto 28 *Rattlback physics*
 Un *rattleback*, también conocido como "piedra celta" o "anagyre", es un objeto semielipsoidal que muestra un comportamiento físico contraintuitivo. Cuando se hace girar sobre una superficie plana en una dirección, gira suavemente; sin embargo, cuando se hace girar en la dirección opuesta, se vuelve inestable, comienza a tambalearse (o «traquetear»), se enlences y luego invierte su giro a la dirección preferida https://youtu.be/LmEf7aIhpF8 Describa cuantitativamente el comportamiento de este objeto
 
-### Reto 29 El Gömböc
+### Reto 29 *El Gömböc*
 El Gömböc es un objeto tridimensional, convexo y homogéneo que tiene un punto de equilibrio estable y otro inestable. Cuando se coloca sobre una superficie plana, independientemente de cómo se coloque el Gömböc, siempre volverá a su punto de equilibrio estable, de forma similar a un juguete que se endereza solo. A diferencia de estos juguetes, que dependen de una base lastrada, la capacidad de autoenderezamiento del Gömböc se debe exclusivamente a su forma geométrica específica.  
 
 La existencia de esta forma fue conjeturada por el matemático ruso Vladimir Arnold en 1995 y demostrada en 2006 por Gábor Domokos y Péter Várkonyi, que construyeron un modelo matemático y un ejemplo físico del Gömböc. El Gömböc también ha permitido comprender fenómenos naturales como la forma del caparazón de algunas tortugas que ayuda a estos animales a enderezarse cuando se ponen boca arriba.
 
 Construya un Gömböc y estudie su movimiento dependiendo de las condiciones iniciales que le imprima
 
-  
+### Reto 30 *Contando fósforos*
+¿Con qué precisión se puede determinar el número de fósforos de una caja, a partir del sonido que producen al agitarla? ¿Se pueden aplicar los mismos métodos a una caja que contenga chicles?
+
+### Reto 31 *Trucos con Tiza*
+Es posible dibujar líneas continuas con tiza en una pizarra. Sin embargo, al cambiar el ángulo de contacto, la línea en la pizarra se convierte en una línea de puntos, aunque el movimiento sigue siendo continuo. ¿Qué parámetros del movimiento relativo entre la tiza y la pizarra pueden deducirse del trazo resultante? ¿Es posible deducir algo sobre las dimensiones de la tiza?
+
+### Reto 32 *La Pelota rellena*
+Una pelota de ping-pong parcialmente llena de líquido o arena rebota mucho más bajo que una pelota rellena. Explica este fenómeno. ¿Cómo depende la altura del rebote de los parámetros pertinentes?
+
+### Reto 33 *Anti terraplanista*
+Proponga un experimento utilizando únicamente una cámara y/o los sensores de su celular para demostrar o refutar la hipótesis de que la Tierra es plana. Utilizando el mismo equipo, estime las dimensiones de la Tierra con la mayor precisión posible.
+
+### Reto 34 *Huellas de gotas de arena*
+Cuando las gotas caen sobre una superficie cubierta por una capa de arena, se forman interesantes patrones. Estudie el proceso de formación de esos patrónes. ¿Qué parámetros de las gotas pueden deducirse del cráter resultante?
