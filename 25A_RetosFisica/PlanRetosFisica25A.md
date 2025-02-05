@@ -152,13 +152,10 @@ La existencia de esta forma fue conjeturada por el matemático ruso Vladimir Arn
 
 Construya un Gömböc y estudie su movimiento dependiendo de las condiciones iniciales que le imprima
 
-### Reto 6 *Hidro Cañon* Grupo 1 (Serrano, Contreras, Ospina)
-¿A qué altura puede saltar una pelota de ping-pong utilizando el [montaje del vídeo](https://youtu.be/mPOcFSHyd9o?t=478 )? ¿Cuál es la fracción máxima de la energía cinética total que puede transferirse a la pelota?
-
-### Reto 7 *Vasos mojados burbujeantes*
+### Reto 9 *Vasos mojados burbujeantes*
 En las condiciones adecuadas, si se da la vuelta a un vaso mojado y se coloca sobre una superficie plana (pero no necesariamente pulida), empiezan a aparecer burbujas de aire en la parte inferior del mismo. Reproduce y explica el fenómeno. ¿Qué parámetros definen el número de burbujas (y las líneas en las que se agrupan) y su duración? ¿Se puede formar un círculo completo de burbujas a lo largo de la pared interior del vaso? Aquí un [videito](https://youtu.be/7CIT1KvoUpU)
 
-### Reto 8 Contando fósforos
+### Reto 10 Contando fósforos
 ¿Con qué precisión se puede determinar el número de fósforos de una caja, a partir del sonido que producen al agitarla? ¿Se pueden aplicar los mismos métodos a una caja que contenga chicles?  
 
 
