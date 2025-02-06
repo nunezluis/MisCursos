@@ -22,9 +22,9 @@ La evaluación de curso toca los dos aspectos fundamentales en la solución de u
 
 ## El "Toque" semanal
 Cada semana cada grupo tiene que presentar un reporte de avance en 3 minutos. En tres transparencias tiene que decir
-+ ¿Qué lo que quieren lograr (el objetivo del reto)
++ ¿Qué lo que quieren lograr (el objetivo del reto) y qué hicieron la semana anterior?
 + ¿Cuáles fueron los avances en esta semana y cuáles fueron las dificultades?
-+
++ ¿Qué van a hacer la siguiente semana?
 
 ## La Comunicación de la Ciencia
 La comunicación de la ciencia es tan clave como la obtención de resultados. De poco sirven los resultados si los pares y, peor, la comunidad no logra captar su importancia. Durante este curso haremos ejercicios de cómo expresarnos en tres géneros de la comunicación científica
