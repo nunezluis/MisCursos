@@ -75,7 +75,7 @@ Los poster, al igual que las presentaciones, no son artículos verticales. Tiene
 ## Reproducibilidad y la Ciencia abierta
 Para garantizar la reproducibilidad de ciencia se debe adjuntar toda la información necesaria. No solo las ideas, la metodología y los resultados que se presentan en los reportes o artículos. Además se deben adjuntar, los códigos computacionales que permiten la simulación, los datos experimentales que sustentan las conclusiones (datos medidos y/o simulados). El reporte final tendrá que contener estos elementos que respalden lo expresado allí.
 
-## Algunas referencias
+## Algunas referencias sobre el uso de celulares como instrumentos de medida
 + Kaps, A., Splith, T. & Stallmach, F. Implementation of smartphone-based experimental exercises for physics courses at universities. Phys. Educ. 56, 035004 (2021).
 + Monteiro, M. & Martí, A. C. Resource Letter MDS-1: Mobile devices and sensors for physics teaching. Am. J. Phys. 90, 328–343 (2022).
 + Poultney, S. K. Measurement and Its Reliability: An Introductory Laboratory Experiment. Am. J. Phys. 39, 176–182 (1971).
