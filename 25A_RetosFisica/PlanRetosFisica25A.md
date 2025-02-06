@@ -21,8 +21,8 @@ La evaluación de curso toca los dos aspectos fundamentales en la solución de u
    + Calidad (claridad, organización y sustentación) del reporte final (20%)
 
 ## El "Toque" semanal
-Cada semana cada grupo tiene que presentar un reporte de avance en 3 minutos. En tres transparencias tiene que decir
-+ ¿Qué lo que quieren lograr (el objetivo del reto) y qué hicieron la semana anterior?
+Cada semana cada grupo tiene que presentar un reporte de avance en 3 minutos. En tres transparencias tienen que decir: 
++ ¿Qué quieren lograr (el objetivo del reto) y qué hicieron la semana anterior?
 + ¿Cuáles fueron los avances en esta semana y cuáles fueron las dificultades?
 + ¿Qué van a hacer la siguiente semana?
 
