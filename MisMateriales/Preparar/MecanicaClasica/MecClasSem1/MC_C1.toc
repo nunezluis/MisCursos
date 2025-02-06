@@ -7,9 +7,10 @@
 \beamer@subsectionintoc {3}{3}{Cantidad de movimiento angular, energ\IeC {\'\i }a cin\'etica y trabajo}{22}{0}{3}
 \beamer@subsectionintoc {3}{4}{Fuerzas conservativas}{28}{0}{3}
 \beamer@subsectionintoc {3}{5}{Energ\IeC {\'\i }a potencial y energ\IeC {\'\i }a total}{30}{0}{3}
-\beamer@sectionintoc {4}{Sistemas de Part\IeC {\'\i }culas}{35}{0}{4}
-\beamer@subsectionintoc {4}{1}{Din\'amica de sistemas de part\IeC {\'\i }culas}{38}{0}{4}
-\beamer@subsectionintoc {4}{2}{Cantidad de Movimiento Angular}{46}{0}{4}
-\beamer@subsectionintoc {4}{3}{Energ\IeC {\'\i }a cin\'etica de un sistemas de part\IeC {\'\i }culas}{53}{0}{4}
-\beamer@subsectionintoc {4}{4}{Energ\IeC {\'\i }a potencial de un sistemas de part\IeC {\'\i }culas}{56}{0}{4}
-\beamer@subsectionintoc {4}{5}{Energ\IeC {\'\i }a Total de un sistemas de part\IeC {\'\i }culas}{61}{0}{4}
+\beamer@subsectionintoc {3}{6}{Algunos ejemplos}{35}{0}{3}
+\beamer@sectionintoc {4}{Sistemas de Part\IeC {\'\i }culas}{39}{0}{4}
+\beamer@subsectionintoc {4}{1}{Din\'amica de sistemas de part\IeC {\'\i }culas}{42}{0}{4}
+\beamer@subsectionintoc {4}{2}{Cantidad de Movimiento Angular}{50}{0}{4}
+\beamer@subsectionintoc {4}{3}{Energ\IeC {\'\i }a cin\'etica de un sistemas de part\IeC {\'\i }culas}{57}{0}{4}
+\beamer@subsectionintoc {4}{4}{Energ\IeC {\'\i }a potencial de un sistemas de part\IeC {\'\i }culas}{60}{0}{4}
+\beamer@subsectionintoc {4}{5}{Energ\IeC {\'\i }a Total de un sistemas de part\IeC {\'\i }culas}{65}{0}{4}
