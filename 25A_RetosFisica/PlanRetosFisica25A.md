@@ -155,24 +155,18 @@ Construya un Gömböc y estudie su movimiento dependiendo de las condiciones ini
 ### Reto 9 *Vasos mojados burbujeantes*
 En las condiciones adecuadas, si se da la vuelta a un vaso mojado y se coloca sobre una superficie plana (pero no necesariamente pulida), empiezan a aparecer burbujas de aire en la parte inferior del mismo. Reproduce y explica el fenómeno. ¿Qué parámetros definen el número de burbujas (y las líneas en las que se agrupan) y su duración? ¿Se puede formar un círculo completo de burbujas a lo largo de la pared interior del vaso? Aquí un [videito](https://youtu.be/7CIT1KvoUpU)
 
-### Reto 10 Contando fósforos
+### Reto 10 *Contando fósforos*
 ¿Con qué precisión se puede determinar el número de fósforos de una caja, a partir del sonido que producen al agitarla? ¿Se pueden aplicar los mismos métodos a una caja que contenga chicles?  
 
+### Reto 11 *Equilibrio estable, inestable y el huevo de Colón*
+La expresión *huevo de Colón* se ha convertido en sinónimo de ideas o soluciones que parecen simples o sencillas después de que alguien las ha demostrado. Muchos retos parecen fáciles una vez que se revela la solución.
+Aquí algunos ejemplos y algunas explicaciones muy superficiales de puntos de equilibrio y rotación https://youtu.be/CGoxvDmgUAg?si=s-ecRAcluuJEsobv Describa mas en detalle estos ejemplos.
 
+### Reto 12 *Huellas de gotas de arena*
+Cuando las gotas caen sobre una superficie cubierta por una capa de arena, se forman interesantes patrones. Estudie el proceso de formación de esos patrónes. ¿Qué parámetros de las gotas pueden deducirse del cráter resultante?
 
-### Reto 10 *Cinta adhesiva escandalosa*
-Al desenrollar un rollo de cinta adhesiva, puede producirse un fuerte sonido. Explica la física de la emisión del sonido. Busca formas de maximizar y minimizar el ruido.
-
-### Reto 11 *Deformaciones del Espacio tiempo* Grupo 8 (Rodríguez, García, Camacho)
-Con una tela elástica contruya un ambiente que reproduzca la deformación del espacio tiempo y pueda calcular, simular y registrar las trayectorias de partículas de prueba alrededor de cuerpos masivo. Compárelo con las geodésicas en Relatividad General. Puede inspirarse en este [video](https://www.youtube.com/watch?v=MTY1Kje0yLg) y apoyarse en Postiglione, A., & De Angelis, I. (2021). Experience gravity in the classroom using the rubber sheet: an educational proposal from the collaboration between university and school. Physics Education, 56(2), 025019.  
-
-### Reto 12 *Antiburbujas*
-Llena un recipiente con agua cuya tensión superficial haya disminuido. A continuación, deja caer una gota de agua normal en el recipiente (muy lentamente). La gota creará la llamada "antiburbuja". Investiga el fenómeno. Maximiza el tamaño y la duración de la antiburbuja. ¿Están relacionadas estas cantidades? Puedes inspirarte en este [video](https://youtu.be/w5UMyck8D64)
-
-### Reto 13 *Rebotes de pelotas de ligas* Grupo 9 (Rojas, Sanchez)
-¿Cómo varía el rebote de una pelota hecha de ligas o bandas de goma en función de su tamaño
-cuando se lanza desde una altura de 1 m? ¿cuántas ligas elásticas maximizan la altura de rebote? La pelota debe estar compuesta en su totalidad por gomas elásticas tal y como muestra este [video](https://youtu.be/cvq2ylWdwvY?si=nOTEA9zSVqUk0Fyx)
-
+### Reto 13 *La Pelota rellena*
+Una pelota de ping-pong parcialmente llena de líquido o arena rebota mucho más bajo que una pelota rellena. Explica este fenómeno. ¿Cómo depende la altura del rebote de los parámetros pertinentes?
 
 
 ## Avances en la evaluación

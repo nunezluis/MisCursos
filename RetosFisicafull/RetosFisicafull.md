@@ -121,3 +121,9 @@ Convénzase y convénzanos que eso es así
 ### Reto 36 *Equilibrio estable, inestable y el huevo de Colón*
 La expresión *huevo de Colón* se ha convertido en sinónimo de ideas o soluciones que parecen simples o sencillas después de que alguien las ha demostrado. Muchos retos parecen fáciles una vez que se revela la solución.
 Aquí algunos ejemplos y algunas explicaciones muy superficiales de puntos de equilibrio y rotación https://youtu.be/CGoxvDmgUAg?si=s-ecRAcluuJEsobv Describa mas en detalle estos ejemplos.
+
+### Reto 37 *Tubo de papel*
+Enrolla una tira larga de papel en un tubo, apreta el enrollado de la tira y colóca el tubo verticalmente sobre una mesa. ¿Por qué suele desenrollarse la tira de forma espasmódica? ¿Qué determina la duración de las sacudidas?
+
+### Reto 38 *Remolino en una botella*
+Cuando una botella abierta, con agua se pone boca abajo, se forma un remolino en el agua al salir. ¿Cuáles son sus características? ¿A qué velocidad se puede vaciar la botella de esa manera? ¿Qué cambia si la botella se llena de arena?
