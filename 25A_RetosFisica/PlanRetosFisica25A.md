@@ -14,7 +14,7 @@ La evaluación de curso toca los dos aspectos fundamentales en la solución de u
    + interacciones y acuerdos entre teoría, simulación y resultados experimentales
    + posibilidad de extender la solución a otros ámbitos
 + **La calidad de la comunicación de los resultados (60%)**
-   + Calidad  (claridad, organización y sustentación) de los avances semanales (20%)
+   + Calidad  (claridad, organización y sustentación) de los avances semanales (10%)
    + Calidad (claridad, organización y sustentación) de la propuesta (10%)
    + Calidad (claridad, organización y sustentación) de los informes de avances (10%)
    + Calidad (claridad, organización y sustentación) del poster final (10%)
