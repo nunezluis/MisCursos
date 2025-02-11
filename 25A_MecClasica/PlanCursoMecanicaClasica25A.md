@@ -21,6 +21,7 @@ Como apoyo bibliográfico tendremos
 + Thornton, S. T., & Marion, J. (2019). Classical dynamics of particles and systems Thomson Book/Cole Singapur
 + Gregory, R. D. (2006). Classical mechanics. Cambridge University Press.
 + Las clases de [Leonard Susskind](https://www.youtube.com/watch?v=ApUFtLCrU90&list=PL47F408D36D4CF129) de la universidad de Stanford
++ Las clases de [Guillermo Abramson](https://youtube.com/playlist?list=PLv0-vSkgrxj_Uv65oZV9ilrWZ2xUNbaw8&si=D_6PXE9xoIJEzW2Q) del instituto Balseiro de Argentina
 ## Programa del Curso
 
 ### Semana 1 C1/C2 Leyes de Newton
@@ -44,6 +45,7 @@ Al finalizar esta semana habremos repasado algunos conceptos de Mecánica que vi
 + Sistemas de Partículas
 
 ### Semana 1 C3/C4 Coordenadas generalizadas
+Esta semana nos toca empezar el curso y comenzamos por definir el espacio de configuraciones. Arrancamos discutiendo el concepto de coordenadas generalizadas y vínculos de un sistema.
 #### Antes de clase
 + **Estudie**
   + Coordenadas generalizadas
@@ -54,7 +56,8 @@ Al finalizar esta semana habremos repasado algunos conceptos de Mecánica que vi
 + **Rehaga** los ejemplos 1. (p35), 3. (p37), 4. (p39), 1. (p49), 3. (p41), 5. (p52), 6. (p54)
 
 #### Problemas S2
-<!--Desarrolle los problemas del [240816](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)-->
+<! -->
+--Desarrolle los problemas del [240816](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)
 
 #### Materiales
 + Presentaciones
@@ -73,6 +76,20 @@ Al finalizar esta semana habremos repasado algunos conceptos de Mecánica que vi
   + [Lagrangian and Hamiltonian Mechanics](Lagrangian and Hamiltonian Mechanics)
   + [Newtonian/Lagrangian/Hamiltonian mechanics are not equivalent](https://www.youtube.com/watch?v=9VNW7NHwnuM)
   + [La historia bien bonita del principio de mínima acción](https://youtu.be/Q10_srZ-pbs?si=eZM-zbC1_tUHcuz4)
+
+#### Al finalizar la semana
+  Los/las estudiantes deberán en capacidad de:
+  1. **Para el caso de coordenadas Generalizadas y Restricciones**:
+     - Definir de coordenadas generalizadas y su uso para describir sistemas físicos con restricciones.
+     - Diferenciar entre restricciones holónomas y anholónomas.
+     - Determinar el número de grados de libertad de un sistema y elegir las coordenadas apropiadas.
+
+  2. **Considerando los Principios Variacionales**:
+     - Comprender el concepto de funcionales y su relación con la búsqueda de extremos en el cálculo variacional.
+     - Establecer el significado de la ecuación de Euler-Lagrange y su papel en la derivación de ecuaciones de movimiento.
+     - Utilizar el cálculo de variaciones para obtener ecuaciones de movimiento de sistemas físicos bajo restricciones mediante multiplicadores de Lagrange.
+     - Desarrollar aplicaciones del cálculo variacional con restricciones en sistemas simples como la partícula libre sobre una esfera y el péndulo simple.
+
 
 ### Clase S3-C5/C6  Leyes de conservación y simetrías
 #### Antes de clases
