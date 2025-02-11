@@ -33,8 +33,12 @@
 \headcommand {\beamer@subsectionentry {0}{5}{2}{30}{Part\IeC {\'\i }cula libre movi\'endose sobre una esfera}}
 \headcommand {\slideentry {5}{2}{1}{30/35}{Part\IeC {\'\i }cula libre movi\'endose sobre una esfera}{0}}
 \headcommand {\beamer@framepages {30}{35}}
-\headcommand {\beamer@partpages {1}{35}}
 \headcommand {\beamer@subsectionpages {30}{35}}
-\headcommand {\beamer@sectionpages {25}{35}}
-\headcommand {\beamer@documentpages {35}}
-\headcommand {\gdef \inserttotalframenumber {8}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{36}{El p\'endulo simple}}
+\headcommand {\slideentry {5}{3}{1}{36/44}{El p\'endulo simple}{0}}
+\headcommand {\beamer@framepages {36}{44}}
+\headcommand {\beamer@partpages {1}{44}}
+\headcommand {\beamer@subsectionpages {36}{44}}
+\headcommand {\beamer@sectionpages {25}{44}}
+\headcommand {\beamer@documentpages {44}}
+\headcommand {\gdef \inserttotalframenumber {9}}

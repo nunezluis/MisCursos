@@ -1,0 +1,9 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Extremos de un funcional}{3}{0}{1}
+\beamer@sectionintoc {2}{Trayectorias cercanas a la extrema}{6}{0}{2}
+\beamer@sectionintoc {3}{Variaciones de un funcional}{12}{0}{3}
+\beamer@sectionintoc {4}{La ecuaci\'on de Euler}{18}{0}{4}
+\beamer@sectionintoc {5}{C\'alculo de variaciones con restricciones}{25}{0}{5}
+\beamer@subsectionintoc {5}{1}{Multiplicadores de Lagrange}{25}{0}{5}
+\beamer@subsectionintoc {5}{2}{Part\IeC {\'\i }cula libre movi\'endose sobre una esfera}{30}{0}{5}
+\beamer@subsectionintoc {5}{3}{El p\'endulo simple}{36}{0}{5}

@@ -98,11 +98,11 @@
   \begin{itemize}  
   	\item<1-> El cálculo variacional con restricciones holónomas se implementa mediante multiplicadores de Lagrange. 
 	\item<2-> Esto  nos permite encontrar extremos de funcionales introduciendo variables adicionales (los multiplicadores de Lagrange) que garantizan esas restricciones y conducen a ecuaciones de Euler-Lagrange modificadas que deben resolverse.
-	\item<3-> Supongamos que queremos encontrar una función \( y(x) \) que minimice (o maximice) un funcional \( I = \mathcal{F}[y] = \int_{x_1}^{x_2} f(x, y(x), y'(x)) \, {\rm d}x \), donde se cumplan la restricción $g(x, y(x), y'(x)) = 0$. 
+	\item<3-> Supongamos que queremos encontrar una función \( y(x) \) que minimice (o maximice) un funcional \( I = \mathcal{F}[y] = \int_{x_1}^{x_2} f(x, y(x), y'(x)) \, {\rm d}x \), donde se cumplan la restricción holónoma $g(x, y(x)) = 0$. 
 	\item<4-> Introducimos un multiplicador de Lagrange \( \lambda(x) \) y el funcional modificado a extremar pasa a ser:
-	$\tilde{I}[y, \lambda] = \int_{x_1}^{x_2} \left( f(x, y(x), y'(x)) + \lambda(x) g(x, y(x), y'(x)) \right){\rm  d}x.$
+	$\tilde{I}[y, \lambda] = \int_{x_1}^{x_2} \left( f(x, y(x), y'(x)) + \lambda(x) g(x, y(x)) \right){\rm  d}x.$
 	\item<5-> Las ecuaciones de Euler-Lagrange, modificadas por la presencia del multiplicador de Lagrange son:
-	$\frac{\partial f}{\partial y} - \frac{{\rm  d}}{{\rm  d}x} \left( \frac{\partial f}{\partial y'} \right) + \lambda \frac{\partial g}{\partial y} - \frac{{\rm  d}}{{\rm  d}x} \left( \lambda \frac{\partial G}{\partial y'} \right) = 0$ con la restricción $G(x, y(x), y'(x)) = 0$
+	$\frac{{\rm  d}}{{\rm  d}x} \left( \frac{\partial f}{\partial y'} \right) - \frac{\partial f}{\partial y} =  \lambda \frac{\partial g}{\partial y}$ con la restricción anholónoma $g(x, y(x)) = 0$
    \end{itemize}
 }
 %%%%%%%%%%%%%%
@@ -122,8 +122,25 @@
 	\item<6-> Las ecuaciones de movimento serán $m\ddot{x} = -2x\frac{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}{R^2}$ igual para $y$ y para $z$.  Las soluciones $x(t)$, $y(t)$ y $z(t)$ extreman la acción $\tilde{I}$ 
    \end{itemize}
 }
+%%%%% Diapo 2
+\subsection{El péndulo simple}
+\frame{
+  \frametitle{El péndulo simple y su vínculo}
+  \begin{itemize}  
+  	\item<1-> El Lagrangiano para un péndulo viene dado por el de una partícula libre limitada por restricciones o vínculos. 
+	\item<2-> Los vínculos/restricciones son $f_{\alpha}(x^A, t) = 0 \Leftrightarrow x^2+y^2-l^2 = 0$
+	\item<3-> Es decir $\mathcal{L}=\frac{1}{2} m(\dot{x}^2+\dot{y}^2)+m g y+\frac{1}{2} \lambda(x^2+y^2-l^2)$
+	\item<4-> Las ecuaciones de movimiento serán $m \ddot{x}=\lambda x$, y  $\ddot{y}=m g+\lambda y$
+	\item<5-> La ecuación de movimiento para $\lambda$ reproduce la restricción. Esto es $\frac{\partial \mathcal{L}^{\prime}}{\partial \lambda}= 0 \Leftrightarrow x^2+y^2-l^2=0$. Nótese $\lambda$, como una coordenada mas. 
+	\item<6-> Si expresamos el lagrangeano en término de sus grados de libertad, $q^i$ (liberando los vículos), las ecuaciones de Lagrange son las mismas.
+	\item<7-> $\mathcal{L}\left[x^A(q^i, t), \dot{x}^A(q^i, \dot{q}^i, t), t , \lambda^{\alpha}\right] \equiv \mathcal{L}^{\prime}\left[q^i, \dot{q}^i, t\right]$, $A = 1, \dots, 3N$; $i =1, \dots n$ y $\alpha = 1, \dots , k$. Con $k = 3N -n$.
+	\item<8-> $\frac{d}{d t}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}^i}\right)-\frac{\partial \mathcal{L}}{\partial q^i}=\lambda_\alpha \frac{\partial f_\alpha}{\partial q^i} = 0$, dado que $f_{\alpha}(x^A, t) = 0 \Rightarrow \frac{\partial f_\alpha}{\partial q^i} = 0$.
+	\item<9-> $\underbrace{\frac{1}{2} m\left(\dot{x}^2+\dot{y}^2\right)+m g y +\frac{1}{2} \lambda(x^2+y^2-l^2)}_\mathcal{L} \equiv \underbrace{\frac{1}{2} m l^2 \dot{\theta}^2+m g l \cos \theta}_{\mathcal{L}^{\prime}}$.
+   \end{itemize}
+}
   
 \end{document}
+
 
 %%%%% Diapo 2
 \section{Sección}
