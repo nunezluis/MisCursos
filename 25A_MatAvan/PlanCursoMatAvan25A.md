@@ -51,8 +51,6 @@ Son importantes las primeras referencias que tienen que ver con *Machine Learnin
 ### Espacios Duales y Tensores
 #### Clases
 + [Clase 5. Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md) **26feb**
-  + Sección 2.3.6, desarrolle el ejercicio 5.
-  + Sección 2.4.5, desarrolle el ejercicio 3 utilizando [MAXIMA](https://maxima.sourceforge.io/) o [Sympy](https://scipy-lectures.org/packages/sympy.html)
 
 + [Clase 6. Tensores y espacios tensoriales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md) **28feb**
 
@@ -62,19 +60,11 @@ Son importantes las primeras referencias que tienen que ver con *Machine Learnin
 
 ### Operadores Lineales
 #### Clases
-+ [Clase 7. Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md) **7mar** Además este día tienen que entregar los problemas de tareas y exponerlos.
-    + Sección 2.1.6, desarrolle los ejercicios 3 y 10.
-    + Sección 2.2.4, desarrolle el ejercicio 7.
-    + Sección 2.3.6, desarrolle el ejercicio 5.
-    + Sección 2.4.5, desarrolle el ejercicio 3 utilizando [MAXIMA](https://maxima.sourceforge.io/) o [Sympy](https://scipy-lectures.org/packages/sympy.html)
++ [Clase 7. Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md) **7mar**
 
 + [Clase 8. Evaluación Ejercicios y Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md) **12mar**
-    1. De la sección 3.1.4 resuelva los ejercicios 2 y 7
-    2. Hacer un código SymPy que resuelva el problema 2 sección 3.2.5
-    3. Resolver ejercicio 5 de la sección 4.1.6
 
 + [Clase 10. Matrices y Operadores Lineales, parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **14mar**
-    1. Resolver los ejercicios 2 y 8 de la sección 4.3.7 de las [notas de clase](25A.pdf)
 
 + [Clase 11. Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **19mar**
 
