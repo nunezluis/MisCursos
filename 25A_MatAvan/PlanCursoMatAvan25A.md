@@ -45,8 +45,6 @@ Son importantes las primeras referencias que tienen que ver con *Machine Learnin
 + [Clase 2. Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md) **14feb**
 
 + [Clase 3. Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md) **19feb**
-   + Sección 2.1.6, desarrolle los ejercicios 3 y 10.
-   + Sección 2.2.4, desarrolle el ejercicio 7.
 
 + [Clase 4. Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) **21feb**
 
