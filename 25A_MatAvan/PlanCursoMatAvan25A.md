@@ -3,7 +3,7 @@
 
 <a name="metodologia"></a>
 ## La metodología
-**Antes de las clases** deberán revisar los materiales de apoyo (videos/textos) y recorrer los ejemplos resueltos de autoevaluación. Así podrán llevar dudas a la discusión que haremos en la clase. La realización de esos ejemplos resueltos será tomada en cuenta durante el desarrollo de la clase. 
+**Antes de las clases** deberán revisar los materiales de apoyo (videos/textos) y recorrer los ejemplos resueltos de autoevaluación. Así podrán llevar dudas a la discusión que haremos en la clase. La realización de esos ejemplos resueltos será tomada en cuenta durante el desarrollo de la clase.
 
 <a name="clases"></a>
 ### Las clases
@@ -11,14 +11,13 @@
 
 En cada clase se propondrán ejercicios y asignaciones que deben resolver, consignar y sustentar Tendremos una hora de consulta para dilucidar las dudas que se les presenten tanto en la solución de los ejercicios y las asignaciones propuestas.
 
-
 <a name="MaterialesCurso"></a>
 ## Materiales del curso
 
 ### Libros textos
 Los materiales que utilizaremos en este curso son unas notas de clase
 + **Temas seleccionados**
-    - del libro [Matematicas Avanzadas Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
+    - del libro [Matematicas Avanzadas Vol 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Volumen1_Lib60New.pdf)
     - del libro [Matematicas Avanzadas Vol 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenDOS.pdf)
 
 Hay que enfatizar que estas notas corresponden a una obra en evolución y siempre presentaremos la última versión. Con eso estamos diciendo que **NO LOS IMPRIMAN**. Consulten la última versión en formato electrónico que les presentamos en los enlaces antes mencionados.
@@ -77,16 +76,16 @@ Son importantes las primeras referencias que tienen que ver con *Machine Learnin
     3. Resolver ejercicio 5 de la sección 4.1.6
 
 + [Clase 10. Matrices y Operadores Lineales, parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **14mar**
-    1. Resolver los ejercicios 2 y 8 de la sección 4.3.7 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
+    1. Resolver los ejercicios 2 y 8 de la sección 4.3.7 de las [notas de clase](25A.pdf)
 
 + [Clase 11. Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **19mar**
 
 + [Clase 12. Autovalores y Autovectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md) **21mar**
 
 + Clase 13 Evaluación y ejercicios **26mar**
-   1. Resolver el ejercicio 2 de la sección 4.3.7 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
-   2. Resolver los ejercicios 4, 5, y 12  de la sección 4.6.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
-   3. Hacer un par de códigos en MAXIMA/Sympy para resolver los ejercicios 6 y 8 de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
+   1. Resolver el ejercicio 2 de la sección 4.3.7 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Volumen1_Lib60New.pdf)
+   2. Resolver los ejercicios 4, 5, y 12  de la sección 4.6.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Volumen1_Lib60New.pdf)
+   3. Hacer un par de códigos en MAXIMA/Sympy para resolver los ejercicios 6 y 8 de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Volumen1_Lib60New.pdf)
 
 ### Series y Transformadas de Fourier
 
