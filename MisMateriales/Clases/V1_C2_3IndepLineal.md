@@ -5,7 +5,7 @@ Esta clase tiene por objetivo, en primer lugar, introducir el concepto de indepe
 
 ### Actividad antes de clase
    1. Estudiar el punto 2.3 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
-   2. Rehacer el ejemplo 2.8.
+   2. Rehacer el ejemplo 2.8, 2.13, 2.14
 
 
 ### Taller de problemas**
