@@ -4,7 +4,7 @@
 Esta clase tiene por objetivo explorar la estructura de los espacios vectoriales al equiparlos con la idea de distancia entres sus elementos (la función métrica); la idea de tamaño de sus elementos (Norma) y finalmente, como generar geometría en un espacio vectorial a partir de la definición de producto interno y con ello el ángulo entre los elementos del espacio.
 
 ### Actividad antes de clase
-   1. Estudiar el punto 2.2 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
+   1. Estudiar el punto 2.2 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Volumen1_Lib60Newshort.pdf)
    2. Rehacer con MAXIMA/SymPy el ejemplo 2.7 .
 
 ### Taller de problemas

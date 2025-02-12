@@ -4,7 +4,7 @@
 Esta clase tiene por objetivo, en primer lugar, introducir el concepto de independencia lineal y, a partir de éste, generar la idea de base para un espacio vectorial. Seguidamente, presentamos la expansión de los vectores de un espacio vectorial como combinación lineal de la base. Se enfatiza en asociar las componentes de los vectores con las distintas bases del espacio vectorial. Finalmente, si el espacio tiene definido un producto interno, se construye una base ortogonal a partir de las bases oblicuas que existan.
 
 ### Actividad antes de clase
-   1. Estudiar el punto 2.3 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNOshort.pdf)
+   1. Estudiar el punto 2.3 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Volumen1_Lib60Newshort.pdf)
    2. Rehacer el ejemplo 2.8, 2.13, 2.14
 
 
