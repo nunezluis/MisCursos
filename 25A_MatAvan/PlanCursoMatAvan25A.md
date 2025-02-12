@@ -3,7 +3,7 @@
 
 <a name="metodologia"></a>
 ## La metodología
-**Antes de las clases** deberán revisar los materiales de apoyo (videos/textos) y recorrer los ejemplos resueltos de autoevaluación. Así podrán llevar dudas a la discusión que haremos en la clase. La realización de esos ejemplos resueltos será tomada en cuenta durante el desarrollo de la clase. Como este curso es para dos estudiantes aprovecharemos mas la actividad de cada uno de Uds.
+**Antes de las clases** deberán revisar los materiales de apoyo (videos/textos) y recorrer los ejemplos resueltos de autoevaluación. Así podrán llevar dudas a la discusión que haremos en la clase. La realización de esos ejemplos resueltos será tomada en cuenta durante el desarrollo de la clase. 
 
 <a name="clases"></a>
 ### Las clases
