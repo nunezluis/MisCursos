@@ -9,7 +9,7 @@ Esta clase tiene por objetivo, en primer lugar, presentar los conceptos fundamen
 3. Rehacer los ejemplos 2.1 y 2.3.
 
 ### Taller de problemas
-De la Sección 2.1.6 desarrollar los ejercicios 3 y 10
+De la Sección 2.1.5 desarrollar los ejercicios 3 y 10
 
 ### Materiales de apoyo:
 [Video](https://youtu.be/aiv3E_Nofko) y [presentación del concepto de espacio vectorial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/2_1GruposEspaciosVectoriales.pdf)
