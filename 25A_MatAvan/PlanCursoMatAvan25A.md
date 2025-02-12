@@ -70,7 +70,7 @@ Son importantes las primeras referencias que tienen que ver con *Machine Learnin
 
 + [Clase 8. Evaluación Ejercicios y Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md) **12mar**
     1. De la sección 3.1.4 resuelva los ejercicios 2 y 7
-    2. Hacer un código MAXIMA/Sympy que resuelva el problema 2 sección 3.2.5
+    2. Hacer un código SymPy que resuelva el problema 2 sección 3.2.5
     3. Resolver ejercicio 5 de la sección 4.1.6
 
 + [Clase 10. Matrices y Operadores Lineales, parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **14mar**
@@ -83,7 +83,7 @@ Son importantes las primeras referencias que tienen que ver con *Machine Learnin
 + Clase 13 Evaluación y ejercicios **26mar**
    1. Resolver el ejercicio 2 de la sección 4.3.7 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Volumen1_Lib60New.pdf)
    2. Resolver los ejercicios 4, 5, y 12  de la sección 4.6.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Volumen1_Lib60New.pdf)
-   3. Hacer un par de códigos en MAXIMA/Sympy para resolver los ejercicios 6 y 8 de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Volumen1_Lib60New.pdf)
+   3. Hacer un par de códigos en SymPy para resolver los ejercicios 6 y 8 de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Volumen1_Lib60New.pdf)
 
 ### Series y Transformadas de Fourier
 

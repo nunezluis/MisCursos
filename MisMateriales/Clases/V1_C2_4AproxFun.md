@@ -5,12 +5,12 @@ Esta clase tiene por objetivos comprender la aplicación de los conceptos de bas
 ### Actividad antes de clase
    1. Estudiar el punto 2.4 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Volumen1_Lib60New.pdf)
    2. Seguir con detenimiento la presentación de aproximación de funciones
-   3. Rehacer los ejemplos:
-      + Mínimos Cuadrados y
-      + Aproximación Polinomial
+   3. Rehacer los ejemplos: 2.16 y 2.17
+      + Mínimos Cuadrados (sección 2.4.3) y
+      + Aproximación Polinomial (sección 2.4.4)
 
 ### Taller de problema.
-Utilizando MAXIMA/SymPy desarrollar el ejercicio 3 de la sección 2.4.5
+Utilizando SymPy desarrollar el ejercicio 3 de la sección 2.4.5
 
 ### Materiales de apoyo:
 [Video aproximación de funciones](https://youtu.be/3f6HkYM3sQM) y [presentación de Aproximación de Funciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/2_4AproximacionFunciones.pdf)
