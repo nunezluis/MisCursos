@@ -14,7 +14,7 @@ Resuelva el ejercicio 4 sección 2.2.4
    1. [Video](https://youtu.be/la9Gnhc0uFg) y [presentación de espacios métricos y normados](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/2_2EspaciosMetricos.pdf)
    2. [Video](https://youtu.be/rQ59n-wr9X8) y [presentación de espacios euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/2_23EspaciosEuclideanos.pdf)
 
-### Al finalizar estos contenidos**
+### Al finalizar estos contenidos
 El estudiantes deberá estar en capacidad de:
 1. Utilizar el concepto de métrica para determinar la distancia entre elementos de un espacio vectoriales y aplicarlo a varios espacios vectoriales (números, n-uplas, funciones, matrices).
 2. Comprender que un espacio vectorial puede tener varias definiciones de métricas y por lo tanto la idea de distancia es variable.
