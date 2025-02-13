@@ -24,8 +24,18 @@
 \headcommand {\beamer@framepages {15}{18}}
 \headcommand {\slideentry {2}{0}{2}{19/23}{}{0}}
 \headcommand {\beamer@framepages {19}{23}}
-\headcommand {\beamer@partpages {1}{23}}
-\headcommand {\beamer@subsectionpages {15}{23}}
 \headcommand {\beamer@sectionpages {15}{23}}
-\headcommand {\beamer@documentpages {23}}
-\headcommand {\gdef \inserttotalframenumber {7}}
+\headcommand {\beamer@subsectionpages {15}{23}}
+\headcommand {\sectionentry {3}{Recapitulando}{24}{Recapitulando}{0}}
+\headcommand {\slideentry {3}{0}{1}{24/28}{}{0}}
+\headcommand {\beamer@framepages {24}{28}}
+\headcommand {\beamer@sectionpages {24}{28}}
+\headcommand {\beamer@subsectionpages {24}{28}}
+\headcommand {\sectionentry {4}{Para la discusi\'on}{29}{Para la discusi\'on}{0}}
+\headcommand {\slideentry {4}{0}{1}{29/31}{}{0}}
+\headcommand {\beamer@framepages {29}{31}}
+\headcommand {\beamer@partpages {1}{31}}
+\headcommand {\beamer@subsectionpages {29}{31}}
+\headcommand {\beamer@sectionpages {29}{31}}
+\headcommand {\beamer@documentpages {31}}
+\headcommand {\gdef \inserttotalframenumber {9}}
