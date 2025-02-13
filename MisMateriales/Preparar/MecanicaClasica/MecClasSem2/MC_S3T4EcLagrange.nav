@@ -39,8 +39,13 @@
 \headcommand {\beamer@framepages {33}{38}}
 \headcommand {\slideentry {5}{2}{2}{39/42}{Invariancia respecto a transformaciones de coordenadas generalizadas}{0}}
 \headcommand {\beamer@framepages {39}{42}}
-\headcommand {\beamer@partpages {1}{42}}
-\headcommand {\beamer@subsectionpages {33}{42}}
 \headcommand {\beamer@sectionpages {29}{42}}
-\headcommand {\beamer@documentpages {42}}
-\headcommand {\gdef \inserttotalframenumber {11}}
+\headcommand {\beamer@subsectionpages {33}{42}}
+\headcommand {\sectionentry {6}{Recapitulando}{43}{Recapitulando}{0}}
+\headcommand {\slideentry {6}{0}{1}{43/47}{}{0}}
+\headcommand {\beamer@framepages {43}{47}}
+\headcommand {\beamer@partpages {1}{47}}
+\headcommand {\beamer@subsectionpages {43}{47}}
+\headcommand {\beamer@sectionpages {43}{47}}
+\headcommand {\beamer@documentpages {47}}
+\headcommand {\gdef \inserttotalframenumber {12}}
