@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  13 FEB 2025 12:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  14 FEB 2025 08:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -954,7 +954,7 @@ Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 22.
 
 </Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png,
- id=58, 184.5294pt x 136.1085pt>
+ id=54, 184.5294pt x 136.1085pt>
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
@@ -1407,15 +1407,6 @@ stitucional/UISLOGO.png  used on input line 171.
  [42
 
 ]
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 190.
-
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <7> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 190.
-
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 190.
-
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
@@ -1480,15 +1471,21 @@ stitucional/UISLOGO.png  used on input line 190.
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package rerunfilecheck Info: File `MC_S3T4EcLagrange.out' has not changed.
-(rerunfilecheck)             Checksum: A6F81997C7B9C89385DF2C4F2241EB0B;1977.
+
+Package rerunfilecheck Warning: File `MC_S3T4EcLagrange.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `MC_S3T4EcLagrange.out':
+(rerunfilecheck)             Before: 840A8CFBD5467D7F289FE422A20FF705;1869
+(rerunfilecheck)             After:  A6F81997C7B9C89385DF2C4F2241EB0B;1977.
  ) 
 Here is how much of TeX's memory you used:
- 23841 strings out of 478268
- 467981 string characters out of 5846347
- 737363 words of memory out of 5000000
- 41434 multiletter control sequences out of 15000+600000
- 483524 words of font info for 78 fonts, out of 8000000 for 9000
+ 23812 strings out of 478268
+ 467620 string characters out of 5846347
+ 738363 words of memory out of 5000000
+ 41407 multiletter control sequences out of 15000+600000
+ 479153 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,498b,857s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -1506,10 +1503,10 @@ texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/t
 exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on MC_S3T4EcLagrange.pdf (47 pages, 334793 bytes).
+Output written on MC_S3T4EcLagrange.pdf (47 pages, 334333 bytes).
 PDF statistics:
- 1428 PDF objects out of 1440 (max. 8388607)
- 1315 compressed objects within 14 object streams
+ 1424 PDF objects out of 1440 (max. 8388607)
+ 1311 compressed objects within 14 object streams
  103 named destinations out of 1000 (max. 500000)
- 166 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 158 words of extra memory for PDF output out of 10000 (max. 10000000)
 
