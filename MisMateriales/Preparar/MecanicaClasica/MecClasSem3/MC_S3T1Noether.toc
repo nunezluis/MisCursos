@@ -3,11 +3,12 @@
 \beamer@subsectionintoc {1}{1}{Ejemplo: Part\IeC {\'\i }cula cono invertido}{8}{0}{1}
 \beamer@subsectionintoc {1}{2}{Ejemplo: Part\IeC {\'\i }cula en medio viscoso}{13}{0}{1}
 \beamer@sectionintoc {2}{Teorema de Noether}{20}{0}{2}
-\beamer@subsectionintoc {2}{1}{Ejemplo: Coordenada c\IeC {\'\i }clica}{30}{0}{2}
-\beamer@subsectionintoc {2}{2}{Ejemplo: Part\IeC {\'\i }cula en campo gravitatorio}{35}{0}{2}
-\beamer@sectionintoc {3}{Homogeneidad del espacio y conservaci\'on del momento lineal}{39}{0}{3}
-\beamer@sectionintoc {4}{Isotrop\IeC {\'\i }a del espacio y conservaci\'on del momento angular}{51}{0}{4}
-\beamer@subsectionintoc {4}{1}{Ejemplo: Oscilador arm\'onico bidimensional}{63}{0}{4}
-\beamer@sectionintoc {5}{Homogeneidad del tiempo y conservaci\'on de la energ\IeC {\'\i }a}{72}{0}{5}
-\beamer@sectionintoc {6}{Energ\IeC {\'\i }a y Potenciales dependientes de las velocidades $V= V(q_j, \dot {q}_j, )$}{79}{0}{6}
-\beamer@sectionintoc {7}{Recapitulando}{85}{0}{7}
+\beamer@subsectionintoc {2}{1}{Transformaciones cont\IeC {\'\i }nuas}{30}{0}{2}
+\beamer@subsectionintoc {2}{2}{Ejemplo: Coordenada c\IeC {\'\i }clica}{35}{0}{2}
+\beamer@subsectionintoc {2}{3}{Ejemplo: Part\IeC {\'\i }cula en campo gravitatorio}{40}{0}{2}
+\beamer@sectionintoc {3}{Homogeneidad del espacio y conservaci\'on del momento lineal}{44}{0}{3}
+\beamer@sectionintoc {4}{Isotrop\IeC {\'\i }a del espacio y conservaci\'on del momento angular}{56}{0}{4}
+\beamer@subsectionintoc {4}{1}{Ejemplo: Oscilador arm\'onico bidimensional}{68}{0}{4}
+\beamer@sectionintoc {5}{Homogeneidad del tiempo y conservaci\'on de la energ\IeC {\'\i }a}{77}{0}{5}
+\beamer@sectionintoc {6}{Energ\IeC {\'\i }a y Potenciales dependientes de las velocidades $V= V(q_j, \dot {q}_j, )$}{84}{0}{6}
+\beamer@sectionintoc {7}{Recapitulando}{90}{0}{7}

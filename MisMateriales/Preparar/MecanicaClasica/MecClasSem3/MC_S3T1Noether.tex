@@ -123,12 +123,28 @@
   	\item<1-> La transformación $q_j^{\prime}=q_j+\delta q_j$ (donde $t$ es fijo, $\delta t=0$ ) produce la siguiente variación  $ \delta \mathcal{L}\left(q_j, \dot{q}_j, t\right)=\sum_{j=1}^s \frac{ \partial \mathcal{L}}{\partial q_j} \delta q_j+\sum_{j=1}^s \frac{ \partial \mathcal{L}}{\partial \dot{q}_j} \delta \dot{q}_j$
 	\item<2-> Las ecuaciones de Lagrange, conducen a
 	$ \delta \mathcal{L}  =\sum_{j=1}^s  \frac{{\rm d}}{{\rm d} t}\left(\frac{ \partial \mathcal{L}}{\partial \dot{q}_j}\right) \delta q_j+\sum_{j=1}^s \frac{ \partial \mathcal{L}}{\partial \dot{q}_j}  \frac{{\rm d}}{{\rm d} t}\left(\delta q_j\right)  = \frac{{\rm d}}{{\rm d} t}\left(\sum_{j=1}^s \frac{ \partial \mathcal{L}}{\partial \dot{q}_j} \delta q_j\right)$
-	\item<3-> Segón el teorema, la variación $\delta \mathcal{L} $ se puede escribir $\delta \mathcal{L} =\frac{{\rm d} f\left(q_j, t\right)}{{\rm d} t}$.
+	\item<3-> Según el teorema, la variación $\delta \mathcal{L} $ se puede escribir $\delta \mathcal{L} =\frac{{\rm d} f\left(q_j, t\right)}{{\rm d} t}$.
 	\item<4-> Luego  $ \frac{{\rm d}}{{\rm d} t}\left(\sum_{j=1}^s \frac{\partial \mathcal{L} }{\partial \dot{q}_j} \delta q_j\right)=\frac{{\rm d} f\left(q_j, t\right)}{{\rm d} t} \Rightarrow  \frac{{\rm d}}{{\rm d} t}\left(\sum_{j=1}^s \frac{\partial \mathcal{L} }{\partial \dot{q}_j} \delta q_j-f\right)=0 \Rightarrow  \mathcal{J}\left(q_j, \dot{q}_j, t\right) \equiv \sum_{j=1}^s \frac{\partial \mathcal{L} }{\partial \dot{q}_j} \delta q_j-f=\text { cte. }$
 	\item<5-> El Teorema de Noether establece que a cada simetría de un sistema, le corresponde una cantidad conservada
 	\item<6-> Las simetrías y cantidades conservadas permiten conocer propiedades de un sistema y hacer predicciones sobre su comportamiento.
 	\item<7-> Las ecuaciones de movimiento son ecuaciones diferenciales de segundo orden para las $q_j$, mientras que las cantidades conservadas $\mathcal{J}\left(q_j, \dot{q}_j, t\right)= cte$, son ecuaciones diferenciales de primer orden
 
+    \end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{Transformaciones contínuas}
+\frame{
+  \frametitle{Transformaciones contínuas}
+  \begin{itemize}
+  	\item<1-> Otra manera de ver el Teorema de Noether es contruir una transformación contínua $q^i(t) \rightarrow \tilde{q}^i(s, t)$ con  $s \in \mathds{R}$, donde $\tilde{q}^i(0, t)=q^i(t)$.
+	\item<2->  Esta transformación es una simetría continua del Lagrangiano $\mathcal{L}$ si $\frac{\partial}{\partial s} \mathcal{L}(q^i(s, t), \dot{q}^i(s, t), t)=0$ y para cada simetría continua existe una cantidad conservada.
+	\item<3->  Entonces $\frac{\partial \mathcal{L}}{\partial s}=\frac{\partial \mathcal{L}}{\partial q^i} \frac{\partial q^i}{\partial s}+\frac{\partial \mathcal{L}}{\partial \dot{q}^i} \frac{\partial \dot{q}^i}{\partial s} \Rightarrow \left.\frac{\partial \mathcal{L}}{\partial s}\right|_{s=0} =0$ 
+	$ \left.\frac{\partial \mathcal{L}}{\partial s}\right|_{s=0} =\left.\frac{\partial \mathcal{L}}{\partial q^i} \frac{\partial q^i}{\partial s}\right|_{s=0}+\left.\frac{\partial \mathcal{L}}{\partial \dot{q}^i} \frac{\partial \dot{q}^i}{\partial s}\right|_{s=0} =\left.\frac{d}{d t}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}^i}\right) \frac{\partial q^i}{\partial s}\right|_{s=0}+\left.\frac{\partial \mathcal{L}}{\partial \dot{q}^i} \frac{\partial \dot{q}^i}{\partial s}\right|_{s=0} $
+	$\left.\frac{\partial \mathcal{L}}{\partial s}\right|_{s=0} = \frac{d}{d t}\left(\left.\frac{\partial \mathcal{L}}{\partial \dot{q}^i} \frac{\partial q^i}{\partial s}\right|_{s=0}\right) \Rightarrow Q=\left.\frac{\partial \mathcal{L}}{\partial \dot{q}^i} \frac{\partial q^i}{\partial s}\right|_{s=0} = cte$, que es la cantidad conservada
+	\item<4-> El teorema de Noether es válido {\bf necesariamente} parametrizadas por un parámetro $s \in \mathds{R}$
+	\item<5-> Muchas teorías son invariantes bajo reflexión, también conocida como paridad, que actúa como $\mathbf{r}_i \rightarrow-\mathbf{r}_i$. Este tipo de simetrías no dan lugar a leyes de conservación en física clásica (aunque sí en física cuántica).
+ 
     \end{itemize}
 }
 %
@@ -281,7 +297,7 @@
   \begin{itemize}
   	\item<1-> {\bf Momentos Conjugados y Coordenadas Cíclicas}
   	\begin{itemize}
-  		\item Definición del momento conjugado \( p_j = \frac{\partial L}{\partial \dot{q}_j} \).
+  		\item Definición del momento conjugado \( p_j = \frac{\partial \mathcal{L}}{\partial \dot{q}_j} \).
 		\item Si una coordenada \( q_i \) no aparece explícitamente en el lagrangiano, cíclicas (o ignorables) el momento conjugado \( p_i \) se conserva.  
 		\item Ejemplos:  
 		\begin{itemize}

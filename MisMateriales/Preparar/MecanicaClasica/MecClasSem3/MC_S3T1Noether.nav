@@ -23,48 +23,52 @@
 \headcommand {\slideentry {2}{0}{2}{23/29}{}{0}}
 \headcommand {\beamer@framepages {23}{29}}
 \headcommand {\beamer@subsectionpages {20}{29}}
-\headcommand {\beamer@subsectionentry {0}{2}{1}{30}{Ejemplo: Coordenada c\IeC {\'\i }clica}}
-\headcommand {\slideentry {2}{1}{1}{30/34}{Ejemplo: Coordenada c\IeC {\'\i }clica}{0}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{30}{Transformaciones cont\IeC {\'\i }nuas}}
+\headcommand {\slideentry {2}{1}{1}{30/34}{Transformaciones cont\IeC {\'\i }nuas}{0}}
 \headcommand {\beamer@framepages {30}{34}}
 \headcommand {\beamer@subsectionpages {30}{34}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{35}{Ejemplo: Part\IeC {\'\i }cula en campo gravitatorio}}
-\headcommand {\slideentry {2}{2}{1}{35/38}{Ejemplo: Part\IeC {\'\i }cula en campo gravitatorio}{0}}
-\headcommand {\beamer@framepages {35}{38}}
-\headcommand {\beamer@sectionpages {20}{38}}
-\headcommand {\beamer@subsectionpages {35}{38}}
-\headcommand {\sectionentry {3}{Homogeneidad del espacio y conservaci\'on del momento lineal}{39}{Homogeneidad del espacio y conservaci\'on del momento lineal}{0}}
-\headcommand {\slideentry {3}{0}{1}{39/42}{}{0}}
-\headcommand {\beamer@framepages {39}{42}}
-\headcommand {\slideentry {3}{0}{2}{43/50}{}{0}}
-\headcommand {\beamer@framepages {43}{50}}
-\headcommand {\beamer@sectionpages {39}{50}}
-\headcommand {\beamer@subsectionpages {39}{50}}
-\headcommand {\sectionentry {4}{Isotrop\IeC {\'\i }a del espacio y conservaci\'on del momento angular}{51}{Isotrop\IeC {\'\i }a del espacio y conservaci\'on del momento angular}{0}}
-\headcommand {\slideentry {4}{0}{1}{51/55}{}{0}}
-\headcommand {\beamer@framepages {51}{55}}
-\headcommand {\slideentry {4}{0}{2}{56/62}{}{0}}
-\headcommand {\beamer@framepages {56}{62}}
-\headcommand {\beamer@subsectionpages {51}{62}}
-\headcommand {\beamer@subsectionentry {0}{4}{1}{63}{Ejemplo: Oscilador arm\'onico bidimensional}}
-\headcommand {\slideentry {4}{1}{1}{63/71}{Ejemplo: Oscilador arm\'onico bidimensional}{0}}
-\headcommand {\beamer@framepages {63}{71}}
-\headcommand {\beamer@sectionpages {51}{71}}
-\headcommand {\beamer@subsectionpages {63}{71}}
-\headcommand {\sectionentry {5}{Homogeneidad del tiempo y conservaci\'on de la energ\IeC {\'\i }a}{72}{Homogeneidad del tiempo y conservaci\'on de la energ\IeC {\'\i }a}{0}}
-\headcommand {\slideentry {5}{0}{1}{72/78}{}{0}}
-\headcommand {\beamer@framepages {72}{78}}
-\headcommand {\beamer@sectionpages {72}{78}}
-\headcommand {\beamer@subsectionpages {72}{78}}
-\headcommand {\sectionentry {6}{Energ\IeC {\'\i }a y Potenciales dependientes de las velocidades $V= V(q_j, \dot {q}_j, )$}{79}{Energ\IeC {\'\i }a y Potenciales dependientes de las velocidades $V= V(q_j, \dot {q}_j, )$}{0}}
-\headcommand {\slideentry {6}{0}{1}{79/84}{}{0}}
-\headcommand {\beamer@framepages {79}{84}}
-\headcommand {\beamer@sectionpages {79}{84}}
-\headcommand {\beamer@subsectionpages {79}{84}}
-\headcommand {\sectionentry {7}{Recapitulando}{85}{Recapitulando}{0}}
-\headcommand {\slideentry {7}{0}{1}{85/86}{}{0}}
-\headcommand {\beamer@framepages {85}{86}}
-\headcommand {\beamer@partpages {1}{86}}
-\headcommand {\beamer@subsectionpages {85}{86}}
-\headcommand {\beamer@sectionpages {85}{86}}
-\headcommand {\beamer@documentpages {86}}
-\headcommand {\gdef \inserttotalframenumber {17}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{35}{Ejemplo: Coordenada c\IeC {\'\i }clica}}
+\headcommand {\slideentry {2}{2}{1}{35/39}{Ejemplo: Coordenada c\IeC {\'\i }clica}{0}}
+\headcommand {\beamer@framepages {35}{39}}
+\headcommand {\beamer@subsectionpages {35}{39}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{40}{Ejemplo: Part\IeC {\'\i }cula en campo gravitatorio}}
+\headcommand {\slideentry {2}{3}{1}{40/43}{Ejemplo: Part\IeC {\'\i }cula en campo gravitatorio}{0}}
+\headcommand {\beamer@framepages {40}{43}}
+\headcommand {\beamer@sectionpages {20}{43}}
+\headcommand {\beamer@subsectionpages {40}{43}}
+\headcommand {\sectionentry {3}{Homogeneidad del espacio y conservaci\'on del momento lineal}{44}{Homogeneidad del espacio y conservaci\'on del momento lineal}{0}}
+\headcommand {\slideentry {3}{0}{1}{44/47}{}{0}}
+\headcommand {\beamer@framepages {44}{47}}
+\headcommand {\slideentry {3}{0}{2}{48/55}{}{0}}
+\headcommand {\beamer@framepages {48}{55}}
+\headcommand {\beamer@sectionpages {44}{55}}
+\headcommand {\beamer@subsectionpages {44}{55}}
+\headcommand {\sectionentry {4}{Isotrop\IeC {\'\i }a del espacio y conservaci\'on del momento angular}{56}{Isotrop\IeC {\'\i }a del espacio y conservaci\'on del momento angular}{0}}
+\headcommand {\slideentry {4}{0}{1}{56/60}{}{0}}
+\headcommand {\beamer@framepages {56}{60}}
+\headcommand {\slideentry {4}{0}{2}{61/67}{}{0}}
+\headcommand {\beamer@framepages {61}{67}}
+\headcommand {\beamer@subsectionpages {56}{67}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{68}{Ejemplo: Oscilador arm\'onico bidimensional}}
+\headcommand {\slideentry {4}{1}{1}{68/76}{Ejemplo: Oscilador arm\'onico bidimensional}{0}}
+\headcommand {\beamer@framepages {68}{76}}
+\headcommand {\beamer@sectionpages {56}{76}}
+\headcommand {\beamer@subsectionpages {68}{76}}
+\headcommand {\sectionentry {5}{Homogeneidad del tiempo y conservaci\'on de la energ\IeC {\'\i }a}{77}{Homogeneidad del tiempo y conservaci\'on de la energ\IeC {\'\i }a}{0}}
+\headcommand {\slideentry {5}{0}{1}{77/83}{}{0}}
+\headcommand {\beamer@framepages {77}{83}}
+\headcommand {\beamer@sectionpages {77}{83}}
+\headcommand {\beamer@subsectionpages {77}{83}}
+\headcommand {\sectionentry {6}{Energ\IeC {\'\i }a y Potenciales dependientes de las velocidades $V= V(q_j, \dot {q}_j, )$}{84}{Energ\IeC {\'\i }a y Potenciales dependientes de las velocidades $V= V(q_j, \dot {q}_j, )$}{0}}
+\headcommand {\slideentry {6}{0}{1}{84/89}{}{0}}
+\headcommand {\beamer@framepages {84}{89}}
+\headcommand {\beamer@sectionpages {84}{89}}
+\headcommand {\beamer@subsectionpages {84}{89}}
+\headcommand {\sectionentry {7}{Recapitulando}{90}{Recapitulando}{0}}
+\headcommand {\slideentry {7}{0}{1}{90/91}{}{0}}
+\headcommand {\beamer@framepages {90}{91}}
+\headcommand {\beamer@partpages {1}{91}}
+\headcommand {\beamer@subsectionpages {90}{91}}
+\headcommand {\beamer@sectionpages {90}{91}}
+\headcommand {\beamer@documentpages {91}}
+\headcommand {\gdef \inserttotalframenumber {18}}
