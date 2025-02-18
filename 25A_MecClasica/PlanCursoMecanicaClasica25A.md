@@ -68,7 +68,7 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 + Lecturas adicionales
   + Ray, J. R. (1966). Nonholonomic constraints. American Journal of Physics, 34(5), 406-408.
   + Grabowski, J., De León, M., Marrero, J. C., & Martín de Diego, D. (2009). Nonholonomic constraints: a new viewpoint. Journal of mathematical physics, 50(1).
-  + Atanackovic, T. M. (1978). The brachistochrone for a material point with arbitrary initial velocity. American Journal of Physics, 46(12), 1274-1275.
+  + Atanackovic, T. M. (1978). The brachistochrone for a material point with an arbitrary initial velocity. American Journal of Physics, 46(12), 1274-1275.
   + Vratanar, B., & Saje, M. (1998). On the analytical solution of the brachistochrone problem in a non-conservative field. International Journal of Non-Linear Mechanics, 33(3), 489–505. doi:10.1016/s0020-7462(97)00026-7
   + Existen algunos sitios web donde se muestran aplicaciones del [cálculo en variaciones](http://www.sc.ehu.es/sbweb/fisica3/dinamica/variaciones/variaciones.html) y varios ejemplos de [Braquistocrona](http://www.sc.ehu.es/sbweb/fisica3/dinamica/variaciones/variaciones_2.html)
   + Igualmente algunos [videos](https://www.youtube.com/watch?v=Cld0p3a43fU)
@@ -116,7 +116,7 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 | **Concepto** | **Explicación** | **Ejemplo** |  
 |-------------|-----------------|------------|  
 | **Momento Conjugado** | Definido como $p_j = \frac{\partial L}{\partial \dot{q}_j}$ | Usado en mecánica Hamiltoniana |  
-| **Coordenadas Cíclicas** | Una coordenada \( q_i \) es cíclica si \( \frac{\partial L}{\partial q_i} = 0 \), lo que implica conservación de \( p_i \). | Coordenada angular \( \phi \) en problemas de fuerza central |  
+| **Coordenadas Cíclicas** | Una coordenada $q_i$ es cíclica si $\frac{\partial L}{\partial q_i} = 0$, lo que implica conservación de $p_i$. | Coordenada angular $\phi$ en problemas de fuerza central |  
 | **Teorema de Noether** | Cada simetría corresponde a una cantidad conservada. | Energía, momento lineal, momento angular |  
 | **Homogeneidad del Espacio** | Conservación del momento lineal | Partícula libre en el espacio |  
 | **Isotropía del Espacio** | Conservación del momento angular | Órbitas planetarias |  
