@@ -111,6 +111,19 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 #### Problemas S3
 <!-- Desarrolle los problemas del [240823](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)-->
 
+#### **Resumen de Conceptos Clave**  
+
+| **Concepto** | **Explicación** | **Ejemplo** |  
+|-------------|-----------------|------------|  
+| **Momento Conjugado** | Definido como \( p_j = \frac{\partial L}{\partial \dot{q}_j} \) | Usado en mecánica Hamiltoniana |  
+| **Coordenadas Cíclicas** | Una coordenada \( q_i \) es cíclica si \( \frac{\partial L}{\partial q_i} = 0 \), lo que implica conservación de \( p_i \). | Coordenada angular \( \phi \) en problemas de fuerza central |  
+| **Teorema de Noether** | Cada simetría corresponde a una cantidad conservada. | Energía, momento lineal, momento angular |  
+| **Homogeneidad del Espacio** | Conservación del momento lineal | Partícula libre en el espacio |  
+| **Isotropía del Espacio** | Conservación del momento angular | Órbitas planetarias |  
+| **Homogeneidad del Tiempo** | Conservación de la energía | Oscilador armónico simple |  
+
+
+
 ### Clase S4-C7/C8 Fuerzas generalizadas
 #### Antes de clase
 + **Estudie**
