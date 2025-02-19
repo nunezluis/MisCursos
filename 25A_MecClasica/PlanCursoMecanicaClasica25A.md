@@ -108,6 +108,9 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
   + [Emmy Noether CSIC](https://www.youtube.com/watch?v=N4to1dp6_lo)
   + [Emmy Noether Fermilab](https://www.youtube.com/watch?v=Rqfj7n5aSwY)
 
+  + Presentación [Fuerzas generalizadas y descripción de una partícula moviéndose en un campo electromagnético](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S4T1ParticulaCampoElectromagnetico.pdf)
+  + Sitio web de [Lagrangian Mechanics for beginners](https://profoundphysics.com/lagrangian-mechanics-for-beginners/)
+
 #### Problemas S3
 <!-- Desarrolle los problemas del [240823](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)-->
 
@@ -139,8 +142,7 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 
 
 #### Materiales
-+ Presentación [Fuerzas generalizadas y descripción de una partícula moviéndose en un campo electromagnético](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S4T1ParticulaCampoElectromagnetico.pdf)
-+ Sitio web de [Lagrangian Mechanics for beginners](https://profoundphysics.com/lagrangian-mechanics-for-beginners/)
+
 
 ### Clase S5-C9/C10 Fuerzas Centrales
 ####Antes de clase

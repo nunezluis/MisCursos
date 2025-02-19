@@ -35,8 +35,24 @@
   \tableofcontents
 \end{frame}
 
-
+%
 %%%%% Diapo 1
+\section{Energía y Potenciales dependientes de las velocidades $V= V(q_j, \dot{q}_j, )$}
+\frame{
+  \frametitle{energía y Potenciales $V= V(q_j, \dot{q}_j, )$}
+   \begin{itemize}
+  	\item<1->  Existen sistemas donde la energía potencial depende tanto de las coordenadas como de las velocidades generalizadas: $V\left(q_j, \dot{q}_j\right)$.
+	\item<2-> El Lagrangiano tiene la forma $\mathcal{L}=T\left(\dot{q}_j\right)-V\left(q_j, \dot{q}_j\right)$. y se define una función de energía como
+	$E\left(q_j, \dot{q}_j\right)  =\sum_{j=1}^s \frac{\partial \mathcal{L}}{\partial \dot{q}_j} \dot{q}_j-\mathcal{L} =\sum_{j=1}^s \frac{\partial T}{\partial \dot{q}_j} \dot{q}_j-\sum_{j=1}^s \frac{\partial V}{\partial \dot{q}_j} \dot{q}_j-(T-V)$
+	\item<3-> Como en general $T\left(\dot{q}_1, \ldots, \dot{q}_s\right)=\frac{1}{2} \sum_{i j}^s \mathcal{T}_{i j} \dot{q}_i \dot{q}_j \Rightarrow \sum_{j}^s \frac{\partial T}{\partial \dot{q}_j}\dot{q}_j = \left(\sum_{j}^s \mathcal{T}_{jj} \dot{q}_j \right)\dot{q}_j = 2T$
+	\item<4-> Entonces $E\left(q_j, \dot{q}_j\right) = 2 T-\sum_{j=1}^s \frac{\partial V}{\partial \dot{q}_j} \dot{q}_j-T+V =T+V-\sum_{j=1}^s \frac{\partial V}{\partial \dot{q}_j} \dot{q}_j$
+	\item<5-> Si la energía potencial $V$ es independiente de las velocidades, $\frac{\partial V}{\partial \dot{q}_j}=0$; entonces la función de energía es igual a la energía mecánica total, $E\left(q_j, \dot{q}_j\right)=T+V$
+	\item<6-> Si $V= V(q_j, \dot{q}_j, )$, la función de energía contiene términos adicionales a $T+V$.
+
+    \end{itemize}
+}
+%
+%%%%% Diapo 2
 \section{Fuerza de Lorentz una {\it una fuerza generalizada} }
 \frame{
   \frametitle{Fuerza de Lorentz}
@@ -52,7 +68,7 @@
 	\item<8-> La fuerza de Lorentz constituye una fuerza generalizada
     \end{itemize}
 }
-%%%%% Diapo 2
+%%%%% Diapo 3
 \section{El potencial vector}
 \frame{
   \frametitle{El potencial vector 1/2}
@@ -73,8 +89,8 @@
 
     \end{itemize}
 }
-
-%%%%% Diapo 2
+%
+%%%%% Diapo 4
 %\section{Sección}
 \frame{
   \frametitle{El potencial vector 2/2}
@@ -89,7 +105,7 @@
     \end{itemize}
 }
 %
-%%%%% Diapo 2
+%%%%% Diapo 5
 \section{Simetría de Calibre}
 \frame{
   \frametitle{Simetría de Calibre 1/2}
@@ -108,7 +124,7 @@
 	$ = \mathcal{L}+\frac{q}{c}\left(\frac{\partial \Lambda}{\partial t}+\nabla \Lambda \cdot \mathbf{v}\right) = \mathcal{L}+\frac{q}{c} \frac{d \Lambda}{{\rm d} t}$
     \end{itemize}
 }  
-%%%%% Diapo 2
+%%%%% Diapo 6
 %\section{Sección}
 \frame{
   \frametitle{Simetría de Calibre 2/2}
@@ -120,6 +136,61 @@
 	\item<5-> Si $ \mathcal{L}^{\prime}=\mathcal{L}+\delta \mathcal{L}$, donde $\delta \mathcal{L}$ es la transformación infinitesimal $\delta \mathcal{L}=\frac{d \Lambda}{d t}$ que deja invariantes las ecuaciones de movimiento.
 	\item<6-> Por el teorema de Noether sabemos que debe existir una cantidad conservada asociada a tal simetría.
 	\item<7-> La simetría de calibre de las ecuaciones de Maxwell implica la conservación de la carga eléctrica
+    \end{itemize}
+}
+%
+%%%%% Diapo 1
+\section{Teorema de Helmholtz}
+\frame{
+\frametitle{Teorema de Helmholtz 1/2}
+\begin{itemize}
+ 	\item<1->  Si el rotacional y la divergencia de un campo vectorial ${\bf F}(x, y, z)$, están especificados en una región del espacio delimitada por una superficie cerrada $S$, y las componentes del campo normales a esa superficie $\hat{\bf n}_{s}\cdot{\bf F}$, también se conocen, entonces ese campo ${\bf F}(x, y, z)$ es único
+	%
+	\item<2->  Todo campo vectorial ${\bf F}$, continuo, continuamente diferenciable (al menos a trozos), y regular en infinito se puede expresar como una suma de dos ``componentes'':  una \textit{longitudinal} o \textit{irrotacional} ${\bf F}_{l}$ y otra \textit{transversa} o \textit{solenoidal}  ${\bf F}_{t}$. \\
+	$ {\bf F}={\bf F}_{l}+{\bf F}_{t}\,, \quad\text{con}\quad
+	\left\{
+	\begin{array}[c]{c}
+	{\boldsymbol \nabla}\times{\bf F}_{l}=0\\ 
+	{\boldsymbol \nabla}\cdot{\bf F}_{t}=0\,.
+	\end{array}
+	\right. $
+	\item<3->  En general el campo ${\bf F}$ puede ser discontinuo, entonces \\
+	$\left.
+	\begin{array}[c]{c}
+	{\boldsymbol \nabla}\cdot{\bf F}=\rho\left(  {\bf r}\right) \\ 
+	{\boldsymbol \nabla}\times{\bf F}={\bf J}\left(  {\bf r}\right)
+	\end{array}
+	\right\}$  y como \\ ${\bf F}={\bf F}_{l}+{\bf F}_{t} \quad \Rightarrow  \left\{
+	\begin{array}[c]{c}
+	{\boldsymbol \nabla}\cdot{\bf F}={\boldsymbol \nabla}\cdot\left({\bf F}_{l}+{\bf F}_{t}\right)  ={\boldsymbol \nabla}\cdot{\bf F}_{l}=\rho\left({\bf r}\right) \\	 
+	{\boldsymbol \nabla}\times{\bf F}={\boldsymbol \nabla}\times\left(  {\bf F}_{l}+{\bf F}_{t}\right)  ={\boldsymbol \nabla}\times{\bf F}_{t}={\bf J}\left({\bf r}\right)\,,
+	\end{array}
+	\right. $
+  \end{itemize}
+}
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Teorema de Helmholtz 1/2}
+   \begin{itemize}  
+	%
+	\item<1->  Entonces ${\boldsymbol \nabla}\times{\bf F}_{l}=0 \; \Rightarrow  {\bf F}_{l}=-{\boldsymbol \nabla}\phi(x^i)  \; \Rightarrow  {\boldsymbol \nabla} \cdot {\bf F} = {\boldsymbol \nabla} \cdot {\bf F}_{l} = -{\boldsymbol \nabla}^{2}\phi(x^i)=\rho\left({\bf r}\right)$ y la solución existe y es única. 
+	%
+	\item<2->  Por otra parte
+	${\boldsymbol \nabla}\cdot{\bf F}_{t}=0 \; \Rightarrow \, {\bf F}_{t}={\boldsymbol \nabla} \times {\bf A} \; \Rightarrow $ \\$ {\boldsymbol \nabla} \times {\bf F}= {\boldsymbol \nabla} \times {\bf F}_{t}=
+{\boldsymbol \nabla} \times \left(  {\boldsymbol \nabla}\times{\bf A}\right)=
+{\boldsymbol \nabla}\left(  {\boldsymbol \nabla}\cdot{\bf A}\right)  -{\boldsymbol \nabla}^{2}{\bf A}={\bf J}\left({\bf r}\right)$
+	%
+	\item<3->  Al seleccionar el calibre de Coulomb ${\boldsymbol \nabla} \cdot {\bf A} = 0$ tendremos ${\boldsymbol \nabla} \times \left(  {\boldsymbol \nabla}\times{\bf A}\right)  = 
+	{\boldsymbol \nabla}^{2}{\bf A}=\partial^{i}\partial_{i}\ {\bf A}=-{\bf J}\left({\bf r}\right)\quad \Rightarrow $ \\$ \partial^{i}\partial_{i}\ A^{k}=-J^{k}\left({\bf r}\right) \; \Leftrightarrow  
+	\left\{
+	\begin{array}[c]{c}
+	{\boldsymbol \nabla}^{2}A_{x}=-J_{x}\left(  {\bf r}\right) \\ \\
+	{\boldsymbol \nabla}^{2}A_{y}=-J_{y}\left(  {\bf r}\right) \\ \\
+	{\boldsymbol \nabla}^{2}A_{z}=-J_{z}\left(  {\bf r}\right)
+	\end{array}
+	\right.$
+	
     \end{itemize}
 }
 

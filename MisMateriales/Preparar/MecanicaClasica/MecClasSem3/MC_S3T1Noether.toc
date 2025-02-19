@@ -10,5 +10,4 @@
 \beamer@sectionintoc {4}{Isotrop\IeC {\'\i }a del espacio y conservaci\'on del momento angular}{56}{0}{4}
 \beamer@subsectionintoc {4}{1}{Ejemplo: Oscilador arm\'onico bidimensional}{68}{0}{4}
 \beamer@sectionintoc {5}{Homogeneidad del tiempo y conservaci\'on de la energ\IeC {\'\i }a}{77}{0}{5}
-\beamer@sectionintoc {6}{Energ\IeC {\'\i }a y Potenciales dependientes de las velocidades $V= V(q_j, \dot {q}_j, )$}{84}{0}{6}
-\beamer@sectionintoc {7}{Recapitulando}{90}{0}{7}
+\beamer@sectionintoc {6}{Recapitulando}{84}{0}{6}
