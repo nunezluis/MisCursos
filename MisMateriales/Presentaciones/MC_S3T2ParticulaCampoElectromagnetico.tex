@@ -1,0 +1,223 @@
+\documentclass[spanish]{beamer}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath}
+\usepackage{mathtools,cancel} % cancela con una flecha \cancelto{0}{XXXX}
+\renewcommand{\CancelColor}{\color{red}} %change cancel color to red
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usepackage{textpos}
+% Logo  en el comienzo 
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+\end{textblock*}}
+
+\begin{document}
+
+\title{\textbf{Partícula en un Campo electromagnético} }
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
+\textit{Universidad Industrial de Santander, Santander, Colombia } \\
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+}
+\date{\today}
+\maketitle
+
+
+\begin{frame}
+\frametitle{Agenda}
+  \tableofcontents
+\end{frame}
+
+%
+%%%%% Diapo 1
+\section{Energía y Potenciales dependientes de las velocidades $V= V(q_j, \dot{q}_j, )$}
+\frame{
+  \frametitle{energía y Potenciales $V= V(q_j, \dot{q}_j, )$}
+   \begin{itemize}
+  	\item<1->  Existen sistemas donde la energía potencial depende tanto de las coordenadas como de las velocidades generalizadas: $V\left(q_j, \dot{q}_j\right)$.
+	\item<2-> El Lagrangiano tiene la forma $\mathcal{L}=T\left(\dot{q}_j\right)-V\left(q_j, \dot{q}_j\right)$. y se define una función de energía como
+	$E\left(q_j, \dot{q}_j\right)  =\sum_{j=1}^s \frac{\partial \mathcal{L}}{\partial \dot{q}_j} \dot{q}_j-\mathcal{L} =\sum_{j=1}^s \frac{\partial T}{\partial \dot{q}_j} \dot{q}_j-\sum_{j=1}^s \frac{\partial V}{\partial \dot{q}_j} \dot{q}_j-(T-V)$
+	\item<3-> Como en general $T\left(\dot{q}_1, \ldots, \dot{q}_s\right)=\frac{1}{2} \sum_{i j}^s \mathcal{T}_{i j} \dot{q}_i \dot{q}_j \Rightarrow \sum_{j}^s \frac{\partial T}{\partial \dot{q}_j}\dot{q}_j = \left(\sum_{j}^s \mathcal{T}_{jj} \dot{q}_j \right)\dot{q}_j = 2T$
+	\item<4-> Entonces $E\left(q_j, \dot{q}_j\right) = 2 T-\sum_{j=1}^s \frac{\partial V}{\partial \dot{q}_j} \dot{q}_j-T+V =T+V-\sum_{j=1}^s \frac{\partial V}{\partial \dot{q}_j} \dot{q}_j$
+	\item<5-> Si la energía potencial $V$ es independiente de las velocidades, $\frac{\partial V}{\partial \dot{q}_j}=0$; entonces la función de energía es igual a la energía mecánica total, $E\left(q_j, \dot{q}_j\right)=T+V$
+	\item<6-> Si $V= V(q_j, \dot{q}_j, )$, la función de energía contiene términos adicionales a $T+V$.
+
+    \end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Fuerza de Lorentz una {\it una fuerza generalizada} }
+\frame{
+  \frametitle{Fuerza de Lorentz}
+   \begin{itemize}  
+  	\item<1->   Una partícula de masa $m$ y carga $q$, moviéndose con velocidad $\mathbf{v}$, en presencia de un campo eléctrico $\mathbf{E}(\mathbf{r}, t)$ y un campo magnético $\mathbf{B}(\mathbf{r}, t)$, está sujeta a fuerza de Lorentz
+	$\mathbf{F}=q\left(\mathbf{E}+\frac{\mathbf{v}}{c} \times \mathbf{B}\right)$
+	\item<2-> Consideremos una partícula con una energía potencial función de su posición y velocidad en coordenadas cartesianas: $V(\mathbf{r}, \dot{\mathbf{r}})$. 
+	\item<3-> El Lagrangiano, en coordenadas cartesianas, es $\mathcal{L}=T(\dot{\mathbf{r}})-V(\mathbf{r}, \dot{\mathbf{r}})$, donde $T(\dot{\mathbf{r}})=\frac{1}{2} m\left(\dot{x}^2+\dot{y}^2+\dot{z}^2\right)=\frac{1}{2} m v^2$ y $V(\mathbf{r}, \dot{\mathbf{r}})$, genérico
+	\item<4-> La ecuación de Lagrange es $\frac{{\rm d}}{{\rm d} t}\left(\frac{\partial \mathcal{L}}{\partial \dot{x}_i}\right)-\frac{\partial \mathcal{L}}{\partial x_i}=0$
+	\item<5-> Con lo cual $\frac{{\rm d}}{{\rm d} t}\left(\frac{\partial T}{\partial \dot{x_i}}\right.\left.-\frac{\partial V}{\partial \dot{x}_i}\right)+\frac{\partial V}{\partial x_i}=0 \Rightarrow \frac{{\rm d}}{{\rm d} t}\left(\frac{\partial T}{\partial \dot{x}_i}\right)=-\frac{\partial V}{\partial x_i}+\frac{{\rm d}}{{\rm d} t}\left(\frac{\partial V}{\partial \dot{x_i}}\right) $
+	\item<6-> Es decir: $m \ddot{x}_i=F_i \Rightarrow F_i \equiv-\frac{\partial V}{\partial x_i}+\frac{{\rm d}}{{\rm d} t}\left(\frac{\partial V}{\partial \dot{x_i}}\right)$
+	\item<7-> Las fuerzas generalizadas dependen de coordenadas y velocidades. 
+	\item<8-> La fuerza de Lorentz constituye una fuerza generalizada
+    \end{itemize}
+}
+%%%%% Diapo 3
+\section{El potencial vector}
+\frame{
+  \frametitle{El potencial vector 1/2}
+   \begin{itemize}  
+  	\item<1-> Consideremos las ecuaciones de Maxwell
+	$\nabla \cdot \mathbf{E}=4 \pi \rho \qquad \nabla \times \mathbf{E}+\frac{1}{c} \frac{\partial \mathbf{B}}{\partial t}=0$ \\
+	$\nabla \cdot \mathbf{B}=0 \qquad \quad \nabla \times \mathbf{B}-\frac{1}{c} \frac{\partial \mathbf{E}}{\partial t}=\frac{4 \pi}{c} \mathbf{J}$
+	\item<2-> Claramente $\nabla \cdot \mathbf{B}=0 \Rightarrow \mathbf{B}=\nabla \times \mathbf{A}$, con $\mathbf{A}(\mathbf{r}, t)$ un potencial vector
+	\item<3-> Con lo cual 
+	$\nabla \times \mathbf{E}+\frac{1}{c} \frac{\partial}{\partial t}(\nabla \times \mathbf{A})=0 \Rightarrow \nabla \times\left(\mathbf{E}+\frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}\right)=0$
+	\item<4-> Entonces $\mathbf{E}+\frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}=-\nabla \varphi  \Rightarrow \mathbf{E}=-\nabla \varphi-\frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}$
+	\item<5-> La fuerza de Lorentz será $\mathbf{F}=q\left[-\nabla \varphi-\frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}+\frac{\mathbf{v}}{c} \times(\nabla \times \mathbf{A})\right]$
+	\item<6-> o también $\mathbf{F}=q\left[-\nabla \varphi+\frac{1}{c} \nabla(\mathbf{A} \cdot \mathbf{v})-\frac{1}{c}(\mathbf{v} \cdot \nabla) \mathbf{A}-\frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}\right]$
+	\item<7-> Donde $\mathbf{v} \times(\nabla \times \mathbf{A})=\nabla(\mathbf{A} \cdot \mathbf{v})-(\mathbf{v} \cdot \nabla) \mathbf{A}$
+	\item<8-> Como $\frac{{\rm d} \mathbf{A}}{{\rm d} t}=\sum_{i=1}^3 \frac{\partial \mathbf{A}}{\partial x_i} \dot{x}_i+\frac{\partial \mathbf{A}}{\partial t}=(\mathbf{v} \cdot \nabla) \mathbf{A}+\frac{\partial \mathbf{A}}{\partial t}$
+	\item<9-> Tendremos  $\mathbf{F}=q\left[-\nabla\left(\varphi-\frac{1}{c} \mathbf{A} \cdot \mathbf{v}\right)-\frac{1}{c} \frac{{\rm d} \mathbf{A}}{{\rm d} t}\right]$ $\Rightarrow F_i=q\left[-\frac{\partial}{\partial x_i}\left(\varphi-\frac{1}{c} \mathbf{A} \cdot \mathbf{v}\right)-\frac{1}{c} \frac{d A_i}{{\rm d} t}\right] $
+	\item<10-> Como $\frac{\partial V}{\partial x_i}  =q \frac{\partial}{\partial x_i}\left(\varphi-\frac{1}{c} \mathbf{A} \cdot \mathbf{v}\right) \quad {\rm y} \quad \frac{\partial V}{\partial \dot{x}_i}  =-\frac{q}{c} A_i$
+
+    \end{itemize}
+}
+%
+%%%%% Diapo 4
+%\section{Sección}
+\frame{
+  \frametitle{El potencial vector 2/2}
+   \begin{itemize}  
+  	\item<1-> Finalmente el potencial será $V=q\left(\varphi-\frac{1}{c} \mathbf{A} \cdot \mathbf{v}\right)$
+	\item<2-> El Lagrangeano $\mathcal{L}=T(\dot{\mathbf{r}})-V(\mathbf{r}, \dot{\mathbf{r}}) \equiv \frac{1}{2} m v^2-q \varphi+\frac{q}{c} \mathbf{A} \cdot \mathbf{v}$
+	\item<3-> La función energía $E  =\sum_j \frac{\partial \mathcal{L}}{\partial \dot{x}_j} \dot{x}_j-\mathcal{L}  =\frac{1}{2} m v^2+q \varphi$
+	\item<4-> La función de energía $E \neq T(\dot{\mathbf{r}})+V(\mathbf{r}, \dot{\mathbf{r}})$, ya a que $V= V(\mathbf{r}, \dot{\mathbf{r}})$ depende de la velocidad de la partícula. 
+	\item<5-> La función energía $E$ se conserva dado que $\frac{\partial \mathcal{L}}{\partial t}=0$
+	\item<6-> La función de energía $E$ no depende del potencial vector $\mathbf{A}$ y, por tanto, tampoco depende del campo magnético $\mathbf{B}$.
+	\item<7-> La fuerza magnética no realiza trabajo ya que siempre es perpendicular a la velocidad de la partícula.
+    \end{itemize}
+}
+%
+%%%%% Diapo 5
+\section{Simetría de Calibre}
+\frame{
+  \frametitle{Simetría de Calibre 1/2}
+   \begin{itemize}  
+	\item<1-> El momento conjugado $p_i$ asociado con la coordenada $x_i$ es
+	$p_i  =\frac{\partial \mathcal{L}}{\partial \dot{x}_i}=m \dot{x}_i+\frac{q}{c} A_i(\mathbf{r}, t)  \Rightarrow \quad \mathbf{p}  =m \mathbf{v}+\frac{q}{c} \mathbf{A}(\mathbf{r}, t)$
+	\item<2-> El momento conjugado depende de la velocidad y de la posición.
+	\item<3-> Sean los campos $\mathbf{B}(\mathbf{r}, t)$ y $\mathbf{E}(\mathbf{r}, t)$ que derivan de $\mathbf{A}(\mathbf{r}, t)$ y $\varphi(\mathbf{r}, t)$.
+	\item<4-> Consideremos la {\bf transformación de calibre}:
+	$ \mathbf{A} \quad \rightarrow \quad \mathbf{A}^{\prime}=\mathbf{A}+\nabla \Lambda \quad {\rm y} \quad  \varphi \quad \rightarrow \quad \varphi^{\prime}=\varphi-\frac{1}{c} \frac{\partial \Lambda}{\partial t}$ donde \\ $\Lambda(\mathbf{r}, t)$ es un campo escalar arbitrario
+	\item<5-> Entonces, los campos eléctrico y magnético son invariantes bajo esta transformación
+	$\mathbf{B}^{\prime}=\nabla \times \mathbf{A}^{\prime} =\nabla \times \mathbf{A}+\nabla \times \nabla \Lambda =\nabla \times \mathbf{A}=\mathbf{B}$ \\
+	$\mathbf{E}^{\prime}=-\nabla \varphi^{\prime}-\frac{1}{c} \frac{\partial \mathbf{A}^{\prime}}{\partial t} =-\nabla \varphi+\frac{1}{c} \nabla\left(\frac{\partial \Lambda}{\partial t}\right)-\frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}-\frac{1}{c} \frac{\partial}{\partial t}(\nabla \Lambda) =\mathbf{E}$  $\mathbf{E}  =-\nabla \varphi-\frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}$
+	\item<6-> El Lagrangiano de una partícula en un campo electromagnético bajo una transformación de calibre, es
+	$\mathcal{L}^{\prime}  = \frac{1}{2} m v^2-q \varphi^{\prime} +\frac{q}{c} \mathbf{A}^{\prime} \cdot \mathbf{v}  =\frac{1}{2} m v^2-q \varphi+\frac{q}{c} \frac{\partial \Lambda}{\partial t}+\frac{q}{c} \mathbf{A} \cdot \mathbf{v}+\frac{q}{c} \nabla \Lambda \cdot \mathbf{v}$
+	$ = \mathcal{L}+\frac{q}{c}\left(\frac{\partial \Lambda}{\partial t}+\nabla \Lambda \cdot \mathbf{v}\right) = \mathcal{L}+\frac{q}{c} \frac{d \Lambda}{{\rm d} t}$
+    \end{itemize}
+}  
+%%%%% Diapo 6
+%\section{Sección}
+\frame{
+  \frametitle{Simetría de Calibre 2/2}
+   \begin{itemize}  
+  	\item<1-> Una transformación de calibre implica la adición al Lagrangiano de la derivada total con respecto al tiempo de una function de las coordenadas y el tiempo.
+	\item<2-> Las ecuaciones de movimiento que se derivan de $ \mathcal{L}$ son invariantes bajo una transformación de calibre.
+	\item<3-> La invarianza de los campos $\mathbf{B}$ y $\mathbf{E}$ bajo una transformación de calibre implica que la fuerza de Lorentz es también invariante.
+	\item<4-> Las ecuaciones de Maxwell son invariantes bajo una transformación de calibre, esto indica la existencia de una simetría fundamental en el electromagnetismo: la {\bf simetría de calibre}
+	\item<5-> Si $ \mathcal{L}^{\prime}=\mathcal{L}+\delta \mathcal{L}$, donde $\delta \mathcal{L}$ es la transformación infinitesimal $\delta \mathcal{L}=\frac{d \Lambda}{d t}$ que deja invariantes las ecuaciones de movimiento.
+	\item<6-> Por el teorema de Noether sabemos que debe existir una cantidad conservada asociada a tal simetría.
+	\item<7-> La simetría de calibre de las ecuaciones de Maxwell implica la conservación de la carga eléctrica
+    \end{itemize}
+}
+%
+%%%%% Diapo 1
+\section{Teorema de Helmholtz}
+\frame{
+\frametitle{Teorema de Helmholtz 1/2}
+\begin{itemize}
+ 	\item<1->  Si el rotacional y la divergencia de un campo vectorial ${\bf F}(x, y, z)$, están especificados en una región del espacio delimitada por una superficie cerrada $S$, y las componentes del campo normales a esa superficie $\hat{\bf n}_{s}\cdot{\bf F}$, también se conocen, entonces ese campo ${\bf F}(x, y, z)$ es único
+	%
+	\item<2->  Todo campo vectorial ${\bf F}$, continuo, continuamente diferenciable (al menos a trozos), y regular en infinito se puede expresar como una suma de dos ``componentes'':  una \textit{longitudinal} o \textit{irrotacional} ${\bf F}_{l}$ y otra \textit{transversa} o \textit{solenoidal}  ${\bf F}_{t}$. \\
+	$ {\bf F}={\bf F}_{l}+{\bf F}_{t}\,, \quad\text{con}\quad
+	\left\{
+	\begin{array}[c]{c}
+	{\boldsymbol \nabla}\times{\bf F}_{l}=0\\ 
+	{\boldsymbol \nabla}\cdot{\bf F}_{t}=0\,.
+	\end{array}
+	\right. $
+	\item<3->  En general el campo ${\bf F}$ puede ser discontinuo, entonces \\
+	$\left.
+	\begin{array}[c]{c}
+	{\boldsymbol \nabla}\cdot{\bf F}=\rho\left(  {\bf r}\right) \\ 
+	{\boldsymbol \nabla}\times{\bf F}={\bf J}\left(  {\bf r}\right)
+	\end{array}
+	\right\}$  y como \\ ${\bf F}={\bf F}_{l}+{\bf F}_{t} \quad \Rightarrow  \left\{
+	\begin{array}[c]{c}
+	{\boldsymbol \nabla}\cdot{\bf F}={\boldsymbol \nabla}\cdot\left({\bf F}_{l}+{\bf F}_{t}\right)  ={\boldsymbol \nabla}\cdot{\bf F}_{l}=\rho\left({\bf r}\right) \\	 
+	{\boldsymbol \nabla}\times{\bf F}={\boldsymbol \nabla}\times\left(  {\bf F}_{l}+{\bf F}_{t}\right)  ={\boldsymbol \nabla}\times{\bf F}_{t}={\bf J}\left({\bf r}\right)\,,
+	\end{array}
+	\right. $
+  \end{itemize}
+}
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Teorema de Helmholtz 1/2}
+   \begin{itemize}  
+	%
+	\item<1->  Entonces ${\boldsymbol \nabla}\times{\bf F}_{l}=0 \; \Rightarrow  {\bf F}_{l}=-{\boldsymbol \nabla}\phi(x^i)  \; \Rightarrow  {\boldsymbol \nabla} \cdot {\bf F} = {\boldsymbol \nabla} \cdot {\bf F}_{l} = -{\boldsymbol \nabla}^{2}\phi(x^i)=\rho\left({\bf r}\right)$ y la solución existe y es única. 
+	%
+	\item<2->  Por otra parte
+	${\boldsymbol \nabla}\cdot{\bf F}_{t}=0 \; \Rightarrow \, {\bf F}_{t}={\boldsymbol \nabla} \times {\bf A} \; \Rightarrow $ \\$ {\boldsymbol \nabla} \times {\bf F}= {\boldsymbol \nabla} \times {\bf F}_{t}=
+{\boldsymbol \nabla} \times \left(  {\boldsymbol \nabla}\times{\bf A}\right)=
+{\boldsymbol \nabla}\left(  {\boldsymbol \nabla}\cdot{\bf A}\right)  -{\boldsymbol \nabla}^{2}{\bf A}={\bf J}\left({\bf r}\right)$
+	%
+	\item<3->  Al seleccionar el calibre de Coulomb ${\boldsymbol \nabla} \cdot {\bf A} = 0$ tendremos ${\boldsymbol \nabla} \times \left(  {\boldsymbol \nabla}\times{\bf A}\right)  = 
+	{\boldsymbol \nabla}^{2}{\bf A}=\partial^{i}\partial_{i}\ {\bf A}=-{\bf J}\left({\bf r}\right)\quad \Rightarrow $ \\$ \partial^{i}\partial_{i}\ A^{k}=-J^{k}\left({\bf r}\right) \; \Leftrightarrow  
+	\left\{
+	\begin{array}[c]{c}
+	{\boldsymbol \nabla}^{2}A_{x}=-J_{x}\left(  {\bf r}\right) \\ \\
+	{\boldsymbol \nabla}^{2}A_{y}=-J_{y}\left(  {\bf r}\right) \\ \\
+	{\boldsymbol \nabla}^{2}A_{z}=-J_{z}\left(  {\bf r}\right)
+	\end{array}
+	\right.$
+	
+    \end{itemize}
+}
+
+\end{document}
+
+
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+  \frametitle{Simetría de Calibre 2/2}
+   \begin{itemize}  
+  	\item<1-> 
+    \end{itemize}
+}
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+  \frametitle{Título transparencia}
+   \begin{itemize}  
+  \item<1-> 
+    \end{itemize}
+}
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+  \frametitle{Título transparencia}
+   \begin{itemize}  
+  \item<1-> 
+    \end{itemize}
+}

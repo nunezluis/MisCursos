@@ -104,7 +104,7 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 + Presentación [El teorema de Noether y leyes de conservación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S3T1Noether.pdf
 )
 
-+ Presentación [Fuerzas generalizadas y descripción de una partícula moviéndose en un campo electromagnético](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S4T1ParticulaCampoElectromagnetico.pdf)
++ Presentación [Fuerzas generalizadas y descripción de una partícula moviéndose en un campo electromagnético](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S3T2ParticulaCampoElectromagnetico.pdf)
 + Sitio web de [Lagrangian Mechanics for beginners](https://profoundphysics.com/lagrangian-mechanics-for-beginners/)
 + Videos
   + [Emmy Noether CSIC](https://www.youtube.com/watch?v=N4to1dp6_lo)
