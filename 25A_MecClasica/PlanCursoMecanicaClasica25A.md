@@ -44,7 +44,7 @@ Al finalizar esta semana habremos repasado algunos conceptos de Mecánica que vi
 + Cantidad de movimiento angular
 + Sistemas de Partículas
 
-### Semana 1 C3/C4 Coordenadas generalizadas
+### Semana 2 C3/C4 Coordenadas generalizadas
 Esta semana nos toca empezar el curso y comenzamos por definir el espacio de configuraciones. Arrancamos discutiendo el concepto de coordenadas generalizadas y vínculos de un sistema.
 #### Antes de clase
 + **Estudie**
@@ -126,6 +126,48 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 | **Isotropía del Espacio** | Conservación del momento angular | Órbitas planetarias |  
 | **Homogeneidad del Tiempo** | Conservación de la energía | Oscilador armónico simple |  
 
+##### 1. **Variables Conjugadas y Coordenadas Cíclicas**
+   - Definición del **momento conjugado** como $ p_j = \frac{\partial L}{\partial \dot{q}_j} $.
+   - Concepto de **coordenada cíclica** (o ignorable): si una coordenada no aparece explícitamente en el lagrangiano, su momento conjugado es una **cantidad conservada**.
+   - **Ejemplos**:
+     - Partícula sobre un **cono invertido**: conservación del momento angular.
+     - Partícula en un **medio viscoso**: cómo el momento conjugado difiere del momento físico.
+
+##### 2. **Teorema de Noether**
+   - Introducción a las **transformaciones continuas** y su relación con las **leyes de conservación**.
+   - **Ejemplos**:
+     - Coordenada cíclica y conservación del momento conjugado.
+     - Partícula en un **campo gravitatorio** y conservación de una cantidad asociada.
+
+##### 3. **Simetrías Fundamentales y Cantidades Conservadas**
+   - **Homogeneidad del espacio** → **Conservación del momento lineal**.
+   - **Isotropía del espacio** → **Conservación del momento angular**.
+     - **Ejemplo**: Oscilador armónico bidimensional.
+   - **Homogeneidad del tiempo** → **Conservación de la energía**.
+
+##### 4. **Energía y Potenciales Dependientes de las Velocidades**:
+   - Consideración de sistemas donde la energía potencial depende de las coordenadas y las velocidades generalizadas.
+   - Definición del Lagrangiano con potenciales dependientes de la velocidad.
+   - Relación entre la función de energía y la energía mecánica total.
+
+##### 5. **Fuerza de Lorentz como una Fuerza Generalizada**:
+   - Ecuación de la Fuerza de Lorentz: $\mathbf{F} = q (\mathbf{E} + \frac{\mathbf{v}}{c} \times \mathbf{B})$.
+   - Reformulación en términos de la función de energía y del Lagrangiano.
+   - Tratamiento de la fuerza de Lorentz dentro del formalismo lagrangiano.
+
+##### 6. **El Potencial Vector**:
+   - Relación con las ecuaciones de Maxwell.
+   - Expresión de los campos eléctrico y magnético en términos de los potenciales escalar y vectorial: $\mathbf{E} = -\nabla \phi - \frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}$ y $\mathbf{B} = \nabla \times \mathbf{A}$.
+   - Explicación de cómo la fuerza de Lorentz puede derivarse del potencial vector.
+
+##### 7. **Simetría de Calibre (Gauge)**:
+   - La invariancia de las ecuaciones bajo transformaciones de calibre.
+   - Cómo el potencial escalar y el potencial vector pueden modificarse sin cambiar los campos eléctricos y magnéticos.
+   - Importancia en teorías más avanzadas de electrodinámica.
+
+##### 8. **Teorema de Helmholtz**:
+   - Descomposición de campos vectoriales en términos de sus componentes irrotacionales y solenoidales.
+   - Aplicación del teorema a la formulación del campo electromagnético en términos de los potenciales escalar y vectorial.
 
 
 ### Clase S4-C7/C8 Fuerzas generalizadas

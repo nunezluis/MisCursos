@@ -4,3 +4,4 @@
 \beamer@sectionintoc {3}{El potencial vector}{17}{0}{3}
 \beamer@sectionintoc {4}{Simetr\IeC {\'\i }a de Calibre}{34}{0}{4}
 \beamer@sectionintoc {5}{Teorema de Helmholtz}{47}{0}{5}
+\beamer@sectionintoc {6}{Recapitulando}{53}{0}{6}
