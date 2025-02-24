@@ -1,0 +1,8 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Problema de dos cuerpos}{3}{0}{1}
+\beamer@sectionintoc {2}{Los grados de libertad}{7}{0}{2}
+\beamer@sectionintoc {3}{La equivalencia unidimensional}{15}{0}{3}
+\beamer@sectionintoc {4}{Potenciales centrales, $V({\bf r})$}{20}{0}{4}
+\beamer@sectionintoc {5}{Resolviendo en coordenadas polares}{25}{0}{5}
+\beamer@sectionintoc {6}{El Sistema es integrable}{31}{0}{6}
+\beamer@sectionintoc {7}{Integrando el sistema}{34}{0}{7}

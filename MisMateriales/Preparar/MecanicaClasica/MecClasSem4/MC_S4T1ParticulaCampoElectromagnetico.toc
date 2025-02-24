@@ -1,6 +1,0 @@
-\babel@toc {spanish}{}\relax 
-\beamer@sectionintoc {1}{Energ\IeC {\'\i }a y Potenciales dependientes de las velocidades $V= V(q_j, \dot {q}_j, )$}{3}{0}{1}
-\beamer@sectionintoc {2}{Fuerza de Lorentz una {\it una fuerza generalizada} }{9}{0}{2}
-\beamer@sectionintoc {3}{El potencial vector}{17}{0}{3}
-\beamer@sectionintoc {4}{Simetr\IeC {\'\i }a de Calibre}{34}{0}{4}
-\beamer@sectionintoc {5}{Teorema de Helmholtz}{47}{0}{5}
