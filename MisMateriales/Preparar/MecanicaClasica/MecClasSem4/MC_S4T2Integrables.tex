@@ -79,7 +79,7 @@
 	\item<1->  El Lagrangiano de un sistema unidimensional con coordenada $q$ tiene la forma general $L=T\left(\dot{q}^2\right)-V_{e f}(q)=\frac{1}{2} a \dot{q}^2-V_{\mathrm{ef}}(q)$, donde $a$ representa masa, longitud, etc., y $V_{\text {ef }}(q)$ es un potencial efectivo que depende de la coordenada $q$, 
 	\item<2->  Como $\frac{\partial L}{\partial t}=0$, la función de energía se conserva
 	\item<3->  Hay un grado de libertad y una cantidad conservada; el sistema es integrable.
-	\item<4-> Como $E =cte$, se determina $t(q)$ en términos de una integral explícita, $\dot{q} =\frac{d q}{d t}=\sqrt{\frac{2}{a}\left(E-V_{\mathrm{ef}}(q)\right)} \Rightarrow t(q)  =\int \sqrt{\frac{a}{2}} \frac{d q}{\sqrt{E-V_{\mathrm{ef}}(q)}}+\text { cte. }$
+	\item<4-> Como $E =cte$, se determina $t(q)$ en términos de una integral explícita, $\dot{q} =\frac{{\rm d} q}{{\rm d} t}=\sqrt{\frac{2}{a}\left(E-V_{\mathrm{ef}}(q)\right)} \Rightarrow t(q)  =\int \sqrt{\frac{a}{2}} \frac{{\rm d} q}{\sqrt{E-V_{\mathrm{ef}}(q)}}+\text { cte. }$
 	\item<5-> En principio, se puede invertir $t(q)$ para obtener $q(t)$. 
 	\item<6-> Para que la solución $q(t)$ sea real, el movimiento puede ocurrir solamente para valores de $q$ tales que $E \geq V_{\mathrm{ef}}(q)$.
 	\item<7-> La condición de integrabilidad de sistemas unidimensionales permite calcular el período de movimientos oscilatorios en esos sistemas.
@@ -87,12 +87,13 @@
 }
 %
 %%%%% Diapo 2
-\section{Ejemplo}
+\section{Movimiento de una partícula en un potencial, arbitrario $V(x)$}
+\subsection{El Lagrangeano, la Energía y los puntos de retorno}
 \frame{
   \frametitle{Movimiento de una partícula en un potencial $V(x)$}
    \begin{itemize}  
-  	\item<1-> Consideremos un sistema descrito por el Lagrangiano $L=T-V=\frac{1}{2} m \dot{x}^2-V(x)$, con la ecuación de  movimiento $m \ddot{x}=-\frac{d V}{d x}$
-	\item<2-> La energía total constante es $E=\frac{1}{2} m \dot{x}^2+V(x)$ y podemos integrar $t(x)=\sqrt{\frac{m}{2}} \int \frac{d q}{\sqrt{E-V(x)}}$
+  	\item<1-> Consideremos un sistema descrito por el Lagrangiano $L=T-V=\frac{1}{2} m \dot{x}^2-V(x)$, con la ecuación de  movimiento $m \ddot{x}=-\frac{{\rm d} V}{{\rm d} x}$
+	\item<2-> La energía total constante es $E=\frac{1}{2} m \dot{x}^2+V(x)$ y podemos integrar $\frac{{\rm d} x}{{\rm d} t} = \sqrt{\frac{2}{m}}\sqrt{E-V(x)} \Rightarrow t(x)=\sqrt{\frac{m}{2}} \int \frac{{\rm d} x}{\sqrt{E-V(x)}}$
 	\item<3-> Como $\frac{1}{2} m \dot{x}^2=E-V(x) \geq 0$, el movimiento sólo puede ocurrir para $E \geq V(x)$.
 	\item<4-> Los puntos de retorno son aquellos para $V(x)=E$. Es decir, $x_1, x_2$ y $x_3$ son puntos de retorno  $V\left(x_1\right)=E, V\left(x_2\right)=E, V\left(x_3\right)=E$
 	\begin{figure}[t]
@@ -102,28 +103,45 @@
 } 
 %
 %%%%% Diapo 2
-%\section{Sección}
+\subsection{Los puntos de equilibrio, retorno y período}
 \frame{
-  \frametitle{Movimiento de partícula en un potencial $V(x)$}
+  \frametitle{Los puntos de equilibrio, retorno y período}
    \begin{itemize}  
-  	\item<1-> Los puntos de equilibrio $x=x_o$ son aquellos donde la fuerza instantánea se anula: $f\left(x_o\right)=\left.0 \Rightarrow \frac{d V}{d x}\right|_{x_o}=0$
-	\item<2-> Un punto estático velocidad y aceleración se anulan: $\ddot{x}=0, \dot{x}=0$.
-	\item<3->  Un punto de equilibrio $x_o$ es estable si $x=x_o+\eta$, donde $\eta$ es un pequeño desplazamiento, tiende a $x=x_o$ al aumentar el tiempo y corresponde a un mímino del potencial $V(x)$. Es decir $\left.\frac{d^2 V}{d x^2}\right|_{x_o}>0, \quad x_o$ es un punto de equilibrio estable
-	\item<4-> Un punto de equilibrio es inestable si el potencial $V(x)$ presenta un máximo en ese punto. Entonces $\left.\quad \frac{d^2 V}{d x^2}\right|_{x_o}<0, \quad x_o$ es un punto de equilibrio inestable.
-	\item<5-> El período de oscilación entre los puntos de retorno $x_1$ y $x_2$ es dos veces el intervalo de tiempo del movimiento entre esos puntos, $\tau_p(E)=2 \sqrt{\frac{m}{2}} \int_{x_1}^{x_2} \frac{d x}{\sqrt{E-V(x)}}$
+  	\item<1-> Los puntos de equilibrio $x=x_0$ son aquellos donde la fuerza instantánea se anula: $f\left(x_0\right)=\left.0 \Rightarrow \frac{{\rm d} V}{{\rm d} x}\right|_{x_0}=0$
+	\item<2-> Un punto estático: velocidad y aceleración se anulan, $\ddot{x}=0, \dot{x}=0$.
+	\item<3->  Un punto de equilibrio $x_0$ es estable si $x=x_0+\eta$, donde $\eta$ es un pequeño desplazamiento, tiende a $x=x_0$ al aumentar el tiempo y corresponde a un mímino del potencial $V(x)$. Es decir $\left.\frac{{\rm d}^2 V}{{\rm d} x^2}\right|_{x_0}>0, \quad x_0$ es un punto de equilibrio estable
+	\item<4-> Un punto de equilibrio es inestable si el potencial $V(x)$ presenta un máximo en ese punto. Entonces $\left.\quad \frac{{\rm d}^2 V}{{\rm d} x^2}\right|_{x_0}<0, \quad x_0$ es un punto de equilibrio inestable.
+	\item<5-> El período de oscilación entre los puntos de retorno $x_1$ y $x_2$ es dos veces el intervalo de tiempo del movimiento entre esos puntos, $\tau_p(E)=2 \sqrt{\frac{m}{2}} \int_{x_1}^{x_2} \frac{{\rm d} x}{\sqrt{E-V(x)}}$
     \end{itemize}
 }
 % 
 %
 %%%%% Diapo 2
-%\section{Sección}
+\subsection{Pequeñas oscilaciones en potenciales arbitrarios}
 \frame{
-  \frametitle{Movimiento de partícula en un potencial $V(x)$}
+  \frametitle{Pequeñas oscilaciones en potenciales arbitrarios}
   \begin{itemize}  
 	\item<1-> Para un valor de $x$ cerca de un punto de equilibrio estable $x_0$, el potencial $V(x)$ puede expresarse mediante una expansión de Taylor alrededor de $x=x_0$. Esto es 
-	$V(x)=V\left(x_0\right) +\cancelto{0}{\left.\frac{d V}{d x}\right|_{x_0}}\left(x-x_0\right) +\left.\frac{1}{2} \frac{d^2 V}{d x^2}\right|_{x_0}\left(x-x_0\right)^2+\cdots$, donde $V\left(x_o\right)$ es un valor constante y el segundo término se anula debido a la condición de equilibrio. 
+	$V(x)=V\left(x_0\right) +\cancelto{0}{\left.\frac{{\rm d} V}{{\rm d} x}\right|_{x_0}}\left(x-x_0\right) +\left.\frac{1}{2} \frac{{\rm d}^2 V}{{\rm d} x^2}\right|_{x_0}\left(x-x_0\right)^2+\cdots$, donde $V\left(x_0\right)$ es un valor constante y el segundo término se anula debido a la condición de equilibrio. 
+	\item<2-> Consideremos un pequeño desplazamiento $\eta$ alrededor de $x_0$, entonces  $x=x_0+\eta$ donde $\eta \rightarrow 0\left(\eta / x_0 \ll 1\right)$.
+	\item<3-> Despreciando términos en potencias de $\eta$ de orden superior al cuadrático, tendremos 
+	$V(x)=\left.\frac{1}{2} \frac{{\rm d}^2 V}{{\rm d} x^2}\right|_{x_0}\left(x-x_0\right)^2=\frac{1}{2} K\left(x-x_0\right)^2$, donde $K \equiv \left.\frac{{\rm d}^2 V}{{\rm d}    x^2}\right|_{x_0}=\text { constante }>0$
+	\item<4-> $V(x)$ posee la misma forma funcional del oscilador armónico.
+	\item<5-> Su ecuación de movimiento $m \ddot{\eta}  =-K(x-x_0)=-K \eta$ 
+	$\Rightarrow \ddot{\eta}+\omega^2 \eta=0 \Rightarrow \omega^2 \equiv \frac{K}{m}=\frac{1}{m} \left.\frac{d^2 V}{d x^2}\right|_{x_0}$
     \end{itemize}
 }
+%
+%%%%% Diapo 2
+\section{Recapitulando}
+\frame{
+  \frametitle{Recapitulando}
+   	\begin{itemize}  
+  \item<1-> 
+    \end{itemize}
+}
+
+
 \end{document}
 
 %

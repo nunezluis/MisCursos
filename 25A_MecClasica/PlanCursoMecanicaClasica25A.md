@@ -98,6 +98,7 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
   + Teorema de Noether
   + Homogeneidad del espacio y conservación del momento lineal
   + Isotropía del espacio y conservación del momento angular
+  + Fuerzas generalizadas: partícula en un campo electromagnético
 + **Rehaga** los ejemplos 2., 3  (p76), 1. (p79), 1. (p81)
 
 #### Materiales
@@ -173,9 +174,6 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 ### Clase S4-C7/C8 Fuerzas generalizadas
 #### Antes de clase
 + **Estudie**
-  + Homogeneidad del tiempo y conservación de la energía
-  + Teorema de Euler para la energía cinética
-  + Fuerzas generalizadas: partícula en un campo electromagnético
   + Sistemas integrables y sistemas caóticos
   + Sistema integrable: movimiento unidimensional
 + **Rehaga** los ejemplos 1. (p97), 2. (p98), 3. (p99)

@@ -1,0 +1,4 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Secci\'on}{3}{0}{1}
+\beamer@sectionintoc {2}{Secci\'on}{4}{0}{2}
+\beamer@sectionintoc {3}{Recapitulando}{5}{0}{3}

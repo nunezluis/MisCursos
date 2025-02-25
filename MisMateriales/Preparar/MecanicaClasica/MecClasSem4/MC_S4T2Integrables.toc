@@ -1,0 +1,9 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Integrales del movimiento}{3}{0}{1}
+\beamer@sectionintoc {2}{Sistemas Integrables}{9}{0}{2}
+\beamer@sectionintoc {3}{Integrabilidad }{11}{0}{3}
+\beamer@sectionintoc {4}{Movimiento de una part\IeC {\'\i }cula en un potencial, arbitrario $V(x)$}{18}{0}{4}
+\beamer@subsectionintoc {4}{1}{El Lagrangeano, la Energ\IeC {\'\i }a y los puntos de retorno}{18}{0}{4}
+\beamer@subsectionintoc {4}{2}{Los puntos de equilibrio, retorno y per\IeC {\'\i }odo}{22}{0}{4}
+\beamer@subsectionintoc {4}{3}{Peque\~nas oscilaciones en potenciales arbitrarios}{27}{0}{4}
+\beamer@sectionintoc {5}{Recapitulando}{32}{0}{5}

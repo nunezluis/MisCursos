@@ -19,15 +19,26 @@
 \headcommand {\beamer@framepages {11}{17}}
 \headcommand {\beamer@sectionpages {11}{17}}
 \headcommand {\beamer@subsectionpages {11}{17}}
-\headcommand {\sectionentry {4}{Ejemplo}{18}{Ejemplo}{0}}
-\headcommand {\slideentry {4}{0}{1}{18/21}{}{0}}
+\headcommand {\sectionentry {4}{Movimiento de una part\IeC {\'\i }cula en un potencial, arbitrario $V(x)$}{18}{Movimiento de una part\IeC {\'\i }cula en un potencial, arbitrario $V(x)$}{0}}
+\headcommand {\beamer@subsectionpages {18}{17}}
+\headcommand {\beamer@subsectionentry {0}{4}{1}{18}{El Lagrangeano, la Energ\IeC {\'\i }a y los puntos de retorno}}
+\headcommand {\slideentry {4}{1}{1}{18/21}{El Lagrangeano, la Energ\IeC {\'\i }a y los puntos de retorno}{0}}
 \headcommand {\beamer@framepages {18}{21}}
-\headcommand {\slideentry {4}{0}{2}{22/26}{}{0}}
+\headcommand {\beamer@subsectionpages {18}{21}}
+\headcommand {\beamer@subsectionentry {0}{4}{2}{22}{Los puntos de equilibrio, retorno y per\IeC {\'\i }odo}}
+\headcommand {\slideentry {4}{2}{1}{22/26}{Los puntos de equilibrio, retorno y per\IeC {\'\i }odo}{0}}
 \headcommand {\beamer@framepages {22}{26}}
-\headcommand {\slideentry {4}{0}{3}{27/27}{}{0}}
-\headcommand {\beamer@framepages {27}{27}}
-\headcommand {\beamer@partpages {1}{27}}
-\headcommand {\beamer@subsectionpages {18}{27}}
-\headcommand {\beamer@sectionpages {18}{27}}
-\headcommand {\beamer@documentpages {27}}
-\headcommand {\gdef \inserttotalframenumber {8}}
+\headcommand {\beamer@subsectionpages {22}{26}}
+\headcommand {\beamer@subsectionentry {0}{4}{3}{27}{Peque\~nas oscilaciones en potenciales arbitrarios}}
+\headcommand {\slideentry {4}{3}{1}{27/31}{Peque\~nas oscilaciones en potenciales arbitrarios}{0}}
+\headcommand {\beamer@framepages {27}{31}}
+\headcommand {\beamer@sectionpages {18}{31}}
+\headcommand {\beamer@subsectionpages {27}{31}}
+\headcommand {\sectionentry {5}{Recapitulando}{32}{Recapitulando}{0}}
+\headcommand {\slideentry {5}{0}{1}{32/32}{}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\beamer@partpages {1}{32}}
+\headcommand {\beamer@subsectionpages {32}{32}}
+\headcommand {\beamer@sectionpages {32}{32}}
+\headcommand {\beamer@documentpages {32}}
+\headcommand {\gdef \inserttotalframenumber {9}}
