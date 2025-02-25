@@ -171,11 +171,12 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
    - Aplicación del teorema a la formulación del campo electromagnético en términos de los potenciales escalar y vectorial.
 
 
-### Clase S4-C7/C8 Fuerzas generalizadas
+### Clase S4-C7/C8 Sistemas Integrables y el problema de dos cuerpos
 #### Antes de clase
 + **Estudie**
   + Sistemas integrables y sistemas caóticos
   + Sistema integrable: movimiento unidimensional
+
 + **Rehaga** los ejemplos 1. (p97), 2. (p98), 3. (p99)
 
 #### Problemas S3
@@ -183,7 +184,8 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 
 
 #### Materiales
-
++ Presentación de [Sistemas integrables](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S4T2Integrables.pdf)
++ Presentación del [problema de dos cuerpos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S5T1Problema2Cuerpos.pdf)
 
 ### Clase S5-C9/C10 Fuerzas Centrales
 ####Antes de clase
