@@ -184,7 +184,7 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 
 
 #### Materiales
-+ Presentación de [Sistemas integrables](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S4T2Integrables.pdf)
++ Presentación de [Sistemas integrables](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S4T1Integrables.pdf)
 + Presentación del [problema de dos cuerpos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S5T1Problema2Cuerpos.pdf)
 
 ### Clase S5-C9/C10 Fuerzas Centrales
