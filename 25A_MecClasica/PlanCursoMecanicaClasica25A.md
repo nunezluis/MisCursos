@@ -192,7 +192,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
 
 ##### **3. Integrabilidad**
    - Un sistema unidimensional con coordenada $q$ tiene un Lagrangiano:
-     $\mathcal{L} = T - V_{\text{ef}} = \frac{1}{2} a \dot{q}^2 - V_{\text{ef}}(q)$
+     $L = T - V_{\text{ef}} = \frac{1}{2} a \dot{q}^2 - V_{\text{ef}}(q)$
    - Se conserva la **energía total** $E$.
    - El tiempo puede expresarse como una integral:
      $$t(q) = \sqrt{\frac{a}{2}} \int \frac{dq}{\sqrt{E - V_{\text{ef}}(q)}}$$
