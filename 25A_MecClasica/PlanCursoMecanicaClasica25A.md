@@ -95,7 +95,7 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 #### En esta semana cubriremos los siguientes temas
 
 ##### 1. **Variables Conjugadas y Coordenadas Cíclicas**
-   - Definición del **momento conjugado** como $ p_j = \frac{\partial L}{\partial \dot{q}_j} $.
+   - Definición del **momento conjugado** como $p_j = \frac{\partial L}{\partial \dot{q}_j}$.
    - Concepto de **coordenada cíclica** (o ignorable): si una coordenada no aparece explícitamente en el lagrangiano, su momento conjugado es una **cantidad conservada**.
    - **Ejemplos**:
      - Partícula sobre un **cono invertido**: conservación del momento angular.
