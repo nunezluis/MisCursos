@@ -95,7 +95,7 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 #### En esta semana cubriremos los siguientes temas
 
 ##### 1. **Variables Conjugadas y Coordenadas Cíclicas**
-   - Definición del **momento conjugado** como $p_j = \frac{\partial L}{\partial \dot{q}_j}$.
+   - Definición del **momento conjugado** como$p_j = \frac{\partial L}{\partial \dot{q}_j}$.
    - Concepto de **coordenada cíclica** (o ignorable): si una coordenada no aparece explícitamente en el lagrangiano, su momento conjugado es una **cantidad conservada**.
    - **Ejemplos**:
      - Partícula sobre un **cono invertido**: conservación del momento angular.
@@ -119,13 +119,13 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
    - Relación entre la función de energía y la energía mecánica total.
 
 ##### 5. **Fuerza de Lorentz como una Fuerza Generalizada**:
-   - Ecuación de la Fuerza de Lorentz: $\mathbf{F} = q (\mathbf{E} + \frac{\mathbf{v}}{c} \times \mathbf{B})$.
+   - Ecuación de la Fuerza de Lorentz:$\mathbf{F} = q (\mathbf{E} + \frac{\mathbf{v}}{c} \times \mathbf{B})$.
    - Reformulación en términos de la función de energía y del Lagrangiano.
    - Tratamiento de la fuerza de Lorentz dentro del formalismo lagrangiano.
 
 ##### 6. **El Potencial Vector**:
    - Relación con las ecuaciones de Maxwell.
-   - Expresión de los campos eléctrico y magnético en términos de los potenciales escalar y vectorial: $\mathbf{E} = -\nabla \phi - \frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}$ y $\mathbf{B} = \nabla \times \mathbf{A}$.
+   - Expresión de los campos eléctrico y magnético en términos de los potenciales escalar y vectorial:$\mathbf{E} = -\nabla \phi - \frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}$y$\mathbf{B} = \nabla \times \mathbf{A}$.
    - Explicación de cómo la fuerza de Lorentz puede derivarse del potencial vector.
 
 ##### 7. **Simetría de Calibre (Gauge)**:
@@ -158,8 +158,8 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 
 | **Concepto** | **Explicación** | **Ejemplo** |  
 |-------------|-----------------|------------|  
-| **Momento Conjugado** | Definido como $p_j = \frac{\partial L}{\partial \dot{q}_j}$ | Usado en mecánica Hamiltoniana |  
-| **Coordenadas Cíclicas** | Una coordenada $q_i$ es cíclica si $\frac{\partial L}{\partial q_i} = 0$, lo que implica conservación de $p_i$. | Coordenada angular $\phi$ en problemas de fuerza central |  
+| **Momento Conjugado** | Definido como$p_j = \frac{\partial L}{\partial \dot{q}_j}$| Usado en mecánica Hamiltoniana |  
+| **Coordenadas Cíclicas** | Una coordenada$q_i$es cíclica si$\frac{\partial L}{\partial q_i} = 0$, lo que implica conservación de$p_i$. | Coordenada angular$\phi$en problemas de fuerza central |  
 | **Teorema de Noether** | Cada simetría corresponde a una cantidad conservada. | Energía, momento lineal, momento angular |  
 | **Homogeneidad del Espacio** | Conservación del momento lineal | Partícula libre en el espacio |  
 | **Isotropía del Espacio** | Conservación del momento angular | Órbitas planetarias |  
@@ -171,13 +171,13 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 #### En esta semana cubriremos los siguientes temas
 Primero exploraemos los conceptos de **sistemas integrables**, **superintegrables**, **no integrables** y sus implicaciones en la dinámica de sistemas físicos.  Los **Sistemas integrables** permiten una evolución predecible con soluciones exactas. Los **Sistemas no integrables** pueden mostrar **caos dinámico** y la **superintegrabilidad** es una propiedad especial de ciertos sistemas con más constantes de movimiento que grados de libertad.
 
-En segundo lugar analizaremos el **problema de dos cuerpos** que permite la reducción del problema a una forma equivalente unidimensional más simple y que facilita la resolución de las ecuaciones de movimiento. El problema de dos cuerpos se **reduce** a un problema de **una partícula** de **masa reducida** $\mu$ en un potencial central $V(r)$. Se conservan la **energía** y el **momento angular**, permitiendo la resolución completa del problema.  Este análisis es clave en **mecánica celeste**, describiendo órbitas planetarias y otros sistemas gravitacionales.
+En segundo lugar analizaremos el **problema de dos cuerpos** que permite la reducción del problema a una forma equivalente unidimensional más simple y que facilita la resolución de las ecuaciones de movimiento. El problema de dos cuerpos se **reduce** a un problema de **una partícula** de **masa reducida**$\mu$en un potencial central$V(r)$. Se conservan la **energía** y el **momento angular**, permitiendo la resolución completa del problema.  Este análisis es clave en **mecánica celeste**, describiendo órbitas planetarias y otros sistemas gravitacionales.
 
 ##### **1. Integrales del Movimiento**
-   - Definición de **cantidades conservadas**: $I_k(q_j, \dot{q}_j) = C_k$, con $C_k$ constante.
-   - Un sistema con $s$ grados de libertad es **integrable** si tiene $s$ cantidades conservadas ($n = s$).
+   - Definición de **cantidades conservadas**:$I_k(q_j, \dot{q}_j) = C_k$, con$C_k$constante.
+   - Un sistema con$s$grados de libertad es **integrable** si tiene$s$cantidades conservadas ($n = s$).
    - Si un sistema posee **más** cantidades conservadas que grados de libertad ($n > s$), se denomina **superintegrable**.
-   - Si un sistema tiene **menos** de $s$ cantidades conservadas ($n < s$), es **no integrable**.
+   - Si un sistema tiene **menos** de$s$cantidades conservadas ($n < s$), es **no integrable**.
 
 ##### **2. Sistemas Integrables**
    - Ejemplos de **sistemas integrables**:
@@ -191,64 +191,64 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
    - **Ejemplo de sistema superintegrable**: **Partícula libre** ($s = 3, n = 4$, conserva energía y momentos lineales en cada dirección).
 
 ##### **3. Integrabilidad**
-   - Un sistema unidimensional con coordenada $q$ tiene un Lagrangiano:
-     $L = T - V_{\text{ef}} = \frac{1}{2} a \dot{q}^2 - V_{\text{ef}}(q)$
-   - Se conserva la **energía total** $E$.
+   - Un sistema unidimensional con coordenada$q$tiene un Lagrangiano:
+    $L = T - V_{\text{ef}} = \frac{1}{2} a \dot{q}^2 - V_{\text{ef}}(q)$
+   - Se conserva la **energía total**$E$.
    - El tiempo puede expresarse como una integral:
-     $$t(q) = \sqrt{\frac{a}{2}} \int \frac{dq}{\sqrt{E - V_{\text{ef}}(q)}}$$
+    $$t(q) = \sqrt{\frac{a}{2}} \int \frac{dq}{\sqrt{E - V_{\text{ef}}(q)}}$$
    - **Condición de integrabilidad**: permite calcular períodos de oscilación en sistemas oscilatorios.
 
-##### **4. Ejemplo: Movimiento en un Potencial $V(x)$**
+##### **4. Ejemplo: Movimiento en un Potencial$V(x)$**
    - Un sistema con Lagrangiano:$L=\frac{1}{2}m\dot{x}^2 - V(x)$
-   - La ecuación de movimiento: $m \ddot{x} = -\frac{dV}{dx}$
-   - **Puntos de equilibrio**: Se encuentran en $x_0$ cuando $\frac{dV}{dx} = 0$.
-      - **Estables**: Si $\frac{d^2V}{dx^2} > 0$.
-      - **Inestables**: Si $\frac{d^2V}{dx^2} < 0$.
+   - La ecuación de movimiento:$m \ddot{x} = -\frac{dV}{dx}$
+   - **Puntos de equilibrio**: Se encuentran en$x_0$cuando$\frac{dV}{dx} = 0$.
+      - **Estables**: Si$\frac{d^2V}{dx^2} > 0$.
+      - **Inestables**: Si$\frac{d^2V}{dx^2} < 0$.
    - **Cálculo del período**:$\tau_p(E) = 2 \sqrt{\frac{m}{2}} \int_{x_1}^{x_2} \frac{dx}{\sqrt{E - V(x)}}$
 
 ##### **5. El Problema de Dos Cuerpos**
-   - Considera dos partículas $m_1$ y $m_2$ en posiciones $\mathbf{r}_1$ y $\mathbf{r}_2$, interactuando mediante un potencial dependiente de la posición relativa: $V(\mathbf{r}_1, \mathbf{r}_2) = V(\mathbf{r}_2 - \mathbf{r}_1)$
+   - Considera dos partículas$m_1$y$m_2$en posiciones$\mathbf{r}_1$y$\mathbf{r}_2$, interactuando mediante un potencial dependiente de la posición relativa:$V(\mathbf{r}_1, \mathbf{r}_2) = V(\mathbf{r}_2 - \mathbf{r}_1)$
    - El sistema tiene **seis grados de libertad**: tres para cada partícula.
-        - Definición del **centro de masa**: $\mathbf{R} = \frac{m_1 \mathbf{r}_1 + m_2 \mathbf{r}_2}{m_1 + m_2}$
+        - Definición del **centro de masa**:$\mathbf{R} = \frac{m_1 \mathbf{r}_1 + m_2 \mathbf{r}_2}{m_1 + m_2}$
         - Definición de la **posición relativa**:
           \[
           \mathbf{r} = \mathbf{r}_2 - \mathbf{r}_1
           \]
 
 ##### **6. Grados de Libertad y Reducción del Problema**
-  - Se expresa la **energía cinética** en términos del movimiento del centro de masa y el movimiento relativo: $T = \frac{1}{2} (m_1 + m_2) \dot{\mathbf{R}}^2 + \frac{1}{2} \mu \dot{\mathbf{r}}^2$
-  - Se define la **masa reducida** del sistema: $\mu = \frac{m_1 m_2}{m_1 + m_2}$
+  - Se expresa la **energía cinética** en términos del movimiento del centro de masa y el movimiento relativo:$T = \frac{1}{2} (m_1 + m_2) \dot{\mathbf{R}}^2 + \frac{1}{2} \mu \dot{\mathbf{r}}^2$
+  - Se define la **masa reducida** del sistema:$\mu = \frac{m_1 m_2}{m_1 + m_2}$
     - El problema se divide en dos partes:
       1. Movimiento del **centro de masa**, que se mueve con velocidad constante.
-      2. Movimiento relativo, equivalente al de una partícula de **masa reducida** $\mu$ en un **potencial efectivo** $V(r)$.
+      2. Movimiento relativo, equivalente al de una partícula de **masa reducida**$\mu$en un **potencial efectivo**$V(r)$.
 
 ##### **7. La Equivalencia Unidimensional**
-  - Se demuestra que el problema de dos cuerpos se reduce a una **partícula ficticia** de masa $ \mu $que se mueve en un **potencial central** $ V(r) \).
+  - Se demuestra que el problema de dos cuerpos se reduce a una **partícula ficticia** de masa$\mu$que se mueve en un **potencial central**$V(r)$.
   - La conservación del **momento lineal** implica que el centro de masa se mueve con velocidad constante, permitiendo ignorar esta parte en el análisis del movimiento relativo.
 
 ##### **8. Potenciales Centrales y Conservación del Momento Angular**
-  - Para un **potencial central** $ V(r) $, la fuerza es: $\mathbf{F} = -\nabla V(r) = -\frac{dV}{dr} \hat{\mathbf{r}}$
-  - Se conserva el **momento angular**: $\mathbf{L} = \mathbf{r} \times \mathbf{p} = \text{cte}$
-  - Esto implica que el movimiento es **bidimensional**, restringido a un **plano** perpendicular al vector $\mathbf{L}$.
+  - Para un **potencial central**$V(r)$, la fuerza es:$\mathbf{F} = -\nabla V(r) = -\frac{dV}{dr} \hat{\mathbf{r}}$
+  - Se conserva el **momento angular**:$\mathbf{L} = \mathbf{r} \times \mathbf{p} = \text{cte}$
+  - Esto implica que el movimiento es **bidimensional**, restringido a un **plano** perpendicular al vector$\mathbf{L}$.
 
 ##### **9. Resolución en Coordenadas Polares**
-  - Se describen las ecuaciones de movimiento en **coordenadas polares** $ (r, \theta)$ : $L = \frac{1}{2} \mu (\dot{r}^2 + r^2 \dot{\theta}^2) - V(r)$
-  - Como $\theta $es **cíclica**, el momento angular se conserva: $L = \mu r^2 \dot{\theta} = \text{cte}$
+  - Se describen las ecuaciones de movimiento en **coordenadas polares**$(r, \theta)$:$L = \frac{1}{2} \mu (\dot{r}^2 + r^2 \dot{\theta}^2) - V(r)$
+  - Como$\theta$es **cíclica**, el momento angular se conserva:$L = \mu r^2 \dot{\theta} = \text{cte}$
   - La energía total también se conserva: $E = \frac{1}{2} \mu (\dot{r}^2 + r^2 \dot{\theta}^2) + V(r) = \text{cte}$
 
 ##### **10. El Sistema es Integrable**
   - Existen **seis cantidades conservadas**, lo que demuestra que el sistema es **integrable**:
     1. Las **tres componentes** de la velocidad del centro de masa.
-    2. La **dirección del momento angular** $ \mathbf{L} \).
-    3. La **magnitud del momento angular** $ L = \mu r^2 \dot{\theta} \).
-    4. La **energía total** $ E \).
-      - La conservación de $ E $y $ L $permite reducir el problema a una **ecuación diferencial unidimensional** en términos de $ r \).
+    2. La **dirección del momento angular** $\mathbf{L}$.
+    3. La **magnitud del momento angular** $L = \mu r^2 \dot{\theta}$.
+    4. La **energía total** $E$.
+      - La conservación de $E$ y $L$ permite reducir el problema a una **ecuación diferencial unidimensional** en términos de $r$.
 
 ##### **11. Integración del Sistema**
-  - La ecuación de la energía se reescribe en términos de $r$: $\dot{r} = \sqrt{\frac{2}{\mu} \left( E - V(r) - \frac{L^2}{2\mu r^2} \right)}$
-  - Integrando, se obtiene el tiempo en función del radio: $t(r) = \sqrt{\frac{\mu}{2}} \int_{r_0}^{r} \frac{dr'}{\sqrt{E - V(r') - \frac{L^2}{2\mu r'^2}}}$
-  - La ecuación para la trayectoria angular $\theta(r)$ es: $\theta(r) = L \sqrt{\frac{2}{\mu}} \int_{r_0}^{r} \frac{dr'}{r'^2 \sqrt{E - V(r') - \frac{L^2}{2\mu r'^2}}} + \theta_0$
-  - Las **constantes de integración** ($ E, L, r_0, \theta_0 $) definen completamente la trayectoria.
+  - La ecuación de la energía se reescribe en términos de$r$:$\dot{r} = \sqrt{\frac{2}{\mu} \left( E - V(r) - \frac{L^2}{2\mu r^2} \right)}$
+  - Integrando, se obtiene el tiempo en función del radio:$t(r) = \sqrt{\frac{\mu}{2}} \int_{r_0}^{r} \frac{dr'}{\sqrt{E - V(r') - \frac{L^2}{2\mu r'^2}}}$
+  - La ecuación para la trayectoria angular$\theta(r)$es:$\theta(r) = L \sqrt{\frac{2}{\mu}} \int_{r_0}^{r} \frac{dr'}{r'^2 \sqrt{E - V(r') - \frac{L^2}{2\mu r'^2}}} + \theta_0$
+  - Las **constantes de integración** ($E, L, r_0, \theta_0$) definen completamente la trayectoria.
 
 
 + **Rehaga** los ejemplos 1. (p97), 2. (p98), 3. (p99)
