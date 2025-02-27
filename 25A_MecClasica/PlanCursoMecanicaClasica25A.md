@@ -245,19 +245,10 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
       - La conservación de $ E $y $ L $permite reducir el problema a una **ecuación diferencial unidimensional** en términos de $ r \).
 
 ##### **11. Integración del Sistema**
-        - La ecuación de la energía se reescribe en términos de $ r \):
-          \[
-          \dot{r} = \sqrt{\frac{2}{\mu} \left( E - V(r) - \frac{L^2}{2\mu r^2} \right)}
-          \]
-        - Integrando, se obtiene el tiempo en función del radio:
-          \[
-          t(r) = \sqrt{\frac{\mu}{2}} \int_{r_0}^{r} \frac{dr'}{\sqrt{E - V(r') - \frac{L^2}{2\mu r'^2}}}
-          \]
-        - La ecuación para la trayectoria angular $ \theta(r) $es:
-          \[
-          \theta(r) = L \sqrt{\frac{2}{\mu}} \int_{r_0}^{r} \frac{dr'}{r'^2 \sqrt{E - V(r') - \frac{L^2}{2\mu r'^2}}} + \theta_0
-          \]
-        - Las **constantes de integración** ($ E, L, r_0, \theta_0 $) definen completamente la trayectoria.
+  - La ecuación de la energía se reescribe en términos de $r$: $\dot{r} = \sqrt{\frac{2}{\mu} \left( E - V(r) - \frac{L^2}{2\mu r^2} \right)}$
+  - Integrando, se obtiene el tiempo en función del radio: $t(r) = \sqrt{\frac{\mu}{2}} \int_{r_0}^{r} \frac{dr'}{\sqrt{E - V(r') - \frac{L^2}{2\mu r'^2}}}$
+  - La ecuación para la trayectoria angular $\theta(r)$ es: $\theta(r) = L \sqrt{\frac{2}{\mu}} \int_{r_0}^{r} \frac{dr'}{r'^2 \sqrt{E - V(r') - \frac{L^2}{2\mu r'^2}}} + \theta_0$
+  - Las **constantes de integración** ($ E, L, r_0, \theta_0 $) definen completamente la trayectoria.
 
 
 + **Rehaga** los ejemplos 1. (p97), 2. (p98), 3. (p99)
