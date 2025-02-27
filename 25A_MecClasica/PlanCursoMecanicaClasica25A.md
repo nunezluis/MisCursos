@@ -215,69 +215,36 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
           \mathbf{r} = \mathbf{r}_2 - \mathbf{r}_1
           \]
 
-     ---
+##### **6. Grados de Libertad y Reducción del Problema**
+  - Se expresa la **energía cinética** en términos del movimiento del centro de masa y el movimiento relativo: $T = \frac{1}{2} (m_1 + m_2) \dot{\mathbf{R}}^2 + \frac{1}{2} \mu \dot{\mathbf{r}}^2$
+  - Se define la **masa reducida** del sistema: $\mu = \frac{m_1 m_2}{m_1 + m_2}$
+    - El problema se divide en dos partes:
+      1. Movimiento del **centro de masa**, que se mueve con velocidad constante.
+      2. Movimiento relativo, equivalente al de una partícula de **masa reducida** $\mu$ en un **potencial efectivo** $V(r)$.
 
-     ### **2. Grados de Libertad y Reducción del Problema**
-        - Se expresa la **energía cinética** en términos del movimiento del centro de masa y el movimiento relativo:
-          \[
-          T = \frac{1}{2} (m_1 + m_2) \dot{\mathbf{R}}^2 + \frac{1}{2} \mu \dot{\mathbf{r}}^2
-          \]
-        - Se define la **masa reducida** del sistema:
-          \[
-          \mu = \frac{m_1 m_2}{m_1 + m_2}
-          \]
-        - El problema se divide en dos partes:
-          1. Movimiento del **centro de masa**, que se mueve con velocidad constante.
-          2. Movimiento relativo, equivalente al de una partícula de **masa reducida** $ \mu $en un **potencial efectivo** $ V(r) \).
+##### **7. La Equivalencia Unidimensional**
+  - Se demuestra que el problema de dos cuerpos se reduce a una **partícula ficticia** de masa $ \mu $que se mueve en un **potencial central** $ V(r) \).
+  - La conservación del **momento lineal** implica que el centro de masa se mueve con velocidad constante, permitiendo ignorar esta parte en el análisis del movimiento relativo.
 
-     ---
+##### **8. Potenciales Centrales y Conservación del Momento Angular**
+  - Para un **potencial central** $ V(r) $, la fuerza es: $\mathbf{F} = -\nabla V(r) = -\frac{dV}{dr} \hat{\mathbf{r}}$
+  - Se conserva el **momento angular**: $\mathbf{L} = \mathbf{r} \times \mathbf{p} = \text{cte}$
+  - Esto implica que el movimiento es **bidimensional**, restringido a un **plano** perpendicular al vector $\mathbf{L}$.
 
-     ### **3. La Equivalencia Unidimensional**
-        - Se demuestra que el problema de dos cuerpos se reduce a una **partícula ficticia** de masa $ \mu $que se mueve en un **potencial central** $ V(r) \).
-        - La conservación del **momento lineal** implica que el centro de masa se mueve con velocidad constante, permitiendo ignorar esta parte en el análisis del movimiento relativo.
+##### **9. Resolución en Coordenadas Polares**
+  - Se describen las ecuaciones de movimiento en **coordenadas polares** $ (r, \theta)$ : $L = \frac{1}{2} \mu (\dot{r}^2 + r^2 \dot{\theta}^2) - V(r)$
+  - Como $\theta $es **cíclica**, el momento angular se conserva: $L = \mu r^2 \dot{\theta} = \text{cte}$
+  - La energía total también se conserva: $E = \frac{1}{2} \mu (\dot{r}^2 + r^2 \dot{\theta}^2) + V(r) = \text{cte}$
 
-     ---
+##### **10. El Sistema es Integrable**
+  - Existen **seis cantidades conservadas**, lo que demuestra que el sistema es **integrable**:
+    1. Las **tres componentes** de la velocidad del centro de masa.
+    2. La **dirección del momento angular** $ \mathbf{L} \).
+    3. La **magnitud del momento angular** $ L = \mu r^2 \dot{\theta} \).
+    4. La **energía total** $ E \).
+      - La conservación de $ E $y $ L $permite reducir el problema a una **ecuación diferencial unidimensional** en términos de $ r \).
 
-     ### **4. Potenciales Centrales y Conservación del Momento Angular**
-        - Para un **potencial central** $ V(r) $, la fuerza es:
-          \[
-          \mathbf{F} = -\nabla V(r) = -\frac{dV}{dr} \hat{\mathbf{r}}
-          \]
-        - Se conserva el **momento angular**:
-          \[
-          \mathbf{L} = \mathbf{r} \times \mathbf{p} = \text{cte}
-          \]
-        - Esto implica que el movimiento es **bidimensional**, restringido a un **plano** perpendicular al vector $ \mathbf{L} \).
-
-     ---
-
-     ### **5. Resolución en Coordenadas Polares**
-        - Se describen las ecuaciones de movimiento en **coordenadas polares** $ (r, \theta) \):
-          \[
-          L = \frac{1}{2} \mu (\dot{r}^2 + r^2 \dot{\theta}^2) - V(r)
-          \]
-        - Como $ \theta $es **cíclica**, el momento angular se conserva:
-          \[
-          L = \mu r^2 \dot{\theta} = \text{cte}
-          \]
-        - La energía total también se conserva:
-          \[
-          E = \frac{1}{2} \mu (\dot{r}^2 + r^2 \dot{\theta}^2) + V(r) = \text{cte}
-          \]
-
-     ---
-
-     ### **6. El Sistema es Integrable**
-        - Existen **seis cantidades conservadas**, lo que demuestra que el sistema es **integrable**:
-          1. Las **tres componentes** de la velocidad del centro de masa.
-          2. La **dirección del momento angular** $ \mathbf{L} \).
-          3. La **magnitud del momento angular** $ L = \mu r^2 \dot{\theta} \).
-          4. La **energía total** $ E \).
-        - La conservación de $ E $y $ L $permite reducir el problema a una **ecuación diferencial unidimensional** en términos de $ r \).
-
-     ---
-
-     ### **7. Integración del Sistema**
+##### **11. Integración del Sistema**
         - La ecuación de la energía se reescribe en términos de $ r \):
           \[
           \dot{r} = \sqrt{\frac{2}{\mu} \left( E - V(r) - \frac{L^2}{2\mu r^2} \right)}
