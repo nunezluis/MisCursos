@@ -191,7 +191,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
    - **Ejemplo de sistema superintegrable**: **Partícula libre** ($s = 3, n = 4$, conserva energía y momentos lineales en cada dirección).
 
 ##### **3. Integrabilidad**
-   - Un sistema unidimensional con coordenada $ q $tiene un Lagrangiano:
+   - Un sistema unidimensional con coordenada $q$ tiene un Lagrangiano:
      $\mathcal{L} = T - V_{\text{ef}} = \frac{1}{2} a \dot{q}^2 - V_{\text{ef}}(q)$
    - Se conserva la **energía total** $E$.
    - El tiempo puede expresarse como una integral:
