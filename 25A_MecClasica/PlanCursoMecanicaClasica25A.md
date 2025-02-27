@@ -199,29 +199,17 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
    - **Condición de integrabilidad**: permite calcular períodos de oscilación en sistemas oscilatorios.
 
 ##### **4. Ejemplo: Movimiento en un Potencial $ V(x) \)**
-   - Un sistema con Lagrangiano:$\mathcal{L} = \frac{1}{2} m \dot{x}^2 - V(x)$
-   - La ecuación de movimiento:
-     \[
-     m \ddot{x} = -\frac{dV}{dx}
-     \]
-   - **Puntos de equilibrio**: Se encuentran en $ x_0 $cuando $ \frac{dV}{dx} = 0 \).
-     - **Estables**: Si $ \frac{d^2V}{dx^2} > 0 \).
-     - **Inestables**: Si $ \frac{d^2V}{dx^2} < 0 \).
-   - **Cálculo del período**:
-     \[
-     \tau_p(E) = 2 \sqrt{\frac{m}{2}} \int_{x_1}^{x_2} \frac{dx}{\sqrt{E - V(x)}}
-     \]
+   - Un sistema con Lagrangiano:$L = \frac{1}{2} m \dot{x}^2 - V(x)$
+   - La ecuación de movimiento: $m \ddot{x} = -\frac{dV}{dx}$
+   - **Puntos de equilibrio**: Se encuentran en $x_0$ cuando $\frac{dV}{dx} = 0$.
+      - **Estables**: Si $\frac{d^2V}{dx^2} > 0$.
+      - **Inestables**: Si $\frac{d^2V}{dx^2} < 0$.
+   - **Cálculo del período**:%\tau_p(E) = 2 \sqrt{\frac{m}{2}} \int_{x_1}^{x_2} \frac{dx}{\sqrt{E - V(x)}}%
 
 ##### **5. El Problema de Dos Cuerpos**
-   - Considera dos partículas $ m_1 $y $ m_2 $en posiciones $ \mathbf{r}_1 $y $ \mathbf{r}_2 $, interactuando mediante un potencial dependiente de la posición relativa:  
-          \[
-          V(\mathbf{r}_1, \mathbf{r}_2) = V(\mathbf{r}_2 - \mathbf{r}_1)
-          \]
+   - Considera dos partículas $m_1$ y $m_2$ en posiciones $\mathbf{r}_1$ y $\mathbf{r}_2$, interactuando mediante un potencial dependiente de la posición relativa: $V(\mathbf{r}_1, \mathbf{r}_2) = V(\mathbf{r}_2 - \mathbf{r}_1)$
    - El sistema tiene **seis grados de libertad**: tres para cada partícula.
-        - Definición del **centro de masa**:
-          \[
-          \mathbf{R} = \frac{m_1 \mathbf{r}_1 + m_2 \mathbf{r}_2}{m_1 + m_2}
-          \]
+        - Definición del **centro de masa**: $\mathbf{R} = \frac{m_1 \mathbf{r}_1 + m_2 \mathbf{r}_2}{m_1 + m_2}$
         - Definición de la **posición relativa**:
           \[
           \mathbf{r} = \mathbf{r}_2 - \mathbf{r}_1
