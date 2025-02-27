@@ -174,15 +174,15 @@ Primero exploraemos los conceptos de **sistemas integrables**, **superintegrable
 En segundo lugar analizaremos el **problema de dos cuerpos** que permite la reducción del problema a una forma equivalente unidimensional más simple y que facilita la resolución de las ecuaciones de movimiento. El problema de dos cuerpos se **reduce** a un problema de **una partícula** de **masa reducida** $ \mu $en un potencial central $ V(r) \). Se conservan la **energía** y el **momento angular**, permitiendo la resolución completa del problema.  Este análisis es clave en **mecánica celeste**, describiendo órbitas planetarias y otros sistemas gravitacionales.
 
 ##### **1. Integrales del Movimiento**
-   - Definición de **cantidades conservadas**: $ I_k(q_j, \dot{q}_j) = C_k $, con $ C_k $ constante.
-   - Un sistema con $s$ grados de libertad es **integrable** si tiene $s$ cantidades conservadas ($ n = s $).
-   - Si un sistema posee **más** cantidades conservadas que grados de libertad ($ n > s $), se denomina **superintegrable**.
-   - Si un sistema tiene **menos** de $ s $cantidades conservadas ($ n < s $), es **no integrable**.
+   - Definición de **cantidades conservadas**: $I_k(q_j, \dot{q}_j) = C_k$, con $C_k$ constante.
+   - Un sistema con $s$ grados de libertad es **integrable** si tiene $s$ cantidades conservadas ($n = s$).
+   - Si un sistema posee **más** cantidades conservadas que grados de libertad ($n > s$), se denomina **superintegrable**.
+   - Si un sistema tiene **menos** de $ s $cantidades conservadas ($n < s$), es **no integrable**.
 
 ##### **2. Sistemas Integrables**
    - Ejemplos de **sistemas integrables**:
-     - **Oscilador armónico simple** ($ s = 1, n = 1 $).
-     - **Péndulo simple** ($ s = 1, n = 1 $).
+     - **Oscilador armónico simple** ($s = 1, n = 1$).
+     - **Péndulo simple** ($s = 1, n = 1$).
      - **Partícula sobre un cono** ($ s = 2, n = 2 $, conserva momento angular y energía).
    - Ejemplos de **sistemas no integrables**:
      - **Péndulo doble** ($ s = 2, n = 1 $).
@@ -193,9 +193,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
 
 ##### **3. Integrabilidad**
    - Un sistema unidimensional con coordenada $ q $tiene un Lagrangiano:
-     \[
-     L = T - V_{\text{ef}} = \frac{1}{2} a \dot{q}^2 - V_{\text{ef}}(q)
-     \]
+     $\mathcal{L} = T - V_{\text{ef}} = \frac{1}{2} a \dot{q}^2 - V_{\text{ef}}(q)$
    - Se conserva la **energía total** $ E \).
    - El tiempo puede expresarse como una integral:
      \[
