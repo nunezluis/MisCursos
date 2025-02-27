@@ -177,28 +177,25 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
    - Definición de **cantidades conservadas**: $I_k(q_j, \dot{q}_j) = C_k$, con $C_k$ constante.
    - Un sistema con $s$ grados de libertad es **integrable** si tiene $s$ cantidades conservadas ($n = s$).
    - Si un sistema posee **más** cantidades conservadas que grados de libertad ($n > s$), se denomina **superintegrable**.
-   - Si un sistema tiene **menos** de $ s $cantidades conservadas ($n < s$), es **no integrable**.
+   - Si un sistema tiene **menos** de $s$ cantidades conservadas ($n < s$), es **no integrable**.
 
 ##### **2. Sistemas Integrables**
    - Ejemplos de **sistemas integrables**:
      - **Oscilador armónico simple** ($s = 1, n = 1$).
      - **Péndulo simple** ($s = 1, n = 1$).
-     - **Partícula sobre un cono** ($ s = 2, n = 2 $, conserva momento angular y energía).
+     - **Partícula sobre un cono** ($s = 2, n = 2$, conserva momento angular y energía).
    - Ejemplos de **sistemas no integrables**:
-     - **Péndulo doble** ($ s = 2, n = 1 $).
-     - **Péndulo de resorte** ($ s = 2, n = 1 $).
-     - **Péndulo paramétrico con longitud variable** ($ s = 1, n = 0 $).
-   - **Ejemplo de sistema superintegrable**:
-     - **Partícula libre** ($ s = 3, n = 4 $, conserva energía y momentos lineales en cada dirección).
+     - **Péndulo doble** ($s = 2, n = 1$).
+     - **Péndulo de resorte** ($s = 2, n = 1$).
+     - **Péndulo paramétrico con longitud variable** ($s = 1, n = 0$).
+   - **Ejemplo de sistema superintegrable**: **Partícula libre** ($s = 3, n = 4$, conserva energía y momentos lineales en cada dirección).
 
 ##### **3. Integrabilidad**
    - Un sistema unidimensional con coordenada $ q $tiene un Lagrangiano:
      $\mathcal{L} = T - V_{\text{ef}} = \frac{1}{2} a \dot{q}^2 - V_{\text{ef}}(q)$
-   - Se conserva la **energía total** $ E \).
+   - Se conserva la **energía total** $E$.
    - El tiempo puede expresarse como una integral:
-     \[
-     t(q) = \sqrt{\frac{a}{2}} \int \frac{dq}{\sqrt{E - V_{\text{ef}}(q)}}
-     \]
+     $$t(q) = \sqrt{\frac{a}{2}} \int \frac{dq}{\sqrt{E - V_{\text{ef}}(q)}}$$
    - **Condición de integrabilidad**: permite calcular períodos de oscilación en sistemas oscilatorios.
 
 ##### **4. Ejemplo: Movimiento en un Potencial $ V(x) \)**
