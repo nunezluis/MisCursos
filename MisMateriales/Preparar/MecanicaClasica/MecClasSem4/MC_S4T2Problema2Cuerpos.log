@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  26 FEB 2025 20:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  26 FEB 2025 20:18
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1037,7 +1037,7 @@ stitucional/UISLOGO.png  used on input line 36.
  [2
 
 ]
-<Figuras/DosCuerpos.png, id=146, 812.03375pt x 614.295pt>
+<Figuras/DosCuerpos.png, id=147, 812.03375pt x 614.295pt>
 File: Figuras/DosCuerpos.png Graphic file (type png)
 <use Figuras/DosCuerpos.png>
 Package pdftex.def Info: Figuras/DosCuerpos.png  used on input line 52.
@@ -1175,7 +1175,7 @@ stitucional/UISLOGO.png  used on input line 69.
  [14
 
 ]
-<Figuras/EquivalenciaDosCuerpos.png, id=468, 1506.62875pt x 439.6425pt>
+<Figuras/EquivalenciaDosCuerpos.png, id=469, 1506.62875pt x 439.6425pt>
 File: Figuras/EquivalenciaDosCuerpos.png Graphic file (type png)
 <use Figuras/EquivalenciaDosCuerpos.png>
 Package pdftex.def Info: Figuras/EquivalenciaDosCuerpos.png  used on input line
@@ -1260,7 +1260,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 89.
 
-<Figuras/MomAngularConstante.png, id=602, 1263.72125pt x 587.19376pt>
+<Figuras/MomAngularConstante.png, id=603, 1263.72125pt x 587.19376pt>
 File: Figuras/MomAngularConstante.png Graphic file (type png)
 <use Figuras/MomAngularConstante.png>
 Package pdftex.def Info: Figuras/MomAngularConstante.png  used on input line 10
@@ -1604,7 +1604,7 @@ al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/loca
 l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/t
 exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on MC_S4T2Problema2Cuerpos.pdf (44 pages, 660099 bytes).
+Output written on MC_S4T2Problema2Cuerpos.pdf (44 pages, 660094 bytes).
 PDF statistics:
  1371 PDF objects out of 1440 (max. 8388607)
  1251 compressed objects within 13 object streams
