@@ -171,7 +171,7 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 #### En esta semana cubriremos los siguientes temas
 Primero exploraemos los conceptos de **sistemas integrables**, **superintegrables**, **no integrables** y sus implicaciones en la dinámica de sistemas físicos.  Los **Sistemas integrables** permiten una evolución predecible con soluciones exactas. Los **Sistemas no integrables** pueden mostrar **caos dinámico** y la **superintegrabilidad** es una propiedad especial de ciertos sistemas con más constantes de movimiento que grados de libertad.
 
-En segundo lugar analizaremos el **problema de dos cuerpos** que permite la reducción del problema a una forma equivalente unidimensional más simple y que facilita la resolución de las ecuaciones de movimiento. El problema de dos cuerpos se **reduce** a un problema de **una partícula** de **masa reducida** $ \mu $en un potencial central $ V(r) \). Se conservan la **energía** y el **momento angular**, permitiendo la resolución completa del problema.  Este análisis es clave en **mecánica celeste**, describiendo órbitas planetarias y otros sistemas gravitacionales.
+En segundo lugar analizaremos el **problema de dos cuerpos** que permite la reducción del problema a una forma equivalente unidimensional más simple y que facilita la resolución de las ecuaciones de movimiento. El problema de dos cuerpos se **reduce** a un problema de **una partícula** de **masa reducida** $\mu$ en un potencial central $V(r)$. Se conservan la **energía** y el **momento angular**, permitiendo la resolución completa del problema.  Este análisis es clave en **mecánica celeste**, describiendo órbitas planetarias y otros sistemas gravitacionales.
 
 ##### **1. Integrales del Movimiento**
    - Definición de **cantidades conservadas**: $I_k(q_j, \dot{q}_j) = C_k$, con $C_k$ constante.
@@ -199,10 +199,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
    - **Condición de integrabilidad**: permite calcular períodos de oscilación en sistemas oscilatorios.
 
 ##### **4. Ejemplo: Movimiento en un Potencial $ V(x) \)**
-   - Un sistema con Lagrangiano:
-     \[
-     L = \frac{1}{2} m \dot{x}^2 - V(x)
-     \]
+   - Un sistema con Lagrangiano:$\mathcal{L} = \frac{1}{2} m \dot{x}^2 - V(x)$
    - La ecuación de movimiento:
      \[
      m \ddot{x} = -\frac{dV}{dx}
