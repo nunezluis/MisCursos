@@ -1,0 +1,13 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{El Campo gravitacional: problema de dos cuerpos (otra vez)}{3}{0}{1}
+\beamer@sectionintoc {2}{Flujo del campo gravitacional}{6}{0}{2}
+\beamer@sectionintoc {3}{La ecuaci\'on de Poisson}{10}{0}{3}
+\beamer@sectionintoc {4}{El problema inverso}{14}{0}{4}
+\beamer@sectionintoc {5}{El problema de Kepler}{23}{0}{5}
+\beamer@sectionintoc {6}{Las c\'onicas}{29}{0}{6}
+\beamer@sectionintoc {7}{Orbitas, excentricidades y energ\IeC {\'\i }as}{34}{0}{7}
+\beamer@sectionintoc {8}{Las Leyes de Kepler}{35}{0}{8}
+\beamer@subsectionintoc {8}{1}{Segunda Ley de Kepler}{38}{0}{8}
+\beamer@subsectionintoc {8}{2}{Tercera Ley de Kepler}{41}{0}{8}
+\beamer@sectionintoc {9}{Recapitulando}{46}{0}{9}
+\beamer@sectionintoc {10}{Para la discusi\'on}{47}{0}{10}

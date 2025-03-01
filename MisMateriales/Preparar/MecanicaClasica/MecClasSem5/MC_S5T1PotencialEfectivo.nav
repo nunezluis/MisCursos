@@ -29,8 +29,18 @@
 \headcommand {\beamer@subsectionentry {0}{3}{3}{26}{Potencial $V=-\frac {k}{r}$}}
 \headcommand {\slideentry {3}{3}{1}{26/28}{Potencial $V=-\frac {k}{r}$}{0}}
 \headcommand {\beamer@framepages {26}{28}}
-\headcommand {\beamer@partpages {1}{28}}
-\headcommand {\beamer@subsectionpages {26}{28}}
 \headcommand {\beamer@sectionpages {18}{28}}
-\headcommand {\beamer@documentpages {28}}
-\headcommand {\gdef \inserttotalframenumber {8}}
+\headcommand {\beamer@subsectionpages {26}{28}}
+\headcommand {\sectionentry {4}{Recapitulando}{29}{Recapitulando}{0}}
+\headcommand {\slideentry {4}{0}{1}{29/29}{}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\beamer@sectionpages {29}{29}}
+\headcommand {\beamer@subsectionpages {29}{29}}
+\headcommand {\sectionentry {5}{Para la discusi\'on}{30}{Para la discusi\'on}{0}}
+\headcommand {\slideentry {5}{0}{1}{30/30}{}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\beamer@partpages {1}{30}}
+\headcommand {\beamer@subsectionpages {30}{30}}
+\headcommand {\beamer@sectionpages {30}{30}}
+\headcommand {\beamer@documentpages {30}}
+\headcommand {\gdef \inserttotalframenumber {10}}

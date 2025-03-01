@@ -1,0 +1,227 @@
+\documentclass[spanish]{beamer}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath}
+\usepackage{mathtools,cancel} % cancela con una flecha \cancelto{0}{XXXX}
+\renewcommand{\CancelColor}{\color{red}} %change cancel color to red
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usepackage{textpos}
+% Logo  en el comienzo 
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+\end{textblock*}}
+
+\begin{document}
+
+\title{\textbf{El problema de Kepler} }
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
+\textit{Universidad Industrial de Santander, Santander, Colombia } \\
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+}
+\date{\today}
+\maketitle
+
+
+\begin{frame}
+\frametitle{Agenda}
+  \tableofcontents
+\end{frame}
+
+
+%%%%% Diapo 1
+\section{El Campo gravitacional: problema de dos cuerpos (otra vez)}
+\frame{
+  \frametitle{El Campo gravitacional: problema de dos cuerpos}
+   \begin{itemize}  
+  	\item<1-> El módulo de la fuerza gravitacional entre dos partículas con masas $m_1$ y $m_2$, separadas por una distancia $r$ es $f(r)=-G \frac{m_1 m_2}{r^2}$, donde $G$ es la constante universal gravitacional.
+	\item<2-> La fuerza gravitacional que una partícula de masa $m_1$ ejerce sobre otra partícula de masa $m_2$ es $ \mathbf{F}(\mathbf{r})=-\nabla V(r)=-G \frac{m_1 m_2}{r^2} \hat{\mathbf{r}}$, con $V(r)=-G \frac{m_1 m_2}{r}$
+	\item<3-> Entonces la intensidad del campo gravitacional de $m_1$ en la posición $\mathbf{r}$ sobre la partícula $m_2$ es  $mathbf{g}(\mathbf{r}) \equiv \frac{\mathbf{F}(\mathbf{r})}{m_2}=-\frac{G m_1}{r^2} \hat{\mathbf{r}}$, donde definimos el potencial gravitacional $\varphi(\mathbf{r})$ producido por $m_1$ como  $\varphi(\mathbf{r}) \equiv \frac{V(r)}{m_2}=-\frac{G m_1}{r}$
+    \end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Flujo del campo gravitacional}
+\frame{
+  \frametitle{Flujo del campo gravitacional}
+   	\begin{itemize}
+		\item<1-> Consideremos una partícula de masa $m$ dentro de una superficie arbitraria y cerrada $S$ que contiene un volumen V.
+		\begin{figure}[t]
+		\includegraphics[width=2.0in]{Figuras/FlujoGravitacional.png}
+   		\end{figure}  
+  	\item<2-> El flujo del campo gravitacional a través de la superficie $S$ es $\Phi=\oint_S \mathbf{g} \cdot d \mathbf{A}  =-G m \oint_S \frac{1}{r^2} d A \; \hat{\mathbf{r}} \cdot \hat{\mathbf{n}}$ donde $g$ se evalúa sobre $S$ y $d \mathbf{A}=d A \;\hat{\mathbf{n}}$ es el diferencial de área de $S$ con un vector normal unitario $\hat{\mathbf{n}}$.
+	\item<3-> Entonces, $\oint_S \mathbf{g} \cdot d \mathbf{A}=-G m \oint_S d \Omega=-4 \pi G m$ con $d \Omega=\frac{d A \cos \theta}{r^2}=\frac{d A \hat{\mathbf{n}} \cdot \hat{\mathbf{r}}}{r^2}$ el diferencial de ángulo sólido, con origen en $m$ encierra un área $d A \cos \theta$ a la distancia $r$
+	\item<4-> El flujo del campo gravitacional a través de $S$ es proporcional a la masa de la partícula encerrada por $S$, independientemente de la ubicación de la partícula dentro de la superficie $S$.
+    \end{itemize}
+}
+%
+%%%%% Diapo 3
+\section{La ecuación de Poisson}
+\frame{
+  \frametitle{La ecuación de Poisson}
+   \begin{itemize}  
+  	\item<1-> El flujo total para un sistema de partículas con masas $m_i, i=1, \ldots, N$, encerradas por la superficie $S$, es $ \oint_S \mathbf{g} \cdot d \mathbf{A}=-4 \pi G \sum_{i=1}^N m_i=-4 \pi G M_{\mathrm{enc}}$ donde $M_{\text {enc }}$ es la masa total encerrada por $S$.
+	\item<2-> El teorema de la divergencia para el campo $\mathbf{g}$ nos dice $\oint_S \mathbf{g} \cdot d \mathbf{A}=\int_{\mathrm{V}} \nabla \cdot \mathbf{g} d \mathrm{~V}=-4 \pi G \int_{\mathrm{V}} \rho d \mathrm{~V}$ donde $M_{\mathrm{enc}}=\int_{\mathrm{V}} \rho d \mathrm{~V}$
+	\item<3-> Puesto que el volumen V es arbitrario tendremos $\nabla \cdot \mathbf{g}=-4 \pi G \rho$ 
+	\item<4-> Que se traduce en la ecuación de Poisson $\nabla^2 \varphi=4 \pi G \rho$
+    \end{itemize}
+}
+%
+%%%%% Diapo 4
+\section{El problema inverso}
+\frame{
+  \frametitle{El problema inverso}
+   \begin{itemize}  
+  	\item<1-> Consideremos el problema inverso: dada una órbita $r(\theta)$, determinar el potencial $V(r)$, o la fuerza central $f(r)$, que causa ésta órbita.
+	\item<2-> La ecuación de movimiento para $r(t)$ es $\mu \ddot{r}-\frac{L^2}{\mu r^3}=-\frac{\partial V}{\partial r}$
+	\item<3->  La derivada temporal de $r(t)$ se puede expresar, usando $\dot{\theta}=\frac{L}{\mu r^2}$, como $\dot{r}=\frac{d r}{d t}=\frac{d r}{d \theta} \frac{d \theta}{d t}=\frac{L}{\mu r^2} \frac{d r}{d \theta}$
+	\item<4-> En general, la derivada temporal se puede escribir como $\frac{d}{d t}  =\frac{L}{\mu r^2} \frac{d}{d \theta}$
+	\item<5-> Con lo cual $\ddot{r}  =\frac{d}{d t}\left(\frac{d r}{d t}\right)=\frac{d}{d t}\left(\frac{L}{\mu r^2} \frac{d r}{d \theta}\right)  =\frac{L}{\mu r^2} \frac{d}{d \theta}\left(\frac{L}{\mu r^2} \frac{d r}{d \theta}\right)$
+	\item<6-> Es decir $\frac{l}{r^2} \frac{d}{d \theta}\left(\frac{l}{\mu r^2} \frac{d r}{d \theta}\right)-\frac{L^2}{\mu r^3}=-\frac{\partial V}{\partial r}$
+	\item<7-> Si $u=1 / r$, tenemos  $\frac{L^2}{\mu} u^2 \frac{d}{d \theta}\left(\frac{d u}{d \theta}\right)+\frac{L^2}{\mu} u^3=-u^2 \frac{\partial V}{\partial u}$
+	\item<8-> es decir, $ \frac{L^2}{\mu}\left[\frac{d^2 u}{d \theta^2}+u\right]=-\frac{\partial V}{\partial u}$
+	\item<9-> Constituye la ecuación diferencial de la órbita para $r(\theta)=1 / u(\theta)$ en términos del potencial $V(r)=V(1 / u)$. Se conoce como la ecuación de Binet.
+    \end{itemize}
+}
+
+%
+%%%%% Diapo 5
+\section{El problema de Kepler}
+\frame{
+  \frametitle{El problema de Kepler}
+   \begin{itemize}  
+  	\item<1-> El problema de Kepler se refiere al cálculo de la órbita de una partícula sobre la cual actúa fuerza gravitacional $f(r)=-\frac{k}{r^2}$, con $k=G m_1 m_2$.
+	\item<2-> La órbita $r(\theta)$ correspondiente la fuerza gravitacional puede ser determinada a partir de la ecuación de Binet $\frac{L^2}{\mu}\left(\frac{d^2 u}{d \theta^2}+u\right)=-\frac{\partial V}{\partial u}$
+	\item<3-> Como el potencial gravitacional es $V(r)=-\frac{k}{r}=-k u$, obtenemos $\frac{d^2 u}{d \theta^2}+u=k \frac{\mu}{L^2}$. Una ecuación diferencial ordinaria inhomogénea de segundo orden
+	\item<4-> La solución de la ecuación homogénea es $u_h^{\prime \prime}+u_h=0 \Rightarrow u_h=A \cos \left(\theta-\theta_0\right)$ con  $A$ y  $\theta_0$ constantes
+	\item<5-> Una solución particular de la inhomogénea es $u_p=k \frac{\mu}{L^2}$.
+	\item<6-> la solución general $u(\theta)=u_h+u_p$ es 
+	$u(\theta) =\frac{k \mu}{L^2}+A \cos \left(\theta-\theta_0\right) \Rightarrow \frac{1}{r} =\frac{k \mu}{L^2}\left[1+e \cos \left(\theta-\theta_0\right)\right],$ y $e$  const.
+    \end{itemize}
+}  
+%
+%%%%% Diapo 6
+\section{Las cónicas}
+\frame{
+  \frametitle{Las cónicas}
+   \begin{itemize}  
+  	\item<1-> La forma general de la ecuación es una cónica con el origen en uno de los focos $\frac{q}{r}=1+e \cos \theta \Leftrightarrow \frac{1}{r}=\frac{\mu k}{L^2}\left(1+\sqrt{1+\frac{2 E L^2}{\mu k^2}} \cos \theta\right)$, \\para  $\theta_0=0$ para $t=0$
+	\item<2-> El movimiento de la partícula con masa reducida $\mu$ en el potencial $V=-k / r$ sigue la trayectoria de una sección cónica 
+	\item<3- >El tipo de cónica (circunferencia, elipse, parábola o hipérbola) depende del valor de la excentricidad $e$, i.e. de la energía total $E$.
+	\item<4-> La excentricidad de la órbita es $e=\sqrt{1+\frac{2 E L^2}{\mu k^2}}$
+	\item<5-> El latus $q$ es  $r\left(\frac{\pi}{2}\right)\equiv q =\frac{L^2}{\mu k}$ y el $r_{\min }=r(0)=\frac{q}{1+e}$
+	\begin{figure}[t]
+	\includegraphics[width=2.0in]{Figuras/Conica.png}
+   	\end{figure}   
+    \end{itemize}
+}
+%%%%% Diapo 7
+\section{Orbitas, excentricidades y energías}
+\frame{
+  \frametitle{Orbitas, excentricidades y energías}
+   \begin{itemize}  
+  	\item<1-> El movimiento radial en el problema de Kepler ocurre para un potencial efectivo $V_{\mathrm{ef}}(r)=-\frac{k}{r}+\frac{L^2}{2 \mu r^2}$
+	\begin{figure}[t]
+	\includegraphics[width=2.0in]{Figuras/KeplerEfectivo.png}
+	\includegraphics[width=2.0in]{Figuras/OrbitaKepler.png}
+   	\end{figure}   
+
+   \end{itemize}
+}
+%%%%% Diapo 9
+\section{Las Leyes de Kepler}
+\frame{
+  \frametitle{Las Leyes de Kepler}
+   \begin{itemize}  
+  	\item<1-> {\bf Primera Ley}: los planetas describen órbitas elípticas alrededor del Sol, el cual se encuentra en uno de los focos de la elipse. {\bf Forma funcional del potencial gravitacional $V(r)=-\frac{k}{r}$ }.
+	\item<2-> {\bf Segunda Ley}: el área barrida por unidad tiempo por el radio vector que va desde el Sol al planeta es constante: $\dot{A}=$ cte. {\bf Existencia de un potencial central $V(r)$ y de la conservación de ${\bf L}$}.
+	\item<3-> {\bf Tercera Ley}: el cuadrado del período del movimiento es proporcional al cubo del semieje mayor de la órbita, para todos los planetas: $T_p^2 \propto a^3$. {\bf Forma funcional del potencial gravitacional $V(r)=-\frac{k}{r}$ y conservación de ${\bf L}$ }.
+    \end{itemize}
+}
+%%%%% Diapo 10
+\subsection{Segunda Ley de Kepler}
+\frame{
+  \frametitle{2da Ley: Velocidad aerolar constante}
+   \begin{itemize}  
+  	\item<1-> 	Un potencial central $V(r)$ implica la conservación del momento angular $L=\mu r^2 \dot{\theta}=$  constant
+  	\begin{figure}[t]
+		\includegraphics[width=2.0in]{Figuras/VelAerolar.png}
+		\includegraphics[width=2.0in]{Figuras/VelAerolarKepler.png}
+   	\end{figure}
+	\item<2-> El diferencial de área barrida por el radio vector $\mathbf{r}$ en un tiempo infinitesimal $d t$ es $d A=\frac{1}{2}(r d \theta) r=\frac{1}{2} r^2 d \theta$, entonces $\frac{d A}{d t}=\frac{1}{2} r^2 \frac{d \theta}{d t}=\frac{1}{2} r^2 \dot{\theta}$ es el área barrida por unidad de tiempo
+	\item<3-> Claramente $\frac{d A}{d t} =\frac{1}{2} r^2\left(\frac{L}{\mu r^2}\right) =\frac{L}{2 \mu}=$ const 
+    \end{itemize}
+}
+%%%%% Diapo 11
+\subsection{Tercera Ley de Kepler}
+\frame{
+  \frametitle{3ra Ley: $T_p^2 \propto a^3$}
+   \begin{itemize}  
+  	\item<1-> Si la órbita es finita, $r \in\left[r_{\min }, r_{\max }\right]$, el área total $A$ encerrada por la órbita barrida por el radio $\mathbf{r}$ en un tiempo igual al período del movimiento $T_p$, es $ A=\frac{l}{2 \mu} \int_0^{T_p} d t=\frac{l}{2 \mu} T_p$
+	\item<2-> Si la órbita es una elipse en el potencial $V(r)=-k / r$, el área encerrada elipse $A=\pi a b$, donde $a$, semieje mayor, y $b$ semieje menor 
+	\item<3-> Tercera Ley de Kepler en su forma exacta es $T_p=2 \pi \sqrt{\frac{\mu a^3}{k}}$
+	\item<4->  $M_S$ es la masa del Sol en el foco, y $m$ del planeta en una órbita elíptica. Entonces $m / M_S \ll 1$ y despreciando términos de orden cuadrático en $m / M_S$, la masa reducida correspondiente al sistema Sol-planeta se puede expresar como $\mu=\frac{m M_S}{M_S+m}=m\left(1+\frac{m}{M_S}\right)^{-1}=m\left(1-\frac{m}{M_S}+\cdots\right) \approx m$
+	\item<5-> Usando $k=G M_S m$ tendremos $T_p^2  \approx \frac{4 \pi^2}{G M_S} a^3 \Rightarrow T_p^2 \propto a^3$
+
+    \end{itemize}
+}
+%%%%% Diapo Recapitulando
+\section{Recapitulando}
+\frame{
+  \frametitle{Recapitulando}
+   	\begin{itemize}  
+  \item<1-> 
+    \end{itemize}
+}
+%%%%% Diapo Discusión
+\section{Para la discusión}
+\frame{
+  \frametitle{Para la discusión}
+   	\begin{itemize}  
+  \item<1-> 
+    \end{itemize}
+}
+
+
+\end{document}
+
+
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+  \frametitle{Título transparencia}
+   	\begin{itemize}  
+  \item<1-> 
+    \end{itemize}
+}
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+  \frametitle{Título transparencia}
+   	\begin{itemize}  
+  \item<1-> 
+    \end{itemize}
+}
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+  \frametitle{Título transparencia}
+   	\begin{itemize}  
+  \item<1-> 
+    \end{itemize}
+}
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+  \frametitle{Título transparencia}
+   	\begin{itemize}  
+  \item<1-> 
+    \end{itemize}
+}
