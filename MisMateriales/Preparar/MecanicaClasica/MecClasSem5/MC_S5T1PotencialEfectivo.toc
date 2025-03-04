@@ -6,4 +6,4 @@
 \beamer@subsectionintoc {3}{2}{Potencial $V=\frac {1}{2} k r^2$}{20}{0}{3}
 \beamer@subsectionintoc {3}{3}{Potencial $V=-\frac {k}{r}$}{26}{0}{3}
 \beamer@sectionintoc {4}{Recapitulando}{29}{0}{4}
-\beamer@sectionintoc {5}{Para la discusi\'on}{30}{0}{5}
+\beamer@sectionintoc {5}{Para la discusi\'on: Potencial Efectivo en Competencia de Precios}{33}{0}{5}

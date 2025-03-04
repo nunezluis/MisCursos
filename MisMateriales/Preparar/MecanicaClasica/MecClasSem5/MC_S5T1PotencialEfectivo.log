@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  1 MAR 2025 07:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  4 MAR 2025 08:02
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1090,7 +1090,7 @@ stitucional/UISLOGO.png  used on input line 52.
  [8
 
 ]
-<Figuras/Trayectorias.png, id=305, 805.0075pt x 665.48625pt>
+<Figuras/Trayectorias.png, id=306, 805.0075pt x 665.48625pt>
 File: Figuras/Trayectorias.png Graphic file (type png)
 <use Figuras/Trayectorias.png>
 Package pdftex.def Info: Figuras/Trayectorias.png  used on input line 72.
@@ -1218,7 +1218,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 94.
 
-<Figuras/Potencialkr3.png, id=546, 717.68124pt x 544.0325pt>
+<Figuras/Potencialkr3.png, id=547, 717.68124pt x 544.0325pt>
 File: Figuras/Potencialkr3.png Graphic file (type png)
 <use Figuras/Potencialkr3.png>
 Package pdftex.def Info: Figuras/Potencialkr3.png  used on input line 109.
@@ -1271,7 +1271,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 111.
 
-<Figuras/Potencialkr2.png, id=603, 1023.825pt x 648.4225pt>
+<Figuras/Potencialkr2.png, id=604, 1023.825pt x 648.4225pt>
 File: Figuras/Potencialkr2.png Graphic file (type png)
 <use Figuras/Potencialkr2.png>
 Package pdftex.def Info: Figuras/Potencialkr2.png  used on input line 125.
@@ -1394,7 +1394,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 127.
 
-<Figuras/Potencialkr.png, id=762, 871.255pt x 562.1pt>
+<Figuras/Potencialkr.png, id=763, 871.255pt x 562.1pt>
 File: Figuras/Potencialkr.png Graphic file (type png)
 <use Figuras/Potencialkr.png>
 Package pdftex.def Info: Figuras/Potencialkr.png  used on input line 145.
@@ -1445,7 +1445,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 153.
+stitucional/UISLOGO.png  used on input line 168.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [29
 
@@ -1455,9 +1455,70 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 161.
+stitucional/UISLOGO.png  used on input line 168.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [30
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 168.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [31
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 168.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [32
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 192.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [33
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 192.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [34
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 192.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+[35
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 192.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [36
 
 ]
 \tf@nav=\write6
@@ -1469,20 +1530,19 @@ stitucional/UISLOGO.png  used on input line 161.
 \tf@snm=\write8
 \openout8 = `MC_S5T1PotencialEfectivo.snm'.
 
-
-(./MC_S5T1PotencialEfectivo.aux
+ (./MC_S5T1PotencialEfectivo.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
 Package rerunfilecheck Info: File `MC_S5T1PotencialEfectivo.out' has not change
 d.
-(rerunfilecheck)             Checksum: 3AB613F92D7B2567C95263E6A76FE39D;1047.
+(rerunfilecheck)             Checksum: 0F28BD701EF45CEE79DE4624F61A5F2D;1295.
  ) 
 Here is how much of TeX's memory you used:
- 24479 strings out of 478268
- 480869 string characters out of 5846347
- 745431 words of memory out of 5000000
- 42085 multiletter control sequences out of 15000+600000
+ 24505 strings out of 478268
+ 481410 string characters out of 5846347
+ 746431 words of memory out of 5000000
+ 42099 multiletter control sequences out of 15000+600000
  484760 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,492b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1500,11 +1560,12 @@ exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/t
 exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local/t
 exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/tex
-live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on MC_S5T1PotencialEfectivo.pdf (30 pages, 761652 bytes).
+live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texli
+ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on MC_S5T1PotencialEfectivo.pdf (36 pages, 798654 bytes).
 PDF statistics:
- 974 PDF objects out of 1000 (max. 8388607)
- 876 compressed objects within 9 object streams
- 69 named destinations out of 1000 (max. 500000)
+ 1141 PDF objects out of 1200 (max. 8388607)
+ 1033 compressed objects within 11 object streams
+ 81 named destinations out of 1000 (max. 500000)
  186 words of extra memory for PDF output out of 10000 (max. 10000000)
 
