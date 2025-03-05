@@ -8,7 +8,7 @@ Esta clase tiene por objetivo construir la definición de un tensor a partir de 
    2. Rehacer los ejemplos resueltos 3.8, 3.9, 3.11 y 3.14
 
 ### Taller de problemas
-   + Hacer un código MAXIMA que resuelva el problema 2 sección 3.3.5
+   + Hacer un código SymPy que resuelva el problema 1 sección 3.3.5
 
 ### Materiales de apoyo:
 [Video tensores y espacios tensoriales](https://youtu.be/vYqYQvEwvlo) y [presentación espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/3_2Tensores1Abst.pdf)
