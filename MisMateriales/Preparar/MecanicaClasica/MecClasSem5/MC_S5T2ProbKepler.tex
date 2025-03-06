@@ -35,7 +35,30 @@
   \tableofcontents
 \end{frame}
 
-
+%
+%
+\section{Recapitulando}
+\frame{
+  \frametitle{Recapitulando}
+En la clase anterior consideramos
+  \begin{enumerate}
+  	\item<1-> El Potencial Efectivo que surge en el {\bf problema de dos cuerpos} con un potencial central $V(r) \Rightarrow V_{\text{ef}}(r) = V(r) + \frac{L^2}{2\mu r^2}$
+	\item<2-> Simplifica el estudio del movimiento en fuerzas centrales, permitiendo visualizar y clasificar órbitas en sistemas gravitacionales y atómicos. 
+	\item<3-> Movimiento Radial y Tipos de Órbitas
+	\begin{enumerate}
+		\item Movimiento para: \( E \geq V_{\text{ef}}(r) \) y puntos de retorno: \( E = V_{\text{ef}}(r) \).
+		\item Órbitas ligadas: \( E < 0 \), oscilación radial entre \( r_{\min} \) y \( r_{\max} \). 
+		\item Órbitas abiertas: \( E \geq 0 \), escape del sistema.
+		\item Órbitas circulares**: \( \frac{dV_{\text{ef}}}{dr} = 0 \) en un mínimo estable.  
+	\end{enumerate}
+	\item<4-> Ejemplos de Potenciales
+	\begin{enumerate}
+		\item \( V(r) = -k/r \) (Gravitacional y Coulombiano): órbitas elípticas, parabólicas e hiperbólicas.
+		\item \( V(r) = -k/r^3 \): Caída al centro si \( E < V_{\text{ef}}(r) \). 
+		\item \( V(r) = \frac{1}{2}kr^2 \) Oscilador armónico tridimensional  
+	\end{enumerate} 
+   \end{enumerate}
+}
 %%%%% Diapo 1
 \section{El Campo gravitacional: problema de dos cuerpos (otra vez)}
 \frame{
@@ -175,10 +198,29 @@
 %%%%% Diapo Recapitulando
 \section{Recapitulando}
 \frame{
-  \frametitle{Recapitulando}
-   	\begin{itemize}  
-  \item<1-> 
-    \end{itemize}
+  \frametitle{Recapitulando el Problema de Kepler}
+  \begin{itemize}  
+  \item<1->  Fuerza central inversamente proporcional al cuadrado de la distancia:  
+     \( f(r) = -\frac{k}{r^2}, \quad k = Gm_1m_2  \Leftrightarrow \) Potencial gravitacional: \( V(r) = -\frac{k}{r} \). 
+     %
+     \item<2-> Flujo del campo gravitacional y la Ecuación de Poisson $\nabla^2 \varphi=4 \pi G \rho$
+     %
+     \item<3-> El problema inverso: dada una órbita $r(\theta)$, determinar el potencial $V(r)$, o la fuerza central $f(r)$, que causa ésta órbita.
+     %
+     \item<4-> El problema de Kepler: La órbita de una partícula bajo la acción de $f(r)=-\frac{k}{r^2}$, con $k=G m_1 m_2$. Obtuvimos $\frac{1}{r} =\frac{k \mu}{L^2}\left[1+e \cos \left(\theta-\theta_0\right)\right]$
+     \begin{enumerate}
+     	\item  \( e = 0 \): órbita circular  
+     	\item \( 0 < e < 1 \): órbita elíptica  
+      	\item \( e = 1 \): órbita parabólica  
+     	\item \( e > 1 \): órbita hiperbólica  
+     \end{enumerate}
+     \item<5-> Leyes de Kepler
+     \begin{enumerate}
+     	\item Ley de las áreas: La velocidad areolar es constante.  
+	\item Ley de las órbitas: Los planetas se mueven en elipses con el Sol en uno de los focos.  
+	\item Ley de los periodos: \( T^2 \propto a^3 \), donde \( a \) es el semieje mayor. 
+     \end{enumerate}	
+\end{itemize}
 }
 %%%%% Diapo Discusión
 \section{Para la discusión}
