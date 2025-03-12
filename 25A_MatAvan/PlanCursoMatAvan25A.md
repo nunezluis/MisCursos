@@ -62,19 +62,19 @@ Son importantes las primeras referencias que tienen que ver con *Machine Learnin
 #### Clases
 + [Clase 7. Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md) **7mar**
 
-+ [Clase 8. Evaluación Ejercicios y Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md) **12mar**
++ [Clase 8. Evaluación Ejercicios y Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md)
 
-+ [Clase 10. Matrices y Operadores Lineales, parte 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **14mar**
++ [Clase 9. Matrices y Operadores Lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **12mar**
 
-+ [Clase 11. Matrices y Operadores Lineales, parte 2](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_3MatOperLineales.md) **19mar**
 
-+ [Clase 12. Autovalores y Autovectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md) **21mar**
++ [Clase 10. Autovalores y Autovectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_4AutovalAutovec.md) **14mar**
 
-+ Clase 13 Evaluación y ejercicios **26mar**
++ Clase 11 Evaluación y ejercicios **19mar**
    1. Resolver el ejercicio 2 de la sección 4.3.7 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Volumen1_Lib60New.pdf)
    2. Resolver los ejercicios 4, 5, y 12  de la sección 4.6.5 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Volumen1_Lib60New.pdf)
    3. Hacer un par de códigos en SymPy para resolver los ejercicios 6 y 8 de la sección 4.6.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Volumen1_Lib60New.pdf)
 
++ Clase 12 Sustentación Computación Cuántica **26mar/28mar**
 ### Series y Transformadas de Fourier
 
 #### Clases
