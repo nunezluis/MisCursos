@@ -42,11 +42,16 @@
   \frametitle{Estabilidad de órbitas circulares}
   \begin{itemize}  
   	\item<1-> Sea radio $r_0$ de una órbita circular descrita por una partícula sujeta a un potencial efectivo $V_{\mathrm{ef}}(r)=V(r)+\frac{L^2}{2 \mu r^2}$
+	%
 	\item<2-> Entonces, un mínimo es  $\left.\frac{\partial V_{\mathrm{ef}}}{\partial r}\right|_{r_0}  = 0 \left.\Rightarrow \frac{\partial V}{\partial r}\right|_{r_0}-\frac{L^2}{\mu r_0^3} = 0$ 
+	%
 	\item<3-> y un verdadero mínimo cumple $\left.\frac{\partial^2 V_{\mathrm{ef}}}{\partial r^2}\right|_{r_0}  > 0 \left.\Rightarrow \frac{\partial^2 V}{\partial r^2}\right|_{r_0}+\frac{3 L^2}{\mu r_0^4}  >0$
-	\item<4-> La fuerza central atractiva sobre una partícula en la órbita circular de radio $r_0$ es $f\left(r_0\right)=-\left.\frac{\partial V}{\partial r}\right|_{r_0}=-\frac{L^2}{\mu r_0^3}$
-	\item<5-> con lo cual $-\left.\frac{\partial f}{\partial r}\right|_{r_0}-\frac{3 f\left(r_0\right)}{r_0}>0 \Rightarrow  \frac{3 f\left(r_0\right)}{r_0}+f^{\prime}\left(r_0\right)<0$
-	\item<6-> En general para fuerzas de la forma $f(r)=-k r^n(k>0)$, la condición de estabilidad se cumple para $n>-3$
+	%
+	\item<4-> La fuerza central atractiva sobre una partícula en la órbita circular de radio $r_0$ es $F(r_0)=-\left.\frac{\partial V}{\partial r}\right|_{r_0}=-\frac{L^2}{\mu r_0^3}$
+	%
+	\item<5-> con lo cual $-\left.\frac{\partial F}{\partial r}\right|_{r_0}-\frac{3 F(r_0)}{r_0}>0 \Rightarrow  \frac{3 F(r_0)}{r_0}+F^{\prime}(r_0)<0$
+	%
+	\item<6-> En general para fuerzas de la forma $F(r)=-k r^n(k>0)$, la condición de estabilidad se cumple para $n>-3$
 	\item<7-> La fuerza gravitacional $(n=-2)$ y la fuerza de un resorte $(n=1)$ producen órbitas circulares estables.
 
    \end{itemize}
@@ -57,14 +62,14 @@
 \frame{
   \frametitle{Perturbaciones $r=r_0+\eta$}
    \begin{itemize}  
-  	\item<1-> Supongamos que la energía de la partícula es $E>V_{\mathrm{ef}}\left(r_0\right)$, donde $r_0$ es el radio de la órbita circular estable. 
+  	\item<1-> Supongamos que la energía de la partícula es $E>V_{\mathrm{ef}}(r_0)$, donde $r_0$ es el radio de la órbita circular estable. 
 	\item<2-> Consideremos una oscilación radial de pequeña amplitud $\eta$ alrededor del radio de la órbita circular $r_0$. Esto es $r=r_0+\eta$, con $\eta / r_0 \ll 1$
 	\begin{figure}[t]
 		\includegraphics[width=2.0in]{Figuras/EstabilidadEta.png}
    	\end{figure}
 	\item<3-> Desarrollamos por Taylor de la función $V_{\mathrm{ef}}(r)$ alrededor de $r_0$, y tenemos
-	$V_{\mathrm{ef}}(r)=V_{\mathrm{ef}}\left(r_0\right)+ \cancelto{0}{\left.\frac{\partial V_{\mathrm{ef}}}{\partial r}\right|_{r_0}}\left(r-r_0\right)+\left.\frac{1}{2} \frac{\partial^2 V_{\mathrm{ef}}}{\partial r^2}\right|_{r_0}\left(r-r_0\right)^2+\ldots$
-	\item<4-> El primer término es una constante, $V_{\mathrm{ef}}\left(r_0\right)=$ cte, y puede ser suprimido  el segundo término se anula por ser un mínimo.
+	$V_{\mathrm{ef}}(r)=V_{\mathrm{ef}}(r_0)+ \cancelto{0}{\left.\frac{\partial V_{\mathrm{ef}}}{\partial r}\right|_{r_0}}\left(r-r_0\right)+\left.\frac{1}{2} \frac{\partial^2 V_{\mathrm{ef}}}{\partial r^2}\right|_{r_0}\left(r-r_0\right)^2+\ldots$
+	\item<4-> El primer término es una constante, $V_{\mathrm{ef}}(r_0)=$ cte, y puede ser suprimido  el segundo término se anula por ser un mínimo.
 
     \end{itemize}
 }
@@ -91,7 +96,7 @@
 	\item<2->  disminuye con la distancia más rápidamente que $1 / r$. Por tanto, aproxima el potencial electrostático del núcleo atómico en las proximidades del núcleo teniendo en cuenta la «cancelación» parcial o el «apantallamiento» de la carga nuclear por los electrones atómicos.
 	\item<3-> la fuerza será $f(r)=-\frac{\partial V}{\partial r}=-k\left(\frac{1}{a r}+\frac{1}{r^2}\right) e^{-(r / a)}$
 	\item<4-> con lo cual $\frac{\partial f}{\partial r}=k\left(\frac{1}{a^2 r}+\frac{2}{a r^2}+\frac{2}{r^3}\right) e^{-(r / a)}$
-	\item<5-> la condicion de estabilidad es $ \frac{3 f(r_0)}{r_0}+f^{\prime}\left(r_0\right)<0 \Rightarrow 3 +\frac{r_0 \, f^{\prime}\left(r_0\right)}{f(r_0)} >0$
+	\item<5-> la condicion de estabilidad es $ \frac{3 f(r_0)}{r_0}+f^{\prime}(r_0)<0 \Rightarrow 3 +\frac{r_0 \, f^{\prime}(r_0)}{f(r_0)} >0$
 	\item<6-> Por lo tanto: $3+\frac{r_0 k\left(\frac{1}{a^2 r_0}+\frac{2}{a r_0^2}+\frac{2}{r_0^3}\right)}{-k\left(\frac{1}{a r_0}+\frac{1}{r_0^2}\right)}>0 \Rightarrow \frac{a^2}{r_0^2}+\frac{a}{r_0}-1>0$
 	\item<7-> Entonces, $q^2+q-1=0$, con $q \equiv a / r_0$, solución $q=\frac{a}{r_0} \gtrsim 0.62$
     \end{itemize}
@@ -156,13 +161,76 @@
   Calcular el ángulo de precesión $\Delta \theta$ para oscilaciones radiales alrededor de una órbita circular de radio $r_0$ para una partícula en el potencial $V(r)=g(r)-\frac{k}{r}$, donde $g(r)$ es una función de $r$ y $k=$ cte.
 \begin{itemize}  
 	\item<1-> El potencial efectivo es $V_{\mathrm{ef}}(r)=V(r)+\frac{L^2}{2 \mu r^2}=g(r)-\frac{k}{r}+\frac{L^2}{2 \mu r^2}$
-	\item<2-> Entonces $\left.\frac{\partial V_{\mathrm{ef}}}{\partial r}\right|_{r_0}=g^{\prime}\left(r_0\right)+\frac{k}{r_0^2}-\frac{L^2}{\mu r_0^3}=0 \Rightarrow L^2=\mu\left(g^{\prime}\left(r_0\right) r_0^3+k r_0\right)$
-	\item<3-> La frecuencia radial es $\omega_r^2=\left.\frac{1}{\mu} \frac{\partial^2 V_{\mathrm{ef}}}{\partial r^2}\right|_{r_0}=\frac{1}{\mu}\left(g^{\prime \prime}\left(r_0\right)-\frac{2 k}{r_0^3}+\frac{3 l^2}{\mu r_0^4}\right)$
-	\item<4-> Con $L^2$ tendremos  $\omega_r^2  =\frac{1}{\mu}\left[g^{\prime \prime}\left(r_0\right)-\frac{2 k}{r_0^3}+\frac{3}{r_0^4}\left(g^{\prime}\left(r_0\right) r_0^3+k r_0\right)\right]  =\frac{1}{\mu}\left(g^{\prime \prime}\left(r_0\right)+\frac{3}{r_0} g^{\prime}\left(r_0\right)+\frac{k}{r_0^3}\right)$
-	\item<5-> Además la velocidad angular es $\dot{\theta}=\frac{l}{\mu r_0^2}=\left[\frac{1}{\mu}\left(\frac{g^{\prime}\left(r_0\right)}{r_0}+\frac{k}{r_0^3}\right)\right]^{1 / 2}$
+	\item<2-> Entonces $\left.\frac{\partial V_{\mathrm{ef}}}{\partial r}\right|_{r_0}=g^{\prime}(r_0)+\frac{k}{r_0^2}-\frac{L^2}{\mu r_0^3}=0 \Rightarrow L^2=\mu\left(g^{\prime}(r_0) r_0^3+k r_0\right)$
+	\item<3-> La frecuencia radial es $\omega_r^2=\left.\frac{1}{\mu} \frac{\partial^2 V_{\mathrm{ef}}}{\partial r^2}\right|_{r_0}=\frac{1}{\mu}\left(g^{\prime \prime}(r_0)-\frac{2 k}{r_0^3}+\frac{3 l^2}{\mu r_0^4}\right)$
+	\item<4-> Con $L^2$ tendremos  $\omega_r^2  =\frac{1}{\mu}\left[g^{\prime \prime}(r_0)-\frac{2 k}{r_0^3}+\frac{3}{r_0^4}\left(g^{\prime}(r_0) r_0^3+k r_0\right)\right]  =\frac{1}{\mu}\left(g^{\prime \prime}(r_0)+\frac{3}{r_0} g^{\prime}(r_0)+\frac{k}{r_0^3}\right)$
+	\item<5-> Además la velocidad angular es $\dot{\theta}=\frac{l}{\mu r_0^2}=\left[\frac{1}{\mu}\left(\frac{g^{\prime}(r_0)}{r_0}+\frac{k}{r_0^3}\right)\right]^{1 / 2}$
 	\item<6-> El ángulo de precesión es 
 	$\Delta \theta=2 \pi\left(\frac{\dot{\theta}}{\omega_r}\right)   =2 \pi\left(\frac{g^{\prime}\left(r_o\right) r_o^2+k}{g^{\prime \prime}\left(r_o\right) r_o^3+3 g^{\prime}\left(r_o\right) r_o^2+k}\right)^{1 / 2}$
 \end{itemize}
 }
+
+%%%%%%%%%%%
+\section{Recapitulando}
+\frame{
+\frametitle{Recapitulando}
+\begin{itemize}  
+	\item<1-> \textbf{Estabilidad de órbitas circulares:} $  V_{\text{ef}}(r) = V(r) + \frac{L^2}{2\mu r^2}, \quad \left.\frac{d^2 V_{\text{ef}}}{dr^2}\right|_{r_0} > 0 $
+	%
+	\item<2-> \textbf{Perturbaciones radiales:} Para $r = r_0 + \eta \Rightarrow$, $  \ddot{\eta} + \omega_r^2 \eta = 0$, entonces  $\omega_r^2 = \frac{1}{\mu} \left.\frac{d^2 V_{\text{ef}}}{dr^2}\right|_{r_0}$
+	%
+	\item<3-> \textbf{Potencial apantallado:} $ V(r) = -\frac{k}{r} e^{-r/a} \quad \Rightarrow \quad \frac{a}{r_0} \gtrsim 0.62$
+	%
+	\item<4-> \textbf{Precesión orbital:} $\Delta \theta = 2\pi \frac{\dot{\theta}}{\omega_r} = 2\pi \left( \frac{L}{\mu r_0^2 \omega_r} \right)$
+	%
+	\item<5-> \textbf{Órbitas cerradas:}  Solo se obtienen con $V(r) \propto \frac{1}{r}$ y $V(r) \propto r^2$ (Teorema de Bertrand).
   
+\end{itemize}  
+}
+
+%%%%% Diapo 2
+\section{Para la discusión}
+\frame{
+\frametitle{Para la discusión}
+{\bf Estabilidad y Precesión en un Potencial Central} \\
+Una partícula de masa \( \mu \) se mueve bajo la influencia del potencial central, de Coulomb modificado con una corrección repulsiva de corto alcance:  $V(r) = -\frac{k}{r} + \frac{\lambda}{r^2}$, donde \( k > 0 \) y \( \lambda > 0 \) son constantes.
+\begin{itemize}  
+	\item Calcular el potencial efectivo \( V_{\text{ef}}(r) \) para este sistema.
+	%
+	\item Encontrar la condición para una órbita circular en el radio \( r_0 \).
+	%
+	\item Determinar la condición bajo la cual esta órbita es estable.
+	%
+	\item Calcular el ángulo de precesión \( \Delta \theta \) del perihelio por periodo radial.
+	%
+	\item Determine si la órbita precesa hacia delante (\( \Delta \theta > 2\pi \)) o hacia atrás (\( \Delta \theta < 2\pi \)).
+\end{itemize}  
+}
 \end{document}
+
+%%%%%%%%%%%
+\section{Título}
+\frame{
+\frametitle{Titulo}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}  
+}
+
+
+1. **Potencial efectivo**  
+   Calcular el potencial efectivo \( V_{\text{ef}}(r) \) para este sistema.
+
+2. **Órbita circular estable**
+   - 
+
+3. **3. Oscilaciones radiales  
+   - Expandir \( V_{\text{ef}(r) \) alrededor de \( r_0 \) hasta segundo orden y hallar la frecuencia radial \( \omega_r \).
+
+4. **Ángulo de precesión**
+   - Calcular el ángulo de precesión \( \Delta \theta \) del perihelio por periodo radial.
+   - Determine si la órbita precesiona hacia delante (\( \Delta \theta > 2\pi \)) o hacia atrás (\( \Delta \theta < 2\pi \)).
+
+
+
+

@@ -44,8 +44,18 @@
 \headcommand {\sectionentry {8}{Precesi\'on para $V(r)=g(r)-\frac {k}{r}$}{39}{Precesi\'on para $V(r)=g(r)-\frac {k}{r}$}{0}}
 \headcommand {\slideentry {8}{0}{1}{39/44}{}{0}}
 \headcommand {\beamer@framepages {39}{44}}
-\headcommand {\beamer@partpages {1}{44}}
-\headcommand {\beamer@subsectionpages {39}{44}}
 \headcommand {\beamer@sectionpages {39}{44}}
-\headcommand {\beamer@documentpages {44}}
-\headcommand {\gdef \inserttotalframenumber {11}}
+\headcommand {\beamer@subsectionpages {39}{44}}
+\headcommand {\sectionentry {9}{Recapitulando}{45}{Recapitulando}{0}}
+\headcommand {\slideentry {9}{0}{1}{45/49}{}{0}}
+\headcommand {\beamer@framepages {45}{49}}
+\headcommand {\beamer@sectionpages {45}{49}}
+\headcommand {\beamer@subsectionpages {45}{49}}
+\headcommand {\sectionentry {10}{Para la discusi\'on}{50}{Para la discusi\'on}{0}}
+\headcommand {\slideentry {10}{0}{1}{50/50}{}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\beamer@partpages {1}{50}}
+\headcommand {\beamer@subsectionpages {50}{50}}
+\headcommand {\beamer@sectionpages {50}{50}}
+\headcommand {\beamer@documentpages {50}}
+\headcommand {\gdef \inserttotalframenumber {13}}
