@@ -41,14 +41,15 @@
 \frame{
   \frametitle{El vector $\mathbf{A}$}
    \begin{itemize}  
-  	\item<1-> La trayectoria del problema de Kepler con el potencial central $V(r)=-k / r$ y la fuerza gravitacional $\mathbf{f}(r)=f(r) \hat{\mathbf{r}}$, con $f(r)=-k / r^2$, es una sección cónica, $\frac{q}{r}=1+e \cos \theta$, donde $q=L^2 / \mu k$, y $e=\sqrt{1+\frac{2 E L^2}{\mu k^2}}$.
-	\item<2-> Podemos definir $\mathbf{r} \cdot \mathbf{A}= r A \cos \theta = L^2-\mu k r$, con $A \equiv \mu k e =$ cte.
-	\item<3-> $\mathbf{A}$ es un vector de magnitud es constante y dirección debe estar en la dirección del perihelio. Si la dirección está en el eje $x$,  $\mathbf{A}=\mu k e \hat{\mathbf{i}}$.
+  	\item<1-> En el problema de Kepler tenemos $V(r)=-k / r$ y  $\mathbf{f}(r) =-k / r^2 \hat{\mathbf{r}}$, 
+	\item<2-> La trayectoria es un cónica, $\frac{q}{r}=1+e \cos \theta$, con $q=L^2 / \mu k$, y $e=\sqrt{1+\frac{2 E L^2}{\mu k^2}}$.
+	\item<3-> Definimos el vector de Laplace-Runge-Lenz como: $ \mathbf{A} = \mathbf{p} \times \mathbf{L} - \mu k\hat{\mathbf{r}}$ \\
+	\item<4-> Es un vector constante en magnitud y dirección. Apunta en la dirección del perihelio: \( \mathbf{A} \cdot \mathbf{L} = 0 \): \( \mathbf{A} \) está en el plano de la órbita.
 	\begin{figure}[t]
 		\includegraphics[width=1.8in]{Figuras/VectorA.png}
    	\end{figure}
-	\item<4-> Como $L^2=\mathbf{L} \cdot \mathbf{L}=\mathbf{L} \cdot(\mathbf{r} \times \mathbf{p})=\mathbf{r} \cdot(\mathbf{p} \times \mathbf{L}) \Rightarrow \mathbf{r} \cdot \mathbf{A}=\mathbf{r} \cdot[(\mathbf{p} \times \mathbf{L})-\mu k \hat{\mathbf{r}}]$
-	\item<5-> Donde $\mathbf{A} \equiv \mathbf{p} \times \mathbf{L} -\mu k \hat{\mathbf{r}}$ y también $\mathbf{A} \cdot \mathbf{L}=0$
+	\item<5-> Como $L^2=\mathbf{L} \cdot \mathbf{L}=\mathbf{L} \cdot(\mathbf{r} \times \mathbf{p})=\mathbf{r} \cdot(\mathbf{p} \times \mathbf{L}) \Rightarrow \mathbf{r} \cdot \mathbf{A}=\mathbf{r} \cdot[(\mathbf{p} \times \mathbf{L})-\mu k \hat{\mathbf{r}}]$
+	\item<6-> Donde $\mathbf{A} \equiv \mathbf{p} \times \mathbf{L} -\mu k \hat{\mathbf{r}}$ y también $\mathbf{A} \cdot \mathbf{L}=0$
 	 
     \end{itemize}
 }
@@ -82,7 +83,61 @@
 	\item<2->La dirección $\hat{\mathbf{A}}$ constante implica que la órbita para $V(r)=-k / r$ no  precesa.
 	\item<3-> El sistema de dos cuerpos sujetos a la fuerza gravitacional que varía como el inverso del cuadrado de la distancia constituye un sistema superintegrable. 
 	\item<4-> Existen seis grados de libertad (tres para cada partícula) y siete cantidades conservadas: las tres componentes de la velocidad del centro de masa $\mathbf{v}_{c m}$, la dirección del momento angular $\mathbf{L}$, su magnitud $L$, la energía $E$ y la dirección del vector de Laplace-Runge-Lenz $\hat{\mathbf{A}}$
+\end{itemize}
+}
 
+%
+%%%%% Diapo 2
+\section{Spoiler Alert. Simetrías Escondidas y paréntesis de Poisson}
+\frame{
+\frametitle{Simetrías Escondidas y paréntesis de Poisson 1/2}
+\begin{itemize}  
+	\item<1-> Mas adelante en este curso, si tenemos un sistema de $n$ partículas libres, definiremos el espacio de configuraciones como un espacio de $3n$ dimensiones $(r_{x\,k}, r_{y\,k}, r_{z\,k})$, con $i= 1, 2, \cdots, n$ 
+	\item<2-> Ese mismo sistema de partículas libres lo podremos describir en el espacio de fases de $6n$ dimensiones $(q_k , p_{k})$ con $k= 1, 2, \cdots, 3n$
+	\item<3-> En el espacio de fases definiremos los paréntesis de Poisson para dos funciones  \( f, g \) cualesquiera:$\{f, g\} = \sum_i \left( \frac{\partial f}{\partial q_i} \frac{\partial g}{\partial p_i} - \frac{\partial f}{\partial p_i} \frac{\partial g}{\partial q_i} \right)$
+	\item<4-> Sea una función $f\left(q_i, p_i, t\right)$ en el espacio de fase $\left(q_i, p_i\right)$, $i=1, \ldots, s$, de un sistema mecánico con una función energía $\mathcal{E}=\mathcal{H}\left(q_i, p_i, t\right)$ que lo llamaremos Hamiltoniano.
+	\item<5-> Entonces $\frac{d f}{d t}=\sum_{i=1}^s\left(\frac{\partial f}{\partial q_i} \dot{q}_i+\frac{\partial f}{\partial p_i} \dot{p}_i\right)+\frac{\partial f}{\partial t} =\{f, \mathcal{H}\}+\frac{\partial f}{\partial t} $.
+	\item<6-> Donde $\dot{q}_i=\frac{\partial \mathcal{H}}{\partial p_i}, \quad \dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i}$ son las ecuaciones de Hamilton.
+	\item<7-> Si $f$ no depende explícitamente del tiempo $\frac{\partial f}{\partial t}=0$ y es una cantidad conservada $\frac{d f}{d t}=0$, entonces $\{f, \mathcal{H}\}=0$.
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{Dos ejemplos}
+\frame{
+\frametitle{Dos Ejemplos}
+\begin{itemize}  
+	\item<1-> Calcular $\{r, \mathbf{p}\}$, donde $r=\left(x^2+y^2+z^2\right)^{1 / 2}$
+	\begin{itemize}
+		\item $\{r, \mathbf{p}\}=\left\{r, p_x\right\} \hat{\mathbf{x}}+\left\{r, p_y\right\} \hat{\mathbf{y}}+\left\{r, p_z\right\} \hat{\mathbf{z}}$
+		\item $\left\{r, p_x\right\}=\sum_{i=1}^3\left(\frac{\partial r}{\partial q_i} \frac{\partial p_x}{\partial p_i}-\frac{\partial r}{\partial p_i} \frac{\partial p_x}{\partial q_i}\right)=\frac{\partial r}{\partial x} \frac{\partial p_x}{\partial p_x}=\frac{x}{r}$
+		\item $\left\{r, p_y\right\}=\frac{y}{r}, \quad\left\{r, p_z\right\}=\frac{z}{r}$
+		\item luego $\{r, \mathbf{p}\}=\frac{x}{r} \hat{\mathbf{x}}+\frac{y}{r} \hat{\mathbf{y}}+\frac{z}{r} \hat{\mathbf{z}}=\frac{\mathbf{r}}{r}=\hat{\mathbf{r}} $
+	\end{itemize}
+	\item<2->  Dadas las componentes del momento angular $\mathbf{L}=\mathbf{r} \times \mathbf{p}$:
+	$L_x=y p_z-z p_y, \quad L_y=z p_x-x p_z, \quad L_z=x p_y-y p_x$ \\
+	Calcular los paréntesis de Poisson para las componentes de {\bf p} y {\bf L}: \\ 	
+	$\left\{p_y, L_x\right\}=-\frac{\partial L_x}{\partial y}=-p_z$;  $\quad \left\{p_x, L_x\right\}=-\frac{\partial L_x}{\partial x}=0$; $\quad \left\{p_z, L_y\right\}=-\frac{\partial L_y}{\partial z}=-p_x$ \\
+ $\left\{L_x, L_y\right\} =\sum_{i=1}^3\left(\frac{\partial L_x}{\partial q_i} \frac{\partial L_y}{\partial p_i}-\frac{\partial L_x}{\partial p_i} \frac{\partial L_y}{\partial q_i}\right)$ \\$ 
+		\left\{L_x, L_y\right\} = \left(\frac{\partial L_x}{\partial x} \frac{\partial L_y}{\partial p_x}-\frac{\partial L_x}{\partial p_x} \frac{\partial L_y}{\partial x}\right)+\left(\frac{\partial L_x}{\partial y} \frac{\partial L_y}{\partial p_y}-\frac{\partial L_x}{\partial p_y} \frac{\partial L_y}{\partial y}\right)+\left(\frac{\partial L_x}{\partial z} \frac{\partial L_y}{\partial p_z}-\frac{\partial L_x}{\partial p_z} \frac{\partial L_y}{\partial z}\right)$ \\
+	$\left\{L_x, L_y\right\} =x p_y-y p_x=L_z$; $\quad \left\{L_y, L_z\right\}  =L_x$ $\quad \left\{L_z, L_x\right\}  =L_y$
+	\item<3-> 	Entonces, $\left\{L_i, L_j\right\}=\epsilon_{i j k} L_k$. En Mecánica Cuántica,  $\left[L_i, L_j\right]=i \hbar \epsilon_{i j k} L_k$.	
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Spoiler Alert: Simetrías Escondidas y el Vector de Runge-Lenz}
+\frame{
+\frametitle{El Vector de Runge-Lenz}
+Para un sistema de Kepler en coordenadas cartesianas
+\begin{itemize}  
+	\item<1-> El Hamiltoniano es $\mathcal{H} = \frac{\vec{p}^2}{2m} - \frac{k}{|\vec{r}|}$
+	\item<2-> El vector de Runge Lenz es $\vec{A} = \vec{p} \times \vec{L} - mk \frac{\vec{r}}{r}$
+	\item<3-> Muestre que $\frac{d\vec{A}}{dt} = \{\vec{A}, H\} = \{A_i, H\} = 0$, donde las $A_i$ son las componentes cartesianas del vector de Runge-Lenz
+	\item<4-> Si $L_k$ son las componente cartesianas de la cantidad de movimiento angular, muestre que $\{L_i, L_j\} = \varepsilon_{ijk} L_k$.  Esta operación define el álgebra de Lie de SO(3) que garantiza simetría rotacional.
+	\item<5-> Muestre también $\{L_i, A_j\} = \varepsilon_{ijk} A_k$
+	\item<6-> Adicionalmente, muestre que $\{L_i, A_j\} = \varepsilon_{ijk} A_k$
+	\item<7-> El problema de Kepler tiene un grupo de simetría ampliado: No sólo rotaciones espaciales SO(3), sino SO(4) para el caso de órbitas acotadas, generada por \( \{L_i, \tilde{A}_j\} \)
 \end{itemize}
 }
  

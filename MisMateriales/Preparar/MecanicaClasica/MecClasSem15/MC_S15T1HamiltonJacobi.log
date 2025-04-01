@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  3 DEC 2024 12:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  1 APR 2025 10:49
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -988,7 +988,7 @@ Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 24.
 
 </Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png,
- id=38, 184.5294pt x 136.1085pt>
+ id=42, 184.5294pt x 136.1085pt>
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
@@ -1131,12 +1131,12 @@ Overfull \vbox (4.25868pt too high) detected at line 52
 [9
 
 ]
-<Figuras/Trayectorias1.png, id=300, 924.45375pt x 674.52pt>
+<Figuras/Trayectorias1.png, id=306, 924.45375pt x 674.52pt>
 File: Figuras/Trayectorias1.png Graphic file (type png)
 <use Figuras/Trayectorias1.png>
 Package pdftex.def Info: Figuras/Trayectorias1.png  used on input line 69.
 (pdftex.def)             Requested size: 108.405pt x 79.09657pt.
-<Figuras/Trayectorias2.png, id=301, 882.29625pt x 727.71875pt>
+<Figuras/Trayectorias2.png, id=307, 882.29625pt x 727.71875pt>
 File: Figuras/Trayectorias2.png Graphic file (type png)
 <use Figuras/Trayectorias2.png>
 Package pdftex.def Info: Figuras/Trayectorias2.png  used on input line 69.
@@ -1480,35 +1480,52 @@ Overfull \vbox (1.12706pt too high) detected at line 116
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
-Package rerunfilecheck Info: File `MC_S15T1HamiltonJacobi.out' has not changed.
 
-(rerunfilecheck)             Checksum: 7BF03A728405516B5D73C38DB06AF97F;766.
+Package rerunfilecheck Warning: File `MC_S15T1HamiltonJacobi.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `MC_S15T1HamiltonJacobi.out':
+(rerunfilecheck)             Before: ADCE0567B49194C560171E74310E1AC5;1131
+(rerunfilecheck)             After:  7BF03A728405516B5D73C38DB06AF97F;766.
  ) 
 Here is how much of TeX's memory you used:
- 24342 strings out of 478268
- 477634 string characters out of 5846347
- 746416 words of memory out of 5000000
- 41952 multiletter control sequences out of 15000+600000
+ 24351 strings out of 478268
+ 477720 string characters out of 5846347
+ 746417 words of memory out of 5000000
+ 41958 multiletter control sequences out of 15000+600000
  477242 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,490b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.
-pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
-></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
-/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr
-/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></us
-r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></us
-r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr
-/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on MC_S15T1HamiltonJacobi.pdf (35 pages, 748653 bytes).
+
+pdfTeX warning (dest): name{Navigation36} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Navigation38} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Outline0.4} has been referenced but does not exist,
+ replaced by a fixed one
+
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pf
+b></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr
+/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/l
+ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/l
+ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on MC_S15T1HamiltonJacobi.pdf (35 pages, 749250 bytes).
 PDF statistics:
- 1067 PDF objects out of 1200 (max. 8388607)
- 972 compressed objects within 10 object streams
- 74 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1074 PDF objects out of 1200 (max. 8388607)
+ 979 compressed objects within 10 object streams
+ 77 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 
