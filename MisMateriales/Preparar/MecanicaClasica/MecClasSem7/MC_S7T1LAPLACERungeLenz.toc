@@ -5,3 +5,4 @@
 \beamer@sectionintoc {4}{Spoiler Alert. Simetr\IeC {\'\i }as Escondidas y par\'entesis de Poisson}{23}{0}{4}
 \beamer@subsectionintoc {4}{1}{Dos ejemplos}{30}{0}{4}
 \beamer@sectionintoc {5}{Spoiler Alert: Simetr\IeC {\'\i }as Escondidas y el Vector de Runge-Lenz}{33}{0}{5}
+\beamer@sectionintoc {6}{Recapitulando}{40}{0}{6}
