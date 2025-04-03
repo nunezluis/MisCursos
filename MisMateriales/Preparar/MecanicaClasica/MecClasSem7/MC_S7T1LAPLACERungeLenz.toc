@@ -1,8 +1,9 @@
 \babel@toc {spanish}{}\relax 
 \beamer@sectionintoc {1}{El problema de Kepler y el vector $\mathbf {A}$, Laplace-Runge-Lenz }{3}{0}{1}
 \beamer@sectionintoc {2}{El vector $\mathbf {A}$ como cantidad conservada}{9}{0}{2}
-\beamer@sectionintoc {3}{Problema Kepler superintegrable}{19}{0}{3}
-\beamer@sectionintoc {4}{Spoiler Alert. Simetr\IeC {\'\i }as Escondidas y par\'entesis de Poisson}{23}{0}{4}
-\beamer@subsectionintoc {4}{1}{Dos ejemplos}{30}{0}{4}
-\beamer@sectionintoc {5}{Spoiler Alert: Simetr\IeC {\'\i }as Escondidas y el Vector de Runge-Lenz}{33}{0}{5}
-\beamer@sectionintoc {6}{Recapitulando}{40}{0}{6}
+\beamer@sectionintoc {3}{La norma del vector $\mathbf {A}$}{18}{0}{3}
+\beamer@sectionintoc {4}{Problema Kepler superintegrable}{25}{0}{4}
+\beamer@sectionintoc {5}{Spoiler Alert. Simetr\IeC {\'\i }as Escondidas y par\'entesis de Poisson}{29}{0}{5}
+\beamer@sectionintoc {6}{Dos ejemplos}{36}{0}{6}
+\beamer@sectionintoc {7}{Recapitulando}{39}{0}{7}
+\beamer@sectionintoc {8}{Para la discusi\'on}{44}{0}{8}

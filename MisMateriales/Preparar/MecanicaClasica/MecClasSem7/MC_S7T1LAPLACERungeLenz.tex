@@ -67,7 +67,22 @@
 	\item<7-> Además $\frac{d}{d t}\left(\frac{\mathbf{r}}{r}\right)  =\frac{d \mathbf{r}}{d t} \frac{1}{r}-\frac{\mathbf{r}}{r^2} \frac{d r}{d t} \Rightarrow \quad-r^2 \frac{d}{d t}\left(\frac{\mathbf{r}}{r}\right)  =\mathbf{r} \frac{d r}{d t}-r \frac{d \mathbf{r}}{d t}$
 	\item<8-> Con lo cual $\frac{d}{d t}(\mathbf{p} \times \mathbf{L})=-\mu f(r) r^2 \frac{d}{d t}\left(\frac{\mathbf{r}}{r}\right) = \mu k \frac{d}{d t}\left(\frac{\mathbf{r}}{r}\right)=\mu k \frac{d \hat{\mathbf{r}}}{d t}$ para $f(r)=-k / r^2$
 	\item<9-> y finalmente $\frac{d \mathbf{A}}{d t}=0 \Rightarrow \mathbf{A} \equiv \mathbf{p} \times \mathbf{L} -\mu k \hat{\mathbf{r}} =$cte
-	\item<10-> La magnitud del vector \textbf{A} para la fuerza gravitacional se expresa en términos de $L$ y $E$ como $A^2=(\mu k e)^2=\mu^2 k^2+2 \mu E L^2=$ cte
+\end{itemize}
+}
+%
+%
+\section{La norma del vector $\mathbf{A}$}
+\frame{
+\frametitle{La norma del vector $\mathbf{A}$}
+\begin{itemize}  
+	\item<1-> La magnitud del vector \textbf{A} para la fuerza gravitacional se expresa en términos de $L$ y $E$ como $A^2=(\mu k e)^2=\mu^2 k^2+2 \mu E L^2=$ cte
+	\item<2-> Si $\mathbf{A} = \mathbf{p} \times \mathbf{L} - mk \frac{\mathbf{r}}{r}$, entonces $A^2 = (\mathbf{p} \times \mathbf{L})^2 + m^2k^2 - 2mk \frac{\mathbf{r}}{r} \cdot (\mathbf{p} \times \mathbf{L})$
+	\item<3-> Como $(\mathbf{p} \times \mathbf{L})^2 = p^2 L^2 - (\mathbf{p} \cdot \mathbf{L})^2 = p^2 L^2 + \cancelto{0}{\mathbf{p} \cdot (\mathbf{r} \times \mathbf{p})} =  p^2 L^2$
+	\item<4-> Por otro lado $-2mk (\mathbf{p} \times \mathbf{L}) \cdot \hat{r} =  -2mk\frac{\mathbf{L}}{r} \cdot (\mathbf{r} \times \mathbf{p} ) = \frac{-2mkL^2}{r}$
+	\item<5-> Entonces $|\mathbf{A}|^2 = p^2 L^2 - 2 m k \cdot \frac{L^2}{r} + m^2 k^2$, pero  $p^2 = 2m \left( E + \frac{k}{r} \right)$
+	\item<5-> tendremos $|\mathbf{A}|^2 = 2mE L^2 + m^2 k^2$ 
+	\item<6-> Como $e = \sqrt{1 + \frac{2EL^2}{m k^2}} \Rightarrow e^2 = 1 + \frac{2EL^2}{m k^2} \Rightarrow m^2 k^2 e^2 = m^2 k^2 + 2mE L^2 = |\mathbf{A}|^2$
+	\item<7-> Finalmente $\boxed{|\mathbf{A}| = m k e}$
 \end{itemize}
 }
 
@@ -103,7 +118,7 @@
 }
 %
 %%%%% Diapo 2
-\subsection{Dos ejemplos}
+\section{Dos ejemplos}
 \frame{
 \frametitle{Dos Ejemplos}
 \begin{itemize}  
@@ -126,42 +141,37 @@
 }
 %
 %%%%% Diapo 2
-\section{Spoiler Alert: Simetrías Escondidas y el Vector de Runge-Lenz}
+\section{Recapitulando}
 \frame{
-\frametitle{El Vector de Runge-Lenz}
+\frametitle{Recapitulando}
+\begin{itemize}  
+	\item<1-> Para un potencial central: \( V(r) = -\frac{k}{r} \) con secciones cónicas como órbitas (elipses, parábolas, hipérbolas), se define el vector de Laplace-Runge-Lenz com \( \mathbf{A} = \mathbf{p} \times \mathbf{L} - \mu k \hat{\mathbf{r}} \) 
+	\item<2-> Se demostró que para fuerzas del tipo $\mathbf{f}(r) = \frac{k}{r^2}\hat{{\bf r}}$, $\mathbf{A}$ es una cantidad conservada dinámica, i.e. \( \frac{d\mathbf{A}}{dt} = 0 \), no noetheriana.
+	\item<3-> $\mathbf{A}$ apunta en la dirección del perihelio y su magnitud está relacionada con \( \mathcal{E} \), $e$ y \( L \) como $|\mathbf{A}| = \sqrt{2mE L^2 + m^2 k^2} = m k e$
+	\item<4-> El problema de Kepler es superintegrable. Tiene más constantes de movimiento que grados de libertad: 
+	\( \mathcal{E} \), \( \mathbf{L} \), \( \mathbf{A} \). Esto garantiza órbitas cerradas (teorema de Bertrand).
+	\item<5-> Los Paréntesis de Poisson para el problema de Kepler presentan las siguientes relaciones entre las componentes de la cantidad de movimiento angular y las del vector de Laplace-Runge-Lenz: \\
+	\( \{L_i, L_j\} = \varepsilon_{ijk} L_k \), \( \{L_i, A_j\} = \varepsilon_{ijk} A_k \)  \\
+	\( \{A_i, A_j\} = -2m\mathcal{E} \varepsilon_{ijk} L_k  \Rightarrow \) grupo \( SO(4) \) (con \( \mathcal{E} < 0 \))
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Para la discusión}
+\frame{
+\frametitle{Para la discusión}
 Para un sistema de Kepler en coordenadas cartesianas
 \begin{itemize}  
-	\item<1-> El Hamiltoniano es $\mathcal{H} = \frac{\mathbf{p}^2}{2m} - \frac{k}{|\mathbf{r}|}$
+	\item<1-> El Hamiltoniano es $\mathcal{H} \equiv \mathcal{E} = \frac{\mathbf{p}^2}{2m} - \frac{k}{|\mathbf{r}|}$
 	\item<2-> El vector de Runge Lenz es $\mathbf{A} = \mathbf{p} \times \mathbf{L} - mk \frac{\mathbf{r}}{r}$
-	\item<3-> Muestre que $\frac{d\mathbf{A}}{dt} = \{\mathbf{A}, H\} = \{A_i, H\} = 0$, donde las $A_i$ son las componentes cartesianas del vector de Runge-Lenz
+	\item<3-> Muestre que $\frac{d\mathbf{A}}{dt} = \{\mathbf{A}, \mathcal{H}\} = \{A_i, \mathcal{H}\} = 0$, donde las $A_i$ son las componentes cartesianas del vector de Runge-Lenz
 	\item<4-> Si $L_k$ son las componente cartesianas de la cantidad de movimiento angular, muestre que $\{L_i, L_j\} = \varepsilon_{ijk} L_k$.  Esta operación define el álgebra de Lie de SO(3) que garantiza simetría rotacional.
 	\item<5-> Muestre también $\{L_i, A_j\} = \varepsilon_{ijk} A_k$
 	\item<6-> Adicionalmente, muestre que $\{L_i, A_j\} = \varepsilon_{ijk} A_k$
 	\item<7-> El problema de Kepler tiene un grupo de simetría ampliado: No sólo rotaciones espaciales SO(3), sino SO(4) para el caso de órbitas acotadas, generada por \( \{L_i, \tilde{A}_j\} \)
 \end{itemize}
 }
-%
-%%%%% Diapo 2
-\section{Recapitulando}
-\frame{
-\frametitle{Título transparencia}
-\begin{itemize}  
-	\item<1-> Para un potencial central: \( V(r) = -\frac{k}{r} \) con secciones cónicas como órbitas (elipses, parábolas, hipérbolas), se define el vector de Laplace-Runge-Lenz com \( \vec{A} = \vec{p} \times \vec{L} - \mu k \hat{r} \) 
-	\item Se demostró que \( \frac{d\vec{A}}{dt} = 0 \) para $$ de la distancia Este vector apunta al perihelio y es constante
-	\end{itemize} 
-	\item<2-> Conservación de \( \vec{A} \)
-	\begin{itemize}
-		\item 
-		\item 
-	\end{itemize} 
-	\item<2-> 
-	\begin{itemize}
-		\item 
-		\item 
-	\end{itemize} 
-\end{itemize}
-}
- 
+
 \end{document}
 %
 %%%%% Diapo 2

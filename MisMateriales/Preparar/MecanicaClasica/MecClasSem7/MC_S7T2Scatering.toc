@@ -1,0 +1,8 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Dispersi\'on: El concepto}{3}{0}{1}
+\beamer@sectionintoc {2}{Par\'ametro de Impacto}{7}{0}{2}
+\beamer@sectionintoc {3}{Dispersi\'on Hiperb\'olica para $V(r)=-\frac {k}{r}$}{10}{0}{3}
+\beamer@sectionintoc {4}{Dispersi\'on hiperb\'olica para $V(r)= \frac {k}{r}$}{16}{0}{4}
+\beamer@sectionintoc {5}{Secci\'on eficaz}{24}{0}{5}
+\beamer@sectionintoc {6}{Secci\'on eficaz diferencial}{30}{0}{6}
+\beamer@sectionintoc {7}{El experimento de Rutherford}{35}{0}{7}
