@@ -6,3 +6,5 @@
 \beamer@sectionintoc {5}{Secci\'on eficaz}{24}{0}{5}
 \beamer@sectionintoc {6}{Secci\'on eficaz diferencial}{30}{0}{6}
 \beamer@sectionintoc {7}{El experimento de Rutherford}{35}{0}{7}
+\beamer@sectionintoc {8}{Recapitulando}{54}{0}{8}
+\beamer@sectionintoc {9}{Para la discusi\'on}{62}{0}{9}

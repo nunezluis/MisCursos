@@ -70,7 +70,7 @@
 \frame{
 \frametitle{Dispersión Hiperbólica para $V(r)=-\frac{k}{r}$}
 \begin{itemize}  
-	\item<1-> La magnitud del momento angular de la partícula será $L=  r p \sin (\pi-\theta)=m v_0 r \sin \theta=m v_0 b \Rightarrow L^2=  m^2 v_0^2 b^2=2 E m b^2$
+	\item<1-> La magnitud del momento angular de la partícula será $L=  r p \operatorname{sen}\, (\pi-\theta)=m v_0 r \operatorname{sen}\, \theta=m v_0 b \Rightarrow L^2=  m^2 v_0^2 b^2=2 E m b^2$
 	\item<2-> Si  $V(r)=-\frac{k}{r}$, la órbita con $E>0$ es una hipérbola, $\frac{q}{r}=1+e \cos \theta$, con 
 	$q  =\frac{L^2}{m k}=\frac{2 E b^2}{k}$ y $e =\sqrt{1+\frac{2 E l^2}{m k^2}}=\sqrt{1+\left(\frac{2 E b}{k}\right)^2}>1$
 	\item<3-> Entonces: $r_{\min }  =\frac{q}{1+e}, \quad \text { para } \theta=0$ y $r_{\max } \rightarrow \infty \quad \text { para } \cos \theta_{\max }  =-\frac{1}{e} \Rightarrow \frac{\pi}{2}<\theta_{\max }<\pi$
@@ -124,7 +124,7 @@
    	\end{figure}
 	\item<3-> Las partículas con el mismo valor $b$ son dispersadas en un cono con vértice en $f$ y ángulo  $\chi$, 
 	\item<4-> El cono encierra un ángulo sólido $\Omega$. 
-	\item<5-> El ángulo sólido diferencial $d \Omega=\frac{d A}{r^2}=\frac{(2 \pi r \sin \chi)(r d \chi)}{r^2}=2 \pi \sin \chi d \chi $
+	\item<5-> El ángulo sólido diferencial $d \Omega=\frac{d A}{r^2}=\frac{(2 \pi r \operatorname{sen}\, \chi)(r d \chi)}{r^2}=2 \pi \operatorname{sen}\, \chi d \chi $
 	\item<6-> La sección eficaz de dispersión $\sigma(\Omega)$ es la fracción de partículas incidentes que son desviadas dentro del ángulo sólido $\Omega$,
 \end{itemize}
 }%
@@ -140,7 +140,7 @@
 	\item<2-> Es la probabilidad de dispersión en un diferencial de ángulo sólido $d \Omega$.
 	\item<3-> Las partículas incidentes en el anillo de radio $b$ y ancho $d b$ por unidad de tiempo debe ser igual a aquellas dispersadas en el diferencial de ángulo $d \Omega$ por unidad de tiempo, $n(\Omega) d \Omega$.
 	\item<4-> Esto es $I 2 \pi b d b  =I \sigma(\Omega) d \Omega \Leftrightarrow 2 \pi b d b =\sigma(\Omega) 2 \pi {\rm sen}\, \chi d \chi$
-	\item<5-> La sección eficaz en función del ángulo de dispersión es $\sigma(\chi)=\frac{b}{\sin \chi}\left|\frac{d b}{d \chi}\right|$. 
+	\item<5-> La sección eficaz en función del ángulo de dispersión es $\sigma(\chi)=\frac{b}{\operatorname{sen}\, \chi}\left|\frac{d b}{d \chi}\right|$. 
 \end{itemize}
 }%
 %%%%% Diapo 2
@@ -169,7 +169,7 @@
 	\item<3-> Es la misma órbita hiperbólica, $e=\sqrt{1+\left(\frac{2 b E}{k}\right)^2}$, de un potencial de Kepler repulsivo 
 	\item<4-> El ángulo de dispersión para un potencial de Kepler repulsivo es $\chi=\pi-2 \theta_{\max }$
 	\item<5-> Luego,  $\cos \left(\frac{\pi}{2}-\frac{\chi}{2}\right) =\cos \theta_{\max } \Rightarrow {\rm sen} \left(\frac{\chi}{2}\right)  =\frac{1}{e}$
-	\item<6-> Y obtenemos $\left(\frac{2 b E}{k}\right)^2=\frac{1}{\sin ^2\left(\frac{\chi}{2}\right)}-1=\cot ^2\left(\frac{\chi}{2}\right) \Rightarrow \cot \left(\frac{\chi}{2}\right)=\frac{2 b E}{k}$
+	\item<6-> Y obtenemos $\left(\frac{2 b E}{k}\right)^2=\frac{1}{\operatorname{sen}\, ^2\left(\frac{\chi}{2}\right)}-1=\cot ^2\left(\frac{\chi}{2}\right) \Rightarrow \cot \left(\frac{\chi}{2}\right)=\frac{2 b E}{k}$
 	\item<7-> El ángulo de dispersión en función de datos iniciales $b, E$, y de la constante $k$ del potencial $V(r)=k / r$
 \end{itemize}
 }
@@ -183,7 +183,7 @@
 	\item<2-> Choque frontal, la partícula retrocede completamente $b=0 \Rightarrow \cot \left(\frac{\chi}{2}\right)=0 \Rightarrow \chi=\pi$
 	\item<3-> La partícula pasa muy lejos del centro repulsivo y no hay dispersión: $b \rightarrow \infty \Rightarrow \cot \left(\frac{\chi}{2}\right) \rightarrow \infty \Rightarrow \chi=0$.
 	\item<4-> Como $b=\frac{k}{2 E} \cot \left(\frac{\chi}{2}\right)$, entonces $\left|\frac{d b}{d \chi}\right|=\frac{k}{4 E} \csc ^2\left(\frac{\chi}{2}\right)$
-	\item<5-> La sección eficaz será $\sigma(\chi) =\frac{1}{\sin \chi} \frac{k}{2 E} \cot (\chi / 2) \frac{k}{4 E} \csc ^2(\chi / 2)  =\frac{k^2}{8 E^2} \frac{\cot (\chi / 2) \csc ^2(\chi / 2)}{2 \sin (\chi / 2) \cos (\chi / 2)}  =\frac{1}{4}\left(\frac{k}{2 E}\right)^2 \csc ^4\left(\frac{\chi}{2}\right)$
+	\item<5-> La sección eficaz será $\sigma(\chi) =\frac{1}{\operatorname{sen}\, \chi} \frac{k}{2 E} \cot (\chi / 2) \frac{k}{4 E} \csc ^2(\chi / 2)  =\frac{k^2}{8 E^2} \frac{\cot (\chi / 2) \csc ^2(\chi / 2)}{2 \operatorname{sen}\, (\chi / 2) \cos (\chi / 2)}  =\frac{1}{4}\left(\frac{k}{2 E}\right)^2 \csc ^4\left(\frac{\chi}{2}\right)$
 	\item<6-> El valor de $\sigma(\chi)$ es grande para $\chi \rightarrow 0$, la mayoría de las partículas $\alpha$ pasan sin desviarse mucho. 
 	\item<7-> Para $\chi=\pi, \sigma(\pi)$ alcanza su valor mínimo no nulo con una probabilidad pequeña de observar partículas $\alpha$ dispersadas completamente hacia atrás, como en un choque frontal contra otra carga puntual positiva. 
 
@@ -198,6 +198,58 @@
 	\begin{figure}[t]
 		\includegraphics[width=1.9in]{Figuras/SeccionEficazRutherford.png}
    	\end{figure}
+}
+%
+%%%%% Diapo 2
+\section{Recapitulando}
+\frame{
+\frametitle{Recapitulando 1/2}
+\begin{itemize}  
+	\item<1-> Estudiamos las trayectorias abiertas para energías \( E > 0 \) en potenciales centrales \( V(r) \).
+	\item<2-> Definimos el ángulo de dispersión, \( \chi \), como diferencia angular entre las direcciones de entrada y salida de la partícula.
+	\item<3-> El parámetro de impacto \( b \) (distancia perpendicular desde la línea de movimiento inicial al centro del potencial) y  la energía \( \mathcal{E} \), definen completamente la trayectoria en la dispersión en mecánica clásica.
+	\item<4-> Consideramos la dispersión hiperbólica en potenciales atractivos y repulsivos. 
+	\begin{itemize}
+		\item Para \( V(r) = -\frac{k}{r} \), la trayectoria con \( E > 0 \) es una hipérbola: \( r(\theta) = \frac{q}{1 + e \cos \theta} \), con \( e > 1 \). El ángulo de dispersión está dado por: \( \operatorname{sen}\,\left(\frac{\chi}{2}\right) = \frac{1}{e} \). Recordamos los asterioides: Oumuamua y Borisov.
+		\item Para \( V(r) = +\frac{k}{r} \) (repulsivo), se cumple \( \chi = \pi - 2\theta_{\text{max}} \), y también \( \operatorname{sen}\,\left(\frac{\chi}{2}\right) = \frac{1}{e} \).
+	\end{itemize}
+	\item<5-> Determinamos \( \chi \) por el método geométrico.  A partir del integral sobre el movimiento radial:  
+$ \theta_{\text{max}} = b \int_0^{u_m} \frac{du}{\sqrt{1 - \frac{V(u)}{E} - b^2 u^2}} \,, \quad u = 1/r $.
+
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+%\section{Recapitulando}
+\frame{
+\frametitle{Recapitulando 2/2}
+\begin{itemize}  
+	\item<1-> Definimos la sección eficaz de dispersión, \( \sigma(\chi) d\Omega \), como fracción de partículas dispersadas dentro de un ángulo sólido diferencial. \\ Donde  \( d\Omega = 2\pi \operatorname{sen}\,\chi d\chi \quad \)  y  \( \quad \sigma(\chi) = \frac{b}{\operatorname{sen}\,\chi} \left| \frac{db}{d\chi} \right| \)
+	\item<2-> Recordamos el experimento de Rutherford
+	\begin{itemize}
+		\item Dispersión de partículas \( \alpha \) en potencial repulsivo \( V(r) = \frac{2Ze^2}{r} \).
+		\item Encontrmos \( \cot\left(\frac{\chi}{2}\right) = \frac{2bE}{k} \)
+		\item y además:  $\sigma(\chi) = \left( \frac{k}{4E} \right)^2 \frac{1}{\operatorname{sen}\,^4(\chi/2)} $
+	\end{itemize}
+	\item<3-> En general los procesos de dispersión 
+	\begin{itemize}
+		\item	Revelan información sobre la naturaleza del potencial.
+		\item Su tratamiento geométrico permite conectar la trayectoria con magnitudes medibles como \( \chi \) y \( \sigma(\chi) \).
+		\item Su formulación se generaliza a colisiones relativistas y cuánticas
+	\end{itemize}
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Para la discusión}
+\frame{
+\frametitle{Para la discusión}
+Consideremos la dispersión bajo el potencial de Coulomb apantallado (también conocido como el potencial de Yukawa) $V(r) =\frac{k}{r} {\rm e}^{-\alpha r}$
+\begin{itemize}  
+	\item<1->  Deduzca las ecuaciones clásicas de trayectoria para ambos potenciales $V_c(r) =\frac{k}{r}$ y $V(r) =\frac{k}{r} {\rm e}^{-\alpha r}$.
+	\item<2->  Calcule ambas secciones eficaces transversales diferenciales para el potencial apantallado para diferentes valores de $\alpha$ y comente los resultados. 
+	\item<3>  Analice cómo cambia el ángulo de dispersión para distintos valores de la energía, parámetros de impacto y de apantallamiento. 
+\end{itemize}
 }
 
 \end{document}
