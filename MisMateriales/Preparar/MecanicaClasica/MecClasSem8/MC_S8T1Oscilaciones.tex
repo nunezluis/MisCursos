@@ -64,7 +64,37 @@
 
    \end{itemize}
 }
-%%%%% Diapo 2
+%
+%%%%% Diapo 3
+\section{Ejemplo: El péndulo simple}
+\frame{
+  \frametitle{El péndulo simple}
+  Una masa \( m \) está unida a una varilla rígida sin masa de longitud \( \ell \), que oscila en un plano vertical bajo la acción de la gravedad.
+  \begin{itemize}  
+  	\item<1-> El lagrangiano $\mathcal{L} = T - V = \frac{1}{2} m \ell^2 \dot{\theta}^2 - mg\ell(1 - \cos\theta)$, \\ donde \( \theta = 0 \), es un punto de equilibrio estable.
+	\item<2-> Para ángulos pequeños: \( \cos\theta \approx 1 - \frac{\theta^2}{2} \), tendremos 
+	$V(\theta) \approx mg\ell \cdot \frac{\theta^2}{2} \Rightarrow \mathcal{L} \approx \frac{1}{2} m \ell^2 \dot{\theta}^2 - \frac{1}{2} mg\ell \theta^2$
+	\item<3-> La ecuación de movimiento es $m\ell^2 \ddot{\theta} + mg\ell \theta = 0 \quad \Rightarrow \ddot{\theta} + \frac{g}{\ell} \theta = 0$
+	\item<4-> La frecuencia de oscilación será $\omega^2 = \frac{K}{c} = \frac{g}{\ell} \quad \Rightarrow \omega = \sqrt{\frac{g}{\ell}}$
+	\item<5-> \begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\textbf{Comparación} & \textbf{General} & \textbf{Péndulo} \\
+\hline
+Coordenada & \( q \) & \( \theta \) \\
+Equilibrio & \( q_0 \) & \( 0 \) \\
+Perturbación & \( \eta = q - q_0 \) & \( \theta \) \\
+Potencial expandido & \( V(q_0) + \frac{1}{2}K\eta^2 \) & \( \frac{1}{2}mgl\theta^2 \) \\
+Frecuencia angular & \( \omega = \sqrt{\frac{K}{c}} \) & \( \sqrt{\frac{g}{l}} \) \\
+\hline
+\end{tabular}
+\end{table}
+
+   \end{itemize}
+}  
+%
+%%%%% Diapo 4
 \section{Oscilaciones con varios grados de libertad}
 \frame{
   \frametitle{Oscilaciones con varios grados de libertad 1/3}
@@ -78,7 +108,7 @@
 	\item<4-> El valor del potencial $V\left(q_1, \ldots, q_s\right)$ cerca de la configuración de equilibrio se obtiene de la expansión de Taylor en varias variables de $V\left(q_1, \ldots, q_s\right)$ alrededor de $\left\{q_{0 i}\right\}$, con $q_i=q_{0 i}+\eta_i$,
    \end{itemize}
 }
-%%%%% Diapo 2
+%%%%% Diapo 5
 %\section{Sección}
 \frame{
   \frametitle{Oscilaciones con varios grados de libertad 2/3}
@@ -94,7 +124,7 @@
 
    \end{itemize}
 }
-%%%%% Diapo 2
+%%%%% Diapo 6
 %\section{Sección}
 \frame{
   \frametitle{Oscilaciones con varios grados de libertad 3/3}
@@ -111,22 +141,130 @@
 	\item<7-> En general, existe solución no trivial $\eta_j(t) \neq 0$ si $a_j \neq 0, \forall j$, cuando $\operatorname{det}\left|V_{i j}-\omega^2 T_{i j}\right|=0$. Las frecuencias características $\omega$ deben ser reales para que las soluciones tengan sentido físico.
    \end{itemize}
 }
-%%%%% Diapo 2
-\section{Ejemplo: Osciladores Acoplados}
+%%%%% Diapo 7
+\section{Ejemplo 1: El Péndulo doble}
 \frame{
-  \frametitle{Osciladores Acoplados 1/2}
-  \begin{itemize}  
-  	\item<1-> Encontrar las frecuencias de oscilación para un sistema de dos partículas de masa $m$ conectadas com resortes horizontales, de constantes $k$ y longitud en reposo $l$. 
+  \frametitle{El Péndulo doble 1/3}
+ Encontrar las frecuencias de oscilación del péndulo doble en el régimen de pequeñas oscilaciones.  Sean dos masas puntuales \( m_1 = m_2 = m \), suspendidas por dos varillas rígidas e inextensibles de longitud \( \ell \). Donde los angulos \( \theta_1, \theta_2 \), son las desviaciones de las varillas respecto a la vertical. Suponga el que movimiento se desarrolla en un plan, la gravedad es uniforme y  \( \theta_1, \theta_2 \ll 1 \)
 	\begin{figure}[t]
-		\includegraphics[width=1.5in]{Figuras/OsciladoresAcoplados.png}
+		\includegraphics[width=1.3in]{Figuras/PenduloDoble.png}
    	\end{figure}
-	 \item<2-> El sistema tiene dos grados de libertad $(s=2)$. Para pequeños desplazamientos $\eta_1$ y $\eta_2$, con $x_i=x_{0 i}+\eta_i$,
-	 \item<3-> La energía cinética para pequeños desplazamientos del equilibrio es $T=\frac{1}{2} m \dot{\eta}_1^2+\frac{1}{2} m \dot{\eta}_2^2=\frac{1}{2} \sum_{i, j} T_{i j} \dot{\eta}_i \dot{\eta}_j$, con $T_{11}=m, \quad T_{22}=m, \quad T_{12}=T_{21}=0$
-	 \item<4-> La energía potencial del sistema para pequeños desplazamientos es $V=\frac{1}{2} k \eta_1^2+\frac{1}{2} k\left(l^{\prime}-l\right)^2+\frac{1}{2} k \eta_2^2=\frac{1}{2} k\left[\eta_1^2+\left(\eta_2-\eta_1\right)^2+\eta_2^2\right]$
-	 \item<5-> Donde $l^{\prime}-l=\left(x_2-x_1\right)-\left(x_{02}-x_{01}\right)=\eta_2-\eta_1$
+\begin{itemize}  
+  	\item<1-> Las posiciones de las masas son $ x_1 = \ell \sin\theta_1 \approx \ell \theta_1,\quad y_1 = -\ell \cos\theta_1 \approx -\ell + \frac{1}{2}\ell\theta_1^2$ y $ x_2 = x_1 + \ell \sin\theta_2 \approx \ell(\theta_1 + \theta_2), \quad y_2 = y_1 - \ell \cos\theta_2 \approx -2\ell + \frac{1}{2}\ell\theta_1^2 + \frac{1}{2}\ell\theta_2^2$
+   \end{itemize}   
+}  
+%%%%% Diapo 8
+%\section{Ejemplo 1: El Péndulo doble}
+\frame{
+  \frametitle{El Péndulo doble 2/3}
+  \begin{itemize}  
+  	\item<1-> La energía cinética $T = \frac{1}{2}m \dot{x}_1^2 + \frac{1}{2}m \dot{y}_1^2 + \frac{1}{2}m \dot{x}_2^2 + \frac{1}{2}m \dot{y}_2^2 \Rightarrow$ 
+	$T = \frac{1}{2} m \ell^2 \dot{\theta}_1^2 + \frac{1}{2} m \ell^2 (\dot{\theta}_1^2 + \dot{\theta}_2^2 + 2\dot{\theta}_1 \dot{\theta}_2)
+= \frac{1}{2} m \ell^2 \left(2\dot{\theta}_1^2 + \dot{\theta}_2^2 + 2\dot{\theta}_1 \dot{\theta}_2\right)$
+	\item<2-> Energía potencial $V = -mgy_1 - mgy_2 \approx mg\ell\left(\theta_1^2 + \frac{1}{2}\theta_2^2\right)$
+	\item<3-> El Lagrangiano $\mathcal{L} = T - V = \frac{1}{2}m\ell^2\left(2\dot{\theta}_1^2 + \dot{\theta}_2^2 + 2\dot{\theta}_1\dot{\theta}_2\right) - \frac{1}{2}mg\ell\left(2\theta_1^2 + \theta_2^2\right)$
+	\item<4-> Si definimos \( \eta_1 = \theta_1 \), y \( \eta_2 = \theta_2 \), tendremos, respectivamente, la energía cinética y potencial de la forma
+	$
+	T = \frac{1}{2}m\ell^2 
+	\begin{pmatrix} 
+	\dot{\eta}_1 & \dot{\eta}_2 
+	\end{pmatrix}
+	\begin{pmatrix}
+	2 & 1 \\
+	1 & 1 \\
+	\end{pmatrix}
+	\begin{pmatrix}
+	\dot{\eta}_1 \\
+	\dot{\eta}_2 \\
+	\end{pmatrix}
+	$
+	y
+	$
+	V = \frac{1}{2}mg\ell 
+	\begin{pmatrix} 
+	\eta_1 & \eta_2 
+	\end{pmatrix}
+	\begin{pmatrix}
+	2 & 0 \\
+	0 & 1 \\
+	\end{pmatrix}
+	\begin{pmatrix}
+	\eta_1 \\
+	\eta_2 \\
+	\end{pmatrix}
+	$
+	\item<5-> La ecuación de movimiento es
+	$\begin{pmatrix}
+	2 & 1 \\
+	1 & 1 \\
+	\end{pmatrix}
+	\begin{pmatrix}
+	\ddot{\eta}_1 \\
+	\ddot{\eta}_2 \\
+	\end{pmatrix}
+	+
+	\begin{pmatrix}
+	2 & 0 \\
+	0 & 1 \\
+	\end{pmatrix}
+	\begin{pmatrix}
+	\eta_1 \\
+	\eta_2 \\
+	\end{pmatrix} = 0
+$  
    \end{itemize}
 }
-%%%%% Diapo 2
+%
+%%%%% Diapo 9
+%\section{Sección}
+\frame{
+  \frametitle{El Péndulo doble 3/3}
+  \begin{itemize}  
+  	\item<1-> Si buscamos soluciones de la forma \( \eta_i(t) = a_i e^{i\omega t} \) tendremos
+	$
+	\det \left[
+	mg\ell
+	\begin{bmatrix}
+	1 & 0 \\
+	0 & 2
+	\end{bmatrix}
+	- \omega^2 m\ell^2
+	\begin{bmatrix}
+	2 & 1 \\
+	1 & 1
+	\end{bmatrix}
+	\right] = 0
+	$, con lo cual
+	\item<2-> $
+	\begin{vmatrix}
+	g - 2\ell \omega^2 & -\ell \omega^2 \\
+	-\ell \omega^2 & 2g - \ell \omega^2
+	\end{vmatrix} =
+	(g - 2\ell \omega^2)(2g - \ell \omega^2) - (\ell \omega^2)^2 = 0$
+	\item<3-> $2g^2 - 3g\ell \omega^2 + 2\ell^2 \omega^4 - \ell^2 \omega^4 = 0 \Rightarrow 2g^2 - 3g\ell \omega^2 + \ell^2 \omega^4 = 0$
+	\item<4-> $\omega^2 = \frac{3g\ell \pm \sqrt{(3g\ell)^2 - 8g^2 \ell^2}}{2\ell^2} = \frac{3g \pm \sqrt{9g^2 - 8g^2}}{2\ell} = \frac{3g \pm g}{2\ell}$
+	\item<5-> y las frecuencias de oscilación son: 
+	 \( \omega_1^2 = \frac{4g}{2\ell} = \frac{2g}{\ell} \), y  \( \omega_2^2 = \frac{2g}{2\ell} = \frac{g}{\ell} \)
+	 \item<6->  Para \( \omega_1 \): masas oscilan en oposición de fase \\
+	 Para \( \omega_2 \): masas oscilan en fase
+   \end{itemize}
+} 
+%%%%% Diapo 10
+\section{Ejemplo 2: Osciladores Acoplados}
+\frame{
+  \frametitle{Osciladores Acoplados 1/2}
+Encontrar las frecuencias de oscilación para un sistema de dos partículas de masa $m$ conectadas com resortes horizontales, de constantes $k$ y longitud en reposo $l$. 
+	\begin{figure}[t]
+		\includegraphics[width=1.4in]{Figuras/OsciladoresAcoplados.png}
+   	\end{figure}  
+  \begin{itemize}  
+	 \item<1-> El sistema tiene dos grados de libertad $(s=2)$. Para pequeños desplazamientos $\eta_1$ y $\eta_2$, con $x_i=x_{0 i}+\eta_i$,
+	 \item<2-> La energía cinética para pequeños desplazamientos del equilibrio es $T=\frac{1}{2} m \dot{\eta}_1^2+\frac{1}{2} m \dot{\eta}_2^2=\frac{1}{2} \sum_{i, j} T_{i j} \dot{\eta}_i \dot{\eta}_j$, con $T_{11}=m, \quad T_{22}=m, \quad T_{12}=T_{21}=0$
+	 \item<3-> La energía potencial del sistema para pequeños desplazamientos es $V=\frac{1}{2} k \eta_1^2+\frac{1}{2} k\left(l^{\prime}-l\right)^2+\frac{1}{2} k \eta_2^2=\frac{1}{2} k\left[\eta_1^2+\left(\eta_2-\eta_1\right)^2+\eta_2^2\right]$
+	 \item<4-> Donde $l^{\prime}-l=\left(x_2-x_1\right)-\left(x_{02}-x_{01}\right)=\eta_2-\eta_1$
+   \end{itemize}
+}
+%%%%% Diapo 11
 %\section{Sección}
 \frame{
   \frametitle{Osciladores Acoplados 2/2}
@@ -149,6 +287,7 @@
    \end{itemize}
 }  
 \end{document}
+%
 %%%%% Diapo 2
 \section{Sección}
 \frame{

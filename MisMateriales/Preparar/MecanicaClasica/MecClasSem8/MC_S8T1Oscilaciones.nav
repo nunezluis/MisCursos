@@ -11,22 +11,36 @@
 \headcommand {\beamer@framepages {9}{12}}
 \headcommand {\beamer@sectionpages {3}{12}}
 \headcommand {\beamer@subsectionpages {3}{12}}
-\headcommand {\sectionentry {2}{Oscilaciones con varios grados de libertad}{13}{Oscilaciones con varios grados de libertad}{0}}
-\headcommand {\slideentry {2}{0}{1}{13/16}{}{0}}
-\headcommand {\beamer@framepages {13}{16}}
-\headcommand {\slideentry {2}{0}{2}{17/23}{}{0}}
-\headcommand {\beamer@framepages {17}{23}}
-\headcommand {\slideentry {2}{0}{3}{24/30}{}{0}}
-\headcommand {\beamer@framepages {24}{30}}
-\headcommand {\beamer@sectionpages {13}{30}}
-\headcommand {\beamer@subsectionpages {13}{30}}
-\headcommand {\sectionentry {3}{Ejemplo: Osciladores Acoplados}{31}{Ejemplo: Osciladores Acoplados}{0}}
-\headcommand {\slideentry {3}{0}{1}{31/35}{}{0}}
-\headcommand {\beamer@framepages {31}{35}}
-\headcommand {\slideentry {3}{0}{2}{36/40}{}{0}}
-\headcommand {\beamer@framepages {36}{40}}
-\headcommand {\beamer@partpages {1}{40}}
-\headcommand {\beamer@subsectionpages {31}{40}}
-\headcommand {\beamer@sectionpages {31}{40}}
-\headcommand {\beamer@documentpages {40}}
-\headcommand {\gdef \inserttotalframenumber {9}}
+\headcommand {\sectionentry {2}{Ejemplo: El p\'endulo simple}{13}{Ejemplo: El p\'endulo simple}{0}}
+\headcommand {\slideentry {2}{0}{1}{13/17}{}{0}}
+\headcommand {\beamer@framepages {13}{17}}
+\headcommand {\beamer@sectionpages {13}{17}}
+\headcommand {\beamer@subsectionpages {13}{17}}
+\headcommand {\sectionentry {3}{Oscilaciones con varios grados de libertad}{18}{Oscilaciones con varios grados de libertad}{0}}
+\headcommand {\slideentry {3}{0}{1}{18/21}{}{0}}
+\headcommand {\beamer@framepages {18}{21}}
+\headcommand {\slideentry {3}{0}{2}{22/28}{}{0}}
+\headcommand {\beamer@framepages {22}{28}}
+\headcommand {\slideentry {3}{0}{3}{29/35}{}{0}}
+\headcommand {\beamer@framepages {29}{35}}
+\headcommand {\beamer@sectionpages {18}{35}}
+\headcommand {\beamer@subsectionpages {18}{35}}
+\headcommand {\sectionentry {4}{Ejemplo 1: El P\'endulo doble}{36}{Ejemplo 1: El P\'endulo doble}{0}}
+\headcommand {\slideentry {4}{0}{1}{36/36}{}{0}}
+\headcommand {\beamer@framepages {36}{36}}
+\headcommand {\slideentry {4}{0}{2}{37/41}{}{0}}
+\headcommand {\beamer@framepages {37}{41}}
+\headcommand {\slideentry {4}{0}{3}{42/47}{}{0}}
+\headcommand {\beamer@framepages {42}{47}}
+\headcommand {\beamer@sectionpages {36}{47}}
+\headcommand {\beamer@subsectionpages {36}{47}}
+\headcommand {\sectionentry {5}{Ejemplo 2: Osciladores Acoplados}{48}{Ejemplo 2: Osciladores Acoplados}{0}}
+\headcommand {\slideentry {5}{0}{1}{48/51}{}{0}}
+\headcommand {\beamer@framepages {48}{51}}
+\headcommand {\slideentry {5}{0}{2}{52/56}{}{0}}
+\headcommand {\beamer@framepages {52}{56}}
+\headcommand {\beamer@partpages {1}{56}}
+\headcommand {\beamer@subsectionpages {48}{56}}
+\headcommand {\beamer@sectionpages {48}{56}}
+\headcommand {\beamer@documentpages {56}}
+\headcommand {\gdef \inserttotalframenumber {13}}
