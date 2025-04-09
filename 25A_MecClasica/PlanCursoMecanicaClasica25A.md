@@ -328,7 +328,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
 #### Materiales
 ##### Presentaciones
 + [Pequeñas oscilaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T1Oscilaciones.pdf)
-+ [Modos normales de oscilación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S10T1ModosNormales.pdf)
++ [Modos normales de oscilación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T2ModosNormales.pdf)
 
 ##### Videos
 + [Modos normales de oscilación y neutrinos](https://www.youtube.com/watch?v=YqVF3NSc5xg)
