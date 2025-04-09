@@ -37,7 +37,7 @@
 
 
 %%%%% Diapo 1
-\section{Marco teórico: Modos normales de oscilación}
+\section{Revisitando los Modos normales de oscilación}
 \frame{
   \frametitle{Modos normales de oscilación 1/2}
    \begin{itemize}  
@@ -62,12 +62,50 @@
 	\item<6-> En el caso de $s=2$, las soluciones generales para los pequeños desplazamientos son $\eta_1=a_1\left(\omega_1\right) \xi_1+a_1\left(\omega_2\right) \xi_2, \quad \eta_2=a_2\left(\omega_1\right) \xi_1+a_2\left(\omega_2\right) \xi_2$
 	\item<7-> Para $\xi_2$ tenemos $\eta_1=a_1\left(\omega_2\right) \xi_2, \quad \eta_2=a_2\left(\omega_2\right) \xi_2
 $,  2 pequeños desplazamientos que oscilas con la frecuencia $\omega_2$ alrededor de su posición de equilibrio con amplitudes $a_1\left(\omega_2\right)$ y $a_2\left(\omega_2\right)$.
-
 \end{itemize}
-
 }
+%%%%%%%%
+%%%%
+\section{Ejemplo: Osciladores Acoplados}
+\subsection{Los osciladores}
+\frame{
+  \frametitle{Los Osciladores}
+Encontrar las frecuencias de oscilación para un sistema de dos partículas de masa $m$ conectadas com resortes horizontales, de constantes $k$ y longitud en reposo $l$. 
+	\begin{figure}[t]
+		\includegraphics[width=1.4in]{Figuras/OsciladoresAcoplados.png}
+   	\end{figure}  
+  \begin{itemize}  
+	 \item<1-> El sistema tiene dos grados de libertad $(s=2)$. Para pequeños desplazamientos $\eta_1$ y $\eta_2$, con $x_i=x_{0 i}+\eta_i$,
+	 \item<2-> La energía cinética para pequeños desplazamientos del equilibrio es $T=\frac{1}{2} m \dot{\eta}_1^2+\frac{1}{2} m \dot{\eta}_2^2=\frac{1}{2} \sum_{i, j} T_{i j} \dot{\eta}_i \dot{\eta}_j$, con $T_{11}=m, \quad T_{22}=m, \quad T_{12}=T_{21}=0$
+	 \item<3-> La energía potencial del sistema para pequeños desplazamientos es $V=\frac{1}{2} k \eta_1^2+\frac{1}{2} k\left(l^{\prime}-l\right)^2+\frac{1}{2} k \eta_2^2=\frac{1}{2} k\left[\eta_1^2+\left(\eta_2-\eta_1\right)^2+\eta_2^2\right]$
+	 \item<4-> Donde $l^{\prime}-l=\left(x_2-x_1\right)-\left(x_{02}-x_{01}\right)=\eta_2-\eta_1$
+   \end{itemize}
+}
+%%%%% Diapo 11
+\subsection{Las ecuaciones de movimiento y sus modos nomales}
+\frame{
+  \frametitle{Ecuaciones de movimiento y sus modos nomales}
+  \begin{itemize}  
+  	\item<1-> Entonces $V=\frac{1}{2}\left[2 k \eta_1^2+2 k \eta_2^2-2 k \eta_1 \eta_2\right]=\frac{1}{2} \sum_{i, j} V_{i j} \eta_i \eta_j$ con $V_{11}=2 k, \quad V_{22}=2 k, \quad V_{12}=V_{21}=-k$.
+	\item<2-> Por lo tanto $
+	\left|\begin{array}{ll}
+	V_{11}-\omega^2 T_{11} & V_{12}-\omega^2 T_{12} \\
+	V_{21}-\omega^2 T_{21} & V_{22}-\omega^2 T_{22}
+	\end{array}\right|=0$
+	\item<3-> Es decir
+	$\left|\begin{array}{cc}
+	2 k-\omega^2 m & -k \\
+	-k & 2 k-\omega^2 m
+	\end{array}\right|=0$
+	\item<4-> La ecuación característica resultante es 
+	$\left(2 k-\omega^2 m\right)^2-k^2=0 \Rightarrow 2 k-\omega^2 m= \pm k \Rightarrow \omega^2=\frac{2 k \pm k}{m}$
+	\item<5-> Finalmente 
+	$\omega_1=\sqrt{\frac{3 k}{m}}, \quad \omega_2=\sqrt{\frac{k}{m}}$
+   \end{itemize}
+}  
+%
 %%%%% Diapo 2
-\section{Un ejemplo: Modos Normales Oscilación para el CO2}
+\section{Ejemplo: Modos Normales Oscilación para el CO2}
 \subsection{Descripción del sistema CO2}
 \frame{
 \frametitle{Descripción del sistema CO2}
