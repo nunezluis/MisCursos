@@ -42,25 +42,25 @@ Al finalizar esta semana habremos repasado algunos conceptos de Mecánica que vi
 1. **Las Tres Leyes de Newton**
    + **1ª ley (Inercia):** una partícula sin fuerzas permanece en reposo o MRU.  
    + **2ª ley:** $\vec{F} = \frac{d\vec{p}}{dt} = m\vec{a}$.  
-   + **3ª ley:** \( \vec{F}_{ij} = -\vec{F}_{ji} \) (acción y reacción).
+   + **3ª ley:** $ \vec{F}_{ij} = -\vec{F}_{ji} $ (acción y reacción).
 
 2. **Sistema de Referencia Inercial**
    + Marcos donde una partícula libre sigue una línea recta.  
    + Transformaciones del grupo de Galileo: traslaciones, rotaciones, boosts.
 
 3. **Conceptos Básicos**
-   + \( \vec{v} = \dot{\vec{r}}, \quad \vec{a} = \dot{\vec{v}}, \quad \vec{p} = m\vec{v} \)
-   + \( \vec{L} = \vec{r} \times \vec{p}, \quad T = \frac{1}{2}mv^2 \)
-   + Trabajo: \( W = \int \vec{F} \cdot d\vec{r} \)
+   + $ \vec{v} = \dot{\vec{r}}, \quad \vec{a} = \dot{\vec{v}}, \quad \vec{p} = m\vec{v} $
+   + $ \vec{L} = \vec{r} \times \vec{p}, \quad T = \frac{1}{2}mv^2 $
+   + Trabajo: $ W = \int \vec{F} \cdot d\vec{r} $
 
 4. **Fuerzas Conservativas y Energía**
-   + Fuerza conservativa: \( \vec{F} = -\nabla V(\vec{r}) \)
-   + Conservación de energía: \( E = T + V = \text{cte} \) si \( \partial V/\partial t = 0 \)
+   + Fuerza conservativa: $ \vec{F} = -\nabla V(\vec{r}) $
+   + Conservación de energía: $ E = T + V = \text{cte} $ si $ \partial V/\partial t = 0 $
 
 5. **Sistemas de Partículas**
-   + Centro de masa: \( \vec{R} = \frac{1}{M}\sum_i m_i\vec{r}_i \)
-   + \( \vec{P}_T = M\vec{v}_{cm}, \quad \vec{L}_T = \sum_i \vec{r}_i \times \vec{p}_i \)
-   + Energía total: \( E = T_{cm} + T_{rel} + V_{ext} + V_{int} \)
+   + Centro de masa: $ \vec{R} = \frac{1}{M}\sum_i m_i\vec{r}_i $
+   + $ \vec{P}_T = M\vec{v}_{cm}, \quad \vec{L}_T = \sum_i \vec{r}_i \times \vec{p}_i $
+   + Energía total: $ E = T_{cm} + T_{rel} + V_{ext} + V_{int} $
 
 
 ### Semana 2 C3/C4 Coordenadas generalizadas
