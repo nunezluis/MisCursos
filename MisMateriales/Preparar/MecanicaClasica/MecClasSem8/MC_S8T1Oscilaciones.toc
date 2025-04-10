@@ -2,4 +2,6 @@
 \beamer@sectionintoc {1}{Peque\~nas oscilaciones 1D}{3}{0}{1}
 \beamer@sectionintoc {2}{Ejemplo: El p\'endulo simple}{13}{0}{2}
 \beamer@sectionintoc {3}{Oscilaciones con varios grados de libertad}{18}{0}{3}
-\beamer@sectionintoc {4}{Ejemplo: El P\'endulo doble}{36}{0}{4}
+\beamer@sectionintoc {4}{Ejemplo: El p\'endulo doble}{36}{0}{4}
+\beamer@sectionintoc {5}{Recapitulando}{48}{0}{5}
+\beamer@sectionintoc {6}{Para la discusi\'on}{52}{0}{6}

@@ -25,15 +25,25 @@
 \headcommand {\beamer@framepages {29}{35}}
 \headcommand {\beamer@sectionpages {18}{35}}
 \headcommand {\beamer@subsectionpages {18}{35}}
-\headcommand {\sectionentry {4}{Ejemplo: El P\'endulo doble}{36}{Ejemplo: El P\'endulo doble}{0}}
+\headcommand {\sectionentry {4}{Ejemplo: El p\'endulo doble}{36}{Ejemplo: El p\'endulo doble}{0}}
 \headcommand {\slideentry {4}{0}{1}{36/36}{}{0}}
 \headcommand {\beamer@framepages {36}{36}}
 \headcommand {\slideentry {4}{0}{2}{37/41}{}{0}}
 \headcommand {\beamer@framepages {37}{41}}
 \headcommand {\slideentry {4}{0}{3}{42/47}{}{0}}
 \headcommand {\beamer@framepages {42}{47}}
-\headcommand {\beamer@partpages {1}{47}}
-\headcommand {\beamer@subsectionpages {36}{47}}
 \headcommand {\beamer@sectionpages {36}{47}}
-\headcommand {\beamer@documentpages {47}}
-\headcommand {\gdef \inserttotalframenumber {11}}
+\headcommand {\beamer@subsectionpages {36}{47}}
+\headcommand {\sectionentry {5}{Recapitulando}{48}{Recapitulando}{0}}
+\headcommand {\slideentry {5}{0}{1}{48/51}{}{0}}
+\headcommand {\beamer@framepages {48}{51}}
+\headcommand {\beamer@sectionpages {48}{51}}
+\headcommand {\beamer@subsectionpages {48}{51}}
+\headcommand {\sectionentry {6}{Para la discusi\'on}{52}{Para la discusi\'on}{0}}
+\headcommand {\slideentry {6}{0}{1}{52/52}{}{0}}
+\headcommand {\beamer@framepages {52}{52}}
+\headcommand {\beamer@partpages {1}{52}}
+\headcommand {\beamer@subsectionpages {52}{52}}
+\headcommand {\beamer@sectionpages {52}{52}}
+\headcommand {\beamer@documentpages {52}}
+\headcommand {\gdef \inserttotalframenumber {13}}

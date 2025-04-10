@@ -43,8 +43,18 @@
 \headcommand {\beamer@subsectionentry {0}{3}{5}{37}{Modos normales para $\omega _2=\sqrt {\frac {k}{m}}$ y $\omega _3=\sqrt {\frac {k}{m}\left (1+\frac {2 m}{M}\right )}$}}
 \headcommand {\slideentry {3}{5}{1}{37/39}{Modos normales para $\omega _2=\sqrt {\frac {k}{m}}$ y $\omega _3=\sqrt {\frac {k}{m}\left (1+\frac {2 m}{M}\right )}$}{0}}
 \headcommand {\beamer@framepages {37}{39}}
-\headcommand {\beamer@partpages {1}{39}}
-\headcommand {\beamer@subsectionpages {37}{39}}
 \headcommand {\beamer@sectionpages {23}{39}}
-\headcommand {\beamer@documentpages {39}}
-\headcommand {\gdef \inserttotalframenumber {11}}
+\headcommand {\beamer@subsectionpages {37}{39}}
+\headcommand {\sectionentry {4}{Recapitulando}{40}{Recapitulando}{0}}
+\headcommand {\slideentry {4}{0}{1}{40/46}{}{0}}
+\headcommand {\beamer@framepages {40}{46}}
+\headcommand {\beamer@sectionpages {40}{46}}
+\headcommand {\beamer@subsectionpages {40}{46}}
+\headcommand {\sectionentry {5}{Para la discusi\'on}{47}{Para la discusi\'on}{0}}
+\headcommand {\slideentry {5}{0}{1}{47/47}{}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\beamer@partpages {1}{47}}
+\headcommand {\beamer@subsectionpages {47}{47}}
+\headcommand {\beamer@sectionpages {47}{47}}
+\headcommand {\beamer@documentpages {47}}
+\headcommand {\gdef \inserttotalframenumber {13}}
