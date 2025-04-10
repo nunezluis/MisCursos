@@ -42,25 +42,25 @@ Al finalizar esta semana habremos repasado algunos conceptos de Mecánica que vi
 1. **Las Tres Leyes de Newton**
    + **1ª ley (Inercia):** una partícula sin fuerzas permanece en reposo o MRU.  
    + **2ª ley:** $\vec{F} = \frac{d\vec{p}}{dt} = m\vec{a}$.  
-   + **3ª ley:** $ \vec{F}_{ij} = -\vec{F}_{ji} $ (acción y reacción).
+   + **3ª ley:** $\vec{F}_{ij} = -\vec{F}_{ji}$ (acción y reacción).
 
 2. **Sistema de Referencia Inercial**
    + Marcos donde una partícula libre sigue una línea recta.  
    + Transformaciones del grupo de Galileo: traslaciones, rotaciones, boosts.
 
 3. **Conceptos Básicos**
-   + $ \vec{v} = \dot{\vec{r}}, \quad \vec{a} = \dot{\vec{v}}, \quad \vec{p} = m\vec{v} $
-   + $ \vec{L} = \vec{r} \times \vec{p}, \quad T = \frac{1}{2}mv^2 $
-   + Trabajo: $ W = \int \vec{F} \cdot d\vec{r} $
+   + $\vec{v} = \dot{\vec{r}}, \quad \vec{a} = \dot{\vec{v}}, \quad \vec{p} = m\vec{v}$
+   + $\vec{L} = \vec{r} \times \vec{p}, \quad T = \frac{1}{2}mv^2$
+   + Trabajo: $W = \int \vec{F} \cdot d\vec{r}$
 
 4. **Fuerzas Conservativas y Energía**
-   + Fuerza conservativa: $ \vec{F} = -\nabla V(\vec{r}) $
-   + Conservación de energía: $ E = T + V = \text{cte} $ si $ \partial V/\partial t = 0 $
+   + Fuerza conservativa: $\vec{F} = -\nabla V(\vec{r})$
+   + Conservación de energía: $E = T + V = \text{cte}$ si$ \partial V/\partial t = 0$
 
 5. **Sistemas de Partículas**
-   + Centro de masa: $ \vec{R} = \frac{1}{M}\sum_i m_i\vec{r}_i $
-   + $ \vec{P}_T = M\vec{v}_{cm}, \quad \vec{L}_T = \sum_i \vec{r}_i \times \vec{p}_i $
-   + Energía total: $ E = T_{cm} + T_{rel} + V_{ext} + V_{int} $
+   + Centro de masa:$ \vec{R} = \frac{1}{M}\sum_i m_i\vec{r}_i$
+   + $\vec{P}_T = M\vec{v}_{cm}, \quad \vec{L}_T = \sum_i \vec{r}_i \times \vec{p}_i$
+   + Energía total: $E = T_{cm} + T_{rel} + V_{ext} + V_{int}$
 
 
 ### Semana 2 C3/C4 Coordenadas generalizadas
@@ -211,10 +211,10 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
 
 ##### **3. Integrabilidad**
    - Un sistema unidimensional con coordenada$q$tiene un Lagrangiano:
-    $L = T - V_{\text{ef}} = \frac{1}{2} a \dot{q}^2 - V_{\text{ef}}(q)$
+   $L = T - V_{\text{ef}} = \frac{1}{2} a \dot{q}^2 - V_{\text{ef}}(q)$
    - Se conserva la **energía total**$E$.
    - El tiempo puede expresarse como una integral:
-    $$t(q) = \sqrt{\frac{a}{2}} \int \frac{dq}{\sqrt{E - V_{\text{ef}}(q)}}$$
+   $$t(q) = \sqrt{\frac{a}{2}} \int \frac{dq}{\sqrt{E - V_{\text{ef}}(q)}}$$
    - **Condición de integrabilidad**: permite calcular períodos de oscilación en sistemas oscilatorios.
 
 ##### **4. Ejemplo: Movimiento en un Potencial$V(x)$**
@@ -253,15 +253,15 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
 ##### **9. Resolución en Coordenadas Polares**
   - Se describen las ecuaciones de movimiento en **coordenadas polares**$(r, \theta)$:$L = \frac{1}{2} \mu (\dot{r}^2 + r^2 \dot{\theta}^2) - V(r)$
   - Como$\theta$es **cíclica**, el momento angular se conserva:$L = \mu r^2 \dot{\theta} = \text{cte}$
-  - La energía total también se conserva: $E = \frac{1}{2} \mu (\dot{r}^2 + r^2 \dot{\theta}^2) + V(r) = \text{cte}$
+  - La energía total también se conserva:$E = \frac{1}{2} \mu (\dot{r}^2 + r^2 \dot{\theta}^2) + V(r) = \text{cte}$
 
 ##### **10. El Sistema es Integrable**
   - Existen **seis cantidades conservadas**, lo que demuestra que el sistema es **integrable**:
     1. Las **tres componentes** de la velocidad del centro de masa.
-    2. La **dirección del momento angular** $\mathbf{L}$.
-    3. La **magnitud del momento angular** $L = \mu r^2 \dot{\theta}$.
-    4. La **energía total** $E$.
-      - La conservación de $E$ y $L$ permite reducir el problema a una **ecuación diferencial unidimensional** en términos de $r$.
+    2. La **dirección del momento angular**$\mathbf{L}$.
+    3. La **magnitud del momento angular**$L = \mu r^2 \dot{\theta}$.
+    4. La **energía total**$E$.
+      - La conservación de$E$ y$L$ permite reducir el problema a una **ecuación diferencial unidimensional** en términos de$r$.
 
 ##### **11. Integración del Sistema**
   - La ecuación de la energía se reescribe en términos de$r$:$\dot{r} = \sqrt{\frac{2}{\mu} \left( E - V(r) - \frac{L^2}{2\mu r^2} \right)}$
