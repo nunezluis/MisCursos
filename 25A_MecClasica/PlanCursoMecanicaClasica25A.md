@@ -42,7 +42,7 @@ Al finalizar esta semana habremos repasado algunos conceptos de Mecánica que vi
 1. **Las Tres Leyes de Newton**
    + **1ª ley (Inercia):** una partícula sin fuerzas permanece en reposo o MRU.  
    + **2ª ley:** $\vec{F} = \frac{d\vec{p}}{dt} = m\vec{a}$.  
-   + **3ª ley:** $\vec{F}_{ij} = -\vec{F}_{ji}$ (acción y reacción).
+   + **3ª ley:** $\vec{F}{i j} = -\vec{F}_{ji}$ (acción y reacción).
 
 2. **Sistema de Referencia Inercial**
    + Marcos donde una partícula libre sigue una línea recta.  

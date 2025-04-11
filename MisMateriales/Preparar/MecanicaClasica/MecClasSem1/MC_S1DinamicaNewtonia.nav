@@ -70,8 +70,13 @@
 \headcommand {\beamer@subsectionentry {0}{4}{5}{66}{Energ\IeC {\'\i }a Total de un sistemas de part\IeC {\'\i }culas}}
 \headcommand {\slideentry {4}{5}{1}{66/71}{Energ\IeC {\'\i }a Total de un sistemas de part\IeC {\'\i }culas}{0}}
 \headcommand {\beamer@framepages {66}{71}}
-\headcommand {\beamer@partpages {1}{71}}
-\headcommand {\beamer@subsectionpages {66}{71}}
 \headcommand {\beamer@sectionpages {39}{71}}
-\headcommand {\beamer@documentpages {71}}
-\headcommand {\gdef \inserttotalframenumber {19}}
+\headcommand {\beamer@subsectionpages {66}{71}}
+\headcommand {\sectionentry {5}{Recapitulando}{72}{Recapitulando}{0}}
+\headcommand {\slideentry {5}{0}{1}{72/74}{}{0}}
+\headcommand {\beamer@framepages {72}{74}}
+\headcommand {\beamer@partpages {1}{74}}
+\headcommand {\beamer@subsectionpages {72}{74}}
+\headcommand {\beamer@sectionpages {72}{74}}
+\headcommand {\beamer@documentpages {74}}
+\headcommand {\gdef \inserttotalframenumber {20}}

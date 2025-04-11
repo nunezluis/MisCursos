@@ -143,8 +143,9 @@ Frecuencia angular & \( \omega = \sqrt{\frac{K}{c}} \) & \( \sqrt{\frac{g}{l}} \
 }
 %%%%% Diapo 7
 \section{Ejemplo: El péndulo doble}
+\subsection{El problema y las posiciones}
 \frame{
-  \frametitle{El Péndulo doble 1/3}
+  \frametitle{El Péndulo doble: problema y las posiciones}
  Encontrar las frecuencias de oscilación del péndulo doble en el régimen de pequeñas oscilaciones.  Sean dos masas puntuales \( m_1 = m_2 = m \), suspendidas por dos varillas rígidas e inextensibles de longitud \( \ell \). Donde los angulos \( \theta_1, \theta_2 \), son las desviaciones de las varillas respecto a la vertical. Suponga el que movimiento se desarrolla en un plan, la gravedad es uniforme y  \( \theta_1, \theta_2 \ll 1 \)
 	\begin{figure}[t]
 		\includegraphics[width=1.3in]{Figuras/PenduloDoble.png}
@@ -154,9 +155,9 @@ Frecuencia angular & \( \omega = \sqrt{\frac{K}{c}} \) & \( \sqrt{\frac{g}{l}} \
    \end{itemize}   
 }  
 %%%%% Diapo 8
-%\section{Ejemplo 1: El Péndulo doble}
+\subsection{Energías y Ecuación de movimiento}
 \frame{
-  \frametitle{El Péndulo doble 2/3}
+  \frametitle{Energías y Ecuación de movimiento}
   \begin{itemize}  
   	\item<1-> La energía cinética $T = \frac{1}{2}m \dot{x}_1^2 + \frac{1}{2}m \dot{y}_1^2 + \frac{1}{2}m \dot{x}_2^2 + \frac{1}{2}m \dot{y}_2^2 \Rightarrow$ 
 	$T = \frac{1}{2} m \ell^2 \dot{\theta}_1^2 + \frac{1}{2} m \ell^2 (\dot{\theta}_1^2 + \dot{\theta}_2^2 + 2\dot{\theta}_1 \dot{\theta}_2)
@@ -194,16 +195,16 @@ Frecuencia angular & \( \omega = \sqrt{\frac{K}{c}} \) & \( \sqrt{\frac{g}{l}} \
 	\end{pmatrix}
 	$
 	\item<5-> La ecuación de movimiento es
-	$\begin{pmatrix}
+	$\ell \begin{pmatrix}
 	2 & 1 \\
 	1 & 1 \\
 	\end{pmatrix}
-	\begin{pmatrix}
+	 \begin{pmatrix}
 	\ddot{\eta}_1 \\
 	\ddot{\eta}_2 \\
 	\end{pmatrix}
 	+
-	\begin{pmatrix}
+	g\begin{pmatrix}
 	2 & 0 \\
 	0 & 1 \\
 	\end{pmatrix}
@@ -216,24 +217,24 @@ $
 }
 %
 %%%%% Diapo 9
-%\section{Sección}
+\subsection{El Péndulo doble: el polinomio característico}
 \frame{
-  \frametitle{El Péndulo doble 3/3}
+  \frametitle{El Péndulo doble: el polinomio característico}
   \begin{itemize}  
   	\item<1-> Si buscamos soluciones de la forma \( \eta_i(t) = a_i e^{i\omega t} \) tendremos
 	$
-	\det \left[
-	mg\ell
-	\begin{bmatrix}
+	\det \left|
+	g 
+	\begin{pmatrix}
 	1 & 0 \\
 	0 & 2
-	\end{bmatrix}
-	- \omega^2 m\ell^2
-	\begin{bmatrix}
+	\end{pmatrix}
+	-  \ell \omega^2 
+	\begin{pmatrix}
 	2 & 1 \\
 	1 & 1
-	\end{bmatrix}
-	\right] = 0
+	\end{pmatrix} 
+	\right| = 0
 	$, con lo cual
 	\item<2-> $
 	\begin{vmatrix}
@@ -241,14 +242,53 @@ $
 	-\ell \omega^2 & 2g - \ell \omega^2
 	\end{vmatrix} =
 	(g - 2\ell \omega^2)(2g - \ell \omega^2) - (\ell \omega^2)^2 = 0$
-	\item<3-> $2g^2 - 3g\ell \omega^2 + 2\ell^2 \omega^4 - \ell^2 \omega^4 = 0 \Rightarrow 2g^2 - 3g\ell \omega^2 + \ell^2 \omega^4 = 0$
-	\item<4-> $\omega^2 = \frac{3g\ell \pm \sqrt{(3g\ell)^2 - 8g^2 \ell^2}}{2\ell^2} = \frac{3g \pm \sqrt{9g^2 - 8g^2}}{2\ell} = \frac{3g \pm g}{2\ell}$
-	\item<5-> y las frecuencias de oscilación son: 
-	 \( \omega_1^2 = \frac{4g}{2\ell} = \frac{2g}{\ell} \), y  \( \omega_2^2 = \frac{2g}{2\ell} = \frac{g}{\ell} \)
-	 \item<6->  Para \( \omega_1 \): masas oscilan en oposición de fase \\
-	 Para \( \omega_2 \): masas oscilan en fase
+	\item<3-> $2g^2 - 5g\ell \omega^2 + 2\ell^2 \omega^4 - \ell^2 \omega^4 = 0 \Rightarrow 2g^2 - 5g\ell \omega^2 + \ell^2 \omega^4 = 0$
+	\item<4-> Con lo cual $\omega^2_{\pm} = \frac{g}{2\ell}(5 \pm \sqrt{17})$
+	 \item<5->  No es un problema de autovalores pero casi. 
+	 \item<6->  Como en el problema de autovalores, para cada valor de $\omega_{\pm}$ vamos a encontrar las componentes de un vector $a^i_{\pm}(\omega_{\pm})$
+	 \item<7-> La ecuación matricial será: $\begin{pmatrix}
+	1 & 0 \\
+	0 & 2
+	\end{pmatrix}
+	\begin{pmatrix}
+	a_{\pm}^1 \\
+	a_{\pm}^2
+	\end{pmatrix} =
+	\frac{5 \pm \sqrt{17}}{2}
+	\begin{pmatrix}
+	2 & 1 \\
+	1 & 1
+	\end{pmatrix}
+		\begin{pmatrix}
+	a_{\pm}^1 \\
+	a_{\pm}^2
+	\end{pmatrix}$
+	\item<8-> Las componentes serán	
+	$ \left\{ \begin{matrix}
+	a_{\pm}^1 = & \lambda_{\pm} (2 a_{\pm}^1 + a_{\pm}^2) \\ \\
+	a_{\pm}^2  = & \frac{\lambda_{\pm}}{2} ( a_{\pm}^1 + a_{\pm}^2)
+	\end{matrix} \right. \quad \text{con } \lambda_{\pm} =\frac{5 \pm \sqrt{17}}{2}$ 
    \end{itemize}
-} 
+}
+%
+%%%%% Diapo 2
+\subsection{El Péndulo doble: de las $\omega_i$ a las amplitudes $a_i$}
+\frame{
+  \frametitle{El Péndulo doble: de las $\omega_i$ a las amplitudes $a_i$}
+  \begin{itemize}  
+  	\item<1-> Las ecuaciones serán 
+	$\begin{cases}
+	(1 - 2\lambda_{\pm})a_{\pm}^1 - \lambda_{\pm} a_{\pm}^2 = 0 \\ \\
+	-\frac{\lambda_{\pm}}{2}a_{\pm}^1 + \left(1 - \frac{\lambda_{\pm}}{2}\right)a_{\pm}^2 = 0
+	\end{cases}$
+	\item<2-> De la primera ecuación $(1 - 2\lambda_{\pm})a_{\pm}^1 - \lambda_{\pm} a_{\pm}^2 = 0 \Rightarrow a_{\pm}^2 = \frac{1 - 2\lambda_{\pm}}{\lambda_{\pm}} a_{\pm}^1$
+	\item<3-> Sustituyendo en la segunda $-\frac{\lambda_{\pm}}{2} a_{\pm}^1 + \left(1 - \frac{\lambda_{\pm}}{2} \right) \left( \frac{1 - 2\lambda_{\pm}}{\lambda_{\pm}} a_{\pm}^1 \right) = 0$
+	\item<4-> Para todo $a_{\pm}^1 \neq 0$ se cumple $-\frac{\lambda_{\pm}}{2} + \left(1 - \frac{\lambda_{\pm}}{2} \right)\cdot \frac{1 - 2\lambda_{\pm}}{\lambda_{\pm}} = 0$
+	\item<4-> Es decir, $\lambda_\pm^2 - 5\lambda_\pm + 2 = 0 \quad \Rightarrow \lambda_\pm = \frac{5 \pm \sqrt{17}}{2}$.
+	\item<5-> Que indica que para esos valor de $\lambda_\pm$ se cumplen para todo $\begin{pmatrix} a_{\pm}^1 \\ a_{\pm}^2 \end{pmatrix}$
+	\item<6-> Entonces $\frac{a_{\pm}^2}{a_{\pm}^1} = \frac{1 - 2\lambda_{\pm}}{\lambda_{\pm}} =\frac{-3 \pm \sqrt{17}}{4} \Rightarrow \left\{ \begin{matrix} \frac{a_{+}^2}{a_{+}^1} =\frac{-3 + \sqrt{17}}{4} & \text{ en fase} \\ \\ \frac{a_{-}^2}{a_{-}^1} = \frac{-3 - \sqrt{17}}{4} & \text{ en contra-fase} \end{matrix} \right.$
+  \end{itemize}
+}  
 %
 %%%%% Diapo 2
 \section{Recapitulando}
@@ -322,5 +362,6 @@ Determine el valor del parámetro $\lambda$ tal que una de las frecuencias de peq
 	\begin{figure}[t]
 		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
    	\end{figure}
-	
+	 Para \( \omega_1 \): masas oscilan en oposición de fase \\
+	 Para \( \omega_2 \): masas oscilan en fase	
 

@@ -3,5 +3,9 @@
 \beamer@sectionintoc {2}{Ejemplo: El p\'endulo simple}{13}{0}{2}
 \beamer@sectionintoc {3}{Oscilaciones con varios grados de libertad}{18}{0}{3}
 \beamer@sectionintoc {4}{Ejemplo: El p\'endulo doble}{36}{0}{4}
-\beamer@sectionintoc {5}{Recapitulando}{48}{0}{5}
-\beamer@sectionintoc {6}{Para la discusi\'on}{52}{0}{6}
+\beamer@subsectionintoc {4}{1}{El problema y las posiciones}{36}{0}{4}
+\beamer@subsectionintoc {4}{2}{Energ\IeC {\'\i }as y Ecuaci\'on de movimiento}{37}{0}{4}
+\beamer@subsectionintoc {4}{3}{El P\'endulo doble: el polinomio caracter\IeC {\'\i }stico}{42}{0}{4}
+\beamer@subsectionintoc {4}{4}{El P\'endulo doble: de las $\omega _i$ a las amplitudes $a_i$}{50}{0}{4}
+\beamer@sectionintoc {5}{Recapitulando}{56}{0}{5}
+\beamer@sectionintoc {6}{Para la discusi\'on}{60}{0}{6}
