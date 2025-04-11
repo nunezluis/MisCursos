@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  11 APR 2025 05:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  11 APR 2025 05:13
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1592,7 +1592,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 275.
+(hyperref)                removing `superscript' on input line 275.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1733,7 +1733,7 @@ LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
 Package rerunfilecheck Info: File `MC_S8T1Oscilaciones.out' has not changed.
-(rerunfilecheck)             Checksum: 7AC5775E447B08CAE5E46F6CFB84759D;2124.
+(rerunfilecheck)             Checksum: 4BDD8796C0A6DCF19BC4CEEF624A9A27;1983.
  ) 
 Here is how much of TeX's memory you used:
  24541 strings out of 478268
@@ -1761,7 +1761,7 @@ live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texliv
 e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 2022/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on MC_S8T1Oscilaciones.pdf (60 pages, 983787 bytes).
+Output written on MC_S8T1Oscilaciones.pdf (60 pages, 983808 bytes).
 PDF statistics:
  1807 PDF objects out of 2073 (max. 8388607)
  1664 compressed objects within 17 object streams

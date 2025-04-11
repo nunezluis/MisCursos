@@ -5,7 +5,7 @@
 \beamer@sectionintoc {4}{Ejemplo: El p\'endulo doble}{36}{0}{4}
 \beamer@subsectionintoc {4}{1}{El problema y las posiciones}{36}{0}{4}
 \beamer@subsectionintoc {4}{2}{Energ\IeC {\'\i }as y Ecuaci\'on de movimiento}{37}{0}{4}
-\beamer@subsectionintoc {4}{3}{El P\'endulo doble: el polinomio caracter\IeC {\'\i }stico}{42}{0}{4}
-\beamer@subsectionintoc {4}{4}{El P\'endulo doble: de las $\omega _i$ a las amplitudes $a_i$}{50}{0}{4}
+\beamer@subsectionintoc {4}{3}{El polinomio caracter\IeC {\'\i }stico}{42}{0}{4}
+\beamer@subsectionintoc {4}{4}{De las frecuencias $\omega _i$ a las amplitudes $a^i$}{50}{0}{4}
 \beamer@sectionintoc {5}{Recapitulando}{56}{0}{5}
 \beamer@sectionintoc {6}{Para la discusi\'on}{60}{0}{6}
