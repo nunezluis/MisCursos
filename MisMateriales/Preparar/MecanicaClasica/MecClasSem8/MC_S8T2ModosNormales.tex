@@ -37,7 +37,7 @@
 
 
 %%%%% Diapo 1
-\section{Revisitando los Modos normales de oscilación}
+\section{Repasamos los Modos normales de oscilación}
 \frame{
   \frametitle{Modos normales de oscilación 1/2}
    \begin{itemize}  
@@ -66,7 +66,7 @@ $,  2 pequeños desplazamientos que oscilas con la frecuencia $\omega_2$ alrededo
 }
 %%%%%%%%
 %%%%
-\section{Ejemplo: Osciladores Acoplados}
+\section{Osciladores Acoplados}
 \subsection{Los osciladores}
 \frame{
   \frametitle{Los Osciladores}
@@ -86,26 +86,76 @@ Encontrar las frecuencias de oscilación para un sistema de dos partículas de mas
 \frame{
   \frametitle{Ecuaciones de movimiento y sus modos nomales}
   \begin{itemize}  
-  	\item<1-> Entonces $V=\frac{1}{2}\left[2 k \eta_1^2+2 k \eta_2^2-2 k \eta_1 \eta_2\right]=\frac{1}{2} \sum_{i, j} V_{i j} \eta_i \eta_j$ con $V_{11}=2 k, \quad V_{22}=2 k, \quad V_{12}=V_{21}=-k$.
-	\item<2-> Por lo tanto $
-	\left|\begin{array}{ll}
-	V_{11}-\omega^2 T_{11} & V_{12}-\omega^2 T_{12} \\
-	V_{21}-\omega^2 T_{21} & V_{22}-\omega^2 T_{22}
-	\end{array}\right|=0$
+	\item<1-> $V=\frac{1}{2}\left[2 k \eta_1^2+2 k \eta_2^2-2 k \eta_1 \eta_2\right]=\frac{1}{2} \sum_{i, j} V_{i j} \eta_i \eta_j$ con $V_{11}=2 k, \quad V_{22}=2 k, \quad V_{12}=V_{21}=-k$.
+	\item<3-> $\sum_j\left(V_{i j}-\omega^2 T_{i j}\right) a_j=0 \Rightarrow 
+	\operatorname{det}
+	\begin{vmatrix}
+		k\begin{pmatrix}
+		2 & -1 \\
+		-1  & 2
+		\end{pmatrix}
+		-m\omega^2
+	\begin{pmatrix}
+		1 & 0 \\
+		0 & 1
+		\end{pmatrix}
+	\end{vmatrix} = 0
+	$ 
 	\item<3-> Es decir
-	$\left|\begin{array}{cc}
-	2 k-\omega^2 m & -k \\
-	-k & 2 k-\omega^2 m
-	\end{array}\right|=0$
-	\item<4-> La ecuación característica resultante es 
-	$\left(2 k-\omega^2 m\right)^2-k^2=0 \Rightarrow 2 k-\omega^2 m= \pm k \Rightarrow \omega^2=\frac{2 k \pm k}{m}$
-	\item<5-> Finalmente 
-	$\omega_1=\sqrt{\frac{3 k}{m}}, \quad \omega_2=\sqrt{\frac{k}{m}}$
+	$\operatorname{det}\begin{vmatrix}
+	 \frac{2k}{m} -\omega^2 & -\frac{k}{m} \\
+	-\frac{k}{m} &  \frac{2k}{m} -\omega^2
+	\end{vmatrix}=0 \Rightarrow \left(2 k-\omega^2 m\right)^2-k^2=0$
+	\item<4-> La ecuación característica es 
+	$2 k-\omega^2 m= \pm k \Rightarrow \omega_{\pm}^2=\frac{2 k \pm k}{m}$
+	\item<5-> La ecuación matricial es 
+	$\begin{pmatrix}
+		2 & -1 \\
+		-1  & 2
+		\end{pmatrix}
+		\begin{pmatrix}
+		a^1_{\pm} \\
+		a^2_{\pm}
+		\end{pmatrix}
+		= \frac{m \omega_{\pm}^2}{k}
+	\begin{pmatrix}
+		a^1_{\pm} \\
+		a^2_{\pm}
+		\end{pmatrix}$
+	\item<6-> Claramente una ecuación de autovalores
+	\item<7-> Entonces, las ecuaciones serán  
+	$\left\{ \begin{matrix}
+	2a^1_{\pm} -a^2_{\pm}= & \frac{m \omega_{\pm}^2}{k} a^1_{\pm} \\ \\
+	-a^1_{\pm} +2a^2_{\pm}= & \frac{m \omega_{\pm}^2}{k} a^1_{\pm}
+	\end{matrix}
+	\right.$ 
    \end{itemize}
-}  
+}
+%%%%% Diapo 2
+\subsection{De las frecuencias $\omega_i$ a las amplitudes $a^i$}
+\frame{
+  \frametitle{De las frecuencias $\omega_i$ a las amplitudes $a^i$}
+  \begin{itemize}  
+  	\item<1-> Si definimos $\lambda_\pm := \frac{m\omega_{\pm}^2}{k}$, entonces 
+	$\left\{ \begin{matrix}
+	2a^1_\pm - a^2_\pm = \lambda_\pm a^1_\pm  \\ \\
+	-a^1_\pm + 2a^2_\pm = \lambda_\pm a^2_\pm 
+	\end{matrix} \right.$
+	\item<2-> Entonces $(2 - \lambda_\pm)a^1_\pm - a^2_\pm = 0 \quad$ y $\quad -a^1_\pm + (2 - \lambda_\pm)a^2_\pm = 0$
+	\item<3-> Al despejar $a^2_\pm$ de la primera y sustituirla en la segunda, tendremos $a^1_\pm \left[(2 - \lambda_\pm)^2 - 1\right] = 0 \quad \Rightarrow (2 - \lambda_\pm)^2 = 1 \quad \Rightarrow \quad 2 - \lambda_\pm = \pm 1$
+	\item<4-> Entonces, si $2 - \lambda_\pm = -1 \Rightarrow \lambda_+ = 3$  y  si $2 - \lambda_\pm = 1 \Rightarrow \lambda_- = 1$, que son los dos valores que corresponden a dos valores que optuvimos de la ecuación característica $\omega_{\pm} = \frac{2 k \pm k}{m} \Rightarrow \omega_{+} = \frac{3 k}{m}$ y $\omega_{-} = \frac{ k}{m}$
+	\item<5-> Finalmente, $\frac{a^2_\pm}{a^1_\pm} = (2 - \lambda_\pm) \Rightarrow 
+	\left\{\ 
+	\begin{matrix}
+		\frac{a^2_+}{a^1_+} = +1 & \text{en fase} \\ \\ 
+		\frac{a^2_-}{a^1_-} = -1 & \text{en contra fase}
+	\end{matrix}
+	 \right.$
+   \end{itemize}
+}    
 %
 %%%%% Diapo 2
-\section{Ejemplo: Modos Normales Oscilación para el CO2}
+\section{Los Modos Normales Oscilación para el CO2}
 \subsection{Descripción del sistema CO2}
 \frame{
 \frametitle{Descripción del sistema CO2}

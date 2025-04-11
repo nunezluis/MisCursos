@@ -1,13 +1,14 @@
 \babel@toc {spanish}{}\relax 
-\beamer@sectionintoc {1}{Revisitando los Modos normales de oscilaci\'on}{3}{0}{1}
-\beamer@sectionintoc {2}{Ejemplo: Osciladores Acoplados}{14}{0}{2}
+\beamer@sectionintoc {1}{Repasamos los Modos normales de oscilaci\'on}{3}{0}{1}
+\beamer@sectionintoc {2}{Osciladores Acoplados}{14}{0}{2}
 \beamer@subsectionintoc {2}{1}{Los osciladores}{14}{0}{2}
 \beamer@subsectionintoc {2}{2}{Las ecuaciones de movimiento y sus modos nomales}{18}{0}{2}
-\beamer@sectionintoc {3}{Ejemplo: Modos Normales Oscilaci\'on para el CO2}{23}{0}{3}
-\beamer@subsectionintoc {3}{1}{Descripci\'on del sistema CO2}{23}{0}{3}
-\beamer@subsectionintoc {3}{2}{Energ\IeC {\'\i }as cin\'etica y potencial}{25}{0}{3}
-\beamer@subsectionintoc {3}{3}{Las frecuencias de oscilaci\'on $\omega _n$}{31}{0}{3}
-\beamer@subsectionintoc {3}{4}{Ecuaciones generales y modo normal de oscilaci\'on para $\omega _1=0$}{34}{0}{3}
-\beamer@subsectionintoc {3}{5}{Modos normales para $\omega _2=\sqrt {\frac {k}{m}}$ y $\omega _3=\sqrt {\frac {k}{m}\left (1+\frac {2 m}{M}\right )}$}{37}{0}{3}
-\beamer@sectionintoc {4}{Recapitulando}{40}{0}{4}
-\beamer@sectionintoc {5}{Para la discusi\'on}{47}{0}{5}
+\beamer@subsectionintoc {2}{3}{De las frecuencias $\omega _i$ a las amplitudes $a^i$}{25}{0}{2}
+\beamer@sectionintoc {3}{Los Modos Normales Oscilaci\'on para el CO2}{30}{0}{3}
+\beamer@subsectionintoc {3}{1}{Descripci\'on del sistema CO2}{30}{0}{3}
+\beamer@subsectionintoc {3}{2}{Energ\IeC {\'\i }as cin\'etica y potencial}{32}{0}{3}
+\beamer@subsectionintoc {3}{3}{Las frecuencias de oscilaci\'on $\omega _n$}{38}{0}{3}
+\beamer@subsectionintoc {3}{4}{Ecuaciones generales y modo normal de oscilaci\'on para $\omega _1=0$}{41}{0}{3}
+\beamer@subsectionintoc {3}{5}{Modos normales para $\omega _2=\sqrt {\frac {k}{m}}$ y $\omega _3=\sqrt {\frac {k}{m}\left (1+\frac {2 m}{M}\right )}$}{44}{0}{3}
+\beamer@sectionintoc {4}{Recapitulando}{47}{0}{4}
+\beamer@sectionintoc {5}{Para la discusi\'on}{54}{0}{5}
