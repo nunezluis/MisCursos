@@ -10,3 +10,4 @@
 \beamer@subsectionintoc {6}{3}{Velocidades Angulares ${\bf \Omega }$ y ${\bf \tilde {\Omega }}$}{32}{0}{6}
 \beamer@subsectionintoc {6}{4}{Productos escalares}{36}{0}{6}
 \beamer@subsectionintoc {6}{5}{Vectores unitarios}{40}{0}{6}
+\beamer@sectionintoc {7}{Recapitulando}{43}{0}{7}

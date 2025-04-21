@@ -42,13 +42,13 @@
   \frametitle{Definiciones}
    \begin{itemize}  
   	\item<1-> Un cuerpo rígido es un sistema de partículas cuyas distancias relativas son fijas
-	\item<2-> Su movimiento se describe en términos de la posición de su centro de masa y de la orientación relativa del cuerpo en el espacio
+	\item<2-> Su movimiento se describe en términos de la posición de su centro de masa y de la orientación relativa del cuerpo en el espacio respecto al centro de masa.
 	\begin{figure}[t]
 		\includegraphics[width=1.8in]{Figuras/SolidRef.png}
    	\end{figure}
 	\item<3-> Esto requiere de dos sistemas de coordenadas:
    	\begin{itemize}
-	\item Un sistema inercial o laboratorio, denotado por $(x, y, z)$ y con origen en un punto fijo $O$
+	\item Un sistema inercial o de laboratorio, denotado por $(x, y, z)$ y con origen en un punto fijo $O$
 	\item  Un sistema en movimiento, fijo en el cuerpo, con origen en el centro de masa (CM), identificado por $\left(x_1, x_2, x_3\right)$
 	\end{itemize} 
     \end{itemize}
@@ -218,7 +218,7 @@
 \frame{
 \frametitle{Productos escalares}
 \begin{itemize}  
-	\item<1-> En general tenemos que $\vec{{\bf \Omega}} = \Omega^1 {\bf \hat{x}} +\Omega^2 {\bf \hat{y}} +\Omega^3 {\bf \hat{z}} =  \tilde{\Omega}^1{\bf \hat{x}_1} + \tilde{\Omega}^2{\bf \hat{x}_2} +\tilde{\Omega}^3{\bf \hat{x}_3}$
+	\item<1-> En general tenemos que ${\bf {\bf \Omega}} = \Omega^1 {\bf \hat{x}} +\Omega^2 {\bf \hat{y}} +\Omega^3 {\bf \hat{z}} =  \tilde{\Omega}^1{\bf \hat{x}_1} + \tilde{\Omega}^2{\bf \hat{x}_2} +\tilde{\Omega}^3{\bf \hat{x}_3}$
 	\item<2-> Por lo tanto \\
 	$\Omega^1 = {\bf \hat{x}} \cdot {\bf \hat{x}_1} \tilde{\Omega}^1 + {\bf \hat{x}} \cdot {\bf \hat{x}_2} \tilde{\Omega}^2 + {\bf \hat{x}} \cdot {\bf \hat{x}_3} \tilde{\Omega}^3$ \\
 	$\Omega^2 = {\bf \hat{y}} \cdot {\bf \hat{x}_1} \tilde{\Omega}^1 + {\bf \hat{y}} \cdot {\bf \hat{x}_2} \tilde{\Omega}^2 + {\bf \hat{y}} \cdot {\bf \hat{x}_3} \tilde{\Omega}^3$ \\
@@ -264,6 +264,46 @@
  
 \end{itemize}
 }
+\section{Recapitulando}
+\frame{
+\frametitle{Recapitulando}
+\begin{itemize}  
+	\item<1-> \textbf{Cuerpo rígido}: sistema de partículas con distancias relativas fijas.
+	\item<2-> El movimiento se descompone en: \textbf{Traslación} centro de masa; \textbf{Rotación} alrededor del centro de masa
+	\item<3-> \textbf{Sistemas Laboratorio/Inercial ($x, y, z$)}; \\ \textbf{Sistema del centro de masa ($x_1, x_2, x_3$)}.
+	\item<4-> \textbf{Descripción de la orientación respecto al CM:} Se utilizan los \textbf{ángulos de Euler} \( (\phi, \theta, \psi) \):
+    	\begin{itemize}
+        		\item \(\phi\) (precesión): rotación alrededor del eje z del Sistema Laboratorio
+        		\item \(\theta\) (nutación): inclinación del eje z al eje \(x_3\)
+        		\item \(\psi\) (rotación): giro alrededor del eje \(x_3\)
+    	\end{itemize}
+	\item<5-> \textbf{Velocidad angular \({\bf \Omega}\):} Velocidad de un punto: ${\bf v}_P = {\bf v}_{CM} + {\bf \Omega} \times {\bf r}$
+	\item<6-> \textbf{\({\bf \Omega}\) en el sistema CM:}
+	$\begin{cases}
+	\tilde{\Omega}_1 = \dot{\phi} \sin \theta \sin \psi + \dot{\theta} \cos \psi \\
+	\tilde{\Omega}_2 = \dot{\phi} \sin \theta \cos \psi - \dot{\theta} \sin \psi \\
+	\tilde{\Omega}_3 = \dot{\psi} + \dot{\phi} \cos \theta
+	\end{cases}$
+\end{itemize}
+}
+%\section{Sección}
+\frame{
+\frametitle{Recapitulando 2/2}
+\begin{itemize}  
+	\item<1-> \textbf{Transformaciones entre sistemas de coordenadas:}
+	\begin{itemize}
+    		\item Las matrices de rotación \( \tilde{U}_\phi, \tilde{U}_\theta, \tilde{U}_\psi \) conectan los sistemas
+    		\item Transformación total: \( \tilde{U}_{\psi\theta\phi} = \tilde{U}_\psi \tilde{U}_\theta \tilde{U}_\phi \)
+    		\item Las matrices son \textbf{ortogonales}: \( \tilde{U}^{-1} = \tilde{U}^{T} \)
+	\end{itemize}
+	\item<2-> \textbf{Interpretación física:}
+	\begin{itemize}
+    		\item Los ángulos de Euler describen la \textbf{orientación}
+    		\item Las componentes de \({\bf \Omega}\) gobiernan la \textbf{dinámica rotacional}
+    		\item Las componentes de \({\bf \Omega}\) son fundamentales para derivar las \textbf{ecuaciones de Euler} y analizar estabilidad y movimiento de trompos y giróscopos
+	\end{itemize}
+\end{itemize}
+}
 
 \end{document}
 
@@ -272,7 +312,7 @@
 \frame{
 \frametitle{Título transparencia}
 \begin{itemize}  
-	\item<1-> 
+	\item<1-> \textbf{Cuerpo rígido}: sistema de partículas con distancias relativas fijas.
 \end{itemize}
 }
 	\begin{figure}[t]
