@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  21 APR 2025 21:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  22 APR 2025 10:37
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -988,7 +988,7 @@ Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 24.
 
 </Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png,
- id=38, 184.5294pt x 136.1085pt>
+ id=42, 184.5294pt x 136.1085pt>
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
@@ -1149,12 +1149,12 @@ stitucional/UISLOGO.png  used on input line 69.
  [13
 
 ]
-<Figuras/Elipsoide.png, id=408, 1078.0275pt x 730.73pt>
+<Figuras/Elipsoide.png, id=414, 1078.0275pt x 730.73pt>
 File: Figuras/Elipsoide.png Graphic file (type png)
 <use Figuras/Elipsoide.png>
 Package pdftex.def Info: Figuras/Elipsoide.png  used on input line 85.
-(pdftex.def)             Requested size: 144.54pt x 97.97528pt.
-<Figuras/PlanosElipsoide.png, id=409, 670.505pt x 528.97626pt>
+(pdftex.def)             Requested size: 137.31255pt x 93.06927pt.
+<Figuras/PlanosElipsoide.png, id=415, 670.505pt x 528.97626pt>
 File: Figuras/PlanosElipsoide.png Graphic file (type png)
 <use Figuras/PlanosElipsoide.png>
 Package pdftex.def Info: Figuras/PlanosElipsoide.png  used on input line 85.
@@ -1166,13 +1166,17 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 85.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [14
+
+Overfull \vbox (1.7543pt too high) detected at line 85
+ []
+
+[14
 
  <./Figuras/Elipsoide.png> <./Figuras/PlanosElipsoide.png>]
 File: Figuras/Elipsoide.png Graphic file (type png)
 <use Figuras/Elipsoide.png>
 Package pdftex.def Info: Figuras/Elipsoide.png  used on input line 85.
-(pdftex.def)             Requested size: 144.54pt x 97.97528pt.
+(pdftex.def)             Requested size: 137.31255pt x 93.06927pt.
 File: Figuras/PlanosElipsoide.png Graphic file (type png)
 <use Figuras/PlanosElipsoide.png>
 Package pdftex.def Info: Figuras/PlanosElipsoide.png  used on input line 85.
@@ -1184,13 +1188,17 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 85.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [15
+
+Overfull \vbox (1.7543pt too high) detected at line 85
+ []
+
+[15
 
 ]
 File: Figuras/Elipsoide.png Graphic file (type png)
 <use Figuras/Elipsoide.png>
 Package pdftex.def Info: Figuras/Elipsoide.png  used on input line 85.
-(pdftex.def)             Requested size: 144.54pt x 97.97528pt.
+(pdftex.def)             Requested size: 137.31255pt x 93.06927pt.
 File: Figuras/PlanosElipsoide.png Graphic file (type png)
 <use Figuras/PlanosElipsoide.png>
 Package pdftex.def Info: Figuras/PlanosElipsoide.png  used on input line 85.
@@ -1202,13 +1210,17 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 85.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [16
+
+Overfull \vbox (1.7543pt too high) detected at line 85
+ []
+
+[16
 
 ]
 File: Figuras/Elipsoide.png Graphic file (type png)
 <use Figuras/Elipsoide.png>
 Package pdftex.def Info: Figuras/Elipsoide.png  used on input line 85.
-(pdftex.def)             Requested size: 144.54pt x 97.97528pt.
+(pdftex.def)             Requested size: 137.31255pt x 93.06927pt.
 File: Figuras/PlanosElipsoide.png Graphic file (type png)
 <use Figuras/PlanosElipsoide.png>
 Package pdftex.def Info: Figuras/PlanosElipsoide.png  used on input line 85.
@@ -1220,7 +1232,41 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 85.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [17
+
+Overfull \vbox (1.7543pt too high) detected at line 85
+ []
+
+[17
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 102.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [18
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 102.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [19
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 102.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [20
 
 ]
 \tf@nav=\write6
@@ -1238,13 +1284,13 @@ LaTeX Info: Redefining \% on input line 25.
 )
 Package rerunfilecheck Info: File `MC_S11T2SolidoEnergCin.out' has not changed.
 
-(rerunfilecheck)             Checksum: E8E7CB2E9C7F90EE5991F0AE3E450D0F;459.
+(rerunfilecheck)             Checksum: F091A34267D840A81B48287DD6E5885E;567.
  ) 
 Here is how much of TeX's memory you used:
- 24331 strings out of 478268
- 477733 string characters out of 5846347
+ 24356 strings out of 478268
+ 478202 string characters out of 5846347
  745416 words of memory out of 5000000
- 41967 multiletter control sequences out of 15000+600000
+ 41985 multiletter control sequences out of 15000+600000
  482140 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,490b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1261,10 +1307,10 @@ local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr
 /local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/
 local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on MC_S11T2SolidoEnergCin.pdf (17 pages, 773284 bytes).
+Output written on MC_S11T2SolidoEnergCin.pdf (20 pages, 783700 bytes).
 PDF statistics:
- 585 PDF objects out of 1000 (max. 8388607)
- 512 compressed objects within 6 object streams
- 38 named destinations out of 1000 (max. 500000)
- 130 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 670 PDF objects out of 1000 (max. 8388607)
+ 594 compressed objects within 6 object streams
+ 45 named destinations out of 1000 (max. 500000)
+ 138 words of extra memory for PDF output out of 10000 (max. 10000000)
 

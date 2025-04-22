@@ -74,16 +74,33 @@
 \begin{itemize}  
 	\item<1-> Energía cinética de un elipsoide ( $I_{11} \neq I_{22} \neq I_{33}$ ) que rota sobre eje $A B$ con velocidad angular $\omega$, y sobre eje $C D$ con velocidad angular $\nu$,
 	\begin{figure}[t]
-		\includegraphics[width=2.0in]{Figuras/Elipsoide.png}
+		\includegraphics[width=1.9in]{Figuras/Elipsoide.png}
 		\includegraphics[width=1.5in]{Figuras/PlanosElipsoide.png}
    	\end{figure}
-	\item<2-> Escogemos eje $A B$ en la dirección $x_3$. Entonces los ejes $x_1$ y $x_2$ rotan alrededor de $A B=x_3$. La dirección de $\omega$ es a lo largo de $x_3$ y la dirección de $\nu$ está sobre el plano $\left(x_1, x_2\right)$.
-	\item<3-> Las componentes $\boldsymbol{\Omega}=\left(\Omega_1, \Omega_2, \Omega_3\right)$ son
-	 $\Omega_1 =\nu \cos \omega t $, $\Omega_2 =\nu \operatorname{sen} \omega t$ y $\Omega_3 =\omega$,
-	 \item<4-> Finalmente $T=T_{\text {rot }}  =\frac{1}{2} I_{11} \Omega_1^2+\frac{1}{2} I_{22} \Omega_2^2+\frac{1}{2} I_{33} \Omega_3^2 \Rightarrow$ $ T=\frac{1}{2}\left(I_{11} \cos ^2 \omega t+I_{22} \operatorname{sen} ^2 \omega t\right) \nu^2+\frac{1}{2} I_{33} \omega^2$
+	\item<2-> Escogemos eje $A B$ en la dirección $x_3$. Entonces los ejes $x_1$ y $x_2$ rotan alrededor de $A B=x_3$. La dirección de $\omega = \dot{\phi}$ es a lo largo de $x_3$ y la dirección de $\nu$ está sobre el plano $\left(x_1, x_2\right)$.
+	\item<3-> Las componentes $\boldsymbol{\Omega}=\left(\tilde{\Omega}_1, \tilde{\Omega}_2, \tilde{\Omega}_3\right)$ son \\
+	 $\tilde{\Omega}_1 =\nu \cos \omega t $, $\quad \tilde{\Omega}_2 =\nu \operatorname{sen} \omega t$ y $\quad \tilde{\Omega}_3 =\omega$,
+	 \item<4-> Finalmente $T=T_{\text {rot }}  =\frac{1}{2} I_{11} \tilde{\Omega}_1^2+\frac{1}{2} I_{22} \tilde{\Omega}_2^2+\frac{1}{2} I_{33} \tilde{\Omega}_3^2 \Rightarrow$ $ T=\frac{1}{2}\left(I_{11} \cos ^2 \omega t+I_{22} \operatorname{sen} ^2 \omega t\right) \nu^2+\frac{1}{2} I_{33} \omega^2$
 \end{itemize}
 }
-  
+%
+%%%%% Diapo Fin
+\section{Recapitulando}
+\frame{
+  \frametitle{Recapitulando}
+En presentación consideramos
+\begin{enumerate}
+	\item<1-> {Descomposición}: $
+        T = T_{\text{cm}} + T_{\text{rot}} = \frac{1}{2} M v_{\text{cm}}^2 + \frac{1}{2} \sum_j m_j ({\bf \Omega} \times {\bf r}_j)^2$
+        \item<2-> {Tensor Inercia}: $T_{\text{rot}} = \frac{1}{2} \sum_{i,k} I_{ik} \Omega_i \Omega_k$, con $
+        I_{ij} = \sum_j m_j \left( r_j^2 \delta_{ij} - x_i x_j \right)$
+        \item<3-> {Elipsoide en Rotación}:
+        ${\bf \Omega}(t) = \left( \nu \cos \omega t, \nu \sin \omega t, \omega \right)$ \\
+        $T = \frac{1}{2} \left( I_{11} \cos^2 \omega t + I_{22} \sin^2 \omega t \right) \nu^2 + \frac{1}{2} I_{33} \omega^2$
+    
+\end{enumerate}
+}
+
 \end{document}
 
 	\begin{figure}[t]
@@ -123,4 +140,5 @@ En presentación consideramos
   	\item<1->
    \end{enumerate}
 }
+
 	

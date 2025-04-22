@@ -3,12 +3,13 @@
 \beamer@sectionintoc {2}{Desplazamiento general del cuerpo r\IeC {\'\i }gido}{6}{0}{2}
 \beamer@sectionintoc {3}{Velocidades en un cuerpo r\IeC {\'\i }gido}{10}{0}{3}
 \beamer@sectionintoc {4}{Precesi\'on, nutaci\'on y rotaci\'on}{15}{0}{4}
-\beamer@sectionintoc {5}{Velocidad ${\bf \Omega }$, \'angulos y velocidades de Euler}{18}{0}{5}
-\beamer@sectionintoc {6}{Transformaciones entre el sistema Centro de Masa y Laboratorio}{23}{0}{6}
-\beamer@subsectionintoc {6}{1}{Rotaciones de Euler}{23}{0}{6}
-\beamer@subsectionintoc {6}{2}{Matrices de Euler}{27}{0}{6}
-\beamer@subsectionintoc {6}{3}{Velocidades Angulares ${\bf \Omega }$ y ${\bf \tilde {\Omega }}$}{32}{0}{6}
-\beamer@subsectionintoc {6}{4}{Productos escalares}{36}{0}{6}
-\beamer@subsectionintoc {6}{5}{Vectores unitarios}{40}{0}{6}
-\beamer@sectionintoc {7}{Recapitulando}{43}{0}{7}
-\beamer@sectionintoc {8}{Para la discusi\'on}{51}{0}{8}
+\beamer@sectionintoc {5}{Matrices de Rotaci\'on y el grupo ${\bf O}(n)$}{18}{0}{5}
+\beamer@sectionintoc {6}{Transformaciones entre el sistema Centro de Masa y Laboratorio}{21}{0}{6}
+\beamer@subsectionintoc {6}{1}{Rotaciones de Euler}{21}{0}{6}
+\beamer@subsectionintoc {6}{2}{Matrices de Euler}{24}{0}{6}
+\beamer@sectionintoc {7}{Velocidad ${\bf \Omega }$, \'angulos y velocidades de Euler}{30}{0}{7}
+\beamer@subsectionintoc {7}{1}{Velocidades Angulares ${\bf \Omega }$ y ${\bf \tilde {\Omega }}$}{34}{0}{7}
+\beamer@subsectionintoc {7}{2}{Productos escalares}{38}{0}{7}
+\beamer@subsectionintoc {7}{3}{Vectores unitarios}{42}{0}{7}
+\beamer@sectionintoc {8}{Recapitulando}{45}{0}{8}
+\beamer@sectionintoc {9}{Para la discusi\'on}{53}{0}{9}

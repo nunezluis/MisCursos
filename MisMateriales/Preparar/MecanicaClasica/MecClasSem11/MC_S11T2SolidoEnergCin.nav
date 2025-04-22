@@ -17,8 +17,13 @@
 \headcommand {\sectionentry {3}{Elipsoide en rotaci\'on}{14}{Elipsoide en rotaci\'on}{0}}
 \headcommand {\slideentry {3}{0}{1}{14/17}{}{0}}
 \headcommand {\beamer@framepages {14}{17}}
-\headcommand {\beamer@partpages {1}{17}}
-\headcommand {\beamer@subsectionpages {14}{17}}
 \headcommand {\beamer@sectionpages {14}{17}}
-\headcommand {\beamer@documentpages {17}}
-\headcommand {\gdef \inserttotalframenumber {5}}
+\headcommand {\beamer@subsectionpages {14}{17}}
+\headcommand {\sectionentry {4}{Recapitulando}{18}{Recapitulando}{0}}
+\headcommand {\slideentry {4}{0}{1}{18/20}{}{0}}
+\headcommand {\beamer@framepages {18}{20}}
+\headcommand {\beamer@partpages {1}{20}}
+\headcommand {\beamer@subsectionpages {18}{20}}
+\headcommand {\beamer@sectionpages {18}{20}}
+\headcommand {\beamer@documentpages {20}}
+\headcommand {\gdef \inserttotalframenumber {6}}

@@ -111,6 +111,100 @@
 	\end{itemize}
 \end{itemize}
 }
+%
+%%%%% Diapo 2
+\section{Matrices de Rotación y el grupo ${\bf O}(n)$}
+\frame{
+\frametitle{Matrices de Rotación y el grupo ${\bf O}(n)$}
+\begin{figure}[t]
+	\includegraphics[width=1.5in]{Figuras/RotacionSimple.png}
+\end{figure}
+\begin{itemize}  
+	\item<1-> En general
+	$
+	\left.
+	\begin{aligned}
+ 		&x_1^{\prime}=x_1 \cos \phi+x_2 \operatorname{sen}  \phi \\
+ 		&x_2^{\prime}=-x_1 \operatorname{sen}  \phi+x_2 \cos \phi
+	\end{aligned}
+	\right\} \Leftrightarrow 
+	\begin{pmatrix}
+	x_1^{\prime} \\
+	x_2^{\prime}
+	\end{pmatrix} = 
+	\begin{pmatrix}
+	\cos \phi & \operatorname{sen}  \phi \\
+	-\operatorname{sen}  \phi & \cos \phi
+	\end{pmatrix}
+	\begin{pmatrix}
+	x_1 \\
+	x_2
+	\end{pmatrix}
+	$
+	\item<2-> Es decir, ${\bf r}^{\prime} = \mathbb{A}_\phi{\bf r}$, con $\mathbb{A}_\phi$ operadores ortogonales (Unitarios). \\ $\mathbb{A}_{-\phi} = \mathbb{A}_{\phi}^T$ y $\mathbb{A}_\phi \mathbb{A}_{\phi}^T = \mathbb{I}$. Además $\mathbb{A}_\phi \mathbb{B}_\gamma = \mathbb{C}_{\phi \gamma}$, con $\mathbb{C}_{\phi \gamma}^T = \mathbb{C}_{\phi \gamma}^{-1}$
+	\item<3-> Los operadores ortogonales, $\mathbb{A}_\phi$, forman el grupo ${\bf O}(n)$
+	\begin{itemize}
+		\item Cerrado $\mathbb{A}_\phi$ ortogonal y  $\mathbb{B}_\gamma$ ortogonal, $\mathbb{A}_\phi \mathbb{B}_\gamma = \mathbb{C}_{\phi \gamma}$ ortogonal
+		\item Inverso $\forall \mathbb{A}_\phi \quad \exists ! \; \mathbb{A}_{-\phi} \ni  \mathbb{A}_\phi \mathbb{A}_{-\phi} \equiv \mathbb{A}_\phi \mathbb{A}_{\phi}^{-1} \equiv \mathbb{A}_\phi \mathbb{A}_{\phi}^{T}= \mathbb{I}$ 
+		\item Neutro $\exists ! \; \mathbb{I} \; \ni \mathbb{A}_\phi \mathbb{I} = \mathbb{I} \mathbb{A}_\phi = \mathbb{A}_\phi$
+		\item Asociativa $(\mathbb{A}_\phi \mathbb{B}_\gamma) \mathbb{D}_\theta = \mathbb{A}_\phi (\mathbb{B}_\gamma \mathbb{D}_\theta)$
+	\end{itemize} 
+\end{itemize}
+}
+%
+%%%%% Diapo 7
+\section{Transformaciones entre el sistema Centro de Masa y Laboratorio}
+\subsection{Rotaciones de Euler}
+\frame{
+\frametitle{Del sistema Centro de Masa al Laboratorio 1/2}
+\begin{itemize}
+	\item<1->  La transformación entre el sistema Centro de Masa y Laboratorio se construye concatenando tres transformaciones lineales independiente, cada una siguiendo un ángulo de Euler ($\phi$, $\theta$, $\psi$). 
+	\item<2-> Si $r^j$ son las componentes del vector posición de un punto en respecto sistema laboratorio, $S_{xyz}$ y $\tilde{r}^i$ las  de un punto respecto al sistema centro de masa, $\tilde{S}_{x_1 x_2 x_3}$, tendremos un par de transformaciones tales que $\tilde{r}^i = \tilde{U}^i_j \, r^j $ y  $ r^j = U^j_i \, \tilde{r}^i$. Además, $\tilde{U}^i_k U^k_j = \delta^i_j \Leftrightarrow \tilde{U}^i_k = (U^i_k)^{-1}$
+	\item<3-> Rotamos tres veces $\tilde{S}_{x_1,x_2,x_3}$ respecto a $S_{x,y,z}$.
+	\begin{figure}[t]
+		\includegraphics[width=2.4in]{Figuras/RotacionesEuler.png}
+   	\end{figure}
+	{\tiny $\tilde{U}^i_j(\phi)=\left(\begin{array}{ccc}\cos\phi & \operatorname{sen}\phi & 0 \\ -\operatorname{sen} \phi & \cos \phi & 0 \\ 0 & 0 & 1\end{array}\right)$, 
+	$\tilde{U}^i_j(\theta)=\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & \cos \theta & \operatorname{sen} \theta \\ 0 & -\operatorname{sen} \theta & \cos \theta\end{array}\right)$  
+ 	$\tilde{U}^i_j(\psi)=\left(\begin{array}{ccc}\cos \psi & \operatorname{sen} \psi & 0 \\ -\operatorname{sen} \psi & \cos \psi & 0 \\ 0 & 0 & 1\end{array}\right)$ }.  
+
+\end{itemize}
+}
+%%%%% Diapo 8
+\subsection{Matrices de Euler}
+\frame{
+\frametitle{Matrices de Euler}
+\begin{itemize} 
+	\item<1-> En general componemos las tres rotaciones como $\tilde{\mathbb{U}}_{\psi \theta \phi} = \tilde{\mathbb{U}}_{\psi} \tilde{\mathbb{U}}_{\theta} \tilde{\mathbb{U}}_{\phi}$
+	{\tiny  $\tilde{\mathbb{U}}_{\psi \theta \phi}  = \begin{pmatrix} \cos \psi \cos \phi - \operatorname{sen} \psi \cos \theta \operatorname{sen} \phi & \cos \psi \operatorname{sen} \phi + \operatorname{sen} \psi \cos \theta \cos \phi & \operatorname{sen} \psi \operatorname{sen} \theta \\ -\operatorname{sen} \psi \cos \phi - \cos \psi \cos \theta \operatorname{sen} \phi & -\operatorname{sen} \psi \operatorname{sen} \phi + \cos \psi \cos \theta \cos \phi & \cos \psi \operatorname{sen} \theta \\
+	\operatorname{sen} \theta \operatorname{sen} \phi & -\operatorname{sen} \theta \cos \phi & \cos \theta \end{pmatrix}
+	$}
+	\item<2-> Como tenemos $\tilde{\mathbb{U}}_{\psi \theta \phi} = \tilde{\mathbb{U}}_{\psi} \tilde{\mathbb{U}}_{\theta} \tilde{\mathbb{U}}_{\phi}$ también tendremos $\tilde{\mathbb{U}}_{\psi \theta \phi}^{-1} \equiv \mathbb{U}_{\phi \theta \psi} =  \mathbb{U}_{-\phi} \mathbb{U}_{-\theta} \mathbb{U}_{-\psi}$.
+	\item<3-> Por lo tanto
+		{\tiny $\tilde{\mathbb{U}}_{-\phi}=\left(\begin{array}{ccc}\cos \phi & -\operatorname{sen} \phi & 0 \\ \operatorname{sen} \phi & \cos \phi & 0 \\ 0 & 0 & 1\end{array}\right)$, 
+	$\tilde{\mathbb{U}}_{-\theta}=\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & \cos \theta & -\operatorname{sen} \theta \\ 0 & \operatorname{sen} \theta & \cos \theta\end{array}\right)$  
+ 	$\tilde{\mathbb{U}}_{-\psi}=\left(\begin{array}{ccc}\cos \psi & -\operatorname{sen} \psi & 0 \\ \operatorname{sen} \psi & \cos \psi & 0 \\ 0 & 0 & 1\end{array}\right)$ }.
+	\item<4-> Finalmente tenemos que las matricies de rotación son matrices ortogonales. Esto es que la traspuesta es la inversa $\tilde{\mathbb{U}}_{\psi \theta \phi}^{-1} = \tilde{\mathbb{U}}_{\psi \theta \phi}^{T}$ y eso se ve claramente en las matrices arriba. Además la inversa de una multiplicación de matrices invierte el orden.
+	\item<5-> {\tiny $\tilde{\mathbb{U}}^{-1} = \tilde{\mathbb{U}}^T = \mathbb{U} = 
+	\begin{pmatrix} 
+	\cos \psi \cos \phi - \operatorname{sen} \psi \cos \theta \operatorname{sen} \phi & -\operatorname{sen} \psi \cos \phi - \cos \psi \cos \theta \operatorname{sen} \phi & \operatorname{sen} \theta \operatorname{sen} \phi \\ 
+	\cos \psi \operatorname{sen} \phi + \operatorname{sen} \psi \cos \theta \cos \phi & -\operatorname{sen} \psi \operatorname{sen} \phi + \cos \psi \cos \theta \cos \phi & -\operatorname{sen} \theta \cos \phi \\ \operatorname{sen} \psi \operatorname{sen} \theta & \cos \psi \operatorname{sen} \theta & \cos \theta
+	\end{pmatrix}$ } 	  
+\end{itemize}
+}
+%
+%%%%% Diapo 6
+%\section{Sección}
+\frame{
+\frametitle{Componentes y velocidades angulares}
+\begin{figure}[t]
+	\includegraphics[width=1.5in]{Figuras/VelocidadesEuler.png}
+	\includegraphics[width=2.8in]{Figuras/ComponentesVelocidades.png}
+\end{figure}
+En general ${\bf \Omega} = \dot{\theta} \hat{{\bf \theta}} + \dot{\phi} \hat{{\bf \phi}} +\dot{\psi} \hat{{\bf \psi}}$
+}
+
+%
 %%%%% Diapo 5
 \section{Velocidad ${\bf \Omega}$, ángulos y velocidades de Euler}
 \frame{
@@ -130,61 +224,12 @@
 	$\tilde{\Omega}_3  = \dot{\psi}+\dot{\phi} \cos \theta$
 \end{itemize}
 }
-%%%%% Diapo 6
-%\section{Sección}
-\frame{
-\frametitle{Componentes y velocidades angulares}
-\begin{figure}[t]
-	\includegraphics[width=1.5in]{Figuras/VelocidadesEuler.png}
-	\includegraphics[width=2.8in]{Figuras/ComponentesVelocidades.png}
-\end{figure}
-}
-%%%%% Diapo 7
-\section{Transformaciones entre el sistema Centro de Masa y Laboratorio}
-\subsection{Rotaciones de Euler}
-\frame{
-\frametitle{Del sistema Centro de Masa al Laboratorio 1/2}
-\begin{itemize}
-	\item<1->  La transformación entre el sistema Centro de Masa y Laboratorio se construye concatenando tres transformaciones lineales independiente, cada una siguiendo un ángulo de Euler ($\phi$, $\theta$, $\psi$). 
-	\item<2-> Si $r^j$ son las componentes del vector posición de un punto en respecto sistema laboratorio, $S_{xyz}$ y $\tilde{r}^i$ las  de un punto respecto al sistema centro de masa, $\tilde{S}_{x_1 x_2 x_3}$, tendremos un par de transformaciones tales que $\tilde{r}^i = \tilde{U}^i_j \, r^j $ y  $ r^j = U^j_i \, \tilde{r}^i$. Además, $\tilde{U}^i_k U^k_j = \delta^i_j$
-	\item<4-> Rotamos tres veces $\tilde{S}_{x_1,x_2,x_3}$ respecto a $S_{x,y,z}$.
-	\begin{figure}[t]
-		\includegraphics[width=2.5in]{Figuras/RotacionesEuler.png}
-   	\end{figure}
-	{\tiny $\tilde{U}^i_j(\phi)=\left(\begin{array}{ccc}\cos\phi & \operatorname{sen}\phi & 0 \\ -\operatorname{sen} \phi & \cos \phi & 0 \\ 0 & 0 & 1\end{array}\right)$, 
-	$\tilde{U}^i_j(\theta)=\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & \cos \theta & \operatorname{sen} \theta \\ 0 & -\operatorname{sen} \theta & \cos \theta\end{array}\right)$  
- 	$\tilde{U}^i_j(\psi)=\left(\begin{array}{ccc}\cos \psi & \operatorname{sen} \psi & 0 \\ -\operatorname{sen} \psi & \cos \psi & 0 \\ 0 & 0 & 1\end{array}\right)$ }.  
-
-\end{itemize}
-}
-%%%%% Diapo 8
-\subsection{Matrices de Euler}
-\frame{
-\frametitle{Matrices de Euler}
-\begin{itemize} 
-	\item<1-> En general concatenamos las tres rotaciones como $\tilde{\mathbb{U}}_{\psi \theta \phi} = \tilde{\mathbb{U}}_{\psi} \tilde{\mathbb{U}}_{\theta} \tilde{\mathbb{U}}_{\phi}$
-	{\tiny  $\tilde{\mathbb{U}}_{\psi \theta \phi}  = \begin{pmatrix} \cos \psi \cos \phi - \operatorname{sen} \psi \cos \theta \operatorname{sen} \phi & \cos \psi \operatorname{sen} \phi + \operatorname{sen} \psi \cos \theta \cos \phi & \operatorname{sen} \psi \operatorname{sen} \theta \\ -\operatorname{sen} \psi \cos \phi - \cos \psi \cos \theta \operatorname{sen} \phi & -\operatorname{sen} \psi \operatorname{sen} \phi + \cos \psi \cos \theta \cos \phi & \cos \psi \operatorname{sen} \theta \\
-	\operatorname{sen} \theta \operatorname{sen} \phi & -\operatorname{sen} \theta \cos \phi & \cos \theta \end{pmatrix}
-	$}
-	\item<2-> Como tenemos $\tilde{\mathbb{U}}_{\psi \theta \phi} = \tilde{\mathbb{U}}_{\psi} \tilde{\mathbb{U}}_{\theta} \tilde{\mathbb{U}}_{\phi}$ también tendremos $\tilde{\mathbb{U}}_{\psi \theta \phi}^{-1} \equiv \mathbb{U}_{\phi \theta \psi} =  \mathbb{U}_{-\phi} \mathbb{U}_{-\theta} \mathbb{U}_{-\psi}$.
-	\item<3-> Por lo tanto
-		{\tiny $\tilde{\mathbb{U}}_{-\phi}=\left(\begin{array}{ccc}\cos \phi & -\operatorname{sen} \phi & 0 \\ \operatorname{sen} \phi & \cos \phi & 0 \\ 0 & 0 & 1\end{array}\right)$, 
-	$\tilde{\mathbb{U}}_{-\theta}=\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & \cos \theta & -\operatorname{sen} \theta \\ 0 & \operatorname{sen} \theta & \cos \theta\end{array}\right)$  
- 	$\tilde{\mathbb{U}}_{-\psi}=\left(\begin{array}{ccc}\cos \psi & -\operatorname{sen} \psi & 0 \\ \operatorname{sen} \psi & \cos \psi & 0 \\ 0 & 0 & 1\end{array}\right)$ }.
-	\item<4-> Finalmente tenemos que las matricies de rotación son matrices ortogonales. Esto es que la traspuesta es la inversa $\tilde{\mathbb{U}}_{\psi \theta \phi}^{-1} = \tilde{\mathbb{U}}_{\psi \theta \phi}^{T}$ y eso se ve claramente en las matrices arriba. Además la inversa de una multiplicación de matrices invierte el orden.
-	\item<5-> {\tiny $\tilde{\mathbb{U}}^{-1} = \tilde{\mathbb{U}}^T = \mathbb{U} = 
-	\begin{pmatrix} 
-	\cos \psi \cos \phi - \operatorname{sen} \psi \cos \theta \operatorname{sen} \phi & -\operatorname{sen} \psi \cos \phi - \cos \psi \cos \theta \operatorname{sen} \phi & \operatorname{sen} \theta \operatorname{sen} \phi \\ 
-	\cos \psi \operatorname{sen} \phi + \operatorname{sen} \psi \cos \theta \cos \phi & -\operatorname{sen} \psi \operatorname{sen} \phi + \cos \psi \cos \theta \cos \phi & -\operatorname{sen} \theta \cos \phi \\ \operatorname{sen} \psi \operatorname{sen} \theta & \cos \psi \operatorname{sen} \theta & \cos \theta
-	\end{pmatrix}$ } 	  
-\end{itemize}
-}
 %%%%% Diapo 9
 \subsection{Velocidades Angulares ${\bf \Omega}$ y ${\bf \tilde{\Omega}}$}
 \frame{
 \frametitle{Velocidades Angulares ${\bf \Omega}$ y ${\bf \tilde{\Omega}}$}
 \begin{itemize}  
-	\item<1-> Estas matrices nos permiten calcular las componentes de la velocidad angular respecto al sistema laboratorio $\Omega^1, \Omega^2, \Omega^3$ a partir de las componentes respecto al sistema centro de masa $\tilde{\Omega}^1, \tilde{\Omega}^2, \tilde{\Omega}^3$.
+	\item<1-> Las matrices de Euler, $\tilde{\mathbb{U}}_{\psi \theta \phi}$, nos permiten calcular las componentes de la velocidad angular respecto al sistema laboratorio $\Omega^1, \Omega^2, \Omega^3$ a partir de las componentes respecto al sistema CM $\tilde{\Omega}^1, \tilde{\Omega}^2, \tilde{\Omega}^3$.
 	\item<2-> {\tiny
 	$
 	\begin{pmatrix} 
@@ -277,8 +322,8 @@
 	\item<5-> {Velocidad angular \({\bf \Omega}\):} Velocidad de un punto: ${\bf v}_P = {\bf v}_{CM} + {\bf \Omega} \times {\bf r}$
 	\item<6-> \textbf{\({\bf \Omega}\)} en el sistema CM:
 	$\begin{cases}
-	\tilde{\Omega}_1 = \dot{\phi} \sin \theta \sin \psi + \dot{\theta} \cos \psi \\
-	\tilde{\Omega}_2 = \dot{\phi} \sin \theta \cos \psi - \dot{\theta} \sin \psi \\
+	\tilde{\Omega}_1 = \dot{\phi} \operatorname{sen}  \theta \operatorname{sen}  \psi + \dot{\theta} \cos \psi \\
+	\tilde{\Omega}_2 = \dot{\phi} \operatorname{sen}  \theta \cos \psi - \dot{\theta} \operatorname{sen}  \psi \\
 	\tilde{\Omega}_3 = \dot{\psi} + \dot{\phi} \cos \theta
 	\end{cases}$
 \end{itemize}
@@ -327,7 +372,6 @@ Escriba la expresión de las componentes de la velocidad angular \( {\bf \Omega} 
 		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
    	\end{figure}
 
-Aquí tienes el planteamiento del ejercicio en formato LaTeX, listo para incluir en tus notas, tareas o presentación de clase:
 
 \documentclass[12pt]{article}
 \usepackage[utf8]{inputenc}

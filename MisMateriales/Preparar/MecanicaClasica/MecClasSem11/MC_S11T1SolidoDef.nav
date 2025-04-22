@@ -24,48 +24,53 @@
 \headcommand {\beamer@framepages {15}{17}}
 \headcommand {\beamer@sectionpages {15}{17}}
 \headcommand {\beamer@subsectionpages {15}{17}}
-\headcommand {\sectionentry {5}{Velocidad ${\bf \Omega }$, \'angulos y velocidades de Euler}{18}{Velocidad ${\bf \Omega }$, \'angulos y velocidades de Euler}{0}}
-\headcommand {\slideentry {5}{0}{1}{18/21}{}{0}}
-\headcommand {\beamer@framepages {18}{21}}
-\headcommand {\slideentry {5}{0}{2}{22/22}{}{0}}
-\headcommand {\beamer@framepages {22}{22}}
-\headcommand {\beamer@sectionpages {18}{22}}
-\headcommand {\beamer@subsectionpages {18}{22}}
-\headcommand {\sectionentry {6}{Transformaciones entre el sistema Centro de Masa y Laboratorio}{23}{Transformaciones entre el sistema Centro de Masa y Laboratorio}{0}}
-\headcommand {\beamer@subsectionpages {23}{22}}
-\headcommand {\beamer@subsectionentry {0}{6}{1}{23}{Rotaciones de Euler}}
-\headcommand {\slideentry {6}{1}{1}{23/26}{Rotaciones de Euler}{0}}
-\headcommand {\beamer@framepages {23}{26}}
-\headcommand {\beamer@subsectionpages {23}{26}}
-\headcommand {\beamer@subsectionentry {0}{6}{2}{27}{Matrices de Euler}}
-\headcommand {\slideentry {6}{2}{1}{27/31}{Matrices de Euler}{0}}
-\headcommand {\beamer@framepages {27}{31}}
-\headcommand {\beamer@subsectionpages {27}{31}}
-\headcommand {\beamer@subsectionentry {0}{6}{3}{32}{Velocidades Angulares ${\bf \Omega }$ y ${\bf \tilde {\Omega }}$}}
-\headcommand {\slideentry {6}{3}{1}{32/35}{Velocidades Angulares ${\bf \Omega }$ y ${\bf \tilde {\Omega }}$}{0}}
-\headcommand {\beamer@framepages {32}{35}}
-\headcommand {\beamer@subsectionpages {32}{35}}
-\headcommand {\beamer@subsectionentry {0}{6}{4}{36}{Productos escalares}}
-\headcommand {\slideentry {6}{4}{1}{36/39}{Productos escalares}{0}}
-\headcommand {\beamer@framepages {36}{39}}
-\headcommand {\beamer@subsectionpages {36}{39}}
-\headcommand {\beamer@subsectionentry {0}{6}{5}{40}{Vectores unitarios}}
-\headcommand {\slideentry {6}{5}{1}{40/42}{Vectores unitarios}{0}}
-\headcommand {\beamer@framepages {40}{42}}
-\headcommand {\beamer@sectionpages {23}{42}}
-\headcommand {\beamer@subsectionpages {40}{42}}
-\headcommand {\sectionentry {7}{Recapitulando}{43}{Recapitulando}{0}}
-\headcommand {\slideentry {7}{0}{1}{43/48}{}{0}}
-\headcommand {\beamer@framepages {43}{48}}
-\headcommand {\slideentry {7}{0}{2}{49/50}{}{0}}
-\headcommand {\beamer@framepages {49}{50}}
-\headcommand {\beamer@sectionpages {43}{50}}
-\headcommand {\beamer@subsectionpages {43}{50}}
-\headcommand {\sectionentry {8}{Para la discusi\'on}{51}{Para la discusi\'on}{0}}
-\headcommand {\slideentry {8}{0}{1}{51/51}{}{0}}
-\headcommand {\beamer@framepages {51}{51}}
-\headcommand {\beamer@partpages {1}{51}}
-\headcommand {\beamer@subsectionpages {51}{51}}
-\headcommand {\beamer@sectionpages {51}{51}}
-\headcommand {\beamer@documentpages {51}}
-\headcommand {\gdef \inserttotalframenumber {16}}
+\headcommand {\sectionentry {5}{Matrices de Rotaci\'on y el grupo ${\bf O}(n)$}{18}{Matrices de Rotaci\'on y el grupo ${\bf O}(n)$}{0}}
+\headcommand {\slideentry {5}{0}{1}{18/20}{}{0}}
+\headcommand {\beamer@framepages {18}{20}}
+\headcommand {\beamer@sectionpages {18}{20}}
+\headcommand {\beamer@subsectionpages {18}{20}}
+\headcommand {\sectionentry {6}{Transformaciones entre el sistema Centro de Masa y Laboratorio}{21}{Transformaciones entre el sistema Centro de Masa y Laboratorio}{0}}
+\headcommand {\beamer@subsectionpages {21}{20}}
+\headcommand {\beamer@subsectionentry {0}{6}{1}{21}{Rotaciones de Euler}}
+\headcommand {\slideentry {6}{1}{1}{21/23}{Rotaciones de Euler}{0}}
+\headcommand {\beamer@framepages {21}{23}}
+\headcommand {\beamer@subsectionpages {21}{23}}
+\headcommand {\beamer@subsectionentry {0}{6}{2}{24}{Matrices de Euler}}
+\headcommand {\slideentry {6}{2}{1}{24/28}{Matrices de Euler}{0}}
+\headcommand {\beamer@framepages {24}{28}}
+\headcommand {\slideentry {6}{2}{2}{29/29}{Matrices de Euler}{0}}
+\headcommand {\beamer@framepages {29}{29}}
+\headcommand {\beamer@sectionpages {21}{29}}
+\headcommand {\beamer@subsectionpages {24}{29}}
+\headcommand {\sectionentry {7}{Velocidad ${\bf \Omega }$, \'angulos y velocidades de Euler}{30}{Velocidad ${\bf \Omega }$, \'angulos y velocidades de Euler}{0}}
+\headcommand {\slideentry {7}{0}{1}{30/33}{}{0}}
+\headcommand {\beamer@framepages {30}{33}}
+\headcommand {\beamer@subsectionpages {30}{33}}
+\headcommand {\beamer@subsectionentry {0}{7}{1}{34}{Velocidades Angulares ${\bf \Omega }$ y ${\bf \tilde {\Omega }}$}}
+\headcommand {\slideentry {7}{1}{1}{34/37}{Velocidades Angulares ${\bf \Omega }$ y ${\bf \tilde {\Omega }}$}{0}}
+\headcommand {\beamer@framepages {34}{37}}
+\headcommand {\beamer@subsectionpages {34}{37}}
+\headcommand {\beamer@subsectionentry {0}{7}{2}{38}{Productos escalares}}
+\headcommand {\slideentry {7}{2}{1}{38/41}{Productos escalares}{0}}
+\headcommand {\beamer@framepages {38}{41}}
+\headcommand {\beamer@subsectionpages {38}{41}}
+\headcommand {\beamer@subsectionentry {0}{7}{3}{42}{Vectores unitarios}}
+\headcommand {\slideentry {7}{3}{1}{42/44}{Vectores unitarios}{0}}
+\headcommand {\beamer@framepages {42}{44}}
+\headcommand {\beamer@sectionpages {30}{44}}
+\headcommand {\beamer@subsectionpages {42}{44}}
+\headcommand {\sectionentry {8}{Recapitulando}{45}{Recapitulando}{0}}
+\headcommand {\slideentry {8}{0}{1}{45/50}{}{0}}
+\headcommand {\beamer@framepages {45}{50}}
+\headcommand {\slideentry {8}{0}{2}{51/52}{}{0}}
+\headcommand {\beamer@framepages {51}{52}}
+\headcommand {\beamer@sectionpages {45}{52}}
+\headcommand {\beamer@subsectionpages {45}{52}}
+\headcommand {\sectionentry {9}{Para la discusi\'on}{53}{Para la discusi\'on}{0}}
+\headcommand {\slideentry {9}{0}{1}{53/53}{}{0}}
+\headcommand {\beamer@framepages {53}{53}}
+\headcommand {\beamer@partpages {1}{53}}
+\headcommand {\beamer@subsectionpages {53}{53}}
+\headcommand {\beamer@sectionpages {53}{53}}
+\headcommand {\beamer@documentpages {53}}
+\headcommand {\gdef \inserttotalframenumber {17}}
