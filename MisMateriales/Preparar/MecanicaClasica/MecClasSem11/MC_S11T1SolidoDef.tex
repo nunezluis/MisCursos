@@ -146,17 +146,14 @@
 \frametitle{Del sistema Centro de Masa al Laboratorio 1/2}
 \begin{itemize}
 	\item<1->  La transformación entre el sistema Centro de Masa y Laboratorio se construye concatenando tres transformaciones lineales independiente, cada una siguiendo un ángulo de Euler ($\phi$, $\theta$, $\psi$). 
-	\item<2-> Si $\mathbf{r}_L$ son las coordenadas de un punto en el sistema $S_{xyz}$ laboratorio y $\tilde{\mathbf{r}}_{cm}$ las  de un punto en el sistema $\tilde{S}_{x_1 x_2 x_3}$ centro de masa, queremos un par de transformaciones tales que 
-	$\tilde{\mathbf{r}}_{cm} = \tilde{\mathbb{U}}\, \mathbf{r}_L \Leftrightarrow \tilde{r}^i = \tilde{U}^i_j \, r^j \quad$ y 
-	$\quad \mathbf{r}_{L} = \mathbb{U}\, \mathbf{r}_{cm} \Leftrightarrow r^i = U^i_j \, \tilde{r}^j$ 
-	\item<3> Claramente $\mathbb{U}\tilde{\mathbb{U}} \equiv \tilde{\mathbb{U}}\mathbb{U} = \mathbb{I} \Rightarrow \tilde{\mathbb{U}} = \mathbb{U}^{-1}$ 
+	\item<2-> Si $r^j$ son las componentes del vector posición de un punto en respecto sistema laboratorio, $S_{xyz}$ y $\tilde{r}^i$ las  de un punto respecto al sistema centro de masa, $\tilde{S}_{x_1 x_2 x_3}$, tendremos un par de transformaciones tales que $\tilde{r}^i = \tilde{U}^i_j \, r^j $ y  $ r^j = U^j_i \, \tilde{r}^i$. Además, $\tilde{U}^i_k U^k_j = \delta^i_j$
 	\item<4-> Rotamos tres veces $\tilde{S}_{x_1,x_2,x_3}$ respecto a $S_{x,y,z}$.
 	\begin{figure}[t]
 		\includegraphics[width=2.5in]{Figuras/RotacionesEuler.png}
    	\end{figure}
-	{\tiny $\tilde{\mathbb{U}}_\phi=\left(\begin{array}{ccc}\cos \phi & \operatorname{sen} \phi & 0 \\ -\operatorname{sen} \phi & \cos \phi & 0 \\ 0 & 0 & 1\end{array}\right)$, 
-	$\tilde{\mathbb{U}}_\theta=\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & \cos \theta & \operatorname{sen} \theta \\ 0 & -\operatorname{sen} \theta & \cos \theta\end{array}\right)$  
- 	$\tilde{\mathbb{U}}_\psi=\left(\begin{array}{ccc}\cos \psi & \operatorname{sen} \psi & 0 \\ -\operatorname{sen} \psi & \cos \psi & 0 \\ 0 & 0 & 1\end{array}\right)$ }.  
+	{\tiny $\tilde{U}^i_j(\phi)=\left(\begin{array}{ccc}\cos\phi & \operatorname{sen}\phi & 0 \\ -\operatorname{sen} \phi & \cos \phi & 0 \\ 0 & 0 & 1\end{array}\right)$, 
+	$\tilde{U}^i_j(\theta)=\left(\begin{array}{ccc}1 & 0 & 0 \\ 0 & \cos \theta & \operatorname{sen} \theta \\ 0 & -\operatorname{sen} \theta & \cos \theta\end{array}\right)$  
+ 	$\tilde{U}^i_j(\psi)=\left(\begin{array}{ccc}\cos \psi & \operatorname{sen} \psi & 0 \\ -\operatorname{sen} \psi & \cos \psi & 0 \\ 0 & 0 & 1\end{array}\right)$ }.  
 
 \end{itemize}
 }
@@ -277,8 +274,8 @@
         		\item \(\theta\) (nutación): inclinación del eje z al eje \(x_3\)
         		\item \(\psi\) (rotación): giro alrededor del eje \(x_3\)
     	\end{itemize}
-	\item<5-> \textbf{Velocidad angular \({\bf \Omega}\):} Velocidad de un punto: ${\bf v}_P = {\bf v}_{CM} + {\bf \Omega} \times {\bf r}$
-	\item<6-> \textbf{\({\bf \Omega}\) en el sistema CM:}
+	\item<5-> {Velocidad angular \({\bf \Omega}\):} Velocidad de un punto: ${\bf v}_P = {\bf v}_{CM} + {\bf \Omega} \times {\bf r}$
+	\item<6-> \textbf{\({\bf \Omega}\)} en el sistema CM:
 	$\begin{cases}
 	\tilde{\Omega}_1 = \dot{\phi} \sin \theta \sin \psi + \dot{\theta} \cos \psi \\
 	\tilde{\Omega}_2 = \dot{\phi} \sin \theta \cos \psi - \dot{\theta} \sin \psi \\
@@ -292,9 +289,9 @@
 \begin{itemize}  
 	\item<1-> \textbf{Transformaciones entre sistemas de coordenadas:}
 	\begin{itemize}
-    		\item Las matrices de rotación \( \tilde{U}_\phi, \tilde{U}_\theta, \tilde{U}_\psi \) conectan los sistemas
-    		\item Transformación total: \( \tilde{U}_{\psi\theta\phi} = \tilde{U}_\psi \tilde{U}_\theta \tilde{U}_\phi \)
-    		\item Las matrices son \textbf{ortogonales}: \( \tilde{U}^{-1} = \tilde{U}^{T} \)
+    		\item Los operadores de rotación \( \tilde{\mathbb{U}}_\phi, \tilde{\mathbb{U}}_\theta, \tilde{\mathbb{U}}_\psi \) conectan los sistemas
+    		\item Transformación total: \( \tilde{\mathbb{U}}_{\psi\theta\phi} = \tilde{\mathbb{U}}_\psi \tilde{\mathbb{U}}_\theta \tilde{\mathbb{U}}_\phi \)
+    		\item Los operadores son \textbf{ortogonales}: \( \tilde{\mathbb{U}}^{-1} = \tilde{\mathbb{U}}^{T} \)
 	\end{itemize}
 	\item<2-> \textbf{Interpretación física:}
 	\begin{itemize}
@@ -303,6 +300,17 @@
     		\item Las componentes de \({\bf \Omega}\) son fundamentales para derivar las \textbf{ecuaciones de Euler} y analizar estabilidad y movimiento de trompos y giróscopos
 	\end{itemize}
 \end{itemize}
+}
+\section{Para la discusión}
+\frame{
+\frametitle{Para la discusión}
+Un rotor simétrico (un trompo ideal) tiene momentos de inercia respecto a sus ejes principales dados por:
+$I_1 = I_2 = I \neq I_3$. El rotor gira libremente en el espacio, sin estar sometido a torques externos. Su orientación se describe mediante los ángulos de Euler \( (\phi, \theta, \psi) \). Inicialmente, el cuerpo gira con una velocidad angular constante \( \dot{\psi}_0 \) alrededor del eje de simetría \( x_3 \), formando un ángulo fijo \( \theta_0 \) con respecto al eje vertical \( z \).
+	\begin{figure}[t]
+		\includegraphics[width=1.5in]{Figuras/TrompoLibre.png}
+		\includegraphics[width=0.9in]{Figuras/PrecesionNutacion.png}
+   	\end{figure}
+Escriba la expresión de las componentes de la velocidad angular \( {\bf \Omega} \) del rotor, en términos de los ángulos de Euler. 1) respecto al CM \\ 2) Respecto al Sistema Laboratorio	
 }
 
 \end{document}
@@ -318,4 +326,79 @@
 	\begin{figure}[t]
 		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
    	\end{figure}
+
+Aquí tienes el planteamiento del ejercicio en formato LaTeX, listo para incluir en tus notas, tareas o presentación de clase:
+
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\geometry{margin=2.5cm}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Mecánica Clásica}
+\lhead{Dinámica del cuerpo rígido}
+\cfoot{\thepage}
+
+\title{Ejercicio: Rotación libre de un rotor simétrico}
+\author{Curso de Mecánica Clásica}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Planteamiento del ejercicio}
+
+Un rotor simétrico (por ejemplo, un trompo ideal) tiene momentos de inercia respecto a sus ejes principales dados por:
+\[
+I_1 = I_2 = I \neq I_3.
+\]
+El rotor gira libremente en el espacio, sin estar sometido a torques externos. Su orientación se describe mediante los ángulos de Euler \( (\phi, \theta, \psi) \). Inicialmente, el cuerpo gira con una velocidad angular constante \( \dot{\psi}_0 \) alrededor del eje de simetría \( x_3 \), formando un ángulo fijo \( \theta_0 \) con respecto al eje vertical \( z \).
+
+\vspace{0.5em}
+\noindent
+\textbf{Objetivo:} Analizar el movimiento rotacional del rotor y determinar las cantidades conservadas y la evolución temporal de los ángulos de Euler.
+
+\vspace{1em}
+\noindent
+\textbf{Preguntas:}
+\begin{enumerate}
+    \item \textbf{(Cinemática)} Escribe la expresión de la velocidad angular \( \vec{\Omega} \) del rotor en el sistema del cuerpo, en términos de los ángulos de Euler.
+
+    \item \textbf{(Dinámica)} Escribe las ecuaciones de Euler para un cuerpo rígido simétrico y deduce sus consecuencias para este caso de rotación libre.
+
+    \item \textbf{(Conservación)} Demuestra que:
+    \begin{itemize}
+        \item La componente \( L_z \) del momento angular en el sistema del laboratorio es constante.
+        \item La energía cinética total también es constante.
+    \end{itemize}
+
+    \item \textbf{(Solución del movimiento)} Suponiendo que el ángulo \( \theta = \theta_0 \) es constante:
+    \begin{itemize}
+        \item Demuestra que \( \dot{\phi} \) es constante y \( \dot{\theta} = 0 \).
+        \item Obtén la relación entre \( \dot{\phi} \), \( \dot{\psi}_0 \), \( I \), \( I_3 \) y \( \theta_0 \).
+    \end{itemize}
+\end{enumerate}
+
+\vspace{1em}
+\noindent
+\textbf{Sugerencia:} Usa la representación de la velocidad angular en términos de ángulos de Euler en la convención \( z \to x' \to z'' \) y trabaja en el sistema del cuerpo.
+
+\vspace{1em}
+\noindent
+\textbf{Datos útiles:}
+\begin{itemize}
+    \item El sistema está libre de torques externos.
+    \item El momento de inercia es constante en el sistema del cuerpo.
+    \item El sistema de referencia inercial está orientado con el eje vertical \( z \).
+\end{itemize}
+
+\end{document}
+
 	

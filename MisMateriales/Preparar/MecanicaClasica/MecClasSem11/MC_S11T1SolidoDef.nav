@@ -59,8 +59,13 @@
 \headcommand {\beamer@framepages {43}{48}}
 \headcommand {\slideentry {7}{0}{2}{49/50}{}{0}}
 \headcommand {\beamer@framepages {49}{50}}
-\headcommand {\beamer@partpages {1}{50}}
-\headcommand {\beamer@subsectionpages {43}{50}}
 \headcommand {\beamer@sectionpages {43}{50}}
-\headcommand {\beamer@documentpages {50}}
-\headcommand {\gdef \inserttotalframenumber {15}}
+\headcommand {\beamer@subsectionpages {43}{50}}
+\headcommand {\sectionentry {8}{Para la discusi\'on}{51}{Para la discusi\'on}{0}}
+\headcommand {\slideentry {8}{0}{1}{51/51}{}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\beamer@partpages {1}{51}}
+\headcommand {\beamer@subsectionpages {51}{51}}
+\headcommand {\beamer@sectionpages {51}{51}}
+\headcommand {\beamer@documentpages {51}}
+\headcommand {\gdef \inserttotalframenumber {16}}
