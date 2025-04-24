@@ -1,7 +1,8 @@
 \babel@toc {spanish}{}\relax 
 \beamer@sectionintoc {1}{Momento Angular de un cuerpo r\IeC {\'\i }gido}{3}{0}{1}
 \beamer@sectionintoc {2}{Generalidades para ${\bf L}$ y ${\bf \Omega }$}{8}{0}{2}
-\beamer@sectionintoc {3}{Ecuaciones de movimiento para cuerpos r\IeC {\'\i }gidos}{13}{0}{3}
-\beamer@sectionintoc {4}{Ejemplo: Cilindro de masa $M$ y radio $a$, rodando sin deslizar}{20}{0}{4}
-\beamer@subsectionintoc {4}{1}{Angulos y velocidades}{20}{0}{4}
-\beamer@subsectionintoc {4}{2}{Ecuaciones de movimiento}{27}{0}{4}
+\beamer@sectionintoc {3}{Rotaci\'on libre, mas general, de un trompo}{13}{0}{3}
+\beamer@sectionintoc {4}{Ecuaciones de movimiento para cuerpos r\IeC {\'\i }gidos}{21}{0}{4}
+\beamer@sectionintoc {5}{Ejemplo: Cilindro de masa $M$ y radio $a$, rodando sin deslizar}{28}{0}{5}
+\beamer@subsectionintoc {5}{1}{Angulos y velocidades}{28}{0}{5}
+\beamer@subsectionintoc {5}{2}{Ecuaciones de movimiento}{35}{0}{5}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  22 APR 2025 09:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  23 APR 2025 21:37
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1962,14 +1962,9 @@ Overfull \hbox (8.63074pt too wide) has occurred while \output is active
 [52
 
 ]
-<Figuras/TrompoLibre.png, id=1522, 662.475pt x 555.07375pt>
-File: Figuras/TrompoLibre.png Graphic file (type png)
-<use Figuras/TrompoLibre.png>
-Package pdftex.def Info: Figuras/TrompoLibre.png  used on input line 359.
-(pdftex.def)             Requested size: 108.405pt x 90.8294pt.
 File: Figuras/PrecesionNutacion.png Graphic file (type png)
 <use Figuras/PrecesionNutacion.png>
-Package pdftex.def Info: Figuras/PrecesionNutacion.png  used on input line 359.
+Package pdftex.def Info: Figuras/PrecesionNutacion.png  used on input line 358.
 
 (pdftex.def)             Requested size: 65.04256pt x 90.82692pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1977,7 +1972,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 359.
+stitucional/UISLOGO.png  used on input line 358.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
 
 Overfull \hbox (8.63074pt too wide) has occurred while \output is active
@@ -1986,7 +1981,7 @@ Overfull \hbox (8.63074pt too wide) has occurred while \output is active
 
 [53
 
- <./Figuras/TrompoLibre.png>]
+]
 \tf@nav=\write6
 \openout6 = `MC_S11T1SolidoDef.nav'.
 
@@ -2004,10 +1999,10 @@ Package rerunfilecheck Info: File `MC_S11T1SolidoDef.out' has not changed.
 (rerunfilecheck)             Checksum: 8E26F67E7D04F45A96E17447ABDCB6E2;2746.
  ) 
 Here is how much of TeX's memory you used:
- 24604 strings out of 478268
- 482358 string characters out of 5846347
+ 24597 strings out of 478268
+ 482174 string characters out of 5846347
  751393 words of memory out of 5000000
- 42145 multiletter control sequences out of 15000+600000
+ 42139 multiletter control sequences out of 15000+600000
  488764 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,520b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2036,10 +2031,10 @@ ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
 e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
 2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on MC_S11T1SolidoDef.pdf (53 pages, 3490226 bytes).
+Output written on MC_S11T1SolidoDef.pdf (53 pages, 3281537 bytes).
 PDF statistics:
- 1686 PDF objects out of 1728 (max. 8388607)
+ 1684 PDF objects out of 1728 (max. 8388607)
  1528 compressed objects within 16 object streams
  121 named destinations out of 1000 (max. 500000)
- 259 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 254 words of extra memory for PDF output out of 10000 (max. 10000000)
 

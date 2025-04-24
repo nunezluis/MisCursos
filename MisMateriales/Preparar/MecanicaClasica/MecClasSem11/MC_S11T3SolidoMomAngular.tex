@@ -66,6 +66,49 @@
 	\item<5-> Para cuerpos esféricos, $I_{11}=I_{22}=I_{33}$, y $\mathbf{L}=I_{11} \boldsymbol{\Omega}: \mathbf{L}$ es paralelo a $\boldsymbol{\Omega}$ 
 \end{itemize}
 }
+%
+%%%%% Diapo 2
+\section{Rotación libre, mas general, de un trompo}
+\frame{
+\frametitle{Rotación libre, mas general, de un trompo 1/2}
+\begin{itemize}  
+	\item<1-> Consideremos la rotación mas general de un trompo (objeto axialmente simétrico con $I_{11}=I_{22} = I \neq  I_{33}$). 
+	\begin{figure}[t]
+		\includegraphics[width=1.5in]{Figuras/TrompoLibre.png}
+   	\end{figure}
+	\item<2-> Tal y como se muestra en la figura ${\bf L}$ y ${\bf \Omega}$ no están alineados.
+	\item<3-> Como no existen torques externos ${\bf L} = cte$ y elegimos el eje $z$ del sistema laboratorio tal que ${\bf L} = L \hat{\bf z}$
+	\item<4-> Como el cuerpo tiene simetría axial no la velocidad angular no puede depender de $\psi$. Entonces 
+	\textbf{\({\bf \Omega}\)} en el sistema CM:
+	$\begin{cases}
+	\tilde{\Omega}_1 =  \dot{\theta}  \\
+	\tilde{\Omega}_2 = \dot{\phi} \operatorname{sen}  \theta \\
+	\tilde{\Omega}_3 = \dot{\psi} + \dot{\phi} \cos \theta
+	\end{cases}$ 
+\end{itemize}
+}
+%\section{Sección}
+\frame{
+\frametitle{Rotación libre, mas general, de un trompo 1/2}
+\begin{itemize}  
+	\item<1-> Las componente del momento angular respecto al CM serán
+	$\begin{matrix} 
+		L_1 =   I \dot{\theta} =  0 &\Rightarrow \theta = \mathrm{cte} \\ \\
+		L_2 =   I \dot{\phi} \operatorname{sen}  \theta =  L\operatorname{sen}  \theta  &\Rightarrow \dot{\phi} = \frac{L}{I} = \mathrm{cte}\\ \\
+		L_3 =   I_{33} (\dot{\psi} + \dot{\phi} \cos \theta) =  L \cos \theta & \Rightarrow \dot{\psi} 
+		= \frac{L \cos \theta(I - I_{33})}{I I_{33}} =\mathrm{cte}
+	\end{matrix}$
+	\item<2-> La velocidad angular $\boldsymbol{\Omega}$ son
+		$\begin{cases}
+		\Omega_1  =\dot{\theta}=0 \\
+		\Omega_2  =\frac{L \operatorname{sen} \theta}{I_{11}}=\mathrm{cte} \\
+		\Omega_3  =\frac{L \cos \theta}{I_{33}}=\mathrm{cte}
+		\end{cases}$
+	\item<3-> El vector $\boldsymbol{\Omega}$ está sobre el plano  $x_2 - x_3$. 
+	\item<4->Como el plano  $x_2 - x_3$ rota alrededor de $z$, entonces $\boldsymbol{\Omega}$ también precesa alrededor de la dirección de $\mathbf{L}$ con velocidad angular $\dot{\phi}=$ cte.
+\end{itemize}
+}
+%
 %%%%% Diapo 2
 \section{Ecuaciones de movimiento para cuerpos rígidos}
 \frame{
@@ -75,7 +118,7 @@
 	\item<2-> La energía cinética de rotación de un cuerpo rígido es  $T_{\mathrm{rot}}=\frac{1}{2} \sum_{i, k} I_{i k} \Omega_i \Omega_k$
 	\item<3-> Las componentes $\Omega_i$ de la velocidad angular pueden expresarse en función de los ángulos de Euler $(\theta, \phi, \psi)$ y de sus velocidades
 	\item<4-> La energía potencial del cuerpo corresponde a la energía potencial de su centro de masa, y se expresa en términos de los ángulos de Euler
-	\item<5-> El Lagrangiano queda como $\mathcal{L}=T-V=L(\theta, \phi, \psi, \dot{\theta}, \dot{\phi}, \dot{\psi}, t)$
+	\item<5-> El Lagrangiano queda como $\mathcal{L}=T-V=\mathcal{L}(\theta, \phi, \psi, \dot{\theta}, \dot{\phi}, \dot{\psi}, t)$
 	\item<6-> Las ecuaciones de Lagrange para cuerpos rígidos son complicadas
 	\item<7-> Los casos más simples son los que presentan simetrías: axial (trompos) o esférica
 \end{itemize}
@@ -128,3 +171,9 @@
 		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
    	\end{figure}
 	
+
+1. Rotación libre de un trompo.
+
+Un cuerpo rígido libre de torque tiene $\boldsymbol{\tau}=0 \mathrm{y}$, por lo tanto su momento angular $\mathbf{l}$ es constante. Por ejemplo, la fuerza de gravedad no ejerce torque sobre un cuerpo rígido en caída libre o sobre un satélite artificial en órbita.
+Un trompo es un cuerpo rígido que posee un ejej de simetría axial y dos momentos principales de inercia iguales. Si escogemos $x_3$ como el eje de simetría axial, tenemos $I_{11}=I_{22} \neq I_{33}$. Los ejes $x_1$ y $x_2$ pueden apuntar en cualquier dirección, manteniendo su mutua perpendicularidad. Para un trompo libre de torque, podemos fijar la dirección constante del vector 1 en la dirección del eje $z$ del laboratorio, sobre el plano ( $x_2, x_3$ ). Entonces, $l_1=0$. La simetría axial implica que la descripción del movimiento no depende del valor del ángulo de rotación $\psi$ alrededor del eje $x_3$; podemos fijar $\psi=0$. Esto equivale a escoger la dirección del eje $x_1$ paralela a la linea nodal.
+

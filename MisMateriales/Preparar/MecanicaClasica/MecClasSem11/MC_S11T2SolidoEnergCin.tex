@@ -20,7 +20,7 @@
 
 \begin{document}
 
-\title{\textbf{Cuerpo Rígido: Energía cinética} }
+\title{\textbf{{\LARGE Cuerpo Rígido:} \\ Energía cinética, momento de inercia, \\ cantidad de movimiento angular y \\ ecuaciones de movimiento} }
 \author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
 \institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
 \textit{Universidad Industrial de Santander, Santander, Colombia } \\
@@ -54,7 +54,7 @@
 \end{itemize}
 }
 %%%%% Diapo 2
-\section{El Tensor de Inercia}
+\section{El tensor de inercia}
 \frame{
 \frametitle{El Tensor de Inercia}
 \begin{itemize}  
@@ -67,7 +67,8 @@
 	\item<5-> Donde $I_{i j} =\left(\begin{array}{ccc}\sum_j m_j\left(x_2^2+x_3^2\right) & -\sum_j m_j x_1 x_2 & -\sum_j m_j x_1 x_3 \\ -\sum_j m_j x_2 x_1 & \sum_j m_j\left(x_1^2+x_3^2\right) & -\sum_j m_j x_2 x_3 \\ -\sum_j m_j x_3 x_1 & -\sum_j m_j x_3 x_2 & \sum_j m_j\left(x_1^2+x_2^2\right)\end{array}\right)$
 \end{itemize}
 }
-%%%%% Diapo 2
+%
+%%%%% Diapo 3
 \section{Elipsoide en rotación}
 \frame{
 \frametitle{Elipsoide en rotación}
@@ -83,26 +84,186 @@
 	 \item<4-> Finalmente $T=T_{\text {rot }}  =\frac{1}{2} I_{11} \tilde{\Omega}_1^2+\frac{1}{2} I_{22} \tilde{\Omega}_2^2+\frac{1}{2} I_{33} \tilde{\Omega}_3^2 \Rightarrow$ $ T=\frac{1}{2}\left(I_{11} \cos ^2 \omega t+I_{22} \operatorname{sen} ^2 \omega t\right) \nu^2+\frac{1}{2} I_{33} \omega^2$
 \end{itemize}
 }
+%%%%% Diapo 4
+\section{Cantidad de movimiento angular de un cuerpo rígido}
+\frame{
+  \frametitle{Cantidad de movimiento angular}
+   \begin{itemize}  
+  	\item<1-> Escogemos el sistema de coordenadas ( $x_1, x_2, x_3$ ) con origen en el centro de masa para definir el momento angular del cuerpo.
+	\item<2-> Si $\mathbf{r}_j$ es el vector de posición de la particula $j$ en $\left(x_1, x_2, x_3\right)$, tenemos $\mathbf{l}=\sum_j \mathbf{r}_j \times \mathbf{p}_j=\sum_j m_j\left(\mathbf{r}_j \times \mathbf{v}_j\right)$, con $\mathbf{v}_j=\boldsymbol{\Omega} \times \mathbf{r}_j$.
+	\item<3-> Entonces $\mathbf{L}=\sum_j m_j \mathbf{r}_j \times\left(\boldsymbol{\Omega} \times \mathbf{r}_j\right) \equiv \sum_j m_j\left[r_j^2 \boldsymbol{\Omega}-\left(\mathbf{r}_j \cdot \boldsymbol{\Omega}\right) \mathbf{r}_j\right]$. \\ Hemos usado $\mathbf{A} \times(\mathbf{B} \times \mathbf{C})=(\mathbf{A} \cdot \mathbf{C}) \mathbf{B}-(\mathbf{A} \cdot \mathbf{B}) \mathbf{C}$
+	\item<4-> Las componentes del momento angular serán: \\
+	$L_i  =\sum_j m_j\left[r_j^2 \Omega_i-x_{i j} \sum_k x_{k j} \Omega_k\right] $ \\ $L_i =\sum_j m_j\left[\sum_k \Omega_k r_j^2 \delta_{i k}-\sum_k x_{i j} x_{k j} \Omega_k\right] $ \\
+	$L_i =\sum_j m_j \sum_k \Omega_k\left[r_j^2 \delta_{i k}-x_{i j} x_{k j}\right] =\sum_k \Omega_k \sum_j m_j\left[r_j^2 \delta_{i k}-x_{i j} x_{k j}\right]$
+	\item<5-> Finalmente  $L_i=\sum_{k=1}^3 I_{i k} \Omega_k \Leftrightarrow \mathbf{L}=I \boldsymbol{\Omega} $ ya que el tensor de inercia es $I_{i k}=\sum_j m_j\left[r_j^2 \delta_{i k}-x_{i j} x_{k j}\right]$
+    \end{itemize}
+}
 %
-%%%%% Diapo Fin
+%%%%% Diapo 5
+\section{Generalidades para ${\bf L}$ y ${\bf \Omega}$}
+\frame{
+\frametitle{${\bf L}$ y ${\bf \Omega}$}
+\begin{itemize}  
+	\item<1-> Hay casos particulares en los cuales podremos escribir $\mathbf{l}=I \boldsymbol{\Omega}$
+	\item<2-> El momento angular y la velocidad angular apuntan en una misma dirección y sentido. Entonces 
+	$ L_1  =I_{11} \Omega_1$,  $L_2  =I_{22} \Omega_2,$ y $ L_3  =I_{33} \Omega_3$
+	\item<3-> Pero en general, el momento angular ${\bf L}$ no es paralelo a la dirección de la velocidad angular $\boldsymbol{\Omega}$ y $\mathbf{L}$ es paralelo a $\boldsymbol{\Omega}$
+	\begin{figure}[t]
+		\includegraphics[width=1.2in]{Figuras/TrompoIdeal.png}
+   	\end{figure}
+	\item<4-> Si el vector $\boldsymbol{\Omega}$ posee solamente una componente sobre un eje $x_k$, tenemos $\boldsymbol{\Omega}=\boldsymbol{\Omega} \, \hat{\mathbf{x}}_k$ y por lo tanto $\mathbf{L}=I_{k k} \Omega \; \hat{\mathbf{x}}_k$.
+	\item<5-> Para cuerpos esféricos, $I_{11}=I_{22}=I_{33}$, y $\mathbf{L}=I_{11} \boldsymbol{\Omega}: \mathbf{L}$ es paralelo a $\boldsymbol{\Omega}$ 
+\end{itemize}
+}
+%
+%%%%% Diapo 6
+\section{Ejemplo: rotación libre, mas general, de un trompo}
+\frame{
+\frametitle{Rotación libre, mas general, de un trompo 1/2}
+\begin{itemize}  
+	\item<1-> Consideremos la rotación mas general de un trompo (objeto axialmente simétrico con $I_{11}=I_{22} = I \neq  I_{33}$). 
+	\begin{figure}[t]
+		\includegraphics[width=1.5in]{Figuras/TrompoLibre.png}
+   	\end{figure}
+	\item<2-> Tal y como se muestra en la figura ${\bf L}$ y ${\bf \Omega}$ no están alineados.
+	\item<3-> Como no existen torques externos ${\bf L} = cte$ y elegimos el eje $z$ del sistema laboratorio tal que ${\bf L} = L \hat{\bf z}$
+	\item<4-> Como el cuerpo tiene simetría axial no la velocidad angular no puede depender de $\psi$. Entonces 
+	\textbf{\({\bf \Omega}\)} en el sistema CM:
+	$\begin{cases}
+	\tilde{\Omega}_1 =  \dot{\theta}  \\
+	\tilde{\Omega}_2 = \dot{\phi} \operatorname{sen}  \theta \\
+	\tilde{\Omega}_3 = \dot{\psi} + \dot{\phi} \cos \theta
+	\end{cases}$ 
+\end{itemize}
+}
+% Diapo 7
+%\section{Sección}
+\frame{
+\frametitle{Rotación libre, mas general, de un trompo 1/2}
+\begin{itemize}  
+	\item<1-> Las componente del momento angular respecto al CM serán
+	$\begin{matrix} 
+		L_1 =   I \dot{\theta} =  0 &\Rightarrow \theta = \mathrm{cte} \\ \\
+		L_2 =   I \dot{\phi} \operatorname{sen}  \theta =  L\operatorname{sen}  \theta  &\Rightarrow \dot{\phi} = \frac{L}{I} = \mathrm{cte}\\ \\
+		L_3 =   I_{33} (\dot{\psi} + \dot{\phi} \cos \theta) =  L \cos \theta & \Rightarrow \dot{\psi} 
+		= \frac{L \cos \theta(I - I_{33})}{I I_{33}} =\mathrm{cte}
+	\end{matrix}$
+	\item<2-> La velocidad angular $\boldsymbol{\Omega}$ son
+		$\begin{cases}
+		\Omega_1  =\dot{\theta}=0 \\
+		\Omega_2  =\frac{L \operatorname{sen} \theta}{I_{11}}=\mathrm{cte} \\
+		\Omega_3  =\frac{L \cos \theta}{I_{33}}=\mathrm{cte}
+		\end{cases}$
+	\item<3-> El vector $\boldsymbol{\Omega}$ está sobre el plano  $x_2 - x_3$. 
+	\item<4->Como el plano  $x_2 - x_3$ rota alrededor de $z$, entonces $\boldsymbol{\Omega}$ también precesa alrededor de la dirección de $\mathbf{L}$ con velocidad angular $\dot{\phi}=$ cte.
+\end{itemize}
+}
+%
+%%%%% Diapo 8
+\section{Ecuaciones de movimiento para cuerpos rígidos}
+\frame{
+\frametitle{Ecuaciones de movimiento para cuerpos rígidos}
+\begin{itemize}  
+	\item<1-> Las ecuaciones de Lagrange para cuerpos rígidos se plantean en términos de los ángulos de Euler.
+	\item<2-> La energía cinética de rotación de un cuerpo rígido es  $T_{\mathrm{rot}}=\frac{1}{2} \sum_{i, k} I_{i k} \Omega_i \Omega_k$
+	\item<3-> Las componentes $\Omega_i$ de la velocidad angular pueden expresarse en función de los ángulos de Euler $(\theta, \phi, \psi)$ y de sus velocidades
+	\item<4-> La energía potencial del cuerpo corresponde a la energía potencial de su centro de masa, y se expresa en términos de los ángulos de Euler
+	\item<5-> El Lagrangiano queda como $\mathcal{L}=T-V=\mathcal{L}(\theta, \phi, \psi, \dot{\theta}, \dot{\phi}, \dot{\psi}, t)$
+	\item<6-> Las ecuaciones de Lagrange para cuerpos rígidos son complicadas
+	\item<7-> Los casos más simples son los que presentan simetrías: axial (trompos) o esférica
+\end{itemize}
+}
+%%%%% Diapo 9
+\section{Ejemplo: Cilindro de masa $M$ y radio $a$, rodando sin deslizar}
+\subsection{Angulos y velocidades}
+\frame{
+\frametitle{Ejemplo: Cilindro de masa $M$ y radio $a$. 1/2 }
+\begin{itemize}  
+	\item<1-> Consideremos un cilindro de masa $M$ y radio $a$, rodando $\sin$ deslizar dentro de una superficie cilíndrica fija de radio $R>a$.
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/CilindroEnCilindro.png}
+		\includegraphics[width=0.8in]{Figuras/PrecesionNutacion.png}
+   	\end{figure}
+	\item<2-> Sea $z$ el eje del cilindro fijo de radio $R$ y $x_3$ el del rodante de radio $a$.
+	\item<3-> 	El ángulo de nutación entre los ejes $x_3$ y $z$ es $\theta=0$. 
+	\item<4->  El ángulo de precesión alrededor de $z$ es $\phi$.
+	\item<5->  La energía cinética respecto al sistema fijo es $T=T_{\mathrm{cm}}+T_{\text {rot }}$.
+	\item<6->  La energía cinética del centro de masa es $T_{\mathrm{cm}}=\frac{1}{2} M v_{\mathrm{cm}}^2$, con $v_{\mathrm{cm}}=(R-a) \dot{\phi}$
+	\item<7-> La energía cinética de rotación es $T_{\text {rot }}=\frac{1}{2} I_{33} \Omega_3^2$
+\end{itemize}
+}
+%%%%% Diapo 10
+\subsection{Ecuaciones de movimiento}
+\frame{
+\frametitle{Cilindro de masa $M$ y radio $a$. 2/2 }
+\begin{itemize}  
+	\item<1-> Rodar sin deslizar implica $v_{\mathrm{cm}}=a \Omega_3 \Rightarrow \Omega_3=\frac{v_{\mathrm{cm}}}{a}=\frac{(R-a) \dot{\phi}}{a}$
+	\item<2-> El momento de inercia del cilindro rodante es $I_{33}=\frac{1}{2} M a^2$.
+	\item<3-> Entonces $T =\frac{1}{2} M(R-a)^2 \dot{\phi}^2+\frac{1}{2} I_{33} \frac{(R-a)^2}{a^2} \dot{\phi}^2  =\frac{3}{4} M(R-a)^2 \dot{\phi}^2$
+	\item<4-> La energía potencial del centro de masa es $V=-M g(R-a) \cos \phi$.
+	\item<5-> El Lagrangiano es $\mathcal{L}=T-V=\frac{3}{4} M(R-a)^2 \dot{\phi}^2+M g(R-a) \cos \phi$
+	\item<6-> La ecuación de movimiento queda $\frac{3}{2} \ddot{\phi}+\frac{g}{(R-a)} \operatorname{sen} \phi=0$.
+	\item<7-> Para pequeñas oscilaciones tenemos $\ddot{\phi}+\frac{2 g}{3(R-a)} \phi=0$.
+	\item<8-> La ecuación de movimiento de un oscilador armónico simple con frecuencia $\omega^2=\frac{2 g}{3(R-a)}$.
+\end{itemize}
+}
 \section{Recapitulando}
 \frame{
-  \frametitle{Recapitulando}
+  \frametitle{Recapitulando 1/2}
 En presentación consideramos
-\begin{enumerate}
-	\item<1-> {Descomposición}: $
-        T = T_{\text{cm}} + T_{\text{rot}} = \frac{1}{2} M v_{\text{cm}}^2 + \frac{1}{2} \sum_j m_j ({\bf \Omega} \times {\bf r}_j)^2$
-        \item<2-> {Tensor Inercia}: $T_{\text{rot}} = \frac{1}{2} \sum_{i,k} I_{ik} \Omega_i \Omega_k$, con $
-        I_{ij} = \sum_j m_j \left( r_j^2 \delta_{ij} - x_i x_j \right)$
-        \item<3-> {Elipsoide en Rotación}:
-        ${\bf \Omega}(t) = \left( \nu \cos \omega t, \nu \sin \omega t, \omega \right)$ \\
-        $T = \frac{1}{2} \left( I_{11} \cos^2 \omega t + I_{22} \sin^2 \omega t \right) \nu^2 + \frac{1}{2} I_{33} \omega^2$
-    
-\end{enumerate}
+\begin{itemize}
+	\item<1-> \textbf{Energía Cinética Total:} $T = \frac{1}{2} M v_{cm}^2 + \frac{1}{2} \sum_j m_j ({\bf \Omega} \times {\bf r}_j)^2 \Rightarrow$ \\
+	$T = \frac{1}{2} M v_{cm}^2 + \frac{1}{2} {\bf \Omega}^T \boldsymbol{I} {\bf \Omega} = \frac{1}{2} M v_{cm}^2 + \frac{1}{2} \sum_{i,k}  \Omega_i I^{i}_{k}\Omega^k$
+	\item<2-> \textbf{Tensor de Inercia:} $I_{ik} = \sum_j m_j \left( r_j^2 \delta_{ik} - x_{i,j} x_{k,j} \right)$
+	\item<3-> \textbf{Velocidad angular:} ${\bf \Omega}(t) = (\nu \cos \omega t, \nu \sin \omega t, \omega)$
+	\item<4-> \textbf{Momento Angular:} ${\bf L} = \sum_j m_j {\bf r}_j \times ({\bf \Omega} \times {\bf r}_j) = \boldsymbol{I} {\bf \Omega}$
+	\item<5-> En general \( {\bf L} \nparallel {\bf \Omega} \). Sólo para cuerpos esféricos o con \( {\bf \Omega} \) en eje principal, ocurre \( {\bf L} \parallel {\bf \Omega} \).
+	\item<5-> \textbf{Energía cinética:}$T = \frac{1}{2}(I_{11} \cos^2 \omega t + I_{22} \sin^2 \omega t)\nu^2 + \frac{1}{2} I_{33} \omega^2$
+	\item<6-> \textbf{Elipsoide en rotación:} precesión de los ejes principales del elipsoide.
+	\item<7-> \textbf{Ecuaciones de Movimiento}
+		\begin{itemize}
+    		\item Se plantean con ángulos de Euler \( (\theta, \phi, \psi) \).
+    		\item Lagrangiano: $\mathcal{L} = T(\theta, \phi, \psi, \dot{\theta}, \dot{\phi}, \dot{\psi}) - V(\theta, \phi, \psi)$
+    		\item Casos con simetría (esfera o trompo) permiten reducción del sistema.
+		\end{itemize}
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Recapitulando 2/2}
+ Ejemplo: Cilindro Rodante
+\begin{itemize}
+	\item \textbf{Sistema:} Cilindro de masa \( M \), radio \( a \), en cavidad de radio \( R > a \)
+	\item  \textbf{Condiciones:} $v_{cm} = (R - a)\dot{\varphi}, \quad \Omega_3 = \frac{v_{cm}}{a},\quad I_{33} = \frac{1}{2} M a^2$
+	\item \textbf{Energías:} $T = \frac{3}{4} M (R - a)^2 \dot{\varphi}^2 \quad V = -Mg(R-a)\cos \varphi \quad \mathcal{L} = T - V$
+	\item \textbf{Ecuación de movimiento:} $\ddot{\varphi} + \frac{2g}{3(R-a)} \varphi = 0$, que es un oscilador armónico simple con \( \omega^2 = \frac{2g}{3(R-a)}  \).
+\end{itemize}
+	}
+\section{Para la discusión}
+\frame{
+\frametitle{Para la discusión}
+    \begin{figure}[ht!]
+    \centering
+        \includegraphics[width=2.0in]{Figuras/EsferaQueRota.png} 
+    \end{figure}
+Considere una esfera de radio $a$, masa $M$ y momento de inercia $
+\boldsymbol{I}$ respecto de un diámetro cualquiera que rueda sin deslizar sobre un plano horizontal.
+\begin{itemize}  
+	\item  Escriba la condición de rodadura sin deslizamiento suponiendo que el plano horizontal está fijo.
+    	\item Demuestre que el centro de masas se mueve en línea recta y a velocidad constante.
+    	\item Escriba la condición de rodadura sin deslizamiento suponiendo que el plano horizontal rota con una velocidad angular $\Omega$ constante alrededor del eje $z$ tal y como muestra la figura.
+\end{itemize}
 }
 
 \end{document}
+%
+%%%%% Diapo 2
 
+
+%
+%%%%% Diapo Fin
 	\begin{figure}[t]
 		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
    	\end{figure}

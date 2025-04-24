@@ -201,7 +201,7 @@
 	\includegraphics[width=1.5in]{Figuras/VelocidadesEuler.png}
 	\includegraphics[width=2.8in]{Figuras/ComponentesVelocidades.png}
 \end{figure}
-En general ${\bf \Omega} = \dot{\theta} \hat{{\bf \theta}} + \dot{\phi} \hat{{\bf \phi}} +\dot{\psi} \hat{{\bf \psi}}$
+En general ${\bf \Omega} = \dot{\theta} \hat{\dot{\bf \theta}} + \dot{\phi} \hat{\dot{\bf \phi}} +\dot{\psi} \hat{\dot{\bf \psi}}$, donde $\hat{\dot{\bf \theta}}$, $\hat{\dot{\bf \phi}}$ y $\hat{\dot{\bf \psi}}$  son vectores unitarios en las direcciones de esas velocidades.
 }
 
 %
@@ -210,7 +210,7 @@ En general ${\bf \Omega} = \dot{\theta} \hat{{\bf \theta}} + \dot{\phi} \hat{{\b
 \frame{
 \frametitle{Velocidad ${\bf \Omega}$ ángulos y velocidades de Euler}
 \begin{itemize}
-	\item<1-> Las velocidades angulares $\dot{\phi}, \dot{\theta}$ y $\dot{\psi}$ pueden expresarse en términos de sus proyecciones sobre los ejes $\left(x_1, x_2, x_3\right)$ como
+	\item<1-> Las velocidades angulares $\dot{\phi}, \dot{\theta}$ y $\dot{\psi}$ pueden expresarse en términos de sus proyecciones sobre los ejes $\left(x_1, x_2, x_3\right)$ del sistema CM como
 	\begin{itemize}
 		\item $\dot{\psi}_1  =0$, $\dot{\psi}_2  =0$ y $\dot{\psi}_3  =\dot{\psi}$;
 		\item $\dot{\theta}_1  =\dot{\theta} \cos \psi$, $\dot{\theta}_2  =-\dot{\theta} \operatorname{sen} \, \psi$ y $\dot{\theta}_3  =0$,  ya que $\dot{\theta}$ es perpendicular a  $x_3$
@@ -352,7 +352,6 @@ En general ${\bf \Omega} = \dot{\theta} \hat{{\bf \theta}} + \dot{\phi} \hat{{\b
 Un rotor simétrico (un trompo ideal) tiene momentos de inercia respecto a sus ejes principales dados por:
 $I_1 = I_2 = I \neq I_3$. El rotor gira libremente en el espacio, sin estar sometido a torques externos. Su orientación se describe mediante los ángulos de Euler \( (\phi, \theta, \psi) \). Inicialmente, el cuerpo gira con una velocidad angular constante \( \dot{\psi}_0 \) alrededor del eje de simetría \( x_3 \), formando un ángulo fijo \( \theta_0 \) con respecto al eje vertical \( z \).
 	\begin{figure}[t]
-		\includegraphics[width=1.5in]{Figuras/TrompoLibre.png}
 		\includegraphics[width=0.9in]{Figuras/PrecesionNutacion.png}
    	\end{figure}
 Escriba la expresión de las componentes de la velocidad angular \( {\bf \Omega} \) del rotor, en términos de los ángulos de Euler. 1) respecto al CM \\ 2) Respecto al Sistema Laboratorio	

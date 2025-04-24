@@ -1,5 +1,13 @@
 \babel@toc {spanish}{}\relax 
 \beamer@sectionintoc {1}{La energ\IeC {\'\i }a cin\'etica}{3}{0}{1}
-\beamer@sectionintoc {2}{El Tensor de Inercia}{9}{0}{2}
+\beamer@sectionintoc {2}{El tensor de inercia}{9}{0}{2}
 \beamer@sectionintoc {3}{Elipsoide en rotaci\'on}{14}{0}{3}
-\beamer@sectionintoc {4}{Recapitulando}{18}{0}{4}
+\beamer@sectionintoc {4}{Cantidad de movimiento angular de un cuerpo r\IeC {\'\i }gido}{18}{0}{4}
+\beamer@sectionintoc {5}{Generalidades para ${\bf L}$ y ${\bf \Omega }$}{23}{0}{5}
+\beamer@sectionintoc {6}{Ejemplo: rotaci\'on libre, mas general, de un trompo}{28}{0}{6}
+\beamer@sectionintoc {7}{Ecuaciones de movimiento para cuerpos r\IeC {\'\i }gidos}{36}{0}{7}
+\beamer@sectionintoc {8}{Ejemplo: Cilindro de masa $M$ y radio $a$, rodando sin deslizar}{43}{0}{8}
+\beamer@subsectionintoc {8}{1}{Angulos y velocidades}{43}{0}{8}
+\beamer@subsectionintoc {8}{2}{Ecuaciones de movimiento}{50}{0}{8}
+\beamer@sectionintoc {9}{Recapitulando}{58}{0}{9}
+\beamer@sectionintoc {10}{Para la discusi\'on}{66}{0}{10}
