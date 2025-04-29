@@ -89,13 +89,13 @@
 \frame{
   \frametitle{Cantidad de movimiento angular}
    \begin{itemize}  
-  	\item<1-> Escogemos el sistema de coordenadas ( $x_1, x_2, x_3$ ) con origen en el centro de masa para definir el momento angular del cuerpo.
-	\item<2-> Si $\mathbf{r}_j$ es el vector de posición de la particula $j$ en $\left(x_1, x_2, x_3\right)$, tenemos $\mathbf{l}=\sum_j \mathbf{r}_j \times \mathbf{p}_j=\sum_j m_j\left(\mathbf{r}_j \times \mathbf{v}_j\right)$, con $\mathbf{v}_j=\boldsymbol{\Omega} \times \mathbf{r}_j$.
-	\item<3-> Entonces $\mathbf{L}=\sum_j m_j \mathbf{r}_j \times\left(\boldsymbol{\Omega} \times \mathbf{r}_j\right) \equiv \sum_j m_j\left[r_j^2 \boldsymbol{\Omega}-\left(\mathbf{r}_j \cdot \boldsymbol{\Omega}\right) \mathbf{r}_j\right]$. \\ Hemos usado $\mathbf{A} \times(\mathbf{B} \times \mathbf{C})=(\mathbf{A} \cdot \mathbf{C}) \mathbf{B}-(\mathbf{A} \cdot \mathbf{B}) \mathbf{C}$
+  	\item<1-> El sistema de coordenadas ( $x_1, x_2, x_3$ ) con origen en el centro de masa para definir el momento angular del sistema de $N$ partículas rígidas.
+	\item<2-> Si $\mathbf{r}_j$ es el vector de posición de la particula $j$ en $\left(x_1, x_2, x_3\right)$, tenemos $\mathbf{L}=\sum_j^N \mathbf{r}_j \times \mathbf{p}_j=\sum_j^N m_j\left(\mathbf{r}_j \times \mathbf{v}_j\right)$, con $\mathbf{v}_j=\boldsymbol{\Omega} \times \mathbf{r}_j$.
+	\item<3-> Entonces $\mathbf{L}=\sum_j^N m_j \mathbf{r}_j \times\left(\boldsymbol{\Omega} \times \mathbf{r}_j\right) \equiv \sum_j^N m_j\left[r_j^2 \boldsymbol{\Omega}-\left(\mathbf{r}_j \cdot \boldsymbol{\Omega}\right) \mathbf{r}_j\right]$. \\ Hemos usado $\mathbf{A} \times(\mathbf{B} \times \mathbf{C})=(\mathbf{A} \cdot \mathbf{C}) \mathbf{B}-(\mathbf{A} \cdot \mathbf{B}) \mathbf{C}$
 	\item<4-> Las componentes del momento angular serán: \\
-	$L_i  =\sum_j m_j\left[r_j^2 \Omega_i-x_{i j} \sum_k x_{k j} \Omega_k\right] $ \\ $L_i =\sum_j m_j\left[\sum_k \Omega_k r_j^2 \delta_{i k}-\sum_k x_{i j} x_{k j} \Omega_k\right] $ \\
-	$L_i =\sum_j m_j \sum_k \Omega_k\left[r_j^2 \delta_{i k}-x_{i j} x_{k j}\right] =\sum_k \Omega_k \sum_j m_j\left[r_j^2 \delta_{i k}-x_{i j} x_{k j}\right]$
-	\item<5-> Finalmente  $L_i=\sum_{k=1}^3 I_{i k} \Omega_k \Leftrightarrow \mathbf{L}=I \boldsymbol{\Omega} $ ya que el tensor de inercia es $I_{i k}=\sum_j m_j\left[r_j^2 \delta_{i k}-x_{i j} x_{k j}\right]$
+	$L_i  =\sum_j^N m_j\left[r_j^2 \Omega_i-x_{i j} \sum_k^3 x_{k j} \Omega_k\right] $ \\ $L_i =\sum_j^N m_j\left[\sum_k^3 \Omega_k r_j^2 \delta_{i k}-\sum_k^3 x_{i j} x_{k j} \Omega_k\right] $ \\
+	$L_i =\sum_j^N m_j \sum_k^3 \Omega_k\left[r_j^2 \delta_{i k}-x_{i j} x_{k j}\right] =\sum_k^3 \Omega_k \sum_j^N m_j\left[r_j^2 \delta_{i k}-x_{i j} x_{k j}\right]$
+	\item<5-> Finalmente  $L_i=\sum_{k=1}^3 I_{i k} \Omega_k \Leftrightarrow \mathbf{L}=I \boldsymbol{\Omega} $ ya que el tensor de inercia es $I_{i k}=\sum_j^N m_j\left[r_j^2 \delta_{i k}-x_{i j} x_{k j}\right]$
     \end{itemize}
 }
 %
@@ -104,7 +104,7 @@
 \frame{
 \frametitle{${\bf L}$ y ${\bf \Omega}$}
 \begin{itemize}  
-	\item<1-> Hay casos particulares en los cuales podremos escribir $\mathbf{l}=I \boldsymbol{\Omega}$
+	\item<1-> Hay casos particulares en los cuales podremos escribir $\mathbf{L}=\mathbf{I} \boldsymbol{\Omega}$
 	\item<2-> El momento angular y la velocidad angular apuntan en una misma dirección y sentido. Entonces 
 	$ L_1  =I_{11} \Omega_1$,  $L_2  =I_{22} \Omega_2,$ y $ L_3  =I_{33} \Omega_3$
 	\item<3-> Pero en general, el momento angular ${\bf L}$ no es paralelo a la dirección de la velocidad angular $\boldsymbol{\Omega}$ y $\mathbf{L}$ es paralelo a $\boldsymbol{\Omega}$

@@ -1,8 +1,8 @@
 \babel@toc {spanish}{}\relax 
-\beamer@sectionintoc {1}{El Trompo de Lagrange: Generalidades}{3}{0}{1}
-\beamer@sectionintoc {2}{El Trompo de Lagrange: El Lagrangeano}{8}{0}{2}
-\beamer@sectionintoc {3}{El Trompo de Lagrange: Coordenadas c\IeC {\'\i }clicas y cantidades conservadas}{15}{0}{3}
-\beamer@sectionintoc {4}{El Trompo de Lagrange: Primeras integrales}{21}{0}{4}
-\beamer@sectionintoc {5}{El Trompo de Lagrange: Potencial efectivo}{25}{0}{5}
-\beamer@sectionintoc {6}{El Trompo de Lagrange: Nutaci\'on y rotaci\'on}{30}{0}{6}
+\beamer@sectionintoc {1}{Generalidades}{3}{0}{1}
+\beamer@sectionintoc {2}{El Lagrangeano}{8}{0}{2}
+\beamer@sectionintoc {3}{Coordenadas c\IeC {\'\i }clicas y cantidades conservadas}{15}{0}{3}
+\beamer@sectionintoc {4}{Primeras integrales}{21}{0}{4}
+\beamer@sectionintoc {5}{Potencial efectivo}{25}{0}{5}
+\beamer@sectionintoc {6}{Nutaci\'on y rotaci\'on}{30}{0}{6}
 \beamer@sectionintoc {7}{Teorema de los ejes paralelos en los momentos de inercia}{35}{0}{7}

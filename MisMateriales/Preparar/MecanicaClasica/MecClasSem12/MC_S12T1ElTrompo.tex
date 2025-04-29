@@ -32,13 +32,12 @@
 
 \begin{frame}
 \frametitle{Agenda}
-  {\LARGE {\bf El Trompo de Lagrange}} \\
   \tableofcontents
 \end{frame}
 
 
 %%%%% Diapo 1
-\section{Generalidades}
+\section{El Trompo de Lagrange: Generalidades}
 \frame{
   \frametitle{El Trompo de Lagrange: Generalidades}
    \begin{itemize}  
@@ -53,7 +52,7 @@
     \end{itemize}
 }
 %%%%% Diapo 2
-\section{El Lagrangeano}
+\section{El Trompo de Lagrange: El Lagrangeano}
 \frame{
 \frametitle{El Trompo de Lagrange: El Lagrangeano}
 \begin{itemize}  
@@ -67,14 +66,14 @@
 \end{itemize}
 }
 %%%%% Diapo 2
-\section{Coordenadas cíclicas y cantidades conservadas}
+\section{El Trompo de Lagrange: Coordenadas cíclicas y cantidades conservadas}
 \frame{
 \frametitle{Coordenadas cíclicas y cantidades conservadas}
 \begin{itemize}  
 	\item<1-> El sistema posee tres grados de libertad: los ángulos de Euler $\theta, \phi$ y $\psi$
 	\item<1-> No depende del tiempo y tiene dos coordenadas cíclicas: $\psi$ y $\phi$.
 	\item<2-> La ecuación de Lagrange para $\psi$ (cíclica) es $\frac{d}{d t}\left(\frac{\partial \mathcal{L}}{\partial \dot{\psi}}\right)-\frac{\partial \mathcal{L}}{\partial \psi}=0$
-	\item<2-> Entonces, $\frac{\partial \mathcal{L}}{\partial \psi}  =0 \Rightarrow \frac{\partial \mathcal{L}}{\partial \dot{\psi}}  =I_{33}(\dot{\psi}+\dot{\phi} \cos \theta)=I_{33} \Omega_3=L_3=$ cte. 
+	\item<2-> Entonces, $\frac{\partial \mathcal{L}}{\partial \psi}  =0 \Rightarrow \frac{\partial \mathcal{L}}{\partial \dot{\psi}}  =I_{33}(\dot{\psi}+\dot{\phi} \cos \theta)=I_{33} \Omega_3=l_3=$ cte. 
 	\item<3-> La ecuación de Lagrange para $\phi$ (cíclica) es $\frac{d}{d t}\left(\frac{\partial \mathcal{L}}{\partial \dot{\phi}}\right)-\frac{\partial \mathcal{L}}{\partial \phi}=0$
 	\item<3-> Otra vez \\ $\frac{\partial \mathcal{L}}{\partial \phi}  =0 \Rightarrow \frac{\partial \mathcal{L}}{\partial \dot{\phi}}  =\left(I_{11} \operatorname{sen} ^2 \theta+I_{33} \cos ^2 \theta\right) \dot{\phi}+I_{33} \dot{\psi} \cos \theta=L_z=$ cte.
 	\item<4-> El torque externo del peso $\boldsymbol{\tau}=-m g \hat{\mathbf{z}} \times \mathbf{d}=m g d\left(\hat{\mathbf{z}} \times \hat{\mathbf{x}}_3\right)$, es perpendicular al plano $\left(x_3, z\right)$, al igual que el vector $d \mathbf{L}$ del cambio de momento angular del trompo.
@@ -83,7 +82,7 @@
 \end{itemize}
 }
 %%%%% Diapo 2
-\section{Primeras integrales}
+\section{El Trompo de Lagrange: Primeras integrales}
 \frame{
 \frametitle{Primeras integrales}
 \begin{itemize}  
@@ -98,7 +97,7 @@
 \end{itemize}
 }
 %%%%% Diapo 2
-\section{Potencial efectivo}
+\section{El Trompo de Lagrange: Potencial efectivo}
 \frame{
 \frametitle{El Trompo de Lagrange: Potencial efectivo}
 \begin{itemize}  
@@ -116,7 +115,7 @@
 \end{itemize}
 }
 %%%%% Diapo 2
-\section{Nutación y rotación}
+\section{El Trompo de Lagrange: Nutación y rotación}
 \frame{
 \frametitle{El Trompo de Lagrange: Nutación y rotación}
 \begin{itemize}  
@@ -134,7 +133,7 @@
 \section{Teorema de los ejes paralelos en los momentos de inercia}
 \frame{
 \frametitle{Teorema de los ejes paralelos}
-Sea $I_{i k}$ el tensor de inercia de un cuerpo rígido (un sistema de $N$ partículas rígidamente unidas) en el sistema de coordenadas ( $x_1, x_2, x_3$ ) con origen en el centro de masa del cuerpo. Un sistema de coordenadas paralelas fijas ( $x_1^{\prime}, x_2^{\prime}, x_3^{\prime}$ ) cuyo origen $O^{\prime}$ se encuentra en una posición $\mathbf{a}=\left(a_1, a_2, a_3\right)$ con respecto al centro de masa del cuerpo. Entonces el tensor de inercia es $I_{i k}^{\prime}=I_{i k}+\sum_j^N m_j\left(a^2 \delta_{i k}-a_i a_k\right)$.
+Sea $I_{i k}$ el tensor de inercia de un cuerpo rígido en el sistema de coordenadas ( $x_1, x_2, x_3$ ) con origen en el centro de masa del cuerpo. Un sistema de coordenadas paralelas fijas ( $x_1^{\prime}, x_2^{\prime}, x_3^{\prime}$ ) cuyo origen $O^{\prime}$ se encuentra en una posición $\mathbf{a}=\left(a_1, a_2, a_3\right)$ con respecto al centro de masa del cuerpo. Entonces el tensor de inercia es $I_{i k}^{\prime}=I_{i k}+\sum_j m_j\left(a^2 \delta_{i k}-a_i a_k\right)$.
 	\begin{figure}[t]
 		\includegraphics[width=1.8in]{Figuras/EjesParalelos.png}
    	\end{figure}
@@ -144,14 +143,14 @@ Sea $I_{i k}$ el tensor de inercia de un cuerpo rígido (un sistema de $N$ partíc
 \frame{
 \frametitle{Demostración Teorema de Steiner}
 \begin{itemize}  
-	\item<1-> El tensor de inercia en el sistema de coordenadas $\left(x_1, x_2, x_3\right)$ con origen en el centro de masa del cuerpo, es $I_{i k}=\sum_j^N m_j\left(r_j^2 \delta_{i k}-x_i x_k\right)$.
+	\item<1-> El tensor de inercia en el sistema de coordenadas $\left(x_1, x_2, x_3\right)$ con origen en el centro de masa del cuerpo, es $I_{i k}=\sum_j m_j\left(r_j^2 \delta_{i k}-x_i x_k\right)$.
 	\item<2-> Supongamos un sistema de coordenadas fijas $\left(x_1^{\prime}, x_2^{\prime}, x_3^{\prime}\right)$, con origen $O^{\prime}$ en una posición $\mathbf{a}$ respecto al centro de masa del cuerpo.
-	\item<3->  La posición de un punto $P$ respecto $\left(x_1, x_2, x_3\right)$ es $\mathbf{r}_j  =\mathbf{a}+\mathbf{r}_j^{\prime} \Rightarrow x_{i \, j}  =a_i+x_{i \, j}^{\prime}$
-	\item<4-> Para $\left(x_1^{\prime}, x_2^{\prime}, x_3^{\prime}\right)$, tenemos $I_{i k}^{\prime}=\sum_j^N m_j\left(r_j^{\prime 2} \delta_{i k}-x_i^{\prime} x_k^{\prime}\right)$, con $r_j^{\prime 2}=\left(\mathbf{r}_j-\mathbf{a}\right)^2=r_j^2+a^2-2 \sum_l^3 x_l a_l$.
+	\item<3->  La posición de un punto $P$ respecto $\left(x_1, x_2, x_3\right)$ es $\mathbf{r}_j  =\mathbf{a}+\mathbf{r}_j^{\prime} \Rightarrow x_i  =a_i+x_i^{\prime}$
+	\item<4-> Para $\left(x_1^{\prime}, x_2^{\prime}, x_3^{\prime}\right)$, tenemos $I_{i k}^{\prime}=\sum_j m_j\left(r_j^{\prime 2} \delta_{i k}-x_i^{\prime} x_k^{\prime}\right)$, con $r_j^{\prime 2}=\left(\mathbf{r}_j-\mathbf{a}\right)^2=r_j^2+a^2-2 \sum_l x_l a_l$.
 	\item<5-> Sustituyendo, 
-	$I_{i k}^{\prime}=  \sum_j^N m_j\left[\left(r_j^2+a^2-2 \sum_l^3 x_l a_l\right) \delta_{i k}-\left(x_i-a_i\right)\left(x_k-a_k\right)\right]$
-	$I_{i k}^{\prime}=  \sum_j^N m_j\left(r_j^2 \delta_{i k}-x_i x_k\right)+\sum_j^N m_j\left(a^2 \delta_{i k}-a_i a_k\right)$
-	$\qquad -2 \sum_j^N m_j \sum_l^3 x_l a_l \delta_{i k}+\sum_j^N m_j x_i a_k+\sum_j^N m_j x_k a_i$
+	$I_{i k}^{\prime}=  \sum_j m_j\left[\left(r_j^2+a^2-2 \sum_l x_l a_l\right) \delta_{i k}-\left(x_i-a_i\right)\left(x_k-a_k\right)\right]$
+	$I_{i k}^{\prime}=  \sum_j m_j\left(r_j^2 \delta_{i k}-x_i x_k\right)+\sum_j m_j\left(a^2 \delta_{i k}-a_i a_k\right)$
+	$\qquad -2 \sum_j m_j \sum_l x_l a_l \delta_{i k}+\sum_j m_j x_i a_k+\sum_j m_j x_k a_i$
 \end{itemize}
 }
 %%%%% Diapo 2
@@ -161,12 +160,12 @@ Sea $I_{i k}$ el tensor de inercia de un cuerpo rígido (un sistema de $N$ partíc
 \begin{itemize}  
 	\item<1-> Pero en el sistema de coordenadas $\left(x_1, x_2, x_3\right)$, tenemos
 $$	\begin{aligned}
-& \sum_j^N m_j x_i a_k=a_k \cancelto{0}{\left(\sum_j^N m_j x_{i\, j}\right)}=0, \\
-& \sum_j^N m_j x_k a_i=a_i\cancelto{0}{\left(\sum_j^N m_j x_{k \, j}\right)}=0 \text {, } \\
-& \sum_j^N m_j \sum_l^3 x_l a_l=\sum_l a_l \cancelto{0}{\left(\sum_j^N m_j x_{l \, j}\right)}=0 .
+& \sum_j m_j x_i a_k=a_k \cancelto{0}{\left(\sum_j m_j x_i(j)\right)}=0, \\
+& \sum_j m_j x_k a_i=a_i\cancelto{0}{\left(\sum_j m_j x_k(j)\right)}=0 \text {, } \\
+& \sum_j m_j \sum_l x_l a_l=\sum_l a_l \cancelto{0}{\left(\sum_j m_j x_l(j)\right)}=0 .
 \end{aligned}
 $$
-	\item<2-> Luego tenemos, $I_{i k}^{\prime}=I_{i k}+\sum_j^N m_j\left(a^2 \delta_{i k}-a_i a_k\right)$
+	\item<2-> Luego tenemos, $I_{i k}^{\prime}=I_{i k}+\sum_j m_j\left(a^2 \delta_{i k}-a_i a_k\right)$
 \end{itemize}
 }
 	
