@@ -63,10 +63,30 @@
 
    \end{itemize}
 }
-%%%%% Diapo 3
-\section{Ejemplos}
+%
+%%%%% Diapo Fin
+\section{Recapitulando}
 \frame{
-  \frametitle{Ejemplos}
+  \frametitle{Recapitulando}
+\begin{enumerate}
+	\item<1-> \textbf{Sistema Mecánico:} Un sistema con \( N \) partículas con \( 3N \) coordenadas cartesianas \( \{ {\bf r}_i = (x_i, y_i, z_i) \} \).
+	\item<2-> \textbf{Restricciones (Vínculos):} \\ \( k \) restricciones independientes \( \Rightarrow \) \( s = 3N - k \) grados de libertad.
+    	\begin{itemize}
+        		\item \textbf{Holónomos:} Relaciones algebraicas \( f_j({\bf r}_1, ..., t) = 0 \).
+        		\item \textbf{Anholónomos:} Involucran velocidades, son no integrables. Ejemplo rodar sin deslizar.
+	\end{itemize}
+	\item<3-> \textbf{Coordenadas Generalizadas:}
+    	\begin{itemize}
+        		\item Conjunto mínimo \( \{q_1(t), ..., q_s(t)\} \) que describe el sistema.
+        		\item Velocidades generalizadas: \( \{\dot{q}_1, ..., \dot{q}_s\} \).
+    	\end{itemize}
+	\item<4-> \textbf{Transformaciones:} \( {\bf r}_i = {\bf r}_i(q_1, ..., q_s, t) \Leftrightarrow q_j = q_j({\bf r}_1, ..., {\bf r}_N, t) \)
+\end{enumerate}
+}
+%%%%% Diapo 3
+\section{Para la discusión}
+\frame{
+  \frametitle{Para la discusión}
 			\begin{figure}[t]
 			\includegraphics[width=1.4in]{Figuras/Pendulo.png} \hspace{1cm} \includegraphics[width=1.4in]{Figuras/PenduloDoble.png} \\ \includegraphics[width=1.4in]{Figuras/Cono.png} \hspace{1cm} \includegraphics[width=2.8in]{Figuras/RuedaSinDeslizar.png} 
    		         \end{figure}

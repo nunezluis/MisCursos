@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  10 FEB 2025 21:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  30 APR 2025 08:10
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -954,7 +954,7 @@ Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 22.
 
 </Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png,
- id=38, 184.5294pt x 136.1085pt>
+ id=42, 184.5294pt x 136.1085pt>
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
@@ -1145,34 +1145,81 @@ stitucional/UISLOGO.png  used on input line 65.
  [16
 
 ]
-<Figuras/Pendulo.png, id=481, 734.745pt x 652.4375pt>
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 85.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <7> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 85.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 85.
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 85.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [17
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 85.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [18
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 85.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+[19
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 85.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [20
+
+]
+<Figuras/Pendulo.png, id=594, 734.745pt x 652.4375pt>
 File: Figuras/Pendulo.png Graphic file (type png)
 <use Figuras/Pendulo.png>
-Package pdftex.def Info: Figuras/Pendulo.png  used on input line 73.
+Package pdftex.def Info: Figuras/Pendulo.png  used on input line 93.
 (pdftex.def)             Requested size: 101.17755pt x 89.83736pt.
-<Figuras/PenduloDoble.png, id=482, 764.8575pt x 580.1675pt>
+<Figuras/PenduloDoble.png, id=595, 764.8575pt x 580.1675pt>
 File: Figuras/PenduloDoble.png Graphic file (type png)
 <use Figuras/PenduloDoble.png>
-Package pdftex.def Info: Figuras/PenduloDoble.png  used on input line 73.
+Package pdftex.def Info: Figuras/PenduloDoble.png  used on input line 93.
 (pdftex.def)             Requested size: 101.17755pt x 76.74345pt.
-<Figuras/Cono.png, id=483, 727.71875pt x 663.47874pt>
+<Figuras/Cono.png, id=596, 727.71875pt x 663.47874pt>
 File: Figuras/Cono.png Graphic file (type png)
 <use Figuras/Cono.png>
-Package pdftex.def Info: Figuras/Cono.png  used on input line 73.
+Package pdftex.def Info: Figuras/Cono.png  used on input line 93.
 (pdftex.def)             Requested size: 101.17755pt x 92.23845pt.
-<Figuras/RuedaSinDeslizar.png, id=484, 1081.03876pt x 410.53375pt>
+<Figuras/RuedaSinDeslizar.png, id=597, 1081.03876pt x 410.53375pt>
 File: Figuras/RuedaSinDeslizar.png Graphic file (type png)
 <use Figuras/RuedaSinDeslizar.png>
-Package pdftex.def Info: Figuras/RuedaSinDeslizar.png  used on input line 73.
+Package pdftex.def Info: Figuras/RuedaSinDeslizar.png  used on input line 93.
 (pdftex.def)             Requested size: 202.35622pt x 76.84334pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 73.
+stitucional/UISLOGO.png  used on input line 93.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [17
+ [21
 
  <./Figuras/Pendulo.png> <./Figuras/PenduloDoble.png> <./Figuras/Cono.png> <./F
 iguras/RuedaSinDeslizar.png>]
@@ -1191,14 +1238,14 @@ LaTeX Info: Redefining \% on input line 25.
 )
 Package rerunfilecheck Info: File `MC_S2T1CoordGeneralizadas.out' has not chang
 ed.
-(rerunfilecheck)             Checksum: 2C0FEDB5700AB6C0EBDCBF96326DF898;475.
+(rerunfilecheck)             Checksum: D71E0E7FF6ACDD3CA067E8D220B24EB4;637.
  ) 
 Here is how much of TeX's memory you used:
- 23679 strings out of 478268
- 465517 string characters out of 5846347
- 725407 words of memory out of 5000000
- 41337 multiletter control sequences out of 15000+600000
- 477536 words of font info for 57 fonts, out of 8000000 for 9000
+ 23761 strings out of 478268
+ 467343 string characters out of 5846347
+ 725406 words of memory out of 5000000
+ 41408 multiletter control sequences out of 15000+600000
+ 482212 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,493b,857s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
@@ -1209,10 +1256,10 @@ sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></
 usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></
 usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></u
 sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on MC_S2T1CoordGeneralizadas.pdf (17 pages, 1396604 bytes).
+Output written on MC_S2T1CoordGeneralizadas.pdf (21 pages, 1412908 bytes).
 PDF statistics:
- 563 PDF objects out of 1000 (max. 8388607)
- 497 compressed objects within 5 object streams
- 38 named destinations out of 1000 (max. 500000)
- 140 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 678 PDF objects out of 1000 (max. 8388607)
+ 605 compressed objects within 7 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 154 words of extra memory for PDF output out of 10000 (max. 10000000)
 

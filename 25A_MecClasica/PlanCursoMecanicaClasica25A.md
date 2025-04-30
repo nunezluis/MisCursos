@@ -97,6 +97,24 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
   + [La historia bien bonita del principio de mínima acción](https://youtu.be/Q10_srZ-pbs?si=eZM-zbC1_tUHcuz4)
 
 #### Al finalizar la semana
+
+1. **Sistema Mecánico:**  
+   Un sistema con \( N \) partículas con \( 3N \) coordenadas cartesianas \( \{ \mathbf{r}_i = (x_i, y_i, z_i) \} \).
+
+2. **Restricciones (Vínculos):**  
+   \( k \) restricciones independientes \( \Rightarrow \) \( s = 3N - k \) grados de libertad.
+   - **Holónomos:** Relaciones algebraicas \( f_j(\mathbf{r}_1, ..., t) = 0 \).
+   - **Anholónomos:** Involucran velocidades, son no integrables. Ejemplo: rodar sin deslizar.
+
+3. **Coordenadas Generalizadas:**
+   - Conjunto mínimo \( \{q_1(t), ..., q_s(t)\} \) que describe el sistema.
+   - Velocidades generalizadas: \( \{\dot{q}_1, ..., \dot{q}_s\} \).
+
+4. **Transformaciones:**  
+   \( \mathbf{r}_i = \mathbf{r}_i(q_1, ..., q_s, t) \Leftrightarrow q_j = q_j(\mathbf{r}_1, ..., \mathbf{r}_N, t) \)
+
+
+
   Los/las estudiantes deberán en capacidad de:
   1. **Para el caso de coordenadas Generalizadas y Restricciones**:
      - Definir de coordenadas generalizadas y su uso para describir sistemas físicos con restricciones.

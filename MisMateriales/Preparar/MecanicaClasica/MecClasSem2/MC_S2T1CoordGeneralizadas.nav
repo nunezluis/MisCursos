@@ -14,11 +14,16 @@
 \headcommand {\beamer@framepages {10}{16}}
 \headcommand {\beamer@sectionpages {10}{16}}
 \headcommand {\beamer@subsectionpages {10}{16}}
-\headcommand {\sectionentry {3}{Ejemplos}{17}{Ejemplos}{0}}
-\headcommand {\slideentry {3}{0}{1}{17/17}{}{0}}
-\headcommand {\beamer@framepages {17}{17}}
-\headcommand {\beamer@partpages {1}{17}}
-\headcommand {\beamer@subsectionpages {17}{17}}
-\headcommand {\beamer@sectionpages {17}{17}}
-\headcommand {\beamer@documentpages {17}}
-\headcommand {\gdef \inserttotalframenumber {5}}
+\headcommand {\sectionentry {3}{Recapitulando}{17}{Recapitulando}{0}}
+\headcommand {\slideentry {3}{0}{1}{17/20}{}{0}}
+\headcommand {\beamer@framepages {17}{20}}
+\headcommand {\beamer@sectionpages {17}{20}}
+\headcommand {\beamer@subsectionpages {17}{20}}
+\headcommand {\sectionentry {4}{Para la discusi\'on}{21}{Para la discusi\'on}{0}}
+\headcommand {\slideentry {4}{0}{1}{21/21}{}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\beamer@partpages {1}{21}}
+\headcommand {\beamer@subsectionpages {21}{21}}
+\headcommand {\beamer@sectionpages {21}{21}}
+\headcommand {\beamer@documentpages {21}}
+\headcommand {\gdef \inserttotalframenumber {6}}

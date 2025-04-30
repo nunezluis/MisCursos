@@ -1,4 +1,5 @@
 \babel@toc {spanish}{}\relax 
 \beamer@sectionintoc {1}{Coordenadas Generalizadas}{3}{0}{1}
 \beamer@sectionintoc {2}{V\IeC {\'\i }nculos hol\'onomos y anhol\'onomos}{10}{0}{2}
-\beamer@sectionintoc {3}{Ejemplos}{17}{0}{3}
+\beamer@sectionintoc {3}{Recapitulando}{17}{0}{3}
+\beamer@sectionintoc {4}{Para la discusi\'on}{21}{0}{4}
