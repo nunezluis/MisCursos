@@ -382,6 +382,8 @@ La semana 11 del sólido rígido
 
 + [El Trompo de Lagrange](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T4ElTrompo.pdf)
 + [Dos Monedas que rotan sin deslizar](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S12T1LaMoneda.pdf)
++ [Las ecuacines de Euler](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Preparar/MecanicaClasica/MecClasSem12/MC_S12T2EcEuler.pdf)
++ [Navegación Inercial y Efecto Coriolis](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Preparar/MecanicaClasica/MecClasSem12/MC_S12T3Coriolis.pdf)
 
 ### Clase S13-C25/C26
 
