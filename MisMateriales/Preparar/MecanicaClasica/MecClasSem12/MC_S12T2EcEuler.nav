@@ -1,0 +1,54 @@
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\headcommand {\beamer@framepages {1}{1}}
+\headcommand {\slideentry {0}{0}{2}{2/2}{}{0}}
+\headcommand {\beamer@framepages {2}{2}}
+\headcommand {\beamer@sectionpages {1}{2}}
+\headcommand {\beamer@subsectionpages {1}{2}}
+\headcommand {\sectionentry {1}{Ecuaciones de Euler}{3}{Ecuaciones de Euler}{0}}
+\headcommand {\beamer@subsectionpages {3}{2}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Generalidades}}
+\headcommand {\slideentry {1}{1}{1}{3/6}{Generalidades}{0}}
+\headcommand {\beamer@framepages {3}{6}}
+\headcommand {\beamer@subsectionpages {3}{6}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{7}{Derivadas en marcos inerciales y no inerciales}}
+\headcommand {\slideentry {1}{2}{1}{7/13}{Derivadas en marcos inerciales y no inerciales}{0}}
+\headcommand {\beamer@framepages {7}{13}}
+\headcommand {\beamer@subsectionpages {7}{13}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{14}{Ecuaciones de Euler}}
+\headcommand {\slideentry {1}{3}{1}{14/20}{Ecuaciones de Euler}{0}}
+\headcommand {\beamer@framepages {14}{20}}
+\headcommand {\beamer@sectionpages {3}{20}}
+\headcommand {\beamer@subsectionpages {14}{20}}
+\headcommand {\sectionentry {2}{Trompo de Euler: $I_{1}^{1} < I_{2}^{2} < I_{3}^{3}$}{21}{Trompo de Euler: $I_{1}^{1} < I_{2}^{2} < I_{3}^{3}$}{0}}
+\headcommand {\beamer@subsectionpages {21}{20}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{21}{Ecuaciones de Euler}}
+\headcommand {\slideentry {2}{1}{1}{21/24}{Ecuaciones de Euler}{0}}
+\headcommand {\beamer@framepages {21}{24}}
+\headcommand {\beamer@subsectionpages {21}{24}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{25}{Evoluci\'on de {\bf L}}}
+\headcommand {\slideentry {2}{2}{1}{25/28}{Evoluci\'on de {\bf L}}{0}}
+\headcommand {\beamer@framepages {25}{28}}
+\headcommand {\beamer@subsectionpages {25}{28}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{29}{Peque\~nas oscilaciones de ${\bf L}$ alrededor de ${\bf x}_3$}}
+\headcommand {\slideentry {2}{3}{1}{29/35}{Peque\~nas oscilaciones de ${\bf L}$ alrededor de ${\bf x}_3$}{0}}
+\headcommand {\beamer@framepages {29}{35}}
+\headcommand {\beamer@sectionpages {21}{35}}
+\headcommand {\beamer@subsectionpages {29}{35}}
+\headcommand {\sectionentry {3}{Trompo sim\'etrico: $I_{1}^{1}=I_{2}^{2} \neq I_{3}^{3}$}{36}{Trompo sim\'etrico: $I_{1}^{1}=I_{2}^{2} \neq I_{3}^{3}$}{0}}
+\headcommand {\beamer@subsectionpages {36}{35}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{36}{El planteamiento del problema}}
+\headcommand {\slideentry {3}{1}{1}{36/38}{El planteamiento del problema}{0}}
+\headcommand {\beamer@framepages {36}{38}}
+\headcommand {\beamer@subsectionpages {36}{38}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{39}{Las ecuaciones de Euler}}
+\headcommand {\slideentry {3}{2}{1}{39/43}{Las ecuaciones de Euler}{0}}
+\headcommand {\beamer@framepages {39}{43}}
+\headcommand {\beamer@subsectionpages {39}{43}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{44}{Las velocidades angulares y \'angulos de Euler}}
+\headcommand {\slideentry {3}{3}{1}{44/48}{Las velocidades angulares y \'angulos de Euler}{0}}
+\headcommand {\beamer@framepages {44}{48}}
+\headcommand {\beamer@partpages {1}{48}}
+\headcommand {\beamer@subsectionpages {44}{48}}
+\headcommand {\beamer@sectionpages {36}{48}}
+\headcommand {\beamer@documentpages {48}}
+\headcommand {\gdef \inserttotalframenumber {11}}

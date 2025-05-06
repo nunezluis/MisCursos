@@ -1,0 +1,248 @@
+\documentclass[spanish]{beamer}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath}
+\usepackage{mathtools,cancel} % cancela con una flecha \cancelto{0}{XXXX}
+\renewcommand{\CancelColor}{\color{red}} %change cancel color to red
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usepackage{textpos}
+% Logo  en el comienzo 
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+\end{textblock*}}
+
+\begin{document}
+
+\title{\textbf{Ecuaciones de Euler} }
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
+\textit{Universidad Industrial de Santander, Santander, Colombia } \\
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+}
+\date{\today}
+\maketitle
+
+
+\begin{frame}
+\frametitle{Agenda}
+  \tableofcontents
+\end{frame}
+
+
+%%%%% Diapo 1
+\section{Ecuaciones de Euler}
+\subsection{Generalidades}
+\frame{
+  \frametitle{Generalidades}
+  Las Ecuaciones de Euler:
+   \begin{itemize}  
+  	\item<1-> son una alternativa útil a las ecuaciones de Lagrange para estudiar la rotación de un cuerpo rígido libre o con torque.
+	\item<2-> son ecuaciones diferenciales de primer orden para las componentes $\tilde{\Omega}^i$ de la velocidad angular respecto al CM, mientras que las ecuaciones de Lagrange corresponden a ecuaciones diferenciales de segundo orden para los ángulos de Euler
+	\item<2-> Permiten describir la evolución de la velocidad angular en un sistema fijo al CM del cuerpo.
+	\item<3->  Aprovechan la simetría del cuerpo y se expresan naturalmente en torno a los ejes principales de inercia.
+	\item<4-> La interpretación física del efecto de los torques externos sobre cada componente de la velocidad angular es intuitiva.
+    \end{itemize}
+}
+%%%%% Diapo 2
+\subsection{Derivadas en marcos inerciales y no inerciales}
+\frame{
+\frametitle{Derivadas en marcos inerciales y no inerciales}
+\begin{itemize}  
+	\item<1-> Consideremos dos sistema de coordenadas: laboratorio $(x,y,z)$ y el sistema CM $(x1,x2,x3)$.
+	\item<2-> Supongamos además, que los orígenes de ambos sistemas de coordenadas coinciden y observemos un vector ${\bf A}$ en ambos sistemas.
+	\item<3-> El sistema $(x1, x2, x3)$ rota con una velocidad angular intantánea $\tilde{\Omega}^i$
+	\item<4-> El cambio infinitesimal en el vector ${\bf A}$ visto desde el Laboratorio se debe efecto de la rotación de los ejes $(x1,x2,x3)$.
+	\item<5-> Esto es $ {\rm d}{\bf A}(t)_{(x,y,z)} =  {\rm d}{\bf A}(t)_{(x1,x2,x3)} + \underbrace{{\bf \Omega} \times {\bf A}(t)}_{{\rm d}{\bf A}(t)_{\rm rot}}$ 
+	\item<6-> El cambio  ${\rm d}{\bf A}(t)_{\rm rot}$ causado por la rotación de $(x1,x2,x3)$ no modifica la magnitud del vector ${\bf A}$, sino su dirección.
+	\item<7-> Es equivalente cuando analizamos el vector posición ${\bf r}$ de una partícula del cuerpo rígido, que mantiene su magnitud en el sistema de coordenadas fijo en el cuerpo y ${\rm d} {\bf r}={\rm d} {\bf \Phi} \times {\bf r}$
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{Ecuaciones de Euler}
+\frame{
+\frametitle{Ecuaciones de Euler}
+\begin{itemize}  
+	\item<1-> En general $d {\bf A}_{\text{rot}}=d {\bf \Phi} \times {\bf A}$, con $d \boldsymbol{\Phi}=\boldsymbol{\Omega} d t$
+	\item<2-> La variación de ${\bf A}$, para los observadores $({\bf x}, {\bf y}, {\bf z})$ y $({\bf x}_1, {\bf x}_2, {\bf x}_3)$, están relacionadas por $\left(\frac{d {\bf A}}{d t}\right)_{({\bf x}, {\bf y}, {\bf z})}=\left(\frac{d {\bf A}}{d t}\right)_{({\bf x}_1, {\bf x}_2, {\bf x}_3)}+\boldsymbol{\Omega} \times {\bf A}$
+	\item<3-> Si ${\bf A}={\bf L}$, entonces $\left(\frac{d {\bf L}}{d t}\right)_{({\bf x}, {\bf y}, {\bf z})}=\left(\frac{d {\bf L}}{d t}\right)_{({\bf x}_1, {\bf x}_2, {\bf x}_3)}+{\bf \Omega} \times {\bf L}$
+	\item<4-> El torque en el sistema $({\bf x}, {\bf y}, {\bf z})$ es $\boldsymbol{\tau}=\left(\frac{d {\bf L}}{d t}\right)_{({\bf x}, {\bf y}, {\bf z})}$, \\ entonces $\boldsymbol{\tau}=\left(\frac{d {\bf L}}{d t}\right)_{({\bf x}_1, {\bf x}_2, {\bf x}_3)}+\boldsymbol{\Omega} \times {\bf L}$
+	\item<5-> Las componentes de ${\bf L}$ respecto a $({\bf x}_1, {\bf x}_2, {\bf x}_3)$ son $L^i=\sum_k I_{k}^{i} \Omega^{k}$. 
+	\item<6-> Entonces las {\it Ecuaciones de Euler} son $\tau^i=\sum_k I_{k}^{i} \dot{\Omega}^k+(\boldsymbol{\Omega} \times L)^i, = \sum_k I_{k}^{i} \dot{\Omega}^k+ \epsilon^{i j k}\Omega_j \left( \sum_m I_{k}^{m} \Omega_{k} \right)  \quad i=1,2,3$
+	\item<7-> Si $I_{k}^i$ es diagonal, entonces
+	$\left\{ 
+	\begin{aligned}
+	& \tau^1=I_{1}^{1} \dot{\Omega}^1+\Omega^2 \Omega^3\left(I_{3}^{3}-I_{2}^{2}\right), \\
+	& \tau^2=I_{2}^{2} \dot{\Omega}^2+\Omega^1 \Omega^3\left(I_{1}^{1}-I_{3}^{3}\right), \\
+	& \tau^3=I_{3}^{3} \dot{\Omega}^3+\Omega^1 \Omega^2\left(I_{2}^{2}-I_{1}^{1}\right) .
+	\end{aligned}
+	\right.$
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Trompo de Euler:  $I_{1}^{1} < I_{2}^{2} < I_{3}^{3}$}
+\subsection{Ecuaciones de Euler}
+\frame{
+\frametitle{Trompo de Euler  y Ecuaciones de Euler}
+\begin{itemize}  
+	\item<1-> {El trompo de Euler}
+	\begin{itemize}
+    		\item Cuerpo rígido con un punto fijo, con momentos de inercia $I_{1}^{1} < I_{2}^{2} < I_{3}^{3}$
+    		\item No hay torque externo: \( {\bf \tau} = 0 \).
+    		\item Se usa el sistema de referencia fijo al CM (ejes principales de inercia).
+	\end{itemize}
+	\item<2-> Ecuaciones de Euler para un cuerpo libre
+	$\left\{
+	\begin{aligned}
+	I_{1}^{1} \dot{\Omega}^1 &= (I_{2}^{2} - I_{3}^{3})\Omega_2 \Omega_3 \\
+	I_{2}^{2} \dot{\Omega}^2 &= (I_{3}^{3} - I_{1}^{1})\Omega_3 \Omega_1 \\
+	I_{3}^{3} \dot{\Omega}^3 &= (I_{1}^{1} - I_{2}^{2})\Omega_1 \Omega_2
+	\end{aligned}
+	\right.$ \\
+	Un sistema de ecuaciones diferenciales, no lineales y acopladas, que describe la evolución de \( {\bf \Omega} \) en el sistema del CM.
+	\item<3-> Cantidades Conservadas
+	\begin{itemize}
+    	\item \textbf{Energía:} 
+    	$ E =T = \frac{1}{2}\left( I^{1}_{1} (\Omega^1)^2 + I^{2}_{2} (\Omega^2)^2 + I^{3}_{3} (\Omega^3)^2 \right)$
+    	\item \textbf{Magnitud del momento angular:} $L^2 =(L^1)^2 +(L^2)^2 +(L^3)^2= (I^{1}_{1})^2 (\Omega^1)^2 + (I^{2}_{2})^2 (\Omega^2)^2 + (I^{3}_{3})^2 (\Omega^3)^2$
+    	\item<4-> Entonces tendremos
+	\begin{itemize}
+    	\item $\frac{(L^1)^2}{2 E I^{1}_{1}}+\frac{(L^2)^2}{2 E I^{2}_{2}}+\frac{(L^3)^2}{2 E I^{3}_{3}}=1$. Elipsoide, semiejes $\sqrt{2 E I_{1}^{1}} < \sqrt{2 E I_{2}^{2}} < \sqrt{2 E I_{3}^{3}}$.
+	\item $L^2 =(L^1)^2 +(L^2)^2 +(L^3)^2$. Esfera de radio igual a $L$ en el sistema CM.
+	\end{itemize}
+\end{itemize}
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{Evolución de {\bf L}}
+\frame{
+\frametitle{Evolución de {\bf L}}
+\begin{itemize}  
+	\item<1-> La solución vive en la intersección de la esfera y del elipsoide, \\ si $2 E I_{1}^{1}<L^2<2 E I_{3}^{3} $
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/TrompoEuler2.png}
+   	\end{figure}
+	\item<2-> Las intersecciones de la esfera con el elipsoide corresponden a curvas cerradas alrededor de los ejes ${\bf x}_1$ y ${\bf x}_3$.
+	\item<3-> El movimiento del vector ${\bf L}$ relativo al sistema (${\bf x}_1, {\bf x}_2, {\bf x}_3$) fijo en el cuerpo debe ser periódico.
+	\item<4-> Durante un período de oscilación el vector ${\bf L}$ describe una especie de superficie cónica alrededor de ${\bf x}_1$ o de ${\bf x}_3$.
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{Pequeñas oscilaciones de ${\bf L}$ alrededor de ${\bf x}_3$}
+\frame{
+\frametitle{Pequeñas oscilaciones de ${\bf L}$ alrededor de ${\bf x}_3$}
+\begin{itemize}  
+	\item<1-> Supongamos que las componentes son pequeñas, $L^2 \ll 1$ y $L^3 \ll 1$ 
+	\item<2-> Entonces $L^2=I_{2}^{2} \Omega^2  \Rightarrow \Omega^2 \ll 1\quad $ y   $\quad L^3=I_{3}^{3} \Omega^3  \Rightarrow \Omega^3 \ll 1$
+	\item<3-> Entonces 
+	$\left.
+	\begin{aligned}
+	I_{1}^{1} \dot{\Omega}^1 &= (I_{2}^{2} - I_{3}^{3})\Omega_2 \Omega_3 \\
+	I_{2}^{2} \dot{\Omega}^2 &= (I_{3}^{3} - I_{1}^{1})\Omega_3 \Omega_1 \\
+	I_{3}^{3} \dot{\Omega}^3 &= (I_{1}^{1} - I_{2}^{2})\Omega_1 \Omega_2
+	\end{aligned}
+	\right\} \Rightarrow 
+	\left\{
+	\begin{aligned}
+	I_{1}^{1} \dot{\Omega}^1 &\approx 0  \quad \Rightarrow \Omega^1 = cte\\
+	I_{2}^{2} \dot{\Omega}^2 &= (I_{3}^{3} - I_{1}^{1})\Omega_3 \Omega_1 \\
+	I_{3}^{3} \dot{\Omega}^3 &= (I_{1}^{1} - I_{2}^{2})\Omega_1 \Omega_2
+	\end{aligned}
+	\right.$
+	\item<4-> Derivando la segunda (tercera) y sustituyendo en la tercera (segunda)
+	tendremos $\ddot{\Omega}^{i}=-\frac{\left(I_{3}^{3}-I_{1}^{1}\right)\left(I_{2}^{2}-I_{1}^{1}\right)}{I_{2}^{2} I_{3}^{3}} (\Omega^1)^2 \Omega^{i}$, con $i = 2, 3$.
+	\item<5-> Con lo cual $\ddot{\Omega}^{i}=-\omega_{x_1}^2 \Omega^{i}$, donde 
+	$\omega_{x_1}=\Omega^1 \sqrt{\frac{\left(I_{3}^{3}-I_{1}^{1}\right)\left(I_{2}^{2}-I_{1}^{1}\right)}{I_{2}^{2} I_{3}^{3}}},$
+	\item<6-> Es la frecuencia de pequeñas oscilaciones estables del vector ${\bf L}$ alrededor del eje ${\bf x}_1$.
+	\item<7-> Siguiendo este método se pueden obtener las oscilaciones alrededor de los ejes ${\bf x}_2$ y ${\bf x}_3$
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Trompo simétrico: $I_{1}^{1}=I_{2}^{2} \neq I_{3}^{3}$}
+\subsection{El planteamiento del problema}
+\frame{
+\frametitle{Trompo simétrico: $I_{1}^{1}=I_{2}^{2} \neq I_{3}^{3}$}
+\begin{figure}[t]
+	\includegraphics[width=1.8in]{Figuras/TrompoSimetrico2.png}
+\end{figure}
+\begin{itemize}  
+	\item<1->  Es un caso especial del trompo de Euler: No hay torque externo: \( \boldsymbol{ \tau} = 0 \). Los momentos de inercia son $I_{1}^{1}=I_{2}^{2} \neq I_{3}^{3}$.
+	\item<2-> Como $\boldsymbol{\tau} = 0 \Rightarrow \boldsymbol{ \tau} = \frac{{\rm d} {\bf L}}{{\rm d} t} = 0 \Rightarrow {\bf L} = cte $ (módulo, dirección y sentido).
+	\item<3-> Más aún, $L^3= L \cos \theta$, tenemos $L^3 = I_{3}^{3} \Omega_3=L \cos \theta \quad \Rightarrow \quad \Omega_3=\frac{L \cos \theta}{I_{3}^{3}}=\text { cte } \Rightarrow \theta=$ cte.
+\end{itemize}
+}
+%
+%%%%%%%
+\subsection{Las ecuaciones de Euler}
+\frame{
+\frametitle{Las ecuaciones de Euler}
+\begin{itemize}  
+	\item<1-> Las ecuaciones de Euler son
+	$\left\{ \begin{aligned}
+	& I_{1}^{1} \dot{\Omega}_1=-\Omega_2 \Omega_3\left(I_{3}^{3}-I_{1}^{1}\right) \\
+	& I_{1}^{1} \dot{\Omega}_2=\Omega_1 \Omega_3\left(I_{3}^{3}-I_{1}^{1}\right) \\
+	& I_{3}^{3} \dot{\Omega}_3=0 .
+	\end{aligned} \right.$	
+	\item<2-> Con lo cual $\dot{\Omega}^1  =-\omega^2 \Omega^2 \quad$ y $\quad \dot{\Omega}^2  =-\omega^2 \Omega^1$
+	\item<3-> Donde $\omega^2=\frac{\left(I_{3}^{3}-I_{1}^{1}\right)}{I_{1}^{1}} \Omega_3=\frac{\left(I_{3}^{3}-I_{1}^{1}\right)}{I_{1}^{1} I_{3}^{3}} L \cos \theta=$cte.
+	\item<4-> Con soluciones $ \Omega_1=A \cos \omega t \quad$ y  $\quad \Omega_2=A \operatorname{sen} \omega t$, \\ donde $A=\left(\Omega_1^2+\Omega_2^2\right)^{1 / 2}$ es constante
+	\item<5-> Tomamos la dirección constante de $\mathbf{L}$ en la dirección $z$, 
+	\item<5-> Entonces $\boldsymbol{\Omega}$ rota con respecto a  ${\bf L}$, con $\Omega_3$ sobre el eje $x_3$ constante, 
+	\item<5-> Su proyección sobre el plano ( $x_1, x_2$ ) rota con velocidad angular constante $\omega$.
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{Las velocidades angulares y ángulos de Euler}
+\frame{
+\frametitle{Las velocidades angulares y ángulos de Euler}
+\begin{itemize}  
+	\item<1-> La velocidad angular de precesión $\dot{\phi}$, es $L_2=I_{2}^{2} \Omega^2= I_{2}^{2} \dot{\phi} \operatorname{sen}\theta = L \operatorname{sen}\theta   \Rightarrow \dot{\phi}=\frac{L}{I_{2}^{2}}$
+	\item<1-> donde hemos utilizado la expresión de $\Omega_2$ en términos de los ángulos de Euler, y tomando $\psi=0$ (usando la simetría axial del trompo).
+	\item<2-> La velocidad angular de rotación $\dot{\psi}$ del trompo sobre su eje $x_3$ es $\Omega_3  = \dot{\psi}+\dot{\phi} \cos \theta \Rightarrow \dot{\psi}  =\Omega_3-\dot{\phi} \cos \theta =\frac{L \cos \theta}{I_{3}^{3}}-\frac{L}{I_{1}^{1}} \cos \theta$
+	\item<3-> El vector $\boldsymbol{\Omega}$ ejecuta una rotación respecto al sistema $(x, y, z)$ describiendo un cono alrededor de la dirección ${\bf z}={\bf L}$, con velocidad angular de precesión $\dot{\phi}$; 
+	\item<4-> El vector $\boldsymbol{\Omega}$ también ejecuta una rotación en el sistema ( $x_1, x_2, x_3$ ) describiendo otro cono alrededor del eje $x_3$ del trompo, con velocidad angular $\omega= \dot{\psi}$. 
+	\item<5-> El vector ${\bf L}$ también rota con velocidad angular $\dot{\psi}$ alrededor de $x_3$, visto desde el sistema $\left(x_1, x_2, x_3\right)$.
+\end{itemize}
+}
+  
+\end{document}
+%
+%%%%% Diapo Fin
+\section{Recapitulando}
+\frame{
+  \frametitle{Recapitulando}
+En presentación consideramos
+  \begin{enumerate}
+  	\item<1->
+   \end{enumerate}
+}
+
+
+%
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
+   	\end{figure}
+	
+
+Para hacer esto, consideremos que los or??genes de ambos sistemas de coordenadas coinciden y observemos un vector A en ambos sistemas.
+	
