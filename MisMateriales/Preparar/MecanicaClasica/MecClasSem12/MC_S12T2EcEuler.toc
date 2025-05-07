@@ -6,7 +6,7 @@
 \beamer@sectionintoc {2}{Trompo de Euler: $I_{1}^{1} < I_{2}^{2} < I_{3}^{3}$}{21}{0}{2}
 \beamer@subsectionintoc {2}{1}{Ecuaciones de Euler}{21}{0}{2}
 \beamer@subsectionintoc {2}{2}{Evoluci\'on de {\bf L}}{25}{0}{2}
-\beamer@subsectionintoc {2}{3}{Peque\~nas oscilaciones de ${\bf L}$ alrededor de ${\bf x}_3$}{29}{0}{2}
+\beamer@subsectionintoc {2}{3}{Peque\~nas oscilaciones de ${\bf L}$ alrededor de ${\bf x}_1$}{29}{0}{2}
 \beamer@sectionintoc {3}{Trompo sim\'etrico: $I_{1}^{1}=I_{2}^{2} \neq I_{3}^{3}$}{36}{0}{3}
 \beamer@subsectionintoc {3}{1}{El planteamiento del problema}{36}{0}{3}
 \beamer@subsectionintoc {3}{2}{Las ecuaciones de Euler}{39}{0}{3}

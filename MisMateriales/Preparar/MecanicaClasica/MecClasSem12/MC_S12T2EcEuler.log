@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  6 MAY 2025 15:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  6 MAY 2025 21:53
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1646,12 +1646,12 @@ LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
 Package rerunfilecheck Info: File `MC_S12T2EcEuler.out' has not changed.
-(rerunfilecheck)             Checksum: 8673CDAF2CBDEB03536F176FE51E5DDC;2440.
+(rerunfilecheck)             Checksum: E32480E9FC024D3F630162AF8604B7DC;2440.
  ) 
 Here is how much of TeX's memory you used:
  24577 strings out of 478268
  482089 string characters out of 5846347
- 745384 words of memory out of 5000000
+ 748384 words of memory out of 5000000
  42130 multiletter control sequences out of 15000+600000
  491666 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1676,7 +1676,7 @@ xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/tex
 live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
 ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on MC_S12T2EcEuler.pdf (48 pages, 965343 bytes).
+Output written on MC_S12T2EcEuler.pdf (48 pages, 967075 bytes).
 PDF statistics:
  1505 PDF objects out of 1728 (max. 8388607)
  1377 compressed objects within 14 object streams
