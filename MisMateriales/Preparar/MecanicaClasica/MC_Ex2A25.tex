@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+
+\begin{document}
+{\Large {\bf Examen Mecánica Clásica}}
+
+\section*{Instrucciones}
+\begin{itemize}
+    \item Tiempo: 3 horas
+    \item Conteste todas las preguntas.
+    \item Justifique todas sus respuestas. Se otorgan puntos completos únicamente a respuestas completas y correctamente razonadas.
+    \item Puede usar constantes físicas y matemáticas estándar sin demostración.
+\end{itemize}
+
+\section*{Parte I: Preguntas Conceptuales (30 puntos)}
+
+Responda de forma concisa pero rigurosa. Cada pregunta vale 10 puntos.
+
+\begin{enumerate}
+    \item \textbf{Fuerzas Centrales y Simetrías} \\
+    Discuta el papel de las leyes de conservación en problemas de fuerzas centrales. En particular, derive las cantidades conservadas a partir de las simetrías del Lagrangiano y explique su significado físico o geométrico.
+
+    \item \textbf{Modos Normales y Acoplamiento} \\
+    Explique por qué los modos normales de un sistema con pequeñas oscilaciones corresponden a ecuaciones de movimiento desacopladas. ¿Cómo se relacionan los autovectores de la matriz dinámica con el movimiento físico del sistema?
+
+    \item \textbf{Tensor de Inercia y Ecuaciones de Euler} \\
+    Describa el significado físico de los ejes principales de inercia. Derive las ecuaciones de Euler para un cuerpo rígido en rotación libre y discuta en qué condiciones el movimiento es estable o inestable.
+\end{enumerate}
+
+\section*{Parte II: Problemas Prácticos (70 puntos)}
+
+Muestre todo su procedimiento. Cada problema indica su valor en puntos.
+
+\subsection*{Problema 1: Dispersión en un Potencial Central (25 puntos)}
+
+Una partícula de masa \( m \) se aproxima a un centro de fuerza con un potencial atractivo de la forma \( V(r) = -\frac{k}{r} \). La partícula tiene energía \( E > 0 \) y parámetro de impacto \( b \).
+
+\begin{enumerate}
+    \item[(a)] Derive la ecuación diferencial para la órbita \( u(\theta) = \frac{1}{r(\theta)} \).
+    \item[(b)] Resuelva la ecuación y encuentre el ángulo de dispersión \( \Theta \).
+    \item[(c)] Demuestre que el parámetro de impacto se relaciona con el ángulo de dispersión mediante \( \Theta = 2 \arcsin\left(\frac{k}{L\sqrt{2mE}}\right) \).
+\end{enumerate}
+
+\subsection*{Problema 2: Osciladores Acoplados (20 puntos)}
+
+Dos masas \( m \) están conectadas por tres resortes idénticos de constante elástica \( k \), dispuestos linealmente con los extremos exteriores fijos. Sean \( x_1 \) y \( x_2 \) los desplazamientos respecto al equilibrio.
+
+\begin{enumerate}
+    \item[(a)] Escriba el Lagrangiano del sistema.
+    \item[(b)] Encuentre las frecuencias de los modos normales y describa los movimientos correspondientes.
+\end{enumerate}
+
+\subsection*{Problema 3: El Trompo Libre Simétrico (25 puntos)}
+
+Considere un trompo simétrico con momentos de inercia \( I_1 = I_2 \ne I_3 \) y sin torques externos. Sea \( \boldsymbol{\omega} \) el vector de velocidad angular y \( \boldsymbol{L} \) el momento angular.
+
+\begin{enumerate}
+    \item[(a)] Escriba las ecuaciones de Euler en el sistema del cuerpo.
+    \item[(b)] Resuelva \( \omega_1(t), \omega_2(t) \) suponiendo \( \omega_3 \) constante.
+    \item[(c)] Discuta la interpretación geométrica de este movimiento utilizando la construcción de Poinsot.
+\end{enumerate}
+
+\end{document}
+
