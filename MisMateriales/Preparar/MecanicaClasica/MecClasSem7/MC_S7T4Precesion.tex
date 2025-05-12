@@ -1,0 +1,238 @@
+\documentclass[spanish]{beamer}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath}
+\usepackage{mathtools,cancel} % cancela con una flecha \cancelto{0}{XXXX}
+\renewcommand{\CancelColor}{\color{red}} %change cancel color to red
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usepackage{textpos}
+% Logo  en el comienzo 
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+\end{textblock*}}
+
+\begin{document}
+
+\title{\textbf{Título presentación} }
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
+\textit{Universidad Industrial de Santander, Santander, Colombia } \\
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+}
+\date{\today}
+\maketitle
+
+
+\begin{frame}
+\frametitle{Agenda}
+  \tableofcontents
+\end{frame}
+
+
+%%%%% Diapo 1
+\section{Sección}
+\frame{
+  \frametitle{Título transparencia}
+   \begin{itemize}  
+  	\item<1-> 
+    \end{itemize}
+}
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+
+%%%%% Diapo Fin
+\section{Recapitulando}
+\frame{
+  \frametitle{Recapitulando}
+En presentación consideramos
+  \begin{enumerate}
+  	\item<1->
+   \end{enumerate}
+}
+  
+\end{document}
+
+\frame{\titlepage}
+
+\begin{frame}{Ecuación de la Órbita}
+Para una partícula bajo un potencial central \( V(r) \), la ecuación de la órbita es:
+\[
+\frac{d^2 u}{d\varphi^2} + u = -\frac{1}{\mu l^2 u^2} \frac{d}{du} V\left(\frac{1}{u}\right), \quad \text{con } u = \frac{1}{r}
+\]
+Dado \( V(r) = -\frac{km}{r^n} \), se tiene:
+\[
+V(u) = -km u^n, \quad \frac{dV}{du} = -kmn u^{n-1}
+\]
+Por tanto, la ecuación toma la forma:
+\[
+\frac{d^2 u}{d\varphi^2} + u = \frac{kmn}{\mu l^2} u^{n-2}
+\]
+
+\end{frame}
+
+\begin{frame}{Aproximación: Órbitas Cercanas a Circulares}
+Supongamos una órbita ligeramente perturbada:
+\[
+u(\varphi) = u_0 + \eta(\varphi), \quad \eta \ll u_0
+\]
+Sustituimos y linealizamos:
+\[
+\frac{d^2 \eta}{d\varphi^2} + \eta \approx \frac{kmn(n-2)}{\mu l^2} u_0^{n-3} \eta
+\]
+La condición de equilibrio nos da:
+\[
+u_0 = \left( \frac{kmn}{\mu l^2} \right)^{\frac{1}{3-n}}
+\]
+Entonces la ecuación se vuelve:
+\[
+\frac{d^2 \eta}{d\varphi^2} + \omega^2 \eta = 0, \quad \omega^2 = 1 - (n-2)(3 - n)
+\]
+
+\end{frame}
+
+\begin{frame}{Precesión de la Órbita}
+La solución para \( \eta(\varphi) \) es oscilatoria:
+\[
+\eta(\varphi) = A \cos(\omega \varphi + \delta)
+\]
+El ángulo barrido entre dos perihelio sucesivos es:
+\[
+\Delta \varphi = \frac{2\pi}{\omega}
+\]
+La precesión por revolución es:
+\[
+\delta\varphi = \Delta \varphi - 2\pi = 2\pi \left( \frac{1}{\omega} - 1 \right)
+\]
+donde:
+\[
+\omega = \sqrt{1 - (n-2)(3 - n)}
+\]
+
+\end{frame}
+
+\begin{frame}{Resultado Final}
+\[
+\boxed{
+\delta\varphi = 2\pi \left( \frac{1}{\sqrt{1 - (n-2)(3 - n)}} - 1
+\right)
+}
+\]
+\vspace{0.5cm}
+\textbf{Observaciones:}
+\begin{itemize}
+    \item Para \( n = 1 \): \( \delta\varphi = 0 \Rightarrow \) órbitas cerradas (Kepler).
+    \item Para \( n < 1 \): \( \delta\varphi > 0 \Rightarrow \) precesión prograda.
+    \item Para \( n > 1 \): \( \delta\varphi < 0 \Rightarrow \) precesión retrógrada.
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Introducción}
+Para derivar la fórmula del ángulo de precesión para una partícula en un potencial central
+\[
+V(r) = -\frac{km}{r^n},
+\]
+partimos de la ecuación de la órbita en coordenadas polares. Este procedimiento es estándar en mecánica clásica y se basa en las ecuaciones de Lagrange para un potencial central.
+\end{frame}
+
+\begin{frame}{1. Ecuación de la órbita}
+Para un potencial central \( V(r) \), la ecuación de la órbita en términos de \( u = 1/r \) es:
+\[
+\frac{d^2 u}{d\varphi^2} + u = -\frac{1}{\mu l^2 u^2} \frac{d}{du} V\left(\frac{1}{u}\right)
+\]
+donde:
+\begin{itemize}
+  \item \( \mu \): masa reducida
+  \item \( l = \mu r^2 \dot{\varphi} \): momento angular
+\end{itemize}
+\end{frame}
+
+\begin{frame}{2. Derivar \( V(1/u) \)}
+Dado \( V(r) = -\dfrac{km}{r^n} \), entonces:
+\[
+V(u) = -km u^n, \quad \frac{dV}{du} = -km n u^{n-1}
+\]
+Sustituyendo en la ecuación de la órbita:
+\[
+\frac{d^2 u}{d\varphi^2} + u = \frac{kmn}{\mu l^2} u^{n - 2}
+\]
+\end{frame}
+
+\begin{frame}{3. Linealización cerca de órbitas circulares}
+Consideramos soluciones cercanas a una órbita circular:
+\[
+u(\varphi) = u_0 + \eta(\varphi), \quad \eta \ll 1
+\]
+Sustituimos y expandimos:
+\[
+\frac{d^2 \eta}{d\varphi^2} + \eta \approx \frac{kmn}{\mu l^2} \left[ u_0^{n-2} + (n-2) u_0^{n-3} \eta \right] - u_0
+\]
+Agrupando:
+\[
+\frac{d^2 \eta}{d\varphi^2} + \left(1 - \frac{kmn(n-2)}{\mu l^2} u_0^{n-3} \right) \eta = \frac{kmn}{\mu l^2} u_0^{n-2} - u_0
+\]
+\end{frame}
+
+\begin{frame}{Condición de equilibrio}
+Para órbita circular se debe anular el término no homogéneo:
+\[
+u_0 = \frac{kmn}{\mu l^2} u_0^{n - 2} \quad \Rightarrow \quad u_0 = \left( \frac{kmn}{\mu l^2} \right)^{\frac{1}{3 - n}}
+\]
+Entonces, la ecuación queda:
+\[
+\frac{d^2 \eta}{d\varphi^2} + \omega^2 \eta = 0, \quad \text{con } \omega^2 = 1 - (n - 2)(3 - n)
+\]
+\end{frame}
+
+\begin{frame}{4. Precesión angular}
+La solución es:
+\[
+\eta(\varphi) = A \cos(\omega \varphi + \delta)
+\]
+La partícula no regresa al mismo ángulo tras una revolución a menos que \( \omega = 1 \). El ángulo entre dos perihelio sucesivos es:
+\[
+\Delta \varphi = \frac{2\pi}{\omega}
+\]
+Precesión por revolución:
+\[
+\delta\varphi = \Delta\varphi - 2\pi = 2\pi \left( \frac{1}{\omega} - 1 \right)
+\]
+\end{frame}
+
+\begin{frame}{Resultado final}
+Con \( \omega = \sqrt{1 - (n - 2)(3 - n)} \), definimos:
+\[
+\alpha = 1 - \frac{3 - n}{2}, \quad \Rightarrow \quad \omega = \sqrt{\alpha}
+\]
+Entonces:
+\[
+\boxed{
+\delta\varphi = 2\pi \left( \frac{1}{\sqrt{1 - \frac{(3 - n)}{2}}} - 1 \right)
+}
+\]
+Este es el ángulo de precesión por revolución para órbitas elípticas bajo el potencial \( V(r) = -\dfrac{km}{r^n} \).
+\end{frame}
+
+\end{document}
+
+
+
+
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
+   	\end{figure}
+	
