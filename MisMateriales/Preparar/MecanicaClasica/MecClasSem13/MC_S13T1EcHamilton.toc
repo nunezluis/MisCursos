@@ -6,9 +6,11 @@
 \beamer@sectionintoc {2}{El esquema Hamiltoniano}{15}{0}{2}
 \beamer@subsectionintoc {2}{1}{Del lagrangeano al hamiltoniano}{15}{0}{2}
 \beamer@subsectionintoc {2}{2}{La transformaci\'on de Legendre}{19}{0}{2}
-\beamer@subsectionintoc {2}{3}{El oscilador arm\'onico}{30}{0}{2}
-\beamer@subsectionintoc {2}{4}{Part\IeC {\'\i }cula movi\'endose en cono vertical}{37}{0}{2}
-\beamer@subsectionintoc {2}{5}{Part\IeC {\'\i }cula en un potencial central}{44}{0}{2}
-\beamer@sectionintoc {3}{Simetr\IeC {\'\i }as y leyes de conservaci\'on}{49}{0}{3}
-\beamer@subsectionintoc {3}{1}{El Hamiltoniano y la Energ\IeC {\'\i }a}{49}{0}{3}
-\beamer@subsectionintoc {3}{2}{Un ejemplo de la realci\'on entre Hamiltoniano y la Energ\IeC {\'\i }a total}{56}{0}{3}
+\beamer@subsectionintoc {2}{3}{El oscilador arm\'onico}{31}{0}{2}
+\beamer@subsectionintoc {2}{4}{Part\IeC {\'\i }cula movi\'endose en cono vertical}{38}{0}{2}
+\beamer@subsectionintoc {2}{5}{Part\IeC {\'\i }cula en un potencial central}{45}{0}{2}
+\beamer@sectionintoc {3}{Simetr\IeC {\'\i }as y leyes de conservaci\'on}{50}{0}{3}
+\beamer@subsectionintoc {3}{1}{El Hamiltoniano y la Energ\IeC {\'\i }a}{50}{0}{3}
+\beamer@subsectionintoc {3}{2}{Un ejemplo de la realci\'on entre Hamiltoniano y la Energ\IeC {\'\i }a total}{57}{0}{3}
+\beamer@sectionintoc {4}{Recapitulando}{63}{0}{4}
+\beamer@sectionintoc {5}{Para la discusi\'on}{68}{0}{5}

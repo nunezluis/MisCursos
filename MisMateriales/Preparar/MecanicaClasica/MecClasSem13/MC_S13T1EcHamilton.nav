@@ -30,31 +30,45 @@
 \headcommand {\beamer@framepages {19}{23}}
 \headcommand {\slideentry {2}{2}{2}{24/29}{La transformaci\'on de Legendre}{0}}
 \headcommand {\beamer@framepages {24}{29}}
-\headcommand {\beamer@subsectionpages {19}{29}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{30}{El oscilador arm\'onico}}
-\headcommand {\slideentry {2}{3}{1}{30/36}{El oscilador arm\'onico}{0}}
-\headcommand {\beamer@framepages {30}{36}}
-\headcommand {\beamer@subsectionpages {30}{36}}
-\headcommand {\beamer@subsectionentry {0}{2}{4}{37}{Part\IeC {\'\i }cula movi\'endose en cono vertical}}
-\headcommand {\slideentry {2}{4}{1}{37/43}{Part\IeC {\'\i }cula movi\'endose en cono vertical}{0}}
-\headcommand {\beamer@framepages {37}{43}}
-\headcommand {\beamer@subsectionpages {37}{43}}
-\headcommand {\beamer@subsectionentry {0}{2}{5}{44}{Part\IeC {\'\i }cula en un potencial central}}
-\headcommand {\slideentry {2}{5}{1}{44/48}{Part\IeC {\'\i }cula en un potencial central}{0}}
-\headcommand {\beamer@framepages {44}{48}}
-\headcommand {\beamer@sectionpages {15}{48}}
-\headcommand {\beamer@subsectionpages {44}{48}}
-\headcommand {\sectionentry {3}{Simetr\IeC {\'\i }as y leyes de conservaci\'on}{49}{Simetr\IeC {\'\i }as y leyes de conservaci\'on}{0}}
-\headcommand {\beamer@subsectionpages {49}{48}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{49}{El Hamiltoniano y la Energ\IeC {\'\i }a}}
-\headcommand {\slideentry {3}{1}{1}{49/55}{El Hamiltoniano y la Energ\IeC {\'\i }a}{0}}
-\headcommand {\beamer@framepages {49}{55}}
-\headcommand {\beamer@subsectionpages {49}{55}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{56}{Un ejemplo de la realci\'on entre Hamiltoniano y la Energ\IeC {\'\i }a total}}
-\headcommand {\slideentry {3}{2}{1}{56/61}{Un ejemplo de la realci\'on entre Hamiltoniano y la Energ\IeC {\'\i }a total}{0}}
-\headcommand {\beamer@framepages {56}{61}}
-\headcommand {\beamer@partpages {1}{61}}
-\headcommand {\beamer@subsectionpages {56}{61}}
-\headcommand {\beamer@sectionpages {49}{61}}
-\headcommand {\beamer@documentpages {61}}
-\headcommand {\gdef \inserttotalframenumber {13}}
+\headcommand {\slideentry {2}{2}{3}{30/30}{La transformaci\'on de Legendre}{0}}
+\headcommand {\beamer@framepages {30}{30}}
+\headcommand {\beamer@subsectionpages {19}{30}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{31}{El oscilador arm\'onico}}
+\headcommand {\slideentry {2}{3}{1}{31/37}{El oscilador arm\'onico}{0}}
+\headcommand {\beamer@framepages {31}{37}}
+\headcommand {\beamer@subsectionpages {31}{37}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{38}{Part\IeC {\'\i }cula movi\'endose en cono vertical}}
+\headcommand {\slideentry {2}{4}{1}{38/44}{Part\IeC {\'\i }cula movi\'endose en cono vertical}{0}}
+\headcommand {\beamer@framepages {38}{44}}
+\headcommand {\beamer@subsectionpages {38}{44}}
+\headcommand {\beamer@subsectionentry {0}{2}{5}{45}{Part\IeC {\'\i }cula en un potencial central}}
+\headcommand {\slideentry {2}{5}{1}{45/49}{Part\IeC {\'\i }cula en un potencial central}{0}}
+\headcommand {\beamer@framepages {45}{49}}
+\headcommand {\beamer@sectionpages {15}{49}}
+\headcommand {\beamer@subsectionpages {45}{49}}
+\headcommand {\sectionentry {3}{Simetr\IeC {\'\i }as y leyes de conservaci\'on}{50}{Simetr\IeC {\'\i }as y leyes de conservaci\'on}{0}}
+\headcommand {\beamer@subsectionpages {50}{49}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{50}{El Hamiltoniano y la Energ\IeC {\'\i }a}}
+\headcommand {\slideentry {3}{1}{1}{50/56}{El Hamiltoniano y la Energ\IeC {\'\i }a}{0}}
+\headcommand {\beamer@framepages {50}{56}}
+\headcommand {\beamer@subsectionpages {50}{56}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{57}{Un ejemplo de la realci\'on entre Hamiltoniano y la Energ\IeC {\'\i }a total}}
+\headcommand {\slideentry {3}{2}{1}{57/62}{Un ejemplo de la realci\'on entre Hamiltoniano y la Energ\IeC {\'\i }a total}{0}}
+\headcommand {\beamer@framepages {57}{62}}
+\headcommand {\beamer@sectionpages {50}{62}}
+\headcommand {\beamer@subsectionpages {57}{62}}
+\headcommand {\sectionentry {4}{Recapitulando}{63}{Recapitulando}{0}}
+\headcommand {\slideentry {4}{0}{1}{63/66}{}{0}}
+\headcommand {\beamer@framepages {63}{66}}
+\headcommand {\slideentry {4}{0}{2}{67/67}{}{0}}
+\headcommand {\beamer@framepages {67}{67}}
+\headcommand {\beamer@sectionpages {63}{67}}
+\headcommand {\beamer@subsectionpages {63}{67}}
+\headcommand {\sectionentry {5}{Para la discusi\'on}{68}{Para la discusi\'on}{0}}
+\headcommand {\slideentry {5}{0}{1}{68/68}{}{0}}
+\headcommand {\beamer@framepages {68}{68}}
+\headcommand {\beamer@partpages {1}{68}}
+\headcommand {\beamer@subsectionpages {68}{68}}
+\headcommand {\beamer@sectionpages {68}{68}}
+\headcommand {\beamer@documentpages {68}}
+\headcommand {\gdef \inserttotalframenumber {17}}

@@ -54,9 +54,9 @@
 \frametitle{La idea hamiltoniana}
 \begin{itemize}
 	\item<1-> La formulación hamiltoniana se desarrolla en el espacio de fase $\left(p_i, q_i\right)$, en términos del conjunto de sus coordenadas generalizadas $q_i$ y de sus momentos conjugados $p_i$.  
-	\item<2-> La dinámica de hamiltoniana consiste en sustituir las $n$ ecuaciones de Lagrange por un conjunto equivalente de $n$ ecuaciones diferenciales ordinarias de primer orden.
+	\item<2-> La dinámica de hamiltoniana consiste en sustituir las $n$ ecuaciones de Lagrange por un conjunto equivalente de $2 n$ ecuaciones diferenciales ordinarias de primer orden.
 	\item<3-> El movimiento se representa por una curva descrita en el espacio de fase, un espacio de $2 n$ dimensiones cuyas coordenadas son las variables independientes $q_i$ y $p_i$.
-	\item<4-> La importancia del formalismo hamiltoniano radica en que proporciona un método potente, general y flexible para la investigación de las cuestiones estructurales más profundas de la mecánica clásica y también en que sirve de fundamento a la mecánica cuántica y a la mecánica estadística.
+	\item<4-> La importancia del formalismo hamiltoniano radica en que proporciona un método potente, general y flexible para la investigación de elemento estructurales más profundos de la mecánica clásica. Por ello sirve de fundamento a la mecánica cuántica y a la mecánica estadística.
 \end{itemize}
 }
 
@@ -78,10 +78,10 @@
 \frame{
 \frametitle{Del lagrangeano al hamiltoniano}
 \begin{itemize}  
-	\item<1-> La descripción hamiltoniana implica sustituir las variables $(q_i, \dot{q}_i)$ por  $(q_i, p_i)$ en todas las magnitudes mecánicas y sustituir la función el Lagrangiano $\mathcal{L}(q, \dot{q}, t)$ por $\mathcal{H}(q, p, t)$ como generador de la dinámica.
+	\item<1-> La descripción hamiltoniana implica sustituir las variables $(q_i, \dot{q}_i)$ por  $(q_i, p_i)$ en todas las magnitudes mecánicas y sustituir el Lagrangiano $\mathcal{L}(q, \dot{q}, t)$ por $\mathcal{H}(q, p, t)$ como generador de la dinámica.
 	\item<2-> Definimos $\mathcal{H}(q, p, t)=\sum_{i=1}^n \dot{q}_i p_i-\mathcal{L}(q, \dot{q}, t)$ como la transformación de Legendre del lagrangiano $\mathcal{L}(q, \dot{q}, t)$. En el lado derecho las velocidades se expresan como ${\dot {q}}_{i}=f_{i}(q,p,t)$.
 	\item<3-> Las ecuaciones dinámicas serán $\dot{q}_i=\frac{\partial \mathcal{H}}{\partial p_i}, \quad \dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i}, \quad i=1, \ldots, n$
-	\item<4-> El planteamiento hamiltoniano de la dinámica implica los siguientes pasos
+	\item<4-> El planteamiento hamiltoniano de la dinámica implica los siguientes pasos:
 	\begin{itemize}
 		\item Se fijan las coordenadas generalizadas y construye el lagrangeano a partir de las energías cinética y potencial
 		\item Se expresan la velocidades generalizadas en término de los momentos canónicos conjungados ${\dot {q}}_{i}=f_{i}(q,p,t)$.
@@ -115,10 +115,22 @@
 	\item<3-> Si tenemos una función de $s$ variables $f\left(x_1, x_2, \ldots, x_s\right)$, existen $s$ derivadas $y_i=\frac{\partial f}{\partial x_i}=y_i\left(x_1, x_2, \ldots, x_s\right)$ para $i=1,2, \ldots, s$.
 	\item<4-> y la transformada de Legendre de $f\left(x_1, x_2, \ldots, x_s\right)$ será  $g\left(y_1, y_2, \ldots, y_s\right)=\sum_{i=1}^s x_i y_i-f\left(x_1, x_2, \ldots, x_s\right)$, con $x_i=x_i\left(y_1, y_2, \ldots, y_s\right) $
 	\item<5-> Variables termodinámicas conjugadas: (Presión-Volumen); (Temperatura-Entropía); (Potencial Químico-Número de partículas).
-	\item<6-> Potenciales termodinámicos: entalpía $H(S, p) =U+pV$; Energía libre de Helmholtz $F(T,V)=U-T S$; y Energía libre de Gibbs $G(T, p) = H-T S = U +pV -TS$
+	\item<6-> Potenciales termodinámicos: entalpía $\mathcal{H}(S, p) =U+pV$; Energía libre de Helmholtz $F(T,V)=U-T S$; y Energía libre de Gibbs $G(T, p) = H-T S = U +pV -TS$
 
 \end{itemize}
 }
+%
+%%%%%
+%\section{Sección}
+\frame{
+\frametitle{Formalismos Equivalentes}
+\begin{figure}[t]
+	\includegraphics[width=4.8in]{Figuras/LagrangeHamilton.png}
+\end{figure}
+
+}
+
+
 %
 %%%%% Diapo 2
 \subsection{El oscilador armónico}
@@ -131,7 +143,7 @@
 	$\mathcal{H}(q, p)=p \frac{p}{m}-\frac{1}{2} m \left( \frac{p}{m}\right)^2+\frac{1}{2} k q^2 =  \frac{p^2}{2m}+\frac{1}{2} k q^2$
 	\item<4-> Las ecuaciones de Hamilton son $\dot{q}  =\frac{\partial \mathcal{H}}{\partial p}=\frac{p}{m} $ y $\dot{p}  =-\frac{\partial \mathcal{H}}{\partial q}=-k q$
 	\item<5-> Se resuelven igual que la ecuación de Lagrange $\ddot{q}=\frac{\dot{p}}{m}=-\frac{k}{m} q$
-	\item<6-> Con solución $q(t)=A \sin (\omega t+\varphi), \quad \omega^2=\frac{k}{m}$, es decir $p(t)=m \dot{q}=A m \omega \cos (\omega t+\varphi)$
+	\item<6-> Con solución $q(t)=A \operatorname{sen} (\omega t+\varphi), \quad \omega^2=\frac{k}{m}$, es decir $p(t)=m \dot{q}=A m \omega \cos (\omega t+\varphi)$
 	\item<7-> El Hamiltoniano es independiente del tiempo, entonces $\mathcal{H}(q, p)=\frac{p^2}{2 m}+\frac{1}{2} k q^2=$ cte Una elipse en el espacio de fase
 	\begin{figure}[t]
 		\includegraphics[width=1.3in]{Figuras/EspFaseOscilador.png}
@@ -159,12 +171,12 @@
 \frame{
 \frametitle{Partícula en un potencial central}
 \begin{itemize}  
-	\item<1-> El lagrangeano en coordenadas esféricas es $\mathcal{L}=T-V=\frac{m}{2}\left(\dot{r}^2+r^2 \dot{\theta}^2+r^2 \sin ^2 \theta \dot{\phi}^2\right)-V(r)$
-	\item<2-> Los momentos conjugados son $p_r=\frac{\partial \mathcal{L}}{\partial \dot{r}}=m \dot{r}$; $p_\theta=\frac{\partial \mathcal{L}}{\partial \dot{\theta}}=m r^2 \dot{\theta}$ y $p_\phi=\frac{\partial \mathcal{L}}{\partial \dot{\phi}}=m r^2 \sin ^2 \theta \dot{\phi}$.
-	\item<3-> Despejamos las velocidades generalizadas $\dot{r}=\frac{p_r}{m}$, $\dot{\theta}=\frac{p_\theta}{m r^2}$, y $\dot{\phi}=\frac{p_\phi}{m r^2 \sin ^2 \theta}$
-	\item<4-> Construimos el Hamiltoniano $\mathcal{H}=\dot{r} p_r+\dot{\theta} p_\theta+\dot{\phi} p_\phi-\mathcal{L}=\frac{1}{2 m}\left(p_r^2+\frac{p_\theta^2}{r^2}+\frac{p_\phi^2}{r^2 \sin ^2 \theta}\right)+V(r)$
-	\item<5-> Las ecuaciones de Hamilton serán $\dot{r}=\frac{\partial \mathcal{H}}{\partial p_r}=\frac{p_r}{m}$; $\dot{\theta}=\frac{\partial \mathcal{H}}{\partial p_\theta}=\frac{p_\theta}{m r^2}$; $\dot{\phi}=\frac{\partial \mathcal{H}}{\partial p_\phi}=\frac{p_\phi}{m r^2 \sin ^2 \theta}$; $\dot{p}_r=-\frac{\partial \mathcal{H}}{\partial r}=\frac{p_\theta^2}{m r^3}+\frac{p_\phi^2}{m r^3 \sin ^2 \theta}-\frac{d V}{d r}$;
- $\dot{p}_\theta=-\frac{\partial \mathcal{H}}{\partial \theta}=\frac{p_\phi^2 \cot \theta}{m r^2 \sin ^2 \theta}$ y  $\dot{p}_\phi=-\frac{\partial \mathcal{H}}{\partial \phi}=0$.
+	\item<1-> El lagrangeano en coordenadas esféricas es $\mathcal{L}=T-V=\frac{m}{2}\left(\dot{r}^2+r^2 \dot{\theta}^2+r^2 \operatorname{sen} ^2 \theta \dot{\phi}^2\right)-V(r)$
+	\item<2-> Los momentos conjugados son $p_r=\frac{\partial \mathcal{L}}{\partial \dot{r}}=m \dot{r}$; $p_\theta=\frac{\partial \mathcal{L}}{\partial \dot{\theta}}=m r^2 \dot{\theta}$ y $p_\phi=\frac{\partial \mathcal{L}}{\partial \dot{\phi}}=m r^2 \operatorname{sen} ^2 \theta \dot{\phi}$.
+	\item<3-> Despejamos las velocidades generalizadas $\dot{r}=\frac{p_r}{m}$, $\dot{\theta}=\frac{p_\theta}{m r^2}$, y $\dot{\phi}=\frac{p_\phi}{m r^2 \operatorname{sen} ^2 \theta}$
+	\item<4-> Construimos el Hamiltoniano $\mathcal{H}=\dot{r} p_r+\dot{\theta} p_\theta+\dot{\phi} p_\phi-\mathcal{L}=\frac{1}{2 m}\left(p_r^2+\frac{p_\theta^2}{r^2}+\frac{p_\phi^2}{r^2 \operatorname{sen} ^2 \theta}\right)+V(r)$
+	\item<5-> Las ecuaciones de Hamilton serán $\dot{r}=\frac{\partial \mathcal{H}}{\partial p_r}=\frac{p_r}{m}$; $\dot{\theta}=\frac{\partial \mathcal{H}}{\partial p_\theta}=\frac{p_\theta}{m r^2}$; $\dot{\phi}=\frac{\partial \mathcal{H}}{\partial p_\phi}=\frac{p_\phi}{m r^2 \operatorname{sen} ^2 \theta}$; $\dot{p}_r=-\frac{\partial \mathcal{H}}{\partial r}=\frac{p_\theta^2}{m r^3}+\frac{p_\phi^2}{m r^3 \operatorname{sen} ^2 \theta}-\frac{d V}{d r}$;
+ $\dot{p}_\theta=-\frac{\partial \mathcal{H}}{\partial \theta}=\frac{p_\phi^2 \cot \theta}{m r^2 \operatorname{sen} ^2 \theta}$ y  $\dot{p}_\phi=-\frac{\partial \mathcal{H}}{\partial \phi}=0$.
 \end{itemize}
 }
 %
@@ -179,7 +191,7 @@
 	\item<2-> Es claro que $\frac{d \mathcal{H}}{d t}\left(q_i, p_i, t\right) =\sum_{i=1}^s \frac{\partial \mathcal{H}}{\partial q_i} \dot{q}_i+\sum_{i=1}^s \frac{\partial \mathcal{H}}{\partial p_i} \dot{p}_i+\frac{\partial \mathcal{H}}{\partial t} =\sum_{i=1}^s \frac{\partial \mathcal{H}}{\partial q_i} \frac{\partial \mathcal{H}}{\partial p_i}-\sum_{i=1}^s \frac{\partial \mathcal{H}}{\partial p_i} \frac{\partial \mathcal{H}}{\partial q_i}+\frac{\partial \mathcal{H}}{\partial t}=\frac{\partial \mathcal{H}}{\partial t} $
 	\item<3-> Si el Hamiltoniano de un sistema no depende explicitamente del tiempo, entonces $\mathcal{H}\left(q_i, p_i\right)$ es constante.
 	\item<4-> La función energía es el Hamiltoniano pero no es la energía total (ciertas condiciones aplican)
-	\item<5-> Un lagrangeano se puede descomponer como $\mathcal{L} = \mathcal{L}_2 +\mathcal{L}_1 +\mathcal{L}_0$. $\mathcal{L}_2$ es una función homogénea de grado dos, $f(\lambda y_1, \dots , \lambda y_s) =\lambda^2 f(y_1, \dots , y_s) $, $\mathcal{L}_1$ homogénea de grado $1$ y $\mathcal{L}_0$ homogénea de grado cero. Se cumple $\sum_{i=1}^s \frac{\partial f}{\partial y_i} y_i=n f$.
+	\item<5-> Un lagrangeano se puede descomponer como $\mathcal{L} = \mathcal{L}_2 +\mathcal{L}_1 +\mathcal{L}_0$. \\ $\mathcal{L}_2$ es una función homogénea de grado dos, $f(\lambda y_1, \dots , \lambda y_s) =\lambda^2 f(y_1, \dots , y_s) $, $\mathcal{L}_1$ homogénea de grado $1$ y \\ $\mathcal{L}_0$ homogénea de grado cero. Se cumple $\sum_{i=1}^s \frac{\partial f}{\partial y_i} y_i=n f$.
 	\item<6-> Entonces $\mathcal{E}(q_i, \dot{q}_i )  = \sum_{i=1}^s \frac{\partial \mathcal{L}}{\partial \dot{q}_i} \dot{q}_i-\mathcal{L} = 2\mathcal{L}_2 +\mathcal{L}_1 -\mathcal{L} = \mathcal{L}_2 -\mathcal{L}_0$
 	\item<7-> Si $\frac{\partial \mathcal{L}}{\partial t} = 0$ y el potencial no depende de las velocidades $\mathcal{L}_2 = T$ y $\mathcal{L}_0 = -V$, entonces  $\mathcal{E} = T + V = E$
 \end{itemize}
@@ -201,7 +213,90 @@
 	\item<6-> El valor y la forma funcional del hamiltoniano dependen del conjunto de coordenadas generalizadas. Puede ocurrir que se conserve en un sistema de coordenadas pero varíe en otro.
 \end{itemize}
 }
+%
+%%%%% Diapo 2
+\section{Recapitulando}
+\frame{
+\frametitle{Recapitulando}
+\begin{itemize}  
+	\item<1-> Formulación Lagrangiana
+	\begin{itemize}
+    		\item Describe la dinámica con \( \mathcal{L}(q_i, \dot{q}_i, t) \) en el espacio de configuración.
+    		\item Ecuaciones de segundo orden: una por cada grado de libertad.
+    		\item Movimiento determinado por \( 2n \) condiciones iniciales: \( q_i(t_0) \), \( \dot{q}_i(t_0) \).
+	\end{itemize}
+	\item<2-> Formulación Hamiltoniana
+	\begin{itemize}
+    		\item Define el espacio de fase \( (q_i, p_i) \), donde \( p_i = \partial \mathcal{L} / \partial \dot{q}_i \).
+    		\item Ecuaciones de movimiento de primer orden:  $\dot{q}_i = \frac{\partial \mathcal{H}}{\partial p_i}, \quad \dot{p}_i = -\frac{\partial \mathcal{H}}{\partial q_i}$
+    		\item Estructura rica y general, base de la mecánica cuántica y estadística.
+	\end{itemize}
+	\item<3-> Ejemplo: Oscilador Armónico
+	\begin{itemize}
+    		\item \( \mathcal{L} = \frac{1}{2}m \dot{q}^2 - \frac{1}{2}k q^2 \)
+    		\item \( p = m \dot{q} \Rightarrow \dot{q} = \frac{p}{m} \)
+    		\item \( \mathcal{H} = \frac{p^2}{2m} + \frac{1}{2}k q^2 \)
+    		\item El sistema describe una elipse en el espacio de fase.
+	\end{itemize}
+	\item<4-> {Importancia del Formalismo}
+	\begin{itemize}
+    		\item Simplifica el tratamiento de sistemas con simetrías.
+    		\item Introduce corchetes de Poisson y transformaciones canónicas.
+    		\item Punto de partida hacia formulaciones modernas de la física teórica.
+	\end{itemize}
+\end{itemize}
+}
+%
+%%%%%%%%%
+%\section{Resumiento}
+\frame{
+\frametitle{Resumiendo}
+{\tiny
+\begin{table}[htdp]
+\caption{Formalismos Equivalentes}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline
+ \textbf{Formalismo Lagrangiano} & \textbf{Formalismo Hamiltoniano} \\
+\hline
+ Elegir coordenadas generalizadas \( q_i \) & Usar las \( q_i \) y definir los momentos conjugados \( p_i = \frac{\partial \mathcal{L}}{\partial \dot{q}_i} \) \\
+\hline
+ Escribir el lagrangiano \( \mathcal{L}(q_i, \dot{q}_i, t) = T - V \) & Calcular el hamiltoniano \( \mathcal{H}(q_i, p_i, t) = \sum_i \dot{q}_i p_i - L \) \\
+\hline
+ Ecuaciones de Euler-Lagrange: 
+\( \frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{q}_i} \right) - \frac{\partial \mathcal{L}}{\partial q_i} = 0 \) & Ecuaciones de Hamilton:
+\( \dot{q}_i = \frac{\partial \mathcal{H}}{\partial p_i}, \quad \dot{p}_i = -\frac{\partial \mathcal{H}}{\partial q_i} \) \\
+\hline
+Ecuaciones diferenciales de segundo orden para \( q_i(t) \) & Ecuaciones acopladas de primer orden para \( q_i(t) \), \( p_i(t) \) \\
+\hline
+Cantidades conservadas y coordenadas cíclicas \( q_i \) & Cantidades conservadas a partir de simetrías de \( \mathcal{H} \) \\
+\hline
+Imagen geométrica: espacio de configuración \( (q_i) \) & Imagen geométrica: espacio de fases \( (q_i, p_i) \) \\
+\hline
+Simetrías mediante el teorema de Noether & Simetrías mediante transformaciones canónicas \\
+\hline
+\end{tabular}
+\end{center}
+\label{default}
+\end{table}
+}%
+}
+%
+%%%%% Diapo 2
+\section{Para la discusión}
+\frame{
+\frametitle{Para la discusión}
+Una partícula de masa \( m \) se desliza sin fricción sobre un aro circular de radio \( R \), el cual rota con velocidad angular constante \( \omega \) alrededor del eje vertical \( z \). Describa la dinámica de la partícula utilizando el formalismo Hamiltoniano.
+\begin{figure}[t]
+	\includegraphics[width=1.0in]{Figuras/CuentaEnAroCircular.png}
+\end{figure}
+}
+
+
 \end{document}
+
+
+
 %
 %%%%% Diapo 2
 \section{Sección}
@@ -214,4 +309,21 @@
 	\begin{figure}[t]
 		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
    	\end{figure}
+
+\begin{table}[htdp]
+\caption{default}
+\begin{center}
+\begin{tabular}{|c|c|cl}
+
+\end{tabular}
+\end{center}
+\label{default}
+\end{table}%
+
+
+%
+%%%%% Diapo 2
+%\section{Sección}
+
+
 	
