@@ -11,6 +11,6 @@
 \beamer@subsectionintoc {2}{5}{Part\IeC {\'\i }cula en un potencial central}{45}{0}{2}
 \beamer@sectionintoc {3}{Simetr\IeC {\'\i }as y leyes de conservaci\'on}{50}{0}{3}
 \beamer@subsectionintoc {3}{1}{El Hamiltoniano y la Energ\IeC {\'\i }a}{50}{0}{3}
-\beamer@subsectionintoc {3}{2}{Un ejemplo de la realci\'on entre Hamiltoniano y la Energ\IeC {\'\i }a total}{57}{0}{3}
+\beamer@subsectionintoc {3}{2}{Un ejemplo de la relaci\'on entre Hamiltoniano y la Energ\IeC {\'\i }a total}{57}{0}{3}
 \beamer@sectionintoc {4}{Recapitulando}{63}{0}{4}
 \beamer@sectionintoc {5}{Para la discusi\'on}{68}{0}{5}

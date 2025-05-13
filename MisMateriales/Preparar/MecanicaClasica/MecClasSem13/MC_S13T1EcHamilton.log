@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  13 MAY 2025 05:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  13 MAY 2025 05:44
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1826,7 +1826,7 @@ LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
 Package rerunfilecheck Info: File `MC_S13T1EcHamilton.out' has not changed.
-(rerunfilecheck)             Checksum: DE8FF2F1D905622B85031651D2B93F56;3169.
+(rerunfilecheck)             Checksum: 1A7AE1827510A63B4966C805916C6FDB;3169.
  ) 
 Here is how much of TeX's memory you used:
  24587 strings out of 478268
@@ -1855,7 +1855,7 @@ texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texliv
 e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on MC_S13T1EcHamilton.pdf (68 pages, 2189487 bytes).
+Output written on MC_S13T1EcHamilton.pdf (68 pages, 2189482 bytes).
 PDF statistics:
  2061 PDF objects out of 2073 (max. 8388607)
  1905 compressed objects within 20 object streams
