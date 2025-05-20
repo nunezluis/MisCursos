@@ -358,6 +358,60 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
 + [Oumuamua](https://science.nasa.gov/solar-system/comets/oumuamua/)
 + [Borisov](https://science.nasa.gov/solar-system/comets/2i-borisov/)
 
+### Contenidos de esta semana
+En esta semana cubrimos
+
+- Para un potencial central $V(r) = -\frac{k}{r}$, cuyas órbitas son secciones cónicas (elipses, parábolas, hipérbolas), se define el **vector de Laplace-Runge-Lenz** como  
+  $\mathbf{A} = \mathbf{p} \times \mathbf{L} - \mu k \hat{\mathbf{r}}$.
+
+- Se demostró que para fuerzas del tipo $\mathbf{f}(r) = \frac{k}{r^2}\hat{\mathbf{r}}$, $\mathbf{A}$ es una cantidad conservada dinámica, es decir,  
+  $\frac{d\mathbf{A}}{dt} = 0$, no derivada de una simetría Noetheriana.
+
+- $\mathbf{A}$ apunta en la dirección del perihelio y su magnitud está relacionada con la energía $\mathcal{E}$, la excentricidad $e$, y el momento angular $L$:  
+  $|\mathbf{A}| = \sqrt{2mE L^2 + m^2 k^2} = m k e$.
+
+- Estudiamos las trayectorias abiertas para energías $E > 0$ en potenciales centrales $V(r)$.
+
+- Definimos el **ángulo de dispersión**, $\chi$, como la diferencia angular entre las direcciones de entrada y salida de la partícula.
+
+- El **parámetro de impacto** $b$ (distancia perpendicular desde la línea de movimiento inicial al centro del potencial) y la energía $\mathcal{E}$ definen completamente la trayectoria en la dispersión clásica.
+
+- Consideramos la **dispersión hiperbólica** en potenciales atractivos y repulsivos:
+  - Para $V(r) = -\frac{k}{r}$, la trayectoria con $E > 0$ es una **hipérbola**:  
+    $r(\theta) = \frac{q}{1 + e \cos \theta}$ con $e > 1$.  
+    El ángulo de dispersión está dado por $\sin\left(\frac{\chi}{2}\right) = \frac{1}{e}$.  
+    Ejemplo: asteroides como *Oumuamua* y *Borisov*.
+  - Para $V(r) = +\frac{k}{r}$ (potencial **repulsivo**),  
+    $\chi = \pi - 2\theta_{\text{max}}$ y también $\sin\left(\frac{\chi}{2}\right) = \frac{1}{e}$.
+
+- Determinamos $\chi$ por el **método geométrico**, a partir de la integral sobre el movimiento radial:  
+  $\theta_{\text{max}} = b \int_0^{u_m} \frac{du}{\sqrt{1 - \frac{V(u)}{E} - b^2 u^2}} \,, \quad u = 1/r$.
+
+- El **problema de Kepler** es **superintegrable**, tiene más constantes de movimiento que grados de libertad:  
+  $\mathcal{E}$, $\mathbf{L}$, $\mathbf{A}$. Esto garantiza órbitas cerradas (teorema de Bertrand).
+
+- Los **Paréntesis de Poisson** del problema de Kepler cumplen:  
+  $\{L_i, L_j\} = \varepsilon_{ijk} L_k$,  
+  $\{L_i, A_j\} = \varepsilon_{ijk} A_k$,  
+  $\{A_i, A_j\} = -2m\mathcal{E} \varepsilon_{ijk} L_k$  
+  lo cual define una estructura de álgebras tipo $SO(4)$ (cuando $\mathcal{E} < 0$).
+
+- Definimos la **sección eficaz de dispersión**, $\sigma(\chi) d\Omega$, como la fracción de partículas dispersadas dentro de un ángulo sólido diferencial:  
+  $d\Omega = 2\pi \sin \chi \, d\chi$,  
+  $\sigma(\chi) = \frac{b}{\sin \chi} \left| \frac{db}{d\chi} \right|$.
+
+- Recordamos el **experimento de Rutherford**:
+  - Dispersión de partículas $\alpha$ en un potencial repulsivo $V(r) = \frac{2Ze^2}{r}$.
+  - Se obtiene:  
+    $\cot\left(\frac{\chi}{2}\right) = \frac{2bE}{k}$
+  - Y la sección eficaz:  
+    $\sigma(\chi) = \left( \frac{k}{4E} \right)^2 \frac{1}{\sin^4(\chi/2)}$
+
+- En general, los **procesos de dispersión**:
+  - Revelan información sobre la **naturaleza del potencial**.
+  - Su tratamiento **geométrico** permite conectar la trayectoria con magnitudes medibles como $\chi$ y $\sigma(\chi)$.
+  - Su formulación se **generaliza a colisiones relativistas y cuánticas**.
+
 ### Clase S8-C15/C16
 
 [Pequeñas oscilaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T1Oscilaciones.pdf)
