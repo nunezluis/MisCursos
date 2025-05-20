@@ -324,8 +324,34 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
 + Presentación [Solución numérica de ecuaciones diferenciales ordinarias](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S5EcDifNumericas.pdf)
 + [Diez clases de soluciones computacionales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/DiezClasesComputacionales.pdf)
 
+#### Contenidos de esta semana
+1. **El Potencial Efectivo** que surge en el **problema de dos cuerpos** con un potencial central  
+   $V(r) \Rightarrow V_{\text{ef}}(r) = V(r) + \frac{L^2}{2\mu r^2}$
 
-### Clase S6-C11/C12  
+2. Simplifica el estudio del movimiento en fuerzas centrales, permitiendo visualizar y clasificar órbitas en sistemas gravitacionales y atómicos.
+
+3. **Movimiento Radial y Tipos de Órbitas**
+   1. Movimiento permitido para $E \geq V_{\text{ef}}(r)$ y puntos de retorno cuando $E = V_{\text{ef}}(r)$.
+   2. Órbitas ligadas: $E < 0$, oscilación radial entre $r_{\min}$ y $r_{\max}$.
+   3. Órbitas abiertas: $E \geq 0$, escape del sistema.
+   4. Órbitas circulares: $\frac{dV_{\text{ef}}}{dr} = 0$ en un mínimo estable.
+
+4. **Ejemplos de Potenciales**
+   1. $V(r) = -\frac{k}{r}$ (Gravitacional y Coulombiano): órbitas elípticas, parabólicas e hiperbólicas.
+   2. $V(r) = -\frac{k}{r^3}$: Caída al centro si $E < V_{\text{ef}}(r)$.
+   3. $V(r) = \frac{1}{2}kr^2$: Oscilador armónico tridimensional.
+
+- **Fuerza central inversamente proporcional al cuadrado de la distancia:**  
+  $f(r) = -\frac{k}{r^2}, \quad k = Gm_1m_2 \Rightarrow$  
+  Potencial gravitacional: $V(r) = -\frac{k}{r}$
+
+- **Flujo del campo gravitacional y la ecuación de Poisson:**  
+  $\nabla^2 \varphi = 4 \pi G \rho$
+
+- **El problema inverso:**  
+  Dada una órbita $r(\theta)$, determinar el potencial $V(r)$ o la fuerza central $f(r)$ que causa esta órbita.
+
+## Clase S6-C11/C12  
 + **Estudie**
   + Ecuación diferencial de la órbita
   + Fuerza gravitacional y problema de Kepler
@@ -341,6 +367,25 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
   + Van Allen, J. A. (2003). Gravitational assist in celestial mechanics—a tutorial. American Journal of Physics, 71(5), 448-451.
   + Berg, P. (2023). The fundamental concepts of the gravity-assist manoeuvre. European Journal of Physics, 44(2), 025002.
 + [Presentación de perturbaciones y precesión de órbitas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S6T4Perturbaciones.pdf)
+
+#### Contenidos de esta semana
+- **El problema de Kepler:**  
+  Órbita de una partícula bajo la acción de  
+  $f(r) = -\frac{k}{r^2}$, con $k = G m_1 m_2$.  
+  Se obtiene:  
+  $\frac{1}{r} = \frac{k \mu}{L^2} \left[ 1 + e \cos(\theta - \theta_0) \right]$
+
+  1. $e = 0$: órbita circular
+  2. $0 < e < 1$: órbita elíptica
+  3. $e = 1$: órbita parabólica
+  4. $e > 1$: órbita hiperbólica
+
+- **Leyes de Kepler:**
+  1. **Ley de las áreas:** La velocidad areolar es constante.
+  2. **Ley de las órbitas:** Los planetas se mueven en elipses con el Sol en uno de los focos.
+  3. **Ley de los periodos:**  
+     $T^2 \propto a^3$, donde $a$ es el semieje mayor.
+
 
 ### Clase S7-C13/C14
 + **Estudie**
@@ -358,7 +403,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
 + [Oumuamua](https://science.nasa.gov/solar-system/comets/oumuamua/)
 + [Borisov](https://science.nasa.gov/solar-system/comets/2i-borisov/)
 
-### Contenidos de esta semana
+#### Contenidos de esta semana
 En esta semana cubrimos
 
 - Para un potencial central $V(r) = -\frac{k}{r}$, cuyas órbitas son secciones cónicas (elipses, parábolas, hipérbolas), se define el **vector de Laplace-Runge-Lenz** como  
@@ -468,7 +513,7 @@ Esta semana cubrimos estos Contenidos
   - Tres modos normales:
     - $\omega_1 = 0$: traslación
     - $\omega_2 = \sqrt{\frac{k}{m}}$: O–C en oposición de fase
-    - $\omega_3 = \sqrt{\frac{k}{m}(1 + 2m/M)}$: O–C en fase. 
+    - $\omega_3 = \sqrt{\frac{k}{m}(1 + 2m/M)}$: O–C en fase.
 
 
 ### Clase S9-C17/C18
