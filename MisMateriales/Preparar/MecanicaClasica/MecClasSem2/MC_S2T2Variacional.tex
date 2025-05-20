@@ -138,6 +138,41 @@
 	\item<9-> $\underbrace{\frac{1}{2} m\left(\dot{x}^2+\dot{y}^2\right)+m g y +\frac{1}{2} \lambda(x^2+y^2-l^2)}_\mathcal{L} \equiv \underbrace{\frac{1}{2} m l^2 \dot{\theta}^2+m g l \cos \theta}_{\mathcal{L}^{\prime}}$.
    \end{itemize}
 }
+%
+%%%%% Diapo Fin
+\section{Recapitulando}
+\frame{
+  \frametitle{Recapitulando}
+En presentación consideramos
+\begin{enumerate}
+  \item<1-> \textbf{Objetivo:} Encontrar la función \( y(x) \) que hace extremo un funcional
+  \[
+  I[y] = \int_{x_1}^{x_2} f(y, y', x) \, dx.
+  \]
+
+  \item<2-> \textbf{Condición de Extremal:} Se introduce una variación \( y(x,\alpha) = y(x) + \alpha \eta(x) \) con \( \eta(x_1) = \eta(x_2) = 0 \). Se impone:
+  \[
+  \left. \frac{dI}{d\alpha} \right|_{\alpha = 0} = 0.
+  \]
+
+  \item \textbf{Ecuación de Euler:}
+  \[
+  \frac{d}{dx} \left( \frac{\partial f}{\partial y'} \right) - \frac{\partial f}{\partial y} = 0.
+  \]
+
+  \item<3-> \textbf{Con Restricciones:} Se usa el método de multiplicadores de Lagrange para restricciones holónomas \( g(x, y) = 0 \), modificando el funcional:
+  \[
+  \tilde{I}[y, \lambda] = \int_{x_1}^{x_2} \left( f + \lambda g \right) dx.
+  \]
+
+  \item<4-> \textbf{Ejemplos:} 
+  \begin{itemize}
+    \item Partícula libre sobre una esfera.
+    \item Péndulo simple como sistema con vínculo circular.
+  \end{itemize}
+\end{enumerate}
+}
+
   
 \end{document}
 

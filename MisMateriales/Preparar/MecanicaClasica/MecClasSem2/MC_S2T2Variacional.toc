@@ -7,3 +7,4 @@
 \beamer@subsectionintoc {5}{1}{Multiplicadores de Lagrange}{25}{0}{5}
 \beamer@subsectionintoc {5}{2}{Part\IeC {\'\i }cula libre movi\'endose sobre una esfera}{30}{0}{5}
 \beamer@subsectionintoc {5}{3}{El p\'endulo simple}{36}{0}{5}
+\beamer@sectionintoc {6}{Recapitulando}{45}{0}{6}

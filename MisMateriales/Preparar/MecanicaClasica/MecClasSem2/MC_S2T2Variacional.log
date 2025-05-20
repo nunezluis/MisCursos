@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  11 FEB 2025 10:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  20 MAY 2025 08:07
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -954,7 +954,7 @@ Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 22.
 
 </Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png,
- id=58, 184.5294pt x 136.1085pt>
+ id=62, 184.5294pt x 136.1085pt>
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
@@ -999,12 +999,12 @@ ut line 49.
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-<Figuras/Trayectoria.png, id=139, 663.47874pt x 490.83376pt>
+<Figuras/Trayectoria.png, id=145, 663.47874pt x 490.83376pt>
 File: Figuras/Trayectoria.png Graphic file (type png)
 <use Figuras/Trayectoria.png>
 Package pdftex.def Info: Figuras/Trayectoria.png  used on input line 49.
 (pdftex.def)             Requested size: 101.17755pt x 74.84267pt.
-<Figuras/TrayectoriaPerturbada.png, id=140, 597.23125pt x 483.8075pt>
+<Figuras/TrayectoriaPerturbada.png, id=146, 597.23125pt x 483.8075pt>
 File: Figuras/TrayectoriaPerturbada.png Graphic file (type png)
 <use Figuras/TrayectoriaPerturbada.png>
 Package pdftex.def Info: Figuras/TrayectoriaPerturbada.png  used on input line 
@@ -1451,6 +1451,62 @@ stitucional/UISLOGO.png  used on input line 140.
  [44
 
 ]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 174.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \vbox (45.4754pt too high) detected at line 174
+ []
+
+[45
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 174.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \vbox (45.4754pt too high) detected at line 174
+ []
+
+[46
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 174.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \vbox (45.4754pt too high) detected at line 174
+ []
+
+[47
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 174.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \vbox (45.4754pt too high) detected at line 174
+ []
+
+[48
+
+]
 \tf@nav=\write6
 \openout6 = `MC_S2T2Variacional.nav'.
 
@@ -1465,14 +1521,14 @@ LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
 Package rerunfilecheck Info: File `MC_S2T2Variacional.out' has not changed.
-(rerunfilecheck)             Checksum: E161BBDF0328B28F1F9AC2788D896C04;1642.
+(rerunfilecheck)             Checksum: 00D52A30D134DC9D01CEB464F9E90CD9;1750.
  ) 
 Here is how much of TeX's memory you used:
- 23768 strings out of 478268
- 466508 string characters out of 5846347
- 732369 words of memory out of 5000000
- 41367 multiletter control sequences out of 15000+600000
- 477842 words of font info for 58 fonts, out of 8000000 for 9000
+ 23831 strings out of 478268
+ 468104 string characters out of 5846347
+ 732368 words of memory out of 5000000
+ 41421 multiletter control sequences out of 15000+600000
+ 478147 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,486b,857s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
@@ -1490,10 +1546,10 @@ texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/t
 exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on MC_S2T2Variacional.pdf (44 pages, 571423 bytes).
+Output written on MC_S2T2Variacional.pdf (48 pages, 587950 bytes).
 PDF statistics:
- 1347 PDF objects out of 1440 (max. 8388607)
- 1236 compressed objects within 13 object streams
- 97 named destinations out of 1000 (max. 500000)
- 170 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1460 PDF objects out of 1728 (max. 8388607)
+ 1343 compressed objects within 14 object streams
+ 106 named destinations out of 1000 (max. 500000)
+ 184 words of extra memory for PDF output out of 10000 (max. 10000000)
 

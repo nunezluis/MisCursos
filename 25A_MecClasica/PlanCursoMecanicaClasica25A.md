@@ -1,6 +1,6 @@
 # Mecánica Clásica Semestre A 2025
 ## Metodología
-Tendremos cuatro ahora de teoría (martes y jueves) y una el viernes. La hora del viernes será para desarrollar una evaluación contínua. Cada viernes tendrán que presentar problemas que han quedado de los contenidos que hemos desarrollado en la semanas
+Tendremos cuatro ahora de teoría (martes y jueves) y una de problemas el viernes. La hora del viernes será para desarrollar una evaluación contínua. Cada viernes tendrán que presentar problemas que han quedado de los contenidos que hemos desarrollado en la semanas
 
 ## Evaluación
 Nos organizaremos en grupos de dos estudiantes y cada grupo debe crear un git y según el modelo que se muestra [aquí](https://github.com/nunezluis/TareasCursos20B). Esto es, se debe clonar este repositorio y compartirlos para poder revisar las tareas, asignaciones y proyectos que desarrollemos durante el curso..  
@@ -97,35 +97,49 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
   + [La historia bien bonita del principio de mínima acción](https://youtu.be/Q10_srZ-pbs?si=eZM-zbC1_tUHcuz4)
 
 #### Al finalizar la semana
+Al finalizar esta semana habremos cubierto los siguientes puntos
 
-1. **Sistema Mecánico:**  
-   Un sistema con \( N \) partículas con \( 3N \) coordenadas cartesianas \( \{ \mathbf{r}_i = (x_i, y_i, z_i) \} \).
+* **Sistema Mecánico:** Un sistema con $N$ partículas con $3N$ coordenadas cartesianas $\{ {\bf r}_i = (x_i, y_i, z_i) \}$.
+* **Restricciones (Vínculos):** $k$ restricciones independientes $\Rightarrow$ $s = 3N - k$ grados de libertad.
 
-2. **Restricciones (Vínculos):**  
-   \( k \) restricciones independientes \( \Rightarrow \) \( s = 3N - k \) grados de libertad.
-   - **Holónomos:** Relaciones algebraicas \( f_j(\mathbf{r}_1, ..., t) = 0 \).
-   - **Anholónomos:** Involucran velocidades, son no integrables. Ejemplo: rodar sin deslizar.
+  * **Holónomos:** Relaciones algebraicas $f_j({\bf r}_1, ..., t) = 0$.
+  * **Anholónomos:** Involucran velocidades, son no integrables. Ejemplo: rodar sin deslizar.
+* **Coordenadas Generalizadas:**
 
-3. **Coordenadas Generalizadas:**
-   - Conjunto mínimo \( \{q_1(t), ..., q_s(t)\} \) que describe el sistema.
-   - Velocidades generalizadas: \( \{\dot{q}_1, ..., \dot{q}_s\} \).
+  * Conjunto mínimo $\{q_1(t), ..., q_s(t)\}$ que describe el sistema.
+  * Velocidades generalizadas: $\{\dot{q}_1, ..., \dot{q}_s\}$.
+* **Transformaciones:** ${\bf r}_i = {\bf r}_i(q_1, ..., q_s, t) \Leftrightarrow q_j = q_j({\bf r}_1, ..., {\bf r}_N, t)$.
+* **Objetivo:** Encontrar la función $y(x)$ que hace extremo un funcional
+  $I[y] = \int_{x_1}^{x_2} f(y, y', x) \, dx$.
+* **Condición de Extremo:** Se introduce una variación $y(x,\alpha) = y(x) + \alpha \eta(x)$ con $\eta(x_1) = \eta(x_2) = 0$, y se impone
+  $\left. \frac{dI}{d\alpha} \right|_{\alpha = 0} = 0$.
+* **Ecuación de Euler:**
+  $\frac{d}{dx} \left( \frac{\partial f}{\partial y'} \right) - \frac{\partial f}{\partial y} = 0$.
+* **Con Restricciones:** Se usa el método de multiplicadores de Lagrange para restricciones holónomas $g(x, y) = 0$, modificando el funcional:
+  $\tilde{I}[y, \lambda] = \int_{x_1}^{x_2} \left( f + \lambda g \right) dx$.
+* **Ejemplos:**
+  * Partícula libre sobre una esfera.
+  * Péndulo simple como sistema con vínculo circular.
+* **La Braquistocrona:** Encontrar la trayectoria $y(x)$ de una partícula, en movimiento sin fricción desde el reposo bajo la acción de la gravedad, que emplea el menor tiempo para ir de $(x_1, y_1)$ a $(x_2, y_2)$.
+  * La distancia más corta no siempre es la más rápida; *los principios variacionales* determinan los caminos óptimos.
+  * La integral del tiempo es $t_{1 \to 2} = \int_{y_1}^{y_2} \frac{\sqrt{1+(x')^2}}{\sqrt{2gy}} \, dy$.
+  * El problema se resuelve mediante la *ecuación de Euler-Lagrange*, que genera una primera integral que relaciona la pendiente con la energía.
+  * La trayectoria resultante es un *segmento de una cicloide*, parametrizada por
+    $x = R(\theta - \sen \theta), \quad y = R(1 - \cos \theta)$, donde $R$ se determina con las condiciones de frontera.
+  * El *principio de Fermat* establece que la luz sigue el *camino del menor tiempo*, lo que lleva a la *ley de Snell* de la refracción:
+    $n_1 \sen \theta_1 = n_2 \sen \theta_2$.
+* **Fundamentos del formalismo lagrangiano:**
+  * La acción de un sistema está dada por
+    $S = \int_{t_1}^{t_2} L(q_j, \dot{q}_j, t) \, dt$.
+  * La trayectoria entre dos estados es aquella que hace *estacionaria* la acción ($\delta S = 0$).
+  * El lagrangiano se define como $\mathcal{L} = T - V$, con $T$ energía cinética y $V$ potencial.
+  * La *ecuación de Euler-Lagrange*
+    $\frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{q}_j} \right) - \frac{\partial \mathcal{L}}{\partial q_j} = 0$ se obtiene considerando variaciones pequeñas.
+  * Esta ecuación proporciona las ecuaciones de movimiento:
+    * Generalizan las leyes de Newton para *cualquier sistema de coordenadas*.
+    * Incorporan restricciones de forma natural.
+    * Aplicables a cualquier sistema mecánico: más versátiles que la mecánica newtoniana.
 
-4. **Transformaciones:**  
-   \( \mathbf{r}_i = \mathbf{r}_i(q_1, ..., q_s, t) \Leftrightarrow q_j = q_j(\mathbf{r}_1, ..., \mathbf{r}_N, t) \)
-
-
-
-  Los/las estudiantes deberán en capacidad de:
-  1. **Para el caso de coordenadas Generalizadas y Restricciones**:
-     - Definir de coordenadas generalizadas y su uso para describir sistemas físicos con restricciones.
-     - Diferenciar entre restricciones holónomas y anholónomas.
-     - Determinar el número de grados de libertad de un sistema y elegir las coordenadas apropiadas.
-
-  2. **Considerando los Principios Variacionales**:
-     - Comprender el concepto de funcionales y su relación con la búsqueda de extremos en el cálculo variacional.
-     - Establecer el significado de la ecuación de Euler-Lagrange y su papel en la derivación de ecuaciones de movimiento.
-     - Utilizar el cálculo de variaciones para obtener ecuaciones de movimiento de sistemas físicos bajo restricciones mediante multiplicadores de Lagrange.
-     - Desarrollar aplicaciones del cálculo variacional con restricciones en sistemas simples como la partícula libre sobre una esfera y el péndulo simple.
 
 
 ### Clase S3-C5/C6  Leyes de conservación y simetrías
