@@ -459,7 +459,15 @@ En esta semana cubrimos
 
 ### Clase S8-C15/C16
 
-[Pequeñas oscilaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T1Oscilaciones.pdf)
+#### Materiales
+##### Presentaciones
++ [Pequeñas oscilaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T1Oscilaciones.pdf)
++ [Modos normales de oscilación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T2ModosNormales.pdf)
+
+##### Videos
++ [Modos normales de oscilación y neutrinos](https://www.youtube.com/watch?v=YqVF3NSc5xg)
++ [Oscilación de la molécula CO2](https://www.youtube.com/watch?v=K6dSM_nDee8)
+
 
 ### Resumen de Contenidos
 Esta semana cubrimos estos Contenidos
@@ -515,34 +523,102 @@ Esta semana cubrimos estos Contenidos
     - $\omega_2 = \sqrt{\frac{k}{m}}$: O–C en oposición de fase
     - $\omega_3 = \sqrt{\frac{k}{m}(1 + 2m/M)}$: O–C en fase.
 
+### Semana 9 colchón
 
-### Clase S9-C17/C18
+### Clase S10-C21/C22
 
-### Clase S10-C19/C20  
-+ **Estudie**
-  + Oscilaciones pequeñas en una dimensión
-  + Oscilaciones con varios grados de libertad
-  + Modos normales
-
-+ **Rehaga los ejemplos resueltos**
-  + Oscilaciones con varios grados de libertad
-  + Modos normales
-
-#### Materiales
-##### Presentaciones
-+ [Pequeñas oscilaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T1Oscilaciones.pdf)
-+ [Modos normales de oscilación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T2ModosNormales.pdf)
-
-##### Videos
-+ [Modos normales de oscilación y neutrinos](https://www.youtube.com/watch?v=YqVF3NSc5xg)
-+ [Oscilación de la molécula CO2](https://www.youtube.com/watch?v=K6dSM_nDee8)
-
-### Clase S11-C21/C22
-
-La semana 11 del sólido rígido
+La semana 10 del sólido rígido
 + [generalidades del sólido rígido, ángulos y velocidades de Euler](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T1SolidoDef.pdf)
 + [La energía cinética y el tensor de inercia](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T2SolidoEnergCin.pdf)
 + [Momento angular de un cuerpo rígido](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S11T3SolidoMomAngular.pdf)
+
+#### Los contenidos de esta semana
+
+- **Cuerpo rígido**: sistema de partículas con distancias relativas fijas.
+
+- El movimiento se descompone en: **Traslación** del centro de masa y **Rotación** alrededor del centro de masa.
+
+- **Sistemas de referencia**:  
+  - Sistema de laboratorio/inercial $(x, y, z)$  
+  - Sistema del centro de masa $(x_1, x_2, x_3)\)
+
+- **Descripción de la orientación respecto al CM**: se utilizan los **ángulos de Euler** \((\phi, \theta, \psi)\):
+  - $\phi$ (precesión): rotación alrededor del eje $z$ del sistema laboratorio.
+  - $\theta$ (nutación): inclinación del eje $z$ al eje $x_3$.
+  - $\psi$ (rotación): giro alrededor del eje $x_3$.
+
+- **Velocidad angular** $\mathbf{\Omega}$:  
+  Velocidad de un punto:  
+  $\mathbf{v}_P = \mathbf{v}_{CM} + \mathbf{\Omega} \times \mathbf{r}$
+
+- **Componentes de $\mathbf{\Omega}$ en el sistema del CM**:
+  \[
+  \begin{cases}
+  \tilde{\Omega}_1 = \dot{\phi} \sin \theta \sin \psi + \dot{\theta} \cos \psi \\
+  \tilde{\Omega}_2 = \dot{\phi} \sin \theta \cos \psi - \dot{\theta} \sin \psi \\
+  \tilde{\Omega}_3 = \dot{\psi} + \dot{\phi} \cos \theta
+  \end{cases}
+  \]
+
+- **Transformaciones entre sistemas de coordenadas**:
+  - Los operadores de rotación $\tilde{\mathbb{U}}_\phi, \tilde{\mathbb{U}}_\theta, \tilde{\mathbb{U}}_\psi$ conectan los sistemas.
+  - Transformación total:  
+    $\tilde{\mathbb{U}}_{\psi\theta\phi} = \tilde{\mathbb{U}}_\psi \tilde{\mathbb{U}}_\theta \tilde{\mathbb{U}}_\phi$
+  - Los operadores son **ortogonales**:  
+    $\tilde{\mathbb{U}}^{-1} = \tilde{\mathbb{U}}^T$
+
+- **Interpretación física**:
+  - Los ángulos de Euler describen la **orientación**.
+  - Las componentes de $\mathbf{\Omega}$ gobiernan la **dinámica rotacional**.
+  - Son esenciales para derivar las **ecuaciones de Euler** y analizar la estabilidad y movimiento de trompos y giróscopos.
+
+- **Energía cinética total**:  
+  \[
+  T = \frac{1}{2} M v_{cm}^2 + \frac{1}{2} \sum_j m_j (\mathbf{\Omega} \times \mathbf{r}_j)^2
+  \Rightarrow T = \frac{1}{2} M v_{cm}^2 + \frac{1}{2} \mathbf{\Omega}^T \boldsymbol{I} \mathbf{\Omega} =
+  \frac{1}{2} M v_{cm}^2 + \frac{1}{2} \sum_{i,k} \Omega_i I^{i}_{k} \Omega^k
+  \]
+
+- **Tensor de inercia**:  
+  $I_{ik} = \sum_j m_j \left( r_j^2 \delta_{ik} - x_{i,j} x_{k,j} \right)$
+
+- **Velocidad angular** (ejemplo):  
+  $\mathbf{\Omega}(t) = (\nu \cos \omega t, \nu \sin \omega t, \omega)$
+
+- **Momento angular**:  
+  $\mathbf{L} = \sum_j m_j \mathbf{r}_j \times (\mathbf{\Omega} \times \mathbf{r}_j) = \boldsymbol{I} \mathbf{\Omega}$
+
+- En general, $\mathbf{L} \nparallel \mathbf{\Omega}$, excepto para cuerpos esféricos o cuando $\mathbf{\Omega}$ está en un eje principal.
+
+- **Energía cinética** (ejemplo):  
+  $T = \frac{1}{2}(I_{11} \cos^2 \omega t + I_{22} \sin^2 \omega t)\nu^2 + \frac{1}{2} I_{33} \omega^2$
+
+- **Elipsoide en rotación**: precesión de los ejes principales.
+
+- **Ecuaciones de movimiento**:
+  - Se plantean con ángulos de Euler \((\theta, \phi, \psi)\).
+  - Lagrangiano:  
+    $\mathcal{L} = T(\theta, \phi, \psi, \dot{\theta}, \dot{\phi}, \dot{\psi}) - V(\theta, \phi, \psi)$
+  - Casos con simetría (esfera o trompo) permiten reducción del sistema.
+
+### Ejemplo: Cilindro Rodante
+
+- **Sistema**: Cilindro de masa $M$, radio $a$, en una cavidad de radio $R > a$
+
+- **Condiciones**:  
+  $v_{cm} = (R - a)\dot{\varphi}, \quad \Omega_3 = \frac{v_{cm}}{a}, \quad I_{33} = \frac{1}{2} M a^2$
+
+- **Energías**:  
+  $T = \frac{3}{4} M (R - a)^2 \dot{\varphi}^2$  
+  $V = -Mg(R-a)\cos \varphi$  
+  $\mathcal{L} = T - V$
+
+- **Ecuación de movimiento**:  
+  $\ddot{\varphi} + \frac{2g}{3(R-a)} \varphi = 0$,  
+  que es un **oscilador armónico simple** con  
+  $\omega^2 = \frac{2g}{3(R-a)}$
+
+
 
 ### Clase S12-C23/C24  
 
