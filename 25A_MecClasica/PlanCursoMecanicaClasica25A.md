@@ -416,6 +416,59 @@ En esta semana cubrimos
 
 [Pequeñas oscilaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T1Oscilaciones.pdf)
 
+### Resumen de Contenidos
+Esta semana cubrimos estos Contenidos
+- **Oscilaciones en 1D:**
+  - Desarrollamos $V_\text{ef}(q)$ en serie de Taylor alrededor del punto $q_0$.
+  - Despreciando órdenes superiores:  
+    $V_\text{ef}(q) \approx V(q_0) + \frac{1}{2} K \eta^2$, con $\eta = q - q_0$
+  - Ecuación de movimiento:  
+    $\ddot{\eta} + \omega^2 \eta = 0$, con  
+    $\omega^2 = \frac{K}{c} = \frac{1}{c} \left. \frac{d^2 V}{d q^2} \right|_{q_0}$
+
+- **Péndulo Simple:**
+  - Para ángulos pequeños: $\cos \theta \approx 1 - \theta^2/2$ y  
+    $\mathcal{L} \approx \frac{1}{2} m\ell^2 \dot{\theta}^2 - \frac{1}{2} mg\ell \theta^2$
+  - Frecuencia: $\omega = \sqrt{g/\ell}$
+
+- **Oscilaciones con Varios Grados de Libertad:**
+  - Expandir el potencial y la energía cinética cerca del equilibrio:  
+    $V \approx \frac{1}{2} \sum_{ij} V_{ij} \eta_i \eta_j$,  
+    $T \approx \frac{1}{2} \sum_{ij} T_{ij} \dot{\eta}_i \dot{\eta}_j$
+  - Lagrangiano linealizado:  
+    $\mathcal{L} = \frac{1}{2} \sum_{ij} (T_{ij} \dot{\eta}_i \dot{\eta}_j - V_{ij} \eta_i \eta_j)$
+  - Ecuación de movimiento para $\eta_k$:  
+    $\sum_j \left( T_{k j} \ddot{\eta}_j + V_{k j} \eta_j \right) = 0$
+  - Para solución del tipo $\eta_j(t) = a_j e^{i \omega t}$:  
+    $\sum_n \left( V_{mn} - \omega^2 T_{mn} \right) a_n = 0$
+  - Existe solución no trivial $\eta_j(t) \neq 0$ si $a_j \neq 0 \ \forall j$ cuando  
+    $\det \left| V_{ij} - \omega^2 T_{ij} \right| = 0$
+  - Las frecuencias $\omega_i$ deben ser reales y están asociadas con las amplitudes $a^j_i$
+
+- **Péndulo Doble:**  
+  Sistema con dos coordenadas generalizadas $\theta_1, \theta_2$
+- Formulación general de pequeñas oscilaciones:  
+  $\sum_j (T_{ij} \ddot{\eta}_j + V_{ij} \eta_j) = 0$
+- Para soluciones $\eta_j(t) = a_j e^{i\omega t}$:  
+  $\sum_j (V_{ij} - \omega^2 T_{ij}) a_j = 0$
+- Soluciones no triviales cuando  
+  $\det |V_{ij} - \omega^2 T_{ij}| = 0$
+- Se obtienen los autovalores $\omega_n$ y autovectores $a_j(\omega_n)$
+- Las soluciones generales son:  
+  $\eta_j(t) = \sum_n a_j(\omega_n) \xi_n(t), \quad \ddot{\xi}_n + \omega_n^2 \xi_n = 0$
+
+- **Dos Osciladores Acoplados:**
+  - $T = \frac{1}{2}m(\dot{\eta}_1^2 + \dot{\eta}_2^2)$,  
+    $V = \frac{1}{2}k[\eta_1^2 + (\eta_2 - \eta_1)^2 + \eta_2^2]$
+  - Frecuencias normales:  
+    $\omega_1 = \sqrt{\frac{k}{m}}, \quad \omega_2 = \sqrt{\frac{3k}{m}}$
+
+- **La molécula de CO\(_2\):**
+  - Sistema lineal O–C–O: 3 masas, 2 resortes.
+  - Tres modos normales:
+    - $\omega_1 = 0$: traslación
+    - $\omega_2 = \sqrt{\frac{k}{m}}$: O–C en oposición de fase
+    - $\omega_3 = \sqrt{\frac{k}{m}(1 + 2m/M)}$: O–C en fase
 
 
 ### Clase S9-C17/C18
