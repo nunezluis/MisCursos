@@ -540,7 +540,7 @@ La semana 10 del sólido rígido
 
 - **Sistemas de referencia**:  
   - Sistema de laboratorio/inercial $(x, y, z)$  
-  - Sistema del centro de masa $(x_1, x_2, x_3)\)
+  - Sistema del centro de masa $(x_1, x_2, x_3)$
 
 - **Descripción de la orientación respecto al CM**: se utilizan los **ángulos de Euler** \((\phi, \theta, \psi)\):
   - $\phi$ (precesión): rotación alrededor del eje $z$ del sistema laboratorio.
