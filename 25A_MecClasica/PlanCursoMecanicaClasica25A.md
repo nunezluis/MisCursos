@@ -127,7 +127,7 @@ Al finalizar esta semana habremos cubierto los siguientes puntos
   * La trayectoria resultante es un *segmento de una cicloide*, parametrizada por
     $x = R(\theta - \sen \theta), \quad y = R(1 - \cos \theta)$, donde $R$ se determina con las condiciones de frontera.
   * El *principio de Fermat* establece que la luz sigue el *camino del menor tiempo*, lo que lleva a la *ley de Snell* de la refracción:
-    $n_1 \sen \theta_1 = n_2 \sen \theta_2$.
+    $n_1 sen \theta_1 = n_2 sen \theta_2$.
 * **Fundamentos del formalismo lagrangiano:**
   * La acción de un sistema está dada por
     $S = \int_{t_1}^{t_2} L(q_j, \dot{q}_j, t) \, dt$.
