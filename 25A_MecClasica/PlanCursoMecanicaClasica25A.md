@@ -468,7 +468,7 @@ Esta semana cubrimos estos Contenidos
   - Tres modos normales:
     - $\omega_1 = 0$: traslación
     - $\omega_2 = \sqrt{\frac{k}{m}}$: O–C en oposición de fase
-    - $\omega_3 = \sqrt{\frac{k}{m}(1 + 2m/M)}$: O–C en fase
+    - $\omega_3 = \sqrt{\frac{k}{m}(1 + 2m/M)}$: O–C en fase. 
 
 
 ### Clase S9-C17/C18
