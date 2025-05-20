@@ -127,7 +127,7 @@ Al finalizar esta semana habremos cubierto los siguientes puntos
   * La trayectoria resultante es un *segmento de una cicloide*, parametrizada por
     $x = R(\theta - \sen \theta), \quad y = R(1 - \cos \theta)$, donde $R$ se determina con las condiciones de frontera.
   * El *principio de Fermat* establece que la luz sigue el *camino del menor tiempo*, lo que lleva a la *ley de Snell* de la refracción:
-    $n_1 sen \theta_1 = n_2 sen \theta_2$.
+    $n_1 sen \theta_1 = n_2 \sen \theta_2$.
 * **Fundamentos del formalismo lagrangiano:**
   * La acción de un sistema está dada por
     $S = \int_{t_1}^{t_2} L(q_j, \dot{q}_j, t) \, dt$.
@@ -145,48 +145,65 @@ Al finalizar esta semana habremos cubierto los siguientes puntos
 ### Clase S3-C5/C6  Leyes de conservación y simetrías
 #### En esta semana cubriremos los siguientes temas
 
-##### 1. **Variables Conjugadas y Coordenadas Cíclicas**
-   - Definición del **momento conjugado** como$p_j = \frac{\partial L}{\partial \dot{q}_j}$.
-   - Concepto de **coordenada cíclica** (o ignorable): si una coordenada no aparece explícitamente en el lagrangiano, su momento conjugado es una **cantidad conservada**.
-   - **Ejemplos**:
-     - Partícula sobre un **cono invertido**: conservación del momento angular.
-     - Partícula en un **medio viscoso**: cómo el momento conjugado difiere del momento físico.
+Here is the content rewritten in **standard Markdown format**, using consistent indentation and spacing for maximum compatibility across platforms:
 
-##### 2. **Teorema de Noether**
-   - Introducción a las **transformaciones continuas** y su relación con las **leyes de conservación**.
-   - **Ejemplos**:
-     - Coordenada cíclica y conservación del momento conjugado.
-     - Partícula en un **campo gravitatorio** y conservación de una cantidad asociada.
+```markdown
+## 1. Variables Conjugadas y Coordenadas Cíclicas
 
-##### 3. **Simetrías Fundamentales y Cantidades Conservadas**
-   - **Homogeneidad del espacio** → **Conservación del momento lineal**.
-   - **Isotropía del espacio** → **Conservación del momento angular**.
-     - **Ejemplo**: Oscilador armónico bidimensional.
-   - **Homogeneidad del tiempo** → **Conservación de la energía**.
+- Definición del **momento conjugado** como \( p_j = \frac{\partial L}{\partial \dot{q}_j} \).
+- Concepto de **coordenada cíclica** (o ignorable): si una coordenada no aparece explícitamente en el lagrangiano, su momento conjugado es una **cantidad conservada**.
+- Ejemplos:
+  - Partícula sobre un **cono invertido**: conservación del momento angular.
+  - Partícula en un **medio viscoso**: cómo el momento conjugado difiere del momento físico.
 
-##### 4. **Energía y Potenciales Dependientes de las Velocidades**:
-   - Consideración de sistemas donde la energía potencial depende de las coordenadas y las velocidades generalizadas.
-   - Definición del Lagrangiano con potenciales dependientes de la velocidad.
-   - Relación entre la función de energía y la energía mecánica total.
+## 2. Teorema de Noether
 
-##### 5. **Fuerza de Lorentz como una Fuerza Generalizada**:
-   - Ecuación de la Fuerza de Lorentz:$\mathbf{F} = q (\mathbf{E} + \frac{\mathbf{v}}{c} \times \mathbf{B})$.
-   - Reformulación en términos de la función de energía y del Lagrangiano.
-   - Tratamiento de la fuerza de Lorentz dentro del formalismo lagrangiano.
+- Introducción a las **transformaciones continuas** y su relación con las **leyes de conservación**.
+- Ejemplos:
+  - Coordenada cíclica y conservación del momento conjugado.
+  - Partícula en un **campo gravitatorio** y conservación de una cantidad asociada.
 
-##### 6. **El Potencial Vector**:
-   - Relación con las ecuaciones de Maxwell.
-   - Expresión de los campos eléctrico y magnético en términos de los potenciales escalar y vectorial:$\mathbf{E} = -\nabla \phi - \frac{1}{c} \frac{\partial \mathbf{A}}{\partial t}$y$\mathbf{B} = \nabla \times \mathbf{A}$.
-   - Explicación de cómo la fuerza de Lorentz puede derivarse del potencial vector.
+## 3. Simetrías Fundamentales y Cantidades Conservadas
 
-##### 7. **Simetría de Calibre (Gauge)**:
-   - La invariancia de las ecuaciones bajo transformaciones de calibre.
-   - Cómo el potencial escalar y el potencial vector pueden modificarse sin cambiar los campos eléctricos y magnéticos.
-   - Importancia en teorías más avanzadas de electrodinámica.
+- **Homogeneidad del espacio** → **Conservación del momento lineal**.
+- **Isotropía del espacio** → **Conservación del momento angular**.
+  - Ejemplo: oscilador armónico bidimensional.
+- **Homogeneidad del tiempo** → **Conservación de la energía**.
 
-##### 8. **Teorema de Helmholtz**:
-   - Descomposición de campos vectoriales en términos de sus componentes irrotacionales y solenoidales.
-   - Aplicación del teorema a la formulación del campo electromagnético en términos de los potenciales escalar y vectorial.
+## 4. Energía y Potenciales Dependientes de las Velocidades
+
+- Consideración de sistemas donde la energía potencial depende de las coordenadas y las velocidades generalizadas.
+- Definición del lagrangiano con potenciales dependientes de la velocidad.
+- Relación entre la función de energía y la energía mecánica total.
+
+## 5. Fuerza de Lorentz como una Fuerza Generalizada
+
+- Ecuación de la Fuerza de Lorentz:  
+  \( \mathbf{F} = q \left( \mathbf{E} + \frac{\mathbf{v}}{c} \times \mathbf{B} \right) \)
+- Reformulación en términos de la función de energía y del lagrangiano.
+- Tratamiento de la fuerza de Lorentz dentro del formalismo lagrangiano.
+
+## 6. El Potencial Vector
+
+- Relación con las ecuaciones de Maxwell.
+- Expresión de los campos eléctrico y magnético en términos de los potenciales escalar y vectorial:  
+  \( \mathbf{E} = -\nabla \phi - \frac{1}{c} \frac{\partial \mathbf{A}}{\partial t} \)  
+  \( \mathbf{B} = \nabla \times \mathbf{A} \)
+- Explicación de cómo la fuerza de Lorentz puede derivarse del potencial vector.
+
+## 7. Simetría de Calibre (Gauge)
+
+- La invariancia de las ecuaciones bajo transformaciones de calibre.
+- Cómo el potencial escalar y el potencial vector pueden modificarse sin cambiar los campos eléctricos y magnéticos.
+- Importancia en teorías más avanzadas de electrodinámica.
+
+## 8. Teorema de Helmholtz
+
+- Descomposición de campos vectoriales en términos de sus componentes irrotacionales y solenoidales.
+- Aplicación del teorema a la formulación del campo electromagnético en términos de los potenciales escalar y vectorial.
+```
+
+This format ensures full compatibility with Markdown renderers used in GitHub, Jupyter Notebooks, VSCode, and most web-based Markdown engines. Let me know if you need a version with MathJax support for full LaTeX rendering in a specific context.
 
 + **Rehaga** los ejemplos 2., 3  (p76), 1. (p79), 1. (p81)
 
