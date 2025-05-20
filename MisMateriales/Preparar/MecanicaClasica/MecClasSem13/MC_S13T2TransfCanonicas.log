@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  3 DEC 2024 05:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  20 MAY 2025 05:30
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -988,7 +988,7 @@ Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 24.
 
 </Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png,
- id=54, 184.5294pt x 136.1085pt>
+ id=82, 184.5294pt x 136.1085pt>
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
@@ -996,6 +996,11 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 30.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
 [1
 
 {/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map} </Users/
@@ -1003,18 +1008,18 @@ luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png>]
 (./MC_S13T2TransfCanonicas.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 9.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 8.
+ut line 9.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
@@ -1027,7 +1032,12 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 36.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [2
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[2
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1035,9 +1045,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 56.
+stitucional/UISLOGO.png  used on input line 57.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [3
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[3
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1045,9 +1060,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 56.
+stitucional/UISLOGO.png  used on input line 57.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [4
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[4
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1055,9 +1075,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 56.
+stitucional/UISLOGO.png  used on input line 57.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [5
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[5
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1065,9 +1090,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 56.
+stitucional/UISLOGO.png  used on input line 57.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [6
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[6
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1075,9 +1105,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 56.
+stitucional/UISLOGO.png  used on input line 57.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [7
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[7
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1085,9 +1120,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 56.
+stitucional/UISLOGO.png  used on input line 57.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [8
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[8
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1095,9 +1135,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 73.
+stitucional/UISLOGO.png  used on input line 74.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [9
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[9
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1105,9 +1150,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 73.
+stitucional/UISLOGO.png  used on input line 74.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [10
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[10
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1115,9 +1165,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 88.
+stitucional/UISLOGO.png  used on input line 89.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [11
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[11
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1125,9 +1180,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 88.
+stitucional/UISLOGO.png  used on input line 89.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [12
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[12
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1135,9 +1195,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 88.
+stitucional/UISLOGO.png  used on input line 89.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [13
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[13
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1145,9 +1210,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 88.
+stitucional/UISLOGO.png  used on input line 89.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [14
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[14
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1155,9 +1225,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 88.
+stitucional/UISLOGO.png  used on input line 89.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [15
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[15
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1165,9 +1240,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 101.
+stitucional/UISLOGO.png  used on input line 102.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [16
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[16
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1175,9 +1255,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 101.
+stitucional/UISLOGO.png  used on input line 102.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [17
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[17
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1185,8 +1270,12 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 101.
+stitucional/UISLOGO.png  used on input line 102.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
 [18
 
@@ -1196,9 +1285,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 101.
+stitucional/UISLOGO.png  used on input line 102.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [19
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[19
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1206,9 +1300,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 117.
+stitucional/UISLOGO.png  used on input line 118.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [20
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[20
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1216,9 +1315,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 117.
+stitucional/UISLOGO.png  used on input line 118.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [21
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[21
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1226,9 +1330,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 117.
+stitucional/UISLOGO.png  used on input line 118.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [22
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[22
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1236,9 +1345,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 117.
+stitucional/UISLOGO.png  used on input line 118.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [23
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[23
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1246,9 +1360,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 117.
+stitucional/UISLOGO.png  used on input line 118.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [24
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[24
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1256,9 +1375,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 117.
+stitucional/UISLOGO.png  used on input line 118.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [25
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[25
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1266,9 +1390,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 131.
+stitucional/UISLOGO.png  used on input line 132.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [26
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[26
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1276,9 +1405,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 131.
+stitucional/UISLOGO.png  used on input line 132.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [27
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[27
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1286,9 +1420,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 131.
+stitucional/UISLOGO.png  used on input line 132.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [28
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[28
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1296,9 +1435,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 131.
+stitucional/UISLOGO.png  used on input line 132.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [29
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[29
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1306,9 +1450,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 147.
+stitucional/UISLOGO.png  used on input line 148.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [30
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[30
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1316,9 +1465,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 147.
+stitucional/UISLOGO.png  used on input line 148.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [31
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[31
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1326,9 +1480,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 147.
+stitucional/UISLOGO.png  used on input line 148.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [32
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[32
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1336,8 +1495,12 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 147.
+stitucional/UISLOGO.png  used on input line 148.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
 
 [33
 
@@ -1347,9 +1510,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 147.
+stitucional/UISLOGO.png  used on input line 148.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [34
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[34
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1357,40 +1525,50 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 165.
+stitucional/UISLOGO.png  used on input line 166.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [35
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[35
 
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 168.
+(hyperref)                removing `math shift' on input line 169.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 168.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \hskip 10.95003pt
-(hyperref)                replaced by space on input line 168.
+(hyperref)                removing `superscript' on input line 169.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 10.95003pt
-(hyperref)                replaced by space on input line 168.
+(hyperref)                replaced by space on input line 169.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 168.
+(hyperref)                \hskip 10.95003pt
+(hyperref)                replaced by space on input line 169.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 169.
 
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 179.
+stitucional/UISLOGO.png  used on input line 180.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
 [36
 
 ]
@@ -1399,9 +1577,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 179.
+stitucional/UISLOGO.png  used on input line 180.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [37
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[37
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1409,9 +1592,14 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 179.
+stitucional/UISLOGO.png  used on input line 180.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [38
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[38
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1419,9 +1607,542 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 179.
+stitucional/UISLOGO.png  used on input line 180.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [39
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[39
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 197.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[40
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 197.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[41
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 197.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[42
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 197.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[43
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 197.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[44
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 197.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[45
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 197.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[46
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 197.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[47
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 214.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[48
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 214.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[49
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 230.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[50
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 230.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[51
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 230.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[52
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 230.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[53
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 230.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[54
+
+]
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 253.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 253.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 253.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 253.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <7> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 253.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 253.
+
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 253.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[55
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 253.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[56
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 253.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[57
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 269.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[58
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 269.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[59
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 269.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[60
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 269.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[61
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 269.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[62
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 284.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[63
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 284.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[64
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 284.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[65
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 284.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[66
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 284.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[67
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 298.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[68
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 298.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[69
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 298.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[70
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 311.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[71
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 311.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[72
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 311.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \hbox (26.83081pt too wide) has occurred while \output is active
+ [][][][]  
+ []
+
+[73
 
 ]
 \tf@nav=\write6
@@ -1439,36 +2160,39 @@ LaTeX Info: Redefining \% on input line 25.
 )
 Package rerunfilecheck Info: File `MC_S13T2TransfCanonicas.out' has not changed
 .
-(rerunfilecheck)             Checksum: 96D7D1B232AB0637A1DA42275D368872;1445.
+(rerunfilecheck)             Checksum: 2987BB072E996D23EDC3C8CEA891267C;2671.
  ) 
 Here is how much of TeX's memory you used:
- 24396 strings out of 478268
- 478235 string characters out of 5846347
- 747422 words of memory out of 5000000
- 41992 multiletter control sequences out of 15000+600000
- 483042 words of font info for 77 fonts, out of 8000000 for 9000
+ 24566 strings out of 478268
+ 481122 string characters out of 5846347
+ 753428 words of memory out of 5000000
+ 42087 multiletter control sequences out of 15000+600000
+ 484218 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,16n,122p,491b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,16n,122p,496b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
 usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
-r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
-local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/l
-ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/lo
-cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/loca
-l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/loca
-l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/t
-exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/tex
-live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on MC_S13T2TransfCanonicas.pdf (39 pages, 308334 bytes).
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/tex
+live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texli
+ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive
+/2022/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on MC_S13T2TransfCanonicas.pdf (73 pages, 444231 bytes).
 PDF statistics:
- 1212 PDF objects out of 1440 (max. 8388607)
- 1108 compressed objects within 12 object streams
- 86 named destinations out of 1000 (max. 500000)
- 152 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2178 PDF objects out of 2487 (max. 8388607)
+ 2024 compressed objects within 21 object streams
+ 161 named destinations out of 1000 (max. 500000)
+ 214 words of extra memory for PDF output out of 10000 (max. 10000000)
 

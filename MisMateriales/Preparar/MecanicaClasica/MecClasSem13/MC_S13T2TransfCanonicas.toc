@@ -1,8 +1,15 @@
 \babel@toc {spanish}{}\relax 
-\beamer@sectionintoc {1}{Transformaciones Puntuales}{3}{0}{1}
-\beamer@sectionintoc {2}{Transformaciones Can\'onicas}{9}{0}{2}
-\beamer@sectionintoc {3}{Transformacion Can\'onica y Principio de M\IeC {\'\i }nima Acci\'on}{11}{0}{3}
-\beamer@sectionintoc {4}{Funci\'on Generadora}{20}{0}{4}
-\beamer@sectionintoc {5}{Ejemplo de Funci\'on Generadora}{26}{0}{5}
-\beamer@sectionintoc {6}{Algunos Tipos de funciones generadoras}{35}{0}{6}
-\beamer@sectionintoc {7}{Ejemplo: $Q=q+e^p \hskip 1em\relax \& \hskip 1em\relax P=p$}{36}{0}{7}
+\beamer@sectionintoc {1}{Transformaciones Can\'onicas}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Transformaciones Puntuales}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Transformaciones Can\'onicas}{9}{0}{1}
+\beamer@subsectionintoc {1}{3}{Transformacion Can\'onica y Principio de M\IeC {\'\i }nima Acci\'on}{11}{0}{1}
+\beamer@subsectionintoc {1}{4}{Funci\'on Generadora}{20}{0}{1}
+\beamer@subsectionintoc {1}{5}{Ejemplo de Funci\'on Generadora}{26}{0}{1}
+\beamer@subsectionintoc {1}{6}{Algunos Tipos de funciones generadoras}{35}{0}{1}
+\beamer@subsectionintoc {1}{7}{Ejemplo: $Q=q+e^p \hskip 1em\relax \& \hskip 1em\relax P=p$}{36}{0}{1}
+\beamer@sectionintoc {2}{Par\'entesis de Poisson}{40}{0}{2}
+\beamer@subsectionintoc {2}{1}{Definici\'on}{40}{0}{2}
+\beamer@subsectionintoc {2}{2}{Propiedades}{48}{0}{2}
+\beamer@subsectionintoc {2}{3}{Dos ejemplos}{55}{0}{2}
+\beamer@subsectionintoc {2}{4}{Par\'entesis de Poisson y Transformaciones Can\'onicas}{58}{0}{2}
+\beamer@sectionintoc {3}{Recapitulando}{68}{0}{3}

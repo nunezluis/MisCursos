@@ -4,45 +4,71 @@
 \headcommand {\beamer@framepages {2}{2}}
 \headcommand {\beamer@sectionpages {1}{2}}
 \headcommand {\beamer@subsectionpages {1}{2}}
-\headcommand {\sectionentry {1}{Transformaciones Puntuales}{3}{Transformaciones Puntuales}{0}}
-\headcommand {\slideentry {1}{0}{1}{3/8}{}{0}}
+\headcommand {\sectionentry {1}{Transformaciones Can\'onicas}{3}{Transformaciones Can\'onicas}{0}}
+\headcommand {\beamer@subsectionpages {3}{2}}
+\headcommand {\beamer@subsectionentry {0}{1}{1}{3}{Transformaciones Puntuales}}
+\headcommand {\slideentry {1}{1}{1}{3/8}{Transformaciones Puntuales}{0}}
 \headcommand {\beamer@framepages {3}{8}}
-\headcommand {\beamer@sectionpages {3}{8}}
 \headcommand {\beamer@subsectionpages {3}{8}}
-\headcommand {\sectionentry {2}{Transformaciones Can\'onicas}{9}{Transformaciones Can\'onicas}{0}}
-\headcommand {\slideentry {2}{0}{1}{9/10}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{9}{Transformaciones Can\'onicas}}
+\headcommand {\slideentry {1}{2}{1}{9/10}{Transformaciones Can\'onicas}{0}}
 \headcommand {\beamer@framepages {9}{10}}
-\headcommand {\beamer@sectionpages {9}{10}}
 \headcommand {\beamer@subsectionpages {9}{10}}
-\headcommand {\sectionentry {3}{Transformacion Can\'onica y Principio de M\IeC {\'\i }nima Acci\'on}{11}{Transformacion Can\'onica y Principio de M\IeC {\'\i }nima Acci\'on}{0}}
-\headcommand {\slideentry {3}{0}{1}{11/15}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{3}{11}{Transformacion Can\'onica y Principio de M\IeC {\'\i }nima Acci\'on}}
+\headcommand {\slideentry {1}{3}{1}{11/15}{Transformacion Can\'onica y Principio de M\IeC {\'\i }nima Acci\'on}{0}}
 \headcommand {\beamer@framepages {11}{15}}
-\headcommand {\slideentry {3}{0}{2}{16/19}{}{0}}
+\headcommand {\slideentry {1}{3}{2}{16/19}{Transformacion Can\'onica y Principio de M\IeC {\'\i }nima Acci\'on}{0}}
 \headcommand {\beamer@framepages {16}{19}}
-\headcommand {\beamer@sectionpages {11}{19}}
 \headcommand {\beamer@subsectionpages {11}{19}}
-\headcommand {\sectionentry {4}{Funci\'on Generadora}{20}{Funci\'on Generadora}{0}}
-\headcommand {\slideentry {4}{0}{1}{20/25}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{4}{20}{Funci\'on Generadora}}
+\headcommand {\slideentry {1}{4}{1}{20/25}{Funci\'on Generadora}{0}}
 \headcommand {\beamer@framepages {20}{25}}
-\headcommand {\beamer@sectionpages {20}{25}}
 \headcommand {\beamer@subsectionpages {20}{25}}
-\headcommand {\sectionentry {5}{Ejemplo de Funci\'on Generadora}{26}{Ejemplo de Funci\'on Generadora}{0}}
-\headcommand {\slideentry {5}{0}{1}{26/29}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{5}{26}{Ejemplo de Funci\'on Generadora}}
+\headcommand {\slideentry {1}{5}{1}{26/29}{Ejemplo de Funci\'on Generadora}{0}}
 \headcommand {\beamer@framepages {26}{29}}
-\headcommand {\slideentry {5}{0}{2}{30/34}{}{0}}
+\headcommand {\slideentry {1}{5}{2}{30/34}{Ejemplo de Funci\'on Generadora}{0}}
 \headcommand {\beamer@framepages {30}{34}}
-\headcommand {\beamer@sectionpages {26}{34}}
 \headcommand {\beamer@subsectionpages {26}{34}}
-\headcommand {\sectionentry {6}{Algunos Tipos de funciones generadoras}{35}{Algunos Tipos de funciones generadoras}{0}}
-\headcommand {\slideentry {6}{0}{1}{35/35}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{6}{35}{Algunos Tipos de funciones generadoras}}
+\headcommand {\slideentry {1}{6}{1}{35/35}{Algunos Tipos de funciones generadoras}{0}}
 \headcommand {\beamer@framepages {35}{35}}
-\headcommand {\beamer@sectionpages {35}{35}}
 \headcommand {\beamer@subsectionpages {35}{35}}
-\headcommand {\sectionentry {7}{Ejemplo: $Q=q+e^p \hskip 1em\relax \& \hskip 1em\relax P=p$}{36}{Ejemplo: $Q=q+e^p \hskip 1em\relax \& \hskip 1em\relax P=p$}{0}}
-\headcommand {\slideentry {7}{0}{1}{36/39}{}{0}}
+\headcommand {\beamer@subsectionentry {0}{1}{7}{36}{Ejemplo: $Q=q+e^p \hskip 1em\relax \& \hskip 1em\relax P=p$}}
+\headcommand {\slideentry {1}{7}{1}{36/39}{Ejemplo: $Q=q+e^p \hskip 1em\relax \& \hskip 1em\relax P=p$}{0}}
 \headcommand {\beamer@framepages {36}{39}}
-\headcommand {\beamer@partpages {1}{39}}
+\headcommand {\beamer@sectionpages {3}{39}}
 \headcommand {\beamer@subsectionpages {36}{39}}
-\headcommand {\beamer@sectionpages {36}{39}}
-\headcommand {\beamer@documentpages {39}}
-\headcommand {\gdef \inserttotalframenumber {11}}
+\headcommand {\sectionentry {2}{Par\'entesis de Poisson}{40}{Par\'entesis de Poisson}{0}}
+\headcommand {\beamer@subsectionpages {40}{39}}
+\headcommand {\beamer@subsectionentry {0}{2}{1}{40}{Definici\'on}}
+\headcommand {\slideentry {2}{1}{1}{40/47}{Definici\'on}{0}}
+\headcommand {\beamer@framepages {40}{47}}
+\headcommand {\beamer@subsectionpages {40}{47}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{48}{Propiedades}}
+\headcommand {\slideentry {2}{2}{1}{48/49}{Propiedades}{0}}
+\headcommand {\beamer@framepages {48}{49}}
+\headcommand {\slideentry {2}{2}{2}{50/54}{Propiedades}{0}}
+\headcommand {\beamer@framepages {50}{54}}
+\headcommand {\beamer@subsectionpages {48}{54}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{55}{Dos ejemplos}}
+\headcommand {\slideentry {2}{3}{1}{55/57}{Dos ejemplos}{0}}
+\headcommand {\beamer@framepages {55}{57}}
+\headcommand {\beamer@subsectionpages {55}{57}}
+\headcommand {\beamer@subsectionentry {0}{2}{4}{58}{Par\'entesis de Poisson y Transformaciones Can\'onicas}}
+\headcommand {\slideentry {2}{4}{1}{58/62}{Par\'entesis de Poisson y Transformaciones Can\'onicas}{0}}
+\headcommand {\beamer@framepages {58}{62}}
+\headcommand {\slideentry {2}{4}{2}{63/67}{Par\'entesis de Poisson y Transformaciones Can\'onicas}{0}}
+\headcommand {\beamer@framepages {63}{67}}
+\headcommand {\beamer@sectionpages {40}{67}}
+\headcommand {\beamer@subsectionpages {58}{67}}
+\headcommand {\sectionentry {3}{Recapitulando}{68}{Recapitulando}{0}}
+\headcommand {\slideentry {3}{0}{1}{68/70}{}{0}}
+\headcommand {\beamer@framepages {68}{70}}
+\headcommand {\slideentry {3}{0}{2}{71/73}{}{0}}
+\headcommand {\beamer@framepages {71}{73}}
+\headcommand {\beamer@partpages {1}{73}}
+\headcommand {\beamer@subsectionpages {68}{73}}
+\headcommand {\beamer@sectionpages {68}{73}}
+\headcommand {\beamer@documentpages {73}}
+\headcommand {\gdef \inserttotalframenumber {19}}

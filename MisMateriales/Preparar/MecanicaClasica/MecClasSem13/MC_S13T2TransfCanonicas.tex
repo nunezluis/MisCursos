@@ -20,7 +20,7 @@
 
 \begin{document}
 
-\title{\textbf{Transformaciones Canónicas} }
+\title{\textbf{Transformaciones Canónicas y \\ Paréntesis de Poisson} }
 \author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
 \institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
 \textit{Universidad Industrial de Santander, Santander, Colombia } \\
@@ -36,7 +36,8 @@
 \end{frame}
 %
 %%%%% Diapo 1
-\section{Transformaciones Puntuales}
+\section{Transformaciones Canónicas}
+\subsection{Transformaciones Puntuales}
 \frame{
   \frametitle{Transformaciones Puntuales}
    \begin{itemize}  
@@ -56,7 +57,7 @@ $\dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i} \Rightarrow \dot{Q}_i=-\fr
 }
 %
 %%%%% Diapo 2
-\section{Transformaciones Canónicas}
+\subsection{Transformaciones Canónicas}
 \frame{
 \frametitle{Transformaciones Canónicas}
 \begin{itemize}  
@@ -73,7 +74,7 @@ $\dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i} \Rightarrow \dot{Q}_i=-\fr
 }
 %
 %%%%% Diapo 2
-\section{Transformacion Canónica y Principio de Mínima Acción}
+\subsection{Transformacion Canónica y Principio de Mínima Acción}
 \frame{
 \frametitle{Principio de Mínima Acción 1/2}
 \begin{itemize}  
@@ -102,7 +103,7 @@ $\dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i} \Rightarrow \dot{Q}_i=-\fr
 
 %
 %%%%% Diapo 2
-\section{Función Generadora}
+\subsection{Función Generadora}
 \frame{
 \frametitle{Función Generadora}
 \begin{itemize}  
@@ -117,7 +118,7 @@ $\dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i} \Rightarrow \dot{Q}_i=-\fr
 }
 %
 %%%%% Diapo 2
-\section{Ejemplo de Función Generadora}
+\subsection{Ejemplo de Función Generadora}
 \frame{
 \frametitle{Ejemplo de Función Generadora 1/2}
 Encontrar la transformación canónica $\left\{q_i, p_i\right\} \rightarrow\left\{Q_i, P_i\right\}, i=1,2$, generada por la función $\mathcal{G}=q_1\left(P_1+2 p_2\right)+p_2 P_2$.
@@ -147,7 +148,7 @@ Encontrar la transformación canónica $\left\{q_i, p_i\right\} \rightarrow\left\{
 } 
 %
 %%%%% Diapo 2
-\section{Algunos Tipos de funciones generadoras}
+\subsection{Algunos Tipos de funciones generadoras}
 \frame{
 \frametitle{Tipos de Funciones Generadoras}
 \begin{center}
@@ -165,7 +166,7 @@ Encontrar la transformación canónica $\left\{q_i, p_i\right\} \rightarrow\left\{
 }
 %
 %%%%% Diapo 2
-\section{Ejemplo: $Q=q+e^p \quad \& \quad P=p$}
+\subsection{Ejemplo: $Q=q+e^p \quad \& \quad P=p$}
 \frame{
 \frametitle{Ejemplo: $Q=q+e^p \quad \& \quad P=p$}
 Dada una transformación $Q=q+e^p \quad \& \quad P=p$, encontrar sus función generadora
@@ -177,7 +178,137 @@ Dada una transformación $Q=q+e^p \quad \& \quad P=p$, encontrar sus función gene
 
 \end{itemize}
 }
- 
+%
+%
+\section{Paréntesis de Poisson}
+\subsection{Definición}
+\frame{
+\frametitle{Paréntesis de Poisson: Definición}
+\begin{itemize}  
+	\item<1-> Sea una función $f\left(q_i, p_i, t\right)$ en el espacio de fase $\left(q_i, p_i\right)$, $i=1, \ldots, s$, de un sistema mecánico con un Hamiltoniano $\mathcal{H}\left(q_i, p_i, t\right)$.
+	\item<2-> La derivada total de $f$ es $\frac{d f}{d t}=\sum_{i=1}^s\left(\frac{\partial f}{\partial q_i} \dot{q}_i+\frac{\partial f}{\partial p_i} \dot{p}_i\right)+\frac{\partial f}{\partial t}$.
+	\item<3-> Sus ecuaciones de Hamilton son $\dot{q}_i=\frac{\partial \mathcal{H}}{\partial p_i}, \quad \dot{p}_i=-\frac{\partial \mathcal{H}}{\partial q_i}$
+	\item<4-> Sustituyendo, tenemos $\frac{d f}{d t}=\sum_{i=1}^s\left(\frac{\partial f}{\partial q_i} \frac{\partial \mathcal{H}}{\partial p_i}-\frac{\partial f}{\partial p_i} \frac{\partial \mathcal{H}}{\partial q_i}\right)+\frac{\partial f}{\partial t}$
+	\item<5-> Entonces el paréntesis de Poisson de la función $f$ para un sistema con hamiltoniano $\mathcal{H}$ es $\{f, \mathcal{H}\} \equiv \sum_{i=1}^s\left(\frac{\partial f}{\partial q_i} \frac{\partial \mathcal{H}}{\partial p_i}-\frac{\partial f}{\partial p_i} \frac{\partial \mathcal{H}}{\partial q_i}\right)$.
+	\item<6-> Con lo cual $\frac{d f}{d t}=\{f, \mathcal{H}\}+\frac{\partial f}{\partial t} $
+	\item<7-> Si $f$ no depende explícitamente del tiempo (cantidad conservada), tenemos $\{f, \mathcal{H}\}=0$
+	\item<8-> Para $f\left(q_i, p_i, t\right)$ y $g\left(q_i, p_i, t\right)$ podemos definir el paréntesis de Poisson de ${f}$ y $g$ como $\{f, g\} \equiv \sum_{i=1}^s\left(\frac{\partial f}{\partial q_i} \frac{\partial g}{\partial p_i}-\frac{\partial f}{\partial p_i} \frac{\partial g}{\partial q_i}\right).$
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{Propiedades}
+\frame{
+\frametitle{Paréntesis de Poisson: Propiedades 1/2}
+\begin{itemize}  
+	\item<1-> El paréntesis de Poisson puede ser considerado como una operación entre dos funciones definidas en un espacio algebraico que asigna otra función en ese espacio.
+	\item<2-> El paréntesis de Poisson, como operación algebraica, posee las siguientes propiedades (características de un álgebra de Lie):
+	\begin{itemize}
+		\item $\{f, g\}=-\{g, f\}, \quad\{f, f\}=0 \quad$ (antisimetría).
+		\item $\{f, c\}=0, \quad$ si $c=$ cte.
+		\item $\left\{a f_1+b f_2, g\right\}=a\left\{f_1, g\right\}+b\left\{f_2, g\right\}, \quad a, b=$ ctes, un operador lineal.
+		\item $\left\{f_1 f_2, g\right\}=f_1\left\{f_2, g\right\}+f_2\left\{f_1, g\right\}, \quad$ (no asociativo).
+		\item $\{f,\{g, \mathcal{H}\}\}+\{g,\{h, f\}\}+\{h,\{f, g\}\}=0 \quad$  la identidad de Jacobi.
+	\end{itemize}
+\end{itemize}
+}
+%
+%
+%\section{Sección}
+\frame{
+\frametitle{Paréntesis de Poisson: Propiedades 2/2}
+\begin{itemize}  
+	\item<1-> Como $p_i$ y $q_i$ representan coordenadas independientes tenemos $\left\{q_i, f\right\}=\sum_{k=1}^s\left(\frac{\partial q_i}{\partial q_k} \frac{\partial f}{\partial p_k}-
+	\cancelto{0}{\frac{\partial q_k}{ \partial p_k}} \frac{\partial f}{\partial q_k}\right)=\sum_{k=1}^s \delta_{i k} \frac{\partial f}{\partial p_k}=\frac{\partial f}{\partial p_i}$ 
+	$\left\{p_i, f\right\}=\sum_{k=1}^s \left(\cancelto{0} {\frac{\partial p^{\prime}}{ \partial q_k}} \frac{\partial f}{\partial p_k}-\frac{\partial p_i}{\partial p_k} \frac{\partial f}{\partial q_k}\right)=-\sum_{k=1}^s \delta_{i k} \frac{\partial f}{\partial q_k}=-\frac{\partial f}{\partial q_i} .$
+	\item<2-> Si $f=p_j$, ó $f=q_j$, $\Rightarrow \left\{q_i, q_j\right\}=0, \quad\left\{p_i, p_j\right\}=0, \quad\left\{q_i, p_j\right\}=\delta_{i j}$
+	\item<3-> Las ecuaciones de Hamilton pueden escribirse como 
+	$\dot{q}_i  =\frac{\partial \mathcal{H}}{\partial p_i}=\left\{q_i, \mathcal{H}\right\} \quad \dot{p}_i  =-\frac{\partial \mathcal{H}}{\partial q_i}=\left\{p_i, \mathcal{H}\right\}$
+	\item<4-> En Mecánica Cuántica, la operación $[A, B]=A B-B A$ es el conmutador de los operadores u observables $A$ y $B$.
+	\item<5-> La estructura algebraica de la Mecánica Clásica, expresada en las propiedades de los paréntesis de Poisson, se preserva en la Mecánica Cuántica. En particular, $\left\{q_i, p_j\right\}=i \hbar \delta_{i j}$, donde $\hbar$ es la constante de Planck (dividida por $2 \pi)$.
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{Dos ejemplos}
+\frame{
+\frametitle{Dos Ejemplos}
+\begin{itemize}  
+	\item<1-> Calcular $\{r, \mathbf{p}\}$, donde $r=\left(x^2+y^2+z^2\right)^{1 / 2}$
+	\begin{itemize}
+		\item $\{r, \mathbf{p}\}=\left\{r, p_x\right\} \hat{\mathbf{x}}+\left\{r, p_y\right\} \hat{\mathbf{y}}+\left\{r, p_z\right\} \hat{\mathbf{z}}$
+		\item $\left\{r, p_x\right\}=\sum_{i=1}^3\left(\frac{\partial r}{\partial q_i} \frac{\partial p_x}{\partial p_i}-\frac{\partial r}{\partial p_i} \frac{\partial p_x}{\partial q_i}\right)=\frac{\partial r}{\partial x} \frac{\partial p_x}{\partial p_x}=\frac{x}{r}$
+		\item $\left\{r, p_y\right\}=\frac{y}{r}, \quad\left\{r, p_z\right\}=\frac{z}{r}$
+		\item luego $\{r, \mathbf{p}\}=\frac{x}{r} \hat{\mathbf{x}}+\frac{y}{r} \hat{\mathbf{y}}+\frac{z}{r} \hat{\mathbf{z}}=\frac{\mathbf{r}}{r}=\hat{\mathbf{r}} $
+	\end{itemize}
+	\item<2->  Dadas las componentes del momento angular $\mathbf{L}=\mathbf{r} \times \mathbf{p}$:
+	$L_x=y p_z-z p_y, \quad L_y=z p_x-x p_z, \quad L_z=x p_y-y p_x$ \\
+	Calcular los paréntesis de Poisson para las componentes de {\bf p} y {\bf L}: \\ 	
+	$\left\{p_y, L_x\right\}=-\frac{\partial L_x}{\partial y}=-p_z$;  $\quad \left\{p_x, L_x\right\}=-\frac{\partial L_x}{\partial x}=0$; $\quad \left\{p_z, L_y\right\}=-\frac{\partial L_y}{\partial z}=-p_x$ \\
+ $\left\{L_x, L_y\right\} =\sum_{i=1}^3\left(\frac{\partial L_x}{\partial q_i} \frac{\partial L_y}{\partial p_i}-\frac{\partial L_x}{\partial p_i} \frac{\partial L_y}{\partial q_i}\right)$ \\$ 
+		\left\{L_x, L_y\right\} = \left(\frac{\partial L_x}{\partial x} \frac{\partial L_y}{\partial p_x}-\frac{\partial L_x}{\partial p_x} \frac{\partial L_y}{\partial x}\right)+\left(\frac{\partial L_x}{\partial y} \frac{\partial L_y}{\partial p_y}-\frac{\partial L_x}{\partial p_y} \frac{\partial L_y}{\partial y}\right)+\left(\frac{\partial L_x}{\partial z} \frac{\partial L_y}{\partial p_z}-\frac{\partial L_x}{\partial p_z} \frac{\partial L_y}{\partial z}\right)$ \\
+	$\left\{L_x, L_y\right\} =x p_y-y p_x=L_z$; $\quad \left\{L_y, L_z\right\}  =L_x$ $\quad \left\{L_z, L_x\right\}  =L_y$
+	\item<3-> 	Entonces, $\left\{L_i, L_j\right\}=\epsilon_{i j k} L_k$. En Mecánica Cuántica,  $\left[L_i, L_j\right]=i \hbar \epsilon_{i j k} L_k$.	
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{Paréntesis de Poisson y Transformaciones Canónicas}
+\frame{
+\frametitle{Paréntesis de Poisson y Transformaciones 1/2}
+Para una transformación canónica $Q_j=Q_j(q_k, p_k, t)$ y $P_i=P_i(q_k, p_k, t)$ se cumple que  $\left\{Q_i, Q_j\right\}=0, \quad\left\{P_i, P_j\right\}=0, \quad\left\{Q_i, P_j\right\}=\delta_{i j}$
+\begin{itemize}  
+	\item<1-> Sea $Q=q+e^p \quad \& \quad P=p$
+	\item<2-> $\{Q, Q\} = \frac{\partial Q}{\partial q} \frac{\partial Q}{\partial p} - \frac{\partial Q}{\partial p} \frac{\partial Q}{\partial q} = (1)(e^p) - (e^p)(1) = 0$;
+	\item<3-> $\{P, P\} = \frac{\partial P}{\partial q} \frac{\partial P}{\partial p} - \frac{\partial P}{\partial p} \frac{\partial P}{\partial q} = (0)(1) - (1)(0) = 0$; y finalmente
+	\item<4-> $\{Q, P\} = \frac{\partial Q}{\partial q} \frac{\partial P}{\partial p} - \frac{\partial Q}{\partial p} \frac{\partial P}{\partial q}$. Calculando cada una
+	$\frac{\partial Q}{\partial q} = 1$, $\frac{\partial Q}{\partial p} = e^p$, $\frac{\partial P}{\partial q} = 0$, y $\frac{\partial P}{\partial p} = 1$, obtenemos $\{Q, P\} = (1)(1) - (e^p)(0) = 1$.  
+	\item<5-> Por lo tanto, como la tranformación cumple con 
+	$\{Q, Q\} = 0, \quad \{P, P\} = 0, \quad \text{y} \quad \{Q, P\} = 1$. {\bf Es canónica}
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Paréntesis de Poisson y Transformaciones 2/2}
+Consideremos la siguiente transformación \\ $P_1=p_1-2 p_2, \quad Q_1=q_1$ y  $P_2=-2 q_1-q_2, \quad Q_2=p_2$
+\begin{itemize}  
+	\item<1-> $\{Q_1, P_1\} =\sum_{i=1}^s\left(\frac{\partial Q_1}{\partial q_i} \frac{\partial P_1}{\partial p_i}-\frac{\partial Q_1}{\partial p_i} \frac{\partial P_1}{\partial q_i}\right)$ \\
+	$\{Q_1, P_1\} =\left(\frac{\partial Q_1}{\partial q_1} \frac{\partial P_1}{\partial p_1}-\frac{\partial Q_1}{\partial p_1} \frac{\partial P_1}{\partial q_1}\right)+\left(\frac{\partial Q_1}{\partial q_2} \frac{\partial P_1}{\partial p_2}-\frac{\partial Q_1}{\partial p_2} \frac{\partial P_1}{\partial q_2}\right)=1 $
+	\item<2-> $\{Q_2, P_2\} =\left(\frac{\partial Q_2}{\partial q_1} \frac{\partial P_2}{\partial p_1}-\frac{\partial Q_2}{\partial p_1} \frac{\partial P_2}{\partial q_1}\right)+\left(\frac{\partial Q_2}{\partial q_2} \frac{\partial P_2}{\partial p_2}-\frac{\partial Q_2}{\partial p_2} \frac{\partial P_2}{\partial q_2}\right)=1$
+	\item<3-> $\{Q_2, P_1\} =\left(\frac{\partial Q_2}{\partial q_1} \frac{\partial P_1}{\partial p_1}-\frac{\partial Q_2}{\partial p_1} \frac{\partial P_1}{\partial q_1}\right)+\left(\frac{\partial Q_2}{\partial q_2} \frac{\partial P_1}{\partial p_2}-\frac{\partial Q_2}{\partial p_2} \frac{\partial P_1}{\partial q_2}\right)=0$
+	\item<4-> $\{Q_1, P_2\} =\left(\frac{\partial Q_1}{\partial q_1} \frac{\partial P_2}{\partial p_1}-\frac{\partial Q_1}{\partial p_1} \frac{\partial P_2}{\partial q_1}\right)+\left(\frac{\partial Q_1}{\partial q_2} \frac{\partial P_2}{\partial p_2}-\frac{\partial Q_1}{\partial p_2} \frac{\partial P_2}{\partial q_2}\right)=0$
+	\item<5-> Por lo tanto, la tranformación  {\bf Es canónica}
+\end{itemize}
+} 
+%
+%%%%% Diapo 2
+\section{Recapitulando}
+\frame{
+\frametitle{Recapitulando}
+\begin{itemize}  
+  \item<1-> \textbf{Transformaciones Puntuales:} Cambios de coordenadas en el espacio de configuraciones no siempre conservan la forma de las ecuaciones de Hamilton.
+  
+  \item<2-> \textbf{Transformaciones Canónicas:} Transformaciones en el espacio de fase que preservan la forma de las ecuaciones de Hamilton. Su validez puede derivarse del Principio de Mínima Acción.
+
+  \item<3-> \textbf{Funciones Generadoras:} Clave para construir transformaciones canónicas. Existen cuatro tipos principales según las variables dependientes. Ejemplo tratado: $F_2(q, P) = qP + eP$ para la transformación $Q = q + eP$, $P = p$.
+
+\end{itemize}
+}
+%
+%
+\frame{
+\frametitle{Recapitulando}
+\begin{itemize}  
+  \item<1-> \textbf{Paréntesis de Poisson:} Definidos como $\{f, g\} = \sum_i \left( \frac{\partial f}{\partial q_i} \frac{\partial g}{\partial p_i} - \frac{\partial f}{\partial p_i} \frac{\partial g}{\partial q_i} \right)$. Describen la evolución temporal de cualquier función en el espacio de fase y forman una estructura de álgebra de Lie.
+
+  \item<2-> \textbf{Propiedades:} Antisimetría, linealidad, regla del producto y la identidad de Jacobi. Permiten verificar si una transformación es canónica mediante $\{Q_i, Q_j\} = 0$, $\{P_i, P_j\} = 0$, $\{Q_i, P_j\} = \delta_{ij}$.
+
+  \item<3-> \textbf{Ejemplos:} Se muestran cálculos de Poisson para magnitudes como $r = \sqrt{x^2 + y^2 + z^2}$ y los componentes del momento angular $\mathbf{L}$.
+
+\end{itemize}
+}   
 \end{document}
 %
 %%%%% Diapo 2
@@ -203,4 +334,4 @@ Las funciones generadores pueden no depender de todas las variables $\left(q_i, 
 	\item<1-> $\mathcal{F}_1=\mathcal{F}_1\left(q_i, Q_i, t\right) \Rightarrow \frac{d \mathcal{F}_1}{d t}=\sum_{i=1}^s\left(\frac{\partial \mathcal{F}_1}{\partial q_i} \dot{q}_i+\frac{\partial \mathcal{F}_1}{\partial Q_i} \dot{Q}_i\right)+\frac{\partial \mathcal{F}_1}{\partial t}$.
 	\item<1-> $p_i=\frac{\partial \mathcal{F}_1}{\partial q_i} =p_i(q, Q, t); \quad P_i=-\frac{\partial \mathcal{F}_1}{\partial Q_i} =P_i(q, Q, t); \quad \tilde{\mathcal{H}} =\mathcal{H}+\frac{\partial \mathcal{F}_1}{\partial t}$
 \end{itemize}
-}	
+}
