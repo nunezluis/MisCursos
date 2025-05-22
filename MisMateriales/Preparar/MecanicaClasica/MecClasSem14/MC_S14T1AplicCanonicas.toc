@@ -5,3 +5,5 @@
 \beamer@sectionintoc {4}{Ejemplo: $\mathcal {H}=q_1 p_1+q_2 p_2+a p_1^2+b p_2^2$}{22}{0}{4}
 \beamer@sectionintoc {5}{Transformaci\'on como evoluci\'on}{29}{0}{5}
 \beamer@sectionintoc {6}{Transformaciones y Coordenadas Hamiltonianas C\IeC {\'\i }clicas}{35}{0}{6}
+\beamer@sectionintoc {7}{Recapitulando}{52}{0}{7}
+\beamer@sectionintoc {8}{Para la discusi\'on}{56}{0}{8}

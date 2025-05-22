@@ -173,7 +173,58 @@ $Q_j  \equiv q_j\left(t_0+d t\right) =q_j\left(t_0\right)+\dot{q}_j d t+\cdots=q
 	\item<10-> Donde $\left(\frac{2 E}{m \omega^2}\right)^{1 / 2}$ es la amplitud y $\varphi$ es la fase.
 
 \end{itemize}
-}  
+}
+%
+%%%%%%%%%  
+\section{Recapitulando}
+\frame{
+\frametitle{Recapitulando}
+\begin{itemize}  
+	\item<1-> {\bf Transformaciones Canónicas Infinitesimales}:
+	\begin{itemize}
+    	\item Forma general: $Q_i = q_i + \epsilon f_i(q_j, p_j)$, $P_i = p_i + \epsilon g_i(q_j, p_j)$
+    	\item Función generadora: $F_2(q_i, P_i) = \sum q_i P_i + \epsilon G(q_i, P_i)$
+    	\item Relaciones: $ f_i = \frac{\partial G}{\partial P_i}, \quad g_i = -\frac{\partial G}{\partial q_i}$
+	\end{itemize}
+	\item<2-> {\bf Invariancia e Invariantes}:
+	\begin{itemize}
+    	\item El cambio de una función $K$ del espacio de fase: $ \delta K = \epsilon \{K, G\}$
+    	\item Si $K$ es invariante bajo la transformación: $\{K, G\} = 0$
+	\end{itemize}
+	\item<3-> {\bf Simetrías y Cantidades Conservadas}
+	\begin{itemize}
+    	\item Si $\mathcal{H}$ es invariante bajo la transformación: $\{\mathcal{H}, G\} = 0$
+    	\item Entonces: $\frac{dG}{dt} = \{G, \mathcal{H}\} + \frac{\partial G}{\partial t} = 0 \Rightarrow G$ es  constante.
+    	\item Esto es análogo al Teorema de Noether en el formalismo hamiltoniano.
+	\end{itemize}
+	\item<4-> {\bf Ejemplo de Hamiltoniano} $\mathcal{H} = q_1p_1 + q_2p_2 + ap_1^2 + bp_2^2$
+	\begin{itemize}
+    	\item Constantes del movimiento: $f_1 = p_1(q_1 + ap_1)$, $f_2 = \frac{p_1}{p_2}$
+    	\item Se cumple: $\{f_1, \mathcal{H}\} = 0$, $\{f_2, \mathcal{H}\} = 0$
+    	\item Por simetría: $f_3 = p_2(q_2 + bp_2)$ también es conservada.
+    	\item Usando ecuaciones de movimiento: $f_4 = p_1 e^t$, $f_5 = p_2 e^t$
+	\end{itemize}
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Para la discusión}
+\frame{
+\frametitle{Para la discusión}
+Vuelve el oscilador harmónico clásico anisótropo, pero ahora el  sistema responde a un Hamiltoniano $\mathcal{H} = \frac{p_x^2}{2m} + \frac{p_y^2}{2m} + \frac{1}{2} k_x x^2 + \frac{1}{2} k_y y^2 $
+\begin{enumerate}
+	\item Determine la  trayectoria del sistema en el espacio de fase $(x,y, p_x, p_y)$. Suponga que conoce las condiciones iniciales $x =x(t=0)$, $y =y(t=0)$, $p_x =p_x(t=0)$ y $p_y ~=~p_y(t~=~0)$ 
+%
+        \item Dada las siguientes cantidades comprobar cuáles corresponde a constantes de movimiento y, en el caso que no lo sean, mostrar cuales condiciones tendrían que cumplir el sistema para que lo fueran. 
+        \begin{enumerate}
+        		\item las energías $E_x = \frac{p_x^2}{2m} +\frac{k_1 x^2}{2}$ y $E_y = \frac{p_y^2}{2m} +\frac{k_2 y^2}{2}$.    
+        %
+        		\item la componente $z$ de cantidad de movimiento angular $L_z = yp_x - x p_y$
+        %
+        		\item Cantidad conservada de cizalladura $K = \omega_x x \, \omega_y y + \frac{p_xp_y}{m^2}$. \\ Con $\omega_i = \sqrt{\frac{k_i}{m}}$, donde $i = x, y$
+	\end{enumerate}
+\end{enumerate}
+}
 \end{document}
 %
 %%%%% Diapo 2
@@ -188,4 +239,21 @@ $Q_j  \equiv q_j\left(t_0+d t\right) =q_j\left(t_0\right)+\dot{q}_j d t+\cdots=q
 	\begin{figure}[t]
 		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
    	\end{figure}
+
+
+%%%%%%%%%%%%
+
+Vuelve el oscilador harmónico clásico anisótropo, pero ahora el  sistema responde a un Hamiltoniano \[\mathcal{H} = \frac{p_x^2}{2m} + \frac{p_y^2}{2m} + \frac{1}{2} k_x x^2 + \frac{1}{2} k_y y^2  \]
+    \begin{enumerate}
+        \item Determine la  trayectoria del sistema en el espacio de fase $(x,y, p_x, p_y)$. Suponga que conoce las condiciones iniciales $x =x(t=0)$, $y =y(t=0)$, $p_x =p_x(t=0)$ y $p_y ~=~p_y(t~=~0)$ (5ptos)
+
+        \item Dada las siguientes cantidades comprobar cuáles corresponde a constantes de movimiento y, en el caso que no lo sean, mostrar cuales condiciones tendrían que cumplir el sistema para que lo fueran (5 ptos). 
+        \begin{enumerate}
+        \item las energías $E_x = \frac{p_x^2}{2m} +\frac{k_1 x^2}{2}$ y $E_y = \frac{p_y^2}{2m} +\frac{k_2 y^2}{2}$.    
+        %
+        \item la componente $z$ de cantidad de movimiento angular $L_z = yp_x - x p_y$
+        %
+        \item Cantidad conservada de cizalladura $K = \omega_x x \, \omega_y y + \frac{p_xp_y}{m^2}$.  Con $\omega_i = \sqrt{\frac{k_i}{m}}$, donde $i = x, y$
+        \end{enumerate}
+
 	

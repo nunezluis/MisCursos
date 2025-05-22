@@ -13,3 +13,4 @@
 \beamer@subsectionintoc {2}{3}{Dos ejemplos}{55}{0}{2}
 \beamer@subsectionintoc {2}{4}{Par\'entesis de Poisson y Transformaciones Can\'onicas}{58}{0}{2}
 \beamer@sectionintoc {3}{Recapitulando}{68}{0}{3}
+\beamer@sectionintoc {4}{Para la discusi\'on}{74}{0}{4}
