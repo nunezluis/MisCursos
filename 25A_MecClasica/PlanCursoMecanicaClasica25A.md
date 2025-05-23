@@ -627,6 +627,37 @@ La semana 10 del sólido rígido
 + [Las ecuaciones de Euler](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Preparar/MecanicaClasica/MecClasSem12/MC_S12T2EcEuler.pdf)
 + [Navegación Inercial y Efecto Coriolis](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Preparar/MecanicaClasica/MecClasSem12/MC_S12T3Coriolis.pdf)
 
+#### Contenidos de esta semana
+
+* **El Lagrangiano del Trompo**: Sistema con eje de simetría / punto fijo
+
+  * Energía cinética: $T = \frac{1}{2} I_{11}(\dot{\theta}^2 + \dot{\phi}^2 \sin^2\theta) + \frac{1}{2} I_{33} (\dot{\psi} + \dot{\phi} \cos\theta)^2$
+  * Energía potencial: $V = mgd \cos\theta$
+  * Lagrangiano: $\mathcal{L} = T - V$
+
+* **Coordenadas cíclicas y cantidades conservadas**
+  * Coordenadas generalizadas: $\theta, \phi, \psi$; Coordenadas cíclicas: $\phi, \psi$
+  * Cantidades conservadas: $L_3 = I_{33}(\dot{\psi} + \dot{\phi} \cos\theta)$,  $L_z = (I_{11} \sin^2\theta + I_{33} \cos^2\theta) \dot{\phi} + I_{33} \dot{\psi} \cos\theta$, y la $\mathcal{E} = T + V$
+
+* **Primeras integrales**
+   * $\dot{\phi} = \frac{L_z - L_3 \cos\theta}{I_{11} \sin^2\theta}$
+   * $\dot{\psi} = \frac{L_3}{I_{33}} - \frac{(L_z - L_3 \cos\theta) \cos\theta}{I_{11} \sin^2\theta}$
+   * $\dot{\theta} = \sqrt{ \frac{2}{I_{11}} \left( E - \frac{(L_z - L_3 \cos\theta)^2}{2 I_{11} \sin^2\theta} - \frac{L_3^2}{2 I_{33}} + mgd \cos\theta \right) }$
+
+* **Potencial Efectivo**: Definimos  $\mathcal{E}' = \mathcal{E} - \frac{L_3^2}{2 I_{33}}$
+  * Energía efectiva: $\mathcal{E}' = \frac{1}{2} I_{11} \dot{\theta}^2 + V_{\text{ef}}(\theta)$
+  * Potencial efectivo: $V_{\text{ef}}(\theta) = \frac{(L_z - L_3 \cos\theta)^2}{2 I_{11} \sin^2\theta} + mgd \cos\theta$
+
+* **Nutación y Rotación**
+  * Movimiento unidimensional en $\theta$ entre puntos de retorno $\theta_1$ y $\theta_2$
+  * Periodo de nutación: $T_{\text{nut}} = 2 \sqrt{\frac{I_{11}}{2}} \int_{\theta_1}^{\theta_2} \frac{d\theta}{\sqrt{\mathcal{E}' - V_{\text{ef}}(\theta)}}$
+  * Comportamiento de $\dot{\phi}$:
+    * $\dot{\phi} > 0$ si $L_z > L_3 \cos\theta$ para todo $\theta$
+    * $\dot{\phi} = 0$ en $\theta_i$ si $L_z = L_3 \cos\theta_i$
+    * Puede cambiar de signo si $L_z < L_3 \cos\theta$ en algún intervalo
+
+
+
 ### Clase S13-C25/C26
 
 + [Dinamica Hamiltoniana](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T1EcHamilton.pdf)

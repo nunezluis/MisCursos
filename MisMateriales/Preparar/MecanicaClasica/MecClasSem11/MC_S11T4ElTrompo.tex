@@ -6,6 +6,9 @@
 \renewcommand{\CancelColor}{\color{red}} %change cancel color to red
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{physics}
+\usepackage{tikz}
+\usetikzlibrary{3d,calc}
 \usepackage{dsfont}
 \usepackage{graphicx}
 \usepackage{geometry}
@@ -59,7 +62,7 @@ Sea $I_{i k}$ el tensor de inercia de un cuerpo rígido (un sistema de $N$ partíc
 	\item<5-> Sustituyendo, 
 	$I_{i k}^{\prime}=  \sum_j^N m_j\left[\left(r_j^2+a^2-2 \sum_l^3 x_l a_l\right) \delta_{i k}-\left(x_i-a_i\right)\left(x_k-a_k\right)\right]$
 	$I_{i k}^{\prime}=  \sum_j^N m_j\left(r_j^2 \delta_{i k}-x_i x_k\right)+\sum_j^N m_j\left(a^2 \delta_{i k}-a_i a_k\right)$
-	$\qquad -2 \sum_j^N m_j \sum_l^3 x_l a_l \delta_{i k}+\sum_j^N m_j x_i a_k+\sum_j^N m_j x_k a_i$
+	\vspace{1cm} $\qquad -2 \sum_j^N m_j \sum_l^3 x_l a_l \delta_{i k}+\sum_j^N m_j x_i a_k+\sum_j^N m_j x_k a_i$
 \end{itemize}
 }
 %%%%% Diapo 2
@@ -218,6 +221,22 @@ $$
   		\end{itemize}
 	\end{itemize}
 \end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Para la discusión}
+\frame{
+\frametitle{Para la discusión}
+{\bf El péndulo esférico rígido} \\
+Consideramos una barra rígida de masa \( M \) y longitud \( \ell \), que cuelga fija por un extremo. El sistema se puede mover libremente bajo la acción de gravedad generando un hemisferio.
+\begin{itemize}  
+	\item Determine el Lagrangiano del sistema.
+	\item Determine si existen coordenadas cíclícas y sus cantidades conservadas
+	\item Identifique las primeras integrales
+	\item Determine la condición sobre \( p_\phi \) para que la barra oscile en un plano
+	\item Escriba las ecuaciones de movimiento del sistema
+	\item Considere un movimiento con ángulos pequeños e integre las ecuaciones de movimiento 
+\end{itemize}
 }	
 \end{document}
 %
@@ -235,81 +254,75 @@ $$
    	\end{figure}
 	
 
+Aquí tienes el ejercicio del péndulo esférico en formato Beamer, listo para incluirse en tus clases:
+
+---
+
+```latex
 \documentclass{beamer}
 \usepackage{amsmath}
 \usepackage{physics}
 
-\title{El Trompo de Lagrange}
-\author{L.A. Núñez (UIS)}
-\date{29 de abril de 2025}
+\title{Ejercicio: El Péndulo Esférico}
+\author{Curso de Mecánica Clásica}
+\date{}
 
 \begin{document}
 
 \frame{\titlepage}
 
-\begin{frame}{El Lagrangiano del Trompo}
+\begin{frame}{Descripción del sistema}
 \begin{itemize}
-  \item Sistema con eje de simetría y punto fijo.
-  \item Energía cinética: 
+  \item Consideramos una masa puntual \( m \) suspendida de una cuerda rígida de longitud \( \ell \), sin masa.
+  \item El movimiento es libre en un hemisferio: péndulo esférico.
+  \item Coordenadas esféricas:
   \[
-  T = \frac{1}{2} I_{11}(\dot{\theta}^2 + \dot{\phi}^2 \operatorname{sen}^2\theta) + \frac{1}{2} I_{33} (\dot{\psi} + \dot{\phi} \cos\theta)^2
-  \]
-  \item Energía potencial:
-  \[
-  V = mgd \cos\theta
-  \]
-  \item Lagrangiano: \( L = T - V \)
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Coordenadas cíclicas y cantidades conservadas}
-\begin{itemize}
-  \item Coordenadas generalizadas: \( \theta, \phi, \psi \)
-  \item Coordenadas cíclicas: \( \phi, \psi \)
-  \item Cantidades conservadas:
-  \[
-  L_3 = I_{33}(\dot{\psi} + \dot{\phi} \cos\theta), \quad
-  L_z = (I_{11} \operatorname{sen}^2\theta + I_{33} \cos^2\theta) \dot{\phi} + I_{33} \dot{\psi} \cos\theta
-  \]
-  \item Energía total: \( E = T + V \)
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Primeras integrales}
-\begin{align*}
-\dot{\phi} &= \frac{L_z - L_3 \cos\theta}{I_{11} \operatorname{sen}^2\theta} \\
-\dot{\psi} &= \frac{L_3}{I_{33}} - \frac{(L_z - L_3 \cos\theta) \cos\theta}{I_{11} \operatorname{sen}^2\theta} \\
-\dot{\theta} &= \sqrt{\frac{2}{I_{11}} \left( E - \frac{(L_z - L_3 \cos\theta)^2}{2 I_{11} \operatorname{sen}^2\theta} - \frac{L_3^2}{2 I_{33}} + mgd \cos\theta \right)}
-\end{align*}
-\end{frame}
-
-\begin{frame}{Potencial Efectivo}
-\begin{itemize}
-  \item Se define \( E' = E - \frac{L_3^2}{2 I_{33}} \)
-  \item Energía efectiva:
-  \[
-  E' = \frac{1}{2} I_{11} \dot{\theta}^2 + V_{\text{ef}}(\theta)
-  \]
-  \item Potencial efectivo:
-  \[
-  V_{\text{ef}}(\theta) = \frac{(L_z - L_3 \cos\theta)^2}{2 I_{11} \operatorname{sen}^2\theta} + mgd \cos\theta
+  x = \ell \sin\theta \cos\phi, \quad
+  y = \ell \sin\theta \sin\phi, \quad
+  z = -\ell \cos\theta
   \]
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Nutación y Rotación}
+\begin{frame}{Parte A: Lagrangiano y coordenadas cíclicas}
+\textbf{1.} Escriba el Lagrangiano en términos de \( \theta \) y \( \phi \):
+\[
+L = T - V = \frac{1}{2} m \ell^2 (\dot{\theta}^2 + \sin^2\theta \dot{\phi}^2) + mg\ell \cos\theta
+\]
+
+\textbf{2.} Identifique la coordenada cíclica y obtenga la cantidad conservada correspondiente.
+\end{frame}
+
+\begin{frame}{Parte B: Primeras integrales}
+\textbf{3.} Usando la conservación de la energía, derive la ecuación del movimiento para \( \theta(t) \):
+\[
+\frac{1}{2} m \ell^2 \dot{\theta}^2 + V_{\text{ef}}(\theta) = E
+\]
+\textbf{donde:}
+\[
+V_{\text{ef}}(\theta) = \frac{p_\phi^2}{2 m \ell^2 \sin^2 \theta} - mg\ell \cos\theta
+\]
+
+\textbf{Interprete físicamente este potencial efectivo.}
+\end{frame}
+
+\begin{frame}{Parte C: Movimiento confinado a un plano}
+\textbf{4.} ¿Cuáles son las condiciones necesarias para que el movimiento se reduzca al de un péndulo plano? \\
+\vspace{0.5em}
+\textbf{Discuta:}
 \begin{itemize}
-  \item Movimiento unidimensional en \( \theta \) entre puntos de retorno \( \theta_1, \theta_2 \)
-  \item Periodo de nutación:
-  \[
-  T_{\text{nut}} = 2 \sqrt{\frac{I_{11}}{2}} \int_{\theta_1}^{\theta_2} \frac{d\theta}{\sqrt{E' - V_{\text{ef}}(\theta)}}
-  \]
-  \item Comportamiento de \( \dot{\phi} \):
-  \begin{itemize}
-    \item \( \dot{\phi} > 0 \) si \( L_z > L_3 \cos\theta \ \forall \theta \)
-    \item \( \dot{\phi} = 0 \) en \( \theta_i \) si \( L_z = L_3 \cos\theta_i \)
-    \item Puede cambiar de signo si \( L_z < L_3 \cos\theta \) en algún intervalo
-  \end{itemize}
+  \item ¿Qué implica que \( \dot{\phi} = 0 \)?
+  \item ¿Qué papel juega el momento angular conservado?
+  \item ¿Qué sucede si se rompe la simetría axial?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Objetivos del ejercicio}
+\begin{itemize}
+  \item Aplicar el formalismo lagrangiano a un sistema con restricciones geométricas.
+  \item Identificar simetrías y sus cantidades conservadas.
+  \item Usar el concepto de potencial efectivo para interpretar el movimiento angular.
+  \item Contrastar con el caso del trompo de Lagrange.
 \end{itemize}
 \end{frame}
 
@@ -318,6 +331,4 @@ $$
 
 ---
 
-¿Deseas también un diagrama ilustrativo o una animación para mostrar la nutación y precesión?
-
-
+¿Te gustaría que añada también una animación o figura para ilustrar la trayectoria del péndulo en la esfera?
