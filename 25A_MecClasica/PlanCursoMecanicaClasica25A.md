@@ -656,6 +656,38 @@ La semana 10 del sólido rígido
     * $\dot{\phi} = 0$ en $\theta_i$ si $L_z = L_3 \cos\theta_i$
     * Puede cambiar de signo si $L_z < L_3 \cos\theta$ en algún intervalo
 
+#### Energía Cinética, Momento de Inercia y Ecuaciones de Movimiento
+
+* **Energía Cinética Total:** $T = \frac{1}{2} M v_{cm}^2 + \frac{1}{2} \sum_j m_j (\boldsymbol{\Omega} \times \mathbf{r}_j)^2 \Rightarrow
+  T = \frac{1}{2} M v_{cm}^2 + \frac{1}{2} \boldsymbol{\Omega}^T \boldsymbol{I} \boldsymbol{\Omega}
+  = \frac{1}{2} M v_{cm}^2 + \frac{1}{2} \sum_{i,k} \Omega_i I^i_k \Omega^k$
+
+* **Tensor de Inercia:** $I_{ik} = \sum_j m_j \left( r_j^2 \delta_{ik} - x_{i,j} x_{k,j} \right)$
+
+* **Velocidad angular:**
+$\boldsymbol{\Omega}(t) = (\nu \cos \omega t, \nu \sin \omega t, \omega)$
+
+* **Momento Angular:**
+$\mathbf{L} = \sum_j m_j \mathbf{r}_j \times (\boldsymbol{\Omega} \times \mathbf{r}_j) = \boldsymbol{I} \boldsymbol{\Omega}$
+
+* En general $\mathbf{L} \nparallel \boldsymbol{\Omega}$. Solo para cuerpos esféricos o con $\boldsymbol{\Omega}$ alineado a un eje principal ocurre $\mathbf{L} \parallel \boldsymbol{\Omega}$.
+
+* **Energía cinética:**
+$T = \frac{1}{2}(I_{11} \cos^2 \omega t + I_{22} \sin^2 \omega t)\nu^2 + \frac{1}{2} I_{33} \omega^2$
+
+* **Elipsoide en rotación:** Precesión de los ejes principales del elipsoide.
+* **Ecuaciones de Movimiento:**
+  * Se plantean con ángulos de Euler $(\theta, \phi, \psi)$.
+  * Lagrangiano: $\mathcal{L} = T(\theta, \phi, \psi, \dot{\theta}, \dot{\phi}, \dot{\psi}) - V(\theta, \phi, \psi)$
+  * Casos con simetría (esfera o trompo) permiten reducción del sistema.
+
+### Ejemplo: Cilindro Rodante
+* **Sistema:** Cilindro de masa $M$, radio $a$, en cavidad de radio $R > a$.
+* **Condiciones:** $ v_{cm} = (R - a)\dot{\varphi}, \quad \Omega_3 = \frac{v_{cm}}{a}, \quad I_{33} = \frac{1}{2} M a^2$
+* **Energías:** $T = \frac{3}{4} M (R - a)^2 \dot{\varphi}^2, \quad V = -Mg(R - a) \cos \varphi, \quad \mathcal{L} = T - V$
+* **Ecuación de movimiento:** $\ddot{\varphi} + \frac{2g}{3(R - a)} \varphi = 0$
+   Es un oscilador armónico simple con frecuencia angular: $\omega^2 = \frac{2g}{3(R - a)}$
+
 
 
 ### Clase S13-C25/C26
