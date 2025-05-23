@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  29 APR 2025 14:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  23 MAY 2025 11:27
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -988,7 +988,7 @@ Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 24.
 
 </Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png,
- id=54, 184.5294pt x 136.1085pt>
+ id=58, 184.5294pt x 136.1085pt>
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
@@ -1039,7 +1039,7 @@ LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
 (Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
 (Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 49.
-<Figuras/EjesParalelos.png, id=132, 916.42375pt x 544.0325pt>
+<Figuras/EjesParalelos.png, id=138, 916.42375pt x 544.0325pt>
 File: Figuras/EjesParalelos.png Graphic file (type png)
 <use Figuras/EjesParalelos.png>
 Package pdftex.def Info: Figuras/EjesParalelos.png  used on input line 49.
@@ -1124,7 +1124,7 @@ stitucional/UISLOGO.png  used on input line 79.
  [10
 
 ]
-<Figuras/TrompoLagrange.png, id=353, 1136.245pt x 525.965pt>
+<Figuras/TrompoLagrange.png, id=359, 1136.245pt x 525.965pt>
 File: Figuras/TrompoLagrange.png Graphic file (type png)
 <use Figuras/TrompoLagrange.png>
 Package pdftex.def Info: Figuras/TrompoLagrange.png  used on input line 94.
@@ -1390,7 +1390,7 @@ stitucional/UISLOGO.png  used on input line 139.
  [32
 
 ]
-<Figuras/MinPotencialTrompo.png, id=936, 1128.215pt x 666.49pt>
+<Figuras/MinPotencialTrompo.png, id=942, 1128.215pt x 666.49pt>
 File: Figuras/MinPotencialTrompo.png Graphic file (type png)
 <use Figuras/MinPotencialTrompo.png>
 Package pdftex.def Info: Figuras/MinPotencialTrompo.png  used on input line 157
@@ -1467,7 +1467,7 @@ stitucional/UISLOGO.png  used on input line 157.
  [37
 
 ]
-<Figuras/NutacionTrompo.png, id=1071, 1040.88875pt x 462.72874pt>
+<Figuras/NutacionTrompo.png, id=1077, 1040.88875pt x 462.72874pt>
 File: Figuras/NutacionTrompo.png Graphic file (type png)
 <use Figuras/NutacionTrompo.png>
 Package pdftex.def Info: Figuras/NutacionTrompo.png  used on input line 172.
@@ -1538,6 +1538,69 @@ stitucional/UISLOGO.png  used on input line 172.
  [42
 
 ]
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 202.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <7> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 202.
+
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 202.
+
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 202.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [43
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 202.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [44
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 202.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+[45
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 202.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [46
+
+]
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <9> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 221.
+
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 221.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [47
+
+]
 \tf@nav=\write6
 \openout6 = `MC_S11T4ElTrompo.nav'.
 
@@ -1547,42 +1610,48 @@ stitucional/UISLOGO.png  used on input line 172.
 \tf@snm=\write8
 \openout8 = `MC_S11T4ElTrompo.snm'.
 
-
-(./MC_S11T4ElTrompo.aux
+ (./MC_S11T4ElTrompo.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
 Package rerunfilecheck Info: File `MC_S11T4ElTrompo.out' has not changed.
-(rerunfilecheck)             Checksum: CE83E2FDD96B30DE5B3CA349DEB322DB;1284.
+(rerunfilecheck)             Checksum: 6DC32C4F7FDA8AE6AE411530F47BF169;1392.
  ) 
 Here is how much of TeX's memory you used:
- 24439 strings out of 478268
- 479049 string characters out of 5846347
- 745381 words of memory out of 5000000
- 42018 multiletter control sequences out of 15000+600000
- 482740 words of font info for 70 fonts, out of 8000000 for 9000
+ 24560 strings out of 478268
+ 481803 string characters out of 5846347
+ 746381 words of memory out of 5000000
+ 42120 multiletter control sequences out of 15000+600000
+ 489962 words of font info for 96 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,18n,122p,557b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 ></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr
-/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/lo
-cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/loca
-l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/
-texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/
-texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/t
-exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/tex
-live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texli
-ve/2022/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb>
-Output written on MC_S11T4ElTrompo.pdf (42 pages, 1812873 bytes).
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texl
+ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/local/texliv
+e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texli
+ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texli
+ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texliv
+e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/local/texlive
+/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2022/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2022/texmf
+-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb>
+Output written on MC_S11T4ElTrompo.pdf (47 pages, 1893655 bytes).
 PDF statistics:
- 1296 PDF objects out of 1440 (max. 8388607)
- 1182 compressed objects within 12 object streams
- 92 named destinations out of 1000 (max. 500000)
- 172 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1473 PDF objects out of 1728 (max. 8388607)
+ 1337 compressed objects within 14 object streams
+ 103 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  22 MAY 2025 05:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  23 MAY 2025 11:06
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1478,7 +1478,11 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 176.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [42
+
+Overfull \vbox (0.954pt too high) detected at line 176
+ []
+
+[42
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1488,7 +1492,11 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 176.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [43
+
+Overfull \vbox (0.954pt too high) detected at line 176
+ []
+
+[43
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1498,7 +1506,11 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 176.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [44
+
+Overfull \vbox (0.954pt too high) detected at line 176
+ []
+
+[44
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1508,7 +1520,11 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 176.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [45
+
+Overfull \vbox (0.954pt too high) detected at line 176
+ []
+
+[45
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1518,7 +1534,11 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 176.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [46
+
+Overfull \vbox (0.954pt too high) detected at line 176
+ []
+
+[46
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1528,6 +1548,9 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 176.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \vbox (0.954pt too high) detected at line 176
+ []
 
 [47
 
@@ -1539,7 +1562,11 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 176.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [48
+
+Overfull \vbox (0.954pt too high) detected at line 176
+ []
+
+[48
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1549,7 +1576,11 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 176.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [49
+
+Overfull \vbox (0.954pt too high) detected at line 176
+ []
+
+[49
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1559,7 +1590,11 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 176.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [50
+
+Overfull \vbox (0.954pt too high) detected at line 176
+ []
+
+[50
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1569,7 +1604,11 @@ png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
 stitucional/UISLOGO.png  used on input line 176.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [51
+
+Overfull \vbox (0.954pt too high) detected at line 176
+ []
+
+[51
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1642,7 +1681,7 @@ Package rerunfilecheck Info: File `MC_S14T1AplicCanonicas.out' has not changed.
 Here is how much of TeX's memory you used:
  24497 strings out of 478268
  480278 string characters out of 5846347
- 748416 words of memory out of 5000000
+ 748417 words of memory out of 5000000
  42055 multiletter control sequences out of 15000+600000
  483286 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1663,7 +1702,7 @@ l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/t
 exlive/2022/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/lo
 cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on MC_S14T1AplicCanonicas.pdf (56 pages, 458285 bytes).
+Output written on MC_S14T1AplicCanonicas.pdf (56 pages, 458438 bytes).
 PDF statistics:
  1674 PDF objects out of 1728 (max. 8388607)
  1547 compressed objects within 16 object streams

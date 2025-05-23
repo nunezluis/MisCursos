@@ -170,8 +170,57 @@ $$
    	\end{figure}
 \end{itemize}
 }
-	
+%
+%%%%% Diapo 2
+\section{Recapitulando}
+\frame{
+\frametitle{Recapitulando 1/2}
+\begin{itemize}  
+	\item<1-> {\bf El Lagrangiano del Trompo}: Sistema con eje de simetría/punto fijo
+	\begin{itemize}
+  		\item Energía cinética: $T = \frac{1}{2} I_{11}(\dot{\theta}^2 + \dot{\phi}^2 \operatorname{sen}^2\theta) + \frac{1}{2} I_{33} (\dot{\psi} + \dot{\phi} \cos\theta)^2$
+  		\item Energía potencial:  $V = mgd \cos\theta$
+  		\item Lagrangiano: \( \mathcal{L} = T - V \)
+	\end{itemize}
+	\item<2-> {\bf Coordenadas cíclicas y cantidades conservadas}
+	\begin{itemize}
+  	\item Coordenadas generalizadas: \( \theta, \phi, \psi \); Coordenadas cíclicas: \( \phi, \psi \)
+  	\item Cantidades conservadas: $ L_3 = I_{33}(\dot{\psi} + \dot{\phi} \cos\theta)$, $L_z = (I_{11} \operatorname{sen}^2\theta + I_{33} \cos^2\theta) \dot{\phi} + I_{33} \dot{\psi} \cos\theta$, \( \mathcal{E} = T + V \)
+	\end{itemize}
+	\item<3-> {\bf Primeras integrales}
+		\begin{itemize} 
+  		\item $\dot{\phi} = \frac{L_z - L_3 \cos\theta}{I_{11} \operatorname{sen}^2\theta}$, $
+		\quad \dot{\psi} = \frac{L_3}{I_{33}} - \frac{(L_z - L_3 \cos\theta) \cos\theta}{I_{11} \operatorname{sen}^2\theta}$
+  		\item $\dot{\theta} = \sqrt{ \frac{2}{I_{11}} \left( E - \frac{(L_z - L_3 \cos\theta)^2}{2 I_{11} \operatorname{sen}^2\theta} - \frac{L_3^2}{2 I_{33}} + mgd \cos\theta  \right) }$
+		\end{itemize}
+	\item<4-> {\bf Potencial Efectivo:} Se define \( \mathcal{E}' = \mathcal{E} - \frac{L_3^2}{2 I_{33}} \)
+	\begin{itemize}
+  		\item Energía efectiva: $\mathcal{E}' = \frac{1}{2} I_{11} \dot{\theta}^2 + V_{\text{ef}}(\theta)$
+  		\item Potencial efectivo: $V_{\text{ef}}(\theta) = \frac{(L_z - L_3 \cos\theta)^2}{2 I_{11} \operatorname{sen}^2\theta} + mgd \cos\theta $
+	\end{itemize}
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Recapitulando 2/2}
+\begin{itemize}  
+	\item<1-> {\bf Nutación y Rotación}
+	\begin{itemize}
+  		\item Movimiento unidimensional en \( \theta \) entre puntos de retorno $\theta_1$, y  $\theta_2$
+  		\item Periodo de nutación: $ T_{\text{nut}} = 2 \sqrt{\frac{I_{11}}{2}} \int_{\theta_1}^{\theta_2} \frac{d\theta}{\sqrt{\mathcal{E}' - V_{\text{ef}}(\theta)}}$
+  		\item Comportamiento de \( \dot{\phi} \):
+  		\begin{itemize}
+    			\item \( \dot{\phi} > 0 \) si \( L_z > L_3 \cos\theta \ \forall \theta \)
+    			\item \( \dot{\phi} = 0 \) en \( \theta_i \) si \( L_z = L_3 \cos\theta_i \)
+    			\item Puede cambiar de signo si \( L_z < L_3 \cos\theta \) en algún intervalo
+  		\end{itemize}
+	\end{itemize}
+\end{itemize}
+}	
 \end{document}
+%
 %%%%% Diapo 2
 \section{Sección}
 \frame{
@@ -185,3 +234,90 @@ $$
 		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
    	\end{figure}
 	
+
+\documentclass{beamer}
+\usepackage{amsmath}
+\usepackage{physics}
+
+\title{El Trompo de Lagrange}
+\author{L.A. Núñez (UIS)}
+\date{29 de abril de 2025}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{El Lagrangiano del Trompo}
+\begin{itemize}
+  \item Sistema con eje de simetría y punto fijo.
+  \item Energía cinética: 
+  \[
+  T = \frac{1}{2} I_{11}(\dot{\theta}^2 + \dot{\phi}^2 \operatorname{sen}^2\theta) + \frac{1}{2} I_{33} (\dot{\psi} + \dot{\phi} \cos\theta)^2
+  \]
+  \item Energía potencial:
+  \[
+  V = mgd \cos\theta
+  \]
+  \item Lagrangiano: \( L = T - V \)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Coordenadas cíclicas y cantidades conservadas}
+\begin{itemize}
+  \item Coordenadas generalizadas: \( \theta, \phi, \psi \)
+  \item Coordenadas cíclicas: \( \phi, \psi \)
+  \item Cantidades conservadas:
+  \[
+  L_3 = I_{33}(\dot{\psi} + \dot{\phi} \cos\theta), \quad
+  L_z = (I_{11} \operatorname{sen}^2\theta + I_{33} \cos^2\theta) \dot{\phi} + I_{33} \dot{\psi} \cos\theta
+  \]
+  \item Energía total: \( E = T + V \)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Primeras integrales}
+\begin{align*}
+\dot{\phi} &= \frac{L_z - L_3 \cos\theta}{I_{11} \operatorname{sen}^2\theta} \\
+\dot{\psi} &= \frac{L_3}{I_{33}} - \frac{(L_z - L_3 \cos\theta) \cos\theta}{I_{11} \operatorname{sen}^2\theta} \\
+\dot{\theta} &= \sqrt{\frac{2}{I_{11}} \left( E - \frac{(L_z - L_3 \cos\theta)^2}{2 I_{11} \operatorname{sen}^2\theta} - \frac{L_3^2}{2 I_{33}} + mgd \cos\theta \right)}
+\end{align*}
+\end{frame}
+
+\begin{frame}{Potencial Efectivo}
+\begin{itemize}
+  \item Se define \( E' = E - \frac{L_3^2}{2 I_{33}} \)
+  \item Energía efectiva:
+  \[
+  E' = \frac{1}{2} I_{11} \dot{\theta}^2 + V_{\text{ef}}(\theta)
+  \]
+  \item Potencial efectivo:
+  \[
+  V_{\text{ef}}(\theta) = \frac{(L_z - L_3 \cos\theta)^2}{2 I_{11} \operatorname{sen}^2\theta} + mgd \cos\theta
+  \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Nutación y Rotación}
+\begin{itemize}
+  \item Movimiento unidimensional en \( \theta \) entre puntos de retorno \( \theta_1, \theta_2 \)
+  \item Periodo de nutación:
+  \[
+  T_{\text{nut}} = 2 \sqrt{\frac{I_{11}}{2}} \int_{\theta_1}^{\theta_2} \frac{d\theta}{\sqrt{E' - V_{\text{ef}}(\theta)}}
+  \]
+  \item Comportamiento de \( \dot{\phi} \):
+  \begin{itemize}
+    \item \( \dot{\phi} > 0 \) si \( L_z > L_3 \cos\theta \ \forall \theta \)
+    \item \( \dot{\phi} = 0 \) en \( \theta_i \) si \( L_z = L_3 \cos\theta_i \)
+    \item Puede cambiar de signo si \( L_z < L_3 \cos\theta \) en algún intervalo
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\end{document}
+```
+
+---
+
+¿Deseas también un diagrama ilustrativo o una animación para mostrar la nutación y precesión?
+
+

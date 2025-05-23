@@ -6,3 +6,4 @@
 \beamer@sectionintoc {5}{Primeras integrales}{29}{0}{5}
 \beamer@sectionintoc {6}{Potencial efectivo}{33}{0}{6}
 \beamer@sectionintoc {7}{Nutaci\'on y rotaci\'on}{38}{0}{7}
+\beamer@sectionintoc {8}{Recapitulando}{43}{0}{8}

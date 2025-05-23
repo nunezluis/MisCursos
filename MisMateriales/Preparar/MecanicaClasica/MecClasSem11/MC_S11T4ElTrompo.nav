@@ -41,8 +41,15 @@
 \headcommand {\sectionentry {7}{Nutaci\'on y rotaci\'on}{38}{Nutaci\'on y rotaci\'on}{0}}
 \headcommand {\slideentry {7}{0}{1}{38/42}{}{0}}
 \headcommand {\beamer@framepages {38}{42}}
-\headcommand {\beamer@partpages {1}{42}}
-\headcommand {\beamer@subsectionpages {38}{42}}
 \headcommand {\beamer@sectionpages {38}{42}}
-\headcommand {\beamer@documentpages {42}}
-\headcommand {\gdef \inserttotalframenumber {11}}
+\headcommand {\beamer@subsectionpages {38}{42}}
+\headcommand {\sectionentry {8}{Recapitulando}{43}{Recapitulando}{0}}
+\headcommand {\slideentry {8}{0}{1}{43/46}{}{0}}
+\headcommand {\beamer@framepages {43}{46}}
+\headcommand {\slideentry {8}{0}{2}{47/47}{}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\beamer@partpages {1}{47}}
+\headcommand {\beamer@subsectionpages {43}{47}}
+\headcommand {\beamer@sectionpages {43}{47}}
+\headcommand {\beamer@documentpages {47}}
+\headcommand {\gdef \inserttotalframenumber {13}}
