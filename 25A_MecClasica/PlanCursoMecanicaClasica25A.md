@@ -628,7 +628,7 @@ La semana 10 del sólido rígido
 + [Navegación Inercial y Efecto Coriolis](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Preparar/MecanicaClasica/MecClasSem12/MC_S12T3Coriolis.pdf)
 
 #### Contenidos de esta semana
-
+##### El Trompo de Lagrange
 * **El Lagrangiano del Trompo**: Sistema con eje de simetría / punto fijo
 
   * Energía cinética: $T = \frac{1}{2} I_{11}(\dot{\theta}^2 + \dot{\phi}^2 \sin^2\theta) + \frac{1}{2} I_{33} (\dot{\psi} + \dot{\phi} \cos\theta)^2$
