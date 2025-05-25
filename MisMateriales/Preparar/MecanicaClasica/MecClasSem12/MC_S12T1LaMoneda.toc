@@ -12,3 +12,4 @@
 \beamer@sectionintoc {3}{Un cono que rueda en un plano horizontal}{45}{0}{3}
 \beamer@subsectionintoc {3}{1}{Coordenadas y ligaduras}{45}{0}{3}
 \beamer@subsectionintoc {3}{2}{Rodar sin deslizar y energ\IeC {\'\i }a cin\'etica}{51}{0}{3}
+\beamer@sectionintoc {4}{Recapitulando}{57}{0}{4}

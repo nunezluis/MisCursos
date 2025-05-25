@@ -51,8 +51,17 @@
 \headcommand {\beamer@subsectionentry {0}{3}{2}{51}{Rodar sin deslizar y energ\IeC {\'\i }a cin\'etica}}
 \headcommand {\slideentry {3}{2}{1}{51/56}{Rodar sin deslizar y energ\IeC {\'\i }a cin\'etica}{0}}
 \headcommand {\beamer@framepages {51}{56}}
-\headcommand {\beamer@partpages {1}{56}}
-\headcommand {\beamer@subsectionpages {51}{56}}
 \headcommand {\beamer@sectionpages {45}{56}}
-\headcommand {\beamer@documentpages {56}}
-\headcommand {\gdef \inserttotalframenumber {12}}
+\headcommand {\beamer@subsectionpages {51}{56}}
+\headcommand {\sectionentry {4}{Recapitulando}{57}{Recapitulando}{0}}
+\headcommand {\slideentry {4}{0}{1}{57/58}{}{0}}
+\headcommand {\beamer@framepages {57}{58}}
+\headcommand {\slideentry {4}{0}{2}{59/60}{}{0}}
+\headcommand {\beamer@framepages {59}{60}}
+\headcommand {\slideentry {4}{0}{3}{61/62}{}{0}}
+\headcommand {\beamer@framepages {61}{62}}
+\headcommand {\beamer@partpages {1}{62}}
+\headcommand {\beamer@subsectionpages {57}{62}}
+\headcommand {\beamer@sectionpages {57}{62}}
+\headcommand {\beamer@documentpages {62}}
+\headcommand {\gdef \inserttotalframenumber {15}}

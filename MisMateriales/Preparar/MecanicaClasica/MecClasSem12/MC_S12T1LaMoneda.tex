@@ -91,7 +91,7 @@ Algunas animaciones ilustrativas en \url{https://rotations.berkeley.edu/the-roll
 \frame{
 \frametitle{Simetrías y Constantes de movimiento}
 \begin{itemize}  
-	\item<1-> El Lagrangeano $\mathcal{L} = T-V \Rightarrow$ $\mathcal{L} = \frac{1}{32} a M \left(4 \left(6 a  \dot{\psi}^2+5 a  \dot{\theta}^2-8 g \sin  \theta \right)+8 a  \dot{\phi}  \dot{\psi} (4 \cos  \theta+\cos 2 \theta+1) \right.$ $\qquad \left.+a  \dot{\phi}^2 (10 \cos 2  \theta+\cos 4 \theta+13)\right)$
+	\item<1-> El Lagrangeano $\mathcal{L} = T-V \Rightarrow$ $\mathcal{L} = \frac{1}{32} a M \left(4 \left(6 a  \dot{\psi}^2+5 a  \dot{\theta}^2-8 g \operatorname{sen}  \theta \right)+8 a  \dot{\phi}  \dot{\psi} (4 \cos  \theta+\cos 2 \theta+1) \right.$ $\qquad \left.+a  \dot{\phi}^2 (10 \cos 2  \theta+\cos 4 \theta+13)\right)$
 	%
 	\item<2-> Las coordenadas $\psi$ y $\phi$ son cíclicas y por lo tanto sus momentos conjugados serán constantes $p_{\psi} = \frac{\partial \mathcal{L}}{\partial \dot{\psi}} =$cte y $p_{\phi} = \frac{\partial \mathcal{L}}{\partial \dot{\phi}} =$cte
 	\item<3-> $p_{\psi} = \frac{\partial \mathcal{L}}{\partial \dot{\psi}} = {\rm cte} \quad \Rightarrow$
@@ -100,7 +100,7 @@ Algunas animaciones ilustrativas en \url{https://rotations.berkeley.edu/the-roll
 	\item<5-> Por lo tanto 
 	$\dot{\phi}\to \frac{\csc ^2\left(\frac{\theta}{2}\right) (-6 C_1+4 C_2 \cos \theta+C_2 \cos 2 \theta+C_2)}{a^2 M (-2 \cos 2 \theta+\cos 3 \theta-5)}$
 	$\dot{\psi}\to \frac{\csc ^2\left(\frac{\theta}{2}\right) (4 (2 C_1-5 C_2) \cos 2 \theta+32 C_1 \cos \theta+8 C_1-2 C_2 \cos 4 \theta-26 C_2)}{8 a^2 M (-2 \cos 2 \theta+\cos 3 \theta-5)}$ 
-	\item<6-> La ecuación de movimiento para $\theta$ es  $ 10  \ddot{\theta}+ 4  \dot{\phi}  \dot{\psi} \sin^3\theta \csc ^2\left(\frac{\theta}{2}\right)+  \dot{\phi}^2 (5 \sin 2 \theta+\sin 4 \theta)+ \frac{8g}{a} \cos \theta \ = 0$
+	\item<6-> La ecuación de movimiento para $\theta$ es  $ 10  \ddot{\theta}+ 4  \dot{\phi}  \dot{\psi} \operatorname{sen}^3\theta \csc ^2\left(\frac{\theta}{2}\right)+  \dot{\phi}^2 (5 \operatorname{sen} 2 \theta+\operatorname{sen} 4 \theta)+ \frac{8g}{a} \cos \theta \ = 0$
 \end{itemize}
 }
 
@@ -129,7 +129,7 @@ Un disco delgado, uniforme, de masa $M$ y radio a está enganchado a una varilla 
 \frametitle{Coordenadas y ligaduras}
 \begin{itemize}  
 	\item<1->  Tenemos seis grados de libertad $(x, y, z, \phi, \psi, \theta)$ y cinco ligaduras
-	\item<2-> $\theta=$ constante implica  $\theta+\beta=\frac{\pi}{2}, \quad \tan \beta=\frac{a}{b}, \quad \theta=\frac{\pi}{2}-\arctan \frac{a}{b}$
+	\item<2-> $\theta=$ constante implica  $\theta+\beta=\frac{\pi}{2}, \quad \tan \beta=\frac{a}{b}, \quad \theta=\frac{\pi}{2} -\arctan \frac{a}{b}$
 	\item<3-> $|{\bf R}| = b$. Más aún, ${\bf R} =b {\bf \hat{x}}_3= b\left[\operatorname{sen} \phi \operatorname{sen} \theta {\bf \hat{x}}-\cos \phi \operatorname{sen} \theta {\bf \hat{y}}+\cos \theta {\bf \hat{z}}\right]$,
 	\item<4-> Entonces $x = b\operatorname{sen} \phi \operatorname{sen} \theta $; $\quad y =-b\cos \phi \operatorname{sen} \theta \quad$ y $z = b\cos \theta $ que cumplen con la ecuación $x^2 +y^2 +z^2 = b^2$
 	\item<5-> Derivándolas con $\theta=$ const., se obtiene: $
@@ -228,28 +228,83 @@ Un cono circular uniforme de altura $h$, ángulo de vértice $\alpha$ y masa $m$ r
 	$T=\frac{1}{2} M\left(\dot{x}^2+\dot{y}^2\right)+\frac{I_{11}}{2}  \dot{\phi}^2 \cos ^2 \alpha+\frac{I_{33}}{2} (\dot{\phi} \operatorname{sen} \alpha+\dot{\psi})^2$
 \end{itemize}
 }
+%
+%%%%% Diapo 2
+\section{Recapitulando}
+\frame{
+\frametitle{Recapitulando 1/3}
+{\bf La moneda que rueda sin deslizar}
+\begin{itemize}
+	\item<1-> {\bf El Sistema}
+		\begin{itemize}
+  		\item Disco homogéneo de radio \( a \), masa \( M \), seis grados de libertad.
+  		\item Ligadura: la velocidad del punto de contacto es cero:  
+		$\dot{\mathbf{r}}_{\text{op}} = \dot{\mathbf{R}} + \boldsymbol{\Omega} \times \mathbf{r}_{\text{cp}} = 0$, y se toma \( \psi = 0 \) por simetría.
+		\end{itemize}  
+	\item<2-> {\bf Energía, Lagrangiano y simetrías de la moneda}
+	\begin{itemize}
+  		\item Energía cinética: $T = \frac{1}{2} M (\dot{x}^2 + \dot{y}^2 + \dot{z}^2) + \frac{1}{2} \boldsymbol{\Omega}^T I \boldsymbol{\Omega}$.  Es decir: $T=\frac{1}{2} M\left(\dot{x}^2+\dot{y}^2+\dot{z}^2\right)$ $+\frac{1}{8} M a^2\left[\dot{\phi}^2 \operatorname{sen}^2 \theta+\dot{\theta}^2+2\left(\dot{\phi} \cos \theta^2+\dot{\psi}\right)^2\right]$
+  		\item Energía potencial: \( V = mga \operatorname{sen} \theta \) entonces el Lagrangiano: \( \mathcal{L} = T - V \)
+		\item Simetrías y constantes de movimiento: Coordenadas cíclicas: \( \phi, \psi \)
+		\begin{itemize}
+			\item $p_{\psi} = \frac{\partial \mathcal{L}}{\partial \dot{\psi}} = {\rm cte} \quad \Rightarrow$
+			$\frac{1}{16} a^2 M \left(\dot{\phi} (10 \cos 2 \theta +\cos 4 \theta +13)+4 \dot{\psi} (4 \cos \theta +\cos 2 \theta  +1)\right) = C_1$
+			\item $p_{\phi} = \frac{\partial \mathcal{L}}{\partial \dot{\phi}} = \frac{1}{4} a^2 M \left(\dot{\phi} (4 \cos \theta +\cos 2 \theta +1)+6 \dot{\psi}\right) = C_2$
+			\item La ecuación de movimiento para $\theta$ es  $ 10  \ddot{\theta}+ 4  \dot{\phi}  \dot{\psi} \operatorname{sen}^3\theta \csc ^2\left(\frac{\theta}{2}\right)+  \dot{\phi}^2 (5 \operatorname{sen} 2 \theta+\operatorname{sen} 4 \theta)+ \frac{8g}{a} \cos \theta \ = 0$
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Recapitulando 2/3}
+{\bf La moneda que rueda en un plano inclinado}
+\begin{itemize}  
+	\item<1-> {\bf El Sistema}
+	\begin{itemize}
+  		\item Disco unido a varilla sin masa, rueda sobre plano inclinado.
+  		\item Tenemos seis grados de libertad $(x, y, z, \phi, \psi, \theta)$ y cinco ligaduras
+		\item  $ \dot{x}+a(\dot{\psi} \cos \phi+\dot{\phi} \cos \phi \cos \theta-\dot{\theta} \operatorname{sen} \phi \operatorname{sen} \theta)=0$,  \\
+		$ \dot{y}+a(\dot{\psi} \operatorname{sen} \phi+\dot{\phi} \operatorname{sen} \phi \cos \theta+\dot{\theta} \cos \phi \operatorname{sen} \theta)=0 $ y  
+		$\quad  \dot{z}-a \dot{\theta} \cos \theta=0$, con $\psi = 0$ por la simetría del cuerpo respecto a ${\bf \hat{x}}_3$. 
+		\item Entonces, $\dot{x}=b \dot{\phi} \cos \phi \operatorname{sen} \theta, \quad \dot{y}=b \dot{\phi} \operatorname{sen} \phi \operatorname{sen} \theta, \quad \dot{z}=0$, obtenemos $\dot{\psi}+\dot{\phi}\left[\frac{b}{a} \operatorname{sen} \theta+\cos \theta\right]=0 \Rightarrow \psi=-\frac{\sqrt{a^2+b^2}}{a} \phi$
+	\end{itemize}
+	\item<2-> {\bf Energía, Lagrangiano y ecuación de movimiento}
+	\begin{itemize}
+  		\item Energía cinética: $T=\frac{M}{8} \frac{a^2 b^2+6 b^4}{a^2+b^2} \dot{\phi}^2 \equiv$ $T= T_{tras} + T_{rot} = \frac{1}{2} M(\dot{x}^2+\dot{y}^2+\dot{z}^2)
+	+\frac{1}{2}( I_{11} \tilde{\Omega}_1^2 +I_{22} \tilde{\Omega}_2^2 +I_{33} \tilde{\Omega}_3^2 )$
+		\item La energía potencial será $V = Mg(y \operatorname{sen} \alpha +z \cos \alpha ) \equiv Mgb(-\cos \phi \operatorname{sen} \theta \operatorname{sen} \alpha +\cos \theta \cos \alpha )$
+  		\item La ecuación de movimiento será $\ddot{\phi}=-g \operatorname{sen} \alpha \frac{4\left(a^2+b^2\right)^{3 / 2}}{a^2+6 b^2} \operatorname{sen} \phi$
+	\end{itemize}
 
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Recapitulando 3/3}
+{\bf Cono que rueda sin deslizar en un plano horizontal}
+\begin{itemize}  
+	\item<1-> {\bf El Sistema}
+	\begin{itemize}
+  	\item Cono de altura \( h \), masa \( m \), ángulo de vértice \( \alpha \).
+  	\item Ligaduras: $x= \frac{3h}{4}\cos \phi \operatorname{sen} \theta$, $\quad y= \frac{3h}{4}\operatorname{sen} \phi \operatorname{sen} \theta$ $\quad z = \frac{3h}{4} \cos \theta $.
+  	\item Rodar sin deslizar implica $\dot{{\bf r}}_{op} = 0=\dot{{\bf R}}+  \tilde{ {\bf \Omega}} \times {\bf r}_{cp}$. Se convierte  en $\dot{x}+b \dot{\phi} \cos \phi \cos \theta+b \dot{\psi} \cos \phi  =0$  $\quad \dot{y}+b \dot{\phi} \operatorname{sen} \phi \cos \theta+b \dot{\psi} \operatorname{sen} \phi =0$  
+	\end{itemize}	
+	\item<2-> {\bf Energía Cinética}
+	\begin{itemize}
+  	\item La energía cinética es 
+	$T = T_{tras} + T_{rot} =\frac{1}{2} M\left(\dot{x}^2+\dot{y}^2\right)+\frac{I_{11}}{2} \left[(\Omega^{1})^2+(\Omega^{2})^2\right]+\frac{I_{33}}{2}  (\Omega^{3})^2$ \\
+	$T=\frac{1}{2} M\left(\dot{x}^2+\dot{y}^2\right)+\frac{I_{11}}{2}  \dot{\phi}^2 \cos ^2 \alpha+\frac{I_{33}}{2} (\dot{\phi} \operatorname{sen} \alpha+\dot{\psi})^2$
+	\end{itemize}
+\end{itemize}
+}
  
 \end{document}
 
-\frac{3h}{4}\left[\operatorname{sen} \phi \operatorname{sen} \theta {\bf \hat{x}}-\cos \phi \operatorname{sen} \theta {\bf \hat{y}}+\cos \theta {\bf \hat{z}}\right]$
-
-La energía cinética será 	$T= T_{tras} + T_{rot} = \frac{1}{2} M(\dot{x}^2+\dot{y}^2)
-	+\frac{1}{2}( I_{11} \tilde{\Omega}_1^2 +I_{22} \tilde{\Omega}_2^2 +I_{33} \tilde{\Omega}_3^2 )$ 
-
-	\item<3-> Por su parte, $\tilde{{\bf \Omega}} \times {\bf r}_{cp} = 
-	\left|
-	\begin{array}{ccc} 
-	{\bf \hat{x}}_1 & {\bf \hat{x}}_2 & {\bf \hat{x}}_3 \\
-	\tilde{\Omega}^1 & \tilde{\Omega}^2 & {\tilde \Omega}^3 \\
-	0 & -a & 0
-	\end{array}\right| = a(\tilde{\Omega}^3 \, {\bf \hat{x}}_1 -\tilde{\Omega}^1\, {\bf \hat{x}}_3) $
-
-
-
-
-	\item<3->  La ligadura de rodar sin deslizar implica que la velocidad del punto $p$, en contacto con la superficie, es instantáneamente cero.
-	\item<4-> Esto es: $\vec{r}(op)=\vec{R}+\vec{r}(cp) \Rightarrow \dot{\vec{r}}(op) = 0=\dot{\vec{R}}+  \vec{\Omega} \times \vec{r}(cp)$
 %
 %%%%% Diapo 2
 \section{Sección}
@@ -259,9 +314,113 @@ La energía cinética será 	$T= T_{tras} + T_{rot} = \frac{1}{2} M(\dot{x}^2+\dot{
 	\item<1-> 
 \end{itemize}
 }
-	\item<2->Las tres primeras components con las coordenadas cartesianas del centro $c$ y las siguientes los ángulos de Euler. Además $\vec{r}(c p)=-a {\bf k}}$.
-
 	\begin{figure}[t]
 		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
    	\end{figure}
-	
+Aquí tienes un resumen en formato **Beamer (LaTeX)** de las diapositivas sobre **monedas y conos rodando sin deslizar**, estructurado en secciones claras según el contenido del archivo:
+
+---
+
+```latex
+\documentclass{beamer}
+\usepackage{amsmath}
+\usetheme{Madrid}
+
+\title{Monedas y Conos: Dinámica sin Deslizamiento}
+\author{L.A. Núñez (UIS)}
+\date{28 de abril de 2025}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{Agenda}
+\begin{itemize}
+  \item Moneda que rueda sin deslizar
+  \item Moneda en un plano inclinado
+  \item Cono que rueda sobre plano horizontal
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------
+\begin{frame}{Moneda que rueda sin deslizar}
+\begin{itemize}
+  \item Disco homogéneo de radio \( a \), masa \( M \), seis grados de libertad.
+  \item Ligadura: la velocidad del punto de contacto es cero:
+  \[
+  \dot{\mathbf{r}}_{\text{op}} = \dot{\mathbf{R}} + \boldsymbol{\Omega} \times \mathbf{r}_{\text{cp}} = 0
+  \]
+  \item Se deducen relaciones entre \( \dot{x}, \dot{y}, \dot{z} \) y \( \dot{\phi}, \dot{\theta}, \dot{\psi} \).
+  \item Se toma \( \psi = 0 \) por simetría.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Energía y Lagrangiano de la moneda}
+\begin{itemize}
+  \item Energía cinética:
+  \[
+  T = \frac{1}{2} M (\dot{x}^2 + \dot{y}^2 + \dot{z}^2) + \frac{1}{2} \boldsymbol{\Omega}^T I \boldsymbol{\Omega}
+  \]
+  \item Incorporando ligaduras:
+  \[
+  T = \frac{1}{32} M a^2 \left[ \text{expresión en } \dot{\phi}, \dot{\theta}, \dot{\psi} \right]
+  \]
+  \item Energía potencial: \( V = mga \operatorname{sen} \theta \)
+  \item Lagrangiano: \( \mathcal{L} = T - V \)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Simetrías y constantes de movimiento}
+\begin{itemize}
+  \item Coordenadas cíclicas: \( \phi, \psi \)
+  \item Conservación de los momentos conjugados \( p_\phi, p_\psi \)
+  \item Ecuación de movimiento para \( \theta \):
+  \[
+  10\ddot{\theta} + \dots + \frac{8g}{a} \cos\theta = 0
+  \]
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------
+\begin{frame}{Moneda en plano inclinado}
+\begin{itemize}
+  \item Disco unido a varilla sin masa, rueda sobre plano inclinado.
+  \item Coordenadas: \( \phi, \theta \); ligaduras reducen el sistema.
+  \item Se obtiene:
+  \[
+  \dot{\psi} + \dot{\phi}\left( \frac{b}{a\operatorname{sen}\theta} + \cos\theta \right) = 0
+  \]
+  \item Energía cinética: función de \( \dot{\phi} \)
+  \item Energía potencial: \( V = Mgb(\ldots) \)
+  \item Ecuación de movimiento: 
+  \[
+  \ddot{\phi} = -\omega^2 \operatorname{sen}\phi
+  \]
+\end{itemize}
+\end{frame}
+
+%---------------------------------------------
+\begin{frame}{Cono que rueda sin deslizar}
+\begin{itemize}
+  \item Cono de altura \( h \), masa \( m \), ángulo de vértice \( \alpha \).
+  \item Ligaduras:
+  \[
+  x = \frac{3h}{4} \cos\phi \operatorname{sen}\theta,\quad y = \frac{3h}{4} \operatorname{sen}\phi \operatorname{sen}\theta
+  \]
+  \item Rotación sin deslizamiento: impone condiciones sobre \( \dot{x}, \dot{y} \)
+  \item Energía cinética:
+  \[
+  T = \frac{1}{2} M (\dot{x}^2 + \dot{y}^2) + \frac{1}{2} I_{11} \dot{\phi}^2 \cos^2\alpha + \frac{1}{2} I_{33} (\dot{\phi} \operatorname{sen}\alpha + \dot{\psi})^2
+  \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusiones}
+\begin{itemize}
+  \item La rodadura sin deslizamiento impone ligaduras no integrables.
+  \item El tratamiento lagrangiano permite incorporar las simetrías del problema.
+  \item Casos como la moneda, plano inclinado y cono son útiles para ilustrar ligaduras no holónomas.
+\end{itemize}
+\end{frame}
+
+\end{document}	
