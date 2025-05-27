@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  27 MAY 2025 14:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  27 MAY 2025 15:42
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -988,7 +988,7 @@ Package hyperref Warning: Option `pdfauthor' has already been used,
 (hyperref)                setting the option has no effect on input line 24.
 
 </Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png,
- id=70, 184.5294pt x 136.1085pt>
+ id=78, 184.5294pt x 136.1085pt>
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
@@ -1158,12 +1158,12 @@ stitucional/UISLOGO.png  used on input line 51.
  [8
 
 ]
-<Figuras/Trayectorias1.png, id=321, 924.45375pt x 674.52pt>
+<Figuras/Trayectorias1.png, id=332, 924.45375pt x 674.52pt>
 File: Figuras/Trayectorias1.png Graphic file (type png)
 <use Figuras/Trayectorias1.png>
 Package pdftex.def Info: Figuras/Trayectorias1.png  used on input line 68.
 (pdftex.def)             Requested size: 108.405pt x 79.09657pt.
-<Figuras/Trayectorias2.png, id=322, 882.29625pt x 727.71875pt>
+<Figuras/Trayectorias2.png, id=333, 882.29625pt x 727.71875pt>
 File: Figuras/Trayectorias2.png Graphic file (type png)
 <use Figuras/Trayectorias2.png>
 Package pdftex.def Info: Figuras/Trayectorias2.png  used on input line 68.
@@ -1810,6 +1810,98 @@ stitucional/UISLOGO.png  used on input line 277.
  [64
 
 ]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 310.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [65
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 310.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [66
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 310.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [67
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 310.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [68
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 340.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \vbox (14.4259pt too high) detected at line 340
+ []
+
+[69
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 340.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \vbox (14.4259pt too high) detected at line 340
+ []
+
+[70
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 340.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+
+Overfull \vbox (14.4259pt too high) detected at line 340
+ []
+
+[71
+
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 347.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [72
+
+]
 \tf@nav=\write6
 \openout6 = `MC_S15T1HamiltonJacobi.nav'.
 
@@ -1825,13 +1917,13 @@ LaTeX Info: Redefining \% on input line 25.
 )
 Package rerunfilecheck Info: File `MC_S15T1HamiltonJacobi.out' has not changed.
 
-(rerunfilecheck)             Checksum: 14CFC79AC011A4A5EFC79F11E8D0ABAB;2427.
+(rerunfilecheck)             Checksum: A3B66A1E818382E4BBC5A99B2A073861;2675.
  ) 
 Here is how much of TeX's memory you used:
- 24516 strings out of 478268
- 480469 string characters out of 5846347
- 746420 words of memory out of 5000000
- 42058 multiletter control sequences out of 15000+600000
+ 24548 strings out of 478268
+ 480763 string characters out of 5846347
+ 746421 words of memory out of 5000000
+ 42072 multiletter control sequences out of 15000+600000
  481330 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,490b,868s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1851,10 +1943,10 @@ ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/lo
 cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/loca
 l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/
 texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on MC_S15T1HamiltonJacobi.pdf (64 pages, 884920 bytes).
+Output written on MC_S15T1HamiltonJacobi.pdf (72 pages, 914217 bytes).
 PDF statistics:
- 1905 PDF objects out of 2073 (max. 8388607)
- 1766 compressed objects within 18 object streams
- 140 named destinations out of 1000 (max. 500000)
- 200 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2130 PDF objects out of 2487 (max. 8388607)
+ 1981 compressed objects within 20 object streams
+ 158 named destinations out of 1000 (max. 500000)
+ 216 words of extra memory for PDF output out of 10000 (max. 10000000)
 

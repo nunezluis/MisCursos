@@ -56,8 +56,20 @@
 \headcommand {\beamer@framepages {58}{61}}
 \headcommand {\slideentry {8}{3}{2}{62/64}{El Oscilador Arm\'onico: Tres Enfoques}{0}}
 \headcommand {\beamer@framepages {62}{64}}
-\headcommand {\beamer@partpages {1}{64}}
-\headcommand {\beamer@subsectionpages {58}{64}}
 \headcommand {\beamer@sectionpages {54}{64}}
-\headcommand {\beamer@documentpages {64}}
-\headcommand {\gdef \inserttotalframenumber {14}}
+\headcommand {\beamer@subsectionpages {58}{64}}
+\headcommand {\sectionentry {9}{Recapitulando}{65}{Recapitulando}{0}}
+\headcommand {\slideentry {9}{0}{1}{65/68}{}{0}}
+\headcommand {\beamer@framepages {65}{68}}
+\headcommand {\slideentry {9}{0}{2}{69/71}{}{0}}
+\headcommand {\beamer@framepages {69}{71}}
+\headcommand {\beamer@sectionpages {65}{71}}
+\headcommand {\beamer@subsectionpages {65}{71}}
+\headcommand {\sectionentry {10}{Para la discusi\'on}{72}{Para la discusi\'on}{0}}
+\headcommand {\slideentry {10}{0}{1}{72/72}{}{0}}
+\headcommand {\beamer@framepages {72}{72}}
+\headcommand {\beamer@partpages {1}{72}}
+\headcommand {\beamer@subsectionpages {72}{72}}
+\headcommand {\beamer@sectionpages {72}{72}}
+\headcommand {\beamer@documentpages {72}}
+\headcommand {\gdef \inserttotalframenumber {17}}

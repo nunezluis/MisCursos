@@ -275,6 +275,76 @@ Partícula de masa \( m \), sujeta a una fuerza $F = -kx \quad \Rightarrow \quad 
 	\end{itemize}
 \end{itemize}
 }
+%
+%%%%% Diapo 2
+\section{Recapitulando}
+\frame{
+\frametitle{Recapitulando}
+\begin{itemize}  
+	\item<1-> {\bf Transformaciones canónicas}
+	\begin{itemize}
+  	\item Transformación canónica: \( (q_i, p_i) \to (Q_i, P_i) \)
+  	\item Permiten hallar soluciones donde \( Q_i, P_i \) sean constantes.
+  	\item Si \( H'(Q_i, P_i) = 0 \), entonces: $\frac{\partial F}{\partial t} + H = 0$
+  	\item Esta \( F \) es la función generadora del cambio.
+	\end{itemize}
+	\item<2-> {\bf Principio de mínima acción}
+	\begin{itemize}
+  	\item La acción \( S = \int_{t_1}^{t_2} L(q_i, \dot{q}_i, t) \, dt \)
+  	\item Si \( t_2 = t \) es variable, entonces \( S = S(q_i, t) \)
+  	\item Las trayectorias reales minimizan esta acción.
+	\end{itemize}
+	\item<3-> {\bf Ecuación de Hamilton-Jacobi}
+	\begin{itemize}
+  	\item Derivada total de \( S \): $\frac{dS}{dt} = \sum_i \frac{\partial S}{\partial q_i} \dot{q}_i + \frac{\partial S}{\partial t}$
+  	\item Comparando con \( \mathcal{L} = \sum p_i \dot{q}_i - \mathcal{H} \), se deduce: $p_i = \frac{\partial S}{\partial q_i}, \quad \frac{\partial S}{\partial t} + \mathcal{H} = 0$
+  	\item Esta es la ecuación de Hamilton-Jacobi.
+	\end{itemize}
+	\item<4-> {\bf Trayectoria del sistema}
+	\begin{itemize}
+  	\item La solución \( S(q_i, \alpha_i, t) \) genera la transformación canónica.
+  	\item Las constantes \( \alpha_i \) se determinan a partir de las condiciones iniciales.
+  	\item Las trayectorias resultan como: $q_i(t) = q_i(q_0, p_0, t), \quad p_i(t) = p_i(q_0, p_0, t)$
+ 	\end{itemize}
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{Recapitulando}
+\begin{itemize}  
+	\item<1-> {\bf Función principal de Hamilton}
+	\begin{itemize}
+  	\item Si \( \mathcal{H} \) no depende del tiempo: \( S(q_i, \alpha_i, t) = \mathcal{W}(q_i, \alpha_i) - \mathcal{E}t \)
+  	\item \( \mathcal{W} \) se llama función principal o característica de Hamilton.
+  	\item Se reduce a resolver: $\mathcal{H}\left(q_i, \frac{\partial \mathcal{W}}{\partial q_i} \right) = \mathcal{E}$
+	\end{itemize}
+	\item<2-> {\bf Oscilador Armónico}
+	\begin{itemize}
+  	\item Hamiltoniano: \( \mathcal{H} = \frac{1}{2m}(p^2 + m^2\omega^2 q^2) \)
+  	\item Ecuación de H-J: $ \frac{\partial S}{\partial t} + \frac{1}{2m} \left( \left( \frac{\partial S}{\partial q} \right)^2 + m^2\omega^2 q^2 \right) = 0$
+  	\item Separación de variables: \( S = \mathcal{W}(q) - \mathcal{E}t \)
+  	\item Se obtiene: $\left( \frac{d \mathcal{W}}{d q} \right)^2 = 2m\left(\mathcal{E} - \frac{1}{2} m\omega^2 q^2\right)$
+  	\item \( \mathcal{W}(q) = \int \sqrt{2m\mathcal{E} - m^2 \omega^2 q^2} \, dq \). Usando derivadas: $p = \frac{\partial S}{\partial q}, \quad Q = \frac{\partial S}{\partial \mathcal{E} }$
+  	\item Solución completa: $q(t) = \sqrt{\frac{2\mathcal{E}}{m\omega^2}} \operatorname{sen}(\omega t + \beta)$
+	\end{itemize}
+	\item<3-> {\bf Comparación de métodos}
+	\begin{itemize}
+  	\item \textbf{Lagrangiano:} Ideal para ligaduras y ecuaciones de segundo orden.
+  	\item \textbf{Hamiltoniano:} Espacio de fase y ecuaciones de primer orden.
+  	\item \textbf{Hamilton-Jacobi:} Reducción a una PDE; conecta con mecánica cuántica.
+  	\item Todos describen la misma física desde distintas perspectivas.
+\end{itemize}
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Para la discusión}
+\frame{
+\frametitle{Para la discusión}
+Desarrolle el péndulo simple (una masa $m$ que cuelga de una cuerda inextensible sin masa, de longitud $l$) por los tres métodos antes mencionados
+}
 
 \end{document}
 %
@@ -287,34 +357,126 @@ Partícula de masa \( m \), sujeta a una fuerza $F = -kx \quad \Rightarrow \quad 
 \end{itemize}
 }
 
-	\begin{figure}[t]
-		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
-   	\end{figure}
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usetheme{Madrid}
+
+\title{Formalismo de Hamilton-Jacobi}
+\author{L.A. Núñez (UIS)}
+\date{27 de mayo de 2025}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{Agenda}
+\begin{enumerate}
+  \item Transformaciones canónicas
+  \item Principio de mínima acción
+  \item Ecuación de Hamilton-Jacobi
+  \item Trayectorias del sistema
+  \item Función principal de Hamilton
+  \item Ecuación independiente del tiempo
+  \item Ejemplo: Oscilador armónico
+  \item Comparación de métodos
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Transformaciones canónicas}
+\begin{itemize}
+  \item Transformación canónica: \( (q_i, p_i) \to (Q_i, P_i) \)
+  \item Permiten hallar soluciones donde \( Q_i, P_i \) sean constantes.
+  \item Si \( H'(Q_i, P_i) = 0 \), entonces:
+  \[
+  \frac{\partial F}{\partial t} + H = 0
+  \]
+  \item Esta \( F \) es la función generadora del cambio.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Principio de mínima acción}
+\begin{itemize}
+  \item La acción \( S = \int_{t_1}^{t_2} L(q_i, \dot{q}_i, t) \, dt \)
+  \item Si \( t_2 = t \) es variable, entonces \( S = S(q_i, t) \)
+  \item Las trayectorias reales minimizan esta acción.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ecuación de Hamilton-Jacobi}
+\begin{itemize}
+  \item Derivada total de \( S \):
+  \[
+  \frac{dS}{dt} = \sum_i \frac{\partial S}{\partial q_i} \dot{q}_i + \frac{\partial S}{\partial t}
+  \]
+  \item Comparando con \( L = \sum p_i \dot{q}_i - H \), se deduce:
+  \[
+  p_i = \frac{\partial S}{\partial q_i}, \quad \frac{\partial S}{\partial t} + H = 0
+  \]
+  \item Esta es la ecuación de Hamilton-Jacobi.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Trayectoria del sistema}
+\begin{itemize}
+  \item La solución \( S(q_i, \alpha_i, t) \) genera la transformación canónica.
+  \item Las constantes \( \alpha_i \) se determinan a partir de las condiciones iniciales.
+  \item Las trayectorias resultan como:
+  \[
+  q_i(t) = q_i(q_0, p_0, t), \quad p_i(t) = p_i(q_0, p_0, t)
+  \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Función principal de Hamilton}
+\begin{itemize}
+  \item Si \( H \) no depende del tiempo: \( S(q_i, \alpha_i, t) = W(q_i, \alpha_i) - Et \)
+  \item \( W \) se llama función principal o característica de Hamilton.
+  \item Se reduce a resolver:
+  \[
+  H\left(q_i, \frac{\partial W}{\partial q_i} \right) = E
+  \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplo: Oscilador Armónico}
+\begin{itemize}
+  \item Hamiltoniano: \( H = \frac{1}{2m}(p^2 + m^2\omega^2 q^2) \)
+  \item Ecuación de H-J:
+  \[
+  \frac{\partial S}{\partial t} + \frac{1}{2m} \left( \left( \frac{\partial S}{\partial q} \right)^2 + m^2\omega^2 q^2 \right) = 0
+  \]
+  	\item Separación de variables: \( S = \mathcal{W}(q) - Et \)
+  	\item Se obtiene: $\left( \frac{dW}{dq} \right)^2 = 2m\left(E - \frac{1}{2} m\omega^2 q^2\right)$
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Solución del ejemplo}
+\begin{itemize}
+  \item \( W(q) = \int \sqrt{2mE - m^2 \omega^2 q^2} \, dq \)
+  \item Usando derivadas:
+  \[
+  p = \frac{\partial S}{\partial q}, \quad Q = \frac{\partial S}{\partial E}
+  \]
+  \item Solución completa:
+  \[
+  q(t) = \sqrt{\frac{2E}{m\omega^2}} \operatorname{sen}(\omega t + \beta)
+  \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Comparación de métodos}
+\begin{itemize}
+  \item \textbf{Lagrangiano:} Ideal con ligaduras; ecuaciones de segundo orden.
+  \item \textbf{Hamiltoniano:} Fase espacio y conservación; ecuaciones de primer orden.
+  \item \textbf{Hamilton-Jacobi:} Reducción a una PDE; conecta con mecánica cuántica.
+  \item Todos describen la misma física desde distintas perspectivas.
+\end{itemize}
+\end{frame}
+
+\end{document}
 
 
-Las relaciones de la transformacion canónica en términos de la función característica $W\left(q_i, P_i\right)$ corresponden a
 
-
-
-Entonces, la condición $H\left(q_i, p_i\right)=E$ se puede expresar como
-
-$$
-H\left(\frac{\partial \mathcal{W} }{\partial q_i}\left(q_i, P_i\right), q_i\right)=E
-$$
-
-que es la ecuación de Hamilton-Jacobi independiente del tiempo satisfecha por la función característica $W\left(q_i, P_i\right)$.
-
-El método de separación de variables para buscar una solución de la ecuación de Hamilton-Jacobi también puede emplearse cuando una coordenada es cíclica. Una coordenada $q_k$ cíclica no aparece explícitamente en el Hamiltoniano y, por lo tanto, tampoco aparece en la correspondiente ecuación de Hamilton-Jacobi. Si el Hamiltoniano es constante, entonces se puede buscar una solución de esta ecuación en la forma
-
-$$
-S\left(q_i, P_i, t\right)=W\left(q_j, P_i\right)+P_k q_k-E t, \quad j \neq k
-$$
-
-
-Entonces,
-
-$$
-p_k=\frac{\partial S}{\partial q_k}=P_k=\alpha_k=\text { cte. }
-$$
 
 	
