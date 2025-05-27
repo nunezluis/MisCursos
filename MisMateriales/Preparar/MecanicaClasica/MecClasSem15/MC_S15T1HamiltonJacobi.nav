@@ -29,13 +29,35 @@
 \headcommand {\beamer@framepages {26}{34}}
 \headcommand {\beamer@sectionpages {26}{34}}
 \headcommand {\beamer@subsectionpages {26}{34}}
-\headcommand {\sectionentry {6}{Ejemplo: Una vez mas el Oscilador Arm\'onico}{35}{Ejemplo: Una vez mas el Oscilador Arm\'onico}{0}}
-\headcommand {\slideentry {6}{0}{1}{35/41}{}{0}}
-\headcommand {\beamer@framepages {35}{41}}
-\headcommand {\slideentry {6}{0}{2}{42/49}{}{0}}
-\headcommand {\beamer@framepages {42}{49}}
-\headcommand {\beamer@partpages {1}{49}}
-\headcommand {\beamer@subsectionpages {35}{49}}
-\headcommand {\beamer@sectionpages {35}{49}}
-\headcommand {\beamer@documentpages {49}}
-\headcommand {\gdef \inserttotalframenumber {9}}
+\headcommand {\sectionentry {6}{Secci\'on}{35}{Secci\'on}{0}}
+\headcommand {\slideentry {6}{0}{1}{35/38}{}{0}}
+\headcommand {\beamer@framepages {35}{38}}
+\headcommand {\beamer@sectionpages {35}{38}}
+\headcommand {\beamer@subsectionpages {35}{38}}
+\headcommand {\sectionentry {7}{Ejemplo: Una vez mas el Oscilador Arm\'onico}{39}{Ejemplo: Una vez mas el Oscilador Arm\'onico}{0}}
+\headcommand {\slideentry {7}{0}{1}{39/45}{}{0}}
+\headcommand {\beamer@framepages {39}{45}}
+\headcommand {\slideentry {7}{0}{2}{46/53}{}{0}}
+\headcommand {\beamer@framepages {46}{53}}
+\headcommand {\beamer@sectionpages {39}{53}}
+\headcommand {\beamer@subsectionpages {39}{53}}
+\headcommand {\sectionentry {8}{Comparando M\'etodos.}{54}{Comparando M\'etodos.}{0}}
+\headcommand {\beamer@subsectionpages {54}{53}}
+\headcommand {\beamer@subsectionentry {0}{8}{1}{54}{Comparando M\'etodos: Conceptos y T\'ecnicas}}
+\headcommand {\slideentry {8}{1}{1}{54/55}{Comparando M\'etodos: Conceptos y T\'ecnicas}{0}}
+\headcommand {\beamer@framepages {54}{55}}
+\headcommand {\beamer@subsectionpages {54}{55}}
+\headcommand {\beamer@subsectionentry {0}{8}{2}{56}{Ventajas y Limitaciones}}
+\headcommand {\slideentry {8}{2}{1}{56/57}{Ventajas y Limitaciones}{0}}
+\headcommand {\beamer@framepages {56}{57}}
+\headcommand {\beamer@subsectionpages {56}{57}}
+\headcommand {\beamer@subsectionentry {0}{8}{3}{58}{El Oscilador Arm\'onico: Tres Enfoques}}
+\headcommand {\slideentry {8}{3}{1}{58/61}{El Oscilador Arm\'onico: Tres Enfoques}{0}}
+\headcommand {\beamer@framepages {58}{61}}
+\headcommand {\slideentry {8}{3}{2}{62/64}{El Oscilador Arm\'onico: Tres Enfoques}{0}}
+\headcommand {\beamer@framepages {62}{64}}
+\headcommand {\beamer@partpages {1}{64}}
+\headcommand {\beamer@subsectionpages {58}{64}}
+\headcommand {\beamer@sectionpages {54}{64}}
+\headcommand {\beamer@documentpages {64}}
+\headcommand {\gdef \inserttotalframenumber {14}}

@@ -128,7 +128,13 @@
 \frame{
 \frametitle{Título transparencia}
 \begin{itemize}  
-	\item<1-> 
+	\item<1-> Entonces, la ecuación de Hamilton-Jacobi independiente del tiempo es 
+	$\frac{\partial S}{\partial t}\left(q_i, t\right)+\mathcal{H}\left(\frac{\partial S}{\partial q_i}, q_i, t\right)=0 \quad \Rightarrow \mathcal{H}\left(\frac{\partial \mathcal{W}}{\partial q_i}\left(q_i, \mathcal{E}, \alpha_j \right), q_i\right)=\mathcal{E}$, donde escogimos $P_1=\alpha_1=\mathcal{E}, P_j=\alpha_j, j=2, \ldots, s$.
+	\item<2-> En términos de la función característica $W\left(q_i, P_i\right)$ tenemos $p_i  =\frac{\partial S}{\partial q_i}=\frac{\partial \mathcal{W} }{\partial q_i}, \quad \forall i \qquad Q_i  =\frac{\partial S}{\partial P_i}=\frac{\partial \mathcal{W}}{\partial P_i}, \quad i \neq 1$
+	\item<3-> Con, la condición $\mathcal{H}\left(q_i, p_i\right)=\mathcal{E}$ tenemos $\mathcal{H}\left(\frac{\partial \mathcal{W} }{\partial q_i}\left(q_i, P_i\right), q_i\right)=\mathcal{E}$
+	\item<4-> Si el Hamiltoniano es constante, entonces tendremos una solución de la forma $S\left(q_i, P_i, t\right)=\mathcal{W}\left(q_j, P_i\right)+P_k q_k-\mathcal{E} t, \quad j \neq k$
+
+
 \end{itemize}
 }
 
@@ -144,8 +150,8 @@ Ecuación de Hamilton-Jacobi para un oscilador armónico simple y la acción asocia
 	\item<2-> La ecuación de Hamilton-Jacobi es $\frac{\partial S}{\partial t}(q, t)+\mathcal{H}(p, q)=0$
 	\item<3-> Como $p=\frac{\partial S}{\partial q}(q, t)$, obtenemos $\frac{\partial S}{\partial t}+\frac{1}{2 m}\left[\left(\frac{\partial S}{\partial q}\right)^2+m^2 \omega^2 q^2\right]=0$.\\  Una ecuacion diferencial parcial de primer orden
 	\item<5-> Puesto que $\frac{\partial \mathcal{H}}{\partial t}=0$, el Hamitoniano es constante e igual a la energía total del sistema, $\mathcal{H}=\mathcal{E}$
-	\item<6-> Buscamos una solución por separación de variables, $S(q, \mathcal{E}, t)=W(q, \mathcal{E})-\mathcal{E}E t$, con $P=E=\alpha$   constante de integración 
-	\item<7-> Entonces, $\frac{1}{2 m}\left[\left(\frac{\partial W}{\partial q}\right)^2+m^2 \omega^2 q^2\right]=E \Rightarrow \frac{\partial W}{\partial q} =\left(2 m \mathcal{E}-m^2 \omega^2 q^2\right)^{1 / 2} \Rightarrow$,  
+	\item<6-> Buscamos una solución por separación de variables, $S(q, \mathcal{E}, t)=W(q, \mathcal{E})-\mathcal{E} t$, con $P=E=\alpha$   constante de integración 
+	\item<7-> Entonces, $\frac{1}{2 m}\left[\left(\frac{\partial \mathcal{W} }{\partial q}\right)^2+m^2 \omega^2 q^2\right]=E \Rightarrow \frac{\partial \mathcal{W} }{\partial q} =\left(2 m \mathcal{E}-m^2 \omega^2 q^2\right)^{1 / 2} \Rightarrow$,  
 $\mathcal{W}(q, E)  =\int\left(2 m \mathcal{E}-m^2 \omega^2 q^2\right)^{1 / 2} d q \equiv S(q, \mathcal{E}, t) +Et$
 \end{itemize}
 }
@@ -155,17 +161,121 @@ $\mathcal{W}(q, E)  =\int\left(2 m \mathcal{E}-m^2 \omega^2 q^2\right)^{1 / 2} d
 \frame{
 \frametitle{Una vez mas el Oscilador Armónico, continuación}
 \begin{itemize}  
-	\item<1-> La función $S(q, E, t)$ permite encontrar transformación canónica generada por $S$ a partir de sus derivadas parciales, $p=\frac{\partial S}{\partial q}=\frac{\partial W}{\partial q} = \sqrt{2 m E-m^2 \omega^2 q^2}$ y \\ $Q=\frac{\partial S}{\partial P}=\frac{\partial S}{\partial E}=\sqrt{\frac{m}{2 E}} \int \frac{d q}{\sqrt{1-\frac{m \omega^2 q^2}{2 E}}}-t=\beta=$cte.
+	\item<1-> La función $S(q, E, t)$ permite encontrar transformación canónica generada por $S$ a partir de sus derivadas parciales, $p=\frac{\partial S}{\partial q}=\frac{\partial \mathcal{W} }{\partial q} = \sqrt{2 m E-m^2 \omega^2 q^2}$ y \\ $Q=\frac{\partial S}{\partial P}=\frac{\partial S}{\partial E}=\sqrt{\frac{m}{2 E}} \int \frac{d q}{\sqrt{1-\frac{m \omega^2 q^2}{2 E}}}-t=\beta=$cte.
 	\item<2-> Integrando obtenemos $Q+t=\frac{1}{\omega} \operatorname{sen}^{-1}\left(\omega q \sqrt{\frac{m}{2 E}}\right)$ 
 	\item<3-> Con cual, $q(Q, E, t)=\sqrt{\frac{2 E}{m \omega^2}} \operatorname{sen} \left(\omega t+\beta^{\prime}\right)$, con $\quad \beta^{\prime}=Q \omega=$ cte. 
-	\item<4-> Entonces $p=\frac{\partial W}{\partial q}=\sqrt{2 m E-m^2 \omega^2 q^2} \equiv \sqrt{2 m E} \cos \left(\omega t+\beta^{\prime}\right)$
+	\item<4-> Entonces $p=\frac{\partial \mathcal{W} }{\partial q}=\sqrt{2 m E-m^2 \omega^2 q^2} \equiv \sqrt{2 m E} \cos \left(\omega t+\beta^{\prime}\right)$
 	\item<5-> Evaluando para $t = 0$, tendremos $q_0 =\sqrt{\frac{2 E}{m \omega^2}} \operatorname{sen} (\omega Q)$ y $p_0  =\sqrt{2 m E} \cos (\omega Q)$
 	\item<6-> Con lo cual $\tan (\omega Q)=m \omega \frac{q_0}{p_0} \quad \Rightarrow \quad Q=\frac{1}{\omega} \tan ^{-1}\left(m \omega \frac{q_0}{p_0}\right)$.
 	\item<7-> Mientras que $E=\frac{1}{2 m}\left(p_0^2+m^2 \omega^2 q_0^2\right)=P$
 	\item<8-> Las ecuaciones $p=p\left(q_0, p_0, t\right)$ y $q=q\left(q_0, p_0, t\right)$ expresan la solución de las ecuaciones de Hamilton para el oscilador armónico en términos de las condiciones iniciales.
 \end{itemize}
 }
-  
+%
+%%%%% Diapo 2
+\section{Comparando Métodos.}
+\subsection{Comparando Métodos: Conceptos y Técnicas}
+\frame{
+\frametitle{Comparando Métodos: Conceptos y Técnicas}
+\begin{itemize}  
+	\item<1-> {\bf Los Conceptos de los formalismos}
+	\begin{itemize}
+  	\item \textbf{Lagrangiano:} Se basa en el principio de mínima acción \( \delta S = 0 \), con \( S = \int \mathcal{L} \, dt \). Utiliza coordenadas generalizadas \( q_i \) y velocidades \( \dot{q}_i \). Las ecuaciones de movimiento son las ecuaciones de Euler-Lagrange.
+	%
+  	\item \textbf{Hamiltoniano:} Surge de una transformación de Legendre del lagrangiano. Las variables son \( q_i \) y sus momentos conjugados \( p_i \). Las ecuaciones de movimiento son de primer orden.
+  	\item \textbf{Hamilton-Jacobi:} Busca una función generadora \( S(q,t) \) que satisface una ecuación en derivadas parciales no lineal. Es una reformulación avanzada que unifica el análisis dinámico con métodos integrables.
+	\end{itemize}
+	\item<2-> {\bf Las Técnicas}
+	\begin{itemize}
+  	\item {\bf Lagrangiano}: espacio de configuración y ecuaciones diferenciales de segundo orden.
+  	\item {\bf Hamiltoniano}: espacio de fases, y ecuaciones de primer orden.
+  	\item {\bf Hamilton-Jacobi} reduce el problema a una única ecuación en derivadas parciales; las soluciones de \( S \) generan toda la dinámica.
+  	\item {\bf Simetrías y  cantidades conservadas} se identifican más fácilmente en el formalismo Hamiltoniano, aunque el teorema de Noether también se aplica al lagrangiano.
+	\end{itemize}
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{Ventajas y Limitaciones}
+\frame{
+\frametitle{Ventajas y Limitaciones}
+\begin{itemize}  
+	\item<1-> {\bf Ventajas y Limitaciones}
+	\begin{itemize}
+  	\item \textbf{Lagrangiano:} Ideal para sistemas con ligaduras y simetrías. Se adapta bien a 	sistemas con coordenadas generalizadas. Menos eficiente en análisis de estabilidad.
+  	\item \textbf{Hamiltoniano:} Proporciona una visión clara del espacio de fases y permite análisis cualitativos. Es la base para el paso a la mecánica cuántica.
+  	\item \textbf{Hamilton-Jacobi:} Potente para sistemas integrables. Su conexión con la mecánica ondulatoria lo hace fundamental para el tránsito clásico-cuántico. Sin embargo, resolver la ecuación de Hamilton-Jacobi puede ser muy difícil.
+	\end{itemize}
+	\item<2-> {\bf Resumiento}
+	\begin{itemize}
+  	\item Los tres métodos describen la misma física, pero desde perspectivas distintas.
+  	\item El enfoque lagrangiano es más geométrico y útil con ligaduras.
+  	\item El hamiltoniano es estructuralmente más rico y se presta al análisis de conservación y estabilidad.
+  	\item El enfoque de Hamilton-Jacobi es el más general y conecta elegantemente con la mecánica cuántica.
+	\end{itemize}
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{El Oscilador Armónico: Tres Enfoques}
+\frame{
+\frametitle{El Oscilador Armónico: Tres Enfoques 1/2}
+Partícula de masa \( m \), sujeta a una fuerza $F = -kx \quad \Rightarrow \quad V(x) = \frac{1}{2}k x^2$
+\begin{itemize}  
+	\item<1-> {\bf Método Lagrangeano}
+	\begin{itemize}
+		\item Lagrangiano:  $\mathcal{L}(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - \frac{1}{2}k x^2$
+		\item Ecuación de Euler-Lagrange $\frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{x}} \right) = \frac{\partial \mathcal{L}}{\partial x} \quad \Rightarrow \quad m\ddot{x} + kx = 0$
+		\item Solución: $x(t) = A \cos(\omega t) + B \sin(\omega t), \quad \omega = \sqrt{\frac{k}{m}}$
+	\end{itemize}
+	\item<2-> {\bf Ventajas del enfoque Lagrangiano}
+	\begin{itemize}
+  		\item Se basa en el principio de mínima acción.
+  		\item Ideal para sistemas con ligaduras y coordenadas generalizadas.
+  		\item Geométricamente intuitivo y extendible a campos.
+	\end{itemize}
+	\item<3-> {\bf Método Hamiltoniano}
+	\begin{itemize}
+		\item Hamiltoniano a partir de \( \mathcal{L} \) $\Rightarrow p = \frac{\partial \mathcal{L}}{\partial \dot{x}} = m \dot{x}, \quad \mathcal{H} = \frac{p^2}{2m} + \frac{1}{2}kx^2$
+		\item Ecuaciones de Hamilton $\dot{x} = \frac{\partial \mathcal{H}}{\partial p} = \frac{p}{m}, \quad \dot{p} = -\frac{\partial \mathcal{H}}{\partial x} = -kx$
+		\item \textbf{Resultado:} $\ddot{x} + \frac{k}{m}x = 0$ 
+	\end{itemize}
+	\item<4-> {\bf Ventajas del enfoque Hamiltoniano}
+\begin{itemize}
+  \item Describe la evolución en el espacio de fases.
+  \item Revela estructura conservativa y simetrías.
+  \item Puente natural hacia mecánica cuántica y estadística.
+\end{itemize}
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+%\section{Sección}
+\frame{
+\frametitle{El Oscilador Armónico: Tres Enfoques 2/2}
+\begin{itemize}  
+	\item<1-> {\bf Método Hamilton-Jacobi}
+	\begin{itemize}
+		\item Ecuación de Hamilton-Jacobi $\frac{1}{2m} \left( \frac{\partial S}{\partial x} \right)^2 + \frac{1}{2}kx^2 + \frac{\partial S}{\partial t} = 0$
+		\item Separación de variables $S(x,t) = W(x) - Et \Rightarrow \left( \frac{dW}{dx} \right)^2 = 2m\left( E - \frac{1}{2}kx^2 \right)$
+		\item Solución $W(x) = \int \sqrt{2m\left( E - \frac{1}{2}kx^2 \right)} dx$
+	\end{itemize}
+	\item<2-> {\bf Ventajas del enfoque Hamilton-Jacobi}
+	\begin{itemize}
+  		\item Método más general: permite obtener soluciones completas.
+  		\item Potente para sistemas integrables.
+  		\item Conexión profunda con la mecánica ondulatoria (Schrödinger).
+	\end{itemize}
+	\item<3-> {\bf Resumiendo}
+	\begin{itemize}
+  		\item Los tres métodos predicen la misma dinámica.
+  		\item \textbf{Lagrangiano:} Intuitivo, útil con ligaduras.
+  		\item \textbf{Hamiltoniano:} Estructural, simétrico, fundamental en física moderna.
+  		\item \textbf{Hamilton-Jacobi:} Avanzado, integra el sistema completo, conecta con teoría cuántica.
+	\end{itemize}
+\end{itemize}
+}
+
 \end{document}
 %
 %%%%% Diapo 2
@@ -181,31 +291,30 @@ $\mathcal{W}(q, E)  =\int\left(2 m \mathcal{E}-m^2 \omega^2 q^2\right)^{1 / 2} d
 		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
    	\end{figure}
 
-solución de la ecuación de Hamilton-Jacobi, Ec. (6.231), por separación de variables; esto es, suponemos que la solución $S$ tiene la forma
+
+Las relaciones de la transformacion canónica en términos de la función característica $W\left(q_i, P_i\right)$ corresponden a
+
+
+
+Entonces, la condición $H\left(q_i, p_i\right)=E$ se puede expresar como
 
 $$
-S\left(q_i, P_i, t\right)=S\left(q_i, \alpha_i, t\right)=W\left(q_i, P_i\right)-E t=W\left(q_i, \alpha_i\right)-E t,
+H\left(\frac{\partial \mathcal{W} }{\partial q_i}\left(q_i, P_i\right), q_i\right)=E
 $$
 
-donde una de las $s$ constantes $\alpha_i$ es $E$. La función $W\left(q_i, P_i\right)=W\left(q_i, \alpha_i\right)$ se llama función característica o principal de Hamilton. En ese caso, sustitución de $S$ en la Ec. (6.231) resulta en una ecuación para la función $W\left(q_i, P_i\right)$, de la forma
+que es la ecuación de Hamilton-Jacobi independiente del tiempo satisfecha por la función característica $W\left(q_i, P_i\right)$.
+
+El método de separación de variables para buscar una solución de la ecuación de Hamilton-Jacobi también puede emplearse cuando una coordenada es cíclica. Una coordenada $q_k$ cíclica no aparece explícitamente en el Hamiltoniano y, por lo tanto, tampoco aparece en la correspondiente ecuación de Hamilton-Jacobi. Si el Hamiltoniano es constante, entonces se puede buscar una solución de esta ecuación en la forma
 
 $$
-H\left(\frac{\partial W}{\partial q_i}\left(q_i, E, P_j\right), q_i\right)=E
-$$
-
-donde escogemos $P_1=\alpha_1=E, P_j=\alpha_j, j=2, \ldots, s$. La Ec. (6.234) se denomina ecuación de Hamilton-Jacobi independiente del tiempo.
-
-En particular, si el Hamiltoniano es independiente del tiempo, la coordenada constante $Q_1=\beta_1$ asociada a $P_1=E$ satisface
-
-$$
-\begin{aligned}
-Q_1 & =\frac{\partial S}{\partial P_1}=\frac{\partial S}{\partial E} \\
-& =\frac{\partial W}{\partial E}-t=\beta_1
-\end{aligned}
+S\left(q_i, P_i, t\right)=W\left(q_j, P_i\right)+P_k q_k-E t, \quad j \neq k
 $$
 
 
-Las relaciones de la transformacion canónica en términos de la función caracterisuca $W\left(q_i, P_i\right)$ corresponden a
+Entonces,
 
+$$
+p_k=\frac{\partial S}{\partial q_k}=P_k=\alpha_k=\text { cte. }
+$$
 
 	

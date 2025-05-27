@@ -1,0 +1,201 @@
+\documentclass[spanish]{beamer}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath}
+\usepackage{mathtools,cancel} % cancela con una flecha \cancelto{0}{XXXX}
+\renewcommand{\CancelColor}{\color{red}} %change cancel color to red
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usepackage{textpos}
+% Logo  en el comienzo 
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+\end{textblock*}}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{Fundamentos Conceptuales}
+\begin{itemize}
+  \item \textbf{Formalismo Lagrangiano:} Se basa en el principio de mínima acción \( \delta S = 0 \), con \( S = \int L \, dt \). Utiliza coordenadas generalizadas \( q_i \) y velocidades \( \dot{q}_i \). Las ecuaciones de movimiento se obtienen de las ecuaciones de Euler-Lagrange.
+  \item \textbf{Formalismo Hamiltoniano:} Surge de una transformación de Legendre del lagrangiano. Las variables son \( q_i \) y sus momentos conjugados \( p_i \). Las ecuaciones de movimiento son de primer orden.
+  \item \textbf{Hamilton-Jacobi:} Busca una función generadora \( S(q,t) \) que satisface una ecuación en derivadas parciales no lineal. Es una reformulación avanzada que unifica el análisis dinámico con métodos integrables.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Características Técnicas}
+\begin{itemize}
+  \item El lagrangiano opera en el espacio de configuración, con ecuaciones diferenciales de segundo orden.
+  \item El hamiltoniano trabaja en el espacio de fases, con un sistema de ecuaciones de primer orden.
+  \item El enfoque de Hamilton-Jacobi permite reducir el problema a una única ecuación en derivadas parciales; las soluciones de \( S \) generan toda la dinámica.
+  \item Las simetrías y las cantidades conservadas se identifican más fácilmente en el formalismo Hamiltoniano, aunque el teorema de Noether también se aplica al lagrangiano.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ventajas y Limitaciones}
+\begin{itemize}
+  \item \textbf{Lagrangiano:} Ideal para sistemas con ligaduras y simetrías. Se adapta bien a sistemas con coordenadas generalizadas. Menos eficiente en análisis de estabilidad.
+  \item \textbf{Hamiltoniano:} Proporciona una visión clara del espacio de fases y permite análisis cualitativos. Es la base para el paso a la mecánica cuántica.
+  \item \textbf{Hamilton-Jacobi:} Potente para sistemas integrables. Su conexión con la mecánica ondulatoria lo hace fundamental para el tránsito clásico-cuántico. Sin embargo, resolver la ecuación de Hamilton-Jacobi puede ser muy difícil.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplo: Oscilador Armónico Simple}
+\begin{itemize}
+  \item \textbf{Lagrangiano:} \( L = \frac{1}{2}m\dot{x}^2 - \frac{1}{2}kx^2 \Rightarrow \ddot{x} + \frac{k}{m}x = 0 \)
+  \item \textbf{Hamiltoniano:} \( H = \frac{p^2}{2m} + \frac{1}{2}kx^2 \); las ecuaciones de Hamilton reproducen la misma dinámica mediante ecuaciones de primer orden.
+  \item \textbf{Hamilton-Jacobi:} Se resuelve la ecuación
+  \[
+  \frac{1}{2m} \left( \frac{\partial S}{\partial x} \right)^2 + \frac{1}{2}kx^2 + \frac{\partial S}{\partial t} = 0
+  \]
+  cuya solución permite obtener todas las integrales del movimiento.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusiones}
+\begin{itemize}
+  \item Los tres métodos describen la misma física, pero desde perspectivas distintas.
+  \item El enfoque lagrangiano es más geométrico y útil con ligaduras.
+  \item El hamiltoniano es estructuralmente más rico y se presta al análisis de conservación y estabilidad.
+  \item El enfoque de Hamilton-Jacobi es el más general y conecta elegantemente con la mecánica cuántica.
+\end{itemize}
+\end{frame}
+\end{document}
+
+Aquí tienes el análisis completo del **oscilador armónico clásico** resuelto con los tres métodos ?Lagrangiano, Hamiltoniano y Hamilton-Jacobi? en formato **Beamer (LaTeX)**:
+
+---
+
+```latex
+\documentclass{beamer}
+\usepackage{amsmath}
+\usepackage{physics}
+\usetheme{Madrid}
+
+\title{El Oscilador Armónico: Tres Enfoques}
+\author{Curso de Mecánica Clásica}
+\date{}
+
+\begin{document}
+
+\frame{\titlepage}
+
+%--------------------------
+\begin{frame}{Planteamiento del problema}
+\begin{itemize}
+  \item Sistema: partícula de masa \( m \), sujeta a una fuerza restauradora
+  \[
+  F = -kx \quad \Rightarrow \quad V(x) = \frac{1}{2}kx^2
+  \]
+  \item Queremos resolver su dinámica con:
+  \begin{enumerate}
+    \item Enfoque Lagrangiano
+    \item Enfoque Hamiltoniano
+    \item Enfoque de Hamilton-Jacobi
+  \end{enumerate}
+\end{itemize}
+\end{frame}
+
+%--------------------------
+\begin{frame}{Método Lagrangiano}
+\textbf{Paso 1:} Lagrangiano
+\[
+\mathcal{L}(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - \frac{1}{2}k x^2
+\]
+
+\textbf{Paso 2:} Ecuación de Euler-Lagrange
+\[
+\frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{x}} \right) = \frac{\partial \mathcal{L}}{\partial x} \quad \Rightarrow \quad m\ddot{x} + kx = 0
+\]
+
+\textbf{Solución:}
+\[
+x(t) = A \cos(\omega t) + B \sin(\omega t), \quad \omega = \sqrt{\frac{k}{m}}
+\]
+\end{frame}
+
+\begin{frame}{Ventajas del enfoque Lagrangiano}
+\begin{itemize}
+  \item Se basa en el principio de mínima acción.
+  \item Ideal para sistemas con ligaduras y coordenadas generalizadas.
+  \item Geométricamente intuitivo y extendible a campos.
+\end{itemize}
+\end{frame}
+
+%--------------------------
+\begin{frame}{Método Hamiltoniano}
+\textbf{Paso 1:} Hamiltoniano a partir de \( \mathcal{L} \)
+\[
+p = \frac{\partial \mathcal{L}}{\partial \dot{x}} = m \dot{x}, \quad H = \frac{p^2}{2m} + \frac{1}{2}kx^2
+\]
+
+\textbf{Paso 2:} Ecuaciones de Hamilton
+\[
+\dot{x} = \frac{\partial H}{\partial p} = \frac{p}{m}, \quad \dot{p} = -\frac{\partial H}{\partial x} = -kx
+\]
+
+\textbf{Resultado:}
+\[
+\ddot{x} + \frac{k}{m}x = 0
+\]
+\end{frame}
+
+\begin{frame}{Ventajas del enfoque Hamiltoniano}
+\begin{itemize}
+  \item Describe la evolución en el espacio de fases.
+  \item Revela estructura conservativa y simetrías.
+  \item Puente natural hacia mecánica cuántica y estadística.
+\end{itemize}
+\end{frame}
+
+%--------------------------
+\begin{frame}{Método Hamilton-Jacobi}
+\textbf{Paso 1:} Ecuación de Hamilton-Jacobi
+\[
+\frac{1}{2m} \left( \frac{\partial S}{\partial x} \right)^2 + \frac{1}{2}kx^2 + \frac{\partial S}{\partial t} = 0
+\]
+
+\textbf{Paso 2:} Separación de variables
+\[
+S(x,t) = W(x) - Et \Rightarrow \left( \frac{dW}{dx} \right)^2 = 2m\left( E - \frac{1}{2}kx^2 \right)
+\]
+
+\textbf{Paso 3:} Solución
+\[
+W(x) = \int \sqrt{2m\left( E - \frac{1}{2}kx^2 \right)} dx
+\]
+\end{frame}
+
+\begin{frame}{Ventajas del enfoque Hamilton-Jacobi}
+\begin{itemize}
+  \item Método más general: permite obtener soluciones completas.
+  \item Potente para sistemas integrables.
+  \item Conexión profunda con la mecánica ondulatoria (Schrödinger).
+\end{itemize}
+\end{frame}
+
+%--------------------------
+\begin{frame}{Comparación Final}
+\begin{itemize}
+  \item Los tres métodos predicen la misma dinámica.
+  \item \textbf{Lagrangiano:} Intuitivo, útil con ligaduras.
+  \item \textbf{Hamiltoniano:} Estructural, simétrico, fundamental en física moderna.
+  \item \textbf{Hamilton-Jacobi:} Avanzado, integra el sistema completo, conecta con teoría cuántica.
+\end{itemize}
+\end{frame}
+
+\end{document}
+```
+
+---
+
+¿Te gustaría que este documento incluyera gráficos del espacio de fases o animaciones para ilustrar las soluciones? También puedo exportarlo a PDF o prepararlo para Overleaf si lo necesitas.
+
+
+
