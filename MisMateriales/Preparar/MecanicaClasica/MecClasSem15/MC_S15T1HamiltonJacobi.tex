@@ -37,26 +37,25 @@
 
 
 %%%%% Diapo 1
-\section{Ecuación de Hamilton Jacobi}
+\section{Las transformaciones canónicas $\left\{p_i, q_i\right\} \rightarrow\left\{P_i, Q_i\right\}=\left\{\alpha_i, \beta_i\right\}$}
 \frame{
-  \frametitle{Ecuación de Hamilton Jacobi}
+  \frametitle{Las transformaciones canónicas}
    \begin{itemize}  
   	\item<1-> Una transformación canónica $Q_i=Q_i\left(q_j, p_j, t\right), P_i=P_i\left(q_j, p_j, t\right)$, permite encontrar las soluciones de las ecuaciones de Hamilton.
 	\item<2-> Esa transformación $Q_i=Q_i\left(q_j, p_j, t\right), P_i=P_i\left(q_j, p_j, t\right)$ lleva $\mathcal{H}\left(q_j, p_j, t\right)\rightarrow \mathcal{H}^{\prime}\left(Q_i, P_i, t\right)$ un hamiltoniano en el cual una (o varias) coordenada $Q_j$ o/y $P_j$ son cíclicas
 	\item<3-> Supongamos una transformación canónica $\left\{q_i, p_i, t\right\} \rightarrow \left\{P_i, Q_i, t\right\}$ tal que, $\left(P_i, Q_i\right)$, las $2 s$ nuevas coordenadas y momentos  son constantes.
 	\item<4-> Esas $2 s$ constantes $Q_i$ y $P_i$ pueden expresarse en función de las $2 s$ condiciones iniciales:  $Q_i=q\left(q_j(0), p_j(0)\right), P_i=p\left(q_j(0), p_j(0)\right)$.
 	\item<5-> La transformación canónica que relacionan las nuevas y viejas variables proporcionan directamente la solución del problema del movimiento, $q_i=q\left(q_j(0), p_j(0), t\right), \quad p_i=p\left(q_j(0), p_j(0), t\right)$.
-	\item<6-> Si  la transformación canónica conduce a nuevos momentos y coordenadas constantes, $P_i \equiv \alpha_i=$ cte, $Q_i \equiv \beta_i=$ cte, tal que $\mathcal{H}^{\prime}\left(Q_i, P_i\right)=0$, entonces existe una función generadora $\mathcal{F}$ tal que $\frac{\partial F}{\partial t}+H=0$
-	\item<7-> Esta condición es la ecuación de Hamilton-Jacobi, para una $\mathcal{F}$.
+	\item<6-> Si  la transformación canónica conduce a nuevos momentos y coordenadas constantes, $P_i \equiv \alpha_i=$ cte, $Q_i \equiv \beta_i=$ cte, tal que $\mathcal{H}^{\prime}\left(Q_i, P_i\right)=0$, entonces existe una función generadora $\mathcal{F}$ tal que $\frac{\partial F}{\partial t}+\mathcal{H}=0$
     \end{itemize}
 }
 %
 %%%%% Diapo 2
-\section{Hamilton-Jacobi y el Principio de Mínima Acción}
+\section{El Principio de Mínima Acción}
 \frame{
-\frametitle{El Principio de Mínima Acción 1/2}
+\frametitle{El Principio de Mínima Acción}
 \begin{itemize}  
-	\item<1-> Consideremos la acción $S=\int_{t_1}^{t_2} L\left(q_i, \dot{q}_i, t\right) d t $
+	\item<1-> Consideremos la acción $S=\int_{t_1}^{t_2} \mathcal{L}\left(q_i, \dot{q}_i, t\right) d t $
 	\item<2-> El valor de la acción $S$ (como integral definida) depende del conjunto de trayectorias $\left\{q_i(t)\right\}$
 	\item<3-> Las trayectorias que satisfacen la ecuaciones de Lagrange corresponden al valor mínimo (extremo) de $S$.
 	\item<4-> Supongamos que el tiempo $t_2$ es variable, i.e, $t_2=t$.
@@ -69,18 +68,70 @@
 }
 %
 %%%%% Diapo 2
-%\section{Sección}
+\section{La ecuación de Hamilton-Jacobi}
 \frame{
-\frametitle{El Principio de Mínima Acción 2/2}
+\frametitle{La ecuación de Hamilton-Jacobi}
 \begin{itemize}  
 	\item<1-> La derivada temporal de la acción es $\frac{d S}{d t}=\sum_{i=1}^s \frac{\partial S}{\partial q_i} \dot{q}_i+\frac{\partial S}{\partial t}$.	
-	\item<2-> Por otro lado, si $t_2=t$ (variable), la definición de la acción implica que $\frac{d S}{d t}=\mathcal{L}=\sum_{i=1}^s p_i \dot{q}_i-H\left(p_i, q_i, t\right)$.
-	\item<3-> Comparando obtenemos $ p_i=\frac{\partial S}{\partial q_i}\left(q_i, t\right)$ y $\frac{\partial S}{\partial t}\left(q_i, t\right)+\mathcal{H}\left(p_i, q_i, t\right)=0$
-	\item<4-> Las cuales se pueden expresar como $\frac{\partial S}{\partial t}\left(q_i, t\right)+\mathcal{H}\left(\frac{\partial S}{\partial q_i}, q_i, t\right)=0$
+	\item<2-> Por otro lado, si $t_2=t$ (variable), la definición de la acción implica que $\frac{d S}{d t}=\mathcal{L}=\sum_{i=1}^s p_i \dot{q}_i-\mathcal{H}\left(p_i, q_i, t\right)$.
+	\item<3-> Comparando obtenemos $ p_i=\frac{\partial S}{\partial q_i}\left(q_i, t\right)$ y $\frac{\partial S}{\partial t}\left(q_i, t\right)+\mathcal{H}\left(p_i, q_i, t\right)=0$, 
+	\item<4-> Las cuales se pueden expresar como $\frac{\partial S}{\partial t}\left(q_i, t\right)+\mathcal{H}\left(\frac{\partial S}{\partial q_i}, q_i, t\right)=0$. Que es la Ecuación de Hamilton Jacobi. 
 	\item<5-> La acción $S$ puede interpretarse como una función generadora capaz de producir la transformación canónica.
 	\item<6-> Más aún, la acción $S$ puede interpretarse como una función generadora tipo $\mathcal{F}_2\left(q_i, P_i, t\right)$, tal que $P_i=\alpha_i=$ cte, $Q_i=\beta_i=$ cte.
+	\item<7->La derivada total $\frac{d \mathcal{F}_2}{d t}=\sum_{i=1}^s\left(\frac{\partial \mathcal{F}_2}{\partial q_i} \dot{q}_i+\frac{\partial \mathcal{F}_2}{\partial P_i} \dot{P}_i\right)+\frac{\partial \mathcal{F}_2}{\partial t}$ $\Rightarrow \frac{d \mathcal{F}_2}{d t}=\sum_{i=1}^s p_i \dot{q}_i-\mathcal{H}$
+	\item<7-> Donde hemos usado: $p_i=\frac{\partial \mathcal{F}_2}{\partial q_i}$ y $\dot{P}_i=0$.
+	
 \end{itemize}
 }
+%
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> Comparando las relaciones de $\mathcal{F}_2\left(q_i, P_i, t\right)$ y $S\left(q_i, P_i, t\right)$, tenemos 
+	$\begin{array}{l|l}
+	p_i=\frac{\partial \mathcal{F}_2}{\partial q_i}\left(q_i, P_i, t\right) & p_i=\frac{\partial S}{\partial q_i}\left(q_i, P_i, t\right)=p_i\left(q_i, P_i, t\right) \\
+	Q_i=\frac{\partial \mathcal{F}_2}{\partial P_i}\left(q_i, P_i, t\right) & Q_i=\frac{\partial S}{\partial P_i}\left(q_i, P_i, t\right)=Q_i\left(q_i, P_i, t\right) \\
+	\mathcal{H}+\frac{\partial \mathcal{F}_2}{\partial t}=\mathcal{H}^{\prime} & \mathcal{H}+\frac{\partial S}{\partial t}=0
+	\end{array}$ \\ donde $P_i=$ cte $=\alpha_i$ y $Q_i=$ cte $=\beta_i$.
+	\item<2-> Si $\mathcal{H}^{\prime}\left(P_i, Q_i\right)=$ cte y existe una transformación canónica $\left\{p_i, q_i\right\} \rightarrow\left\{P_i, Q_i\right\}=\left\{\alpha_i, \beta_i\right\}$, generada por $\mathcal{F}_2=S$, tal que $\mathcal{H}^{\prime}\left(P_i, Q_i\right) \equiv \mathcal{H}^{\prime}\left(\alpha_i, \beta_i\right)=0$, entonces se satisface ecuación de Hamilton-Jacobi, $\frac{\partial S}{\partial t}+\mathcal{H}=0$
+	\item<3-> La solución $S\left(q_i, P_i, t\right)$ de la ecuación de Hamilton-Jacobi genera la transformación $\left\{p_i, q_i, t\right\} \rightarrow\left\{P_i, Q_i, t\right\}$.
+	\item<4->  Las constantes $P_i ,Q_i \leftrightarrow \alpha_i, \beta_i$ se expresan en términos de las $2 s$ condiciones iniciales $\left(q_i(0), p_i(0)\right)$.
+	\item<5-> La solución de la ecuación de Hamilton-Jacobi para un sistema provee la trayectoria $q_i(t)=q_i\left(q_i(0), p_i(0), t\right)$ y $p_i(t)=p_i\left(q_i(0), p_i(0), t\right)$.
+
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> Matemáticamente, la ecuación de Hamilton-Jabobi es una ecuación en derivadas parciales de primer orden para $S\left(q_i, t\right)$ con $s+1$ variables,
+	$\frac{\partial S}{\partial t}\left(q_1, \ldots, q_s, t\right)+H\left(q_1, \ldots, q_s, \frac{\partial S}{\partial q_1}, \frac{\partial S}{\partial q_2} \ldots, \frac{\partial S}{\partial q_s}, t\right)=0$
+	\item<2-> La función $S$ no es incógnita, sólo aparecen sus derivadas.
+	\item<3-> Si $S$ es solución, entonces $\tilde{S} =S+C_1$ también lo es. 
+	\item<4-> Una de las $(s+1)$ constantes de integración es irrelevante.
+	\item<5-> Para que la acción tenga la forma $S\left(q_i, P_i, t\right)$, tomamos las $s$ constantes $P_i=\alpha_i$. 
+	\item<6-> La solución $ S=S\left(q_1, \ldots, q_s, P_1, \ldots, P_s, t\right)=S\left(q_i, \alpha_i, t\right)$.
+	\item<7-> Si el Hamiltoniano $\mathcal{H}$ es independiente del tiempo, entonces es una constante, igual a la energía total del sistema, $\mathcal{H}\left(q_i, p_i\right)= cte =\mathcal{E}$. 
+	\item<8-> Suponemos que la solución $S$ tiene la forma 
+	$S\left(q_i, P_i, t\right)=S\left(q_i, \alpha_i, t\right)=\mathcal{W}\left(q_i, P_i\right)- \mathcal{E} t=\mathcal{W}\left(q_i, \alpha_i\right)-\mathcal{E} t$. \\ Una de las $s$ constantes $\alpha_i$ es $\mathcal{E}$
+	\item<9-> La función $\mathcal{W}\left(q_i, P_i\right)=\mathcal{W}\left(q_i, \alpha_i\right)$ se llama función característica o principal de Hamilton.
+\end{itemize}
+}
+
+%
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+
 
 %
 %%%%% Diapo 2
@@ -90,12 +141,12 @@
 Ecuación de Hamilton-Jacobi para un oscilador armónico simple y la acción asociada a este sistema.
 \begin{itemize}  
 	\item<1-> El Hamiltoniano es $\mathcal{H}(q, p)=\frac{1}{2 m}\left(p^2+m^2 \omega^2 q^2\right)$
-	\item<2-> La ecuación de Hamilton-Jacobi es $\frac{\partial S}{\partial t}(q, t)+H(p, q)=0$
+	\item<2-> La ecuación de Hamilton-Jacobi es $\frac{\partial S}{\partial t}(q, t)+\mathcal{H}(p, q)=0$
 	\item<3-> Como $p=\frac{\partial S}{\partial q}(q, t)$, obtenemos $\frac{\partial S}{\partial t}+\frac{1}{2 m}\left[\left(\frac{\partial S}{\partial q}\right)^2+m^2 \omega^2 q^2\right]=0$.\\  Una ecuacion diferencial parcial de primer orden
-	\item<5-> Puesto que $\frac{\partial \mathcal{H}}{\partial t}=0$, el Hamitoniano es constante e igual a la energía total del sistema, $\mathcal{H}=E$
-	\item<6-> Buscamos una solución por separación de variables, $S(q, E, t)=W(q, E)-E t$, con $P=E=\alpha$   constante de integración 
-	\item<7-> Entonces, $\frac{1}{2 m}\left[\left(\frac{\partial W}{\partial q}\right)^2+m^2 \omega^2 q^2\right]=E \Rightarrow \frac{\partial W}{\partial q} =\left(2 m E-m^2 \omega^2 q^2\right)^{1 / 2} \Rightarrow$,  
-$W(q, E)  =\int\left(2 m E-m^2 \omega^2 q^2\right)^{1 / 2} d q \equiv S(q, E, t) +Et$
+	\item<5-> Puesto que $\frac{\partial \mathcal{H}}{\partial t}=0$, el Hamitoniano es constante e igual a la energía total del sistema, $\mathcal{H}=\mathcal{E}$
+	\item<6-> Buscamos una solución por separación de variables, $S(q, \mathcal{E}, t)=W(q, \mathcal{E})-\mathcal{E}E t$, con $P=E=\alpha$   constante de integración 
+	\item<7-> Entonces, $\frac{1}{2 m}\left[\left(\frac{\partial W}{\partial q}\right)^2+m^2 \omega^2 q^2\right]=E \Rightarrow \frac{\partial W}{\partial q} =\left(2 m \mathcal{E}-m^2 \omega^2 q^2\right)^{1 / 2} \Rightarrow$,  
+$\mathcal{W}(q, E)  =\int\left(2 m \mathcal{E}-m^2 \omega^2 q^2\right)^{1 / 2} d q \equiv S(q, \mathcal{E}, t) +Et$
 \end{itemize}
 }
 %
@@ -129,4 +180,32 @@ $W(q, E)  =\int\left(2 m E-m^2 \omega^2 q^2\right)^{1 / 2} d q \equiv S(q, E, t)
 	\begin{figure}[t]
 		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
    	\end{figure}
+
+solución de la ecuación de Hamilton-Jacobi, Ec. (6.231), por separación de variables; esto es, suponemos que la solución $S$ tiene la forma
+
+$$
+S\left(q_i, P_i, t\right)=S\left(q_i, \alpha_i, t\right)=W\left(q_i, P_i\right)-E t=W\left(q_i, \alpha_i\right)-E t,
+$$
+
+donde una de las $s$ constantes $\alpha_i$ es $E$. La función $W\left(q_i, P_i\right)=W\left(q_i, \alpha_i\right)$ se llama función característica o principal de Hamilton. En ese caso, sustitución de $S$ en la Ec. (6.231) resulta en una ecuación para la función $W\left(q_i, P_i\right)$, de la forma
+
+$$
+H\left(\frac{\partial W}{\partial q_i}\left(q_i, E, P_j\right), q_i\right)=E
+$$
+
+donde escogemos $P_1=\alpha_1=E, P_j=\alpha_j, j=2, \ldots, s$. La Ec. (6.234) se denomina ecuación de Hamilton-Jacobi independiente del tiempo.
+
+En particular, si el Hamiltoniano es independiente del tiempo, la coordenada constante $Q_1=\beta_1$ asociada a $P_1=E$ satisface
+
+$$
+\begin{aligned}
+Q_1 & =\frac{\partial S}{\partial P_1}=\frac{\partial S}{\partial E} \\
+& =\frac{\partial W}{\partial E}-t=\beta_1
+\end{aligned}
+$$
+
+
+Las relaciones de la transformacion canónica en términos de la función caracterisuca $W\left(q_i, P_i\right)$ corresponden a
+
+
 	
