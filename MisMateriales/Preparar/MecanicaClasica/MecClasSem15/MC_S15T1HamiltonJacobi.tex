@@ -67,7 +67,7 @@
 \end{itemize}
 }
 %
-%%%%% Diapo 2
+%%%%% Diapo 3
 \section{La ecuación de Hamilton-Jacobi}
 \frame{
 \frametitle{La ecuación de Hamilton-Jacobi}
@@ -85,9 +85,9 @@
 }
 %
 %%%%% Diapo 2
-\section{Sección}
+\section{La trayectoria del sistema}
 \frame{
-\frametitle{Título transparencia}
+\frametitle{La trayectoria del sistema}
 \begin{itemize}  
 	\item<1-> Comparando las relaciones de $\mathcal{F}_2\left(q_i, P_i, t\right)$ y $S\left(q_i, P_i, t\right)$, tenemos 
 	$\begin{array}{l|l}
@@ -104,9 +104,9 @@
 }
 %
 %%%%% Diapo 2
-\section{Sección}
+\section{Función principal de Hamilton-Jacobi}
 \frame{
-\frametitle{Título transparencia}
+\frametitle{Función principal de Hamilton-Jacobi}
 \begin{itemize}  
 	\item<1-> Matemáticamente, la ecuación de Hamilton-Jabobi es una ecuación en derivadas parciales de primer orden para $S\left(q_i, t\right)$ con $s+1$ variables,
 	$\frac{\partial S}{\partial t}\left(q_1, \ldots, q_s, t\right)+H\left(q_1, \ldots, q_s, \frac{\partial S}{\partial q_1}, \frac{\partial S}{\partial q_2} \ldots, \frac{\partial S}{\partial q_s}, t\right)=0$
@@ -124,9 +124,9 @@
 
 %
 %%%%% Diapo 2
-\section{Sección}
+\section{Ecuación Independiente del tiempo}
 \frame{
-\frametitle{Título transparencia}
+\frametitle{Ecuación Independiente del tiempo}
 \begin{itemize}  
 	\item<1-> Entonces, la ecuación de Hamilton-Jacobi independiente del tiempo es 
 	$\frac{\partial S}{\partial t}\left(q_i, t\right)+\mathcal{H}\left(\frac{\partial S}{\partial q_i}, q_i, t\right)=0 \quad \Rightarrow \mathcal{H}\left(\frac{\partial \mathcal{W}}{\partial q_i}\left(q_i, \mathcal{E}, \alpha_j \right), q_i\right)=\mathcal{E}$, donde escogimos $P_1=\alpha_1=\mathcal{E}, P_j=\alpha_j, j=2, \ldots, s$.
@@ -150,8 +150,8 @@ Ecuación de Hamilton-Jacobi para un oscilador armónico simple y la acción asocia
 	\item<2-> La ecuación de Hamilton-Jacobi es $\frac{\partial S}{\partial t}(q, t)+\mathcal{H}(p, q)=0$
 	\item<3-> Como $p=\frac{\partial S}{\partial q}(q, t)$, obtenemos $\frac{\partial S}{\partial t}+\frac{1}{2 m}\left[\left(\frac{\partial S}{\partial q}\right)^2+m^2 \omega^2 q^2\right]=0$.\\  Una ecuacion diferencial parcial de primer orden
 	\item<5-> Puesto que $\frac{\partial \mathcal{H}}{\partial t}=0$, el Hamitoniano es constante e igual a la energía total del sistema, $\mathcal{H}=\mathcal{E}$
-	\item<6-> Buscamos una solución por separación de variables, $S(q, \mathcal{E}, t)=W(q, \mathcal{E})-\mathcal{E} t$, con $P=E=\alpha$   constante de integración 
-	\item<7-> Entonces, $\frac{1}{2 m}\left[\left(\frac{\partial \mathcal{W} }{\partial q}\right)^2+m^2 \omega^2 q^2\right]=E \Rightarrow \frac{\partial \mathcal{W} }{\partial q} =\left(2 m \mathcal{E}-m^2 \omega^2 q^2\right)^{1 / 2} \Rightarrow$,  
+	\item<6-> Buscamos una solución por separación de variables, $S(q, \mathcal{E}, t)=W(q, \mathcal{E})-\mathcal{E} t$, con $P=\mathcal{E}=\alpha$   constante de integración 
+	\item<7-> Entonces, $\frac{1}{2 m}\left[\left(\frac{\partial \mathcal{W} }{\partial q}\right)^2+m^2 \omega^2 q^2\right]=\mathcal{E} \Rightarrow \frac{\partial \mathcal{W} }{\partial q} =\left(2 m \mathcal{E}-m^2 \omega^2 q^2\right)^{1 / 2} \Rightarrow$,  
 $\mathcal{W}(q, E)  =\int\left(2 m \mathcal{E}-m^2 \omega^2 q^2\right)^{1 / 2} d q \equiv S(q, \mathcal{E}, t) +Et$
 \end{itemize}
 }
@@ -161,22 +161,22 @@ $\mathcal{W}(q, E)  =\int\left(2 m \mathcal{E}-m^2 \omega^2 q^2\right)^{1 / 2} d
 \frame{
 \frametitle{Una vez mas el Oscilador Armónico, continuación}
 \begin{itemize}  
-	\item<1-> La función $S(q, E, t)$ permite encontrar transformación canónica generada por $S$ a partir de sus derivadas parciales, $p=\frac{\partial S}{\partial q}=\frac{\partial \mathcal{W} }{\partial q} = \sqrt{2 m E-m^2 \omega^2 q^2}$ y \\ $Q=\frac{\partial S}{\partial P}=\frac{\partial S}{\partial E}=\sqrt{\frac{m}{2 E}} \int \frac{d q}{\sqrt{1-\frac{m \omega^2 q^2}{2 E}}}-t=\beta=$cte.
+	\item<1-> La función $S(q, \mathcal{E}, t)$ permite encontrar transformación canónica generada por $S$ a partir de sus derivadas parciales, $p=\frac{\partial S}{\partial q}=\frac{\partial \mathcal{W} }{\partial q} = \sqrt{2 m \mathcal{E}-m^2 \omega^2 q^2}$ y \\ $Q=\frac{\partial S}{\partial P}=\frac{\partial S}{\partial \mathcal{E}}=\sqrt{\frac{m}{2 \mathcal{E}}} \int \frac{d q}{\sqrt{1-\frac{m \omega^2 q^2}{2 \mathcal{E}}}}-t=\beta=$cte.
 	\item<2-> Integrando obtenemos $Q+t=\frac{1}{\omega} \operatorname{sen}^{-1}\left(\omega q \sqrt{\frac{m}{2 E}}\right)$ 
-	\item<3-> Con cual, $q(Q, E, t)=\sqrt{\frac{2 E}{m \omega^2}} \operatorname{sen} \left(\omega t+\beta^{\prime}\right)$, con $\quad \beta^{\prime}=Q \omega=$ cte. 
-	\item<4-> Entonces $p=\frac{\partial \mathcal{W} }{\partial q}=\sqrt{2 m E-m^2 \omega^2 q^2} \equiv \sqrt{2 m E} \cos \left(\omega t+\beta^{\prime}\right)$
-	\item<5-> Evaluando para $t = 0$, tendremos $q_0 =\sqrt{\frac{2 E}{m \omega^2}} \operatorname{sen} (\omega Q)$ y $p_0  =\sqrt{2 m E} \cos (\omega Q)$
+	\item<3-> Con cual, $q(Q, \mathcal{E}, t)=\sqrt{\frac{2 \mathcal{E}}{m \omega^2}} \operatorname{sen} \left(\omega t+\beta^{\prime}\right)$, con $\quad \beta^{\prime}=Q \omega=$ cte. 
+	\item<4-> Entonces $p=\frac{\partial \mathcal{W} }{\partial q}=\sqrt{2 m \mathcal{E}-m^2 \omega^2 q^2} \equiv \sqrt{2 m \mathcal{E}} \cos \left(\omega t+\beta^{\prime}\right)$
+	\item<5-> Evaluando para $t = 0$, tendremos $q_0 =\sqrt{\frac{2 \mathcal{E}}{m \omega^2}} \operatorname{sen} (\omega Q)$ y $p_0  =\sqrt{2 m \mathcal{E}} \cos (\omega Q)$
 	\item<6-> Con lo cual $\tan (\omega Q)=m \omega \frac{q_0}{p_0} \quad \Rightarrow \quad Q=\frac{1}{\omega} \tan ^{-1}\left(m \omega \frac{q_0}{p_0}\right)$.
-	\item<7-> Mientras que $E=\frac{1}{2 m}\left(p_0^2+m^2 \omega^2 q_0^2\right)=P$
+	\item<7-> Mientras que $\mathcal{E}=\frac{1}{2 m}\left(p_0^2+m^2 \omega^2 q_0^2\right)=P$
 	\item<8-> Las ecuaciones $p=p\left(q_0, p_0, t\right)$ y $q=q\left(q_0, p_0, t\right)$ expresan la solución de las ecuaciones de Hamilton para el oscilador armónico en términos de las condiciones iniciales.
 \end{itemize}
 }
 %
 %%%%% Diapo 2
 \section{Comparando Métodos.}
-\subsection{Comparando Métodos: Conceptos y Técnicas}
+\subsection{Conceptos y Técnicas}
 \frame{
-\frametitle{Comparando Métodos: Conceptos y Técnicas}
+\frametitle{Conceptos y Técnicas}
 \begin{itemize}  
 	\item<1-> {\bf Los Conceptos de los formalismos}
 	\begin{itemize}
@@ -226,7 +226,7 @@ Partícula de masa \( m \), sujeta a una fuerza $F = -kx \quad \Rightarrow \quad 
 	\begin{itemize}
 		\item Lagrangiano:  $\mathcal{L}(x, \dot{x}) = \frac{1}{2}m\dot{x}^2 - \frac{1}{2}k x^2$
 		\item Ecuación de Euler-Lagrange $\frac{d}{dt} \left( \frac{\partial \mathcal{L}}{\partial \dot{x}} \right) = \frac{\partial \mathcal{L}}{\partial x} \quad \Rightarrow \quad m\ddot{x} + kx = 0$
-		\item Solución: $x(t) = A \cos(\omega t) + B \sin(\omega t), \quad \omega = \sqrt{\frac{k}{m}}$
+		\item Solución: $x(t) = A \cos(\omega t) + B \operatorname{sen}(\omega t), \quad \omega = \sqrt{\frac{k}{m}}$
 	\end{itemize}
 	\item<2-> {\bf Ventajas del enfoque Lagrangiano}
 	\begin{itemize}

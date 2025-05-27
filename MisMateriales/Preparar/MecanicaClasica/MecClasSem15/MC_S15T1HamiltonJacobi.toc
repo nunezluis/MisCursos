@@ -2,11 +2,11 @@
 \beamer@sectionintoc {1}{Las transformaciones can\'onicas $\left \{p_i, q_i\right \} \rightarrow \left \{P_i, Q_i\right \}=\left \{\alpha _i, \beta _i\right \}$}{3}{0}{1}
 \beamer@sectionintoc {2}{El Principio de M\IeC {\'\i }nima Acci\'on}{9}{0}{2}
 \beamer@sectionintoc {3}{La ecuaci\'on de Hamilton-Jacobi}{14}{0}{3}
-\beamer@sectionintoc {4}{Secci\'on}{21}{0}{4}
-\beamer@sectionintoc {5}{Secci\'on}{26}{0}{5}
-\beamer@sectionintoc {6}{Secci\'on}{35}{0}{6}
+\beamer@sectionintoc {4}{La trayectoria del sistema}{21}{0}{4}
+\beamer@sectionintoc {5}{Funci\'on principal de Hamilton-Jacobi}{26}{0}{5}
+\beamer@sectionintoc {6}{Ecuaci\'on Independiente del tiempo}{35}{0}{6}
 \beamer@sectionintoc {7}{Ejemplo: Una vez mas el Oscilador Arm\'onico}{39}{0}{7}
 \beamer@sectionintoc {8}{Comparando M\'etodos.}{54}{0}{8}
-\beamer@subsectionintoc {8}{1}{Comparando M\'etodos: Conceptos y T\'ecnicas}{54}{0}{8}
+\beamer@subsectionintoc {8}{1}{Conceptos y T\'ecnicas}{54}{0}{8}
 \beamer@subsectionintoc {8}{2}{Ventajas y Limitaciones}{56}{0}{8}
 \beamer@subsectionintoc {8}{3}{El Oscilador Arm\'onico: Tres Enfoques}{58}{0}{8}
