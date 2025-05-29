@@ -68,21 +68,42 @@
 \frametitle{Formalismo Hamiltoniano}
 \begin{itemize}  
 	\item<1-> El hamiltoniano se define por: $\mathcal{H} = p_x \dot{x} + p_y \dot{y} - \mathcal{L}$
-	\item<2-> Con $p_x = \frac{\partial \mathcal{L}}{\partial \dot{x}} = m \dot{x} \quad$ y $\quad p_y = \frac{\partial \mathcal{L}}{\partial \dot{y}} = m \dot{y} + q B x$
+	\item<2-> Como $\mathcal{L} = \frac{1}{2} m (\dot{x}^2 + \dot{y}^2) + q B x \dot{y}$
+	 tenemos $p_x = \frac{\partial \mathcal{L}}{\partial \dot{x}} = m \dot{x} \quad$ y $\quad p_y = \frac{\partial \mathcal{L}}{\partial \dot{y}} = m \dot{y} + q B x$
+	%
 	\item<3-> Entonces $\mathcal{H} = \frac{p_x^2}{2m} + \frac{1}{2m} (p_y - q B x)^2$
-	\item<4-> Las Ecuaciones de Hamilton $\dot{x} = \frac{\partial H}{\partial p_x} = \frac{p_x}{m}
-\quad \Rightarrow \quad \ddot{x} = \frac{\dot{p}_x}{m}$ $\dot{p}_x = -\frac{\partial H}{\partial x} = -\frac{q B}{m} (p_y - q B x); \quad$ $\dot{y} = \frac{\partial H}{\partial p_y} = \frac{p_y - q B x}{m}
-\quad \Rightarrow \ddot{y} = \frac{\dot{p}_y - q B \dot{x}}{m}$; finalmente $\dot{p}_y = -\frac{\partial H}{\partial y} = 0 \quad \Rightarrow \quad p_y = \text{cte}$
+	%
+	\item<4-> Las Ecuaciones de Hamilton $\dot{x} = \frac{\partial \mathcal{H}}{\partial p_x} = \frac{p_x}{m} \quad \Rightarrow \ddot{x} = \frac{\dot{p}_x}{m} $ $\dot{p}_x = -\frac{\partial \mathcal{H}}{\partial x} = -\frac{q B}{m} (p_y - q B x);$ $\quad \Rightarrow  \ddot{x} = -\frac{q B}{m} (p_y - q B x)$ 
+	$\dot{y} = \frac{\partial \mathcal{H}}{\partial p_y} = \frac{p_y - q B x}{m} \quad \Rightarrow \ddot{y} = \frac{\dot{p}_y - q B \dot{x}}{m} \quad \Rightarrow \ddot{y} = -\frac{q B \dot{x}}{m}$; \\ finalmente $\dot{p}_y = -\frac{\partial \mathcal{H}}{\partial y} = 0 \quad \Rightarrow \quad p_y =$ cte $\quad \Rightarrow \ddot{y} = -\frac{q B \dot{x}}{m}$
+	%
+	\item<5-> Como $p_y$ es constante: $X = x - \frac{p_y}{q B} \Rightarrow \ddot{X} = -\omega_c^2 X,$ con  $\omega_c = \frac{q B}{m}$, y otra vez se obtienen las mismas ecuaciones movimiento
+
 
 \end{itemize}
 }
 %
 %%%%% Diapo 2
-\section{Sección}
+\section{Formalismo de Hamilton-Jacobi}
 \frame{
-\frametitle{Título transparencia}
+\frametitle{Formalismo de Hamilton-Jacobi}
 \begin{itemize}  
-	\item<1-> 
+	\item<1-> La función de acción $S(x, y, t)$ será tal que $\mathcal{H}\left(x, \frac{\partial S}{\partial x}, \frac{\partial S}{\partial y} \right) + \frac{\partial S}{\partial t} = 0$
+	%
+	\item<2-> Con lo cual Hamilton-Jacobi $\frac{1}{2m} \left[ \left( \frac{\partial S}{\partial x} \right)^2 + \left( \frac{\partial S}{\partial y} - q B x \right)^2 \right] + \frac{\partial S}{\partial t} = 0$
+	%
+	\item<3-> Intentamos la separabilidad como: $S(x, y, t) = \mathcal{W}(x) + p_y y - \mathcal{E} t$
+	%
+	\item<4-> Entonces: $\frac{\partial S}{\partial x} = \frac{d 
+	\mathcal{W}}{d x}, \quad \frac{\partial S}{\partial y} = p_y, \quad \frac{\partial S}{\partial t} = -\mathcal{E}$
+	
+	\item<5-> Con lo cual: $\frac{1}{2m} \left[ \left( \frac{d \mathcal{W}}{d x} \right)^2 + (p_y - q B x)^2 \right] = \mathcal{E}$. Entonces
+	\item<6-> $\left( \frac{dW}{dx} \right)^2 = 2m
+	\mathcal{E} - (p_y - q B x)^2 \Rightarrow \mathcal{W}(x) = \int \sqrt{2m\mathcal{E} - (p_y - q B x)^2} \, dx$
+	\item<7-> Las ecuaciones $p_x = \frac{\partial S}{\partial x} = \frac{dW}{dx}, \quad p_y = \text{cte}, \quad Q_y = \frac{\partial S}{\partial p_y} = y + \frac{\partial W}{\partial p_y}$
+	\item<8-> La dependencia de $x(t)$ se obtiene: $\frac{dx}{dt} = \frac{\partial H}{\partial p_x} = \frac{p_x}{m}$ 
+	\item<9-> Pero como $p_x = \frac{dW}{dx}$, tenemos: $\frac{dx}{dt} = \frac{1}{m} \sqrt{2mE - (p_y - q B x)^2}$
+
+
 \end{itemize}
 }
 
