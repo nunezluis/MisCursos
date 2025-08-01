@@ -78,13 +78,13 @@ por definir
 
 ### Los vectores de siempre (1 Semana)
 <a name="VectoresSiempre"></a>
-+ [Clase 1: Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md) **Semana 1 = 5Ago**
++ [Clase 1: Los vectores de siempre](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_1LosVectoresdeSiempre.md) **Semana 1 = 5/6Ago/**
 
 + [Clase 2: Análisis vectorial express y número complejos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C1_2AnalisisVectExpress.md). **Semana 1 = 8Ago**
 
 ### Espacios Vectoriales lineales. (3.0 Semanas)
 <a name="EspaciosVectoriales"></a>
-+ [Clase 3: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md) **Semana 2 12ago**
++ [Clase 3: Grupos y espacios lineales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_1GrupoEspVectorial.md) **Semana 2 12/13ago**
 Además tendremos un **taller evaluado de los vectores de siempre** (clases 1 y 2).
     1. Código en SymPy para calcular centroide de un triángulo (Problema 3 Sección 1.1.6).
     2. Código en SymPy que reproduzca el ejercicio 6 de la Sección 1.2.7
@@ -93,11 +93,11 @@ Además tendremos un **taller evaluado de los vectores de siempre** (clases 1 y 
 
 + [Clase 4: Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md). **Semana 2 15ago**
 
-+ [Clase 5: Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md) **Semana 3 19ago** **Entrega asignación 1**
++ [Clase 5: Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md) **Semana 3 19/20ago** **Entrega asignación 1**
 
 + Ajuste **Semana 3 22ago**
 
-+ [Clase 6: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) **Semana 4 26ago**
++ [Clase 6: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) **Semana 4 26/27ago**
     1. Taller Evaluado Espacios Lineales (clases 3, 4, y 5)
         1. De la Sección 2.1.6 desarrollar los ejercicios 3 y 10
         2. Resuelva el ejercicio 6 sección 2.2.4
@@ -111,11 +111,11 @@ Por definir
 <a name="EspaciosDuales"></a>
 + [Clase 7: Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md) **Semana 4 29ago**
 
-+ [Clase 8: Tensores y espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md). **Semana 5 2sep**
++ [Clase 8: Tensores y espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md). **Semana 5 2/3sep**
 
 + [Clase 9: Tensores y sus aplicaciones en Física](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_3AplicaTensores.md). **Semana 5 5sep**
 
-+ [Clase 10: Vectores y tensores en espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_4EspPseudoEuclid.md). **Semana 6 9sep**
++ [Clase 10: Vectores y tensores en espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_4EspPseudoEuclid.md). **Semana 6 9/10sep**
 Evaluación de los ejercicios asignados clases 6, 7, 8 y 9.    
  1. los ejercicios 5 y 6 de la sección 2.3.6
  2.  SymPy desarrollar el ejercicio 3 de la sección 2.4.5
