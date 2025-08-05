@@ -12,6 +12,7 @@ El tercer objetivo es iniciar a los estudiantes en la utilización de la notaci�
 3. Estudiarse el apéndice 6.2 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf) Deben empezar a manejar SymPy
 3. Estudiar puntos 1.1, 1.2 y 1.3 y 1.4 del capítulo 1 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
 4. Rehacer los ejemplos 1.2, 1.3, 1.4, 1.10, 1.14 y 1.15.
+5. Seguir los videos de 3blue1Brown [vectores](https://www.youtube.com/watch?v=fNk_zzaMoSs) y [independencia lineal](https://www.youtube.com/watch?v=k7RM-ot2NWY)
 
 ### Taller de problemas 1 (evaluación en la clase 3)
 1. Realice un código en SymPy para el cual, dado tres vectores que formen los lados de un triángulo calcule el centroide (Problema 3 Sección 1.1.6). Trate de hacer este problema de forma que pueda reutilizar su código para tres vectores cualesquiera.
