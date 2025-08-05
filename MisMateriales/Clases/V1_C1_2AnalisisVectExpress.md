@@ -5,9 +5,10 @@
 ### Actividad antes de clase
    1. Estudiar puntos 1.5 y 1.6 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
    2. Rehacer los ejemplos 1.17, 1.19, 1.24, 1.28 y 1.30.
+   3. Seguir el video de [transformaciones lineales](https://www.youtube.com/watch?v=kYB8IZa5AuE)
 
 ### Taller de problema 1 (evaluación en la clase 3)
-   1. De la sección 1.5.7 resuelva los ejercicios 2a, 2d y 2f y con MAXIMA/PYTHON el ejercicio 13;
+   1. De la sección 1.5.7 resuelva los ejercicios 2a, 2d y 2f y con PYTHON/SymPy el ejercicio 13;
    2. De la sección 1.6.6 resuelva los ejercicios 2, 5 y 6.
 
 ### Materiales de apoyo
