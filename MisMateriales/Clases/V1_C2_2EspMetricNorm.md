@@ -8,7 +8,7 @@ Esta clase tiene por objetivo explorar la estructura de los espacios vectoriales
    2. Rehacer con SymPy el ejemplo 2.7 .
 
 ### Taller de problemas
-Resuelva el ejercicio 4 sección 2.2.4
+Resuelva el ejercicio 6 sección 2.2.4
 
 ### Materiales de apoyo
    1. [Video](https://youtu.be/la9Gnhc0uFg) y [presentación de espacios métricos y normados](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/2_2EspaciosMetricos.pdf)
