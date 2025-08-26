@@ -1,13 +1,13 @@
-| Nº | Nombre                                  |13ago | Col4 | Col5 | Col6 | Col7 | Col8 | Col9 | Col10 | Col11 | Col12 | Col13 | Col14 | Col15 | Col16 |
+| Nº | Nombre                                  |13ago | 20ago | Col5 | Col6 | Col7 | Col8 | Col9 | Col10 | Col11 | Col12 | Col13 | Col14 | Col15 | Col16 |
 |----|-----------------------------------------|------|------|------|------|------|------|------|-------|-------|-------|-------|-------|-------|-------|
 | 1  | ALMEIDA PIÑA LAURA KARIME              |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
 | 2  | AMAYA ARROYO FELIPE CARLOS             |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
-| 3  | ARIZA FLOREZ CRISTIAN YESID            |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
+| 3  | ARIZA FLOREZ CRISTIAN YESID            |      |   0  |      |      |      |      |      |       |       |       |       |       |       |       |
 | 4  | BOHORQUEZ NIÑO HENYERBEL ALDAYR        |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
 | 5  | CONDE BENAVIDES SANTIAGO               |   5  |      |      |      |      |      |      |       |       |       |       |       |       |       |
 | 6  | HINCAPIE QUINTERO ANGEL CAMILO         |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
-| 7  | ISAACS TORRES RAFAEL DARIO             |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
-| 8  | LOPEZ BELLO NATHALY GISSETH            |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
+| 7  | ISAACS TORRES RAFAEL DARIO             |      |  0   |      |      |      |      |      |       |       |       |       |       |       |       |
+| 8  | LOPEZ BELLO NATHALY GISSETH            |      |  0   |      |      |      |      |      |       |       |       |       |       |       |       |
 | 9  | MEZA CARDENAS JEFFERSON EXNEIDER       |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
 | 10 | MURILLO VANEGAS JUAN MANUEL            |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
 | 11 | OSPINA HERNANDEZ ALEJANDRO             |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
@@ -15,10 +15,10 @@
 | 13 | PLATA BERDUGO JORGE STEVEN             |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
 | 14 | RICO HURTADO SAMUEL DARIO              |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
 | 15 | RINCON GALVIS ELKIN MAURICIO           |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
-| 16 | RODRIGUEZ BARRERA ISABELLA             |   4   |      |      |      |      |      |      |       |       |       |       |       |       |       |
+| 16 | RODRIGUEZ BARRERA ISABELLA             |  4   |  5   |      |      |      |      |      |       |       |       |       |       |       |       |
 | 17 | ROSERO GOMEZ JUAN CAMILO               |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
 | 18 | SANDOVAL PEÑA DANIEL EDUARDO           |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
 | 19 | SILVA SERRANO JORGE ANDRES             |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
-| 20 | SOSA SAAVEDRA JOSE PABLO               |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
+| 20 | SOSA SAAVEDRA JOSE PABLO               |      |   5  |      |      |      |      |      |       |       |       |       |       |       |       |
 | 21 | VARGAS MERCADO JOSE MIGUEL             |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
 | 22 | VILLAMIZAR REDONDO FABIAN AUGUSTO      |      |      |      |      |      |      |      |       |       |       |       |       |       |       |
