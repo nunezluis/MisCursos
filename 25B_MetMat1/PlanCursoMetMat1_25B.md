@@ -36,7 +36,7 @@ La evaluación de este curso se realizará en base a tres tipos de actividades c
 
 + **Cada tercera clase (C3C)** se hará una evaluación sustentada de los *ejercicios asignados* como tarea.  Se tomarán en cuenta diez de estas evaluaciones y sumarán el 20\%. Las solución a los ejercicios C3C se compartirán desde el repositorio *git*
 
-+ **Tres asignaciones especiales** se sustentará una asignación especial. *Tendremos dos tipos de asignaciones cuyas evaluaciones sumarán el 20% del curso*. Los reportes y las presentaciones de las asignaciones se compartirán desde el repositorio *git*
++ **Dos asignaciones especiales** se sustentará una asignación especial. *Tendremos dos tipos de asignaciones cuyas evaluaciones sumarán el 20% del curso*. Los reportes y las presentaciones de las asignaciones se compartirán desde el repositorio *git*
 
 + En la **clase 14 o 15** y en **la 26 o 27** se realizará una evaluación oral (o escrita según el caso) de temas cubiertos hasta esas fechas. Estas conversaciones evaluadas acopiarán el 60% restante.
 
@@ -73,8 +73,6 @@ También utilizaremos capítulos de la siguiente  bibliografía de textos clási
 | [Análisis vectorial](#AnalisisVectorial)| 2.5  |
 | [Variable compleja](#VariableCompleja) |3|
 
-### Asignación 1
-por definir
 
 ### Los vectores de siempre (1 Semana)
 <a name="VectoresSiempre"></a>
@@ -98,13 +96,10 @@ Además tendremos un **taller evaluado de los vectores de siempre** (clases 1 y 
 + Ajuste **Semana 3 22ago**
 
 + [Clase 6: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) **Semana 4 26/27ago**
-    1. Taller Evaluado Espacios Lineales (clases 3, 4, y 5)
-        1. De la Sección 2.1.6 desarrollar los ejercicios 3 y 10
-        2. Resuelva el ejercicio 6 sección 2.2.4
-        3. Desarrollar los ejercicios 5 y 6 de la sección 2.3.6
-    2. También tendremos la sustentación de Asignación 1.
+    1. Desarrollar los ejercicios 5 y 6 de la sección 2.3.6
+    2. Utilizando SymPy desarrollar el ejercicio 3 de la sección 2.4.51
 
-### Asignación 2 (Entrega hasta clase 10 y discusión clase 11).
+### Asignación 1 (Entrega hasta clase 10 y discusión clase 11).
 Por definir
 
 ### Espacios vectoriales duales y tensoriales. (2.5 Semanas)
