@@ -99,9 +99,6 @@ Además tendremos un **taller evaluado de los vectores de siempre** (clases 1 y 
     1. Desarrollar los ejercicios 5 y 6 de la sección 2.3.6
     2. Utilizando SymPy desarrollar el ejercicio 3 de la sección 2.4.51
 
-### Asignación 1 (Entrega hasta clase 10 y discusión clase 11).
-Por definir
-
 ### Espacios vectoriales duales y tensoriales. (2.5 Semanas)
 <a name="EspaciosDuales"></a>
 + [Clase 7: Funcionales Lineales y Espacios Vectoriales Duales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_1EspDuales.md) **Semana 4 29ago**
