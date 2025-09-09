@@ -6,6 +6,7 @@ Esta clase tiene por objetivo mostrar tres aplicaciones de tensores en Física. 
 ### Actividades **antes** de clase**
    1. Estudiar los puntos 3.3.1 (tensor de esfuerzo 2D) y 3.3.3 (tensor de inercia).  
    2. Sorprenderse con [este video](https://www.youtube.com/watch?v=1VPfZ_XzisU)
+   3. Seguir [este video](https://www.youtube.com/watch?v=YxXyN2ifK8A)  
 
 ### Actividad **después** de clase
    1. De la sección 3.3.5 hacer los ejercicios 2, 7 y 8  
