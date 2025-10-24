@@ -38,4 +38,4 @@ Esta clase tiene varios objetivos presentar con detalles el caso 3D de espacios 
    4. Construir las superficies equipotenciales y las curvas con un mismo valor del campo escalar partiendo de un campo escalar escalar dado
    5. Construir las líneas de flujo y las trayectorias ortogonales de un campo vectorial
    6. Calcular el flujo de un campo vectorial
-   7. ser capaz de utilizar MAXIMA o cualquier otro manipulador simbólico para realizar cambios de coordenadas.
+   7. ser capaz de utilizar SymPy o cualquier otro manipulador simbólico para realizar cambios de coordenadas.
