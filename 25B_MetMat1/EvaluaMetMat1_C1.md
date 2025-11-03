@@ -6,7 +6,7 @@
 | 4  | BOHORQUEZ NIÑO HENYERBEL ALDAYR         |        |         |         |         |        |
 | 5  | CONDE BENAVIDES SANTIAGO                |   5.0  |         |         |         |        |
 | 6  | HINCAPIE QUINTERO ANGEL CAMILO          |   3.0  |         |         |         |        |
-| 7  | ISAACS TORRES RAFAEL DARIO              |        |         |         |         |        |
+| 7  | ISAACS TORRES RAFAEL DARIO              |   3.5  |         |         |         |        |
 | 8  | LOPEZ BELLO NATHALY GISSETH             |        |         |         |         |        |
 | 9  | MEZA CARDENAS JEFFERSON EXNEIDER        |        |         |         |         |        |
 | 10 | MURILLO VANEGAS JUAN MANUEL             |  3.5   |         |         |         |        |
@@ -20,7 +20,7 @@
 | 18 | SANDOVAL PEÑA DANIEL EDUARDO            |        |         |         |         |        |
 | 19 | SILVA SERRANO JORGE ANDRES              |  2.0   |         |         |         |        |
 | 20 | SOSA SAAVEDRA JOSE PABLO                |  1.0   |         |         |         |        |
-| 21 | VARGAS MERCADO JOSE MIGUEL              |        |         |         |         |        |
+| 21 | VARGAS MERCADO JOSE MIGUEL              |  5.0   |         |         |         |        |
 | 22 | VILLAMIZAR REDONDO FABIAN AUGUSTO       |  2.0   |         |         |         |        |
 | 23 | Espinosa Carrillo Nicolas Santiago      |  5.0   |         |         |         |        |
 | 24 | González Martínez Samuel Alexis         |  5.0   |         |         |         |        |
