@@ -4,11 +4,11 @@
 | 2  | BORDETH RUBIO LUIS ALEJANDRO            |        |         |         |         |        |
 | 3  | CARDENAS ANGARITA DANNA ISABELLA        |        |         |         |         |        |
 | 4  | CUEVAS ESTUPIÑAN ALEJANDRO              |        |         |         |         |        |
-| 5  | ECHEVERRY OTALORA DANIELA ALEJANDRA     |        |         |         |         |        |
-| 6  | ESPINOSA CARRILLO NICOLAS SANTIAGO      |        |         |         |         |        |
+| 5  | ECHEVERRY OTALORA DANIELA ALEJANDRA     |   2.0  |         |         |         |        |
+| 6  | ESPINOSA CARRILLO NICOLAS SANTIAGO      |   5.0  |         |         |         |        |
 | 7  | FUENTES RICAURTE DIEGO ESTEBAN          |        |         |         |         |        |
 | 8  | GOMEZ OSMA CARLOS JOSE                  |        |         |         |         |        |
-| 9  | GONZALEZ MARTINEZ SAMUEL ALEXIS         |        |         |         |         |        |
+| 9  | GONZALEZ MARTINEZ SAMUEL ALEXIS         |   5.0  |         |         |         |        |
 | 10 | HERNANDEZ CALA DANNA SOFIA              |        |         |         |         |        |
 | 11 | HOLGUIN SOTO YASSER JASID               |        |         |         |         |        |
 | 12 | MARTINEZ GARCIA LUIS GONZALO            |        |         |         |         |        |
