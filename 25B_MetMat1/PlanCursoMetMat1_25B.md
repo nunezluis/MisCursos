@@ -154,7 +154,7 @@ Evaluación de los ejercicios asignados clases 12, 13 14 y 15
 
 + [Clase 19: Integrales de campos vectoriales y teoremas integrales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C5_3TeoremasIntegrales.md) **XXX**
 
-+ [Clase 20: Teoría de Potencial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/EnConstruccion.md).
++ [Clase 20: Teoría de Potencial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/5_40TeoriaPotencial.pdf).
 
 ### Variable Compleja (3 Semanas)
 <a name="VariableCompleja"></a>
