@@ -22,5 +22,4 @@
 | 20 | SOSA SAAVEDRA JOSE PABLO        |   4.0    |  1.0   |   3.5   | 4.0     |         |        |
 | 21 | VARGAS MERCADO JOSE MIGUEL      |   3.5  |  5.0   |   2.0   | 2.5     |         |        |
 | 22 | VILLAMIZAR REDONDO FABIAN AUGUSTO|  3.5    |  2.0   |   1.5   |   1.5   |         |        |
-| 23 | Espinosa Carrillo Nicolas Santiago|      |  5.0   |         |         |         |        |
-| 24 | González Martínez Samuel Alexis |        |  5.0   |         |         |         |        |
+x
