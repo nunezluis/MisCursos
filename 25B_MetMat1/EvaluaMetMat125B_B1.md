@@ -18,7 +18,7 @@
 | 16 | PITRE GAMEZ JHOAM ALBERTO         |   2.5    |   3.5  |  2.5    |   3.5   |   2.0    | 3.3       |
 | 17 | QUINTANA GONZALEZ FERNANDO        |    3.0   |   2.0  |  3.5    |   2.0    |   2.5    |  3.1   |
 | 18 | RIOS CAMPOS PAOLA ANDREA          |    3.0   |   3.5  |   3.5   |         |         |        |
-| 19 | RODRIGUEZ HERNANDEZ LAURA DANIELA |    2.0   |   2.0     |  1.0    |  2.5    |   1.5      | 2.0       |
+| 19 | RODRIGUEZ HERNANDEZ LAURA DANIELA |    2.0   |   2.0     |  1.0    |  2.5    |   1.5      | 2.7       |
 | 20 | ROMERO VIRGUEZ MIGUEL ALBERTO     |    1.0   |   3.5  |  4.0    |  1.5    |  3.0    | 3.0       |
 | 21 | SARMIENTO VILLARREAL JUAN DIEGO   |  1.0        |        |         |         |         |        |
 | 22 | UCROS MUÑOZ ISABELLA MARIA        |    6.0      |   4.25 |   5.0   |    4.5     |  4.5       | 5.0       |
