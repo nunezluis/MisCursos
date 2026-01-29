@@ -1,4 +1,4 @@
-# Plan del Curso de Métodos Matemáticos de la Física 1 (Semestre B25)
+# Plan del Curso de Métodos Matemáticos de la Física 1 (Semestre A26)
 1. [La metodología](#metodologia)
    1. [Clases](#clases)
    2. [Colaboración y computación](#colaboracion)
@@ -15,7 +15,7 @@
 ### Las clases
 **En cada clase** tendremos dos partes: una de ~30m-40m para presentar los conceptos, seguida por otra de ~60m-50m para la discusión en los ejemplos resueltos. Los conceptos habrán sido previamente expuestos en videos e indicados en los materiales de estudio.
 
-En cada clase se propondrán ejercicios y asignaciones que deben resolver, consignar y sustentar **cada tercera clase, n +3** y **fechas fijas las asignaciones**, respectivamente.  Tendremos una hora de consulta para dilucidar las dudas que se les presenten tanto en la solución de los ejercicios y las asignaciones propuestas.
+En cada clase se propondrán ejercicios y asignaciones que deben resolver, consignar y sustentar **cada tercera clase**, es decir  **n +3** y **fechas fijas las asignaciones**, respectivamente.  Tendremos una hora de consulta para dilucidar las dudas que se les presenten tanto en la solución de los ejercicios y las asignaciones propuestas.
 
 ### Las asignaciones
 Las asignación son parte fundamental del desarrollo del curso.  Algunas asignaciones será de aplicación de los conceptos y otras de discusión de artículos relacionados con los tópicos que estemos desarrollando.  Las asignaciones de aplicación buscan reforzar los conceptos del curso en la solución de un problema particular, muchas veces con visos de realidad. La discusión de artículos relacionan los conceptos del curso con su utilización específica reportada en la literatura.  Las asignaciones de aplicación serán presentadas de dos maneras: un reporte tipo artículo y una presentación de máximo 6 láminas expuestas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
