@@ -15,9 +15,9 @@ El tercer objetivo es iniciar a los estudiantes en la utilización de la notaci�
 5. Seguir los videos de 3blue1Brown [vectores](https://www.youtube.com/watch?v=fNk_zzaMoSs) y [independencia lineal](https://www.youtube.com/watch?v=k7RM-ot2NWY)
 
 ### Taller de problemas 1 (evaluación en la clase 3)
-1. Realice un código en SymPy para el cual, dado tres vectores que formen los lados de un triángulo calcule el centroide (Problema 3 Sección 1.1.6). Trate de hacer este problema de forma que pueda reutilizar su código para tres vectores cualesquiera.
-2. Realice un código en SymPy que reproduzca el ejercicio 6 de la Sección 1.2.7
-3. Realice los ejercicios 3 y 4 de seccion 1.4.5 de las notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf).
+1. Realice un código en SymPy para el cual, Ejercicio 5 Sección 1.1.6. Trate de hacer este problema de forma que pueda reutilizar su código distintas configuraciones.
+2. Realice un código en SymPy que reproduzca el ejercicio 6 de la Sección 1.2.7. Haga el código lo mas general posible
+3. Realice los ejercicios 3 y 4 de sección 1.4.5 de las notas de clase.
 
 ### Materiales de apoyo
 1. [Video](https://youtu.be/2LhoaImegV4) y [presentación generalidades de vectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/1_1Vectores.pdf)
