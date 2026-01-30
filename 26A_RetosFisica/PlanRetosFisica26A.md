@@ -6,7 +6,6 @@ Cada equipo de trabajo deberá:
 2. Presentar un modelo teórico apoyado en simulaciones de Jupyter notebooks
 3. Comparaciones entre mediciones y simulaciones
 4. Una discusión física de las limitaciones o virtudes de su propuesta
-E
 
 
 Los equipos de trabajo estarán conformados por tres estudiantes. La solución del reto deberá ser dominada por cada uno de los integrantes del equipo. Se vale la división del trabajo, pero al final cada uno de los miembros debe ser capaz de sustentar la solución en todas sus facetas. No vale: *el/ella hizo la simulación*
@@ -135,7 +134,7 @@ El calendario del curso será el siguiente:
 
 
 ## Retos para seleccionar
-Los equipos deberán seleccionar uno de estos retos para resolverlos durante el semestre, siguiendo el calendario arriba expuesto.
+Los equipos deberán seleccionar uno de estos temas para plantear un experimento de bajo costo siguiendo el calendario arriba expuesto.
 
 + Cinemática:
   + Medición de posición, velocidad instantánea, tiempo de vuelo
@@ -144,14 +143,13 @@ Los equipos deberán seleccionar uno de estos retos para resolverlos durante el 
   + Medición de fuerzas, fricción, aceleración
   + Medición de fuerza elástica, oscilaciones
   + Momentos de Inercia
-  + Poleas y objetos físicos en rotación
+  + Poleas y objetos en rotación
   + Sistemas de masa variables (cuerdas y cadenas)
   + Péndulo simple y péndulo físico
   + Osciladores forzados y amortiguados
 + Trabajo y energía: Conversión energía potencial y cinética  
-  + Poleas y objetos físicos en rotación
+  + Poleas y objetos  en rotación
   + Sistemas de masa variables (cuerdas y cadenas)
   + Péndulo simple y péndulo físico
   + Osciladores forzados y amortiguados
 + Conservación de la cantidad de movimiento lineal, angular
-+
