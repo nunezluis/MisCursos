@@ -20,7 +20,7 @@ En cada clase se propondrán ejercicios que deben resolver, consignar y sustenta
 
 <a name="colaboracion"></a>
 ### La computación
-**Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  tres tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([SymPy](https://www.sympy.org/en/index.html) para trabajar en un ambiente de Jupyter notebooks), otra de edición de documentos científicos de alta calidad ([overleaf](https://en.wikipedia.org/wiki/Overleaf)) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales. Adicionalmente, como homenaje al gran [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz) deberán documentar en el git la solución de los ejercicios y asignaciones utilizando [markdown](https://en.wikipedia.org/wiki/Markdown).
+**Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  dos tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([SymPy](https://www.sympy.org/en/index.html) para trabajar en un ambiente de Jupyter notebooks) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales. Adicionalmente, como homenaje al gran [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz) deberán documentar en el git la solución de los ejercicios y asignaciones utilizando [markdown](https://en.wikipedia.org/wiki/Markdown).
 
 + Pueden registrarse en github [aquí](https://github.com/)
 
@@ -30,7 +30,7 @@ En cada clase se propondrán ejercicios que deben resolver, consignar y sustenta
 
 + Se realizará cuatro evaluaciones orales (o escritas según el caso) de temas cubiertos hasta esas fechas. Estas conversaciones evaluadas acopiarán el 80% restante.
 
-+ **Para consignar las tareas y asignaciones** deberan "clonar" el [repositorio de tareas](https://github.com/nunezluis/TareasCursos20B) y depositar allí las tareas, asignaciones y proyectos que desarrollemos durante el curso.
++ **Para consignar las tareas** deberan "clonar" el [repositorio de tareas](https://github.com/nunezluis/TareasCursos20B) y depositar allí las tareas, asignaciones y proyectos que desarrollemos durante el curso.
 
 <a name="MaterialesCurso"></a>
 ## Materiales del curso
