@@ -89,10 +89,12 @@ Para garantizar la reproducibilidad de ciencia se debe adjuntar toda la informac
 + Schectman, R. M. The Use of Computer Generated Data in Experiment Design—A Student Exercise. Am. J. Phys. 40, 1742–1747 (1972).
 + Vieyra, R., Vieyra, C., Jeanjacquot, P., Marti, A. & Monteiro, M. Turn your smartphone into lab. Sci Teach 82, 32–40 (2015).
 
-## Algunas referencias del uso de FABLab para la fabricación de instrumentos
+## Algunas referencias del uso de FABLab para la fabricación de instrumentos científicos
++ Fonda, C., & Canessa, E. (2016). Making ideas at scientific fabrication laboratories. Physics Education, 51(6), 065016.
 + Blikstein, P. (2013). Digital fabrication and *making* in education: The democratization of invention. FabLabs: Of machines, makers and inventors, 4(1), 1-21.
 + Baden, T., Chagas, A. M., Gage, G., Marzullo, T., Prieto-Godino, L. L., & Euler, T. (2015). Open Labware: 3-D printing your own lab equipment. PLoS biology, 13(3), e1002086.
 + Pearce, J. M. (2012). Building research equipment with free, open-source hardware. Science, 337(6100), 1303-1304.
++ Bouquet, F., Bobroff, J., Fuchs-Gallezot, M., & Maurines, L. (2017). Project-based physics labs using low-cost open-source hardware. American Journal of Physics, 85(3), 216-222.
 
 ## Calendario del Curso de Retos científicos
 El calendario del curso será el siguiente:
@@ -107,7 +109,7 @@ El calendario del curso será el siguiente:
         + Documentos: Presentaciones y reportes  
 + **Semana 2 (11feb)** Taller de diseño asistido por computador mediante [onshape](https://www.onshape.com/en/) Además,recopilación de información. identificación de las referencias claves relacionadas con el tema: artículos, videos, tutoriales, etc.
    + *Entregables para el 18feb:* Actualización del Git con las referencias del tema
-+ **Semanas 3 (18feb)** Taller de impresión 3D  y
++ **Semanas 3 (18feb)** Taller de impresión 3D a partir de los diseños de la semana anterior
 + **Semana 4 (25feb)** Redacción y sustentación de la propuesta de investigación
   + *Entregables para el 4mar:*
       + Documento (enlace a *overleaf*) con la propuesta (max 5pg sin referencias, ni autores-resumen)
