@@ -30,7 +30,7 @@ En cada clase se propondrán ejercicios que deben resolver, consignar y sustenta
 
 + Se realizará cuatro evaluaciones orales (o escritas según el caso) de temas cubiertos hasta esas fechas. Estas conversaciones evaluadas acopiarán el 80% restante.
 
-+ **Para consignar las tareas** deberan "clonar" el [repositorio de tareas](https://github.com/nunezluis/TareasCursos20B) y depositar allí las tareas, asignaciones y proyectos que desarrollemos durante el curso.
++ **Para consignar las tareas** deberan "clonar" el [repositorio de tareas](https://github.com/nunezluis/TareasCursos20B) y depositar allí las tareas que desarrollemos durante el curso.
 
 <a name="MaterialesCurso"></a>
 ## Materiales del curso
