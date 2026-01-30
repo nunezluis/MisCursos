@@ -20,7 +20,7 @@ En cada clase se propondrán ejercicios que deben resolver, consignar y sustenta
 
 <a name="colaboracion"></a>
 ### La computación
-**Las herramientas computacionales** son una parte escencial de la actividad científica actual. Utilizaremos  dos tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([SymPy](https://www.sympy.org/en/index.html) para trabajar en un ambiente de Jupyter notebooks) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales. Adicionalmente, como homenaje al gran [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz) deberán documentar en el git la solución de los ejercicios y asignaciones utilizando [markdown](https://en.wikipedia.org/wiki/Markdown).
+**Las herramientas computacionales** son una parte esencial de la actividad científica actual. Utilizaremos  dos tipos herramientas computacionales: una de manipulación simbólica o álgebra computacional ([SymPy](https://www.sympy.org/en/index.html) para trabajar en un ambiente de Jupyter notebooks) y otra un repositorio ([Git](https://en.wikipedia.org/wiki/GitHub)) para la preservación de documentos, datos y códigos computacionales. Adicionalmente, como homenaje al gran [Aaron Swartz](https://en.wikipedia.org/wiki/Aaron_Swartz) deberán documentar en el git la solución de los ejercicios y asignaciones utilizando [markdown](https://en.wikipedia.org/wiki/Markdown).
 
 + Pueden registrarse en github [aquí](https://github.com/)
 
