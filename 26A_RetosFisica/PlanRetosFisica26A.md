@@ -137,8 +137,21 @@ El calendario del curso será el siguiente:
 ## Retos para seleccionar
 Los equipos deberán seleccionar uno de estos retos para resolverlos durante el semestre, siguiendo el calendario arriba expuesto.
 
-+ Cinemática: Medición de posición, velocidad instantánea, tiempo de vuelo
++ Cinemática:
+  + Medición de posición, velocidad instantánea, tiempo de vuelo
+  + Medición de velocidad angular, aceleración angular
 + Dinámica, (leyes de Newton):
   + Medición de fuerzas, fricción, aceleración
   + Medición de fuerza elástica, oscilaciones
-+ Trabajo y energía  
+  + Momentos de Inercia
+  + Poleas y objetos físicos en rotación
+  + Sistemas de masa variables (cuerdas y cadenas)
+  + Péndulo simple y péndulo físico
+  + Osciladores forzados y amortiguados
++ Trabajo y energía: Conversión energía potencial y cinética  
+  + Poleas y objetos físicos en rotación
+  + Sistemas de masa variables (cuerdas y cadenas)
+  + Péndulo simple y péndulo físico
+  + Osciladores forzados y amortiguados
++ Conservación de la cantidad de movimiento lineal, angular
++
