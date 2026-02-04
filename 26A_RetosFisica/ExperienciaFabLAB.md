@@ -52,11 +52,6 @@
 
 * Not a paper, but a structured web resource with experiments and teacher-facing materials; useful as a baseline that your students can “hack” and extend. ([Physics Lab Arduino][12])
 
-## Common design pattern across these experiences (what they share)
-
-* **Open-ended design brief + constraints** (cost ceiling, measurement uncertainty target, safety rules).
-* **Rapid prototyping loop** (build → test → debug → document), enabled by FabLab tooling.
-* **Quantitative validation** (calibration, uncertainty budget, comparison to model), often using smartphones/video analysis as the “fastest path to data.”
 
 
 [1]: https://arxiv.org/abs/1512.01093?utm_source=chatgpt.com "Making Ideas at Scientific Fabrication Laboratories"
