@@ -1,5 +1,5 @@
 
-[![Build a seismograph with Raspberry Shake — The MagPi magazine](https://tse4.mm.bing.net/th/id/OIP.RXPPgU6xLCQidl6JDjcwhAHaE7?pid=Api)](https://magpi.raspberrypi.com/articles/build-a-seismograph-with-raspberry-shake?utm_source=chatgpt.com)
+
 
 ## 1) **OhmPi** — open-source **electrical resistivity (ERT) meter** for near-surface geophysics
 
@@ -84,13 +84,8 @@ A compact **seismograph** using a **geophone** + **24-bit digitization** + Raspb
 * **Hands-on “geophone + Pi + ADC” guide (useful for a fully student-owned build):** Core Electronics tutorial. ([Core Electronics][7])
 
 ---
+[![Build a seismograph with Raspberry Shake — The MagPi magazine](https://tse4.mm.bing.net/th/id/OIP.RXPPgU6xLCQidl6JDjcwhAHaE7?pid=Api)](https://magpi.raspberrypi.com/articles/build-a-seismograph-with-raspberry-shake?utm_source=chatgpt.com)
 
-### If you want one instrument that “feels like geophysics” in the first month
-
-* **OhmPi (ERT)** is unbeatable for *near-surface* field practice (electrodes, contact resistance, inversion).
-* **DIY seismograph** is unbeatable for *signal processing + monitoring* (noise, spectra, event detection, network thinking).
-
-If you tell me your target subfield (hydrogeophysics, engineering geophysics, volcano/seismo, environmental), I’ll propose **3–4 student lab/field experiences per instrument** with realistic BOM and acceptance tests.
 
 [1]: https://www.hardware-x.com/article/S2468-0672%2820%2930031-6/fulltext?utm_source=chatgpt.com "OhmPi: An open source data logger for dedicated ..."
 [2]: https://ohmpi.org/?utm_source=chatgpt.com "OHMPI: Open source and open hardware resistivity-meter ..."
