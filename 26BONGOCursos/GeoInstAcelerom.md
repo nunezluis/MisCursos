@@ -141,7 +141,6 @@ Run the course as **two tracks**:
 * **Track 1 (precision node):** OpenEEW/ADXL355-class for “how real networks are built.” ([GitHub][1])
 * **Track 2 (maker logger):** MPU-6050/ADXL345-class for “high-throughput student projects” and rapid iteration. ([SciELO][5])
 
-If you want, I can turn this into a **8–10 week syllabus** with: (i) minimum BOM per team, (ii) acceptance tests (calibration + noise + enclosure QA), and (iii) grading rubrics for hardware, data quality, and geoscience interpretation.
 
 [1]: https://github.com/openeew/openeew-sensor?utm_source=chatgpt.com "Hardware for an OpenEEW sensor"
 [2]: https://pubs.geoscienceworld.org/ssa/srl/article/96/2A/980/648871/Evaluation-of-an-Open-Earthquake-Early-Warning?utm_source=chatgpt.com "Evaluation of an Open Earthquake Early Warning System ..."
