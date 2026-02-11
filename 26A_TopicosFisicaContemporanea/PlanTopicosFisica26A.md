@@ -7,6 +7,9 @@ En esta charla compartiré mi trayectoria desde la universidad hasta la investig
 
 Natalia estudió Física en la UIS e hizo una maestría en Astrofísica en la Univ de Guanajuato México. Ahora realiza su doctorado en Astrofísica  en atmósferas de enanas marrones en la Universidad de Johns Hopkins, en los EEUU. También entusiasta de divulgación de la Astronomía, principalmente en proyectos para Colombia.
 
-### 13feb Lectura
+### 13feb Lectura artículo de Wieman
+Wieman, C. (2022). [How to become a successful physicist](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ReferenciaArticulos/CarreerDev/Wieman-HowtoBecomeAsuccessfulphysicist2022PhysicsToday.pdf). Physics Today, 75(9), 46-52.
 
-Wieman, C. (2022). How to become a successful physicist. Physics Today, 75(9), 46-52. 
+En la primera hora nos vamos a organizar en grupos de 3 personas para responder (en papel y lapiz, sin celular) algunas preguntas alusivas al artículo.
+
+En la segunda hora algunos grupos presentarán sus conclusiones y serán evaluados por sus compañeros.
