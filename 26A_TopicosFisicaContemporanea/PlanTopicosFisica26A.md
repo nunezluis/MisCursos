@@ -13,3 +13,22 @@ Wieman, C. (2022). [How to become a successful physicist](https://github.com/nun
 En la primera hora nos vamos a organizar en grupos de 3 personas para responder (en papel y lapiz, sin celular) algunas preguntas alusivas al artículo.
 
 En la segunda hora algunos grupos presentarán sus conclusiones y serán evaluados por sus compañeros.
+
+#### ¿Qué se espera en este ejercicio?
+
+Respuestas cortas a las preguntas con citas o ejemplos del artículo. Lenguaje propio (parafraseo), no copia textual.
+
+1. ¿Qué entiende Wieman por un “físico exitoso”?**
+   Explica su definición con tus propias palabras y menciona dos rasgos concretos que lo diferencien de ser “bueno en las clases de física”.
+
+2. ¿Qué es el marco de las “29 decisiones” y por qué es útil?
+   Explica qué representan o ilustran las “29 decisiones”. Luego menciona tres decisiones (o tipos de decisión) de etapas distintas de la resolución de problemas (inicio / desarrollo / cierre).
+
+3. Expertos vs. novatos: ¿cuál es la diferencia cognitiva clave?
+   Según Wieman, ¿qué hacen de manera diferente los expertos con su conocimiento? Da un ejemplo de un “marco” en física y explica cómo guía las elecciones.
+
+4. Práctica deliberada: ¿cómo sería aplicada a habilidades de investigación?
+   Propón un plan de práctica deliberada de 2 semanas para una habilidad de decisión. Incluye: la subhabilidad, la tarea de práctica, la fuente de retroalimentación y un criterio de éxito.
+
+5. Reflexión y sesgo de confirmación: ¿por qué son peligrosos y cómo se contrarrestan?
+   Explica qué hace el sesgo de confirmación en investigación, da un escenario realista donde podría engañarte y enumera dos contramedidas que usarías.
