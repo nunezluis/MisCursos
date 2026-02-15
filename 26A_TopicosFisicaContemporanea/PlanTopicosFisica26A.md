@@ -83,3 +83,14 @@ Angie es egresada de Física de la Universidad Industrial de Santander. Actualme
 
 ### 5mar Lectura del tercer capítulo del libro de Feibelman :
 *Important Choices: A Thesis Adviser,a Postdoctoral Job. A discussion of what to consider: young adviserversus an older one, a superstar versus ajourneyman, a small group versus a “factory.”Understanding and attending to your interestsas a postdoc.*
+
+
+### 10mar TBA
+#### Rocío Mojica (Gradiant, España)
+
+
+### 12mar Lectura del cuarto capítulo del libro de Feibelman :
+*Giving Talks: Preparing talks that will make people want tohire and keep you and that will make theinformation you present easy to assimilate.*
+
+### 17mar TBA
+#### Andres Camilo García (Escuela de Física, Universidad Industrial de Santander)
