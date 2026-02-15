@@ -35,7 +35,7 @@ En la segunda hora algunos grupos presentarán sus conclusiones y serán evaluad
 
 Respuestas cortas a las preguntas con citas o ejemplos del artículo. Lenguaje propio (parafraseo), no copia textual.
 
-1. ¿Qué entiende Wieman por un “físico exitoso”?**
+1. ¿Qué entiende Wieman por un “físico exitoso”?
    Explica su definición con tus propias palabras y menciona dos rasgos concretos que lo diferencien de ser “bueno en las clases de física”.
 
 2. ¿Qué es el marco de las “29 decisiones” y por qué es útil?
