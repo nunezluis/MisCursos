@@ -90,7 +90,7 @@ Angie es egresada de Física de la Universidad Industrial de Santander. Actualme
 
 
 ### 12mar Lectura del cuarto capítulo del libro de Feibelman :
-*Giving Talks: Preparing talks that will make people want tohire and keep you and that will make theinformation you present easy to assimilate.*
+*Giving Talks: Preparing talks that will make people want to hire and keep you and that will make the information you present easy to assimilate.*
 
 ### 17mar TBA
 #### Andres Camilo García (Escuela de Física, Universidad Industrial de Santander)
