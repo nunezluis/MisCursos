@@ -24,6 +24,8 @@ En esta charla compartiré mi trayectoria desde la universidad hasta la investig
 
 Natalia estudió Física en la UIS e hizo una maestría en Astrofísica en la Univ de Guanajuato México. Ahora realiza su doctorado en Astrofísica  en atmósferas de enanas marrones en la Universidad de Johns Hopkins, en los EEUU. También entusiasta de divulgación de la Astronomía, principalmente en proyectos para Colombia.
 
+Video de la charla [aquí](https://youtu.be/-zcnlteh0mg)
+
 ### 13feb Lectura artículo de Wieman
 Wieman, C. (2022). [How to become a successful physicist](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/ReferenciaArticulos/CarreerDev/Wieman-HowtoBecomeAsuccessfulphysicist2022PhysicsToday.pdf). Physics Today, 75(9), 46-52.
 
@@ -61,7 +63,9 @@ En esta charla comparto entre relatos personales, cómo he ido construyendo mi i
 
 Jennifer es egresada en Física del la Universidad Industrial de Santander. Hizo su maestría en Física (Astropartículas) en la UIS y ahora hace su doctorado en la Universidad de Guanajuato México en radioastronomía aplicada al estudio del gas en regiones de formación estelar masivas.
 
-### 19feb Lectura del primer capítulo del libro de Feibelman :
+Video de la charal [aquí](https://youtu.be/DIiuFeRIoVE)
+
+### 20feb Lectura del primer capítulo del libro de Feibelman :
 
 *Do You See Yourself in This Picture? A set of nonfiction vignettes illustrating some of the ways that young scientists make their livesmore unpleasant than necessary or fail entirely to establish themselves in a research career.*
 
