@@ -83,6 +83,8 @@ Además tendremos un **taller evaluado de los vectores de siempre** (clases 1 y 
 + [Clase 4: Espacios Métricos, Normados y Euclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_2EspMetricNorm.md). **S2C2 = 13feb**
 
 + [Clase 5: Dependencia e independencia líneal y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_3IndepLineal.md) **S3C1 = 18feb**
+  + De la Sección 2.1.5 desarrollar el ejercicio 10
+  + Resuelva el ejercicio 6 sección 2.2.4 
 
 + [Clase 6: Aproximación de funciones y bases ortogonales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C2_4AproxFun.md) **S3C2 = 20feb**
     1. Desarrollar los ejercicios 5 y 6 de la sección 2.3.6
