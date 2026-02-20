@@ -108,7 +108,7 @@ Bono: hasta **+2** puntos por **claridad excepcional**.
 * **4:** Muestra comprensión profunda de incentivos/crédito/seguridad; las decisiones se alinean estrechamente con el mensaje del capítulo.
 
 
-#### Realimentación escrita obligatoria (en cada revisión)
+#### Realimentación escrita obligatoria (en cada evaluación)
 Es imperioso que cada evaluación se justifique aclarando
 
 1.  **Una fortaleza** (“Mantengan…”)
