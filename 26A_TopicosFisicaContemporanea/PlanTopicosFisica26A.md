@@ -63,11 +63,58 @@ En esta charla comparto entre relatos personales, cómo he ido construyendo mi i
 
 Jennifer es egresada en Física del la Universidad Industrial de Santander. Hizo su maestría en Física (Astropartículas) en la UIS y ahora hace su doctorado en la Universidad de Guanajuato México en radioastronomía aplicada al estudio del gas en regiones de formación estelar masivas.
 
-Video de la charal [aquí](https://youtu.be/DIiuFeRIoVE)
+Video de la charla [aquí](https://youtu.be/DIiuFeRIoVE)
 
 ### 20feb Lectura del primer capítulo del libro de Feibelman :
 
 *Do You See Yourself in This Picture? A set of nonfiction vignettes illustrating some of the ways that young scientists make their livesmore unpleasant than necessary or fail entirely to establish themselves in a research career.*
+
+#### Tres preguntas para evaluar la lectura.
+La primera hora los equipos de 3 responderán a las siguientes preguntas relacionadas con la lectura y comprensión del capítulo
+##### Técnica vs. orientación al problema (Feibelman + el mentor “C.”):
+   Feibelman dice que la preparación del seminario la hizo eminentemente técnica, pero débil en la selección y en la contextualización del problemas. Mediante dos detalles concretos de la historia (por ejemplo, patrón de publicaciones, estilo de preparación de seminarios, etc.), explica qué significa “orientación al problema” en este capítulo. Luego enumera e interpreta los tres consejos clave de C. para dar un seminario con sentido, y explica cómo ese consejo cambió la trayectoria de Feibelman.
+
+##### El momento lo es todo (caso “T.”):
+ Reconstruye la situación de posdoctorado de T. como un estudio de caso sobre riesgo profesional. ¿Cuáles fueron las dos razones principales por las que los resultados de su búsqueda de empleo fueron más débiles de lo esperado (sé específico sobre productos/resultados y relaciones/recomendaciones)? Luego propón un plan alternativo concreto para 18 meses de T. que equilibre (i) un esfuerzo ambicioso con (ii) proyectos publicables a corto plazo y (iii) construcción de relaciones—incluye al menos dos hábitos accionables que debería haber adoptado.
+
+##### Autoconocimiento + incentivos institucionales (elige DOS casos: B, L, F/R o H):
+Para cada caso elegido, identifica (a) la suposición de la persona sobre lo que la llevaría al éxito, (b) la realidad institucional que en la práctica gobernaba la evaluación/el crédito/la estabilidad, y (c) la consecuencia. Luego propone una “mejor decisión” (un movimiento de carrera o una estrategia) que alinee sus acciones con el mensaje central del capítulo sobre evaluación realista y gestión racional de la carrera.
+
+#### Rúbrica de evaluación por pares (Peer-review)
+
+Puntaje por cada pregunta: **0–4**. Total: **/12**.
+Bono: hasta **+2** puntos por **claridad excepcional**.
+
+
+##### **P1 (0–4): Técnica vs. orientación al problema**
+
+* **0–1:** Respuesta vaga; sin detalles específicos; se listan los consejos sin interpretarlos.
+* **2:** Incluye algunos elementos concretos, pero la conexión con “orientación al problema” es débil.
+* **3:** Presenta dos detalles concretos + una definición clara + interpreta los tres consejos de C.
+* **4:** Explica con fuerza la relación causal de cómo el consejo cambió la trayectoria; es precisa y coherente.
+
+##### **P2 (0–4): “El momento lo es todo” (caso T.)**
+
+* **0–1:** Respuesta genérica; las razones no se vinculan a productos/resultados ni a relaciones; el plan es poco realista.
+* **2:** Identifica razones, pero el plan carece de estructura o de hábitos accionables.
+* **3:** Dos razones claras + plan equilibrado para 18 meses + dos hábitos accionables.
+* **4:** El plan incluye hitos/entregables, contingencia (“plan B”) y una estrategia explícita de relaciones/visibilidad.
+
+##### **P3 (0–4): Autoconocimiento + incentivos institucionales (dos casos)**
+
+* **0–1:** Solo relata la historia; no identifica los incentivos institucionales.
+* **2:** Identifica elementos, pero las consecuencias o la “mejor decisión” son superficiales.
+* **3:** Define con claridad suposición/realidad/consecuencia + propone una mejor decisión razonable para cada caso.
+* **4:** Muestra comprensión profunda de incentivos/crédito/seguridad; las decisiones se alinean estrechamente con el mensaje del capítulo.
+
+
+#### Realimentación escrita obligatoria (en cada revisión)
+Es imperioso que cada evaluación se justifique aclarando
+
+1.  **Una fortaleza** (“Mantengan…”)
+2.  **Una brecha o deficiencia** (“En este punto no queda claro…”)
+3.  **Se sugiera una mejora concreta** (“Añadan el detalle X / reescriban la frase Y / hagan el plan medible indicando…”)**
+
 
 
 ### 24feb  En la era de la inteligencia artificial, lo más revolucionario sigue siendo pensar como científica
