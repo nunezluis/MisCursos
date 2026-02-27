@@ -153,7 +153,7 @@ La primera hora los equipos de 3 responderán a las siguientes preguntas relacio
 
    1.  **Una fortaleza** (“Mantengan…”)
    2.  **Una brecha o deficiencia** (“En este punto no queda claro…”)
-   3.  **Se sugiera una mejora concreta** (“Añadan el detalle X / reescriban la frase Y / hagan el plan medible indicando…”)**
+   3.  **Se sugiera una mejora concreta** (“Añadan el detalle X / reescriban la frase Y / hagan el plan medible indicando…”)
 
 
 ### 3mar TBA
