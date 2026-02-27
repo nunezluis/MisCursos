@@ -127,6 +127,34 @@ Angie es egresada de Física de la Universidad Industrial de Santander. Actualme
 ### 26feb Lectura del segundo capítulo del libro de Feibelman:
 *Advice from a Dinosaur? Can you expect someone to be an effectivementor who emerged into the scientificmarketplace in a world that looked verydifferent?*
 
+#### Tres preguntas para evaluar la lectura.
+La primera hora los equipos de 3 responderán a las siguientes preguntas relacionadas con la lectura y comprensión del capítulo
+
+##### “¿Consejos de un dinosaurio?”—¿cuándo (y por qué) un científico mayor puede seguir siendo un buen mentor?
+   Feibelman sostiene que los “dinosaurios” *sí pueden* ser mentores eficaces **si** los eliges por rasgos específicos y no por la edad. En tu respuesta: (i) menciona **dos grandes cambios** del “mercado científico” desde el inicio de sus carreras, y (ii) enumera **tres tipos concretos de ayuda** que, según el capítulo, un mentor mayor todavía puede brindar.
+
+##### La entrevista con la “respuesta equivocada”:
+   Describe el episodio de la entrevista para el puesto de planificación urbana: ¿qué pregunta le hicieron, qué respondió él y por qué dice que fue “la respuesta equivocada”? Luego explica qué enseña esto sobre **credibilidad/compromiso** y sobre *leer las necesidades del empleador* al buscar trabajo fuera de la academia.
+
+##### Cómo mejorar tus probabilidades en un mercado laboral difícil (y qué implica que hagas mañana):
+   Feibelman dice que conseguir un puesto permanente depende de dos factores: explica cuáles son y cuál de ellos realmente puedes influir. Luego propone **dos acciones específicas** que él hizo (o recomienda) y que aumentan directamente tu “probabilidad por puesto”, incluyendo cómo estructuró deliberadamente su charla de trabajo en Sandia para audiencias distintas.  
+
+#### Rúbrica de evaluación por pares (Peer-review)
+
+   Puntaje por cada pregunta: **0–4**. Total: **/12**.
+   Bono: hasta **+2** puntos por **claridad excepcional**.
+   * **0–1:** Solo relata la historia de forma genérica;
+   * **2:** Identifica algunos elementos.
+   * **3:** Define con claridad los hechos
+   * **4:** Muestra comprensión profunda
+
+#### Realimentación escrita obligatoria (en cada evaluación)
+   Es imperioso que cada evaluación se justifique aclarando
+
+   1.  **Una fortaleza** (“Mantengan…”)
+   2.  **Una brecha o deficiencia** (“En este punto no queda claro…”)
+   3.  **Se sugiera una mejora concreta** (“Añadan el detalle X / reescriban la frase Y / hagan el plan medible indicando…”)**
+
 
 ### 3mar TBA
 #### Zandra Lizarazo (Escuela de Física, Universidad Industrial de Santander)
