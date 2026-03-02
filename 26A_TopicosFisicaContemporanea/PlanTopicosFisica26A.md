@@ -163,7 +163,7 @@ El propósito de esta presentación es contarles acerca de mi formación académ
 
 Los profesores integrantes del GOTS de esa época se habían formado a nivel de doctorado en el exterior y tenían contactos con diferentes profesores e investigadores (P. Pellat-Finet, M. Fraces, W. Rhodes, A. Guzmán, N. Bolognini, entre otros) los cuales visitaban nuestra unviersidad y nos dictaban diferentes tipos de cursos (cortos, largos) en los que ellos eran expertos, así que ese tipo de experiencia tuvo una gran efecto en mi formación de maestría y de doctorado. Mi trabajo de maestría fue también experimental relacionado con encriptación óptica en una configuración de mezclado de cuatro ondas usando un cristal fotorrefractivo como medio de registro en una formulación de Fourier fraccionaria. Mi tesis de doctorado tuvo un enfoque teórico la cual se basó en el estudio de la propagración de la luz en medios dipersivos y como aporte se icluyen las pérdidas dependientes de la frecuencia en el modelo.
 
-Luego de terminar mis estudios doctorales trabajé en varias instituciones de educación superior y en el año (2011) ingresé a la escuela de Física y al GOTS. Mis trabajos de investigación están muy relacionados con la óptica de Fourier fraccionaria y recientemente trabajo en el desarrollo de un modelo para explicar la polarización de la radición emitida en un efecto Zeeman a partir de la estructura atómica, además trabajo en la formulación de compuertas para la computación cuántica. En cuanto a mi ejercicio docente oriento asignaturas teóricas y experimentales para física e ingeniería a nivel de pregrado y asignaturas teórcias a nivel de maestría.
+Luego de terminar mis estudios doctorales trabajé en varias instituciones de educación superior y en el año (2011) ingresé a la escuela de Física y al GOTS. Mis trabajos de investigación están muy relacionados con la óptica de Fourier fraccionaria y recientemente trabajo en el desarrollo de un modelo para explicar la polarización de la radiación emitida en un efecto Zeeman a partir de la estructura atómica, además trabajo en la formulación de compuertas para la computación cuántica. En cuanto a mi ejercicio docente oriento asignaturas teóricas y experimentales para física e ingeniería a nivel de pregrado y asignaturas teórcias a nivel de maestría.
 
 
 ### 5mar Lectura del tercer capítulo del libro de Feibelman :
@@ -172,7 +172,13 @@ Luego de terminar mis estudios doctorales trabajé en varias instituciones de ed
 
 ### 10mar TBA
 #### Rocío Mojica (Gradiant, España)
+El camino profesional rara vez es lineal. A lo largo de nuestra trayectoria enfrentamos retos personales y estructurales: el contexto cultural, las condiciones económicas, la salud física y mental y, en general, las circunstancias de la vida. Estos factores no solo influyen en nuestras decisiones, sino que a menudo nos impulsan a replantearnos el rumbo, explorar nuevos horizontes y redefinir nuestra identidad profesional.
 
+En esta charla compartiré mi transición desde la física hacia la investigación en la industria tecnológica. Recorreré mi trayectoria personal y profesional, deteniéndome en las lecciones aprendidas, los logros que marcaron etapas clave y los fracasos que impulsaron mi crecimiento.
+
+Asimismo, abordaré mi compromiso con el desarrollo y uso responsable de la inteligencia artificial. Reflexionaré sobre la importancia de comprender nuestros derechos y responsabilidades como ciudadanía en un entorno cada vez más mediado por sistemas automatizados y saturado de narrativas exageradas, promesas infladas y desinformación.
+
+Rocío es física graduada de la Universidad Pedagógica y Tecnológica de Colombia. Después de años en el entorno académico, optó por abandonar esa trayectoria y dar el salto a la industria tecnológica. Hoy trabaja como investigadora en un centro tecnológico centrado en el desarrollo de herramientas que protegen a la ciudadanía frente a los usos malintencionados de la inteligencia artificial.
 
 ### 12mar Lectura del cuarto capítulo del libro de Feibelman :
 *Giving Talks: Preparing talks that will make people want to hire and keep you and that will make the information you present easy to assimilate.*
