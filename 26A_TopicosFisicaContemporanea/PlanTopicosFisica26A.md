@@ -157,7 +157,13 @@ La primera hora los equipos de 3 responderán a las siguientes preguntas relacio
 
 
 ### 3mar TBA
-#### Zandra Lizarazo (Escuela de Física, Universidad Industrial de Santander)
+#### Zandra Y. Lizarazo Mejía (Escuela de Física, Universidad Industrial de Santander)
+##### Mi experiencia en óptica
+El propósito de esta presentación es contarles acerca de mi formación académica y de lo que he realizado luego de mis estudios de pregrado, maestría y doctorado. Toda mi formación ha sido realizada en la UIS en el Grupo de óptica y tratamiento de señales (GOTS). Mi trabajo de investigación para obtener el titulo de Física fue experimental donde trabajé en caracterización de pantallas de cristal líquido como moduladores de fase, como todo trabajo experimental toma tiempo y se requiere contar con el equipo para llevar a cabo los experimentos y no por eso deja de ser fascinante.
+
+Los profesores integrantes del GOTS de esa época se habían formado a nivel de doctorado en el exterior y tenían contactos con diferentes profesores e investigadores (P. Pellat-Finet, M. Fraces, W. Rhodes, A. Guzmán, N. Bolognini, entre otros) los cuales visitaban nuestra unviersidad y nos dictaban diferentes tipos de cursos (cortos, largos) en los que ellos eran expertos, así que ese tipo de experiencia tuvo una gran efecto en mi formación de maestría y de doctorado. Mi trabajo de maestría fue también experimental relacionado con encriptación óptica en una configuración de mezclado de cuatro ondas usando un cristal fotorrefractivo como medio de registro en una formulación de Fourier fraccionaria. Mi tesis de doctorado tuvo un enfoque teórico la cual se basó en el estudio de la propagración de la luz en medios dipersivos y como aporte se icluyen las pérdidas dependientes de la frecuencia en el modelo.
+
+Luego de terminar mis estudios doctorales trabajé en varias instituciones de educación superior y en el año (2011) ingresé a la escuela de Física y al GOTS. Mis trabajos de investigación están muy relacionados con la óptica de Fourier fraccionaria y recientemente trabajo en el desarrollo de un modelo para explicar la polarización de la radición emitida en un efecto Zeeman a partir de la estructura atómica, además trabajo en la formulación de compuertas para la computación cuántica. En cuanto a mi ejercicio docente oriento asignaturas teóricas y experimentales para física e ingeniería a nivel de pregrado y asignaturas teórcias a nivel de maestría.
 
 
 ### 5mar Lectura del tercer capítulo del libro de Feibelman :
