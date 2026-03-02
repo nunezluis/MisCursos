@@ -170,7 +170,7 @@ Luego de terminar mis estudios doctorales trabajé en varias instituciones de ed
 *Important Choices: A Thesis Adviser,a Postdoctoral Job. A discussion of what to consider: young adviserversus an older one, a superstar versus ajourneyman, a small group versus a “factory.”Understanding and attending to your interestsas a postdoc.*
 
 
-### 10mar TBA
+### 10mar Una ruta personal no lineal
 #### Rocío Mojica (Gradiant, España)
 El camino profesional rara vez es lineal. A lo largo de nuestra trayectoria enfrentamos retos personales y estructurales: el contexto cultural, las condiciones económicas, la salud física y mental y, en general, las circunstancias de la vida. Estos factores no solo influyen en nuestras decisiones, sino que a menudo nos impulsan a replantearnos el rumbo, explorar nuevos horizontes y redefinir nuestra identidad profesional.
 
