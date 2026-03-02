@@ -156,9 +156,8 @@ La primera hora los equipos de 3 responderán a las siguientes preguntas relacio
    3.  **Se sugiera una mejora concreta** (“Añadan el detalle X / reescriban la frase Y / hagan el plan medible indicando…”)
 
 
-### 3mar TBA
+### Mi experiencia en óptica
 #### Zandra Y. Lizarazo Mejía (Escuela de Física, Universidad Industrial de Santander)
-##### Mi experiencia en óptica
 El propósito de esta presentación es contarles acerca de mi formación académica y de lo que he realizado luego de mis estudios de pregrado, maestría y doctorado. Toda mi formación ha sido realizada en la UIS en el Grupo de óptica y tratamiento de señales (GOTS). Mi trabajo de investigación para obtener el titulo de Física fue experimental donde trabajé en caracterización de pantallas de cristal líquido como moduladores de fase, como todo trabajo experimental toma tiempo y se requiere contar con el equipo para llevar a cabo los experimentos y no por eso deja de ser fascinante.
 
 Los profesores integrantes del GOTS de esa época se habían formado a nivel de doctorado en el exterior y tenían contactos con diferentes profesores e investigadores (P. Pellat-Finet, M. Fraces, W. Rhodes, A. Guzmán, N. Bolognini, entre otros) los cuales visitaban nuestra unviersidad y nos dictaban diferentes tipos de cursos (cortos, largos) en los que ellos eran expertos, así que ese tipo de experiencia tuvo una gran efecto en mi formación de maestría y de doctorado. Mi trabajo de maestría fue también experimental relacionado con encriptación óptica en una configuración de mezclado de cuatro ondas usando un cristal fotorrefractivo como medio de registro en una formulación de Fourier fraccionaria. Mi tesis de doctorado tuvo un enfoque teórico la cual se basó en el estudio de la propagración de la luz en medios dipersivos y como aporte se icluyen las pérdidas dependientes de la frecuencia en el modelo.
@@ -170,7 +169,7 @@ Luego de terminar mis estudios doctorales trabajé en varias instituciones de ed
 *Important Choices: A Thesis Adviser,a Postdoctoral Job. A discussion of what to consider: young adviserversus an older one, a superstar versus ajourneyman, a small group versus a “factory.”Understanding and attending to your interestsas a postdoc.*
 
 
-### 10mar Una ruta personal no lineal 
+### 10mar Una ruta personal no lineal
 #### Rocío Mojica (Gradiant, España)
 El camino profesional rara vez es lineal. A lo largo de nuestra trayectoria enfrentamos retos personales y estructurales: el contexto cultural, las condiciones económicas, la salud física y mental y, en general, las circunstancias de la vida. Estos factores no solo influyen en nuestras decisiones, sino que a menudo nos impulsan a replantearnos el rumbo, explorar nuevos horizontes y redefinir nuestra identidad profesional.
 
