@@ -156,7 +156,7 @@ La primera hora los equipos de 3 responderán a las siguientes preguntas relacio
    3.  **Se sugiera una mejora concreta** (“Añadan el detalle X / reescriban la frase Y / hagan el plan medible indicando…”)
 
 
-### Mi experiencia en óptica
+### 3mar Mi experiencia en óptica
 #### Zandra Y. Lizarazo Mejía (Escuela de Física, Universidad Industrial de Santander)
 El propósito de esta presentación es contarles acerca de mi formación académica y de lo que he realizado luego de mis estudios de pregrado, maestría y doctorado. Toda mi formación ha sido realizada en la UIS en el Grupo de óptica y tratamiento de señales (GOTS). Mi trabajo de investigación para obtener el titulo de Física fue experimental donde trabajé en caracterización de pantallas de cristal líquido como moduladores de fase, como todo trabajo experimental toma tiempo y se requiere contar con el equipo para llevar a cabo los experimentos y no por eso deja de ser fascinante.
 
