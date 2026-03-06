@@ -168,6 +168,10 @@ Luego de terminar mis estudios doctorales trabajé en varias instituciones de ed
 ### 5mar Lectura del tercer capítulo del libro de Feibelman :
 *Important Choices: A Thesis Adviser,a Postdoctoral Job. A discussion of what to consider: young adviserversus an older one, a superstar versus ajourneyman, a small group versus a “factory.”Understanding and attending to your interestsas a postdoc.*
 
+[Reflexiones sobre ciencia abierta](https://youtu.be/bg59OWYAS60)
+[Brevísima (cantabile e con brio) Introdución (histórica) al LATEX](
+https://docs.google.com/presentation/d/1Z_CtgYWEvyo7lrj6FKMHqHMobxNncXF7/edit?usp=sharing&ouid=111698804100718023619&rtpof=true&sd=true)
+
 
 ### 10mar Una ruta personal no lineal
 #### Rocío Mojica (Gradiant, España)
