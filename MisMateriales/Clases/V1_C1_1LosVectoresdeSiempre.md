@@ -6,7 +6,7 @@ El segundo objetivo es utilizar la excusa del conocimiento previo vectores carte
 
 El tercer objetivo es iniciar a los estudiantes en la utilización de la notación de Einstein para desarrollar álgebra de vectores utilizando índices. En este contexto se explicará el uso de la [delta de Kronecker](https://en.wikipedia.org/wiki/Kronecker_delta) y el [símbolo de Levi-Civita](https://en.wikipedia.org/wiki/Levi-Civita_symbol)
 
-### Actividad antes de iniciar la clase
+### Actividad antes de iniciar la clase (pa ver)
 
 1. Registrarse y configurar repositorio git
 2. Estudiarse el apéndice 6.2 de las [notas de clase](https://github.com/nunezluis/Cursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf) Deben empezar a manejar SymPy
