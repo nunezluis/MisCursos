@@ -4,7 +4,7 @@
 Esta clase tiene por objetivo mostrar tres aplicaciones de tensores en Física. En primer lugar construimos del tensor de esfuerzos 2D de un cuerpo extendido a partir del equilibrio de fuerzas y torque. Luego mostramos que ese objeto transforma como un tensor. Acto seguido construimos el tensor de inercia a partir de un sistema de partículas que rotan rígidamente.
 
 ### Actividades **antes** de clase**
-   1. Estudiar los puntos 3.3.1 (tensor de esfuerzo 2D) y 3.3.3 (tensor de inercia).  
+   1. Estudiar los puntos 3.3.1 (tensor de esfuerzo 2D) y 3.3.3 (tensor de inercia) de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf).  
    2. Sorprenderse con [este video](https://www.youtube.com/watch?v=1VPfZ_XzisU)
    3. Seguir [este video](https://www.youtube.com/watch?v=YxXyN2ifK8A)  
 
