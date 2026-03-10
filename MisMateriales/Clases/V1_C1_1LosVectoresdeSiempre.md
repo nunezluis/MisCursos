@@ -9,8 +9,8 @@ El tercer objetivo es iniciar a los estudiantes en la utilización de la notaci�
 ### Actividad antes de iniciar la clase
 
 1. Registrarse y configurar repositorio git
-2. Estudiarse el apéndice 6.2 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf) Deben empezar a manejar SymPy
-3. Estudiar puntos 1.1, 1.2 y 1.3 y 1.4 del capítulo 1 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
+2. Estudiarse el apéndice 6.2 de las [notas de clase](https://github.com/nunezluis/Cursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf) Deben empezar a manejar SymPy
+3. Estudiar puntos 1.1, 1.2 y 1.3 y 1.4 del capítulo 1 de las [notas de clase](https://github.com/nunezluis/Cursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
 4. Rehacer los ejemplos 1.2, 1.3, 1.4, 1.10, 1.14 y 1.15.
 5. Seguir los videos de 3blue1Brown [vectores](https://www.youtube.com/watch?v=fNk_zzaMoSs) y [independencia lineal](https://www.youtube.com/watch?v=k7RM-ot2NWY)
 
@@ -20,9 +20,9 @@ El tercer objetivo es iniciar a los estudiantes en la utilización de la notaci�
 3. Realice los ejercicios 3 y 4 de sección 1.4.5 de las notas de clase.
 
 ### Materiales de apoyo
-1. [Video](https://youtu.be/2LhoaImegV4) y [presentación generalidades de vectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/1_1Vectores.pdf)
-2. [Video](https://youtu.be/WNMyW9gKutU) y [presentación bases y componentes de vectores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/1_2BaseCompon.pdf)
-3. Video y [presentación de álgebra vectores, índices y notación de Einstein](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/1_3VectoresIndices.pdf)
+1. [Video](https://youtu.be/2LhoaImegV4) y [presentación generalidades de vectores](https://github.com/nunezluis/Cursos/blob/main/MisMateriales/Presentaciones/1_1Vectores.pdf)
+2. [Video](https://youtu.be/WNMyW9gKutU) y [presentación bases y componentes de vectores](https://github.com/nunezluis/Cursos/blob/main/MisMateriales/Presentaciones/1_2BaseCompon.pdf)
+3. Video y [presentación de álgebra vectores, índices y notación de Einstein](https://github.com/nunezluis/Cursos/blob/main/MisMateriales/Presentaciones/1_3VectoresIndices.pdf)
 
 ### Al finalizar estos contenidos
 El estudiantes deberá:
