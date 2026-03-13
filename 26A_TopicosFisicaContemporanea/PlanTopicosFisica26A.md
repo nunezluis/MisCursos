@@ -230,5 +230,12 @@ Unas preguntas orientadoras pueden ser
 ### 7abr TBA
 #### Rogelio Ospina (Escuela de Física, Universidad Industrial de Santander)
 
+
 ### 9abr Lectura del sexto capítulo del libro de Feibelman :
 *From Here to Tenure:Choosing a Career Path. An unsentimental comparison of the merits ofjobs in academia, industry, and in governmentlaboratories.*.
+
+### 14abr TBA
+#### XXX (Escuela de Física, Universidad Industrial de Santander)
+
+### 16abr Lectura del septimo capítulo del libro de Feibelman :
+*Job Interviews: What will happen on your interview trip; thequestions you had better be prepared to answer.*
