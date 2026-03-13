@@ -238,4 +238,4 @@ Unas preguntas orientadoras pueden ser
 #### XXX (Escuela de Física, Universidad Industrial de Santander)
 
 ### 16abr Lectura del septimo capítulo del libro de Feibelman :
-*Job Interviews: What will happen on your interview trip; thequestions you had better be prepared to answer.*
+*Job Interviews: What will happen on your interview trip; the questions you had better be prepared to answer.*
