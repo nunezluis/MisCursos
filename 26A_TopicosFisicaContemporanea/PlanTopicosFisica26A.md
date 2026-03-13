@@ -217,3 +217,13 @@ Unas preguntas orientadoras pueden ser
 
 ### 20mar Lectura del cuarto capítulo del libro de Feibelman :
 *Giving Talks: Preparing talks that will make people want to hire and keep you and that will make the information you present easy to assimilate.*
+
+
+### 24mar TBA
+#### Fabio Lora (Escuela de Física, Universidad Industrial de Santander)
+
+### 7abr TBA
+#### Rogelio Ospina (Escuela de Física, Universidad Industrial de Santander)
+
+### 9abr Lectura del quinto capítulo del libro de Feibelman :
+*Writing Papers:Publishing Without Perishing53Why it is important to write good papers. Whento write up your work, how to draw the readerin, how to draw attention to your results*.
