@@ -165,9 +165,7 @@ Los profesores integrantes del GOTS de esa época se habían formado a nivel de 
 Luego de terminar mis estudios doctorales trabajé en varias instituciones de educación superior y en el año (2011) ingresé a la escuela de Física y al GOTS. Mis trabajos de investigación están muy relacionados con la óptica de Fourier fraccionaria y recientemente trabajo en el desarrollo de un modelo para explicar la polarización de la radiación emitida en un efecto Zeeman a partir de la estructura atómica, además trabajo en la formulación de compuertas para la computación cuántica. En cuanto a mi ejercicio docente oriento asignaturas teóricas y experimentales para física e ingeniería a nivel de pregrado y asignaturas teórcias a nivel de maestría.
 
 
-### 5mar Lectura del tercer capítulo del libro de Feibelman :
-*Important Choices: A Thesis Adviser,a Postdoctoral Job. A discussion of what to consider: young adviserversus an older one, a superstar versus ajourneyman, a small group versus a “factory.”Understanding and attending to your interestsas a postdoc.*
-
+### 6mar
 [Reflexiones sobre ciencia abierta](https://youtu.be/bg59OWYAS60)
 [Brevísima (cantabile e con brio) Introdución (histórica) al LATEX](
 https://docs.google.com/presentation/d/1Z_CtgYWEvyo7lrj6FKMHqHMobxNncXF7/edit?usp=sharing&ouid=111698804100718023619&rtpof=true&sd=true)
@@ -183,8 +181,39 @@ Asimismo, abordaré mi compromiso con el desarrollo y uso responsable de la inte
 
 Rocío es física graduada de la Universidad Pedagógica y Tecnológica de Colombia. Después de años en el entorno académico, optó por abandonar esa trayectoria y dar el salto a la industria tecnológica. Hoy trabaja como investigadora en un centro tecnológico centrado en el desarrollo de herramientas que protegen a la ciudadanía frente a los usos malintencionados de la inteligencia artificial.
 
-### 12mar Lectura del cuarto capítulo del libro de Feibelman :
-*Giving Talks: Preparing talks that will make people want to hire and keep you and that will make the information you present easy to assimilate.*
+
+### 13mar Lectura del tercer capítulo del libro de Feibelman :
+*Important Choices: A Thesis Adviser,a Postdoctoral Job. A discussion of what to consider: young adviserversus an older one, a superstar versus ajourneyman, a small group versus a “factory.”Understanding and attending to your interestsas a postdoc.*
+#### Preguntas de comprensión sobre el Capítulo 3 de *PhD is Not Enough!*
+
+1. **Elección del director de tesis:**  
+   Feibelman sostiene que un director de tesis con mayor trayectoria y reconocimiento puede ser una mejor opción que uno más joven, pero también afirma que **la estabilidad y el prestigio no son suficientes**. Según el capítulo, ¿qué cualidades específicas debe buscar un estudiante en un director de tesis y en el grupo de investigación antes de integrarse a él? Explica por qué esas cualidades son importantes para el desarrollo científico del estudiante.
+
+2. **Elección de una posición posdoctoral:**  
+   Feibelman afirma que durante los años de posdoctorado un joven científico debe **terminar algo** y **lograr ser conocido y útil**. ¿Por qué advierte contra aceptar un posdoctorado en un campo poco definido o centrado en un proyecto largo y técnicamente muy difícil? Explica cómo este consejo se relaciona con el corto tiempo disponible antes de volver al mercado laboral académico.
+
+#### Pregunta para generar debate en clase
+
+**¿Qué es más importante al elegir un director de tesis o un supervisor posdoctoral: el prestigio y las conexiones de esa persona, o su capacidad para ofrecer orientación, reconocimiento del trabajo y un ambiente sano para el crecimiento intelectual?**  
+Sustenta tu respuesta con ejemplos del capítulo.
+
+#### Metodología para el debate
++ **Equipo A**: defiende la importancia del prestigio, la visibilidad y las conexiones.
++ **Equipo B**: defiende la importancia de la mentoría, el reconocimiento del trabajo, la independencia y la cultura del grupo.
+
+Respalden cada afirmación con evidencia del capítulo, no opiniones personales. Cada equipo debe llegar con:
++ una o dos ideas clave del capítulo,
++ un ejemplo concreto o una advertencia planteada por Feibelman,
++ un contraargumento frente a la otra postura.
+
+Unas preguntas orientadoras pueden ser
++ ¿Qué valora más Feibelman en un director de tesis?
++ ¿Qué riesgos identifica al elegir un posdoctorado?
++ ¿Qué pesa más a largo plazo: el prestigio o la afinidad?
 
 ### 17mar TBA
 #### Andres Camilo García (Escuela de Física, Universidad Industrial de Santander)
+
+
+### 20mar Lectura del cuarto capítulo del libro de Feibelman :
+*Giving Talks: Preparing talks that will make people want to hire and keep you and that will make the information you present easy to assimilate.*
