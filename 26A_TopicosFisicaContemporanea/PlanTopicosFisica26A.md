@@ -222,8 +222,13 @@ Unas preguntas orientadoras pueden ser
 ### 24mar TBA
 #### Fabio Lora (Escuela de Física, Universidad Industrial de Santander)
 
+
+### 26abr Lectura del quinto capítulo del libro de Feibelman :
+*Writing Papers:Publishing Without Perishing. Why it is important to write good papers. Whento write up your work, how to draw the readerin, how to draw attention to your results*.
+
+
 ### 7abr TBA
 #### Rogelio Ospina (Escuela de Física, Universidad Industrial de Santander)
 
-### 9abr Lectura del quinto capítulo del libro de Feibelman :
-*Writing Papers:Publishing Without Perishing53Why it is important to write good papers. Whento write up your work, how to draw the readerin, how to draw attention to your results*.
+### 9abr Lectura del sexto capítulo del libro de Feibelman :
+*From Here to Tenure:Choosing a Career Path. An unsentimental comparison of the merits ofjobs in academia, industry, and in governmentlaboratories.*.
