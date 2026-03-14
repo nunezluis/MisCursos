@@ -1,18 +1,22 @@
 ## Tensores y sus aplicaciones en Física
 
 ### Objetivos de la clase
-Esta clase tiene por objetivo mostrar tres aplicaciones de tensores en Física. En primer lugar construimos del tensor de esfuerzos 2D de un cuerpo extendido a partir del equilibrio de fuerzas y torque. Luego mostramos que ese objeto transforma como un tensor. Acto seguido construimos el tensor de inercia a partir de un sistema de partículas que rotan rígidamente.
+En esta clase analizaremos las propiedades de transformación de los tensores, que garantizan la invariancia de las ecuaciones físicas frente a cambios en el sistema de coordenadas. El cálculo tensorial proporciona el marco matemático necesario para formular leyes físicas en sistemas de coordenadas arbitrarios, lo cual resulta fundamental en diversas áreas de la física, como la mecánica de medios continuos, la geometría diferencial, el electromagnetismo y la relatividad general.
+
+A continuación, presentaremos tres aplicaciones de los tensores en física. En primer lugar, construiremos el tensor de esfuerzos bidimensional de un cuerpo extendido a partir de las condiciones de equilibrio de fuerzas y de torques, y mostraremos que dicho objeto posee las propiedades de transformación de un tensor. Posteriormente, derivaremos el tensor de inercia considerando un sistema de partículas que rota como un cuerpo rígido.
 
 ### Actividades **antes** de clase**
-   1. Estudiar los puntos 3.3.1 (tensor de esfuerzo 2D) y 3.3.3 (tensor de inercia) de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf).  
-   2. Sorprenderse con [este video](https://www.youtube.com/watch?v=1VPfZ_XzisU)
-   3. Seguir [este video](https://www.youtube.com/watch?v=YxXyN2ifK8A)  
+   1. Estudiar el punto 3.2.8 y rehacer los ejemplos 3.13, 3.14 y 3.15 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf).
+   2. Estudiar los puntos 3.3.1 (tensor de esfuerzo 2D) y 3.3.3 (tensor de inercia) de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf).  
+   3. Sorprenderse con [este video](https://www.youtube.com/watch?v=1VPfZ_XzisU)
+   4. Seguir [este video](https://www.youtube.com/watch?v=YxXyN2ifK8A)  
 
 ### Actividad **después** de clase
    1. De la sección 3.3.5 hacer los ejercicios 2, 7 y 8  
 
 ### Materiales de apoyo
-   1. La [presentación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/3_3EjemplTensor.pdf)
+   1. [La presentación de las transformaciones de vectores y tensores](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/3_3Tensores2Cord.pdf)
+   2. La [presentación de aplicaciones físicas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/3_3EjemplTensor.pdf)
 
 ### Al finalizar estos contenidos
    El estudiantes deberá:
