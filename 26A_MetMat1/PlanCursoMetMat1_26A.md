@@ -100,12 +100,12 @@ Además tendremos un **taller evaluado de los vectores de siempre** (clases 1 y 
 
 + [Clase 8: Tensores y espacios tensoriales abstractos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_2EspTensoriales.md). **S5C2 6mar**
 
-+ [Clase 9: Tensores y sus aplicaciones en Física](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_3AplicaTensores.md). **S6C1 11mar**
++ [Clase 9: Tensores y sus aplicaciones en Física](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_3AplicaTensores.md). **S6C1 13mar**
 
-+ [Clase 10: Vectores y tensores en espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_4EspPseudoEuclid.md). **S6C2 13mar**
++ [Clase 10: Vectores y tensores en espacios pseudoeuclideanos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C3_4EspPseudoEuclid.md). **S6C2 18mar**
 Evaluación de los ejercicios asignados clases 6, 7, 8 y 9.    
  1. los ejercicios 5 y 6 de la sección 2.3.6
- 2.  SymPy desarrollar el ejercicio 3 de la sección 2.4.5
+ 2. SymPy desarrollar el ejercicio 3 de la sección 2.4.5
  3. ejercicios 6 y 7 de la Sección 3.1.4 .
  4. Hacer un código  SymPy que resuelva el problema 2 sección 3.3.5.
  5. Desarrolle los problemas 7 y 8 de esa misma sección 3.3.00
@@ -117,9 +117,9 @@ Evaluación de los ejercicios asignados clases 6, 7, 8 y 9.
 + [Clase 11: Operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_1OperLineales.md)  **S7C1 18mar**
 
 + [Clase 12: Fauna de operadores lineales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Clases/V1_C4_2FaunaOperLineales.md)  **S7C2 20mar**
-    + Evaluación
-        + Ejercicio 2 y 8 sección 3.3.5
-        + Ejercicio 6 sección 3.4.3
+Evaluación
+  + Ejercicio 2 y 8 sección 3.3.5
+  + Ejercicio 6 sección 3.4.3
 
 
 
