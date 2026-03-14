@@ -20,5 +20,7 @@ A continuación, presentaremos tres aplicaciones de los tensores en física. En 
 
 ### Al finalizar estos contenidos
    El estudiantes deberá:
-   1. comprender la diferencia entre vectores, tensores y escalares
-   2. ser capaz de deducir tanto el tensor de esfuerzos 2D como el tensor de inercia a partir de un sistema de partículas
+   1. Transformar las componentes contravariantes y contravariantes de un vector entre diferentes sistemas de coordenadas utilizando tanto los vectores base como la matriz Jacobiana.
+   2. Aplicar la ley general de transformación tensorial para tensores de rango arbitrario con bases ortogonales y no ortogonales
+   3. Reconocer la estructura de las leyes de transformación tensorial, que involucran múltiples vectores base y factores Jacobianos.
+   4. ser capaz de deducir tanto el tensor de esfuerzos 2D como el tensor de inercia a partir de un sistema de partículas
