@@ -6,8 +6,8 @@ Esta clase tiene por objetivo construir la definición de un tensor a partir de 
 Seguidamente presentaremos el tensor métrico para espacios vectoriales abstractos. Construiremos sus componentes a partir de una base dada y su base dual. Mostraremos como el tensor métrico conecta componentes (contravariantes) de vectores con las componentes (covariantes) de las formas lineales.  Comprobaremos como el tensor métrico codifica la geometría del espacio vectorial, permitiendl calcular distancias, ángulos y normas incluso en sistemas de coordenadas no ortogonales.
 
 ### Actividad antes de clase
-   1. Estudiar los puntos 3.2.1, 3.2.2, 3.2.3, 3.2.4 3.2.5, 3.2.6, 3.2.7 y 3.2.8 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
-   2. Rehacer los ejemplos 3.8, 3.9, 3.11 y 3.14 
+   1. Estudiar los puntos 3.2.1, 3.2.2, 3.2.3, 3.2.4 3.2.5, 3.2.6y 3.2.7 de las [notas de clase](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/VolumenUNO.pdf)
+   2. Rehacer los ejemplos 3.8, 3.9, 3.11 y 3.14
 
 ### Taller de problemas
    + Hacer un código SymPy que resuelva el problema 1 sección 3.3.5
