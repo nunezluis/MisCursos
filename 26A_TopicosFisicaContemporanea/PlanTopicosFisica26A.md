@@ -220,9 +220,21 @@ En esta charla abordaremos los conceptos necesarios para entender el acople de l
 ### 20mar Lectura del cuarto capítulo del libro de Feibelman :
 *Giving Talks: Preparing talks that will make people want to hire and keep you and that will make the information you present easy to assimilate.*
 
+Que cada equipo debe preparar y presentar una charla breve de 4 minutos sobre algún punto del capítulo 4, siguiendo explícitamente las pautas de Feibelman. Unas posibles **preguntas orientadoras** podrían ser.
 
-### 24mar TBA
+1. **Feibelman sostiene que una charla científica no debe entenderse como una simple exposición técnica, sino como una intervención estratégica que moldea la percepción profesional del expositor.**  
+   Analice esta idea y explique cómo transforma la manera en que debe diseñarse una charla. En su respuesta, discuta el papel de la introducción, la construcción de una narrativa científica, la selección del nivel de detalle y la relación entre claridad expositiva y reputación académica.
+
+2. **El capítulo critica varias prácticas habituales en presentaciones científicas, como el exceso de tecnicismo, la sobrecarga de diapositivas, el abuso de detalles metodológicos y el uso de esquemas iniciales poco útiles.**  
+   Elija al menos **dos** de estas críticas y evalúe su fundamento. ¿Por qué Feibelman considera que estas prácticas debilitan la comunicación científica? ¿En qué medida esta crítica sigue siendo válida en el contexto actual de seminarios, congresos y defensas académicas?
+
+Aquí también dejo algunas ideas de [¿cómo hacer una buena presentación?](https://www.ted.com/playlists/574/how_to_make_a_great_presentation)
+
+
+### 24mar TBA Capturando sombras de objetos compactos con el código OSIRIS
 #### Fabio Lora (Escuela de Física, Universidad Industrial de Santander)
+
+La radiación emitida por cuásares y núcleos galácticos activos (AGN) se origina en un plasma relativista orbitando en las regiones cercanas al horizonte de eventos de agujeros negros supermasivos, donde los efectos gravitatorios extremos gobiernan la dinámica del espacio-tiempo. La comparación entre observaciones y modelos teóricos permite desentrañar parámetros clave del agujero negro (masa, espín) y del plasma (tasa de acreción, estructura térmica). En este contexto, los algoritmos de trazado de rayos son herramientas fundamentales para reconstruir las trayectorias de fotones desde el disco de acreción hasta el observador, incorporando efectos relativistas como lentes gravitacionales, corrimientos al rojo y boosting Doppler. En este seminario, presentamos OSIRIS, un nuevo código estable en FORTRAN capaz de calcular eficientemente geodésicas nulas alrededor de objetos compactos. Basado en un formalismo hamiltoniano, OSIRIS emplea esquemas de integración adaptativos que preservan la restricción del hamiltoniano, garantizando soluciones físicas incluso en regímenes de curvatura extrema. Como validación, demostraremos su capacidad para: calcular sombras y anillos de Einstein en agujeros de Kerr con espines extremos, reconstruir la imagen de un disco de acreción relativista  delgado alrededor de un agujero de Kerr y cuantificar la influencia de parámetros asociados al espacio tiempo en la morfología de las emisiones observables. Aunque OSIRIS no está paralelizado con MPI ni CUDA, sus tiempos de cálculo son equivalentes a los reportados por otros códigos que sí utilizan estas plataformas de computación paralela.
 
 
 ### 26abr Lectura del quinto capítulo del libro de Feibelman :
