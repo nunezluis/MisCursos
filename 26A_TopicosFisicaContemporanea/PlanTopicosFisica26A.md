@@ -246,7 +246,8 @@ La radiación emitida por cuásares y núcleos galácticos activos (AGN) se orig
 
 
 ### 9abr Lectura del quinto capítulo del libro de Feibelman :
-*Writing Papers:Publishing Without Perishing. Why it is important to write good papers. Whento write up your work, how to draw the readerin, how to draw attention to your results*.
+*Writing Papers:Publishing Without Perishing. Why it is important to write good papers. When to write up your work, how to draw the readerin, how to draw attention to your results*.
+
 1. **Feibelman compara un artículo científico con una nota periodística.** A partir de esta analogía, explique cómo deberían funcionar el **título, el resumen, la introducción, el cuerpo y la conclusión**. ¿Qué aporta cada sección para que el artículo sea claro, convincente y digno de ser leído?
 
 2. **Según Feibelman, un artículo no debe limitarse a reportar resultados, sino que debe contar una historia.** ¿Qué quiere decir con esto? En su respuesta, discuta cómo, según el autor, deben manejarse el **contexto, los resultados clave, las citas, los vacíos lógicos, el detalle técnico y la legibilidad** al escribir un artículo.
