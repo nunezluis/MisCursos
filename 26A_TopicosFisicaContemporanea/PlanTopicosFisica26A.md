@@ -241,8 +241,9 @@ La radiación emitida por cuásares y núcleos galácticos activos (AGN) se orig
 *Writing Papers:Publishing Without Perishing. Why it is important to write good papers. Whento write up your work, how to draw the readerin, how to draw attention to your results*.
 
 
-### 7abr TBA
-#### Rogelio Ospina (Escuela de Física, Universidad Industrial de Santander)
+### 7abr Materiales Nanoestructurados: ciencia, historia y aplicaciones
+#### Rogelio Ospina (Escuela de Física, Universidad Industrial de Santander
+  Descubra cómo la nanotecnología está revolucionando la creación de productos mediante materiales con propiedades únicas y una reactividad superior. Explore innovaciones clave en medicina, tratamiento de aguas y construcción sostenible que están definiendo el futuro tecnológico
 
 
 ### 9abr Lectura del quinto capítulo del libro de Feibelman :
@@ -258,10 +259,12 @@ La radiación emitida por cuásares y núcleos galácticos activos (AGN) se orig
    Feibelman sostiene que los artículos científicos deben escribirse de manera **ágil, legible y con estructura narrativa**, y no solo como textos técnicamente correctos. ¿Considera usted que este énfasis en el estilo mejora la comunicación científica, o cree que corre el riesgo de simplificar en exceso trabajos complejos? Sustente su posición.
 
 
+### 14abr Nanotecnología para un Planeta Más Limpio: El Caso del PET Contaminado de aceites de cocina usados
+#### Camilo Suárez Ballesteros (Escuela de Física, Universidad Industrial de Santander)
+El proyecto surge de una necesidad ambiental crítica: grandes cantidades de plástico PET reciclable se pierden debido a la contaminación con aceites usados de cocina, lo que impide su reprocesamiento y limita su aprovechamiento en la cadena de reciclaje. Para enfrentar este desafío, se diseñó una estrategia basada en principios de nanotecnología y fenómenos de cavitación ultrasónica, integrados bajo el enfoque de la sostenibilidad.
+La primera fase del proyecto consistió en la síntesis de nanopartículas magnéticas recubiertas con PET reciclado, capaces de interactuar selectivamente con los residuos oleosos adheridos a las escamas de PET. Durante los ciclos de lavado asistidos por ultrasonido, los fenómenos de cavitación y ondas de presión facilitan el desprendimiento del aceite de la superficie del plástico. Posteriormente, mediante la aplicación de campos magnéticos externos, las nanopartículas pueden recuperarse y reutilizarse en nuevos ciclos de limpieza, lo que hace que el proceso sea eficiente y sostenible. Estas nanopartículas fueron caracterizadas mediante técnicas espectroscópicas y microscopía SEM, confirmando su estructura, morfología y funcionalidad. Actualmente, el proyecto avanza en la fase final de determinación de los parámetros óptimos de limpieza mediante ultrasonido.
+En paralelo, se desarrolla una línea de investigación orientada a la fabricación de nanofibras de PET reciclado mediante electrospinning. Estas nanofibras aprovechan principios de electrostática, dinámica de fluidos y energía superficial para crear membranas superhidrofílicas y superoleofóbicas bajo agua, capaces de separar aceites presentes en aguas residuales industriales.
 
-
-### 14abr TBA
-#### XXX (Escuela de Física, Universidad Industrial de Santander)
 
 ### 16abr Lectura del septimo capítulo del libro de Feibelman :
 *Job Interviews: What will happen on your interview trip; the questions you had better be prepared to answer.*
