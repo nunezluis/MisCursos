@@ -280,12 +280,8 @@ Evaluación de artículos
 ### 5may Astropartículas ¿cómo y por qué?
 #### Christian Sarmiento-Cano (Dept de Ciencias Básicas, Universidad Autónoma de Bucaramanga)
 
-
-
-
-### 16abr Lectura del septimo capítulo del libro de Feibelman :
+### 8may Lectura del septimo capítulo del libro de Feibelman :
 *Job Interviews: What will happen on your interview trip; the questions you had better be prepared to answer.*
 
-
-
-*Job Interviews: What will happen on your interview trip; the questions you had better be prepared to answer.*
+### 12may TBA
+#### Fabio Lora-Clavijo (Escuela de Física, Universidad Industrial de Santander)
