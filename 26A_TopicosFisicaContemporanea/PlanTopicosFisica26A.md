@@ -279,7 +279,7 @@ Sin embargo, el objetivo central será superar esta confrontación para entender
 
 ### 24abr Acto del Día del investigador (no habrá clases)
 
-### 28abr TBA
+### 28abr Microscopía por interferencia de luz blanca en los espacios de la CIE. (Comisión Internacional de Iluminación)
 #### Jader Guerrero (Escuela de Física, Universidad Industrial de Santander)
 
 ### 5may Astropartículas ¿cómo y por qué?
