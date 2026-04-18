@@ -269,8 +269,13 @@ En paralelo, se desarrolla una línea de investigación orientada a la fabricaci
 ### 17abr Lectura del septimo capítulo del libro de Feibelman :
 Evaluación de artículos
 
-### 21abr TBA
-#### Leonardo Pachón (Guane Entreprise, Santander Colombia)
+### 21abr IA vs. Física / IA + Física: Redefiniendo el rol del investigador y el descubrimiento científico.
+#### Leonardo Pachón (Guane Enterprise, Santander Colombia)
+Históricamente, la física ha avanzado impulsada por la intuición humana, la elegancia matemática y la validación experimental rigurosa. Hoy, la irrupción de la Inteligencia Artificial plantea una encrucijada sin precedentes: ¿es la IA una herramienta que devalúa el razonamiento físico al reducirlo a un simple ajuste de datos, o es el instrumento definitivo para nuestro próximo gran salto cognitivo?
+
+Esta charla explorará algunas de las dimensiones de este encuentro (IA vs. Física, IA para la Física, y la Física de la IA). Discutiremos abiertamente las tensiones actuales en el rol del investigador: el choque entre la interpretabilidad de las leyes físicas y la "caja negra" del aprendizaje profundo, la crisis de la causalidad y el miedo a la obsolescencia del método analítico tradicional.
+
+Sin embargo, el objetivo central será superar esta confrontación para entender cómo integrar ambas disciplinas. Analizaremos cómo el físico moderno puede utilizar la IA para investigar a un nivel mucho más profundo: descubriendo simetrías ocultas en sistemas hipercomplejos, resolviendo problemas cuánticos o termodinámicos antes intratables, y utilizando algoritmos no para reemplazar la intuición, sino para expandir los límites de nuestra comprensión del universo.
 
 ### 24abr Acto del Día del investigador (no habrá clases)
 
