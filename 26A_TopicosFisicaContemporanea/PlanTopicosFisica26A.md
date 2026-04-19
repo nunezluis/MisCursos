@@ -281,6 +281,9 @@ Sin embargo, el objetivo central será superar esta confrontación para entender
 
 ### 28abr Microscopía por interferencia de luz blanca en los espacios de la CIE. (Comisión Internacional de Iluminación)
 #### Jader Guerrero (Escuela de Física, Universidad Industrial de Santander)
+La microscopía por interferencia de luz blanca aprovecha la baja coherencia temporal de la luz blanca para obtener la topografía de superficies en el orden de decenas de nanómetros a micrones. Presentaremos los principios físicos de la interferometría de baja coherencia.
+
+El punto clave y, tal vez, novedoso es la conexión entre la información espectral de la luz reflejada por la muestra y su representación en los espacios de color definidos por la Commission Internationale de l’Éclairage (CIE), a saber: CIExy, CIELab y CIELuv. Es decir, el color es tratado como un observable físico que permite determinar el contacto óptico al barrer la señal de coherencia en los espacios cromáticos. Trabajos recientes han demostrado que la señal interferométrica en WLSI (*White Light Scanning Interferometry*) como también se llama este tipo de microscopía, puede representarse como trayectorias en espacios de color de la CIE, permitiendo la localización del orden de interferencia y la reconstrucción de superficies con gran robustez, comparable con los métodos basados únicamente en la envolvente.
 
 ### 5may Astropartículas ¿cómo y por qué?
 #### Christian Sarmiento-Cano (Dept de Ciencias Básicas, Universidad Autónoma de Bucaramanga)
