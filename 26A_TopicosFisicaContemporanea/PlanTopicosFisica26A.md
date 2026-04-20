@@ -267,7 +267,7 @@ En paralelo, se desarrolla una línea de investigación orientada a la fabricaci
 
 
 ### 17abr Lectura del septimo capítulo del libro de Feibelman :
-Evaluación de artículos
+Visita Virtual al Observatorio Pierre Auger en Malargue Argentina
 
 ### 21abr IA vs. Física / IA + Física: Redefiniendo el rol del investigador y el descubrimiento científico.
 #### Leonardo Pachón (Guane Enterprise, Santander Colombia)
