@@ -285,8 +285,9 @@ La microscopía por interferencia de luz blanca aprovecha la baja coherencia tem
 
 El punto clave y, tal vez, novedoso es la conexión entre la información espectral de la luz reflejada por la muestra y su representación en los espacios de color definidos por la Commission Internationale de l’Éclairage (CIE), a saber: CIExy, CIELab y CIELuv. Es decir, el color es tratado como un observable físico que permite determinar el contacto óptico al barrer la señal de coherencia en los espacios cromáticos. Trabajos recientes han demostrado que la señal interferométrica en WLSI (*White Light Scanning Interferometry*) como también se llama este tipo de microscopía, puede representarse como trayectorias en espacios de color de la CIE, permitiendo la localización del orden de interferencia y la reconstrucción de superficies con gran robustez, comparable con los métodos basados únicamente en la envolvente.
 
-### 5may Astropartículas ¿cómo y por qué?
-#### Christian Sarmiento-Cano (Dept de Ciencias Básicas, Universidad Autónoma de Bucaramanga)
+### 5may Algunos aspectos de Física de Neutrinos
+#### Mario A. Acero Ortega (Programa de Física, Facultad de Ciencias Básicas Universidad del Atlántico)
+Siendo la partícula masiva más abundante del universo, los neutrinos juegan un papel muy importante en varias ramas de la física de altas energías y la cosmología. Conocerlos, entender su comportamiento, es fundamental en el proceso de búsqueda de respuestas a varias preguntas sobre la naturaleza y de posibles usos y aplicaciones. Para ello, es necesario entender qué son, de dónde vienen y cómo podemos detectar estas elusivas partículas elementales. En esta charla se presentan algunos detalles sobre estos aspectos particulares.
 
 ### 8may Lectura del septimo capítulo del libro de Feibelman :
 *Job Interviews: What will happen on your interview trip; the questions you had better be prepared to answer.*
