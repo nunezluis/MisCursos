@@ -292,5 +292,6 @@ Siendo la partícula masiva más abundante del universo, los neutrinos juegan un
 ### 8may Lectura del septimo capítulo del libro de Feibelman :
 *Job Interviews: What will happen on your interview trip; the questions you had better be prepared to answer.*
 
-### 12may TBA
-#### Fabio Lora-Clavijo (Escuela de Física, Universidad Industrial de Santander)
+### 12may Rayos cósmicos entre los meV y los EeV
+#### Christian Sarmiento-Cano (Departamento de Ciencias Básicas, Universidad Autónoma de Bucaramanga)
+La charla abordará las propiedades y el origen de los rayos cósmicos a lo largo de un amplio rango de energías, así como sus aplicaciones en física, ciencias atmosféricas y estudios del medio ambiente. Se presentarán desarrollos recientes en detección de partículas y muografía, con énfasis en experiencias asociadas al uso de telescopios de muones y detectores Cherenkov de agua para el monitoreo de volcanes, humedad del suelo y variaciones atmosféricas.
