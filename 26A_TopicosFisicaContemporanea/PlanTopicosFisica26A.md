@@ -300,7 +300,7 @@ La charla abordará las propiedades y el origen de los rayos cósmicos a lo larg
 ### 15may Lectura del septimo capítulo del libro de Feibelman :
 *Job Interviews: What will happen on your interview trip; the questions you had better be prepared to answer.*
 
-## Preguntas de entrevista para identificar fortalezas y debilidades del candidato
+#### Preguntas de entrevista para identificar fortalezas y debilidades del candidato
 
 | Pregunta                                                                                                          | Qué evalúa                                           | Señales positivas                                                                                                                             | Señales de alerta                                                                                                |
 | ----------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
