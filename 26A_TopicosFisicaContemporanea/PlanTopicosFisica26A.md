@@ -289,9 +289,13 @@ El punto clave y, tal vez, novedoso es la conexión entre la información espect
 #### Mario A. Acero Ortega (Programa de Física, Facultad de Ciencias Básicas Universidad del Atlántico)
 Siendo la partícula masiva más abundante del universo, los neutrinos juegan un papel muy importante en varias ramas de la física de altas energías y la cosmología. Conocerlos, entender su comportamiento, es fundamental en el proceso de búsqueda de respuestas a varias preguntas sobre la naturaleza y de posibles usos y aplicaciones. Para ello, es necesario entender qué son, de dónde vienen y cómo podemos detectar estas elusivas partículas elementales. En esta charla se presentan algunos detalles sobre estos aspectos particulares.
 
-### 8may Lectura del septimo capítulo del libro de Feibelman :
-*Job Interviews: What will happen on your interview trip; the questions you had better be prepared to answer.*
+### 8may Análisis crítico de introducción y resúmenes de un artículo:
+En función de lo que recomienda Feibelman analizaremos algunos artículos. Miraremos su resumen e introducción.
+
 
 ### 12may Rayos cósmicos entre los meV y los EeV
 #### Christian Sarmiento-Cano (Departamento de Ciencias Básicas, Universidad Autónoma de Bucaramanga)
 La charla abordará las propiedades y el origen de los rayos cósmicos a lo largo de un amplio rango de energías, así como sus aplicaciones en física, ciencias atmosféricas y estudios del medio ambiente. Se presentarán desarrollos recientes en detección de partículas y muografía, con énfasis en experiencias asociadas al uso de telescopios de muones y detectores Cherenkov de agua para el monitoreo de volcanes, humedad del suelo y variaciones atmosféricas.
+
+### 14may Lectura del septimo capítulo del libro de Feibelman :
+*Job Interviews: What will happen on your interview trip; the questions you had better be prepared to answer.*
