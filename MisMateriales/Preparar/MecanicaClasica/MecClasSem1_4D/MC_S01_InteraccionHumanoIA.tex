@@ -1,0 +1,195 @@
+\documentclass[spanish]{beamer}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath}
+\usepackage{mathtools,cancel} % cancela con una flecha \cancelto{0}{XXXX}
+\renewcommand{\CancelColor}{\color{red}} %change cancel color to red
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usepackage{textpos}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+
+%---- Paleta: un color de acento por cada D -----------------
+\definecolor{mainaccent}{HTML}{2B3A67} % indigo profundo (titulos)
+\definecolor{Cdel}{HTML}{14807E}       % Delegacion   - verde azulado
+\definecolor{Cdes}{HTML}{2A6FB0}       % Descripcion  - azul
+\definecolor{Cdis}{HTML}{C4771F}       % Discernimiento - ambar
+\definecolor{Cdil}{HTML}{7A4EA8}       % Diligencia   - purpura
+\definecolor{good}{HTML}{2E7D32}       % correcto / prompt adecuado
+\definecolor{bad}{HTML}{B00020}        % incorrecto / prompt deficiente
+
+\newcommand{\Del}{\textcolor{Cdel}{\textbf{Delegación}}}
+\newcommand{\Des}{\textcolor{Cdes}{\textbf{Descripción}}}
+\newcommand{\Dis}{\textcolor{Cdis}{\textbf{Discernimiento}}}
+\newcommand{\Dil}{\textcolor{Cdil}{\textbf{Diligencia}}}
+
+% Logo  en el comienzo 
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+\end{textblock*}}
+
+\begin{document}
+
+\title{\textbf{Las cuatro D de la colaboración humano--IA}}
+\subtitle{Trabajar con un asistente de IA en Mecánica Clásica}
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
+\textit{Universidad Industrial de Santander, Santander, Colombia } \\
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}} \\
+{\tiny Dakan, R., \& Feller, J. (2025). The AI fluency framework: A descriptive and normative model of human-AI interaction for higher education. \url{https://aifluencyframework.org}}
+}
+\date{\today}
+
+\maketitle
+
+
+\begin{frame}
+\frametitle{Agenda}
+  \tableofcontents
+\end{frame}
+
+
+%%%%% Diapo 1
+\section{Modalidades de Interacción Humano-IA}
+\frame{
+  \frametitle{Modalidades de Interacción Humano-IA}
+   \begin{itemize}  
+  	\item<1-> {\bf Automatización.} {\it La IA realiza tareas siguiendo instrucciones humanas  ({\it prompt})}. Demanda una definición clara de la tarea y de las medidas de control de calidad. Resume correos electrónicos y artículos, genera publicaciones en redes sociales, programación básica
+	%
+	\item<2-> {\bf Aumento.} {\it La IA y el ser humano definen y ejecutan tareas de forma conjunta}. Potencia la creatividad humana, en lugar de sustituirla, mediante la incorporación de un interlocutor de reflexión basado en la IA. Redacción de relatos, ensayos y trabajos de investigación, así como tareas complejas de programación.
+	%
+	\item<3-> {\bf Agentes.} {\it El humano configura la IA para que realice de forma autónoma tareas futuras (incluso para otros) en nombre del usuario.} Requiere una comprensión profunda de las capacidades y limitaciones de la IA. Personajes interactivos de videojuegos, tutores y chatbots.
+    \end{itemize}
+}
+%%%%% Diapo 2
+\section{El modelo de las 4D en un vistazo}
+\subsection{¿Por qué necesitamos un modelo y un método?}
+\frame{
+\frametitle{¿Por qué necesitamos un modelo y un  método?}
+  Un asistente de IA capaz puede \alert{responder} casi cualquier problema de Mecánica Clásica y es precisamente ahí donde está el peligro.
+\begin{itemize}  
+	\item<1-> Un asistente IA que \textbf{da la respuesta} elimina el esfuerzo productivo en el que realmente ocurre el aprendizaje.
+	%
+	\item<2-> El estudiante queda con una solución que implica la comprensión \emph{del asistente IA}, no la suya.
+	%
+	\item<3-> El objetivo debe ser construir un compañero de estudios (y un conjunto de hábitos en el estudiante) que \textbf{enseñe en lugar de dar la respuesta} --- y que esté diseñado para \textbf{retirarse} a medida que aumenta la competencia.
+	%
+	\item<4-> El modelo de competencias de las 4D de Dakan y Feller (2025) parece facilitarnos la comprensión de la interacción.
+	\begin{itemize}
+    		\item \Del\ --- decidir \emph{qué delegar} y qué conservar.
+    		\item \Des\ --- plantear el problema a la IA con \emph{precisión}.
+    		\item \Dis\ --- \emph{evaluar críticamente} lo que regresa.
+    		\item \Dil\ --- verificar, declarar, registrar y \emph{apropiarse} del resultado.
+	\end{itemize}
+\end{itemize}
+}
+%%%%% Diapo 3
+\subsection{4D es un ciclo, no una lista de chequeo}
+\frame{
+\frametitle{4D es un ciclo, no una lista de chequeo}
+ \begin{center}
+  \begin{tikzpicture}[
+    Dnode/.style={rounded corners, thick, minimum width=3.1cm, minimum height=1.05cm,
+      align=center, font=\small\bfseries, text=white},
+    every edge/.style={draw, -{Stealth[length=3mm]}, thick, mainaccent}]
+    \node[Dnode, fill=Cdel] (del) {Delegación};
+    \node[Dnode, fill=Cdes, right=3.6cm of del] (des) {Descripción};
+    \node[Dnode, fill=Cdis, below=1.7cm of des] (dis) {Discernimiento};
+    \node[Dnode, fill=Cdil, below=1.7cm of del] (dil) {Diligencia};
+    \draw (del) edge (des);
+    \draw (des) edge (dis);
+    \draw (dis) edge (dil);
+    \draw (dil) edge (del);
+    \draw[dashed, {Stealth[length=3mm]}-, Cdis, thick] (del) -- (dis)
+      node[midway, sloped, fill=white, inner sep=1pt, font=\scriptsize]{verificación};
+  \end{tikzpicture}
+  \end{center}
+  \begin{center}
+    Puede haber iteración entre \Del\ y \Dil . \\ Modificaciones en la \Dil~general nuevas \Del.  \\
+    Un cambio en el \Dis~realimenta la re-\Des.
+  \end{center}
+}
+
+%%%%% Diapo 2
+\subsection{¿Qué ganamos con las 4D?}
+\frame{
+\frametitle{¿Qué ganamos con las 4D?}
+\begin{itemize}  
+	\item<1-> {\bf Es agnóstica respecto de plataformas y tecnologías:} no depende de herramientas o plataformas concretas y se adapta a las tecnologías y a los casos de uso emergentes y en rápida evolución.
+	%
+	\item<2-> {\bf Es contextual y flexible:} describe acciones efectivas en lugar de prescribir procesos rígidos, y es compatible con otras taxonomías de competencias en diversos contextos profesionales.
+	%
+	\item<3-> {\bf Centrada en la ética:} considera que las consideraciones éticas son fundamentales y reconoce que el uso responsable y seguro de la IA es tan importante como su diseño responsable y seguro.
+	%
+	\item<4-> No son destrezas de física, sino \alert{metacognitivas}  para gestionar la propia resolución de problemas y van más allá de este curso.
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{\Del~¿qué delegar?}
+\frame{
+\frametitle{\Del~¿qué delegar?}
+\begin{itemize}  
+	\item<1-> \textbf{El acto cognitivo:} \emph{descomposición} de la tarea y luego \emph{asignación}. Decidir qué delegar obliga a descomponer el problema en sus  partes: sistema, fuerzas, ligaduras, método, ejecución, interpretación.
+	%
+	\item<2-> {\bf Regla de asignación:} Conservar lo que es el \textbf{objetivo de aprendizaje} y \textbf{no puede verificarse}; delegue lo que es \textbf{verificable}.
+	%
+	\item<3-> Supongamos el siguiente sistema: el bloque $m$ sobre una \emph{cuña sin fricción} $M$, que a su vez desliza libremente sobre un piso sin fricción.
+      	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/wedge_block_system.png}
+   	\end{figure}
+	\item<4-> {\bf No delegar} lo que desarrolla la destreza. No se puede delegar el diagrama de cuerpo libre porque no habría cómo distinguir entre uno correcto y otro erróneo. 
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{{\Del\ en mecánica newtoniana}}
+\frame{
+\frametitle{{\Del\ en mecánica newtoniana}}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+
+
+%%%%% Diapo Fin
+\section{Recapitulando}
+\frame{
+  \frametitle{Recapitulando}
+En presentación consideramos
+  \begin{enumerate}
+  	\item<1->
+   \end{enumerate}
+}
+  
+\end{document}
+
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
+   	\end{figure}
+	
