@@ -1,0 +1,441 @@
+%============================================================
+%  Las cuatro D de la colaboracion humano-IA en Mecanica Clasica
+%  Presentacion Beamer (tema metropolis)
+%  Compilar: pdflatex 4Ds_mecanica_clasica_ES.tex   (ejecutar dos veces)
+%============================================================
+\documentclass[aspectratio=169,11pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usetheme{metropolis}
+\metroset{progressbar=foot, numbering=fraction, block=fill, sectionpage=progressbar}
+
+\usepackage{amsmath,amssymb}
+\usepackage[spanish,es-noshorthands]{babel}
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+
+%---- Paleta: un color de acento por cada D -----------------
+\definecolor{mainaccent}{HTML}{2B3A67} % indigo profundo (titulos)
+\definecolor{Cdel}{HTML}{14807E}       % Delegacion   - verde azulado
+\definecolor{Cdes}{HTML}{2A6FB0}       % Descripcion  - azul
+\definecolor{Cdis}{HTML}{C4771F}       % Discernimiento - ambar
+\definecolor{Cdil}{HTML}{7A4EA8}       % Diligencia   - purpura
+\definecolor{good}{HTML}{2E7D32}       % correcto / prompt adecuado
+\definecolor{bad}{HTML}{B00020}        % incorrecto / prompt deficiente
+
+\setbeamercolor{frametitle}{bg=mainaccent}
+\setbeamercolor{progress bar}{fg=Cdis}
+\setbeamercolor{alerted text}{fg=Cdis}
+
+%---- Etiquetas de color para cada D ------------------------
+\newcommand{\Del}{\textcolor{Cdel}{\textbf{Delegación}}}
+\newcommand{\Des}{\textcolor{Cdes}{\textbf{Descripción}}}
+\newcommand{\Dis}{\textcolor{Cdis}{\textbf{Discernimiento}}}
+\newcommand{\Dil}{\textcolor{Cdil}{\textbf{Diligencia}}}
+\newcommand{\chip}[2]{\tikz[baseline=-0.6ex]\node[fill=#1,text=white,rounded corners=2pt,
+  inner sep=2.5pt,font=\scriptsize\bfseries]{#2};}
+
+%---- Cajas de prompt (bloques de color) --------------------
+\newenvironment{promptgood}{\setbeamercolor{block title}{bg=good,fg=white}%
+  \setbeamercolor{block body}{bg=good!8}\begin{block}{Prompt adecuado}\itshape}{\end{block}}
+\newenvironment{promptbad}{\setbeamercolor{block title}{bg=bad,fg=white}%
+  \setbeamercolor{block body}{bg=bad!8}\begin{block}{Prompt deficiente / vago}\itshape}{\end{block}}
+
+\title{Las cuatro D de la colaboración humano--IA}
+\subtitle{Trabajar con un asistente de IA en Mecánica Clásica}
+\author{Mecánica Clásica --- Curso de posgrado}
+\date{\today}
+\institute{Delegación \ $\cdot$\ Descripción \ $\cdot$\ Discernimiento \ $\cdot$\ Diligencia}
+
+\begin{document}
+
+\maketitle
+
+%============================================================
+\begin{frame}[shrink=20]{¿Por qué necesitamos un método?}
+  Un asistente de IA capaz puede \alert{responder} casi cualquier problema de
+  mecánica. Precisamente ahí está el peligro.
+  \vspace{0.6em}
+  \begin{itemize}
+    \item Un tutor que \textbf{da la respuesta} elimina el esfuerzo productivo en el
+          que realmente ocurre el aprendizaje.
+    \item El estudiante se queda con una salida fluida que codifica la comprensión
+          \emph{del asistente}, no la suya.
+  \end{itemize}
+  \vspace{0.6em}
+  \begin{alertblock}{Objetivo}
+    Construir un compañero (y un conjunto de hábitos en el estudiante) que
+    \textbf{enseñe en lugar de dar la respuesta} --- y que esté diseñado para
+    \textbf{retirarse} a medida que crece la competencia.
+  \end{alertblock}
+  \vspace{0.3em}
+  Las 4D son el modelo de competencias que lo hace posible.
+\end{frame}
+
+%============================================================
+\section{El modelo de un vistazo}
+
+\begin{frame}{Las cuatro competencias}
+  \setlength{\leftmargini}{1.2em}
+  \begin{itemize}\setlength\itemsep{0.55em}
+    \item[\chip{Cdel}{D1}] \Del\ --- decidir \emph{qué delegar} y qué conservar.
+    \item[\chip{Cdes}{D2}] \Des\ --- plantear el problema a la IA con \emph{precisión}.
+    \item[\chip{Cdis}{D3}] \Dis\ --- \emph{evaluar críticamente} lo que regresa.
+    \item[\chip{Cdil}{D4}] \Dil\ --- verificar, declarar, registrar y \emph{apropiarse}
+          del resultado.
+  \end{itemize}
+  \vspace{0.7em}
+  \begin{quote}
+    No son destrezas de física, sino destrezas \alert{metacognitivas} --- destrezas
+    para gestionar la propia resolución de problemas. Por eso se transfieren mucho más
+    allá de este curso.
+  \end{quote}
+\end{frame}
+
+\begin{frame}{Un ciclo, no una lista de verificación}
+  \begin{center}
+  \begin{tikzpicture}[
+    Dnode/.style={rounded corners, thick, minimum width=3.1cm, minimum height=1.05cm,
+      align=center, font=\small\bfseries, text=white},
+    every edge/.style={draw, -{Stealth[length=3mm]}, thick, mainaccent}]
+    \node[Dnode, fill=Cdel] (del) {Delegación};
+    \node[Dnode, fill=Cdes, right=3.6cm of del] (des) {Descripción};
+    \node[Dnode, fill=Cdis, below=1.7cm of des] (dis) {Discernimiento};
+    \node[Dnode, fill=Cdil, below=1.7cm of del] (dil) {Diligencia};
+    \draw (del) edge (des);
+    \draw (des) edge (dis);
+    \draw (dis) edge (dil);
+    \draw (dil) edge (del);
+    \draw[dashed, {Stealth[length=3mm]}-, Cdis, thick] (del) -- (dis)
+      node[midway, sloped, fill=white, inner sep=1pt, font=\scriptsize]{compuerta};
+  \end{tikzpicture}
+  \end{center}
+  \begin{center}\small
+    \textbf{Compuerta de verificación:} solo puede \Del\ de forma responsable lo que,
+    en principio, podría \Dis. \\
+    Una falla en el discernimiento retroalimenta la re-\Des; el registro de la
+    diligencia informa la siguiente \Del.
+  \end{center}
+\end{frame}
+
+\begin{frame}{Tres propiedades del modelo}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.33\textwidth}
+      \textbf{Metacognitivo}\\[0.3em]
+      \footnotesize Cada D rige \emph{cómo gestiona su propio pensamiento}, no un
+      resultado concreto. Por eso se transfiere.
+    \column{0.33\textwidth}
+      \textbf{Evolutivo}\\[0.3em]
+      \footnotesize Las fronteras \emph{se desplazan a medida que crece la competencia}.
+      Un novato y un experto abordan la misma tarea de forma distinta.
+    \column{0.33\textwidth}
+      \textbf{Entrelazado}\\[0.3em]
+      \footnotesize Las cuatro \emph{se condicionan mutuamente} a través de la compuerta
+      de verificación --- no son etapas independientes.
+  \end{columns}
+  \vspace{1.2em}
+  \begin{center}
+    \small\itshape La frontera de delegación se expande, y el andamiaje del tutor se
+    retira, a lo largo del semestre.
+  \end{center}
+\end{frame}
+
+%============================================================
+\section{\texorpdfstring{\textcolor{Cdel}{Delegación}}{Delegacion}}
+
+\begin{frame}{\Del\ --- qué delegar}
+  \textbf{El acto cognitivo:} \emph{descomposición} de la tarea y luego
+  \emph{asignación}. Decidir qué delegar obliga a descomponer el problema en sus
+  partes --- sistema, fuerzas, ligaduras, método, ejecución, interpretación.
+  \vspace{0.5em}
+  \begin{block}{Regla de asignación}
+    Conserve lo que es el \textbf{objetivo de aprendizaje} o lo que \textbf{no puede
+    verificar}; delegue lo que es \textbf{verificable} y no es la destreza que se busca
+    desarrollar.
+  \end{block}
+  \begin{itemize}
+    \item \textbf{Falla que previene:} la \alert{descarga cognitiva} perjudicial ---
+          delegar precisamente el trabajo que desarrolla la destreza.
+    \item \textbf{Compuerta de verificación:} no puede delegar un diagrama de cuerpo
+          libre que aún no sabría trazar correctamente --- no tendría cómo detectar uno
+          erróneo.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[shrink=20]{\Del\ en mecánica newtoniana}
+  \textbf{Sistema:} bloque $m$ sobre una \emph{cuña sin fricción} $M$ que a su vez
+  desliza libremente sobre un piso sin fricción.
+  \vspace{0.4em}
+  \begin{promptbad}
+    ``Resuelve el problema del bloque sobre la cuña móvil.'' \upshape
+    \footnotesize\\[0.2em] Delega la física que se está enseñando; la salida no puede
+    ser verificada por un estudiante que no supo plantearla.
+  \end{promptbad}
+  \begin{promptgood}
+    ``Tengo los diagramas de cuerpo libre y la ligadura de que el bloque permanece
+    sobre el plano inclinado. Esto da un sistema lineal $2\times2$ para las dos
+    aceleraciones. Resuélvelo simbólicamente.'' \upshape
+    \footnotesize\\[0.2em] Conserva el modelado; delega solo el álgebra verificable.
+  \end{promptgood}
+  \begin{center}\small
+    El diagrama de cuerpo libre y la ligadura \emph{son} el contenido newtoniano;
+    la resolución del sistema lineal no lo es.
+  \end{center}
+\end{frame}
+
+%============================================================
+\section{\texorpdfstring{\textcolor{Cdes}{Descripción}}{Descripcion}}
+
+\begin{frame}{\Des\ --- el prompt es la formulación}
+  \textbf{El acto cognitivo:} externalizar la especificación del problema. Describir un
+  problema a la IA es \emph{isomorfo} a plantear correctamente un problema de física.
+  \vspace{0.4em}
+  \begin{block}{Una buena descripción fija\ldots}
+    el sistema de referencia y las coordenadas $\cdot$ cada suposición $\cdot$ el modelo
+    $\cdot$ las condiciones iniciales y de frontera $\cdot$ la \emph{forma} de respuesta
+    deseada.
+  \end{block}
+  \begin{itemize}
+    \item \textbf{Falla que previene:} una especificación insuficiente no da una
+          respuesta vaga --- da una \alert{respuesta segura a una pregunta alterada en
+          silencio}, porque el modelo llena los vacíos con sus sesgos (por lo general, el
+          caso de libro de texto más común).
+    \item \textbf{Espejo diagnóstico:} un estudiante que no puede describir el problema
+          con claridad todavía no lo comprende.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[shrink=15]{\Des\ en mecánica newtoniana}
+  \textbf{Sistema:} proyectil con resistencia del aire.
+  \begin{promptbad}
+    ``¿Cómo se mueve un proyectil con resistencia del aire?'' \upshape
+    \footnotesize\\[0.2em] El asistente elegirá en silencio una ley de arrastre
+    ---normalmente \emph{lineal}--- y podría devolver una forma cerrada que no existe
+    para el caso que usted tenía en mente.
+  \end{promptbad}
+  \begin{promptgood}
+    ``Masa $m$, rapidez $v_0$, ángulo $\theta$, gravedad $g$, arrastre \textbf{cuadrático}
+    $\mathbf{F}_d=-b\,|\mathbf{v}|\,\mathbf{v}$. En un sistema de referencia inercial 2D
+    ($x$ horizontal, $y$ hacia arriba) escribe la segunda ley de Newton como un sistema
+    de primer orden para $(x,y,v_x,v_y)$. Indica las suposiciones; solo las ecuaciones.''
+    \upshape
+  \end{promptgood}
+  \vspace{-0.2em}
+  \[
+    \dot v_x=-\tfrac{b}{m}\sqrt{v_x^2+v_y^2}\,v_x,\qquad
+    \dot v_y=-g-\tfrac{b}{m}\sqrt{v_x^2+v_y^2}\,v_y.
+  \]
+  \begin{center}\small El arrastre lineal ($\propto v$) frente al cuadrático
+  ($\propto v^2$) cambia \emph{toda} la estructura de la solución.\end{center}
+\end{frame}
+
+%============================================================
+\section{\texorpdfstring{\textcolor{Cdis}{Discernimiento}}{Discernimiento}}
+
+\begin{frame}[shrink=15]{\Dis\ --- cada respuesta es una hipótesis}
+  \textbf{El acto cognitivo:} aplicar el conjunto de herramientas de verificación del
+  físico \emph{contra la IA}, en lugar de contra su propia álgebra.
+  \vspace{0.4em}
+  \begin{block}{Las herramientas}
+    dimensiones $\cdot$ signos y simetría $\cdot$ casos límite $\cdot$ leyes de
+    conservación $\cdot$ orden de magnitud $\cdot$ comparación con resultados conocidos.
+  \end{block}
+  El discernimiento tiene \textbf{capas}:
+  \begin{itemize}
+    \item \textbf{superficial} --- dimensiones, signos evidentes;
+    \item \textbf{estructural} --- ¿el método es adecuado? ¿son consistentes las
+          suposiciones?
+    \item \textbf{profunda} --- ¿es correcta la física en los casos límite?
+  \end{itemize}
+  \begin{center}\small\itshape Nunca acepte una respuesta que no haya superado al menos
+  una verificación dimensional y un caso límite.\end{center}
+\end{frame}
+
+\begin{frame}{\Dis\ --- dos errores detectados en mecánica newtoniana}
+  \textbf{1. Velocidad límite (arrastre cuadrático).}\\
+  La IA afirma $v_t=\dfrac{mg}{b}$.\quad Pero $[b]=\mathrm{kg/m}$, de modo que
+  $\dfrac{mg}{b}$ tiene unidades de $\mathrm{m^2/s^2}$ --- una \alert{velocidad al
+  cuadrado}.
+  \[
+    \text{Balance correcto: } mg=b\,v_t^2 \;\Rightarrow\; v_t=\sqrt{mg/b}.
+  \]
+  \footnotesize (El asistente devolvió la fórmula del arrastre \emph{lineal}.)
+  \vspace{0.7em}\normalsize
+
+  \textbf{2. Cuenta sobre un alambre recto que gira con $\omega$ constante (plano
+  horizontal).}\\
+  La IA escribe $\ddot r=-\omega^2 r$, ``así que la cuenta oscila.''
+  \[
+    \text{Físicamente la cuenta sale \emph{hacia afuera}: } \ddot r=+\omega^2 r
+    \;\Rightarrow\; \text{crecimiento exponencial.}
+  \]
+  \footnotesize El signo oscilatorio es incorrecto; el término de Coriolis pertenece a
+  la ecuación \emph{azimutal}, no a la radial.
+\end{frame}
+
+%============================================================
+\section{\texorpdfstring{\textcolor{Cdil}{Diligencia}}{Diligencia}}
+
+\begin{frame}[shrink=25]{\Dil\ --- el compromiso permanente}
+  \textbf{El discernimiento es un \emph{acto}; la diligencia es una \emph{disposición}.}
+  Hace que la verificación no sea opcional y mantiene la rendición de cuentas en todo el
+  flujo de trabajo.
+  \vspace{0.5em}
+  \begin{block}{Las cuatro obligaciones}
+    \begin{enumerate}
+      \item \textbf{Verificar} antes de confiar.
+      \item \textbf{Declarar} el uso de IA según la política de la actividad.
+      \item \textbf{Registrar} la interacción (prompts, respuesta, qué se aceptó /
+            rechazó / corrigió, cómo se verificó).
+      \item \textbf{Rederivar} de forma independiente un resultado corregido antes de
+            construir sobre él.
+    \end{enumerate}
+  \end{block}
+  \begin{itemize}
+    \item Conlleva la obligación de \textbf{reproducibilidad} --- código documentado,
+          semillas fijas, tolerancias declaradas.
+    \item Es la \alert{columna vertebral de la integridad}: impide que un error detectado
+          se propague en silencio.
+  \end{itemize}
+\end{frame}
+
+%============================================================
+\section{Las cuatro juntas}
+
+\begin{frame}{De principio a fin: la cuña móvil (1/2)}
+  \chip{Cdel}{D1}~\Del\quad
+  \footnotesize Construyo yo mismo los DCL, elijo el sistema de referencia del piso y
+  escribo la ligadura; delego la resolución simbólica.
+  \vspace{0.5em}\normalsize
+
+  \chip{Cdes}{D2}~\Des\quad
+  \footnotesize ``Bloque $m$ sin fricción sobre cuña $M$ sin fricción (ángulo $\alpha$),
+  cuña libre sobre un piso sin fricción. Sistema del piso; aquí están mis tres
+  ecuaciones. Resuelve simbólicamente para la aceleración de la cuña $A$ y la aceleración
+  del bloque $a_{\mathrm{rel}}$ a lo largo del plano inclinado.''
+  \vspace{0.6em}\normalsize
+
+  \begin{block}{Respuesta de la IA}
+    \[
+      A=\frac{mg\sin\alpha\cos\alpha}{M+m\sin^2\alpha},\qquad
+      a_{\mathrm{rel}}=\frac{(M+m)\,g\sin\alpha}{M+m\sin^2\alpha}.
+    \]
+  \end{block}
+\end{frame}
+
+\begin{frame}[shrink=15]{De principio a fin: la cuña móvil (2/2)}
+  \chip{Cdis}{D3}~\Dis\ --- cuatro verificaciones independientes:
+  \begin{itemize}\footnotesize\setlength\itemsep{0.25em}
+    \item \textbf{Dimensiones:} ambas son aceleraciones. \textcolor{good}{\checkmark}
+    \item \textbf{Límite} $M\to\infty$ (cuña fija): $A\to0$,\;
+          $a_{\mathrm{rel}}\to g\sin\alpha$ --- el resultado conocido del plano inclinado
+          fijo. \textcolor{good}{\checkmark}
+    \item \textbf{Límite} $\alpha\to0$: ambas $\to0$. \textcolor{good}{\checkmark}
+    \item \textbf{Cantidad de movimiento:} sin fuerza horizontal externa $\Rightarrow$
+          las aceleraciones horizontales del bloque y de la cuña tienen signo opuesto.
+          \textcolor{good}{\checkmark}
+  \end{itemize}
+  \vspace{0.5em}
+  \chip{Cdil}{D4}~\Dil
+  \begin{itemize}\footnotesize\setlength\itemsep{0.25em}
+    \item Registrar el prompt, la respuesta y las cuatro verificaciones (sin corrección
+          necesaria).
+    \item Declarar el papel del asistente; rederivar $a_{\mathrm{rel}}$ a mano antes de
+          usarla en la parte de energía del problema.
+  \end{itemize}
+  \vspace{0.3em}
+  \begin{center}\small\itshape Resultado verificado, apropiado y reproducible.\end{center}
+\end{frame}
+
+%============================================================
+\section{Diseñar el tutor}
+
+\begin{frame}[shrink=25]{El giro: las 4D como especificación del tutor}
+  El modelo no es solo un código de conducta para los estudiantes --- nos dice
+  \alert{cómo configurar el asistente para que enseñe en lugar de dar la respuesta}.
+  \vspace{0.6em}
+  \renewcommand{\arraystretch}{1.35}
+  \footnotesize
+  \begin{tabular}{@{}p{2.6cm}p{9.4cm}@{}}
+    \toprule
+    \textbf{Dimensión} & \textbf{El tutor se comporta así\ldots}\\
+    \midrule
+    \textcolor{Cdel}{Delegación} & Se niega a realizar el objetivo de aprendizaje
+      enunciado; pregunta qué ha planteado usted, ayuda a descomponer y \emph{nombra} la
+      subtarea que asume.\\
+    \textcolor{Cdes}{Descripción} & Hace preguntas aclaratorias (\emph{¿qué ley de
+      arrastre? ¿qué sistema de referencia? ¿sin fricción?}) y reformula el problema antes
+      de resolver.\\
+    \textcolor{Cdis}{Discernimiento} & Presenta sus resultados como tentativos, señala su
+      propia incertidumbre y ofrece una \emph{verificación que usted puede hacer} en lugar
+      de certificar la corrección.\\
+    \textcolor{Cdil}{Diligencia} & Solicita el registro de la interacción, recuerda la
+      política de declaración y retiene la reutilización hasta que usted rederive de forma
+      independiente.\\
+    \bottomrule
+  \end{tabular}
+  \vspace{0.5em}
+
+  \scriptsize Esto se corresponde con el aprendizaje cognitivo: \emph{modelar, guiar,
+  andamiar y luego retirarse}.
+\end{frame}
+
+\begin{frame}{Por qué la mecánica clásica es el vehículo ideal}
+  \begin{itemize}\setlength\itemsep{0.55em}
+    \item \textbf{Una cultura de verificación madura.} Leyes de conservación, simetría,
+          dimensiones y casos límite ofrecen verificaciones baratas e independientes a
+          cada paso --- la materia prima del \Dis.
+    \item \textbf{Múltiples formulaciones equivalentes.} ``Describe esto en la imagen
+          hamiltoniana y concíliala con el resultado lagrangiano'' es un ejercicio natural
+          de \Des-y-\Dis\ propio de este dominio.
+    \item \textbf{Un gradiente de dificultad limpio.} Desde problemas totalmente
+          verificables hasta problemas genuinamente abiertos --- de modo que la frontera
+          de \Del\ se desplaza \emph{de forma visible} a lo largo del curso.
+    \item \textbf{Objetivos alineados.} La geometría, la simetría y los límites de la
+          predictibilidad son justamente los hábitos de juicio que las 4D desarrollan.
+  \end{itemize}
+\end{frame}
+
+%============================================================
+\section{Evaluación e ideas clave}
+
+\begin{frame}{Evaluar con las 4D}
+  \begin{block}{Evalúe las cuatro dimensiones \emph{por separado}}
+    ¿Fue apropiada la \Del? ¿precisa la \Des? ¿suficiente el \Dis?
+    ¿documentada la \Dil? \; El registro de la interacción es la evidencia.
+  \end{block}
+  \vspace{0.4em}
+  Lea el \textbf{perfil} del estudiante, no una sola calificación.
+  \vspace{0.6em}
+  \begin{alertblock}{La falla común y reveladora}
+    \Des\ fuerte, \Dis\ débil --- \emph{prompts fluidos, respuestas sin verificar.}
+    La rúbrica revela exactamente eso.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Ideas clave}
+  \begin{enumerate}\setlength\itemsep{0.5em}
+    \item Trate a la IA como un \textbf{compañero de entrenamiento, nunca como un
+          oráculo}.
+    \item \Del\ lo que pueda \Dis; describa como plantearía un problema de física;
+          ponga a prueba cada respuesta; la \Dil\ lo obliga a apropiarse del resultado.
+    \item Las cuatro son \textbf{entrelazadas} y \textbf{evolutivas} --- unidas por la
+          compuerta de verificación, calibradas al estudiante.
+    \item Integradas en el tutor, aportan \textbf{transferencia}, \textbf{independencia}
+          e \textbf{integridad} --- un compañero diseñado para \emph{retirarse}.
+  \end{enumerate}
+  \vspace{0.8em}
+  \begin{center}\Large
+    \textcolor{Cdel}{Delegar} $\to$ \textcolor{Cdes}{Describir} $\to$
+    \textcolor{Cdis}{Discernir} $\to$ \textcolor{Cdil}{Diligencia}
+  \end{center}
+\end{frame}
+
+\begin{frame}[standout]
+  Delegue solo lo que pueda discernir.
+\end{frame}
+
+\end{document}

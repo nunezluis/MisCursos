@@ -1,0 +1,10 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{\IeC {\textquestiondown }Por qu\'e necesitamos un m\'etodo?}{2}{0}{1}
+\beamer@sectionintoc {2}{El modelo de un vistazo}{3}{0}{2}
+\beamer@sectionintoc {3}{\leavevmode {\color {Cdel}Delegaci\'on}}{6}{0}{3}
+\beamer@sectionintoc {4}{\leavevmode {\color {Cdes}Descripci\'on}}{8}{0}{4}
+\beamer@sectionintoc {5}{\leavevmode {\color {Cdis}Discernimiento}}{10}{0}{5}
+\beamer@sectionintoc {6}{\leavevmode {\color {Cdil}Diligencia}}{12}{0}{6}
+\beamer@sectionintoc {7}{Las cuatro juntas}{13}{0}{7}
+\beamer@sectionintoc {8}{Dise\~nar el tutor}{15}{0}{8}
+\beamer@sectionintoc {9}{Evaluaci\'on e ideas clave}{17}{0}{9}
