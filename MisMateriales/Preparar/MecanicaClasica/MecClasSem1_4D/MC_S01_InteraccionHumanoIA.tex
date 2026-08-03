@@ -213,28 +213,34 @@
 	%
 	\item<2-> {\bf Las herramientas de verificación:} dimensiones $\cdot$ signos y simetría $\cdot$ casos límite $\cdot$ leyes de conservación $\cdot$ orden de magnitud $\cdot$ comparación con resultados conocidos.
 	%
-	\item<3-> El discernimiento puede tener varias \textbf{capas}:
+	\item<3-> El \Dis~puede tener varias \textbf{capas}:
 	\begin{itemize}
 		\item \textbf{superficial} --- dimensiones, signos evidentes;
-		\item \textbf{estructural} --- ¿El método es adecuado? ¿Son consistentes las suposiciones?
-		\item \textbf{profunda} --- ¿Es correcta la física en los casos límite?
+		\item \textbf{estructural} --- ¿El método es adecuado? ¿Las suposiciones son consistentes?
+		\item \textbf{profunda} --- ¿La física en los casos límite es correcta ?
   	\end{itemize}
+	%
+	\item<4-> Nunca acepte una respuesta que no haya superado al menos una verificación dimensional y un caso límite.
 \end{itemize}
 }
 %
 %%%%% Diapo 2
-\section{Sección}
+\subsection{\Dis\ --- dos errores en mecánica newtoniana}
 \frame{
-\frametitle{Título transparencia}
+\frametitle{\Dis\ --- dos errores en mecánica newtoniana}
 \begin{itemize}  
-	\item<1-> 
+	\item<1->   \textbf{Velocidad límite (roce cuadrático).}  La IA afirma que $v_t=\dfrac{mg}{b}$. \\ Pero un análisis dimensional previo $[b]=\mathrm{kg/m}$, de modo que  $\dfrac{mg}{b}$ tiene unidades de $\mathrm{m^2/s^2}$,  \alert{velocidad al  cuadrado}. \\ El resultado correcto es:  $mg=b\,v_t^2 \;\Rightarrow\; v_t=\sqrt{mg/b}$. \\	
+	El asistente IA devolvió la fórmula del roce \emph{lineal}.
+	%
+	\item<2-> \textbf{Una cuenta en un alambre recto que gira en un plano horizontal con velocidad angular, $\omega$, constante}. \\ La IA escribe la aceleración $\ddot r=-\omega^2 r$, ``así que la cuenta oscila.''
+	El signo oscilatorio es incorrecto; el término de Coriolis pertenece a la ecuación \emph{azimutal}, no a la radial.
 \end{itemize}
 }
 %
 %%%%% Diapo 2
-\section{Sección}
+\section{\Dil\ --- el compromiso permanente}
 \frame{
-\frametitle{Título transparencia}
+\frametitle{\Dil\ --- el compromiso permanente}
 \begin{itemize}  
 	\item<1-> 
 \end{itemize}

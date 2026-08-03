@@ -241,12 +241,12 @@
   \textbf{Sistema:} proyectil con resistencia del aire.
   \begin{promptbad}
     ``¿Cómo se mueve un proyectil con resistencia del aire?'' \upshape
-    \footnotesize\\[0.2em] El asistente elegirá en silencio una ley de arrastre
+    \footnotesize\\[0.2em] El asistente elegirá en silencio una ley de roce
     ---normalmente \emph{lineal}--- y podrí­a devolver una forma cerrada que no existe
     para el caso que usted tení­a en mente.
   \end{promptbad}
   \begin{promptgood}
-    ``Masa $m$, rapidez $v_0$, ángulo $\theta$, gravedad $g$, arrastre \textbf{cuadrático}
+    ``Masa $m$, rapidez $v_0$, ángulo $\theta$, gravedad $g$, roce \textbf{cuadrático}
     $\mathbf{F}_d=-b\,|\mathbf{v}|\,\mathbf{v}$. En un sistema de referencia inercial 2D
     ($x$ horizontal, $y$ hacia arriba) escribe la segunda ley de Newton como un sistema
     de primer orden para $(x,y,v_x,v_y)$. Indica las suposiciones; solo las ecuaciones.''
@@ -257,7 +257,7 @@
     \dot v_x=-\tfrac{b}{m}\sqrt{v_x^2+v_y^2}\,v_x,\qquad
     \dot v_y=-g-\tfrac{b}{m}\sqrt{v_x^2+v_y^2}\,v_y.
   \]
-  \begin{center}\small El arrastre lineal ($\propto v$) frente al cuadrático
+  \begin{center}\small El roce lineal ($\propto v$) frente al cuadrático
   ($\propto v^2$) cambia \emph{toda} la estructura de la solución.\end{center}
 \end{frame}
 
@@ -284,14 +284,14 @@
 \end{frame}
 
 \begin{frame}{\Dis\ --- dos errores detectados en mecánica newtoniana}
-  \textbf{1. Velocidad lí­mite (arrastre cuadrático).}\\
+  \textbf{1. Velocidad lí­mite (roce cuadrático).}\\
   La IA afirma $v_t=\dfrac{mg}{b}$.\quad Pero $[b]=\mathrm{kg/m}$, de modo que
   $\dfrac{mg}{b}$ tiene unidades de $\mathrm{m^2/s^2}$ --- una \alert{velocidad al
   cuadrado}.
   \[
     \text{Balance correcto: } mg=b\,v_t^2 \;\Rightarrow\; v_t=\sqrt{mg/b}.
   \]
-  \footnotesize (El asistente devolvió la fórmula del arrastre \emph{lineal}.)
+  \footnotesize (El asistente devolvió la fórmula del roce \emph{lineal}.)
   \vspace{0.7em}\normalsize
 
   \textbf{2. Cuenta sobre un alambre recto que gira con $\omega$ constante (plano
@@ -382,7 +382,7 @@
     \textbf{Dimensión} & \textbf{El tutor se comporta así­\ldots}\\
     \midrule
     \textcolor{Cdel}{Delegación} & Se niega a realizar el objetivo de aprendizaje  enunciado; pregunta qué ha planteado usted, ayuda a descomponer y \emph{nombra} la  subtarea que asume.\\
-    \textcolor{Cdes}{Descripción} & Hace preguntas aclaratorias (\emph{ ¿qué ley de arrastre? ¿qué sistema de referencia? ¿sin fricción?}) y reformula el problema antes de resolver.\\
+    \textcolor{Cdes}{Descripción} & Hace preguntas aclaratorias (\emph{ ¿qué ley de roce? ¿qué sistema de referencia? ¿sin fricción?}) y reformula el problema antes de resolver.\\
     \textcolor{Cdis}{Discernimiento} & Presenta sus resultados como tentativos, señala su propia incertidumbre y ofrece una \emph{verificación que usted puede hacer} en lugar  de certificar la corrección. \\
     \textcolor{Cdil}{Diligencia} & Solicita el registro de la interacción, recuerda la
       política de declaración y retiene la reutilización hasta que usted rederive de forma
