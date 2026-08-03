@@ -4,8 +4,9 @@
 \beamer@subsectionintoc {2}{1}{\IeC {\textquestiondown }Por qu\'e necesitamos un modelo y un m\'etodo?}{6}{0}{2}
 \beamer@subsectionintoc {2}{2}{4D es un ciclo, no una lista de chequeo}{10}{0}{2}
 \beamer@subsectionintoc {2}{3}{\IeC {\textquestiondown }Qu\'e ganamos con las 4D?}{11}{0}{2}
-\beamer@subsectionintoc {2}{4}{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}~\IeC {\textquestiondown }qu\'e delegar?}{15}{0}{2}
-\beamer@subsectionintoc {2}{5}{{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}\ en mec\'anica newtoniana}}{19}{0}{2}
-\beamer@sectionintoc {3}{Secci\'on}{20}{0}{3}
-\beamer@sectionintoc {4}{Secci\'on}{21}{0}{4}
-\beamer@sectionintoc {5}{Recapitulando}{22}{0}{5}
+\beamer@sectionintoc {3}{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}}{15}{0}{3}
+\beamer@subsectionintoc {3}{1}{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}~\IeC {\textquestiondown }qu\'e delegar?}{15}{0}{3}
+\beamer@subsectionintoc {3}{2}{{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}\ en mec\'anica newtoniana}}{19}{0}{3}
+\beamer@sectionintoc {4}{Secci\'on}{20}{0}{4}
+\beamer@sectionintoc {5}{Secci\'on}{21}{0}{5}
+\beamer@sectionintoc {6}{Recapitulando}{22}{0}{6}

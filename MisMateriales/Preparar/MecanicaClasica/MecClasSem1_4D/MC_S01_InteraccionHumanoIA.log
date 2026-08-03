@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  2 AUG 2026 18:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  2 AUG 2026 18:51
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -873,24 +873,24 @@ LaTeX Info: Redefining \% on input line 25.
 )
 \openout1 = `MC_S01_InteraccionHumanoIA.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -948,7 +948,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-Package hyperref Info: Link coloring OFF on input line 38.
+Package hyperref Info: Link coloring OFF on input line 45.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -962,65 +962,65 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count356
 )
-LaTeX Info: Redefining \ref on input line 38.
-LaTeX Info: Redefining \pageref on input line 38.
-LaTeX Info: Redefining \nameref on input line 38.
+LaTeX Info: Redefining \ref on input line 45.
+LaTeX Info: Redefining \pageref on input line 45.
+LaTeX Info: Redefining \nameref on input line 45.
  (./MC_S01_InteraccionHumanoIA.out) (./MC_S01_InteraccionHumanoIA.out)
 \@outlinefile=\write5
 \openout5 = `MC_S01_InteraccionHumanoIA.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 38.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 45.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 38.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 45.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 38.
+(Font)                  OT1/cmss/m/n --> OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 38.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 38.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 38.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 45.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 38.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/m/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 38.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 38.
+(Font)                  OT1/cmss/bx/n --> OT1/cmss/m/n on input line 45.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 38.
+(Font)                  OT1/cmr/m/it --> OT1/cmss/m/it on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 38.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 38.
+(Font)                  OT1/cmr/bx/it --> OT1/cmss/m/it on input line 45.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 38.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 38.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/m/n on input line 45.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 38.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 45.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 38.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 38.
+(Font)                  OT1/cmss/b/n --> OT1/cmr/b/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 38.
+(Font)                  OT1/cmss/b/n --> OT1/cmss/b/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 38.
+(Font)                  OT1/cmss/m/n --> OT1/cmss/b/n on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 38.
+(Font)                  OT1/cmss/m/it --> OT1/cmss/b/it on input line 45.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 38.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 38.
+(Font)                  OT1/cmtt/m/n --> OT1/cmtt/b/n on input line 45.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 45.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 3
-8.
+(Font)                  OT1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 4
+5.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 3
-8.
+(Font)                  OT1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 4
+5.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 38.
+ut line 45.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/translator/translator-basic-dicti
 onary-English.dict
@@ -1070,35 +1070,35 @@ Dictionary: translator-theorem-dictionary, Language: English
 tionary-Spanish.dict
 Dictionary: translator-theorem-dictionary, Language: Spanish 
 )
-LaTeX Info: Redefining \. on input line 38.
-LaTeX Info: Redefining \% on input line 38.
+LaTeX Info: Redefining \. on input line 45.
+LaTeX Info: Redefining \% on input line 45.
  (./MC_S01_InteraccionHumanoIA.nav)
 
 Package hyperref Warning: Option `pdfauthor' has already been used,
-(hyperref)                setting the option has no effect on input line 42.
+(hyperref)                setting the option has no effect on input line 49.
 
 </Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png,
- id=66, 184.5294pt x 136.1085pt>
+ id=70, 184.5294pt x 136.1085pt>
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 50.
+stitucional/UISLOGO.png  used on input line 57.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 50.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
 
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 50.
+ut line 57.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
@@ -1116,7 +1116,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 56.
+stitucional/UISLOGO.png  used on input line 63.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [2
 
@@ -1126,7 +1126,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 70.
+stitucional/UISLOGO.png  used on input line 77.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [3
 
@@ -1136,7 +1136,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 70.
+stitucional/UISLOGO.png  used on input line 77.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [4
 
@@ -1146,7 +1146,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 70.
+stitucional/UISLOGO.png  used on input line 77.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [5
 
@@ -1156,7 +1156,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 92.
+stitucional/UISLOGO.png  used on input line 99.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [6
 
@@ -1166,7 +1166,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 92.
+stitucional/UISLOGO.png  used on input line 99.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [7
 
@@ -1176,7 +1176,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 92.
+stitucional/UISLOGO.png  used on input line 99.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [8
 
@@ -1186,7 +1186,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 92.
+stitucional/UISLOGO.png  used on input line 99.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [9
 
@@ -1196,7 +1196,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 118.
+stitucional/UISLOGO.png  used on input line 125.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [10
 
@@ -1206,7 +1206,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 133.
+stitucional/UISLOGO.png  used on input line 140.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
 
 [11
@@ -1217,7 +1217,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 133.
+stitucional/UISLOGO.png  used on input line 140.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [12
 
@@ -1227,7 +1227,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 133.
+stitucional/UISLOGO.png  used on input line 140.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [13
 
@@ -1237,15 +1237,15 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 133.
+stitucional/UISLOGO.png  used on input line 140.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [14
 
 ]
-<Figuras/wedge_block_system.png, id=468, 591.1686pt x 410.85495pt>
+<Figuras/wedge_block_system.png, id=474, 591.1686pt x 410.85495pt>
 File: Figuras/wedge_block_system.png Graphic file (type png)
 <use Figuras/wedge_block_system.png>
-Package pdftex.def Info: Figuras/wedge_block_system.png  used on input line 150
+Package pdftex.def Info: Figuras/wedge_block_system.png  used on input line 158
 .
 (pdftex.def)             Requested size: 130.08621pt x 90.40717pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1253,10 +1253,10 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 150.
+stitucional/UISLOGO.png  used on input line 158.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
 
-Overfull \vbox (3.59497pt too high) detected at line 150
+Overfull \vbox (3.59497pt too high) detected at line 158
  []
 
 [15
@@ -1264,7 +1264,7 @@ Overfull \vbox (3.59497pt too high) detected at line 150
  <./Figuras/wedge_block_system.png>]
 File: Figuras/wedge_block_system.png Graphic file (type png)
 <use Figuras/wedge_block_system.png>
-Package pdftex.def Info: Figuras/wedge_block_system.png  used on input line 150
+Package pdftex.def Info: Figuras/wedge_block_system.png  used on input line 158
 .
 (pdftex.def)             Requested size: 130.08621pt x 90.40717pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1272,10 +1272,10 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 150.
+stitucional/UISLOGO.png  used on input line 158.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
 
-Overfull \vbox (3.59497pt too high) detected at line 150
+Overfull \vbox (3.59497pt too high) detected at line 158
  []
 
 [16
@@ -1283,7 +1283,7 @@ Overfull \vbox (3.59497pt too high) detected at line 150
 ]
 File: Figuras/wedge_block_system.png Graphic file (type png)
 <use Figuras/wedge_block_system.png>
-Package pdftex.def Info: Figuras/wedge_block_system.png  used on input line 150
+Package pdftex.def Info: Figuras/wedge_block_system.png  used on input line 158
 .
 (pdftex.def)             Requested size: 130.08621pt x 90.40717pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1291,10 +1291,10 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 150.
+stitucional/UISLOGO.png  used on input line 158.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
 
-Overfull \vbox (3.59497pt too high) detected at line 150
+Overfull \vbox (3.59497pt too high) detected at line 158
  []
 
 [17
@@ -1302,7 +1302,7 @@ Overfull \vbox (3.59497pt too high) detected at line 150
 ]
 File: Figuras/wedge_block_system.png Graphic file (type png)
 <use Figuras/wedge_block_system.png>
-Package pdftex.def Info: Figuras/wedge_block_system.png  used on input line 150
+Package pdftex.def Info: Figuras/wedge_block_system.png  used on input line 158
 .
 (pdftex.def)             Requested size: 130.08621pt x 90.40717pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1310,10 +1310,10 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 150.
+stitucional/UISLOGO.png  used on input line 158.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
 
-Overfull \vbox (3.59497pt too high) detected at line 150
+Overfull \vbox (3.59497pt too high) detected at line 158
  []
 
 [18
@@ -1324,7 +1324,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 159.
+stitucional/UISLOGO.png  used on input line 171.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [19
 
@@ -1334,7 +1334,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 168.
+stitucional/UISLOGO.png  used on input line 180.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [20
 
@@ -1344,7 +1344,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 177.
+stitucional/UISLOGO.png  used on input line 189.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [21
 
@@ -1354,7 +1354,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 188.
+stitucional/UISLOGO.png  used on input line 200.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [22
 
@@ -1374,14 +1374,14 @@ LaTeX Info: Redefining \% on input line 25.
 )
 Package rerunfilecheck Info: File `MC_S01_InteraccionHumanoIA.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: 3ECFF5B431F2006CF6F4C54C617DD2FE;1941.
+(rerunfilecheck)             Checksum: EFBC1621D2D067B50A0935A4521A3732;2038.
  ) 
 Here is how much of TeX's memory you used:
- 27961 strings out of 478268
- 564577 string characters out of 5846347
- 817476 words of memory out of 5000000
- 45534 multiletter control sequences out of 15000+600000
- 480061 words of font info for 66 fonts, out of 8000000 for 9000
+ 28004 strings out of 478268
+ 565855 string characters out of 5846347
+ 818674 words of memory out of 5000000
+ 45576 multiletter control sequences out of 15000+600000
+ 480368 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,494b,866s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
@@ -1390,11 +1390,12 @@ Here is how much of TeX's memory you used:
 usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><
 /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb><
 /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on MC_S01_InteraccionHumanoIA.pdf (22 pages, 248475 bytes).
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on MC_S01_InteraccionHumanoIA.pdf (22 pages, 263499 bytes).
 PDF statistics:
- 726 PDF objects out of 1000 (max. 8388607)
- 660 compressed objects within 7 object streams
- 55 named destinations out of 1000 (max. 500000)
- 187 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 764 PDF objects out of 1000 (max. 8388607)
+ 682 compressed objects within 7 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 279 words of extra memory for PDF output out of 10000 (max. 10000000)
 

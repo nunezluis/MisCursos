@@ -29,6 +29,13 @@
 \newcommand{\Dis}{\textcolor{Cdis}{\textbf{Discernimiento}}}
 \newcommand{\Dil}{\textcolor{Cdil}{\textbf{Diligencia}}}
 
+%---- Cajas de prompt (bloques de color) --------------------
+\newenvironment{promptgood}{\setbeamercolor{block title}{bg=good,fg=white}%
+  \setbeamercolor{block body}{bg=good!8}\begin{block}{Prompt adecuado}\itshape}{\end{block}}
+\newenvironment{promptbad}{\setbeamercolor{block title}{bg=bad,fg=white}%
+  \setbeamercolor{block body}{bg=bad!8}\begin{block}{Prompt deficiente / vago}\itshape}{\end{block}}
+
+
 % Logo  en el comienzo 
 \addtobeamertemplate{frametitle}{}{%
 \begin{textblock*}{100mm}(.85\textwidth,-1cm)
@@ -133,6 +140,7 @@
 }
 %
 %%%%% Diapo 2
+\section{\Del}
 \subsection{\Del~¿qué delegar?}
 \frame{
 \frametitle{\Del~¿qué delegar?}
@@ -153,9 +161,13 @@
 \subsection{{\Del\ en mecánica newtoniana}}
 \frame{
 \frametitle{{\Del\ en mecánica newtoniana}}
-\begin{itemize}  
-	\item<1-> 
-\end{itemize}
+  \textbf{Sistema:} bloque $m$ sobre una \emph{cuña sin fricción} $M$ que a su vez desliza libremente sobre un piso sin fricción.
+	%
+	  \begin{promptbad}  ``Resuelve el problema del bloque sobre la cuña móvil.'' \\ Delega la física que se está enseñando; la salida no puede ser verificada por un estudiante que no supo plantearla.  \end{promptbad}
+	%
+	  \begin{promptgood} ``Tengo el diagrama de cuerpo libre y la ligadura que muestran que el bloque permanece   sobre el plano inclinado. Esto da lugar a un sistema lineal $2\times2$ para ambas aceleraciones. Resuélvelo simbólicamente.'' Conserva el modelado; delega solo el álgebra verificable.
+  \end{promptgood}
+      El diagrama de cuerpo libre y la ligadura \emph{son} el contenido newtoniano. La resolución del sistema lineal no lo es.
 }
 %
 %%%%% Diapo 2

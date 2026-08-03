@@ -22,28 +22,31 @@
 \headcommand {\beamer@subsectionentry {0}{2}{3}{11}{\IeC {\textquestiondown }Qu\'e ganamos con las 4D?}}
 \headcommand {\slideentry {2}{3}{1}{11/14}{\IeC {\textquestiondown }Qu\'e ganamos con las 4D?}{0}}
 \headcommand {\beamer@framepages {11}{14}}
+\headcommand {\beamer@sectionpages {6}{14}}
 \headcommand {\beamer@subsectionpages {11}{14}}
-\headcommand {\beamer@subsectionentry {0}{2}{4}{15}{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}~\IeC {\textquestiondown }qu\'e delegar?}}
-\headcommand {\slideentry {2}{4}{1}{15/18}{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}~\IeC {\textquestiondown }qu\'e delegar?}{0}}
+\headcommand {\sectionentry {3}{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}}{15}{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}}{0}}
+\headcommand {\beamer@subsectionpages {15}{14}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{15}{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}~\IeC {\textquestiondown }qu\'e delegar?}}
+\headcommand {\slideentry {3}{1}{1}{15/18}{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}~\IeC {\textquestiondown }qu\'e delegar?}{0}}
 \headcommand {\beamer@framepages {15}{18}}
 \headcommand {\beamer@subsectionpages {15}{18}}
-\headcommand {\beamer@subsectionentry {0}{2}{5}{19}{{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}\ en mec\'anica newtoniana}}}
-\headcommand {\slideentry {2}{5}{1}{19/19}{{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}\ en mec\'anica newtoniana}}{0}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{19}{{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}\ en mec\'anica newtoniana}}}
+\headcommand {\slideentry {3}{2}{1}{19/19}{{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}\ en mec\'anica newtoniana}}{0}}
 \headcommand {\beamer@framepages {19}{19}}
-\headcommand {\beamer@sectionpages {6}{19}}
+\headcommand {\beamer@sectionpages {15}{19}}
 \headcommand {\beamer@subsectionpages {19}{19}}
-\headcommand {\sectionentry {3}{Secci\'on}{20}{Secci\'on}{0}}
-\headcommand {\slideentry {3}{0}{1}{20/20}{}{0}}
+\headcommand {\sectionentry {4}{Secci\'on}{20}{Secci\'on}{0}}
+\headcommand {\slideentry {4}{0}{1}{20/20}{}{0}}
 \headcommand {\beamer@framepages {20}{20}}
 \headcommand {\beamer@sectionpages {20}{20}}
 \headcommand {\beamer@subsectionpages {20}{20}}
-\headcommand {\sectionentry {4}{Secci\'on}{21}{Secci\'on}{0}}
-\headcommand {\slideentry {4}{0}{1}{21/21}{}{0}}
+\headcommand {\sectionentry {5}{Secci\'on}{21}{Secci\'on}{0}}
+\headcommand {\slideentry {5}{0}{1}{21/21}{}{0}}
 \headcommand {\beamer@framepages {21}{21}}
 \headcommand {\beamer@sectionpages {21}{21}}
 \headcommand {\beamer@subsectionpages {21}{21}}
-\headcommand {\sectionentry {5}{Recapitulando}{22}{Recapitulando}{0}}
-\headcommand {\slideentry {5}{0}{1}{22/22}{}{0}}
+\headcommand {\sectionentry {6}{Recapitulando}{22}{Recapitulando}{0}}
+\headcommand {\slideentry {6}{0}{1}{22/22}{}{0}}
 \headcommand {\beamer@framepages {22}{22}}
 \headcommand {\beamer@partpages {1}{22}}
 \headcommand {\beamer@subsectionpages {22}{22}}
