@@ -7,6 +7,11 @@
 \beamer@sectionintoc {3}{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}}{15}{0}{3}
 \beamer@subsectionintoc {3}{1}{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}~\IeC {\textquestiondown }qu\'e delegar?}{15}{0}{3}
 \beamer@subsectionintoc {3}{2}{{\leavevmode {\color {Cdel}\textbf {Delegaci\'on}}\ en mec\'anica newtoniana}}{19}{0}{3}
-\beamer@sectionintoc {4}{Secci\'on}{20}{0}{4}
-\beamer@sectionintoc {5}{Secci\'on}{21}{0}{5}
-\beamer@sectionintoc {6}{Recapitulando}{22}{0}{6}
+\beamer@sectionintoc {4}{\leavevmode {\color {Cdes}\textbf {Descripci\'on}}}{20}{0}{4}
+\beamer@subsectionintoc {4}{1}{\leavevmode {\color {Cdes}\textbf {Descripci\'on}}--- el prompt es la formulaci\'on del problema}{20}{0}{4}
+\beamer@subsectionintoc {4}{2}{\leavevmode {\color {Cdes}\textbf {Descripci\'on}}\ en mec\'anica newtoniana}{24}{0}{4}
+\beamer@sectionintoc {5}{\leavevmode {\color {Cdis}\textbf {Discernimiento}}: cada respuesta es una hip\'otesis}{25}{0}{5}
+\beamer@sectionintoc {6}{Secci\'on}{28}{0}{6}
+\beamer@sectionintoc {7}{Secci\'on}{29}{0}{7}
+\beamer@sectionintoc {8}{Secci\'on}{30}{0}{8}
+\beamer@sectionintoc {9}{Recapitulando}{31}{0}{9}

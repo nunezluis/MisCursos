@@ -171,6 +171,67 @@
 }
 %
 %%%%% Diapo 2
+\section{\Des}
+\subsection{\Des --- el prompt es la formulación del problema}
+\frame{
+\frametitle{\Des --- el prompt es la formulación}
+\begin{itemize}  
+	\item<1->   \textbf{El acto cognitivo:} externalizar la especificación del problema. Describir un problema a la IA equivale a plantear correctamente un problema de física.
+	%
+	\item<2-> {\bf Una buena descripción condiciona \ldots} el sistema de referencia y las coordenadas $\cdot$ cada suposición $\cdot$ el modelo $\cdot$ las condiciones iniciales y de frontera $\cdot$ la \emph{forma} de la respuesta  deseada.
+	%
+	\item<3-> \textbf{Previen la Falla:} una especificación insuficiente no da una respuesta vaga --- da una \alert{respuesta segura a una pregunta alterada en silencio}, porque el modelo llena los vacíos con sus sesgos (por lo general, el caso más común de libro de texto).
+          %
+          \item<4-> \textbf{Espejo diagnóstico:} un estudiante que no puede describir el problema con claridad todavía no lo comprende.
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{\Des\ en mecánica newtoniana}
+\frame{
+\frametitle{\Des\ en mecánica newtoniana}
+\begin{promptbad}
+    ``¿Cómo se mueve un proyectil con resistencia del aire?'' \\
+    {\it El asistente elegirá en silencio una ley de roce, típicamente \emph{lineal} con la velocidad, y podría devolver una solución que no coincide con la que usted tenía en mente.}
+  \end{promptbad}
+\begin{promptgood}
+    ``Masa $m$, rapidez inicial $v_0$, ángulo elevación $\theta$, gravedad $g$, fuerza de roce \textbf{cuadrática} $\mathbf{F}_r=-b\,|\mathbf{v}|\,\mathbf{v}$. Escribe la segunda ley de Newton como un sistema de primer orden para $(x,y,v_x,v_y)$, en un sistema de referencia inercial 2D ($x$ horizontal, $y$ hacia arriba). Indica las suposiciones.''
+\end{promptgood}
+   \[
+    \dot v_x=-\tfrac{b}{m}\sqrt{v_x^2+v_y^2}\,v_x,\qquad
+    \dot v_y=-g-\tfrac{b}{m}\sqrt{v_x^2+v_y^2}\,v_y.
+  \]
+  \begin{center}\small El roce lineal, $\propto v$, frente al cuadrático, $\propto v^2$, cambia la estructura de la solución.\end{center}
+}
+%
+%%%%% Diapo 2
+\section{\Dis: cada respuesta es una hipótesis}
+\frame{
+\frametitle{\Dis: cada respuesta es una hipótesis}
+\begin{itemize}  
+	\item<1->   \textbf{El acto cognitivo:} aplicar el conjunto de herramientas de verificación del sistema físico \emph{contra la IA}, en lugar de contra su propia álgebra.
+	%
+	\item<2-> {\bf Las herramientas de verificación:} dimensiones $\cdot$ signos y simetría $\cdot$ casos límite $\cdot$ leyes de conservación $\cdot$ orden de magnitud $\cdot$ comparación con resultados conocidos.
+	%
+	\item<3-> El discernimiento puede tener varias \textbf{capas}:
+	\begin{itemize}
+		\item \textbf{superficial} --- dimensiones, signos evidentes;
+		\item \textbf{estructural} --- ¿El método es adecuado? ¿Son consistentes las suposiciones?
+		\item \textbf{profunda} --- ¿Es correcta la física en los casos límite?
+  	\end{itemize}
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+%
+%%%%% Diapo 2
 \section{Sección}
 \frame{
 \frametitle{Título transparencia}
