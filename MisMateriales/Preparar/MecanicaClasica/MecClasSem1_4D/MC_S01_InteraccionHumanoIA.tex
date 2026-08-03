@@ -98,7 +98,7 @@
 \end{itemize}
 }
 %%%%% Diapo 3
-\subsection{4D es un ciclo, no una lista de chequeo}
+%\subsection{4D es un ciclo, no una lista de chequeo}
 \frame{
 \frametitle{4D es un ciclo, no una lista de chequeo}
  \begin{center}
@@ -140,8 +140,8 @@
 }
 %
 %%%%% Diapo 2
-\section{\Del}
-\subsection{\Del~¿qué delegar?}
+\section{\Del~¿qué delegar? y ejemplo newtoniano}
+%\subsection{\Del~}
 \frame{
 \frametitle{\Del~¿qué delegar?}
 \begin{itemize}  
@@ -158,7 +158,7 @@
 }
 %
 %%%%% Diapo 2
-\subsection{{\Del\ en mecánica newtoniana}}
+%\subsection{{\Del\ en mecánica newtoniana}}
 \frame{
 \frametitle{{\Del\ en mecánica newtoniana}}
   \textbf{Sistema:} bloque $m$ sobre una \emph{cuña sin fricción} $M$ que a su vez desliza libremente sobre un piso sin fricción.
@@ -171,10 +171,10 @@
 }
 %
 %%%%% Diapo 2
-\section{\Des}
-\subsection{\Des --- el prompt es la formulación del problema}
+\section{\Des: ~el prompt es la formulación del problema}
+%\subsection{\Des : ~el prompt es la formulación del problema}
 \frame{
-\frametitle{\Des --- el prompt es la formulación}
+\frametitle{\Des : ~el prompt es la formulación}
 \begin{itemize}  
 	\item<1->   \textbf{El acto cognitivo:} externalizar la especificación del problema. Describir un problema a la IA equivale a plantear correctamente un problema de física.
 	%
@@ -187,7 +187,7 @@
 }
 %
 %%%%% Diapo 2
-\subsection{\Des\ en mecánica newtoniana}
+%\subsection{\Des\ en mecánica newtoniana}
 \frame{
 \frametitle{\Des\ en mecánica newtoniana}
 \begin{promptbad}
@@ -205,7 +205,8 @@
 }
 %
 %%%%% Diapo 2
-\section{\Dis: cada respuesta es una hipótesis}
+\section{\Dis:~cada respuesta es una hipótesis}
+%\subsection{\Dis: cada respuesta es una hipótesis}
 \frame{
 \frametitle{\Dis: cada respuesta es una hipótesis}
 \begin{itemize}  
@@ -225,9 +226,9 @@
 }
 %
 %%%%% Diapo 2
-\subsection{\Dis\ --- dos errores en mecánica newtoniana}
+%\subsection{\Dis : ~ dos errores en mecánica newtoniana}
 \frame{
-\frametitle{\Dis\ --- dos errores en mecánica newtoniana}
+\frametitle{\Dis : ~ dos errores en mecánica newtoniana}
 \begin{itemize}  
 	\item<1->   \textbf{Velocidad límite (roce cuadrático).}  La IA afirma que $v_t=\dfrac{mg}{b}$. \\ Pero un análisis dimensional previo $[b]=\mathrm{kg/m}$, de modo que  $\dfrac{mg}{b}$ tiene unidades de $\mathrm{m^2/s^2}$,  \alert{velocidad al  cuadrado}. \\ El resultado correcto es:  $mg=b\,v_t^2 \;\Rightarrow\; v_t=\sqrt{mg/b}$. \\	
 	El asistente IA devolvió la fórmula del roce \emph{lineal}.
@@ -238,23 +239,44 @@
 }
 %
 %%%%% Diapo 2
-\section{\Dil\ --- el compromiso permanente}
+\section{\Dil : ~ el compromiso permanente}
 \frame{
-\frametitle{\Dil\ --- el compromiso permanente}
+\frametitle{\Dil : ~ el compromiso permanente}
+\begin{itemize}  
+	\item<1->   El \Dis~ es un \emph{acto}; la \Dil~ es una \emph{disposición}. Hace que la verificación no sea opcional y mantiene la rendición de cuentas en {\bf todo el  flujo de trabajo}.
+	%
+	\item<2-> Las cuatro obligaciones
+	\begin{enumerate}
+      		\item \textbf{Verificar} antes de confiar.
+      		\item \textbf{Declarar} el uso de la IA conforme a la política de la actividad.
+      		\item \textbf{Registrar} la interacción ({\it prompts}, respuesta, qué se aceptó/rechazó/corrigió, cómo se verificó).
+		\item \textbf{Rederivar} de forma independiente un resultado corregido antes de construir sobre él.
+    	\end{enumerate}
+    	\item<3-> \Dil~conlleva la obligación de \textbf{reproducibilidad}: código documentado,  semillas fijas, tolerancias declaradas.
+	\item<4-> Es la \alert{columna vertebral de la integridad}: impide que un error detectado  se propague en silencio.
+
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+%
+%%%%%%
+\section{Section}
+\frametitle{Titulo}
+\frame{
 \begin{itemize}  
 	\item<1-> 
 \end{itemize}
 }
 %
-%%%%% Diapo 2
-\section{Sección}
+%%%%%%%%
+\section{Section}
+\frametitle{Titulo}
 \frame{
-\frametitle{Título transparencia}
 \begin{itemize}  
 	\item<1-> 
 \end{itemize}
 }
-
 
 %%%%% Diapo Fin
 \section{Recapitulando}
@@ -267,6 +289,19 @@ En presentación consideramos
 }
   
 \end{document}
+
+\section{Las cuatro D juntas}
+\subsection{La cuña móvil \Del~y~\Des}
+\frametitle{La cuña móvil \Del~y~\Des}
+\frame{
+\begin{itemize}  
+	\item<1-> \Del:~Construyo el diagrama de cuerpo libre, elijo el sistema de referencia y identifico la ligadura; delego la resolución simbólica.
+	%
+	\item<2-> \Des: ~ Considera un bloque de masa, $m$ que desliza sin fricción sobre una cuña de $M$ y ángulo de elevación  $\alpha$. La cuña desliza sin fricción sobre un plano horizontal. A partir de las ecuaciones de movimiento, resuelve simbólicamente la aceleración de la cuña $A$ y la aceleración  del bloque $a_{\rm rel}$ a lo largo del plano inclinado.'' 
+	%
+\end{itemize}
+}
+
 
 	\begin{figure}[t]
 		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
