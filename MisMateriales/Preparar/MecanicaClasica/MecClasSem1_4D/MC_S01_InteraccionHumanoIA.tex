@@ -140,7 +140,7 @@
 }
 %
 %%%%% Diapo 2
-\section{\Del~¿qué delegar? y ejemplo newtoniano}
+\section{\Del~¿qué delegar? y el ejemplo de la cuña}
 %\subsection{\Del~}
 \frame{
 \frametitle{\Del~¿qué delegar?}
@@ -149,9 +149,9 @@
 	%
 	\item<2-> {\bf Regla de asignación:} Conservar lo que es el \textbf{objetivo de aprendizaje} y \textbf{no puede verificarse}; delegue lo que es \textbf{verificable}.
 	%
-	\item<3-> Supongamos el siguiente sistema: el bloque $m$ sobre una \emph{cuña sin fricción} $M$, que a su vez desliza libremente sobre un piso sin fricción.
+	\item<3-> Supongamos el siguiente sistema: un bloque de masa $m$ que se desliza sin fricción sobre una \emph{cuña} de masa $M$, que a su vez se desplaza libremente sobre un piso sin fricción.
       	\begin{figure}[t]
-		\includegraphics[width=1.8in]{Figuras/wedge_block_system.png}
+		\includegraphics[width=1.5in]{Figuras/wedge_block_system.png}
    	\end{figure}
 	\item<4-> {\bf No delegar} lo que desarrolla la destreza. No se puede delegar el diagrama de cuerpo libre porque no habría cómo distinguir entre uno correcto y otro erróneo. 
 \end{itemize}
@@ -160,7 +160,7 @@
 %%%%% Diapo 2
 %\subsection{{\Del\ en mecánica newtoniana}}
 \frame{
-\frametitle{{\Del\ en mecánica newtoniana}}
+\frametitle{{\Del\ cuña en mecánica newtoniana}}
   \textbf{Sistema:} bloque $m$ sobre una \emph{cuña sin fricción} $M$ que a su vez desliza libremente sobre un piso sin fricción.
 	%
 	  \begin{promptbad}  ``Resuelve el problema del bloque sobre la cuña móvil.'' \\ Delega la física que se está enseñando; la salida no puede ser verificada por un estudiante que no supo plantearla.  \end{promptbad}
@@ -260,47 +260,82 @@
 %
 %%%%% Diapo 2
 %
-%%%%%%
-\section{Section}
-\frametitle{Titulo}
+\section{La cuña y las cuatro D juntas}
 \frame{
+\frametitle{La cuña y las cuatro D juntas}
 \begin{itemize}  
-	\item<1-> 
+	\item<1-> \Del:~Construyo el diagrama de cuerpo libre, elijo el sistema de referencia e identifico la ligadura; delego la resolución simbólica.
+	%
+	\item<2-> \Des: ~ ``Considera un bloque de masa, $m$ que desliza sin fricción sobre una cuña de $M$ y ángulo de elevación  $\alpha$. La cuña desliza sin fricción sobre un plano horizontal. A partir de las ecuaciones de movimiento, resuelve simbólicamente la aceleración de la cuña $A$ y la aceleración  del bloque $a_{\rm rel}$ a lo largo del plano inclinado.'' \\
+	 {\it Respuesta de la IA}: $  A=\dfrac{mg\operatorname{sen}\alpha\cos\alpha}{M+m\operatorname{sen}^2\alpha},\qquad   a_{\mathrm{rel}}=\dfrac{(M+m)\,g\operatorname{sen}\alpha}{M+m\operatorname{sen}^2\alpha}$.
+	 %
+	 \item<3-> \Dis:~tres verificaciones físicas independientes:
+	 \begin{itemize}\footnotesize\setlength\itemsep{0.25em}
+    		\item \textbf{Dimensiones:} ambas son aceleraciones. \textcolor{good}{\checkmark}
+    		\item \textbf{Lí­mite} $M \to \infty \Rightarrow A \to 0$,\;  $a_{\mathrm{rel}} \to g\operatorname{sen}\alpha$, plano inclinado fijo. \textcolor{good}{\checkmark}
+    		\item \textbf{Lí­mite} $\alpha \to 0$: ambas $A, a_{\mathrm{rel}} \to0$. \textcolor{good}{\checkmark}
+          	\textcolor{good}{\checkmark}
+  	\end{itemize}
+	%
+	\item<4-> \Dil
+	\begin{itemize}\footnotesize\setlength\itemsep{0.25em}
+    		\item Registrar el {\it prompt}, la respuesta y las cuatro verificaciones.
+    		\item Declarar el papel del asistente IA; rederivar $A$ y $a_{\mathrm{rel}}$ a mano antes de  usarlas en la parte de energía del problema
+		\item  {\bf Resultado verificado, apropiado y reproducible.}
+  	\end{itemize}
 \end{itemize}
 }
 %
-%%%%%%%%
-\section{Section}
-\frametitle{Titulo}
+%%%%%%
+\section{El diseño del tutor}
 \frame{
+\frametitle{Las 4D como especificación del tutor}
+El modelo de las 4D no es solo un código de conducta para los estudiantes. Ese modelo nos ayuda a  \alert{configurar el asistente IA para que enseñe en lugar de dar la respuesta}. El Asistente IA se comportará
 \begin{itemize}  
-	\item<1-> 
+	\item<1-> \Del: ~Se niega a cumplir el objetivo de aprendizaje  enunciado. Pregunta qué ha planteado usted, ayuda a descomponer los problemas y \emph{nombra} la subtarea que asume
+	%
+	\item<2-> \Des:~Hace preguntas aclaratorias (\emph{¿qué ley de roce? ¿qué sistema de referencia? ¿sin fricción?}) y reformula el problema antes de resolver
+	%
+	\item<3-> \Dis:~Presenta sus resultados como tentativos, señala su propia incertidumbre y ofrece una \emph{verificación que usted puede hacer} en lugar  de certificar la corrección
+	%
+	\item<4-> \Dil:~Solicita el registro de la interacción, recuerda la política de declaración y retiene la reutilización hasta que usted rederive de forma independiente.
+\end{itemize}
+  {\bf Aprendizaje cognitivo:} \emph{modelar, guiar, andamiar y luego retirarse}.
+}
+%
+%%%%%%%%
+\section{Mecánica clásica, el vehículo ideal}
+\frame{
+\frametitle{Mecánica clásica, el vehículo ideal}
+\begin{itemize}  
+	\item<1-> \textbf{Una cultura de verificación madura}. Las leyes de conservación, la simetría, las dimensiones y los casos límite ofrecen verificaciones inmediatas e independientes a cada paso: la materia prima del \Dis.
+	%
+	\item<2-> \textbf{Múltiples formulaciones equivalentes.} ``Describe esto en la imagen  hamiltoniana y concíli­ala con el resultado lagrangiano'' es un ejercicio natural de \Des-y-\Dis\ propio de esta disciplina.
+	%
+	\item<3-> \textbf{Un gradiente de dificultad limpio.} Desde problemas totalmente  verificables hasta problemas genuinamente abiertos de modo que la frontera de \Del~ se desplaza \emph{de forma visible}.
+	%
+	\item<4->  \textbf{Objetivos alineados.} La geometría, la simetría y los límites de la predictibilidad son justamente los hábitos de juicio que las 4D desarrollan.
 \end{itemize}
 }
-
+%
 %%%%% Diapo Fin
 \section{Recapitulando}
 \frame{
   \frametitle{Recapitulando}
-En presentación consideramos
+En presentación consideramos \\
+\begin{center}
+ \Del~$\to$~\Des~$\to$~\Dis~$\to$~\Dil
+\end{center} 
   \begin{enumerate}
-  	\item<1->
+     \item<1-> Trate a la IA como un \textbf{compañero de entrenamiento, nunca como un oráculo}.
+     \item<2-> {\bf Delegue} lo que pueda {\bf discernir}. {\bf Describa} cómo plantearía un problema de física. Ponga a prueba cada respuesta; la \Dil\ lo obliga a apropiarse del resultado.
+    \item<3-> Las 4D están \textbf{entrelazadas} y son \textbf{evolutivas}, unidas por la compuerta de verificación y calibradas para el estudiante.
+    \item<4-> Integradas en el tutor, aportan \textbf{transferencia}, \textbf{independencia} e \textbf{integridad} --- un compañero diseñado para \emph{retirarse}.
    \end{enumerate}
 }
   
 \end{document}
 
-\section{Las cuatro D juntas}
-\subsection{La cuña móvil \Del~y~\Des}
-\frametitle{La cuña móvil \Del~y~\Des}
-\frame{
-\begin{itemize}  
-	\item<1-> \Del:~Construyo el diagrama de cuerpo libre, elijo el sistema de referencia y identifico la ligadura; delego la resolución simbólica.
-	%
-	\item<2-> \Des: ~ Considera un bloque de masa, $m$ que desliza sin fricción sobre una cuña de $M$ y ángulo de elevación  $\alpha$. La cuña desliza sin fricción sobre un plano horizontal. A partir de las ecuaciones de movimiento, resuelve simbólicamente la aceleración de la cuña $A$ y la aceleración  del bloque $a_{\rm rel}$ a lo largo del plano inclinado.'' 
-	%
-\end{itemize}
-}
 
 
 	\begin{figure}[t]
