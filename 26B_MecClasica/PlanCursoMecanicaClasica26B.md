@@ -36,7 +36,7 @@ Como apoyo bibliográfico tendremos
 Realice un reporte de los dos problemas que se asignaron al final de la clase.
 
 #### Materiales
-+ [Presentación Las 4D en mecánica clásica](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S1DinamicaNewtonia.pdf)
++ [Presentación Las 4D en mecánica clásica](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S01_InteraccionHumanoIA.pdf)
 
 #### Al finalizar la clases y sus actividades
 El estudiante estará en capacidad de
