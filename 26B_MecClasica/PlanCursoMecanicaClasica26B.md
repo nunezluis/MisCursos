@@ -42,7 +42,7 @@ Realice un reporte de los dos problemas que se asignaron al final de la clase.
 El estudiante estará en capacidad de
 - Reconocer y aplicar la terminología y los conceptos del Marco de Competencia en IA, en particular las cuatro competencias básicas (delegación, descripción, discernimiento y diligencia) en los tres modos de interacción (automatización, aumento y agentes);
 - Evaluar cuándo y cómo delegar tareas de forma eficaz entre las personas y los sistemas de IA,
-- Diseñar y poner en práctica estrategias de comunicación eficaces con sistemas de inteligencia artificial, aplicando técnicas de prompting contrastadas, orientación contextual y enfoques de perfeccionamiento iterativo para mejorar los resultados de la colaboración;
+- Diseñar y poner en práctica estrategias de comunicación eficaces con sistemas de inteligencia artificial, aplicando técnicas de *prompting* contrastadas, orientación contextual y enfoques de perfeccionamiento iterativo para mejorar los resultados de la colaboración;
 - Evaluar de forma crítica los resultados, los procesos y los comportamientos de la IA utilizando enfoques de análisis sistemático para identificar problemas de calidad, errores fácticos y la idoneidad en contextos educativos y profesionales;
 - Aplicar prácticas éticas y responsables en materia de inteligencia artificial, incluyendo normas de transparencia, medidas de rendición de cuentas y una verificación rigurosa de los resultados del trabajo asistido por la inteligencia artificial, al tiempo que se comprenden las implicaciones más amplias de la integración de la inteligencia artificial en la educación superior;
 
@@ -164,7 +164,7 @@ Al finalizar esta semana habremos cubierto los siguientes puntos
 
 
 
-### Clase S3-C5/C6  Leyes de conservación y simetrías
+### Clase S3-C5/C6  Leyes de conservación y simetrías 25ago 27ago
 #### En esta semana cubriremos los siguientes temas
 
 ## 1. Variables Conjugadas y Coordenadas Cíclicas
@@ -243,7 +243,7 @@ Al finalizar esta semana habremos cubierto los siguientes puntos
 
 
 
-### Clase S4-C7/C8 Sistemas Integrables y el problema de dos cuerpos
+### Clase S4-C7/C8 Sistemas Integrables y el problema de dos cuerpos 1sep-3sep
 #### En esta semana cubriremos los siguientes temas
 Primero exploraemos los conceptos de **sistemas integrables**, **superintegrables**, **no integrables** y sus implicaciones en la dinámica de sistemas físicos.  Los **Sistemas integrables** permiten una evolución predecible con soluciones exactas. Los **Sistemas no integrables** pueden mostrar **caos dinámico** y la **superintegrabilidad** es una propiedad especial de ciertos sistemas con más constantes de movimiento que grados de libertad.
 
@@ -334,7 +334,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
 + Presentación de [Sistemas integrables](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S4T1Integrables.pdf)
 + Presentación del [problema de dos cuerpos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S4T2Problema2Cuerpos.pdf)
 
-### Clase S5-C9/C10 Fuerzas Centrales
+### Clase S5-C9/C10 Fuerzas Centrales 8sep-10sep
 ####Antes de clase
 + **Estudie**
   + Problema de dos cuerpos
@@ -373,7 +373,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
 - **El problema inverso:**  
   Dada una órbita $r(\theta)$, determinar el potencial $V(r)$ o la fuerza central $f(r)$ que causa esta órbita.
 
-## Clase S6-C11/C12  
+## Clase S6-C11/C12   22sep-24sep
 + **Estudie**
   + Ecuación diferencial de la órbita
   + Fuerza gravitacional y problema de Kepler
