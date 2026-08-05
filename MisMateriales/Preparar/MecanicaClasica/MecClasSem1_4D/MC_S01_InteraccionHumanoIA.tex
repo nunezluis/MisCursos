@@ -180,9 +180,9 @@
 \begin{itemize}  
 	\item<1->   \textbf{El acto cognitivo:} externalizar la especificación del problema. Describir un problema a la IA equivale a plantear correctamente un problema de física.
 	%
-	\item<2-> {\bf Una buena descripción condiciona \ldots} el sistema de referencia y las coordenadas $\cdot$ cada suposición $\cdot$ el modelo $\cdot$ las condiciones iniciales y de frontera $\cdot$ la \emph{forma} de la respuesta  deseada.
+	\item<2-> {\bf Una buena descripción condiciona} el sistema de referencia y las coordenadas $\cdot$ cada suposición $\cdot$ el modelo $\cdot$ las condiciones iniciales y de frontera $\cdot$ la \emph{forma} de la respuesta  deseada.
 	%
-	\item<3-> \textbf{Previen la Falla:} una especificación insuficiente no da una respuesta vaga --- da una \alert{respuesta segura a una pregunta alterada en silencio}, porque el modelo llena los vacíos con sus sesgos (por lo general, el caso más común de libro de texto).
+	\item<3-> \textbf{Puede generar una falla:} una especificación insuficiente no da una respuesta vaga. Provee una \alert{respuesta segura a una pregunta bajo supuestos internos}, porque el modelo llena los vacíos con sus sesgos (por lo general, el caso más común de libro de texto).
           %
           \item<4-> \textbf{Espejo diagnóstico:} un estudiante que no puede describir el problema con claridad todavía no lo comprende.
 \end{itemize}
@@ -336,24 +336,33 @@ En presentación consideramos la concatenación de las 4D \\
    \end{enumerate}
 }
 
-\section{Para la discusión}
+\section{Para la discusión }
 \frame{
-  \frametitle{Para la discusión}
+  \frametitle{Para la discusión 1/2}
 Considere los siguientes sistemas físicos
 \begin{itemize}
 	\item {\bf La máquina de Atwood ideal:} Dos masas $m_1>m_2$ unidas por una \emph{cuerda ideal} (inextensible y sin masa) que pasa por una \emph{polea ideal} (sin masa ni fricción). Se pide la aceleración $a$ y la tensión $T$ de la cuerda.
 	%
-	\item {\bf La maquina de Atwood con polea con masa:} Repita el análisis con una \textbf{polea real} de momento de inercia $I$ y radio $r_p$, con la cuerda que \textbf{no desliza} sobre ella.
+	\item {\bf La máquina de Atwood con polea con masa:} Repita el análisis con una \textbf{polea real} de momento de inercia $I$ y radio $r_p$, con la cuerda que \textbf{no desliza} sobre ella.
 \end{itemize}
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/Atwood.png}
+   	\end{figure}
+}
+%
+%%%%%%%%%
+\frame{
+  \frametitle{Para la discusión 2/2}
 \begin{itemize}
-	\item \Del : liste qué se conserva al humano y qué se delega a la IA
+	\item \Del : liste qué conserva el humano y qué se delega a la IA
 	%
-	\item \Des : Redacte \textbf{un prompt preciso} (polea y cuerda ideales, cuál masa es mayor) y pide ($a$ y $T$). Un prompt vago dejando supuestos que suponga la IA
+	\item \Des : Redacte \textbf{un prompt preciso} (polea y cuerda ideales: cuál es mayor la masa) y pida ($a$ y $T$). Redacte un prompt vago que deje supuestos para la IA. Compare
 	%
 	\item \Dis : \textbf{Audite} la respuesta. Dimensiones $[a]$, $[T]$; Límite $m_1=m_2$; Límite $m_2 \to 0$; Simetría al intercambiar $m_1\leftrightarrow m_2$.
 	%
-	\item \Dil :  \textbf{Rederive $T$ a mano}; Verifique la cota $m_2\,g < T < m_1\,g$
+	\item \Dil :  \textbf{Rederive $T$ a mano}; Verifique la cota $m_2\,g < T < m_1\,g$. Genere una \textbf{bitácora 4D} (prompts; qué aceptó / rechazó / corrigió; cómo verificó;  errores hallados; razonamiento final) y la \textbf{declaración de uso de IA}.
 \end{itemize}
+Repita ese listado para el caso de la \textbf{polea real} de momento de inercia $I$ y radio $r_p$, con la cuerda que \textbf{no desliza} sobre ella
 }
 
   

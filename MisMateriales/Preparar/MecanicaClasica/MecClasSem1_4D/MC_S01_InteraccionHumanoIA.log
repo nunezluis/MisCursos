@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  4 AUG 2026 21:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  5 AUG 2026 08:21
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1242,7 +1242,7 @@ stitucional/UISLOGO.png  used on input line 142.
  [14
 
 ]
-<Figuras/wedge_block_system.png, id=489, 591.1686pt x 410.85495pt>
+<Figuras/wedge_block_system.png, id=490, 591.1686pt x 410.85495pt>
 File: Figuras/wedge_block_system.png Graphic file (type png)
 <use Figuras/wedge_block_system.png>
 Package pdftex.def Info: Figuras/wedge_block_system.png  used on input line 160
@@ -1684,14 +1684,33 @@ stitucional/UISLOGO.png  used on input line 337.
  [50
 
 ]
+<Figuras/Atwood.png, id=1500, 456.38506pt x 415.5525pt>
+File: Figuras/Atwood.png Graphic file (type png)
+<use Figuras/Atwood.png>
+Package pdftex.def Info: Figuras/Atwood.png  used on input line 351.
+(pdftex.def)             Requested size: 130.08621pt x 118.44637pt.
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 .png Graphic file (type png)
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 357.
+stitucional/UISLOGO.png  used on input line 351.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
- [51
+
+Overfull \vbox (9.305pt too high) detected at line 351
+ []
+
+[51
+
+ <./Figuras/Atwood.png>]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 366.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [52
 
 ]
 \tf@nav=\write6
@@ -1703,8 +1722,7 @@ stitucional/UISLOGO.png  used on input line 357.
 \tf@snm=\write8
 \openout8 = `MC_S01_InteraccionHumanoIA.snm'.
 
-
-(./MC_S01_InteraccionHumanoIA.aux
+ (./MC_S01_InteraccionHumanoIA.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
@@ -1713,13 +1731,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `MC_S01_InteraccionHumanoIA.out' has not chan
 ged.
-(rerunfilecheck)             Checksum: 300AF3A4D196BA629CE1A99E66831820;3014.
+(rerunfilecheck)             Checksum: 5497201C72C6B483C48712CA9FA0E917;3022.
  ) 
 Here is how much of TeX's memory you used:
- 28175 strings out of 478268
- 568377 string characters out of 5846347
+ 28185 strings out of 478268
+ 568545 string characters out of 5846347
  823672 words of memory out of 5000000
- 45678 multiletter control sequences out of 15000+600000
+ 45685 multiletter control sequences out of 15000+600000
  486902 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,494b,866s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1741,10 +1759,10 @@ ve/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texliv
 e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/
 2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/texlive/20
 22/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on MC_S01_InteraccionHumanoIA.pdf (51 pages, 454272 bytes).
+Output written on MC_S01_InteraccionHumanoIA.pdf (52 pages, 487239 bytes).
 PDF statistics:
- 1635 PDF objects out of 1728 (max. 8388607)
- 1482 compressed objects within 15 object streams
- 116 named destinations out of 1000 (max. 500000)
- 367 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1664 PDF objects out of 1728 (max. 8388607)
+ 1507 compressed objects within 16 object streams
+ 118 named destinations out of 1000 (max. 500000)
+ 372 words of extra memory for PDF output out of 10000 (max. 10000000)
 

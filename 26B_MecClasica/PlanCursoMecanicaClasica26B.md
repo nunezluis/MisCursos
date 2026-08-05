@@ -1,15 +1,15 @@
 # Mecánica Clásica Semestre B 2026
 ## Metodología
-Tendremos cuatro ahora de teoría (miércoles y viernes) y una de problemas el viernes. La hora del viernes será para desarrollar una evaluación contínua. Cada viernes tendrán que presentar problemas que han quedado de los contenidos que hemos desarrollado en la semanas
+Tendremos cuatro ahora de teoría (miércoles y viernes) y una de problemas el viernes. La hora del viernes será para desarrollar una evaluación contínua. Cada viernes tendrán que presentar problemas que han quedado de los contenidos que hemos desarrollado en la semanas. eligiremos un nombre y un problema al azar que se tendrá que presentar.
 
 ## Evaluación
 Nos organizaremos en grupos de dos estudiantes y cada grupo debe crear un git y según el modelo que se muestra [aquí](https://github.com/nunezluis/TareasCursos20B). Esto es, se debe clonar este repositorio y compartirlos para poder revisar las tareas, asignaciones y proyectos que desarrollemos durante el curso..  
 + **Evaluación continua 30%** Los problemas de los viernes. Deben ser cargados en un Git para evaluarlos y serán sustentados al azar cada viernes.
-+ **Tres parciales, 20% c/u** Dos exámenes presenciales estándares posiblemente orales (Tienen que aprobar dos)
-+ **Una asignaciones 10% c/u** A definir
++ **Tres parciales, 20% c/u** Tres exámenes presenciales estándares posiblemente orales (Tienen que aprobar dos)
++ **Una asignaciones 20% c/u** Consistirá en la solución de un reto
 
 ### La asignación
-La asignación es parte fundamental del desarrollo del curso.  Algunas asignaciones será de aplicación de los conceptos y otras de discusión de artículos relacionados con los tópicos que estemos desarrollando.  Las asignaciones de aplicación buscan reforzar los conceptos del curso en la solución de un problema particular, muchas veces con visos de realidad. La discusión de artículos relacionan los conceptos del curso con su utilización específica reportada en la literatura.  Las asignaciones de aplicación serán presentadas de dos maneras: un reporte tipo artículo y una presentación de máximo 6 láminas expuestas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
+La asignación es parte fundamental del desarrollo del curso. La asignación estará orientada a la discusión de artículos relacionados con los tópicos que estemos desarrollando. Buscamos relacionar conceptos del curso con su utilización específica reportada en la literatura.  Será presentada de dos maneras: un reporte tipo artículo y una presentación de máximo 6 láminas expuestas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
 
 ## Bibliografía
 ### Libro texto
@@ -23,6 +23,14 @@ Como apoyo bibliográfico tendremos
 + Las clases de [Leonard Susskind](https://www.youtube.com/watch?v=ApUFtLCrU90&list=PL47F408D36D4CF129) de la universidad de Stanford
 + Las clases de [Guillermo Abramson](https://youtube.com/playlist?list=PLv0-vSkgrxj_Uv65oZV9ilrWZ2xUNbaw8&si=D_6PXE9xoIJEzW2Q) del instituto Balseiro de Argentina
 ## Programa del Curso
+
+
+### Semana 1 C0 Las 4D en Mecánica Classical 4ago
+#### Antes de clase
++ **Estudie**
+  + El artículo Dakan, R., \& Feller, J. (2025). The AI fluency framework: A descriptive and normative model of human-AI interaction for higher education.
+  + Realice el minicurso de [AI Fluency: Framework & Foundations](https://opencourses.ie/opencourse/ai-fluency-framework-foundations/)
+  + Revise la documentación de [Artificial Intelligence at Ringling: Framework for AI Fluency](https://ringling.libguides.com/ai/framework)
 
 ### Semana 1 C1/C2 Leyes de Newton
 #### Antes de clase
@@ -38,7 +46,7 @@ Los problemas para discutir en clase los pueden encontrar [aquí](https://www.ov
 + [Presentación Semana 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S1DinamicaNewtonia.pdf)
 
 #### Al finalizar
-Al finalizar esta semana habremos repasado algunos conceptos de Mecánica que vimos en otros curso:
+Al finalizar esta semana habremos repasado algunos conceptos de Mecánica que vimos en otros cursos:
 1. **Las Tres Leyes de Newton**
    + **1ª ley (Inercia):** una partícula sin fuerzas permanece en reposo o MRU.  
    + **2ª ley:** $\vec{F} = \frac{d\vec{p}}{dt} = m\vec{a}$.  
