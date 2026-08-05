@@ -9,7 +9,7 @@ Nos organizaremos en grupos de dos estudiantes y cada grupo debe crear un git y 
 + **Una asignaciones 20% c/u** Consistirá en la solución de un reto
 
 ### La asignación
-La asignación es parte fundamental del desarrollo del curso. La asignación estará orientada a la discusión de artículos relacionados con los tópicos que estemos desarrollando. Buscamos relacionar conceptos del curso con su utilización específica reportada en la literatura.  Será presentada de dos maneras: un reporte tipo artículo y una presentación de máximo 6 láminas expuestas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
+La asignación es parte fundamental del desarrollo del curso. La asignación estará orientada a la solución de un reto que involucre el uso de la IA como un miembro mas del equipo.  Será presentada de dos maneras: un reporte tipo artículo y una presentación de máximo 6 láminas expuestas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
 
 ## Bibliografía
 ### Libro texto
