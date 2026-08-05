@@ -11,3 +11,4 @@
 \beamer@sectionintoc {8}{El dise\~no del tutor}{39}{0}{8}
 \beamer@sectionintoc {9}{Mec\'anica cl\'asica, el ambiente ideal}{43}{0}{9}
 \beamer@sectionintoc {10}{Recapitulando}{47}{0}{10}
+\beamer@sectionintoc {11}{Para la discusi\'on}{51}{0}{11}

@@ -66,8 +66,13 @@
 \headcommand {\sectionentry {10}{Recapitulando}{47}{Recapitulando}{0}}
 \headcommand {\slideentry {10}{0}{1}{47/50}{}{0}}
 \headcommand {\beamer@framepages {47}{50}}
-\headcommand {\beamer@partpages {1}{50}}
-\headcommand {\beamer@subsectionpages {47}{50}}
 \headcommand {\beamer@sectionpages {47}{50}}
-\headcommand {\beamer@documentpages {50}}
-\headcommand {\gdef \inserttotalframenumber {17}}
+\headcommand {\beamer@subsectionpages {47}{50}}
+\headcommand {\sectionentry {11}{Para la discusi\'on}{51}{Para la discusi\'on}{0}}
+\headcommand {\slideentry {11}{0}{1}{51/51}{}{0}}
+\headcommand {\beamer@framepages {51}{51}}
+\headcommand {\beamer@partpages {1}{51}}
+\headcommand {\beamer@subsectionpages {51}{51}}
+\headcommand {\beamer@sectionpages {51}{51}}
+\headcommand {\beamer@documentpages {51}}
+\headcommand {\gdef \inserttotalframenumber {18}}
