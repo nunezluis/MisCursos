@@ -3,9 +3,9 @@
 Tendremos cuatro ahora de teoría (miércoles y viernes) y una de problemas el viernes. La hora del viernes será para desarrollar una evaluación contínua. Cada viernes tendrán que presentar problemas que han quedado de los contenidos que hemos desarrollado en la semanas. eligiremos un nombre y un problema al azar que se tendrá que presentar.
 
 ## Evaluación
-Nos organizaremos en grupos de dos estudiantes y cada grupo debe crear un git y según el modelo que se muestra [aquí](https://github.com/nunezluis/TareasCursos20B). Esto es, se debe clonar este repositorio y compartirlos para poder revisar las tareas, asignaciones y proyectos que desarrollemos durante el curso..  
-+ **Evaluación continua 30%** Los problemas de los viernes. Deben ser cargados en un Git para evaluarlos y serán sustentados al azar cada viernes.
-+ **Tres parciales, 20% c/u** Tres exámenes presenciales estándares posiblemente orales (Tienen que aprobar dos)
+Nos organizaremos en grupos de dos estudiantes y cada grupo debe crear un git y según el modelo que se muestra [aquí](https://github.com/nunezluis/TareasCursos20B). Esto es, se debe clonar este repositorio y compartirlos para poder revisar las tareas y la asignación que desarrollemos durante el curso.  
++ **Evaluación continua 35%** Los problemas de los viernes. Deben ser cargados en un Git para evaluarlos y serán sustentados al azar cada viernes.
++ **Tres parciales, 15% c/u** Tres exámenes presenciales estándares posiblemente orales (Tienen que aprobar dos)
 + **Una asignaciones 20% c/u** Consistirá en la solución de un reto
 
 ### La asignación
@@ -25,14 +25,28 @@ Como apoyo bibliográfico tendremos
 ## Programa del Curso
 
 
-### Semana 1 C0 Las 4D en Mecánica Classical 4ago
+### Semana 0 C0 Las 4D en Mecánica Classical 4ago
 #### Antes de clase
 + **Estudie**
-  + El artículo Dakan, R., \& Feller, J. (2025). The AI fluency framework: A descriptive and normative model of human-AI interaction for higher education.
+  + Estudia el artículo de [Dakan, R., \& Feller, J. (2025). The AI fluency framework: A descriptive and normative model of human-AI interaction for higher education](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/hea-genai-fluency-framework.pdf)
   + Realice el minicurso de [AI Fluency: Framework & Foundations](https://opencourses.ie/opencourse/ai-fluency-framework-foundations/)
   + Revise la documentación de [Artificial Intelligence at Ringling: Framework for AI Fluency](https://ringling.libguides.com/ai/framework)
 
-### Semana 1 C1/C2 Leyes de Newton
+#### Problemas S0
+Realice un reporte de los dos problemas que se asignaron al final de la clase.
+
+#### Materiales
++ [Presentación Las 4D en mecánica clásica](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S1DinamicaNewtonia.pdf)
+
+#### Al finalizar la clases y sus actividades
+El estudiante estará en capacidad de
+- Reconocer y aplicar la terminología y los conceptos del Marco de Competencia en IA, en particular las cuatro competencias básicas (delegación, descripción, discernimiento y diligencia) en los tres modos de interacción (automatización, aumento y agentes);
+- Evaluar cuándo y cómo delegar tareas de forma eficaz entre las personas y los sistemas de IA,
+- Diseñar y poner en práctica estrategias de comunicación eficaces con sistemas de inteligencia artificial, aplicando técnicas de prompting contrastadas, orientación contextual y enfoques de perfeccionamiento iterativo para mejorar los resultados de la colaboración;
+- Evaluar de forma crítica los resultados, los procesos y los comportamientos de la IA utilizando enfoques de análisis sistemático para identificar problemas de calidad, errores fácticos y la idoneidad en contextos educativos y profesionales;
+- Aplicar prácticas éticas y responsables en materia de inteligencia artificial, incluyendo normas de transparencia, medidas de rendición de cuentas y una verificación rigurosa de los resultados del trabajo asistido por la inteligencia artificial, al tiempo que se comprenden las implicaciones más amplias de la integración de la inteligencia artificial en la educación superior;
+
+### Semana 1 C1/C2 Leyes de Newton 11ago-13ago
 #### Antes de clase
 + **Estudie**
   + Leyes de Newton y mecánica de una partícula
@@ -43,7 +57,7 @@ Como apoyo bibliográfico tendremos
 Los problemas para discutir en clase los pueden encontrar [aquí](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)
 
 #### Materiales
-+ [Presentación Semana 1](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S1DinamicaNewtonia.pdf)
++ [Presentación Dinámica newtoniana](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S1DinamicaNewtonia.pdf)
 
 #### Al finalizar
 Al finalizar esta semana habremos repasado algunos conceptos de Mecánica que vimos en otros cursos:
@@ -71,7 +85,7 @@ Al finalizar esta semana habremos repasado algunos conceptos de Mecánica que vi
    + Energía total: $E = T_{cm} + T_{rel} + V_{ext} + V_{int}$
 
 
-### Semana 2 C3/C4 Coordenadas generalizadas
+### Semana 2 C3/C4 Coordenadas generalizadas 18ago-20ago
 Esta semana nos toca empezar el curso y comenzamos por definir el espacio de configuraciones. Arrancamos discutiendo el concepto de coordenadas generalizadas y vínculos de un sistema.
 #### Antes de clase
 + **Estudie**
@@ -84,7 +98,7 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 
 #### Problemas S2
 <! -->
---Desarrolle los problemas del [240816](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)
+--Desarrolle los problemas del [260818](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)
 
 #### Materiales
 + Presentaciones
