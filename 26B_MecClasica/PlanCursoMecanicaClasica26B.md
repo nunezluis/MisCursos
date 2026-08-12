@@ -60,28 +60,39 @@ Los problemas para discutir en clase los pueden encontrar [aquí](https://www.ov
 + [Presentación Dinámica newtoniana](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S1DinamicaNewtonia.pdf)
 
 #### Al finalizar
-Al finalizar esta semana habremos repasado algunos conceptos de Mecánica que vimos en otros cursos:
-1. **Las Tres Leyes de Newton**
-   + **1ª ley (Inercia):** una partícula sin fuerzas permanece en reposo o MRU.  
-   + **2ª ley:** $\vec{F} = \frac{d\vec{p}}{dt} = m\vec{a}$.  
-   + **3ª ley:** $\vec{F}{i j} = -\vec{F}_{ji}$ (acción y reacción).
+Al finalizar esta semana
++ Habremos contemplado el panorama general del curso.  Ofrecimos un mapa del curso antes de entrar en los detalles. La idea central es que la mecánica clásica admite tres formulaciones equivalentes de una misma dinámica —newtoniana, lagrangiana y hamiltoniana— y que sobre ellas se construyen dos capas estructurales más profundas: las transformaciones canónicas y la teoría de Hamilton–Jacobi. Cada formulación describe el mismo movimiento, pero revela, simplifica o generaliza aspectos distintos.
+  + Contenidos
+  + ¿Qué es la mecánica clásica? El movimiento como sistema dinámico determinista, su rango de validez y los límites que dieron origen a la relatividad, la mecánica cuántica y el caos.
+  + Mecánica newtoniana (Cosenza, Cap. 1). Fuerzas y aceleraciones; leyes de conservación derivadas de las leyes de fuerza; las incomodidades que motivan las coordenadas generalizadas.
+  + Mecánica lagrangiana (Cap. 1–2). El principio de acción estacionaria, las ecuaciones de Euler–Lagrange y la conexión simetría–conservación mediante el teorema de Noether.
+  + Mecánica hamiltoniana (Cap. 6). Transformación de Legendre, espacio de fase, ecuaciones de Hamilton, teorema de Liouville y corchetes de Poisson.
+  + Transformaciones canónicas (Cap. 6). La libertad de cambiar las variables del espacio de fase preservando la forma de las ecuaciones de Hamilton.
+  + Hamilton–Jacobi e integrabilidad (Cap. 6). La ecuación de Hamilton–Jacobi, las variables de acción–ángulo y la distinción entre sistemas integrables y caóticos.
+  + Como hilos transversales, el curso sigue las leyes de conservación, la integrabilidad y los límites de la predictibilidad, y revisita los mismos sistemas modelo (oscilador armónico, péndulo, problema de Kepler, osciladores acoplados, trompo simétrico) en cada formalismo. También se plantea el uso de la IA como compañero de aprendizaje sujeto a verificación.
 
-2. **Sistema de Referencia Inercial**
-   + Marcos donde una partícula libre sigue una línea recta.  
-   + Transformaciones del grupo de Galileo: traslaciones, rotaciones, boosts.
++ Luego habremos repasado algunos conceptos de Mecánica que vimos en otros cursos:
+  1. **Las Tres Leyes de Newton**
+    + **1ª ley (Inercia):** una partícula sin fuerzas permanece en reposo o MRU.  
+    + **2ª ley:** $\vec{F} = \frac{d\vec{p}}{dt} = m\vec{a}$.  
+    + **3ª ley:** $\vec{F}{i j} = -\vec{F}_{ji}$ (acción y reacción).
 
-3. **Conceptos Básicos**
-   + $\vec{v} = \dot{\vec{r}}, \quad \vec{a} = \dot{\vec{v}}, \quad \vec{p} = m\vec{v}$
-   + $\vec{L} = \vec{r} \times \vec{p}, \quad T = \frac{1}{2}mv^2$
-   + Trabajo: $W = \int \vec{F} \cdot d\vec{r}$
+  2. **Sistema de Referencia Inercial**
+    + Marcos donde una partícula libre sigue una línea recta.  
+    + Transformaciones del grupo de Galileo: traslaciones, rotaciones, boosts.
 
-4. **Fuerzas Conservativas y Energía**
+  3. **Conceptos Básicos**
+    + $\vec{v} = \dot{\vec{r}}, \quad \vec{a} = \dot{\vec{v}}, \quad \vec{p} = m\vec{v}$
+    + $\vec{L} = \vec{r} \times \vec{p}, \quad T = \frac{1}{2}mv^2$
+    + Trabajo: $W = \int \vec{F} \cdot d\vec{r}$
+
+  4. **Fuerzas Conservativas y Energía**
    + Fuerza conservativa: $\vec{F} = -\nabla V(\vec{r})$
    + Conservación de energía: $E = T + V = \text{cte}$ si$ \partial V/\partial t = 0$
 
-5. **Sistemas de Partículas**
-   + Centro de masa:$\vec{R} = \frac{1}{M}\sum_i m_i\vec{r}_i$
-   + $\vec{P}_T = M \vec{v}_{cm}, \quad \vec{L}_T = \sum_i \vec{r}_i \times \vec{p}_i$
+  5. **Sistemas de Partículas**
+   + Centro de masa: $\vec{R} = \frac{1}{M}\sum_i m_i\vec{r}_i$
+   + $\vec{P}_{T} = M \vec{v}_{cm}, \quad \vec{L}_T = \sum_i \vec{r}_i \times \vec{p}_i$
    + Energía total: $E = T_{cm} + T_{rel} + V_{ext} + V_{int}$
 
 
