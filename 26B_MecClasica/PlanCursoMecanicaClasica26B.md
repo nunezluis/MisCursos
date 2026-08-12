@@ -57,6 +57,7 @@ El estudiante estará en capacidad de
 Los problemas para discutir en clase los pueden encontrar [aquí](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)
 
 #### Materiales
++ [Presentación Panorámica del curso](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S01OverviewCurso.pdf)
 + [Presentación Dinámica newtoniana](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S1DinamicaNewtonia.pdf)
 
 #### Al finalizar
