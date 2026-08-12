@@ -1,0 +1,8 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Mec\'anica cl\'asica: el estudio del movimiento}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{\IeC {\textquestiondown }Qu\'e es la mec\'anica cl\'asica?}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{Una din\'amica, varios lenguajes}{6}{0}{1}
+\beamer@sectionintoc {2}{Secci\'on}{12}{0}{2}
+\beamer@sectionintoc {3}{Secci\'on}{13}{0}{3}
+\beamer@sectionintoc {4}{Secci\'on}{14}{0}{4}
+\beamer@sectionintoc {5}{Recapitulando}{15}{0}{5}

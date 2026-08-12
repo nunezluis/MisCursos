@@ -1,0 +1,127 @@
+\documentclass[spanish]{beamer}
+\usepackage[ansinew]{inputenc} % Acepta caracteres en castellano
+\usepackage[spanish]{babel}    % silabea palabras castellanas
+\usepackage{amsmath}
+\usepackage{mathtools,cancel} % cancela con una flecha \cancelto{0}{XXXX}
+\renewcommand{\CancelColor}{\color{red}} %change cancel color to red
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usepackage{textpos}
+\usepackage{bm}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,fit,backgrounds}
+% --- macros de conveniencia -------------------------------------
+\newcommand{\vek}[1]{\bm{#1}}
+\newcommand{\pd}[2]{\dfrac{\partial #1}{\partial #2}}
+\newcommand{\dt}[1]{\dot{#1}}
+\newcommand{\pb}[2]{\{#1,#2\}}
+\newcommand{\formalism}[1]{\textbf{\textcolor{structure.fg}{#1}}}
+
+% Logo  en el comienzo 
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+\end{textblock*}}
+
+\begin{document}
+
+\title{\textbf{El curso de Mecánica Clásica} }
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}  
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias, } \\
+\textit{Universidad Industrial de Santander, Santander, Colombia } \\
+{\includegraphics[height=0.4in, keepaspectratio=true]{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}}
+}
+\date{\today}
+\maketitle
+
+
+\begin{frame}
+\frametitle{Agenda}
+  \tableofcontents
+\end{frame}
+
+
+%%%%% Diapo 1
+\section{Mecánica clásica: el estudio del movimiento}
+\subsection{¿Qué es la mecánica clásica?}
+\frame{
+  \frametitle{¿Qué es la mecánica clásica?}
+   \begin{itemize}  
+  	\item<1-> El estudio del \alert{movimiento}: la evolución en el tiempo de la posición de una partícula, o de la configuración de un sistema de partículas.
+	%
+	\item<2-> Válida en un amplio rango de escalas --- desde $\sim 100$\,nm hasta distancias cosmológicas --- excepto en el régimen cuántico.
+	%
+	\item<3-> ¿Dónde encuentra la mecánica clásica sus límites (siglo XX)?
+	\begin{itemize}
+		\item altas velocidades / energías $\;\rightarrow\;$ \emph{relatividad}
+		\item escala atómica $\;\rightarrow\;$ \emph{mecánica cuántica}
+	\end{itemize}	
+    \end{itemize}
+}
+%
+%%%%% Diapo 2
+\subsection{Una dinámica, varios lenguajes}
+\frame{
+\frametitle{Una dinámica, varios lenguajes}
+\begin{itemize}  
+    \item<1-> Mecánica newtoniana --- fuerzas y aceleraciones
+    \item<2-> Mecánica  {lagrangiana} --- un principio variacional en el espacio de configuración
+    \item<3-> Mecánica  {hamiltoniana} --- flujo en el espacio de fase
+    \item<4->  {Transformaciones canónicas} --- la libertad de cambiar las variables del espacio de fase
+    \item<5-> Teoría de  {Hamilton--Jacobi} --- transformar un problema en su propia solución
+    \item<6-> Para cada uno de estos formalismos,nos preguntaremos: 
+    \begin{itemize}
+    	\item \emph{¿cómo resolvemos las ecuaciones?}
+	\item \emph{¿qué estructura le subyace?} \\ Esto es simetrías, cantidades conservadas, integrabilidad.
+    \end{itemize}
+ \end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+%
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+\frametitle{Título transparencia}
+\begin{itemize}  
+	\item<1-> 
+\end{itemize}
+}
+
+%%%%% Diapo Fin
+\section{Recapitulando}
+\frame{
+  \frametitle{Recapitulando}
+En presentación consideramos
+  \begin{enumerate}
+  	\item<1->
+   \end{enumerate}
+}
+  
+\end{document}
+
+	\begin{figure}[t]
+		\includegraphics[width=1.8in]{Figuras/Dispersion.png}
+   	\end{figure}
+	
