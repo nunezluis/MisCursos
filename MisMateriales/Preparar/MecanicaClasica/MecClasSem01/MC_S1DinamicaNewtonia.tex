@@ -12,6 +12,15 @@
 \usetheme{Madrid}
 \usecolortheme{beaver}
 \usepackage{textpos}
+\usepackage{bm}
+\usepackage{tikz}
+% --- macros -----------------------------------------------------
+\newcommand{\vek}[1]{{\bf #1}}
+\newcommand{\uv}[1]{\hat{\vek{#1}}}
+\newcommand{\pd}[2]{\dfrac{\partial #1}{\partial #2}}
+
+
+
 % Logo  en el comienzo 
 \addtobeamertemplate{frametitle}{}{%
 \begin{textblock*}{100mm}(.85\textwidth,-1cm)
@@ -312,34 +321,102 @@ $
 
     \end{itemize}
 }
-\section{Recapitulando}
+%
+%%%%% Diapo 2
+\section{Para la discusión}
 \frame{
-\frametitle{Recapitulando}
-En presentación consideramos
-	\begin{enumerate}
-  		\item<1-> Las Tres Leyes de Newton
-		\begin{itemize}
-			\item $1^a$ ley (Inercia): una partícula sin fuerzas permanece en reposo o MRU.  
-			\item $2^a$ ley:  \( \vec{F} = \frac{d\vec{p}}{dt} = m\vec{a} \).  
-			\item $3^a$ ley:  \( \vec{F}_{ij} = -\vec{F}_{ji} \) (acción y reacción).
-		\end{itemize}
-		\item<2-> Sistema de Referencia Inercial
-		\begin{itemize}
-			\item Marcos donde una partícula libre sigue una línea recta.
-			\item Transformaciones del grupo de Galileo: traslaciones, rotaciones, boosts. 
-		\end{itemize}
-		\item<3-> Conceptos Básicos
-		\begin{itemize}
-			\item \( \vec{v} = \dot{\vec{r}}, \quad \vec{a} = \dot{\vec{v}}, \quad \vec{p} = m\vec{v} \)
-			\item \( \vec{L} = \vec{r} \times \vec{p}, \quad T = \frac{1}{2}mv^2 \)
-			\item Trabajo: \( W = \int \vec{F} \cdot d\vec{r} \)
-		\end{itemize}
-
-
-    \end{enumerate}
+\frametitle{Para la discusión}
+  Una partí­cula de masa $m$ se mueve en el campo de fuerzas \\
+  $\vek{F}(\vek{r}) = -\left(k_1\,x\,\uv{x} + k_2\,y\,\uv{y} + k_3\,z\,\uv{z}\right), \quad k_1,k_2,k_3>0$  constantes distintas.
+Responda justificadamente las siguientes preguntas:
+\begin{enumerate}
+    \item ¿Es $\vek{F}$ \alert{conservativa}? Si lo es, halle la energí­a potencial $V(\vek{r})$.
+    \item ¿Se conserva la \alert{energí­a} total $E$? ¿Por qué?
+    \item ¿Se conserva alguna componente del \alert{momento lineal} $\vek{p}$?
+    \item ¿Se conserva el \alert{momento angular} $\vek{L}$ (o alguna de sus componentes)?
+    \item Analice el caso particular $k_1=k_2=k_3$. ¿Qué cambia?
+\end{enumerate}
 }
 
-
+%%%%% Diapo 2
+\frame{
+  \frametitle{Flujo de trabajo con la IA}
+  \begin{enumerate}
+    \item \textbf{Primero a mano.} Resuelva (1)--(5) usted mismo, antes de consultar a la IA. Escriba sus respuestas y el criterio que utilizó en cada caso.
+    \item \textbf{Luego pregunte a la IA.} Use un \emph{prompt} claro, por ejemplo:
+      \begin{quote}\small
+        ``Una partícula de masa $m$ está en la fuerza $\vek F=-(k_1 x,\,k_2 y,\,k_3 z)$ con $k_i$ constantes positivas distintas. ¿La fuerza es conservativa? ¿Cuál es el potencial? ¿Qué cantidades ($E$, $\vek p$, $\vek L$) se conservan y por qué?''
+      \end{quote}
+    \item \textbf{Después, critique.} No acepte la respuesta: verifíquela (siguiente lámina) y señale cualquier error.
+  \end{enumerate}
+  \begin{alertblock}{Regla de oro}
+    La IA es un \emph{compañero}, no un oráculo. Una respuesta bien redactada puede ser físicamente incorrecta.
+  \end{alertblock}
+}
+%
+%%%%% Diapo 2
+\frame{
+  \frametitle{Respuesta de la IA (para analizar)}
+  Un asistente respondió lo siguiente. \\ \alert{Contiene errores,} encuéntrelos y corríjalos.
+  \begin{block}{Respuesta generada}
+    \small
+    ``El sistema es un oscilador armónico tridimensional; la fuerza es \textbf{central} y conservativa. En consecuencia se conservan:
+    \begin{itemize}\small
+      \item la energía total $E$ (fuerza conservativa);
+      \item La cantidad de movimiento angular $\vek{L}$, pues el torque de una fuerza central es nulo, $\boldsymbol{\tau}=\vek{r}\times\vek{F}=\vek 0$;
+      \item La cantidad de movimiento lineal $\vek{p}$, ya que el oscilador es simétrico.
+    \end{itemize}
+    La energía potencial es $V(\vek r)=\tfrac{1}{2}k\,r^2$, donde $r=|\vek r|$.''
+  \end{block}
+  \vspace{-0.2em}
+  {\bf ¿Cuáles afirmaciones son correctas, cuáles no y cómo lo demuestra?}
+  }
+%
+%%%%% Diapo 2
+\frame{
+  \frametitle{Su tarea de verificación}
+  Compruebe cada afirmación con un cálculo concreto:
+  \begin{itemize}
+    \item \textbf{Conservación:} calcule $\nabla\times\vek{F}$. ¿Se anula?
+    \item \textbf{Potencial:} tome el $V$ propuesto por la IA y compruebe si $\boldsymbol{\nabla}V$ \emph{reproduce} la fuerza $\vek F$ dada. ¿Qué falla?
+    \item \textbf{¿Central?} Una fuerza es central si $\vek F \parallel \uv{r}$. ¿Lo es aquí? \\ ¿Bajo qué condición?
+    \item \textbf{Torque:} calcule $\boldsymbol{\tau}=\vek{r}\times\vek{F}$ componente a componente. ¿Es cero?
+    \item \textbf{Momento lineal:} ¿En qué dirección se anula la fuerza?
+    \item \textbf{Casos límite:} ponga $k_1=k_2=k_3$ y verifique que su análisis sea consistente.
+    \item \textbf{Dimensiones:} confirme que $[k_i]$, $[V]$ y $[\boldsymbol{\tau}]$ son correctas.
+  \end{itemize}
+}
+%
+%%%%% Diapo 2
+\frame{
+  \frametitle{Entregable y bitácora de IA}
+  \begin{columns}[T]
+    \begin{column}{0.54\textwidth}
+      \textbf{Entregue}
+      \begin{enumerate}\small
+        \item Su solución a mano de (1)--(5).
+        \item El diagnóstico de la respuesta de la IA: qué está bien, qué está mal y la \emph{demostración} de cada error.
+        \item La versión corregida y final.
+      \end{enumerate}
+    \end{column}
+    \begin{column}{0.46\textwidth}
+      \textbf{Bitácora de IA (obligatoria)}
+      \begin{enumerate}\small
+        \item los \emph{prompts} usados;
+        \item la respuesta relevante de la IA;
+        \item qué aceptó / rechazó / corrigió;
+        \item cómo lo verificó;
+        \item su razonamiento final;
+        \item errores o alucinaciones detectadas.
+      \end{enumerate}
+    \end{column}
+  \end{columns}
+  \vspace{0.4em}
+  \begin{block}{Pistas}
+    \small
+    Recuerde de la clase: $\vek L=$ cte $\Leftrightarrow \boldsymbol{\tau}=\vek0$;\quad $E=$ cte si $\partial V/\partial t=0$; \\ $p_i=$ cte si no hay fuerza en la dirección $i$ (coordenada cí­clica).
+  \end{block}
+}
   
 \end{document}
 
@@ -379,7 +456,7 @@ En presentación consideramos
 %\label{fig1vectcartes}
 \end{center}
 \end{figure}
-
+%
 %%%%% Diapo 2
 \section{Dinámica de sistemas de partículas}
 \frame{
@@ -390,7 +467,7 @@ En presentación consideramos
 	\item<3-> 
     \end{itemize}
 }
-
+%
 %%%%% Diapo 2
 \section{Dinámica de sistemas de partículas}
 \frame{

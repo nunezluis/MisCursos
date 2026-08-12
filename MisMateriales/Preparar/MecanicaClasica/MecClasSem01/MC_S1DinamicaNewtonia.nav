@@ -72,11 +72,19 @@
 \headcommand {\beamer@framepages {66}{71}}
 \headcommand {\beamer@sectionpages {39}{71}}
 \headcommand {\beamer@subsectionpages {66}{71}}
-\headcommand {\sectionentry {5}{Recapitulando}{72}{Recapitulando}{0}}
-\headcommand {\slideentry {5}{0}{1}{72/74}{}{0}}
-\headcommand {\beamer@framepages {72}{74}}
-\headcommand {\beamer@partpages {1}{74}}
-\headcommand {\beamer@subsectionpages {72}{74}}
-\headcommand {\beamer@sectionpages {72}{74}}
-\headcommand {\beamer@documentpages {74}}
-\headcommand {\gdef \inserttotalframenumber {20}}
+\headcommand {\sectionentry {5}{Para la discusi\'on}{72}{Para la discusi\'on}{0}}
+\headcommand {\slideentry {5}{0}{1}{72/72}{}{0}}
+\headcommand {\beamer@framepages {72}{72}}
+\headcommand {\slideentry {5}{0}{2}{73/73}{}{0}}
+\headcommand {\beamer@framepages {73}{73}}
+\headcommand {\slideentry {5}{0}{3}{74/74}{}{0}}
+\headcommand {\beamer@framepages {74}{74}}
+\headcommand {\slideentry {5}{0}{4}{75/75}{}{0}}
+\headcommand {\beamer@framepages {75}{75}}
+\headcommand {\slideentry {5}{0}{5}{76/76}{}{0}}
+\headcommand {\beamer@framepages {76}{76}}
+\headcommand {\beamer@partpages {1}{76}}
+\headcommand {\beamer@subsectionpages {72}{76}}
+\headcommand {\beamer@sectionpages {72}{76}}
+\headcommand {\beamer@documentpages {76}}
+\headcommand {\gdef \inserttotalframenumber {24}}
