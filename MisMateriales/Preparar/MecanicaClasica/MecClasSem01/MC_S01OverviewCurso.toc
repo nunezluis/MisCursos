@@ -2,7 +2,6 @@
 \beamer@sectionintoc {1}{Mec\'anica cl\'asica: el estudio del movimiento}{3}{0}{1}
 \beamer@subsectionintoc {1}{1}{\IeC {\textquestiondown }Qu\'e es la mec\'anica cl\'asica?}{3}{0}{1}
 \beamer@subsectionintoc {1}{2}{Una din\'amica, varios lenguajes}{6}{0}{1}
-\beamer@sectionintoc {2}{Secci\'on}{12}{0}{2}
-\beamer@sectionintoc {3}{Secci\'on}{13}{0}{3}
-\beamer@sectionintoc {4}{Secci\'on}{14}{0}{4}
-\beamer@sectionintoc {5}{Recapitulando}{15}{0}{5}
+\beamer@subsectionintoc {1}{3}{\IeC {\textquestiondown }C\'omo se conectan los formalismos?}{13}{0}{1}
+\beamer@sectionintoc {2}{Hoja de ruta del curso}{14}{0}{2}
+\beamer@sectionintoc {3}{Uso de la IA en este curso}{15}{0}{3}

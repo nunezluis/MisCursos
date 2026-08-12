@@ -69,54 +69,109 @@
 \frame{
 \frametitle{Una dinámica, varios lenguajes}
 \begin{itemize}  
-    \item<1-> Mecánica newtoniana --- fuerzas y aceleraciones
-    \item<2-> Mecánica  {lagrangiana} --- un principio variacional en el espacio de configuración
-    \item<3-> Mecánica  {hamiltoniana} --- flujo en el espacio de fase
-    \item<4->  {Transformaciones canónicas} --- la libertad de cambiar las variables del espacio de fase
-    \item<5-> Teoría de  {Hamilton--Jacobi} --- transformar un problema en su propia solución
-    \item<6-> Para cada uno de estos formalismos,nos preguntaremos: 
-    \begin{itemize}
-    	\item \emph{¿cómo resolvemos las ecuaciones?}
-	\item \emph{¿qué estructura le subyace?} \\ Esto es simetrías, cantidades conservadas, integrabilidad.
-    \end{itemize}
+    \item<1-> {\bf Mecánica newtoniana}: fuerzas y aceleraciones \\ $\dt{\vek{p}} = \vek{F}, \qquad \vek{p}=m\dt{\vek{r}} .$
+    \item<2-> {\bf Mecánica  lagrangiana}: Principio variacional 
+    $\mathcal{L}(q_i,\dt q_i,t)=T-V,\quad \delta \mathcal{S}= \delta\int_{t_1}^{t_2} \mathcal{L}\,dt = 0\quad \quad \frac{d}{dt}\!\left(\pd{\mathcal{L}}{\dt q_i}\right)-\pd{\mathcal{L}}{q_i}=0.$ 
+    \item<3-> {\bf Mecánica hamiltoniana}: flujo en el espacio de fase
+    $\mathcal{H}(q_i,p_i,t)=\sum_i p_i\,\dt q_i - \mathcal{L}, \quad p_i=\pd{\mathcal{L}}{\dt q_i}.$
+    \item<4->  Transformaciones canónicas:  la libertad de cambiar las variables del espacio de fase $(q_i,p_i)\;\longrightarrow\;(Q_i,P_i)$, preservando ec. de Hamilton
+    \item<5->  Teoría de  Hamilton--Jacobi:  transformar un problema en su propia solución $ \mathcal{H}\!\left(q_i,\pd{\mathcal{S}}{q_i},t\right)+\pd{\mathcal{S}}{t}=0$,  $\mathcal{S}$ función principal de Hamilton 
+    \item<6-> {\bf Para cada uno de estos formalismos,nos preguntaremos:} \emph{¿cómo resolvemos las ecuaciones?}, \emph{¿qué estructura le subyace?} Esto es simetrías, cantidades conservadas, integrabilidad.
+    \item<7-> Haga que la IA resuelva un problema simple con todos estos métodos
  \end{itemize}
 }
 %
-%%%%% Diapo 2
-\section{Sección}
+%%%%% Diapo 3
+\subsection{¿Cómo se conectan los formalismos?}
 \frame{
-\frametitle{Título transparencia}
-\begin{itemize}  
-	\item<1-> 
-\end{itemize}
-}
-%
-%%%%% Diapo 2
-\section{Sección}
-\frame{
-\frametitle{Título transparencia}
-\begin{itemize}  
-	\item<1-> 
-\end{itemize}
-}
-%
-%%%%% Diapo 2
-\section{Sección}
-\frame{
-\frametitle{Título transparencia}
-\begin{itemize}  
-	\item<1-> 
-\end{itemize}
-}
+\frametitle{¿Cómo se conectan los formalismos?}
+  \begin{center}
+  \begin{tikzpicture}[
+      node distance=5mm,
+      box/.style={draw, rounded corners, align=center, fill=structure.fg!12,
+                  minimum width=44mm, minimum height=7mm, font=\small, inner sep=2pt},
+      lab/.style={font=\scriptsize\itshape, fill=white, inner sep=1pt},
+      arr/.style={-{Latex[length=2mm]}, thick}
+    ]
+    \node[box] (N) {Mecánica newtoniana \\ \scriptsize $\dt{\vek p}=\vek F$};
+    \node[box, below=of N] (L) {Mecánica lagrangiana \\ \scriptsize $\delta S=0$};
+    \node[box, below=of L] (H) {Mecánica hamiltoniana \\ \scriptsize $\dt q=\partial_p H,\ \dt p=-\partial_q H$};
+    \node[box, below=of H] (C) {Transformaciones canónicas \\ \scriptsize $(q,p)\to(Q,P)$};
+    \node[box, below=of C] (J) {Hamilton--Jacobi / acción--ángulo \\ \scriptsize integrabilidad};
 
-%%%%% Diapo Fin
-\section{Recapitulando}
+    \draw[arr] (N) -- node[lab]{principio variacional} (L);
+    \draw[arr] (L) -- node[lab]{transformación de Legendre} (H);
+    \draw[arr] (H) -- node[lab]{cambio de variables} (C);
+    \draw[arr] (C) -- node[lab]{transformar a constantes} (J);
+
+    \begin{scope}[on background layer]
+      \node[draw, dashed, rounded corners, fit=(N)(L)(H),
+            label={[font=\scriptsize\itshape]right:formulaciones equivalentes}] {};
+    \end{scope}
+  \end{tikzpicture}
+  \end{center}
+}
+%
+%%%%% Diapo 4
+\section{Hoja de ruta del curso}
 \frame{
-  \frametitle{Recapitulando}
-En presentación consideramos
-  \begin{enumerate}
-  	\item<1->
-   \end{enumerate}
+\frametitle{Hoja de ruta del curso}
+\  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \textbf{El formalismo, en orden}
+      \begin{enumerate}\small
+        \item Ecuaciones de movimiento; Lagrange (Cap.~1)
+        \item Leyes de conservación y simetrí­as (Cap.~2)
+        \item Fuerzas centrales, Kepler, dispersión (Cap.~3)
+        \item Oscilaciones pequeñas, modos normales (Cap.~4)
+        \item Cuerpos rí­gidos, tensor de inercia, Euler (Cap.~5)
+        \item Dinámica hamiltoniana, transformaciones canónicas, H--J, integrabilidad (Cap.~6)
+      \end{enumerate}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{Sistemas modelo recurrentes}
+      \begin{itemize}\small
+        \item oscilador armónico
+        \item péndulo simple y no lineal
+        \item problema de dos cuerpos / Kepler
+        \item osciladores acoplados
+        \item el trompo simétrico
+      \end{itemize}
+      \vspace{0.4em}
+      {\footnotesize {\it Cada sistema se retoma en todos los formalismos, para comparar lo que revela cada lenguaje.}}
+    \end{column}
+  \end{columns}
+}
+%
+%%%%% Diapo 5
+\section{Uso de la IA en este curso}
+\frame{
+\frametitle{Uso de la IA en este curso}
+  Los asistentes de IA se usan como \alert{compañeros de aprendizaje}, nunca como generadores de respuestas.
+  \begin{columns}[T]
+    \begin{column}{0.5\textwidth}
+      \textbf{Buenos usos}
+      \begin{itemize}\small
+        \item explicaciones y analogí­as alternativas
+        \item verificar el álgebra intermedia
+        \item sugerir métodos numéricos; depurar código
+        \item generar preguntas de autoevaluación
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \textbf{Verificar siempre}
+      \begin{itemize}\small
+        \item un signo erróneo en un lagrangiano
+        \item una cantidad supuestamente conservada que en realidad no lo es
+        \item una transformación inválida (no canónica)
+        \item inconsistencias dimensionales o en casos límite
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \vspace{0.4em}
+  \begin{block}{Documentación que deberá conservar}
+    Los prompts utilizados, qué aceptó / rechazó / corrigió, cómo lo verificó y su razonamiento final.
+  \end{block}
 }
   
 \end{document}
