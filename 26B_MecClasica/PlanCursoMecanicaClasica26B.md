@@ -80,8 +80,8 @@ Al finalizar esta semana habremos repasado algunos conceptos de Mecánica que vi
    + Conservación de energía: $E = T + V = \text{cte}$ si$ \partial V/\partial t = 0$
 
 5. **Sistemas de Partículas**
-   + Centro de masa:$ \vec{R} = \frac{1}{M}\sum_i m_i\vec{r}_i$
-   + $\vec{P}_T = M\vec{v}_{cm}, \quad \vec{L}_T = \sum_i \vec{r}_i \times \vec{p}_i$
+   + Centro de masa:$\vec{R} = \frac{1}{M}\sum_i m_i\vec{r}_i$
+   + $\vec{P}_T = M \vec{v}_{cm}, \quad \vec{L}_T = \sum_i \vec{r}_i \times \vec{p}_i$
    + Energía total: $E = T_{cm} + T_{rel} + V_{ext} + V_{int}$
 
 
