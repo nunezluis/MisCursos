@@ -131,7 +131,8 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 
 #### Interactuando con la IA
 A continuación un par de ejercicios programado para interactuar con cualquier agente IA siguiendo la metodología 4D
-+ [Coordenadas generalizadas y vínculos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S2_Actividad4D_CoordenadasVinculos.pdf) 
++ [Coordenadas generalizadas y vínculos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S2_Actividad4D_CoordenadasVinculos.pdf)
++ [Multiplicadores de Lagrange]()
 
 #### Al finalizar la semana
 Al finalizar esta semana habremos cubierto los siguientes puntos

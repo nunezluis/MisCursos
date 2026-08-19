@@ -90,7 +90,7 @@
 	\item<7-> Entonces $I[y_i]=\int_{x_1}^{x_2} f\left(y_i(x), y_i^{\prime}(x), x\right) {\rm d} x \Rightarrow \delta I = 0 \Rightarrow$ \\$ \Rightarrow \frac{{\rm d}}{{\rm d} x}\left(\frac{\partial f}{\partial y_i^{\prime}}\right)-\frac{\partial f}{\partial y_i}=0$ para $ i=1,2, \ldots, s$
    \end{itemize}
 }
-%%%%% Diapo 2
+%%%%% Diapo 5
 \section{Cálculo de variaciones con restricciones}
 \subsection{Multiplicadores de Lagrange}
 \frame{
@@ -102,9 +102,11 @@
 	\item<4-> Introducimos un multiplicador de Lagrange \( \lambda(x) \) y el funcional modificado a extremar pasa a ser:
 	$\tilde{I}[y, \lambda] = \int_{x_1}^{x_2} \left( f(x, y(x), y'(x)) + \lambda(x) g(x, y(x)) \right){\rm  d}x.$
 	\item<5-> Las ecuaciones de Euler-Lagrange, modificadas por la presencia del multiplicador de Lagrange son:
-	$\frac{{\rm  d}}{{\rm  d}x} \left( \frac{\partial f}{\partial y'} \right) - \frac{\partial f}{\partial y} =  \lambda \frac{\partial g}{\partial y}$ con la restricción anholónoma $g(x, y(x)) = 0$
+	$\frac{{\rm  d}}{{\rm  d}x} \left( \frac{\partial f}{\partial y'} \right) - \frac{\partial f}{\partial y} =  \lambda \frac{\partial g}{\partial y}$ con la restricción holónoma $g(x, y(x)) = 0$
    \end{itemize}
 }
+%
+% Diapo 6
 %%%%%%%%%%%%%%
 \subsection{Partícula libre moviéndose sobre una esfera}
 \frame{
@@ -118,11 +120,11 @@
 	$\frac{{\rm d}}{{\rm d}t} \left( m\dot{y} \right) - \lambda \cdot 2y = 0 \Rightarrow m\ddot{y} = 2\lambda y$ \\
 	$\frac{{\rm d}}{{\rm d}t} \left( m\dot{z} \right) - \lambda \cdot 2z = 0 \Rightarrow m\ddot{x} = 2\lambda z$ 
 	\item<4-> Derivando la restricción $\frac{{\rm d}^2}{{\rm d}t^2} (x^2 + y^2 + z^2 - R^2) = 2\dot{x}^2 + 2x\ddot{x} + 2\dot{y}^2 + 2y\ddot{y} + 2\dot{z}^2 + 2z\ddot{z} = 0$
-	\item<5-> Sustituyendo  \( \ddot{x}, \ddot{y}, \ddot{z} \) tendremos $2(\dot{x}^2 + \dot{y}^2 + \dot{z}^2) + 2\lambda R^2 = 0$ y despejamos $\lambda = -\frac{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}{R^2}$
-	\item<6-> Las ecuaciones de movimiento serán $m\ddot{x} = -2x\frac{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}{R^2}$ iguales para $y$ y para $z$. Las soluciones $x(t)$, $y(t)$ y $z(t)$ extreman la acción $\tilde{I}$ 
+	\item<5-> Sustituyendo  \( \ddot{x}, \ddot{y}, \ddot{z} \) tendremos $2(\dot{x}^2 + \dot{y}^2 + \dot{z}^2) + 2\frac{\lambda}{m} R^2 = 0$ y despejamos $\lambda = -\frac{m(\dot{x}^2 + \dot{y}^2 + \dot{z}^2)}{R^2}$
+	\item<6-> Las ecuaciones de movimiento serán $\ddot{x} = -2x\frac{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}{R^2}$ iguales para $y$ y para $z$. Las soluciones $x(t)$, $y(t)$ y $z(t)$ extreman la acción $\tilde{I}$ 
    \end{itemize}
 }
-%%%%% Diapo 2
+%%%%% Diapo 7
 \subsection{El péndulo simple}
 \frame{
   \frametitle{El péndulo simple y su vínculo}
@@ -132,7 +134,7 @@
 	\item<3-> Es decir $\mathcal{L}=\frac{1}{2} m(\dot{x}^2+\dot{y}^2)+m g y+\frac{1}{2} \lambda(x^2+y^2-l^2)$
 	\item<4-> Las ecuaciones de movimiento serán $m \ddot{x}=\lambda x$, y  $\ddot{y}=m g+\lambda y$
 	\item<5-> La ecuación de movimiento de $\lambda$ satisface la restricción. Esto es $\frac{\partial \mathcal{L}^{\prime}}{\partial \lambda}= 0 \Leftrightarrow x^2+y^2-l^2=0$. Nótese $\lambda$, como una coordenada más. 
-	\item<6-> Si expresamos el lagrangiano en términos de sus grados de libertad, $q^i$ (liberando los vículos), las ecuaciones de Lagrange son las mismas.
+	\item<6-> Si expresamos el lagrangiano en términos de sus grados de libertad, $q^i$ (liberando los vínculos), las ecuaciones de Lagrange son las mismas.
 	\item<7-> $\mathcal{L}\left[x^A(q^i, t), \dot{x}^A(q^i, \dot{q}^i, t), t , \lambda^{\alpha}\right] \equiv \mathcal{L}^{\prime}\left[q^i, \dot{q}^i, t\right]$, $A = 1, \dots, 3N$; $i =1, \dots n$ y $\alpha = 1, \dots , k$. Con $k = 3N -n$.
 	\item<8-> $\frac{d}{d t}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}^i}\right)-\frac{\partial \mathcal{L}}{\partial q^i}=\lambda_\alpha \frac{\partial f_\alpha}{\partial q^i} = 0$, dado que $f_{\alpha}(x^A, t) = 0 \Rightarrow \frac{\partial f_\alpha}{\partial q^i} = 0$.
 	\item<9-> $\underbrace{\frac{1}{2} m\left(\dot{x}^2+\dot{y}^2\right)+m g y +\frac{1}{2} \lambda(x^2+y^2-l^2)}_\mathcal{L} \equiv \underbrace{\frac{1}{2} m l^2 \dot{\theta}^2+m g l \cos \theta}_{\mathcal{L}^{\prime}}$.
@@ -174,7 +176,21 @@ En presentación consideramos
 \frame{
   \frametitle{Título transparencia}
   \begin{itemize}  
-  	\item<1-> 
+  	\item<1-> $m\ddot{\mathbf r} = 2\lambda\,\mathbf r$, es decir, $\ddot{\mathbf r} = (2\lambda/m)\,\mathbf r$. Derivando dos veces el vínculo, $\frac{d^2}{dt^2}\left(\mathbf r\cdot\mathbf r - R^2\right)=0 \;\Longrightarrow\; \dot{\mathbf r}\cdot\dot{\mathbf r} + \mathbf r\cdot\ddot{\mathbf r} = 0 \;\Longrightarrow\; v^2 + \frac{2\lambda}{m}R^2 = 0,$
+	\item<2-> de donde $\boxed{\;\lambda = -\frac{m\,v^2}{2R^2}\;}, \qquad v^2 \equiv \dot x^2+\dot y^2+\dot z^2 .$
+	%
+	\item<3-> sustituyendo $\lambda = -mv^2/(2R^2)$ en $m\ddot{\mathbf r}=2\lambda\mathbf r$, $\ddot{\mathbf r} = -\frac{v^2}{R^2}\,\mathbf r \qquad\Longleftrightarrow\qquad m\ddot x = -\,m\,x\,\frac{v^2}{R^2}.$
+   \end{itemize}
+}
+
+
+%%%%% Diapo 2
+\section{Sección}
+\frame{
+  \frametitle{Título transparencia}
+  \begin{itemize}  
+  	\item<1-> $m\ddot{\mathbf r} = 2\lambda\,\mathbf r$, es decir $\ddot{\mathbf r} = (2\lambda/m)\,\mathbf r$. Derivando dos veces el vínculo,
+$$\frac{d^2}{dt^2}\left(\mathbf r\cdot\mathbf r - R^2\right)=0 \;\Longrightarrow\; \dot{\mathbf r}\cdot\dot{\mathbf r} + \mathbf r\cdot\ddot{\mathbf r} = 0 \;\Longrightarrow\; v^2 + \frac{2\lambda}{m}R^2 = 0,$$
    \end{itemize}
 }
 %%%%% Diapo 2
