@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  20 MAY 2025 08:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  18 AUG 2026 19:12
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1456,13 +1456,9 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 174.
+stitucional/UISLOGO.png  used on input line 166.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
-
-Overfull \vbox (45.4754pt too high) detected at line 174
- []
-
-[45
+ [45
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1470,13 +1466,9 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 174.
+stitucional/UISLOGO.png  used on input line 166.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
-
-Overfull \vbox (45.4754pt too high) detected at line 174
- []
-
-[46
+ [46
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1484,13 +1476,9 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 174.
+stitucional/UISLOGO.png  used on input line 166.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
-
-Overfull \vbox (45.4754pt too high) detected at line 174
- []
-
-[47
+ [47
 
 ]
 File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
@@ -1498,13 +1486,19 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 174.
+stitucional/UISLOGO.png  used on input line 166.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [48
 
-Overfull \vbox (45.4754pt too high) detected at line 174
- []
-
-[48
+]
+File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
+.png Graphic file (type png)
+<use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
+png>
+Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
+stitucional/UISLOGO.png  used on input line 166.
+(pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
+ [49
 
 ]
 \tf@nav=\write6
@@ -1516,7 +1510,8 @@ Overfull \vbox (45.4754pt too high) detected at line 174
 \tf@snm=\write8
 \openout8 = `MC_S2T2Variacional.snm'.
 
- (./MC_S2T2Variacional.aux
+
+(./MC_S2T2Variacional.aux
 LaTeX Info: Redefining \. on input line 25.
 LaTeX Info: Redefining \% on input line 25.
 )
@@ -1524,10 +1519,10 @@ Package rerunfilecheck Info: File `MC_S2T2Variacional.out' has not changed.
 (rerunfilecheck)             Checksum: 00D52A30D134DC9D01CEB464F9E90CD9;1750.
  ) 
 Here is how much of TeX's memory you used:
- 23831 strings out of 478268
- 468104 string characters out of 5846347
- 732368 words of memory out of 5000000
- 41421 multiletter control sequences out of 15000+600000
+ 23827 strings out of 478268
+ 467952 string characters out of 5846347
+ 732369 words of memory out of 5000000
+ 41415 multiletter control sequences out of 15000+600000
  478147 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,16n,122p,486b,857s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1546,10 +1541,10 @@ texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/t
 exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texl
 ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on MC_S2T2Variacional.pdf (48 pages, 587950 bytes).
+Output written on MC_S2T2Variacional.pdf (49 pages, 591431 bytes).
 PDF statistics:
- 1460 PDF objects out of 1728 (max. 8388607)
- 1343 compressed objects within 14 object streams
- 106 named destinations out of 1000 (max. 500000)
+ 1487 PDF objects out of 1728 (max. 8388607)
+ 1369 compressed objects within 14 object streams
+ 108 named destinations out of 1000 (max. 500000)
  184 words of extra memory for PDF output out of 10000 (max. 10000000)
 

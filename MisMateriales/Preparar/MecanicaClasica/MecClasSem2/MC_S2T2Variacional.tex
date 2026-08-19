@@ -39,8 +39,8 @@
 \frame{
   \frametitle{Extremos de un funcional}
    \begin{itemize}  
-  	\item<1-> En los problemas de extremos del cálculo diferencial se busca el valor de una variable $x$ para el cual una función $g = g(x)$ es máxima o mínima. 
-  	\item<2-> En los problemas de extremos en el cálculo variacional se busca una función $y(x)$ con cual un funcional, $I=\mathcal{F}[y(x)]$, sea extremo (máximo o mínimo). 
+  	\item<1-> En los problemas de extremos del cálculo diferencial se busca el valor de la variable $x$ para el cual una función $g = g(x)$ es extrema (máxima o mínima). 
+  	\item<2-> En los problemas de extremos en el cálculo variacional se busca una función $y(x)$ para la cual un funcional, $I=\mathcal{F}[y(x)]$, sea un extremo (máximo o mínimo). 
 	\item<3-> Entonces anularemos las variaciones del funcional, $\delta I = \delta \mathcal{F}[y(x)] = 0$, para determinar la $y(x)$ que lo hace extremo.
 			\begin{figure}[t]
 			\includegraphics[width=1.4in]{Figuras/Trayectoria.png} \hspace{1cm} \includegraphics[width=1.4in]{Figuras/TrayectoriaPerturbada.png} 
@@ -56,8 +56,8 @@
 	\item<2->  Consideremos todas las funciones cercanas a $y(x)$ de la forma $y(x,\alpha) = y(x) + \alpha \eta(x)$, con lo cual $y(x, 0) = y(x)$
 	\item<3->  La función $\eta(x)$ es diferenciable y $\eta(x_1) = \eta(x_2) = 0$, con lo cual $y(x_1, 0) = y(x_1) \equiv y_1$ y consecuentemente $y(x_2, 0) = y(x_2) \equiv y_2$
 	\item<4->  Entonces hemos transformado el funcional en una función $I(\alpha) = \mathcal{F}[f(x, \alpha)] = \int_{x_1}^{x_2} {\rm d}x \; f(y(x, \alpha), y^{\prime}(x, \alpha), x)$
-	\item<5-> Sabemos como buscar los extremos de una función $\left.\frac{{\rm d} I(\alpha)}{{\rm d} \alpha}\right|_{\alpha=0} = 0$
-	\item<6-> Al evaluar $\alpha = 0$ garantizamos que obtenemos la $y(x)$ que hace extremo el funcional $I$.  
+	\item<5-> Sabemos cómo buscar los extremos de una función $\left.\frac{{\rm d} I(\alpha)}{{\rm d} \alpha}\right|_{\alpha=0} = 0$
+	\item<6-> Al evaluar $\alpha = 0$, garantizamos obtener la $y(x)$ que hace extremo el funcional $I$.  
   \end{itemize}
 }
 
@@ -84,9 +84,9 @@
   	\item<1-> Evaluando en $\alpha=0$, tenemos $\left.\frac{{\rm d} I}{{\rm d} \alpha}\right|_{\alpha=0}=\int_{x_1}^{x_2}\left[\frac{\partial f}{\partial y}-\frac{{\rm d}}{{\rm d} x}\left(\frac{\partial f}{\partial y^{\prime}}\right)\right]_{\alpha=0} \eta(x) {\rm d} x=0 .$
 	\item<2-> La condición $\left.\frac{d I}{d \alpha}\right|_{\alpha=0}=0$ implica que el integrando se anula.
 	\item<3-> Con lo cual $\frac{d}{d x}\left(\frac{\partial f}{\partial y^{\prime}}\right)-\frac{\partial f}{\partial y}=0$
-	\item<4-> La ecuación de Euler expresa la condición que debe satisfacer la función $y(x)$ para que el funcionl $I$ sea extremo. 
-	\item<5-> Es una ecuación diferencial de segundo orden para $y(x)$ para las condiciones dadas.
-	\item<6-> Los principios variacionales pueden extenderse a funcionales de varias funciones y sus derivadas $f\left(y_i(x), y_i^{\prime}(x), \ldots, x\right)$, con  $i=1,2, \ldots, s,$. Buscaremos las $y_i(x), i=1,2, \ldots, s$, que pasan por $x_1$ y $x_2$ y que hacen que $I$ adquiera un valor extremo, i.e., $\delta I=0$.
+	\item<4-> La ecuación de Euler expresa la condición que debe satisfacer la función $y(x)$ para que el funcional $I$ sea un extremo. 
+	\item<5-> Es una ecuación diferencial de segundo orden para $y(x)$ bajo las condiciones dadas.
+	\item<6-> Los principios variacionales pueden extenderse a funcionales de varias funciones y sus derivadas $f\left(y_i(x), y_i^{\prime}(x), \ldots, x\right)$, con  $i=1,2, \ldots, s$. Buscaremos las $y_i(x)$ con $i=1,2, \ldots, s$ que pasan por $x_1$ y $x_2$ y hacen que $I$ adquiera un valor extremo, i.e., $\delta I=0$.
 	\item<7-> Entonces $I[y_i]=\int_{x_1}^{x_2} f\left(y_i(x), y_i^{\prime}(x), x\right) {\rm d} x \Rightarrow \delta I = 0 \Rightarrow$ \\$ \Rightarrow \frac{{\rm d}}{{\rm d} x}\left(\frac{\partial f}{\partial y_i^{\prime}}\right)-\frac{\partial f}{\partial y_i}=0$ para $ i=1,2, \ldots, s$
    \end{itemize}
 }
@@ -119,7 +119,7 @@
 	$\frac{{\rm d}}{{\rm d}t} \left( m\dot{z} \right) - \lambda \cdot 2z = 0 \Rightarrow m\ddot{x} = 2\lambda z$ 
 	\item<4-> Derivando la restricción $\frac{{\rm d}^2}{{\rm d}t^2} (x^2 + y^2 + z^2 - R^2) = 2\dot{x}^2 + 2x\ddot{x} + 2\dot{y}^2 + 2y\ddot{y} + 2\dot{z}^2 + 2z\ddot{z} = 0$
 	\item<5-> Sustituyendo  \( \ddot{x}, \ddot{y}, \ddot{z} \) tendremos $2(\dot{x}^2 + \dot{y}^2 + \dot{z}^2) + 2\lambda R^2 = 0$ y despejamos $\lambda = -\frac{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}{R^2}$
-	\item<6-> Las ecuaciones de movimento serán $m\ddot{x} = -2x\frac{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}{R^2}$ igual para $y$ y para $z$.  Las soluciones $x(t)$, $y(t)$ y $z(t)$ extreman la acción $\tilde{I}$ 
+	\item<6-> Las ecuaciones de movimiento serán $m\ddot{x} = -2x\frac{\dot{x}^2 + \dot{y}^2 + \dot{z}^2}{R^2}$ iguales para $y$ y para $z$. Las soluciones $x(t)$, $y(t)$ y $z(t)$ extreman la acción $\tilde{I}$ 
    \end{itemize}
 }
 %%%%% Diapo 2
@@ -127,12 +127,12 @@
 \frame{
   \frametitle{El péndulo simple y su vínculo}
   \begin{itemize}  
-  	\item<1-> El Lagrangiano para un péndulo viene dado por el de una partícula libre limitada por restricciones o vínculos. 
+  	\item<1-> El lagrangiano de un péndulo se obtiene a partir del de una partícula libre, pero sujeto a restricciones o vínculos. 
 	\item<2-> Los vínculos/restricciones son $f_{\alpha}(x^A, t) = 0 \Leftrightarrow x^2+y^2-l^2 = 0$
 	\item<3-> Es decir $\mathcal{L}=\frac{1}{2} m(\dot{x}^2+\dot{y}^2)+m g y+\frac{1}{2} \lambda(x^2+y^2-l^2)$
 	\item<4-> Las ecuaciones de movimiento serán $m \ddot{x}=\lambda x$, y  $\ddot{y}=m g+\lambda y$
-	\item<5-> La ecuación de movimiento para $\lambda$ reproduce la restricción. Esto es $\frac{\partial \mathcal{L}^{\prime}}{\partial \lambda}= 0 \Leftrightarrow x^2+y^2-l^2=0$. Nótese $\lambda$, como una coordenada mas. 
-	\item<6-> Si expresamos el lagrangeano en término de sus grados de libertad, $q^i$ (liberando los vículos), las ecuaciones de Lagrange son las mismas.
+	\item<5-> La ecuación de movimiento de $\lambda$ satisface la restricción. Esto es $\frac{\partial \mathcal{L}^{\prime}}{\partial \lambda}= 0 \Leftrightarrow x^2+y^2-l^2=0$. Nótese $\lambda$, como una coordenada más. 
+	\item<6-> Si expresamos el lagrangiano en términos de sus grados de libertad, $q^i$ (liberando los vículos), las ecuaciones de Lagrange son las mismas.
 	\item<7-> $\mathcal{L}\left[x^A(q^i, t), \dot{x}^A(q^i, \dot{q}^i, t), t , \lambda^{\alpha}\right] \equiv \mathcal{L}^{\prime}\left[q^i, \dot{q}^i, t\right]$, $A = 1, \dots, 3N$; $i =1, \dots n$ y $\alpha = 1, \dots , k$. Con $k = 3N -n$.
 	\item<8-> $\frac{d}{d t}\left(\frac{\partial \mathcal{L}}{\partial \dot{q}^i}\right)-\frac{\partial \mathcal{L}}{\partial q^i}=\lambda_\alpha \frac{\partial f_\alpha}{\partial q^i} = 0$, dado que $f_{\alpha}(x^A, t) = 0 \Rightarrow \frac{\partial f_\alpha}{\partial q^i} = 0$.
 	\item<9-> $\underbrace{\frac{1}{2} m\left(\dot{x}^2+\dot{y}^2\right)+m g y +\frac{1}{2} \lambda(x^2+y^2-l^2)}_\mathcal{L} \equiv \underbrace{\frac{1}{2} m l^2 \dot{\theta}^2+m g l \cos \theta}_{\mathcal{L}^{\prime}}$.
@@ -146,26 +146,18 @@
 En presentación consideramos
 \begin{enumerate}
   \item<1-> \textbf{Objetivo:} Encontrar la función \( y(x) \) que hace extremo un funcional
-  \[
-  I[y] = \int_{x_1}^{x_2} f(y, y', x) \, dx.
-  \]
-
+  $I[y] = \int_{x_1}^{x_2} f(y, y', x) \, dx.$
+  %
   \item<2-> \textbf{Condición de Extremal:} Se introduce una variación \( y(x,\alpha) = y(x) + \alpha \eta(x) \) con \( \eta(x_1) = \eta(x_2) = 0 \). Se impone:
-  \[
-  \left. \frac{dI}{d\alpha} \right|_{\alpha = 0} = 0.
-  \]
-
-  \item \textbf{Ecuación de Euler:}
-  \[
-  \frac{d}{dx} \left( \frac{\partial f}{\partial y'} \right) - \frac{\partial f}{\partial y} = 0.
-  \]
-
-  \item<3-> \textbf{Con Restricciones:} Se usa el método de multiplicadores de Lagrange para restricciones holónomas \( g(x, y) = 0 \), modificando el funcional:
-  \[
-  \tilde{I}[y, \lambda] = \int_{x_1}^{x_2} \left( f + \lambda g \right) dx.
-  \]
-
-  \item<4-> \textbf{Ejemplos:} 
+  $  \left. \frac{dI}{d\alpha} \right|_{\alpha = 0} = 0.$
+  %
+  \item<3-> \textbf{Ecuación de Euler:}
+  $\frac{d}{dx} \left( \frac{\partial f}{\partial y'} \right) - \frac{\partial f}{\partial y} = 0.$
+  %
+  \item<4-> \textbf{Con Restricciones:} Se usa el método de multiplicadores de Lagrange para restricciones holónomas \( g(x, y) = 0 \), modificando el funcional:
+  $\tilde{I}[y, \lambda] = \int_{x_1}^{x_2} \left( f + \lambda g \right) dx.$
+  %
+  \item<5-> \textbf{Ejemplos:} 
   \begin{itemize}
     \item Partícula libre sobre una esfera.
     \item Péndulo simple como sistema con vínculo circular.
