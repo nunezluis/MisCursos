@@ -1,0 +1,522 @@
+%=====================================================================
+%  Actividad 4D-02 : "El vinculo que no era"
+%  Mecanica Clasica (posgrado) - Escuela de Fisica, UIS
+%  Tema Beamer: Madrid
+%
+%  NOTA AL DOCENTE:
+%   * El bloque \appendix del final contiene la CLAVE (dictamen R1-R8).
+%     Comente esas lineas antes de distribuir el PDF a los estudiantes.
+%   * Para incluir el logo institucional, descomente la linea \logo{...}
+%     y coloque el archivo del logo en el mismo directorio.
+%  Compilar:  pdflatex archivo.tex   (dos veces)
+%=====================================================================
+\documentclass[10pt,aspectratio=169]{beamer}
+
+\usetheme{Madrid}
+\usecolortheme{default}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% Carga portable del castellano: usa spanish.ldf si esta instalado;
+% si no, recurre al archivo de localizacion .ini de babel moderno.
+\IfFileExists{spanish.ldf}
+  {\usepackage[spanish,es-noshorthands]{babel}}
+  {\usepackage[spanish,provide=*]{babel}}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{graphicx}
+
+% \logo{\includegraphics[height=0.8cm]{logo-uis.png}}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{caption}[numbered]
+\setbeamercovered{transparent}
+
+\newcommand{\rv}{\mathbf{r}}
+\newcommand{\vv}{\mathbf{v}}
+
+\title[Actividad 4D-02: vínculos]{Actividad 4D--02: «El vínculo que no era»}
+\subtitle{Auditoría de un asistente IA sobre coordenadas generalizadas y vínculos}
+\author[L.A. Núñez]{Luis A. Núñez}
+\institute[UIS]{Escuela de Física, Facultad de Ciencias,\\ Universidad Industrial de Santander, Santander, Colombia}
+\date{18 de agosto de 2026}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%---------------------------------------------------------------------
+\begin{frame}{Agenda}
+  \tableofcontents
+\end{frame}
+
+%=====================================================================
+\section{Objetivos y reglas de juego}
+%=====================================================================
+
+\begin{frame}{¿Qué se persigue con esta actividad?}
+  \begin{itemize}[<+->]
+    \item Casi todos los textos afirman que \emph{«rodar sin deslizar es un vínculo no holónomo»}.
+    \item Un asistente de IA reproducirá esa afirmación \textbf{con toda confianza}, porque es estable en la literatura.
+    \item Pero la clasificación de un vínculo \textbf{no depende de que aparezcan velocidades}: depende de si la forma diferencial asociada es \textbf{integrable}.
+    \item Usted va a \textbf{fijar} el criterio correcto \emph{corrigiendo a la IA}, no escuchando una definición.
+  \end{itemize}
+  \onslide<5->{
+  \begin{alertblock}{Regla del curso}
+    Cada respuesta de la IA es una \textbf{hipótesis}. Nunca acepte una que no haya pasado al menos una prueba estructural y un caso límite.
+  \end{alertblock}}
+\end{frame}
+
+\begin{frame}{Objetivos de aprendizaje}
+  Al finalizar, usted estará en capacidad de:
+  \begin{enumerate}[<+->]
+    \item \textbf{Formular} los vínculos de un sistema como ecuaciones explícitas.
+    \item \textbf{Clasificar} un vínculo (holónomo/anholónomo, esclerónomo/reónomo) \emph{aplicando un criterio de integrabilidad}.
+    \item \textbf{Distinguir} la reducción de la dimensión del espacio de configuración de la restricción sobre las velocidades accesibles.
+    \item \textbf{Construir} $\rv_i=\rv_i(q_1,\dots,q_s,t)$ y evaluar si un conjunto $\{q_j\}$ parametriza la variedad de configuración.
+    \item \textbf{Auditar} una respuesta de IA con una batería explícita de pruebas.
+    \item \textbf{Documentar} la interacción de modo que un tercero la reproduzca.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Conceptos previos}
+  \begin{itemize}
+    \item Sistema de $N$ partículas y sus $3N$ coordenadas; cuerpo rígido libre y sus \textbf{6} grados de libertad.
+    \item Vínculo holónomo $f_j(\rv_1,\dots,\rv_N,t)=0$; conteo $s=3N-k$ para $k$ vínculos holónomos \textbf{independientes}.
+    \item Forma de Pfaff $\sum_j a_j\,dq_j+a_t\,dt=0$; diferencial exacta; factor integrante; derivadas cruzadas.
+    \item Jacobiano, cambio de variables, singularidades de una parametrización.
+    \item Cinemática de rodadura sin deslizamiento.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Política de uso de IA en esta actividad}
+  \small
+  \begin{table}
+  \begin{tabular}{@{}p{3.1cm}p{2.9cm}p{7.4cm}@{}}
+    \toprule
+    \textbf{Fase} & \textbf{Uso de IA} & \textbf{Justificación} \\
+    \midrule
+    1 --- Delegación & \alert{Prohibido} & Identificar vínculos, contarlos y elegir las $q_j$ \emph{es} el objetivo de aprendizaje: quien no sabe hacerlo no puede verificar el resultado. \\
+    2 --- Descripción & Obligatorio & Se evalúa la calidad de la especificación, no la respuesta. \\
+    3 --- Discernimiento & Obligatorio & La respuesta de la IA es el objeto de estudio. \\
+    4 --- Diligencia & Solo álgebra verificable y depuración de código & Toda rederivación se hace a mano y queda registrada. \\
+    \bottomrule
+  \end{tabular}
+  \end{table}
+  \vspace{0.2em}
+  La Ficha de la Fase~1 se entrega con \textbf{marca de tiempo anterior} a la primera interacción registrada en la bitácora.
+\end{frame}
+
+%=====================================================================
+\section{El sistema núcleo}
+%=====================================================================
+
+\begin{frame}{Núcleo común: dos casos que \emph{parecen} el mismo}
+  \begin{block}{Caso A --- rodadura rectilínea}
+    Disco de radio $R$ en un plano vertical \textbf{fijo}, rueda sin deslizar en línea recta.\\
+    Coordenadas candidatas: $(x,\theta)$. \qquad Vínculo: $\ \dot x - R\dot\theta = 0$.
+  \end{block}
+  \pause
+  \begin{block}{Caso B --- el disco puede cambiar de rumbo}
+    Disco vertical de radio $R$ que rueda sin deslizar y \textbf{puede girar alrededor de la vertical} por el punto de contacto.\\
+    Coordenadas candidatas: $(x,y,\varphi,\theta)$, con $\varphi$ el rumbo y $\theta$ el giro propio.
+    \[
+      \dot x = R\,\dot\theta\cos\varphi, \qquad \dot y = R\,\dot\theta\sin\varphi .
+    \]
+  \end{block}
+  \pause
+  \begin{center}
+    \alert{Ambos «ruedan sin deslizar». ¿Pertenecen a la misma clase de vínculo?}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Sistema asignado (según el último dígito del código)}
+  \small
+  \begin{table}
+  \begin{tabular}{@{}cp{11.5cm}@{}}
+    \toprule
+    \textbf{Dígito} & \textbf{Sistema} \\
+    \midrule
+    0, 1 & Péndulo simple plano de longitud $l$ (masa puntual, varilla rígida sin masa). \\
+    2, 3 & Péndulo doble plano, $(l_1,m_1)$, $(l_2,m_2)$. \\
+    4, 5 & Partícula sobre la superficie \textbf{interior} de un cono de semiángulo $\alpha$, vértice en el origen, eje $z$ vertical. \\
+    6, 7 & Péndulo cuyo soporte recorre una circunferencia de radio $a$ en el plano vertical con $\omega$ constante. \\
+    8, 9 & Partícula que desliza sin fricción sobre la superficie \textbf{exterior} de una esfera de radio $R$, partiendo del reposo en el polo. \\
+    \bottomrule
+  \end{tabular}
+  \end{table}
+  Todos los entregables se hacen para el \textbf{núcleo común} \emph{y} para el \textbf{sistema asignado}.
+\end{frame}
+
+%=====================================================================
+\section{Fase 1 --- Delegación (sin IA)}
+%=====================================================================
+
+\begin{frame}{Fase 1 --- Delegación}
+  \begin{quote}\small
+    Acto cognitivo: descomponer la tarea y decidir qué se conserva.\\
+    \textbf{Regla de asignación:} conserve lo que es objetivo de aprendizaje y no puede verificar; delegue lo que es verificable.
+  \end{quote}
+  \pause
+  \textbf{1.1 Ficha de formulación} (para Caso A, Caso B y sistema asignado):
+  \begin{columns}[T]
+    \begin{column}{0.48\textwidth}
+      \small
+      \begin{itemize}
+        \item Esquema con ejes, origen y símbolos definidos.
+        \item Conteo bruto \textbf{con la regla usada} ($3N$ para partículas; $6$ por cuerpo rígido libre).
+        \item Cada vínculo como ecuación numerada, con su forma diferencial.
+        \item Argumento de independencia de los $k$ vínculos.
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.48\textwidth}
+      \small
+      \begin{itemize}
+        \item Clasificación \textbf{con el criterio aplicado explícitamente}.
+        \item $s$; y si hay vínculos no integrables: (dimensión del espacio de configuración, número de velocidades independientes).
+        \item $\{q_j\}$ con su dominio.
+        \item $\rv_i=\rv_i(q_1,\dots,q_s,t)$ para \emph{todas} las partículas.
+        \item Número de condiciones iniciales independientes.
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Fase 1 --- Tabla de delegación}
+  \small
+  \begin{table}
+  \begin{tabular}{@{}p{6.4cm}p{2.4cm}p{4.6cm}@{}}
+    \toprule
+    \textbf{Subtarea} & \textbf{¿Conservo / delego?} & \textbf{¿Por qué? ¿Cómo verifico?} \\
+    \midrule
+    Identificar los vínculos & & \\
+    Clasificarlos & & \\
+    Elegir las $q_j$ & & \\
+    Verificar exactitud de una forma diferencial & & \\
+    Buscar un factor integrante & & \\
+    Álgebra de la condición de integrabilidad & & \\
+    Graficar / integrar numéricamente & & \\
+    Interpretar el resultado & & \\
+    \bottomrule
+  \end{tabular}
+  \end{table}
+  \begin{alertblock}{Restricción}
+    Las tres primeras filas \textbf{deben} quedar del lado humano. Si su tabla las delega, la Fase~1 no cumple su objetivo.
+  \end{alertblock}
+\end{frame}
+
+%=====================================================================
+\section{Fase 2 --- Descripción}
+%=====================================================================
+
+\begin{frame}{Fase 2 --- Descripción: el prompt es la formulación}
+  \begin{quote}\small
+    Una especificación insuficiente \emph{no} produce una respuesta vaga: produce una respuesta segura al problema de libro más común.
+  \end{quote}
+  \pause
+  \begin{enumerate}
+    \item \textbf{Prompt vago}: subespecifique deliberadamente el \textbf{Caso B} (sin decir si el disco puede cambiar de rumbo, sin fijar ejes, sin pedir justificación). Registre la respuesta completa.
+    \pause
+    \item \textbf{Prompt preciso}: misma pregunta, fijando como mínimo\\
+      sistema de referencia y origen $\cdot$ idealizaciones (rígido, delgado, contacto puntual) $\cdot$ si el plano del disco puede rotar respecto de la vertical $\cdot$ significado de cada símbolo $\cdot$ qué se pide (vínculos en forma diferencial, clasificación \textbf{y el criterio de integrabilidad usado}) $\cdot$ formato de la respuesta.
+    \pause
+    \item \textbf{Comparación} (media página): ¿qué supuestos rellenó la IA por su cuenta? ¿Cambian la clasificación y el conteo de $s$? ¿Alguna respuesta declara su propia incertidumbre?
+  \end{enumerate}
+\end{frame}
+
+%=====================================================================
+\section{Fase 3 --- Discernimiento}
+%=====================================================================
+
+\begin{frame}{Batería de verificación V1--V7}
+  \small
+  \begin{table}
+  \begin{tabular}{@{}cp{2.7cm}p{9.4cm}@{}}
+    \toprule
+    & \textbf{Prueba} & \textbf{Pregunta operativa} \\
+    \midrule
+    V1 & Conteo & ¿La regla de partida es la correcta? ¿$s=3N-k$ se aplicó \emph{solo} a vínculos holónomos independientes? \\
+    V2 & Datos iniciales & ¿El número de condiciones iniciales es $2s$? Si excede $2s$, hay vínculos no integrables y la reducción es inválida. \\
+    V3 & Integrabilidad & ¿$\partial a_j/\partial q_k=\partial a_k/\partial q_j$? Si no, ¿existe factor integrante? ¿Se cumple $\omega\wedge d\omega=0$? \\
+    V4 & Accesibilidad & ¿Hay un ciclo cerrado en unas coordenadas que \textbf{cambie} otra? Si sí, ninguna $F(q)=$ cte puede existir. \\
+    V5 & Parametrización & ¿Las $q_j$ determinan unívocamente todos los $\rv_i$? ¿Dónde falla (jacobiano nulo, singularidades)? \\
+    V6 & Tiempo y dimensiones & ¿$\partial\rv_i/\partial t\neq 0$? (esclerónomo vs.\ reónomo). ¿Homogeneidad dimensional? \\
+    V7 & Dominio de validez & ¿Bilateral o unilateral? ¿Hasta qué instante o en qué región vale? \\
+    \bottomrule
+  \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}{Una regla que conviene demostrar, no memorizar}
+  \begin{block}{Formas de Pfaff en dos variables}
+    Una forma de Pfaff autónoma
+    \[
+      a(q_1,q_2)\,dq_1 + b(q_1,q_2)\,dq_2 = 0 ,
+    \]
+    con $a,b$ suaves y no simultáneamente nulas, \textbf{siempre} admite factor integrante local.
+  \end{block}
+  \pause
+  \begin{center}
+    \alert{Extraiga usted la consecuencia sobre el Caso A.}\\[0.4em]
+    ¿Cuántas variables independientes hay en el Caso A? ¿Y en el Caso B?
+  \end{center}
+\end{frame}
+
+\begin{frame}{Fase 3 --- Parte A: auditoría de la transcripción}
+  Para \textbf{cada} afirmación R1--R8 del Anexo:
+  \begin{enumerate}
+    \item Dictamine: \textbf{correcta / incorrecta / parcialmente correcta}.
+    \item Si no es correcta, cite \textbf{el fragmento exacto} que falla.
+    \item Indique \textbf{qué prueba V1--V7} la detecta.
+    \item Escriba la \textbf{versión corregida}, con justificación completa.
+  \end{enumerate}
+  \pause
+  \begin{alertblock}{Advertencia}
+    La transcripción contiene al menos una afirmación \textbf{correcta}. Marcarla como errónea se penaliza igual que no detectar un error: \textbf{la calibración importa tanto como la sospecha}.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}{Anexo --- Transcripción a auditar (1/3)}
+  \small
+  \textit{Prompt utilizado:} «Explícame las coordenadas generalizadas y los vínculos del disco que rueda y de otros sistemas mecánicos típicos.»
+  \vspace{0.6em}
+
+  \textbf{R1.} «Un disco rígido que rueda es un sistema de $N=1$ cuerpo, de modo que se describe con $3N=3$ coordenadas cartesianas, sobre las que después se imponen los vínculos.»
+  \vspace{0.4em}
+
+  \textbf{R2.} «La condición de rodadura sin deslizamiento $\dot x_{cm}-R\dot\theta=0$ involucra velocidades; por lo tanto es un vínculo anholónomo y no admite integración.»
+  \vspace{0.4em}
+
+  \textbf{R3.} «Para el disco vertical que además puede orientarse sobre el plano, las condiciones $\dot x=R\dot\theta\cos\varphi$ y $\dot y=R\dot\theta\sin\varphi$ son dos vínculos, luego $s=4-2=2$ y basta elegir $q=(x,y)$ como coordenadas generalizadas.»
+\end{frame}
+
+\begin{frame}{Anexo --- Transcripción a auditar (2/3)}
+  \small
+  \textbf{R4.} «En la partícula sobre el cono de semiángulo $\alpha$, el vínculo $z=r\cot\alpha$ relaciona dos coordenadas entre sí y depende de la geometría del sistema, por lo que es un vínculo anholónomo, con $s=2$.»
+  \vspace{0.5em}
+
+  \textbf{R5.} «Para el péndulo doble plano con masas puntuales y varillas rígidas: $x_1^2+y_1^2-l_1^2=0$ y $(x_2-x_1)^2+(y_2-y_1)^2-l_2^2=0$ son vínculos holónomos y esclerónomos; con $N=2$ y $3N=6$, la condición de movimiento plano añade $z_1=0$ y $z_2=0$, de modo que $s=6-4=2$ y se puede tomar $q=(\theta_1,\theta_2)$.»
+  \vspace{0.5em}
+
+  \textbf{R6.} «Para el péndulo cuyo soporte recorre una circunferencia con velocidad angular constante $\omega$, el vínculo es holónomo y esclerónomo; por lo tanto la energía mecánica $E=T+V$ se conserva y $s=1$.»
+\end{frame}
+
+\begin{frame}{Anexo --- Transcripción a auditar (3/3)}
+  \small
+  \textbf{R7.} «Las coordenadas generalizadas deben tener dimensiones de longitud, para que las velocidades generalizadas tengan dimensiones de velocidad; por eso conviene usar la longitud de arco $s=l\theta$ en lugar del ángulo $\theta$.»
+  \vspace{0.6em}
+
+  \textbf{R8.} «Una partícula que desliza sobre la superficie exterior de una esfera lisa de radio $R$ obedece el vínculo holónomo $r-R=0$ durante todo el movimiento, de manera que $s=2$ en todo instante.»
+  \vspace{1.2em}
+  \pause
+  \begin{center}
+    \alert{Ocho afirmaciones. Al menos una es correcta. ¿Cuáles sobreviven a V1--V7?}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Fase 3 --- Parte B: auditoría de \emph{su propia} interacción}
+  Aplique la misma batería a la respuesta obtenida con su prompt preciso. Identifique:
+  \begin{itemize}
+    \item errores;
+    \item afirmaciones no verificables;
+    \item afirmaciones correctas pero mal justificadas;
+    \item \textbf{silencios}: lo que la IA omitió y su Ficha de la Fase~1 sí contemplaba.
+  \end{itemize}
+  \pause
+  \begin{block}{Interacción de retorno (obligatoria)}
+    Presente a la IA \textbf{una} de sus correcciones y registre su reacción.
+    ¿Cede sin argumentos? ¿Defiende su posición? ¿Introduce un error nuevo al corregir?\\
+    Comente en tres líneas qué le dice esto sobre \textbf{el valor probatorio de la conformidad de un modelo}.
+  \end{block}
+\end{frame}
+
+%=====================================================================
+\section{Fase 4 --- Diligencia}
+%=====================================================================
+
+\begin{frame}{Fase 4 --- Diligencia}
+  \begin{enumerate}
+    \item \textbf{Rederivación independiente y a mano} de:
+      \begin{itemize}\small
+        \item la integración explícita del vínculo del \textbf{Caso A}, con la constante interpretada físicamente;
+        \item la demostración de que el sistema de vínculos del \textbf{Caso B} no es integrable;
+        \item el conteo de grados de libertad y de datos iniciales en ambos casos;
+        \item el punto o condición donde el vínculo de su sistema asignado deja de ser válido, si aplica.
+      \end{itemize}
+    \pause
+    \item \textbf{Bitácora 4D}: \emph{prompt $\cdot$ respuesta relevante $\cdot$ aceptado/rechazado/corregido $\cdot$ cómo se verificó (prueba V) $\cdot$ error o limitación detectada $\cdot$ razonamiento final propio}.
+    \pause
+    \item \textbf{Declaración de uso de IA}: herramienta y versión, fecha, fases de uso, y la frase\\
+      \emph{«Verifiqué de forma independiente los resultados sobre los que construí; los errores que subsisten son míos».}
+    \pause
+    \item \textbf{Reproducibilidad}: código documentado, tolerancias y semillas declaradas.
+  \end{enumerate}
+\end{frame}
+
+%=====================================================================
+\section{Extensión computacional}
+%=====================================================================
+
+\begin{frame}{Extensión computacional (opcional, recomendada)}
+  Demuestre \textbf{numéricamente} la no integrabilidad del Caso B por accesibilidad (V4).
+  \begin{block}{Tarea}
+    Integre $\ \dot x = R\dot\theta\cos\varphi$, $\ \dot y = R\dot\theta\sin\varphi$, imponiendo que el punto de contacto recorra una circunferencia de radio $R_c$ con rapidez $v$ constante
+    ($\dot\theta=v/R$, $\dot\varphi=v/R_c$) durante $T=2\pi R_c/v$.
+  \end{block}
+  \pause
+  \textbf{Reporte:}
+  \begin{enumerate}\small
+    \item Valores finales de $(x,y,\varphi,\theta)$ frente a los iniciales.
+    \item El argumento: si existiera $F(x,y,\varphi,\theta)=$ cte, un ciclo que devuelve $x,y,\varphi$ debería devolver $\theta$. Verifique $\Delta\theta = 2\pi R_c/R$ y concluya.
+    \item Control de convergencia: dos tolerancias distintas, error en $\Delta\theta$ frente al valor analítico.
+    \item Repita con $R_c/R = 1,\,3,\,10$ y compruebe la ley.
+  \end{enumerate}
+  \pause
+  \begin{center}\small
+    Las ecuaciones se derivan \textbf{antes} de implementarlas. El código puede depurarse con IA;
+    \alert{la interpretación de la salida no se delega.}
+  \end{center}
+\end{frame}
+
+%=====================================================================
+\section{Entregables, defensa y rúbrica}
+%=====================================================================
+
+\begin{frame}{Entregables}
+  \small
+  \begin{enumerate}
+    \item Ficha de formulación (Fase 1), con marca de tiempo previa a la interacción con IA.
+    \item Tabla de delegación.
+    \item Anexo de prompts: vago, preciso y respuestas completas \emph{sin editar}.
+    \item Auditoría R1--R8 en tabla: dictamen $\cdot$ fragmento que falla $\cdot$ prueba V $\cdot$ corrección justificada.
+    \item Auditoría de la interacción propia + comentario de la interacción de retorno.
+    \item Rederivaciones a mano (manuscritas o en \LaTeX).
+    \item Bitácora 4D (seis columnas).
+    \item Declaración de uso de IA.
+    \item (Opcional) Código y figuras de la extensión computacional.
+  \end{enumerate}
+  \vspace{0.3em}
+  \textbf{Formato:} máximo 8 páginas sin contar anexos de transcripciones. Notación consistente con la del curso.
+\end{frame}
+
+\begin{frame}{Defensa oral (5 minutos)}
+  El docente elegirá dos preguntas de variación:
+  \begin{itemize}\small
+    \item Cambio el disco del Caso A por una esfera que rueda sin deslizar sobre el plano. ¿Cambia su conclusión? ¿Por qué?
+    \item Muéstreme en la forma diferencial dónde exactamente falla la exactitud en el Caso B.
+    \item ¿Cuántas condiciones iniciales necesito en el Caso B? ¿Y si el disco pudiera además deslizar?
+    \item Si el disco del Caso A puede despegarse del piso, ¿qué tipo de vínculo aparece?
+    \item Su compañero dice que el Caso B tiene 2 grados de libertad porque hay 2 vínculos. Convénzalo \emph{sin escribir ecuaciones}.
+    \item ¿Puede el vínculo de su sistema asignado ser reónomo si elijo otro sistema de referencia? Argumente.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Rúbrica (100 puntos)}
+  \scriptsize
+  \begin{table}
+  \begin{tabular}{@{}p{4.0cm}cp{8.2cm}@{}}
+    \toprule
+    \textbf{Criterio} & \textbf{Peso} & \textbf{Nivel Ejemplar (4/4)} \\
+    \midrule
+    1. Formulación física propia & 20 & Vínculos, conteo, transformaciones y datos iniciales correctos en ambos casos y en el sistema asignado; dominios y singularidades explícitos. \\
+    2. Delegación & 10 & Conserva identificación, clasificación y elección de $q$; enuncia \emph{cómo} verificaría cada delegación. \\
+    3. Descripción & 15 & El prompt preciso fija marco, idealizaciones, símbolos, criterio y formato; la comparación identifica los supuestos rellenados por la IA. \\
+    4. Discernimiento --- Anexo & 25 & Dictamina correctamente los 8 ítems (incluido R5); cita el fragmento, asigna la prueba V y corrige con justificación completa. \\
+    5. Discernimiento --- interacción propia & 10 & Aplica $\geq 4$ pruebas V con resultado explícito; comenta críticamente la interacción de retorno. \\
+    6. Diligencia & 15 & Rederivaciones completas y correctas; bitácora de seis columnas; declaración firmada; código reproducible. \\
+    7. Comunicación y notación & 5 & Notación consistente; símbolos definidos; extensión respetada. \\
+    \bottomrule
+  \end{tabular}
+  \end{table}
+  \vspace{-0.2em}
+  \textbf{Defensa oral:} $\pm 10$. \quad
+  \textbf{Integridad:} una auditoría correcta cuya bitácora no permita reconstruir el camino no supera el nivel 2 en el criterio 6.
+\end{frame}
+
+%=====================================================================
+\section{Para la discusión}
+%=====================================================================
+
+\begin{frame}{Para la discusión}
+  \begin{enumerate}[<+->]
+    \item ¿Por qué la heurística «hay velocidades $\Rightarrow$ es anholónomo» sobrevive en tantos textos? ¿Qué la hace tan estable en la salida de un asistente de IA?
+    \item Si un vínculo no integrable \emph{no} reduce la dimensión del espacio de configuración, ¿qué es exactamente lo que reduce?
+    \item ¿Qué prueba de V1--V7 habría bastado, por sí sola, para detectar el error de R3?
+    \item ¿Puede una respuesta ser \emph{correcta} y aun así inaceptable como entregable de este curso?
+    \item Si la IA acepta su corrección de inmediato, ¿ha aprendido usted algo sobre si tenía razón?
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}{Recapitulando}
+  \begin{enumerate}
+    \item \textbf{Criterio, no mnemotecnia:} la presencia de velocidades es condición \emph{necesaria}, no suficiente, para la no holonomía.
+    \item \textbf{Dos reducciones distintas:} los vínculos holónomos reducen la dimensión del espacio de configuración; los no integrables restringen las velocidades accesibles.
+    \item \textbf{Las 4D en cadena:} Delegación $\to$ Descripción $\to$ Discernimiento $\to$ Diligencia, unidas por la compuerta de verificación.
+    \item \textbf{La calibración es parte de la competencia:} detectar todo lo falso \emph{y} no marcar lo verdadero.
+  \end{enumerate}
+\end{frame}
+
+%=====================================================================
+%  CLAVE DEL DOCENTE --- comentar antes de distribuir a estudiantes
+%=====================================================================
+\appendix
+
+\begin{frame}{\textsc{Clave del docente} --- dictamen R1--R8}
+  \small
+  \begin{table}
+  \begin{tabular}{@{}ccp{8.6cm}@{}}
+    \toprule
+    \textbf{Ítem} & \textbf{Dictamen} & \textbf{Prueba / motivo} \\
+    \midrule
+    R1 & Incorrecta & V1: $3N$ vale para partículas; un cuerpo rígido libre tiene 6 g.d.l.; el Caso B usa $(x,y,\varphi,\theta)$. \\
+    R2 & \alert{Incorrecta} & V3: $dx-R\,d\theta$ es exacta $\Rightarrow x-R\theta=$ cte. Holónomo y esclerónomo, $s=1$. \\
+    R3 & Incorrecta (dos errores) & V2--V5: no integrable \emph{y} los vínculos no integrables no reducen el espacio de configuración. \\
+    R4 & Parcialmente correcta & V3: $z=r\cot\alpha$ es holónomo y esclerónomo; $s=2$ sí es correcto. \\
+    R5 & \textbf{Correcta} & Control de falsos positivos: $s=6-4=2$, $q=(\theta_1,\theta_2)$. \\
+    R6 & Parcialmente correcta & V6: holónomo pero \textbf{reónomo}; $E=T+V$ no se conserva; $s=1$ correcto. \\
+    R7 & Incorrecta & V6: las $q_j$ pueden tener dimensiones distintas o ninguna; $[p_jq_j]=$ acción. \\
+    R8 & Incorrecta & V7: vínculo \textbf{unilateral} $r\ge R$; se pierde en $\cos\theta_c=2/3$. \\
+    \bottomrule
+  \end{tabular}
+  \end{table}
+\end{frame}
+
+\begin{frame}{\textsc{Clave del docente} --- los dos puntos centrales}
+  \small
+  \begin{block}{Caso A es holónomo (R2)}
+    $\omega = dx - R\,d\theta$, con $\partial(1)/\partial\theta = \partial(-R)/\partial x = 0$: exacta.
+    $\Rightarrow x-R\theta=$ cte (posición del contacto cuando $\theta=0$); $s = 2-1 = 1$, $q=\theta$.
+    Refuerzo: en dos variables \emph{siempre} hay factor integrante $\Rightarrow$ la no holonomía exige al menos tres variables.
+  \end{block}
+  \begin{block}{Caso B no es integrable (R3)}
+    Con $\omega_1 = dx - R\cos\varphi\,d\theta$: \ $d\omega_1 = R\sin\varphi\,d\varphi\wedge d\theta$, luego
+    \[\omega_1\wedge d\omega_1 = R\sin\varphi\;dx\wedge d\varphi\wedge d\theta \neq 0 \quad\text{(Frobenius falla).}\]
+    Configuración: 4 coordenadas accesibles; velocidades independientes: 2; datos iniciales: $4+2=6 \neq 2s=4$.
+    Accesibilidad: rodando por una circunferencia de radio $R_c$ el disco regresa a $(x,y)$ y a $\varphi$, pero $\Delta\theta = 2\pi R_c/R$.
+    \emph{(Verificado numéricamente: $R=1$, $R_c=3$ $\Rightarrow$ $x,y\sim10^{-13}$, $\varphi/2\pi = 1.000$, $\theta = 18.8496 = 6\pi$.)}
+  \end{block}
+\end{frame}
+
+\begin{frame}{\textsc{Clave del docente} --- errores frecuentes e intervención}
+  \scriptsize
+  \begin{table}
+  \begin{tabular}{@{}p{4.6cm}p{4.2cm}p{5.0cm}@{}}
+    \toprule
+    \textbf{Error} & \textbf{Señal en el entregable} & \textbf{Intervención} \\
+    \midrule
+    Clasificar por presencia de velocidades & R2 marcado anholónomo «porque hay $\dot x$» & Exigir el cálculo de derivadas cruzadas antes del dictamen. \\
+    Aplicar $s=3N-k$ a vínculos no integrables & $s=2$ en el Caso B & Pedir el conteo de condiciones iniciales (V2). \\
+    Confundir cuerpo rígido con partícula & $3N=3$ en R1 & Preguntar cuántos ángulos orientan el disco. \\
+    Elegir $q$ que no parametrizan & $q=(x,y)$ en el Caso B & Pedir escribir $\rv_i(q,t)$: el intento falla solo. \\
+    Confundir esclerónomo con «el movimiento no depende del tiempo» & R6 clasificado esclerónomo & Pedir $\partial\rv/\partial t$ explícita. \\
+    Marcar R5 como error & Falso positivo & Discutir el costo epistémico de la sospecha indiscriminada. \\
+    Aceptar que la IA «acepte» la corrección & Bitácora sin verificación posterior & La conformidad del modelo no es evidencia. \\
+    \bottomrule
+  \end{tabular}
+  \end{table}
+\end{frame}
+
+\end{document}

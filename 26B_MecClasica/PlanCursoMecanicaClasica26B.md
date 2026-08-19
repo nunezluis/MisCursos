@@ -109,8 +109,7 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 + **Rehaga** los ejemplos 1. (p35), 3. (p37), 4. (p39), 1. (p49), 3. (p41), 5. (p52), 6. (p54)
 
 #### Problemas S2
-<! -->
---Desarrolle los problemas del [260818](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)
+--> Desarrolle los problemas del [260818](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)
 
 #### Materiales
 + Presentaciones
@@ -129,6 +128,10 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
   + [Lagrangian and Hamiltonian Mechanics](Lagrangian and Hamiltonian Mechanics)
   + [Newtonian/Lagrangian/Hamiltonian mechanics are not equivalent](https://www.youtube.com/watch?v=9VNW7NHwnuM)
   + [La historia bien bonita del principio de mínima acción](https://youtu.be/Q10_srZ-pbs?si=eZM-zbC1_tUHcuz4)
+
+#### Interactuando con la IA
+A continuación un par de ejercicios programado para interactuar con cualquier agente IA siguiendo la metodología 4D
++ [Coordenadas generalizadas y vínculos]() 
 
 #### Al finalizar la semana
 Al finalizar esta semana habremos cubierto los siguientes puntos
