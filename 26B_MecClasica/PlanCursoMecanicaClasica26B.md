@@ -113,7 +113,7 @@ Esta semana nos toca empezar el curso y comenzamos por definir el espacio de con
 
 #### Materiales
 + Presentaciones
-  + [Coordenadas Generalizadas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S2CoordGeneralizadas.pdf)
+  + [Coordenadas Generalizadas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S2T1CoordGeneralizadas.pdf)
   + [Cálculo Variacional](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S2T2Variacional.pdf)
   + [Tiempo mínimo: la Braquistocrona y el principio de Fermat](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S2T3Braquistocrona.pdf)
   + [Principio de Mínima Acción y las ecuaciones de Lagrange](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S3T4EcLagrange.pdf)
