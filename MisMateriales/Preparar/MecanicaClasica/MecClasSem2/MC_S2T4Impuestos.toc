@@ -1,0 +1,4 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Formulaci\'on del Problema}{3}{0}{1}
+\beamer@sectionintoc {2}{Secci\'on}{5}{0}{2}
+\beamer@sectionintoc {3}{Recapitulando}{6}{0}{3}

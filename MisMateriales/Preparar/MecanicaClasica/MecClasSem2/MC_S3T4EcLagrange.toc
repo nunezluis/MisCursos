@@ -7,3 +7,4 @@
 \beamer@subsectionintoc {5}{1}{Lagrangeanos equivalentes}{29}{0}{5}
 \beamer@subsectionintoc {5}{2}{Invariancia respecto a transformaciones de coordenadas generalizadas}{33}{0}{5}
 \beamer@sectionintoc {6}{Recapitulando}{43}{0}{6}
+\beamer@sectionintoc {7}{Para la discusi\'on}{48}{0}{7}
