@@ -244,7 +244,7 @@ Al finalizar esta semana habremos cubierto los siguientes puntos
 
 
 #### Problemas S3
-<!-- Desarrolle los problemas del [240823](https://www.overleaf.com/read/qfmyrjrznngf#e945e4)-->
+Desarrolle el ejerccio planteado en [esta presentación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S3T1_EjercicioNoether.pdf)
 
 #### **Resumen de Conceptos Clave**  
 
