@@ -6,8 +6,8 @@
 \beamer@subsectionintoc {2}{1}{Transformaciones cont\IeC {\'\i }nuas}{30}{0}{2}
 \beamer@subsectionintoc {2}{2}{Ejemplo: Coordenada c\IeC {\'\i }clica}{35}{0}{2}
 \beamer@subsectionintoc {2}{3}{Ejemplo: Part\IeC {\'\i }cula en campo gravitatorio}{40}{0}{2}
-\beamer@sectionintoc {3}{Homogeneidad del espacio y conservaci\'on del momento lineal}{44}{0}{3}
-\beamer@sectionintoc {4}{Isotrop\IeC {\'\i }a del espacio y conservaci\'on del momento angular}{56}{0}{4}
-\beamer@subsectionintoc {4}{1}{Ejemplo: Oscilador arm\'onico bidimensional}{68}{0}{4}
-\beamer@sectionintoc {5}{Homogeneidad del tiempo y conservaci\'on de la energ\IeC {\'\i }a}{77}{0}{5}
-\beamer@sectionintoc {6}{Recapitulando}{84}{0}{6}
+\beamer@sectionintoc {3}{Homogeneidad del espacio y conservaci\'on del momento lineal}{45}{0}{3}
+\beamer@sectionintoc {4}{Isotrop\IeC {\'\i }a del espacio y conservaci\'on del momento angular}{57}{0}{4}
+\beamer@subsectionintoc {4}{1}{Ejemplo: Oscilador arm\'onico bidimensional}{69}{0}{4}
+\beamer@sectionintoc {5}{Homogeneidad del tiempo y conservaci\'on de la energ\IeC {\'\i }a}{78}{0}{5}
+\beamer@sectionintoc {6}{Recapitulando}{85}{0}{6}
