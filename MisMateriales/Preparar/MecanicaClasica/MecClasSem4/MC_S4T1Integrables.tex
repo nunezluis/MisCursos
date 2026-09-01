@@ -41,12 +41,12 @@
 \frame{
   \frametitle{Primeras integrales del movimiento}
    \begin{itemize}  
-  	\item<1-> Las cantidades conservadas, $I_k\left(q_j, \dot{q}_j\right)=C_k$, donde $C_k=$ constante, y $k=1, \ldots, n$
+  	\item<1-> Las cantidades conservadas, $\mathcal{I}_k\left(q_j, \dot{q}_j\right)=C_k$, donde $C_k=$ constante, y $k=1, \ldots, n$
 , son primeras integrales del movimiento de un sistema.
 	\item<2-> Un sistema con $s$ grados de libertad es integrable si posee $s$ cantidades conservadas; es decir, si $n=s$.
-	\item<3-> A partir de esa integración las demás coordenadas pueden, en principio, ser integradas. 
-	\item<4-> Un sistema para el cual existen más cantidades conservadas que grados de libertad $(n>s)$ se llama superintegrable.
-	\item<5-> El ejemplo más simple de sistema superintegrable es una partícula libre. Otro ejemplo es el problema de dos cuerpos sujetos a interacción gravitacional.
+	\item<3-> A partir de esa integración, las demás coordenadas pueden, en principio, integrarse. 
+	\item<4-> Un sistema para el cual hay más cantidades conservadas que grados de libertad $(n>s)$ se llama superintegrable.
+	\item<5-> El ejemplo más simple de un sistema superintegrable es una partícula libre. Otro ejemplo es el problema de dos cuerpos sometidos a interacción gravitatoria.
 	\item<6-> Si un sistema con $s$ grados de libertad tiene menos de $s$ cantidades conservadas $(n<s)$, se denomina no integrable.
    \end{itemize}
 }
@@ -60,11 +60,11 @@
 	\begin{itemize}
 		\item Oscilador armónico simple: $s=1 ; C_1=E=$ cte, $n=1$; es integrable.
 		\item  Péndulo simple: $s=1 ; C_1=E=\mathrm{cte}, n=1$; es integrable.
-		\item  Partícula sobre un cono: $s=2, C_1=l_z=$ cte, $C_2=E=$ cte, $n=2$; es integrable.
+		\item  Partícula sobre un cono: $s=2, C_1=L_z=$ cte, $C_2=E=$ cte, $n=2$; es integrable.
 		\item  Péndulo doble: $s=2 ; C_1=E=$ cte, $n=1$; no es integrable.
-		\item  Péndulo cuyo soporte gira en un círculo en plano vertical con velocidad angular constante: $s=1, n=0$; no es integrable.
+		\item  Péndulo cuyo soporte gira en un círculo en un plano vertical con velocidad angular constante: $s=1, n=0$; no es integrable.
 		\item  Péndulo de resorte: $s=2 ; C_1=E=$ cte, $n=1$; no es integrable.
-		\item  Péndulo paramétrico cuya longitud varía en el tiempo: $s=1, n=0$; no es integrable.
+		\item  Péndulo paramétrico cuya longitud varía con el tiempo: $s=1, n=0$; no es integrable.
 		\item  Partícula libre es superintegrable: $s=3 ; n=4$ : $C_1=E=$ cte, $C_2=p_x=$ cte, $C_2=p_y=\mathrm{cte}, C_2=p_z=\mathrm{cte}$.
 	\end{itemize}  
 	\item<2-> La integrabilidad es un tipo de simetría presente en varios sistemas dinámicos, y que conduce a una evolución regular (periódica o estacionaria) de las variables del sistema en el tiempo
@@ -76,25 +76,25 @@
 \frame{
   \frametitle{Integrabilidad }
    \begin{itemize}  
-	\item<1->  El Lagrangiano de un sistema unidimensional con coordenada $q$ tiene la forma general $L=T\left(\dot{q}^2\right)-V_{e f}(q)=\frac{1}{2} a \dot{q}^2-V_{\mathrm{ef}}(q)$, donde $a$ representa masa, longitud, etc., y $V_{\text {ef }}(q)$ es un potencial efectivo que depende de la coordenada $q$, 
+	\item<1->  El Lagrangiano de un sistema unidimensional con coordenada $q$ tiene la forma general $\mathcal{L}=T\left(\dot{q}^2\right)-V_{e f}(q)=\frac{1}{2} a \dot{q}^2-V_{\rm ef}(q)$, donde $a$ representa masa, longitud, etc., y $V_{\text {ef }}(q)$ es un potencial efectivo que depende de la coordenada $q$, 
 	\item<2->  Como $\frac{\partial L}{\partial t}=0$, la función de energía se conserva
 	\item<3->  Hay un grado de libertad y una cantidad conservada; el sistema es integrable.
-	\item<4-> Como $E =cte$, se determina $t(q)$ en términos de una integral explícita, $\dot{q} =\frac{{\rm d} q}{{\rm d} t}=\sqrt{\frac{2}{a}\left(E-V_{\mathrm{ef}}(q)\right)} \Rightarrow t(q)  =\int \sqrt{\frac{a}{2}} \frac{{\rm d} q}{\sqrt{E-V_{\mathrm{ef}}(q)}}+\text { cte. }$
+	\item<4-> Como $E =cte$, se determina $t(q)$ en términos de una integral explícita, $\dot{q} =\frac{{\rm d} q}{{\rm d} t}=\sqrt{\frac{2}{a}\left(E-V_{\rm ef}(q)\right)} \Rightarrow t(q)  =\int \sqrt{\frac{a}{2}} \frac{{\rm d} q}{\sqrt{E-V_{\rm ef}(q)}}+\text { cte. }$
 	\item<5-> En principio, se puede invertir $t(q)$ para obtener $q(t)$. 
-	\item<6-> Para que la solución $q(t)$ sea real, el movimiento puede ocurrir solamente para valores de $q$ tales que $E \geq V_{\mathrm{ef}}(q)$.
-	\item<7-> La condición de integrabilidad de sistemas unidimensionales permite calcular el período de movimientos oscilatorios en esos sistemas.
+	\item<6-> Para que la solución $q(t)$ sea real, el movimiento puede ocurrir únicamente para valores de $q$ tales que $E \geq V_{\rm ef}(q)$.
+	\item<7-> La condición de integrabilidad de los sistemas unidimensionales permite calcular el período de los movimientos oscilatorios en dichos sistemas.
    \end{itemize}
 }
 %
 %%%%% Diapo 2
 \section{Movimiento de una partícula en un potencial, arbitrario $V(x)$}
-\subsection{El Lagrangeano, la Energía y los puntos de retorno}
+\subsection{El Lagrangeano, la energía y los puntos de retorno}
 \frame{
   \frametitle{Movimiento de una partícula en un potencial $V(x)$}
    \begin{itemize}  
-  	\item<1-> Consideremos un sistema descrito por el Lagrangiano $L=T-V=\frac{1}{2} m \dot{x}^2-V(x)$, con la ecuación de  movimiento $m \ddot{x}=-\frac{{\rm d} V}{{\rm d} x}$
+  	\item<1-> Consideremos un sistema descrito por el Lagrangiano $\mathcal{L}=T-V=\frac{1}{2} m \dot{x}^2-V(x)$, con la ecuación de  movimiento $m \ddot{x}=-\frac{{\rm d} V}{{\rm d} x}$
 	\item<2-> La energía total constante es $E=\frac{1}{2} m \dot{x}^2+V(x)$ y podemos integrar $\frac{{\rm d} x}{{\rm d} t} = \sqrt{\frac{2}{m}}\sqrt{E-V(x)} \Rightarrow t(x)=\sqrt{\frac{m}{2}} \int \frac{{\rm d} x}{\sqrt{E-V(x)}}$
-	\item<3-> Como $\frac{1}{2} m \dot{x}^2=E-V(x) \geq 0$, el movimiento sólo puede ocurrir para $E \geq V(x)$.
+	\item<3-> Como $\frac{1}{2} m \dot{x}^2=E-V(x) \geq 0$, el movimiento sólo puede ocurrir si $E \geq V(x)$.
 	\item<4-> Los puntos de retorno son aquellos para $V(x)=E$. Es decir, $x_1, x_2$ y $x_3$ son puntos de retorno  $V\left(x_1\right)=E, V\left(x_2\right)=E, V\left(x_3\right)=E$
 	\begin{figure}[t]
 		\includegraphics[width=2.0in]{Figuras/Potencial.png}
@@ -128,7 +128,7 @@
 	$V(x)=\left.\frac{1}{2} \frac{{\rm d}^2 V}{{\rm d} x^2}\right|_{x_0}\left(x-x_0\right)^2=\frac{1}{2} K\left(x-x_0\right)^2$, donde $K \equiv \left.\frac{{\rm d}^2 V}{{\rm d}    x^2}\right|_{x_0}=\text { constante }>0$
 	\item<4-> $V(x)$ posee la misma forma funcional del oscilador armónico.
 	\item<5-> Su ecuación de movimiento $m \ddot{\eta}  =-K(x-x_0)=-K \eta$, entonces 
-	$\Rightarrow \ddot{\eta}+\omega^2 \eta=0 \Rightarrow \omega^2 \equiv \frac{K}{m}=\frac{1}{m} \left.\frac{d^2 V}{d x^2}\right|_{x_0} \Leftrightarrow \quad \omega^2=\left.\frac{1}{a} \frac{\partial^2 V_{\mathrm{ef}}}{\partial q^2}\right|_{q_0}$
+	$\Rightarrow \ddot{\eta}+\omega^2 \eta=0 \Rightarrow \omega^2 \equiv \frac{K}{m}=\frac{1}{m} \left.\frac{d^2 V}{d x^2}\right|_{x_0} \Leftrightarrow \quad \omega^2=\left.\frac{1}{a} \frac{\partial^2 V_{\rm ef}}{\partial q^2}\right|_{q_0}$
     \end{itemize}
 }
 %
