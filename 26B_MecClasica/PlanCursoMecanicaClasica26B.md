@@ -280,7 +280,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
      - **Péndulo doble** ($s = 2, n = 1$).
      - **Péndulo de resorte** ($s = 2, n = 1$).
      - **Péndulo paramétrico con longitud variable** ($s = 1, n = 0$).
-   - **Ejemplo de sistema superintegrable**: **Partícula libre** ($s = 3, n = 4$, conserva energía y momentos lineales en cada dirección).
+   - **Ejemplo de sistema superintegrable**: **Partícula libre** ($s = 3, n = 6$, los momentos lineales y angulares en cada dirección).
 
 ##### **3. Integrabilidad**
    - Un sistema unidimensional con coordenada$q$tiene un Lagrangiano:
@@ -290,7 +290,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
    $$t(q) = \sqrt{\frac{a}{2}} \int \frac{dq}{\sqrt{E - V_{\text{ef}}(q)}}$$
    - **Condición de integrabilidad**: permite calcular períodos de oscilación en sistemas oscilatorios.
 
-##### **4. Ejemplo: Movimiento en un Potencial$V(x)$**
+##### ** 4. Ejemplo: Movimiento en un Potencial $V(x)$ **
    - Un sistema con Lagrangiano: $L=\frac{1}{2}m\dot{x}^2 - V(x)$
    - La ecuación de movimiento: $m \ddot{x} = -\frac{dV}{dx}$
    - **Puntos de equilibrio**: Se encuentran en$x_0$cuando$\frac{dV}{dx} = 0$.
