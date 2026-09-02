@@ -41,12 +41,11 @@
 \frame{
   \frametitle{Primeras integrales del movimiento}
    \begin{itemize}  
-  	\item<1-> Las cantidades conservadas, $\mathcal{I}_k\left(q_j, \dot{q}_j\right)=C_k$, donde $C_k=$ constante, y $k=1, \ldots, n$
-, son primeras integrales del movimiento de un sistema.
-	\item<2-> Un sistema con $s$ grados de libertad es integrable si posee $s$ cantidades conservadas; es decir, si $n=s$.
+  	\item<1-> Las cantidades conservadas, $\mathcal{I}_k\left(q_j, \dot{q}_j\right)=C_k$, donde $C_k=$ constante, y $k=1, \ldots, n$ , son primeras integrales del movimiento de un sistema.
+	\item<2-> Un sistema con $s$ grados de libertad es integrable si posee $s$ cantidades conservadas; es decir, si $n=s$. Luego exigiremos que su paréntesis de Poisson se anule $\left\{ \mathcal{I}_k, \mathcal{I}_l \right\} = 0$ (involución)
 	\item<3-> A partir de esa integración, las demás coordenadas pueden, en principio, integrarse. 
 	\item<4-> Un sistema para el cual hay más cantidades conservadas que grados de libertad $(n>s)$ se llama superintegrable.
-	\item<5-> El ejemplo más simple de un sistema superintegrable es una partícula libre. Otro ejemplo es el problema de dos cuerpos sometidos a interacción gravitatoria.
+	\item<5-> El ejemplo más simple de un sistema superintegrable es una partícula libre. Otro ejemplo es el problema de dos cuerpos sometidos a una interacción gravitatoria.
 	\item<6-> Si un sistema con $s$ grados de libertad tiene menos de $s$ cantidades conservadas $(n<s)$, se denomina no integrable.
    \end{itemize}
 }
@@ -65,19 +64,19 @@
 		\item  Péndulo cuyo soporte gira en un círculo en un plano vertical con velocidad angular constante: $s=1, n=0$; no es integrable.
 		\item  Péndulo de resorte: $s=2 ; C_1=E=$ cte, $n=1$; no es integrable.
 		\item  Péndulo paramétrico cuya longitud varía con el tiempo: $s=1, n=0$; no es integrable.
-		\item  Partícula libre es superintegrable: $s=3 ; n=4$ : $C_1=E=$ cte, $C_2=p_x=$ cte, $C_2=p_y=\mathrm{cte}, C_2=p_z=\mathrm{cte}$.
+		\item  Partícula libre es superintegrable: $s=3 ; n=6$ :  $C_1=p_x=$ cte, $C_2=p_y=$cte, $C_3=p_z=$cte, $C_4=L_x=$ cte, $C_5=L_y=$cte, $C_6=L_z=$cte.  Note que $\frac{{\rm d}{\bf L}}{{\rm d}t} = {\bf v} \times {\bf p} = 0$, además $E = \frac{p_x^2}{2m} +\frac{p_y^2}{2m} +\frac{p_z^2}{2m} $
 	\end{itemize}  
 	\item<2-> La integrabilidad es un tipo de simetría presente en varios sistemas dinámicos, y que conduce a una evolución regular (periódica o estacionaria) de las variables del sistema en el tiempo
     \end{itemize}
 }
 %
-%%%%% Diapo 2
+%%%%% Diapo 3
 \section{Integrabilidad }
 \frame{
   \frametitle{Integrabilidad }
    \begin{itemize}  
 	\item<1->  El Lagrangiano de un sistema unidimensional con coordenada $q$ tiene la forma general $\mathcal{L}=T\left(\dot{q}^2\right)-V_{e f}(q)=\frac{1}{2} a \dot{q}^2-V_{\rm ef}(q)$, donde $a$ representa masa, longitud, etc., y $V_{\text {ef }}(q)$ es un potencial efectivo que depende de la coordenada $q$, 
-	\item<2->  Como $\frac{\partial L}{\partial t}=0$, la función de energía se conserva
+	\item<2->  Como $\frac{\partial \mathcal{L}}{\partial t}=0$, la función de energía se conserva
 	\item<3->  Hay un grado de libertad y una cantidad conservada; el sistema es integrable.
 	\item<4-> Como $E =cte$, se determina $t(q)$ en términos de una integral explícita, $\dot{q} =\frac{{\rm d} q}{{\rm d} t}=\sqrt{\frac{2}{a}\left(E-V_{\rm ef}(q)\right)} \Rightarrow t(q)  =\int \sqrt{\frac{a}{2}} \frac{{\rm d} q}{\sqrt{E-V_{\rm ef}(q)}}+\text { cte. }$
 	\item<5-> En principio, se puede invertir $t(q)$ para obtener $q(t)$. 
@@ -86,9 +85,9 @@
    \end{itemize}
 }
 %
-%%%%% Diapo 2
+%%%%% Diapo 4
 \section{Movimiento de una partícula en un potencial, arbitrario $V(x)$}
-\subsection{El Lagrangeano, la energía y los puntos de retorno}
+\subsection{El lagrangiano, la energía y los puntos de retorno}
 \frame{
   \frametitle{Movimiento de una partícula en un potencial $V(x)$}
    \begin{itemize}  
@@ -102,26 +101,26 @@
    \end{itemize}
 } 
 %
-%%%%% Diapo 2
+%%%%% Diapo 5
 \subsection{Los puntos de equilibrio, retorno y período}
 \frame{
   \frametitle{Los puntos de equilibrio, retorno y período}
    \begin{itemize}  
-  	\item<1-> Los puntos de equilibrio $x=x_0$ son aquellos donde la fuerza instantánea se anula: $f\left(x_0\right)=\left.0 \Rightarrow \frac{{\rm d} V}{{\rm d} x}\right|_{x_0}=0$
-	\item<2-> Un punto estático: velocidad y aceleración se anulan, $\ddot{x}=0, \dot{x}=0$.
-	\item<3->  Un punto de equilibrio $x_0$ es estable si $x=x_0+\eta$, donde $\eta$ es un pequeño desplazamiento, tiende a $x=x_0$ al aumentar el tiempo y corresponde a un mímino del potencial $V(x)$. Es decir $\left.\frac{{\rm d}^2 V}{{\rm d} x^2}\right|_{x_0}>0, \quad x_0$ es un punto de equilibrio estable
+  	\item<1-> Los puntos de equilibrio $x=x_0$ son aquellos en los que la fuerza instantánea se anula: $f\left(x_0\right)=\left.0 \Rightarrow \frac{{\rm d} V}{{\rm d} x}\right|_{x_0}=0$
+	\item<2-> Un punto estático: la velocidad y la aceleración se anulan, $\ddot{x}=0, \dot{x}=0$.
+	\item<3->  Un punto de equilibrio $x_0$ es estable si $x=x_0+\eta$, donde $\eta$ es un pequeño desplazamiento, tiende a $x=x_0$ al aumentar el tiempo y corresponde a un mínimo del potencial $V(x)$. Es decir $\left.\frac{{\rm d}^2 V}{{\rm d} x^2}\right|_{x_0}>0, \quad x_0$ es un punto de equilibrio estable
 	\item<4-> Un punto de equilibrio es inestable si el potencial $V(x)$ presenta un máximo en ese punto. Entonces $\left.\quad \frac{{\rm d}^2 V}{{\rm d} x^2}\right|_{x_0}<0, \quad x_0$ es un punto de equilibrio inestable.
 	\item<5-> El período de oscilación entre los puntos de retorno $x_1$ y $x_2$ es dos veces el intervalo de tiempo del movimiento entre esos puntos, $\tau_p(E)=2 \sqrt{\frac{m}{2}} \int_{x_1}^{x_2} \frac{{\rm d} x}{\sqrt{E-V(x)}}$
     \end{itemize}
 }
 % 
 %
-%%%%% Diapo 2
+%%%%% Diapo 6
 \subsection{Pequeñas oscilaciones en potenciales arbitrarios}
 \frame{
   \frametitle{Pequeñas oscilaciones en potenciales arbitrarios}
   \begin{itemize}  
-	\item<1-> Para un valor de $x$ cerca de un punto de equilibrio estable $x_0$, el potencial $V(x)$ puede expresarse mediante una expansión de Taylor alrededor de $x=x_0$. Esto es 
+	\item<1-> Para un valor de $x$ cercano a un punto de equilibrio estable $x_0$, el potencial $V(x)$ puede expresarse mediante una expansión de Taylor en torno a $x=x_0$. Esto es 
 	$V(x)=V\left(x_0\right) +\cancelto{0}{\left.\frac{{\rm d} V}{{\rm d} x}\right|_{x_0}}\left(x-x_0\right) +\left.\frac{1}{2} \frac{{\rm d}^2 V}{{\rm d} x^2}\right|_{x_0}\left(x-x_0\right)^2+\cdots$, donde $V\left(x_0\right)$ es un valor constante y el segundo término se anula debido a la condición de equilibrio. 
 	\item<2-> Consideremos un pequeño desplazamiento $\eta$ alrededor de $x_0$, entonces  $x=x_0+\eta$ donde $\eta \rightarrow 0\left(\eta / x_0 \ll 1\right)$.
 	\item<3-> Despreciando términos en potencias de $\eta$ de orden superior al cuadrático, tendremos 
@@ -132,66 +131,53 @@
     \end{itemize}
 }
 %
-%%%%% Diapo 2
+%%%%% Diapo 7
 \section{Recapitulando}
 \frame{
 \frametitle{Recapitulando}
 \begin{itemize}  
-	\item<1-> Esta presentación explora los conceptos de {\bf sistemas integrables}, {\bf no integrables}, {\bf superintegrables} y sus implicaciones en la dinámica de sistemas físicos.
-	\item<2->   {\bf Sistemas integrables} permiten una evolución predecible con soluciones exactas.
+	\item<1-> Esta presentación explora los conceptos de {\bf sistemas integrables}, {\bf no integrables} y {\bf superintegrables}, así como sus implicaciones.
+	\item<2->   {\bf Sistemas integrables} permiten una evolución predecible mediante soluciones exactas.
 	\begin{itemize}
 		\item Oscilador armónico simple (\( s = 1, n = 1 \)).
 		\item Péndulo simple (\( s = 1, n = 1 \)).
 		\item Partícula sobre un cono (\( s = 2, n = 2 \),  momento angular y energía).
 	\end{itemize}
-	\item<3-> {\bf Sistemas no integrables} pueden mostrar caos dinámico.
+	\item<3-> {\bf Sistemas no integrables} pueden presentar caos dinámico.
 	\begin{itemize}
 		\item Péndulo doble (\( s = 2, n = 1 \)).
 		\item Péndulo de resorte (\( s = 2, n = 1 \)).
 		\item Péndulo paramétrico con longitud variable (\( s = 1, n = 0 \)).
 	\end{itemize}
-	\item<4-> La {\bf superintegrabilidad} es una propiedad especial de ciertos sistemas con más constantes de movimiento que grados de libertad. La partícula libre (\( s = 3, n = 4 \), energía y 3 momentos lineales).
-	\item<5-> Movimiento en un Potencial \( V(x) \):  Puntos de equilibrio \( \left. \frac{dV}{dx}\right|_{x_0} = 0 \). Estables: Si \( \frac{d^2V}{dx^2} > 0 \); Inestables: Si \( \frac{d^2V}{dx^2} < 0 \); Cálculo del período.
+	\item<4-> La {\bf superintegrabilidad} es una propiedad de ciertos sistemas con más constantes de movimiento que grados de libertad. La partícula libre (\( s = 3, n = 6 \) ), 3 momentos angulares y 3 momentos lineales). La energía depende de los momentos lineales.
+	\item<5-> Movimiento en un potencial \( V(x) \):  Puntos de equilibrio \( \left. \frac{dV}{dx}\right|_{x_0} = 0 \). Estables: Si \( \frac{d^2V}{dx^2} > 0 \); Inestables: si \( \frac{d^2V}{dx^2} < 0 \); Cálculo del período.
     \end{itemize}
 }
 %
-%%%%% Diapo 2
+%%%%% Diapo 8
 \section{Para la discusión}
 \frame{
 \frametitle{Para la discusión}
 \begin{itemize}  
-	\item<1-> Considere el oscilador armónico para una energía $E$ conocida.
+	\item<1-> Considere el oscilador armónico con una energía $E$ conocida.
 		\begin{itemize}
 		\item ¿El sistema es integrable? ¿Por qué? 
 		\item Encuentre el punto de equilibrio, los puntos de retorno y el período.
 	\end{itemize} 
-	\item<2-> Considere el péndulo simple para una energía $E$ conocida y arbitraria. 
+	\item<2-> Considere el péndulo simple con una energía $E$ conocida y arbitraria. 
 	\begin{itemize}
 		\item ¿El sistema es integrable? ¿Por qué? Encuentre el punto de equilibrio, los puntos de retorno y el período.
-		\item ¿depende el período de la masa? ¿Depende el período de la energía?
+		\item ¿Depende el período de la masa? ¿Depende el período de la energía?
 	\end{itemize} 
-	\item<3-> Considere una partícula de masa $m$ moviéndose sobre la superficie de un cono vertical con ángulo de vértice $\alpha$. 
+	\item<3-> Considere una partícula de masa $m$ que se mueve sobre la superficie de un cono vertical con ángulo de vértice $\alpha$. 
 	\begin{itemize}
-		\item ¿El sistema es integrable? ¿Por qué? Encuentre el Lagrangeano y las primeras integrales
+		\item ¿El sistema es integrable? ¿Por qué? Encuentre el lagrangiano y las primeras integrales
 		\item Encuentre los puntos de equilibrio, retorno y frecuencia para pequeñas oscilaciones
 	\end{itemize}
 \end{itemize}	
 }
 \end{document}
 
-%
-%%%%% Diapo 2
-\section{Sección}
-\frame{
-\frametitle{Título transparencia}
-\begin{itemize}  
-	\item<1-> Considere el oscilador armónico para una $E$ conocida. ¿El sistema es integrable? ¿Por qué? Encuentre el punto de equilibrio, los puntos de retorno y el período.
-	\item<2-> Considere una partícula de masa $m$ moviéndose sobre la superficie de un cono vertical con ángulo de vértice $\alpha$. 
-	\begin{itemize}
-		\item ¿El sistema es integrable? ¿Por qué? Encuentre el Lagrangeano y las primeras integrales
-	\end{itemize}
-    \end{itemize}
-}
 %
 %%%%% Diapo 2
 \section{Sección}
