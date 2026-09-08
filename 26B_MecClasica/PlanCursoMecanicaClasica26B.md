@@ -348,7 +348,9 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
 
 #### Materiales
 + Presentación de [Sistemas integrables](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S4T1Integrables.pdf)
-+ Presentación del [problema de dos cuerpos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S4T2Problema2Cuerpos.pdf)
+
+### Clase S4-C8 Primer Examen 4sep
+[Solución del primer parcial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Examenes/MecanicaClasica26BExam1.pdf) 
 
 ### Clase S5-C9/C10 Fuerzas Centrales 8sep-10sep
 ####Antes de clase
@@ -399,6 +401,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
 + **Rehaga** los ejemplos 1. pg 114; 1. pg 131; 2. pg 132; 1. y 2. pg 137
 
 #### Materiales
++ Presentación del [problema de dos cuerpos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S4T2Problema2Cuerpos.pdf)
 + [Presentación del Problema de Kepler](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S6T1ProbKepler.pdf)
 + [Presentación del Leyes de Kepler](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S6T2LeyesKepler.pdf)
 + [Presentación de Transferencia de Hohmann y asistencia gravitacional](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S6T3Hollman.pdf) Adicionalmente consultar [Transferencia Hohmann](https://en.wikipedia.org/wiki/Hohmann_transfer_orbit) y [Asistencia Gravitacional](https://en.wikipedia.org/wiki/Gravity_assist) en wikipedia. En este tema hay un par de buenas referencias
