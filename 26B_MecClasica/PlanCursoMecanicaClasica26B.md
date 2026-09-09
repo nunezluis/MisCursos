@@ -359,7 +359,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
   + Potencial efectivo
 
 #### Materiales
-+ Presentación del [Potencial efectivo](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S5T2PotencialEfectivo.pdf)
++ Presentación del [Potencial efectivo](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S5T1PotencialEfectivo.pdf)
 + Presentación [Ecuaciones diferenciales generalidades](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S5EcDifOrd.pdf)
 + Presentación [Solución numérica de ecuaciones diferenciales ordinarias](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S5EcDifNumericas.pdf)
 + [Diez clases de soluciones computacionales](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/DiezClasesComputacionales.pdf)
