@@ -55,10 +55,10 @@
 \frame{
   \frametitle{Las trayectorias 1/2}
    \begin{itemize}  
-  	\item<1-> La condición $\dot{r}^2 \geq 0$ implica que este movimento ocurre para valores de $r$ tales que $E \geq V_{\mathrm{ef}}(r)$ 
+  	\item<1-> La condición $\dot{r}^2 \geq 0$ implica que este movimiento ocurre para valores de $r$ tales que $E \geq V_{\mathrm{ef}}(r)$ 
 	\item<2-> Los puntos de retorno están dados por la condición $\dot{r}=0$, i.e. 
 	$E  =V_{\mathrm{ef}}(r)=\frac{L^2}{2 \mu r^2}+V(r)  \Rightarrow E r^2-V(r) r^2-\frac{L^2}{2 \mu}=0$
-	\item<3-> Es una ecuación algebraica de segundo grado en $r$ y pueden existir dos raíces reales, $r=r_{\min }, r=r_{\max }$. 
+	\item<3-> El grado de esta ecuación depende de $V(r)$; en general puede tener varias raíces reales positivas. Los puntos de retorno físicos son las raíces $r>0$ que acotan una región con $E \geq V_{\mathrm{ef}}(r)$.
 	\begin{figure}[t]
 		\includegraphics[width=1.5in]{Figuras/Trayectorias.png}
    	\end{figure}
@@ -75,8 +75,8 @@
 \frame{
   \frametitle{Las trayectorias 2/2}
   \begin{enumerate}
-	\item<1-> Como $\dot{\theta}=\frac{L}{\mu r^2} \geq 0$, la velocidad angular $\dot{\theta}$ nunca cambia de signo.
-	\item<2-> El ángulo $\theta$ siempre se incrementa en el tiempo y el movimiento siempre ocurre en una misma dirección sobre el plano $(r, \theta)$.
+	\item<1-> Como $\dot{\theta}=\frac{L}{\mu r^2} \geq 0$, la velocidad angular $\dot{\theta}$ no cambia de signo.
+	\item<2-> El ángulo $\theta$ siempre aumenta con el tiempo y el movimiento siempre ocurre en la misma dirección sobre el plano $(r, \theta)$.
 	\item<3-> Para encontrar la condición de choque $r \rightarrow 0$, i.e. $r_{\min }=0$
 	\item<4-> De la ecuación para la energía tenemos  
 	$\frac{1}{2} \mu \dot{r}^2  =E-V(r)-\frac{L^2}{2 \mu r^2}>0  \Rightarrow E r^2-V(r) r^2-\frac{L^2}{2 \mu}>0$
@@ -89,25 +89,25 @@
 	\end{itemize} 
   \end{enumerate}
 }
-%%%%% Diapo 2
+%%%%% Diapo 4
 \section{Ejemplos}
 \subsection{Potencial $V=-\frac{k}{r^3}$}
 \frame{
   \frametitle{Potencial $V=-\frac{k}{r^3}$}
    \begin{itemize}  
-  	\item<1-> Si el Potencial $V=-\frac{k}{r^3}$ el potencial efectivo será $V_{\mathrm{ef}}(r)=-\frac{k}{r^3}+\frac{L^2}{2 \mu r^2}$
+  	\item<1-> Si el potencial $V=-\frac{k}{r^3}$, el potencial efectivo será $V_{\mathrm{ef}}(r)=-\frac{k}{r^3}+\frac{L^2}{2 \mu r^2}$
 	\begin{figure}[t]
 		\includegraphics[width=2.0in]{Figuras/Potencialkr3.png}
    	\end{figure}
 	\item<2-> El potencial efectivo exhibe un máximo $V_{\text {ef }(\max )}$ que representa una barrera de potencial si $E<V_{\text {ef }(\max )}$. Los posibles movimientos son
 	\begin{itemize}
-		\item  $E=E_1>V_{\text {ef }(\max )}$; movimiento existe $\forall r$.
-		\item $E=E_2<V_{\text {ef }(\max )}$; hay dos puntos de retorno $r_1$ y $r_2$ que satisfacen $E=V_{\text {ef }}$. El movimiento ocurre para $r \in\left[0, r_1\right]$ y para $r \geq r_2$. En Mecánica Clásica, el movimiento es imposible para $r \in\left[r_1, r_2\right]$.
-		\item $E<0$; movimiento ocurre para $r \in\left[0, r_1\right]$.
+		\item  $E=E_1>V_{\text {ef }(\max )}$; existe movimiento $\forall r$.
+		\item $E=0<E_2<V_{\text {ef }(\max )}$; hay dos puntos de retorno $r_1$ y $r_2$ que satisfacen $E=V_{\text {ef }}$. El movimiento ocurre para $r \in\left[0, r_1\right]$ y para $r \geq r_2$. En Mecánica Clásica, el movimiento es imposible para $r \in\left[r_1, r_2\right]$.
+		\item $E<0$; el movimiento ocurre para $r \in\left[0, r_1\right]$.
 	\end{itemize}
 \end{itemize}
 }
-%%%%% Diapo 2
+%%%%% Diapo 5
 \subsection{Potencial $V=\frac{1}{2} k r^2$}
 \frame{
   \frametitle{Potencial $V=\frac{1}{2} k r^2$}
@@ -123,7 +123,7 @@
 	\item<6-> El movimiento radial es el resultado de dos oscilaciones simples, perpendiculares entre sí, con igual frecuencia $\omega_x^2=\omega_y^2=k / \mu$.
     \end{itemize}
 }
-%%%%% Diapo 2
+%%%%% Diapo 6
 \subsection{Potencial $V=-\frac{k}{r}$}
 \frame{
   \frametitle{Potencial $V=-\frac{k}{r}$}
@@ -144,26 +144,26 @@
     \end{itemize}
 }
 %
-%
+%%%%% Diapo 7
 \section{Recapitulando}
 \frame{
   \frametitle{Recapitulando}
 En presentación consideramos
   \begin{enumerate}
-  	\item<1-> El Potencial Efectivo que surge en el {\bf problema de dos cuerpos} con un potencial central $V(r) \Rightarrow V_{\text{ef}}(r) = V(r) + \frac{L^2}{2\mu r^2}$
-	\item<2-> Simplifica el estudio del movimiento en fuerzas centrales, permitiendo visualizar y clasificar órbitas en sistemas gravitacionales y atómicos. 
+  	\item<1-> El {\bf potencial efectivo} que surge en el {\bf problema de dos cuerpos} con un potencial central $V(r) \Rightarrow V_{\rm ef}(r) = V(r) + \frac{L^2}{2\mu r^2}$
+	\item<2-> Simplifica el estudio del movimiento bajo fuerzas centrales, permitiendo visualizar y clasificar las órbitas en sistemas gravitacionales y atómicos. 
 	\item<3-> Movimiento Radial y Tipos de Órbitas
 	\begin{enumerate}
-		\item Movimiento para: \( E \geq V_{\text{ef}}(r) \) y puntos de retorno: \( E = V_{\text{ef}}(r) \).
-		\item Órbitas ligadas: \( E < 0 \), oscilación radial entre \( r_{\min} \) y \( r_{\max} \). 
-		\item Órbitas abiertas: \( E \geq 0 \), escape del sistema.
-		\item Órbitas circulares**: \( \frac{dV_{\text{ef}}}{dr} = 0 \) en un mínimo estable.  
+		\item Movimiento para: \( E \geq V_{\rm ef}(r) \) y puntos de retorno: \( E = V_{\rm ef}(r) \).
+		\item Órbitas ligadas: \( E < 0 \), con oscilación radial entre \( r_{\min} \) y \( r_{\max} \). 
+		\item Órbitas abiertas: \( E \geq 0 \), con escape del sistema.
+		\item Órbitas circulares: \( \frac{dV_{\rm ef}}{dr} = 0 \) en un mínimo estable.  
 	\end{enumerate}
-	\item<4-> Ejemplos de Potenciales
+	\item<4-> Ejemplos de potenciales
 	\begin{enumerate}
-		\item \( V(r) = -k/r \) (Gravitacional y Coulombiano): órbitas elípticas, parabólicas e hiperbólicas.
-		\item \( V(r) = -k/r^3 \): Caída al centro si \( E < V_{\text{ef}}(r) \). 
-		\item \( V(r) = \frac{1}{2}kr^2 \) Oscilador armónico tridimensional  
+		\item \( V(r) = -k/r \) (gravitacional y coulombiano): órbitas elípticas, parabólicas e hiperbólicas.
+		\item \( V(r) = -k/r^3 \): casos límites en Relatividad General. 
+		\item \( V(r) = \frac{1}{2}kr^2 \) oscilador armónico tridimensional  
 	\end{enumerate} 
    \end{enumerate}
 }
@@ -179,7 +179,7 @@ En presentación consideramos
 			\item  $C(x) = c x^2$ $\to$ Costos de producción.
 			\item  $\frac{L^2}{2 x^2}$ $\to$ Barrera de ajuste de precios (regulación, competencia).
 		\end{enumerate}
-		\item<2-> El potencial efectivo  es $V_{\text{ef}}(x) = -A e^{-\alpha x} + c x^2 + \frac{L^2}{2 x^2}$ 
+		\item<2-> El potencial efectivo  es $V_{\rm ef}(x) = -A e^{-\alpha x} + c x^2 + \frac{L^2}{2 x^2}$ 
 		\begin{enumerate}
 			\item Término atractivo \( -A e^{-\alpha x} \): Incentiva precios bajos (alta demanda)
 			\item Término repulsivo \( c x^2 \): Costos de producción crecientes
@@ -200,7 +200,7 @@ En presentación consideramos
   \frametitle{Recapitulando}
 En presentación consideramos
   \begin{enumerate}
-  	\item<1-> El Potencial Efectivo surge en el {\bf problema de dos cuerpos} con un potencial central $V(r) \Rightarrow V_{\text{ef}}(r) = V(r) + \frac{L^2}{2\mu r^2}$
+  	\item<1-> El Potencial Efectivo surge en el {\bf problema de dos cuerpos} con un potencial central $V(r) \Rightarrow V_{\rm ef}(r) = V(r) + \frac{L^2}{2\mu r^2}$
 	\item<2->
   
    \end{enumerate}
