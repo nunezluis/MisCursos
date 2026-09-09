@@ -299,7 +299,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
    - **Cálculo del período**:$\tau_p(E) = 2 \sqrt{\frac{m}{2}} \int_{x_1}^{x_2} \frac{dx}{\sqrt{E - V(x)}}$
 
 ##### **5. El Problema de Dos Cuerpos**
-   - Considera dos partículas$m_1$y$m_2$en posiciones$\mathbf{r}_1$y$\mathbf{r}_2$, interactuando mediante un potencial dependiente de la posición relativa:$V(\mathbf{r}_1, \mathbf{r}_2) = V(\mathbf{r}_2 - \mathbf{r}_1)$
+   - Considera dos partículas$m_1$ y $m_2$en posiciones$\mathbf{r}_1$y$\mathbf{r}_2$, interactuando mediante un potencial dependiente de la posición relativa:$V(\mathbf{r}_1, \mathbf{r}_2) = V(\mathbf{r}_2 - \mathbf{r}_1)$
    - El sistema tiene **seis grados de libertad**: tres para cada partícula.
         - Definición del **centro de masa**:$\mathbf{R} = \frac{m_1 \mathbf{r}_1 + m_2 \mathbf{r}_2}{m_1 + m_2}$
         - Definición de la **posición relativa**: $\mathbf{r} = \mathbf{r}_2 - \mathbf{r}_1$
@@ -350,7 +350,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
 + Presentación de [Sistemas integrables](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S4T1Integrables.pdf)
 
 ### Clase S4-C8 Primer Examen 4sep
-[Solución del primer parcial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Examenes/MecanicaClasica26BExam1.pdf) 
+[Solución del primer parcial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Examenes/MecanicaClasica26BExam1.pdf)
 
 ### Clase S5-C9/C10 Fuerzas Centrales 8sep-10sep
 ####Antes de clase

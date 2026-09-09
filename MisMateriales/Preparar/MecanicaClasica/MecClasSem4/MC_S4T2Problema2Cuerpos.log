@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  1 MAR 2025 10:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  9 SEP 2026 04:57
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1037,7 +1037,7 @@ stitucional/UISLOGO.png  used on input line 36.
  [2
 
 ]
-<Figuras/DosCuerpos.png, id=146, 812.03375pt x 614.295pt>
+<Figuras/DosCuerpos.png, id=148, 812.03375pt x 614.295pt>
 File: Figuras/DosCuerpos.png Graphic file (type png)
 <use Figuras/DosCuerpos.png>
 Package pdftex.def Info: Figuras/DosCuerpos.png  used on input line 52.
@@ -1175,7 +1175,7 @@ stitucional/UISLOGO.png  used on input line 69.
  [14
 
 ]
-<Figuras/EquivalenciaDosCuerpos.png, id=468, 1506.62875pt x 439.6425pt>
+<Figuras/EquivalenciaDosCuerpos.png, id=469, 1506.62875pt x 439.6425pt>
 File: Figuras/EquivalenciaDosCuerpos.png Graphic file (type png)
 <use Figuras/EquivalenciaDosCuerpos.png>
 Package pdftex.def Info: Figuras/EquivalenciaDosCuerpos.png  used on input line
@@ -1260,7 +1260,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 89.
 
-<Figuras/MomAngularConstante.png, id=602, 1263.72125pt x 587.19376pt>
+<Figuras/MomAngularConstante.png, id=603, 1263.72125pt x 587.19376pt>
 File: Figuras/MomAngularConstante.png Graphic file (type png)
 <use Figuras/MomAngularConstante.png>
 Package pdftex.def Info: Figuras/MomAngularConstante.png  used on input line 10
@@ -1541,7 +1541,7 @@ Overfull \vbox (7.4586pt too high) detected at line 171
 [42
 
 ]
-<Figuras/DosCuerposMasasResorte.png, id=1215, 726.715pt x 327.2225pt>
+<Figuras/DosCuerposMasasResorte.png, id=1217, 726.715pt x 327.2225pt>
 File: Figuras/DosCuerposMasasResorte.png Graphic file (type png)
 <use Figuras/DosCuerposMasasResorte.png>
 Package pdftex.def Info: Figuras/DosCuerposMasasResorte.png  used on input line
@@ -1588,12 +1588,12 @@ LaTeX Info: Redefining \% on input line 25.
 )
 Package rerunfilecheck Info: File `MC_S4T2Problema2Cuerpos.out' has not changed
 .
-(rerunfilecheck)             Checksum: 601030125D1929FD9804E2179A6DB9D7;1511.
+(rerunfilecheck)             Checksum: 03D0D8B281C1F0D036D259AA25C710DD;1521.
  ) 
 Here is how much of TeX's memory you used:
  24521 strings out of 478268
  481116 string characters out of 5846347
- 746465 words of memory out of 5000000
+ 746464 words of memory out of 5000000
  42089 multiletter control sequences out of 15000+600000
  488764 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1605,21 +1605,22 @@ fb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 ></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><
 /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb><
 /usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/
-local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/l
-ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/lo
-cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/loca
-l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/loca
-l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/t
-exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on MC_S4T2Problema2Cuerpos.pdf (44 pages, 749776 bytes).
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local
+/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local/
+texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texl
+ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on MC_S4T2Problema2Cuerpos.pdf (44 pages, 758590 bytes).
 PDF statistics:
- 1374 PDF objects out of 1440 (max. 8388607)
- 1252 compressed objects within 13 object streams
+ 1379 PDF objects out of 1440 (max. 8388607)
+ 1255 compressed objects within 13 object streams
  99 named destinations out of 1000 (max. 500000)
  194 words of extra memory for PDF output out of 10000 (max. 10000000)
 

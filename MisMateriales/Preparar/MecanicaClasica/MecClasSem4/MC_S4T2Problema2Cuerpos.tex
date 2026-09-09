@@ -59,10 +59,10 @@
 	\item<2-> Es decir: $\mathbf{r}_1^{\prime}=\mathbf{r}_1-\frac{m_1 \mathbf{r}_1+m_2 \mathbf{r}_2}{m_1+m_2}=\frac{m_2\left(\mathbf{r}_1-\mathbf{r}_2\right)}{\left(m_1+m_2\right)}=-\frac{m_2}{\left(m_1+m_2\right)} \mathbf{r}$ y 
 	$ \mathbf{r}_2^{\prime}=\mathbf{r}_2-\frac{m_1 \mathbf{r}_1+m_2 \mathbf{r}_2}{m_1+m_2}=\frac{m_1\left(\mathbf{r}_2-\mathbf{r}_1\right)}{\left(m_1+m_2\right)}=\frac{m_1}{\left(m_1+m_2\right)} \mathbf{r}$
 	\item<3-> La energía cinética total del sistema será $T=T_{\mathrm{cm}}+T_{\mathrm{rel}}$
-	\item<4-> Entonces $T_{\mathrm{cm}} =\frac{1}{2} M_T \dot{\mathbf{R}}^2=\frac{1}{2}\left(m_1+m_2\right) \dot{\mathbf{R}}^2$
+	\item<4-> Entonces $T_{\mathrm{cm}} =\frac{1}{2} M_{\rm T} \dot{\mathbf{R}}^2=\frac{1}{2}\left(m_1+m_2\right) \dot{\mathbf{R}}^2$
 	\item<5-> y $T_{\mathrm{rel}} =\frac{1}{2} m_1 \dot{\mathbf{r}}_1^{\prime 2}+\frac{1}{2} m_2 \dot{\mathbf{r}}_2^{\prime 2} =\frac{1}{2} \frac{m_1 m_2^2}{\left(m_1+m_2\right)^2} \dot{\mathbf{r}}^2+\frac{1}{2} \frac{m_1^2 m_2}{\left(m_1+m_2\right)^2} \dot{\mathbf{r}}^2 =\frac{1}{2} \frac{m_1 m_2}{\left(m_1+m_2\right)} \dot{\mathbf{r}}^2$
 	\item<6-> y si definimos la masa reducida, $\mu \equiv \frac{m_1 m_2}{\left(m_1+m_2\right)}$
-	\item<7-> El Lagrangiano del sistema es 
+	\item<7-> El lagrangiano del sistema es 
 	$\mathcal{L}(\mathbf{r}, \mathbf{R}, \dot{\mathbf{r}}, \dot{\mathbf{R}}) =T-V\left(\mathbf{r}_2-\mathbf{r}_1\right) =\frac{1}{2}\left(m_1+m_2\right) \dot{\mathbf{R}}^2+\frac{1}{2} \mu \dot{\mathbf{r}}^2-V(\mathbf{r})$
 	\item<8-> Los seis grados de libertad del sistema se describen mediante las componentes de los vectores $\mathbf{r}$ y $\mathbf{R}$.
     \end{itemize}
@@ -86,15 +86,15 @@
 }
 
 %%%%% Diapo 2
-\section{Potenciales centrales, $V({\bf r})$}
+\section{Potenciales centrales, $V(|{\bf r})|$}
 \frame{
-  \frametitle{Potenciales centrales, $V({\bf r})$}
+  \frametitle{Potenciales centrales, $V(|{\bf r}|)$}
    \begin{itemize}  
-  	\item<1->  El problema se simplifica más para potenciales centrales, $V({\bf r})$.
-	\item<2->   Entonces la fuerza central es $\mathbf{F}=-\nabla V({\bf r})=-\frac{\partial V}{\partial r} \hat{\mathbf{r}}=f({\bf r}) \hat{\mathbf{r}}$
-	\item<3-> Las fuerza centrales no ejercen torque neto sobre las partículas y el momento angular total ${\bf L}$ se conserva, $\boldsymbol{\tau} =\mathbf{r} \times f({\bf r}) \hat{\mathbf{r}}=0 \Rightarrow \boldsymbol{\tau} =\frac{{\rm d}  \mathbf{L}}{{\rm d} t}=0 \Rightarrow \mathbf{L}=\mathbf{r} \times \mathbf{p}=\text { cte }$
-	\item<4-> La conservación del vector momento angular total, ${\bf L}$, significa que tanto su dirección como magnitud son constantes.
-	\item<5-> El movimiento de la partícula de masa equivalente $\mu$ siempre ocurre sobre el plano ($\mathbf{r}, \mathbf{p})$ y se puede describir mediante dos coordenadas.
+  	\item<1->  El problema se simplifica aún más para potenciales centrales, $V(|{\bf r}|)$.
+	\item<2->   Entonces la fuerza central es $\mathbf{F}=-\nabla V(|{\bf r}|)=-\frac{{\rm d} V}{{\rm d} r} \hat{\mathbf{r}}=f(|{\bf r}|) \hat{\mathbf{r}}$
+	\item<3-> Las fuerzas centrales no ejercen torque neto sobre las partículas y el momento angular total $\mathbf{L}$ se conserva, $\boldsymbol{\tau} =\mathbf{r} \times f({\bf r}) \hat{\mathbf{r}}=0$ y como  $\boldsymbol{\tau} =\frac{{\rm d}  \mathbf{L}}{{\rm d} t}=0 \Rightarrow \mathbf{L}=\mathbf{r} \times \mathbf{p}=\text { cte }$
+	\item<4-> La conservación del vector momento angular total, $\mathbf{L}$, significa que tanto su dirección como su magnitud son constantes.
+	\item<5-> El movimiento de la partícula de masa equivalente $\mu$ siempre ocurre en el plano ($\mathbf{r}, \mathbf{p})$ y puede describirse mediante dos coordenadas.
 	\begin{figure}[t]
 		\includegraphics[width=1.9in]{Figuras/MomAngularConstante.png}
    	\end{figure}
@@ -123,8 +123,8 @@
   	\item<1-> Entonces, en el problema de dos cuerpos existen seis grados de libertad y al menos seis cantidades conservadas. Por lo tanto, se trata de un sistema integrable.
 	\item<2-> Las seis cantidades conservadas $I_k\left(\mathbf{r}_1, \mathbf{r}_2, \dot{\mathbf{r}}_1, \dot{\mathbf{r}}_2\right)=C_k(k=1, \ldots, 6)$  del problema de dos cuerpos sujetos a un potencial central $V\left(\left|\mathbf{r}_2-\mathbf{r}_1\right|\right)=V(r)$ son:
 	\begin{enumerate}
-	\item Las tres componentes del vector velocidad del centro de masa $\dot{\mathbf{R}}$: $I_1=\dot{x}_{c m}=$ cte, $I_2=\dot{y}_{c m}=$ cte, $I_3=\dot{y}_{c m}=$ cte. Esto reduce el problema al movimiento del vector de posición relativa $\mathbf{r}$.
-	\item La dirección del momento angular ${\bf L}=$ cte, reduce el movimiento a un plano y se expresa como $I_4=z=0$.
+	\item Las tres componentes del vector velocidad del centro de masa $\dot{\mathbf{R}}$: $I_1=\dot{x}_{c m}=$ cte, $I_2=\dot{y}_{c m}=$ cte, $I_3=\dot{z}_{c m}=$ cte. Esto reduce el problema al movimiento del vector de posición relativa $\mathbf{r}$.
+	\item La dirección del momento angular $\mathbf{L}=$ cte, reduce el movimiento a un plano y se expresa como $I_4=z=0$.
 	\item La magnitud del momento angular $I_5=\mu r^2 \dot{\theta}=L$.
 	\item La energía total $I_6=\frac{1}{2} \mu\left(\dot{r}^2+r^2 \dot{\theta}^2\right)+V(r)=E$.
 	\end{enumerate}
@@ -155,8 +155,8 @@
 	\item<1-> El problema de dos cuerpos se reduce a un problema de una partícula ficticia, de masa reducida \( \mu \), en un potencial central \( V(r) \). \\ El problema se divide en dos partes:
 	\begin{itemize}
 		\item Movimiento del centro de masa, que se mueve con velocidad constante.
-		\item Movimiento relativo, equivalente al de una partícula de masa reducida \( \mu \) en un potencial efectivo \( V(r) \). 
-		\item La conservación del momento lineal del centro de masas implica que el centro de masa se mueve con velocidad constante, permitiendo ignorar esta parte en el análisis del movimiento relativo.
+		\item Movimiento relativo, equivalente al de una partícula de masa reducida \( \mu \) en un potencial efectivo \( V_{\rm ef}(r) \). 
+		\item La conservación del momento lineal del centro de masa implica que el centro de masa se mueve con velocidad constante, permitiendo ignorar esta parte en el análisis del movimiento relativo.
 	\end{itemize}
 	\item<2-> Existen seis cantidades conservadas, lo que demuestra que el sistema es integrable.
 	\begin{itemize}
