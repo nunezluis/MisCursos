@@ -37,7 +37,7 @@ Cuando niños jugábamos con un [teléfono de vasos y cuerda](https://youtu.be/P
 Para seguir la tónica de recuerdos de la infancia del reto anterior. Si construyes un [avioncito de papel con una hoja tipo carta](https://youtu.be/6fLh8eswOn0) ¿A qué distancia máxima puede volar un avión hecho con la hoja? ¿Cómo depende la distancia de la densidad del papel y del tipo de avión? ¿cambia al distancia máxima con el diseño?
 
 ### Reto 11  *Dardos soplados*
-Muchas tibus amazónicas, africanas y los ninjas japoneses, utilizan  [cerbatanas que disparan dardos](https://youtu.be/7Zt7ytttO-A) para cazar o guerrear. Proponga la construcción óptima del sistema (cerbatana + dardo) de tal forma que  logre el máximo alcance de tiro con dardos hechos de conos de papel. Estime además el alcance de tiro.
+Muchas tribus amazónicas, africanas y los ninjas japoneses, utilizan  [cerbatanas que disparan dardos](https://youtu.be/7Zt7ytttO-A) para cazar o guerrear. Proponga la construcción óptima del sistema (cerbatana + dardo) de tal forma que  logre el máximo alcance de tiro con dardos hechos de conos de papel. Estime además el alcance de tiro.
 
 ### Reto 12  *Botellas oscilantes, medio vacías o medio llenas*
 Si empujas horizontalmente una botella medio llena de agua, rodará hacia delante con una velocidad oscilante. ¿De qué y cómo depende la magnitud de las oscilaciones de la velocidad? ¿de la cantidad o viscosidad de líquido?
