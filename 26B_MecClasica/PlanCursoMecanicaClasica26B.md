@@ -5,7 +5,7 @@ Tendremos cuatro ahora de teoría (miércoles y viernes) y una de problemas el v
 ## Evaluación
 Nos organizaremos en grupos de dos estudiantes y cada grupo debe crear un git y según el modelo que se muestra [aquí](https://github.com/nunezluis/TareasCursos20B). Esto es, se debe clonar este repositorio y compartirlos para poder revisar las tareas y la asignación que desarrollemos durante el curso.  
 + **Evaluación continua 20%** Los problemas de los viernes. Deben ser cargados en un Git para evaluarlos y serán sustentados al azar cada viernes.
-+ **Cuatro parciales, 15% c/u** Tres exámenes presenciales estándares posiblemente orales (Tienen que aprobar tres)
++ **Cuatro parciales, 15% c/u** cuatro exámenes presenciales estándares posiblemente orales (Tienen que aprobar tres)
 + **Una asignaciones 20% c/u** Consistirá en la solución de un reto
 
 ### La asignación
