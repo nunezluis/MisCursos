@@ -11,6 +11,8 @@ Nos organizaremos en grupos de dos estudiantes y cada grupo debe crear un git y 
 ### La asignación
 La asignación es parte fundamental del desarrollo del curso. La asignación estará orientada a la solución de un reto que involucre el uso de la IA como un miembro mas del equipo.  Será presentada de dos maneras: un reporte tipo artículo y una presentación de máximo 6 láminas expuestas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
 
+La lista de retos, así como la metodología la encuentran [aquí](https://github.com/nunezluis/MisCursos/blob/main/26B_MecClasica/AsignacionMecClasB26.md) 
+
 ## Bibliografía
 ### Libro texto
 Seguiremos como libro texto: [Mecánica Clásica (2016)](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/LibrosCapitulos/Cosenza2016PrePrint.pdf) preprint de mi gran amigo [Mario Cosenza](https://scholar.google.co.ve/citations?hl=es&user=wmSC_7EAAAAJ)   
