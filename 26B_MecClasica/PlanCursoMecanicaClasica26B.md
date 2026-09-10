@@ -4,14 +4,14 @@ Tendremos cuatro ahora de teoría (miércoles y viernes) y una de problemas el v
 
 ## Evaluación
 Nos organizaremos en grupos de dos estudiantes y cada grupo debe crear un git y según el modelo que se muestra [aquí](https://github.com/nunezluis/TareasCursos20B). Esto es, se debe clonar este repositorio y compartirlos para poder revisar las tareas y la asignación que desarrollemos durante el curso.  
-+ **Evaluación continua 35%** Los problemas de los viernes. Deben ser cargados en un Git para evaluarlos y serán sustentados al azar cada viernes.
-+ **Tres parciales, 15% c/u** Tres exámenes presenciales estándares posiblemente orales (Tienen que aprobar dos)
++ **Evaluación continua 20%** Los problemas de los viernes. Deben ser cargados en un Git para evaluarlos y serán sustentados al azar cada viernes.
++ **Cuatro parciales, 15% c/u** Tres exámenes presenciales estándares posiblemente orales (Tienen que aprobar tres)
 + **Una asignaciones 20% c/u** Consistirá en la solución de un reto
 
 ### La asignación
 La asignación es parte fundamental del desarrollo del curso. La asignación estará orientada a la solución de un reto que involucre el uso de la IA como un miembro mas del equipo.  Será presentada de dos maneras: un reporte tipo artículo y una presentación de máximo 6 láminas expuestas en 12m. Para presentar el reporte se podrá utilizar [un modelo](https://www.overleaf.com/read/hfqvjnjwngnp) que hemos utilizado en otras ocasiones.
 
-La lista de retos, así como la metodología la encuentran [aquí](https://github.com/nunezluis/MisCursos/blob/main/26B_MecClasica/AsignacionMecClasB26.md) 
+La lista de retos, así como la metodología la encuentran [aquí](https://github.com/nunezluis/MisCursos/blob/main/26B_MecClasica/AsignacionMecClasB26.md)
 
 ## Bibliografía
 ### Libro texto

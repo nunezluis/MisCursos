@@ -1,5 +1,5 @@
 
-# Diecisiete retos de Mecánica Clásica para equipos de estudiantes
+# Retos de Mecánica Clásica para equipos de estudiantes
 
 ## Resolución de problemas complejos con asistencia de IA
 
