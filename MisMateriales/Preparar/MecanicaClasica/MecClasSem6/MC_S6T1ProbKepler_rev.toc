@@ -1,0 +1,6 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Gravitación: campo, ley de Gauss y modelo puntual}{8}{0}{1}
+\beamer@sectionintoc {2}{La ecuación de la órbita (Binet)}{26}{0}{2}
+\beamer@sectionintoc {3}{Solución del problema de Kepler}{42}{0}{3}
+\beamer@sectionintoc {4}{Clasificación de órbitas}{57}{0}{4}
+\beamer@sectionintoc {5}{Verificación, IA y cómputo}{64}{0}{5}
