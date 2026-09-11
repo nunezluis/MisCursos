@@ -263,7 +263,7 @@ Desarrolle el ejerccio planteado en [esta presentación](https://github.com/nune
 
 ### Clase S4-C7/C8 Sistemas Integrables y el problema de dos cuerpos 1sep-3sep
 #### En esta semana cubriremos los siguientes temas
-Primero exploraemos los conceptos de **sistemas integrables**, **superintegrables**, **no integrables** y sus implicaciones en la dinámica de sistemas físicos.  Los **Sistemas integrables** permiten una evolución predecible con soluciones exactas. Los **Sistemas no integrables** pueden mostrar **caos dinámico** y la **superintegrabilidad** es una propiedad especial de ciertos sistemas con más constantes de movimiento que grados de libertad.
+Primero exploraremos los conceptos de **sistemas integrables**, **superintegrables**, **no integrables** y sus implicaciones en la dinámica de sistemas físicos.  Los **Sistemas integrables** permiten una evolución predecible con soluciones exactas. Los **Sistemas no integrables** pueden mostrar **caos dinámico** y la **superintegrabilidad** es una propiedad especial de ciertos sistemas con más constantes de movimiento que grados de libertad.
 
 En segundo lugar analizaremos el **problema de dos cuerpos** que permite la reducción del problema a una forma equivalente unidimensional más simple y que facilita la resolución de las ecuaciones de movimiento. El problema de dos cuerpos se **reduce** a un problema de **una partícula** de **masa reducida**$\mu$en un potencial central$V(r)$. Se conservan la **energía** y el **momento angular**, permitiendo la resolución completa del problema.  Este análisis es clave en **mecánica celeste**, describiendo órbitas planetarias y otros sistemas gravitacionales.
 
@@ -404,8 +404,8 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
 
 #### Materiales
 + Presentación del [problema de dos cuerpos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S4T2Problema2Cuerpos.pdf)
-+ [Presentación del Problema de Kepler](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S6T1ProbKepler.pdf)
 + [Presentación del Leyes de Kepler](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S6T2LeyesKepler.pdf)
++ [Presentación del Problema de Kepler](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S6T1ProbKeplerBinet.pdf)
 + [Presentación de Transferencia de Hohmann y asistencia gravitacional](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S6T3Hollman.pdf) Adicionalmente consultar [Transferencia Hohmann](https://en.wikipedia.org/wiki/Hohmann_transfer_orbit) y [Asistencia Gravitacional](https://en.wikipedia.org/wiki/Gravity_assist) en wikipedia. En este tema hay un par de buenas referencias
   + Van Allen, J. A. (2003). Gravitational assist in celestial mechanics—a tutorial. American Journal of Physics, 71(5), 448-451.
   + Berg, P. (2023). The fundamental concepts of the gravity-assist manoeuvre. European Journal of Physics, 44(2), 025002.
