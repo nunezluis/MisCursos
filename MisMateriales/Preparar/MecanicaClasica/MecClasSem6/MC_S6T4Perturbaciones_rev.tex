@@ -1,0 +1,695 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Mecanica Clasica  --  Sesion 6, Tema 4:
+%  Estabilidad y Precesion de Orbitas
+%  Version revisada.  Guardar en codificacion UTF-8.
+%
+%  Cambios respecto de la version original:
+%   [C1] UTF-8 + fontenc T1; rutas relativas; sin geometry; entorno frame.
+%   [C2] Notacion unificada: momento angular  \ell  (antes L y l mezclados);
+%        fuerza central  f(r)  (antes F y f);  r_0  con cero (antes r_o).
+%   [C3] CORRECCION CONCEPTUAL PRINCIPAL: se distingue el angulo apsidal
+%        \Delta\theta (angulo barrido entre dos perihelios) del corrimiento
+%        del perihelio  \delta\varphi = \Delta\theta - 2\pi.  La version
+%        anterior afirmaba que "hay precesion si \Delta\theta < 2\pi", lo
+%        cual contradecia la diapositiva final de discusion.
+%   [C4] Enunciado correcto del teorema de Bertrand (cuantificador "TODAS
+%        las orbitas acotadas").
+%   [C5] Se explicita la inversion de la desigualdad al dividir entre
+%        f(r_0) < 0  en el ejemplo de Coulomb apantallado, y se da la raiz
+%        exacta (\sqrt5-1)/2 en lugar de 0.62.
+%   [C6] Nuevo resultado unificador: \Delta\theta = 2\pi/\sqrt{n+3} para
+%        f = -k r^n, que conecta estabilidad, precesion y cierre.
+%   [C7] Nuevos frames: objetivos, prerrequisitos, verificaciones (Kepler y
+%        oscilador), angulo apsidal exacto, aplicacion a Mercurio,
+%        chequeos conceptuales, actividad con IA, extension computacional.
+%   [C8] \ell fijo durante la perturbacion: hipotesis que faltaba.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot,es-noshorthands]{babel}
+
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{mathtools,cancel}
+\renewcommand{\CancelColor}{\color{red}}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{textpos}
+% NOTA: no se carga geometry (beamer gestiona su propia caja de pagina)
+% NOTA: dsfont se elimino por no usarse.
+
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+\graphicspath{{Figuras/}{./Figuras/}{./}}
+\newcommand{\logoUIS}{Figuras/UISLOGO.png}
+% Inclusion tolerante a figuras ausentes: el archivo compila igual.
+\newcommand{\figopt}[2]{%  #1 = archivo, #2 = ancho
+  \IfFileExists{Figuras/#1}{\includegraphics[width=#2]{Figuras/#1}}%
+  {\fbox{\parbox[c][0.7in][c]{#2}{\centering\tiny falta \texttt{Figuras/#1}}}}}
+
+\IfFileExists{\logoUIS}{%
+  \addtobeamertemplate{frametitle}{}{%
+    \begin{textblock*}{100mm}(.85\textwidth,-1cm)
+      \includegraphics[height=0.4in,keepaspectratio=true]{\logoUIS}
+    \end{textblock*}}}{}
+
+% Macros de notacion  [C2]
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\vell}{\boldsymbol{\ell}}
+\newcommand{\Vef}{V_{\mathrm{ef}}}
+\newcommand{\dth}{\Delta\theta}          % angulo apsidal
+\newcommand{\dph}{\delta\varphi}         % corrimiento del perihelio
+
+\begin{document}
+
+\title[Estabilidad y Precesión]{\textbf{Estabilidad y Precesión de Órbitas}}
+\subtitle{Mecánica Clásica --- Sesión 6, Tema 4}
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias,}\\
+\textit{Universidad Industrial de Santander, Colombia}}
+\date{\today}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Agenda}
+  \tableofcontents
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Objetivos y contexto}
+
+\begin{frame}
+\frametitle{Objetivos de aprendizaje}
+Al finalizar esta sesión el estudiante debe ser capaz de:
+\begin{enumerate}
+  \item<1-> \textbf{Formular} la condición de estabilidad de una órbita circular
+        como una condición sobre $\Vef''(r_0)$ y \textbf{traducirla} a una
+        condición sobre la fuerza, $3f(r_0)/r_0+f'(r_0)<0$.
+  \item<2-> \textbf{Derivar} la frecuencia de oscilación radial $\omega_r$
+        linealizando el movimiento alrededor de $r_0$ a $\ell$ constante.
+  \item<3-> \textbf{Distinguir} el \emph{ángulo apsidal} $\dth$ del
+        \emph{corrimiento del perihelio} $\dph=\dth-2\pi$, y
+        \textbf{determinar} el sentido de la precesión.
+  \item<4-> \textbf{Calcular} $\dth$ para potenciales dados y
+        \textbf{verificar} los casos límite kepleriano y armónico.
+  \item<5-> \textbf{Enunciar con precisión} el teorema de Bertrand y
+        \textbf{explicar} por qué no contradice la existencia de órbitas
+        cerradas particulares en otros potenciales.
+  \item<6-> \textbf{Evaluar} el dominio de validez de todo el tratamiento
+        (órbitas casi circulares) comparándolo con la integral apsidal exacta.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Punto de partida: el potencial efectivo}
+\begin{itemize}
+  \item<1-> Fuerza central $\Rightarrow$ $\vell$ constante $\Rightarrow$
+        movimiento plano y $\ell=\mu r^{2}\dot\theta=$ cte.
+  \item<2-> El problema radial es unidimensional:
+        \[ \mu\ddot r=-\frac{d\Vef}{dr},\qquad
+           \Vef(r)=V(r)+\frac{\ell^{2}}{2\mu r^{2}},\qquad
+           E=\tfrac{1}{2}\mu\dot r^{2}+\Vef(r). \]
+  \item<3-> \alert{Advertencia de notación:} $\Vef$ \emph{no} es una energía
+        potencial verdadera; el término centrífugo es energía cinética angular
+        reescrita. Todo lo que sigue vale \alert{a $\ell$ fijo}.
+  \item<4-> Una \textbf{órbita circular} de radio $r_0$ corresponde a un punto
+        crítico: $\Vef'(r_0)=0$. Es \textbf{estable} si es un mínimo:
+        $\Vef''(r_0)>0$.
+  \item<5-> \textbf{Pregunta de la sesión:} si perturbamos ligeramente esa
+        órbita circular, ¿qué figura describe la partícula? ¿Se cierra?
+\end{itemize}
+\note{Insistir en ``a $\ell$ fijo'': la perturbación radial conserva el momento
+angular, de modo que la partícula perturbada se mueve en el \emph{mismo}
+$\Vef$. Si se perturbara también $\ell$, cambiaría la curva $\Vef$ y $r_0$.}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Estabilidad de órbitas circulares}
+
+\begin{frame}
+\frametitle{Estabilidad de órbitas circulares}
+\begin{itemize}
+  \item<1-> \textbf{Punto crítico:}
+        $\displaystyle \left.\frac{\partial\Vef}{\partial r}\right|_{r_0}=0
+        \;\Rightarrow\;
+        \left.\frac{\partial V}{\partial r}\right|_{r_0}
+        -\frac{\ell^{2}}{\mu r_0^{3}}=0 .$
+  \item<2-> \textbf{Mínimo verdadero:}
+        $\displaystyle \left.\frac{\partial^{2}\Vef}{\partial r^{2}}\right|_{r_0}>0
+        \;\Rightarrow\;
+        \left.\frac{\partial^{2} V}{\partial r^{2}}\right|_{r_0}
+        +\frac{3\ell^{2}}{\mu r_0^{4}}>0 .$
+  \item<3-> La fuerza central en $r_0$ es, usando el punto crítico,
+        $\displaystyle f(r_0)=-\left.\frac{\partial V}{\partial r}\right|_{r_0}
+        =-\frac{\ell^{2}}{\mu r_0^{3}}<0$ (atractiva, como debe ser).
+  \item<4-> Sustituyendo $V''=-f'$ y $\dfrac{3\ell^{2}}{\mu r_0^{4}}
+        =-\dfrac{3f(r_0)}{r_0}$:
+        \[ \boxed{\;\frac{3f(r_0)}{r_0}+f'(r_0)<0\;} \]
+  \item<5-> \textbf{Forma equivalente y más útil} (dividiendo entre
+        $f(r_0)/r_0<0$, \alert{lo que invierte la desigualdad}):
+        \[ \left.\frac{d\ln|f|}{d\ln r}\right|_{r_0}>-3 . \]
+        ``La fuerza atractiva no debe caer más rápido que $r^{-3}$''.
+\end{itemize}
+\note{El paso 5 es la fuente de errores de signo más común del tema: $f(r_0)<0$.
+Pedirlo explícitamente en el examen.}
+\end{frame}
+
+\begin{frame}
+\frametitle{Caso de referencia: ley de potencia $f(r)=-k\,r^{n}$, $k>0$}
+\begin{itemize}
+  \item<1-> $f'=-knr^{n-1}$, luego
+        $\dfrac{3f}{r_0}+f'=-k\,r_0^{n-1}\,(n+3)<0
+        \iff \boxed{\,n>-3\,}$.
+  \item<2-> \textbf{Ejemplos:}
+        \begin{itemize}
+          \item Gravitación / Coulomb, $n=-2$: estable.
+          \item Resorte isótropo, $n=1$: estable.
+          \item $n=-3$: caso marginal, $\omega_r=0$ (el mínimo se aplana).
+          \item $n<-3$: la órbita circular es \emph{inestable}; la partícula
+                cae al centro o escapa.
+        \end{itemize}
+  \item<3-> \alert{Retener el factor $(n+3)$:} reaparecerá literalmente en la
+        frecuencia radial y en el ángulo de precesión. La misma combinación
+        controla \emph{estabilidad}, \emph{oscilación} y \emph{cierre} de la
+        órbita.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Perturbaciones radiales}
+
+\begin{frame}
+\frametitle{Perturbaciones $r=r_0+\eta$}
+\begin{columns}[T]
+\begin{column}{0.42\textwidth}
+  \begin{figure}
+    \figopt{EstabilidadEta.png}{1.8in}
+  \end{figure}
+  {\tiny La energía $E$ está apenas por encima del mínimo: el movimiento radial
+   queda confinado entre dos puntos de retorno próximos a $r_0$.}
+\end{column}
+\begin{column}{0.56\textwidth}
+\small
+\begin{itemize}
+  \item<1-> Hipótesis: $0<E-\Vef(r_0)\ll|\Vef(r_0)|$, con $r_0$ el radio de una
+        órbita circular \emph{estable}, y \alert{$\ell$ fijo}.
+  \item<2-> Escribimos $r=r_0+\eta$ con $|\eta|/r_0\ll1$ y desarrollamos:
+        \[ \Vef(r)=\Vef(r_0)
+           +\cancelto{0}{\left.\frac{\partial\Vef}{\partial r}\right|_{r_0}}\eta
+           +\frac{1}{2}\left.\frac{\partial^{2}\Vef}{\partial r^{2}}
+           \right|_{r_0}\eta^{2}+\mathcal{O}(\eta^{3}). \]
+  \item<3-> El término lineal se anula \emph{porque $r_0$ es un punto crítico};
+        el término constante puede suprimirse (redefinición del cero de energía).
+  \item<4-> \alert{Validez:} el desarrollo exige
+        $|\Vef'''(r_0)\,\eta|\ll 3|\Vef''(r_0)|$. La anarmonicidad, que aparece
+        a orden $\eta^{3}$, es justamente lo que hace que $\dth$ dependa de la
+        amplitud en órbitas excéntricas.
+\end{itemize}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Oscilaciones radiales}
+\begin{columns}[T]
+\begin{column}{0.58\textwidth}
+\small
+\begin{itemize}
+  \item<1-> A segundo orden,
+        $\Vef\simeq\tfrac{1}{2}K\eta^{2}$, con
+        $K\equiv\left.\dfrac{\partial^{2}\Vef}{\partial r^{2}}\right|_{r_0}
+        =\mathrm{cte}>0$.
+  \item<2-> Como $\ddot r=\ddot\eta$ y
+        $f_{\mathrm{ef}}=-\partial_r\Vef\simeq-K\eta$, la ecuación radial
+        $\mu\ddot r=f_{\mathrm{ef}}(r)$ se linealiza:
+        \[ \boxed{\;\ddot\eta+\omega_r^{2}\eta=0,\qquad
+           \omega_r^{2}=\frac{K}{\mu}
+           =\frac{1}{\mu}\left.\frac{\partial^{2}\Vef}{\partial r^{2}}
+           \right|_{r_0}\;} \]
+  \item<3-> Solución $\eta(t)=A\cos(\omega_r t+\phi)$, con
+        $T_r=2\pi/\omega_r$. La estabilidad ($K>0$) es exactamente la condición
+        $\omega_r^{2}>0$: si $K<0$, $\eta$ crece exponencialmente.
+  \item<4-> Para $f=-kr^{n}$:
+        $\;\omega_r^{2}=(n+3)\,\dot\theta^{2}$, con
+        $\dot\theta=\ell/\mu r_0^{2}$. \alert{Reaparece $(n+3)$.}
+\end{itemize}
+\end{column}
+\begin{column}{0.40\textwidth}
+  \begin{figure}
+    \figopt{OscilaRadial.png}{1.5in}
+  \end{figure}
+  {\tiny Superposición de una oscilación radial rápida sobre el giro angular.}
+\end{column}
+\end{columns}
+\note{Demostración de $\omega_r^2=(n+3)\dot\theta^2$:
+$\Vef''=-f'-3f/r_0$ y, para $f=-kr^n$, $\Vef''=k r_0^{n-1}(n+3)$; además
+la condición de órbita circular da $\mu r_0\dot\theta^2=|f|=kr_0^n$.}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ejemplo: potencial de Coulomb apantallado}
+
+\begin{frame}
+\frametitle{Estabilidad para $V(r)=-\dfrac{k}{r}\,e^{-r/a}$}
+\small
+Investigar la estabilidad de las órbitas circulares con $k>0$, $a>0$.
+\begin{itemize}
+  \item<1-> Es el \textbf{potencial de Coulomb apantallado} (o de Yukawa), con
+        $k=Ze^{2}/4\pi\varepsilon_0$: modela el campo del núcleo
+        \emph{apantallado} por los electrones atómicos. Decae más rápido que
+        $1/r$, con longitud de apantallamiento $a$.
+  \item<2-> La fuerza:
+        $\displaystyle f(r)=-\frac{\partial V}{\partial r}
+        =-k\left(\frac{1}{ar}+\frac{1}{r^{2}}\right)e^{-r/a}<0 .$
+  \item<3-> Su derivada:
+        $\displaystyle f'(r)=k\left(\frac{1}{a^{2}r}+\frac{2}{ar^{2}}
+        +\frac{2}{r^{3}}\right)e^{-r/a} .$
+  \item<4-> Condición de estabilidad,
+        $\dfrac{3f(r_0)}{r_0}+f'(r_0)<0$. Dividimos entre $f(r_0)/r_0$, que es
+        \alert{negativo}, de modo que la desigualdad \alert{se invierte}:
+        \[ 3+\frac{r_0\,f'(r_0)}{f(r_0)}>0 . \]
+  \item<5-> Los factores $k$ y $e^{-r_0/a}$ se cancelan en el cociente. Con
+        $q\equiv a/r_0$:
+        \[ 3-\frac{q^{-2}+2q^{-1}+2}{q^{-1}+1}>0
+           \;\Longleftrightarrow\;
+           \boxed{\,q^{2}+q-1>0\,} \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Coulomb apantallado: resultado e interpretación}
+\begin{columns}[T]
+\begin{column}{0.52\textwidth}
+\footnotesize
+\begin{itemize}
+  \item<1-> Las raíces de $q^{2}+q-1=0$ son
+        $q_\pm=\dfrac{-1\pm\sqrt5}{2}$. La raíz negativa carece de sentido
+        físico ($q=a/r_0>0$), luego
+        \[ \boxed{\;\frac{a}{r_0}>\frac{\sqrt5-1}{2}=0.6180\ldots\;}
+           \iff r_0<\varphi\,a,\;\;\varphi=\frac{1+\sqrt5}{2}. \]
+  \item<2-> \alert{Interpretación:} sólo son estables las órbitas circulares
+        \emph{dentro} de unas $1.62$ longitudes de apantallamiento. Más allá,
+        el apantallamiento exponencial hace que la fuerza caiga más rápido que
+        $r^{-3}$ y el mínimo de $\Vef$ desaparece.
+  \item<3-> \textbf{Verificación independiente} con la forma logarítmica
+        ($u=r_0/a$), que evita todo el álgebra:
+        \[ \frac{d\ln|f|}{d\ln r}=-2+\frac{u}{1+u}-u>-3
+           \iff u^{2}-u-1<0 . \checkmark \]
+  \item<4-> \textbf{Control:} $a\to\infty$ recupera Coulomb puro, estable para
+        todo $r_0$. \checkmark
+\end{itemize}
+\end{column}
+\begin{column}{0.46\textwidth}
+  \begin{figure}
+    \figopt{CoulombApantallado.png}{2.2in}
+  \end{figure}
+  {\tiny $\Vef(r)$ para el potencial apantallado: al aumentar $r_0/a$ el mínimo
+   se hace menos profundo hasta desaparecer.}
+\end{column}
+\end{columns}
+\note{El umbral es el inverso de la razón áurea. Buen anzuelo, pero conviene
+aclarar que no tiene significado profundo: sale de que la ecuación
+característica es cuadrática.}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Precesión: dos ángulos que no hay que confundir}
+
+\begin{frame}
+\frametitle{Precesión: definiciones precisas}
+\begin{columns}[T]
+\begin{column}{0.60\textwidth}
+\small
+\begin{itemize}
+  \item<1-> Mientras $r$ oscila con período $T_r$, el ángulo $\theta$ avanza
+        monótonamente. El \textbf{ángulo apsidal}
+        \[ \dth\equiv\dot\theta\,T_r=2\pi\,\frac{\dot\theta}{\omega_r}
+           =2\pi\,\frac{\ell}{\mu r_0^{2}}
+           \left(\frac{1}{\mu}\left.\frac{\partial^{2}\Vef}{\partial r^{2}}
+           \right|_{r_0}\right)^{-1/2} \]
+        es el ángulo \alert{barrido entre dos pasos consecutivos por el
+        perihelio}, \alert{no} el desplazamiento del perihelio.
+  \item<2-> El \textbf{corrimiento del perihelio} por período radial es
+        \[ \boxed{\;\dph=\dth-2\pi\;} \]
+  \item<3-> \alert{Hay precesión si y sólo si $\dth\neq2\pi$}, es decir
+        $\omega_r\neq\dot\theta$. (La versión ``hay precesión si
+        $\dth<2\pi$'' es incorrecta: eso sólo selecciona un \emph{sentido}.)
+\end{itemize}
+\end{column}
+\begin{column}{0.38\textwidth}
+  \begin{figure}
+    \figopt{Precesa.png}{1.5in}
+  \end{figure}
+  {\tiny El perihelio no vuelve a la misma dirección: gira $\dph=\dth-2\pi$ en
+   cada oscilación radial.}
+\end{column}
+\end{columns}
+\note{Éste es el punto que más se presta a confusión. Comprobar en el pizarrón:
+si $\dth=2\pi+\epsilon$, la partícula debe girar ``un poco más de una vuelta''
+para volver al perihelio, luego el perihelio se ha movido hacia adelante.}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sentido de la precesión y dominio de validez}
+\begin{itemize}
+  \item<1-> $\dth>2\pi$ (es decir $\omega_r<\dot\theta$): precesión
+        \textbf{directa}, el perihelio \emph{avanza} en el sentido del
+        movimiento. Es el caso de Mercurio.
+  \item<2-> $\dth<2\pi$ ($\omega_r>\dot\theta$): precesión
+        \textbf{retrógrada}, el perihelio \emph{retrocede}.
+  \item<3-> $\dth=2\pi$ ($\omega_r=\dot\theta$): órbita cerrada, sin precesión.
+        Es una coincidencia de frecuencias, no una regla general.
+  \item<4-> \alert{Dominio de validez:} todo lo anterior supone órbita
+        \emph{casi circular}, $|\eta|/r_0\ll1$, porque $\omega_r$ se obtuvo
+        linealizando. Para órbitas de excentricidad finita $\dth$ depende
+        además de la amplitud, y hay que usar la integral apsidal exacta.
+  \item<5-> \alert{Además:} $\dth$ se definió a $\ell$ fijo. Una perturbación
+        que cambie $\ell$ (rozamiento, empuje tangencial) desplaza $r_0$ y
+        cambia $\dth$; ése es otro problema.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultado unificador: $f(r)=-k\,r^{n}$}
+\begin{itemize}
+  \item<1-> Ya vimos $\omega_r^{2}=(n+3)\dot\theta^{2}$. Por lo tanto
+        \[ \boxed{\;\dth=\frac{2\pi}{\sqrt{n+3}}\;}\qquad (n>-3) \]
+        El ángulo apsidal de una órbita casi circular \alert{no depende de
+        $\ell$, ni de $k$, ni de $r_0$}: sólo del exponente.
+  \item<2-> \textbf{Verificaciones obligatorias:}
+        \begin{itemize}
+          \item Kepler, $n=-2$: $\dth=2\pi$ $\Rightarrow$ elipse cerrada con
+                foco en el centro de fuerzas. \checkmark
+          \item Oscilador isótropo, $n=1$: $\dth=\pi$ $\Rightarrow$ elipse
+                cerrada con \emph{centro} en el centro de fuerzas (dos
+                perihelios por vuelta). \checkmark
+          \item $n\to-3^{+}$: $\dth\to\infty$, la partícula da infinitas
+                vueltas por oscilación radial: el límite de inestabilidad.
+        \end{itemize}
+  \item<3-> \textbf{Una misma cantidad, tres papeles:} $n+3>0$ es estabilidad;
+        $\sqrt{n+3}$ es la razón de frecuencias; $\sqrt{n+3}$ racional es
+        cierre de la órbita \emph{casi circular}.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Órbitas cerradas y teorema de Bertrand}
+
+\begin{frame}
+\frametitle{Órbitas cerradas}
+\small
+\begin{itemize}
+  \item<1-> Una órbita acotada, $r\in[r_{\min},r_{\max}]$, es \textbf{cerrada}
+        si $r$ y $\theta$ se repiten simultáneamente tras un tiempo finito.
+  \item<2-> Esto ocurre si y sólo si $\dth$ es un múltiplo \emph{racional} de
+        $2\pi$:
+        \[ \dth=\frac{m}{n}\,2\pi
+           \iff \frac{\dot\theta}{\omega_r}=\frac{m}{n}
+           \iff n\,T_r=m\,T_\theta,\qquad m,n\in\mathbb{Z}^{+}. \]
+  \item<3-> Tras $n$ oscilaciones radiales
+        ($r_{\min}\!\to\!r_{\max}\!\to\!r_{\min}$), el \alert{radio vector}
+        completa $m$ revoluciones y la trayectoria se cierra. En ese lapso el
+        \alert{perihelio} ha girado $n\,\dph=2\pi(m-n)$, es decir $m-n$
+        revoluciones enteras: vuelve a su dirección inicial.
+  \item<4-> Si $\dot\theta/\omega_r$ es irracional la órbita es
+        \textbf{cuasiperiódica}: nunca se cierra y llena densamente el anillo
+        $r_{\min}\le r\le r_{\max}$. (Primer encuentro del curso con un toro
+        invariante; volverá en variables acción--ángulo.)
+  \item<5-> \textbf{Teorema de Bertrand.} Los únicos potenciales centrales para
+        los cuales \alert{\emph{todas}} las órbitas acotadas son cerradas son
+        $V(r)=-k/r$ y $V(r)=\tfrac{1}{2}\mu\omega_0^{2}r^{2}$.
+  \item<6-> \alert{El cuantificador es esencial.} Con $f=-kr^{6}$ se tiene
+        $\dth=2\pi/3$: las órbitas \emph{casi circulares} se cierran, pero las
+        de amplitud finita no. Bertrand no lo prohíbe; prohíbe que se cierren
+        \emph{todas}.
+\end{itemize}
+\note{La demostración de Bertrand requiere ir a orden $\eta^3$ y $\eta^4$ en el
+desarrollo: la condición es que $\dth$ sea independiente de la amplitud, no
+sólo racional. Mencionarlo, no demostrarlo.}
+\end{frame}
+
+\begin{frame}
+\frametitle{El ángulo apsidal exacto}
+\begin{itemize}
+  \item<1-> Sin la aproximación de órbita casi circular, la cuadratura de la
+        órbita da
+        \[ \theta(r)=\theta_{i}+\frac{\ell}{\sqrt{2\mu}}
+           \int_{r_i}^{r}\frac{dr'}{r'^{2}
+           \sqrt{E-V(r')-\dfrac{\ell^{2}}{2\mu r'^{2}}}} \]
+  \item<2-> y el ángulo apsidal exacto es
+        \[ \boxed{\;\dth=\frac{2\ell}{\sqrt{2\mu}}
+           \int_{r_{\min}}^{r_{\max}}\frac{dr}{r^{2}
+           \sqrt{E-V(r)-\dfrac{\ell^{2}}{2\mu r^{2}}}}\;} \]
+        con $r_{\min},r_{\max}$ las raíces de $E=\Vef(r)$ (puntos de retorno,
+        $\dot r=0$).
+  \item<3-> \alert{Consistencia:} cuando $E\to\Vef(r_0)$ los dos puntos de
+        retorno colapsan sobre $r_0$ y esta integral tiende a
+        $2\pi\dot\theta/\omega_r$. Las dos expresiones de la sesión son el
+        mismo objeto en regímenes distintos.
+  \item<4-> En general $\dth$ depende de $E$ y $\ell$ (equivalentemente, de $a$
+        y $e$). Que \emph{no} dependa es la propiedad excepcional que
+        caracteriza a los dos potenciales de Bertrand.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Ejemplo general: $V(r)=g(r)-k/r$}
+
+\begin{frame}
+\frametitle{Precesión para $V(r)=g(r)-\dfrac{k}{r}$}
+\small
+Calcular $\dth$ para oscilaciones radiales alrededor de una órbita circular de
+radio $r_0$, con $g(r)$ una perturbación arbitraria y $k=$ cte.
+\begin{itemize}
+  \item<1-> $\displaystyle \Vef(r)=g(r)-\frac{k}{r}+\frac{\ell^{2}}{2\mu r^{2}}$.
+  \item<2-> \textbf{Órbita circular:}
+        $\displaystyle \left.\frac{\partial\Vef}{\partial r}\right|_{r_0}
+        =g'(r_0)+\frac{k}{r_0^{2}}-\frac{\ell^{2}}{\mu r_0^{3}}=0
+        \;\Rightarrow\;
+        \ell^{2}=\mu\left(g'(r_0)\,r_0^{3}+k\,r_0\right).$
+  \item<3-> \textbf{Frecuencia radial:}
+        $\displaystyle \omega_r^{2}
+        =\frac{1}{\mu}\left(g''(r_0)-\frac{2k}{r_0^{3}}
+        +\frac{3\ell^{2}}{\mu r_0^{4}}\right)
+        =\frac{1}{\mu}\left(g''(r_0)+\frac{3g'(r_0)}{r_0}
+        +\frac{k}{r_0^{3}}\right).$
+  \item<4-> \textbf{Velocidad angular:}
+        $\displaystyle \dot\theta=\frac{\ell}{\mu r_0^{2}}
+        =\left[\frac{1}{\mu}\left(\frac{g'(r_0)}{r_0}
+        +\frac{k}{r_0^{3}}\right)\right]^{1/2}.$
+  \item<5-> \textbf{Ángulo apsidal:}
+        \[ \boxed{\;\dth=2\pi\,\frac{\dot\theta}{\omega_r}
+           =2\pi\left(\frac{g'(r_0)\,r_0^{2}+k}
+           {g''(r_0)\,r_0^{3}+3g'(r_0)\,r_0^{2}+k}\right)^{1/2}\;} \]
+  \item<6-> \alert{Control obligatorio:} si $g\equiv0$,
+        $\dth=2\pi\sqrt{k/k}=2\pi$: Kepler, órbita cerrada. \checkmark
+        Además $\ell^{2}=\mu k r_0$, la relación kepleriana conocida.
+        \checkmark
+\end{itemize}
+\note{Conviene señalar que $\dth$ resulta independiente de $\ell$ porque $\ell$
+ya fue eliminado mediante la condición de órbita circular: $r_0$ y $\ell$ no son
+independientes.}
+\end{frame}
+
+\begin{frame}
+\frametitle{Aplicación: la precesión del perihelio de Mercurio}
+\small
+\begin{columns}[T]
+\begin{column}{0.56\textwidth}
+\footnotesize
+\begin{itemize}
+  \item<1-> La relatividad general añade al problema kepleriano un término
+        efectivo $g(r)=-C/r^{3}$, con
+        $C=\dfrac{GM\ell^{2}}{m c^{2}}$ y $k=GMm$.
+  \item<2-> Con $g'=3C/r^{4}$, $g''=-12C/r^{5}$:
+        \[ \dth=2\pi\left(\frac{k+3C/r_0^{2}}
+           {k-3C/r_0^{2}}\right)^{1/2}
+           \simeq 2\pi\left(1+\frac{3C}{k\,r_0^{2}}\right). \]
+  \item<3-> Luego $\dth>2\pi$: precesión \alert{directa}. Usando
+        $\ell^{2}=\mu k r_0\Rightarrow \ell^{2}/m^{2}=GMr_0$,
+        \[ \boxed{\;\dph\simeq\frac{6\pi GM}{c^{2}r_0}\;} \]
+        que para órbitas excéntricas se generaliza con
+        $r_0\to a(1-e^{2})$.
+  \item<4-> Mercurio: $\dph\approx43''$ por siglo, tras descontar la precesión
+        de los equinoccios y las perturbaciones de los demás planetas.
+\end{itemize}
+\end{column}
+\begin{column}{0.42\textwidth}
+  \begin{figure}
+    \figopt{PrecesaPlanetas.png}{\textwidth}
+  \end{figure}
+  {\tiny La precesión observada del perihelio es la suma de un efecto de
+   coordenadas, de perturbaciones newtonianas entre planetas, y de un residuo
+   relativista.}
+\end{column}
+\end{columns}
+\note{Cifras aproximadas para Mercurio, respecto del equinoccio: $\sim5600''$/siglo
+observados, de los cuales $\sim5025''$ son precesión de los equinoccios y
+$\sim532''$ perturbaciones planetarias newtonianas; el residuo $\sim43''$/siglo
+es el término relativista. Verificar antes de citar cifras exactas en el examen.}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Recapitulación, chequeos y actividades}
+
+\begin{frame}
+\frametitle{Recapitulando}
+\begin{itemize}
+  \item<1-> \textbf{Órbita circular:} $\Vef'(r_0)=0$;
+        \textbf{estable} si $\Vef''(r_0)>0$, equivalentemente
+        $\dfrac{3f(r_0)}{r_0}+f'(r_0)<0$, o
+        $\dfrac{d\ln|f|}{d\ln r}\Big|_{r_0}>-3$.
+  \item<2-> \textbf{Perturbación radial a $\ell$ fijo:}
+        $\ddot\eta+\omega_r^{2}\eta=0$ con
+        $\omega_r^{2}=\Vef''(r_0)/\mu$.
+  \item<3-> \textbf{Coulomb apantallado:} estable si
+        $\dfrac{a}{r_0}>\dfrac{\sqrt5-1}{2}=0.618$, es decir
+        $r_0<1.618\,a$.
+  \item<4-> \textbf{Precesión:} ángulo apsidal
+        $\dth=2\pi\dot\theta/\omega_r$; corrimiento del perihelio
+        $\dph=\dth-2\pi$. Directa si $\dth>2\pi$, retrógrada si
+        $\dth<2\pi$, nula si $\dth=2\pi$.
+  \item<5-> \textbf{Ley de potencia:} $\dth=2\pi/\sqrt{n+3}$.
+  \item<6-> \textbf{Bertrand:} sólo $-k/r$ y $\tfrac12\mu\omega_0^2r^{2}$ cierran
+        \emph{todas} las órbitas acotadas.
+  \item<7-> \textbf{Hacia la próxima sesión:} $\dth$ es una razón de frecuencias
+        $\omega_\theta/\omega_r$; en variables acción--ángulo esa razón es
+        exactamente el número de rotación, y su racionalidad decide entre
+        toros resonantes y no resonantes.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Chequeos conceptuales}
+\begin{enumerate}
+  \item<1-> ¿Puede una órbita circular ser estable frente a perturbaciones
+        radiales y, sin embargo, inestable frente a perturbaciones que cambien
+        $\ell$? ¿Qué hipótesis del análisis se está violando?
+  \item<2-> Para $f=-kr^{n}$, $\dth$ no depende de $r_0$. ¿Es eso cierto para
+        el potencial apantallado? ¿Por qué la diferencia?
+  \item<3-> Un estudiante afirma: ``como $\dth=2\pi/\sqrt{n+3}$ es racional
+        para $n=6$, el teorema de Bertrand es falso''. Responda.
+  \item<4-> En el límite $n\to-3^{+}$, $\omega_r\to0$ pero $\dot\theta$ es
+        finita. Describa cualitativamente la trayectoria.
+  \item<5-> ¿Qué signo debe tener $g'(r_0)$ para que una perturbación
+        \emph{repulsiva} añadida a Kepler produzca precesión retrógrada?
+\end{enumerate}
+\note{(1) Sí: el análisis es a $\ell$ fijo; una perturbación tangencial cambia
+$\ell$ y desplaza el mínimo de $\Vef$, pero el nuevo mínimo sigue existiendo si
+$n>-3$. (2) No: en el apantallado $\dth$ depende de $r_0/a$, porque el potencial
+no es homogéneo; sólo las leyes de potencia carecen de escala. (3) Bertrand
+exige que se cierren TODAS las órbitas acotadas, no sólo las casi circulares.
+(4) Espiral de paso creciente: la partícula gira muchas veces mientras $r$
+apenas ha completado media oscilación. (5) Ver la fórmula: basta que el
+numerador disminuya más que el denominador; para $g=\lambda/r^2$, $\lambda>0$,
+sale $\dth<2\pi$.}
+\end{frame}
+
+\begin{frame}
+\frametitle{Actividad con IA: auditoría de afirmaciones}
+\small
+\textbf{Tarea asistida por IA (45 min).} Un asistente produce el siguiente
+resumen del tema. Contiene \alert{cinco} defectos. Identifíquelos, clasifíquelos
+y corríjalos.
+\begin{block}{Fragmento a auditar}
+\begin{enumerate}\footnotesize
+  \item ``Una órbita circular es estable si la fuerza atractiva decae más
+        rápido que $r^{-3}$.''
+  \item ``Hay precesión cuando el ángulo de precesión cumple $\dth<2\pi$.''
+  \item ``El ángulo $\dth$ mide cuánto se desplaza la dirección del perihelio en
+        cada período radial.''
+  \item ``Como $\dth=2\pi/\sqrt{n+3}$ vale $\pi$ para el oscilador, la órbita
+        del oscilador es una elipse con foco en el centro de fuerzas.''
+  \item ``Bertrand demuestra que ningún potencial distinto de $-k/r$ y $r^{2}$
+        admite órbitas cerradas.''
+\end{enumerate}
+\end{block}
+\textbf{Clasifique cada defecto como:} (a) inversión de una desigualdad,
+(b) confusión entre dos cantidades distintas, (c) error de cuantificador
+(``alguna'' vs.\ ``toda''), (d) error de interpretación geométrica.
+\medskip
+
+\textbf{Entregable:} prompts usados, respuesta de la IA, qué se aceptó,
+rechazó o corrigió, \alert{cómo se verificó cada punto} (caso límite,
+contraejemplo explícito, cálculo directo), razonamiento final propio y
+limitaciones detectadas. Se califica la \emph{verificación}, no la detección.
+\note{Defecto 1: la condición es $n>-3$, es decir que \emph{no} decaiga más
+rápido que $r^{-3}$; se invirtió la desigualdad. 2: hay precesión si
+$\dth\neq2\pi$. 3: eso es $\dph=\dth-2\pi$. 4: la elipse del oscilador tiene el
+\emph{centro}, no un foco, en el centro de fuerzas. 5: cuantificador: Bertrand
+habla de \emph{todas} las órbitas acotadas; $n=6$ es contraejemplo para órbitas
+casi circulares.}
+\end{frame}
+
+\begin{frame}
+\frametitle{Extensión computacional (Python)}
+\small
+\textbf{Antes de programar:} obtenga $\Vef(r)$, $r_0(\ell)$ y $\omega_r(r_0)$
+analíticamente para el potencial que va a integrar.
+\begin{enumerate}
+  \item<1-> \textbf{Verificación de $\omega_r$.} Integre el movimiento con
+        $\eta_0/r_0=10^{-3},10^{-2},10^{-1}$ para $f=-kr^{n}$. Mida el período
+        radial por conteo de máximos y compare con $2\pi/(\dot\theta\sqrt{n+3})$.
+        Grafique el error relativo frente a $\eta_0/r_0$ y determine el
+        \emph{orden} de la desviación anarmónica.
+  \item<2-> \textbf{Ángulo apsidal.} Mida $\dth$ numéricamente como el ángulo
+        entre dos perihelios consecutivos y compárelo con $2\pi/\sqrt{n+3}$ y
+        con la integral apsidal exacta evaluada por cuadratura (cuidado con la
+        singularidad integrable en los puntos de retorno: use el cambio
+        $r=\frac{r_{\min}+r_{\max}}{2}+\frac{r_{\max}-r_{\min}}{2}\sin\psi$).
+  \item<3-> \textbf{Umbral de estabilidad.} Para el potencial apantallado,
+        integre con $r_0/a=1.0,\,1.6,\,1.7$ y muestre numéricamente el cambio de
+        comportamiento en $r_0/a=\varphi$.
+  \item<4-> \textbf{Cierre y cuasiperiodicidad.} Compare las trayectorias para
+        $n=-2$, $n=1$, $n=6$ y $n=0$ ($\sqrt3$ irracional) durante $200$
+        períodos radiales. Construya la sección de Poincaré $(r,\dot r)$ en
+        $\theta=0\;(\mathrm{mod}\;2\pi)$.
+  \item<5-> \textbf{Control de calidad obligatorio:} conservación de $E$ y
+        $\ell$, estudio de convergencia en $\Delta t$, y una frase que
+        distinga \emph{deriva numérica} de \emph{precesión física}. Una
+        precesión espuria por error de truncamiento es el artefacto clásico de
+        este problema.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Para la discusión}
+{\bf Estabilidad y precesión en un potencial de Coulomb modificado}\\[2pt]
+\small
+Una partícula de masa reducida $\mu$ se mueve en el potencial central
+\[ V(r)=-\frac{k}{r}+\frac{\lambda}{r^{2}},\qquad k>0,\;\lambda>0, \]
+donde el segundo término representa una corrección repulsiva de corto alcance.
+\begin{enumerate}
+  \item Construya $\Vef(r)$ e identifique los dos términos que compiten en
+        $r^{-2}$.
+  \item Obtenga la condición de órbita circular de radio $r_0$ y determine si
+        es estable. ¿Existe algún $\lambda$ que la desestabilice?
+  \item Calcule $\dth$ y $\dph$ usando la fórmula general con
+        $g(r)=\lambda/r^{2}$.
+  \item Determine el sentido de la precesión y justifíquelo físicamente.
+  \item \textbf{Verificación:} este potencial admite solución exacta. Compruebe
+        que su resultado casi circular coincide con el exacto y explique por qué
+        la coincidencia es total en este caso y no en general.
+\end{enumerate}
+\note{Solución (no distribuir).
+$g=\lambda r^{-2}$, $g'=-2\lambda r^{-3}$, $g''=6\lambda r^{-4}$.
+Numerador $g'r_0^2+k=k-2\lambda/r_0$; denominador
+$g''r_0^3+3g'r_0^2+k=6\lambda/r_0-6\lambda/r_0+k=k$.
+Luego $\dth=2\pi\sqrt{1-2\lambda/(kr_0)}<2\pi$: precesión RETRÓGRADA.
+Estabilidad: el término $\lambda/r^2$ se suma al centrífugo, $\Vef$ conserva un
+mínimo mientras $\ell^2/2\mu+\lambda>0$, siempre cierto para $\lambda>0$; la
+órbita circular existe sólo si $r_0>2\lambda/k$ (para que $\ell^2>0$).
+Exacto: la ecuación de la órbita da $\dth_{\rm exacto}
+=2\pi\ell/\sqrt{\ell^{2}+2\mu\lambda}$; con $\ell^{2}=\mu(kr_0-2\lambda)$ se
+obtiene $\ell^2/(\ell^2+2\mu\lambda)=1-2\lambda/(kr_0)$: coincidencia exacta.
+La razón: $\lambda/r^2$ sólo redefine $\ell^2\to\ell^2+2\mu\lambda$, de modo que
+$\dth$ no depende de la amplitud y la aproximación casi circular es exacta.}
+\end{frame}
+
+\end{document}

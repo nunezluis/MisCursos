@@ -1,0 +1,7 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Objetivos y prerrequisitos}{3}{0}{1}
+\beamer@sectionintoc {2}{Las tres leyes y su contenido dinámico}{14}{0}{2}
+\beamer@sectionintoc {3}{Segunda ley: velocidad areolar}{20}{0}{3}
+\beamer@sectionintoc {4}{Tercera ley: período y semieje mayor}{25}{0}{4}
+\beamer@sectionintoc {5}{Generalización: semejanza mecánica}{38}{0}{5}
+\beamer@sectionintoc {6}{Chequeos, actividad con IA y extensión computacional}{42}{0}{6}

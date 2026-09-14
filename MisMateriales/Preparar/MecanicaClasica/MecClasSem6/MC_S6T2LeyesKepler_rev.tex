@@ -1,0 +1,434 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Mecanica Clasica  --  Sesion 6, Tema 2:  Leyes de Kepler
+%  Version revisada.  Guardar este archivo en codificacion UTF-8.
+%  Compilar con:  pdflatex  (o xelatex/lualatex si se prefiere fontspec)
+%
+%  Cambios respecto de la version original (ver informe de revision):
+%   [C1] Codificacion UTF-8 y fontenc T1.
+%   [C2] Rutas relativas para el logo y las figuras (\graphicspath), con
+%        \IfFileExists para que el archivo compile aunque falten imagenes.
+%   [C3] Notacion unificada: el momento angular es siempre L (antes L / l).
+%   [C4] Entorno frame (en lugar de \frame{...}) para permitir contenido fragil.
+%   [C5] Se completa el paso algebraico omitido entre pi a b = \ell T/(2\mu)
+%        y T = 2\pi\sqrt{\mu a^3/k}.
+%   [C6] Corregido: mu ~ m desprecia terminos de PRIMER orden en m/M_S.
+%   [C7] Se da primero la forma exacta de dos cuerpos T^2=4\pi^2a^3/[G(M_S+m)].
+%   [C8] Se distingue orbita ACOTADA de orbita CERRADA (teorema de Bertrand).
+%   [C9] Nuevos frames: objetivos, prerrequisitos, chequeos conceptuales,
+%        semejanza mecanica, actividad con IA, extension computacional, resumen.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[10pt]{beamer}
+
+\usepackage[utf8]{inputenc}      % [C1]
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-nodecimaldot,es-noshorthands]{babel}  % evita que "." y
+                                 % ";" se vuelvan activos dentro de modo mate.
+
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{mathtools,cancel}
+\renewcommand{\CancelColor}{\color{red}}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{textpos}
+% NOTA: no se carga geometry: beamer gestiona su propia caja de pagina.
+
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+% [C2] Rutas relativas y tolerancia a figuras ausentes
+\graphicspath{{Figuras/}{./Figuras/}{./}}
+\newcommand{\logoUIS}{Figuras/UISLOGO.png}
+\newcommand{\figopt}[2]{%  #1 = archivo, #2 = ancho
+  \IfFileExists{Figuras/#1}{\includegraphics[width=#2]{Figuras/#1}}%
+  {\fbox{\parbox[c][0.8in][c]{#2}{\centering\tiny falta \texttt{Figuras/#1}}}}}
+
+\IfFileExists{\logoUIS}{%
+  \addtobeamertemplate{frametitle}{}{%
+    \begin{textblock*}{100mm}(.85\textwidth,-1cm)
+      \includegraphics[height=0.4in,keepaspectratio=true]{\logoUIS}
+    \end{textblock*}}}{}
+
+% Macros de notacion  [C3]
+\newcommand{\uv}[1]{\hat{\mathbf{#1}}}
+\newcommand{\vect}[1]{\mathbf{#1}}
+\newcommand{\vell}{\boldsymbol{\ell}}   % vector momento angular
+\newcommand{\Lang}{\mathcal{L}}          % lagrangiano  (distinto de \ell)
+
+\begin{document}
+
+\title[Leyes de Kepler]{\textbf{Leyes de Kepler}}
+\subtitle{Mecánica Clásica --- Sesión 6, Tema 2}
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias,}\\
+\textit{Universidad Industrial de Santander, Colombia}}
+\date{\today}
+
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Agenda}
+  \tableofcontents
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Objetivos y prerrequisitos}
+
+\begin{frame}
+\frametitle{Objetivos de aprendizaje}
+Al finalizar esta sesión el estudiante debe ser capaz de:
+\begin{enumerate}
+  \item<1-> \textbf{Deducir} la segunda ley de Kepler a partir de la conservación
+        de $\vell$, e \textbf{identificar} que es válida para
+        \emph{cualquier} fuerza central.
+  \item<2-> \textbf{Determinar} qué ingrediente dinámico codifica cada una de las
+        tres leyes (fuerza central, forma $-k/r$, cierre de la órbita).
+  \item<3-> \textbf{Derivar} la forma exacta de la tercera ley,
+        $T_p=2\pi\sqrt{\mu a^{3}/k}$, sin saltos algebraicos.
+  \item<4-> \textbf{Evaluar} el error cometido al aproximar $\mu\approx m$ y
+        \textbf{cuantificarlo} para planetas reales.
+  \item<5-> \textbf{Generalizar} la relación período--tamaño a potenciales
+        homogéneos $V\propto r^{n}$ mediante semejanza mecánica.
+  \item<6-> \textbf{Verificar} numéricamente la constancia de $L$ y de la
+        velocidad areolar, y \textbf{distinguir} deriva numérica de física.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Conceptos previos requeridos}
+\begin{itemize}
+  \item<1-> \textbf{Reducción del problema de dos cuerpos}: coordenadas
+        $\vect{R}_{\mathrm{cm}}$ y $\vect{r}=\vect{r}_1-\vect{r}_2$;
+        masa reducida $\mu=\dfrac{m_1m_2}{m_1+m_2}$.
+  \item<2-> \textbf{Fuerza central} $\vect{F}=f(r)\,\uv{r}$ $\Rightarrow$
+        $\dot{\vell}=\vect{r}\times\vect{F}=0$ $\Rightarrow$ movimiento
+        \emph{plano}.
+  \item<3-> \textbf{Lagrangiano en el plano orbital}
+        $\Lang=\tfrac{1}{2}\mu(\dot r^{2}+r^{2}\dot\theta^{2})-V(r)$;
+        $\theta$ cíclica $\Rightarrow$
+        $p_\theta=\mu r^{2}\dot\theta\equiv \ell=\text{cte}$.
+  \item<4-> \textbf{Ecuación de la órbita} para $V(r)=-k/r$:
+        \[
+          r(\theta)=\frac{p}{1+e\cos\theta},\qquad
+          p=\frac{L^{2}}{\mu k},\qquad
+          e=\sqrt{1+\frac{2E \ell^{2}}{\mu k^{2}}},\qquad
+          a=\frac{k}{2|E|}.
+        \]
+  \item<5-> \textbf{Órbitas acotadas}: $E<0 \Leftrightarrow 0\le e<1$ (elipse);
+        $e=1$ parábola, $e>1$ hipérbola.
+\end{itemize}
+\note{Recordar que $\ell$ (escalar) es la componente perpendicular al plano del
+vector $\vell$. Todo lo que sigue usa $\mu$, no $m$: la órbita es la del
+vector relativo $\vect{r}$.}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Las tres leyes y su contenido dinámico}
+
+\begin{frame}
+\frametitle{Las Leyes de Kepler}
+\footnotesize
+\begin{tabular}{@{}p{0.30\textwidth}p{0.30\textwidth}p{0.32\textwidth}@{}}
+\toprule
+\textbf{Ley} & \textbf{Enunciado} & \textbf{Ingrediente dinámico} \\
+\midrule
+\textbf{1.ª} (forma de la órbita)
+ & Los planetas describen elipses con el Sol en uno de los focos.
+ & Forma funcional $V(r)=-k/r$ \emph{y} $E<0$; el cierre de la órbita es
+   específico de $n=-1$ (Bertrand). \\[2pt]
+\textbf{2.ª} (ley de áreas)
+ & $\dot A=$ cte.
+ & \emph{Sólo} fuerza central: $\vell=$ cte. No depende de la forma de
+   $V(r)$. \\[2pt]
+\textbf{3.ª} (período--tamaño)
+ & $T_p^{2}\propto a^{3}$, con la \emph{misma} constante para todos los planetas.
+ & Forma funcional $V(r)=-k/r$ (semejanza mecánica) \emph{y} la aproximación
+   $m/M_S\ll 1$ para la universalidad de la constante. \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+\uncover<2->{\alert{Jerarquía:} la 2.ª ley es la más general (cualquier
+$f(r)$); la 1.ª y la 3.ª seleccionan el potencial kepleriano.}
+\note{Punto clave de la sesión: cada ley empírica es la huella de una hipótesis
+dinámica distinta. Kepler no podía separarlas; nosotros sí.}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tres precisiones sobre los enunciados}
+\begin{itemize}
+  \item<1-> \textbf{¿En qué foco está el Sol?} El Sol ocupa un foco de la órbita
+        \emph{relativa} $\vect{r}(t)$. En el sistema centro de masa, ambos
+        cuerpos describen elipses semejantes con foco común en el CM, con
+        semiejes $a_{\odot}=\frac{\mu}{M_S}a$ y $a_{p}=\frac{\mu}{m}a$.
+  \item<2-> \textbf{La 2.ª ley no necesita un potencial.} Basta que la fuerza sea
+        central, $\vect{F}=f(r,t)\,\uv{r}$: aunque $f$ dependa del tiempo y no
+        derive de $V(r)$, $\vect{r}\times\vect{F}=0$ y $\vell$ se conserva.
+  \item<3-> \textbf{Acotada $\neq$ cerrada.} Toda órbita con $E<0$ en un
+        potencial atractivo es acotada, pero sólo se cierra para
+        $V\propto -1/r$ y $V\propto r^{2}$ (teorema de Bertrand). En cualquier
+        otro caso la órbita precesa y llena densamente el anillo
+        $r_{\min}\le r\le r_{\max}$.
+  \item<4-> \alert{Nota:} para el oscilador $V\propto r^{2}$ la órbita también es
+        una elipse, pero con el centro de fuerzas en el \emph{centro}, no en un
+        foco. La 1.ª ley, con la palabra ``foco'', ya distingue $-k/r$ de $r^2$.
+\end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Segunda ley: velocidad areolar}
+
+\begin{frame}
+\frametitle{2.\textsuperscript{a} Ley: velocidad areolar constante}
+\begin{columns}[T]
+\begin{column}{0.46\textwidth}
+  \begin{figure}
+    \figopt{VelAerolar.png}{1.9in}\\[2pt]
+    \figopt{VelAerolarKepler.png}{1.9in}
+  \end{figure}
+  {\tiny Áreas iguales en tiempos iguales: cerca del perihelio el planeta recorre
+   un arco más largo en el mismo $dt$.}
+\end{column}
+\begin{column}{0.52\textwidth}
+\small
+\begin{itemize}
+  \item<1-> Fuerza central $\Rightarrow$
+        $\ell=\mu r^{2}\dot\theta = \text{cte}$.
+  \item<2-> Área barrida en $dt$ (triángulo a primer orden en $d\theta$):
+        \[ dA=\tfrac{1}{2}(r\,d\theta)\,r=\tfrac{1}{2}r^{2}d\theta
+           \;\Longrightarrow\; \dot A=\tfrac{1}{2}r^{2}\dot\theta . \]
+  \item<3-> Sustituyendo $\dot\theta=\ell/(\mu r^{2})$:
+        \[ \boxed{\;\dot A=\frac{1}{2}r^{2}\frac{\ell}{\mu r^{2}}
+           =\frac{\ell}{2\mu}=\text{cte}\;} \]
+  \item<4-> Forma vectorial:
+        $\dot{\vect{A}}=\tfrac{1}{2}\vect{r}\times\dot{\vect{r}}
+         =\dfrac{\vell}{2\mu}$.
+        La constancia de la \emph{dirección} es la planitud de la órbita; la del
+        \emph{módulo} es la ley de áreas.
+  \item<5-> Consecuencia en los ápsides ($\dot r=0$):
+        $r_{\min}v_{\max}=r_{\max}v_{\min}$.
+\end{itemize}
+\end{column}
+\end{columns}
+\note{Errata frecuente: escribir $dA = r\,d\theta\,dr$. El factor 1/2 viene del
+área del triángulo, no de una integral radial.}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Tercera ley: período y semieje mayor}
+
+\begin{frame}
+\frametitle{3.\textsuperscript{a} Ley (1/3): del área barrida al área encerrada}
+\begin{itemize}
+  \item<1-> Si la órbita es \alert{cerrada} de período $T_p$, integrar
+        $\dot A=\ell/2\mu$ sobre un período da el área \emph{barrida}:
+        \[ A_{\text{barrida}}=\frac{\ell}{2\mu}\int_{0}^{T_p}dt
+           =\frac{\ell}{2\mu}\,T_p . \]
+  \item<2-> \alert{Hipótesis que hay que hacer explícita:} sólo si la órbita se
+        cierra, el área barrida en un período coincide con el área
+        \emph{encerrada}. En una órbita acotada pero precesante el radio vector
+        vuelve a barrer regiones ya recorridas.
+  \item<3-> Para $V(r)=-k/r$ con $E<0$ la órbita es una elipse y
+        \[ A_{\text{encerrada}}=\pi a b , \]
+        con $a$ el semieje mayor y $b$ el semieje menor.
+  \item<4-> Igualando:
+        \[ \pi a b=\frac{\ell}{2\mu}T_p
+           \;\Longrightarrow\; T_p=\frac{2\pi\mu\,a\,b}{\ell}. \tag{$\star$} \]
+        \alert{Aún no es la tercera ley:} $b$ y $\ell$ dependen de la
+        excentricidad. Hay que eliminarlos.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{3.\textsuperscript{a} Ley (2/3): eliminación de $b$ y de $\ell$}
+\textbf{Dos identidades de la elipse kepleriana} (de la ecuación de la órbita):
+\begin{align}
+  b^{2}&=a^{2}(1-e^{2})=a\,p, &&\text{con } p=a(1-e^{2}) \;\Rightarrow\;
+  b=\sqrt{a\,p}, \label{eq:b} \\ [2pt]
+  p&=\frac{\ell^{2}}{\mu k} &&\Rightarrow\; \ell=\sqrt{\mu k p}. \label{eq:l}
+\end{align}
+\pause
+\textbf{Sustituyendo \eqref{eq:b} y \eqref{eq:l} en $(\star)$ de la transparencia anterior:}
+\[
+  T_p=\frac{2\pi\mu\,a\,\sqrt{a p}}{\sqrt{\mu k p}}
+     =\frac{2\pi\mu\,a^{3/2}\,\cancel{\sqrt{p}}}{\sqrt{\mu k}\,\cancel{\sqrt{p}}}
+     =2\pi\,\frac{\mu}{\sqrt{\mu k}}\;a^{3/2}
+     =2\pi\sqrt{\frac{\mu}{k}}\;a^{3/2}.
+\]
+\pause
+\[
+  \boxed{\;T_p=2\pi\sqrt{\frac{\mu a^{3}}{k}}\;}
+  \qquad\Longleftrightarrow\qquad T_p^{2}=\frac{4\pi^{2}\mu}{k}\,a^{3}
+\]
+\pause
+\begin{itemize}
+  \item El semilatus rectum $p$ (y por tanto $e$ y $\ell$) \alert{se cancela}:
+        el período depende \emph{sólo} de $a$. Ésta es la afirmación no trivial.
+  \item \textbf{Chequeo dimensional}: $[k]=\text{energía}\times\text{longitud}$,
+        luego $[\mu a^{3}/k]=\dfrac{\text{kg}\cdot\text{m}^{3}}
+        {\text{kg}\,\text{m}^{2}\text{s}^{-2}\cdot\text{m}}=\text{s}^{2}$.
+        \checkmark
+\end{itemize}
+\note{El paso clave que suele omitirse es $b=\sqrt{ap}$. Pedir a los estudiantes
+que lo demuestren a partir de $r_{\min}+r_{\max}=2a$ y $r_{\min}r_{\max}=b^2$.}
+\end{frame}
+
+\begin{frame}
+\frametitle{3.\textsuperscript{a} Ley (3/3): forma exacta de dos cuerpos}
+\begin{itemize}
+  \item<1-> Para la gravitación $k=GM_S m$ y $\mu=\dfrac{mM_S}{M_S+m}$, de modo
+        que la combinación que aparece en $T_p$ es \emph{exactamente}
+        \[ \frac{\mu}{k}=\frac{mM_S}{(M_S+m)\,G M_S m}=\frac{1}{G(M_S+m)} . \]
+  \item<2-> Por lo tanto, sin ninguna aproximación:
+        \[ \boxed{\;T_p^{2}=\frac{4\pi^{2}}{G\,(M_S+m)}\,a^{3}\;} \]
+  \item<3-> \alert{La tercera ley de Kepler, tal como él la enunció}
+        (misma constante para todos los planetas) \alert{no es exacta}: la
+        constante $T_p^{2}/a^{3}$ depende del planeta a través de $m$.
+  \item<4-> Sólo si $m/M_S\ll 1$, despreciando términos de \alert{primer} orden
+        en $m/M_S$,
+        \[ \frac{1}{M_S+m}=\frac{1}{M_S}\left(1-\frac{m}{M_S}+\mathcal{O}
+           \!\left[\left(\tfrac{m}{M_S}\right)^{2}\right]\right)
+           \approx\frac{1}{M_S}
+           \;\Longrightarrow\; T_p^{2}\approx\frac{4\pi^{2}}{GM_S}a^{3}. \]
+  \item<5-> \textbf{Magnitud del error relativo} $\simeq m/M_S$:
+        Júpiter $\sim 9.5\times10^{-4}$, Tierra $\sim 3.0\times10^{-6}$,
+        Mercurio $\sim 1.7\times10^{-7}$. Medible, y de hecho medido.
+\end{itemize}
+\note{Aquí se corrige el error de la versión anterior: escribir
+$\mu=m(1-m/M_S+\cdots)\approx m$ y decir que se ``desprecian términos
+cuadráticos'' es inconsistente; lo que se desprecia es el término lineal.
+Presentar primero la forma exacta evita el desarrollo por completo.}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Generalización: semejanza mecánica}
+
+\begin{frame}
+\frametitle{¿De dónde sale realmente el exponente $3/2$?}
+\begin{itemize}
+  \item<1-> Sea $V(r)$ homogénea de grado $n$: $V(\alpha r)=\alpha^{n}V(r)$.
+        La acción es invariante bajo cambios de escala
+        $\vect{r}\to\alpha\vect{r}$, $t\to\beta t$ si
+        $\dfrac{\alpha^{2}}{\beta^{2}}=\alpha^{n}
+        \;\Rightarrow\; \beta=\alpha^{1-n/2}$.
+  \item<2-> Es decir, dos trayectorias geométricamente semejantes de tamaños
+        $a_1,a_2$ tienen períodos
+        \[ \frac{T_2}{T_1}=\left(\frac{a_2}{a_1}\right)^{1-n/2}. \]
+  \item<3-> Casos particulares:
+        \begin{itemize}
+          \item $n=-1$ (Kepler): $T\propto a^{3/2}$ \quad$\rightarrow$\quad
+                tercera ley, \emph{sin resolver la órbita}.
+          \item $n=2$ (oscilador): $T\propto a^{0}$, isocronía.
+          \item $n=1$ (caída uniforme): $T\propto a^{1/2}$, $h=\tfrac12 gt^2$.
+        \end{itemize}
+  \item<4-> \alert{Lección metodológica:} un argumento de escalamiento entrega el
+        exponente sin ningún cálculo; la integración explícita sólo añade la
+        \emph{constante} $4\pi^{2}\mu/k$. Distinguir siempre qué parte de un
+        resultado es estructural y qué parte es de detalle.
+\end{itemize}
+\note{Landau \& Lifshitz, \emph{Mecánica}, \S10 (semejanza mecánica). Conecta
+con el teorema del virial, que se verá enseguida.}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Chequeos, actividad con IA y extensión computacional}
+
+\begin{frame}
+\frametitle{Chequeos conceptuales}
+\begin{enumerate}
+  \item<1-> Un cometa y un asteroide tienen órbitas con el mismo semieje mayor
+        pero excentricidades $e=0.9$ y $e=0.05$. ¿Cuál tiene mayor período?
+        ¿Mayor momento angular? ¿Mayor energía?
+  \item<2-> ¿Se cumple la segunda ley de Kepler en un potencial
+        $V(r)=-k/r^{3}$? ¿Y la primera? ¿Y la tercera?
+  \item<3-> Si mañana el Sol perdiera masa lentamente, ¿qué cantidad de las que
+        aparecen en esta sesión dejaría de conservarse primero?
+  \item<4-> La Tierra y un satélite artificial orbitan el Sol y la Tierra
+        respectivamente. ¿Por qué la constante $T^{2}/a^{3}$ es distinta en cada
+        caso, si ambas son ``la tercera ley''?
+\end{enumerate}
+\note{Respuestas (no distribuir): (1) mismo período (sólo depende de $a$) y misma
+energía $E=-k/2a$; mayor $\ell$ el de menor $e$. (2) 2.ª sí (es central); 1.ª no
+(no se cierra, precesa); 3.ª no ($n=-3\Rightarrow T\propto a^{5/2}$). (3) $E$ deja
+de conservarse ($\partial_t V\neq0$) mientras $\vell$ se sigue conservando;
+introduce el tema de invariantes adiabáticos. (4) la constante es
+$4\pi^2/[G(M+m)]$: cambia el cuerpo central.}
+\end{frame}
+
+\begin{frame}
+\frametitle{Actividad con IA: auditoría de una derivación}
+\small
+\textbf{Tarea (asistida por IA, 45 min).} Se entrega una ``solución'' generada por
+un asistente de IA que contiene \alert{cinco} defectos. Identifíquelos,
+clasifíquelos y corríjalos.
+\begin{block}{Fragmento a auditar}
+\begin{enumerate}\footnotesize
+  \item ``La ley de áreas se cumple porque el potencial es $-k/r$.''
+  \item ``Como la órbita está acotada, es cerrada y encierra un área $\pi ab$.''
+  \item ``$T_p=2\pi\sqrt{k a^{3}/\mu}$.''
+  \item ``Despreciando términos cuadráticos en $m/M_S$ se obtiene $\mu\approx m$.''
+  \item ``Luego $T_p^{2}=4\pi^{2}a^{3}/(GM_S)$ es un resultado exacto.''
+\end{enumerate}
+\end{block}
+\textbf{Clasifique cada defecto como:} (a) error de \emph{alcance} (hipótesis
+demasiado fuerte o demasiado débil), (b) error \emph{dimensional}, (c) error de
+\emph{orden en una expansión}, (d) error de \emph{estatus} (aproximado
+presentado como exacto).
+\medskip
+
+\textbf{Entregable} (según la política de IA del curso): prompts utilizados,
+respuesta de la IA, qué se aceptó/rechazó/corrigió, \emph{cómo} se verificó cada
+punto (chequeo dimensional, caso límite, contraejemplo numérico), razonamiento
+final propio, y limitaciones detectadas. Se evalúa la \alert{verificación}, no la
+detección.
+\note{El defecto 3 se detecta sólo con análisis dimensional; el 2 requiere un
+contraejemplo ($V=-k/r^3$, órbita precesante); el 5 se refuta con la forma exacta
+$T^2=4\pi^2a^3/[G(M_S+m)]$.}
+\end{frame}
+
+\begin{frame}
+\frametitle{Extensión computacional (Python)}
+\small
+\textbf{Antes de programar:} deduzca y escriba las ecuaciones de movimiento en
+coordenadas cartesianas del vector relativo y fije unidades (UA, año, $M_\odot$).
+\begin{enumerate}
+  \item<1-> \textbf{Integración.} Integre la órbita con RK4 y con un integrador
+        simpléctico (leapfrog/Verlet), $e=0.7$. Compare la deriva de $E$ y de
+        $\ell$ en $10^{3}$ períodos. \emph{¿Qué se conserva y por qué?}
+  \item<2-> \textbf{Ley de áreas.} Calcule $\Delta A$ en intervalos iguales
+        $\Delta t$ cerca del perihelio y del afelio; verifique
+        $\Delta A=\ell\Delta t/2\mu$ dentro de la tolerancia del integrador.
+  \item<3-> \textbf{Tercera ley.} Con datos reales de los planetas, ajuste
+        $\log T$ vs.\ $\log a$. Reporte la pendiente con su incertidumbre y
+        grafique los \emph{residuos} frente a $m/M_\odot$: debe aparecer la
+        corrección del punto (3/3).
+  \item<4-> \textbf{Cierre de la órbita.} Integre $V(r)=-k/r^{1+\epsilon}$ para
+        $\epsilon=0,\,0.01,\,0.1$ y mida la precesión del perihelio por vuelta.
+        Compare con la predicción perturbativa.
+  \item<5-> \textbf{Control de calidad obligatorio:} estudio de convergencia en
+        $\Delta t$, criterio de tolerancia, y una frase que distinga
+        \emph{artefacto numérico} de \emph{efecto físico}.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resumen}
+\begin{itemize}
+  \item<1-> $\dot A=\dfrac{\ell}{2\mu}$: ley de áreas $\equiv$ conservación de
+        $L$ $\equiv$ fuerza central. \emph{No} usa la forma de $V(r)$.
+  \item<2-> $T_p=2\pi\sqrt{\dfrac{\mu a^{3}}{k}}$: exige además órbita
+        \emph{cerrada} ($V=-k/r$, $E<0$); el período no depende de $e$.
+  \item<3-> $T_p^{2}=\dfrac{4\pi^{2}}{G(M_S+m)}a^{3}$ es la forma exacta de dos
+        cuerpos; la ley de Kepler ``con constante universal'' es su límite
+        $m/M_S\to0$.
+  \item<4-> El exponente $3/2$ es consecuencia de la homogeneidad de grado $-1$
+        del potencial (semejanza mecánica), no del detalle de la elipse.
+  \item<5-> \textbf{Hacia la próxima sesión:} el vector de Laplace--Runge--Lenz
+        como la simetría ``oculta'' responsable del cierre de las órbitas, y su
+        formulación en términos de corchetes de Poisson.
+\end{itemize}
+\end{frame}
+
+\end{document}
