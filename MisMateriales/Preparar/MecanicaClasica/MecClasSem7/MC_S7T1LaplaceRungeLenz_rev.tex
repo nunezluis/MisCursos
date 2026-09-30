@@ -1,0 +1,965 @@
+% =====================================================================
+%  Mecánica Clásica — Sesión 7, Tema 1: El vector de Laplace–Runge–Lenz
+%  Versión revisada (UTF-8). Compilar con pdflatex, xelatex o lualatex.
+%
+%  VERSIÓN DOCENTE / ESTUDIANTE
+%  ----------------------------
+%  \docentetrue  -> incluye las diapositivas "Nota docente" (soluciones,
+%                   errores frecuentes, rúbricas). NO distribuir.
+%  \docentefalse -> versión para estudiantes.
+%
+%  Notación (común con MC_S7T2Scattering.tex):
+%   mu      masa reducida (mu ~ m si m << M)
+%   \ell    momento angular (vector \boldsymbol\ell, módulo \ell)
+%   k > 0   V(r) = -k/r (atractivo); f(r) = -k/r^2
+%   q       semilatus rectum, e excentricidad, theta medido desde el pericentro
+%   A       vector de Laplace–Runge–Lenz, A = p x ell - mu k rhat
+% =====================================================================
+\documentclass[aspectratio=169]{beamer}
+
+\newif\ifdocente
+\docentefalse   % <-- cambiar a \docentetrue para la versión docente
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-noshorthands]{babel} % sin atajos: evita choques con <...> de beamer
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{cancel}
+\renewcommand{\CancelColor}{\color{red}}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{textpos}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc}
+
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\setbeamertemplate{navigation symbols}{}
+
+% ---------------------------------------------------------------------
+% Rutas relativas (portables). Las figuras van en ./Figuras/
+% ---------------------------------------------------------------------
+\graphicspath{{Figuras/}}
+\newcommand{\logoUIS}{%
+  \IfFileExists{Figuras/UISLOGO.png}%
+    {\includegraphics[height=0.4in,keepaspectratio]{UISLOGO.png}}{}}
+\addtobeamertemplate{frametitle}{}{%
+  \begin{textblock*}{100mm}(.88\textwidth,-1cm)\logoUIS\end{textblock*}}
+
+% Figura con respaldo: si el archivo no existe se muestra un recuadro
+\newcommand{\figura}[2]{%
+  \IfFileExists{Figuras/#2}%
+    {\includegraphics[width=#1]{#2}}%
+    {\fbox{\begin{minipage}[c][2.2cm][c]{\dimexpr#1-2\fboxsep-2\fboxrule\relax}%
+      \centering\tiny Figura:\\ \texttt{\detokenize{#2}}\end{minipage}}}}
+
+% ---------------------------------------------------------------------
+% Notación unificada
+% ---------------------------------------------------------------------
+\providecommand{\sen}{}
+\renewcommand{\sen}{\operatorname{sen}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\vr}{\mathbf r}
+\newcommand{\vp}{\mathbf p}
+\newcommand{\vA}{\mathbf A}
+\newcommand{\vD}{\mathbf D}
+\newcommand{\vl}{\boldsymbol\ell}
+\newcommand{\rh}{\hat{\mathbf r}}
+\newcommand{\thh}{\hat{\boldsymbol\theta}}
+\newcommand{\PB}[2]{\{#1,#2\}}
+\newcommand{\Hc}{\mathcal H}
+% Etiquetas de política de IA
+\newcommand{\IAprohibida}{\colorbox{red!20}{\scriptsize\textbf{IA-prohibida}}}
+\newcommand{\IAasistida}{\colorbox{yellow!30}{\scriptsize\textbf{IA-asistida}}}
+\newcommand{\IArequerida}{\colorbox{green!20}{\scriptsize\textbf{IA-requerida}}}
+\newcommand{\nivel}[1]{\colorbox{blue!12}{\scriptsize\textbf{Nivel #1}}}
+
+\title{\textbf{El vector de Laplace–Runge–Lenz}}
+\subtitle{Una simetría oculta del problema de Kepler}
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias}\\
+\textit{Universidad Industrial de Santander, Santander, Colombia}\\[2pt]
+\logoUIS}
+\date{Mecánica Clásica · Sesión 7 · Tema 1}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Agenda}
+  \tableofcontents
+\end{frame}
+
+% =====================================================================
+\section[Introducción]{Introducción: objetivos y conexión}
+% =====================================================================
+
+\begin{frame}{Objetivos de aprendizaje}
+Al finalizar esta sesión, el estudiante podrá:
+\begin{enumerate}
+  \item<1-> \textbf{Derivar} la conservación del vector de Laplace–Runge–Lenz (LRL)
+        $\vA$ y \textbf{demostrar} que solo ocurre para fuerzas $\propto 1/r^{2}$.
+  \item<2-> \textbf{Calcular} $|\vA|=\mu k e$ e \textbf{interpretar} la dirección de $\vA$
+        (pericentro), incluida la órbita obtenida algebraicamente a partir de $\vA$.
+  \item<3-> \textbf{Analizar} la integrabilidad del problema de Kepler: contar integrales
+        independientes y explicar por qué las órbitas ligadas son cerradas.
+  \item<4-> \textbf{Calcular} paréntesis de Poisson entre $\vl$, $\vA$ y $\Hc$ e
+        \textbf{interpretar} el álgebra resultante (anticipo del Cap.~6).
+  \item<5-> \textbf{Usar} $\vA$ para estimar la precesión de órbitas perturbadas y
+        \textbf{evaluar críticamente} afirmaciones generadas por IA sobre estos temas.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Conceptos previos y continuidad}
+\begin{itemize}
+  \item<1-> \textbf{Noether} (§2.3–2.5): homogeneidad temporal $\Rightarrow E$;
+        isotropía $\Rightarrow \vl=\vr\times\vp$. Ambas provienen de transformaciones
+        \emph{puntuales} (de coordenadas y tiempo).
+  \item<2-> \textbf{Integrabilidad} (§2.8): un sistema con $s$ grados de libertad y $n$
+        integrales independientes es integrable si $n=s$ y superintegrable si $n>s$.
+  \item<3-> \textbf{Problema de Kepler} (§3.4): $V=-k/r$, órbitas cónicas
+        $\dfrac{q}{r}=1+e\cos\theta$, \; $q=\dfrac{\ell^{2}}{\mu k}$, \;
+        $e=\sqrt{1+\dfrac{2E\ell^{2}}{\mu k^{2}}}$.
+  \item<4-> \textbf{Precesión} (§3.6): en un potencial central genérico el ángulo barrido
+        entre dos pericentros consecutivos \emph{no} es $2\pi$: la órbita es una roseta.
+\end{itemize}
+\visible<5->{%
+\begin{block}{Lo nuevo}
+Una cantidad conservada que \emph{no} proviene de una simetría puntual evidente
+y que explica por qué la órbita kepleriana no precesa.
+\end{block}}
+\end{frame}
+
+\begin{frame}{Motivación física: ¿por qué no precesa la órbita de Kepler?}
+\begin{itemize}
+  \item<1-> Para $V=-k/r$ el pericentro regresa exactamente al mismo punto después de cada
+        vuelta: las órbitas ligadas son \emph{cerradas}.
+  \item<2-> Para casi cualquier otro potencial central (§3.6), la dirección del pericentro
+        gira: la órbita llena una corona circular.
+  \item<3-> Observación: el perihelio de Mercurio avanza $\approx43''$ por siglo más de lo que
+        explican las perturbaciones de los otros planetas. Si la dirección del
+        perihelio es una \emph{cantidad conservada} para $1/r$, cualquier precesión es una
+        señal de que el potencial no es exactamente $1/r$.
+  \item<4-> Preguntas guía:
+  \begin{itemize}
+    \item ¿Qué cantidad conservada «fija» la dirección del pericentro?
+    \item ¿Por qué solo existe para $1/r^{2}$?
+    \item ¿Qué simetría la genera, si no es una simetría puntual?
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section[Construcción de $\mathbf A$]{Construcción del vector $\mathbf A$}
+% =====================================================================
+
+\begin{frame}{Motivación heurística: la órbita como producto escalar}
+\begin{itemize}
+  \item<1-> Partimos de la cónica con $\theta$ medido desde el pericentro:
+  \[
+    \frac{\ell^{2}}{\mu k}=r+e\,r\cos\theta
+    \quad\Longrightarrow\quad
+    \mu k e\;r\cos\theta=\ell^{2}-\mu k r .
+  \]
+  \item<2-> Si $\vA$ es un vector fijo de módulo $\mu k e$ dirigido al pericentro,
+        el lado izquierdo es $\vr\cdot\vA$.
+  \item<3-> Escribimos el lado derecho como producto escalar con $\vr$:
+  \[
+    \ell^{2}=\vl\cdot(\vr\times\vp)=\vr\cdot(\vp\times\vl),\qquad r=\vr\cdot\rh .
+  \]
+  \item<4-> Entonces $\vr\cdot\vA=\vr\cdot\big[\vp\times\vl-\mu k\,\rh\big]$, lo que
+        \emph{sugiere} la definición
+  \[
+    \boxed{\;\vA\equiv\vp\times\vl-\mu k\,\rh\;}\qquad(\vp=\mu\dot{\vr}).
+  \]
+\end{itemize}
+\visible<5->{%
+\begin{alertblock}{Esto no es una demostración}
+\small $\vr\cdot\vA=\vr\cdot\mathbf B$ solo fija la componente de $\vA-\mathbf B$ a lo largo de $\vr$.
+La definición es una conjetura; su validez se establece demostrando que $\dd\vA/\dd t=0$.
+\end{alertblock}}
+\end{frame}
+
+\begin{frame}{Primeras propiedades}
+\begin{itemize}
+  \item<1-> $\vp\times\vl\perp\vl$ y $\rh\perp\vl$, por tanto
+        $\boxed{\vA\cdot\vl=0}$: $\vA$ está en el plano de la órbita.
+  \item<2-> Dimensiones: $[\vp\times\vl]=[\mu k]=M^{2}L^{3}T^{-2}$; así
+        $e=|\vA|/\mu k$ es adimensional. \checkmark
+  \item<3-> Para un potencial repulsivo $V=+k/r$ se cambia $k\to-k$:
+        $\vA=\vp\times\vl+\mu k\,\rh$.
+\end{itemize}
+\visible<4->{%
+\begin{center}
+\figura{0.42\textwidth}{VectorA.png}
+\end{center}
+\small\centering En cada punto de la órbita, $\vp\times\vl$ y $-\mu k\rh$ cambian, pero su
+suma es la misma.}
+\end{frame}
+
+% =====================================================================
+\section[Conservación]{Conservación: solo para fuerzas $1/r^{2}$}
+% =====================================================================
+
+\begin{frame}{Derivada temporal para una fuerza central arbitraria}
+\small
+Sea $\dot{\vp}=f(r)\,\rh$ una fuerza central arbitraria; entonces $\dot{\vl}=0$.
+\begin{itemize}
+  \item<1->
+  $\ds\frac{\dd}{\dd t}(\vp\times\vl)=\dot{\vp}\times\vl+\vp\times\cancelto{0}{\dot{\vl}}
+   =\mu\frac{f(r)}{r}\,\vr\times(\vr\times\dot{\vr}) .$
+  \item<2-> Con $\mathbf a\times(\mathbf b\times\mathbf c)=\mathbf b(\mathbf a\cdot\mathbf c)
+        -\mathbf c(\mathbf a\cdot\mathbf b)$ y $\vr\cdot\dot{\vr}=r\dot r$:
+  \[
+    \frac{\dd}{\dd t}(\vp\times\vl)=\mu\frac{f(r)}{r}\big[\vr\,(r\dot r)-r^{2}\dot{\vr}\big]
+      =\mu f(r)\big[\vr\,\dot r-r\,\dot{\vr}\big].
+  \]
+  \item<3-> Por otra parte
+        $\ds\frac{\dd\rh}{\dd t}=\frac{\dd}{\dd t}\Big(\frac{\vr}{r}\Big)
+        =\frac{\dot{\vr}}{r}-\frac{\vr\,\dot r}{r^{2}}
+        \;\Rightarrow\; -r^{2}\frac{\dd\rh}{\dd t}=\vr\,\dot r-r\,\dot{\vr}$.
+  \item<4-> Resultado general (válido para \emph{cualquier} $f(r)$):
+  \[
+    \boxed{\;\frac{\dd}{\dd t}(\vp\times\vl)=-\mu\,r^{2}f(r)\,\frac{\dd\rh}{\dd t}\;}
+  \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conservación de $\vA$ y su unicidad}
+\begin{itemize}
+  \item<1-> Sumando el término $-\mu k\,\dd\rh/\dd t$:
+  \[
+    \boxed{\;\frac{\dd\vA}{\dd t}=-\mu\big[r^{2}f(r)+k\big]\frac{\dd\rh}{\dd t}\;}
+  \]
+  \item<2-> Si $\ell\neq0$, $\dd\rh/\dd t=\dot\theta\,\thh\neq0$, luego
+        \[
+          \frac{\dd\vA}{\dd t}=0\iff r^{2}f(r)=-k\iff f(r)=-\frac{k}{r^{2}} .
+        \]
+  \item<3-> $\vA$ es constante \textbf{únicamente} para la fuerza inversa del cuadrado:
+        $\vA=\vp\times\vl-\mu k\,\rh=\text{cte}$.
+  \item<4-> Verificación: el resultado depende solo de $r^{2}f(r)$, es decir, de la ley de
+        potencias de la fuerza, y no del valor de $\ell$ ni de $E$.
+\end{itemize}
+\visible<5->{%
+\begin{block}{Para qué sirve el resultado general}
+\small Si $f=-k/r^{2}+\delta f$, entonces $\dd\vA/\dd t=-\mu r^{2}\delta f\,\dd\rh/\dd t$:
+$\vA$ deja de ser constante y su lenta rotación es la precesión (sección 7).
+\end{block}}
+\end{frame}
+
+% =====================================================================
+\section[Módulo y geometría]{Módulo, dirección y geometría de $\mathbf A$}
+% =====================================================================
+
+\begin{frame}{El módulo de $\vA$}
+\begin{itemize}
+  \item<1-> $|\vA|^{2}=(\vp\times\vl)^{2}+\mu^{2}k^{2}-2\mu k\,\rh\cdot(\vp\times\vl)$.
+  \item<2-> Como $\vp\cdot\vl=\vp\cdot(\vr\times\vp)=0$:\;
+        $(\vp\times\vl)^{2}=p^{2}\ell^{2}-(\vp\cdot\vl)^{2}=p^{2}\ell^{2}$.
+  \item<3-> Producto mixto: $\rh\cdot(\vp\times\vl)=\dfrac1r\,\vl\cdot(\vr\times\vp)=\dfrac{\ell^{2}}{r}$.
+  \item<4-> Con $p^{2}=2\mu\big(E+\tfrac kr\big)$:
+  \[
+    |\vA|^{2}=2\mu E\ell^{2}+\cancel{\frac{2\mu k\ell^{2}}{r}}
+      -\cancel{\frac{2\mu k\ell^{2}}{r}}+\mu^{2}k^{2}
+      =\mu^{2}k^{2}\Big(1+\frac{2E\ell^{2}}{\mu k^{2}}\Big).
+  \]
+  \item<5-> Es decir,
+  \[
+    \boxed{\;|\vA|=\mu k e\;}
+    \qquad\text{e independiente de } r\text{: consistente con } \dd\vA/\dd t=0.\;\checkmark
+  \]
+  \item<6-> $|\vA|$ \emph{no} es una integral nueva: depende de $E$ y $\ell$.
+        Lo nuevo es la \textbf{dirección} de $\vA$ en el plano de la órbita.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Dirección de $\vA$: verificación en los ápsides}
+\begin{itemize}
+  \item<1-> En un ápside $\vp\perp\vr$, luego $\vp\times\vl=p\ell\,\rh$ y
+        $\vA=(p\ell-\mu k)\,\rh$, con $p\ell=\ell^{2}/r$.
+  \item<2-> \textbf{Pericentro}: $r_p=\dfrac{q}{1+e}$ $\Rightarrow$
+        $p\ell=\mu k(1+e)$ $\Rightarrow$ $\vA=\mu k e\,\rh_p$.
+  \item<3-> \textbf{Apocentro} ($e<1$): $r_a=\dfrac{q}{1-e}$ $\Rightarrow$
+        $p\ell=\mu k(1-e)$ $\Rightarrow$ $\vA=-\mu k e\,\rh_a$.
+  \item<4-> Como $\rh_a=-\rh_p$, en ambos casos $\vA$ apunta al \textbf{pericentro}. \checkmark
+  \item<5-> \textbf{Límite circular} ($e=0$): $p\ell=\mu k$ en todo punto y $\vA=\mathbf 0$;
+        la dirección del pericentro no está definida, como corresponde.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplo canónico: la órbita a partir de $\vA$, sin integrar}
+\begin{itemize}
+  \item<1-> Sea $\theta$ el ángulo entre $\vr$ y la dirección \emph{fija} de $\vA$.
+        Calculamos $\vr\cdot\vA$ de dos maneras:
+  \[
+    \vr\cdot\vA=A\,r\cos\theta,
+    \qquad
+    \vr\cdot\vA=\vr\cdot(\vp\times\vl)-\mu k\,r=\ell^{2}-\mu k\,r .
+  \]
+  \item<2-> Igualando y despejando:
+  \[
+    r\,(\mu k+A\cos\theta)=\ell^{2}
+    \quad\Longrightarrow\quad
+    \frac{\ell^{2}/\mu k}{r}=1+\frac{A}{\mu k}\cos\theta .
+  \]
+  \item<3-> Con $|\vA|=\mu k e$ se recupera $\dfrac{q}{r}=1+e\cos\theta$: la
+        ecuación de la órbita se obtiene con \emph{álgebra} a partir de dos cantidades
+        conservadas, sin la ecuación de Binet ni integrales.
+  \item<4-> $r$ es mínimo en $\theta=0$: el pericentro está en la dirección de $\vA$.
+        La constancia de $\vA$ implica que el eje de la cónica no gira.
+\end{itemize}
+\visible<5->{%
+\begin{block}{Comparación de métodos}
+\small §3.3–3.4: integrar la ecuación radial o la de Binet. Aquí: usar las integrales
+$\vl$ y $\vA$. El segundo camino muestra \emph{por qué} la órbita es cerrada.
+\end{block}}
+\end{frame}
+
+\begin{frame}{Geometría en el espacio de momentos: el hodógrafo}
+\begin{columns}[T]
+\begin{column}{0.60\textwidth}
+\small
+\begin{itemize}
+  \item<1-> Con $\vl\times(\vp\times\vl)=\ell^{2}\vp-\vl(\vl\cdot\vp)=\ell^{2}\vp$:
+  \[
+    \vl\times\vA=\ell^{2}\vp-\mu k\,\vl\times\rh .
+  \]
+  \item<2-> Despejando $\vp$:
+  \[
+    \vp=\frac{\vl\times\vA}{\ell^{2}}+\frac{\mu k}{\ell}\,\hat{\vl}\times\rh .
+  \]
+  \item<3-> El primer término es constante; el segundo tiene módulo fijo $\mu k/\ell$
+        y gira con $\rh$. Por tanto $\vp$ recorre una \textbf{circunferencia} de radio
+        $\mu k/\ell$ con centro a distancia $\mu k e/\ell$ del origen.
+  \item<4-> $e<1$: el origen queda dentro del círculo; $e>1$: fuera.
+\end{itemize}
+\end{column}
+\begin{column}{0.38\textwidth}
+\centering
+\begin{tikzpicture}[scale=1.0,>=Stealth]
+  \draw[->,gray] (-1.6,0) -- (1.8,0) node[right,font=\scriptsize]{$p_x$};
+  \draw[->,gray] (0,-1.1) -- (0,2.5) node[above,font=\scriptsize]{$p_y$};
+  \draw[thick,red!70!black] (0,0.6) circle (1.2);
+  \fill (0,0.6) circle (0.03);
+  \draw[<->] (0.08,0) -- node[right,font=\scriptsize]{$\mu k e/\ell$} (0.08,0.6);
+  \draw[->,blue!70!black] (0,0.6) -- node[above,sloped,font=\scriptsize]{$\mu k/\ell$} (-1.04,1.2);
+  \draw[->,thick] (0,0) -- (-1.04,1.2) node[left,font=\scriptsize]{$\vp$};
+  \fill (0,0) circle (0.03) node[below left,font=\scriptsize]{$O$};
+\end{tikzpicture}\\[2pt]
+{\scriptsize Hodógrafo para $e=0.5$ ($\vA$ a lo largo de $+x$).}
+\end{column}
+\end{columns}
+\end{frame}
+
+% =====================================================================
+\section[Integrabilidad]{Integrabilidad y órbitas cerradas}
+% =====================================================================
+
+\begin{frame}{Contando integrales independientes}
+\small
+\begin{itemize}
+  \item<1-> Separamos el centro de masa (una partícula libre, $\mathbf P$ constante) del
+        movimiento relativo, que tiene $s=3$ grados de libertad y un espacio de fases de
+        dimensión $2s=6$.
+  \item<2-> \textbf{Potencial central genérico}: $E,\ell_x,\ell_y,\ell_z$ son $4$ integrales
+        independientes ($\ell^{2}$ es función de ellas). Como $4>3$, ya es (mínimamente)
+        superintegrable.
+  \item<3-> \textbf{Kepler}: $E$, $\vl$ (3) y $\vA$ (3) suman 7 funciones, ligadas por
+  \[
+    \vA\cdot\vl=0,\qquad A^{2}=\mu^{2}k^{2}+2\mu E\ell^{2}.
+  \]
+        Quedan $7-2=5=2s-1$ integrales independientes: el máximo posible.
+        Kepler es \textbf{máximamente superintegrable}.
+  \item<4-> Lo que aporta $\vA$ más allá de $E$ y $\vl$ es un solo número: el ángulo del
+        pericentro dentro del plano de la órbita.
+\end{itemize}
+\visible<5->{%
+\begin{alertblock}{Cuidado con el conteo}
+\small Una «dirección» en el espacio son dos números; una dirección dentro de un plano ya
+fijado es uno. Contar «cantidades» en lugar de funciones independientes lleva a errores.
+\end{alertblock}}
+\end{frame}
+
+\begin{frame}{Por qué las órbitas ligadas de Kepler son cerradas}
+\begin{columns}[T]
+\begin{column}{0.60\textwidth}
+\small
+\begin{itemize}
+  \item<1-> Cada integral independiente restringe la trayectoria a una hipersuperficie
+        del espacio de fases (dimensión 6).
+  \item<2-> \textbf{Genérico} (4 integrales): la trayectoria vive en una superficie de
+        dimensión $6-4=2$ (un toro). Si la razón de frecuencias radial y angular es
+        irracional, la llena: roseta.
+  \item<3-> \textbf{Kepler} (5 integrales): la trayectoria vive en una curva de dimensión
+        $6-5=1$. Para $E<0$ esa curva es acotada, luego la trayectoria es la curva misma:
+        una \textbf{órbita cerrada}.
+  \item<4-> \textbf{Teorema de Bertrand}: los únicos potenciales centrales cuyas órbitas
+        ligadas son todas cerradas son $-k/r$ y $\tfrac12\kappa r^{2}$. Ambos son
+        máximamente superintegrables (el oscilador tiene su propia integral extra, un tensor).
+\end{itemize}
+\end{column}
+\begin{column}{0.38\textwidth}
+\centering\figura{0.95\linewidth}{DirA.png}\\[2pt]
+{\scriptsize $\hat{\vA}$ constante: el eje de la órbita no gira.}
+\end{column}
+\end{columns}
+\end{frame}
+
+% =====================================================================
+\section[Poisson]{Anticipo: paréntesis de Poisson y simetría oculta}
+% =====================================================================
+
+\begin{frame}{Anticipo del Cap.~6: paréntesis de Poisson}
+\small
+\begin{itemize}
+  \item<1-> Espacio de fases de un sistema con $s$ grados de libertad: coordenadas
+        $(q_i,p_i)$, $i=1,\dots,s$. Para una partícula en 3D, $s=3$ y
+        $(q_1,q_2,q_3)=(x,y,z)$.
+  \item<2-> Para dos funciones $f(q,p,t)$, $g(q,p,t)$:
+  \[
+    \PB{f}{g}=\sum_{i=1}^{s}\Big(\frac{\partial f}{\partial q_i}\frac{\partial g}{\partial p_i}
+      -\frac{\partial f}{\partial p_i}\frac{\partial g}{\partial q_i}\Big).
+  \]
+  \item<3-> Con las ecuaciones de Hamilton $\dot q_i=\partial\Hc/\partial p_i$,
+        $\dot p_i=-\partial\Hc/\partial q_i$:
+  \[
+    \frac{\dd f}{\dd t}=\PB{f}{\Hc}+\frac{\partial f}{\partial t}.
+  \]
+  \item<4-> Si $\partial f/\partial t=0$: $f$ es una integral del movimiento
+        $\iff\PB{f}{\Hc}=0$.
+  \item<5-> Para Kepler, $\Hc=\dfrac{p^{2}}{2\mu}-\dfrac{k}{r}$ (aquí $\Hc$ coincide con la
+        energía $E$ porque no depende de $t$).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplos básicos}
+\small
+\begin{itemize}
+  \item<1-> $\PB{r}{p_x}=\dfrac{\partial r}{\partial x}=\dfrac{x}{r}$, y análogamente para
+        $y,z$: \; $\PB{r}{\vp}=\rh$.
+  \item<2-> Con $\ell_x=yp_z-zp_y$, etc., y $\PB{p_i}{g}=-\partial g/\partial q_i$:
+  \[
+    \PB{p_y}{\ell_x}=-\frac{\partial\ell_x}{\partial y}=-p_z,\qquad
+    \PB{p_x}{\ell_x}=0
+    \quad\Longrightarrow\quad
+    \PB{p_i}{\ell_j}=\varepsilon_{ijk}\,p_k .
+  \]
+  \item<3-> $\ell_x=yp_z-zp_y$ y $\ell_y=zp_x-xp_z$ solo comparten el par $(z,p_z)$;
+        los términos $i=x,y$ se anulan:
+  \[
+    \PB{\ell_x}{\ell_y}
+    =\frac{\partial\ell_x}{\partial z}\frac{\partial\ell_y}{\partial p_z}
+     -\frac{\partial\ell_x}{\partial p_z}\frac{\partial\ell_y}{\partial z}
+    =(-p_y)(-x)-(y)(p_x)=\ell_z .
+  \]
+  \item<4-> Por permutación cíclica: $\boxed{\PB{\ell_i}{\ell_j}=\varepsilon_{ijk}\,\ell_k}$,
+        el álgebra de Lie $\mathfrak{so}(3)$ de las rotaciones. En mecánica cuántica:
+        $[\hat\ell_i,\hat\ell_j]=i\hbar\,\varepsilon_{ijk}\hat\ell_k$.
+  \item<5-> Más en general, si $\mathbf V(\vr,\vp)$ es un vector construido con $\vr$, $\vp$,
+        productos $\cdot$, $\times$ y funciones escalares, entonces
+        $\PB{\ell_i}{V_j}=\varepsilon_{ijk}V_k$: $\vl$ genera las rotaciones.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{El álgebra de Kepler}
+\begin{itemize}
+  \item<1-> Con $\Hc=\dfrac{p^{2}}{2\mu}-\dfrac kr$ y $\vA=\vp\times\vl-\mu k\,\rh$ se obtiene
+        (problemas P4 y P7, actividad IA-3):
+  \[
+    \PB{A_i}{\Hc}=0,\qquad
+    \PB{\ell_i}{A_j}=\varepsilon_{ijk}A_k,\qquad
+    \PB{A_i}{A_j}=-2\mu\Hc\,\varepsilon_{ijk}\,\ell_k .
+  \]
+  \item<2-> $\PB{A_i}{\Hc}=0$ es la conservación de $\vA$ en lenguaje hamiltoniano: el mismo
+        cálculo de la sección 3, escrito de otra forma.
+  \item<3-> $\PB{\ell_i}{A_j}=\varepsilon_{ijk}A_k$ dice que $\vA$ se transforma como un vector
+        bajo rotaciones.
+  \item<4-> En una superficie de energía fija ($\Hc=E<0$) definimos
+        $\vD\equiv\vA/\sqrt{-2\mu E}$ (unidades de momento angular):
+  \[
+    \PB{\ell_i}{\ell_j}=\varepsilon_{ijk}\ell_k,\quad
+    \PB{\ell_i}{D_j}=\varepsilon_{ijk}D_k,\quad
+    \PB{D_i}{D_j}=\varepsilon_{ijk}\ell_k .
+  \]
+        Estas seis funciones generan el álgebra $\mathfrak{so}(4)$ (rotaciones en 4D).
+\end{itemize}
+\visible<5->{%
+\begin{block}{Según el signo de la energía}
+\small $E<0$: $\mathfrak{so}(4)$ (grupo compacto); \; $E=0$: $\PB{A_i}{A_j}=0$, álgebra euclidiana
+$\mathfrak{e}(3)$; \; $E>0$: con $\vD=\vA/\sqrt{2\mu E}$ se obtiene $\mathfrak{so}(3,1)$ (álgebra de Lorentz).
+\end{block}}
+\end{frame}
+
+\begin{frame}{Una simetría oculta}
+\begin{itemize}
+  \item<1-> $E$ y $\vl$ provienen de simetrías \emph{puntuales}: traslaciones temporales y
+        rotaciones de $\vr$ (§2.4–2.5).
+  \item<2-> $\vA$ no proviene de ninguna transformación de coordenadas $\vr\to\vr'(\vr,t)$.
+        Como función en el espacio de fases, genera vía $\PB{\cdot}{\vA}$ transformaciones
+        que \emph{mezclan} $\vr$ y $\vp$: una simetría «oculta» o dinámica, visible
+        en el espacio de fases y no en el de configuraciones.
+  \item<3-> Con $\mathbf J^{\pm}=\tfrac12(\vl\pm\vD)$:
+        $\PB{J^{\pm}_i}{J^{\pm}_j}=\varepsilon_{ijk}J^{\pm}_k$ y
+        $\PB{J^{+}_i}{J^{-}_j}=0$: dos copias independientes de $\mathfrak{so}(3)$,
+        es decir, $\mathfrak{so}(4)\cong\mathfrak{so}(3)\oplus\mathfrak{so}(3)$.
+  \item<4-> Consecuencia cuántica (Pauli, 1926): esta simetría explica la degeneración
+        $n^{2}$ de los niveles del átomo de hidrógeno, que la simetría rotacional sola no explica.
+\end{itemize}
+\visible<5->{%
+\begin{alertblock}{Precisión sobre Noether}
+\small Decir que $\vA$ es «no noetheriana» es impreciso: en el espacio de fases toda integral
+genera una simetría. Lo correcto es que no corresponde a una simetría \emph{puntual}
+del lagrangiano.
+\end{alertblock}}
+\end{frame}
+
+% =====================================================================
+\section[Precesión]{$\mathbf A$ como herramienta: precesión de órbitas perturbadas}
+% =====================================================================
+
+\begin{frame}{Órbitas perturbadas: $\vA$ gira lentamente}
+\small
+\begin{itemize}
+  \item<1-> Si $f(r)=-\dfrac{k}{r^{2}}+\delta f(r)$ con $\delta f$ pequeña, el resultado
+        general de la sección 3 da
+  \[
+    \frac{\dd\vA}{\dd t}=-\mu\,r^{2}\,\delta f(r)\,\frac{\dd\rh}{\dd t},
+    \qquad \dd\rh=\thh\,\dd\theta .
+  \]
+  \item<2-> A primer orden integramos sobre la órbita \emph{no perturbada}
+        ($\vA\parallel\hat{\mathbf x}$, $\thh=(-\sen\theta,\cos\theta)$,
+        $1/r=(1+e\cos\theta)/q$):
+  \[
+    \Delta\vA=-\mu\oint r^{2}\,\delta f\;\thh\,\dd\theta .
+  \]
+  \item<3-> $\vl$ sigue constante (la perturbación es central): la órbita permanece plana,
+        pero su eje gira. Ángulo de precesión por vuelta:
+  \[
+    \Delta\varphi=\frac{(\hat{\vA}\times\Delta\vA)\cdot\hat{\vl}}{A},\qquad A=\mu k e .
+  \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplo: perturbación $\delta V=\beta/r^{2}$}
+\small
+\begin{itemize}
+  \item<1-> $\delta f=-\dd(\delta V)/\dd r=2\beta/r^{3}$, luego
+        $r^{2}\delta f=2\beta/r=\dfrac{2\beta}{q}(1+e\cos\theta)$.
+  \item<2-> Integrando sobre una vuelta, solo sobrevive
+        $\oint e\cos^{2}\theta\,\dd\theta=\pi e$ en la componente $y$:
+  \[
+    \Delta\vA=-\frac{2\pi\mu\beta e}{q}\,\hat{\mathbf y}
+    \quad\Longrightarrow\quad
+    \Delta\varphi=-\frac{2\pi\mu\beta e}{q\,\mu k e}=-\frac{2\pi\mu\beta}{\ell^{2}} .
+  \]
+  \item<3-> \textbf{Verificación exacta}: $\beta/r^{2}$ se suma a la barrera centrífuga,
+        $\ell^{2}\to\ell^{2}+2\mu\beta$ en la ecuación de Binet. El ángulo entre pericentros es
+        $2\pi/\sqrt{1+2\mu\beta/\ell^{2}}$, así
+  \[
+    \Delta\varphi_{\text{exacto}}=2\pi\Big[\Big(1+\frac{2\mu\beta}{\ell^{2}}\Big)^{-1/2}-1\Big]
+    \simeq-\frac{2\pi\mu\beta}{\ell^{2}} .\;\checkmark
+  \]
+  \item<4-> $\beta>0$ (repulsión adicional): el pericentro retrocede. El resultado no depende
+        de $e$ a primer orden.
+\end{itemize}
+\visible<5->{%
+\begin{block}{Lo mismo para la relatividad general}
+\small La corrección $\delta V=-\gamma/r^{3}$ da una precesión positiva; aplicada a Mercurio
+reproduce $\approx43''$ por siglo (problema P5).
+\end{block}}
+\end{frame}
+
+% =====================================================================
+\section[Recapitulando]{Recapitulando}
+% =====================================================================
+
+\begin{frame}{Recapitulando 1/2}
+\begin{itemize}
+  \item<1-> Para $V=-k/r$ se define $\vA=\vp\times\vl-\mu k\,\rh$, con $\vA\cdot\vl=0$.
+        (Repulsivo, $V=+k/r$: $\vA=\vp\times\vl+\mu k\,\rh$.)
+  \item<2-> Para cualquier fuerza central
+        $\dd\vA/\dd t=-\mu\,[r^{2}f(r)+k]\,\dd\rh/\dd t$: $\vA$ se conserva
+        \emph{si y solo si} $f=-k/r^{2}$.
+  \item<3-> $|\vA|=\mu k e=\sqrt{\mu^{2}k^{2}+2\mu E\ell^{2}}$; $\vA$ apunta al pericentro;
+        $\vA=0$ para órbitas circulares.
+  \item<4-> A partir de $\vA$ y $\vl$ la órbita se obtiene sin integrar:
+        $q/r=1+e\cos\theta$. En el espacio de momentos, el hodógrafo es una circunferencia.
+  \item<5-> Kepler tiene $5=2s-1$ integrales independientes (máximamente superintegrable),
+        frente a 4 de un potencial central genérico: por eso las órbitas ligadas son cerradas.
+        Bertrand: solo $-k/r$ y $\tfrac12\kappa r^{2}$ tienen esa propiedad.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Recapitulando 2/2}
+\begin{itemize}
+  \item<1-> Álgebra de Poisson: $\PB{\ell_i}{\ell_j}=\varepsilon_{ijk}\ell_k$,
+        $\PB{\ell_i}{A_j}=\varepsilon_{ijk}A_k$,
+        $\PB{A_i}{A_j}=-2\mu\Hc\,\varepsilon_{ijk}\ell_k$, $\PB{A_i}{\Hc}=0$.
+  \item<2-> Para $E<0$, $\vl$ y $\vD=\vA/\sqrt{-2\mu E}$ generan $\mathfrak{so}(4)$:
+        simetría oculta, no puntual.
+  \item<3-> Bajo perturbaciones centrales, $\vl$ se conserva pero $\vA$ gira: la tasa de giro
+        es la precesión. Ejemplo: $\delta V=\beta/r^{2}\Rightarrow\Delta\varphi=-2\pi\mu\beta/\ell^{2}$.
+  \item<4-> \textbf{Hipótesis}: problema de dos cuerpos reducido ($\mu$), fuerza central
+        conservativa, mecánica no relativista.
+  \item<5-> \textbf{Próximo tema}: dispersión (Tema 2). $\vA$ también existe para $E>0$;
+        las asíntotas de la hipérbola son simétricas respecto de $\vA$, y eso fija el ángulo
+        de dispersión.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Preguntas conceptuales}
+\begin{enumerate}
+  \item<1-> $\vA$ tiene tres componentes. ¿Cuántas integrales \emph{nuevas} aporta respecto de
+        $E$ y $\vl$? ¿Por qué?
+  \item<2-> ¿Qué ocurre con la dirección de $\vA$ en una órbita circular? ¿Es eso un problema?
+  \item<3-> Con $\delta V=\beta/r^{2}$, ¿por qué la órbita sigue siendo plana aunque precese?
+  \item<4-> Para el oscilador isótropo $V=\tfrac12\kappa r^{2}$ las órbitas ligadas son cerradas.
+        ¿Se conserva $\vA$ (con alguna elección de la constante)? ¿Qué conserva entonces?
+  \item<5-> ¿Es correcto decir que $\vA$ «no tiene simetría asociada»?
+\end{enumerate}
+\end{frame}
+
+\ifdocente
+\begin{frame}{Nota docente: respuestas a las preguntas conceptuales}
+\footnotesize
+\begin{enumerate}
+  \item Una: $A$ depende de $E,\ell$ y $\vA\perp\vl$; queda el ángulo del pericentro en el
+        plano. \emph{Error frecuente}: «tres integrales nuevas».
+  \item $\vA=0$: la dirección no está definida porque no hay pericentro distinguido. No es un
+        problema; el conteo de integrales independientes se hace en puntos genéricos.
+  \item La perturbación es central: $\dot{\vl}=0$, luego el plano se conserva; solo
+        $\vA$ gira dentro de él.
+  \item No: $\dd\vA/\dd t=-\mu[r^{2}f+k]\dd\rh/\dd t$ con $f=-\kappa r$ no se anula para ningún $k$.
+        El oscilador conserva el tensor simétrico $T_{ij}=p_ip_j/\mu+\mu\omega^{2}x_ix_j$
+        (álgebra $\mathfrak{su}(3)$); sus órbitas son elipses centradas en el origen, no en un foco.
+  \item No. En el espacio de fases $\vA$ genera una simetría (mezcla $\vr$ y $\vp$); no es una
+        simetría puntual del lagrangiano. Conecta con la actividad IA-2(c).
+\end{enumerate}
+\end{frame}
+\fi
+
+% =====================================================================
+\section[Actividades con IA]{Actividades con asistentes de IA (4D)}
+% =====================================================================
+
+\begin{frame}{Política de uso de IA en esta sesión}
+\footnotesize
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Actividad & Política & Qué se evalúa \\
+\midrule
+Preguntas conceptuales, P1, P2 & \IAprohibida & razonamiento propio \\
+P3–P7 & \IAasistida & derivación y verificación \\
+IA-1, IA-2 & \IArequerida & análisis crítico de la IA \\
+IA-3 & \IAasistida{} (paso 1: \IAprohibida) & cálculo simbólico verificado \\
+P8 & \IAasistida & modelo, código, validación \\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{itemize}
+  \item<2-> Recordemos las 4D: \textbf{Delegación} $\to$ \textbf{Descripción} $\to$
+        \textbf{Discernimiento} $\to$ \textbf{Diligencia}.
+  \item<3-> Toda actividad con IA entrega una \textbf{bitácora 4D}: prompts; respuesta
+        relevante; qué se aceptó / rechazó / corrigió; cómo se verificó; errores hallados;
+        razonamiento final. Además, la \textbf{declaración de uso de IA}.
+  \item<4-> Regla mínima de Discernimiento: ninguna respuesta se acepta sin al menos
+        \emph{una verificación dimensional y un caso límite}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Actividad IA-1 \IArequerida: tres afirmaciones sobre $\vA$ 1/2}
+Un asistente de IA hizo las siguientes afirmaciones:
+\begin{exampleblock}{Respuesta de la IA (textual)}
+\small
+\begin{enumerate}
+  \item «Como $\vl$ se conserva para toda fuerza central y $\vA$ se construye con $\vp$ y $\vl$,
+        $\vA$ también se conserva para toda fuerza central.»
+  \item «Cualquier potencial central distinto de $-k/r$ tiene exactamente tantas integrales
+        independientes como grados de libertad; el problema de Kepler es el único sistema
+        central superintegrable.»
+  \item «$\PB{A_i}{A_j}=+2\mu\Hc\,\varepsilon_{ijk}\ell_k$; por eso, para órbitas ligadas
+        ($\Hc<0$), $\vl$ y $\vA/\sqrt{-2\mu\Hc}$ generan $\mathfrak{so}(4)$.»
+\end{enumerate}
+\end{exampleblock}
+\visible<2->{%
+\begin{alertblock}{Su tarea}
+Clasifique cada afirmación como correcta, incorrecta o parcialmente correcta y
+\emph{demuéstrelo}. Para la afirmación 3, note que el análisis dimensional no puede
+decidir un signo: ¿qué verificación sí puede?
+\end{alertblock}}
+\end{frame}
+
+\begin{frame}{Actividad IA-1 \IArequerida: tres afirmaciones sobre $\vA$ 2/2}
+\begin{itemize}
+  \item<1-> \textbf{Delegación}: liste qué conserva usted (planteamiento, criterio de
+        verificación) y qué puede delegar (álgebra vectorial, cálculo simbólico).
+  \item<2-> \textbf{Descripción}: redacte un prompt que pida $\dd\vA/\dd t$ para una fuerza
+        central \emph{arbitraria} $f(r)$, sin suponer $f=-k/r^{2}$. Redacte uno vago
+        («¿se conserva el vector LRL?») y compare las respuestas.
+  \item<3-> \textbf{Discernimiento}: (1) un contraejemplo concreto basta; (2) cuente
+        integrales independientes para un potencial central genérico; (3) evalúe
+        $\PB{A_x}{A_y}$ en un punto concreto del espacio de fases, o deduzca qué álgebra
+        resultaría con el signo propuesto.
+  \item<4-> \textbf{Diligencia}: rederive a mano la fórmula general de $\dd\vA/\dd t$ y
+        documente con qué verificación descartó cada afirmación.
+        Entregue la bitácora 4D y la declaración de uso.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Actividad IA-2 \IArequerida: auditar la versión anterior 1/2}
+\footnotesize
+La versión anterior de esta presentación fue generada con IA a partir de las notas del curso.
+Contenía, entre otros, los siguientes enunciados:
+\begin{exampleblock}{Fragmentos originales}
+\begin{enumerate}
+  \item[(a)] $(\vp\times\mathbf L)^{2}=p^{2}L^{2}-(\vp\cdot\mathbf L)^{2}
+        =p^{2}L^{2}+\cancelto{0}{\vp\cdot(\vr\times\vp)}$.
+  \item[(b)] «Existen seis grados de libertad y siete cantidades conservadas: las tres
+        componentes de $\mathbf v_{cm}$, la dirección de $\mathbf L$, su magnitud $L$, la energía
+        $E$ y la dirección de $\hat{\vA}$.»
+  \item[(c)] «Para fuerzas del tipo $\mathbf f(r)=\frac{k}{r^{2}}\rh$, $\vA$ es una cantidad
+        conservada dinámica, no noetheriana.»
+  \item[(d)] «Tiene más constantes de movimiento que grados de libertad\dots\ Esto garantiza
+        órbitas cerradas (teorema de Bertrand).»
+  \item[(e)] «De $\vr\cdot\vA=\vr\cdot[\vp\times\mathbf L-\mu k\rh]$, definimos
+        $\vA\equiv\vp\times\mathbf L-\mu k\rh$», antes de probar $\dd\vA/\dd t=0$ y
+        afirmando ya que «es un vector constante».
+  \item[(f)] En «Para la discusión»: «Muestre también $\{L_i,A_j\}=\varepsilon_{ijk}A_k$» y
+        «Adicionalmente, muestre que $\{L_i,A_j\}=\varepsilon_{ijk}A_k$»; «SO(4)\dots\ generada
+        por $\{L_i,\tilde A_j\}$».
+\end{enumerate}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}{Actividad IA-2 \IArequerida: auditar la versión anterior 2/2}
+\begin{itemize}
+  \item<1-> Para cada fragmento (a)–(f): identifique el error, clasifíquelo (signo, conteo, lógico,
+        conceptual, atribución, edición) y proponga la \emph{verificación mínima} que lo
+        habría detectado.
+  \item<2-> Reflexión: ¿cuáles errores cambian la física y cuáles solo la presentación?
+        ¿Cuáles habría detectado un compilador, cuáles un lector atento y cuáles solo un experto?
+  \item<3-> \textbf{Diligencia}: para el fragmento (e), escriba el orden lógico correcto
+        (conjetura $\to$ demostración de $\dd\vA/\dd t=0$ $\to$ propiedades) y explique qué
+        parte de la diapositiva original era solo heurística.
+  \item<4-> Entregue la bitácora 4D: qué le preguntó a la IA, qué aceptó, qué corrigió y cómo
+        lo verificó.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Actividad IA-3 \IAasistida: verificación simbólica del álgebra de Kepler}
+\small
+\begin{enumerate}
+  \item<1-> \IAprohibida{} Calcule a mano $\PB{\ell_x}{A_y}$ usando el lema
+        $\PB{\ell_i}{V_j}=\varepsilon_{ijk}V_k$ y justifique por qué $\vA$ lo cumple.
+  \item<2-> Con ayuda de la IA, escriba un código (Python + SymPy) que defina $\PB{f}{g}$ en
+        $(x,y,z,p_x,p_y,p_z)$ y verifique $\PB{A_i}{\Hc}=0$, $\PB{\ell_i}{A_j}=\varepsilon_{ijk}A_k$,
+        $\PB{A_i}{A_j}=-2\mu\Hc\,\varepsilon_{ijk}\ell_k$, $\vA\cdot\vl=0$ y
+        $A^{2}=\mu^{2}k^{2}+2\mu\Hc\ell^{2}$.
+  \item<3-> \textbf{Verificación independiente}: escriba \emph{usted} una segunda rutina que
+        evalúe los paréntesis con derivadas por diferencias finitas en puntos aleatorios del
+        espacio de fases y compare. Declare la precisión alcanzada.
+  \item<4-> \textbf{Extensión}: sustituya $\Hc\to\Hc+\beta/r^{2}$. ¿Qué paréntesis dejan de
+        anularse? Relacione $\PB{\vA}{\Hc}$ con la fórmula de precesión de la sección 7.
+  \item<5-> \textbf{Entregables}: código documentado y reproducible, tabla de resultados,
+        bitácora 4D, declaración de uso. Defensa oral: explicar una línea del código elegida
+        por el docente.
+\end{enumerate}
+\end{frame}
+
+\ifdocente
+\begin{frame}{Nota docente: solución de IA-1}
+\footnotesize
+\textbf{Objetivo}: distinguir un argumento plausible de una demostración; ver que las
+dimensiones no fijan signos.
+\begin{itemize}
+  \item Afirmación 1: \textbf{incorrecta}. $\dd\vA/\dd t=-\mu[r^{2}f+k]\,\dd\rh/\dd t$.
+        Contraejemplo: para $V=\frac12\kappa r^{2}$, $r^{2}f+k=k-\kappa r^{3}$ se anula a lo sumo en
+        un radio; en cualquier órbita no circular $\vA$ varía, cualquiera que sea $k$. El argumento confunde «construido con cantidades conservadas» con
+        «construido \emph{solo} con cantidades conservadas» ($\rh$ no lo es).
+  \item Afirmación 2: \textbf{incorrecta}. Todo potencial central en 3D tiene $E,\ell_x,\ell_y,\ell_z$:
+        4 integrales independientes $>3$. Kepler se distingue por ser \emph{máximamente}
+        superintegrable (5); el oscilador isótropo también lo es (Bertrand).
+  \item Afirmación 3: \textbf{incorrecta} (signo). El valor correcto es $-2\mu\Hc$ (verificado
+        con SymPy). Con el signo $+$, $\PB{D_i}{D_j}=-\varepsilon_{ijk}\ell_k$ y el álgebra sería
+        $\mathfrak{so}(3,1)$, no compacta. Verificaciones: evaluación simbólica o numérica en un
+        punto; consistencia con la degeneración finita $n^{2}$ del hidrógeno (grupo compacto).
+\end{itemize}
+\textbf{Errores frecuentes}: aceptar (1) porque «$\vl$ es constante»; contar componentes en
+lugar de funciones independientes; intentar decidir (3) con dimensiones.
+\textbf{Extensión}: construir el tensor de Fradkin del oscilador y verificar que se conserva.
+\end{frame}
+
+\begin{frame}{Nota docente: solución de IA-2}
+\footnotesize
+\begin{itemize}
+  \item (a) Signo y potencia: debería ser $-(\vp\cdot\mathbf L)^{2}$ con $\vp\cdot\mathbf L=0$.
+        Inofensivo en el resultado, pero la expresión escrita no es cuadrática en $\vp\cdot\mathbf L$.
+        Verificación: homogeneidad (grado en $\vp$).
+  \item (b) Conteo: mezcla números de funciones (una «dirección» son 2) y omite $\mathbf R_{cm}-\mathbf v_{cm}t$.
+        Conteo correcto para el movimiento relativo: $7-2=5=2s-1$.
+  \item (c) Signo: $\mathbf f=+k\rh/r^{2}$ es repulsiva y requiere $\vA=\vp\times\vl+\mu k\rh$.
+        «No noetheriana» es impreciso (véase la diapositiva de simetría oculta).
+        Verificación: evaluar $\vA$ en el pericentro con la $\mathbf f$ indicada.
+  \item (d) Atribución: el cierre de las órbitas se sigue de $\hat{\vA}$ constante; Bertrand es
+        el enunciado de unicidad ($-k/r$ y $r^{2}$ son los únicos).
+  \item (e) Lógico: $\vr\cdot\vA=\vr\cdot\mathbf B$ no implica $\vA=\mathbf B$; y afirmar la
+        constancia antes de demostrarla invierte el razonamiento.
+  \item (f) Edición: ítem duplicado, falta $\PB{A_i}{A_j}$, $\tilde A$ sin definir, y los
+        generadores son $L_i$ y $\tilde A_j$, no sus paréntesis.
+\end{itemize}
+Clasificación sugerida: (b), (c), (e) cambian la física o la lógica; (a), (f) son de
+presentación; (d) es de atribución.
+\end{frame}
+
+\begin{frame}{Nota docente: IA-3 y rúbrica}
+\scriptsize
+\textbf{IA-3} — Paso 1: $\PB{\ell_x}{A_y}=A_z$. Resultados esperados: todos los paréntesis coinciden
+(verificados por el autor con SymPy). Con $\Hc+\beta/r^{2}$:
+$\PB{A_i}{\Hc}=-\mu\,(2\beta/r)\,(\dd\rh/\dd t)_i\neq0$; los demás paréntesis entre $\vl$ y $\vA$ no
+cambian (no involucran $\Hc$), pero $\PB{A_i}{A_j}$ ya no es proporcional al nuevo $\Hc$.
+Errores típicos: diferencias finitas con paso inadecuado (error de redondeo vs.\ truncamiento).
+
+\medskip
+\begin{tabular}{p{2.0cm}p{3.9cm}p{3.9cm}p{3.9cm}}
+\toprule
+Dimensión & 3 --- Logrado & 2 --- Parcial & 1 --- Insuficiente\\
+\midrule
+Descripción & Prompt con fuerza general e hipótesis explícitas; compara con el vago & Prompt preciso sin comparación & Prompt vago\\
+Discernimiento & Contraejemplo, conteo correcto y verificación del signo en un punto & Una o dos verificaciones & Acepta o rechaza sin verificar\\
+Diligencia & Rederiva $\dd\vA/\dd t$ general; bitácora completa & Rederivación parcial & Sin rederivación\\
+Código (IA-3) & Dos verificaciones independientes concuerdan; precisión declarada & Solo SymPy & No reproducible\\
+Oral & Explica y modifica el código con predicción previa & Explica sin predecir & No explica su entrega\\
+\bottomrule
+\end{tabular}
+\end{frame}
+\fi
+
+% =====================================================================
+\section[Problemas]{Problemas para la discusión}
+% =====================================================================
+
+\begin{frame}{Problemas para la discusión 1/3}
+\small
+\begin{description}[P0]
+  \item[P1] \nivel{1} \IAprohibida{}
+        Una órbita elíptica tiene $e=0.6$. (a) Dibuje $\vp\times\vl$, $-\mu k\rh$ y $\vA$ en el
+        pericentro, el apocentro y en $\theta=\pi/2$. (b) Verifique en $\theta=\pi/2$ que
+        $|\vA|=\mu k e$. (c) ¿Qué ocurre si $e\to0$?
+  \item[P2] \nivel{1} \IAprohibida{}
+        Verifique la consistencia dimensional de $|\vA|=\mu k e$, de
+        $\PB{A_i}{A_j}=-2\mu\Hc\,\varepsilon_{ijk}\ell_k$ y de $\vD=\vA/\sqrt{-2\mu E}$.
+        ¿Qué unidades tiene $\vD$ y por qué es natural?
+  \item[P3] \nivel{2} \IAasistida{}
+        A partir del hodógrafo: (a) obtenga las velocidades en el pericentro y el apocentro y
+        compárelas con $\ell=\mu r v$. (b) Para $e>1$ muestre que el origen queda fuera del
+        círculo y que los momentos asintóticos son los puntos de tangencia; verifique
+        $p_\infty^{2}=2\mu E$.
+\end{description}
+\end{frame}
+
+\begin{frame}{Problemas para la discusión 2/3}
+\small
+\begin{description}[P0]
+  \item[P4] \nivel{2} \IAasistida{} (Problema 18 del Cap.~6 de las notas)
+        (a) Demuestre el lema $\PB{\ell_i}{V_j}=\varepsilon_{ijk}V_k$ para
+        $\mathbf V=\vr,\vp$ y deduzca $\PB{\ell_i}{A_j}=\varepsilon_{ijk}A_k$.
+        (b) Calcule $\PB{A_x}{\Hc}$ explícitamente y compare, paso a paso, con la demostración
+        newtoniana de la sección 3.
+  \item[P5] \nivel{3} \IAasistida{} \textbf{Perihelio de Mercurio.}
+        (a) Con el método de la sección 7, muestre que $\delta V=-\gamma/r^{3}$ produce
+        $\Delta\varphi=6\pi\gamma\mu^{2}k/\ell^{4}$ por vuelta.
+        (b) La relatividad general equivale, en este orden, a $\gamma=GM\ell^{2}/(mc^{2})$
+        con $\mu\simeq m$, $k=GMm$. Muestre que $\Delta\varphi=6\pi GM/[c^{2}a(1-e^{2})]$.
+        (c) Evalúe para Mercurio en segundos de arco por siglo, citando la fuente de los datos.
+  \item[P6] \nivel{3} \IAasistida{}
+        Para el potencial repulsivo $V=+k/r$: (a) muestre que $\vA=\vp\times\vl+\mu k\rh$ se
+        conserva y que $|\vA|=\mu k e$; (b) verifique que apunta al pericentro; (c) obtenga la
+        órbita $q/r=e\cos\theta-1$ sin integrar.
+\end{description}
+\end{frame}
+
+\begin{frame}{Problemas para la discusión 3/3}
+\small
+\begin{description}[P0]
+  \item[P7] \nivel{3} \IAasistida{} \textbf{$\mathfrak{so}(4)$ y la energía.}
+        Con $\vD=\vA/\sqrt{-2\mu E}$ y $\mathbf J^{\pm}=\tfrac12(\vl\pm\vD)$:
+        (a) muestre que $\mathbf J^{+}$ y $\mathbf J^{-}$ satisfacen cada uno $\mathfrak{so}(3)$ y que
+        $\PB{J^{+}_i}{J^{-}_j}=0$; (b) muestre que $(\mathbf J^{+})^{2}=(\mathbf J^{-})^{2}$;
+        (c) exprese $E$ en función de $\ell^{2}+D^{2}$.
+        Extensión: ¿qué sugiere esto al cuantizar (Pauli, 1926)?
+  \item[P8] \nivel{4} \IAasistida{} \textbf{Investigación: $\vA$ como diagnóstico numérico.}
+        (a) Integre una órbita de Kepler ($e=0.5$) con RK4 y con \emph{leapfrog} (Verlet) para
+        varios pasos $h$; monitoree $E$, $\vl$ y la dirección de $\vA$.
+        (b) Mida la precesión espuria del eje y su dependencia con $h$.
+        (c) Añada $\delta V=\beta/r^{2}$, mida la precesión física y compare con
+        $-2\pi\mu\beta/\ell^{2}$ y con el resultado exacto.
+        (d) ¿Cuál es el menor $\beta$ que puede detectar con cada integrador y cada $h$?
+\end{description}
+\end{frame}
+
+\ifdocente
+\begin{frame}{Nota docente: P1, P2 y P3}
+\footnotesize
+\textbf{P1} — Objetivo: geometría de $\vA$.
+En $\theta=\pi/2$: $r=q$; de la órbita, $p_r=\mu\dot r=\frac{\mu k e}{\ell}\sen\theta=\frac{\mu k e}{\ell}$
+y $p_\theta=\ell/r=\mu k/\ell$. Entonces
+$\vp\times\vl=\ell(p_\theta\rh-p_r\thh)=\mu k\rh-\mu k e\,\thh$ y $\vA=-\mu k e\,\thh$. Con $\thh(\pi/2)=-\hat{\mathbf x}$:
+$\vA=\mu k e\,\hat{\mathbf x}$. \checkmark\; (c) $\vA\to0$, dirección indefinida.
+Error: olvidar la componente radial de $\vp$.
+
+\textbf{P2} — $[\vA]=M^{2}L^{3}T^{-2}$; $[\PB{A_x}{A_y}]=[A]^{2}/[xp]=M^{3}L^{4}T^{-3}=[\mu\Hc\ell]$. \checkmark\;
+$[\vD]=[A]/\sqrt{[\mu E]}=ML^{2}T^{-1}$: momento angular, por eso $\vl$ y $\vD$ forman una sola
+álgebra. Lección: las dimensiones no fijan el signo de $\PB{A_i}{A_j}$ (IA-1).
+
+\textbf{P3} — Radio $\mu k/\ell$, centro a $\mu k e/\ell$: $p_{\max}=\mu k(1+e)/\ell$,
+$p_{\min}=\mu k(1-e)/\ell$, iguales a $\ell/r_p$ y $\ell/r_a$. \checkmark\;
+(b) Tangente desde el origen: $p_\infty^{2}=(\mu k/\ell)^{2}(e^{2}-1)=2\mu E$. \checkmark\;
+Extensión: el ángulo entre las tangentes da el ángulo de dispersión (Tema 2).
+\end{frame}
+
+\begin{frame}{Nota docente: P4, P5 y P6}
+\footnotesize
+\textbf{P4} — Lema: $\PB{\ell_i}{x_j}=\varepsilon_{ijk}x_k$, $\PB{\ell_i}{p_j}=\varepsilon_{ijk}p_k$; los
+escalares ($r$, $p^{2}$, $\vr\cdot\vp$) tienen paréntesis nulo con $\ell_i$; con la regla de Leibniz se
+extiende a $\vp\times\vl$ y a $\rh$. (b) Con $\PB{x_i}{\Hc}=p_i/\mu$ y $\PB{p_i}{\Hc}=-kx_i/r^{3}$, es el
+mismo cálculo que la sección 3. Error frecuente: omitir que $\PB{\ell_i}{\ell_j}\neq0$ al tratar $\vp\times\vl$.
+
+\textbf{P5} — $\delta f=-3\gamma/r^{4}$, $r^{2}\delta f=-3\gamma u^{2}$, $u=(1+e\cos\theta)/q$.
+$\oint(1+e\cos\theta)^{2}\cos\theta\,\dd\theta=2\pi e$, luego $\Delta A_y=6\pi\mu\gamma e/q^{2}$ y
+$\Delta\varphi=6\pi\gamma/(kq^{2})=6\pi\gamma\mu^{2}k/\ell^{4}$ (avance). (b) Con
+$\ell^{2}=m^{2}GMa(1-e^{2})$: $\Delta\varphi=6\pi GM/[c^{2}a(1-e^{2})]$.
+(c) $GM_\odot=1.327\times10^{20}$, $a=5.791\times10^{10}$ m, $e=0.2056$: $5.02\times10^{-7}$ rad/vuelta;
+$415.2$ vueltas/siglo $\Rightarrow\approx43.0''$/siglo. \checkmark\;
+Error: usar $\ell$ por unidad de masa en una fórmula y total en otra.
+
+\textbf{P6} — Con $f=+k/r^{2}$, $r^{2}f+k'=0$ requiere $k'=-k$. En el pericentro $p\ell=\ell^{2}/r_p=\mu k(e-1)$,
+así $\vA=(p\ell+\mu k)\rh_p=\mu k e\,\rh_p$. (c) $\vr\cdot\vA=\ell^{2}+\mu k r=\mu k e\,r\cos\theta$
+$\Rightarrow q/r=e\cos\theta-1$. Conecta con la órbita repulsiva del Tema 2.
+\end{frame}
+
+\begin{frame}{Nota docente: P7 y P8}
+\footnotesize
+\textbf{P7} — (a) Con $\PB{D_i}{\ell_j}=\varepsilon_{ijk}D_k$:
+$\PB{J^{+}_i}{J^{+}_j}=\tfrac14(\varepsilon\ell+\varepsilon D+\varepsilon D+\varepsilon\ell)_{k}=\varepsilon_{ijk}J^{+}_k$;
+$\PB{J^{+}_i}{J^{-}_j}=\tfrac14(\varepsilon\ell-\varepsilon D+\varepsilon D-\varepsilon\ell)=0$.
+(b) $(\mathbf J^{\pm})^{2}=\tfrac14(\ell^{2}+D^{2}\pm2\vl\cdot\vD)$ y $\vl\cdot\vD=0$.
+(c) $\ell^{2}+D^{2}=\ell^{2}+\dfrac{\mu^{2}k^{2}+2\mu E\ell^{2}}{-2\mu E}=-\dfrac{\mu k^{2}}{2E}$
+$\Rightarrow E=-\dfrac{\mu k^{2}}{2(\ell^{2}+D^{2})}$.
+Extensión: con $4(\mathbf J^{\pm})^{2}+\hbar^{2}\to n^{2}\hbar^{2}$ se obtiene $E_n=-\mu k^{2}/(2\hbar^{2}n^{2})$.
+Error: tratar $E$ como constante fuera de la superficie de energía al calcular $\PB{D_i}{D_j}$.
+
+\textbf{P8} — Resultados esperados: RK4 no conserva $E$ ni $\vl$ exactamente (deriva secular
+pequeña, $\propto h^{4}$); leapfrog conserva $\vl$ exactamente para fuerzas centrales y mantiene $E$
+acotada, pero ambos producen una precesión espuria de $\hat{\vA}$ (en leapfrog, $\propto h^{2}$).
+Comprobación del autor ($\mu=k=1$, $\ell=1.2$, $\beta=0.01$): primer orden $-0.0436$ rad/vuelta,
+exacto $-0.0432$; la integración numérica con \texttt{rtol}$=10^{-12}$ reproduce el exacto.
+Criterio de detección: precesión física $\gg$ espuria acumulada en el tiempo de simulación.
+Riesgos: medir el ángulo del pericentro con una malla temporal gruesa (usar $\hat{\vA}$ es más robusto).
+\end{frame}
+\fi
+
+\end{document}

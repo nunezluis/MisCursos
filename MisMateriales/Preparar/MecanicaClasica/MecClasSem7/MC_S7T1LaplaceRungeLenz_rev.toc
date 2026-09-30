@@ -1,0 +1,11 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Introducción: objetivos y conexión}{3}{0}{1}
+\beamer@sectionintoc {2}{Construcción del vector $\mathbf A$}{17}{0}{2}
+\beamer@sectionintoc {3}{Conservación: solo para fuerzas $1/r^{2}$}{26}{0}{3}
+\beamer@sectionintoc {4}{Módulo, dirección y geometría de $\mathbf A$}{35}{0}{4}
+\beamer@sectionintoc {5}{Integrabilidad y órbitas cerradas}{55}{0}{5}
+\beamer@sectionintoc {6}{Anticipo: paréntesis de Poisson y simetría oculta}{64}{0}{6}
+\beamer@sectionintoc {7}{$\mathbf A$ como herramienta: precesión de órbitas perturbadas}{84}{0}{7}
+\beamer@sectionintoc {8}{Recapitulando}{92}{0}{8}
+\beamer@sectionintoc {9}{Actividades con asistentes de IA (4D)}{107}{0}{9}
+\beamer@sectionintoc {10}{Problemas para la discusión}{127}{0}{10}

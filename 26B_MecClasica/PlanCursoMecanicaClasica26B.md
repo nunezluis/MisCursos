@@ -438,7 +438,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
 
 #### Materiales
 ##### Presentaciones
-+ [Vector Laplace-Runge-Lenz](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S7T1LAPLACERungeLenz.pdf)
++ [Vector Laplace-Runge-Lenz](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S7T1LAPLACERungeLenz_rev.pdf)
 + [Dispersión](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S7T2Scatering_rev.pdf)
 
 ##### Videos
