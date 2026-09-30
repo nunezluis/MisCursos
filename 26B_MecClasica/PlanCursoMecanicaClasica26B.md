@@ -429,6 +429,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
      $T^2 \propto a^3$, donde $a$ es el semieje mayor.
 
 
+
 ### Clase S7-C13/C14
 + **Estudie**
 + El vector de Laplace-Runge-Lenz
@@ -438,7 +439,7 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
 #### Materiales
 ##### Presentaciones
 + [Vector Laplace-Runge-Lenz](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S7T1LAPLACERungeLenz.pdf)
-+ [Dispersión](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S7T2Scatering.pdf)
++ [Dispersión](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S7T2Scatering_rev.pdf)
 
 ##### Videos
 + [dispersion hiperbolica](https://www.youtube.com/watch?v=HjIarTx5itY)

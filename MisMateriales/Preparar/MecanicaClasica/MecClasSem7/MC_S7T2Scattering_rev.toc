@@ -1,0 +1,10 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Introducción: objetivos y conexión}{3}{0}{1}
+\beamer@sectionintoc {2}{El problema de dispersión}{19}{0}{2}
+\beamer@sectionintoc {3}{Ángulo de dispersión en un potencial central arbitrario}{28}{0}{3}
+\beamer@sectionintoc {4}{Dispersión hiperbólica: $V(r)=\mp k/r$}{38}{0}{4}
+\beamer@sectionintoc {5}{Sección eficaz de dispersión}{56}{0}{5}
+\beamer@sectionintoc {6}{El experimento de Rutherford}{71}{0}{6}
+\beamer@sectionintoc {7}{Recapitulando}{100}{0}{7}
+\beamer@sectionintoc {8}{Actividades con asistentes de IA (4D)}{114}{0}{8}
+\beamer@sectionintoc {9}{Problemas para la discusión}{136}{0}{9}

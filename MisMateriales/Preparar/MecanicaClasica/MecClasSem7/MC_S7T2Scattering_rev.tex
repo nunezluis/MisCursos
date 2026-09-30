@@ -1,0 +1,1080 @@
+% =====================================================================
+%  Mecánica Clásica — Sesión 7, Tema 2: Dispersión en campos centrales
+%  Versión revisada (UTF-8). Compilar con pdflatex, xelatex o lualatex.
+%
+%  VERSIÓN DOCENTE / ESTUDIANTE
+%  ----------------------------
+%  \docentetrue  -> incluye las diapositivas "Nota docente" (soluciones,
+%                   errores frecuentes, rúbricas). NO distribuir.
+%  \docentefalse -> versión para estudiantes.
+% =====================================================================
+\documentclass[aspectratio=169]{beamer}
+
+\newif\ifdocente
+\docentefalse   % <-- cambiar a \docentetrue para la versión docente
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-noshorthands]{babel} % sin atajos: evita choques con <...> de beamer
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{cancel}
+\renewcommand{\CancelColor}{\color{red}}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{textpos}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,angles,quotes}
+
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\setbeamertemplate{navigation symbols}{}
+
+% ---------------------------------------------------------------------
+% Rutas relativas (portables). Las figuras van en ./Figuras/
+% ---------------------------------------------------------------------
+\graphicspath{{Figuras/}}
+\newcommand{\logoUIS}{%
+  \IfFileExists{Figuras/UISLOGO.png}%
+    {\includegraphics[height=0.4in,keepaspectratio]{UISLOGO.png}}{}}
+\addtobeamertemplate{frametitle}{}{%
+  \begin{textblock*}{100mm}(.88\textwidth,-1cm)\logoUIS\end{textblock*}}
+
+% Figura con respaldo: si el archivo no existe se muestra un recuadro
+\newcommand{\figura}[2]{%
+  \IfFileExists{Figuras/#2}%
+    {\includegraphics[width=#1]{#2}}%
+    {\fbox{\begin{minipage}[c][2.2cm][c]{\dimexpr#1-2\fboxsep-2\fboxrule\relax}%
+      \centering\tiny Figura:\\ \texttt{\detokenize{#2}}\end{minipage}}}}
+
+% ---------------------------------------------------------------------
+% Notación unificada
+% ---------------------------------------------------------------------
+\providecommand{\sen}{}
+\renewcommand{\sen}{\operatorname{sen}}
+\newcommand{\tmax}{\theta_{\max}}
+\newcommand{\rmin}{r_{\min}}
+\newcommand{\um}{u_{m}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ds}{\displaystyle}
+% Etiquetas de política de IA
+\newcommand{\IAprohibida}{\colorbox{red!20}{\scriptsize\textbf{IA-prohibida}}}
+\newcommand{\IAasistida}{\colorbox{yellow!30}{\scriptsize\textbf{IA-asistida}}}
+\newcommand{\IArequerida}{\colorbox{green!20}{\scriptsize\textbf{IA-requerida}}}
+\newcommand{\nivel}[1]{\colorbox{blue!12}{\scriptsize\textbf{Nivel #1}}}
+
+\title{\textbf{Dispersión en campos de fuerza central}}
+\subtitle{Ángulo de dispersión, sección eficaz y el experimento de Rutherford}
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias}\\
+\textit{Universidad Industrial de Santander, Santander, Colombia}\\[2pt]
+\logoUIS}
+\date{Mecánica Clásica · Sesión 7 · Tema 2}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Agenda}
+  \tableofcontents
+\end{frame}
+
+% =====================================================================
+\section[Introducción]{Introducción: objetivos y conexión}
+% =====================================================================
+
+\begin{frame}{Objetivos de aprendizaje}
+Al finalizar esta sesión, el estudiante podrá:
+\begin{enumerate}
+  \item<1-> \textbf{Formular} el problema de dispersión en un potencial central
+        a partir de los datos $(b,E)$ y de las cantidades conservadas.
+  \item<2-> \textbf{Derivar} la función de deflexión $\Theta(b)$ para un potencial
+        central arbitrario y \textbf{evaluarla} para el potencial de Coulomb/Kepler.
+  \item<3-> \textbf{Definir, interpretar y calcular} la sección eficaz diferencial y total
+        (esfera dura, Rutherford).
+  \item<4-> \textbf{Verificar} resultados mediante análisis dimensional y casos límite
+        (partícula libre, ángulos pequeños, choque frontal).
+  \item<5-> \textbf{Evaluar críticamente} derivaciones generadas por IA y
+        \textbf{simular} la dispersión en potenciales sin solución cerrada.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Conceptos previos y continuidad}
+\begin{itemize}
+  \item<1-> \textbf{Problema de dos cuerpos} (§3.1): se reduce a una partícula de masa
+        reducida $\mu = mM/(m+M)$ en el potencial $V(r)$.
+  \item<2-> \textbf{Noether} (§2.4–2.5): homogeneidad temporal $\Rightarrow E$ constante;
+        isotropía $\Rightarrow \boldsymbol{\ell}=\mathbf r\times\mathbf p$ constante
+        $\Rightarrow$ movimiento plano.
+  \item<3-> \textbf{Potencial efectivo} (§3.2):
+        $V_{\text{ef}}(r)=V(r)+\dfrac{\ell^2}{2\mu r^2}$.
+        Hasta ahora estudiamos órbitas \emph{ligadas}; la dispersión corresponde a
+        las órbitas \emph{no ligadas}, $E>0$.
+  \item<4-> \textbf{Ecuación de Binet} (§3.3) y \textbf{órbitas cónicas} (§3.4):
+        para $E>0$ en $V\propto 1/r$ la órbita es una hipérbola ($e>1$).
+  \item<5-> \textbf{Vector de Laplace–Runge–Lenz} (§3.7): fija la dirección del pericentro;
+        ofrece un camino alternativo al ángulo de dispersión.
+\end{itemize}
+\visible<6->{%
+\begin{block}{Lo nuevo}
+Ya no preguntamos por la trayectoria $r(\theta)$ completa, sino por un \emph{observable
+asintótico}: la desviación $\chi$ y la distribución angular de un haz, $\sigma(\chi)$.
+\end{block}}
+\end{frame}
+
+\begin{frame}{Motivación física}
+\begin{itemize}
+  \item<1-> Hacia 1909, Geiger y Marsden observaron que una pequeña fracción de partículas
+        $\alpha$ que atravesaban una lámina delgada de oro era desviada \emph{hacia atrás}.
+  \item<2-> En un átomo con carga positiva difusa (modelo de Thomson) las fuerzas
+        son demasiado débiles para producir desviaciones grandes.
+  \item<3-> Pregunta: \emph{¿qué distribución angular produciría una carga puntual?}
+        Si la predicción coincide con el experimento, la carga positiva
+        está concentrada en un núcleo.
+  \item<4-> Esta sesión construye la herramienta general: dado $V(r)$,
+        predecir $\chi(b)$ y $\sigma(\chi)$.
+  \item<5-> El problema inverso (de $\sigma(\chi)$ medida a $V(r)$) es la base
+        de la física experimental de colisiones.
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section[El problema de dispersión]{El problema de dispersión}
+% =====================================================================
+
+\begin{frame}{Dispersión: el concepto}
+\begin{columns}[T]
+\begin{column}{0.58\textwidth}
+\begin{itemize}
+  \item<1-> Dispersión (\emph{scattering}): desviación de la trayectoria de una
+        partícula con $E>0$ debida a un potencial central $V(r)$, atractivo o repulsivo.
+  \item<2-> La partícula llega desde $r\to\infty$, alcanza $\rmin$ y regresa a
+        $r\to\infty$ con velocidad de igual magnitud pero otra dirección.
+  \item<3-> \textbf{Ángulo de dispersión} $\chi\in[0,\pi]$: ángulo entre la velocidad
+        inicial $\mathbf v_0$ y la final $\mathbf v_f$.
+\end{itemize}
+\end{column}
+\begin{column}{0.40\textwidth}
+\centering\figura{0.95\linewidth}{Dispersion.png}
+\end{column}
+\end{columns}
+\visible<4->{%
+\begin{alertblock}{Hipótesis de trabajo}
+\small Centro dispersor fijo en el foco $f$ ($m\ll M$, $\mu\simeq m$), o bien todo en el
+sistema centro de masa con $\mu$ y $E_{\text{cm}}$. Fuerza central conservativa,
+$V(r)\to 0$ cuando $r\to\infty$. Colisión elástica, sin absorción.
+\end{alertblock}}
+\end{frame}
+
+\begin{frame}{Parámetro de impacto y cantidades conservadas}
+\begin{columns}[T]
+\begin{column}{0.60\textwidth}
+\begin{itemize}
+  \item<1-> Energía (en $r\to\infty$, $V\to0$): $\;E=\tfrac12 m v_0^2$.
+  \item<2-> \textbf{Parámetro de impacto} $b$: distancia perpendicular entre la recta
+        de $\mathbf v_0$ y la paralela que pasa por el centro de fuerza.
+  \item<3-> Sea $\varphi$ el ángulo entre $\mathbf r$ y $\mathbf p$. Sobre la asíntota
+        $r\sen\varphi=b$, luego
+        \[
+          \ell=rp\sen\varphi=m v_0 b
+          \;\;\Longrightarrow\;\;
+          \ell^2=2mEb^2 .
+        \]
+\end{itemize}
+\end{column}
+\begin{column}{0.38\textwidth}
+\centering\figura{0.95\linewidth}{Impctprmtr.png}
+\end{column}
+\end{columns}
+\begin{itemize}
+  \item<4-> \textbf{Simetría axial} alrededor del eje del haz: la desviación depende solo
+        de $b$ (no del azimut), y el azimut se conserva.
+  \item<5-> Para un $V(r)$ dado, los datos $(b,E)$ determinan completamente la trayectoria.
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section[Ángulo de dispersión]{Ángulo de dispersión en un potencial central arbitrario}
+% =====================================================================
+
+\begin{frame}{Del pericentro a la asíntota: el ángulo $\tmax$}
+\small
+\begin{itemize}
+  \item<1-> Conservación de $E$ y $\ell$:
+  \[
+    E=\tfrac12 m\dot r^{2}+V_{\text{ef}}(r),\qquad
+    \dot\theta=\frac{\ell}{m r^{2}}
+    \;\;\Longrightarrow\;\;
+    \frac{\dd\theta}{\dd r}=\frac{\dot\theta}{\dot r}
+    =\frac{\ell}{r^{2}\sqrt{2m\,[E-V(r)]-\ell^{2}/r^{2}}} .
+  \]
+  \item<2-> La órbita es simétrica respecto de la línea del pericentro. Sea $\tmax$ el ángulo
+        barrido desde $\rmin$ hasta $r\to\infty$. Con $\ell=b\sqrt{2mE}$:
+  \[
+    \tmax=\frac{\ell}{\sqrt{2m}}\int_{\rmin}^{\infty}
+      \frac{\dd r}{r^{2}\sqrt{E-V(r)-\frac{\ell^{2}}{2mr^{2}}}}
+    = b\int_{\rmin}^{\infty}\frac{\dd r}{r^{2}\sqrt{1-\frac{V(r)}{E}-\frac{b^{2}}{r^{2}}}} .
+  \]
+  \item<3-> Con $u=1/r$ (\,$\dd r/r^{2}=-\dd u$\,):
+  \[
+    \boxed{\;\tmax=b\int_{0}^{\um}\frac{\dd u}{\sqrt{1-\frac{V(u)}{E}-b^{2}u^{2}}}\;},
+    \qquad \um=\frac{1}{\rmin}.
+  \]
+  \item<4-> $\rmin$ es la \textbf{mayor} raíz de $E=V_{\text{ef}}(r)$ (primer punto de
+        retorno que encuentra la partícula que llega desde el infinito).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Función de deflexión}
+\begin{itemize}
+  \item<1-> Definimos la \textbf{función de deflexión}
+  \[
+    \boxed{\; \chi = \Theta(b)\equiv\pi-2\,\tmax(b)\;}
+  \]
+  \item<2-> \textbf{Verificación (partícula libre, $V=0$):}
+        $\tmax=b\int_0^{1/b}\frac{\dd u}{\sqrt{1-b^2u^2}}=\sen^{-1}(1)=\frac{\pi}{2}
+        \;\Rightarrow\;\Theta=0$. \checkmark
+  \item<3-> Potencial \textbf{repulsivo}: la órbita barre menos de $\pi$,
+        $\tmax<\pi/2$, $\Theta>0$.
+  \item<4-> Potencial \textbf{atractivo}: la órbita rodea al centro, $\tmax>\pi/2$,
+        $\Theta<0$.
+  \item<5-> Ángulo observado: $\chi=|\Theta|$ si $|\Theta|\le\pi$.
+\end{itemize}
+\visible<6->{%
+\begin{alertblock}{Advertencias para potenciales generales}
+\small
+En potenciales atractivos puede ocurrir $|\Theta|>\pi$ (la partícula da vueltas:
+\emph{orbiting}); entonces $\chi$ se obtiene reduciendo $|\Theta|$ módulo $2\pi$ al
+intervalo $[0,\pi]$. Además, varios valores de $b$ pueden producir el mismo $\chi$.
+\end{alertblock}}
+\end{frame}
+
+% =====================================================================
+\section[Coulomb / Kepler]{Dispersión hiperbólica: $V(r)=\mp k/r$}
+% =====================================================================
+
+\begin{frame}{Potencial atractivo $V(r)=-k/r$ \; ($k>0$)}
+\small
+\begin{columns}[T]
+\begin{column}{0.64\textwidth}
+\begin{itemize}
+  \item<1-> Para $E>0$ la órbita es una hipérbola ($\theta$ medido desde el pericentro):
+  \[
+    \frac{q}{r}=1+e\cos\theta,\quad
+    q=\frac{\ell^{2}}{mk}=\frac{2Eb^{2}}{k},
+  \]
+  \[
+    e=\sqrt{1+\frac{2E\ell^{2}}{mk^{2}}}=\sqrt{1+\Big(\frac{2Eb}{k}\Big)^{2}}>1 .
+  \]
+  \item<2-> $\rmin=\dfrac{q}{1+e}$ en $\theta=0$; \; $r\to\infty$ cuando
+        $\cos\tmax=-\dfrac1e$, así $\dfrac{\pi}{2}<\tmax<\pi$.
+\end{itemize}
+\end{column}
+\begin{column}{0.34\textwidth}
+\centering\figura{0.95\linewidth}{DispersionHiperbolica.png}
+\end{column}
+\end{columns}
+\begin{itemize}
+  \item<3-> $\Theta=\pi-2\tmax<0$, luego $\chi=2\tmax-\pi$ y
+  \[
+    \sen\frac{\chi}{2}=\sen\Big(\tmax-\frac{\pi}{2}\Big)=-\cos\tmax=\frac1e .
+  \]
+  \item<4-> La trayectoria \textbf{encierra} al foco.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Potencial repulsivo $V(r)=+k/r$ \; ($k>0$)}
+\small
+\begin{columns}[T]
+\begin{column}{0.64\textwidth}
+\begin{itemize}
+  \item<1-> Ecuación de Binet con $u=1/r$:
+  \[
+    u''+u=-\frac{m}{\ell^{2}}\frac{\dd V}{\dd u}=-\frac{mk}{\ell^{2}} .
+  \]
+  \item<2-> Solución (pericentro en $\theta=0$):
+        $u=A\cos\theta-\dfrac{mk}{\ell^{2}}$.
+  \item<3-> Sustituyendo en
+        $E=\frac{\ell^{2}}{2m}\big(u'^{2}+u^{2}\big)+ku$, los términos en
+        $\cos\theta$ se cancelan y resulta $A=\frac{mk}{\ell^{2}}\,e$ con
+        \textbf{la misma} $e$. Así, $\;\dfrac{q}{r}=e\cos\theta-1$.
+\end{itemize}
+\end{column}
+\begin{column}{0.34\textwidth}
+\centering\figura{0.95\linewidth}{DispersionHiperbolicaRepulsiva.png}
+\end{column}
+\end{columns}
+\begin{itemize}
+  \item<4-> $\rmin=\dfrac{q}{e-1}$; \; $r\to\infty$ cuando $\cos\tmax=\dfrac1e$,
+        así $\tmax<\dfrac{\pi}{2}$.
+  \item<5-> $\Theta=\pi-2\tmax>0$, $\chi=\Theta$ y
+        $\sen\dfrac{\chi}{2}=\cos\tmax=\dfrac1e$. La trayectoria \textbf{no encierra} al foco.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Resultado común y verificaciones}
+\begin{itemize}
+  \item<1-> En ambos casos $\sen(\chi/2)=1/e$. Como
+        $\csc^{2}(\chi/2)-1=e^{2}-1=(2Eb/k)^{2}$:
+  \[
+    \boxed{\;\cot\frac{\chi}{2}=\frac{2bE}{k}\;}
+    \qquad\Longleftrightarrow\qquad
+    b=\frac{k}{2E}\cot\frac{\chi}{2}.
+  \]
+  \item<2-> \textbf{Dimensiones}: $k/E$ tiene dimensión de longitud; $2bE/k$ es adimensional. \checkmark
+  \item<3-> \textbf{Límites}: $b\to0\Rightarrow\chi\to\pi$ (choque frontal);
+        \; $b\to\infty\Rightarrow\chi\to0$ (sin desviación).
+  \item<4-> \textbf{Observación}: para iguales $(b,E)$, atracción y repulsión dan el mismo
+        $|\Theta|$ aunque las trayectorias sean distintas.
+        ¿Puede una medida de $\sigma(\chi)$ distinguir el signo de $k$?
+  \item<5-> \textbf{Camino alternativo}: el vector de Laplace–Runge–Lenz apunta al pericentro
+        y la órbita es simétrica respecto de él; las asíntotas forman ángulos
+        $\pm\tmax$ con $\mathbf A$. (Ejercicio: obtenga $\sen(\chi/2)=1/e$ así.)
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Aplicación: objetos interestelares}
+\begin{itemize}
+  \item<1-> Los objetos interestelares describen hipérbolas con el Sol en el foco
+        ($k=GM_\odot m$). La desviación de su velocidad heliocéntrica es
+        $\chi=2\sen^{-1}(1/e)$.
+\end{itemize}
+\visible<2->{%
+\begin{center}
+\begin{tabular}{lccc}
+\toprule
+Objeto & Naturaleza & $e$ (aprox.) & $\chi$ \\
+\midrule
+1I/\textquoteleft Oumuamua & objeto interestelar (asteroide/cometa, debatido) & $1.20$ & $\approx113^\circ$\\
+2I/Borisov   & cometa & $3.36$ & $\approx35^\circ$\\
+3I/ATLAS (2025) & cometa & $\approx6.1$ & $\approx19^\circ$\\
+\bottomrule
+\end{tabular}
+\end{center}}
+\begin{itemize}
+  \item<3-> Cuanto mayor la excentricidad (mayor $E$ o mayor $b$), menor la desviación.
+  \item<4-> Los valores de $e$ deben verificarse en la base de datos
+        JPL Small-Body Database antes de usarlos (véase el problema P3).
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section[Sección eficaz]{Sección eficaz de dispersión}
+% =====================================================================
+
+\begin{frame}{Sección eficaz diferencial: definición}
+\small
+\begin{columns}[T]
+\begin{column}{0.62\textwidth}
+\begin{itemize}
+  \item<1-> Haz de partículas idénticas con distintos $b$ $\Rightarrow$ distintos $\chi$.
+  \item<2-> \textbf{Intensidad} del haz:
+        $I=\dfrac{\#\text{ partículas}}{\text{área}\times\text{tiempo}}$.
+  \item<3-> Sea $\dd\dot N$ el número de partículas dispersadas \emph{por unidad de tiempo}
+        dentro del ángulo sólido $\dd\Omega$:
+  \[
+    \boxed{\;\sigma(\Omega)\equiv\frac{\dd\sigma}{\dd\Omega}
+      =\frac{1}{I}\,\frac{\dd\dot N}{\dd\Omega}\;}
+    \qquad [\sigma\,\dd\Omega]=\text{área}.
+  \]
+\end{itemize}
+\end{column}
+\begin{column}{0.36\textwidth}
+\centering\figura{0.95\linewidth}{SeccionEficaz.png}
+\end{column}
+\end{columns}
+\begin{itemize}
+  \item<4-> \textbf{Interpretación}: $\sigma\,\dd\Omega$ es el área transversal del haz
+        cuyas partículas terminan en $\dd\Omega$. \emph{No es una fracción ni una probabilidad.}
+  \item<5-> Para un blanco delgado con $n_b$ centros por unidad de área, la
+        \emph{probabilidad} de que una partícula se disperse en $\dd\Omega$ es
+        $n_b\,\sigma\,\dd\Omega$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Sección eficaz en función de $\chi$}
+\small
+\begin{columns}[T]
+\begin{column}{0.64\textwidth}
+\begin{itemize}
+  \item<1-> Las partículas con el mismo $b$ salen sobre un cono de semiángulo $\chi$
+        con vértice en $f$. Entre $\chi$ y $\chi+\dd\chi$:
+        \[
+          \dd\Omega=\frac{(2\pi r\sen\chi)(r\,\dd\chi)}{r^{2}}=2\pi\sen\chi\,\dd\chi .
+        \]
+  \item<2-> Conservación del número de partículas: las que cruzan el anillo
+        $(b,b+\dd b)$ salen en $(\chi,\chi+\dd\chi)$:
+        $\;I\,2\pi b\,|\dd b|=I\,\sigma(\chi)\,2\pi\sen\chi\,|\dd\chi|$.
+\end{itemize}
+\end{column}
+\begin{column}{0.34\textwidth}
+\centering\figura{0.95\linewidth}{SeccionEficazDiferencial.png}
+\end{column}
+\end{columns}
+\visible<3->{%
+\[
+  \boxed{\;\sigma(\chi)=\frac{b}{\sen\chi}\left|\frac{\dd b}{\dd\chi}\right|\;}
+  \qquad
+  \sigma_T=\int\sigma\,\dd\Omega=2\pi\int_0^{\pi}\sigma(\chi)\sen\chi\,\dd\chi .
+\]}
+\begin{itemize}
+  \item<4-> El valor absoluto: $\sigma$ es un área positiva y, en general,
+        $\dd b/\dd\chi<0$.
+  \item<5-> Si varios $b_i$ producen el mismo $\chi$:
+        $\sigma(\chi)=\sum_i\frac{b_i}{\sen\chi}\left|\frac{\dd b}{\dd\chi}\right|_i$.
+        Si $\dd\chi/\dd b=0$, $\sigma$ diverge («arcoíris»).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplo canónico: esfera dura de radio $a$}
+\small
+\begin{columns}[T]
+\begin{column}{0.55\textwidth}
+\begin{itemize}
+  \item<1-> $V=\infty$ para $r<a$, $V=0$ para $r>a$. Reflexión especular:
+        ángulo de incidencia $\alpha$ con $\sen\alpha=b/a$.
+  \item<2-> $\chi=\pi-2\alpha\;\Rightarrow\; b=a\cos\dfrac{\chi}{2}$, \;
+        $\left|\dfrac{\dd b}{\dd\chi}\right|=\dfrac a2\sen\dfrac{\chi}{2}$.
+  \item<3-> Entonces
+  \[
+    \sigma(\chi)=\frac{a\cos\frac{\chi}{2}\,\frac a2\sen\frac{\chi}{2}}{\sen\chi}
+      =\frac{a^{2}}{4},
+    \qquad \sigma_T=\frac{a^{2}}{4}\,4\pi=\pi a^{2}.
+  \]
+\end{itemize}
+\end{column}
+\begin{column}{0.43\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.92,>=Stealth]
+  % esfera
+  \fill[gray!25] (0,0) circle (1);
+  \draw (0,0) circle (1);
+  \fill (0,0) circle (0.03) node[below right,font=\scriptsize]{$f$};
+  % eje
+  \draw[dashed,gray] (-2.3,0) -- (1.6,0);
+  % rayo incidente y = b = 0.6
+  \draw[->,thick,blue!70!black] (-2.3,0.6) -- (-0.8,0.6);
+  % normal
+  \draw[dashed] (0,0) -- (-1.2,0.9);
+  % rayo reflejado (dir (-0.28,0.96))
+  \draw[->,thick,red!70!black] (-0.8,0.6) -- (-1.22,2.04);
+  % continuación del rayo incidente
+  \draw[dotted] (-0.8,0.6) -- (0.2,0.6);
+  % b
+  \draw[<->] (-2.0,0) -- node[left,font=\scriptsize]{$b$} (-2.0,0.6);
+  % a
+  \draw[<->,gray] (0,0) -- node[below,font=\scriptsize]{$a$} (0.6,-0.8);
+  % ángulo chi
+  \coordinate (P) at (-0.8,0.6);
+  \coordinate (F) at (0.2,0.6);
+  \coordinate (R) at (-1.22,2.04);
+  \pic[draw,->,angle radius=0.45cm,"$\chi$",angle eccentricity=1.45,font=\scriptsize] {angle=F--P--R};
+\end{tikzpicture}
+\end{column}
+\end{columns}
+\begin{itemize}
+  \item<4-> Dispersión \textbf{isótropa}; $\sigma_T=\pi a^{2}$ es la «sombra» geométrica:
+        de ahí el nombre \emph{sección eficaz}.
+  \item<5-> \textbf{Con la integral general}:
+        $\tmax=b\int_0^{1/a}\frac{\dd u}{\sqrt{1-b^2u^2}}=\sen^{-1}\frac ba=\alpha$
+        $\Rightarrow\Theta=\pi-2\alpha$. \checkmark
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section[Rutherford]{El experimento de Rutherford}
+% =====================================================================
+
+\begin{frame}{El experimento de Rutherford: planteamiento}
+\begin{columns}[T]
+\begin{column}{0.58\textwidth}
+\begin{itemize}
+  \item<1-> Partículas $\alpha$ (carga $Z_1e$, $Z_1=2$) inciden sobre núcleos de oro
+        (carga $Z_2e$, $Z_2=79$).
+  \item<2-> Potencial de Coulomb repulsivo:
+  \[
+    V(r)=\frac{k}{r},\qquad
+    k=\frac{Z_1Z_2e^{2}}{4\pi\varepsilon_0}\;\;\text{(SI)}
+  \]
+  (en unidades gaussianas $k=Z_1Z_2e^{2}$).
+  \item<3-> Valor útil: $\dfrac{e^{2}}{4\pi\varepsilon_0}\simeq1.44\ \text{MeV·fm}$.
+\end{itemize}
+\end{column}
+\begin{column}{0.40\textwidth}
+\centering\figura{0.95\linewidth}{Rutherford.png}
+\end{column}
+\end{columns}
+\visible<4->{%
+\begin{block}{Objetivo}
+Calcular $\chi(b)$ \emph{sin usar la órbita}, solo con la integral general de $\tmax$,
+y comparar con el resultado geométrico.
+\end{block}}
+\end{frame}
+
+\begin{frame}{Rutherford: evaluación de la integral 1/2}
+\begin{itemize}
+  \item<1-> Con $V(u)=ku$:\;
+        $\ds\tmax=b\int_0^{\um}\frac{\dd u}{\sqrt{1-\frac{k}{E}u-b^{2}u^{2}}}$.
+  \item<2-> Completando el cuadrado, con
+        $w\equiv bu+\dfrac{k}{2Eb}$ y $D^{2}\equiv1+\Big(\dfrac{k}{2Eb}\Big)^{2}$:
+        \[
+          1-\frac{k}{E}u-b^{2}u^{2}=D^{2}-w^{2},\qquad b\,\dd u=\dd w .
+        \]
+  \item<3-> Como $\ds\int\frac{\dd w}{\sqrt{D^{2}-w^{2}}}=-\cos^{-1}\frac{w}{D}$ \;
+        (¡atención al signo!):
+        \[
+          \tmax=\Big[-\cos^{-1}\frac{w}{D}\Big]_{w(0)}^{w(\um)} .
+        \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Rutherford: evaluación de la integral 2/2}
+\begin{itemize}
+  \item<1-> $\um$ es la raíz positiva de $1-\frac kEu-b^2u^2=0$, es decir, $w(\um)=D$.
+        Además $\dfrac{w(0)}{D}=\dfrac{1}{e}$ con $e=\sqrt{1+(2bE/k)^{2}}$.
+  \item<2-> Por tanto
+        \[
+          \tmax=\cos^{-1}\Big(\frac1e\Big)-\cancelto{0}{\cos^{-1}(1)}
+          \;\;\Longrightarrow\;\;\cos\tmax=\frac1e ,
+        \]
+        idéntico al resultado geométrico: $\chi=\Theta=\pi-2\tmax$ y
+        $\cot\dfrac{\chi}{2}=\dfrac{2bE}{k}$. \checkmark
+\end{itemize}
+\visible<3->{%
+\begin{alertblock}{Lección de verificación}
+\small Un ángulo barrido debe cumplir $\tmax>0$. Con la primitiva de signo equivocado se
+obtiene $\tmax=-\cos^{-1}(1/e)$, y el resultado «correcto» $\cos\tmax=1/e$ aparece solo
+porque el coseno es par (véase la actividad IA-2).
+\end{alertblock}}
+\end{frame}
+
+\begin{frame}{Verificación: aproximación impulsiva (ángulos pequeños)}
+\begin{itemize}
+  \item<1-> Si $b\gg k/E$, la trayectoria es casi recta: $x=v_0t$, $y=b$.
+        La fuerza transversal es $F_\perp=\dfrac{k}{r^{2}}\dfrac{b}{r}$, con
+        $r=\sqrt{b^{2}+v_0^{2}t^{2}}$.
+  \item<2-> Impulso transversal:
+  \[
+    \Delta p_\perp=\int_{-\infty}^{\infty}\frac{k\,b\,\dd t}{(b^{2}+v_0^{2}t^{2})^{3/2}}
+    =\frac{k\,b}{v_0}\cdot\frac{2}{b^{2}}=\frac{2k}{b\,v_0}.
+  \]
+  \item<3-> Ángulo: $\ds\chi\simeq\frac{\Delta p_\perp}{p}=\frac{2k}{b\,m v_0^{2}}=\frac{k}{bE}$.
+  \item<4-> Resultado exacto con $\chi\ll1$:
+        $\cot\frac{\chi}{2}\simeq\frac{2}{\chi}=\frac{2bE}{k}\Rightarrow\chi\simeq\frac{k}{bE}$. \checkmark
+\end{itemize}
+\visible<5->{%
+\begin{block}{Para qué sirve}
+\small Es un \emph{límite independiente}: no usa la órbita ni la integral de $\tmax$.
+Se generaliza a cualquier $V(r)$ y se usará en la actividad IA-1.
+\end{block}}
+\end{frame}
+
+\begin{frame}{Sección eficaz de Rutherford}
+\begin{itemize}
+  \item<1-> De $b=\dfrac{k}{2E}\cot\dfrac{\chi}{2}$:\;
+        $\left|\dfrac{\dd b}{\dd\chi}\right|=\dfrac{k}{4E}\csc^{2}\dfrac{\chi}{2}$.
+  \item<2-> Con $\sen\chi=2\sen\frac{\chi}{2}\cos\frac{\chi}{2}$:
+  \[
+    \sigma(\chi)=\frac{1}{\sen\chi}\,\frac{k}{2E}\cot\frac{\chi}{2}\,
+      \frac{k}{4E}\csc^{2}\frac{\chi}{2}
+    =\frac{k^{2}}{8E^{2}}\,
+      \frac{\cot\frac{\chi}{2}\,\csc^{2}\frac{\chi}{2}}{2\sen\frac{\chi}{2}\cos\frac{\chi}{2}}
+  \]
+  \visible<3->{%
+  \[
+    \boxed{\;\sigma(\chi)=\Big(\frac{k}{4E}\Big)^{2}\frac{1}{\sen^{4}(\chi/2)}\;}
+  \]}
+  \item<4-> \textbf{Dimensiones}: $(k/E)^{2}$ es un área. \checkmark
+  \item<5-> \textbf{Ángulos pequeños}: $\sigma\simeq(k/E)^{2}\chi^{-4}$, lo mismo que se
+        obtiene con $b\simeq k/(E\chi)$ de la aproximación impulsiva. \checkmark
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Rutherford: interpretación física}
+\begin{itemize}
+  \item<1-> $\sigma(\pi)=(k/4E)^{2}\neq0$: existe retrodispersión. Lo notable no es que sea
+        poco probable, sino que \emph{ocurra}: con una carga difusa sería prácticamente nula.
+  \item<2-> $\sigma_T=\int\sigma\,\dd\Omega$ \textbf{diverge} en $\chi\to0$: el potencial
+        $1/r$ tiene alcance infinito y toda partícula se desvía algo.
+        Se miden secciones eficaces a $\chi$ finito.
+  \item<3-> Distancia de máximo acercamiento:
+        \[
+          \rmin=\frac{q}{e-1}=\frac{k}{2E}\Big[1+\csc\frac{\chi}{2}\Big],
+          \qquad \rmin^{\text{frontal}}=\frac{k}{E}.
+        \]
+  \item<4-> Orden de magnitud: $\alpha$ de $7.7$ MeV sobre Au:
+        $k=2\cdot79\cdot1.44\simeq228$ MeV·fm, así
+        $\rmin^{\text{frontal}}\simeq30$ fm,
+        mientras que $R_{\text{Au}}\simeq1.2\,A^{1/3}\,\text{fm}\simeq7$ fm.
+  \item<5-> La partícula nunca «toca» el núcleo: por eso el Coulomb puro funciona.
+        Cuando $\rmin\sim R$ (mayor $E$) aparecen desviaciones: miden el tamaño nuclear.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Rutherford: resultados experimentales}
+\centering
+\figura{0.42\textwidth}{rutherford_scattering_and_size_of_nucleus.png}\hfill
+\figura{0.42\textwidth}{SeccionEficazRutherford.png}
+\vfill
+\small Identifique en las figuras: la dependencia $\sen^{-4}(\chi/2)$ y la energía
+a la que aparecen desviaciones respecto de Coulomb puro.
+\end{frame}
+
+\begin{frame}{Dominio de validez}
+\begin{itemize}
+  \item<1-> \textbf{Marco de referencia}: los resultados valen en el sistema centro de masa,
+        con $\mu$ y $E=\frac12\mu v_0^{2}$. Para una partícula $m_1$ que incide sobre
+        $m_2$ en reposo, el ángulo en el laboratorio $\vartheta$ cumple
+        \[
+          \tan\vartheta=\frac{\sen\chi}{\cos\chi+m_1/m_2}.
+        \]
+        Para $\alpha$ sobre Au, $m_1/m_2\simeq0.02$: $\vartheta\simeq\chi$.
+  \item<2-> \textbf{Descripción clásica}: requiere que la trayectoria esté bien definida,
+        $\eta=\dfrac{Z_1Z_2e^{2}}{4\pi\varepsilon_0\hbar v}\gg1$.
+        Para $\alpha$ de $7.7$ MeV sobre Au, $\eta\approx18$.
+  \item<3-> Curiosidad: para el Coulomb puro, la mecánica cuántica no relativista da
+        exactamente la misma $\sigma(\chi)$. Es una propiedad particular del potencial $1/r$,
+        no una regla general.
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section[Recapitulando]{Recapitulando}
+% =====================================================================
+
+\begin{frame}{Recapitulando 1/2}
+\begin{itemize}
+  \item<1-> Dispersión: órbitas no ligadas ($E>0$) en $V(r)$; los datos $(b,E)$ y la
+        conservación de $E$ y $\ell=mv_0b$ determinan la trayectoria.
+  \item<2-> Ángulo del pericentro a la asíntota y función de deflexión:
+  \[
+    \tmax=b\int_0^{\um}\frac{\dd u}{\sqrt{1-\frac{V(u)}{E}-b^{2}u^{2}}},\qquad
+    \Theta=\pi-2\tmax,\qquad \chi=|\Theta|.
+  \]
+  \item<3-> Coulomb/Kepler, $V=\mp k/r$: órbita hiperbólica con
+        $e=\sqrt{1+(2Eb/k)^{2}}$, $\sen(\chi/2)=1/e$,
+        $\cot(\chi/2)=2bE/k$, idéntico para atracción y repulsión.
+  \item<4-> Verificaciones: partícula libre ($\Theta=0$), dimensiones, $b\to0$ y
+        $b\to\infty$, aproximación impulsiva $\chi\simeq k/(bE)$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Recapitulando 2/2}
+\begin{itemize}
+  \item<1-> Sección eficaz (área, no probabilidad):
+        $\sigma=\dfrac1I\dfrac{\dd\dot N}{\dd\Omega}$,
+        \; $\sigma(\chi)=\dfrac{b}{\sen\chi}\left|\dfrac{\dd b}{\dd\chi}\right|$,
+        \; $\dd\Omega=2\pi\sen\chi\,\dd\chi$.
+  \item<2-> Esfera dura: $\sigma=a^{2}/4$ (isótropa), $\sigma_T=\pi a^{2}$.
+  \item<3-> Rutherford: $\sigma=(k/4E)^{2}\sen^{-4}(\chi/2)$; retrodispersión finita;
+        $\sigma_T$ infinita; $\rmin^{\text{frontal}}=k/E\gg R$ nuclear.
+  \item<4-> \textbf{Hipótesis}: centro fijo o sistema CM, fuerza central conservativa,
+        colisión elástica, sin absorción, régimen clásico ($\eta\gg1$).
+  \item<5-> \textbf{Próximo tema}: oscilaciones pequeñas. Pasamos de las órbitas no ligadas
+        al movimiento cerca de un mínimo de $V_{\text{ef}}$, que ya apareció en las
+        oscilaciones radiales de §3.6.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Preguntas conceptuales}
+\begin{enumerate}
+  \item<1-> Una partícula libre tiene $\tmax=\pi/2$. ¿Por qué ese valor, y qué significa
+        geométricamente $\tmax$?
+  \item<2-> ¿Es $\sigma(\chi)$ una probabilidad? ¿Qué unidades tiene? ¿Cómo se obtiene
+        una probabilidad a partir de ella?
+  \item<3-> Con el mismo $(b,E)$, un protón y un antiprotón sobre un núcleo se desvían
+        el mismo $\chi$. ¿Por qué? ¿Puede la $\sigma(\chi)$ clásica distinguirlos?
+  \item<4-> ¿Por qué $\sigma_T$ es infinita para Coulomb y finita para la esfera dura?
+        ¿Qué propiedad del potencial decide?
+  \item<5-> ¿Qué le ocurre a $\sigma(\chi)$ si para algún $b$ se cumple
+        $\dd\chi/\dd b=0$?
+\end{enumerate}
+\end{frame}
+
+\ifdocente
+\begin{frame}{Nota docente: respuestas a las preguntas conceptuales}
+\footnotesize
+\begin{enumerate}
+  \item $\tmax$ es el ángulo polar barrido entre el pericentro y la asíntota. Una recta
+        barre $\pi$ en total, $\pi/2$ a cada lado del punto de máximo acercamiento.
+        \emph{Error frecuente}: creer que $\tmax$ es un «máximo» dinámico.
+  \item No. Tiene unidades de área/sr. La probabilidad por partícula es
+        $n_b\sigma\,\dd\Omega$ (blanco delgado). \emph{Error frecuente}: repetir
+        «fracción de partículas».
+  \item $\chi$ depende solo de $|k|$ vía $e$; $\sigma$ depende de $k^{2}$. Clásicamente no:
+        el signo se revela en interferencia (p.\,ej. Coulomb–nuclear) o en efectos
+        de orden superior. Buena puerta a la discusión cuántica.
+  \item $\sigma_T$ es finita solo si $V$ es \emph{estrictamente} nulo más allá de un
+        radio finito: si $V\neq0$ para todo $r$, toda $b$ produce $\chi\neq0$.
+        (También vale para Yukawa: conecta con la actividad IA-1.)
+  \item Diverge (arcoíris clásico): muchos $b$ vecinos llegan al mismo $\chi$.
+\end{enumerate}
+\end{frame}
+\fi
+
+% =====================================================================
+\section[Actividades con IA]{Actividades con asistentes de IA (4D)}
+% =====================================================================
+
+\begin{frame}{Política de uso de IA en esta sesión}
+\footnotesize
+\begin{center}
+\begin{tabular}{lll}
+\toprule
+Actividad & Política & Qué se evalúa \\
+\midrule
+Preguntas conceptuales, P1 & \IAprohibida & razonamiento propio \\
+P2, P4–P7 & \IAasistida & derivación y verificación \\
+P3 & \IAasistida & búsqueda y verificación de datos \\
+IA-1, IA-2 & \IArequerida & análisis crítico de la IA \\
+IA-3 / P8 & \IAasistida{} (paso 1: \IAprohibida) & modelo, código \\
+\bottomrule
+\end{tabular}
+\end{center}
+\begin{itemize}
+  \item<2-> Recordemos las 4D: \textbf{Delegación} $\to$ \textbf{Descripción} $\to$
+        \textbf{Discernimiento} $\to$ \textbf{Diligencia}.
+  \item<3-> Toda actividad con IA entrega una \textbf{bitácora 4D}: prompts; respuesta
+        relevante; qué se aceptó / rechazó / corrigió; cómo se verificó; errores hallados;
+        razonamiento final. Además, la \textbf{declaración de uso de IA}.
+  \item<4-> Regla mínima de Discernimiento: ninguna respuesta se acepta sin al menos
+        \emph{una verificación dimensional y un caso límite}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Actividad IA-1 \IArequerida: auditar una afirmación sobre Yukawa 1/2}
+Un asistente de IA respondió lo siguiente sobre el potencial de Coulomb apantallado
+(Yukawa) $V(r)=\dfrac{k}{r}\,\mathrm{e}^{-\alpha r}$, con $k>0$ y $\alpha>0$:
+\begin{exampleblock}{Respuesta de la IA (textual)}
+\small
+\begin{enumerate}
+  \item «En el límite de ángulos pequeños, el ángulo de dispersión es
+        $\chi(b)\simeq\dfrac{k}{Eb}\,\mathrm{e}^{-\alpha b}$.»
+  \item «Como el potencial decae exponencialmente, la sección eficaz total clásica es
+        finita y del orden de $\sigma_T\simeq\pi/\alpha^{2}$.»
+  \item «Para $\alpha\to0$ se recupera la sección eficaz de Rutherford.»
+\end{enumerate}
+\end{exampleblock}
+\visible<2->{%
+\begin{alertblock}{Su tarea}
+Clasifique cada afirmación como correcta, incorrecta o parcialmente correcta y
+\emph{demuéstrelo}. Las afirmaciones pueden sonar razonables y aun así ser falsas.
+\end{alertblock}}
+\end{frame}
+
+\begin{frame}{Actividad IA-1 \IArequerida: auditar una afirmación sobre Yukawa 2/2}
+\begin{itemize}
+  \item<1-> \textbf{Delegación}: liste qué conserva usted (planteamiento, verificación)
+        y qué puede delegar (integrales tabuladas, álgebra, gráficas).
+  \item<2-> \textbf{Descripción}: redacte un prompt preciso que pida la aproximación
+        impulsiva para un $V(r)$ \emph{general}, con todas las hipótesis
+        (trayectoria recta, $\chi\ll1$, centro fijo). Redacte también uno vago. Compare.
+  \item<3-> \textbf{Discernimiento}: aplique a la afirmación 1
+        (a) dimensiones; (b) el límite $\alpha\to0$; (c) el comportamiento para
+        $\alpha b\gg1$; (d) la comparación con el cálculo numérico de $\tmax$.
+        ¿Basta con que un resultado pase \emph{un} límite?
+        Para la afirmación 2: ¿qué propiedad de $V$ decide si $\sigma_T$ clásica es finita?
+  \item<4-> \textbf{Diligencia}: demuestre a mano que, en la aproximación impulsiva,
+        \[
+          \chi(b)\simeq-\frac{b}{E}\int_b^{\infty}\frac{V'(r)\,\dd r}{\sqrt{r^{2}-b^{2}}},
+        \]
+        verifique que reproduce $\chi\simeq k/(bE)$ para Coulomb, y aplíquela a Yukawa.
+        Entregue la bitácora 4D y la declaración de uso.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Actividad IA-2 \IArequerida: auditar la versión anterior de estas diapositivas}
+\footnotesize
+La versión anterior de esta presentación fue generada con IA a partir de las notas del curso.
+Contenía, entre otros, los siguientes enunciados:
+\begin{exampleblock}{Fragmentos originales}
+\begin{enumerate}
+  \item[(a)] $\tmax=\cos^{-1}\!\Big[\frac1e\big(1+\frac{2b^{2}E}{k}u\big)\Big]\Big|_0^{\um}$
+        \; y luego \;
+        $\tmax=\cancelto{0}{\cos^{-1}(1)}-\cos^{-1}\big(\frac1e\big)\Rightarrow\cos\tmax=\frac1e$.
+  \item[(b)] «La sección eficaz $\sigma(\Omega)$ es la fracción de partículas incidentes
+        desviadas dentro de $\Omega$… Es la probabilidad de dispersión en $\dd\Omega$.»
+  \item[(c)] «Recordamos los asteroides: Oumuamua y Borisov.»
+  \item[(d)] (Problema 29 de las notas) $\;\sigma_T=\int\sigma\,\dd\Omega
+        =2\pi\int_0^{\pi}\sigma(\chi)\,\dd\chi$.
+\end{enumerate}
+\end{exampleblock}
+\begin{itemize}
+  \item<2-> Para cada fragmento: identifique el error, clasifíquelo (signo, dimensional,
+        conceptual, factual, notación) y proponga la \emph{verificación mínima} que lo
+        habría detectado \emph{sin} conocer la respuesta correcta.
+  \item<3-> Pista para (d): pruebe la fórmula con un caso cuya $\sigma_T$ conoce.
+  \item<4-> Reflexión: el fragmento (a) llega a un resultado final correcto.
+        ¿Por qué eso no basta? ¿Cómo se propagó el error de las notas a las diapositivas?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Actividad IA-3 \IAasistida: dispersión en el potencial de Yukawa 1/2}
+\small
+\textbf{Modelo:} $V(r)=\dfrac{k}{r}\mathrm{e}^{-\alpha r}$. Use $k/E$ como unidad de longitud
+y estudie $\alpha k/E\in\{0,\ 0.1,\ 0.3,\ 1\}$.
+\begin{enumerate}
+  \item<1-> \IAprohibida{} Derive a mano la integral de $\tmax$ y la ecuación para
+        $\um$. ¿Por qué no existe una órbita en forma cerrada?
+  \item<2-> Calcule $\Theta(b)$ numéricamente (Python). El integrando diverge de forma
+        integrable en $\um$: elimine la singularidad con un cambio de variable
+        (p.\,ej. $u=\um(1-t^{2})$) y justifíquelo. Encuentre $\um$ con un método de
+        acotamiento (\emph{bracketing}) y declare la tolerancia.
+  \item<3-> Método independiente: integre las ecuaciones de movimiento
+        (p.\,ej. \texttt{solve\_ivp}, con \texttt{rtol} y \texttt{atol} declarados),
+        mida $\chi$ en las asíntotas y monitoree $E$ y $\ell$.
+  \item<4-> Construya $\sigma(\chi)$ (diferencias finitas de $b(\chi)$ o Monte Carlo con
+        un haz uniforme) y grafique $\sigma/\sigma_{\text{Rutherford}}$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Actividad IA-3 \IAasistida: dispersión en el potencial de Yukawa 2/2}
+\begin{itemize}
+  \item<1-> \textbf{Validación obligatoria}:
+        (i) $\alpha=0$ reproduce $\cot(\chi/2)=2bE/k$;
+        (ii) los dos métodos (integral y trayectorias) coinciden dentro de la tolerancia;
+        (iii) convergencia al reducir el paso o la tolerancia;
+        (iv) conservación de $E$ y $\ell$;
+        (v) para $\alpha b\gg1$, comparación con su resultado de IA-1.
+  \item<2-> \textbf{Interpretación}: ¿en qué rango de $\chi$ importa el apantallamiento y
+        por qué? ¿Qué ocurre con $\sigma_T$ clásica? Distinga artefactos numéricos de
+        comportamiento físico.
+  \item<3-> \textbf{Uso permitido de la IA}: depuración, sugerencias de métodos numéricos,
+        gráficas. No permitido: la derivación del paso 1.
+  \item<4-> \textbf{Entregables}: código documentado y reproducible (repositorio con
+        control de versiones), figuras con interpretación, bitácora 4D, declaración de uso.
+        Defensa oral breve: cambio de parámetro en vivo.
+\end{itemize}
+\end{frame}
+
+\ifdocente
+\begin{frame}{Nota docente: solución de IA-1}
+\footnotesize
+\textbf{Objetivo}: detectar un resultado plausible que pasa algunas verificaciones y falla otras.
+\begin{itemize}
+  \item \textbf{Fórmula general}: $\Delta p_\perp=-\int V'(r)\frac{b}{r}\,\dd t$, con
+        $\dd t=\dd x/v$ y $r\,\dd r=x\,\dd x$:
+        $\chi=\frac{\Delta p_\perp}{mv}=-\frac{b}{E}\int_b^\infty\frac{V'(r)\,\dd r}{\sqrt{r^2-b^2}}$.
+        Para Coulomb, $V'=-k/r^2$ y $\int_b^\infty\frac{\dd r}{r^2\sqrt{r^2-b^2}}=\frac1{b^2}$,
+        así que $\chi=k/(bE)$. \checkmark
+  \item \textbf{Yukawa}: con $\int_{-\infty}^{\infty}\frac{e^{-\alpha\sqrt{b^2+x^2}}}{\sqrt{b^2+x^2}}\dd x=2K_0(\alpha b)$
+        y $\frac{\dd}{\dd b}K_0(\alpha b)=-\alpha K_1(\alpha b)$:
+        \quad $\boxed{\chi\simeq\frac{k\alpha}{E}K_1(\alpha b)}$.
+  \item Afirmación 1: \textbf{incorrecta}. Pasa las dimensiones y el límite $\alpha\to0$
+        ($K_1(z)\simeq1/z$). Falla para $\alpha b\gg1$: $K_1(z)\simeq\sqrt{\pi/2z}\,e^{-z}$
+        da $\chi\simeq\frac kE\sqrt{\frac{\pi\alpha}{2b}}\,e^{-\alpha b}$, que difiere de la IA en
+        el factor $\sqrt{\pi\alpha b/2}$, creciente con $b$. Lección: un límite no es prueba.
+  \item Afirmación 2: \textbf{incorrecta}. $V\neq0$ para todo $r$, luego $\chi(b)>0$ para todo $b$
+        y $\sigma_T=\int2\pi b\,\dd b=\infty$ clásicamente. $\pi/\alpha^2$ es un orden de magnitud
+        del resultado cuántico (finito), no clásico.
+  \item Afirmación 3: \textbf{correcta}.
+\end{itemize}
+\textbf{Errores frecuentes}: aceptar (1) por pasar $\alpha\to0$; confundir decaimiento rápido con
+alcance finito; olvidar el factor $b/r$ de la componente transversal.
+\textbf{Extensión}: comparar $\chi$ impulsiva con la numérica de IA-3 y hallar dónde falla ($\chi\sim1$).
+\end{frame}
+
+\begin{frame}{Nota docente: solución de IA-2 y IA-3}
+\footnotesize
+\textbf{IA-2}
+\begin{itemize}
+  \item (a) Signo: la primitiva es $-\cos^{-1}(w/D)$. Con el signo original resulta
+        $\tmax=-\cos^{-1}(1/e)<0$, imposible para un ángulo barrido. Verificación mínima:
+        aplicar la misma primitiva a la partícula libre o exigir $\tmax>0$. El «resultado
+        correcto» sale solo porque $\cos$ es par. Además, $\um$ se tomó de la órbita
+        (argumento circular).
+  \item (b) Dimensional: $\sigma\,\dd\Omega=\dd\dot N/I$ tiene unidades de área.
+  \item (c) Factual: 2I/Borisov es un cometa. Verificación: fuente primaria (MPC/JPL).
+  \item (d) Falta $\sen\chi$. La esfera dura lo detecta:
+        $2\pi\int_0^\pi\frac{a^2}{4}\dd\chi=\frac{\pi^2a^2}{2}\neq\pi a^2$.
+        \emph{Corregir también en las notas} (3.273–3.276, 3.278, 3.282, Problema 29).
+\end{itemize}
+\textbf{IA-3} (resultados esperados)
+\begin{itemize}
+  \item Con $k/E=1$: si $\alpha\ll1$ el cociente $\sigma/\sigma_R\to1$ a ángulos grandes
+        (pues $\rmin\ll1/\alpha$) y cae bajo 1 a ángulos pequeños ($b\gtrsim1/\alpha$).
+        Para $\alpha=1$ la supresión alcanza ángulos mayores.
+  \item $\chi(b)$ cae como $e^{-\alpha b}$ (con el prefactor de IA-1) para $b\gg1/\alpha$.
+  \item Errores numéricos típicos: no tratar la singularidad en $\um$, raíz $\um$ equivocada,
+        iniciar la trayectoria a distancia finita demasiado pequeña (error en $\chi$ de orden
+        $V(r_0)/E$), medir $\chi$ antes de alcanzar la asíntota.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Nota docente: rúbrica para actividades IA-1 a IA-3}
+\scriptsize
+\begin{tabular}{p{2.0cm}p{3.9cm}p{3.9cm}p{3.9cm}}
+\toprule
+Dimensión & 3 --- Logrado & 2 --- Parcial & 1 --- Insuficiente\\
+\midrule
+Descripción (prompt) & Especifica hipótesis, límites de validez y forma de la respuesta; compara con el prompt vago y explica la diferencia & Prompt preciso sin comparación, o comparación sin análisis & Prompt vago; hipótesis implícitas\\
+Discernimiento & Aplica dimensiones, dos límites independientes y numérica; clasifica cada afirmación con demostración & Aplica una o dos verificaciones; alguna clasificación sin justificar & Acepta o rechaza sin verificar\\
+Diligencia & Rederiva a mano la fórmula impulsiva general y la aplica; bitácora completa & Rederivación incompleta o bitácora parcial & Sin rederivación; bitácora ausente\\
+Física & Explica por qué $\sigma_T$ clásica diverge y dónde importa el apantallamiento & Explicación correcta pero incompleta & Errores conceptuales (alcance finito vs.\ decaimiento)\\
+Código (IA-3) & Reproducible; convergencia y conservación demostradas; dos métodos concuerdan & Funciona, validación parcial & No reproducible o sin validación\\
+Oral & Explica y modifica un parámetro en vivo con predicción previa & Explica pero no predice & No puede explicar su entrega\\
+\bottomrule
+\end{tabular}
+\end{frame}
+\fi
+
+% =====================================================================
+\section[Problemas]{Problemas para la discusión}
+% =====================================================================
+
+\begin{frame}{Problemas para la discusión 1/3}
+\small
+\begin{description}[P0]
+  \item[P1] \nivel{1} \IAprohibida{}
+        Partículas $\alpha$ de $5.0$ MeV inciden sobre oro.
+        (a) Calcule $k$ en MeV·fm. (b) Halle $b$ para $\chi=90^\circ$ y $\chi=150^\circ$.
+        (c) Calcule $\rmin$ para el choque frontal y para $\chi=150^\circ$; compárelos con
+        $R_{\text{Au}}$. (d) Calcule $\sigma(10^\circ)/\sigma(90^\circ)$ y explique su significado
+        experimental.
+  \item[P2] \nivel{2} \IAasistida{}
+        Usando el vector de Laplace–Runge–Lenz
+        $\mathbf A=\mathbf p\times\boldsymbol\ell\mp mk\,\hat{\mathbf r}$, demuestre
+        $\sen(\chi/2)=1/e$ para $V=\mp k/r$ sin resolver la ecuación de la órbita.
+        ¿Qué ventaja tiene este método?
+  \item[P3] \nivel{2} \IAasistida{}
+        Obtenga de JPL Small-Body Database la distancia de perihelio $q_p$ y la
+        excentricidad $e$ de 1I, 2I y 3I. Deduzca $v_\infty=\sqrt{GM_\odot(e-1)/q_p}$,
+        $b=q_p\sqrt{(e+1)/(e-1)}$ y $\chi$. Verifique la tabla de la sesión.
+        Documente la fuente y la fecha de consulta.
+\end{description}
+\end{frame}
+
+\begin{frame}{Problemas para la discusión 2/3}
+\small
+\begin{description}[P0]
+  \item[P4] \nivel{2} \IAasistida{} (Problema 28 de las notas)
+        Calcule $\sigma(\chi)$ para $V=k/r^{2}$, $k>0$. Verifique el resultado en los
+        límites $\chi\to0$ y $\chi\to\pi$ y por análisis dimensional.
+  \item[P5] \nivel{3} \IAasistida{}
+        Esfera dura con proyectil y blanco de igual masa, blanco inicialmente en reposo.
+        (a) Muestre que $\vartheta=\chi/2$. (b) Obtenga $\sigma_{\text{lab}}(\vartheta)$
+        imponiendo $\sigma_{\text{lab}}\dd\Omega_{\text{lab}}=\sigma_{\text{cm}}\dd\Omega_{\text{cm}}$.
+        (c) Verifique que $\sigma_T$ es la misma en ambos sistemas. ¿Por qué debe serlo?
+  \item[P6] \nivel{3} \IAasistida{} (Problema 29 de las notas, con la definición corregida
+        $\sigma_T=2\pi\int_0^\pi\sigma\sen\chi\,\dd\chi$)
+        Calcule $\sigma_T$ para $V=k/r-k/a$ si $r<a$ y $V=0$ si $r>a$, con $k>0$.
+        Antes de integrar, pregúntese qué partículas se desvían.
+\end{description}
+\end{frame}
+
+\begin{frame}{Problemas para la discusión 3/3}
+\small
+\begin{description}[P0]
+  \item[P7] \nivel{3} \IAasistida{} (Problema 30 de las notas)
+        Una partícula de energía $E$ incide sobre $V=-k/r^{n}$, $n>2$, $k>0$.
+        (a) Halle el máximo parámetro de impacto $b_{\max}$ para que caiga al centro
+        (use $V_{\text{ef}}$). (b) Calcule la sección eficaz de captura
+        $\sigma_c=\pi b_{\max}^{2}$. (c) Verifique el caso $n=4$ y las dimensiones.
+  \item[P8] \nivel{4} \IAasistida{} \textbf{Investigación}
+        (a) Complete la actividad IA-3 (Yukawa).
+        (b) Extensión: para el potencial de Lennard-Jones
+        $V=4\varepsilon[(r_0/r)^{12}-(r_0/r)^{6}]$, calcule $\Theta(b)$ para varias $E/\varepsilon$.
+        Identifique el ángulo arcoíris ($\dd\Theta/\dd b=0$) y, a baja energía, el
+        \emph{orbiting}. Construya $\sigma(\chi)$ sumando las ramas y explique sus
+        singularidades.
+\end{description}
+\end{frame}
+
+\ifdocente
+\begin{frame}{Nota docente: P1 y P2}
+\footnotesize
+\textbf{P1} — Objetivo: órdenes de magnitud en Rutherford. Conceptos: $b(\chi)$, $\rmin$, $\sigma(\chi)$.
+\begin{itemize}
+  \item (a) $k=2\cdot79\cdot1.44=227.5$ MeV·fm. (b) $k/2E=22.75$ fm: $b(90^\circ)=22.75$ fm;
+        $b(150^\circ)=22.75\cot75^\circ=6.10$ fm.
+  \item (c) Frontal: $k/E=45.5$ fm; $\chi=150^\circ$: $22.75\,(1+\csc75^\circ)=46.3$ fm
+        (mayor que el frontal, como debe ser). Ambos $\gg R_{\text{Au}}\simeq7$ fm.
+  \item (d) $\sen^4 45^\circ/\sen^4 5^\circ\simeq4.3\times10^{3}$: el conteo a ángulos grandes
+        exige tiempos de medida mucho mayores.
+  \item Errores: usar $\chi$ en lugar de $\chi/2$; confundir $b$ con $\rmin$; unidades de $e^2$.
+\end{itemize}
+\textbf{P2} — Objetivo: comparar métodos (conservación vs.\ integración de la órbita).
+\begin{itemize}
+  \item Atractivo: $|\mathbf A|=mke$. Asíntota de entrada: $\hat{\mathbf r}=-\hat{\mathbf v}_{\text{in}}$ y
+        $\mathbf p\times\boldsymbol\ell\perp\mathbf p$, luego $\mathbf A\cdot\hat{\mathbf v}_{\text{in}}=mk$:
+        $\cos\gamma=1/e$. Por la simetría respecto de $\mathbf A$,
+        $\hat{\mathbf v}_{\text{out}}$ es la reflexión de $-\hat{\mathbf v}_{\text{in}}$, así
+        $\cos\chi=-\cos2\gamma\Rightarrow\chi=\pi-2\gamma\Rightarrow\sen(\chi/2)=\cos\gamma=1/e$.
+        Repulsivo: análogo con $+mk\hat{\mathbf r}$.
+  \item Ventaja: usa solo cantidades conservadas y valores asintóticos. Pista: evalúe
+        $\mathbf A\cdot\hat{\mathbf v}$ en $t\to\pm\infty$. Extensión: dirección de $\mathbf A$ y la
+        rotación de la velocidad.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Nota docente: P3 y P4}
+\footnotesize
+\textbf{P3} — Objetivo: conectar la teoría con datos reales y verificar fuentes.
+\begin{itemize}
+  \item Para la hipérbola: $q_p=a(e-1)$ y $b=a\sqrt{e^2-1}$ (semieje imaginario $=$ parámetro
+        de impacto), luego $b=q_p\sqrt{(e+1)/(e-1)}$; $v_\infty^2=GM_\odot/a$.
+  \item Con $e\approx1.20,\,3.36,\,6.1$: $\chi\approx113^\circ,\,35^\circ,\,19^\circ$.
+        \emph{Verificar $e$ y $q_p$ antes de clase.}
+  \item Errores: confundir $q_p$ (perihelio) con el semilatus rectum $q$; usar AU y km/s sin convertir.
+\end{itemize}
+\textbf{P4} — Objetivo: $\sigma$ para un potencial no coulombiano con solución cerrada.
+\begin{itemize}
+  \item $1-\frac{V}{E}-b^2u^2=1-\beta^2u^2$, $\beta^2=b^2+k/E$ $\Rightarrow$
+        $\tmax=\frac{\pi b}{2\beta}$, \; $\Theta=\pi\big(1-\frac{b}{\beta}\big)$.
+  \item Con $x=\chi/\pi$: $b^2=\frac kE\frac{(1-x)^2}{x(2-x)}$, y
+        $\sigma=\frac{\pi|\dd(b^2)|}{2\pi^2\sen\chi\,\dd x}
+        =\frac{k}{\pi E}\frac{1-x}{x^2(2-x)^2\sen\chi}$.
+  \item Verificaciones: $\chi\to\pi$: $(1-x)/\sen\chi\to1/\pi$, así $\sigma(\pi)=\frac{k}{\pi^2E}$ finita
+        (cuidado: el cociente $0/0$ no implica $\sigma\to0$); $\chi\to0$:
+        $\sigma\simeq\frac{\pi k}{4E}\chi^{-3}$; dimensiones: $k/E$ es un área. \checkmark
+  \item Errores: olvidar que $\beta$ depende de $b$ al derivar; perder el factor $\pi$ entre $x$ y $\chi$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Nota docente: P5, P6 y P7}
+\footnotesize
+\textbf{P5} — Igual masa: $\tan\vartheta=\frac{\sen\chi}{1+\cos\chi}=\tan\frac{\chi}{2}$.
+$\sigma_{\text{lab}}=\sigma_{\text{cm}}\frac{\sen\chi\,\dd\chi}{\sen\vartheta\,\dd\vartheta}
+=\frac{a^2}{4}\frac{2\sen2\vartheta}{\sen\vartheta}=a^2\cos\vartheta$, con $0\le\vartheta\le\pi/2$.
+$\sigma_T=2\pi a^2\int_0^{\pi/2}\cos\vartheta\sen\vartheta\,\dd\vartheta=\pi a^2$. \checkmark\;
+Debe coincidir: $\sigma_T$ cuenta partículas desviadas, independiente del marco.
+Error frecuente: integrar $\vartheta$ hasta $\pi$.
+
+\textbf{P6} — Si $b\ge a$ no hay desviación; si $b<a$ la partícula entra en la región de fuerza
+repulsiva y $\chi>0$. Por tanto $\sigma_T=\int_0^a2\pi b\,\dd b=\pi a^2$, sin calcular $\sigma(\chi)$.
+Con la fórmula errónea de las notas (sin $\sen\chi$) el resultado sería otro: conecta con IA-2(d).
+Extensión: calcular $\sigma(\chi)$ (dentro, órbita coulombiana con energía $E+k/a$).
+
+\textbf{P7} — $V_{\text{ef}}$ tiene un máximo en $r_*^{\,n-2}=\frac{nkm}{\ell^2}$ con
+$V_{\text{ef}}(r_*)=\frac{\ell^2}{2mr_*^2}\big(1-\frac2n\big)$. Captura si $E>V_{\text{ef}}(r_*)$; con
+$\ell^2=2mEb^2$:
+\[
+b_{\max}=\Big(\tfrac{n}{n-2}\Big)^{\frac{n-2}{2n}}\Big(\tfrac{nk}{2E}\Big)^{1/n},\qquad
+\sigma_c=\pi\Big(\tfrac{n}{n-2}\Big)^{\frac{n-2}{n}}\Big(\tfrac{nk}{2E}\Big)^{2/n}.
+\]
+$n=4$: $\sigma_c=2\pi\sqrt{k/E}$. \checkmark\; Dimensiones: $[k/E]=L^n$.
+Error frecuente: comparar $E$ con $V$ en lugar de $V_{\text{ef}}$.
+\end{frame}
+
+\begin{frame}{Nota docente: P8}
+\footnotesize
+\textbf{Objetivo}: investigación con modelado, cómputo y validación; puede ser proyecto.
+\begin{itemize}
+  \item (a) Véase la nota de IA-3.
+  \item (b) Resultados cualitativos esperados (a verificar numéricamente):
+        $\Theta>0$ para $b$ pequeño (núcleo repulsivo); $\Theta<0$ a $b$ intermedio (cola
+        atractiva) con un mínimo $\Theta_r$ (ángulo arcoíris, $\sigma$ diverge); $\Theta\to0^-$
+        para $b\to\infty$. A baja energía aparece una divergencia logarítmica de $\Theta$
+        (\emph{orbiting}) asociada al máximo de $V_{\text{ef}}$; en unidades reducidas ocurre por
+        debajo de $E\sim0.8\,\varepsilon$ (verifíquelo numéricamente antes de usarlo como dato).
+  \item Donde $\Theta$ cruza $-\pi$ o $0$ con $b\neq0$ hay glorias ($\sen\chi\to0$).
+  \item Validación: comparar $\Theta(b)$ para $E\gg\varepsilon$ con esfera dura de radio
+        $\approx\rmin(b=0)$; conservación de $E$ y $\ell$; dos métodos independientes.
+  \item Riesgos: raíces múltiples de $E=V_{\text{ef}}$ (elegir la mayor); singularidades de $\sigma$.
+        Simplificación: limitarse a $E/\varepsilon\ge1$.
+\end{itemize}
+\end{frame}
+\fi
+
+\end{document}
