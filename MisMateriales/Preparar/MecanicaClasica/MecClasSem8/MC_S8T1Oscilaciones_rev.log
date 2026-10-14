@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  13 OCT 2026 19:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  14 OCT 2026 11:59
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -2329,7 +2329,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 610.
+stitucional/UISLOGO.png  used on input line 625.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [101
 
@@ -2389,7 +2389,7 @@ File: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO
 <use /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.
 png>
 Package pdftex.def Info: /Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenIn
-stitucional/UISLOGO.png  used on input line 640.
+stitucional/UISLOGO.png  used on input line 625.
 (pdftex.def)             Requested size: 39.19156pt x 28.90755pt.
  [107
 
@@ -2610,9 +2610,15 @@ stitucional/UISLOGO.png  used on input line 753.
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
 )
-Package rerunfilecheck Info: File `MC_S8T1Oscilaciones_rev.out' has not changed
-.
-(rerunfilecheck)             Checksum: 960FE203661C5039045BC610ADBBF4A6;1382.
+
+Package rerunfilecheck Warning: File `MC_S8T1Oscilaciones_rev.out' has changed.
+
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `MC_S8T1Oscilaciones_rev.out':
+(rerunfilecheck)             Before: 960FE203661C5039045BC610ADBBF4A6;1382
+(rerunfilecheck)             After:  88E67A0A2516662566397A4562B1C1D7;1382.
  ) 
 Here is how much of TeX's memory you used:
  39101 strings out of 478268
@@ -2668,7 +2674,7 @@ lic/cm-super/sfsx1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/publi
 c/cm-super/sfsx1440.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/
 cm-super/sftt1000.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm
 -super/sftt1095.pfb>
-Output written on MC_S8T1Oscilaciones_rev.pdf (126 pages, 1601254 bytes).
+Output written on MC_S8T1Oscilaciones_rev.pdf (126 pages, 1601111 bytes).
 PDF statistics:
  3707 PDF objects out of 4296 (max. 8388607)
  3426 compressed objects within 35 object streams

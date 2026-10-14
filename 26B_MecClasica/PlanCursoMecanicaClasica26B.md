@@ -512,6 +512,10 @@ En esta semana cubrimos
 + [Oscilación de la molécula CO2](https://www.youtube.com/watch?v=K6dSM_nDee8)
 + [Osciladores acoplados](https://www.youtube.com/watch?v=V4fUA713_2Y)
 
+##### Simuladores de péndulos
++ [Pendulum Lab](https://phet.colorado.edu/en/simulations/pendulum-lab/activities)
++ [Péndulo doble](https://www.myphysicslab.com/pendulum/double-pendulum-en.html)
+
 
 ### Resumen de Contenidos
 Esta semana cubrimos estos Contenidos

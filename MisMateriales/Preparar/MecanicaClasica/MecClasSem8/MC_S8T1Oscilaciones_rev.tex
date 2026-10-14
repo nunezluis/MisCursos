@@ -113,12 +113,12 @@ Al terminar la sesión, usted podrá:
 
 \begin{frame}{De dónde venimos y qué cambia}
 \begin{itemize}
-\item<1-> \textbf{Clase de estabilidad:} $q_0$ es equilibrio si $\Vef'(q_0)=0$ y es estable si $\Vef''(q_0)>0$. \\
+\item<1-> \textbf{Clase de estabilidad:} $q_0$ es un equilibrio si $\Vef'(q_0)=0$ y es estable si $\Vef''(q_0)>0$. \\
 \alert{Hoy:} describimos cuantitativamente el movimiento \emph{cerca} de $q_0$.
-\item<2-> \textbf{Ecuaciones de Euler--Lagrange} y energía cinética como forma cuadrática en las velocidades generalizadas (ligaduras holónomas y esclerónomas).
-\item<3-> \textbf{Leyes de conservación:} la energía (o la integral de Jacobi) permite resolver el péndulo exactamente por cuadratura.
+\item<2-> \textbf{Ecuaciones de Euler--Lagrange} y la energía cinética en forma cuadrática de las velocidades generalizadas (ligaduras holónomas y esclerónomas).
+\item<3-> \textbf{Leyes de conservación:} la energía (o la integral de Jacobi) permite resolver exactamente el péndulo por cuadratura.
 \item<4-> \textbf{Álgebra lineal:} formas cuadráticas, matrices simétricas definidas positivas, autovalores y autovectores.
-\item<5-> \textbf{Se mantiene:} la formulación lagrangiana, el carácter conservativo, las ligaduras holónomas.
+\item<5-> \textbf{Se mantienen:} la formulación lagrangiana, el carácter conservativo y las ligaduras holónomas.
 \item<6-> \textbf{Se modifica:} reemplazamos $\mathcal{L}$ por su truncamiento cuadrático $\mathcal{L}_2$ $\Rightarrow$ ecuaciones \emph{lineales} con coeficientes constantes y principio de superposición.
 \end{itemize}
 \end{frame}
@@ -588,9 +588,24 @@ B_+\begin{pmatrix}1\\ -\sqrt2\end{pmatrix}\cos(\omega_+t+\varphi_+).
 \theta_1(t)=\tfrac{\theta_0}{2}\big(\cos\omega_-t+\cos\omega_+t\big),\qquad
 \theta_2(t)=\tfrac{\theta_0}{\sqrt2}\big(\cos\omega_-t-\cos\omega_+t\big).
 \]
-Compruebe las cuatro condiciones iniciales.
-\item<3-> Como $\omega_+/\omega_-=1+\sqrt2$ es irracional, el movimiento es \textbf{cuasiperiódico}: nunca se repite exactamente. Cada modo por separado sí es periódico.
+Compruebe las cuatro condiciones iniciales, use los simuladores.
+\item<3-> Como $\omega_+/\omega_-=1+\sqrt2$ es irracional, el movimiento es \textbf{cuasiperiódico}: nunca se repite exactamente. Cada modo por separado sí es periódico. 
 \item<4-> \textbf{Mirando hacia adelante:} las coordenadas normales anticipan las variables acción--ángulo (toros invariantes); a energías mayores, el péndulo doble no lineal deja de ser regular (caos, Cap.~2 de las notas).
+\end{itemize}
+\end{frame}
+
+%=========================================================================
+\section{Recapitulando}
+%=========================================================================
+\begin{frame}{Recapitulando}
+\small
+\begin{itemize}
+\item<1-> \textbf{1D:} $\mathcal{L}_2=\tfrac12c_0\dot\eta^2-\tfrac12K\eta^2$, \ $\omega^2=K/c_0=\Vef''(q_0)/c(q_0)$. El signo de $K$ decide estabilidad; $K=0$ exige órdenes superiores.
+\item<2-> \textbf{Validez:} $|\eta|\ll3K/|\Vef'''|$ (o el análogo cuártico). Para el péndulo, $\tau/\tau_0=1+\theta_0^2/16+\cdots$: el isocronismo es un efecto del truncamiento.
+\item<3-> \textbf{$s$ grados de libertad:} $\mathcal{L}_2=\tfrac12\dot{\bfeta}^{\mathsf T}\Tm\dot{\bfeta}-\tfrac12\bfeta^{\mathsf T}\Vm\bfeta$ con $\Tm=[T_{ij}(q_0)]$, $\Vm=[V_{ij}]$; \ $\Tm\ddot{\bfeta}+\Vm\bfeta=0$.
+\item<4-> \textbf{Modos normales:} $(\Vm-\omega^2\Tm)\ba=0$, $\det(\Vm-\omega^2\Tm)=0$; $\omega_k^2$ reales; $\omega_k^2>0\ \forall k\iff$ mínimo estable; $\ba_k$ $\Tm$-ortogonales; coordenadas normales desacopladas.
+\item<5-> \textbf{Péndulo doble ($m$, $\ell$ iguales):} $\omega_\pm^2=(2\pm\sqrt2)\,g/\ell$; modo lento en fase, $a_2/a_1=\sqrt2$; modo rápido en contrafase, $a_2/a_1=-\sqrt2$.
+\item<6-> \textbf{Verificar siempre:} traza, determinante, Rayleigh, ortogonalidad, dimensiones, límites. \textbf{Próximos pasos:} oscilaciones forzadas y amortiguadas; estabilidad de la rotación del cuerpo rígido (misma linealización); en la formulación hamiltoniana, las coordenadas normales conducen a las variables acción--ángulo.
 \end{itemize}
 \end{frame}
 
@@ -621,21 +636,6 @@ Compruebe las cuatro condiciones iniciales.
 \end{itemize}
 \item<4-> \textbf{Experimentos:} (i) condiciones iniciales sobre cada modo, $\bfeta(0)=A\,\ba_\pm$, y medición de $\omega(A)$; (ii) $\theta_1(0)=\theta_0$, $\theta_2(0)=0$ y comparación con la solución lineal; (iii) a energías mayores, secciones de Poincaré.
 \item<5-> \textbf{Interpretación:} distinga artefactos numéricos (deriva de energía, resolución espectral finita) de efectos físicos (corrimiento de frecuencia, intercambio de energía, irregularidad).
-\end{itemize}
-\end{frame}
-
-%=========================================================================
-\section{Recapitulando}
-%=========================================================================
-\begin{frame}{Recapitulando}
-\small
-\begin{itemize}
-\item<1-> \textbf{1D:} $\mathcal{L}_2=\tfrac12c_0\dot\eta^2-\tfrac12K\eta^2$, \ $\omega^2=K/c_0=\Vef''(q_0)/c(q_0)$. El signo de $K$ decide estabilidad; $K=0$ exige órdenes superiores.
-\item<2-> \textbf{Validez:} $|\eta|\ll3K/|\Vef'''|$ (o el análogo cuártico). Para el péndulo, $\tau/\tau_0=1+\theta_0^2/16+\cdots$: el isocronismo es un efecto del truncamiento.
-\item<3-> \textbf{$s$ grados de libertad:} $\mathcal{L}_2=\tfrac12\dot{\bfeta}^{\mathsf T}\Tm\dot{\bfeta}-\tfrac12\bfeta^{\mathsf T}\Vm\bfeta$ con $\Tm=[T_{ij}(q_0)]$, $\Vm=[V_{ij}]$; \ $\Tm\ddot{\bfeta}+\Vm\bfeta=0$.
-\item<4-> \textbf{Modos normales:} $(\Vm-\omega^2\Tm)\ba=0$, $\det(\Vm-\omega^2\Tm)=0$; $\omega_k^2$ reales; $\omega_k^2>0\ \forall k\iff$ mínimo estable; $\ba_k$ $\Tm$-ortogonales; coordenadas normales desacopladas.
-\item<5-> \textbf{Péndulo doble ($m$, $\ell$ iguales):} $\omega_\pm^2=(2\pm\sqrt2)\,g/\ell$; modo lento en fase, $a_2/a_1=\sqrt2$; modo rápido en contrafase, $a_2/a_1=-\sqrt2$.
-\item<6-> \textbf{Verificar siempre:} traza, determinante, Rayleigh, ortogonalidad, dimensiones, límites. \textbf{Próximos pasos:} oscilaciones forzadas y amortiguadas; estabilidad de la rotación del cuerpo rígido (misma linealización); en la formulación hamiltoniana, las coordenadas normales conducen a las variables acción--ángulo.
 \end{itemize}
 \end{frame}
 
