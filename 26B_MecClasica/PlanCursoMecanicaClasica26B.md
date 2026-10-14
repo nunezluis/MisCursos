@@ -510,6 +510,7 @@ En esta semana cubrimos
 ##### Videos
 + [Modos normales de oscilación y neutrinos](https://www.youtube.com/watch?v=YqVF3NSc5xg)
 + [Oscilación de la molécula CO2](https://www.youtube.com/watch?v=K6dSM_nDee8)
++ [Osciladores acoplados](https://www.youtube.com/watch?v=V4fUA713_2Y)
 
 
 ### Resumen de Contenidos
