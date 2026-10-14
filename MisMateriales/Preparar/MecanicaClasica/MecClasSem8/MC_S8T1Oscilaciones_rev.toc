@@ -1,0 +1,9 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Punto de partida}{3}{0}{1}
+\beamer@sectionintoc {2}{Oscilaciones en una dimensión}{19}{0}{2}
+\beamer@sectionintoc {3}{Ejemplo: el péndulo simple}{31}{0}{3}
+\beamer@sectionintoc {4}{Oscilaciones con varios grados de libertad}{48}{0}{4}
+\beamer@sectionintoc {5}{Ejemplo: el péndulo doble}{74}{0}{5}
+\beamer@sectionintoc {6}{Comprobación y extensión}{95}{0}{6}
+\beamer@sectionintoc {7}{Recapitulando}{107}{0}{7}
+\beamer@sectionintoc {8}{Para la discusión}{113}{0}{8}

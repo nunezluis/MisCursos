@@ -1,0 +1,990 @@
+% !TEX encoding = UTF-8 Unicode
+% !TEX program = pdflatex
+%=========================================================================
+%  MC_S8T1Oscilaciones.tex -- Mecánica Clásica (posgrado), UIS
+%  Sesión 8, Tema 1: Pequeñas oscilaciones
+%
+%  Versión revisada (octubre 2026). Cambios principales:
+%   * Codificación UTF-8 (antes ISO-8859-1/ansinew); se elimina geometry
+%     (incompatible con beamer) y los marcos vacíos tras \end{document}.
+%   * Notación unificada (ver la diapositiva "Notación"): matrices
+%     constantes \Tm=[T_ij(q_0)], \Vm=[V_ij]; vectores modales a_k=a(omega_k)
+%     y coordenadas normales xi_k como en las notas del curso (Cap. 4).
+%   * Derivación corregida: T_ij(q) -> T_ij(q_0); criterio de pequeñez;
+%     condición de solución no trivial; realidad y signo de omega^2.
+%   * Péndulo doble corregido: V = +mg(y_1+y_2); omega^2 = (2 +- sqrt2) g/l;
+%     a_2/a_1 = -+ sqrt2 (lento en fase, rápido en contrafase).
+%   * Nuevas diapositivas: validez de la aproximación de ángulo pequeño
+%     (período exacto con K(k)), propiedades de los modos normales y
+%     herramientas de verificación (traza, determinante, Rayleigh).
+%   * Discusión reescrita: problemas por niveles + actividades 4D con IA.
+%   * Apéndice para el profesor (soluciones, clave y rúbrica):
+%     compile con \instructortrue para incluirlo.
+%=========================================================================
+\documentclass[spanish]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish,es-noshorthands]{babel} % es-noshorthands: evita conflictos con < > de beamer
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{cancel}                % \cancelto{0}{...}
+\renewcommand{\CancelColor}{\color{red}}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{textpos}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\usefonttheme[onlymath]{serif} % matemáticas con serifa: negritas legibles para vectores y matrices
+
+%------------------------------------------------------------------------
+% Versión del profesor: cambie a \instructortrue para incluir el apéndice
+%------------------------------------------------------------------------
+\newif\ifinstructor
+\instructorfalse
+
+%------------------------------------------------------------------------
+% Logo y figuras: si el archivo no existe, el documento compila igual
+%------------------------------------------------------------------------
+\newcommand{\logopath}{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}
+\newcommand{\logoUIS}{\IfFileExists{\logopath}{\includegraphics[height=0.4in,keepaspectratio=true]{\logopath}}{}}
+\addtobeamertemplate{frametitle}{}{%
+\begin{textblock*}{100mm}(.85\textwidth,-1cm)\logoUIS\end{textblock*}}
+
+% \figura{ancho}{archivo}: incluye la figura o dibuja un marcador
+\newcommand{\figura}[2]{%
+  \IfFileExists{#2}{\includegraphics[width=#1]{#2}}%
+  {\fbox{\parbox[c][\dimexpr #1*35/100\relax][c]{\dimexpr #1-2\fboxsep\relax}{\centering\tiny Figura no encontrada:\\ \resizebox{\linewidth}{!}{\texttt{\detokenize{#2}}}}}}}
+
+%------------------------------------------------------------------------
+% Notación unificada
+%------------------------------------------------------------------------
+\newcommand{\Tm}{\mathbf{T}}              % matriz de inercia  [T_ij(q_0)] (negrita recta = matriz)
+\newcommand{\Vm}{\mathbf{V}}              % matriz de rigidez  [V_ij]
+\newcommand{\bfeta}{\boldsymbol{\eta}}    % vector de desplazamientos
+\newcommand{\bfxi}{\boldsymbol{\xi}}
+\newcommand{\ba}{\boldsymbol{a}}          % vector modal (negrita = vector)
+\newcommand{\Vef}{V_{\mathrm{ef}}}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\Id}{\mathbf{1}}
+\newcommand{\nivel}[1]{\textcolor{darkred}{\textbf{[N#1]}}}
+\newcommand{\IA}[1]{\textcolor{blue!60!black}{\textbf{#1}}}
+\setbeamercolor{block title alerted}{bg=red!70!black,fg=white}
+
+\title{\textbf{Pequeñas oscilaciones}}
+\subtitle{Linealización, modos normales y límites de la aproximación}
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias,} \\
+\textit{Universidad Industrial de Santander, Santander, Colombia} \\
+\logoUIS}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{Agenda}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}\tableofcontents[sections={1-4},hideallsubsections]\end{column}
+\begin{column}{0.48\textwidth}\tableofcontents[sections={5-8},hideallsubsections]\end{column}
+\end{columns}
+\end{frame}
+
+%=========================================================================
+\section{Punto de partida}
+%=========================================================================
+\begin{frame}{Objetivos de aprendizaje}
+Al terminar la sesión, usted podrá:
+\begin{enumerate}
+\item<1-> \textbf{Derivar} el lagrangiano cuadrático de un sistema conservativo alrededor de un equilibrio, justificando qué términos se conservan y cuáles se desprecian.
+\item<2-> \textbf{Calcular} frecuencias y modos normales resolviendo el problema generalizado de autovalores $(\Vm-\omega^2\Tm)\,\ba=0$.
+\item<3-> \textbf{Analizar} la estabilidad de un equilibrio a partir del signo de $\omega_k^2$ e \textbf{interpretar} los modos de frecuencia cero.
+\item<4-> \textbf{Evaluar} la validez de la aproximación cuantificando cómo depende el período de la amplitud.
+\item<5-> \textbf{Verificar} resultados ---propios o generados por IA--- con traza, determinante, cociente de Rayleigh, ortogonalidad y casos límite.
+\item<6-> \textbf{Simular} el sistema no lineal y \textbf{comparar} con la predicción lineal.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{De dónde venimos y qué cambia}
+\begin{itemize}
+\item<1-> \textbf{Clase de estabilidad:} $q_0$ es equilibrio si $\Vef'(q_0)=0$ y es estable si $\Vef''(q_0)>0$. \\
+\alert{Hoy:} describimos cuantitativamente el movimiento \emph{cerca} de $q_0$.
+\item<2-> \textbf{Ecuaciones de Euler--Lagrange} y energía cinética como forma cuadrática en las velocidades generalizadas (ligaduras holónomas y esclerónomas).
+\item<3-> \textbf{Leyes de conservación:} la energía (o la integral de Jacobi) permite resolver el péndulo exactamente por cuadratura.
+\item<4-> \textbf{Álgebra lineal:} formas cuadráticas, matrices simétricas definidas positivas, autovalores y autovectores.
+\item<5-> \textbf{Se mantiene:} la formulación lagrangiana, el carácter conservativo, las ligaduras holónomas.
+\item<6-> \textbf{Se modifica:} reemplazamos $\mathcal{L}$ por su truncamiento cuadrático $\mathcal{L}_2$ $\Rightarrow$ ecuaciones \emph{lineales} con coeficientes constantes y principio de superposición.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Motivación: todo mínimo suave parece una parábola}
+\begin{columns}[T]
+\begin{column}{0.52\textwidth}
+\begin{itemize}
+\item<1-> Moléculas que vibran, iones en trampas, péndulos acoplados, estructuras elásticas: cerca de un mínimo, el potencial es aproximadamente cuadrático.
+\item<2-> Tres preguntas guían la sesión:
+  \begin{enumerate}
+  \item ¿Cuántas frecuencias hay y cuánto valen?
+  \item ¿Qué forma tiene cada movimiento colectivo (modo)?
+  \item ¿Hasta qué amplitud es confiable esta descripción?
+  \end{enumerate}
+\item<3-> La tercera pregunta conecta con el final del curso: frecuencias que dependen de la amplitud, perturbaciones y caos.
+\end{itemize}
+\end{column}
+\begin{column}{0.46\textwidth}
+\begin{tikzpicture}
+\begin{axis}[width=5.6cm,height=4.8cm,xmin=-1.8,xmax=1.8,ymin=-1.3,ymax=2.4,
+  xlabel={$x/a$},ylabel={$V/V_0$},tick label style={font=\tiny},label style={font=\scriptsize},
+  legend style={font=\tiny,at={(0.5,0.98)},anchor=north}]
+\addplot[thick,blue,domain=-1.75:1.75,samples=120]{x^4-2*x^2};
+\addlegendentry{$V$ exacto}
+\addplot[thick,red,dashed,domain=0.45:1.55,samples=60]{-1+4*(x-1)^2};
+\addlegendentry{aprox. cuadrática}
+\end{axis}
+\end{tikzpicture}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Notación de la sesión}
+\footnotesize
+\begin{tabular}{@{}L{0.37\textwidth}L{0.6\textwidth}@{}}
+\toprule
+\textbf{Símbolo} & \textbf{Significado} \\
+\midrule
+$s$ & número de grados de libertad \\
+$q_i,\ q_{0i}$ & coordenadas generalizadas y sus valores de equilibrio \\
+$\eta_i=q_i-q_{0i}$,\ $\bfeta=(\eta_1,\ldots,\eta_s)^{\mathsf T}$ & desplazamientos respecto al equilibrio \\
+$c(q)$,\ $c_0\equiv c(q_0)$ & coeficiente inercial en 1D: $\mathcal{L}=\tfrac12 c(q)\dot q^2-\Vef(q)$ \\
+$\Vef(q)$ & potencial efectivo 1D ($\Vef=V$ si no se eliminó ninguna coordenada) \\
+$K\equiv \Vef''(q_0)$ & rigidez en 1D \\
+$\Tm=[T_{ij}(q_0)]$,\ $\Vm=[V_{ij}]$ & matrices de inercia y de rigidez (constantes, simétricas). Negrita recta: matrices; negrita cursiva: vectores \\
+$\omega_k$,\ $\ba_k\equiv\ba(\omega_k)$ & frecuencia normal y vector modal; componentes $a_j(\omega_k)$ \\
+$\xi_k$ & coordenada normal \\
+$\tau$,\ $\tau_0=2\pi/\omega_0$ & período exacto y período armónico \\
+\bottomrule
+\end{tabular}
+
+\medskip
+Índices: $i,j$ para coordenadas; $k,l$ para modos. Correspondencia 1D$\leftrightarrow$ $s$D: $c_0\leftrightarrow\Tm$, $K\leftrightarrow\Vm$. Coordenadas cartesianas: $x$ horizontal, $y$ vertical hacia arriba.
+\end{frame}
+
+%=========================================================================
+\section{Oscilaciones en una dimensión}
+%=========================================================================
+\begin{frame}{Pequeñas oscilaciones 1D (1/3): equilibrio y estabilidad}
+\begin{itemize}
+\item<1-> Sistema de un grado de libertad (clase de estabilidad):
+$\displaystyle \mathcal{L}=\tfrac12\,c(q)\,\dot q^2-\Vef(q),\qquad c(q)>0 .$
+\item<2-> Ecuación de Euler--Lagrange, con $c'\equiv \dd c/\dd q$:
+\[
+\frac{\dd}{\dd t}\big(c\,\dot q\big)-\tfrac12 c'\dot q^2+\Vef'=0
+\;\Longrightarrow\;
+c(q)\,\ddot q+\tfrac12\,c'(q)\,\dot q^2=-\Vef'(q)\equiv f_{\mathrm{ef}}(q).
+\]
+\item<3-> \textbf{Equilibrio:} $q(t)=q_0$ es solución $\iff f_{\mathrm{ef}}(q_0)=0 \iff \Vef'(q_0)=0$ (un extremo, no necesariamente un mínimo).
+\item<4-> \textbf{Estabilidad:} $\Vef''(q_0)>0$ (mínimo) estable; $\Vef''(q_0)<0$ inestable; $\Vef''(q_0)=0$ requiere órdenes superiores.
+\end{itemize}
+\begin{figure}
+\figura{1.6in}{Figuras/MinimoOscila.jpg}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Pequeñas oscilaciones 1D (2/3): linealización}
+\begin{itemize}
+\item<1-> Escribimos $q=q_0+\eta$ y desarrollamos por Taylor:
+\[
+\Vef(q_0+\eta)=\Vef(q_0)+\cancelto{0}{\Vef'(q_0)}\,\eta+\tfrac12\,\Vef''(q_0)\,\eta^2+\tfrac16\,\Vef'''(q_0)\,\eta^3+\cdots
+\]
+\item<2-> Definimos $K\equiv\Vef''(q_0)$ y $c_0\equiv c(q_0)$. Como $\dot q=\dot\eta$ ya es pequeño, $c(q)\dot q^2=c_0\dot\eta^2+\mathcal{O}(\eta\dot\eta^2)$.
+\item<3-> Lagrangiano cuadrático (la constante $\Vef(q_0)$ no afecta la dinámica):
+\[
+\mathcal{L}_2=\tfrac12\,c_0\,\dot\eta^2-\tfrac12\,K\,\eta^2
+\quad\Longrightarrow\quad c_0\,\ddot\eta+K\,\eta=0 .
+\]
+(El término $\tfrac12 c'\dot q^2$ de la ecuación exacta es de segundo orden y desaparece.)
+\item<4-> Tres casos:
+\begin{itemize}
+\item $K>0$: $\ddot\eta+\omega^2\eta=0$, con $\displaystyle\omega^2=\frac{K}{c_0}=\frac{1}{c_0}\left.\frac{\dd^2\Vef}{\dd q^2}\right|_{q_0}$.
+\item $K<0$: $\eta\propto e^{\pm\gamma t}$, $\gamma^2=|K|/c_0$; la perturbación crece y la linealización sólo vale durante un tiempo finito.
+\item $K=0$: no hay término armónico; el movimiento es anarmónico y su período depende de la amplitud.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Pequeñas oscilaciones 1D (3/3): solución y validez}
+\small
+\begin{itemize}
+\item<1-> Solución general ($B_1,B_2$ reales; $a$ complejo):
+\[
+\eta(t)=B_1\cos\omega t+B_2\operatorname{sen}\omega t=A\cos(\omega t+\varphi)=\operatorname{Re}\!\big(a\,e^{i\omega t}\big),\quad a\equiv A\,e^{i\varphi}.
+\]
+\item<2-> Con $\eta(0)=\eta_0$ y $\dot\eta(0)=v_0$: $B_1=\eta_0$, $B_2=v_0/\omega$, $A=\sqrt{\eta_0^2+v_0^2/\omega^2}$, $\tan\varphi=-v_0/(\omega\eta_0)$.
+\item<3-> \textbf{Verificaciones:} $[\omega^2]=[K]/[c_0]=\mathrm{s}^{-2}$ para cualquier elección de $q$; la energía $E_2=\tfrac12 c_0\dot\eta^2+\tfrac12K\eta^2=\tfrac12 KA^2$ es constante.
+\item<4-> \textbf{¿Cuándo es ``pequeño'' $\eta$?} No basta $\eta/q_0\ll1$ (¡$q_0$ puede ser cero!). El término cúbico debe ser despreciable frente al cuadrático:
+\[
+\left|\tfrac16\Vef'''(q_0)\,\eta^3\right|\ll\tfrac12 K\eta^2
+\;\iff\;
+|\eta|\ll \frac{3K}{|\Vef'''(q_0)|}.
+\]
+Si $\Vef'''(q_0)=0$, se usa el cuártico: $\eta^2\ll 12K/|\Vef''''(q_0)|$. Es un criterio de orden de magnitud; el efecto sobre la frecuencia lo cuantificamos con el péndulo.
+\end{itemize}
+\end{frame}
+
+%=========================================================================
+\section{Ejemplo: el péndulo simple}
+%=========================================================================
+\begin{frame}{El péndulo simple}
+\small
+Masa $m$ en el extremo de una varilla rígida sin masa de longitud $\ell$, en un plano vertical, con gravedad uniforme $g$; $\theta$ se mide desde la vertical hacia abajo.
+\begin{itemize}
+\item<1-> $\mathcal{L}=\tfrac12 m\ell^2\dot\theta^2-mg\ell(1-\cos\theta)$, es decir $c=m\ell^2$ (constante) y $\Vef=V=mg\ell(1-\cos\theta)$.
+\item<2-> $V'=mg\ell\operatorname{sen}\theta=0\Rightarrow\theta_0=0$ ($V''=mg\ell>0$, estable) o $\theta_0=\pi$ ($V''=-mg\ell<0$, inestable, $\gamma=\sqrt{g/\ell}$).
+\item<3-> Con $\cos\theta=1-\theta^2/2+\mathcal{O}(\theta^4)$:\quad $\mathcal{L}_2=\tfrac12 m\ell^2\dot\theta^2-\tfrac12 mg\ell\,\theta^2$.
+\item<4-> $m\ell^2\ddot\theta+mg\ell\,\theta=0\;\Rightarrow\;\ddot\theta+\omega_0^2\theta=0$, \quad $\omega_0^2=\dfrac{K}{c_0}=\dfrac{mg\ell}{m\ell^2}=\dfrac{g}{\ell}$.
+\end{itemize}
+\uncover<5->{
+\begin{center}\footnotesize
+\begin{tabular}{lcc}
+\toprule
+ & \textbf{General (1D)} & \textbf{Péndulo} \\
+\midrule
+Coordenada y equilibrio & $q,\ q_0$ & $\theta,\ 0$ \\
+Perturbación & $\eta=q-q_0$ & $\eta=\theta$ \\
+Coeficientes & $c_0,\ K$ & $m\ell^2,\ mg\ell$ \\
+Potencial cuadrático & $\Vef(q_0)+\tfrac12K\eta^2$ & $\tfrac12 mg\ell\,\theta^2$ \\
+Frecuencia angular & $\omega=\sqrt{K/c_0}$ & $\omega_0=\sqrt{g/\ell}$ \\
+\bottomrule
+\end{tabular}
+\end{center}}
+\end{frame}
+
+\begin{frame}{Ángulos pequeños (1/3): el período exacto como cuadratura}
+\begin{itemize}
+\item<1-> La energía se conserva. Si el péndulo parte del reposo en $\theta_0$:
+\[
+\tfrac12 m\ell^2\dot\theta^2+mg\ell(1-\cos\theta)=mg\ell(1-\cos\theta_0),
+\]
+de donde $\dot\theta^2=2\omega_0^2(\cos\theta-\cos\theta_0)$.
+\item<2-> Con $\cos\theta=1-2\operatorname{sen}^2(\theta/2)$ y $k\equiv\operatorname{sen}(\theta_0/2)$:
+\[
+\dot\theta^2=4\omega_0^2\big(k^2-\operatorname{sen}^2\tfrac{\theta}{2}\big).
+\]
+\item<3-> Por simetría, un cuarto de período va de $\theta=0$ a $\theta=\theta_0$:
+\[
+\tau=4\int_0^{\theta_0}\frac{\dd\theta}{\dot\theta}=\frac{2}{\omega_0}\int_0^{\theta_0}\frac{\dd\theta}{\sqrt{k^2-\operatorname{sen}^2(\theta/2)}} .
+\]
+\item<4-> El integrando diverge en $\theta=\theta_0$ (punto de retorno), pero la integral converge: hace falta un cambio de variable que regularice el extremo.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ángulos pequeños (2/3): integral elíptica y desarrollo}
+\small
+\begin{itemize}
+\item<1-> Cambio de variable $\operatorname{sen}(\theta/2)=k\operatorname{sen}\phi$ (con $\phi:0\to\pi/2$):
+\[
+\dd\theta=\frac{2k\cos\phi\,\dd\phi}{\sqrt{1-k^2\operatorname{sen}^2\phi}},\qquad \sqrt{k^2-\operatorname{sen}^2(\theta/2)}=k\cos\phi .
+\]
+\item<2-> Resultado exacto:
+\[
+\tau=\frac{4}{\omega_0}\,K(k),\qquad K(k)\equiv\int_0^{\pi/2}\frac{\dd\phi}{\sqrt{1-k^2\operatorname{sen}^2\phi}}
+\]
+(integral elíptica completa de primera especie, de módulo $k$).
+\item<3-> Con $K(k)=\tfrac{\pi}{2}\big(1+\tfrac14k^2+\tfrac{9}{64}k^4+\cdots\big)$, \ $k^2=\tfrac{\theta_0^2}{4}-\tfrac{\theta_0^4}{48}+\cdots$ \ y \ $\tau_0=2\pi/\omega_0$:
+\[
+\boxed{\;\frac{\tau}{\tau_0}=\frac{2}{\pi}K\!\left(\operatorname{sen}\tfrac{\theta_0}{2}\right)=1+\frac{\theta_0^2}{16}+\frac{11\,\theta_0^4}{3072}+\mathcal{O}(\theta_0^6)\;}
+\]
+\item<4-> \textbf{Nota computacional:} \texttt{scipy.special.ellipk(m)} usa el \emph{parámetro} $m=k^2$, no el módulo $k$. Es un error fácil de cometer (también en código generado por IA); pruébelo con $\theta_0=90^\circ$, donde $\tau/\tau_0=1.1803$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ángulos pequeños (3/3): ¿qué tan pequeño es ``pequeño''?}
+\begin{columns}[T]
+\begin{column}{0.47\textwidth}
+\small
+\begin{tabular}{rcc}
+\toprule
+$\theta_0$ & $\tau/\tau_0-1$ exacto & $\theta_0^2/16$ \\
+\midrule
+$5^\circ$ & $0.05\%$ & $0.05\%$ \\
+$10^\circ$ & $0.19\%$ & $0.19\%$ \\
+$30^\circ$ & $1.74\%$ & $1.71\%$ \\
+$60^\circ$ & $7.32\%$ & $6.85\%$ \\
+$90^\circ$ & $18.0\%$ & $15.4\%$ \\
+\bottomrule
+\end{tabular}
+\begin{itemize}
+\item<2-> Error del $1\%$ en el período para $\theta_0\approx 23^\circ\approx0.4$ rad.
+\item<3-> El \emph{isocronismo} es una propiedad del truncamiento cuadrático, no del péndulo.
+\item<4-> $\omega(\theta_0)\approx\omega_0\big(1-\theta_0^2/16\big)$: la frecuencia depende de la amplitud (anticipa la teoría de perturbaciones y las variables acción--ángulo).
+\end{itemize}
+\end{column}
+\begin{column}{0.51\textwidth}
+\begin{tikzpicture}
+\begin{axis}[width=6.4cm,height=5.2cm,xmin=0,xmax=120,ymin=0.98,ymax=1.42,
+  xlabel={$\theta_0$ (grados)},ylabel={$\tau/\tau_0$},
+  tick label style={font=\tiny},label style={font=\scriptsize},
+  legend style={font=\tiny},legend pos=north west]
+\addplot[thick,blue] coordinates {(0,1.0000) (10,1.0019) (20,1.0077) (30,1.0174) (40,1.0313) (50,1.0498) (60,1.0732) (70,1.1021) (80,1.1375) (90,1.1803) (100,1.2322) (110,1.2953) (120,1.3729)};
+\addlegendentry{exacto, $\tfrac{2}{\pi}K(k)$}
+\addplot[thick,red,dashed,domain=0:120,samples=60]{1+(x*pi/180)^2/16};
+\addlegendentry{$1+\theta_0^2/16$}
+\addplot[gray,dotted,thick,domain=0:120]{1};
+\addlegendentry{armónico}
+\end{axis}
+\end{tikzpicture}
+\end{column}
+\end{columns}
+\end{frame}
+
+%=========================================================================
+\section{Oscilaciones con varios grados de libertad}
+%=========================================================================
+\begin{frame}{Varios grados de libertad (1/6): hipótesis y equilibrio}
+\small
+\begin{itemize}
+\item<1-> Sistema de $s$ grados de libertad $\{q_i\}$, ligaduras \textbf{holónomas y esclerónomas} (independientes de $t$) y fuerzas conservativas con potencial $V(q_1,\ldots,q_s)$.
+\item<2-> Si $\boldsymbol r_\alpha=\boldsymbol r_\alpha(q)$ no depende explícitamente de $t$, la energía cinética es una forma cuadrática homogénea:
+\[
+T=\tfrac12\sum_{i,j}T_{ij}(q)\,\dot q_i\dot q_j,\qquad
+T_{ij}(q)=\sum_\alpha m_\alpha\,\frac{\partial\boldsymbol r_\alpha}{\partial q_i}\cdot\frac{\partial\boldsymbol r_\alpha}{\partial q_j}=T_{ji}(q),
+\]
+y es definida positiva. \alert{En general $T_{ij}$ depende de $q$.}
+\item<3-> \textbf{Equilibrio} en $\{q_{0i}\}$: \ $\left.\dfrac{\partial V}{\partial q_i}\right|_{q_0}=0,\quad i=1,\ldots,s$.
+\end{itemize}
+\begin{columns}[c]
+\begin{column}{0.7\textwidth}\small
+\begin{itemize}
+\item<4-> Perturbamos: $q_i=q_{0i}+\eta_i$. ``Pequeño'' significa que los términos cúbicos de $V$ son despreciables frente a los cuadráticos (no $\eta_i/q_{0i}\ll1$).
+\end{itemize}
+\end{column}
+\begin{column}{0.28\textwidth}\centering\figura{1.0in}{Figuras/OscilaVariosGrados.png}\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Varios grados de libertad (2/6): desarrollo de $V$ y de $T$}
+\small
+\begin{itemize}
+\item<1-> Taylor en varias variables alrededor de $\{q_{0i}\}$:
+\[
+V(q)=V(q_0)+\cancelto{0}{\sum_i\left(\frac{\partial V}{\partial q_i}\right)_{\!0}}\eta_i
++\frac12\sum_{i,j}\left(\frac{\partial^2V}{\partial q_i\partial q_j}\right)_{\!0}\eta_i\eta_j+\mathcal{O}(\eta^3).
+\]
+\item<2-> $V_{ij}\equiv(\partial^2V/\partial q_i\partial q_j)_0=V_{ji}$ (igualdad de derivadas cruzadas). Omitiendo la constante:
+$V\simeq\tfrac12\sum_{i,j}V_{ij}\,\eta_i\eta_j=\tfrac12\,\bfeta^{\mathsf T}\Vm\,\bfeta$.
+\item<3-> Para $T$: $\dot q_i=\dot\eta_i$ ya es de primer orden, de modo que
+\[
+T_{ij}(q)=T_{ij}(q_0)+\sum_l\left(\frac{\partial T_{ij}}{\partial q_l}\right)_{\!0}\eta_l+\cdots
+\]
+y, por tanto, $T=\tfrac12\sum_{i,j}T_{ij}(q_0)\,\dot\eta_i\dot\eta_j+\mathcal{O}(\eta\,\dot\eta^2)$.
+\item<4-> \textbf{Lagrangiano cuadrático}, consistente a segundo orden en $(\eta,\dot\eta)$:
+\[
+\boxed{\;\mathcal{L}_2=\tfrac12\,\dot{\bfeta}^{\mathsf T}\Tm\,\dot{\bfeta}-\tfrac12\,\bfeta^{\mathsf T}\Vm\,\bfeta
+=\tfrac12\sum_{i,j}\big(T_{ij}\,\dot\eta_i\dot\eta_j-V_{ij}\,\eta_i\eta_j\big)\;}
+\]
+con $\Tm=[T_{ij}(q_0)]$ y $\Vm=[V_{ij}]$ \textbf{constantes}, simétricas, y $\Tm$ definida positiva.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Varios grados de libertad (3/6): ecuaciones de movimiento}
+\begin{itemize}
+\item<1-> Ecuación de Lagrange para $\eta_i$: \ $\dfrac{\dd}{\dd t}\left(\dfrac{\partial\mathcal{L}_2}{\partial\dot\eta_i}\right)-\dfrac{\partial\mathcal{L}_2}{\partial\eta_i}=0$.
+\item<2-> Usando $\partial\dot\eta_j/\partial\dot\eta_i=\delta_{ij}$ y la simetría $T_{jl}=T_{lj}$:
+\[
+\frac{\partial\mathcal{L}_2}{\partial\dot\eta_i}=\frac12\sum_{j,l}T_{jl}\big(\delta_{ji}\dot\eta_l+\delta_{li}\dot\eta_j\big)
+=\frac12\Big(\sum_l T_{il}\dot\eta_l+\sum_j T_{ji}\dot\eta_j\Big)=\sum_j T_{ij}\,\dot\eta_j .
+\]
+\item<3-> Análogamente, $\dfrac{\partial\mathcal{L}_2}{\partial\eta_i}=-\displaystyle\sum_j V_{ij}\,\eta_j$.
+\item<4-> Resultado:
+\[
+\boxed{\;\sum_j\big(T_{ij}\,\ddot\eta_j+V_{ij}\,\eta_j\big)=0,\ \ i=1,\ldots,s
+\quad\Longleftrightarrow\quad
+\Tm\,\ddot{\bfeta}+\Vm\,\bfeta=0\;}
+\]
+\item<5-> Son $s$ ecuaciones lineales \textbf{acopladas} con coeficientes constantes: una ecuación individual \emph{no} es la de un oscilador armónico, salvo que $\Tm$ y $\Vm$ sean ambas diagonales. Equivalentemente, $\ddot{\bfeta}=-\Tm^{-1}\Vm\,\bfeta$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Varios grados de libertad (4/6): modos normales}
+\small
+\begin{itemize}
+\item<1-> Ensayamos un movimiento colectivo con una sola frecuencia: $\bfeta(t)=\operatorname{Re}\big(\ba\,e^{i\omega t}\big)$, con $\ba$ constante.
+\item<2-> Sustituyendo en $\Tm\ddot{\bfeta}+\Vm\bfeta=0$:
+\[
+\boxed{\;(\Vm-\omega^2\Tm)\,\ba=0\;}\qquad\Longleftrightarrow\qquad \sum_j\big(V_{ij}-\omega^2T_{ij}\big)\,a_j=0 .
+\]
+Es un \textbf{problema generalizado de autovalores} (equivale a $\Tm^{-1}\Vm\,\ba=\omega^2\ba$).
+\item<3-> Hay solución no trivial ($\ba\neq0$: \emph{no todas} las $a_j$ nulas; algunas pueden anularse) si y sólo si $\det\big(\Vm-\omega^2\Tm\big)=0$, un polinomio de grado $s$ en $\omega^2$ con raíces $\omega_1^2,\ldots,\omega_s^2$.
+\item<4-> Para $s=2$: \
+$\big(V_{11}-\omega^2T_{11}\big)\big(V_{22}-\omega^2T_{22}\big)-\big(V_{12}-\omega^2T_{12}\big)^2=0 .$
+\item<5-> Para cada $\omega_k$, el sistema $(\Vm-\omega_k^2\Tm)\ba_k=0$ tiene rango $s-1$ (raíz simple): $\ba_k$ queda determinado \emph{salvo un factor}, y lo físico son los cocientes $a_i(\omega_k)/a_j(\omega_k)$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Varios grados de libertad (5/6): propiedades de los modos}
+\begin{itemize}
+\item<1-> \textbf{$\omega_k^2$ es real.} Multiplicando $(\Vm-\omega^2\Tm)\ba=0$ por $\ba^\dagger$: \ $\omega^2=\dfrac{\ba^\dagger\Vm\,\ba}{\ba^\dagger\Tm\,\ba}$, cociente de dos números reales con denominador positivo. Por tanto, los $\ba_k$ pueden elegirse reales.
+\item<2-> \textbf{Signo de $\omega_k^2$:} todos los $\omega_k^2>0\iff\Vm$ definida positiva (mínimo estricto). Un $\omega_k^2<0$ \emph{no} carece de sentido físico: describe una dirección inestable, $\bfeta\propto\ba_k e^{\pm\gamma_k t}$ con $\gamma_k^2=-\omega_k^2$.
+\item<3-> \textbf{Modos cero:} $\omega_k=0$ si $\Vm$ es singular: dirección neutra, a menudo asociada a una simetría continua (traslación, rotación) y a un momento conservado (Noether).
+\item<4-> \textbf{$\Tm$-ortogonalidad:} si $\omega_k\neq\omega_l$, entonces $\ba_l^{\mathsf T}\Tm\,\ba_k=0$. \\
+{\small Prueba: $\ba_l^{\mathsf T}\Vm\ba_k=\omega_k^2\,\ba_l^{\mathsf T}\Tm\ba_k$ y $\ba_k^{\mathsf T}\Vm\ba_l=\omega_l^2\,\ba_k^{\mathsf T}\Tm\ba_l$; restando y usando la simetría, $(\omega_k^2-\omega_l^2)\,\ba_l^{\mathsf T}\Tm\ba_k=0$.}
+\item<5-> \textbf{Degeneración:} si dos $\omega_k$ coinciden, cualquier combinación de sus vectores es modo; se elige una base $\Tm$-ortogonal.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Varios grados de libertad (6/6): coordenadas normales}
+\small
+\begin{itemize}
+\item<1-> Normalizando $\ba_k^{\mathsf T}\Tm\,\ba_l=\delta_{kl}$ y escribiendo $\bfeta=\sum_k\xi_k\,\ba_k$:
+\[
+\mathcal{L}_2=\tfrac12\sum_k\big(\dot\xi_k^2-\omega_k^2\,\xi_k^2\big)\;\Longrightarrow\;\ddot\xi_k+\omega_k^2\xi_k=0 :
+\]
+$s$ osciladores \textbf{desacoplados}.
+\item<2-> Solución general con $2s$ constantes, fijadas por las condiciones iniciales:
+\[
+\bfeta(t)=\sum_k\ba_k\big(B_k\cos\omega_kt+C_k\operatorname{sen}\omega_kt\big),
+\]
+con $B_k=\ba_k^{\mathsf T}\Tm\,\bfeta(0)$ \ y \ $C_k=\ba_k^{\mathsf T}\Tm\,\dot{\bfeta}(0)/\omega_k$.
+\item<3-> \textbf{Herramientas de verificación} (útiles para revisar su álgebra o la de una IA):
+\begin{itemize}
+\item $\sum_k\omega_k^2=\operatorname{tr}\big(\Tm^{-1}\Vm\big)$, \qquad $\prod_k\omega_k^2=\det\Vm/\det\Tm$.
+\item Cociente de Rayleigh: $\omega_{\min}^2\le\dfrac{\boldsymbol x^{\mathsf T}\Vm\,\boldsymbol x}{\boldsymbol x^{\mathsf T}\Tm\,\boldsymbol x}\le\omega_{\max}^2$ para todo $\boldsymbol x\neq0$.
+\item Ortogonalidad $\ba_l^{\mathsf T}\Tm\ba_k=0$; dimensiones; límites de desacople.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+%=========================================================================
+\section{Ejemplo: el péndulo doble}
+%=========================================================================
+\begin{frame}{El péndulo doble (1/5): el problema y las posiciones}
+\textbf{Problema.} Encontrar las frecuencias y los modos normales del péndulo doble en el régimen de pequeñas oscilaciones. Dos masas puntuales $m_1=m_2=m$ cuelgan de varillas rígidas, inextensibles y sin masa de longitud $\ell$; $\theta_1,\theta_2$ son los ángulos de cada varilla con la vertical. Movimiento plano, gravedad uniforme, $|\theta_1|,|\theta_2|\ll1$.
+\begin{columns}[T]
+\begin{column}{0.66\textwidth}
+\begin{itemize}
+\item<2-> Posiciones exactas (origen en el pivote, $y$ hacia arriba):
+\[
+\begin{aligned}
+x_1&=\ell\operatorname{sen}\theta_1, & y_1&=-\ell\cos\theta_1,\\
+x_2&=x_1+\ell\operatorname{sen}\theta_2, & y_2&=y_1-\ell\cos\theta_2 .
+\end{aligned}
+\]
+\item<3-> \textbf{¿A qué orden?} $T$ ya es cuadrática en las velocidades: basta $T_{ij}$ en el equilibrio. $V$ depende de las alturas: hay que llevarlas hasta segundo orden,
+$y_1\simeq-\ell+\tfrac12\ell\theta_1^2$, \ $y_2\simeq-2\ell+\tfrac12\ell(\theta_1^2+\theta_2^2)$.
+\end{itemize}
+\end{column}
+\begin{column}{0.32\textwidth}
+\centering\figura{1.2in}{Figuras/PenduloDoble.png}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{El péndulo doble (2/5): energías y ecuación de movimiento}
+\small
+\begin{itemize}
+\item<1-> Energía cinética exacta:
+$T=\tfrac12m\ell^2\big[2\dot\theta_1^2+\dot\theta_2^2+2\dot\theta_1\dot\theta_2\cos(\theta_1-\theta_2)\big]$, es decir,
+\[
+\big[T_{ij}(\theta)\big]=m\ell^2\begin{pmatrix}2&\cos(\theta_1-\theta_2)\\ \cos(\theta_1-\theta_2)&1\end{pmatrix}.
+\]
+\item<2-> En el equilibrio $\theta_1=\theta_2=0$: \ $\Tm=m\ell^2\begin{pmatrix}2&1\\1&1\end{pmatrix}$ \ (aquí se ve que $T_{ij}$ depende de $q$).
+\item<3-> Energía potencial gravitatoria ($y$ hacia arriba):
+\[
+V=mg\,(y_1+y_2)=-mg\ell\,(2\cos\theta_1+\cos\theta_2)\simeq-3mg\ell+\tfrac12mg\ell\,\big(2\theta_1^2+\theta_2^2\big),
+\]
+de modo que $\Vm=mg\ell\begin{pmatrix}2&0\\0&1\end{pmatrix}$ (compruébelo con $V_{ij}=\partial^2V/\partial\theta_i\partial\theta_j|_0$).
+\item<4-> Con $\bfeta=(\theta_1,\theta_2)^{\mathsf T}$, $\mathcal{L}_2=\tfrac12\dot{\bfeta}^{\mathsf T}\Tm\dot{\bfeta}-\tfrac12\bfeta^{\mathsf T}\Vm\bfeta$ y, dividiendo por $m\ell$:
+\[
+\ell\begin{pmatrix}2&1\\1&1\end{pmatrix}\begin{pmatrix}\ddot\theta_1\\ \ddot\theta_2\end{pmatrix}
++g\begin{pmatrix}2&0\\0&1\end{pmatrix}\begin{pmatrix}\theta_1\\ \theta_2\end{pmatrix}=0 .
+\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{El péndulo doble (3/5): la ecuación característica}
+\small
+\begin{itemize}
+\item<1-> Con $\bfeta=\operatorname{Re}(\ba\,e^{i\omega t})$ y la variable adimensional $\lambda\equiv\ell\omega^2/g$:
+\[
+\Vm-\omega^2\Tm=mg\ell\begin{pmatrix}2-2\lambda&-\lambda\\-\lambda&1-\lambda\end{pmatrix}.
+\]
+\item<2-> $\det(\Vm-\omega^2\Tm)=0$:
+\[
+(2-2\lambda)(1-\lambda)-\lambda^2=\lambda^2-4\lambda+2=0
+\;\Rightarrow\;
+\lambda_\pm=2\pm\sqrt2 .
+\]
+\item<3-> Frecuencias normales:\quad
+$\boxed{\;\omega_\pm^2=\big(2\pm\sqrt2\big)\,g/\ell\;}$\,; \quad
+$\omega_-^2\approx0.586\,g/\ell$, \ $\omega_+^2\approx3.414\,g/\ell$, \ $\omega_+/\omega_-=1+\sqrt2$.
+\item<4-> \textbf{Verificación:} $\Tm^{-1}\Vm=\dfrac{g}{\ell}\begin{pmatrix}2&-1\\-2&2\end{pmatrix}$:\ traza $=4=\lambda_++\lambda_-$ \ y \ $\det\Vm/\det\Tm=2=\lambda_+\lambda_-$ (en unidades de $g/\ell$).
+\item<5-> \textbf{Rayleigh} con el ``modo rígido'' $\boldsymbol x=(1,1)$: $\dfrac{\boldsymbol x^{\mathsf T}\Vm\boldsymbol x}{\boldsymbol x^{\mathsf T}\Tm\boldsymbol x}=\dfrac35\,\dfrac{g}{\ell}\ \ge\ \omega_-^2$ (es la frecuencia del péndulo físico rígido equivalente).
+\item<6-> Coincide con la Ec.~(4.61) de las notas para $m_1=m_2$, $l_1=l_2$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{El péndulo doble (4/5): de las frecuencias a los modos}
+\begin{columns}[T]
+\begin{column}{0.62\textwidth}
+\small
+\begin{itemize}
+\item<1-> En unidades de $mg\ell$, $(\Vm-\omega^2\Tm)\ba=0$ da dos ecuaciones:
+\[
+\begin{cases}
+(2-2\lambda)\,a_1-\lambda\,a_2=0\\
+-\lambda\,a_1+(1-\lambda)\,a_2=0
+\end{cases}
+\]
+\item<2-> Compatibles sólo si $\frac{2(1-\lambda)}{\lambda}=\frac{\lambda}{1-\lambda}$, o sea $\lambda^2-4\lambda+2=0$. Para $\lambda_\pm$ las filas son \emph{proporcionales}: $\ba_\pm$ queda fijado salvo un factor (no ``para todo $\ba$'').
+\item<3-> $\dfrac{a_2(\omega_\pm)}{a_1(\omega_\pm)}=\dfrac{2(1-\lambda_\pm)}{\lambda_\pm}=\mp\sqrt2$:
+\begin{itemize}
+\item $\omega_-$ (lento): $\ba_-\propto(1,\sqrt2)$, \textbf{en fase}.
+\item $\omega_+$ (rápido): $\ba_+\propto(1,-\sqrt2)$, \textbf{en contrafase}.
+\end{itemize}
+\end{itemize}
+\end{column}
+\begin{column}{0.36\textwidth}
+\uncover<3->{
+\begin{tikzpicture}[scale=1]
+\foreach \sx/\sg/\lab in {0/1/{lento, $\omega_-$\\ en fase}, 2.1/-1/{rápido, $\omega_+$\\ contrafase}}{
+\begin{scope}[xshift=\sx cm]
+\fill[pattern=north east lines] (-0.45,0) rectangle (0.45,0.12);
+\draw[thick] (-0.45,0)--(0.45,0);
+\draw[dashed,gray] (0,0)--(0,-2.55);
+\pgfmathsetmacro{\ta}{13}
+\pgfmathsetmacro{\tb}{\sg*1.41421*13}
+\coordinate (A) at ({1.2*sin(\ta)},{-1.2*cos(\ta)});
+\coordinate (B) at ($(A)+({1.2*sin(\tb)},{-1.2*cos(\tb)})$);
+\draw[dashed,gray] (A)--++(0,-1.2);
+\draw[very thick] (0,0)--(A)--(B);
+\fill[darkred] (A) circle (2.5pt);
+\fill[darkred] (B) circle (2.5pt);
+\node[align=center,font=\scriptsize] at (0,-2.95) {\lab};
+\end{scope}}
+\end{tikzpicture}
+\\[2pt]
+{\scriptsize Esquema exagerado: $\theta_2=\pm\sqrt2\,\theta_1$.}}
+\uncover<4->{\\[4pt]\scriptsize $\Tm$-ortogonalidad: $(1,\sqrt2)\begin{pmatrix}2&1\\1&1\end{pmatrix}\begin{pmatrix}1\\-\sqrt2\end{pmatrix}=0$ \checkmark}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{El péndulo doble (5/5): solución general e interpretación}
+\begin{itemize}
+\item<1-> Superposición de los dos modos (4 constantes):
+\[
+\begin{pmatrix}\theta_1\\ \theta_2\end{pmatrix}=
+B_-\begin{pmatrix}1\\ \sqrt2\end{pmatrix}\cos(\omega_-t+\varphi_-)+
+B_+\begin{pmatrix}1\\ -\sqrt2\end{pmatrix}\cos(\omega_+t+\varphi_+).
+\]
+\item<2-> \textbf{Ejemplo:} se suelta desde el reposo con $\theta_1(0)=\theta_0$, $\theta_2(0)=0$. Proyectando con $\Tm$ (o resolviendo $2\times2$): $B_-=B_+=\theta_0/2$, $\varphi_\pm=0$,
+\[
+\theta_1(t)=\tfrac{\theta_0}{2}\big(\cos\omega_-t+\cos\omega_+t\big),\qquad
+\theta_2(t)=\tfrac{\theta_0}{\sqrt2}\big(\cos\omega_-t-\cos\omega_+t\big).
+\]
+Compruebe las cuatro condiciones iniciales.
+\item<3-> Como $\omega_+/\omega_-=1+\sqrt2$ es irracional, el movimiento es \textbf{cuasiperiódico}: nunca se repite exactamente. Cada modo por separado sí es periódico.
+\item<4-> \textbf{Mirando hacia adelante:} las coordenadas normales anticipan las variables acción--ángulo (toros invariantes); a energías mayores, el péndulo doble no lineal deja de ser regular (caos, Cap.~2 de las notas).
+\end{itemize}
+\end{frame}
+
+%=========================================================================
+\section{Comprobación y extensión}
+%=========================================================================
+\begin{frame}{Preguntas conceptuales}
+\begin{enumerate}
+\item<1-> Si $\Vef''(q_0)=0$ pero $\Vef''''(q_0)>0$, ¿es estable el equilibrio? ¿Cómo depende el período de la amplitud?
+\item<2-> En el péndulo $q_0=0$. ¿Qué significa entonces ``$\eta/q_0\ll1$''? Proponga un criterio correcto.
+\item<3-> ¿Por qué basta evaluar $T_{ij}$ en $q_0$, mientras que $V$ debe desarrollarse hasta segundo orden?
+\item<4-> Un modo con $\omega_k^2<0$, ¿``carece de sentido físico''? ¿Qué describe?
+\item<5-> ¿Cuándo aparece un modo con $\omega_k=0$? Dé un ejemplo y relaciónelo con una cantidad conservada.
+\item<6-> En el péndulo doble linealizado, soltado desde $\theta_1=\theta_0$, $\theta_2=0$, ¿es periódico el movimiento?
+\item<7-> Si se duplican ambas masas del péndulo doble, ¿cambian $\omega_\pm$? ¿Cambian los modos?
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Extensión computacional: lineal frente a no lineal}
+\begin{itemize}
+\item<1-> \textbf{Antes de programar:} derive las ecuaciones no lineales completas del péndulo doble y verifique que su linealización reproduce $\Tm\ddot{\bfeta}+\Vm\bfeta=0$.
+\item<2-> \textbf{Método:} integrador adaptativo de alto orden (p.\,ej.\ \texttt{scipy.integrate.solve\_ivp} con \texttt{DOP853}); declare \texttt{rtol}, \texttt{atol}, el intervalo y las condiciones iniciales; unidades $g=\ell=m=1$.
+\item<3-> \textbf{Verificación obligatoria:}
+\begin{itemize}
+\item deriva relativa de la energía $|E(t)-E(0)|/|E(0)|$ frente a la tolerancia;
+\item convergencia: repita con tolerancias $10\times$ menores;
+\item a amplitud muy pequeña, la frecuencia medida debe coincidir con $\omega_\pm$.
+\end{itemize}
+\item<4-> \textbf{Experimentos:} (i) condiciones iniciales sobre cada modo, $\bfeta(0)=A\,\ba_\pm$, y medición de $\omega(A)$; (ii) $\theta_1(0)=\theta_0$, $\theta_2(0)=0$ y comparación con la solución lineal; (iii) a energías mayores, secciones de Poincaré.
+\item<5-> \textbf{Interpretación:} distinga artefactos numéricos (deriva de energía, resolución espectral finita) de efectos físicos (corrimiento de frecuencia, intercambio de energía, irregularidad).
+\end{itemize}
+\end{frame}
+
+%=========================================================================
+\section{Recapitulando}
+%=========================================================================
+\begin{frame}{Recapitulando}
+\small
+\begin{itemize}
+\item<1-> \textbf{1D:} $\mathcal{L}_2=\tfrac12c_0\dot\eta^2-\tfrac12K\eta^2$, \ $\omega^2=K/c_0=\Vef''(q_0)/c(q_0)$. El signo de $K$ decide estabilidad; $K=0$ exige órdenes superiores.
+\item<2-> \textbf{Validez:} $|\eta|\ll3K/|\Vef'''|$ (o el análogo cuártico). Para el péndulo, $\tau/\tau_0=1+\theta_0^2/16+\cdots$: el isocronismo es un efecto del truncamiento.
+\item<3-> \textbf{$s$ grados de libertad:} $\mathcal{L}_2=\tfrac12\dot{\bfeta}^{\mathsf T}\Tm\dot{\bfeta}-\tfrac12\bfeta^{\mathsf T}\Vm\bfeta$ con $\Tm=[T_{ij}(q_0)]$, $\Vm=[V_{ij}]$; \ $\Tm\ddot{\bfeta}+\Vm\bfeta=0$.
+\item<4-> \textbf{Modos normales:} $(\Vm-\omega^2\Tm)\ba=0$, $\det(\Vm-\omega^2\Tm)=0$; $\omega_k^2$ reales; $\omega_k^2>0\ \forall k\iff$ mínimo estable; $\ba_k$ $\Tm$-ortogonales; coordenadas normales desacopladas.
+\item<5-> \textbf{Péndulo doble ($m$, $\ell$ iguales):} $\omega_\pm^2=(2\pm\sqrt2)\,g/\ell$; modo lento en fase, $a_2/a_1=\sqrt2$; modo rápido en contrafase, $a_2/a_1=-\sqrt2$.
+\item<6-> \textbf{Verificar siempre:} traza, determinante, Rayleigh, ortogonalidad, dimensiones, límites. \textbf{Próximos pasos:} oscilaciones forzadas y amortiguadas; estabilidad de la rotación del cuerpo rígido (misma linealización); en la formulación hamiltoniana, las coordenadas normales conducen a las variables acción--ángulo.
+\end{itemize}
+\end{frame}
+
+%=========================================================================
+\section{Para la discusión}
+%=========================================================================
+\begin{frame}{Para la discusión (1/7): política de uso de IA}
+\footnotesize
+\begin{tabular}{@{}L{0.36\textwidth}L{0.27\textwidth}L{0.28\textwidth}@{}}
+\toprule
+\textbf{Actividad} & \textbf{Uso de IA} & \textbf{Énfasis de la evaluación}\\
+\midrule
+Quiz en clase (10 min): péndulo con soporte deslizante unido a un resorte & \textbf{Prohibido} & $\Tm$, $\Vm$ y ecuación característica \\
+P1--P3 & \textbf{Asistido}: sólo álgebra verificable & formulación propia, derivación, verificación \\
+P4--P5 & \textbf{Asistido} + bitácora 4D & discernimiento, casos límite \\
+P6 (proyecto corto) & \textbf{Asistido} (código) + defensa oral & validación, interpretación \\
+Actividad IA 1 & \textbf{Requerido} (crítica) & detección, corrección, verificación \\
+Actividad IA 2 & \textbf{Asistido} (ciclo 4D) & descripción y discernimiento \\
+\bottomrule
+\end{tabular}
+
+\medskip
+\small
+\textbf{Regla de Delegación} (sesión 1): conserve lo que es objetivo de aprendizaje y no puede verificar; delegue sólo lo verificable. Todo entregable incluye la \textbf{bitácora 4D} y la \textbf{declaración de uso de IA}.
+\end{frame}
+
+\begin{frame}{Para la discusión (2/7): problemas de nivel 1 y 2}
+\footnotesize
+\begin{enumerate}
+\item[P1] \nivel{1} \textbf{Pozo doble.} Partícula de masa $m$ en 1D con $V(x)=V_0\big[(x/a)^4-2(x/a)^2\big]$, $V_0,a>0$.
+(a) Halle y clasifique los equilibrios. (b) Calcule $\omega$ de las pequeñas oscilaciones y verifique dimensiones. (c) Con el término cúbico, estime hasta qué amplitud vale la aproximación. (d) Para el equilibrio inestable, halle la tasa de crecimiento $\gamma$.
+\end{enumerate}
+\begin{columns}[T]
+\begin{column}{0.7\textwidth}
+\footnotesize
+\begin{enumerate}
+\item[P2] \nivel{2} \textbf{Péndulos acoplados.} Dos péndulos idénticos (masa $m$, longitud $\ell$) cuelgan de pivotes a la misma altura separados una distancia $D$. Un resorte de constante $k$ y longitud natural $D$ une las varillas a una distancia $d\le\ell$ de los pivotes; en el equilibrio las varillas son verticales y el resorte no está deformado.
+(a) Construya $\Tm$ y $\Vm$, justificando a qué orden contribuye la elongación del resorte. (b) Halle $\omega_1,\omega_2$ y los modos; dibújelos. (c) Si se suelta $\theta_1=\theta_0$, $\theta_2=0$ desde el reposo, ¿cada cuánto tiempo pasa la energía de un péndulo al otro? Analice el límite $kd^2\ll mg\ell$.
+\end{enumerate}
+\end{column}
+\begin{column}{0.28\textwidth}
+\centering\figura{1.05in}{Figuras/DosPendulosResorte.png}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Para la discusión (3/7): problemas de nivel 2 y 3}
+\footnotesize
+\begin{enumerate}
+\item[P3] \nivel{2} \textbf{Cuenta en un aro giratorio.} Una cuenta de masa $m$ desliza sin fricción sobre un aro de radio $R$ que gira con velocidad angular constante $\Omega$ alrededor de su diámetro vertical; $\theta$ se mide desde el punto más bajo.
+(a) Escriba $\mathcal{L}=\tfrac12mR^2\dot\theta^2-\Vef(\theta)$ e identifique $\Vef$. (b) Halle los equilibrios, su estabilidad y sus frecuencias en función de $\Omega$. (c) ¿Qué ocurre en $\Omega=\sqrt{g/R}$? Relaciónelo con el caso $K=0$. (d) ¿Se conserva la energía? ¿Qué cantidad se conserva?
+\end{enumerate}
+\begin{columns}[T]
+\begin{column}{0.7\textwidth}
+\footnotesize
+\begin{enumerate}
+\item[P4] \nivel{3} \textbf{Péndulo triple.} Tres varillas rígidas sin masa, de longitud $\ell$ cada una, cuelgan en serie de un pivote fijo; las masas son $\lambda m$ (la más cercana al pivote), $m$ y $m$ (la más baja). Movimiento plano, $g$ uniforme.
+(a) Construya $\Tm$ y $\Vm$ generalizando el patrón del péndulo doble. (b) Determine $\lambda$ para que una de las frecuencias de pequeñas oscilaciones sea igual a la de un péndulo simple de longitud $\ell/2$. (c) Halle y dibuje ese modo. (d) Verifique con traza, determinante y el límite $\lambda\to\infty$.
+\end{enumerate}
+\end{column}
+\begin{column}{0.28\textwidth}
+\centering\figura{1.05in}{Figuras/PenduloTriple.png}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Para la discusión (4/7): problemas de nivel 3 y 4}
+\footnotesize
+\begin{enumerate}
+\item[P5] \nivel{3} \textbf{Dos iones en una trampa lineal.} Dos iones de masa $m$ y carga $q$ se mueven sobre un eje con
+\[
+V=\tfrac12m\omega_z^2\big(x_1^2+x_2^2\big)+\frac{q^2}{4\pi\varepsilon_0\,|x_2-x_1|}.
+\]
+(a) Halle el equilibrio (no está en el origen). (b) Calcule $\Tm$, $\Vm$, las frecuencias y los modos. (c) Interprete el modo de frecuencia $\omega_z$ en términos de fuerzas internas; ¿qué ocurre si $\omega_z\to0$? (d) Estime la separación para $^{40}$Ca$^+$ con $\omega_z=2\pi\times1$ MHz.
+\item[P6] \nivel{4} \textbf{Investigación: ¿hasta dónde vale la linealización?} Para el péndulo doble ($m$, $\ell$ iguales), siga el protocolo de la extensión computacional:
+(a) derive las ecuaciones no lineales; (b) mida $\omega(A)$ con $\bfeta(0)=A\,\ba_-$ desde el reposo, $A\in[0.01,1]$ rad; (c) determine el exponente $\alpha$ en $|\omega(A)/\omega_--1|\propto A^\alpha$ y explíquelo con un argumento de simetría; (d) explore energías mayores con secciones de Poincaré.
+Entregables: código reproducible, pruebas de convergencia, deriva de energía e interpretación física de cada gráfica.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Para la discusión (5/7): Actividad IA 1, auditoría}
+\IA{Uso de IA: requerido (análisis crítico).} La siguiente derivación, adaptada de una versión preliminar de estas diapositivas, contiene errores. Trátela como la respuesta de un asistente de IA: \emph{cada afirmación es una hipótesis}.
+\small
+\begin{enumerate}
+\item[E1] ``Perturbamos con $\eta_i\to0$, es decir, $\eta_i/q_{0i}\ll1$.''
+\item[E2] ``Los $T_{ij}$ son parámetros constantes que dependen de masas y longitudes.''
+\item[E3] ``En $\sum_j(T_{kj}\ddot\eta_j+V_{kj}\eta_j)=0$, cada término tiene la forma de la ecuación de un oscilador armónico.''
+\item[E4] ``Existe solución no trivial si $a_j\neq0\ \forall j$, cuando $\det|V_{ij}-\omega^2T_{ij}|=0$; las $\omega$ deben ser reales para que las soluciones tengan sentido físico.''
+\item[E5] Péndulo doble: ``$V=-mgy_1-mgy_2\approx mg\ell\big(\theta_1^2+\tfrac12\theta_2^2\big)$.''
+\item[E6] ``$\det\Big|\,g\begin{pmatrix}1&0\\0&2\end{pmatrix}-\ell\omega^2\begin{pmatrix}2&1\\1&1\end{pmatrix}\Big|=0\ \Rightarrow\ \omega_\pm^2=\dfrac{g}{2\ell}\big(5\pm\sqrt{17}\big)$.''
+\item[E7] ``Para esos $\lambda_\pm$ las ecuaciones se cumplen para todo $(a^1_\pm,a^2_\pm)$; \ $a^2_\pm/a^1_\pm=(-3\pm\sqrt{17})/4$, y el modo `$+$' oscila en fase.''
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Para la discusión (6/7): Actividad IA 1, tareas}
+\small
+\begin{enumerate}
+\item<1-> \textbf{Discernimiento.} Para cada afirmación E1--E7 decida si es correcta; localice el error, clasifíquelo (signo, transcripción de una matriz, lógica, concepto) y corríjalo con una derivación propia.
+\item<2-> \textbf{Verificación independiente.} Use al menos tres herramientas: traza, determinante, cociente de Rayleigh, $\Tm$-ortogonalidad, significado físico de cada $V_{ij}$, comparación con la Ec.~(4.61) de las notas.
+\item<3-> \textbf{Meta-pregunta.} ¿Cuáles de esas pruebas \emph{no} detectan el error de E6? ¿Por qué? ¿Qué enseña esto sobre confiar en una sola verificación?
+\item<4-> \textbf{Descripción.} Pida a un asistente de IA que resuelva el mismo péndulo doble con un prompt preciso (coordenadas, orientación de $y$, orden requerido en $T$ y $V$, forma de la respuesta) y con uno vago. Aplique las mismas pruebas a ambas respuestas.
+\item<5-> \textbf{Diligencia.} Entregue la bitácora 4D: prompts; respuesta relevante; qué aceptó, rechazó o corrigió; cómo lo verificó; errores o alucinaciones detectados; su razonamiento final. Añada la declaración de uso de IA.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Para la discusión (7/7): Actividad IA 2, las 4D en P4}
+\IA{Uso de IA: asistido.} Aplique el ciclo de la sesión 1 al péndulo triple (P4).
+\small
+\begin{itemize}
+\item<1-> \textbf{Delegación:} liste qué conserva usted (geometría, patrón de $T_{ij}$ y $V_{ij}$, interpretación del modo) y qué delega (desarrollo del determinante $3\times3$, raíces del polinomio).
+\item<2-> \textbf{Descripción:} redacte un prompt preciso (orden de las masas desde el pivote, ángulos respecto a la vertical, $\Tm$ y $\Vm$ ya construidas; pida $\det(\Vm-\omega^2\Tm)$ como polinomio en $\lambda$ y $\omega^2$) y uno vago (``frecuencias del péndulo triple con masas $\lambda m$, $m$, $m$''). ¿Qué supuso la IA sobre la posición de $\lambda m$?
+\item<3-> \textbf{Discernimiento:} audite con $\sum_k\omega_k^2=\operatorname{tr}(\Tm^{-1}\Vm)$, $\prod_k\omega_k^2=\det\Vm/\det\Tm$, el cociente de Rayleigh con el modo rígido $(1,1,1)$ y el límite $\lambda\to\infty$ (¿qué frecuencias deben sobrevivir?).
+\item<4-> \textbf{Diligencia:} rederive a mano la condición sobre $\lambda$; compruebe el modo sustituyéndolo en $(\Vm-\omega^2\Tm)\ba=0$; entregue la bitácora 4D y la declaración de uso de IA.
+\end{itemize}
+\end{frame}
+
+%=========================================================================
+% APÉNDICE PARA EL PROFESOR (compilar con \instructortrue)
+%=========================================================================
+\ifinstructor
+\appendix
+\section*{Apéndice del profesor}
+\newcommand{\campo}[1]{\textcolor{darkred}{\textbf{#1}}}
+
+\begin{frame}{Profesor: alineación objetivos--actividades--evaluación}
+\scriptsize
+Supuesto de diseño: dos bloques de 100 min (teoría y ejemplos; discusión y actividades), más trabajo autónomo de una semana para P4--P6.
+
+\medskip
+\begin{tabular}{@{}p{0.34\textwidth}p{0.28\textwidth}p{0.3\textwidth}@{}}
+\toprule
+\textbf{Objetivo} & \textbf{Dónde se desarrolla} & \textbf{Dónde se evalúa}\\
+\midrule
+O1 Derivar $\mathcal{L}_2$ & 1D (2/3); $s$D (2/6) & quiz; P1, P2, P3 \\
+O2 Frecuencias y modos & $s$D (4/6--6/6); péndulo doble & quiz; P2, P4, P5 \\
+O3 Estabilidad y modos cero & 1D (2/3); $s$D (5/6) & P1(d), P3, P5(c); preguntas 4--5 \\
+O4 Validez de la aproximación & ángulos pequeños & P1(c), P6; preguntas 1--2 \\
+O5 Verificar (propio o IA) & $s$D (6/6); péndulo doble (3/5) & Actividades IA 1 y 2; P4(d) \\
+O6 Simular y comparar & extensión computacional & P6 (con defensa oral) \\
+\bottomrule
+\end{tabular}
+
+\medskip
+Mecanismos de autenticidad: quiz sin IA, defensa oral de P6 con variación de parámetros en vivo, preguntas personalizadas sobre la bitácora 4D (``¿por qué rechazó esta línea de la respuesta?'').
+\end{frame}
+
+\begin{frame}{Profesor: clave de las preguntas conceptuales}
+\scriptsize
+\begin{enumerate}
+\item Estable (mínimo estricto). Con $V\simeq\tfrac{1}{24}V''''\eta^4\equiv\alpha\eta^4$, el análisis dimensional da $\tau\sim\sqrt{c_0/\alpha}\,/A$: el período \emph{disminuye} con la amplitud; no hay régimen armónico.
+\item No tiene sentido (división por cero). Criterio: términos de orden superior $\ll$ cuadrático, $|\eta|\ll3K/|\Vef'''|$ o $\eta^2\ll12K/|\Vef''''|$; en el péndulo el criterio operativo es $\theta_0^2/16\ll1$.
+\item $\eta$ y $\dot\eta\sim\omega\eta$ son del mismo orden. $T$ ya es cuadrática en $\dot\eta$: cualquier dependencia de $T_{ij}$ en $\eta$ da términos cúbicos. En $V$ el término lineal se anula por equilibrio y el cuadrático es el primero que sobrevive.
+\item Describe una dirección inestable: $\bfeta\propto\ba_k e^{\gamma_kt}$ (p.\,ej.\ péndulo invertido). La linealización vale mientras $|\bfeta|$ sea pequeño, es decir, $t\lesssim\gamma^{-1}\ln(\ell_V/|\bfeta(0)|)$, donde $\ell_V$ es la escala de validez.
+\item Cuando $\Vm$ es singular. Ejemplos: P5 con $\omega_z\to0$, molécula lineal CO$_2$ (notas, ej.~1), péndulo con soporte deslizante (notas, ej.~2): traslación libre $\Rightarrow$ momento lineal conservado (Noether).
+\item No: $\omega_+/\omega_-=1+\sqrt2$ es irracional; el movimiento es cuasiperiódico y la trayectoria en $(\theta_1,\theta_2)$ llena densamente un paralelogramo.
+\item No cambian: $\Tm$ y $\Vm$ son ambas proporcionales a $m$, y $\Tm^{-1}\Vm$ no depende de $m$. Los modos tampoco cambian.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Profesor: quiz sin IA (10 min) --- clave}
+\scriptsize
+\campo{Enunciado.} Péndulo (masa $m$, longitud $\ell$) que cuelga de un soporte de masa $M$; el soporte desliza sin fricción sobre un riel horizontal y está unido a una pared por un resorte $k$. Coordenadas: $x$ (soporte, desde el equilibrio) y $\theta$.
+
+\campo{Solución.} $T=\tfrac12(M+m)\dot x^2+m\ell\dot x\dot\theta\cos\theta+\tfrac12m\ell^2\dot\theta^2$, \ $V=\tfrac12kx^2-mg\ell\cos\theta$.
+\[
+\Tm=\begin{pmatrix}M+m&m\ell\\ m\ell&m\ell^2\end{pmatrix},\qquad
+\Vm=\begin{pmatrix}k&0\\0&mg\ell\end{pmatrix},\qquad
+M\ell\,\omega^4-\big[k\ell+(M+m)g\big]\omega^2+kg=0 .
+\]
+\campo{Verificaciones esperadas.} $k\to0$: $\omega^2\in\{0,\ (1+m/M)\,g/\ell\}$ (notas, Ec.~4.108); $M\to\infty$: $\omega^2\to g/\ell$; $\prod\omega^2=kg/(M\ell)=\det\Vm/\det\Tm$ con $\det\Tm=Mm\ell^2$.
+
+\campo{Calificación (10 pts).} $\Tm$ con $\cos\theta\to1$ justificado: 4; $\Vm$: 2; ecuación característica: 2; al menos una verificación: 2.
+
+\campo{Errores frecuentes.} Conservar $\cos\theta$ en $T_{12}$; olvidar el término cruzado $m\ell\dot x\dot\theta$; escribir $T_{11}=M$.
+\end{frame}
+
+\begin{frame}{Profesor: P1 (pozo doble) --- nivel 1}
+\scriptsize
+\campo{Objetivo:} O1, O3, O4. \ \campo{Conceptos:} equilibrio, estabilidad, $\omega^2=V''/m$, criterio de validez. \ \campo{Estrategia:} derivadas sucesivas de $V$.
+
+\campo{Solución.} $V'=\dfrac{4V_0}{a^2}\,x\Big[\Big(\dfrac{x}{a}\Big)^2-1\Big]=0\Rightarrow x=0,\pm a$. \quad $V''=\dfrac{4V_0}{a^2}\Big[3\Big(\dfrac{x}{a}\Big)^2-1\Big]$.
+\begin{itemize}
+\item $x=0$: $V''=-4V_0/a^2$, máximo inestable, $\gamma=\sqrt{4V_0/(ma^2)}$.
+\item $x=\pm a$: $K=8V_0/a^2$, mínimos, $\omega=\sqrt{8V_0/(ma^2)}=\sqrt2\,\gamma$; $[V_0/(ma^2)]=\mathrm{s}^{-2}$ \checkmark
+\item $V'''(\pm a)=\pm24V_0/a^3\Rightarrow|\eta|\ll3K/|V'''|=a$.
+\end{itemize}
+\campo{Errores frecuentes:} clasificar $x=0$ como mínimo; omitir el factor $1/m$; usar $\eta/x_0\ll1$ (indefinido en $x=0$); ignorar la asimetría del pozo.
+
+\campo{Pistas:} grafique $V/V_0$ frente a $x/a$; ¿cuál es la única escala de longitud del problema?
+
+\campo{Extensión:} con el término cúbico, el centro de oscilación se corre: promediando $c_0\ddot\eta+K\eta+\tfrac12V'''\eta^2=0$ se obtiene $\langle\eta\rangle=-V'''A^2/(4K)=-3A^2/(4a)$, hacia la barrera, donde el pozo es más blando.
+\end{frame}
+
+\begin{frame}{Profesor: P2 (péndulos acoplados) --- nivel 2}
+\scriptsize
+\campo{Objetivo:} O1, O2. \ \campo{Conceptos:} orden de la elongación, simetría de intercambio, batidos. \ \campo{Estrategia:} la simetría $\theta_1\leftrightarrow\theta_2$ da los modos $(1,\pm1)$ sin calcular determinantes.
+
+\campo{Solución.} Longitud del resorte: $L-D=d(\operatorname{sen}\theta_2-\operatorname{sen}\theta_1)+\mathcal{O}(\theta^4/D)=d(\theta_2-\theta_1)+\mathcal{O}(\theta^3)$; los desplazamientos verticales sólo entran a cuarto orden.
+\[
+\Tm=m\ell^2\,\Id,\qquad
+\Vm=\begin{pmatrix}mg\ell+kd^2&-kd^2\\-kd^2&mg\ell+kd^2\end{pmatrix};
+\]
+\[
+\omega_1^2=\frac{g}{\ell},\ \ \ba_1\propto(1,1);\qquad \omega_2^2=\frac{g}{\ell}+\frac{2kd^2}{m\ell^2},\ \ \ba_2\propto(1,-1).
+\]
+Con $\theta_1(0)=\theta_0$, $\theta_2(0)=0$, reposo: $\theta_1=\theta_0\cos\tfrac{\Delta\omega\,t}{2}\cos\bar\omega t$, \ $\theta_2=\theta_0\operatorname{sen}\tfrac{\Delta\omega\,t}{2}\operatorname{sen}\bar\omega t$, con $\Delta\omega=\omega_2-\omega_1$, $\bar\omega=\tfrac12(\omega_1+\omega_2)$. Transferencia completa en $t_T=\pi/\Delta\omega$; si $kd^2\ll mg\ell$, $\Delta\omega\simeq\omega_1kd^2/(mg\ell)$ y $t_T\simeq\pi mg\ell/(\omega_1kd^2)$.
+
+\campo{Errores frecuentes:} incluir la componente vertical a primer orden; suponer $d=\ell$ sin decirlo; perder el factor 2 en $\omega_2^2$; confundir el período de la envolvente ($2\pi/\Delta\omega$) con el tiempo de transferencia ($\pi/\Delta\omega$).
+
+\campo{Pistas:} ¿qué movimiento deja el resorte sin deformar?
+
+\campo{Extensión:} resorte pretensado (longitud natural $\neq D$): aparece un término lineal en $V$ y el equilibrio se desplaza; masas distintas: la transferencia es incompleta.
+\end{frame}
+
+\begin{frame}{Profesor: P3 (cuenta en un aro giratorio) --- nivel 2}
+\scriptsize
+\campo{Objetivo:} O1, O3; conecta con la clase de estabilidad. \ \campo{Conceptos:} potencial efectivo, bifurcación, caso $K=0$, integral de Jacobi.
+
+\campo{Solución.} $\mathcal{L}=\tfrac12mR^2\big(\dot\theta^2+\Omega^2\operatorname{sen}^2\theta\big)+mgR\cos\theta$, \ $c=mR^2$, \ $\Vef=-mgR\cos\theta-\tfrac12mR^2\Omega^2\operatorname{sen}^2\theta$.
+$\Vef'=mR\operatorname{sen}\theta\,(g-R\Omega^2\cos\theta)$; con $\Omega_c^2\equiv g/R$:
+\begin{itemize}
+\item $\theta=0$: $\omega^2=\Omega_c^2-\Omega^2$, estable sólo si $\Omega<\Omega_c$.
+\item $\theta=\pi$: $\Vef''=-mR^2(\Omega_c^2+\Omega^2)<0$, siempre inestable.
+\item $\cos\theta_*=\Omega_c^2/\Omega^2$ (existe si $\Omega>\Omega_c$): $\omega^2=\Omega^2\operatorname{sen}^2\theta_*=\Omega^2-\Omega_c^4/\Omega^2$, estable.
+\item $\Omega=\Omega_c$: $K=0$ y $\Vef\simeq\text{cte}+\tfrac18mgR\,\theta^4$: estable pero anarmónico (bifurcación en horquilla).
+\end{itemize}
+$E=T+V$ \emph{no} se conserva (el agente que mantiene $\Omega$ realiza trabajo); como $\partial\mathcal{L}/\partial t=0$, se conserva $h=\tfrac12mR^2\dot\theta^2+\Vef$.
+
+\campo{Errores frecuentes:} signo del término centrífugo en $\Vef$; usar $V$ en lugar de $\Vef$; afirmar que $E$ se conserva; olvidar que $\theta_*$ sólo existe para $\Omega>\Omega_c$.
+
+\campo{Pistas:} factorice $\Vef'$. \quad \campo{Extensión:} diagrama de bifurcación $\theta_*(\Omega)$ y frecuencia $\to0$ en $\Omega\to\Omega_c$; formulación hamiltoniana.
+\end{frame}
+
+\begin{frame}{Profesor: P4 (péndulo triple) --- nivel 3}
+\scriptsize
+\campo{Objetivo:} O2, O5. \ \campo{Conceptos:} generalización de $T_{ij}$ y $V_{ij}$; condición sobre una raíz. \ \campo{Estrategia:} sustituir $\omega^2=2g/\ell$ directamente.
+
+\campo{Solución.} Con $x_n\simeq\ell\sum_{i\le n}\theta_i$ y masas $\mu_n m$, $\mu=(\lambda,1,1)$: $T_{ij}=m\ell^2\sum_{n\ge\max(i,j)}\mu_n$, \ $V_{ij}=mg\ell\,\delta_{ij}\sum_{n\ge i}\mu_n$:
+\[
+\Tm=m\ell^2\begin{pmatrix}\lambda+2&2&1\\2&2&1\\1&1&1\end{pmatrix},\qquad \Vm=mg\ell\,\mathrm{diag}(\lambda+2,2,1).
+\]
+$\det\big(\Vm-\tfrac{2g}{\ell}\Tm\big)=(mg\ell)^3\det\begin{pmatrix}-(\lambda+2)&-4&-2\\-4&-2&-2\\-2&-2&-1\end{pmatrix}=2(mg\ell)^3(\lambda-2)=0\Rightarrow\boxed{\lambda=2}$.
+
+Modo: $\ba\propto(1,0,-2)$: la varilla central permanece vertical; desplazamientos horizontales de las masas $\propto(1,1,-1)$. Las otras frecuencias son $\omega^2=\tfrac12(5\pm\sqrt{17})\,g/\ell\approx0.438,\ 4.562\ g/\ell$.
+
+\campo{Verificaciones:} $\operatorname{tr}(\Tm^{-1}\Vm)=7$; $\det\Vm/\det\Tm=2(\lambda+2)/\lambda=4$; Rayleigh $(1,1,1)$: $(\lambda+5)/(\lambda+13)=7/15\ge0.438$; si $\lambda\to\infty$: $\omega^2\to g/\ell$ y $(2\pm\sqrt2)g/\ell$ (comprobado numéricamente).
+
+\campo{Errores frecuentes:} invertir el orden de las masas; usar $\min(i,j)$ en lugar de $\max(i,j)$; desarrollar la cúbica completa y equivocarse.
+
+\campo{Extensión y nota:} el enunciado original era ambiguo. Si $\lambda m$ está en medio, $\lambda=(3+\sqrt{33})/6\approx1.457$; si está abajo, $\lambda=(1+\sqrt{41})/10\approx0.740$. Curiosidad útil para la Actividad IA 1: $\tfrac12(5\pm\sqrt{17})$ coincide con el valor erróneo de E6; reconocer un número ``familiar'' no valida un resultado.
+\end{frame}
+
+\begin{frame}{Profesor: P5 (dos iones en una trampa) --- nivel 3}
+\scriptsize
+\campo{Objetivo:} O2, O3 (transferencia). \ \campo{Conceptos:} equilibrio desplazado, hessiano de Coulomb, fuerzas internas, Noether. \ \campo{Estrategia:} coordenadas de centro de masa y relativa.
+
+\campo{Solución.} Con $\kappa\equiv q^2/(4\pi\varepsilon_0)$: $m\omega_z^2\,x_2=\kappa/(x_2-x_1)^2$ y simetría $x_{2,1}=\pm d/2$ $\Rightarrow d^3=2\kappa/(m\omega_z^2)$. Como $\partial^2(\kappa/r)/\partial r^2=2\kappa/r^3=m\omega_z^2$ en $r=d$:
+\[
+\Vm=m\omega_z^2\begin{pmatrix}2&-1\\-1&2\end{pmatrix},\quad \Tm=m\,\Id,\quad
+\omega_{\mathrm{CM}}=\omega_z\ (1,1),\qquad \omega_{\mathrm{r}}=\sqrt3\,\omega_z\ (1,-1).
+\]
+La fuerza de Coulomb depende sólo de $x_2-x_1$: $X=\tfrac12(x_1+x_2)$ cumple $\ddot X=-\omega_z^2X$ \emph{exactamente}, aun sin linealizar. Si $\omega_z\to0$: simetría de traslación, modo cero y momento total conservado (Noether). Estimación: $\kappa=2.31\times10^{-28}$ J\,m, $m=6.64\times10^{-26}$ kg $\Rightarrow d\approx5.6\ \mu$m.
+
+\campo{Errores frecuentes:} desarrollar alrededor de $x=0$ (allí $V'\neq0$ y Coulomb es singular); signo del hessiano de Coulomb; perder el factor 2 en $d^3$; mezclar unidades gaussianas y SI.
+
+\campo{Pistas:} ¿qué fuerzas actúan sobre el centro de masa?
+
+\campo{Extensión:} tres iones: $\omega/\omega_z=1,\ \sqrt3,\ \sqrt{29/5}\approx2.408$ (comprobado numéricamente).
+\end{frame}
+
+\begin{frame}{Profesor: P6 (investigación computacional) --- nivel 4}
+\scriptsize
+\campo{Objetivo:} O4, O5, O6. \ \campo{Conceptos:} ecuaciones no lineales, validación numérica, corrimiento anarmónico, simetría.
+
+\campo{Ecuaciones} ($\Delta\equiv\theta_1-\theta_2$):
+\[
+2\ddot\theta_1+\cos\Delta\,\ddot\theta_2=-\dot\theta_2^2\operatorname{sen}\Delta-2\tfrac{g}{\ell}\operatorname{sen}\theta_1,\qquad
+\cos\Delta\,\ddot\theta_1+\ddot\theta_2=\dot\theta_1^2\operatorname{sen}\Delta-\tfrac{g}{\ell}\operatorname{sen}\theta_2 ;
+\]
+su linealización reproduce $\Tm\ddot{\bfeta}+\Vm\bfeta=0$.
+
+\campo{Resultados de referencia} (cálculo propio con \texttt{DOP853}, \texttt{rtol}$=10^{-11}$, \texttt{atol}$=10^{-12}$, $g=\ell=1$): deriva de energía $\lesssim10^{-12}$; para el modo lento, $\omega(A)/\omega_--1\approx-0.084\,A^2$ ($A\le0.2$ rad; $-0.75\%$ en $A=0.3$). Así $\alpha=2$: $T$ y $V$ son pares bajo $\bfeta\to-\bfeta$, no hay términos cúbicos y la primera corrección proviene de los cuárticos, de orden $A^2$ (compárese con $-1/16\approx-0.063$ del péndulo simple). A energías mayores aparecen órbitas irregulares (notas, Cap.~2).
+
+\campo{Errores frecuentes:} integrar por error las ecuaciones linealizadas; RK4 de paso fijo grande cuya deriva de energía se confunde con física; resolución espectral $2\pi/t_{\max}$ comparable al efecto medido; condiciones iniciales fuera del modo, que producen batidos.
+
+\campo{Pistas:} mida el período por cruces por cero con interpolación; verifique primero el límite $A\to0$.
+
+\campo{Extensión:} coeficiente analítico por Lindstedt--Poincaré; mapa de Poincaré en función de la energía.
+\end{frame}
+
+\begin{frame}{Profesor: clave de la Actividad IA 1 (1/2)}
+\scriptsize
+\begin{tabular}{@{}L{0.05\textwidth}L{0.54\textwidth}L{0.33\textwidth}@{}}
+\toprule
+& \textbf{Diagnóstico y corrección} & \textbf{Prueba que lo detecta}\\
+\midrule
+E1 & Concepto: $q_{0i}$ puede ser 0. Criterio: términos cúbicos $\ll$ cuadráticos. & Péndulo: $q_0=0$. \\
+E2 & Concepto: $T_{ij}=T_{ij}(q)$; lo constante es $T_{ij}(q_0)$, por consistencia a segundo orden. & Péndulo doble: $\cos(\theta_1-\theta_2)$. \\
+E3 & Concepto: las ecuaciones están acopladas; sólo las coordenadas normales desacoplan. & Escribir la fila 1 del péndulo doble. \\
+E4 & Lógica: no trivial es $\ba\neq0$, no $a_j\neq0\ \forall j$ (contraejemplo: modo $(1,0,-2)$ de P4). $\omega^2$ siempre es real; $\omega^2<0$ es inestabilidad física. (La misma frase aparece en las notas, Ec.~4.66.) & Contraejemplo P4; cociente $\ba^\dagger\Vm\ba/\ba^\dagger\Tm\ba$. \\
+\bottomrule
+\end{tabular}
+\end{frame}
+
+\begin{frame}{Profesor: clave de la Actividad IA 1 (2/2)}
+\scriptsize
+\begin{tabular}{@{}L{0.05\textwidth}L{0.54\textwidth}L{0.33\textwidth}@{}}
+\toprule
+& \textbf{Diagnóstico y corrección} & \textbf{Prueba que lo detecta}\\
+\midrule
+E5 & Signo: con $y$ hacia arriba, $V=+mg(y_1+y_2)$. La expresión escrita da $+3mg\ell-mg\ell(\theta_1^2+\tfrac12\theta_2^2)$: ¡un máximo! El resultado final mostrado sólo es correcto con el signo $+$. & Signo de $V''$ en un equilibrio estable. \\
+E6 & Transcripción: $\Vm\propto\mathrm{diag}(2,1)$, no $\mathrm{diag}(1,2)$. Correcto: $\omega^2=(2\pm\sqrt2)g/\ell$. & Traza (5 frente a 4); $V_{11}$ debe cargar ambas masas; notas Ec.~(4.61). \textbf{No} lo detectan: determinante (2 en ambos casos), Rayleigh ($0.6$ acota ambos), $\Tm$-ortogonalidad (vale para cualquier $\Vm$ simétrica), dimensiones. \\
+E7 & Lógica: filas linealmente dependientes $\Rightarrow\ba$ fijado salvo un factor. Además $(1-2\lambda)/\lambda=(-3\mp\sqrt{17})/4$: la asignación de signos estaba invertida. Correcto: $a_2/a_1=\mp\sqrt2$, el modo rápido es el de contrafase. & Sustituir el vector en la segunda fila. \\
+\bottomrule
+\end{tabular}
+
+\medskip
+\textbf{Para la discusión en clase:} la meta-pregunta sobre E6 es el núcleo de la actividad. Dos de las pruebas más usadas (producto de frecuencias y cota de Rayleigh) son ``ciegas'' a este error; sólo la traza, el sentido físico de $V_{11}$ y la comparación con una fuente independiente lo detectan.
+\end{frame}
+
+\begin{frame}{Profesor: rúbrica de la Actividad IA 1 (20 pts)}
+\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}L{0.15\textwidth}L{0.30\textwidth}L{0.24\textwidth}L{0.21\textwidth}@{}}
+\toprule
+\textbf{Criterio} & \textbf{Pleno} & \textbf{Parcial} & \textbf{Insuficiente}\\
+\midrule
+Detección (6) & Identifica y localiza al menos 6 de E1--E7 con su tipo de error (6) & Identifica 4--5 con ubicación (3--4) & $\le3$, o señala ``errores'' inexistentes sin justificar (0--2) \\
+Corrección (6) & Obtiene $\omega_\pm^2=(2\pm\sqrt2)g/\ell$ y $a_2/a_1=\mp\sqrt2$ con todos los pasos y asigna bien fase/contrafase (6) & Resultado correcto con un paso sin justificar o con los modos mal asignados (3--4) & Resultado incorrecto o tomado de la IA sin derivación (0--2) \\
+Verificación (4) & Al menos 3 pruebas independientes y explica por qué determinante y Rayleigh no detectan E6 (4) & 2 pruebas, sin la meta-pregunta (2) & 1 prueba o ``la IA lo confirmó'' (0) \\
+Bitácora 4D (2) & Los seis elementos y la declaración de uso de IA (2) & Faltan 1--2 elementos (1) & Ausente (0) \\
+Defensa oral (2) & Explica sin notas, en 3 min, por qué $T_{ij}(q)\to T_{ij}(q_0)$ y por qué $\omega^2<0$ es físico (2) & Explica uno de los dos (1) & No lo explica (0) \\
+\bottomrule
+\end{tabular}
+\end{frame}
+
+\begin{frame}{Profesor: rúbrica de P6 (20 pts)}
+\scriptsize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}L{0.19\textwidth}L{0.31\textwidth}L{0.22\textwidth}L{0.2\textwidth}@{}}
+\toprule
+\textbf{Criterio} & \textbf{Pleno} & \textbf{Parcial} & \textbf{Insuficiente}\\
+\midrule
+Formulación (4) & Ecuaciones no lineales derivadas a mano; muestra que su linealización da $\Tm\ddot{\bfeta}+\Vm\bfeta=0$ (4) & Correctas, sin comprobar la linealización (2) & Copiadas o incorrectas (0) \\
+Implemen\-tación (4) & Declara método, tolerancias y condiciones iniciales; código ejecutable desde cero, con control de versiones (4) & Funciona, sin documentar parámetros (2) & No reproducible (0) \\
+Verificación (5) & Deriva de energía frente a tolerancia, convergencia y límite $A\to0$ que recupera $\omega_-$ con error $<0.1\%$ (5) & Dos de las tres pruebas (3) & Ninguna o una (0--1) \\
+Interpretación (5) & $\alpha=2$ por ajuste, explicado por la paridad de $T$ y $V$; separa artefactos numéricos de efectos físicos (5) & $\alpha$ sin explicación, o explicación sin ajuste (3) & Sin exponente, o un artefacto tomado por física (0--1) \\
+Defensa oral (2) & Predice y comprueba en vivo un cambio de parámetros propuesto por el profesor (2) & Lo ejecuta sin predecirlo (1) & No modifica su código (0) \\
+\bottomrule
+\end{tabular}
+\end{frame}
+\fi
+
+\end{document}

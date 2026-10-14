@@ -504,7 +504,7 @@ En esta semana cubrimos
 
 #### Materiales
 ##### Presentaciones
-+ [Pequeñas oscilaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T1Oscilaciones.pdf)
++ [Pequeñas oscilaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T1Oscilaciones_rev.pdf)
 + [Modos normales de oscilación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T2ModosNormales.pdf)
 
 ##### Videos
