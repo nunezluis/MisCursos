@@ -511,6 +511,7 @@ En esta semana cubrimos
 + [Modos normales de oscilación y neutrinos](https://www.youtube.com/watch?v=YqVF3NSc5xg)
 + [Oscilación de la molécula CO2](https://www.youtube.com/watch?v=K6dSM_nDee8)
 + [Osciladores acoplados](https://www.youtube.com/watch?v=V4fUA713_2Y)
++ [Video de la clase, para sistemas de un grado de libertad](https://youtu.be/Bb_JVxAlF5s)
 
 ##### Simuladores de péndulos
 + [Pendulum Lab](https://phet.colorado.edu/en/simulations/pendulum-lab/activities)
