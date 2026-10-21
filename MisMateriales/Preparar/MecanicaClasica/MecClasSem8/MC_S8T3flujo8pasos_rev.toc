@@ -1,0 +1,6 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Objetivos y motivación}{3}{0}{1}
+\beamer@sectionintoc {2}{El flujo de trabajo en un vistazo}{5}{0}{2}
+\beamer@sectionintoc {3}{Los ocho pasos}{8}{0}{3}
+\beamer@sectionintoc {4}{El flujo de trabajo en acción}{17}{0}{4}
+\beamer@sectionintoc {5}{Perspectivas y resumen}{23}{0}{5}
