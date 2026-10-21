@@ -1,0 +1,18 @@
+\frametitle{Extensión computacional: autovalores generalizados en Python}
+\begin{lstlisting}
+import numpy as np
+from scipy.linalg import eigh
+m, M, k = 16.0, 12.0, 1.0                 # unidades arbitrarias (u, k=1)
+T = np.diag([m, M, m])
+V = k*np.array([[1,-1,0],[-1,2,-1],[0,-1,1]])
+w2, A = eigh(V, T)                        # resuelve V a = w^2 T a, con A^T T A = 1
+print(w2)                                 # comparar con 0, k/m, (k/m)(1+2m/M)
+print(np.allclose(A.T @ T @ A, np.eye(3)), np.allclose(A.T @ V @ A, np.diag(w2)))
+\end{lstlisting}
+\small
+\begin{enumerate}
+  \item Compare con los valores analíticos. ¿Por qué aparece $\omega_1^2\approx-10^{-17}$? Distinga artefacto numérico de física.
+  \item Calcule $\ev(t)$ por superposición modal y por integración directa de $\Tm\ddot\ev=-\Vm\ev$ (\texttt{solve\_ivp}, tolerancias declaradas). Verifique $E$ y $P$.
+  \item Osciladores con resorte central $\kappa\ll k$: excite una masa y mida el tiempo de transferencia de energía; compare con $\pi/(\omega_2-\omega_1)$.
+  \item Problema 3 completo (no lineal): compare la frecuencia transversal con la lineal al crecer la amplitud.
+\end{enumerate}

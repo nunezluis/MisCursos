@@ -1,0 +1,818 @@
+% =====================================================================
+%  Mecánica Clásica — S8T2: Modos normales de oscilación
+%  Versión revisada (UTF-8). Compilar con pdflatex (dos pasadas).
+%
+%  VERSIÓN ESTUDIANTE / INSTRUCTOR
+%  ------------------------------
+%  \instructorfalse  -> versión para estudiantes (sin soluciones)
+%  \instructortrue   -> agrega el apéndice con notas, soluciones,
+%                       errores frecuentes y rúbricas
+% =====================================================================
+\documentclass[spanish,10pt]{beamer}
+\newif\ifinstructor
+\instructorfalse   % <-- cambie a \instructortrue para la versión del instructor
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish,es-noshorthands,es-nodecimaldot]{babel}
+\usepackage{amsmath,amssymb,amsfonts,mathtools}
+\usepackage{bm}
+\usepackage{multicol}
+\usepackage{cancel}
+\renewcommand{\CancelColor}{\color{red}}
+\usepackage{graphicx}
+\usepackage{booktabs,array,tabularx}
+\usepackage{listings}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing,patterns,arrows.meta,babel}
+\usepackage{textpos}
+
+\usetheme{Madrid}
+\usecolortheme{beaver}
+\setbeamertemplate{navigation symbols}{}
+
+% ---------------------------------------------------------------------
+%  Logo institucional (si el archivo no existe, se omite sin error)
+% ---------------------------------------------------------------------
+\newcommand{\logoUIS}{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}
+\newcommand{\insertarlogo}[1]{\IfFileExists{\logoUIS}{\includegraphics[height=#1,keepaspectratio=true]{\logoUIS}}{}}
+\addtobeamertemplate{frametitle}{}{%
+  \begin{textblock*}{100mm}(.85\textwidth,-1cm)
+    \insertarlogo{0.4in}
+  \end{textblock*}}
+
+% Figura externa si existe; si no, dibujo TikZ de respaldo
+\newcommand{\figuraOtikz}[3]{\IfFileExists{#1}{\includegraphics[width=#2]{#1}}{#3}}
+
+% ---------------------------------------------------------------------
+%  Notación unificada del curso
+% ---------------------------------------------------------------------
+\newcommand{\Tm}{\mathsf{T}}                 % matriz de energía cinética
+\newcommand{\Vm}{\mathsf{V}}                 % matriz de energía potencial
+\newcommand{\Am}{\mathsf{A}}                 % matriz modal
+\newcommand{\Om}{\Omega}                   % matriz diagonal de frecuencias
+\newcommand{\ev}{\bm{\eta}}                  % vector de desplazamientos
+\newcommand{\xiv}{\bm{\xi}}                  % vector de coordenadas normales
+\newcommand{\av}[1]{\mathbf{a}^{(#1)}}       % vector de amplitudes del modo #1
+\newcommand{\uv}{\mathbf{u}}                 % vector de traslación rígida
+\newcommand{\tr}{^{\top}}                    % transpuesta
+\IfFileExists{dsfont.sty}{\usepackage{dsfont}\newcommand{\Id}{\mathds{1}}}{\newcommand{\Id}{\mathbb{I}}} % identidad
+\newcommand{\dd}{\mathrm{d}}
+
+% Las cuatro D (colores como en MC_S01)
+\definecolor{cdele}{RGB}{31,94,166}
+\definecolor{cdesc}{RGB}{38,128,170}
+\definecolor{cdisc}{RGB}{214,120,30}
+\definecolor{cdili}{RGB}{120,50,150}
+\newcommand{\Dele}{\textcolor{cdele}{\textbf{Delegación}}}
+\newcommand{\Desc}{\textcolor{cdesc}{\textbf{Descripción}}}
+\newcommand{\Disc}{\textcolor{cdisc}{\textbf{Discernimiento}}}
+\newcommand{\Dili}{\textcolor{cdili}{\textbf{Diligencia}}}
+\newcommand{\ok}{\checkmark}
+
+% TikZ: resortes, paredes, masas
+\tikzset{
+  resorte/.style={decorate,decoration={coil,aspect=0.5,segment length=3.2pt,amplitude=3pt,pre length=2pt,post length=2pt}},
+  flecha/.style={-{Stealth[length=5pt]},very thick,cdisc}
+}
+\newcommand{\paredIzq}[1]{\fill[pattern=north east lines] (#1-0.18,-0.45) rectangle (#1,0.45); \draw[thick] (#1,-0.45)--(#1,0.45);}
+\newcommand{\paredDer}[1]{\fill[pattern=north east lines] (#1,-0.45) rectangle (#1+0.18,0.45); \draw[thick] (#1,-0.45)--(#1,0.45);}
+% Dos masas entre paredes; #1,#2: longitudes (con signo) de las flechas
+\newcommand{\dosmasas}[2]{%
+\begin{tikzpicture}[scale=0.62,baseline=(current bounding box.center)]
+  \paredIzq{0}\paredDer{6}
+  \draw[resorte] (0,0)--(1.75,0); \draw[resorte] (2.25,0)--(3.75,0); \draw[resorte] (4.25,0)--(6,0);
+  \draw[fill=cdele!25] (1.75,-0.25) rectangle (2.25,0.25);
+  \draw[fill=cdele!25] (3.75,-0.25) rectangle (4.25,0.25);
+  \ifdim #1pt=0pt\else\draw[flecha] (2,0.5)--++(#1,0);\fi
+  \ifdim #2pt=0pt\else\draw[flecha] (4,0.5)--++(#2,0);\fi
+\end{tikzpicture}}
+% Molécula lineal O–C–O; #1,#2,#3: flechas sobre O, C, O
+\newcommand{\cotres}[3]{%
+\begin{tikzpicture}[scale=0.62,baseline=(current bounding box.center)]
+  \draw[resorte] (0.3,0)--(1.75,0); \draw[resorte] (2.25,0)--(3.7,0);
+  \shade[ball color=red!65] (0,0) circle (0.30);
+  \shade[ball color=gray!60] (2,0) circle (0.25);
+  \shade[ball color=red!65] (4,0) circle (0.30);
+  \node[font=\tiny] at (0,-0.6) {O}; \node[font=\tiny] at (2,-0.6) {C}; \node[font=\tiny] at (4,-0.6) {O};
+  \ifdim #1pt=0pt\else\draw[flecha] (0,0.55)--++(#1,0);\fi
+  \ifdim #2pt=0pt\else\draw[flecha] (2,0.55)--++(#2,0);\fi
+  \ifdim #3pt=0pt\else\draw[flecha] (4,0.55)--++(#3,0);\fi
+\end{tikzpicture}}
+
+\lstset{language=Python,basicstyle=\ttfamily\scriptsize,keywordstyle=\color{cdele}\bfseries,
+  commentstyle=\color{gray}\itshape,columns=fullflexible,frame=single,framerule=0.3pt,
+  showstringspaces=false,upquote=true}
+
+% =====================================================================
+\title[Modos normales]{\textbf{Modos normales de oscilación}}
+\subtitle{Del problema de autovalores a las coordenadas normales}
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias,} \\
+\textit{Universidad Industrial de Santander, Santander, Colombia} \\
+\insertarlogo{0.4in}}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{frame}{Agenda}
+  \begin{multicols}{2}\small
+  \tableofcontents[hideallsubsections]
+  \end{multicols}
+\end{frame}
+
+% =====================================================================
+\section{Objetivos, prerrequisitos y notación}
+% =====================================================================
+\begin{frame}{Objetivos de aprendizaje y prerrequisitos}
+\textbf{Al final de esta sesión usted podrá:}
+\begin{enumerate}
+  \item<1-> \textbf{Formular} las pequeñas oscilaciones como el problema de autovalores generalizado $\Vm\mathbf a=\omega^2\Tm\mathbf a$.
+  \item<2-> \textbf{Demostrar} que $\omega_n^2$ es real y no negativa en un equilibrio estable y que los modos son ortogonales respecto de $\Tm$.
+  \item<3-> \textbf{Construir} las coordenadas normales y \textbf{expresar} la solución general a partir de las condiciones iniciales.
+  \item<4-> \textbf{Usar} simetrías (traslación, paridad) para \textbf{predecir} modos antes de calcularlos.
+  \item<5-> \textbf{Calcular e interpretar} los modos de dos osciladores acoplados y de la molécula lineal CO$_2$.
+  \item<6-> \textbf{Evaluar} críticamente un resultado generado por IA mediante dimensiones, sustitución, límites y leyes de conservación.
+\end{enumerate}
+\vspace{0.5ex}
+\textbf{Prerrequisitos:} lagrangiano cerca del equilibrio y matrices $T_{ij}$, $V_{ij}$ (S8T1);
+estabilidad de un equilibrio; teorema de Noether (traslaciones $\Rightarrow$ momento lineal);
+álgebra lineal: matrices simétricas, formas cuadráticas, autovalores, diagonalización.
+\end{frame}
+
+\begin{frame}{Notación unificada}
+\small
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\toprule
+$s$ & número de grados de libertad; $i,j=1,\dots,s$ indexan coordenadas \\
+$n=1,\dots,s$ & índice de \textbf{modos} (no usamos $k$: es la constante elástica) \\
+$q_{0i}$,\; $\eta_i=q_i-q_{0i}$ & equilibrio y pequeños desplazamientos; $\ev=(\eta_1,\dots,\eta_s)\tr$ \\
+$T_{ij}$, $V_{ij}$ & coeficientes de las formas cuadráticas; matrices $\Tm$, $\Vm$ (reales, simétricas, constantes) \\
+$\omega_n$ & frecuencias normales, ordenadas $0\le\omega_1\le\omega_2\le\cdots\le\omega_s$ \\
+$\av{n}$ & vector de amplitudes del modo $n$; componentes $a_j^{(n)}\equiv a_j(\omega_n)$ (notación de las notas) \\
+$\Am=[\av1\cdots\av s]$ & matriz modal;\quad $\Om^2=\mathrm{diag}(\omega_1^2,\dots,\omega_s^2)$ \\
+$\xi_n$,\; $\xiv$ & coordenadas normales \\
+$^{\top}$ & transpuesta (no confundir con la matriz $\Tm$) \\
+$\uv=(1,\dots,1)\tr$ & desplazamiento rígido (traslación) de todas las partículas \\
+\bottomrule
+\end{tabularx}
+\end{frame}
+
+% =====================================================================
+\section{Motivación: ¿cómo vibra una molécula?}
+% =====================================================================
+\begin{frame}{Motivación: el CO$_2$ y la radiación infrarroja}
+\begin{itemize}[<+->]
+  \item El CO$_2$ atmosférico absorbe fuertemente cerca de $\lambda\approx 4.3\,\mu$m y $\lambda\approx 15\,\mu$m, pero su vibración de estiramiento \emph{simétrico} ($\tilde\nu\approx 1.3\times10^{3}\,\mathrm{cm}^{-1}$) no absorbe en el infrarrojo: sólo se observa en espectroscopía Raman.
+  \item ¿Por qué una molécula de tres átomos vibra sólo con \emph{ciertas} frecuencias? ¿Por qué un patrón de movimiento puede ``verse'' en el IR y otro no?
+  \item Idea central de hoy: cerca de un equilibrio estable, cualquier movimiento pequeño es una \textbf{superposición de $s$ movimientos colectivos independientes} —los modos normales— cada uno con una sola frecuencia.
+  \item Encontrarlos equivale a \textbf{diagonalizar simultáneamente} las formas cuadráticas de las energías cinética y potencial; las simetrías del sistema permiten anticipar su forma.
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section{Del lagrangiano cuadrático al problema de autovalores}
+% =====================================================================
+\begin{frame}{Repaso (S8T1): el lagrangiano cerca del equilibrio}
+\textbf{Supuestos:} ligaduras holónomas y esclerónomas, fuerzas conservativas, equilibrio estable $q_0$ ($\partial V/\partial q_i|_{q_0}=0$), amplitudes pequeñas.
+\begin{itemize}[<+->]
+  \item Con $T=\tfrac12\sum_{ij}m_{ij}(q)\,\dot q_i\dot q_j$, al desarrollar hasta \emph{segundo orden} en $(\eta,\dot\eta)$:
+  \[
+  \mathcal{L}_2 = \tfrac12\,\dot{\ev}\tr\Tm\,\dot{\ev}-\tfrac12\,\ev\tr\Vm\,\ev,
+  \qquad T_{ij}=m_{ij}(q_0),\qquad V_{ij}=\left.\frac{\partial^2V}{\partial q_i\partial q_j}\right|_{q_0}.
+  \]
+  \item Basta evaluar $m_{ij}$ en $q_0$: la corrección $\propto \eta\,\dot\eta\,\dot\eta$ es de tercer orden.
+  \item $\Tm$ es \textbf{definida positiva} (la energía cinética es positiva para toda $\dot\ev\neq0$); $\Vm$ es \textbf{semidefinida positiva} si $q_0$ es un mínimo de $V$.
+  \item Ecuaciones de Euler–Lagrange:
+  \[
+  \sum_j\left(T_{ij}\ddot\eta_j+V_{ij}\eta_j\right)=0
+  \quad\Longleftrightarrow\quad
+  \Tm\,\ddot{\ev}+\Vm\,\ev=0 .
+  \]
+  Un sistema lineal \emph{acoplado}: $\Tm$ y $\Vm$ no son, en general, diagonales.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{El problema de autovalores generalizado}
+\begin{itemize}[<+->]
+  \item Buscamos movimientos en que \emph{todas} las coordenadas oscilan con la misma frecuencia: $\ev(t)=\mathbf a\,e^{i\omega t}$ (se toma la parte real). Sustituyendo:
+  \[
+  \sum_j\left(V_{ij}-\omega^2T_{ij}\right)a_j=0
+  \quad\Longleftrightarrow\quad
+  \boxed{\;\Vm\,\mathbf a=\omega^2\,\Tm\,\mathbf a\;}
+  \]
+  \item Soluciones no triviales $\mathbf a\neq0$ exigen
+  \[
+  \det\!\left(\Vm-\omega^2\Tm\right)=0 ,
+  \]
+  un polinomio de grado $s$ en $\omega^2$: su $s$ raíces son las $\omega_n^2$.
+  \item Nota de notación: $\det(\cdot)$ y $|\cdot|$ significan lo mismo; no se escriben juntos.
+  \item Si $\Tm=m\,\Id$ es un problema de autovalores ordinario. En general \emph{no} lo es: los modos no son ortogonales en el sentido euclidiano sino respecto de $\Tm$ (próxima lámina).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{¿Por qué $\omega_n^2$ es real y no negativa?}
+\begin{itemize}[<+->]
+  \item Multiplicando $\Vm\mathbf a=\omega^2\Tm\mathbf a$ por $\mathbf a^\dagger$ (conjugado transpuesto):
+  \[
+  \omega^2=\frac{\mathbf a^\dagger\Vm\,\mathbf a}{\mathbf a^\dagger\Tm\,\mathbf a}\qquad\text{(cociente de Rayleigh).}
+  \]
+  \item Para una matriz real y simétrica $\mathsf S$, $\left(\mathbf a^\dagger\mathsf S\mathbf a\right)^*=\mathbf a^\dagger\mathsf S\tr\mathbf a=\mathbf a^\dagger\mathsf S\mathbf a$: numerador y denominador son \textbf{reales}.
+  \item Denominador $>0$ ($\Tm$ definida positiva); numerador $\ge0$ (mínimo de $V$) $\Rightarrow$ $\omega^2\ge0$.
+  \item Como $\Vm-\omega^2\Tm$ es real, los $\av n$ pueden escogerse \textbf{reales}: en un modo todas las coordenadas oscilan en fase o en contrafase.
+  \item[] \centering
+  \begin{tabular}{lll}
+  \toprule
+  $\omega_n^2>0$ & oscilación & equilibrio estable en esa dirección\\
+  $\omega_n^2=0$ & $\xi_n=\alpha+\beta t$ & dirección neutra (típicamente, una simetría)\\
+  $\omega_n^2<0$ & $\xi_n\propto e^{\pm\gamma t}$ & inestable: la linealización deja de valer\\
+  \bottomrule
+  \end{tabular}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ortogonalidad respecto de $\Tm$ y normalización}
+\begin{itemize}[<+->]
+  \item Sean $\Vm\av n=\omega_n^2\Tm\av n$ y $\Vm\av m=\omega_m^2\Tm\av m$. Multiplicamos la primera por $\av m{}\tr$, la segunda por $\av n{}\tr$ y restamos (usando $\Vm\tr=\Vm$, $\Tm\tr=\Tm$):
+  \[
+  \left(\omega_n^2-\omega_m^2\right)\,\av m{}\tr\,\Tm\,\av n=0 .
+  \]
+  \item Si $\omega_n\neq\omega_m$: $\;\av m{}\tr\Tm\,\av n=0$. Si hay degeneración, se elige una base ortogonal (Gram–Schmidt con el producto escalar $\langle\mathbf x,\mathbf y\rangle_{\Tm}=\mathbf x\tr\Tm\mathbf y$).
+  \item Normalizando $\av n{}\tr\Tm\av n=1$, la matriz modal $\Am$ cumple
+  \[
+  \boxed{\;\Am\tr\Tm\Am=\Id,\qquad \Am\tr\Vm\Am=\Om^2\;}
+  \]
+  \textbf{diagonalización simultánea} de dos formas cuadráticas ($\Am$ no es ortogonal salvo si $\Tm\propto\Id$).
+  \item Dimensiones: si $[\eta]=$ L y $[T_{ij}]=$ M, entonces $[a_j^{(n)}]=$ M$^{-1/2}$ y $[\xi_n]=$ M$^{1/2}$L.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Coordenadas normales: $s$ osciladores independientes}
+\begin{itemize}[<+->]
+  \item Definimos $\xiv$ mediante
+  \[
+  \ev=\Am\,\xiv\quad\Longleftrightarrow\quad \xiv=\Am\tr\Tm\,\ev\qquad(\text{porque }\Am^{-1}=\Am\tr\Tm).
+  \]
+  \item Sustituyendo en el lagrangiano:
+  \[
+  L=\tfrac12\dot\xiv\tr\underbrace{\left(\Am\tr\Tm\Am\right)}_{\Id}\dot\xiv-\tfrac12\xiv\tr\underbrace{\left(\Am\tr\Vm\Am\right)}_{\Om^2}\xiv
+  =\sum_{n=1}^{s}\tfrac12\left(\dot\xi_n^2-\omega_n^2\xi_n^2\right).
+  \]
+  \item Euler–Lagrange: $\ddot\xi_n+\omega_n^2\xi_n=0$, \textbf{desacopladas}.
+  \item Cada $E_n=\tfrac12(\dot\xi_n^2+\omega_n^2\xi_n^2)$ se conserva por separado: $s$ integrales de movimiento independientes. El sistema linealizado es \textbf{integrable} (reaparecerá con las variables acción–ángulo, $I_n=E_n/\omega_n$).
+  \item En las notas, $\xi_n\equiv c_ne^{i\omega_nt}$ (parte real): es la misma coordenada, con $\av n$ sin normalizar.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Solución general y condiciones iniciales}
+\begin{itemize}[<+->]
+  \item Con $\ev(0)$ y $\dot\ev(0)$ dados, la proyección con $\Tm$ da
+  \[
+  \xi_n(0)=\av n{}\tr\Tm\,\ev(0),\qquad \dot\xi_n(0)=\av n{}\tr\Tm\,\dot\ev(0),
+  \]
+  \[
+  \xi_n(t)=\xi_n(0)\cos\omega_nt+\dot\xi_n(0)\,\frac{\sin\omega_nt}{\omega_n},
+  \qquad
+  \ev(t)=\sum_{n}\av n\,\xi_n(t).
+  \]
+  \item \textbf{Modo cero:} $\lim_{\omega\to0}\sin(\omega t)/\omega=t\;\Rightarrow\;\xi_n=\xi_n(0)+\dot\xi_n(0)\,t$, movimiento libre.
+  \item Forma compleja: $\xi_n=\mathrm{Re}\,(c_ne^{i\omega_nt})$ con $c_n=\xi_n(0)-i\dot\xi_n(0)/\omega_n$. El número complejo $c_n=|c_n|e^{i\varphi_n}$ es una \textbf{amplitud compleja} (módulo $=$ amplitud, argumento $=$ fase), no sólo una fase; y esta forma \emph{no} sirve si $\omega_n=0$.
+  \item La \textbf{configuración} del modo $n$ está dada por los cocientes $a_i^{(n)}/a_j^{(n)}$. Si las $\omega_n$ son inconmensurables, el movimiento general es cuasiperiódico.
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section{Ejemplo canónico 1: dos osciladores acoplados}
+% =====================================================================
+\begin{frame}{Dos masas y tres resortes: planteamiento}
+Dos partículas de masa $m$ sobre una recta, unidas entre sí y a dos paredes fijas por tres resortes de constante $k$ y longitud natural $l$; paredes separadas $3l$ (resortes relajados en el equilibrio).
+\begin{center}
+\figuraOtikz{Figuras/OsciladoresAcoplados.png}{1.6in}{%
+\begin{tikzpicture}[scale=0.7]
+  \paredIzq{0}\paredDer{6}
+  \draw[resorte] (0,0)--(1.75,0) node[midway,above=3pt]{\scriptsize $k$};
+  \draw[resorte] (2.25,0)--(3.75,0) node[midway,above=3pt]{\scriptsize $k$};
+  \draw[resorte] (4.25,0)--(6,0) node[midway,above=3pt]{\scriptsize $k$};
+  \draw[fill=cdele!25] (1.75,-0.25) rectangle node{\scriptsize $m$} (2.25,0.25);
+  \draw[fill=cdele!25] (3.75,-0.25) rectangle node{\scriptsize $m$} (4.25,0.25);
+  \draw[-Stealth] (2,-0.5)--(2.7,-0.5) node[right]{\scriptsize $\eta_1$};
+  \draw[-Stealth] (4,-0.5)--(4.7,-0.5) node[right]{\scriptsize $\eta_2$};
+\end{tikzpicture}}
+\end{center}
+\begin{itemize}[<+->]
+  \item $s=2$; coordenadas $x_i=x_{0i}+\eta_i$. Energía cinética: $T=\tfrac12m\dot\eta_1^2+\tfrac12m\dot\eta_2^2\;\Rightarrow\;\Tm=m\,\Id$.
+  \item Alargamiento del resorte central: $l'-l=(x_2-x_1)-(x_{02}-x_{01})=\eta_2-\eta_1$. Entonces
+  \[
+  V=\tfrac12k\left[\eta_1^2+(\eta_2-\eta_1)^2+\eta_2^2\right]=\tfrac12\left[2k\eta_1^2+2k\eta_2^2-2k\eta_1\eta_2\right],
+  \]
+  de modo que $V_{11}=V_{22}=2k$, $V_{12}=V_{21}=-k$ (el término cruzado es $\tfrac12(V_{12}+V_{21})\eta_1\eta_2$): \;$\Vm=k\begin{pmatrix}2&-1\\-1&2\end{pmatrix}$.
+  \item Un pretensado (paredes a distancia $\neq3l$) cambia $x_{0i}$ pero no $\Vm$ longitudinal; sí importa en el movimiento transversal (Problema 3).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Frecuencias normales}
+\begin{itemize}[<+->]
+  \item Condición de soluciones no triviales:
+  \[
+  \det\!\left(\Vm-\omega^2\Tm\right)=
+  \begin{vmatrix}2k-m\omega^2&-k\\-k&2k-m\omega^2\end{vmatrix}
+  =\left(2k-m\omega^2\right)^2-k^2=0 .
+  \]
+  \item Entonces $2k-m\omega^2=\pm k$, es decir
+  \[
+  \omega_1^2=\frac{k}{m}\quad(\text{signo }+),\qquad
+  \omega_2^2=\frac{3k}{m}\quad(\text{signo }-).
+  \]
+  \item \textbf{Control dimensional:} $[k/m]=\mathrm{s}^{-2}$, luego $k/m$ y $3k/m$ son valores de $\omega^2$, no de $\omega$:
+  $\omega_1=\sqrt{k/m}$, $\omega_2=\sqrt{3k/m}$.
+  \item Con $\lambda\equiv m\omega^2/k$ el problema es $\begin{pmatrix}2&-1\\-1&2\end{pmatrix}\mathbf a=\lambda\,\mathbf a$, con $\lambda_1=1$, $\lambda_2=3$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Configuración de los modos}
+\begin{itemize}[<+->]
+  \item Primera fila de $(\Vm-\omega_n^2\Tm)\av n=0$: $\;(2k-m\omega_n^2)\,a_1^{(n)}-k\,a_2^{(n)}=0\;\Rightarrow\; \dfrac{a_2^{(n)}}{a_1^{(n)}}=2-\lambda_n$.
+  \item[] \centering
+  \begin{tabular}{c c c l c}
+  \toprule
+  $n$ & $\omega_n^2$ & $a_2^{(n)}/a_1^{(n)}$ & configuración & \\
+  \midrule
+  1 & $k/m$  & $2-1=+1$ & en fase      & \dosmasas{0.7}{0.7}\\[1ex]
+  2 & $3k/m$ & $2-3=-1$ & en contrafase & \dosmasas{0.7}{-0.7}\\
+  \bottomrule
+  \end{tabular}
+  \item \textbf{Física:} en fase, el resorte central no se deforma y cada masa siente sólo $k$: $\omega_1^2=k/m$.
+  \item En contrafase, el punto medio del resorte central queda fijo; cada mitad tiene constante $2k$ y cada masa siente $k+2k$: $\omega_2^2=3k/m$.
+  \item La frecuencia mayor corresponde al modo con inversión de fase: más resortes deformados, mayor rigidez efectiva.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Coordenadas normales de los osciladores acoplados}
+\begin{itemize}[<+->]
+  \item Normalizados con $\Tm=m\Id$: \quad $\av1=\dfrac{1}{\sqrt{2m}}\begin{pmatrix}1\\1\end{pmatrix}$, \quad $\av2=\dfrac{1}{\sqrt{2m}}\begin{pmatrix}1\\-1\end{pmatrix}$.
+  \item $\xiv=\Am\tr\Tm\ev$:
+  \[
+  \xi_1=\sqrt{\tfrac m2}\,(\eta_1+\eta_2),\qquad \xi_2=\sqrt{\tfrac m2}\,(\eta_1-\eta_2).
+  \]
+  $\xi_1\propto$ desplazamiento del centro de masa; $\xi_2\propto$ coordenada relativa.
+  \item Sustituyendo $\eta_{1,2}=(\xi_1\pm\xi_2)/\sqrt{2m}$:
+  \[
+  L=\tfrac12\left(\dot\xi_1^2+\dot\xi_2^2\right)-\tfrac12\left(\frac km\,\xi_1^2+\frac{3k}m\,\xi_2^2\right).
+  \]
+  \item Dos osciladores independientes; $E_1$ y $E_2$ se conservan por separado.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Cuatro verificaciones independientes}
+Ningún resultado se acepta sin haber pasado al menos una verificación dimensional y un caso límite (MC\_S01).
+\begin{enumerate}[<+->]
+  \item \textbf{Sustitución:} $\Vm(1,1)\tr=k(1,1)\tr=\frac km\,\Tm(1,1)\tr$ \ok; \quad $\Vm(1,-1)\tr=3k(1,-1)\tr$ \ok.
+  \item \textbf{Dimensiones:} $[\omega^2]=[k/m]=\mathrm{s}^{-2}$ \ok.
+  \item \textbf{Límite de desacople:} con resorte central $\kappa$, $\omega_1^2=k/m$, $\omega_2^2=(k+2\kappa)/m$; si $\kappa\to0$ se obtienen dos osciladores idénticos e independientes (frecuencia degenerada) \ok.
+  \item \textbf{Ortogonalidad:} $\av1{}\tr\Tm\av2=\frac{m}{2m}(1-1)=0$ \ok.
+\end{enumerate}
+\uncover<+->{\alert{Atención:} la ortogonalidad (4) la satisfacen \emph{también} los modos con las frecuencias intercambiadas. Una sola verificación no basta: (1) y el argumento físico sí detectan el intercambio.}
+\end{frame}
+
+% =====================================================================
+\section{Ejemplo canónico 2: la molécula lineal CO$_2$}
+% =====================================================================
+\begin{frame}{Modelo de la molécula O--C--O}
+\begin{center}
+\figuraOtikz{Figuras/OscilaCO2.png}{1.8in}{\cotres{0}{0}{0}}
+\end{center}
+$M$: masa del C; $m$: masa de cada O; $k$: constante del enlace C--O (modelado como resorte); $l$: separación de equilibrio; $l_1,l_2$: longitudes de los enlaces fuera del equilibrio. Sólo movimiento a lo largo del eje molecular ($s=3$).
+\begin{itemize}[<+->]
+  \item $\eta_i=x_i-x_{0i}$, $i=1,2,3$; \;$l_1-l=\eta_2-\eta_1$, \;$l_2-l=\eta_3-\eta_2$.
+  \item $T=\tfrac12m\dot\eta_1^2+\tfrac12M\dot\eta_2^2+\tfrac12m\dot\eta_3^2$, \quad
+  $V=\tfrac12k(\eta_2-\eta_1)^2+\tfrac12k(\eta_3-\eta_2)^2$.
+  \item
+  \[
+  \Tm=\begin{pmatrix}m&0&0\\0&M&0\\0&0&m\end{pmatrix},\qquad
+  \Vm=k\begin{pmatrix}1&-1&0\\-1&2&-1\\0&-1&1\end{pmatrix}.
+  \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Antes de calcular: lo que predicen las simetrías}
+\begin{itemize}[<+->]
+  \item \textbf{Traslación.} $V(\ev+\epsilon\,\uv)=V(\ev)$ para todo $\epsilon$, con $\uv=(1,1,1)\tr$ $\Rightarrow$ $\Vm\uv=0$:
+  \[
+  \uv \text{ es un modo con } \omega_1=0 .
+  \]
+  Por Noether, la misma simetría conserva $P=\sum_i\partial L/\partial\dot\eta_i=\uv\tr\Tm\,\dot\ev$.
+  \item \textbf{Paridad} (reflexión respecto del C): $\Pi:(\eta_1,\eta_2,\eta_3)\mapsto(-\eta_3,-\eta_2,-\eta_1)$. Se verifica $[\Pi,\Tm]=[\Pi,\Vm]=0$.
+  \item Entonces los modos no degenerados son pares ($\Pi\mathbf a=\mathbf a$) o impares ($\Pi\mathbf a=-\mathbf a$):
+  \begin{itemize}
+    \item par: $a_3=-a_1$ y $a_2=-a_2\Rightarrow a_2=0$ (el C \textbf{no se mueve}, por simetría, no por ser pesado);
+    \item impar: $a_3=a_1$, $a_2$ libre (incluye la traslación).
+  \end{itemize}
+  \item \textbf{Predicción:} el polinomio cúbico se factoriza en (sector par, $1\times1$)$\times$(sector impar, $2\times2$), y uno de los factores impares es $\omega^2$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Las frecuencias normales}
+\begin{itemize}[<+->]
+  \item $\det(\Vm-\omega^2\Tm)=
+  \begin{vmatrix}k-m\omega^2&-k&0\\-k&2k-M\omega^2&-k\\0&-k&k-m\omega^2\end{vmatrix}=0$.
+  \item Desarrollando por la primera fila:
+  \[
+  \begin{aligned}
+  &(k-m\omega^2)\left[(2k-M\omega^2)(k-m\omega^2)-k^2\right]-k^2(k-m\omega^2)\\
+  &\qquad=(k-m\omega^2)\left[(2k-M\omega^2)(k-m\omega^2)-2k^2\right].
+  \end{aligned}
+  \]
+  \item El corchete es $\omega^2\left[mM\omega^2-k(M+2m)\right]$, de modo que
+  \[
+  \omega^2\left(k-m\omega^2\right)\left[k(M+2m)-mM\omega^2\right]=0 .
+  \]
+  \item
+  \[
+  \omega_1=0,\qquad \omega_2=\sqrt{\frac km},\qquad \omega_3=\sqrt{\frac km\left(1+\frac{2m}{M}\right)} .
+  \]
+  Como se anticipó: $\omega_1=0$ (traslación) y un factor lineal, $k-m\omega^2$ (sector par).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Configuración de los modos del CO$_2$}
+\small
+Para cada $\omega_n$: \quad
+$(k-m\omega_n^2)a_1-ka_2=0,\quad -ka_1+(2k-M\omega_n^2)a_2-ka_3=0,\quad -ka_2+(k-m\omega_n^2)a_3=0$.
+\begin{itemize}[<+->]
+  \item $\omega_1=0$: $a_1=a_2=a_3$. \textbf{Traslación rígida}; $\ddot\xi_1=0\Rightarrow\xi_1=\alpha+\beta t$.
+  \item $\omega_2=\sqrt{k/m}$: la fila 1 da $a_2=0$; la fila 2, $a_3=-a_1$. \textbf{Estiramiento simétrico}: O en contrafase entre sí, C en reposo.
+  \item $\omega_3$: $k-m\omega_3^2=-\frac{2mk}{M}\Rightarrow a_2=-\frac{2m}{M}a_1$, y la fila 3 da $a_3=a_1$. \textbf{Estiramiento antisimétrico}: O en fase entre sí, C en contrafase con ellos.
+  \item[] \centering
+  \begin{tabular}{c c c}
+  $\omega_1=0$ & $\omega_2=\sqrt{k/m}$ & $\omega_3=\sqrt{\frac km\left(1+\frac{2m}M\right)}$\\[0.5ex]
+  \cotres{0.55}{0.55}{0.55} & \cotres{-0.55}{0}{0.55} & \cotres{0.3}{-0.8}{0.3}\\
+  $(1,1,1)$ & $(1,0,-1)$ & $\left(1,-\frac{2m}{M},1\right)$
+  \end{tabular}\\[0.5ex]
+  {\scriptsize Flechas a escala para $m/M=16/12$ ($a_2/a_1=-8/3$ en el modo 3).}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ortogonalidad y conservación del momento lineal}
+\begin{itemize}[<+->]
+  \item Normalizados: $\av1=\frac{(1,1,1)\tr}{\sqrt{M+2m}}$,\;
+  $\av2=\frac{(1,0,-1)\tr}{\sqrt{2m}}$,\;
+  $\av3=\sqrt{\frac{M}{2m(M+2m)}}\left(1,-\frac{2m}{M},1\right)\tr$.
+  \item El momento total es $P=\uv\tr\Tm\,\dot\ev=\uv\tr\Tm\Am\,\dot\xiv$. Como $\av1=\uv/\sqrt{M+2m}$ y $\Am\tr\Tm\Am=\Id$:
+  \[
+  P=\sqrt{M+2m}\;\dot\xi_1=(M+2m)\,\dot X_{\mathrm{cm}} .
+  \]
+  \item La conservación de $P$ (Noether) es exactamente $\ddot\xi_1=0$, la ecuación del modo cero.
+  \item Para los modos oscilantes, la ortogonalidad con el modo cero \emph{es} la condición de momento nulo:
+  \[
+  \uv\tr\Tm\,\av n=m\,a_1^{(n)}+M\,a_2^{(n)}+m\,a_3^{(n)}=0,\qquad n=2,3 .
+  \]
+  Modo 2: $m-m=0$ \ok; \quad Modo 3: $m-2m+m=0$ \ok.
+  \item Los modos que vibran no desplazan el centro de masa: la fuerza externa total sobre la molécula es nula.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Comparación con el experimento y límites del modelo}
+\begin{itemize}[<+->]
+  \item Predicción \emph{libre de parámetros}: $\omega_3/\omega_2=\sqrt{1+2m/M}=\sqrt{1+32/12}\approx1.91$.
+  \item Valores observados (aproximados): estiramiento antisimétrico $\tilde\nu_3\approx2349\,\mathrm{cm}^{-1}$ ($\lambda\approx4.26\,\mu$m, activo en IR); estiramiento simétrico, un doblete Raman en $\approx1285$ y $1388\,\mathrm{cm}^{-1}$ (resonancia de Fermi), centro $\approx1340\,\mathrm{cm}^{-1}$. Cociente observado $\approx1.75$.
+  \item ¿Por qué el modo 2 no absorbe en el IR? Por paridad, conserva el centro de carga: el momento dipolar no cambia. El modo 3 sí lo hace oscilar.
+  \item Lo que el modelo omite: interacción O--O, anarmonicidad y la \textbf{flexión} (degenerada, $\tilde\nu_2\approx667\,\mathrm{cm}^{-1}$, $\lambda\approx15\,\mu$m), que requiere movimiento fuera del eje. En 3D: $3N=9$ grados de libertad $=3$ traslaciones $+\,2$ rotaciones $+\,4$ vibraciones.
+  \item \textbf{Límite} $M\to\infty$: $\omega_2=\omega_3=\sqrt{k/m}$, degeneradas: dos O independientes unidos a un C fijo.
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section{Verificaciones conceptuales}
+% =====================================================================
+\begin{frame}{Verificaciones conceptuales (sin IA, en clase)}
+\begin{enumerate}
+  \item Si se duplican todas las masas sin cambiar los resortes, ¿qué ocurre con las $\omega_n$? ¿Y con las configuraciones $a_i^{(n)}/a_j^{(n)}$?
+  \item ¿Puede una frecuencia normal ser imaginaria? ¿Qué propiedad de $\Vm$ lo indicaría y qué significa físicamente?
+  \item En el modo $\omega_2$ del CO$_2$ el carbono está en reposo. ¿Es porque $M$ es grande? Justifique con una simetría.
+  \item ¿Dependen las $\omega_n$ de la elección de coordenadas generalizadas? ¿Y los vectores $\av n$?
+  \item Verdadero o falso: “la frecuencia más alta corresponde siempre al modo con más inversiones de fase”. ¿Para qué clase de sistemas es cierto?
+  \item ¿Es periódico, en general, el movimiento del CO$_2$ si se excita un solo átomo de oxígeno? Explique en términos de $\omega_3/\omega_2$.
+\end{enumerate}
+\end{frame}
+
+% =====================================================================
+\section{Extensión computacional}
+% =====================================================================
+\begin{frame}[fragile]{Extensión computacional: autovalores generalizados en Python}
+\begin{lstlisting}
+import numpy as np
+from scipy.linalg import eigh
+m, M, k = 16.0, 12.0, 1.0                 # unidades arbitrarias (u, k=1)
+T = np.diag([m, M, m])
+V = k*np.array([[1,-1,0],[-1,2,-1],[0,-1,1]])
+w2, A = eigh(V, T)                        # resuelve V a = w^2 T a, con A^T T A = 1
+print(w2)                                 # comparar con 0, k/m, (k/m)(1+2m/M)
+print(np.allclose(A.T @ T @ A, np.eye(3)), np.allclose(A.T @ V @ A, np.diag(w2)))
+\end{lstlisting}
+\small
+\begin{enumerate}
+  \item Compare con los valores analíticos. ¿Por qué aparece $\omega_1^2\approx-10^{-17}$? Distinga artefacto numérico de física.
+  \item Calcule $\ev(t)$ por superposición modal y por integración directa de $\Tm\ddot\ev=-\Vm\ev$ (\texttt{solve\_ivp}, tolerancias declaradas). Verifique $E$ y $P$.
+  \item Osciladores con resorte central $\kappa\ll k$: excite una masa y mida el tiempo de transferencia de energía; compare con $\pi/(\omega_2-\omega_1)$.
+  \item Problema 3 completo (no lineal): compare la frecuencia transversal con la lineal al crecer la amplitud.
+\end{enumerate}
+\end{frame}
+
+% =====================================================================
+\section{Actividades con asistentes de IA (las 4D)}
+% =====================================================================
+\begin{frame}{Política de uso de IA en esta sesión}
+\small
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.42\textwidth} >{\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Tarea} & \textbf{Modalidad} \\
+\midrule
+Plantear $\Tm$ y $\Vm$; verificaciones conceptuales; Problemas 1 y 2 (planteamiento) & \textbf{IA prohibida}: es el objetivo de aprendizaje \\
+Actividad IA 1 (auditoría de una respuesta) & \textbf{IA requerida}: análisis crítico \\
+Actividad IA 2 (oscilaciones transversales, Problema 3) & \textbf{IA requerida}: Descripción y Discernimiento \\
+Actividad IA 3 y Problema 4 (cálculo simbólico/numérico) & \textbf{IA asistida}: código y álgebra, con verificación \\
+\bottomrule
+\end{tabularx}
+\vspace{1ex}
+\begin{itemize}
+  \item Toda entrega con IA incluye la \textbf{bitácora 4D} y la declaración de uso.
+  \item Verificación de autoría: explicación oral breve de un modo (sin notas) y recorrido del código con una variación de parámetros propuesta por el profesor.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Actividad IA 1 — \Disc: auditar una respuesta}
+\begin{block}{Respuesta (plausible) de un asistente IA, preparada para la actividad}
+\small
+“Para dos masas $m$ y tres resortes $k$: $\det(\Vm-\omega^2\Tm)=0\Rightarrow(2k-m\omega^2)^2=k^2$.
+Por lo tanto $\omega_\pm=\frac{2k\pm k}{m}$, es decir $\omega_+=\frac{3k}{m}$ y $\omega_-=\frac{k}{m}$.
+Como $a_2/a_1=2-\lambda$, el modo $+$ tiene $a_2/a_1=+1$ (en fase) y el modo $-$ tiene $a_2/a_1=-1$ (contrafase).
+Esto es razonable: en el modo en fase el resorte central se comprime y la frecuencia es mayor.”
+\end{block}
+\begin{itemize}
+  \item \Disc: aplique, \emph{por separado}, dimensiones, sustitución de $(1,\pm1)\tr$ en $\Vm\mathbf a=\omega^2\Tm\mathbf a$, el argumento físico del resorte central y la ortogonalidad. ¿Cuántos errores hay? ¿Qué verificación detecta cada uno y cuál no detecta ninguno?
+  \item \Dili: reescriba la respuesta corregida, rederivada a mano, y regístrela en la bitácora 4D.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Actividad IA 2 — \Desc: oscilaciones transversales}
+\begin{alertblock}{Prompt deficiente / vago}
+\small “Calcula las frecuencias de oscilación transversal de dos masas $m$ unidas entre sí y a dos paredes por tres resortes de constante $k$.”\\
+Deja sin especificar la tensión. El asistente suele completar el hueco con el caso longitudinal.
+\end{alertblock}
+\begin{exampleblock}{Prompt adecuado}
+\small “Dos masas $m$; paredes separadas $3a$; resortes de constante $k$ y longitud natural $l<a$ (tensión $\tau=k(a-l)$). Movimiento en un plano horizontal, sin gravedad. Desplazamientos transversales $y_1,y_2$ pequeños frente a $a$. Expande la longitud de cada resorte hasta segundo orden en los desplazamientos, escribe $V$ hasta orden cuadrático e indica todas las suposiciones.”
+\end{exampleblock}
+\begin{itemize}
+  \item \Dele: usted predice, \emph{antes} de consultar, qué debe ocurrir si $a\to l$.
+  \item \Disc: dimensiones de $\omega^2$; límite $a\to l$; límite $l\to0$; ¿se acoplan los movimientos longitudinal y transversal a segundo orden?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Actividad IA 3 — \Dele\ y \Dili: el CO$_2$ con computación}
+\begin{itemize}
+  \item \Dele: \emph{usted} escribe $\Tm$, $\Vm$ y predice con simetrías el modo cero y los sectores de paridad. Se delegan sólo la factorización simbólica (SymPy) y el código numérico (\texttt{eigh}).
+  \item \Desc: el prompt incluye las matrices, el problema generalizado $\Vm\mathbf a=\omega^2\Tm\mathbf a$, la normalización $\Am\tr\Tm\Am=\Id$ y las unidades.
+  \item \Disc:
+  \begin{itemize}
+    \item ¿aparece $\omega_1^2\approx0$? ¿con qué signo y por qué?
+    \item $P=0$ en los modos 2 y 3; $\Am\tr\Tm\Am=\Id$;
+    \item límite $M\to\infty$: degeneración $\omega_2=\omega_3$. ¿Es un error que \texttt{eigh} devuelva otra base del subespacio degenerado?
+  \end{itemize}
+  \item \Dili: código en un repositorio con versiones de bibliotecas, parámetros y tolerancias declarados; bitácora 4D; rederivación a mano de $\omega_3$ antes de usarla en el Problema 4.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{La bitácora 4D (para toda tarea con IA)}
+\small
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\toprule
+1. Prompt(s) & texto completo y en orden \\
+2. Respuesta relevante & fragmento usado (no la conversación entera) \\
+3. Aceptado / rechazado / corregido & qué parte y por qué \\
+4. Verificación & dimensiones, sustitución, límites, simetrías, conservación, comparación numérica \\
+5. Razonamiento final & su derivación, en sus palabras \\
+6. Errores detectados & signos, factores, supuestos ocultos, alucinaciones \\
+\bottomrule
+\end{tabularx}
+\vspace{1ex}
+
+Que una respuesta esté bien redactada no prueba que sea correcta: en la Actividad IA 1 la respuesta es fluida, segura y está equivocada.
+\end{frame}
+
+% =====================================================================
+\section{Recapitulando}
+% =====================================================================
+\begin{frame}{Recapitulando}
+\begin{itemize}
+  \item Cerca de un equilibrio estable: $\Tm\ddot\ev+\Vm\ev=0$, con $\Tm$ definida positiva y $\Vm$ semidefinida positiva.
+  \item Modos: $\Vm\av n=\omega_n^2\Tm\av n$, $\det(\Vm-\omega^2\Tm)=0$; $\omega_n^2\ge0$ reales, $\av n$ reales y ortogonales respecto de $\Tm$.
+  \item Coordenadas normales: $\ev=\Am\xiv$, $\xiv=\Am\tr\Tm\ev$; $L=\sum_n\frac12(\dot\xi_n^2-\omega_n^2\xi_n^2)$: $s$ osciladores independientes, $s$ energías conservadas.
+  \item Las simetrías anticipan modos: traslación $\Rightarrow$ $\omega=0$ y $P$ conservado; paridad $\Rightarrow$ modos pares e impares.
+  \item Dos osciladores: $\omega_1=\sqrt{k/m}$ en fase; $\omega_2=\sqrt{3k/m}$ en contrafase.
+  \item CO$_2$: $\omega_1=0$ traslación; $\omega_2=\sqrt{k/m}$ estiramiento simétrico (C en reposo); $\omega_3=\sqrt{\frac km(1+\frac{2m}M)}$ estiramiento antisimétrico (C en contrafase con los O).
+  \item \textbf{Validez:} amplitudes pequeñas, fuerzas conservativas, ligaduras esclerónomas.
+  \item \textbf{Próximo:} oscilaciones forzadas y amortiguadas (resonancia). Luego, en el cuerpo rígido, el mismo problema de autovalores reaparece en el tensor de inercia y sus ejes principales.
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section{Para la discusión}
+% =====================================================================
+\begin{frame}{Para la discusión 1/3}
+\small
+\textbf{Problema 1 (Nivel 1, sin IA).} Encuentre las frecuencias y las configuraciones de los modos normales para pequeñas oscilaciones longitudinales del sistema de dos masas y tres resortes de la figura (izquierda). Resuelva primero para constantes $k_1,k_2,k_3$ arbitrarias y luego particularice. Repita para el sistema vertical (derecha) y explique por qué la gravedad no aparece en las frecuencias.
+\begin{center}
+\figuraOtikz{Figuras/dosMasasResorte3k.png}{1.6in}{%
+\begin{tikzpicture}[scale=0.55]
+  \paredIzq{0}\paredDer{6}
+  \draw[resorte] (0,0)--(1.75,0) node[midway,above=3pt]{\tiny $k_1$};
+  \draw[resorte] (2.25,0)--(3.75,0) node[midway,above=3pt]{\tiny $k_2$};
+  \draw[resorte] (4.25,0)--(6,0) node[midway,above=3pt]{\tiny $k_3$};
+  \draw[fill=cdele!25] (1.75,-0.25) rectangle node{\tiny $m$} (2.25,0.25);
+  \draw[fill=cdele!25] (3.75,-0.25) rectangle node{\tiny $m$} (4.25,0.25);
+\end{tikzpicture}}\qquad
+\figuraOtikz{Figuras/dosMasasResortesVerticales.png}{0.9in}{%
+\begin{tikzpicture}[scale=0.45]
+  \fill[pattern=north east lines] (-0.8,0) rectangle (0.8,0.2); \draw[thick] (-0.8,0)--(0.8,0);
+  \draw[resorte] (0,0)--(0,-1.6) node[midway,right=3pt]{\tiny $k$};
+  \draw[fill=cdele!25] (-0.3,-1.6) rectangle node{\tiny $m_1$} (0.3,-2.2);
+  \draw[resorte] (0,-2.2)--(0,-3.8) node[midway,right=3pt]{\tiny $k$};
+  \draw[fill=cdele!25] (-0.3,-3.8) rectangle node{\tiny $m_2$} (0.3,-4.4);
+\end{tikzpicture}}
+\end{center}
+\textbf{Problema 2 (Nivel 2, sin IA).} En el modelo del CO$_2$ se desplaza el oxígeno 1 una distancia $d$ y se suelta desde el reposo ($\ev(0)=(d,0,0)\tr$, $\dot\ev(0)=0$).
+(a) Calcule $\xi_n(0)$. (b) Obtenga $\eta_2(t)$ y explique por qué contiene una sola frecuencia. (c) Verifique que $X_{\mathrm{cm}}$ es constante. (d) ¿Es periódico el movimiento?
+\end{frame}
+
+\begin{frame}{Para la discusión 2/3}
+\small
+\textbf{Problema 3 (Nivel 3, IA requerida: Actividad IA 2).} Calcule las frecuencias y las configuraciones de los modos normales para pequeñas oscilaciones \emph{transversales} de dos masas $m$ conectadas entre sí y a las paredes por resortes horizontales de constante $k$.
+\begin{itemize}
+  \item El enunciado está incompleto a propósito: identifique qué dato falta, introdúzcalo ($a$, $l$) y justifique.
+  \item ¿Qué ocurre si los resortes están en su longitud natural en el equilibrio? ¿Qué tipo de oscilación queda?
+\end{itemize}
+\vspace{1ex}
+\textbf{Problema 4 (Nivel 4, investigación, IA asistida).} ¿Qué tan bueno es el modelo de dos resortes para el CO$_2$?
+\begin{enumerate}
+  \item Ajuste $k$ con $\tilde\nu_3\approx2349\,\mathrm{cm}^{-1}$ y prediga el estiramiento simétrico. Compare con el doblete observado.
+  \item Agregue un resorte O--O de constante $k'$. Muestre (simetría y cálculo) cuál frecuencia cambia y cuál no. Estime $k'$.
+  \item Critique el ajuste: ¿cuántos datos y cuántos parámetros? ¿Qué predicción independiente permitiría poner a prueba el modelo?
+  \item Implemente los cálculos con \texttt{eigh} y documente las verificaciones.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Para la discusión 3/3 — las 4D aplicadas a los problemas}
+\begin{itemize}
+  \item \Dele: liste qué conserva usted (planteamiento de $\Tm$ y $\Vm$, simetrías, interpretación) y qué delega (factorización, código, gráficos).
+  \item \Desc: para el Problema 3, redacte un prompt vago y uno preciso; compare las respuestas y explique cada diferencia por un supuesto implícito.
+  \item \Disc: audite cada respuesta. Dimensiones de $\omega^2$; sustitución en $\Vm\mathbf a=\omega^2\Tm\mathbf a$; límites ($k_2\to0$, $a\to l$, $M\to\infty$); simetría al intercambiar las masas; momento total nulo en los modos oscilantes.
+  \item \Dili: rederive a mano las frecuencias que use después; verifique numéricamente $\Am\tr\Tm\Am=\Id$; entregue bitácora 4D y declaración de uso de IA.
+\end{itemize}
+\vspace{1ex}
+Repita el listado para el Problema 4 incluyendo la comparación con los datos espectroscópicos (cite la fuente que use).
+\end{frame}
+
+% =====================================================================
+%  APÉNDICE DEL INSTRUCTOR
+% =====================================================================
+\ifinstructor
+\appendix
+\section*{Apéndice del instructor}
+
+\begin{frame}{[Instructor] Plan de la sesión y notas}
+\footnotesize
+\textbf{Destinatario:} instructor. \textbf{Duración:} 90 min presenciales + trabajo autónomo.
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\toprule
+0–10 min & Motivación CO$_2$ y repaso de $\Tm$, $\Vm$ \\
+10–35 min & Estructura: realidad de $\omega^2$, ortogonalidad, coordenadas normales, condiciones iniciales \\
+35–55 min & Osciladores acoplados y cuatro verificaciones \\
+55–75 min & CO$_2$: simetrías primero, cálculo después; momento y ortogonalidad \\
+75–90 min & Verificaciones conceptuales (1–3) y Actividad IA 1 en parejas \\
+Casa & Problemas 1–4, Actividades IA 2 y 3 \\
+\bottomrule
+\end{tabularx}
+\vspace{0.5ex}
+\textbf{Erratas corregidas respecto de la versión anterior:} intercambio en fase/contrafase en los osciladores acoplados; $\omega_\pm$ escrito como $\omega^2$ (error dimensional); $a_1$ en lugar de $a_2$ en la ecuación $i=2$ (también en la Ec.~(4.67) de las notas) y en el sistema de autovalores; $\dot\zeta_1$ en lugar de $\dot\xi_1$ (también Ec.~(4.87)); recapitulación del CO$_2$ (“O–C en fase” para $\omega_3$, cuando el C va en contrafase); orden de frecuencias unificado ascendente. En el ejemplo vertical de las notas, Ec.~(4.128), el coeficiente lineal debe ser $k(m_1+2m_2)$ (la raíz final es correcta).
+
+\textbf{Concepciones erróneas a vigilar:} “$c_n$ es una fase”; la forma $c_ne^{i\omega t}$ aplicada a $\omega=0$; ortogonalidad euclidiana cuando $\Tm\not\propto\Id$; “el C está quieto porque es pesado”.
+\end{frame}
+
+\begin{frame}{[Instructor] Problema 1 — solución}
+\footnotesize
+\textbf{Objetivo:} 1 y 5. \textbf{Conceptos:} $\Tm$, $\Vm$, determinante secular, configuración de modos, papel de la gravedad. \textbf{Nivel:} 1. \textbf{Estrategia:} alargamientos en función de $\eta$, identificar $V_{ij}$, determinante, cocientes de amplitudes.
+
+\textbf{Horizontal:} $\Tm=m\Id$, $\Vm=\begin{pmatrix}k_1+k_2&-k_2\\-k_2&k_2+k_3\end{pmatrix}$,
+\[
+\omega_\pm^2=\frac{1}{2m}\left[k_1+2k_2+k_3\pm\sqrt{(k_1-k_3)^2+4k_2^2}\right],\qquad
+\frac{a_2}{a_1}=\frac{k_1+k_2-m\omega^2}{k_2}.
+\]
+Si $k_1=k_3=k$, $k_2=\kappa$: $\omega_1^2=k/m$ (en fase), $\omega_2^2=(k+2\kappa)/m$ (contrafase). Si $k_1\neq k_3$ los modos dejan de ser exactamente simétricos/antisimétricos (se pierde la paridad). Particularizar con los valores de la figura.
+
+\textbf{Vertical} ($m_1$ arriba, $m_2$ abajo, resortes $k$): la gravedad sólo añade términos lineales en $V$, que desplazan el equilibrio y no aportan a $V_{ij}$.
+$\Vm=\begin{pmatrix}2k&-k\\-k&k\end{pmatrix}$, $\Tm=\mathrm{diag}(m_1,m_2)$:
+\[
+m_1m_2\,\omega^4-k(m_1+2m_2)\,\omega^2+k^2=0\;\Rightarrow\;
+\omega_\pm^2=\frac{k}{2m_1m_2}\left[(m_1+2m_2)\pm\sqrt{m_1^2+4m_2^2}\right].
+\]
+Control: $m_1=m_2=m\Rightarrow\omega^2=\frac km\frac{3\pm\sqrt5}{2}$.
+
+\textbf{Errores frecuentes:} $V_{12}=-2k_2$ (olvidar el $\frac12$); incluir $g$ en $V_{ij}$; dar $\omega^2$ como $\omega$. \textbf{Pista:} escriba el alargamiento de cada resorte. \textbf{Extensión:} $m_1\to\infty$ y $m_2\to0$ en el vertical; interprete.
+\end{frame}
+
+\begin{frame}{[Instructor] Problema 2 — solución}
+\footnotesize
+\textbf{Objetivo:} 3 y 4. \textbf{Conceptos:} proyección con $\Tm$, modo cero, paridad, cuasiperiodicidad. \textbf{Nivel:} 2. \textbf{Estrategia:} $\xi_n(0)=\av n{}\tr\Tm\ev(0)=m\,d\,a_1^{(n)}$ y suma modal.
+
+(a) $\xi_1(0)=\dfrac{md}{\sqrt{M+2m}}$, \; $\xi_2(0)=d\sqrt{\dfrac m2}$, \; $\xi_3(0)=md\sqrt{\dfrac{M}{2m(M+2m)}}$; todas las $\dot\xi_n(0)=0$.
+
+(b)
+\[
+\eta_1=d\left[\tfrac{m}{M+2m}+\tfrac12\cos\omega_2t+\tfrac{M}{2(M+2m)}\cos\omega_3t\right],\quad
+\eta_2=\tfrac{md}{M+2m}\left(1-\cos\omega_3t\right),
+\]
+\[
+\eta_3=d\left[\tfrac{m}{M+2m}-\tfrac12\cos\omega_2t+\tfrac{M}{2(M+2m)}\cos\omega_3t\right].
+\]
+$\eta_2$ sólo contiene $\omega_3$ porque el único modo oscilante con $a_2\neq0$ es el impar (el par tiene $a_2=0$ por paridad). Control: $\ev(0)=(d,0,0)$ \ok.
+
+(c) $X_{\mathrm{cm}}=(m\eta_1+M\eta_2+m\eta_3)/(M+2m)=md/(M+2m)$, constante \ok.
+(d) $\omega_3/\omega_2=\sqrt{11/3}$ es irracional (con $m/M=4/3$): movimiento cuasiperiódico en un 2-toro.
+
+\textbf{Errores frecuentes:} omitir el modo cero (posiciones medias erróneas); usar $\Am\tr$ en vez de $\Am\tr\Tm$ como inversa; normalizar con la norma euclidiana. \textbf{Pista:} ¿dónde está el centro de masa en $t=0$? \textbf{Extensión:} energía en cada modo, $E_n=\frac12\omega_n^2\xi_n(0)^2$; ¿qué fracción va al modo IR-activo?
+\end{frame}
+
+\begin{frame}{[Instructor] Problema 3 — solución (transversal)}
+\footnotesize
+\textbf{Objetivo:} 1, 5 y 6. \textbf{Conceptos:} desarrollo a segundo orden, papel de la tensión, desacople, límites. \textbf{Nivel:} 3. \textbf{Estrategia:} longitud $L=\sqrt{(a+\Delta x)^2+\Delta y^2}\simeq a+\Delta x+\frac{\Delta y^2}{2a}$.
+
+Con $\tau=k(a-l)$ y paredes en $x=0,3a$, el término lineal en $\Delta x$ se anula al sumar y, hasta segundo orden,
+\[
+V_2=\frac k2\sum(\Delta x)^2+\frac{\tau}{2a}\sum(\Delta y)^2 :
+\]
+longitudinal y transversal se \textbf{desacoplan} (los cruces son cúbicos). Transversal:
+\[
+\Vm_y=\frac{\tau}{a}\begin{pmatrix}2&-1\\-1&2\end{pmatrix},\qquad
+\omega_1^2=\frac{\tau}{ma}=\frac{k(a-l)}{ma}\ (\text{en fase}),\qquad \omega_2^2=\frac{3\tau}{ma}\ (\text{contrafase}).
+\]
+\textbf{Límites:} $a\to l$: $\omega\to0$; queda $V\simeq\frac{k}{8l^2}\sum(\Delta y)^4$, oscilación no lineal con frecuencia dependiente de la amplitud (enlace con dinámica no lineal). $l\to0$: $\tau/a\to k$ y se recupera $k/m$, $3k/m$; la respuesta “longitudinal” de la IA sólo es correcta para resortes de longitud natural nula.
+
+\textbf{Errores frecuentes:} copiar el resultado longitudinal; usar $\frac12k(\Delta y)^2$; desarrollar la raíz sólo a primer orden. \textbf{Pista:} ¿qué fuerza restituye una masa desplazada lateralmente si los resortes no están tensos? \textbf{Extensión:} $N$ masas (cuerda con cuentas): $\omega_n^2=\frac{4\tau}{ma}\sin^2\frac{n\pi}{2(N+1)}$; relación de dispersión.
+\end{frame}
+
+\begin{frame}{[Instructor] Problema 4 — guía (investigación)}
+\footnotesize
+\textbf{Objetivo:} 5 y 6. \textbf{Conceptos:} ajuste de parámetros, simetría, límites del modelo, espectroscopía. \textbf{Nivel:} 4. \textbf{Productos:} informe breve + cuaderno reproducible.
+
+(1) $\omega=2\pi c\,\tilde\nu$; $m_{\mathrm O}\approx16\,$u, $m_{\mathrm C}=12\,$u. De $\tilde\nu_3$: $k=\frac{m\omega_3^2}{1+2m/M}\approx1.4\times10^3\,\mathrm{N/m}$; predicción $\tilde\nu_{\mathrm{sim}}=\tilde\nu_3/1.91\approx1.23\times10^3\,\mathrm{cm}^{-1}$, unos $10\%$ por debajo del centro del doblete ($\approx1340$).
+
+(2) Con $\frac12k'(\eta_3-\eta_1)^2$: el modo impar tiene $\eta_3=\eta_1$, así que $k'$ no lo afecta: $\omega_3$ igual; el par: $\omega_2^2=(k+2k')/m$. Con $1340\,\mathrm{cm}^{-1}$: $k'\approx1.4\times10^2\,\mathrm{N/m}$ ($k'/k\approx0.1$); con $1285$ o $1388$: $k'\approx70$–$200\,\mathrm{N/m}$. La incertidumbre por la resonancia de Fermi domina.
+
+(3) Dos parámetros, dos datos: cero grados de libertad, no hay prueba. Pruebas independientes: sustitución isotópica ($^{13}$C, $^{18}$O); la flexión requiere un parámetro angular adicional.
+
+\textbf{Errores frecuentes:} confundir $\tilde\nu$ con $\omega$ (factor $2\pi c$); usar u sin convertir; presentar el ajuste como validación. \textbf{Riesgos/simplificaciones:} limitarse a (1)–(2) si el tiempo es corto. \textbf{Nota:} los valores espectroscópicos son aproximados; exija a los estudiantes citar la fuente (p.~ej., NIST Chemistry WebBook) y verificar.
+\end{frame}
+
+\begin{frame}{[Instructor] Clave de la Actividad IA 1 y de las verificaciones}
+\footnotesize
+\textbf{Errores sembrados (3):}
+\begin{itemize}
+\item[(i)] $\omega_\pm=\frac{2k\pm k}{m}$ es $\omega^2$: lo detecta el análisis dimensional.
+\item[(ii)] Con $\lambda_+=3$, $a_2/a_1=2-3=-1$: el modo de mayor frecuencia es la contrafase. Lo detectan la sustitución de $(1,1)\tr$ ($\Vm(1,1)\tr=k(1,1)\tr\Rightarrow\omega^2=k/m$) y el argumento físico.
+\item[(iii)] La justificación física es falsa: en fase el resorte central \emph{no} se deforma.
+\end{itemize}
+La ortogonalidad no detecta (ii) ni (iii). Este intercambio estaba en la versión anterior de estas láminas: un ejemplo real de error fluido.
+
+\textbf{Verificaciones conceptuales:}
+\begin{enumerate}
+\item $\omega_n\to\omega_n/\sqrt2$; configuraciones iguales ($\Tm\to2\Tm$).
+\item Sí, si $\Vm$ tiene un autovalor negativo (equilibrio que no es mínimo): crecimiento exponencial, inestabilidad.
+\item No: es la paridad; un modo par exige $a_2=-a_2$.
+\item Las $\omega_n$ son invariantes ($\det[\mathsf J\tr(\Vm-\omega^2\Tm)\mathsf J]=(\det\mathsf J)^2\det(\Vm-\omega^2\Tm)$); los $\av n$ se transforman con el jacobiano $\mathsf J$.
+\item Cierto para cadenas con acoplamiento a primeros vecinos (matrices de Jacobi: el modo $n$ tiene $n-1$ cambios de signo); no es un teorema general.
+\item No, en general: $\omega_3/\omega_2$ irracional $\Rightarrow$ cuasiperiódico.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{[Instructor] Rúbrica para las actividades con IA (y Problema 4)}
+\scriptsize
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.16\textwidth} X X X@{}}
+\toprule
+\textbf{Dimensión} & \textbf{Sobresaliente (4)} & \textbf{Suficiente (2–3)} & \textbf{Insuficiente (0–1)} \\
+\midrule
+Formulación & $\Tm$, $\Vm$ y supuestos (tensión, pequeñas amplitudes) explícitos y correctos & Correctos con algún supuesto implícito & Copiados de la IA o con error de signo/factor \\
+Verificación & $\ge3$ verificaciones independientes, cada una ligada al error que detecta & 1–2 verificaciones correctas & Ninguna, o sólo “la IA lo confirmó” \\
+Uso de simetrías & Predice modo cero y paridad antes de calcular y lo contrasta & Las menciona después del cálculo & No las usa \\
+Interpretación & Explica cada modo físicamente y los límites del modelo & Describe los modos sin justificación física & Sólo números \\
+Uso crítico de IA & Bitácora completa; identifica qué verificación no detecta cada error & Bitácora completa sin análisis de las verificaciones & Bitácora ausente o incompleta \\
+Reproducibilidad & Código ejecutable, versiones y tolerancias declaradas, pruebas $\Am\tr\Tm\Am=\Id$ & Código ejecutable sin pruebas & No ejecuta o no se entrega \\
+\bottomrule
+\end{tabularx}
+\vspace{0.5ex}
+Defensa oral (5 min): explicar sin notas un modo del CO$_2$ y responder una variación (p.~ej., $M\to\infty$ o resorte O--O).
+\end{frame}
+\fi
+
+\end{document}
