@@ -1,0 +1,636 @@
+% =====================================================================
+%  Un método, cuatro lecciones: el flujo de trabajo de ocho pasos
+%  basado en el potencial efectivo
+%  Mecánica Clásica (posgrado) -- lección de síntesis
+%  Lecciones conectadas: leyes de Kepler, problema de Kepler,
+%  perturbación de órbitas circulares, oscilaciones pequeñas.
+%  Los números de ecuación remiten a M. G. Cosenza, Mecánica Clásica (2024).
+%  Compilar con: pdflatex (dos veces). Requiere logo_uis.png en la misma carpeta.
+% =====================================================================
+\documentclass[11pt]{beamer}
+\usetheme{Madrid}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-noshorthands,es-nodecimaldot]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,calc,babel}
+
+% ---------- colores del estilo de las lecciones anteriores ----------
+\definecolor{rojoUIS}{RGB}{204,0,0}
+\definecolor{rojoOscuro}{RGB}{163,0,0}
+\definecolor{rojoProfundo}{RGB}{122,0,0}
+\definecolor{grisTitulo}{RGB}{242,242,242}
+\definecolor{grisPortada}{RGB}{217,217,217}
+\definecolor{grisPie}{RGB}{236,236,236}
+
+\setbeamercolor{frametitle}{fg=rojoUIS,bg=grisTitulo}
+\setbeamercolor{title}{fg=rojoUIS,bg=grisPortada}
+\setbeamercolor{subtitle}{fg=rojoUIS}
+\setbeamercolor{author in head/foot}{fg=grisTitulo,bg=rojoOscuro}
+\setbeamercolor{title in head/foot}{fg=rojoOscuro,bg=grisPie}
+\setbeamercolor{date in head/foot}{fg=rojoProfundo,bg=grisPortada}
+\setbeamercolor{block title}{fg=rojoUIS,bg=grisPortada}
+\setbeamercolor{block body}{bg=grisTitulo}
+\setbeamercolor{block title alerted}{fg=white,bg=rojoOscuro}
+\setbeamercolor{block body alerted}{bg=rojoUIS!6}
+\setbeamercolor{block title example}{fg=white,bg=teal!80!black}
+\setbeamercolor{block body example}{bg=teal!6}
+\setbeamerfont{subtitle}{shape=\itshape,series=\mdseries}
+\setbeamerfont{title}{series=\bfseries}
+\setbeamerfont{title in head/foot}{series=\bfseries}
+\setbeamerfont{block title}{size=\normalsize}
+\setbeamerfont{institute}{shape=\itshape,size=\footnotesize}
+
+% ---------- logo en la esquina superior derecha del título de cada lámina ----------
+\setbeamertemplate{frametitle}{%
+  \nointerlineskip
+  \begin{beamercolorbox}[wd=\paperwidth,ht=2.6ex,dp=1.6ex,leftskip=0.3cm,rightskip=0.3cm]{frametitle}%
+    \usebeamerfont{frametitle}\insertframetitle\hfill
+    \raisebox{-0.35\height}[0pt][0pt]{\includegraphics[height=0.95cm]{logo_uis.png}}%
+  \end{beamercolorbox}%
+}
+
+% ---------- colores de las fases del flujo ----------
+\definecolor{reducir}{HTML}{1F5A96}
+\definecolor{analizar}{HTML}{1B7F6B}
+\definecolor{linealizar}{HTML}{C26A12}
+\definecolor{validar}{HTML}{A23B3B}
+
+% ---------- macros ----------
+\newcommand{\Vef}{V_{\mathrm{ef}}}
+\newcommand{\ec}[1]{\textcolor{gray}{\text{\scriptsize(Ec.~#1)}}}
+\newcommand{\paso}[2]{%
+  \tikz[baseline=(s.base)]\node[fill=#1,text=white,rounded corners=2pt,
+  inner sep=2pt,font=\scriptsize\bfseries](s){#2};}
+\newcommand{\comillas}[1]{``#1''}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+% ---------- portada ----------
+\title[Un método, cuatro lecciones]{Un método, cuatro lecciones}
+\subtitle{El flujo de trabajo de ocho pasos basado en el potencial efectivo}
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}
+\institute[UIS]{Escuela de Física, Facultad de Ciencias,\\
+Universidad Industrial de Santander, Santander, Colombia\\[0.4em]
+\includegraphics[height=1.0cm]{logo_uis.png}\\[0.3em]
+{\upshape\scriptsize Síntesis de las lecciones: leyes de Kepler $\cdot$ problema de Kepler $\cdot$ perturbaciones $\cdot$ oscilaciones pequeñas.\\
+Ecuaciones referidas a M. G. Cosenza, \emph{Mecánica Clásica} (2024).}}
+\date{\today}
+
+\begin{document}
+
+% ---------------------------------------------------------------------
+\begin{frame}
+\titlepage
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{Agenda}
+\tableofcontents
+\end{frame}
+
+% =====================================================================
+\section{Objetivos y motivación}
+% =====================================================================
+\begin{frame}{Objetivos de aprendizaje}
+\small
+Al terminar esta lección usted debería ser capaz de:
+\begin{enumerate}
+  \item \textbf{Formular} la reducción de un problema a un grado de libertad, pasando de las simetrías a las cantidades conservadas y de estas al potencial efectivo.
+  \item \textbf{Analizar} equilibrios, estabilidad y puntos de retorno a partir de la forma de $\Vef$.
+  \item \textbf{Deducir} frecuencias de oscilaciones pequeñas mediante linealización e \textbf{interpretar} sus cocientes como precesión, cierre o cuasiperiodicidad.
+  \item \textbf{Comparar} las cuatro lecciones como aplicaciones de un único flujo de trabajo e \textbf{identificar} qué resultados son exactos y cuáles aproximados.
+  \item \textbf{Evaluar} una deducción, propia o ajena, con una lista fija de verificación.
+\end{enumerate}
+\vspace{0.3em}
+\textbf{Prerrequisitos:} ecuaciones de Euler--Lagrange, coordenadas cíclicas y teorema de Noether, desarrollo de Taylor, EDO lineales con coeficientes constantes.
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{¿Por qué un flujo de trabajo común?}
+\small
+Cuatro lecciones y, en apariencia, cuatro temas:
+\begin{itemize}
+  \item \textbf{Leyes de Kepler}: geometría y tiempos de las órbitas planetarias.
+  \item \textbf{Problema de Kepler}: solución exacta en $V=-k/r$.
+  \item \textbf{Perturbación}: qué ocurre cerca de una órbita circular.
+  \item \textbf{Oscilaciones pequeñas}: movimiento cerca de cualquier equilibrio estable.
+\end{itemize}
+Las cuatro se resolvieron con la \emph{misma secuencia de pasos}. Hacerla explícita convierte cuatro técnicas en un solo método, transferible a sistemas que usted no ha visto.
+\vspace{0.4em}
+\begin{block}{La idea central}
+Simetría $\Rightarrow$ cantidad conservada $\Rightarrow$ movimiento unidimensional en $\Vef(q)$.
+La \emph{forma} de $\Vef$ y el \emph{cociente de sus frecuencias} deciden casi todo: acotado o no acotado, estable o inestable, cerrado o con precesión.
+\end{block}
+\end{frame}
+
+% =====================================================================
+\section{El flujo de trabajo en un vistazo}
+% =====================================================================
+\begin{frame}{El flujo de trabajo de ocho pasos}
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  caja/.style={draw=none,rounded corners=3pt,text=white,font=\small\bfseries,
+              minimum width=3.0cm,text width=2.85cm,minimum height=1.5cm,align=center,inner sep=3pt,execute at begin node={\hyphenpenalty=10000}},
+  flecha/.style={-{Stealth[length=2.6mm]},thick,gray!70!black},
+  node distance=0.55cm and 0.5cm]
+  % Fila 1
+  \node[caja,fill=reducir]  (s1) {1. Simetrías y\\coordenadas\\adaptadas};
+  \node[caja,fill=reducir,right=of s1]  (s2) {2. Cantidades\\conservadas};
+  \node[caja,fill=reducir,right=of s2]  (s3) {3. Reducción a\\un grado de\\libertad: $\Vef(q)$};
+  \node[caja,fill=analizar,right=of s3] (s4) {4. Lectura\\de $\Vef$: retorno\\y cuadratura};
+  % Fila 2 (en serpentina)
+  \node[caja,fill=analizar,below=1.0cm of s4] (s5) {5. Equilibrio\\y estabilidad};
+  \node[caja,fill=linealizar,left=of s5]  (s6) {6. Linealización:\\$\ddot\eta+\omega^2\eta=0$};
+  \node[caja,fill=linealizar,left=of s6]  (s7) {7. Comparación\\de frecuencias};
+  \node[caja,fill=validar,left=of s7] (s8) {8. Validación:\\límites, exactitud};
+  % flechas
+  \draw[flecha] (s1)--(s2); \draw[flecha] (s2)--(s3); \draw[flecha] (s3)--(s4);
+  \draw[flecha] (s4)--(s5); \draw[flecha] (s5)--(s6); \draw[flecha] (s6)--(s7);
+  \draw[flecha] (s7)--(s8);
+  \draw[flecha,dashed] (s8.west) -- ++(-0.45,0) |- node[pos=0.25,left,font=\scriptsize,text=gray!70!black,align=right]{revisar\\modelo} (s1.west);
+  % etiquetas de fase
+  \node[above=0.15cm of s2,font=\scriptsize\bfseries,text=reducir] {REDUCIR};
+  \node[above=0.15cm of s4,font=\scriptsize\bfseries,text=analizar] {ANALIZAR};
+  \node[font=\scriptsize\bfseries,text=linealizar,anchor=north] at ($(s6.south)!0.5!(s7.south)+(0,-0.15)$) {LINEALIZAR Y COMPARAR};
+  \node[below=0.15cm of s8,font=\scriptsize\bfseries,text=validar] {VALIDAR};
+\end{tikzpicture}}
+
+\vspace{0.8em}
+{\small Los pasos 1--3 eliminan grados de libertad; los pasos 4--5 son cualitativos y exactos; los pasos 6--7 son aproximaciones locales; el paso 8 decide en qué se puede confiar.}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{Los pasos en las cuatro lecciones (1--4)}
+\scriptsize
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}L{2.2cm}L{2.1cm}L{2.3cm}L{2.2cm}L{2.2cm}@{}}
+\toprule
+\textbf{Paso} & \textbf{Leyes de Kepler} & \textbf{Problema de Kepler} & \textbf{Perturbación} & \textbf{Osc.\ pequeñas}\\
+\midrule
+\paso{reducir}{1} Simetría & Fuerza central $\Rightarrow$ movimiento plano & Coordenadas del CM y relativas; polares $(r,\theta)$ & La misma simetría de la órbita circular & $q$ medida desde el equilibrio\\
+\paso{reducir}{2} Conservación & $l$ $\Rightarrow$ 2.ª ley & $\mathbf P$, $\mathbf l$, $E$: seis integrales & $l$ fijo; $E\gtrsim E_0$ & $E$; $T$ y $V$ cuadráticas\\
+\paso{reducir}{3} Reducción & Usa el $\Vef$ de Kepler & $\Vef=-\dfrac{k}{r}+\dfrac{l^2}{2\mu r^2}$ & $\Vef=V+\dfrac{l^2}{2\mu r^2}$ & $\tfrac12 c\dot q^2+\Vef(q)=E$\\
+\paso{analizar}{4} Lectura de $\Vef$ & 1.ª ley: elipse; 3.ª ley vía el área & Puntos de retorno, cónicas, ecuación de Kepler & $r\in[r_{\min},r_{\max}]$ alrededor de $r_0$ & Movimiento acotado entre puntos de retorno\\
+\bottomrule
+\end{tabular}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{Los pasos en las cuatro lecciones (5--8)}
+\scriptsize
+\renewcommand{\arraystretch}{1.35}
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}L{2.2cm}L{2.1cm}L{2.3cm}L{2.2cm}L{2.2cm}@{}}
+\toprule
+\textbf{Paso} & \textbf{Leyes de Kepler} & \textbf{Problema de Kepler} & \textbf{Perturbación} & \textbf{Osc.\ pequeñas}\\
+\midrule
+\paso{analizar}{5} Equilibrio & La órbita circular como caso particular & $r_0=l^2/\mu k$ es un mínimo & $\Vef'(r_0)=0$, $\Vef''>0$ & $\Vef'(q_0)=0$, $\Vef''>0$\\
+\paso{linealizar}{6} Linealización & --- & $u''+u=\mu k/l^2$ (¡exacta!) & $\ddot\eta+\omega_r^2\eta=0$ & $\ddot\eta+\omega^2\eta=0$; modos normales\\
+\paso{linealizar}{7} Frecuencias & 3.ª ley: $T\propto a^{3/2}$ & $\omega_r=\dot\theta_0$: sin precesión & $\Delta\theta=2\pi\dot\theta_0/\omega_r$; cierre & Cocientes de frecuencias normales\\
+\paso{validar}{8} Validación & Acuerdo con la observación & Límites $e\to0$, $E\to0$ & Perturbación $\to0$ da $\Delta\theta\to2\pi$ & La amplitud $\to0$ fija la validez\\
+\bottomrule
+\end{tabular}
+\end{frame}
+
+% =====================================================================
+\section{Los ocho pasos}
+% =====================================================================
+
+\begin{frame}{\paso{reducir}{Paso 1} Simetrías y coordenadas adaptadas}
+\small
+\textbf{Movimiento general.} Cuente los grados de libertad que quedan después de las ligaduras holónomas. Luego elija coordenadas generalizadas en las que cada simetría continua actúe como el \emph{desplazamiento de una sola coordenada}.
+
+\vspace{0.3em}
+\textbf{Por qué importa.} Una simetría solo es útil si hace cíclica una coordenada, $\partial L/\partial q_k=0$. Una mala elección de coordenadas oculta la simetría.
+
+\vspace{0.4em}
+\begin{exampleblock}{En las cuatro lecciones}
+\begin{itemize}
+  \item Dos cuerpos: $(\mathbf r_1,\mathbf r_2)\to(\mathbf R,\mathbf r)$; la invariancia traslacional hace cíclica a $\mathbf R$.
+  \item Isotropía: movimiento en un plano, coordenadas polares $(r,\theta)$:
+  \[L=\tfrac12\mu(\dot r^2+r^2\dot\theta^2)-V(r)\quad\ec{3.20}\]
+  \item Oscilaciones pequeñas: $q=q_0+\eta$, con $\eta$ medida desde el equilibrio.
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{\paso{reducir}{Paso 2} Cantidades conservadas}
+\small
+\textbf{Movimiento general (Noether).}
+\begin{itemize}
+  \item $q_k$ cíclica $\Rightarrow$ $p_k=\partial L/\partial\dot q_k=$ cte.
+  \item $\partial L/\partial t=0$ $\Rightarrow$ se conserva la función energía; coincide con $E=T+V$ cuando las ligaduras no dependen del tiempo y $V$ no depende de las velocidades.
+\end{itemize}
+Si hay tantas integrales independientes como grados de libertad, el problema es integrable.
+
+\vspace{0.4em}
+\begin{exampleblock}{En las cuatro lecciones}
+\begin{itemize}
+  \item Dos cuerpos: $\mathbf P_T$ (3), dirección de $\mathbf l$ (1), $l=\mu r^2\dot\theta$ (1), $E$ (1): seis integrales \ec{3.23, 3.25}.
+  \item La 2.ª ley de Kepler es la conservación de $l$:\quad $\dfrac{dA}{dt}=\dfrac{l}{2\mu}$ \ec{3.148}
+  \item Perturbación: $l$ se \emph{mantiene fijo}; solo $E$ se eleva por encima de $E_0$.
+\end{itemize}
+\end{exampleblock}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{\paso{reducir}{Paso 3} Reducción a un grado de libertad}
+\small
+Elimine la velocidad cíclica usando su momento conservado, \emph{en la energía o en la ecuación de movimiento}:
+\[
+E=\tfrac12 c\,\dot q^2+\Vef(q),\qquad
+\Vef(r)=V(r)+\frac{l^2}{2\mu r^2}\quad\ec{3.26}
+\]
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{block}{Interpretación}
+\footnotesize
+El término centrífugo \emph{no} es una ley de fuerza. Es la energía cinética angular, $\tfrac12\mu r^2\dot\theta^2$, reescrita con el $l$ conservado.
+\end{block}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{alertblock}{Trampa de signo}
+\footnotesize
+Sustituir $\dot\theta=l/\mu r^2$ en $L$ antes de variar produce $-l^2/2\mu r^2$ en el potencial: el signo equivocado. Elimine en $E$, en la ecuación de movimiento o use el routhiano $R=L-p_\theta\dot\theta$.
+\end{alertblock}
+\end{column}
+\end{columns}
+\vspace{0.4em}
+{\footnotesize Forma genérica usada en oscilaciones pequeñas: $L=\tfrac12 c\,\dot q^2-\Vef(q)$ \ec{4.1}, donde $c$ reúne los parámetros inerciales.}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{\paso{analizar}{Paso 4} Lectura de $\Vef$ y cuadratura}
+\small
+\begin{columns}[T]
+\begin{column}{0.46\textwidth}
+\textbf{Lectura cualitativa} (exacta):
+\begin{itemize}
+  \item Puntos de retorno: raíces de $E=\Vef(q)$.
+  \item Movimiento acotado o no acotado según el nivel de $E$.
+\end{itemize}
+\textbf{Cuadratura} (exacta):
+\[
+t=\sqrt{\tfrac{\mu}{2}}\int\frac{dr}{\sqrt{E-\Vef(r)}}
+\]
+\[
+\theta=\frac{l}{\sqrt{2\mu}}\int\frac{dr}{r^2\sqrt{E-\Vef(r)}}+\theta_0
+\]
+{\centering\ec{3.28, 3.33}\par}
+\end{column}
+\begin{column}{0.52\textwidth}
+\begin{exampleblock}{Kepler: $\Vef=-k/r+l^2/2\mu r^2$}
+\footnotesize
+\begin{itemize}
+  \item Cónica $q/r=1+e\cos\theta$, con
+  \[e=\sqrt{1+\tfrac{2El^2}{\mu k^2}},\quad q=\tfrac{l^2}{\mu k}\ \ec{3.116}\]
+  \item $E<0$: elipse, $a=k/2|E|$ (1.ª ley de Kepler); $E=0$: parábola; $E>0$: hipérbola.
+  \item Dependencia temporal: $\omega t=\psi-e\sin\psi$, $r=a(1-e\cos\psi)$ \ec{3.166}.
+\end{itemize}
+\end{exampleblock}
+\end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{\paso{analizar}{Paso 5} Equilibrio y estabilidad}
+\small
+\[
+\Vef'(q_0)=0\ \ \text{(equilibrio)},\qquad \Vef''(q_0)>0\ \ \text{(estable)}\qquad\ec{4.4, 4.5}
+\]
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\textbf{Fuerzas centrales.} Una órbita circular es un equilibrio del movimiento \emph{radial}:
+\[
+\left.\frac{\partial V}{\partial r}\right|_{r_0}=\frac{l^2}{\mu r_0^3}\quad\ec{3.199}
+\]
+Con la fuerza $f(r)=-V'(r)$, la estabilidad exige
+\[
+\frac{3f(r_0)}{r_0}+f'(r_0)<0\quad\ec{3.203}
+\]
+\end{column}
+\begin{column}{0.47\textwidth}
+\begin{exampleblock}{Fuerza $f=-k\,r^{n}$, $k>0$}
+\footnotesize
+La condición se reduce a $n>-3$.
+\begin{itemize}
+  \item Gravedad, $n=-2$: estable.
+  \item Resorte isótropo, $n=1$: estable.
+  \item $n\le-3$: la barrera centrífuga no retiene la órbita; la partícula cae hacia el centro o escapa en espiral.
+\end{itemize}
+\end{exampleblock}
+\end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{\paso{linealizar}{Paso 6} Linealización}
+\small
+Tome $q=q_0+\eta$ con $|\eta|$ pequeño y desarrolle hasta segundo orden; el término lineal se anula por el paso 5:
+\[
+\Vef(q)\approx \Vef(q_0)+\tfrac12 K\eta^2,\ \ K\equiv\Vef''(q_0)
+\ \Longrightarrow\
+\ddot\eta+\omega^2\eta=0,\ \ \omega^2=\frac{K}{c}\ \ \ec{4.9}
+\]
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\begin{exampleblock}{Oscilaciones radiales}
+\footnotesize
+\[\omega_r^2=\frac{1}{\mu}\left.\frac{\partial^2\Vef}{\partial r^2}\right|_{r_0}\ \ec{3.211}\]
+El oscilador armónico es el modelo \emph{local} universal de todo mínimo estable.
+\end{exampleblock}
+\end{column}
+\begin{column}{0.48\textwidth}
+\begin{block}{Una sorpresa de Kepler}
+\footnotesize
+Con $u=1/r$, la órbita de Kepler satisface
+\[u''+u=\frac{\mu k}{l^2}\ \ec{3.102}\]
+un oscilador armónico en el \emph{ángulo} $\theta$. Es \emph{exacto}, no linealizado; por eso la solución es una cónica.
+\end{block}
+\end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{Paso 6: varios grados de libertad}
+\small
+Cerca de una configuración estable $\mathbf q_0$, con $\boldsymbol\eta=\mathbf q-\mathbf q_0$:
+\[
+L\approx\tfrac12\,\dot{\boldsymbol\eta}^{\mathsf T}\,\mathsf T\,\dot{\boldsymbol\eta}-\tfrac12\,\boldsymbol\eta^{\mathsf T}\,\mathsf V\,\boldsymbol\eta,
+\qquad
+\mathsf V_{ij}=\left.\frac{\partial^2V}{\partial q_i\partial q_j}\right|_{\mathbf q_0},
+\]
+donde $\mathsf T_{ij}$ es la matriz cinética evaluada en $\mathbf q_0$. El ensayo $\boldsymbol\eta=\mathbf a\,e^{i\omega t}$ conduce al problema de autovalores generalizado
+\[
+(\mathsf V-\omega^2\mathsf T)\,\mathbf a=0,\qquad \det(\mathsf V-\omega^2\mathsf T)=0 .
+\]
+\begin{block}{La misma lógica, en forma matricial}
+\footnotesize
+\begin{itemize}
+  \item Estabilidad $\Leftrightarrow$ $\mathsf V$ definida positiva $\Leftrightarrow$ todas las $\omega_k^2>0$.
+  \item Las coordenadas normales desacoplan el movimiento en osciladores independientes.
+  \item El resultado unidimensional $\omega^2=K/c$ es el caso $1\times1$.
+\end{itemize}
+\end{block}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{\paso{linealizar}{Paso 7} Comparación de frecuencias}
+\small
+Dos movimientos periódicos independientes, aquí el radial y el angular, se combinan en una sola órbita. Su \textbf{cociente} decide la geometría:
+\begin{gather*}
+\Delta\theta=\dot\theta_0\,T_r=2\pi\,\frac{\dot\theta_0}{\omega_r}\quad\ec{3.212}\\
+\text{órbita cerrada}\iff\frac{\dot\theta_0}{\omega_r}=\frac{m}{n}\in\mathbb Q\quad\ec{3.216}
+\end{gather*}
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\footnotesize
+\begin{itemize}
+  \item Cociente racional: la órbita se cierra tras $n$ periodos radiales y $m$ revoluciones.
+  \item Cociente irracional: órbita cuasiperiódica que nunca se cierra.
+  \item Varios modos normales: la misma regla vale para los cocientes $\omega_j/\omega_k$ (figuras de Lissajous).
+\end{itemize}
+\end{column}
+\begin{column}{0.49\textwidth}
+\begin{exampleblock}{Escalas de tiempo}
+\footnotesize
+3.ª ley de Kepler: $T_p=2\pi\sqrt{\mu a^3/k}$ \ec{3.164}.\\[0.2em]
+Similitud mecánica para $V\propto r^{\nu}$: $T\propto a^{\,1-\nu/2}$ \ec{3.196}.\\[0.2em]
+$\nu=-1$ (gravedad): $T\propto a^{3/2}$; $\nu=2$ (oscilador): $T$ no depende de la amplitud.
+\end{exampleblock}
+\end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{\paso{validar}{Paso 8} Validación}
+\small
+\begin{columns}[T]
+\begin{column}{0.5\textwidth}
+\textbf{Lista para cada resultado}
+\footnotesize
+\begin{enumerate}
+  \item \textbf{Dimensiones} de cada expresión nueva.
+  \item \textbf{Signos}: atractivo o repulsivo; término centrífugo positivo.
+  \item \textbf{Límites}: perturbación $\to0$, $e\to0$, amplitud $\to0$, $E\to0$.
+  \item \textbf{Carácter}: ¿exacto (cuadratura), linealizado o numérico?
+  \item \textbf{Consistencia}: ¿coincide el resultado lineal con la integral exacta en su límite?
+  \item \textbf{Conservación}: ¿se conservan $E$ y $l$ en toda verificación numérica?
+\end{enumerate}
+\end{column}
+\begin{column}{0.47\textwidth}
+\begin{alertblock}{Dominio de validez}
+\footnotesize
+La linealización vale para $|\eta|$ mucho menor que la escala en la que cambia $\Vef''$. Para amplitud finita, el ángulo apsidal exacto
+\[
+\Delta\theta=\frac{2l}{\sqrt{2\mu}}\int_{r_{\min}}^{r_{\max}}\frac{dr}{r^2\sqrt{E-\Vef}}\ \ec{3.218}
+\]
+en general depende de $E$. Un cierre hallado por linealización puede no sobrevivir a amplitud finita.
+\end{alertblock}
+\end{column}
+\end{columns}
+\end{frame}
+
+% =====================================================================
+\section{El flujo de trabajo en acción}
+% =====================================================================
+
+\begin{frame}{Hilo 1: Kepler en los ocho pasos}
+\footnotesize
+\renewcommand{\arraystretch}{1.25}
+\begin{tabular}{@{}L{2.55cm}L{8.6cm}@{}}
+\toprule
+\textbf{Paso} & \textbf{Resultado para $V(r)=-k/r$}\\
+\midrule
+\paso{reducir}{1} Simetría & Traslaciones y rotaciones: coordenadas del CM, masa reducida $\mu$, polares planas $(r,\theta)$\\
+\paso{reducir}{2} Conservación & $\mathbf P_T$, $\mathbf l$, $E$: seis integrales para seis grados de libertad $\Rightarrow$ integrable\\
+\paso{reducir}{3} Reducción & $\Vef(r)=-k/r+l^2/2\mu r^2$ \ec{3.119}\\
+\paso{analizar}{4} Lectura de $\Vef$ & Puntos de retorno $r_{\min,\max}=a(1\mp e)$; órbitas cónicas; ecuación de Kepler\\
+\paso{analizar}{5} Equilibrio & $r_0=l^2/\mu k$, $E_0=-\mu k^2/2l^2$; $\Vef''(r_0)=k/r_0^3>0$: estable\\
+\paso{linealizar}{6} Linealización & $\omega_r^2=k/\mu r_0^3$\\
+\paso{linealizar}{7} Frecuencias & $\dot\theta_0^2=l^2/\mu^2r_0^4=k/\mu r_0^3=\omega_r^2$ $\Rightarrow$ $\Delta\theta=2\pi$: \textbf{sin precesión}\\
+\paso{validar}{8} Validación & La órbita exacta (paso 4) lo confirma: el perihelio queda fijo para todo $e$, no solo si $e\to0$\\
+\bottomrule
+\end{tabular}
+
+\vspace{0.6em}
+\small
+La degeneración $\omega_r=\dot\theta_0$ es la huella dinámica de una cantidad conservada adicional: el vector de Laplace--Runge--Lenz (Sec.~3.7).
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{Hilo 2: órbitas perturbadas, $f\propto r^{n}$}
+\small
+\begin{columns}[T]
+\begin{column}{0.53\textwidth}
+\footnotesize
+Fuerza $f(r)=-k\,r^{n}$, $k>0$; órbita circular de radio $r_0$.
+
+\vspace{0.3em}
+\paso{analizar}{5} Equilibrio: $l^2=\mu k\,r_0^{\,n+3}$; estable si y solo si $n>-3$.
+
+\vspace{0.3em}
+\paso{linealizar}{6} Linealización, usando $\Vef''=-f'-3f/r$:
+\[
+\omega_r^2=\frac{k\,(n+3)\,r_0^{\,n-1}}{\mu}
+\]
+\paso{linealizar}{7} Comparación con $\dot\theta_0^2=\dfrac{l^2}{\mu^2r_0^4}=\dfrac{k\,r_0^{\,n-1}}{\mu}$:
+\[
+\boxed{\ \Delta\theta=\frac{2\pi}{\sqrt{n+3}}\ }
+\]
+\end{column}
+\begin{column}{0.45\textwidth}
+\begin{exampleblock}{\paso{validar}{8} Validación}
+\footnotesize
+\begin{itemize}
+  \item $n=-2$ (gravedad): $\Delta\theta=2\pi$. Coincide con el hilo 1.
+  \item $n=1$ (oscilador isótropo): $\Delta\theta=\pi$. Elipse centrada: dos ciclos radiales por revolución.
+  \item $n\to-3^{+}$: $\Delta\theta\to\infty$, el borde de la estabilidad.
+\end{itemize}
+\end{exampleblock}
+\begin{block}{Conexión con Bertrand}
+\footnotesize
+El cierre de órbitas casi circulares para todo $r_0$ exige $\sqrt{n+3}$ racional. Los órdenes superiores en la amplitud dejan solo $n=-2$ y $n=1$.
+\end{block}
+\end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{¿Exacto, aproximado o cualitativo?}
+\scriptsize
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{@{}L{4.3cm}L{1.9cm}L{4.9cm}@{}}
+\toprule
+\textbf{Resultado} & \textbf{Carácter} & \textbf{Dónde falla o cambia}\\
+\midrule
+Conservación de $l$; 2.ª ley de Kepler & Exacto & Fuerzas no centrales\\
+Órbitas cónicas; 1.ª ley de Kepler & Exacto & Todo $V$ no proporcional a $1/r$\\
+$T_p=2\pi\sqrt{\mu a^3/k}$; 3.ª ley de Kepler & Exacto & Otros potenciales (la similitud da otro exponente)\\
+Puntos de retorno y clasificación de órbitas a partir de $\Vef$ & Exacto, cualitativo & ---\\
+$\omega^2=\Vef''(q_0)/c$ & Linealizado & Amplitud finita: correcciones anarmónicas\\
+$\Delta\theta=2\pi\,\dot\theta_0/\omega_r$ & Linealizado & Excentricidad finita: usar la Ec.~3.218\\
+Frecuencias de los modos normales & Linealizado & Gran amplitud; acoplamiento de modos\\
+\bottomrule
+\end{tabular}
+\vspace{0.6em}
+
+\small
+Los pasos 4--5 dan información exacta y global. Los pasos 6--7 dan información aproximada y local. En el paso 8 se decide en cuál se apoya una afirmación.
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{Errores conceptuales frecuentes}
+\small
+\begin{itemize}
+  \item \paso{reducir}{3} \comillas{El término centrífugo es un potencial real.} Es energía cinética angular reescrita con el $l$ conservado; solo existe para $l$ fijo.
+  \item \paso{reducir}{3} Sustituir $p_\theta$ en $L$ antes de variar, lo que invierte el signo de la barrera.
+  \item \paso{analizar}{5} Evaluar la estabilidad con $V''$ en lugar de $\Vef''$.
+  \item \paso{analizar}{5} Perturbar una órbita circular cambiando $l$ sin advertirlo.
+  \item \paso{linealizar}{7} Tomar $\omega_r=\dot\theta_0$ en el problema de Kepler como una coincidencia numérica y no como una simetría.
+  \item \paso{linealizar}{7} Creer que las oscilaciones pequeñas requieren un resorte físico: \emph{cualquier} mínimo estable se comporta como uno.
+  \item \paso{validar}{8} Suponer que una condición de cierre linealizada vale para cualquier amplitud.
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{Preguntas conceptuales}
+\small
+Discútalas en parejas; justifique cada respuesta indicando el paso del flujo de trabajo que utilizó.
+\begin{enumerate}
+  \item Una partícula se mueve en $V(r)=-k/r^4$, $k>0$. ¿Es estable una órbita circular? Responda sin calcular $\Vef''$ explícitamente.
+  \item Para cierta fuerza central se obtiene $\omega_r/\dot\theta_0=\sqrt2$. ¿Se cierra una órbita circular ligeramente perturbada? ¿Qué aspecto tiene?
+  \item ¿Por qué conocer $\omega^2=\Vef''(q_0)/c$ no basta para saber si se cierran las órbitas de amplitud finita?
+  \item La 2.ª ley de Kepler vale para toda fuerza central. ¿Por qué no ocurre lo mismo con la 1.ª y la 3.ª?
+  \item ¿Qué paso del flujo de trabajo cambia, y cómo, en un sistema \emph{sin} simetrías continuas?
+\end{enumerate}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{El paso 8 como hábito}
+\small
+La lista del paso 8 se aplica a \emph{cualquier} deducción que usted lea: un libro de texto, la solución de un compañero o una respuesta generada por IA.
+
+\vspace{0.3em}
+Antes de aceptar un resultado, pregúntese:
+\begin{itemize}
+  \item ¿Tiene las dimensiones correctas?
+  \item ¿Se reduce a un caso conocido (Kepler, oscilador isótropo) en el límite adecuado?
+  \item ¿Es exacto o linealizado, y se dice explícitamente?
+  \item ¿Se eliminó correctamente el término centrífugo?
+\end{itemize}
+\vspace{0.3em}
+\begin{alertblock}{Hábito por desarrollar}
+\footnotesize
+Una notación pulida no prueba que el resultado sea correcto. En este tema, una sola verificación de límites detecta la mayoría de los errores de signo y de factores. Por ejemplo, todo $\Delta\theta$ propuesto debe dar $2\pi$ para $V=-k/r$ y $\pi$ para $V\propto r^2$.
+\end{alertblock}
+\end{frame}
+
+% =====================================================================
+\section{Perspectivas y resumen}
+% =====================================================================
+
+\begin{frame}{Hacia las próximas unidades}
+\footnotesize
+\begin{columns}[T]
+\begin{column}{0.48\textwidth}
+\textbf{Dinámica hamiltoniana (pasos 2--3).} Con $p_\theta=l$ fijo,
+\[
+H=\frac{p_r^2}{2\mu}+\Vef(r):
+\]
+la reducción se convierte en movimiento en un plano de fase $(r,p_r)$, y el paso 4 en la lectura de sus curvas de nivel.
+
+\vspace{0.3em}
+\textbf{Cuerpos rígidos (pasos 5--6).} La estabilidad de la rotación alrededor de los ejes principales usa la misma lógica de linealizar y evaluar.
+\end{column}
+\begin{column}{0.48\textwidth}
+\textbf{Variables de acción--ángulo (paso 7).} Las frecuencias son $\omega_k=\partial H/\partial J_k$. Para Kepler,
+\[
+H=-\frac{\mu k^2}{2\,(J_r+J_\theta)^2}
+\]
+de modo que $\omega_r=\omega_\theta$: la degeneración del hilo 1, ahora explicada estructuralmente (Sec.~6.10).
+
+\vspace{0.3em}
+\textbf{Perturbaciones y caos (paso 8).} Los cocientes de frecuencias conmensurables son donde las perturbaciones actúan con más fuerza: el punto de partida de la teoría KAM y del movimiento caótico.
+\end{column}
+\end{columns}
+\end{frame}
+
+% ---------------------------------------------------------------------
+\begin{frame}{Resumen}
+\small
+\begin{columns}[T]
+\begin{column}{0.55\textwidth}
+\textbf{El flujo de trabajo}
+\footnotesize
+\begin{enumerate}\setlength{\itemsep}{0pt}
+  \item Simetrías y coordenadas adaptadas
+  \item Cantidades conservadas (Noether)
+  \item Reducción a $\Vef(q)$
+  \item Puntos de retorno y cuadratura
+  \item Equilibrio y estabilidad
+  \item Linealización: $\omega^2=\Vef''/c$
+  \item Cocientes de frecuencias: precesión, cierre, periodos
+  \item Validación: dimensiones, límites, exactitud
+\end{enumerate}
+\end{column}
+\begin{column}{0.42\textwidth}
+\begin{block}{Ecuaciones centrales}
+\footnotesize
+\[\Vef=V+\frac{l^2}{2\mu r^2}\]
+\[\omega_r^2=\frac{1}{\mu}\Vef''(r_0)\]
+\[\Delta\theta=2\pi\,\frac{\dot\theta_0}{\omega_r}\]
+\end{block}
+\end{column}
+\end{columns}
+\vspace{0.3em}
+Las leyes de Kepler, el problema de Kepler, las perturbaciones orbitales y las oscilaciones pequeñas son cuatro aplicaciones de este único método.
+\end{frame}
+
+\end{document}

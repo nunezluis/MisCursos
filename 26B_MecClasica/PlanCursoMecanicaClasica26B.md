@@ -505,7 +505,8 @@ En esta semana cubrimos
 #### Materiales
 ##### Presentaciones
 + [Pequeñas oscilaciones](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T1Oscilaciones_rev.pdf)
-+ [Modos normales de oscilación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T2ModosNormales.pdf)
++ [Un mismo método para cuatro casos](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T3flujo_8_pasos.pdf)
++ [Modos normales de oscilación](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S8T2ModosNormales_rev.pdf)
 
 ##### Videos
 + [Modos normales de oscilación y neutrinos](https://www.youtube.com/watch?v=YqVF3NSc5xg)
