@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  20 OCT 2026 20:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2023.1.30)  20 OCT 2026 20:32
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1272,7 +1272,7 @@ Package rerunfilecheck Info: File `flujo_8_pasos.out' has not changed.
 Here is how much of TeX's memory you used:
  27131 strings out of 478268
  548405 string characters out of 5846347
- 814804 words of memory out of 5000000
+ 813762 words of memory out of 5000000
  44719 multiletter control sequences out of 15000+600000
  493391 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1310,7 +1310,7 @@ exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/20
 22/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/texlive/2022
 /texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2022/t
 exmf-dist/fonts/type1/public/cm-super/sfss1000.pfb>
-Output written on flujo_8_pasos.pdf (24 pages, 445295 bytes).
+Output written on flujo_8_pasos.pdf (24 pages, 445172 bytes).
 PDF statistics:
  1083 PDF objects out of 1200 (max. 8388607)
  863 compressed objects within 9 object streams

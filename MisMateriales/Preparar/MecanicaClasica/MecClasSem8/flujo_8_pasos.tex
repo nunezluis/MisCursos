@@ -1,8 +1,8 @@
 % =====================================================================
-%  Un método, cuatro lecciones: el flujo de trabajo de ocho pasos
+%  Un método, cuatro clases: el flujo de trabajo de ocho pasos
 %  basado en el potencial efectivo
 %  Mecánica Clásica (posgrado) -- lección de síntesis
-%  Lecciones conectadas: leyes de Kepler, problema de Kepler,
+%  clases conectadas: leyes de Kepler, problema de Kepler,
 %  perturbación de órbitas circulares, oscilaciones pequeñas.
 %  Los números de ecuación remiten a M. G. Cosenza, Mecánica Clásica (2024).
 %  Compilar con: pdflatex (dos veces). Requiere logo_uis.png en la misma carpeta.
@@ -18,7 +18,7 @@
 \usepackage{tikz}
 \usetikzlibrary{positioning,arrows.meta,calc,babel}
 
-% ---------- colores del estilo de las lecciones anteriores ----------
+% ---------- colores del estilo de las clases anteriores ----------
 \definecolor{rojoUIS}{RGB}{204,0,0}
 \definecolor{rojoOscuro}{RGB}{163,0,0}
 \definecolor{rojoProfundo}{RGB}{122,0,0}
@@ -69,13 +69,13 @@
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 
 % ---------- portada ----------
-\title[Un método, cuatro lecciones]{Un método, cuatro lecciones}
+\title[Un método, cuatro clases]{Un método, cuatro clases}
 \subtitle{El flujo de trabajo de ocho pasos basado en el potencial efectivo}
 \author[L.A. Núñez]{\textbf{Luis A. Núñez}}
 \institute[UIS]{Escuela de Física, Facultad de Ciencias,\\
 Universidad Industrial de Santander, Santander, Colombia\\[0.4em]
 \includegraphics[height=1.0cm]{logo_uis.png}\\[0.3em]
-{\upshape\scriptsize Síntesis de las lecciones: leyes de Kepler $\cdot$ problema de Kepler $\cdot$ perturbaciones $\cdot$ oscilaciones pequeñas.\\
+{\upshape\scriptsize Síntesis de las clases: leyes de Kepler $\cdot$ problema de Kepler $\cdot$ perturbaciones $\cdot$ oscilaciones pequeñas.\\
 Ecuaciones referidas a M. G. Cosenza, \emph{Mecánica Clásica} (2024).}}
 \date{\today}
 
@@ -101,7 +101,7 @@ Al terminar esta lección usted debería ser capaz de:
   \item \textbf{Formular} la reducción de un problema a un grado de libertad, pasando de las simetrías a las cantidades conservadas y de estas al potencial efectivo.
   \item \textbf{Analizar} equilibrios, estabilidad y puntos de retorno a partir de la forma de $\Vef$.
   \item \textbf{Deducir} frecuencias de oscilaciones pequeñas mediante linealización e \textbf{interpretar} sus cocientes como precesión, cierre o cuasiperiodicidad.
-  \item \textbf{Comparar} las cuatro lecciones como aplicaciones de un único flujo de trabajo e \textbf{identificar} qué resultados son exactos y cuáles aproximados.
+  \item \textbf{Comparar} las cuatro clases como aplicaciones de un único flujo de trabajo e \textbf{identificar} qué resultados son exactos y cuáles aproximados.
   \item \textbf{Evaluar} una deducción, propia o ajena, con una lista fija de verificación.
 \end{enumerate}
 \vspace{0.3em}
@@ -111,7 +111,7 @@ Al terminar esta lección usted debería ser capaz de:
 % ---------------------------------------------------------------------
 \begin{frame}{¿Por qué un flujo de trabajo común?}
 \small
-Cuatro lecciones y, en apariencia, cuatro temas:
+Cuatro clases y, en apariencia, cuatro temas:
 \begin{itemize}
   \item \textbf{Leyes de Kepler}: geometría y tiempos de las órbitas planetarias.
   \item \textbf{Problema de Kepler}: solución exacta en $V=-k/r$.
@@ -164,7 +164,7 @@ La \emph{forma} de $\Vef$ y el \emph{cociente de sus frecuencias} deciden casi t
 \end{frame}
 
 % ---------------------------------------------------------------------
-\begin{frame}{Los pasos en las cuatro lecciones (1--4)}
+\begin{frame}{Los pasos en las cuatro clases (1--4)}
 \scriptsize
 \renewcommand{\arraystretch}{1.35}
 \setlength{\tabcolsep}{3pt}
@@ -181,7 +181,7 @@ La \emph{forma} de $\Vef$ y el \emph{cociente de sus frecuencias} deciden casi t
 \end{frame}
 
 % ---------------------------------------------------------------------
-\begin{frame}{Los pasos en las cuatro lecciones (5--8)}
+\begin{frame}{Los pasos en las cuatro clases (5--8)}
 \scriptsize
 \renewcommand{\arraystretch}{1.35}
 \setlength{\tabcolsep}{3pt}
@@ -209,7 +209,7 @@ La \emph{forma} de $\Vef$ y el \emph{cociente de sus frecuencias} deciden casi t
 \textbf{Por qué importa.} Una simetría solo es útil si hace cíclica una coordenada, $\partial L/\partial q_k=0$. Una mala elección de coordenadas oculta la simetría.
 
 \vspace{0.4em}
-\begin{exampleblock}{En las cuatro lecciones}
+\begin{exampleblock}{En las cuatro clases}
 \begin{itemize}
   \item Dos cuerpos: $(\mathbf r_1,\mathbf r_2)\to(\mathbf R,\mathbf r)$; la invariancia traslacional hace cíclica a $\mathbf R$.
   \item Isotropía: movimiento en un plano, coordenadas polares $(r,\theta)$:
@@ -230,7 +230,7 @@ La \emph{forma} de $\Vef$ y el \emph{cociente de sus frecuencias} deciden casi t
 Si hay tantas integrales independientes como grados de libertad, el problema es integrable.
 
 \vspace{0.4em}
-\begin{exampleblock}{En las cuatro lecciones}
+\begin{exampleblock}{En las cuatro clases}
 \begin{itemize}
   \item Dos cuerpos: $\mathbf P_T$ (3), dirección de $\mathbf l$ (1), $l=\mu r^2\dot\theta$ (1), $E$ (1): seis integrales \ec{3.23, 3.25}.
   \item La 2.ª ley de Kepler es la conservación de $l$:\quad $\dfrac{dA}{dt}=\dfrac{l}{2\mu}$ \ec{3.148}
