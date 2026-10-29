@@ -1,0 +1,8 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Objetivos y punto de partida}{3}{0}{1}
+\beamer@sectionintoc {2}{Cuerpo rígido y velocidad angular}{17}{0}{2}
+\beamer@sectionintoc {3}{Rotaciones y el grupo SO(3)}{30}{0}{3}
+\beamer@sectionintoc {4}{Ángulos de Euler}{44}{0}{4}
+\beamer@sectionintoc {5}{Velocidad angular en ángulos de Euler}{65}{0}{5}
+\beamer@sectionintoc {6}{Recapitulando}{90}{0}{6}
+\beamer@sectionintoc {7}{Para la discusión}{99}{0}{7}
