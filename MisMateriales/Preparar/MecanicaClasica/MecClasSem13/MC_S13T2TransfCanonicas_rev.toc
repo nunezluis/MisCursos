@@ -1,0 +1,19 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Transformaciones canónicas}{16}{0}{1}
+\beamer@subsectionintoc {1}{1}{Motivación}{16}{0}{1}
+\beamer@subsectionintoc {1}{2}{Cambios de variables en el espacio de fase}{20}{0}{1}
+\beamer@sectionintoc {2}{Funciones generadoras}{27}{0}{2}
+\beamer@subsectionintoc {2}{1}{Acción estacionaria en el espacio de fase}{27}{0}{2}
+\beamer@subsectionintoc {2}{2}{Los cuatro tipos básicos}{34}{0}{2}
+\beamer@subsectionintoc {2}{3}{Ejemplos}{42}{0}{2}
+\beamer@sectionintoc {3}{Paréntesis de Poisson}{61}{0}{3}
+\beamer@subsectionintoc {3}{1}{Definición y evolución temporal}{61}{0}{3}
+\beamer@subsectionintoc {3}{2}{Propiedades}{68}{0}{3}
+\beamer@subsectionintoc {3}{3}{Ejemplos}{78}{0}{3}
+\beamer@sectionintoc {4}{Paréntesis de Poisson y transformaciones canónicas}{87}{0}{4}
+\beamer@subsectionintoc {4}{1}{Criterio de canonicidad}{87}{0}{4}
+\beamer@subsectionintoc {4}{2}{Transformaciones canónicas infinitesimales}{99}{0}{4}
+\beamer@subsectionintoc {4}{3}{Teorema de Liouville}{106}{0}{4}
+\beamer@sectionintoc {5}{La IA y las transformaciones canónicas}{117}{0}{5}
+\beamer@sectionintoc {6}{Recapitulando}{137}{0}{6}
+\beamer@sectionintoc {7}{Para la discusión}{144}{0}{7}

@@ -1,0 +1,1035 @@
+% =====================================================================
+%  Mecánica Clásica — Dinámica Hamiltoniana (S13, Tema 1)
+%  Escuela de Física, Universidad Industrial de Santander
+%  Codificación: UTF-8
+%
+%  Versión para estudiantes:  \instructorfalse  (por defecto)
+%  Versión para el instructor: \instructortrue  (agrega, al final,
+%  notas de clase, soluciones completas y claves de las actividades)
+% =====================================================================
+\documentclass[spanish]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}       % define también \sen
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{cancel}               % \cancel{...} en rojo
+\renewcommand{\CancelColor}{\color{red}}
+\usepackage{graphicx}
+\usepackage{booktabs,array}
+\usepackage{tikz}
+\usepackage{textpos}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+% ---------------------------------------------------------------------
+%  Interruptor de versión
+% ---------------------------------------------------------------------
+\newif\ifinstructor
+\instructorfalse     % cambie a \instructortrue para la versión docente
+
+% ---------------------------------------------------------------------
+%  Logo institucional (cambie solo esta ruta)
+% ---------------------------------------------------------------------
+\newcommand{\logoUIS}{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}
+\newcommand{\insertarlogo}{%
+  \IfFileExists{\logoUIS}{\includegraphics[height=0.4in]{\logoUIS}}{}}
+
+\addtobeamertemplate{frametitle}{}{%
+  \begin{textblock*}{100mm}(.85\textwidth,-1cm)
+    \insertarlogo
+  \end{textblock*}}
+
+% Figura con aviso si el archivo no existe: \figura{ancho}{archivo}
+\newcommand{\figura}[2]{%
+  \IfFileExists{#2}{\includegraphics[width=#1]{#2}}%
+    {\fbox{\parbox{\dimexpr#1-2\fboxsep-2\fboxrule}%
+      {\centering\tiny Falta la figura:\\ \detokenize{#2}}}}}
+
+% ---------------------------------------------------------------------
+%  Notación unificada del curso
+%  s: número de grados de libertad; i = 1,...,s
+%  (q_i, \dot q_i): estado lagrangiano; (q_i, p_i): espacio de fase
+% ---------------------------------------------------------------------
+\newcommand{\Lag}{\mathcal{L}}               % Lagrangiano
+\newcommand{\Ham}{\mathcal{H}}               % Hamiltoniano
+\newcommand{\Ene}{\mathcal{E}}               % función de energía
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\cte}{\text{cte}}
+
+% ---------------------------------------------------------------------
+\title[Dinámica Hamiltoniana]{\textbf{Dinámica Hamiltoniana}}
+\subtitle{Ecuaciones de Hamilton, espacio de fase y leyes de conservación}
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias,}\\
+  \textit{Universidad Industrial de Santander, Santander, Colombia}\\
+  \insertarlogo}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% ---------------------------------------------------------------------
+%  Objetivos y prerrequisitos (antes de la agenda)
+% ---------------------------------------------------------------------
+
+\begin{frame}{Objetivos de aprendizaje}
+Al finalizar la sesión, el estudiante podrá:
+\begin{enumerate}[<+->]
+  \item \textbf{Construir} $\Ham(q,p,t)$ a partir de $\Lag(q,\dot q,t)$ mediante
+        la transformación de Legendre, verificando que sea invertible.
+  \item \textbf{Deducir} las ecuaciones de Hamilton y \textbf{aplicarlas} a
+        sistemas con uno y varios grados de libertad.
+  \item \textbf{Interpretar} trayectorias y puntos de equilibrio en el espacio de fase.
+  \item \textbf{Identificar} cantidades conservadas (coordenadas cíclicas,
+        $\partial\Ham/\partial t=0$) y \textbf{reducir} el número de grados de libertad.
+  \item \textbf{Distinguir} entre Hamiltoniano, función de energía y energía total,
+        y entre momento canónico y momento mecánico.
+  \item \textbf{Evaluar} con las 4D una derivación hamiltoniana producida por un asistente de IA.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Lo que necesitamos recordar}
+\begin{itemize}[<+->]
+  \item Coordenadas generalizadas $q_i$, ligaduras holónomas y $s$ grados de libertad.
+  \item Principio de acción estacionaria y ecuaciones de Euler--Lagrange.
+  \item Momento conjugado $p_i=\partial\Lag/\partial\dot q_i$, coordenadas cíclicas
+        y teorema de Noether.
+  \item Función de energía $\Ene=\sum_i\dot q_i\,\partial\Lag/\partial\dot q_i-\Lag$ (Cap.~2),
+        conservada si $\partial\Lag/\partial t=0$.
+  \item Potencial efectivo (fuerzas centrales) y estabilidad de equilibrios.
+  \item Herramientas matemáticas: diferencial total, funciones homogéneas
+        (teorema de Euler), teorema de la función inversa.
+  \item[] \alert{Hoy:} la misma dinámica descrita con otras variables.
+        No aparece física nueva, aparece \emph{estructura} nueva.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Agenda}
+\begin{columns}[T]
+  \begin{column}{0.48\textwidth}
+    \tableofcontents[sections={1-4},hideallsubsections]
+  \end{column}
+  \begin{column}{0.48\textwidth}
+    \tableofcontents[sections={5-9},hideallsubsections]
+  \end{column}
+\end{columns}
+\end{frame}
+
+% =====================================================================
+\section{De Lagrange a Hamilton}
+% =====================================================================
+
+\subsection{La idea lagrangiana}
+\begin{frame}{La idea lagrangiana}
+\begin{itemize}[<+->]
+  \item La dinámica se codifica en una función $\Lag(q_i,\dot q_i,t)$, $i=1,\dots,s$,
+        donde $s$ es el número de grados de libertad.
+  \item Las ecuaciones de Euler--Lagrange son $s$ ecuaciones diferenciales
+        ordinarias de \textbf{segundo orden}:
+        \[
+          \frac{d}{dt}\left(\pd{\Lag}{\dot q_i}\right)-\pd{\Lag}{q_i}=0,
+          \qquad i=1,\dots,s .
+        \]
+  \item El movimiento queda determinado por $2s$ condiciones iniciales:
+        $q_i(t_0)$ y $\dot q_i(t_0)$.
+  \item Geométricamente, el movimiento es una curva $q_i(t)$ en el
+        \textbf{espacio de configuración}, de dimensión $s$.
+  \item Un punto de ese espacio \emph{no} determina el estado: por él pasan
+        infinitas trayectorias, una para cada velocidad inicial.
+\end{itemize}
+\end{frame}
+
+\subsection{La idea hamiltoniana}
+\begin{frame}{La idea hamiltoniana}
+\begin{itemize}[<+->]
+  \item El estado del sistema es un punto $(q_i,p_i)$ del \textbf{espacio de fase},
+        de dimensión $2s$, formado por las coordenadas generalizadas y sus momentos conjugados.
+  \item Las $s$ ecuaciones de Lagrange se sustituyen por $2s$ ecuaciones de
+        \textbf{primer orden}: la forma general de un sistema dinámico
+        $\dot{\mathbf{x}}=\mathbf{F}(\mathbf{x},t)$.
+  \item Por existencia y unicidad, por cada punto del espacio de fase pasa una única
+        trayectoria: si $\Ham$ no depende de $t$, las trayectorias \emph{no se cruzan}.
+  \item Las $q_i$ y las $p_i$ tienen el mismo estatus. Esto permite transformaciones
+        que las mezclan (transformaciones canónicas, próxima sesión).
+  \item Es el lenguaje natural de la mecánica estadística (teorema de Liouville) y de la
+        mecánica cuántica (corchetes de Poisson $\to$ conmutadores).
+\end{itemize}
+\end{frame}
+
+\subsection{Velocidades generalizadas y momentos conjugados}
+\begin{frame}{¿Por qué no basta con $v_i=\dot q_i$?}
+\begin{itemize}[<+->]
+  \item Bajar el orden es trivial: con $v_i\equiv\dot q_i$ se obtienen $2s$ ecuaciones
+        de primer orden
+        \[
+          \dot q_i=v_i,\qquad
+          \frac{d}{dt}\left(\pd{\Lag}{v_i}\right)=\pd{\Lag}{q_i},
+          \qquad \Lag=\Lag(q_i,v_i,t).
+        \]
+  \item Es correcto, pero asimétrico: una ecuación es cinemática y la otra dinámica.
+        No revela ninguna estructura común.
+  \item Hamilton elige otra variable independiente, el \textbf{momento conjugado}
+        (o canónico):
+        \[
+          p_i\equiv\pd{\Lag}{\dot q_i}(q,\dot q,t),\qquad i=1,\dots,s .
+        \]
+  \item \alert{Momento canónico $\neq$ momento mecánico}: para una carga en un
+        campo electromagnético (Cap.~2), $\mathbf p=m\mathbf v+\frac{q}{c}\mathbf A$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Invertibilidad: ¿se pueden despejar las velocidades?}
+\begin{itemize}[<+->]
+  \item Para cambiar de variables necesitamos $\dot q_i=\dot q_i(q,p,t)$.
+        Por el teorema de la función inversa, esto es posible (localmente) si
+        \[
+          \det\left(\frac{\partial^2\Lag}{\partial\dot q_i\,\partial\dot q_j}\right)\neq 0 .
+        \]
+  \item Sistemas naturales: $T=\tfrac12\sum_{i,j}M_{ij}(q)\,\dot q_i\dot q_j$ con
+        $M$ definida positiva. Si $\Lag=T+\sum_i a_i(q)\dot q_i-V(q)$, entonces
+        \[
+          \mathbf p=M\dot{\mathbf q}+\mathbf a
+          \quad\Longrightarrow\quad
+          \dot{\mathbf q}=M^{-1}(\mathbf p-\mathbf a).
+        \]
+  \item Si el hessiano es singular (por ejemplo, $\Lag$ lineal en las velocidades),
+        aparecen relaciones entre $q$ y $p$: sistemas singulares (Dirac),
+        fuera del alcance de este curso.
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section{La transformación de Legendre}
+% =====================================================================
+
+\begin{frame}{La transformación de Legendre 1/3: geometría}
+\begin{columns}[T]
+\begin{column}{0.58\textwidth}
+\begin{itemize}[<+->]
+  \item Sea $f(x)$ con $f''(x)\neq0$. La pendiente $y=f'(x)$ es monótona y se puede
+        invertir: $x=x(y)$.
+  \item La recta tangente en $(x,f(x))$ tiene pendiente $y$ y corta al eje vertical
+        en $b$:
+        \[ f=yx+b \;\Rightarrow\; -b=yx-f . \]
+  \item La curva $f(x)$ es la \textbf{envolvente} de la familia de sus rectas
+        tangentes: conocer $b(y)$ equivale a conocer $f(x)$.
+  \item Las descripciones $(x,f)$ y $(y,b)$ son equivalentes.
+\end{itemize}
+\end{column}
+\begin{column}{0.40\textwidth}
+  \centering
+  \figura{\linewidth}{Figuras/TransfLegendre.png}\\[2mm]
+  {\tiny\url{https://youtu.be/vgLq90cOI_M}}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{La transformación de Legendre 2/3: propiedades}
+\begin{itemize}[<+->]
+  \item Transformada de Legendre de $f$:
+        $\; g(y)\equiv y\,x(y)-f\big(x(y)\big)$.
+  \item Derivando: $g'(y) = \frac{{\rm d}g(y)}{{\rm d}y} =x+y\,x'(y)-\frac{{\rm d}f(x)}{{\rm d}x}\,x'(y)=x$. \\
+        La transformación es \textbf{involutiva}: aplicada a $g$ devuelve $f$.
+  \item Varias variables: $y_i=\pd{f}{x_i}$, invertible si
+        $\det\big(\partial^2 f/\partial x_i\partial x_j\big)\neq0$, y
+        \[
+          g(y_1,\dots,y_s)=\sum_{i=1}^s x_i y_i-f,\qquad \pd{g}{y_i}=x_i .
+        \]
+  \item \textbf{Variables pasivas}: si $f=f(x,z)$ y solo se transforman las $x$,
+        \[
+          g(y,z)=\sum_i x_i y_i-f(x,z)\quad\Rightarrow\quad
+          \pd{g}{z_k}\Big|_{y}=-\pd{f}{z_k}\Big|_{x}.
+        \]
+  \item En mecánica: $x\to\dot q$, $\;y\to p$, $\;z\to(q,t)$, $\;f\to\Lag$, $\;g\to\Ham$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{La transformación de Legendre 3/3: termodinámica}
+\begin{itemize}[<+->]
+  \item Energía interna $U(S,V,N)$ con $dU=T\,dS-P\,dV+\mu\,dN$.
+        Pares conjugados: $(T,S)$, $(-P,V)$, $(\mu,N)$.
+  \item Potenciales termodinámicos:
+        \begin{itemize}
+          \item Helmholtz: $F(T,V)=U-TS$
+          \item Entalpía: $H_{\mathrm e}(S,P)=U+PV$
+          \item Gibbs: $G(T,P)=U-TS+PV$
+        \end{itemize}
+  \item \alert{Convención de signo:} con nuestra definición $g=xy-f$, la transformada
+        de $U$ respecto a $S$ es $TS-U=-F$. Termodinámica y mecánica usan signos
+        opuestos; la información contenida es la misma.
+  \item \alert{Notación:} aquí $P$ es la presión y $H_{\mathrm e}$ la entalpía;
+        no deben confundirse con el momento $p$ ni con el Hamiltoniano $\Ham$.
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section{Las ecuaciones de Hamilton}
+% =====================================================================
+
+\begin{frame}{Deducción de las ecuaciones de Hamilton}
+\small
+Supuestos: $\Lag(q,\dot q,t)$ con hessiano no singular y $p_i=\partial\Lag/\partial\dot q_i$.
+Definimos el \textbf{Hamiltoniano}
+\[
+  \Ham(q,p,t)\equiv\sum_{i=1}^s p_i\,\dot q_i(q,p,t)-\Lag\big(q,\dot q(q,p,t),t\big).
+\]
+\pause
+Su diferencial es
+\[
+  d\Ham=\sum_i\big(\dot q_i\,dp_i+\cancel{p_i\,d\dot q_i}\big)
+        -\sum_i\Big(\pd{\Lag}{q_i}dq_i+\cancel{\pd{\Lag}{\dot q_i}d\dot q_i}\Big)
+        -\pd{\Lag}{t}dt .
+\]
+\pause
+Con Euler--Lagrange, $\partial\Lag/\partial q_i=\dot p_i$:
+$\quad d\Ham=\sum_i\big(\dot q_i\,dp_i-\dot p_i\,dq_i\big)-\pd{\Lag}{t}\,dt.$
+\pause
+Comparando con
+$d\Ham=\sum_i\big(\pd{\Ham}{q_i}dq_i+\pd{\Ham}{p_i}dp_i\big)+\pd{\Ham}{t}dt$:
+\[
+  \boxed{\;\dot q_i=\pd{\Ham}{p_i},\qquad \dot p_i=-\pd{\Ham}{q_i},\qquad
+  \pd{\Ham}{t}=-\pd{\Lag}{t}\;}
+\]
+\pause
+La primera ecuación es la inversión de Legendre (no usa la dinámica);
+la segunda contiene las ecuaciones de Euler--Lagrange.
+\end{frame}
+
+\begin{frame}{El procedimiento hamiltoniano}
+\begin{enumerate}[<+->]
+  \item Elegir las coordenadas generalizadas $q_i$ (ligaduras, grados de libertad).
+  \item Construir $\Lag(q,\dot q,t)$; para sistemas naturales $\Lag=T-V$.
+  \item Calcular $p_i=\partial\Lag/\partial\dot q_i$ y verificar que el hessiano no sea singular.
+  \item Despejar las velocidades: $\dot q_i=\dot q_i(q,p,t)$.
+  \item Construir $\Ham=\sum_i p_i\dot q_i-\Lag$ y expresarlo
+        \textbf{solo} en $(q,p,t)$.
+  \item Escribir las $2s$ ecuaciones de Hamilton; identificar coordenadas cíclicas
+        y verificar si $\partial\Ham/\partial t=0$.
+\end{enumerate}
+\onslide<+->{
+\begin{alertblock}{Error frecuente}
+Derivar respecto a $q_i$ antes de eliminar las $\dot q_i$ produce signos
+incorrectos (lo veremos en el ejemplo del cono).
+\end{alertblock}}
+\end{frame}
+
+\begin{frame}{Formalismos equivalentes}
+\begin{center}
+  \figura{4.3in}{Figuras/LagrangeHamilton.png}
+\end{center}
+Ambos formalismos describen la misma dinámica: Lagrange en $(q,\dot q)$ con $s$
+ecuaciones de segundo orden; Hamilton en $(q,p)$ con $2s$ de primer orden.
+\end{frame}
+
+% =====================================================================
+\section{Ejemplos}
+% =====================================================================
+
+\subsection{El oscilador armónico}
+\begin{frame}{El oscilador armónico 1/2}
+Masa $m$ unida a un resorte de constante $k$; $q$ es el desplazamiento desde el
+equilibrio; $s=1$.
+\begin{itemize}[<+->]
+  \item Lagrangiano: $\Lag=\tfrac12 m\dot q^2-\tfrac12 kq^2$.
+  \item Momento conjugado: $p=\pd{\Lag}{\dot q}=m\dot q\;\Rightarrow\;\dot q=p/m$.
+  \item Hamiltoniano:
+        \[
+          \Ham=p\dot q-\Lag
+              =\frac{p^2}{m}-\frac12 m\Big(\frac{p}{m}\Big)^2+\frac12 kq^2
+              =\frac{p^2}{2m}+\frac12 kq^2 .
+        \]
+  \item Ecuaciones de Hamilton:
+        $\dot q=\pd{\Ham}{p}=\dfrac{p}{m}$, $\quad\dot p=-\pd{\Ham}{q}=-kq$.
+  \item Combinándolas, $\ddot q=\dot p/m=-(k/m)q$: la misma ecuación de Lagrange.
+  \item Solución: $q(t)=A\sen(\omega t+\phi)$ y $p(t)=mA\omega\cos(\omega t+\phi)$,
+        con $\omega^2=k/m$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{El oscilador armónico 2/2: espacio de fase}
+\begin{columns}[T]
+\begin{column}{0.62\textwidth}
+\begin{itemize}[<+->]
+  \item $\partial\Ham/\partial t=0\Rightarrow\Ham=E=\cte$. Cada trayectoria es una
+        curva de nivel:
+        \[
+          \frac{q^2}{2E/k}+\frac{p^2}{2mE}=1 ,
+        \]
+        una elipse de semiejes $\sqrt{2E/k}$ y $\sqrt{2mE}$.
+  \item Sentido horario: si $q>0$, $\dot p=-kq<0$.
+  \item El origen es un punto fijo elíptico (un \emph{centro}); las elipses
+        de distinta energía no se cruzan.
+  \item Área encerrada:
+        $\oint p\,dq=\pi\sqrt{2E/k}\sqrt{2mE}=2\pi E/\omega$.
+        Reaparecerá en las variables de acción--ángulo.
+\end{itemize}
+\end{column}
+\begin{column}{0.36\textwidth}
+  \centering
+  \figura{\linewidth}{Figuras/EspFaseOscilador.png}
+\end{column}
+\end{columns}
+\end{frame}
+
+\subsection{Partícula en un cono vertical}
+\begin{frame}{Partícula en un cono vertical 1/2}
+\small
+Cono con vértice hacia abajo, eje vertical $z$ y semiángulo $\alpha$ en el vértice.
+Coordenadas: $r$ (distancia al eje) y $\varphi$ (azimut); ligadura $z=r\cot\alpha$; $s=2$.
+\par\normalsize
+\begin{itemize}[<+->]
+  \item $T=\tfrac12 m(\dot r^2+\dot z^2+r^2\dot\varphi^2)
+          =\tfrac12 m\dot r^2\csc^2\alpha+\tfrac12 mr^2\dot\varphi^2$,
+        $\quad V=mgr\cot\alpha$.
+  \item Momentos: $p_r=m\dot r\csc^2\alpha$, $\quad p_\varphi=mr^2\dot\varphi$
+        (componente $z$ del momento angular).
+  \item Hamiltoniano:
+        \[
+          \Ham(r,\varphi,p_r,p_\varphi)=\frac{p_r^2\sen^2\alpha}{2m}
+          +\frac{p_\varphi^2}{2mr^2}+mgr\cot\alpha .
+        \]
+  \item Ecuaciones de Hamilton:
+        \begin{align*}
+          \dot r&=\frac{p_r\sen^2\alpha}{m}, &
+          \dot p_r&=-\pd{\Ham}{r}=\frac{p_\varphi^2}{mr^3}-mg\cot\alpha,\\
+          \dot\varphi&=\frac{p_\varphi}{mr^2}, &
+          \dot p_\varphi&=-\pd{\Ham}{\varphi}=0 .
+        \end{align*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Partícula en un cono vertical 2/2: reducción}
+\begin{itemize}[<+->]
+  \item Dos cantidades conservadas: $p_\varphi\equiv\ell$ ($\varphi$ es cíclica) y
+        $\Ham=E$ ($\partial\Ham/\partial t=0$). Aquí $\Ham=T+V$ porque la ligadura
+        no depende del tiempo.
+  \item Con $p_\varphi=\ell$ fijo, el problema se reduce a un grado de libertad:
+        \[
+          \Ham=\frac{\sen^2\alpha}{2m}\,p_r^2+V_{\mathrm{ef}}(r),\qquad
+          V_{\mathrm{ef}}(r)=\frac{\ell^2}{2mr^2}+mgr\cot\alpha .
+        \]
+  \item Órbita circular: $V_{\mathrm{ef}}'(r_0)=0\Rightarrow
+        r_0^3=\dfrac{\ell^2\tan\alpha}{m^2g}$; es estable porque
+        $V_{\mathrm{ef}}''(r_0)=3\ell^2/(mr_0^4)>0$.
+  \item Geometría: en el espacio de fase de dimensión 4, $\Ham=E$ define una
+        hipersuperficie de dimensión 3; fijando además $p_\varphi=\ell$, el movimiento
+        queda en una superficie de dimensión 2.
+  \item En $\Lag$, $\varphi$ es cíclica pero $\dot\varphi$ sigue apareciendo; en $\Ham$,
+        $p_\varphi$ es un parámetro y la reducción es inmediata.
+\end{itemize}
+\end{frame}
+
+\subsection{Partícula en un potencial central}
+\begin{frame}{Partícula en un potencial central 1/2}
+\small
+Partícula de masa $m$ (o masa reducida $\mu$ del problema de dos cuerpos) en un
+potencial $V(r)$; coordenadas esféricas $(r,\theta,\varphi)$; $s=3$.
+\par\normalsize
+\begin{itemize}[<+->]
+  \item Lagrangiano:
+        $\Lag=\dfrac m2\left(\dot r^2+r^2\dot\theta^2+r^2\sen^2\theta\,\dot\varphi^2\right)-V(r)$.
+  \item Momentos:
+        $p_r=m\dot r$, $\quad p_\theta=mr^2\dot\theta$, $\quad p_\varphi=mr^2\sen^2\theta\,\dot\varphi$.
+  \item Hamiltoniano:
+        \[
+          \Ham=\frac{1}{2m}\left(p_r^2+\frac{p_\theta^2}{r^2}
+               +\frac{p_\varphi^2}{r^2\sen^2\theta}\right)+V(r).
+        \]
+  \item Ecuaciones de Hamilton:
+        \begin{align*}
+          \dot r&=\frac{p_r}{m}, &
+          \dot p_r&=\frac{p_\theta^2}{mr^3}+\frac{p_\varphi^2}{mr^3\sen^2\theta}-\frac{dV}{dr},\\
+          \dot\theta&=\frac{p_\theta}{mr^2}, &
+          \dot p_\theta&=\frac{p_\varphi^2\cos\theta}{mr^2\sen^3\theta},\\
+          \dot\varphi&=\frac{p_\varphi}{mr^2\sen^2\theta}, &
+          \dot p_\varphi&=0 .
+        \end{align*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Partícula en un potencial central 2/2: conservación oculta}
+\begin{itemize}[<+->]
+  \item $\varphi$ es cíclica: $p_\varphi=L_z=\cte$.
+  \item $\theta$ \emph{no} es cíclica, pero la cantidad
+        \[
+          L^2\equiv p_\theta^2+\frac{p_\varphi^2}{\sen^2\theta}
+        \]
+        es constante. Verifíquelo: calcule $dL^2/dt$ con las ecuaciones de Hamilton.
+  \item Entonces el Hamiltoniano se reduce a un problema radial:
+        \[
+          \Ham=\frac{p_r^2}{2m}+\frac{L^2}{2mr^2}+V(r),
+        \]
+        con el mismo potencial efectivo de la unidad de fuerzas centrales.
+  \item Moraleja: no toda cantidad conservada proviene de una coordenada cíclica en las
+        variables elegidas. Los corchetes de Poisson darán el criterio general.
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section{Leyes de conservación y energía}
+% =====================================================================
+
+\subsection{Evolución temporal del Hamiltoniano}
+\begin{frame}{Evolución temporal del Hamiltoniano}
+\begin{itemize}[<+->]
+  \item A lo largo de una trayectoria, usando las ecuaciones de Hamilton,
+        \[
+          \frac{d\Ham}{dt}
+          =\sum_i\Big(\pd{\Ham}{q_i}\underbrace{\dot q_i}_{\partial\Ham/\partial p_i}
+          +\pd{\Ham}{p_i}\underbrace{\dot p_i}_{-\partial\Ham/\partial q_i}\Big)
+          +\pd{\Ham}{t}
+          =\pd{\Ham}{t}=-\pd{\Lag}{t}.
+        \]
+  \item Si $\partial\Ham/\partial t=0$, $\Ham$ es constante y la trayectoria vive en la
+        hipersuperficie $\Ham(q,p)=h$, de dimensión $2s-1$.
+  \item Coordenada cíclica: $\partial\Ham/\partial q_j=0\Rightarrow p_j=\alpha_j=\cte$.
+        El par $(q_j,p_j)$ sale de la dinámica: el espacio de fase pierde dos dimensiones,
+        y $q_j(t)$ se obtiene al final por cuadratura,
+        $\dot q_j=\partial\Ham/\partial\alpha_j$.
+  \item Simetrías y conservación (Noether): traslación temporal $\leftrightarrow\Ham$;
+        traslación espacial $\leftrightarrow\mathbf p$; rotación $\leftrightarrow\mathbf L$.
+\end{itemize}
+\end{frame}
+
+\subsection{Hamiltoniano, función de energía y energía total}
+\begin{frame}{Hamiltoniano, función de energía y energía total}
+\begin{itemize}[<+->]
+  \item $\Ham$ es la función de energía expresada en otras variables:
+        $\Ham(q,p,t)=\Ene\big(q,\dot q(q,p,t),t\big)$.
+  \item Descomposición: $\Lag=\Lag_2+\Lag_1+\Lag_0$, con $\Lag_k$ homogénea de grado $k$
+        en las velocidades: $\Lag_k(q,\lambda\dot q,t)=\lambda^k\Lag_k(q,\dot q,t)$.
+  \item Teorema de Euler: $\sum_i\dot q_i\,\partial\Lag_k/\partial\dot q_i=k\,\Lag_k$. Por lo tanto
+        \[
+          \Ene=2\Lag_2+\Lag_1-\Lag=\Lag_2-\Lag_0 .
+        \]
+        $\Lag_1$ no contribuye al valor de $\Ene$ (aunque reaparece en
+        $\Ham(q,p)$ a través de $\mathbf p-\mathbf a$).
+  \item Si las posiciones cartesianas no dependen explícitamente del tiempo,
+        $\mathbf r_a=\mathbf r_a(q)$, entonces $T$ es cuadrática homogénea y $\Lag_2=T$.
+        Si además $V=V(q)$, entonces $\Lag_1=0$ y $\Lag_0=-V$:
+        \[
+          \Ham=T+V=E .
+        \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Dos preguntas independientes}
+\begin{block}{}
+\begin{itemize}
+  \item ¿Se conserva $\Ham$? $\;\Longleftrightarrow\;\partial\Ham/\partial t=0$.
+  \item ¿Es $\Ham=T+V$? $\;\Longleftarrow\;$ $\mathbf r_a=\mathbf r_a(q)$ sin $t$ explícito
+        y $V$ independiente de las velocidades.
+\end{itemize}
+\end{block}
+\pause
+Las cuatro combinaciones ocurren:
+\begin{center}
+\small
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}lcc@{}}
+  \toprule
+  & $\Ham=T+V$ & $\Ham\neq T+V$ \\
+  \midrule
+  $\Ham$ se conserva    & oscilador, cono, péndulo & varilla rotante, $\omega=\cte$ \\
+  $\Ham$ no se conserva & oscilador con $k(t)$     & varilla rotante, $\omega(t)$ \\
+  \bottomrule
+\end{tabular}
+\end{center}
+\pause
+\alert{$\partial\Lag/\partial t=0$ no garantiza que $\Ham$ sea la energía total.}
+\end{frame}
+
+\subsection{Cuenta en una varilla que rota}
+\begin{frame}{Cuenta en una varilla que rota 1/2}
+\begin{columns}[T]
+\begin{column}{0.66\textwidth}
+{\small Varilla sin masa en un plano horizontal, que gira con $\omega$ constante
+alrededor de un eje vertical que la atraviesa. Cuenta de masa $m$ sin fricción;
+$r$ es su posición sobre la varilla medida desde el eje; $s=1$
+(el ángulo $\omega t$ está prescrito: ligadura reónoma).}
+\small
+\begin{itemize}[<+->]
+  \item $\Lag=T=\tfrac m2\left(\dot r^2+\omega^2r^2\right)$, $\quad p_r=m\dot r$.
+  \item $\Ham=\dfrac{p_r^2}{2m}-\dfrac{m\omega^2}{2}r^2$.
+  \item $\partial\Ham/\partial t=0\Rightarrow\Ham$ se conserva, pero
+        $E=T=\dfrac{p_r^2}{2m}+\dfrac{m\omega^2}{2}r^2\neq\Ham$.
+  \item $\dot r=p_r/m$, $\;\dot p_r=m\omega^2r\Rightarrow\ddot r=\omega^2r$:
+        \[ r(t)=Ae^{\omega t}+Be^{-\omega t}. \]
+        La cuenta no oscila (recuerde el error de la IA en la Sesión~1).
+\end{itemize}
+\end{column}
+\begin{column}{0.32\textwidth}
+  \centering
+  \figura{0.9\linewidth}{Figuras/CuentaMoviendo.png}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Cuenta en una varilla que rota 2/2: interpretación}
+\begin{columns}[T]
+\begin{column}{0.62\textwidth}
+\begin{itemize}[<+->]
+  \item La energía no se conserva:
+        $\dfrac{dE}{dt}=m\dot r\ddot r+m\omega^2r\dot r=2m\omega^2r\dot r$.
+        La varilla ejerce una fuerza normal $N=2m\omega\dot r$ que realiza trabajo
+        con potencia $N\,(\omega r)$.
+  \item $\Ham$ es la energía en el sistema que rota: cinética relativa más
+        el potencial centrífugo $-\tfrac12 m\omega^2r^2$.
+  \item Espacio de fase: las curvas $\Ham=h$ son hipérbolas; el origen es un
+        punto de silla (equilibrio inestable) con separatrices $p_r=\pm m\omega r$.
+        Compare con el centro del oscilador.
+  \item El valor de $\Ham$ depende de las coordenadas cuando la transformación
+        $q\to Q(q,t)$ depende del tiempo; el de $\Lag$ no.
+\end{itemize}
+\end{column}
+\begin{column}{0.36\textwidth}
+\centering
+% Retrato de fase (unidades m = omega = 1): H = p^2/2 - r^2/2
+\begin{tikzpicture}[scale=0.62]
+  \draw[->] (-2.2,0) -- (2.4,0) node[right] {\scriptsize $r$};
+  \draw[->] (0,-2.2) -- (0,2.4) node[above] {\scriptsize $p_r$};
+  \draw[thick,red] (-2,-2) -- (2,2);
+  \draw[thick,red] (-2,2) -- (2,-2);
+  \foreach \c in {0.6,1.6}{
+    \draw[blue] plot[domain=-1.9:1.9,samples=40] (\x,{sqrt(\x*\x+\c)});
+    \draw[blue] plot[domain=-1.9:1.9,samples=40] (\x,{-sqrt(\x*\x+\c)});
+    \draw[blue] plot[domain=-1.9:1.9,samples=40] ({sqrt(\x*\x+\c)},\x);
+    \draw[blue] plot[domain=-1.9:1.9,samples=40] ({-sqrt(\x*\x+\c)},\x);
+  }
+\end{tikzpicture}\\
+{\tiny En rojo, las separatrices $p_r=\pm m\omega r$.}
+\end{column}
+\end{columns}
+\end{frame}
+
+\subsection{Preguntas de control}
+\begin{frame}{Preguntas de control}
+\begin{enumerate}[<+->]
+  \item ¿Pueden cruzarse dos trayectorias en el espacio de fase de un sistema con
+        $\partial\Ham/\partial t=0$? ¿Y en el espacio de configuración?
+  \item Si $\Lag$ no depende explícitamente de $t$, ¿se conserva $\Ham$? ¿Es la energía total?
+  \item Los Lagrangianos $\Lag$ y $\Lag'=\Lag+\dfrac{dF(q,t)}{dt}$ dan las mismas ecuaciones
+        de movimiento. ¿Cambian los momentos conjugados? ¿Cambia el Hamiltoniano?
+  \item Partícula en un potencial central: ¿qué dimensión tiene la región del espacio de
+        fase compatible con valores fijos de $E$, $L^2$ y $L_z$?
+  \item ¿Por qué el área $2\pi E/\omega$ de la elipse del oscilador podría ser una cantidad
+        interesante si $\omega$ cambia lentamente en el tiempo?
+\end{enumerate}
+\end{frame}
+
+% =====================================================================
+\section{La IA en la formulación hamiltoniana}
+% =====================================================================
+
+\begin{frame}{\alert{Delegación} y \alert{Descripción} en la formulación hamiltoniana}
+\begin{alertblock}{Prompt deficiente / vago}
+\textit{“Dame el Hamiltoniano del péndulo esférico.”}\\
+El asistente elegirá en silencio desde dónde se mide $\theta$ (y con ello el signo del
+potencial) y puede escribir $\Ham=T+V$ sin justificarlo.
+\end{alertblock}
+\pause
+\begin{exampleblock}{Prompt adecuado}
+\textit{“Péndulo esférico de masa $m$ y longitud $\ell$; $\theta$ se mide desde la vertical
+hacia abajo y $\varphi$ es el azimut. Mi Lagrangiano es
+$\Lag=\tfrac12 m\ell^2(\dot\theta^2+\sen^2\theta\,\dot\varphi^2)+mg\ell\cos\theta$.
+Calcula $p_\theta$ y $p_\varphi$, verifica que la relación con las velocidades es
+invertible y expresa $\Ham$ solo en $(\theta,\varphi,p_\theta,p_\varphi)$.
+Indica qué coordenadas son cíclicas.”}
+\end{exampleblock}
+\pause
+Se conserva el modelado (coordenadas, ligadura, $\Lag$); se delega la transformación
+de Legendre, que es verificable.
+\end{frame}
+
+\begin{frame}{\alert{Discernimiento}: dos errores frecuentes}
+\begin{itemize}[<+->]
+  \item \textbf{Derivar antes de eliminar las velocidades.} Para el cono, la IA escribe
+        $\Ham=\tfrac12 m\dot r^2\csc^2\alpha+\tfrac12 mr^2\dot\varphi^2+mgr\cot\alpha$ y
+        concluye que $\dot p_r=-\partial\Ham/\partial r=-mr\dot\varphi^2-mg\cot\alpha$.
+        \begin{itemize}
+          \item Con $\Ham$ en $(r,p_\varphi)$:
+                $-\partial_r\big(p_\varphi^2/2mr^2\big)=+p_\varphi^2/mr^3=+mr\dot\varphi^2$.
+          \item Caso límite: con el signo de la IA, $\dot p_r<0$ siempre y no existen
+                órbitas circulares. Euler--Lagrange da
+                $m\csc^2\alpha\,\ddot r=mr\dot\varphi^2-mg\cot\alpha$.
+        \end{itemize}
+  \item \textbf{Confundir conservación con energía.} La IA afirma: “como
+        $\partial\Lag/\partial t=0$ y $V$ no depende de las velocidades, $\Ham=T+V$”.
+        \begin{itemize}
+          \item Contraejemplo: la cuenta en la varilla rotante. La condición correcta es
+                que las ligaduras y coordenadas no dependan del tiempo.
+        \end{itemize}
+  \item Toda respuesta es una hipótesis: dimensiones, signos, casos límite y comparación
+        con Euler--Lagrange.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\alert{Diligencia}: política de uso de IA en esta unidad}
+\begin{itemize}[<+->]
+  \item \textbf{IA prohibida:} elección de coordenadas, identificación de ligaduras y
+        construcción del Lagrangiano; primera derivación de las ecuaciones de movimiento.
+  \item \textbf{IA asistida:} álgebra de la transformación de Legendre, verificación
+        simbólica (SymPy), sugerencia de métodos numéricos y depuración de código.
+  \item \textbf{IA requerida (crítica):} auditoría de una respuesta generada por IA
+        (Actividad~A).
+  \item Toda entrega con IA incluye la \textbf{bitácora 4D}:
+        \begin{enumerate}
+          \item prompts utilizados;
+          \item respuesta relevante de la IA;
+          \item qué se aceptó, rechazó o corrigió;
+          \item cómo se verificó;
+          \item razonamiento final propio;
+          \item errores o alucinaciones detectados.
+        \end{enumerate}
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section{Recapitulando}
+% =====================================================================
+
+\begin{frame}{Recapitulando}
+\begin{enumerate}[<+->]
+  \item \textbf{Misma dinámica, otras variables:} $(q,\dot q)\to(q,p)$ mediante la
+        transformación de Legendre, que exige un hessiano no singular.
+  \item \textbf{Ecuaciones de Hamilton:} $2s$ ecuaciones de primer orden,
+        $\dot q_i=\partial\Ham/\partial p_i$, $\;\dot p_i=-\partial\Ham/\partial q_i$.
+        La primera invierte Legendre; la segunda contiene la dinámica.
+  \item \textbf{Espacio de fase:} una sola trayectoria por punto; $\Ham=\cte$ define
+        hipersuperficies de dimensión $2s-1$; centros (oscilador) y sillas (varilla rotante).
+  \item \textbf{Conservación:} $\partial\Ham/\partial t=0\Rightarrow\Ham=\cte$; una coordenada
+        cíclica elimina dos dimensiones; existen constantes “ocultas” como $L^2$.
+  \item \textbf{$\Ham$ frente a $E$:} conservación de $\Ham$ y la igualdad $\Ham=T+V$ son
+        preguntas independientes.
+  \item \textbf{Próxima sesión:} teorema de Liouville, corchetes de Poisson y
+        transformaciones canónicas.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Resumiendo: formalismos equivalentes}
+\scriptsize
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{@{}>{\raggedright}p{0.17\textwidth}>{\raggedright}p{0.37\textwidth}>{\raggedright\arraybackslash}p{0.37\textwidth}@{}}
+  \toprule
+  & \textbf{Formalismo lagrangiano} & \textbf{Formalismo hamiltoniano} \\
+  \midrule
+  Variables & $(q_i,\dot q_i)$; espacio de configuración de dimensión $s$
+            & $(q_i,p_i)$, $p_i=\partial\Lag/\partial\dot q_i$; espacio de fase de dimensión $2s$ \\
+  Función básica & $\Lag(q,\dot q,t)$; para sistemas naturales $T-V$
+                 & $\Ham(q,p,t)=\sum_i p_i\dot q_i-\Lag$ \\
+  Ecuaciones & $\frac{d}{dt}\big(\partial\Lag/\partial\dot q_i\big)-\partial\Lag/\partial q_i=0$:
+               $s$ de segundo orden
+             & $\dot q_i=\partial\Ham/\partial p_i$, $\;\dot p_i=-\partial\Ham/\partial q_i$:
+               $2s$ de primer orden \\
+  Condiciones iniciales & $q_i(t_0)$, $\dot q_i(t_0)$ & $q_i(t_0)$, $p_i(t_0)$ \\
+  Coordenada cíclica $q_j$ & $p_j=\cte$, pero $\dot q_j$ permanece en $\Lag$
+                           & $p_j=\alpha_j$ es un parámetro; se eliminan dos dimensiones \\
+  Energía & $\Ene=\cte$ si $\partial\Lag/\partial t=0$ & $\Ham=\cte$ si $\partial\Ham/\partial t=0$ \\
+  Simetrías & Teorema de Noether & Corchetes de Poisson y transformaciones canónicas \\
+  \bottomrule
+\end{tabular}
+\end{frame}
+
+% =====================================================================
+\section{Para la discusión}
+% =====================================================================
+
+\begin{frame}{Para la discusión 1/6: el aro rotante (Nivel 2)}
+\begin{columns}[T]
+\begin{column}{0.70\textwidth}
+{\small
+Una partícula de masa $m$ desliza sin fricción sobre un aro circular de radio $R$,
+que rota con velocidad angular constante $\omega$ alrededor de su diámetro vertical.
+}
+\small
+\begin{enumerate}[(a)]
+  \item Elija la coordenada generalizada, identifique las ligaduras y escriba $\Lag$.
+        \hfill{\scriptsize[IA prohibida]}
+  \item Construya $\Ham$ y escriba las ecuaciones de Hamilton.
+  \item ¿Se conserva $\Ham$? ¿Es $\Ham=T+V$? Calcule $dE/dt$ e interprete.
+  \item Encuentre los equilibrios y su estabilidad en función de $\omega$.
+        Existe una frecuencia crítica $\omega_c$: encuéntrela.
+  \item Calcule la frecuencia de las pequeñas oscilaciones alrededor de cada
+        equilibrio estable.
+  \item Esboce el retrato de fase para $\omega<\omega_c$ y para $\omega>\omega_c$.
+\end{enumerate}
+\end{column}
+\begin{column}{0.28\textwidth}
+  \centering
+  \figura{0.95\linewidth}{Figuras/CuentaEnAroCircular.png}
+\end{column}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Para la discusión 2/6: las 4D aplicadas al aro rotante}
+\begin{itemize}[<+->]
+  \item \alert{Delegación:} liste qué conserva usted (coordenada, ligadura, $\Lag$,
+        interpretación) y qué puede delegar (álgebra de Legendre, raíces de
+        $\partial V_{\mathrm{ef}}/\partial\theta$, gráficas).
+  \item \alert{Descripción:} redacte un prompt preciso (eje de giro, origen de $\theta$,
+        $\omega$ constante, su Lagrangiano) y otro vago. Compare las respuestas.
+  \item \alert{Discernimiento:} audite la respuesta.
+        \begin{itemize}
+          \item Dimensiones de $\Ham$ y de $\omega_c$.
+          \item Límite $\omega\to0$: debe recuperarse el péndulo simple.
+          \item Sustituya las ecuaciones de Hamilton y verifique que $\Ham$ es constante
+                y que $E$ no lo es.
+          \item Compare con las ecuaciones de Euler--Lagrange.
+        \end{itemize}
+  \item \alert{Diligencia:} rederive $\omega_c$ a mano; entregue la bitácora 4D y la
+        declaración de uso de IA.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Para la discusión 3/6: carga en un campo $\mathbf B$ (Nivel 3)}
+\textbf{P2.} Partícula de masa $m$ y carga $q$ en el plano $xy$, con
+$\mathbf B=B\hat{\mathbf z}$, potencial vector $\mathbf A=\frac B2(-y,x,0)$ y $\phi=0$
+(unidades gaussianas, Cap.~2).
+\begin{enumerate}[(a)]
+  \item Obtenga $\Ham$ en coordenadas cartesianas y en polares $(r,\varphi)$.
+  \item Muestre que $\Ham=\tfrac12 mv^2$ aunque $\Lag$ contiene un término lineal en
+        las velocidades. ¿Por qué?
+  \item ¿Es $p_\varphi$ el momento angular mecánico $mr^2\dot\varphi$? Interprete su conservación.
+  \item Obtenga la frecuencia de ciclotrón a partir de las ecuaciones de Hamilton.
+\end{enumerate}
+\medskip
+{\small IA asistida: puede verificar el álgebra con SymPy o con un asistente;
+registre la interacción en la bitácora 4D.}
+\end{frame}
+
+\begin{frame}{Para la discusión 4/6: un oscilador amortiguado (Nivel 3)}
+\textbf{P3.} Considere el Lagrangiano
+\[
+  \Lag=e^{2\gamma t}\left(\tfrac12 m\dot q^2-\tfrac12 m\omega^2q^2\right).
+\]
+\begin{enumerate}[(a)]
+  \item Obtenga $p$ y $\Ham$. Muestre que las ecuaciones de Hamilton conducen a
+        $\ddot q+2\gamma\dot q+\omega^2q=0$.
+  \item ¿Se conserva $\Ham$? ¿Es la energía? ¿Es $p$ el momento mecánico $m\dot q$?
+  \item Dibuje las trayectorias en los planos $(q,p)$ y $(q,m\dot q)$, y compare cómo
+        evoluciona el área de un conjunto de condiciones iniciales.
+\end{enumerate}
+\medskip
+{\small Pregunta abierta: ¿qué nos dice este ejemplo sobre la relación entre
+Hamiltoniano y energía en sistemas disipativos?}
+\end{frame}
+
+\begin{frame}{Para la discusión 5/6: extensión computacional (Nivel 4)}
+\small
+Integre numéricamente las ecuaciones de Hamilton del aro rotante (con $\omega=0$
+se obtiene el péndulo simple). Lenguaje: Python.
+\par\normalsize
+\begin{enumerate}[<+->]
+  \item Derive las ecuaciones antes de programar. \hfill{\scriptsize[IA prohibida]}
+  \item Implemente Euler explícito, Euler simpléctico y RK4 (o \texttt{solve\_ivp},
+        declarando \texttt{rtol} y \texttt{atol}). \hfill{\scriptsize[IA asistida]}
+  \item Grafique el error relativo $|\Ham(t)-\Ham(0)|/|\Ham(0)|$ para varios pasos $h$;
+        estime el orden de convergencia.
+  \item Superponga las trayectorias numéricas a las curvas de nivel de $\Ham$;
+        identifique la separatriz para $\omega>\omega_c$.
+  \item Distinga artefactos numéricos de comportamiento físico: ¿por qué Euler explícito
+        produce espirales?
+  \item Valide: período de pequeñas oscilaciones frente al valor analítico.
+        Entregue código documentado y reproducible (repositorio git).
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Para la discusión 6/6: Actividad A (IA requerida)}
+\begin{alertblock}{Respuesta de un asistente de IA (aro rotante)}
+\small
+\textit{“Con $\theta$ medido desde el punto más bajo,
+$\Lag=\tfrac12 mR^2(\dot\theta^2+\omega^2\sen^2\theta)-mgR\cos\theta$.
+Como $\partial\Lag/\partial t=0$, la energía
+$\Ham=T+V=\dfrac{p_\theta^2}{2mR^2}+\tfrac12 mR^2\omega^2\sen^2\theta-mgR\cos\theta$
+se conserva. El punto $\theta=0$ es estable para todo $\omega$, porque es el mínimo del
+potencial gravitacional.”}
+\end{alertblock}
+\pause
+La respuesta contiene \textbf{al menos tres} errores.
+\begin{enumerate}[<+->]
+  \item Identifique cada error y la verificación que lo revela
+        (consistencia interna, caso límite, cálculo de $dE/dt$, estabilidad).
+  \item Escriba la versión correcta de cada afirmación.
+  \item Registre el proceso en la bitácora 4D.
+\end{enumerate}
+\end{frame}
+
+% =====================================================================
+%  NOTAS PARA EL INSTRUCTOR (solo si \instructortrue)
+% =====================================================================
+\ifinstructor
+\appendix
+\section{Notas para el instructor}
+
+\begin{frame}{Instructor: planificación de la sesión}
+\small
+\textbf{Duración sugerida:} 100 min.
+Motivación y continuidad (10); Legendre y deducción (25); ejemplos (30);
+conservación y energía (20); actividad IA en clase (15).
+Los problemas P1--P4 y la Actividad~A son para trabajo fuera de clase.
+
+\medskip
+\textbf{Concepciones erróneas a vigilar}
+\begin{itemize}
+  \item Identificar el espacio de configuración con el espacio $(q,\dot q)$.
+  \item Confundir momento canónico con momento mecánico.
+  \item Creer que $\partial\Lag/\partial t=0$ implica $\Ham=T+V$.
+  \item Derivar $\Ham$ mientras todavía contiene velocidades.
+  \item Pensar que Hamilton “resuelve más fácil”: las ecuaciones son equivalentes;
+        la ventaja es estructural.
+  \item Signo de la transformación de Legendre en termodinámica.
+\end{itemize}
+
+\medskip
+\textbf{Respuestas a las preguntas de control.}
+(1) No en el espacio de fase (unicidad); sí en el de configuración.
+(2) Se conserva, pero no es necesariamente $T+V$.
+(3) $p_i'=p_i+\partial F/\partial q_i$ y $\Ham'=\Ham-\partial F/\partial t$.
+(4) Dimensión 3 ($6-3$); será un toro $T^3$ (integrabilidad).
+(5) Es un invariante adiabático: $J=E/\omega$.
+\end{frame}
+
+\begin{frame}{Instructor: P1, aro rotante (1/2)}
+\scriptsize
+\textbf{Objetivo:} construir $\Ham$ con ligadura reónoma; distinguir $\Ham$ de $E$;
+analizar estabilidad. \textbf{Conceptos:} Legendre, $\partial\Ham/\partial t$, $\Ham$ frente a $E$,
+potencial efectivo, bifurcación. \textbf{Nivel:} 2.
+\textbf{Estrategia:} $\theta$ desde el punto más bajo, origen en el centro del aro, $z=-R\cos\theta$,
+azimut prescrito $\omega t$.
+
+\medskip
+\textbf{Solución.}
+$v^2=R^2\dot\theta^2+R^2\omega^2\sen^2\theta$, $\;V=-mgR\cos\theta$:
+\[
+  \Lag=\tfrac12 mR^2(\dot\theta^2+\omega^2\sen^2\theta)+mgR\cos\theta,\qquad
+  p_\theta=mR^2\dot\theta .
+\]
+\[
+  \Ham=\frac{p_\theta^2}{2mR^2}+V_{\mathrm{ef}}(\theta),\qquad
+  V_{\mathrm{ef}}=-\tfrac12 mR^2\omega^2\sen^2\theta-mgR\cos\theta .
+\]
+$\dot\theta=p_\theta/mR^2$, $\;\dot p_\theta=mR^2\omega^2\sen\theta\cos\theta-mgR\sen\theta$
+$\Rightarrow\;\ddot\theta=\sen\theta\,(\omega^2\cos\theta-g/R)$.
+
+$\partial\Ham/\partial t=0$: $\Ham$ se conserva. $E=T+V=\Ham+mR^2\omega^2\sen^2\theta$ no se conserva:
+$dE/dt=2mR^2\omega^2\sen\theta\cos\theta\,\dot\theta=\tau\omega$, con $\tau=dL_z/dt$ y
+$L_z=mR^2\omega\sen^2\theta$: el motor que mantiene $\omega$ realiza trabajo.
+
+\medskip
+Equilibrios: $V_{\mathrm{ef}}'=mR\sen\theta\,(g-R\omega^2\cos\theta)=0\Rightarrow$
+$\theta=0$, $\theta=\pi$ y $\cos\theta_0=g/(R\omega^2)$ si $\omega>\omega_c\equiv\sqrt{g/R}$.
+\end{frame}
+
+\begin{frame}{Instructor: P1, aro rotante (2/2)}
+\scriptsize
+$V_{\mathrm{ef}}''=-mR^2\omega^2\cos2\theta+mgR\cos\theta$ y $\Omega^2=V_{\mathrm{ef}}''/(mR^2)$:
+\begin{itemize}
+  \item $\theta=0$: $\Omega^2=\omega_c^2-\omega^2$; estable solo si $\omega<\omega_c$.
+  \item $\theta=\pi$: $\Omega^2=-(\omega^2+\omega_c^2)<0$; siempre inestable.
+  \item $\theta_0$ (si $\omega>\omega_c$): $\Omega^2=\omega^2\sen^2\theta_0=\omega^2-\omega_c^4/\omega^2>0$; estable.
+\end{itemize}
+Bifurcación de horquilla en $\omega=\omega_c$. Límites: $\omega\to0$ da $\Omega^2\to g/R$
+(péndulo); $\omega\to\infty$ da $\theta_0\to\pi/2$ y $\Omega\to\omega$.
+Retrato de fase: para $\omega<\omega_c$, centro en $0$ y sillas en $\pm\pi$; para
+$\omega>\omega_c$, silla en $0$, centros en $\pm\theta_0$ y separatriz en forma de ocho.
+
+\medskip
+\textbf{Errores frecuentes:} tomar $E$ como constante; signo del término gravitacional;
+omitir $\omega^2\sen^2\theta$; escribir $\Omega^2=V''/m$ (falta $R^2$); olvidar $\theta=\pi$;
+afirmar que $\theta_0$ existe para todo $\omega$.
+
+\textbf{Pistas:} ¿la posición cartesiana depende explícitamente de $t$?
+¿Qué término de $\Lag$ es $\Lag_0$?
+
+\textbf{Extensión:} $\omega$ ligeramente mayor que $\omega_c$ ($\theta_0\propto\sqrt{\omega-\omega_c}$);
+fricción; analogía con transiciones de fase de Landau.
+\end{frame}
+
+\begin{frame}{Instructor: P2, carga en campo magnético}
+\scriptsize
+\textbf{Objetivo:} distinguir momento canónico y mecánico; ver que $\Lag_1$ no
+contribuye al valor de $\Ham$.
+\textbf{Nivel:} 3.
+\textbf{Solución.}
+$\Lag=\tfrac12 m(\dot x^2+\dot y^2)+\frac{qB}{2c}(x\dot y-y\dot x)$;
+$p_x=m\dot x-\frac{qB}{2c}y$, $\;p_y=m\dot y+\frac{qB}{2c}x$.
+\[
+  \Ham=\frac{1}{2m}\Big[\big(p_x+\tfrac{qB}{2c}y\big)^2+\big(p_y-\tfrac{qB}{2c}x\big)^2\Big]
+      =\frac{(\mathbf p-\frac qc\mathbf A)^2}{2m}=\tfrac12 mv^2 .
+\]
+$\Ham=\Lag_2-\Lag_0$ con $\Lag_1=\frac qc\mathbf A\cdot\mathbf v$ (la fuerza magnética no hace trabajo).
+Las ecuaciones dan $m\ddot x=\frac{qB}{c}\dot y$, $\;m\ddot y=-\frac{qB}{c}\dot x$ (fuerza de Lorentz);
+frecuencia $\omega_B=qB/(mc)$.
+
+Polares: $\Lag=\tfrac12 m(\dot r^2+r^2\dot\varphi^2)+\frac{qB}{2c}r^2\dot\varphi$,
+$\;p_\varphi=mr^2\dot\varphi+\frac{qB}{2c}r^2$ (canónico $\neq$ mecánico),
+\[
+  \Ham=\frac{p_r^2}{2m}+\frac{1}{2mr^2}\Big(p_\varphi-\frac{qB}{2c}r^2\Big)^2 .
+\]
+Para una órbita de radio $a$ con centro de guía $\mathbf R_c$:
+$p_\varphi=\frac{m\omega_B}{2}\big(|\mathbf R_c|^2-a^2\big)$, constante aunque $L_z$
+mecánico no lo sea si $\mathbf R_c\neq0$.
+
+\medskip
+\textbf{Errores frecuentes:} $\mathbf p=m\mathbf v$; agregar una “energía magnética” a $\Ham$;
+mezclar unidades SI ($q$) y gaussianas ($q/c$).
+\textbf{Pista:} use la descomposición $\Lag_2+\Lag_1+\Lag_0$.
+\textbf{Extensión:} gauge de Landau $\mathbf A=(0,Bx,0)$: ahora se conserva $p_y$;
+los momentos canónicos dependen del gauge (niveles de Landau en mecánica cuántica).
+\end{frame}
+
+\begin{frame}{Instructor: P3, oscilador de Caldirola--Kanai}
+\scriptsize
+\textbf{Objetivo:} $\Ham$ dependiente del tiempo; $p\neq m\dot q$; anticipo de Liouville.
+\textbf{Nivel:} 3 (es el problema 25 de las notas, partes a y b).
+
+\textbf{Solución.} $p=me^{2\gamma t}\dot q$;
+$\;\Ham=e^{-2\gamma t}\dfrac{p^2}{2m}+e^{2\gamma t}\,\tfrac12 m\omega^2q^2$.
+$\dot q=e^{-2\gamma t}p/m$, $\;\dot p=-e^{2\gamma t}m\omega^2q$.
+Derivando $p=me^{2\gamma t}\dot q$:
+$me^{2\gamma t}(\ddot q+2\gamma\dot q)=-me^{2\gamma t}\omega^2q\Rightarrow\ddot q+2\gamma\dot q+\omega^2q=0$.
+
+$\partial\Ham/\partial t\neq0$: no se conserva. $\Ham=e^{2\gamma t}E_{\mathrm{mec}}$, con
+$E_{\mathrm{mec}}=\tfrac12 m\dot q^2+\tfrac12 m\omega^2q^2$: no es la energía.
+
+Subamortiguado: $q\sim e^{-\gamma t}$ y $p\sim e^{+\gamma t}$; en $(q,p)$ el área se conserva
+(flujo hamiltoniano); en $(q,m\dot q)$ el jacobiano es $e^{-2\gamma t}$ y las trayectorias
+son espirales hacia el origen.
+
+\medskip
+\textbf{Errores frecuentes:} suponer $p=m\dot q$; afirmar que $\Ham$ se conserva;
+concluir que la disipación “no puede” describirse con un Hamiltoniano (sí, con
+dependencia explícita en $t$, pero $\Ham$ no es una energía física).
+\textbf{Extensión:} la función generadora $F_2=e^{\gamma t}qP$ (parte c del problema 25)
+lleva a un Hamiltoniano independiente del tiempo (próxima sesión).
+\end{frame}
+
+\begin{frame}{Instructor: P4 (computacional) y clave de la Actividad A}
+\scriptsize
+\textbf{P4.} Con $m=k=1$, Euler explícito es $(q,p)\mapsto(q+hp,\,p-hq)$, de determinante $1+h^2$:
+$\Ham$ crece en un factor $(1+h^2)$ por paso (espiral hacia afuera, artefacto numérico).
+Euler simpléctico, $q_{n+1}=q_n+hp_n$, $p_{n+1}=p_n-hq_{n+1}$, tiene determinante $1$:
+preserva áreas y el error en $\Ham$ es acotado y oscilante, sin deriva. RK4 no es
+simpléctico: deriva lenta, de orden $h^4$. Validación con el período del péndulo,
+$T=4\sqrt{R/g}\,K(k)$ con $k=\sen(\theta_{\max}/2)$
+(\texttt{scipy.special.ellipk} usa el parámetro $k^2$).
+Evaluar: derivación, implementación, convergencia, interpretación y reproducibilidad.
+
+\medskip
+\textbf{Actividad A, clave.}
+\begin{enumerate}
+  \item Signo: con $z=-R\cos\theta$, $V=-mgR\cos\theta$ y $\Lag$ debe tener $+mgR\cos\theta$.
+        La respuesta es internamente inconsistente: su $\Lag$ y su $V$ no coinciden.
+        El límite $\omega\to0$ lo revela (el péndulo simple quedaría invertido).
+  \item $\Ham\neq T+V$: la ligadura depende del tiempo. Correcto:
+        $\Ham=\Lag_2-\Lag_0=\frac{p_\theta^2}{2mR^2}-\tfrac12 mR^2\omega^2\sen^2\theta-mgR\cos\theta$.
+  \item Lo que se conserva es $\Ham$, no la expresión escrita (que es $E$):
+        $dE/dt=2mR^2\omega^2\sen\theta\cos\theta\,\dot\theta\neq0$.
+  \item $\theta=0$ es estable solo si $\omega<\omega_c=\sqrt{g/R}$.
+\end{enumerate}
+\end{frame}
+\fi
+
+\end{document}

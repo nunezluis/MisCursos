@@ -1,0 +1,1040 @@
+% =====================================================================
+%  Mecánica Clásica — Transformaciones canónicas y paréntesis de Poisson
+%  (S13, Tema 2)
+%  Escuela de Física, Universidad Industrial de Santander
+%  Codificación: UTF-8
+%
+%  Versión para estudiantes:  \instructorfalse  (por defecto)
+%  Versión para el instructor: \instructortrue  (agrega, al final,
+%  notas de clase, soluciones completas y claves de las actividades)
+% =====================================================================
+\documentclass[spanish]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}       % define también \sen
+\usepackage{amsmath,amssymb,mathtools}
+\usepackage{cancel}               % \cancel{...} en rojo
+\renewcommand{\CancelColor}{\color{red}}
+\usepackage{graphicx}
+\usepackage{booktabs,array}
+\usepackage{tikz}
+\usepackage{textpos}
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+% ---------------------------------------------------------------------
+%  Interruptor de versión
+% ---------------------------------------------------------------------
+\newif\ifinstructor
+\instructorfalse     % cambie a \instructortrue para la versión docente
+
+% ---------------------------------------------------------------------
+%  Logo institucional (cambie solo esta ruta)
+% ---------------------------------------------------------------------
+\newcommand{\logoUIS}{/Users/luisnunez/Dropbox/MisDocumentos/UIS/UISImagenInstitucional/UISLOGO.png}
+\newcommand{\insertarlogo}{%
+  \IfFileExists{\logoUIS}{\includegraphics[height=0.4in]{\logoUIS}}{}}
+
+\addtobeamertemplate{frametitle}{}{%
+  \begin{textblock*}{100mm}(.85\textwidth,-1cm)
+    \insertarlogo
+  \end{textblock*}}
+
+% Figura con aviso si el archivo no existe: \figura{ancho}{archivo}
+\newcommand{\figura}[2]{%
+  \IfFileExists{#2}{\includegraphics[width=#1]{#2}}%
+    {\fbox{\parbox{\dimexpr#1-2\fboxsep-2\fboxrule}%
+      {\centering\tiny Falta la figura:\\ \detokenize{#2}}}}}
+
+% ---------------------------------------------------------------------
+%  Notación unificada del curso
+%  s: número de grados de libertad; i = 1,...,s
+%  (q_i, p_i): variables originales; (Q_i, P_i): variables nuevas
+%  F_1,...,F_4: funciones generadoras; G: generador infinitesimal
+% ---------------------------------------------------------------------
+\newcommand{\Lag}{\mathcal{L}}               % Lagrangiano
+\newcommand{\Ham}{\mathcal{H}}               % Hamiltoniano
+\newcommand{\tH}{\tilde{\mathcal{H}}}        % Hamiltoniano transformado
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pb}[2]{\left\{#1,#2\right\}}    % paréntesis de Poisson
+\newcommand{\cte}{\text{cte}}
+
+% ---------------------------------------------------------------------
+\title[Transformaciones canónicas]{\textbf{Transformaciones canónicas y\\ paréntesis de Poisson}}
+\subtitle{Funciones generadoras, simetrías y teorema de Liouville}
+\author[L.A. Núñez]{\textbf{Luis A. Núñez}}
+\institute[UIS]{\textit{Escuela de Física, Facultad de Ciencias,}\\
+  \textit{Universidad Industrial de Santander, Santander, Colombia}\\
+  \insertarlogo}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% ---------------------------------------------------------------------
+%  Objetivos y prerrequisitos (antes de la agenda)
+% ---------------------------------------------------------------------
+
+\begin{frame}{Objetivos de aprendizaje}
+Al finalizar la sesión, el estudiante podrá:
+\begin{enumerate}[<+->]
+  \item \textbf{Definir} una transformación canónica y \textbf{distinguirla} de un
+        cambio arbitrario de variables en el espacio de fase.
+  \item \textbf{Deducir} las relaciones de las cuatro funciones generadoras a partir
+        del principio de acción estacionaria.
+  \item \textbf{Construir} la transformación asociada a una función generadora y,
+        a la inversa, \textbf{encontrar} la función generadora de una transformación dada.
+  \item \textbf{Calcular} paréntesis de Poisson y \textbf{usarlos} para obtener la
+        evolución temporal y las cantidades conservadas.
+  \item \textbf{Determinar} si una transformación es canónica mediante los
+        paréntesis fundamentales.
+  \item \textbf{Relacionar} generadores infinitesimales, simetrías y conservación,
+        y \textbf{evaluar} con las 4D una respuesta de IA sobre estos temas.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Lo que necesitamos recordar}
+\begin{itemize}[<+->]
+  \item Ecuaciones de Hamilton:
+        $\dot q_i=\partial\Ham/\partial p_i$, $\;\dot p_i=-\partial\Ham/\partial q_i$,
+        $\;d\Ham/dt=\partial\Ham/\partial t$.
+  \item Coordenada cíclica $\Rightarrow$ momento conjugado constante: el par
+        $(q_j,p_j)$ sale de la dinámica.
+  \item Principio de acción estacionaria, $\delta\int\Lag\,dt=0$, y la libertad
+        $\Lag\to\Lag+dF/dt$.
+  \item Transformación de Legendre: cambio de variable independiente.
+  \item Oscilador: elipses en $(q,p)$ con área $2\pi E/\omega$.
+  \item Potencial central: $L^2$ se conserva aunque $\theta$ no sea cíclica.
+  \item[] \alert{Hoy:} buscaremos variables en las que las coordenadas sean cíclicas,
+        y un criterio general para reconocer cantidades conservadas.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Agenda}
+\begin{columns}[T]
+  \begin{column}{0.48\textwidth}
+    \tableofcontents[sections={1-4},hideallsubsections]
+  \end{column}
+  \begin{column}{0.48\textwidth}
+    \tableofcontents[sections={5-9},hideallsubsections]
+  \end{column}
+\end{columns}
+\end{frame}
+
+% =====================================================================
+\section{Transformaciones canónicas}
+% =====================================================================
+
+\subsection{Motivación}
+\begin{frame}{¿Por qué cambiar de variables en el espacio de fase?}
+\begin{itemize}[<+->]
+  \item Si todas las coordenadas fueran cíclicas, $\tH=\tH(P)$, las ecuaciones de
+        Hamilton se integrarían de inmediato:
+        \[
+          \dot P_i=0\Rightarrow P_i=\cte,\qquad
+          \dot Q_i=\pd{\tH}{P_i}\equiv\nu_i(P)\Rightarrow Q_i=\nu_i t+\beta_i .
+        \]
+  \item Lagrange solo admite \textbf{transformaciones puntuales} $Q_i=Q_i(q,t)$.
+        Hamilton trata $q$ y $p$ en igualdad de condiciones: admite cambios que
+        \emph{mezclan} coordenadas y momentos.
+  \item Pero no cualquier cambio $(q,p)\to(Q,P)$ conserva la forma de las ecuaciones
+        de Hamilton. Los que la conservan son las \textbf{transformaciones canónicas}.
+  \item Anticipo: para el oscilador existen variables $(Q,P)$ con $\tH=\omega P$.
+        Las elipses se convierten en rectas.
+\end{itemize}
+\end{frame}
+
+\subsection{Cambios de variables en el espacio de fase}
+\begin{frame}{No todo cambio de variables es canónico}
+\small
+Sea $\Ham(q,p)$, $s=1$, y definamos $\tH(Q,P)\equiv\Ham\big(q(Q,P),p(Q,P)\big)$.
+\begin{itemize}[<+->]
+  \item \textbf{Caso 1:} $Q=-p$, $\;P=q$. Usando la regla de la cadena,
+        \begin{align*}
+          \dot P&=\dot q=\pd{\Ham}{p}=\pd{\tH}{Q}\pd{Q}{p}=-\pd{\tH}{Q}, &
+          \dot Q&=-\dot p=\pd{\Ham}{q}=\pd{\tH}{P}\pd{P}{q}=\pd{\tH}{P}.
+        \end{align*}
+        \alert{Se conserva la forma de las ecuaciones de Hamilton.}
+  \item \textbf{Caso 2:} $Q=p$, $\;P=q$. Ahora
+        \[
+          \dot P=\dot q=\pd{\Ham}{p}=+\pd{\tH}{Q},\qquad
+          \dot Q=\dot p=-\pd{\Ham}{q}=-\pd{\tH}{P}.
+        \]
+        Los signos quedan invertidos: \alert{no es canónica}
+        (equivale a usar $-\tH$).
+  \item Prueba con la partícula libre, $\Ham=p^2/2m$: en el caso 2,
+        $\tH=Q^2/2m$ predice $\dot P=-Q/m$, pero en realidad $\dot P=\dot q=+Q/m$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Definición de transformación canónica}
+\begin{itemize}[<+->]
+  \item Una transformación invertible
+        \[
+          Q_i=Q_i(q,p,t),\qquad P_i=P_i(q,p,t),\qquad i=1,\dots,s,
+        \]
+        es \textbf{canónica} si, para \emph{todo} Hamiltoniano $\Ham(q,p,t)$, existe
+        una función $\tH(Q,P,t)$ tal que
+        \[
+          \dot Q_i=\pd{\tH}{P_i},\qquad \dot P_i=-\pd{\tH}{Q_i}.
+        \]
+  \item La exigencia “para todo $\Ham$” hace que la canonicidad sea una propiedad de la
+        transformación, no de un sistema particular.
+  \item Las transformaciones puntuales de Lagrange, extendidas a los momentos, son un
+        caso particular (lo veremos con la función generadora $F_2$).
+  \item Utilidad: buscar variables en las que $\tH$ no dependa de algunas $Q_j$
+        (coordenadas cíclicas).
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section{Funciones generadoras}
+% =====================================================================
+
+\subsection{Acción estacionaria en el espacio de fase}
+\begin{frame}{Acción estacionaria en el espacio de fase}
+\begin{itemize}[<+->]
+  \item Con $\Lag=\sum_i p_i\dot q_i-\Ham$, la acción se escribe en el espacio de fase:
+        \[
+          S[q,p]=\int_{t_1}^{t_2}\Big(\sum_{i=1}^s p_i\dot q_i-\Ham(q,p,t)\Big)dt .
+        \]
+  \item Variamos $q_i$ y $p_i$ de forma \emph{independiente}, con
+        $\delta q_i(t_1)=\delta q_i(t_2)=0$. Integrando por partes el término
+        $p_i\,\delta\dot q_i$:
+        \[
+          \delta S=\int_{t_1}^{t_2}\sum_i\Big[\delta p_i\Big(\dot q_i-\pd{\Ham}{p_i}\Big)
+                  -\delta q_i\Big(\dot p_i+\pd{\Ham}{q_i}\Big)\Big]dt
+                  +\Big[\sum_i p_i\,\delta q_i\Big]_{t_1}^{t_2}.
+        \]
+  \item El término de frontera se anula y $\delta S=0$ para variaciones arbitrarias
+        produce exactamente las ecuaciones de Hamilton.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{La condición de canonicidad}
+\begin{itemize}[<+->]
+  \item En las variables nuevas también debe valer
+        $\delta\int\big(\sum_i P_i\dot Q_i-\tH\big)dt=0$.
+  \item Ambos principios dan dinámicas equivalentes si los integrandos difieren en una
+        derivada total:
+        \[
+          \boxed{\;\sum_{i=1}^s p_i\dot q_i-\Ham=\sum_{i=1}^s P_i\dot Q_i-\tH+\frac{dF}{dt}\;}
+        \]
+        porque $\int_{t_1}^{t_2}\frac{dF}{dt}dt=F(t_2)-F(t_1)$ tiene variación nula
+        en los extremos.
+  \item $F$ es la \textbf{función generadora} de la transformación.
+        Es una condición suficiente; excluimos las transformaciones de escala,
+        $\lambda\big(\sum p\dot q-\Ham\big)=\sum P\dot Q-\tH+dF/dt$ con $\lambda\neq1$.
+  \item La transformación generada por $F$ es propiedad de $F$: sirve para
+        cualquier Hamiltoniano.
+\end{itemize}
+\end{frame}
+
+\subsection{Los cuatro tipos básicos}
+\begin{frame}{Función generadora de tipo $F_1(q,Q,t)$}
+\begin{itemize}[<+->]
+  \item Si $q_i$ y $Q_i$ pueden tomarse como variables independientes, escribimos
+        $F=F_1(q,Q,t)$:
+        \[
+          \frac{dF_1}{dt}=\sum_i\Big(\pd{F_1}{q_i}\dot q_i+\pd{F_1}{Q_i}\dot Q_i\Big)+\pd{F_1}{t}.
+        \]
+  \item Comparando con $\dfrac{dF}{dt}=\sum_i p_i\dot q_i-\sum_i P_i\dot Q_i+(\tH-\Ham)$,
+        término a término:
+        \[
+          p_i=\pd{F_1}{q_i},\qquad P_i=-\pd{F_1}{Q_i},\qquad \tH=\Ham+\pd{F_1}{t}.
+        \]
+  \item Si $q$ y $Q$ no son independientes (por ejemplo, la identidad $Q=q$),
+        $F_1$ no existe. Se cambia de variables independientes con una
+        \textbf{transformación de Legendre}:
+        \begin{align*}
+          F_2(q,P,t)&=F_1+\textstyle\sum_i Q_iP_i, &
+          F_3(p,Q,t)&=F_1-\textstyle\sum_i q_ip_i,\\
+          F_4(p,P,t)&=F_1+\textstyle\sum_i Q_iP_i-\sum_i q_ip_i .
+        \end{align*}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Los cuatro tipos de funciones generadoras}
+\small
+\renewcommand{\arraystretch}{1.7}
+\begin{tabular}{@{}lll@{}}
+  \toprule
+  \textbf{Tipo} & \textbf{Relaciones} & \textbf{Ejemplo} \\
+  \midrule
+  $F_1(q,Q,t)$ & $p_i=\pd{F_1}{q_i},\quad P_i=-\pd{F_1}{Q_i}$
+               & $F_1=\sum_i q_iQ_i$: $\;Q_i=p_i,\;P_i=-q_i$ \\
+  $F_2(q,P,t)$ & $p_i=\pd{F_2}{q_i},\quad Q_i=\pd{F_2}{P_i}$
+               & $F_2=\sum_i q_iP_i$: identidad \\
+  $F_3(p,Q,t)$ & $q_i=-\pd{F_3}{p_i},\quad P_i=-\pd{F_3}{Q_i}$
+               & $F_3=\sum_i p_iQ_i$: $\;Q_i=-q_i,\;P_i=-p_i$ \\
+  $F_4(p,P,t)$ & $q_i=-\pd{F_4}{p_i},\quad Q_i=\pd{F_4}{P_i}$
+               & $F_4=\sum_i p_iP_i$: $\;Q_i=p_i,\;P_i=-q_i$ \\
+  \bottomrule
+\end{tabular}
+\medskip
+\begin{itemize}
+  \item En todos los casos: $\tH=\Ham+\partial F_k/\partial t$. Si $F_k$ no depende de $t$,
+        el Hamiltoniano conserva su valor.
+  \item $F_1=\sum_i q_iQ_i$ intercambia coordenadas y momentos: la etiqueta
+        “coordenada” o “momento” no tiene un significado absoluto.
+  \item Una $F$ puede ser de tipos distintos en pares $(q_i,p_i)$ distintos.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Las transformaciones puntuales son canónicas}
+\begin{itemize}[<+->]
+  \item Sea $Q_i=f_i(q,t)$ una transformación puntual del espacio de configuración.
+        Tomamos
+        \[
+          F_2(q,P,t)=\sum_{j=1}^s f_j(q,t)\,P_j .
+        \]
+  \item Entonces
+        \[
+          Q_i=\pd{F_2}{P_i}=f_i(q,t),\qquad
+          p_i=\pd{F_2}{q_i}=\sum_j P_j\,\pd{f_j}{q_i}.
+        \]
+        La primera es la transformación de coordenadas; la segunda dice cómo se
+        transforman los momentos (como un vector covariante).
+  \item Ejemplo: de cartesianas a polares en el plano, los nuevos momentos son
+        $p_r$ y $p_\varphi=L_z$.
+  \item $\tH=\Ham+\sum_j P_j\,\partial f_j/\partial t$: el valor de $\Ham$ cambia si la
+        transformación depende del tiempo (recuerde la varilla rotante).
+\end{itemize}
+\end{frame}
+
+\subsection{Ejemplos}
+\begin{frame}{Ejemplo 1: de la transformación a la función generadora}
+Encontrar una función generadora para $\;Q=q+e^p$, $\;P=p$.
+\begin{itemize}[<+->]
+  \item Como $P=p$, las variables $(q,P)$ son independientes: buscamos $F_2(q,P)$ con
+        \[
+          Q=\pd{F_2}{P},\qquad p=\pd{F_2}{q}.
+        \]
+  \item De la primera, con $Q=q+e^P$:
+        $\;F_2=qP+e^P+f(q)$, donde $f(q)$ es una función arbitraria de integración.
+  \item La segunda fija $f$: $\;p=\pd{F_2}{q}=P+f'(q)$ debe ser igual a $P$, así que
+        $f'=0$.
+  \item Resultado: $\;F_2(q,P)=qP+e^P$ (más una constante irrelevante).
+  \item \alert{Las dos relaciones deben verificarse.} Integrar solo una y poner la
+        “constante” igual a cero es un error frecuente.
+        Además, el sistema solo tiene solución si la transformación es canónica
+        (condición de integrabilidad).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplo 2: de la función generadora a la transformación}
+Encontrar la transformación generada por
+$\;G=q_1(P_1+2p_2)+p_2P_2$, $\;s=2$.
+\begin{itemize}[<+->]
+  \item $G$ depende de $(q_1,P_1)$ y de $(p_2,P_2)$: es de tipo $F_2$ en el par 1 y de
+        tipo $F_4$ en el par 2.
+  \item Par 1 ($F_2$):
+        $\;p_1=\pd{G}{q_1}=P_1+2p_2$, $\quad Q_1=\pd{G}{P_1}=q_1$.
+  \item Par 2 ($F_4$):
+        $\;q_2=-\pd{G}{p_2}=-(2q_1+P_2)$, $\quad Q_2=\pd{G}{P_2}=p_2$.
+  \item Despejando las variables nuevas:
+        \[
+          Q_1=q_1,\qquad P_1=p_1-2p_2,\qquad Q_2=p_2,\qquad P_2=-2q_1-q_2 .
+        \]
+  \item $G$ no depende de $t$, así que $\tH=\Ham$.
+  \item Las notas (Sec.~6.5) obtienen lo mismo desde la condición $dF/dt$; las reglas
+        de la tabla son ese mismo cálculo ya hecho.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplo 3: el oscilador armónico en nuevas variables 1/2}
+$\Ham=\dfrac{p^2}{2m}+\dfrac12 m\omega^2q^2$. Buscamos $(Q,P)$ con $Q$ cíclica.
+\begin{itemize}[<+->]
+  \item Propuesta: $p=f(P)\cos Q$, $\;q=\dfrac{f(P)}{m\omega}\sen Q$. Entonces
+        $\tH=f(P)^2/2m$ y $Q$ es cíclica.
+  \item Buscamos $F_1(q,Q)$. El cociente da $p=m\omega q\cot Q=\pd{F_1}{q}$, de donde
+        \[
+          F_1(q,Q)=\tfrac12 m\omega q^2\cot Q .
+        \]
+  \item El nuevo momento:
+        $\;P=-\pd{F_1}{Q}=\dfrac{m\omega q^2}{2\sen^2 Q}$. Por lo tanto
+        \[
+          q=\sqrt{\frac{2P}{m\omega}}\,\sen Q,\qquad p=\sqrt{2m\omega P}\,\cos Q,
+          \qquad f(P)=\sqrt{2m\omega P}.
+        \]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplo 3: el oscilador armónico en nuevas variables 2/2}
+\begin{columns}[T]
+\begin{column}{0.58\textwidth}
+\begin{itemize}[<+->]
+  \item $F_1$ no depende de $t$: $\;\tH=\Ham=\omega P$.
+  \item Ecuaciones de Hamilton:
+        $\dot P=-\partial\tH/\partial Q=0$, $\;\dot Q=\partial\tH/\partial P=\omega$.
+        Por lo tanto $P=E/\omega$ y $Q=\omega t+\phi$.
+  \item Regresando:
+        $q(t)=\sqrt{2E/m\omega^2}\,\sen(\omega t+\phi)$.
+  \item $P=E/\omega=\dfrac{1}{2\pi}\oint p\,dq$: el área de la elipse dividida por
+        $2\pi$. $Q$ es un ángulo.
+  \item Son las \textbf{variables de acción--ángulo}; la ecuación de
+        Hamilton--Jacobi dará un método sistemático para encontrarlas.
+\end{itemize}
+\end{column}
+\begin{column}{0.40\textwidth}
+\centering
+% Elipses en (q,p) y rectas en (Q,P), unidades m = omega = 1
+\begin{tikzpicture}[scale=0.42]
+  \draw[->] (-2.4,0) -- (2.6,0) node[right] {\scriptsize $q$};
+  \draw[->] (0,-2.4) -- (0,2.6) node[above] {\scriptsize $p$};
+  \foreach \r in {0.8,1.4,2.0} \draw[blue] (0,0) circle (\r);
+\end{tikzpicture}\\[1mm]
+\begin{tikzpicture}[scale=0.42]
+  \draw[->] (0,0) -- (6.9,0) node[right] {\scriptsize $Q$};
+  \draw[->] (0,0) -- (0,2.6) node[above] {\scriptsize $P$};
+  \draw[dashed] (6.28,0) -- (6.28,2.3) node[above] {\tiny $2\pi$};
+  \foreach \y in {0.6,1.2,1.9} \draw[blue,thick] (0,\y) -- (6.28,\y);
+\end{tikzpicture}\\
+{\tiny Las curvas de energía constante pasan a ser rectas $P=\cte$.}
+\end{column}
+\end{columns}
+\end{frame}
+
+% =====================================================================
+\section{Paréntesis de Poisson}
+% =====================================================================
+
+\subsection{Definición y evolución temporal}
+\begin{frame}{Paréntesis de Poisson y evolución temporal}
+\begin{itemize}[<+->]
+  \item Sea $f(q,p,t)$ una función en el espacio de fase. A lo largo de una trayectoria,
+        usando las ecuaciones de Hamilton,
+        \[
+          \frac{df}{dt}=\sum_i\Big(\pd{f}{q_i}\dot q_i+\pd{f}{p_i}\dot p_i\Big)+\pd{f}{t}
+          =\pb{f}{\Ham}+\pd{f}{t},
+        \]
+        con el \textbf{paréntesis de Poisson}
+        \[
+          \pb{f}{g}\equiv\sum_{i=1}^s\Big(\pd{f}{q_i}\pd{g}{p_i}-\pd{f}{p_i}\pd{g}{q_i}\Big).
+        \]
+  \item Convención: las notas escriben $[f,g]$; Landau usa el signo opuesto.
+        Verifique siempre con $\pb{q}{p}=1$.
+  \item Con $f=\Ham$: $\;d\Ham/dt=\partial\Ham/\partial t$, como en la sesión anterior.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Cantidades conservadas}
+\begin{itemize}[<+->]
+  \item $f$ es una constante de movimiento si $\dfrac{df}{dt}=\pb{f}{\Ham}+\pd{f}{t}=0$.
+  \item Si $f$ no depende explícitamente de $t$:
+        \[
+          f\ \text{se conserva}\iff\pb{f}{\Ham}=0 .
+        \]
+  \item Una cantidad conservada \emph{puede} depender de $t$. Partícula libre,
+        $\Ham=p^2/2m$, y $f=x-pt/m$:
+        \[
+          \pb{f}{\Ham}=\frac{p}{m},\qquad\pd{f}{t}=-\frac{p}{m}
+          \quad\Rightarrow\quad\frac{df}{dt}=0 .
+        \]
+        $f=x(0)$ es la posición inicial (generador de las transformaciones de Galileo).
+  \item Los paréntesis de Poisson convierten la búsqueda de cantidades conservadas en
+        un cálculo algebraico, sin necesidad de coordenadas cíclicas.
+\end{itemize}
+\end{frame}
+
+\subsection{Propiedades}
+\begin{frame}{Propiedades algebraicas}
+Para funciones $f,g,h$ en el espacio de fase y constantes $a,b,c$:
+\begin{itemize}[<+->]
+  \item Antisimetría: $\pb{f}{g}=-\pb{g}{f}$; en particular $\pb{f}{f}=0$.
+  \item Bilinealidad: $\pb{af+bg}{h}=a\pb{f}{h}+b\pb{g}{h}$; $\;\pb{f}{c}=0$.
+  \item Regla de Leibniz: $\pb{fg}{h}=f\pb{g}{h}+g\pb{f}{h}$.
+  \item Identidad de Jacobi:
+        $\pb{f}{\pb{g}{h}}+\pb{g}{\pb{h}{f}}+\pb{h}{\pb{f}{g}}=0$.
+  \item Con antisimetría, bilinealidad y Jacobi, las funciones forman un
+        \textbf{álgebra de Lie}; con Leibniz, un álgebra de Poisson.
+        La operación no es asociativa: $\pb{f}{\pb{g}{h}}\neq\pb{\pb{f}{g}}{h}$ en general.
+  \item \textbf{Teorema de Poisson} (consecuencia de Jacobi): si $f$ y $g$ son
+        constantes de movimiento, $\pb{f}{g}$ también lo es
+        (aunque puede ser trivial o función de las anteriores).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Paréntesis fundamentales y ecuaciones de Hamilton}
+\begin{itemize}[<+->]
+  \item Como $q_i$ y $p_i$ son variables independientes,
+        \[
+          \pb{q_i}{f}=\sum_k\Big(\pd{q_i}{q_k}\pd{f}{p_k}
+             -\cancel{\pd{q_i}{p_k}}\pd{f}{q_k}\Big)=\pd{f}{p_i},
+          \qquad
+          \pb{p_i}{f}=-\pd{f}{q_i}.
+        \]
+  \item \textbf{Paréntesis fundamentales:}
+        \[
+          \pb{q_i}{q_j}=0,\qquad \pb{p_i}{p_j}=0,\qquad \pb{q_i}{p_j}=\delta_{ij}.
+        \]
+  \item Ecuaciones de Hamilton en forma simétrica:
+        $\;\dot q_i=\pb{q_i}{\Ham}$, $\;\dot p_i=\pb{p_i}{\Ham}$.
+  \item Mecánica cuántica (Dirac): $\pb{f}{g}\to\dfrac{1}{i\hbar}[\hat f,\hat g]$.
+        Así, $[\hat q_i,\hat p_j]=i\hbar\,\delta_{ij}$ y la ecuación de Heisenberg es
+        $\dfrac{d\hat A}{dt}=\dfrac{1}{i\hbar}[\hat A,\hat\Ham]+\pd{\hat A}{t}$.
+        \alert{El paréntesis clásico es $\pb{q_i}{p_j}=\delta_{ij}$, adimensional;
+        el factor $i\hbar$ es del conmutador.}
+\end{itemize}
+\end{frame}
+
+\subsection{Ejemplos}
+\begin{frame}{Ejemplos: distancia radial y momento angular 1/2}
+\begin{itemize}[<+->]
+  \item $r=(x^2+y^2+z^2)^{1/2}$. Con $\pb{f}{p_j}=\partial f/\partial x_j$:
+        $\pb{r}{p_x}=x/r$, $\;\pb{r}{p_y}=y/r$, $\;\pb{r}{p_z}=z/r$, es decir
+        $\pb{r}{\mathbf p}=\hat{\mathbf r}$.
+  \item Momento angular $\mathbf L=\mathbf r\times\mathbf p$:
+        $\;L_x=yp_z-zp_y$, $\;L_y=zp_x-xp_z$, $\;L_z=xp_y-yp_x$.
+  \item Con $\pb{p_i}{f}=-\partial f/\partial x_i$:
+        \[
+          \pb{p_y}{L_x}=-\pd{L_x}{y}=-p_z,\quad
+          \pb{p_x}{L_x}=0,\quad
+          \pb{p_z}{L_y}=-\pd{L_y}{z}=-p_x .
+        \]
+  \item En general, $\pb{x_i}{L_j}=\epsilon_{ijk}x_k$ y $\pb{p_i}{L_j}=\epsilon_{ijk}p_k$:
+        $\mathbf r$ y $\mathbf p$ se transforman como vectores bajo rotaciones.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplos: distancia radial y momento angular 2/2}
+\begin{itemize}[<+->]
+  \item En $\pb{L_x}{L_y}$ solo contribuyen los términos con $z$ y $p_z$:
+        \[
+          \pb{L_x}{L_y}=\pd{L_x}{z}\pd{L_y}{p_z}-\pd{L_x}{p_z}\pd{L_y}{z}
+          =(-p_y)(-x)-(y)(p_x)=L_z .
+        \]
+  \item Por permutación cíclica: $\;\pb{L_i}{L_j}=\epsilon_{ijk}L_k$.
+        En mecánica cuántica, $[\hat L_i,\hat L_j]=i\hbar\,\epsilon_{ijk}\hat L_k$.
+  \item Con Leibniz: $\pb{L^2}{L_z}=2L_x\pb{L_x}{L_z}+2L_y\pb{L_y}{L_z}
+        =-2L_xL_y+2L_yL_x=0$.
+  \item Potencial central: $\pb{L_i}{\Ham}=0$, así que se conservan $\mathbf L$ y $L^2$.
+        Esto explica la “conservación oculta” de $L^2$ de la sesión anterior.
+  \item Teorema de Poisson: si se conservan $L_x$ y $L_y$, también se conserva
+        $\pb{L_x}{L_y}=L_z$.
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section{Paréntesis de Poisson y transformaciones canónicas}
+% =====================================================================
+
+\subsection{Criterio de canonicidad}
+\begin{frame}{Criterio de canonicidad}
+\begin{itemize}[<+->]
+  \item \textbf{Teorema.} $(q,p)\to(Q,P)$ es canónica si y solo si preserva los
+        paréntesis fundamentales:
+        \[
+          \pb{Q_i}{Q_j}_{q,p}=0,\qquad\pb{P_i}{P_j}_{q,p}=0,\qquad
+          \pb{Q_i}{P_j}_{q,p}=\delta_{ij}.
+        \]
+        Demostración: notas, Sec.~6.7.
+  \item Consecuencia: $\pb{f}{g}_{q,p}=\pb{f}{g}_{Q,P}$ para toda $f,g$. Los paréntesis
+        son \textbf{invariantes canónicos} y el subíndice puede omitirse.
+  \item Para $s=1$, $\pb{Q}{P}_{q,p}=\det\dfrac{\partial(Q,P)}{\partial(q,p)}$:
+        canónica $\iff$ preserva el área \emph{y} la orientación.
+  \item Para $s$ grados de libertad hay $s(2s-1)$ paréntesis independientes:
+        uno si $s=1$, seis si $s=2$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Aplicación del criterio ($s=1$)}
+\begin{itemize}[<+->]
+  \item $Q=q+e^p$, $\;P=p$:
+        $\;\pb{Q}{P}=\pd{Q}{q}\pd{P}{p}-\pd{Q}{p}\pd{P}{q}=(1)(1)-(e^p)(0)=1$. Canónica.
+        \\{\small($\pb{Q}{Q}=\pb{P}{P}=0$ por antisimetría: no hace falta calcularlos.)}
+  \item $Q=-p$, $\;P=q$: $\;\pb{Q}{P}=0-(-1)(1)=1$. Canónica.
+  \item $Q=p$, $\;P=q$: $\;\pb{Q}{P}=0-(1)(1)=-1$. No es canónica
+        (invierte la orientación).
+  \item Oscilador: por la invariancia basta calcular $\pb{q}{p}_{Q,P}$,
+        \begin{align*}
+          \pb{q}{p}_{Q,P}&=\pd{q}{Q}\pd{p}{P}-\pd{q}{P}\pd{p}{Q}\\
+          &=\sqrt{\tfrac{2P}{m\omega}}\cos Q\,\sqrt{\tfrac{m\omega}{2P}}\cos Q
+          +\tfrac{\sen Q}{\sqrt{2m\omega P}}\sqrt{2m\omega P}\,\sen Q=1 .
+        \end{align*}
+        Canónica.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Aplicación del criterio ($s=2$)}
+Transformación del Ejemplo 2:
+$\;Q_1=q_1$, $\;P_1=p_1-2p_2$, $\;Q_2=p_2$, $\;P_2=-2q_1-q_2$.
+\begin{itemize}[<+->]
+  \item Hay que verificar los \textbf{seis} paréntesis independientes:
+        \begin{gather*}
+          \pb{Q_1}{P_1}=1,\qquad\pb{Q_2}{P_2}=1,\qquad
+          \pb{Q_1}{P_2}=0,\\
+          \pb{Q_2}{P_1}=0,\qquad
+          \pb{Q_1}{Q_2}=0,\qquad\pb{P_1}{P_2}=0 .
+        \end{gather*}
+  \item El último no es trivial; dos términos se cancelan:
+        \[
+          \pb{P_1}{P_2}=-\sum_k\pd{P_1}{p_k}\pd{P_2}{q_k}=-\big[(1)(-2)+(-2)(-1)\big]=0 .
+        \]
+  \item Conclusión: la transformación generada por $G$ es canónica, como debía ser.
+  \item Verificar solo $\pb{Q_i}{P_i}=1$ no basta para $s\ge2$.
+\end{itemize}
+\end{frame}
+
+\subsection{Transformaciones canónicas infinitesimales}
+\begin{frame}{Transformaciones canónicas infinitesimales}
+\begin{itemize}[<+->]
+  \item Una pequeña desviación de la identidad:
+        $F_2(q,P)=\sum_i q_iP_i+\varepsilon\,G(q,P)$, con $\varepsilon\to0$.
+  \item A primer orden en $\varepsilon$ (con $G(q,P)\simeq G(q,p)$):
+        \[
+          \delta q_i=Q_i-q_i=\varepsilon\pd{G}{p_i},\qquad
+          \delta p_i=P_i-p_i=-\varepsilon\pd{G}{q_i}.
+        \]
+        $G$ es el \textbf{generador} de la transformación.
+  \item El cambio de cualquier función $K(q,p)$ es
+        $\;\delta K=\varepsilon\pb{K}{G}$.
+  \item \textbf{Noether hamiltoniano:} si $\Ham$ es invariante, $\delta\Ham=\varepsilon\pb{\Ham}{G}=0$,
+        entonces $dG/dt=\pb{G}{\Ham}=0$ (para $\partial G/\partial t=0$).
+        \alert{El generador de una simetría es una cantidad conservada}, y viceversa.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Tres generadores importantes}
+\begin{itemize}[<+->]
+  \item $G=p_x$: $\;\delta x=\varepsilon$, todo lo demás fijo.
+        Traslación en $x$ $\leftrightarrow$ conservación de $p_x$.
+  \item $G=L_z=xp_y-yp_x$:
+        \[
+          \delta x=-\varepsilon y,\quad\delta y=\varepsilon x,\quad
+          \delta p_x=-\varepsilon p_y,\quad\delta p_y=\varepsilon p_x .
+        \]
+        Rotación de ángulo $\varepsilon$ alrededor de $z$ $\leftrightarrow$
+        conservación de $L_z$.
+  \item $G=\Ham$, $\;\varepsilon=dt$:
+        \[
+          \delta q_i=\dot q_i\,dt,\qquad\delta p_i=\dot p_i\,dt .
+        \]
+        \alert{La evolución temporal es una transformación canónica generada por $\Ham$.}
+\end{itemize}
+\end{frame}
+
+\subsection{Teorema de Liouville}
+\begin{frame}{Consecuencia: el teorema de Liouville}
+\begin{itemize}[<+->]
+  \item El flujo $(q(0),p(0))\mapsto(q(t),p(t))$ es una composición de transformaciones
+        canónicas infinitesimales: es canónico para todo $t$.
+  \item Para $s=1$: $\pb{q(t)}{p(t)}_{q(0),p(0)}=1$ significa que el jacobiano vale 1.
+        \alert{El área de cualquier región del espacio de fase se conserva.}
+  \item En general (teorema de Liouville): se conserva el volumen $2s$-dimensional y la
+        densidad de puntos en el espacio de fase es constante a lo largo de las
+        trayectorias. Es la base de la mecánica estadística.
+  \item Conexiones con la sesión anterior:
+        \begin{itemize}
+          \item Oscilador amortiguado: el área se conserva en $(q,p)$ y se contrae en $(q,m\dot q)$.
+          \item Péndulo con Euler explícito: $\det=1+h^2\cos q\neq1$, no es canónico.
+                Euler simpléctico: $\det=1$ exactamente.
+        \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Preguntas de control}
+\begin{enumerate}[<+->]
+  \item ¿Es canónica $Q=\lambda q$, $P=\lambda p$? ¿Y $Q=\lambda q$, $P=p/\lambda$?
+  \item ¿Una transformación canónica conserva siempre el \emph{valor} del Hamiltoniano?
+  \item Si $f$ y $g$ son constantes de movimiento, ¿lo es $\pb{f}{g}$? ¿Siempre aporta
+        información nueva?
+  \item ¿Puede una cantidad conservada tener $\pb{f}{\Ham}\neq0$?
+  \item ¿Qué transformación genera $L_z$? ¿Por qué $\pb{L_z}{\Ham}=0$ expresa a la vez
+        una simetría y una ley de conservación?
+\end{enumerate}
+\end{frame}
+
+% =====================================================================
+\section{La IA y las transformaciones canónicas}
+% =====================================================================
+
+\begin{frame}{\alert{Delegación} y \alert{Descripción}: funciones generadoras}
+\begin{alertblock}{Prompt deficiente / vago}
+\textit{“Dame las variables de acción--ángulo del oscilador armónico y su función
+generadora.”}\\
+El asistente elegirá en silencio la convención ($\sen$ o $\cos$; $P=E/\omega$ o
+$J=2\pi E/\omega$), el tipo de función generadora y el signo del paréntesis.
+Las fórmulas pueden ser incompatibles con las de clase.
+\end{alertblock}
+\pause
+\begin{exampleblock}{Prompt adecuado}
+\textit{“Para $\Ham=p^2/2m+\tfrac12 m\omega^2q^2$ considero
+$q=\sqrt{2P/m\omega}\,\sen Q$, $p=\sqrt{2m\omega P}\cos Q$.
+(1) Verifica que $\pb{q}{p}_{Q,P}=1$ con
+$\pb{f}{g}=\sum(\partial_q f\,\partial_p g-\partial_p f\,\partial_q g)$.
+(2) Busca $F_1(q,Q)$ con $p=\partial F_1/\partial q$, $P=-\partial F_1/\partial Q$
+y verifica ambas relaciones. (3) Escribe $\tH(Q,P)$.”}
+\end{exampleblock}
+\pause
+Se conservan la elección de la transformación y la interpretación; se delega el
+álgebra verificable, con la convención fijada.
+\end{frame}
+
+\begin{frame}{\alert{Discernimiento}: dos errores frecuentes}
+\begin{itemize}[<+->]
+  \item \textbf{Mezclar el paréntesis con el conmutador.} La IA afirma:
+        “clásicamente $\pb{q}{p}=i\hbar$”.
+        \begin{itemize}
+          \item Análisis dimensional: $\pb{q}{p}=\partial q/\partial q\cdot\partial p/\partial p$
+                es adimensional; $\hbar$ tiene unidades de acción.
+          \item Lo correcto: $\pb{q}{p}=1$ y $[\hat q,\hat p]=i\hbar$.
+        \end{itemize}
+  \item \textbf{Olvidar la función de integración.} Para $Q=q$, $\;P=p+2q$, la IA integra
+        $Q=\partial F_2/\partial P$ y responde $F_2=qP$ “con constante cero”.
+        \begin{itemize}
+          \item Prueba: $F_2=qP$ genera la identidad, $p=P$, lo que contradice $P=p+2q$.
+          \item Lo correcto: $F_2=qP+f(q)$ con $p=P+f'(q)$, así que $f=-q^2$ y
+                $F_2=qP-q^2$. Es el análogo de $\Lag\to\Lag+d(q^2)/dt$.
+        \end{itemize}
+  \item Toda respuesta es una hipótesis: dimensiones, $\pb{Q}{P}=1$, sustitución en
+        ambas relaciones de la función generadora y casos conocidos (la identidad).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{\alert{Diligencia}: política de uso de IA en esta unidad}
+\begin{itemize}[<+->]
+  \item \textbf{IA prohibida:} elegir el tipo de función generadora y plantear sus
+        relaciones; primera verificación de canonicidad en P1 y P2.
+  \item \textbf{IA asistida:} integración de las relaciones, cálculo simbólico de
+        paréntesis (SymPy), gráficas y depuración de código.
+  \item \textbf{IA requerida (crítica):} auditoría de una respuesta generada por IA
+        (Actividad~A).
+  \item Toda entrega con IA incluye la \textbf{bitácora 4D}:
+        \begin{enumerate}
+          \item prompts utilizados;
+          \item respuesta relevante de la IA;
+          \item qué se aceptó, rechazó o corrigió;
+          \item cómo se verificó;
+          \item razonamiento final propio;
+          \item errores o alucinaciones detectados.
+        \end{enumerate}
+\end{itemize}
+\end{frame}
+
+% =====================================================================
+\section{Recapitulando}
+% =====================================================================
+
+\begin{frame}{Recapitulando}
+\begin{enumerate}[<+->]
+  \item \textbf{Transformaciones canónicas:} preservan la forma de las ecuaciones de
+        Hamilton para todo $\Ham$; incluyen las puntuales y también mezclan $q$ y $p$.
+  \item \textbf{Funciones generadoras:} surgen de la acción estacionaria;
+        cuatro tipos básicos relacionados por transformaciones de Legendre;
+        $\tH=\Ham+\partial F/\partial t$.
+  \item \textbf{Paréntesis de Poisson:} $df/dt=\pb{f}{\Ham}+\partial f/\partial t$;
+        estructura de álgebra de Lie; $\pb{L_i}{L_j}=\epsilon_{ijk}L_k$.
+  \item \textbf{Criterio:} canónica $\iff$ preserva los paréntesis fundamentales;
+        para $s=1$, jacobiano igual a 1.
+  \item \textbf{Simetrías:} si $\pb{G}{\Ham}=0$, $G$ genera una simetría y se conserva.
+        $\Ham$ genera la evolución: teorema de Liouville.
+  \item \textbf{Próxima sesión:} Hamilton--Jacobi, la búsqueda de una $F_2=S$ con $\tH=0$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Resumiendo: herramientas canónicas}
+\scriptsize
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{@{}>{\raggedright}p{0.22\textwidth}>{\raggedright}p{0.36\textwidth}>{\raggedright\arraybackslash}p{0.33\textwidth}@{}}
+  \toprule
+  \textbf{Herramienta} & \textbf{Qué se calcula} & \textbf{Cuándo conviene} \\
+  \midrule
+  Definición & Ecuaciones de Hamilton en $(Q,P)$ para todo $\Ham$
+             & Para entender el concepto; rara vez para verificar \\
+  Función generadora & $F_1,\dots,F_4$ y sus relaciones; $\tH=\Ham+\partial F/\partial t$
+                     & Para \emph{construir} transformaciones y buscar coordenadas cíclicas \\
+  Paréntesis fundamentales & $\pb{Q_i}{Q_j}$, $\pb{P_i}{P_j}$, $\pb{Q_i}{P_j}$
+                           & Para \emph{verificar} una transformación dada \\
+  Jacobiano ($s=1$) & $\det\,\partial(Q,P)/\partial(q,p)=1$
+                    & Un grado de libertad; interpretación geométrica \\
+  Generador infinitesimal & $\delta K=\varepsilon\pb{K}{G}$
+                          & Simetrías y leyes de conservación \\
+  \bottomrule
+\end{tabular}
+\end{frame}
+
+% =====================================================================
+\section{Para la discusión}
+% =====================================================================
+
+\begin{frame}{Para la discusión 1/6: variables de ángulo en 2D (Nivel 2)}
+\small
+\textbf{P1.} Oscilador anisótropo,
+$\Ham=\dfrac{p_x^2+p_y^2}{2m}+\dfrac m2\big(\omega_x^2x^2+\omega_y^2y^2\big)$, y la
+transformación $(x,y,p_x,p_y)\to(\theta_x,\theta_y,P_x,P_y)$:
+\[
+  x=\sqrt{\frac{2P_x}{m\omega_x}}\cos\theta_x,\quad p_x=-\sqrt{2m\omega_xP_x}\,\sen\theta_x,
+  \quad\text{y lo mismo para }(y,p_y).
+\]
+\begin{enumerate}[(a)]
+  \item Verifique que es canónica. ¿Cuántos paréntesis debe calcular y por qué algunos
+        son inmediatos? \hfill{\scriptsize[IA prohibida]}
+  \item Construya $\tH(\theta_x,\theta_y,P_x,P_y)$.
+  \item Encuentre una función generadora de tipo $F_1(x,y,\theta_x,\theta_y)$.
+  \item Resuelva las ecuaciones de Hamilton en las nuevas variables y regrese a $x(t)$,
+        $y(t)$. Relacione $P_x$ con la energía $E_x$ y la amplitud $A_x$.
+  \item Caso isótropo, $\omega_x=\omega_y$: exprese $L_z$ en las nuevas variables,
+        calcule $\pb{L_z}{\tH}$ e interprete. ¿Qué ocurre si $\omega_x\neq\omega_y$?
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Para la discusión 2/6: las 4D aplicadas a P1}
+\begin{itemize}[<+->]
+  \item \alert{Delegación:} conserve el planteamiento (qué paréntesis calcular, qué tipo
+        de $F$, la interpretación de $P_x$); delegue derivadas, simplificaciones
+        trigonométricas y gráficas.
+  \item \alert{Descripción:} redacte un prompt que fije la transformación, la convención del
+        paréntesis y el tipo de $F$. Redacte otro que no lo haga y compare.
+  \item \alert{Discernimiento:} audite la respuesta.
+        \begin{itemize}
+          \item Dimensiones de $P_x$ (acción) y de $\tH$ (energía).
+          \item Límite: $\theta_x=\omega_xt+\phi_x$ debe reproducir la solución de Newton.
+          \item ¿Aparece un factor $2\pi$? ¿Es compatible con $\pb{x}{p_x}=1$?
+          \item Sustituya $F_1$ en \emph{ambas} relaciones.
+        \end{itemize}
+  \item \alert{Diligencia:} rederive a mano $\pb{x}{p_x}$; entregue la bitácora 4D y la
+        declaración de uso de IA.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Para la discusión 3/6: canonicidad y tipos de $F$ (Nivel 2)}
+\textbf{P2.} Considere, para $q>0$, la transformación
+\[
+  Q=q^{\alpha}e^{\beta p},\qquad P=q^{\alpha}e^{-\beta p},
+\]
+con $\alpha$ y $\beta$ constantes (notas, problema~20).
+\begin{enumerate}[(a)]
+  \item Determine $\alpha$ y $\beta$ para que la transformación sea canónica.
+        ¿Por qué no basta que $\pb{Q}{P}=1$ en un punto?
+  \item Muestre que $F_3(p,Q)=-\tfrac12 Q^2e^{2p}$ la genera. ¿Por qué es de tipo $F_3$?
+  \item ¿Existe también una función de tipo $F_1(q,Q)$? Si existe, encuéntrela.
+  \item ¿Qué ocurre si se toma $\beta$ con el signo opuesto?
+\end{enumerate}
+\medskip
+{\small IA asistida en (c): registre la interacción en la bitácora 4D.}
+\end{frame}
+
+\begin{frame}{Para la discusión 4/6: simetrías en un campo $\mathbf B$ (Nivel 3)}
+\textbf{P3.} Carga $q$ y masa $m$ en el plano $xy$ con $\mathbf B=B\hat{\mathbf z}$
+y gauge simétrico (sesión anterior, P2). Con $b\equiv qB/2c$:
+\[
+  \Ham=\frac{1}{2m}\big(\pi_x^2+\pi_y^2\big),\qquad
+  \pi_x=p_x+by,\quad\pi_y=p_y-bx .
+\]
+\begin{enumerate}[(a)]
+  \item Calcule $\pb{\pi_x}{\pi_y}$. ¿Qué significa que no se anule?
+  \item Muestre que $K_x=p_x-by$ y $K_y=p_y+bx$ satisfacen $\pb{K_i}{\Ham}=0$.
+        Relacione $K_x,K_y$ con el centro de la órbita circular.
+  \item Encuentre la transformación infinitesimal generada por $K_x$. ¿Por qué $p_x$
+        no se conserva, si el campo es uniforme?
+  \item Calcule $\pb{K_x}{K_y}$. ¿Qué dice el teorema de Poisson en este caso?
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Para la discusión 5/6: Liouville en la computadora (Nivel 4)}
+\small
+Péndulo adimensional, $\Ham=\tfrac12p^2-\cos q$. Lenguaje: Python.
+\begin{enumerate}[<+->]
+  \item Derive las ecuaciones de Hamilton y el jacobiano de un paso para Euler explícito
+        y Euler simpléctico. \hfill{\scriptsize[IA prohibida]}
+  \item Evolucione el borde de un disco de condiciones iniciales con \texttt{solve\_ivp}
+        (tolerancias declaradas), Euler explícito, Euler simpléctico y RK4.
+        \hfill{\scriptsize[IA asistida]}
+  \item Calcule el área encerrada (fórmula del cordón) en función de $t$. Ubique el disco
+        lejos y cerca de la separatriz.
+  \item Cerca de la separatriz el borde se estira: ¿la pérdida aparente de área es física o
+        un artefacto del estimador? Refine el borde de forma adaptativa.
+  \item Para $s=2$ (dos osciladores acoplados), calcule numéricamente la matriz
+        $M=\partial(q(t),p(t))/\partial(q(0),p(0))$ y verifique $M^{T}JM=J$.
+  \item Entregue código documentado, reproducible y en un repositorio git.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Para la discusión 6/6: Actividad A (IA requerida)}
+\begin{alertblock}{Respuesta de un asistente de IA}
+\small
+\textit{“La transformación $Q=p$, $P=q$ es canónica: solo intercambia los papeles de
+coordenadas y momentos, que en la formulación hamiltoniana tienen el mismo estatus.
+En efecto, $\pb{Q}{P}=\pd{Q}{q}\pd{P}{p}-\pd{Q}{p}\pd{P}{q}=-1$ y, como
+$|\pb{Q}{P}|=1$, la transformación preserva el área del espacio de fase.
+Una función generadora es $F_1(q,Q)=qQ$, pues $p=\partial F_1/\partial q=Q$ y
+$P=-\partial F_1/\partial Q=q$.”}
+\end{alertblock}
+\pause
+La respuesta contiene \textbf{al menos tres} errores.
+\begin{enumerate}[<+->]
+  \item Identifique cada error y la verificación que lo revela
+        (paréntesis, partícula libre, sustitución en la función generadora).
+  \item Escriba la versión correcta de cada afirmación.
+  \item Registre el proceso en la bitácora 4D.
+\end{enumerate}
+\end{frame}
+
+% =====================================================================
+%  NOTAS PARA EL INSTRUCTOR (solo si \instructortrue)
+% =====================================================================
+\ifinstructor
+\appendix
+\section{Notas para el instructor}
+
+\begin{frame}{Instructor: planificación de la sesión}
+\small
+\textbf{Duración sugerida:} 100 min.
+Motivación y definición (15); funciones generadoras y ejemplos (30);
+paréntesis de Poisson (25); criterio, generadores y Liouville (20);
+actividad IA en clase (10). P1--P4 y la Actividad~A son trabajo fuera de clase.
+
+\medskip
+\textbf{Concepciones erróneas a vigilar}
+\begin{itemize}
+  \item Creer que cualquier cambio invertible de $(q,p)$ es canónico.
+  \item Integrar una sola relación de la función generadora.
+  \item Confundir $\pb{q}{p}=1$ con $[\hat q,\hat p]=i\hbar$.
+  \item Verificar solo $\pb{Q_i}{P_i}=1$ cuando $s\ge2$.
+  \item Pensar que conservar el área (en valor absoluto) basta para ser canónica.
+  \item Mezclar convenciones de signo del paréntesis (Landau).
+\end{itemize}
+
+\medskip
+\textbf{Respuestas a las preguntas de control.}
+(1) $\pb{Q}{P}=\lambda^2$: solo si $\lambda^2=1$; $Q=\lambda q$, $P=p/\lambda$ sí
+($F_2=\lambda qP$).
+(2) Solo si $\partial F/\partial t=0$.
+(3) Sí (teorema de Poisson), pero puede ser una constante o función de las otras.
+(4) Sí, si depende de $t$: $f=x-pt/m$.
+(5) Rotaciones alrededor de $z$; $\pb{L_z}{\Ham}=0$ es a la vez $\delta\Ham=0$ y $dL_z/dt=0$.
+\end{frame}
+
+\begin{frame}{Instructor: P1, oscilador anisótropo (1/2)}
+\scriptsize
+\textbf{Objetivo:} verificar canonicidad, construir $F_1$ y $\tH$, interpretar la variable
+de acción. \textbf{Conceptos:} paréntesis fundamentales, invariancia, $F_1$, acción--ángulo.
+\textbf{Nivel:} 2. \textbf{Estrategia:} usar la invariancia, calcular $\pb{x}{p_x}_{\theta,P}$.
+
+\medskip
+\textbf{Solución.}
+(a) Para $s=2$ hay 6 paréntesis. Los cuatro cruzados ($\pb{x}{y}$, $\pb{p_x}{p_y}$,
+$\pb{x}{p_y}$, $\pb{y}{p_x}$) se anulan porque las variables $x$ dependen solo de
+$(\theta_x,P_x)$ y las $y$ solo de $(\theta_y,P_y)$. Además
+\[
+  \pb{x}{p_x}_{\theta,P}
+  =\Big(-\sqrt{\tfrac{2P_x}{m\omega_x}}\sen\theta_x\Big)\Big(-\sqrt{\tfrac{m\omega_x}{2P_x}}\sen\theta_x\Big)
+  -\frac{\cos\theta_x}{\sqrt{2m\omega_xP_x}}\Big(-\sqrt{2m\omega_xP_x}\cos\theta_x\Big)=1 .
+\]
+(b) $\tH=\omega_xP_x+\omega_yP_y$.
+(c) $p_x/x=-m\omega_x\tan\theta_x$, por lo tanto
+$F_1=-\tfrac12 m\big(\omega_xx^2\tan\theta_x+\omega_yy^2\tan\theta_y\big)$.
+Verificación: $P_x=-\partial F_1/\partial\theta_x=\tfrac12 m\omega_xx^2\sec^2\theta_x$. \checkmark
+\\(d) $\dot\theta_x=\omega_x$, $\dot P_x=0$: $\theta_x=\omega_xt+\phi_x$,
+$P_x=E_x/\omega_x=\tfrac12 m\omega_xA_x^2$ y $x=A_x\cos(\omega_xt+\phi_x)$.
+
+\medskip
+\alert{Nota:} la versión anterior del enunciado definía $P_x=2\pi\,m\omega_xA_x^2/2$.
+Con ese factor, $\pb{x}{p_x}=1/2\pi$ y la transformación \emph{no} es canónica. El factor
+$2\pi$ corresponde a $J=\oint p\,dq$, cuyo ángulo conjugado es $\theta/2\pi$.
+\end{frame}
+
+\begin{frame}{Instructor: P1, oscilador anisótropo (2/2)}
+\scriptsize
+(e) Con $\omega_x=\omega_y=\omega$:
+\[
+  L_z=xp_y-yp_x=2\sqrt{P_xP_y}\,\sen(\theta_x-\theta_y),\qquad
+  \pb{L_z}{\tH}=\omega\Big(\pd{L_z}{\theta_x}+\pd{L_z}{\theta_y}\Big)=0 .
+\]
+$L_z$ depende de la diferencia de fases, que es constante solo si las frecuencias son
+iguales. Si $\omega_x\neq\omega_y$, $\pb{L_z}{\tH}\propto(\omega_x-\omega_y)\neq0$.
+La degeneración de frecuencias produce una constante adicional (órbitas cerradas);
+se conecta con las figuras de Lissajous e integrabilidad.
+
+\medskip
+\textbf{Errores frecuentes:} el factor $2\pi$; el signo de $p_x$; verificar solo una
+relación de $F_1$; calcular solo $\pb{x}{p_x}$ sin justificar los demás; ignorar que
+$F_1$ es singular donde $\cos\theta_x=0$ (la descripción de tipo $F_1$ es local).
+
+\textbf{Pistas:} use la invariancia $\pb{x}{p_x}_{q,p}=\pb{x}{p_x}_{\theta,P}$;
+divida $p_x$ entre $x$ para obtener $\partial F_1/\partial x$.
+
+\textbf{Extensión:} razón de frecuencias racional frente a irracional; trayectorias en
+el toro $(\theta_x,\theta_y)$; resolver el mismo problema por Hamilton--Jacobi.
+\end{frame}
+
+\begin{frame}{Instructor: P2, familia $Q=q^\alpha e^{\beta p}$}
+\scriptsize
+\textbf{Objetivo:} imponer canonicidad como identidad, no en un punto; tipos de $F$.
+\textbf{Nivel:} 2.
+
+\textbf{Solución.} (a) $\pb{Q}{P}=-2\alpha\beta\,q^{2\alpha-1}$. Para que valga 1 para todo $q$:
+$2\alpha-1=0$ y $-2\alpha\beta=1$, así que $\alpha=\tfrac12$ y $\beta=-1$:
+$\;Q=\sqrt q\,e^{-p}$, $\;P=\sqrt q\,e^{p}$.
+\\(b) Las variables independientes naturales son $(p,Q)$: $q=Q^2e^{2p}$ y $P=Qe^{2p}$.
+Con $F_3=-\tfrac12Q^2e^{2p}$: $-\partial F_3/\partial p=Q^2e^{2p}=q$ \checkmark,
+$\;-\partial F_3/\partial Q=Qe^{2p}=P$ \checkmark.
+\\(c) Dados $q$ y $Q$, $p=\tfrac12\ln q-\ln Q$, así que $F_1$ existe:
+$F_1=\tfrac q2(\ln q-1)-q\ln Q$. Verificación: $\partial F_1/\partial q=p$ \checkmark,
+$\;-\partial F_1/\partial Q=q/Q=P$ \checkmark.
+\\(d) Con $\beta=+1$: $\pb{Q}{P}=-1$, se invierte la orientación y no es canónica.
+
+\medskip
+\textbf{Errores frecuentes:} imponer $\pb{Q}{P}=1$ en un valor particular de $q$;
+olvidar el dominio $q>0$; tomar la $F$ de las notas como $F_1$ en lugar de $F_3$;
+signo de $\beta$.
+\textbf{Pista:} ¿qué potencia de $q$ debe desaparecer?
+\textbf{Extensión:} comparar con $Q=\ln q$, $P=qp$ (también canónica) y encontrar
+su función generadora.
+\end{frame}
+
+\begin{frame}{Instructor: P3, simetrías en un campo magnético}
+\scriptsize
+\textbf{Objetivo:} generadores, simetría y conservación cuando el gauge no es invariante.
+\textbf{Nivel:} 3. Unidades gaussianas; $\omega_B=qB/mc=2b/m$.
+
+\textbf{Solución.} (a) $\pb{\pi_x}{\pi_y}=\pb{p_x}{-bx}+\pb{by}{p_y}=b+b=2b=qB/c$.
+Los momentos mecánicos no conmutan (en mecánica cuántica: niveles de Landau).
+\\(b) $\pb{K_x}{\pi_x}=\pb{K_x}{\pi_y}=0$ y $\pb{K_y}{\pi_x}=\pb{K_y}{\pi_y}=0$; como
+$\Ham=\Ham(\pi_x,\pi_y)$, $\pb{K_i}{\Ham}=0$. Centro de la órbita:
+$X_c=x+v_y/\omega_B=K_y/2b$, $\;Y_c=y-v_x/\omega_B=-K_x/2b$.
+\\(c) Generador $K_x$: $\delta x=\varepsilon$, $\delta y=0$, $\delta p_x=0$, $\delta p_y=\varepsilon b$.
+Es una traslación acompañada de un cambio de gauge (el gauge simétrico depende de $x$).
+Por eso $p_x$ no se conserva: $\pb{p_x}{\Ham}=b\,\pi_y/m\neq0$.
+\\(d) $\pb{K_x}{K_y}=-2b$, una constante: el teorema de Poisson no da nada nuevo.
+Implica $\pb{X_c}{Y_c}=-c/qB$: las coordenadas del centro no conmutan
+(degeneración de los niveles de Landau).
+
+\medskip
+\textbf{Errores frecuentes:} confundir $\pi$ con $p$; omitir $\delta p_y$; suponer que
+“campo uniforme” implica $p_x$ conservado; errores de signo en $b$.
+\textbf{Pista:} exprese $\Ham$ solo con $\pi_x,\pi_y$.
+\textbf{Extensión:} gauge de Landau; relación con
+$p_\varphi=\tfrac{m\omega_B}{2}(|\mathbf R_c|^2-a^2)$ de la sesión anterior.
+\end{frame}
+
+\begin{frame}{Instructor: P4 (computacional) y clave de la Actividad A}
+\scriptsize
+\textbf{P4.} Jacobiano de un paso: Euler explícito, $(q,p)\mapsto(q+hp,\,p-h\sen q)$,
+tiene $\det=1+h^2\cos q$. Euler simpléctico ($q'=q+hp$, $p'=p-h\sen q'$) tiene
+$\det=1$ exactamente. RK4: $\det=1+O(h^5)$ por paso.
+Área con la fórmula del cordón; cerca de la separatriz el borde se filamenta y, sin
+remuestreo adaptativo, el área \emph{estimada} cae: es un artefacto del estimador, no
+de la dinámica. Para $s=2$, $J=\begin{pmatrix}0&I\\-I&0\end{pmatrix}$; $M$ por
+diferencias finitas o por las ecuaciones variacionales.
+Evaluar: derivación, implementación, convergencia, interpretación, reproducibilidad.
+
+\medskip
+\textbf{Actividad A, clave.}
+\begin{enumerate}
+  \item $\pb{Q}{P}=-1\neq1$: \emph{no} es canónica. Con $\Ham=p^2/2m$ y $\tH=Q^2/2m$,
+        las ecuaciones de Hamilton dan $\dot P=-Q/m$, pero $\dot P=\dot q=+Q/m$.
+        Las ecuaciones valen con $-\tH$ (transformación anticanónica).
+  \item Preservar $|\det|$ no basta: hace falta $\det=+1$ (orientación). Para $s>1$,
+        $\det=1$ es necesario pero no suficiente.
+  \item $F_1=qQ$ da $P=-\partial F_1/\partial Q=-q$, no $+q$: genera $Q=p$, $P=-q$, que sí
+        es canónica pero es otra transformación.
+  \item “Mismo estatus” es retórica, no una demostración.
+\end{enumerate}
+\end{frame}
+\fi
+
+\end{document}

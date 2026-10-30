@@ -1,0 +1,19 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{De Lagrange a Hamilton}{16}{0}{1}
+\beamer@subsectionintoc {1}{1}{La idea lagrangiana}{16}{0}{1}
+\beamer@subsectionintoc {1}{2}{La idea hamiltoniana}{21}{0}{1}
+\beamer@subsectionintoc {1}{3}{Velocidades generalizadas y momentos conjugados}{26}{0}{1}
+\beamer@sectionintoc {2}{La transformación de Legendre}{33}{0}{2}
+\beamer@sectionintoc {3}{Las ecuaciones de Hamilton}{49}{0}{3}
+\beamer@sectionintoc {4}{Ejemplos}{62}{0}{4}
+\beamer@subsectionintoc {4}{1}{El oscilador armónico}{62}{0}{4}
+\beamer@subsectionintoc {4}{2}{Partícula en un cono vertical}{72}{0}{4}
+\beamer@subsectionintoc {4}{3}{Partícula en un potencial central}{81}{0}{4}
+\beamer@sectionintoc {5}{Leyes de conservación y energía}{89}{0}{5}
+\beamer@subsectionintoc {5}{1}{Evolución temporal del Hamiltoniano}{89}{0}{5}
+\beamer@subsectionintoc {5}{2}{Hamiltoniano, función de energía y energía total}{93}{0}{5}
+\beamer@subsectionintoc {5}{3}{Cuenta en una varilla que rota}{100}{0}{5}
+\beamer@subsectionintoc {5}{4}{Preguntas de control}{108}{0}{5}
+\beamer@sectionintoc {6}{La IA en la formulación hamiltoniana}{113}{0}{6}
+\beamer@sectionintoc {7}{Recapitulando}{132}{0}{7}
+\beamer@sectionintoc {8}{Para la discusión}{139}{0}{8}
