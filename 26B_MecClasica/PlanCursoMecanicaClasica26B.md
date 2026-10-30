@@ -713,8 +713,8 @@ La semana 10 del sólido rígido
 
 ### Clase S13-C25/C26
 
-+ [Dinamica Hamiltoniana](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T1EcHamilton.pdf)
-+ [Transformaciones Canónicas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T2TransfCanonicas.pdf)
++ [Dinamica Hamiltoniana](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T1EcHamilton_rev.pdf)
++ [Transformaciones Canónicas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T2TransfCanonicas_rev.pdf)
 + [Paréntesis de Poisson](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T3ParentesisPoisson.pdf)
 ### Clase S14-C27/C28
 [Simetrías y Cantidades Conservadas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S14T1AplicCanonicas.pdf)
