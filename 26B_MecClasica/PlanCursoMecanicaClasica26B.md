@@ -715,7 +715,7 @@ La semana 10 del sólido rígido
 
 + [Dinamica Hamiltoniana](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T1EcHamilton_rev.pdf)
 + [Transformaciones Canónicas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T2TransfCanonicas_rev.pdf)
-+ [Paréntesis de Poisson](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T3ParentesisPoisson.pdf)
++ [Paréntesis de Poisson](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T3ParentesisPoisson_rev.pdf)
 + [Un ejemplo resuelto](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T3Problemas_rev.pdf)
 
 ### Clase S14-C27/C28
