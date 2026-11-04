@@ -1,0 +1,10 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Objetivos y convenciones}{3}{0}{1}
+\beamer@sectionintoc {2}{Problema 1: péndulo con soporte sobre una parábola}{14}{0}{2}
+\beamer@sectionintoc {3}{Problema 2: $\mathcal {H}= q + t e^p$}{34}{0}{3}
+\beamer@sectionintoc {4}{Problema 3: hamiltonianos y lagrangianos equivalentes}{49}{0}{4}
+\beamer@sectionintoc {5}{Problema 4: constantes de movimiento $f(q_1,p_1)$}{65}{0}{5}
+\beamer@sectionintoc {6}{Problema 5: una rotación en el espacio de fase}{77}{0}{6}
+\beamer@sectionintoc {7}{Recapitulando}{94}{0}{7}
+\beamer@sectionintoc {8}{Actividades con IA (modelo 4D)}{105}{0}{8}
+\beamer@sectionintoc {9}{Para la discusión}{120}{0}{9}

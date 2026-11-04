@@ -1,0 +1,21 @@
+\frametitle{Actividad 4 (Delegación): álgebra simbólica verificable}
+En el Problema 5 delegue el álgebra y conserve la elección del tipo de función
+generadora y la interpretación:
+\footnotesize
+\begin{verbatim}
+import sympy as sp
+t, Q, P, m, w, g = sp.symbols('t Q P m omega gamma', real=True)
+q = Q*sp.cos(g*t) + P/(m*w)*sp.sin(g*t)
+p = -m*w*Q*sp.sin(g*t) + P*sp.cos(g*t)
+pb = sp.diff(q, Q)*sp.diff(p, P) - sp.diff(q, P)*sp.diff(p, Q)
+print(sp.simplify(pb))          # debe dar 1
+H = p**2/(2*m) + m*w**2*q**2/2
+print(sp.simplify(H))           # ¿depende de t?
+\end{verbatim}
+\normalsize
+\begin{itemize}
+  \item Extienda el código: verifique $p=\partial F_2/\partial q$, $Q=\partial F_2/\partial P$
+        y la expresión de $\Ham'$.
+  \item Discernimiento: ¿por qué \texttt{simplify(H)} es una prueba más fuerte
+        que evaluar $\Ham$ en unos pocos valores numéricos?
+\end{itemize}
