@@ -1,0 +1,11 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Objetivos y convenciones}{3}{0}{1}
+\beamer@sectionintoc {2}{Definición}{14}{0}{2}
+\beamer@sectionintoc {3}{Propiedades algebraicas}{23}{0}{3}
+\beamer@sectionintoc {4}{Momento lineal y angular}{35}{0}{4}
+\beamer@sectionintoc {5}{Teorema de Poisson e integrabilidad}{51}{0}{5}
+\beamer@sectionintoc {6}{Generadores de transformaciones}{60}{0}{6}
+\beamer@sectionintoc {7}{Paréntesis de Poisson y transformaciones canónicas}{67}{0}{7}
+\beamer@sectionintoc {8}{Recapitulando}{79}{0}{8}
+\beamer@sectionintoc {9}{Actividades con IA (modelo 4D)}{90}{0}{9}
+\beamer@sectionintoc {10}{Para la discusión}{104}{0}{10}

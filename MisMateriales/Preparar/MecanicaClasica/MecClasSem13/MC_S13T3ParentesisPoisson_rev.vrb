@@ -1,0 +1,23 @@
+\frametitle{Actividad 2 (Delegación): paréntesis en SymPy}
+Delegue el álgebra y conserve la interpretación:
+\footnotesize
+\begin{verbatim}
+import sympy as sp
+x, y, z, px, py, pz = sp.symbols('x y z p_x p_y p_z', real=True)
+q, p = [x, y, z], [px, py, pz]
+
+def pb(f, g):
+    return sp.simplify(sum(sp.diff(f, q[i])*sp.diff(g, p[i])
+                           - sp.diff(f, p[i])*sp.diff(g, q[i])
+                           for i in range(3)))
+
+Lx, Ly, Lz = y*pz - z*py, z*px - x*pz, x*py - y*px
+print(pb(Lx, Ly) - Lz)        # debe dar 0
+\end{verbatim}
+\normalsize
+\begin{itemize}
+  \item Extienda: verifique $\pb{L^2}{L_i}=0$ y la identidad de Jacobi para tres
+        polinomios de su elección.
+  \item Discernimiento: ¿por qué verificar Jacobi con \emph{tres} ejemplos no la
+        demuestra? ¿Qué sí sería una demostración?
+\end{itemize}
