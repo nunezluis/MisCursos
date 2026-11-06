@@ -715,12 +715,13 @@ La semana 10 del sólido rígido
 
 + [Dinamica Hamiltoniana](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T1EcHamilton_rev.pdf)
 + [Transformaciones Canónicas](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T2TransfCanonicas_rev.pdf)
-+ [Paréntesis de Poisson](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T3ParentesisPoisson_rev.pdf)
 + [Un ejemplo resuelto](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Presentaciones/MC_S13T3Problemas_rev.pdf)
 
-[Oscilador y espacio de fase](https://docs.google.com/presentation/d/1Dp6OeZMoFKcyKbEBIMZGP6AEDHTj1vLnrzyGD2L9Si0/edit?usp=sharing)
-[Aro cuenta y gravedad](https://docs.google.com/presentation/d/1qdYJRB30Opd60Ho0l8NRsqgyI4uusOEVbi74dbw06tc/edit?usp=sharing)
-[Particula en un cono](https://docs.google.com/presentation/d/1TAeVK9DmIACyJMAV7xS4D9mVOqFa1bEo2YPOsHrfu1I/edit?usp=sharing)
+
+[Oscilador y espacio de fase](https://youtu.be/tS_ITP5U_xk?si=s646vrPVEJO37KnA)
+[Trayectoria de una cuenta en una varilla rotante](https://youtu.be/doX37xEC474?si=x7hCQ-x3bqSuIyde)
+[Aro cuenta y gravedad](https://youtu.be/vPt0xokjXco?si=90ZX68AJBTlqVk2p)
+[Particula en un cono](https://youtu.be/8lJh0VTfC-I?si=jOyOQMFSl6F1kRqo)
 
 
 ### Clase S14-C27/C28
