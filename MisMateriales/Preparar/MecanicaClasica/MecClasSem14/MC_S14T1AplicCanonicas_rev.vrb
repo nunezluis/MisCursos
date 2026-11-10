@@ -1,0 +1,26 @@
+\frametitle{Actividad 2 (Delegación): buscar invariantes cuadráticos}
+Delegue la búsqueda; conserve la interpretación:
+\footnotesize
+\begin{verbatim}
+import sympy as sp
+x, y, px, py = sp.symbols('x y p_x p_y', real=True)
+m, wx, wy = sp.symbols('m omega_x omega_y', positive=True)
+z = [x, y, px, py]
+H = (px**2 + py**2)/(2*m) + m*(wx**2*x**2 + wy**2*y**2)/2
+
+def pb(f, g):
+    d = sp.diff
+    return sum(d(f, z[i])*d(g, z[i+2]) - d(f, z[i+2])*d(g, z[i])
+               for i in range(2))
+
+mon = [u*v for i, u in enumerate(z) for v in z[i:]]   # 10 monomios
+c = sp.symbols('c0:10')
+K = sum(ci*mi for ci, mi in zip(c, mon))
+eqs = sp.Poly(sp.expand(pb(K, H)), *z).coeffs()
+print(sp.solve(eqs, c, dict=True))
+\end{verbatim}
+\normalsize
+\begin{itemize}
+  \item Compare el resultado para $\omega_x\neq\omega_y$ y para $\omega_x = \omega_y$.
+        ¿Qué transformación genera cada invariante nuevo?
+\end{itemize}
