@@ -429,7 +429,6 @@ En segundo lugar analizaremos el **problema de dos cuerpos** que permite la redu
      $T^2 \propto a^3$, donde $a$ es el semieje mayor.
 
 
-
 ### Clase S7-C13/C14
 + **Estudie**
 + El vector de Laplace-Runge-Lenz
@@ -576,6 +575,9 @@ Esta semana cubrimos estos Contenidos
     - $\omega_3 = \sqrt{\frac{k}{m}(1 + 2m/M)}$: O–C en fase.
 
 ### Semana 9 colchón
+[Solución del segundo parcial](https://github.com/nunezluis/MisCursos/blob/main/MisMateriales/Examenes/Examen2MecClasica26BV2Solucion.pdf)
+
+
 
 ### Clase S10-C21/C22
 
